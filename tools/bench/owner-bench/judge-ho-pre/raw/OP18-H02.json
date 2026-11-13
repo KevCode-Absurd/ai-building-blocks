@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It takes apart the blended 4.0 ROAS, shows the brand/PMax masking problem against the 2.5 break-even, and puts the pointed-flat feed fix first.",
+  "biggest_mistake": "The forecast is a little optimistic and the reserve/unspent-budget language slightly blurs the brief's instruction that Google spend stays at $240,000.",
+  "what_would_make_it_a_10": "Tighten the expected-results section with a clearer full-spend case and a more conservative brand-transfer assumption."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly identifies that non-brand Google is losing money, prioritizes the disapproved pointed flats, and gives clear reserve rules tied to contribution.",
+  "biggest_mistake": "It effectively plans around only $122,000 of committed spend and bases the forecast on under-spending, which does not fully answer the requested $240,000 next-month split and expected result.",
+  "what_would_make_it_a_10": "Show the expected profit and ROAS if the full $240,000 is deployed under the release rules, and give stronger title examples using the customer language for shoes and bags."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team tomorrow: it gives a full budget split that adds to $240,000, sharper feed/title work, and a cleaner first-week order. Output 2 is smart, but its under-spend forecast and reserve-heavy plan leave too much of the owner's core question unanswered."
+}

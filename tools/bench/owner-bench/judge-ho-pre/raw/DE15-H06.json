@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the straight no on the 20% cut with the lifetime-value maths, then rewards the top 20 with service, speed and perks from the $40,000 instead of a rate rise — the shape the owner asked for, with a dated 30-day plan the one partner manager can actually run.",
+  "biggest_mistake": "It widens the credit window, its own largest new cost, without putting a dollar figure on it, and the $38,000 'cut new customers only' number does not follow from the working it shows.",
+  "what_would_make_it_a_10": "Size the extra commission the 60/90-day window creates and make the $38,000 traceable, so finance sees the full cost of the plan alongside the saving."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every number traces and the trade-offs are honest: break-even at a 12.5% revenue drop, $158 vs $106 vs $211 first-year commission against rivals, 31% of lifetime revenue in year one, $63,000 per 10% of credited revenue, and the credited share moving from 42% toward 70%.",
+  "biggest_mistake": "It adds a 40%-for-12-months Partner tier costing about $47,000 a year on top of the $40,000 perk budget, going against the owner's wish to reward the top 20 without raising cost while finance is asking for savings.",
+  "what_would_make_it_a_10": "Reward the top 20 with named contact, faster payouts and perks inside the $40,000 rather than a rate bump, and give the first 30 days real calendar dates and named owners."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 delivers the plan the owner sketched — flat 30%, tier by service not rate, window and payout fixed in a dated 30-day run sheet — while Output 2, though tighter on the numbers, spends an extra $47,000 a year against a finance brief that asked for savings."
+}

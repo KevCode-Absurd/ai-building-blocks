@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Direct and punchy breakdown of the 4.0 blended ROAS into exact dollar contribution by segment against the 2.5 break-even.",
+  "biggest_mistake": "Holding $118,000 (nearly half the budget) in an uncommitted reserve while slashing PMax to $80k risks severely stalling campaign delivery and algorithmic learning.",
+  "what_would_make_it_a_10": "Allocate a realistic active budget across dedicated non-brand search and shopping rather than parking half the CFO-approved budget in reserve."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Realistic, technically sharp execution that uses the exact lost impression math for bags, sets up dedicated non-brand search, diagnoses structured data/automatic item updates in GMC, and weaves Claire's and Nina's exact words into copy.",
+  "biggest_mistake": "Could give a slightly more concrete rollout framework for title testing (like A/B split or half-catalog testing) rather than a linear rewrite sequence.",
+  "what_would_make_it_a_10": "Include a controlled split-testing methodology for the title rollout alongside the phased implementation."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 delivers a much smarter media architecture by splitting the winning search themes into a dedicated non-brand search campaign and scaling bags precisely to close the 38% impression gap. Its feed troubleshooting advice is genuinely specialist-grade (structured data, variant URLs, automatic item updates), and its ad copy perfectly nails Claire's and Nina's personas."
+}

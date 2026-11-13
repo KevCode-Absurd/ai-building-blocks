@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the two big owner signals—bring back the paused transparency winner and test taste from reviews—and turns them into launch-ready copy plus a concrete first-4 plan.",
+  "biggest_mistake": "It adds extra media-test instructions and assumptions the brief did not ask for, and one line ('The sweet bit is dates') strays from the approved wording enough to invite legal nitpicking.",
+  "what_would_make_it_a_10": "Tighten to only the requested deliverables, keep every claim in exact approved language, and retain the same strong launch logic."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly revives the paused front-of-pack winner and adds a much-needed taste-led test in a voice close to the brand.",
+  "biggest_mistake": "It uses unapproved or misstated claims like 'sweetened only with dates' and 'Nothing hidden on the back,' which is a serious fault for a tightly controlled food brand brief.",
+  "what_would_make_it_a_10": "Rewrite every claim to match the approved list exactly, add a stronger price/value line in Priya's words, and keep the same clean structure."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to my team tomorrow: it uses my data better, gives more distinct angles, and gets the first-launch test plan right. Output 2 is good in parts, but the claim wording errors would make me nervous."
+}

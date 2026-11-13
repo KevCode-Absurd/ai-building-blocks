@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers are traced and correct, including the 13.0 per 100 agency losses, Lite as 70% of churn, and the 12-month Lite survival of 37%. It also states plainly that the biggest leak is self-inflicted, not Semrush.",
+  "biggest_mistake": "Move 5 (publish link-data studies) is generic content advice with a weak metric. Move 1's first step is 40 interviews, which is slower than starting a beta. The 'Data as of November 2026' date is invented.",
+  "what_would_make_it_a_10": "Replace the content-marketing move with a sharper, more original bet, and make Move 1's first step something shipped this month rather than interviews.",
+  "overall_note": "Solid, honest and correct."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A lose/tie/win/not-Semrush summary with explicit 'do first', 'stop' and 'don't spend' lines, then ranked moves that quote the personas' own words. Every move has an owner, a concrete first step this month and a metric.",
+  "biggest_mistake": "Some metrics are stretched: a Lite top-up is expected to lift in-house trial-to-paid, and the enterprise vendor-consolidation line is loosely tied to Semrush. The free-report move risks cannibalising paid plans.",
+  "what_would_make_it_a_10": "Tie every success metric directly to its move, and add a clearer revenue-risk test for the free Webmaster Tools report.",
+  "overall_note": "Sharper top-of-page answer and more original."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both get the numbers right and see that agencies on reporting and PPC are the real Semrush fight and that the Lite limit is self-inflicted. Output 2 is easier to act on: a summary with stop and don't-spend lines, a beta to start this month, and a fresh idea in the free-tier report. Output 1's fifth move is generic content advice."
+}

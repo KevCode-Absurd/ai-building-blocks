@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Leads with the three numbers and puts the forecast miss, the margin drop and Customer A on the first screen, with every figure traceable (5.5% ARR growth, ~$2.6M Customer A, 33-37 month runway) and the sharpest single read in either draft: direct-created databases grew only 2.6%, so nearly all growth came from the low-converting partner channel.",
+  "biggest_mistake": "The margin line — 'that extra $0.9M is roughly 9 points of margin, more than the 7-point drop' — is loose enough that a partner checking it will ask what offset the rest, and the pricing ask (the lead partner's ask) sits third behind two angel asks.",
+  "what_would_make_it_a_10": "Say plainly that compute explains the whole 7-point drop with a small offsetting gain elsewhere, and put the VP Enterprise Sales / New York request first since that is the ask the lead partner can actually move."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every ask is packaged so an angel can act without rewriting it (forwardable one-liners for the New York sales hire and the self-hosting interview), and the analysis is precise where it counts: the Customer A loss shows in February 2027 ARR, September runway is shown for trend, enterprise growth is measured on September's base, and the compute attribution is properly hedged.",
+  "biggest_mistake": "It states 'the role is now based in New York' as a settled fact when the owner has not decided that (only the assumptions block hedges it), and the asks appear twice — up top and at the end — which adds a little length for a phone reader.",
+  "what_would_make_it_a_10": "Frame the New York base as a decision being taken or a question for the lead partner, and move the bad-news block above the 'what we need' summary so nothing precedes it."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are sendable and get the numbers right, but #2 is the one I could forward to an angel as-is and it gets the February ARR timing, the runway trend and the compute attribution cleaner, while #1's '9 points vs 7-point drop' line is the kind of thing my lead partner would circle."
+}

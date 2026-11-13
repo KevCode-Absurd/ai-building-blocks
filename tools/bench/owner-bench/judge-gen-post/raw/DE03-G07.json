@@ -1,0 +1,29 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 5,
+  "overall": 6
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 ships finished, on-brand copy and gates that map exactly to my data (YouTube and authors first, migration fixed before freeze), while Output 2 buries the same good thinking under placeholders and a five-post X thread I'd have to finish myself. Output 2's staging idea is sharper, but I can't paste [first name] and [Opens in __ ms] into a launch email."
+}

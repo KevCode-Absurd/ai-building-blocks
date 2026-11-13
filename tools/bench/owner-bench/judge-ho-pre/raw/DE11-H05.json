@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranks fixes by tickets we can actually remove, gives the Simplify debts math and working, and writes all three articles answer-first in our voice.",
+  "biggest_mistake": "The restore article tells people to tap 'Restore' in Activity without checking that this exists in the app, and the currency article is listed as 'write' without flagging that the conversion rules need product input — homework risk on a same-day-ship claim.",
+  "what_would_make_it_a_10": "Verify the Restore/Undelete button names and iOS-vs-web steps in the live app, and flag the currency article's dependency so the forecast doesn't lean on an article that can't be written."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "priorities2": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The ticket forecast is the most defensible: a stated reach assumption and a real help-rate (58%) with a range, plus honest upside notes on the excluded articles.",
+  "biggest_mistake": "It pads the article list with a merge decision that says nothing needs merging, and its written articles carry 'contact us' routes and 'Cancel Splitwise Pro' related links it never specifies.",
+  "what_would_make_it_a_10": "Cut the redundant merge row and specify exactly where each 'contact us' link and related article points, so the three articles can ship without an engineer guessing."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and would be glad to get either, but Output 2's forecast uses a real help-rate and a named range with upside, while Output 1's per-topic 'share avoided' guesses are less defensible. Output 1's articles are a touch more concrete; Output 2's numbers are the ones I'd defend to the team."
+}

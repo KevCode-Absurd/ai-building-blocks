@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the real signals: keep 30%, focus on the top creator-educator partners, fix the credit window and payouts, and keep the plan within the $40,000 perk budget.",
+  "biggest_mistake": "The $38,000 saving from cutting only new customers is not well supported and likely wrong, and the 90-day credit window is limited to Partners rather than fixing the issue for everyone.",
+  "what_would_make_it_a_10": "Make the new-customer savings math solid, extend the credit window more cleanly, and tighten the first-30-days finance impacts."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the clearest money case against the 20% cut, including lifetime value, top-20 concentration, partner defection risk, and the cost of a 90-day window.",
+  "biggest_mistake": "The 40% first-year Partner tier adds a new commission cost on top of the $40,000 budget when the data says the main complaints are payout speed, minimums, and lost credit, not the rate.",
+  "what_would_make_it_a_10": "Keep the stronger 90-day-window and cost modelling, but avoid the unnecessary 40% tier unless it is tied to a strict retention or incremental-growth test."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 1 is the plan I would be more comfortable handing to finance and the partner manager tomorrow: it keeps the 30% promise, rewards the top partners without raising headline commission, fixes payouts, and stays inside the stated perk budget. Output 2 has better modelling in places, but the 40% tier spends more before proving the payout and credit fixes are not enough."
+}

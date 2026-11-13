@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every email serves one of the two habits that predict retention, and email 5 targets whichever habit each user is still missing, using only triggers the tool supports, with skip rules and platform branching.",
+  "biggest_mistake": "The control group gets no onboarding emails at all, which risks losing users. Email 5 also needs two versions with different buttons, which adds build work.",
+  "what_would_make_it_a_10": "Compare the new series against a holdout on the old series, and give each email a numeric 'worked if' target the way the welcome email has one."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The copy is clean and ready to paste. Each email has a clear 'worked if' number, the inactivity email is guilt-free, and the drop list links back to the customers' own words.",
+  "biggest_mistake": "It spends the fifth email on Pro instead of pushing users to the habit they haven't formed yet. That weakens the focus on the 67% both-habits group, and the claim about what Pro reminders do needs checking.",
+  "what_would_make_it_a_10": "Replace the Pro email with a 'missing habit' email and send Pro after day 30 to active users."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are calm, on-brand and branch by platform. Output 1 keeps all five emails on the two habits that drive retention and saves Pro until users are hooked, which is the series I'd rather run."
+}

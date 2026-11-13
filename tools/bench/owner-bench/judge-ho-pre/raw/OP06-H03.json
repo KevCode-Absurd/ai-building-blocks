@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the three real levers in the data, ranks them in the right order, and writes usable on-brand messages with realistic ranges.",
+  "biggest_mistake": "It counts kept sales from swaps as upside but does not net that against likely swap fulfilment costs or make the portal test plan as explicit as it could.",
+  "what_would_make_it_a_10": "Add a clearer measurement plan for the portal change and a slightly tighter profit view on swaps, not just revenue kept."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very usable, especially on measurement and rollout, and it correctly treats the fit-finder lift as needing a discount from the raw 19-point gap.",
+  "biggest_mistake": "It misses the owner's hoped-for day-3 update message and gives a single target table up top that feels more certain than the data supports.",
+  "what_would_make_it_a_10": "Include the proactive day-3 update, present expected results as a range, and rank the fixes more explicitly by money saved."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the one I'd rather pay for because it better matches the brief's desired message set and gives the honest ranges and ranking I asked for. Output 2 is strong, but it is a bit less aligned to the exact post-purchase flow I wanted."
+}

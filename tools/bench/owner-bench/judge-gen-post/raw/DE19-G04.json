@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 6,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the winning segment and pricing-change trigger, keeps step 1 link-free, and ties every list rule and the proof point back to the pilot data in a finance person's plain voice.",
+  "biggest_mistake": "Subject lines are lowercase and a touch thin, and the sequence is a safe single track with no real second angle for controllers who aren't mid-pricing-change.",
+  "what_would_make_it_a_10": "Add verified numbers (38/57 meetings, 6.8% vs 0.9%) directly beside the list rules and offer one genuinely different opener variant to test, all still under 120 words per email."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp prioritisation with a 'first move this week', a clear exclude table, and an honest projection that plans on the floor rather than a wish.",
+  "biggest_mistake": "Daily-step and '20-minute call' asks creep in and one factual claim is shaky (implied pricing-change timing links to close windows), plus the bolder-move tangent sends to watch-list controllers the brief says to hold, which risks souring the list.",
+  "what_would_make_it_a_10": "Keep every email to one question and one small ask under 120 words, drop the speculative bolder move, and verify each data claim (frame reply range as 6.8% floor against 7.9% trigger) before sending."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both write for the right segment, but Output 1 is tighter, cleaner on the no-link rule and one-question-per-email brief, and I'd trust its numbers and copy tomorrow with fewer edits."
+}

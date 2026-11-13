@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the segment case with real seat math (0.73 paid seats per recruiting signup, 57% of new paid seats) and writes the hero in Priya's own words, tying every section to a specific number from the data.",
+  "biggest_mistake": "Three proof slots are left as bracketed homework (security certifications, integration logos, customer quote), so the page cannot be pasted live without the owner filling blanks first, and the A/B plan gives no sample size or stopping rule.",
+  "what_would_make_it_a_10": "Replace the bracketed proof with concrete, verified assets (or explicitly cut those slots) and add the visitor count and run rules needed to call the hero test."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the segment choice concrete at a glance (733 paid seats per 1,000 signups versus 12 for coaching), puts security right beside the demo, reframes open source as the answer to Priya's security blocker rather than a hook, and hands over a test that can actually be run, with sample size, power and a projection.",
+  "biggest_mistake": "Some sections are only a headline plus one line, so the copy is a notch leaner than finished landing prose, and the hero leans on the survey phrase rather than Priya's sharper \"email tennis.\"",
+  "what_would_make_it_a_10": "Flesh the thinner sections into full, paste-ready copy and sharpen the H1 with the customer's own phrase, while keeping the test math exactly as it is."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick the right segment and get the numbers right, but output 2 gives me a test I can launch this week with a sample size and a projection, and no blanks to fill before the page goes live, whereas output 1's richer copy arrives with three bracketed proof slots I have to go and source."
+}

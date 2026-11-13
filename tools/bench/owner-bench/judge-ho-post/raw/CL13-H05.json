@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The ranking is built on tickets that can be removed, with the working shown. The forecast is an honest range (2,700 to 4,300 fewer tickets, $11,100 to $17,500) whose arithmetic checks out, and it leads with the bad news about Apple and Google refunds.",
+  "biggest_mistake": "It runs well over the 1,200-word limit, and it adds new articles beside the old ones instead of rewriting them, which leaves two overlapping balance pages and a thin plan for the week-2 pages.",
+  "what_would_make_it_a_10": "Cut it to 1,200 words, fold the 'bolder move' into the main plan, and make the new articles replace the old ones so the help centre has one page per task.",
+  "fix_note": null
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The three articles are practical and complete: Simplify debts can be checked and turned off, restore steps cover app and web, and the refund article covers Apple, Google and web payments plus how to cancel. It also adds the search-term tip for the 4,900 unclicked searches.",
+  "biggest_mistake": "The forecast is a single estimate of about 3,700 fewer tickets with only a 'half my shares' fallback, not a real range. It also plans to merge the 71%-helpful 'Recording a payment' article, which spends effort where the data shows little gain, and it never links the Settle up screen.",
+  "what_would_make_it_a_10": "Give a proper low-to-high forecast, drop the low-value merge, link the Settle up screen, and bring it under the 1,200-word limit.",
+  "fix_note": null
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both found the three right fixes and wrote usable articles. Output 1 gives the owner the honest range they asked for, shows the ticket numbers beside every action and in-app link, and is upfront about the Apple and Google refund limit. Output 2's articles are slightly fuller, but its plan is a little less focused and its forecast is a single number."
+}

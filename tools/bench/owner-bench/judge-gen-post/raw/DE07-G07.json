@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the migration problem that will repeat and builds real protection: a 1,000-user carry-over test, a one-step undo of old settings, and a staged rollout gated on migration tickets staying low.",
+  "biggest_mistake": "It leaves placeholders in the customer-facing X posts and email ([@author1], [Opens in __ ms on a __ Mac], [support address], [Extension] by [author]), which is homework for the owner.",
+  "what_would_make_it_a_10": "Fill every placeholder and add a short measures-and-plan-B section with a baseline, targets and a trigger for pausing the update."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It grounds the whole plan in a correct 17,080 retained-user baseline, sets targets against it, and adds a plan B with real triggers (over 50 carry-over tickets a day, under 5,750 creator installs by 11 Dec).",
+  "biggest_mistake": "The strong two-wave update idea is buried as a 'bolder move' at the end, and the email greeting 'Hi,' drops personalization for a 420,000 list.",
+  "what_would_make_it_a_10": "Pull the two-wave rollout into the main 'must be true' gates and keep the personalized email greeting, so the best protection and the copy are locked into the plan itself."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the channel math, the migration gate and community early access right, but Output 2 is more finished and more operational: no placeholders, an owner per task, a correct 17,080 baseline with targets and a plan B. Output 1's support-capacity and undo details are excellent, but the bracketed placeholders make it homework to ship."
+}

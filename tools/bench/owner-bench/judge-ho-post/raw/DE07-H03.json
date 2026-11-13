@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the three right calls in the right order and is honest about the numbers, halving the fit-finder gap for selection bias, warning that the plan runs through Christmas, and insisting on a holdout rather than last quarter.",
+  "biggest_mistake": "The post-delivery fit help is folded into the delivery email instead of a timed fit check, and the order-of-work dates (16-20 Nov) imply a start date it never lists as an assumption.",
+  "what_would_make_it_a_10": "Add a fit check two to five days after delivery for first-time bra buyers, with real fitting guidance in our voice, and state the assumed start date behind the Christmas warning."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "The message set is the best part: a fit check ten minutes after a first bra order with a two-hour size switch before picking, plus a day-five fit check with genuinely useful fitting words (band on the loosest hook, no gaps or spilling), all in our voice with one button each.",
+  "biggest_mistake": "It gives no way to prove the portal change (the holdout covers only messages) and never flags that the 60 days run into Christmas, so the January return spike will look like a failure.",
+  "what_would_make_it_a_10": "Pair the swap-first portal with a measured read (staged rollout or matched weeks) and warn that gift orders will distort tickets and returns through January."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the three fixes and the maths right, but Output 2's copy is the one I'd actually send and its pre-dispatch and post-delivery fit checks are exactly what Jess needs; Output 1 is sharper on measurement honesty and has the better fresh idea, so it's close."
+}

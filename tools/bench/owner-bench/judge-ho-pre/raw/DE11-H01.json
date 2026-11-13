@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the core signal — top-5 matte shades out ~30 Nov, re-carton the held 3,900 first, rush the top 5, skip slow lines — and lands inside ₹1.2 crore with a Monday task list and an honest back-in-stock message.",
+  "biggest_mistake": "The 22,000 rush + 25,000 standard for the top 5 is not clearly reconciled to the 3,770/week plus 2.5x sale week and leaves the total at ₹1.19 crore with only ₹1.3 lakh of buffer, which is thin if freight or a shade split pushes units up.",
+  "what_would_make_it_a_10": "Tighter unit math showing the rush qty covers sale week at 2.5x with a clean carry-over to 28 Dec, plus a shade-level split table for the five hero shades."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It builds a date-by-date top-5 stock table (5,200 sellable → 0 ~30 Nov → rush lands 7 Dec → 2.5x sale → standard lands 28 Dec), names owners on every action, and holds ₹5.87 lakh as real buffer while giving a clear weekly check and January reorder rule.",
+  "biggest_mistake": "The glitter palette clearance prices (₹899 add-on, ₹799 sale) and the 15,000-unit liquidation line are not tied to a gross-profit calc, so the 'turn it back into cash' promise is asserted rather than shown.",
+  "what_would_make_it_a_10": "Show the gross profit per palette under the ₹899/₹799/clearance paths (after pick-pack and marketplace fees) so the clearance decision is money-first, and tighten the back-in-stock copy to brand voice."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the core call right, but output 2's date-by-date top-5 table, named owners and weekly reorder rule are what I'd actually hand my ops lead on Monday; output 1 is close but its rush/standard quantities are harder to defend and the buffer is thin."
+}

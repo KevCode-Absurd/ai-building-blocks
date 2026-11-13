@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts directly on the real signals in the data: APAC hours, weekend clarity, and replacing resumes with a short written exercise weighted highest.",
+  "biggest_mistake": "It invents an interview structure and includes a slightly awkward scoring formula, and the opening line is a bit more dramatic than our usual voice.",
+  "what_would_make_it_a_10": "Tighten the voice a touch, simplify the scoring math, and make the application exercise fully specified without adding extra assumed interview steps."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sounds close to us and clearly turns the application into a writing-first process that welcomes career changers and states the schedule plainly.",
+  "biggest_mistake": "It adds a second written stage and a 100-word 'why this job' field that are not strongly supported by the data and add review work back into the process.",
+  "what_would_make_it_a_10": "Make the initial written exercise the main filter, remove the low-signal extras, and add fuller 1, 3, and 5 anchors across the scorecard tied more directly to the work."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more built on our data and solves the drowning problem better. It weights the right signal, states the APAC need and weekend rotation clearly, and gives the hiring team a more usable scorecard."
+}

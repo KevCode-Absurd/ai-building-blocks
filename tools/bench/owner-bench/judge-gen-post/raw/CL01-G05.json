@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It names the Asia-Pacific overnight gap and leads with honest hard parts: the hours, a clear weekend rotation with a yearly count, and a local-time table. It also turns the application into the reply exercise, with hours math that checks out.",
+  "biggest_mistake": "The application's centerpiece, 'a real ticket from the last 90 days', is never written out. It also puts 45% of the scorecard weight on interview rows, even though interview signals predicted little.",
+  "what_would_make_it_a_10": "Write the actual customer email for the application, shift more weight to writing (including handoff notes), and add a clear offer threshold."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows the 0.62 signal all the way through. A ready-to-paste customer email sits in the form, writing to customers carries 50% weight and writing for teammates another 15%, there is a clear offer rule, and the review-hours math is correct (70 vs 160).",
+  "biggest_mistake": "The 15% 'Conversation' line is close to the interview impression the data says barely predicts anything. The rotation and hours sit a few sections down rather than right under the salary.",
+  "what_would_make_it_a_10": "Make the interview score structured, behavior-based rows, and put hours plus the weekend rotation right next to the salary at the top."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the time zone, weekend and writing-first logic right. I could post the second one tomorrow because the customer email is already written, writing dominates the scorecard, and it tells me when to make an offer."
+}

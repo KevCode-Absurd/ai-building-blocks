@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 5,
+  "priorities": 6,
+  "reasoning": 5,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 6,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The copy perfectly nails the blunt, honest brand voice while keeping strict adherence to Meta's display limits and character counts.",
+  "biggest_mistake": "It claims 'no budget was given' instead of calculating the historical daily spend from the provided 90-day data table.",
+  "what_would_make_it_a_10": "Deducing the daily spend from the past data to build a rigorous, math-backed media plan, and including a headline specifically focused on taste."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Expertly deduces the historical daily budget (₹6,333) from the 90-day spend table and builds a rigorous, math-backed media buying test plan with hard cut rules.",
+  "biggest_mistake": "It misses the specific opportunity to write a headline focused on taste, only dedicating primary texts to the top review theme.",
+  "what_would_make_it_a_10": "Adding one or two headlines that explicitly focus on taste to fully capitalize on the fact that 26% of reviews praise the flavor."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 acts like a true e-commerce media buyer by calculating your historical daily spend to set a realistic budget, and provides hard, math-backed rules for pausing and tracking. Output 1 simply complains that no budget was given and provides a much shallower test plan."
+}

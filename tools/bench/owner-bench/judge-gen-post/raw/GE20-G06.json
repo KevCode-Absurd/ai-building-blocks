@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The math and projections are flawless, translating raw data into exact business impact for every recommended move.",
+  "biggest_mistake": "The working text under the first table is slightly dense, though the math itself is perfectly accurate.",
+  "what_would_make_it_a_10": "It is already a 10, delivering exactly what the brief asked for with incredible analytical rigor."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Effectively isolates the agency segment as the main source of Semrush losses and calculates the lost trial shares accurately.",
+  "biggest_mistake": "Move 5 is generic content marketing advice ('Publish studies...') which the owner's notes explicitly stated would be annoying.",
+  "what_would_make_it_a_10": "Replace the generic content move with a product or growth lever tied directly to the data, and provide deeper projections for the outcomes."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 executes the math brilliantly, showing exactly how many customers are lost and what fixing it will yield in revenue and retention. It perfectly captures the brand voice, avoiding generic advice while delivering a highly original product-led growth idea in Move 5."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the in-app checkout bug first with the money sized, then ranks five tests by expected impact with honest detectable effects that respect the 0.56% mobile conversion reality.",
+  "biggest_mistake": "The hero image test ranks last but still carries a projected ₹5.9 lakh gain on the thinnest evidence, which slightly overstates its value against the delivery and size tests.",
+  "what_would_make_it_a_10": "Trim the hedgey projections on the weakest test and add a one-line sample-size sanity check for the 4-week all-device tests to prove the 9.9% effect is reachable in the traffic."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The funnel table by browser is a sharp, honest read that names the in-app checkout bug with the near-exact error-to-drop-off match.",
+  "biggest_mistake": "It spends one of only five test slots on a combined image-and-reviews test rather than isolating the highest-confidence page change, and it leaves EMI amounts and firmness ratings as fill-in blanks, so it is not ready to run.",
+  "what_would_make_it_a_10": "Split the image and reviews into separate, ranked tests or drop the image test for an isolated reviews move, and fill the EMI and firmness numbers so the page copy can ship as written."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is tighter, ranks the five tests more honestly against the traffic reality, and is ready to brief to the team, while Output 2 is useful but leaves blanks and spends a test slot on a weaker combined change."
+}

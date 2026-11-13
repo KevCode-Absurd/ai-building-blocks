@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly takes apart the 4.0 ROAS, shows PMax is losing money without brand, puts the pointed-flat feed fix first, and reallocates the full $240,000 toward the proven winners.",
+  "biggest_mistake": "The forecast for brand search holding almost all PMax brand value at much lower spend is a reasonable assumption but still a bit optimistic and should be watched closely.",
+  "what_would_make_it_a_10": "Add slightly tighter week-2-to-4 rules by campaign and a clearer check for incremental brand value after the brand exclusion."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the clearest profit story, including that non-brand Google lost money, and adds a thoughtful geo test for whether broad PMax has delayed brand-building value.",
+  "biggest_mistake": "It undercuts the brief’s $240,000 spend plan by expecting a large amount to stay unspent, and some PMax instructions are too blunt or platform-risky, such as products-only/no image-video and broad negatives.",
+  "what_would_make_it_a_10": "Make the $240,000 deployment and daily pacing fully consistent, remove questionable PMax setup instructions, and keep the bolder geo test secondary to the proven feed and budget fixes."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I could hand to the team tomorrow: the numbers add up, the first action is the feed issue, and the budget moves directly toward bags, washable, and standing-all-day searches. Output 2 has good insight, but it is less operationally clean and takes a few platform and budget risks I would need to fix first."
+}

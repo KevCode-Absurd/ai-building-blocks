@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks the right segment and trigger, keeps step 1 link-free, and gives an honest projection that refuses to multiply the 6.8% segment gain by the 7.9% trigger gain because the pilot never tested them together, with a check-after-300-sends rule.",
+  "biggest_mistake": "It ships a cold outbound sequence with no opt-out line or postal address, so I cannot legally send it without adding the compliance footer myself; it also puts the 9-to-4-day proof in step 1 rather than a later step as asked, and runs at or over the 900-word limit.",
+  "what_would_make_it_a_10": "Add the opt-out and postal footer, move the 140-person 9-to-4 proof to step 2 or 3, and open the document with the one thing to do this week."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the call and a concrete first move this week, and it is the only version that ships send-ready with an opt-out line, postal address and a send window that avoids a controller's close week.",
+  "biggest_mistake": "The fixed 12th-15th start window rests on an invented assumption about when close runs, so a pricing change flagged mid-month can sit for weeks and lose exactly the freshness the data rewards.",
+  "what_would_make_it_a_10": "Keep the close-week dodging but send within days of the flag unless it lands inside close, and paste the signature and opt-out inline in each email instead of stating it as a rule."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the segment, the pricing-change hook and the no-link step 1 right and both projections check out, but output 2 tells me what to do first this week and is sendable as written, while output 1 leaves me to add the opt-out and postal address and may run past the word limit. Output 1's refusal to multiply the two gains is the better piece of reasoning, so this is close, but output 2 is the one I would hand to the team tomorrow."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 7.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A complete Monday-ready plan: tracking set-up, nurse and server Spark Ads from day 1, a budget that adds to $30,000, kill and scale rules in dollars, and a day-30 scorecard tied to the $38 target and an own-store new-customer check.",
+  "biggest_mistake": "The hooks are thin and not in Maria's and Tasha's own words (Concept 5 just says 'Same as Concept 1'), and the day-30 table mixes Pass/Hold/Fail thresholds without saying which source of orders decides.",
+  "what_would_make_it_a_10": "Write every hook in the customers' real phrases, state one clear source of truth for the day-30 verdict, and add a holdout or a stronger incrementality check."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ready-to-shoot creative that opens on the foot problem in the customers' own words ('My feet don't ache by hour ten', 'Pricey, but I'm never going back') and closes with 'One purchased = one donated' as a fact, supported by shown working for every threshold ($27.10, $38.46, $57, the learning bar).",
+  "biggest_mistake": "The day-30 release rule is somewhat convoluted, with a $50 store-tag threshold and three reads. Even a pass only 'holds' spend at about $1,625 a day, so it is cautious about scaling.",
+  "what_would_make_it_a_10": "Simplify the day-20 and day-30 decision into one clear primary read with the others as checks, and say what to do when the licensed Spark posts expire in March."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 reads like a plan I could hand to the team and shoot: the hooks sound like Maria and Tasha, the brand rules hold (the donation line only as a closing fact, no discount lead), and the math is shown. Its three-read day-30 test plus a holdout is the stronger answer to whether TikTok really earned more budget."
+}

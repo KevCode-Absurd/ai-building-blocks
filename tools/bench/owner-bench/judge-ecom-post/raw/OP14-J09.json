@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It cleanly separates what the data proves from what still needs checking, then turns that into a ranked, owner-ready plan with clear stop rules, owners and a practical weekly scorecard.",
+  "biggest_mistake": "It slightly overstates one paid-spend point and keeps some impact sizing fairly rough, especially on the 'we spend about 19% more to get 11% fewer new customers' framing.",
+  "what_would_make_it_a_10": "Tighten the few impact calculations and add one sharper quantified target for abandoned-flow recovery based on Brooklinen's own pre-move baseline rather than directional estimates."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It adds useful financial framing, especially the contribution-after-ads baseline and the explicit gain ranges by move, which helps an owner see the size of each bet.",
+  "biggest_mistake": "Several sizing assumptions and formulas are too speculative or shaky for decision-making, and some tactics stray from the brief's 'what the numbers prove' standard into practitioner lore and invented precision.",
+  "what_would_make_it_a_10": "Keep the strong financial framing but strip out weak assumptions, correct the gain math, and anchor each target to the store's actual historical baseline rather than external yardsticks or modelled estimates."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could run tomorrow with less cleanup: it sticks closer to what my data actually proves, nails the priorities I care about, and gives the stop/do/owner structure I asked for. Output 2 has some smart thinking, but it leans too hard on modelled numbers and extra assumptions I would want checked before acting."
+}

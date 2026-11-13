@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built entirely on our own signals: the on-feet creator watch times, the Meta hook cost table, the $27.10 first-order and ~$38 90-day break-even, with kill and scale rules in dollars and a day-3 tracking gate.",
+  "biggest_mistake": "The day-30 dollar projections ('790 new customers') and some kill thresholds are more precise than the underlying data supports, and the $38.46 90-day break-even uses a slightly odd fee formula that should be shown more plainly.",
+  "what_would_make_it_a_10": "Cut the false-precision projections and lock the day-30 read to the holdout plus a clean 90-day contribution calculation shown in one line."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 7,
+  "voice": 6,
+  "range": 6,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Clear, readable structure with a usable weekly refresh rule and a sensible 'own the rights before March' note.",
+  "biggest_mistake": "It invents a Scale campaign and a Day-30 pass/fail on first-order cost alone, and its day-30 '790 first orders' bar and the '$45,000 month 2' jump ignore that a first order only earns $27.10, so the decision rule can greenlight losing money.",
+  "what_would_make_it_a_10": "Replace the vague 'Days 15 to 30' read with a store-vs-platform check and a holdout, and tie every scale number to the 90-day contribution, not the first order."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like it was built from our data: it leads with the nurse and server videos, uses the Meta hook costs, sets the $38 bar on 90-day contribution and gives dollar kill/scale rules I can hand to the team; Output 2 is cleaner to skim but its day-30 bar and scaling can lose money."
+}

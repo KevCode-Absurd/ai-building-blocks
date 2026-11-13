@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It brings back the switched-off 1-month pause as the main save and puts the 1,771 subscribers and £15,936 a month on it, so most of the flow rests on our own 2025 test rather than on hope.",
+  "biggest_mistake": "There is no holdout, only a kill rule, so I can't prove the 1,330 lift the way I'd insist on, and the 'UK subscription rules from January 2027' line is a specific date I can't verify from the brief.",
+  "what_would_make_it_a_10": "Keep a 10% slice on today's flow for eight weeks and give a per-reason read at day 90 next to the kill thresholds, and this is the version I'd sign off."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The 10% holdout for eight weeks and the logging to 30, 90 and 180 days are the most operational build notes of the two, and the 'smaller daily goal' panel gives the not-progressing group something to do that isn't a discount.",
+  "biggest_mistake": "The £607 on the 50%-off switcher row is roughly double the truth — 67 people at half price is about £301 — which is exactly the mistake of counting discounted subscribers at full price.",
+  "what_would_make_it_a_10": "Price the discount row correctly and either drop the half-price offer to switchers or show the evidence for it, and I'd trust the headline number without re-doing the sheet."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 keeps the money honest, refuses discounts nobody has earned and makes the pause the main event, while Output 2's thinking is nearly as good but prices its one discount row at about twice what it's worth — on the number I said I'd check. Both are buildable next sprint; I'd ship Output 1 with a holdout bolted on."
+}

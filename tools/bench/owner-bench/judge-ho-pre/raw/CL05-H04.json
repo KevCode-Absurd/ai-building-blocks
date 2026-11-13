@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 7,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A disciplined flow with no discounts, the pause brought back for 'no time', and full copy for every reason. The money is worked through honestly (+1,329 kept, about +£10,700 a month) and the answer says the pause is the only well-supported row.",
+  "biggest_mistake": "It runs well past the 1,000-word limit, and it gives the team a pre-launch checklist and a metrics list but no build order or holdout test to prove the lift.",
+  "what_would_make_it_a_10": "Cut it to the word limit and add a build order plus a holdout group to show the lift against today's flow."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It restores the pause as the main save (79% of the subscribers kept). It adds build notes and a 10% holdout for 8 weeks, which is the right way to prove the lift. It also adds a fresh 'smaller daily goal' option for learners who already have a reminder.",
+  "biggest_mistake": "It keeps a 50% discount for app switchers on an untested 3.5% guess, and the £607 for that group is counted at full price although labelled 'after discount'.",
+  "what_would_make_it_a_10": "Drop the switcher discount, or label it clearly as a test, and add the first-month metrics with target numbers."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both rebuild the flow around the pause, the 12-month switch and the reminder, and the numbers are near-identical. Output 2 stays within the length, has build notes and a holdout test, and adds a fresh idea. Output 1 has warmer copy and avoids the switcher discount, but it runs long."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 7,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Brings back the paused 1-month pause as the main save and proves it is the whole business case: 1,771 of the 2,210 kept, with the blunt warning that without it the flow keeps about 440 and does worse than today.",
+  "biggest_mistake": "The 12-month revenue row does not reconcile with its own stated churn basis: 842 subscribers at £9 with 6% monthly churn after 90 days is about £73,400, not the £83,100 shown, so the '+£98,200' delta and the '£1.18m' claim are built on a number that does not trace (the error understates the improvement, but an owner checking will notice).",
+  "what_would_make_it_a_10": "Show the month-by-month working behind the 12-month figures so every number ties to the churn assumption, and drop the loose '£29,160 a month' label for the 3-month discount cost."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The cleanest read of the two: sharp per-reason panels with genuinely useful extra ideas (a 'remind me in 3/6 months' for trip-over cancellers, a smaller daily goal for people who already have a reminder), and a 10% holdout against today's flow.",
+  "biggest_mistake": "It keeps 50% off for 'switching apps' and gives no honest range or sensitivity, then stacks to '£136,000 per monthly group' with no churn applied, so the headline value is the rosiest version rather than the defensible one.",
+  "what_would_make_it_a_10": "Add a low/base/high range with the working, apply a churn assumption to the annual figure, flag that £9.00 is assumed to be the monthly price, and put the pause rebuild at the top as this week's critical-path job."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are buildable and on-voice, but Output 1 gives me the money story I can defend - the pause carries 80% of the save, the cost of not having it, an honest range, and a this-week critical path - while Output 2 leaves a discount running for switchers and quotes a churn-free £136k. Output 1's 12-month revenue row needs reworking, but it does not change the decision."
+}

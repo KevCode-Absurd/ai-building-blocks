@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Calculates the expected RTO loss per COD order by tier (₹70 in Tier 3 vs ₹27 in Metro) and ties prepaid switch incentives directly to those margins while protecting full price in metros.",
+  "biggest_mistake": "Doesn't suggest shifting agent working hours to cover the 31% 8 pm–midnight chat spike, relying solely on automated night replies.",
+  "what_would_make_it_a_10": "A ready-to-use staffing shift schedule for the 4 agents alongside the bot to handle live evening chat spikes."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The practical operational suggestion to shift one of the 4 agents to a 2 pm to midnight shift directly solves the after-hours chat backlog.",
+  "biggest_mistake": "Fails to differentiate prepaid switch incentives across pincode tiers, leaving Tier 3 RTO without an economic lever.",
+  "what_would_make_it_a_10": "Tying the prepaid nudge incentives directly to the differential RTO loss across tiers instead of relying on a generic zero-incentive message."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 treats the business like a profit-focused operator: it models the exact loss per tier (₹70 in Tier 3 vs ₹27 in Metro), sizes the prepaid discounts accordingly, and proposes a partial-advance COD test that directly tackles the ₹5.5 lakh Tier 3 leak."
+}

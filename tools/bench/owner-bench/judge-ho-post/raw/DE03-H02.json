@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes the 4.0 ROAS apart against the 2.5 break-even, puts the feed fix first, and lands a $240,000 split with profit ranges that add up.",
+  "biggest_mistake": "The base-case brand Search ROAS of about 25 and $455,000 of value is a big assumption that inflates the profit uplift, and the 2.6 PMax target is only loosely justified given non-brand PMax runs at 2.03 today.",
+  "what_would_make_it_a_10": "Show the brand Search estimate with a floor and a ceiling and tie the PMax target to the feed fix actually landing, so the profit range is built on evidence rather than a single bullish assumption."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 10,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Groups brand Search and PMax brand together honestly, warns that Google-reported revenue will fall, and adds a state-split test with a stated risk cost.",
+  "biggest_mistake": "Cuts $146,300 of spend and holds $104,000 in reserve, which under a $240,000 ceiling starves the proven bags and 'washable' winners and makes the month slow to read; the 13% revenue-drop framing is right but buried.",
+  "what_would_make_it_a_10": "Move the reserve rule into the plan as a firm sequence so proven winners get funded first, and lead with the one clear profit number and first action instead of a long setup."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 wins because it puts the feed fix, the brand exclusion and a fully-funded $240,000 split first, with profit ranges the owner can check, while Output 2's large reserve and state-split test add risk and reading burden before the simple wins are banked."
+}

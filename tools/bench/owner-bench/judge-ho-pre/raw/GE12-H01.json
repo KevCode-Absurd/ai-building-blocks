@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sizes the expensive rush order to perfectly bridge the gap until the standard order lands on December 28, which minimizes the premium paid.",
+  "biggest_mistake": "Suggesting a 'Notify me' button instead of taking guaranteed pre-orders means customers with impending events will likely switch brands out of uncertainty.",
+  "what_would_make_it_a_10": "Take pre-orders to secure the cash and the customer immediately, and explicitly show the date-by-date math for the top 5 shades."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It brilliantly spots the missing shade-level data for foundation and kohl, calculates the exact worst-case cost (₹4.17 lakh) to rush them, and holds back just enough cash to cover it.",
+  "biggest_mistake": "It slightly mixes B2C and B2B economics in the liquidation step; selling to bulk liquidators won't incur per-unit pick, pack and ship fees.",
+  "what_would_make_it_a_10": "Recognize that clearing dead stock to liquidators is done in bulk, so per-unit fulfillment minimums don't apply and taking a loss on cost is standard."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both outputs did the complex math perfectly, which is rare. Output 2 wins for acting like a true operator: it built a precise financial contingency for the data it didn't have, and its date-by-date table leaves zero doubt that the plan works."
+}

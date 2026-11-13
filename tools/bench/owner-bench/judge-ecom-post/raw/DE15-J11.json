@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the in-app checkout bug first and sizes it correctly (about 560 extra orders, ₹34 lakh gross margin), then gives each test money, guardrails and a detection threshold.",
+  "biggest_mistake": "Test 5 bundles two changes (new hero image plus moving reviews) so a win tells you nothing about which change did it, and the A/A week is wasted at 0.56% conversion.",
+  "what_would_make_it_a_10": "Split test 5 into one change, drop the A/A week, tighten the under-powered 2-week mobile sample sizes, and add a scannable ranked table up top."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Operationally complete: a ranked summary table, a two-lane factorial design with an interaction check, no-peek/ship rules, precise per-version sample sizes, and a fresh delivery-day-picker idea.",
+  "biggest_mistake": "Weakens the firmness signal (19% of chats) by folding it into review tabs instead of answering it directly, and leaves the EMI figure as a placeholder (₹X).",
+  "what_would_make_it_a_10": "Give firmness its own clear on-page answer backed by the real rating, and fill the EMI placeholder with the store's actual plan amounts."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both are strong and fix the bug first with sound money maths, but Output 2 is the one I'd hand my team: it reads faster, its sample sizes are exact, it handles test interaction, and it gives me a bolder delivery-day idea. Output 1's bundled hero-plus-reviews test means a win wouldn't tell me what worked."
+}

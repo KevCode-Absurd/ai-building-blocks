@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the two big signals: the Asia-Pacific coverage gap and the fact that writing predicts success far more than years or tools.",
+  "biggest_mistake": "The application is not fully ready to run because it does not include the actual customer-reply prompt, and the piece likely runs over the 1,100-word limit.",
+  "what_would_make_it_a_10": "Add a ready-to-paste customer email exercise and trim the operational detail while keeping the strong scorecard and APAC-hours positioning."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is publishable, plain-spoken, honest about salary, hours and weekends, and puts the written customer reply at the center of the process.",
+  "biggest_mistake": "The application reply prompt gives too few facts to test problem-solving well, and the extra 'why this job' question is a weaker signal than the exercise.",
+  "what_would_make_it_a_10": "Give the written exercise enough customer/account facts to score problem solving as well as tone, and remove or de-emphasize the low-signal motivation question."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is closer to something I could post tomorrow: it has the salary up front, the APAC need, the weekend rotation, the career-changer welcome, and an actual application exercise. Output 1 has a stronger operations plan, but it is less ready because the exercise itself is missing and it needs trimming."
+}

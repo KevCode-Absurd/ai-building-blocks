@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes the 4.0 apart against the 2.5 break-even, and every profit, budget and forecast number checks out: $36,708 lost in non-brand PMax, a split that totals exactly $240,000, and $1,114,700 base value.",
+  "biggest_mistake": "It keeps $128,000 in PMax and forecasts a 2.2 cautious case, which is below break-even, and adds no negatives to stop the 1.2 broad and 1.6 sustainable spend from leaking back in.",
+  "what_would_make_it_a_10": "Add negatives for broad and sustainable terms, move PMax to products only, and set explicit week 2–4 cut and scale rules with a new-customer guardrail."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It cuts exactly the $146,300 of loss-making spend and backs that with concrete PMax mechanics: brand exclusion, negatives, products only, and final URL expansion off. It adds week-by-week rules, a new-customer guardrail, owners for each step, and a costed regional test of whether broad spend builds brand.",
+  "biggest_mistake": "The $198,000 profit forecast doesn't show how much of the $104,000 reserve it assumes gets spent, and parking that much unspent may look to the CFO like an underspent plan.",
+  "what_would_make_it_a_10": "Show the line-by-line working behind the $198,000 profit forecast, and add search ad or asset copy built on Claire's 'stand in for eight hours' language."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both find the brand subsidy and get the numbers right, but Output 2 actually stops the money-losing spend with negatives and products-only PMax, gives me rules and a guardrail for weeks 2 to 4, and tells me honestly that reported revenue will drop. Output 1 still leaves $128,000 in a PMax that its own cautious case puts below break-even."
+}

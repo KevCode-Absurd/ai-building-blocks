@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It flawlessly incorporates the data signals and persona quotes, nails the exact brand phrase requested, and provides a brilliant matrix mapping out all 24 posts.",
+  "biggest_mistake": "It narrowly misses using the exact requested customer quote 'switch my brain off' (opting for 'Brain still on?' instead), though it captures the spirit perfectly.",
+  "what_would_make_it_a_10": "Using the exact customer phrase 'switch my brain off' in a hook would make it absolutely flawless."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Provides solid, clear logic with a strong weekly rhythm and accurate math for the performance baseline and projections.",
+  "biggest_mistake": "Misses the specific brand phrase 'Take a breath. You've got this.' explicitly provided in the brand guidelines.",
+  "what_would_make_it_a_10": "Include the requested brand phrases, push the boundaries with fresh ideas beyond just the templates, and map out the content plan for all four weeks instead of just themes."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 went above and beyond by writing hooks for all 24 posts and pitching a data-backed 'bolder move' live stream. It also correctly applied the exact brand phrases from the brief, whereas Output 2 missed them."
+}

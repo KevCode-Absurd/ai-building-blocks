@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the core signals correctly and turns them into a workable plan: heavy sleep focus, four narrator clips a week, evening posting, and a sensible week-1/no-review approach.",
+  "biggest_mistake": "It leaves too much of the month in a repeated weekly template and keeps more kindness volume than the data really earns versus sleep.",
+  "what_would_make_it_a_10": "Give a fully specific week-by-week schedule with lighter kindness, more explicit use of the young professional's language across the month, and remove the off-strategy daytime parent test unless clearly framed as a small test."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It has sharper owner-style prioritisation, especially calling out narrator clips as the main bet and giving a realistic low/base/high outcome frame.",
+  "biggest_mistake": "It makes a key wrong call on review by saying none of the later posts need review, despite week-3 copy that explicitly names a sleep condition, and it adds speculative live-stream advice outside the brief and capacity.",
+  "what_would_make_it_a_10": "Tighten the plan to the brief, fix the review/compliance logic, and remove unsupported extras like the live-stream test unless capacity, rights, and tracking are clearly validated."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd rather hand to the team tomorrow: it fits the data, respects the review timing, and stays within capacity. Output 2 is smart in places, but the review mistake and extra live-stream detour make it less safe and less ready."
+}

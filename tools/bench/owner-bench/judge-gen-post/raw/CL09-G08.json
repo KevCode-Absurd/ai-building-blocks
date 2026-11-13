@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It goes straight at the Essentials 8+ leak (9.6% churn, about $24k lost a month) with one flat plan, correct base and downside math, and a clean test with go and stop thresholds.",
+  "biggest_mistake": "It treats yearly billing as a side note at the point of switching, so it never fixes the page that defaults to monthly. That is the cheapest retention win in our data.",
+  "what_would_make_it_a_10": "Also make yearly visible by default and in-app for everyone, and size what that is worth inside the board's two-quarter window."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches all three signals in our data: the 8+ churn leak (worth more than all 41,000 small shops combined), the hidden yearly option, and that the 12-month promise means only churn and uptake count in two quarters. It also gives low, mid and high cases and is honest about the near-zero low case.",
+  "biggest_mistake": "The extra 'bolder move' and the 25-channel cap make the plan more tempting for Team customers to move down to. Adding those features drifts toward the menu I said I didn't want, and the mid-case churn of 3.5% looks optimistic.",
+  "what_would_make_it_a_10": "Drop the bolder-move section, justify why the cap is 25 channels rather than a tighter fence against Team, and tighten the prose to make it easier to scan."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick the right flat Agency plan with sound math. The second one also fixes hidden yearly billing and tells me plainly what can and can't move revenue inside the board's two-quarter window."
+}

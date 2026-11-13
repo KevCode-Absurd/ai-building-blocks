@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It nails the exact persona requirements immediately by putting 'The three numbers' and a 1-line 'What we need' above the fold, complete with forwardable snippets for the asks.",
+  "biggest_mistake": "Very little to fault, though the breakdown of the $2.2M burn could have been styled in a tiny 3-line table like O2 did for even faster scanning.",
+  "what_would_make_it_a_10": "It is already a 10/10 investor update that could be sent to real investors tonight without editing."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Segmenting the asks by audience (everyone, angels, lead partner) and adding a clear table for the burn breakdown.",
+  "biggest_mistake": "Splitting 'What went wrong' and 'What we're doing about it' into two separate lists forces the reader to match problems to solutions across sections.",
+  "what_would_make_it_a_10": "Pair problems with solutions inline, put Customer A first in the bad news section, and provide ready-to-forward blurbs in the asks."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are exceptional drafts, but Output 1 is slightly sharper: it pairs each problem directly with its concrete fix, includes ready-to-forward blurbs for the asks, and satisfies the lead partner's desire for the three numbers plus asks right at the top of the email."
+}

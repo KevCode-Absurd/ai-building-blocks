@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It writes the sequence to the one segment and moment the pilot actually rewards, then backs it with honest, checkable maths that refuses to multiply the two gains (6.8% floor, 7.9% ceiling) and shows the per-100 and all-1,900 counts.",
+  "biggest_mistake": "Step 1 asks how many days the close takes but then tells them to reply 'yes' if it runs past five, so the answer and the reply key do not quite line up.",
+  "what_would_make_it_a_10": "Tighten the step 1 call to action so the reply they are asked for answers the question they were just asked, and add one line on how a reply is handled (e.g. 'yes' and 'steps' routing) so the sequence can be run without the owner stepping back in."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the decision and the first move this week, and adds genuinely useful pieces the brief did not spell out: reply handling, an A/B test instruction, and a clean leave-out table with pilot results beside each reason.",
+  "biggest_mistake": "It invents a send window ('start step 1 between the 12th and the 15th, so step 4 lands before close') and a 4.0% positive-reply top end that are not in the brief or the pilot, and the 'bolder move' sprays the watch list with a 1.8% generic-style opener, which contradicts the data's own lesson.",
+  "what_would_make_it_a_10": "Ground the send-timing advice in the one signal the data gives (pricing-page flag, within 60 days) instead of an assumed close calendar, and drop the watch-list spray option so every recommendation follows the pilot."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both would be usable, but Output 1 is the one I would run as written: every number traces to the pilot, the segment, trigger, no-link rule and 9-to-4-day proof are all in the right place, and it does not invent a send calendar or a positive-reply ceiling I cannot verify. Output 2 is strong on presentation and reply handling, but the made-up 12th-to-15th window and the off-data watch-list spray dilute the same insight."
+}

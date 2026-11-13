@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Directly tackles the hero lipstick bottleneck, nails the ₹1.2 crore budget constraint, and provides an honest, on-brand back-order customer messaging plan.",
+  "biggest_mistake": "Unnecessarily delays placing standard POs to Friday 20 November instead of Monday 16 November, pushing delivery past Christmas to 1 January.",
+  "what_would_make_it_a_10": "Place all POs on Monday to land standard stock before year-end, and recognise that re-cartoning 3,900 units on top of 9,100 stretches coverage nearly to rush arrival."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Gives the ops lead an airtight Monday schedule with all POs placed immediately, plus practical moves like ad-pausing and order caps to mitigate the stock gap.",
+  "biggest_mistake": "Assumed the 3,900 held units were inside the 9,100 on-hand count rather than additive, predicting a stockout that is worse than the raw numbers allow.",
+  "what_would_make_it_a_10": "Treat the 3,900 re-cartoned units as additive to reach 13,000 units, which completely bridges the gap to the 7 December rush delivery."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is cleaner operationally: it places all purchase orders on Monday so standard stock lands on 28 December rather than 1 January, and provides smart commercial tactics (order caps, ad pausing) to preserve stock for bridal pros and sale week."
+}

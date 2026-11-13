@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the top real pair (face wash + serum) first, protects the serum reorder against a ₹699 line, and builds the threshold math and COD/RTO leak into one coherent money story.",
+  "biggest_mistake": "The Break-even column for Glow Routine mixes two bases: the 136 figure compares ₹537 vs ₹337 (serum alone), but the stated pair saving is ₹35 against existing pair buyers, so the math basis isn't consistent across the three bundles.",
+  "what_would_make_it_a_10": "Show one consistent break-even basis (either incremental vs. the current best single item or vs. existing pair buyers) and quantify the expected lift with a stated range, not just a break-even threshold."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Sharpest idea in either answer: the serum-page price ladder (₹599 → ₹749 with lip balm → ₹999 routine) and the ₹599 threshold that still lets the serum ship free, plus the clear 'why not ₹699' reasoning.",
+  "biggest_mistake": "Key numbers don't tie out: it calls the two-item pair with a lip balm 'saves ₹49' when ₹599 + ₹199 - ₹749 = ₹49 but then says '+₹150 more' for the same shopper, and the ₹599 threshold table mixes ₹271-per-order loss estimates with an assumed 6% slice that is invented and would swing the whole recommendation.",
+  "what_would_make_it_a_10": "Rebuild every money number from one clean model with the actual ₹499–₹598 slice sourced rather than assumed, fix the internal inconsistencies in the serum + lip balm profit, and use the same break-even basis for the three bundles."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 has a consistent spine: it picks plausible bundles, defends keeping ₹499 with the RTO line, and shows its break-even and threshold working in a way I can audit; Output 2 has the better single idea (the serum-page ladder) but its numbers contradict each other, which I would not sign off on."
+}

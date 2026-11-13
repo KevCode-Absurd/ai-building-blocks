@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Provides extremely accurate revenue math and traces every assumption back to the data provided.",
+  "biggest_mistake": "Lacks a clear build order for the product team, which was a specific request in the brief.",
+  "what_would_make_it_a_10": "Add a concrete, prioritized list of build notes for the next sprint and provide a more thoughtful option for the 'switching apps' group."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliantly repurposes the existing 50% discount strictly for those switching apps, and includes a perfect set of build notes for the sprint.",
+  "biggest_mistake": "Assumes £9 is the monthly price when quoting to the customer, when it is actually the blended average revenue per user.",
+  "what_would_make_it_a_10": "It is a 10, but changing the exact monthly price placeholder to reflect that £9 is just the ARPU would make it completely bulletproof."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 reads exactly like the work of a senior product manager. It includes a specific build order for the sprint, smartly saves the existing discount for app-switchers (a brilliant insight), and even handles edge cases like users who already have a reminder set."
+}

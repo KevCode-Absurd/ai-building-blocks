@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Deducting the margin lost to natural returners who would have bought anyway shows top-tier commercial thinking.",
+  "biggest_mistake": "Leaving the 46 to 90 days 'at-risk' segment out of the main target table makes the sequence slightly disjointed, even though the strategy for them is spot on.",
+  "what_would_make_it_a_10": "Integrate the day-28 nudge directly into the wave planning table so the team sees exactly when every segment fires."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The holdout math is extremely precise, accurately stripping out the 10% control group and unavailable subscribers before calculating lifts.",
+  "biggest_mistake": "Asking Monsoon Dark buyers to fill out a quiz instead of just recommending the closest dark roast match creates unnecessary friction for a segment with a known preference.",
+  "what_would_make_it_a_10": "Recommend the Monsoon Dark match directly in the email and shift the 'slipping' sequence earlier, as day 68 is too late for a 34-day median gap."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 perfectly understands the customer experience: it gives the Monsoon Dark match immediately, proves the delivery fix with hard numbers, and applies the brand's 'how you brew' phrase brilliantly to equipment buyers. Its financial logic regarding organic returners seals the win."
+}

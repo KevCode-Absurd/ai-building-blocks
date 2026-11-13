@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Dissects the 4.0 ROAS against the 2.5 break-even immediately and clearly isolates non-brand search into dedicated campaigns for the winning themes.",
+  "biggest_mistake": "Does not explicitly warn the executive team that cutting unprofitable spend will cause top-line reported revenue to dip initially.",
+  "what_would_make_it_a_10": "Add accountability owners and 'done when' completion criteria to the first-week roadmap."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Combines fearless commercial honesty about the impending top-line dip with an actionable delegation table and a disciplined regional holdout test for brand-building broad spend.",
+  "biggest_mistake": "Holding back $104,000 in reserve may be slightly too conservative for a 30-day window without an accelerated weekly deployment trigger.",
+  "what_would_make_it_a_10": "Specify exact campaign targets for non-brand search capture rather than relying solely on feed-only PMax."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are masterclasses in retail media buying that nail every number and brand nuance, but Output 2 wins because it proactively warns me that top-line revenue will drop 13%, designs an incremental geo-split test to check if broad spend actually drives assisted brand conversions, and formats the week-one roadmap with explicit owners and completion criteria."
+}

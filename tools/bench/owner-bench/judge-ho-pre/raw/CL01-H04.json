@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A tight one-screen flow that splits each reason by plan type and reminder status, with warm copy in our voice and a 10% holdout to test the assumed rates.",
+  "biggest_mistake": "It keeps 50% off for switchers even though 61% leave when the discount ends, and it labels the switcher revenue 'after discount' while counting them at full £9.",
+  "what_would_make_it_a_10": "Drop the switcher discount, give an honest range showing that the pause is proven and the other rows are guesses, and set kill criteria for the untested offers."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It cuts discounts entirely, puts the proven pause first, and is honest about which numbers are solid. It also gives a clear measurement plan with kill thresholds and a pre-launch checklist the team can act on.",
+  "biggest_mistake": "The heading 'Before you go' leans slightly toward a retention script. It also states an unverified UK rule date and offers no holdout to prove lift.",
+  "what_would_make_it_a_10": "Add a holdout group to measure true lift, give the switching-apps group something more useful than a thank-you, and warm up the heading."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both find the paused winner and the right offer per reason, but Output 2 stops wasting discounts altogether, is honest about which numbers are proven, and tells my team exactly what to check and measure."
+}

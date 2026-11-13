@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The data call is clean: half the posts on sleep, four narrator videos a week, evening slots, and a stop list. The projection is shown (12×450 + 8×100 + 4×95 ≈ 6,580) and the baseline of 10,900 installs from 76 posts is correct.",
+  "biggest_mistake": "It sends all of weeks 2–4 for review even though nothing names a condition, and it never says which posts later in the plan would actually need review. Only the 6 week-1 drafts are shown, so the owner can't see what weeks 2–4 contain beyond four angle names.",
+  "what_would_make_it_a_10": "Give a post-by-post grid for all 24 slots with the review flag and submission date on each, and add the Headspace line 'Take a breath. You've got this.' to the drafts."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is the more complete and actionable plan. It has a 24-post grid, named owners with first-week deadlines, and drafts built on the customer's own hooks and the brand line. The success test is tied to the 90-day baseline, with high and low cases, shown working, and a clear 'it failed' line.",
+  "biggest_mistake": "It declares no post needs review, but later grid titles like 'Awake at 2am' sit close to insomnia wording and are not flagged. The live-stream idea also adds risk and length to a plan that is already near the word cap.",
+  "what_would_make_it_a_10": "Flag the borderline later titles and say when to submit them, and trim the live-stream add-on to keep the plan within 1,200 words."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both make the same core call (sleep, narrator clips, evening, stop quote cards, app news and focus). Output 2 gives the owner more to run tomorrow: a full 24-post grid, owners and deadlines, drafts in the brand voice with fresh hooks, and a success test with working and decision thresholds."
+}

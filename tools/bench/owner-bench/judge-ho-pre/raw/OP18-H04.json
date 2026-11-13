@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the biggest signal in the data: bringing back the pause for 'no time' while stopping wasteful discounts for trip-over and other low-fit reasons.",
+  "biggest_mistake": "The revenue model is mostly useful but still simplifies the current discounted-flow economics and includes a slightly unnecessary legal note about UK rules not given in the brief.",
+  "what_would_make_it_a_10": "Tighten the money model to show first-90-day cash impact versus day-90 retained revenue, and remove any unbriefed legal speculation."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a clean one-screen flow with exact copy, visible cancel access, and a strong build note that the pause is the main lever.",
+  "biggest_mistake": "It keeps a 50%-off discount for switchers without evidence and then counts that row in the uplift, which risks repeating the current margin-wasting mistake.",
+  "what_would_make_it_a_10": "Remove the unsupported switching-app discount, make that group a clean exit or feedback capture, and recalculate uplift on proven or clearly labelled test assumptions."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to the flow I would actually ship: it respects the learner, brings back the proven pause, avoids blanket discounts, and shows the money clearly. Output 2 is good, but the unsupported half-price offer for switchers weakens both the strategy and the revenue case."
+}

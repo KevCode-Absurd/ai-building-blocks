@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reasons honestly about the fit finder gap, crediting only half of the 19 points because keen buyers self-select. It backs this with a holdout, a fit-finder A/B test with a conversion guardrail, and a Christmas warning. The numbers all trace to the brief.",
+  "biggest_mistake": "It sends only four messages and gives the fit help little room. The first-time bra fit nudge is a short block in the confirmation, and the only post-delivery help is a generic line in the delivered email, with no follow-up before a customer decides to return.",
+  "what_would_make_it_a_10": "Add a dedicated post-delivery fit message for first-time bra buyers, tighten the length, and use a cautious exchange target in place of the 35 to 45% jump.",
+  "use_as_is_note": ""
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the cost base (£139,800 in returns, £31,360 in tickets), then gives six short one-button messages in the brand voice. The delivered and day-5 fit messages give practical fit tips and a swap button, which suits Jess and Amira.",
+  "biggest_mistake": "The 10-minute fit-check email relies on a 2-hour order-edit window that may not exist. It also counts the £183,800 swap figure as sales kept, and it never states the fit-finder selection bias or the seasonal timing risk outright.",
+  "what_would_make_it_a_10": "Name the selection bias in the fit-finder estimate, allow for Christmas timing, and add a fallback for the size-switch window.",
+  "use_as_is_note": ""
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 gives me a fuller set of paste-ready messages in our voice, including the fit help after delivery for bra buyers, with a clean ticket-first order and a clear numbers table. Output 1 has sharper caveats and a bolder idea, but fewer finished messages and less fit help after delivery."
+}

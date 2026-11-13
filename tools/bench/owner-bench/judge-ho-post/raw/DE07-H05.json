@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Articles are genuinely ready to paste, answer-first, in Jordan's and Chiara's words, and every forecast number (1,184/1,160/1,000/225 = 3,743; $15,300; $7,700 at half) traces correctly to the data.",
+  "biggest_mistake": "It misses that 'Payment or settle up not showing' is 3,600 tickets at 71% helpful — a reach problem a link fixes — and instead proposes merging it as a 'low effort small gain,' while never adding the settle-up screen Help link.",
+  "what_would_make_it_a_10": "Give a proper per-topic range (not a point estimate plus a half-downside) and fix the settle-up reach with a screen link rather than a merge."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots that the 3,600-ticket settle-up topic is a reach problem ('leave Recording a payment alone... a link fixes it'), gives an honest per-topic range (2,703–4,276; $11,082–$17,532), and adds a fenced, quantified bolder move.",
+  "biggest_mistake": "The delete article gives only app steps, with no web path, and it never explicitly says to map the 4,900 misspelled searches as synonyms, so findability relies on the retitle alone.",
+  "what_would_make_it_a_10": "Add desktop/web restore steps to article 2 and spell out the search-synonym mapping so the 4,900 no-click searches land directly."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both are accurate and on-brand, but Output 2 catches the second-biggest ticket driver as a reach problem Output 1 tries to 'merge,' and it gives the honest range I asked for instead of a point estimate."
+}

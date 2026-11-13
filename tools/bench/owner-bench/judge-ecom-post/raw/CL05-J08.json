@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It starts with the 46 to 90 day group using a no-discount reminder, gives Monsoon Dark buyers their own track, and gates ex-subscribers behind a delivery fix, with a dated week-one plan and a 10% holdout per group.",
+  "biggest_mistake": "The worth table ignores WhatsApp-only reach and uses an unexplained ₹535 profit per returner for G6. The Monsoon Dark draft promises a match but never names it, and there is no explicit break-even lift per group.",
+  "what_would_make_it_a_10": "Name the actual closest dark roast and farm in the Monsoon Dark draft, show the break-even lift per offer, and trim to the 1,500-word limit.",
+  "use_as_is_note": ""
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It states plainly that lapsed buyers left because something broke, not over price. It gates ex-subscribers on delivery, and adds a day-28 running-low nudge plus offer tests (10% vs free shipping) judged on gross profit.",
+  "biggest_mistake": "It launches with the 91 to 180 day group and treats the 46 to 90 day group only as an always-on nudge, not a first wave. The worth model also puts 2 orders per returner in a 12-month ₹8.5 lakh figure, subtracts discount cost twice, and uses holdout sizes that don't match contactable counts.",
+  "what_would_make_it_a_10": "Make the 46 to 90 day group wave one with a no-discount reminder, use a conservative reachable base with a break-even lift, and fill the match placeholders with a real named roast.",
+  "use_as_is_note": ""
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 puts the cheapest, most at-risk group first, gives Monsoon Dark buyers and ex-subscribers their own tracks with a clear gate, and has a dated first week and group-by-group profit ranges. Output 2 is good on offer tests and the day-28 nudge, but its target order misses the 46 to 90 day opportunity and its worth model is looser."
+}

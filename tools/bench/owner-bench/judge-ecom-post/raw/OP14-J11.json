@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the in-app checkout bug, quantifies the missed checkouts and orders, and ties the top tests to the clearest evidence in the brief.",
+  "biggest_mistake": "It has a few shaky numbers and choices that would make me double-check the maths, especially using 0.70% as the all-device order baseline and some profit projections.",
+  "what_would_make_it_a_10": "Tighten the sample-size and lift maths to the right baselines, keep the money estimates fully traceable, and separate what to ship from what truly needs testing even more cleanly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the broken in-app checkout first with the right money case, then ranks high-leverage tests that match the actual customer questions and traffic reality.",
+  "biggest_mistake": "It misses a chance to say more plainly that some elements like the trial line and review summary are so low risk they should be shipped, not debated, and one test combines hero image and reviews into a less clean read.",
+  "what_would_make_it_a_10": "Keep the strong ranking and maths, but make every test cleaner to interpret, especially by separating combined changes and sizing gross-profit impact for each test."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I'd rather pay for because it reads my data more carefully, uses the browser split properly, and gives a more believable testing plan after fixing the bug. Output 1 is good, but its baseline and effect-size maths feel less trustworthy in places."
+}

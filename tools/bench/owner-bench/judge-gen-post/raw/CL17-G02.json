@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The segment math is right and sharp: 0.73 paid seats per recruiting signup against 0.17 for team sales demos. The page leads with email tennis and moves round robin and routing up with the real 88% and 74% figures.",
+  "biggest_mistake": "Security sits in section 6 of 9, three sections above the demo form. It does not remove Priya's main blocker at the moment she would click.",
+  "what_would_make_it_a_10": "Put security proof directly beside the demo form, cut the bracket placeholders to one clear caveat, and add a sample size so the two-week minimum means something."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The flow matches how Priya buys. Security sits right before a 4-field demo form, plus a 'send to your security team' idea in the confirmation email. The sample size and seat projection check out (about 13,400 per arm; 150 to 460 seats).",
+  "biggest_mistake": "The sample size uses the 3.1% homepage signup rate as the baseline for a narrower metric (demos plus recruiting signups only), so the real test likely needs more visitors and runs longer than stated.",
+  "what_would_make_it_a_10": "Base the power calculation on the current recruiting-visitor start rate, and keep each section to one action instead of a button plus a 'Get started' text link."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both pick recruiting with correct seat math and use Priya's words. The second puts security right where she would book a demo and gives me a test plan I can actually staff and run."
+}

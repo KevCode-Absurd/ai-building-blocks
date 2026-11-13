@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes the 4.0 apart against the 2.5 break-even, puts the feed fix first, and rebuilds the $240,000 with a disciplined reserve rule that adds to exactly $240,000.",
+  "biggest_mistake": "The expected 'next 30 days' contribution table implies a +$72k swing from only $122k committed spend while brand sales are assumed to hold at full value after the exclusion — an optimistic framing that needs re-checking, and a 104-character title exceeds Google's 150 limit only barely (fine) but the two-half title rollout adds complexity for week one.",
+  "what_would_make_it_a_10": "A defensible downside case on total contribution (not just non-brand) and a clean, single-pass title rollout without the half-A/half-B complication."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Clean diagnosis of brand leaking into PMax (11% of spend, 50% of value), the 2.03 non-brand ROAS and the $36.7k loss, plus a strong feed-fix checklist with concrete root causes.",
+  "biggest_mistake": "The forecast is built on invented ROAS assumptions (brand at ~25, PMax at 2.6, new search at 3.2) that push total value to $1.11M and profit up $61k — well above the prior month's $962k value on the same spend, with no evidence for a new non-brand Search campaign earning 3.2 and PMax holding 2.6; and the split puts $128k into a line it just showed runs at 2.03.",
+  "what_would_make_it_a_10": "Ground the forecast in the observed ROAS of each line and the reserve, not new-campaign hopes, and make the split add to $240,000 with the working shown against the 2.5 break-even."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd pay for: it puts the feed fix first, judges every line against 2.5, and its budget and profit forecast are conservative and traceable; Output 2's forecast invents ROAS for a new campaign and promises a $61k profit jump on the same $240k, which I don't believe."
+}

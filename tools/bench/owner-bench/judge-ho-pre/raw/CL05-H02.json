@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clean profit table against the 2.5 break-even, a split that adds to $240,000, a day-by-day first week with daily budgets, and ready search headlines and title patterns in the brand's voice.",
+  "biggest_mistake": "The forecast is optimistic and untested: PMax is assumed to jump from 2.0 to 2.6 and a brand-new non-brand Search campaign to earn 3.2. Brand sales are assumed to hold at 95% after the exclusion, with no way to check that, and the reserve is only $30,000.",
+  "what_would_make_it_a_10": "Add explicit negatives or caps for the losing 'women's flats' and 'sustainable shoes' spend, a way to check brand sales after the exclusion, clear weekly rules for weeks 2 to 4, and a more cautious forecast."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It breaks the 4.0 ROAS down line by line against break-even, and it is correct on the numbers. It adds disciplined rules: a Friday reserve-release rule, a brand-exclusion test read on 14 December against Shopify new-customer orders, a Black Friday discount warning, and an owner and 'done when' for every first-week action.",
+  "biggest_mistake": "Only $122,000 is committed and $118,000 sits in a rule-based reserve, so the split is less decisive. The profit forecast counts committed spend only, so what happens if the reserve is released is not modelled.",
+  "what_would_make_it_a_10": "Model the profit if the reserve is released, and add ready-to-paste search headlines or ad copy in the Rothy's voice."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both fix the feed first, exclude brand from PMax and use the 2.5 break-even. The second adds a verification test for the brand exclusion, concrete exact-match negatives, Black Friday risk, and clear weekly release rules. Its forecast also comes with a stated downside case."
+}

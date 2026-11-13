@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 6,
+  "voice": 7,
+  "range": 7,
+  "ready": 5,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Eight clear go/no-go gates (1,000-user migration beta, undo, support with engineers on shifts, staged rollout) tied to the 58% migration-ticket problem, plus a dated plan with a retention-ranked channel table.",
+  "biggest_mistake": "The X thread and email are full of placeholders ([__ ms on a __ Mac], [@author1], [first name], [support address]). The plan also runs too long and asks for extra builds (an undo feature, a 1,000-user beta) that are hard to fit before the freeze.",
+  "what_would_make_it_a_10": "Cut the length and the placeholders, drop or justify the undo feature given the freeze, and deliver a launch-day post and email that can be pasted as written."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with a clear decision (community first, no launch unless carry-over is proven) and works backward from the 1 December freeze: author build on 17 Nov, bug triage by 27 Nov, an owner on every dated row, plus measures, plan B and a staged-rollout option.",
+  "biggest_mistake": "It runs over the 1,200-word limit and makes no use of engineering to help support during launch week, so the 12-hour reply target rests on a projection.",
+  "what_would_make_it_a_10": "Trim to the word limit and add a concrete launch-week support staffing plan (for example, engineers on shifts) behind the reply-time target."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 reads like my brand and is nearly ready to paste: the X post uses \"Do more with your keyboard,\" the email credits the 1,500 authors, and neither has placeholders. Its timeline is built backward from the code freeze, and it has measures, a plan B and a safer staged rollout."
+}

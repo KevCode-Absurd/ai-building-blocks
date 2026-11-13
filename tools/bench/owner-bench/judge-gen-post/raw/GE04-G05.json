@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The inclusion of a timezone mapping table in the job post immediately answers the most practical question for the APAC audience.",
+  "biggest_mistake": "Splitting the writing assessment across two different scorecard rows dilutes the instruction to weight writing as the heaviest single factor.",
+  "what_would_make_it_a_10": "Consolidating the writing score on the scorecard and including a concrete example of the written customer prompt in the application outline."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Providing a realistic, concise customer prompt directly in the application section, along with brilliantly tailored 1-3-5 scorecard examples.",
+  "biggest_mistake": "Very little to fault, though the timezone translations in the prose aren't quite as scannable as a dedicated table.",
+  "what_would_make_it_a_10": "Adding a quick local timezone reference table to ensure zero confusion for applicants across different APAC regions."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs perfectly diagnosed the data signals (APAC hours, writing over experience, weekend rotation), but Output 2's scorecard rubrics and the inclusion of the actual writing prompt make it an incredibly polished, ready-to-use artifact."
+}

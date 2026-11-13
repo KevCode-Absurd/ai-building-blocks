@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds that the top 5 shades run out about 30 November and fixes it with re-cartoning, a ₹207 rush order landing 7 December and a standard order. The total of ₹1,14,13,400 checks out, with ₹5.87 lakh kept as a costed buffer.",
+  "biggest_mistake": "There is no forward cover view for every line, so the owner can't see where liquid lipstick, foundation and kohl stand in February. The glitter add-on is tied to lipstick orders during the window when the top shades are out of stock.",
+  "what_would_make_it_a_10": "Add a line-by-line stock-left-on-6-February table and a single dated action calendar for the ops lead."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every line is projected to 6 February, and the plan says re-cartoning moves the top-5 sell-out from about 23 November to 30 November. A dated Monday-to-February action table and honest back-in-stock copy in our voice ('Tanvi will wait a week, and this is a week') make it ready to run.",
+  "biggest_mistake": "Only ₹1.3 lakh is left spare inside the ₹1.2 crore. The 4-per-shade cap could frustrate bridal artists who buy 6 to 10 units, unless the pro pre-order really catches them.",
+  "what_would_make_it_a_10": "Keep a larger cash buffer with a trigger for moving foundation or kohl to rush, and exempt verified makeup artists from the order cap."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the core plan and the money right. Output 2 adds the February cover table for every line and a dated action calendar, which my ops lead could act on Monday without asking questions, though Output 1's bigger cash buffer is safer."
+}

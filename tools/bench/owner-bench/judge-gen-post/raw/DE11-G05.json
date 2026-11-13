@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post reads exactly like 37signals: $82,000 up top, hard parts (overnight hours, quiet solo stretches, weekend rotation) stated plainly, and the writing exercise replaces the resume/cover letter because the data says writing predicts performance (0.62) while experience does not (0.04-0.07).",
+  "biggest_mistake": "The application includes a third free-text question ('In 100 words or fewer, why this job?') that adds reviewer load and reintroduces an unvalidated signal, slightly undercutting its own claim of trimming the 160 hours.",
+  "what_would_make_it_a_10": "Drop the 'why this job' question (or make it scored only for the shortlist) so the application is purely the validated writing signal, and show the reviewer-hour math against the 160-hour baseline more prominently."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The scorecard is the strongest of the two: it splits 'solves the problem' from 'clear, warm writing,' gives concrete 1/3/5 anchors, and adds a smart bolder move (asking 4+ scorers for permission to recontact next round) that directly attacks the 2,100-application problem.",
+  "biggest_mistake": "The job post spends a full table on local-time conversions (Manila/Tokyo/Sydney summer shifts) and talks about 'Asia-Pacific hours' prominently, which narrows the audience more than the brief's career-changer persona likely intends and makes the post heavier than a grade-8 read should be.",
+  "what_would_make_it_a_10": "Tighten the post to one sentence on the time zone plus the local-time table, and cut the interview-based scorecard rows (75% of weight sits on writing and problem-solving in the reply) so what's scored matches what the 0.62 data actually validates."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 1 sounds more like us and is cleaner to publish, but Output 2's scorecard, application math and recontact idea give the hiring team more to actually use; I'd merge them, keeping Output 1's copy and Output 2's scorecard."
+}

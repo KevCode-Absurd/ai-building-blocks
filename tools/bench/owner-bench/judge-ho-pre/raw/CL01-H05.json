@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The ranking is built on tickets we can remove, and the forecast has a clear range (1,455 to 3,395) with transparent working, plus a list of things to check before publishing.",
+  "biggest_mistake": "It leaves 'How balances work' as it is, the 38%-helpful article that 21,000 people read, and bolts a new one beside it. The forecast also uses a borrowed 58% help rate that has no link to each topic.",
+  "what_would_make_it_a_10": "Rewrite 'How balances work' itself so Simplify debts is answered in its first lines, and set the help rate for each topic from that topic's own evidence rather than a median."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It rewrites the articles people already land on, using their search words. It covers app and web restore and Pro cancellation, and it reasons through each topic, counting only the 2,000 app-store billing tickets.",
+  "biggest_mistake": "The 3,700 forecast leans optimistic, and the low end is only mentioned after the point estimate. It also suggests merging an article that is already 71% helpful, and the 'Balances are simplified. Why?' line is extra engineering work on top of the one day.",
+  "what_would_make_it_a_10": "Lead with an explicit low-to-high range, drop the payment-article merge, and keep the in-app work inside the engineer's one day."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are publishable. Output 2 rewrites the articles people already read, covers restore on the web and how to cancel Pro, and justifies each saving topic by topic, so I'd ship it with less patching. Output 1's forecast range is the more honest of the two."
+}

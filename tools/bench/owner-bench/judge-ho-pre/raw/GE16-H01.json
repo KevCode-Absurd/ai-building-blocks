@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Catches every underlying signal in the inventory data—the 2.4-week stockout risk on hero lipsticks, the 4-day warehouse re-cartoning fix, and the ₹60 lakh locked in glitter palettes—and packages them into a clean, cash-compliant plan.",
+  "biggest_mistake": "Leaving only ₹1.3 lakh as a cash buffer leaves virtually zero margin for freight fluctuations or rush upgrades if specific foundation shades are running lower than average.",
+  "what_would_make_it_a_10": "Allocating explicit ownership tags (ops lead vs e-commerce lead) to each tactical task and holding back a slightly larger cash buffer for shade-level rush contingencies."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless operational plan that not only fixes the rush/standard reorder split within budget, but wisely reserves ₹5.87 lakh with a concrete rule to rush any foundation or kohl shades that dip under 8 weeks of cover.",
+  "biggest_mistake": "Assumes every gap customer will pre-order during the out-of-stock week, which slightly overstates net retained volume before the sale lands.",
+  "what_would_make_it_a_10": "Nothing meaningful—this is masterclass inventory planning that an ops lead and founder can execute on Monday morning without asking a single question."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both models delivered exceptional, specialist-grade plans that caught every nuance in the data, but Output 2 wins by holding back a deliberate ₹5.87 lakh contingency to rush low-cover foundation/kohl shades and assigning clear role owners to every task."
+}

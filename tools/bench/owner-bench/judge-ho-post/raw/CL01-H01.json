@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Catches the top-5 run-out, rushes only those shades, stays inside ₹1.2 crore with arithmetic that checks out, and gives the ops lead a clean dated timeline that includes ad pause and order caps to stretch stock.",
+  "biggest_mistake": "It counts the 3,900 held units as already inside the 9,100. It states this as an assumption, but it means re-cartoning doesn't extend the top-5 runway, so the gap and the rush quantity may be overstated.",
+  "what_would_make_it_a_10": "Settle whether held stock is extra to the 9,100, size the rush on that answer, and show the working for each shade's split."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Shows the top-5 maths step by step (back-orders + sale at 2.5x + buffer), adds reorder points per line, and gives a Monday trigger sheet with owners, so ops can run it without guessing.",
+  "biggest_mistake": "It also treats the held units as inside on-hand, so the re-cartoning win looks smaller than it may be. Its palette target of 3,000 sold by January barely dents ₹60 lakh of stuck cash.",
+  "what_would_make_it_a_10": "Settle the held-stock reading and set a more ambitious palette clearance plan that turns more of the ₹54 lakh of excess back into cash before January."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both make the right call: rush the top-5 shades, skip liquid and glitter, and stay under ₹1.2 crore. Output 2 shows its maths and gives my ops lead triggers and reorder points, so it's easier to run and check week to week."
+}

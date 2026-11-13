@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 6,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It takes the 4.0 apart against the 2.5 break-even with correct numbers: PMax without brand at 2.03, -$36,708, and total contribution of $144,960. It also gives a hands-on diagnosis of the price mismatch and turns on automatic item updates.",
+  "biggest_mistake": "It keeps $128,000 in Performance Max with no negatives on the 1.2 'women's flats' or 1.6 'sustainable' pockets and simply assumes 2.6. Its own cautious case of 2.2 is below break-even, so the biggest line could still lose about $15,000.",
+  "what_would_make_it_a_10": "Strip the losing broad and sustainable pockets out of PMax with negatives or a much smaller budget, so even the cautious case is above 2.5 on every line."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers all check: $41,400 non-brand contribution in the base case, $27,400 in the downside, and a split that adds to $240,000. Every line clears break-even even in the downside. Clear Friday reserve rules, the Black Friday freeze and the discount-adjusted 4.0 break-even are things I hadn't thought through.",
+  "biggest_mistake": "Committing only $122,000 gives up about $114,000 of non-brand sales. The fix for recurring price mismatches is thinner than it should be, with no automatic item updates, and the four-week staggered title rollout is slow for a 30-day plan.",
+  "what_would_make_it_a_10": "Add automatic item updates and a size-level price check to stop the mismatch coming back, and roll the new titles out faster on the disapproved pointed flats first."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both find the brand leak and fix the feed first, but Output 2 cuts the money-losing pockets explicitly and stays profitable even in its downside case. Output 1 still parks $128,000 in a PMax that its own cautious case says loses money. Output 2 also plans around Black Friday, which I'd have paid for."
+}

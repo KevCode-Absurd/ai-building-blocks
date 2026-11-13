@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the three real levers in the data: the silent delivery gap, low fit-finder use on bras, and the refund-first portal.",
+  "biggest_mistake": "It should flag SMS consent before adding SMS, and a couple of copy lines could be softened slightly for fit sensitivity.",
+  "what_would_make_it_a_10": "Add consent rules for SMS and tighten the fit copy while keeping the same plan, numbers and sequencing."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a sharp executive plan with good working, a holdout mindset, and useful weekly/monthly targets.",
+  "biggest_mistake": "The day-3 update excludes no-scan parcels, which are exactly where the silence problem is, and some copy leans too much on a single 'due by' date.",
+  "what_would_make_it_a_10": "Send the day-3 reassurance to unscanned parcels too, use delivery ranges throughout, and add a dedicated post-delivery bra fit message."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team tomorrow: it has the right order, the messages, the portal changes and the maths tied to the biggest problems. Output 2 is strong, but it misses part of the WISMO fix and is less complete on post-delivery fit support."
+}

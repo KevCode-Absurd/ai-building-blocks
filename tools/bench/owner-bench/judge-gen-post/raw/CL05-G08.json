@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "One clean recommendation (a flat $79 Agency plan) with revenue math that checks out against the data: $249k for Essentials 8+, $24k lost each month, 29% of churned revenue. It also shows a negative downside case and a break-even point for Team move-downs.",
+  "biggest_mistake": "Yearly billing is only a brief mention at the switch, not a lever of its own. The base case also assumes half of Essentials 8+ customers pay $15 more and switch, which looks optimistic.",
+  "what_would_make_it_a_10": "Make the yearly push (default or in-app offer) a costed part of the plan, and justify the 50% switch assumption or lower it.",
+  "bundle": null
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 6,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data closely: per-account math ($63.91, $120.85, $95.87), 374 customers and $23.9k lost each month, and a yearly-payer analysis that says plainly yearly won't help within two quarters. It adds a price-lock-for-yearly idea aimed at the 'creeping bill' fear.",
+  "biggest_mistake": "It bundles Agency, a yearly display change and a 'bolder move' despite the ask for one recommendation. It is also dense with jargon (MRR, holdout) and runs over the length limit, and the mid case's 3.5% churn after upgrade is optimistic.",
+  "what_would_make_it_a_10": "Cut to one clear recommendation in plain grade 7-8 words and keep the yearly analysis to a short note, with more cautious churn assumptions.",
+  "bundle": null
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick the right target (Essentials 8+ with a flat plan including approvals), get the math right, and set sensible stop rules. Output 2 is slightly richer: it uses the yearly-billing signal, is honest that nothing lands in two quarters, and offers a fresh price-lock idea. Output 1 is easier to read and truer to 'one recommendation'."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It uses your actual hiring and support data to redesign the funnel around the strongest signal—writing—while clearly targeting the overnight UTC gap and stating the weekend rotation upfront.",
+  "biggest_mistake": "The post says 'No resume' at all, which may be a little more radical than needed and could limit basic screening context for later stages.",
+  "what_would_make_it_a_10": "Keep this structure but add the exact sample customer email plus a tiny note on what not to optimize for when scoring it."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is thoughtful about process design, includes a useful calibration method, and adds a smart idea to retain strong applicants for future rounds.",
+  "biggest_mistake": "It drifts away from your strongest evidence by weighting interview-based criteria too heavily and introducing unsupported assumptions like exact interview lengths and a 'same ticket for everyone' from the last 90 days.",
+  "what_would_make_it_a_10": "Reweight the scorecard so written work is clearly dominant, add a written handoff exercise, and trim unsupported assumptions and arithmetic/logic drift in the screening plan."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could publish and run tomorrow with almost no edits. It follows the data more faithfully, sounds more like us, and makes the highest-leverage change: moving the short writing test into the application and weighting writing the most."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 6,
+  "voice": 7,
+  "range": 6,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The three numbers come first, then the bad news (missed forecast, Customer A, margin, stalled hire), and each item has a response. The direct-database growth of only 2.6% shows the growth is channel-driven.",
+  "biggest_mistake": "The margin claim is muddled: it says the $0.9M is about 9 points of margin, 'more than the 7-point drop', which confuses the explanation. The email is also probably over 700 words and repeats itself with a burn table plus a full table.",
+  "what_would_make_it_a_10": "Cut it under 700 words with one table, state the margin link cleanly, put the asks near the top, and add forwardable blurbs for each ask."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The asks are summarised in the first screen, and each names a profile and a date. Two come with short blurbs investors can forward. It uses the brand's own 'here's what went wrong and what we're doing about it' framing.",
+  "biggest_mistake": "It commits to a 27 November ship date and a New York-based role as settled decisions, which are only stated as assumptions. It also never puts a number on how much of the 7-point margin drop the compute cost explains.",
+  "what_would_make_it_a_10": "Quantify the margin impact of the idle projects and the expected saving from the 48-hour pause, and give the New York decision a stated confidence or fallback."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 puts the three numbers, the bad news and the specific asks on the first screen. Its numbers check out (the runway row, the 48% AI-builder growth), it adds forwardable intro blurbs, and it explains Customer A's effect on February ARR. Output 1 has a muddled margin claim and is wordier, with duplicate tables."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks up Priya's exact phrasing ('email tennis') in the hero and rigorously applies all test data into specific proof elements.",
+  "biggest_mistake": "Alternates CTAs between 'Get started' and 'Book a demo' across sections, creating conflicting funnels on a team-focused landing page.",
+  "what_would_make_it_a_10": "Commit to 'Book a demo' as the primary action throughout and place the security section right beside the final demo CTA."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Exceptional CRO thinking that places security immediately before the demo form, models statistical power for the A/B test, and suggests a high-leverage post-booking action for IT review.",
+  "biggest_mistake": "Includes secondary text links right under buttons in sections 1 and 8, slightly stretching the 'one action per section' guideline.",
+  "what_would_make_it_a_10": "Remove the secondary text link under the hero CTA to keep the initial conversion path single-threaded."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 demonstrates superior landing page CRO craft: it places security directly ahead of the demo form to remove Priya's primary friction, provides sample size math for the test, and maintains consistent team CTA alignment."
+}

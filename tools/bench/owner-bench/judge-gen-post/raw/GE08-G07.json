@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It perfectly operationalizes the launch timeline around the 1 December code freeze and support capacity with specific owners and zero placeholder copy.",
+  "biggest_mistake": "Ranking extension authors above X in the table despite X having higher total retained users could have used one brief clarifying sentence about retention percentage vs volume.",
+  "what_would_make_it_a_10": "It is already a 10—an exceptional, production-ready launch plan that nails Raycast's voice and solves the underlying support risk."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong operational launch gates, including a staged 10/30/100% rollout mechanism and having engineers take support shifts.",
+  "biggest_mistake": "Leaving extensive bracketed placeholders throughout the X thread and customer email instead of writing finished copy ready to paste.",
+  "what_would_make_it_a_10": "Replace every bracketed placeholder with finished, real copy and assign explicit owners to each row in the timeline."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers finished, beautifully written copy ready to publish without placeholders, while assigning concrete team owners across every step of the timeline. Output 2 has great strategic ideas like staged rollouts, but leaves too much fill-in-the-blank homework in the marketing assets."
+}

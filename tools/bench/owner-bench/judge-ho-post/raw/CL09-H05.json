@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the decision, an honest ticket range ($11,100 to $17,500 saved) and the bad news about the 2,000 Apple and Google refunds, then backs every number with working that checks out.",
+  "biggest_mistake": "It writes a separate Simplify debts article and only edits the top of 'How balances work', so the 21,000-view page that only helps 38% of readers stays mostly broken. It also misses adding the 'undo delete' search terms to the help centre search.",
+  "what_would_make_it_a_10": "Rewrite 'How balances work' in place around Simplify debts, and map the 4,900 no-click searches to the restore article as search synonyms."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The articles are the most complete: app and web restore steps, the Apple and Google cancel paths, and a cheap fix that adds 'undo delete', 'restore expense' and 'recover deleted' as search terms for the restore article.",
+  "biggest_mistake": "The forecast is one number plus a half-shares floor rather than a reasoned range. It also counts the currency article as live mid-month and suggests merging 'Recording a payment' into a new page when that page already helps 71% of readers.",
+  "what_would_make_it_a_10": "Lead with the decision and an honest range, open the refund article with 'Ask Apple or Google' in the first line, and leave the 71%-helpful payment article alone."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and usable. I'd take the first because it tells me up front what to do, what it saves as a range, and what it can't fix. The second has slightly fuller articles and the smart search-terms fix."
+}

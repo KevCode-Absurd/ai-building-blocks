@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The seat math is tight and correct (733 vs 12 paid seats per 1,000 signups), security sits right before the 4-field demo form, and the A/B plan has a correct sample size and seat projection.",
+  "biggest_mistake": "The hero uses our house line instead of Priya's 'email tennis' phrase, so the strongest customer-language hook is left only in a section headline.",
+  "what_would_make_it_a_10": "Put Priya's own words ('email tennis' or getting Monday back) into the hero and add one tactical answer to the 'calendars not kept current' objection beyond working hours."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero speaks Priya's language ('No email tennis') with a round robin subhead that skips people who are off, and the deciding metric smartly requires a first booking within 7 days.",
+  "biggest_mistake": "It asserts unsourced numbers ('three or four emails', 'your week gone'), places security three sections away from the demo form, and gives no sample size or projection for the test.",
+  "what_would_make_it_a_10": "Drop the invented email-count claim, move security next to the demo form, and add test sizing and the expected seat upside."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick recruiting with the right math. I'd pay more for the first: it keeps every claim tied to my data, puts security right where Priya books, and tells me how long the test must run. The second has the catchier hero line."
+}

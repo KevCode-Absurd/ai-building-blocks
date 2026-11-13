@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly breaks the 4.0 ROAS apart, shows the 2.5 break-even, identifies PMax brand dependence, the starved bags winner, and the pointed-flat feed issue as the first fix.",
+  "biggest_mistake": "The reserve plan is commercially sensible but the expected-results table is based on only $122,000 committed spend, so it does not fully answer what happens if the full $240,000 is deployed.",
+  "what_would_make_it_a_10": "Show the base, upside and downside results for the full $240,000 deployment and tighten the few platform details around PMax negatives/feed-only setup."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a clean profit-after-ad-cost view, fixes the feed first, and translates the winning customer language into useful titles and search ads.",
+  "biggest_mistake": "It leaves $128,000 in PMax without a clear enough mechanism to stop broad, sustainable, display and video waste, so the forecast depends on PMax improving more than the plan proves.",
+  "what_would_make_it_a_10": "Make the PMax cut/control plan sharper, explicitly block or cap the losing query groups, and make the expected profit range less dependent on optimistic brand and PMax assumptions."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather run: it is more disciplined on profit, correctly treats brand as masking the loss, puts the feed fix first, and gives stronger weekly rules for releasing money. Output 2 is good, but it risks continuing the same PMax waste while forecasting improvement."
+}

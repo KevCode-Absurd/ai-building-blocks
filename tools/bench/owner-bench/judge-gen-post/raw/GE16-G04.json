@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The operational insight to schedule sends between the 12th and 15th to land cleanly outside the controller's 9-day month-end close window is exceptional domain expertise.",
+  "biggest_mistake": "Pitches a 20-minute meeting right away in step 1 rather than testing a lower-friction initial reply hook.",
+  "what_would_make_it_a_10": "Already a 10 for cold outbound targeting finance leaders."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent low-friction CTAs ('reply yes', 'reply steps') and direct incorporation of the brand phrase 'close your books faster.'",
+  "biggest_mistake": "Promises unvetted collateral to leads ('one-page summary', 'three steps that team took') that must now be written, and misses scheduling sends around the monthly close cycle.",
+  "what_would_make_it_a_10": "Incorporate the month-end calendar cadence into send scheduling and keep the reply offers grounded in existing assets."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both outputs understand the data and audience deeply, but Output 1 shows true domain mastery by timing the 4-step sequence around the controller's 9-day month-end close window, while Output 2 creates homework by promising collateral we don't have."
+}

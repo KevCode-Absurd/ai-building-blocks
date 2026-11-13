@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It refuses the 20% cut with correct lifetime maths ($1,677 vs $1,130, $1,174 net) and a sharp break-even: lose 4 of the top 20 and the saving is gone.",
+  "biggest_mistake": "It gives the Partner tier 40% for year one, which adds about $46,000 of rate cost on top of an open-ended 90-day window cost it never totals.",
+  "what_would_make_it_a_10": "Price the 90-day window as a total figure, compete for the top 20 on service and speed rather than rate, and put real dates and owners on the 30-day plan."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It shows the honest cost: a cut on new referrals only saves about $38,000 in year one, and the 90-day window costs $62,000 to $89,000, worked from 3,365 customers and churn.",
+  "biggest_mistake": "The rule 'we pay on new customers who keep their plan' is muddy next to the lifetime promise, and the 40% rival threat is answered only with service perks.",
+  "what_would_make_it_a_10": "Tighten that payout rule wording and add a fallback if a top-20 partner gets a firm 40% offer."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both say no to the cut with the right maths. The second one tells me the bad news in dollars, doesn't raise my commission rate, and gives my one partner manager a dated plan with owners I can run on Monday."
+}

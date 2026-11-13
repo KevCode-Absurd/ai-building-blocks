@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The financial modelling is exceptional, correctly calculating the year-one fraction of lifetime value (31%) and the exact one-time cashflow impact of changing payout dates.",
+  "biggest_mistake": "No significant mistakes; it is a masterclass in reading the data and building a robust, costed business case.",
+  "what_would_make_it_a_10": "It is already a 10."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Accurately identifies that applying the 20% cut retroactively breaks a promise, and models that true savings on just new cohorts would only be about $38k.",
+  "biggest_mistake": "Giving standard members only a 60-day window still risks missing too many delayed conversions, considering the median time to pay is 41 days and 58% pay after day 30.",
+  "what_would_make_it_a_10": "A creative structural solution to counter the rival's 40% offer, rather than just opting to pass on it entirely."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both outputs produced outstanding financial analysis and caught the one-time cashflow quirk of changing payout dates. However, Output 1's solution to the rival's 40% threat—matching it for year one only and precisely costing it using churn decay mathematics—is a stroke of commercial genius."
+}

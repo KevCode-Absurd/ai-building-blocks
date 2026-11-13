@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every email serves one of the two habits that predict retention. It uses only the five allowed triggers, with skip rules and a day-8 branch that pushes each user to whichever habit they're missing, which goes straight at the 8% to 67% gap.",
+  "biggest_mistake": "Email 5 sets a day-14 goal but compares it to a week-one 8% baseline. The holdout gets no onboarding email at all, so the series is never measured against the old series.",
+  "what_would_make_it_a_10": "Use one measurement window for the 8% baseline and goal. Add a second holdout on the old series so the win is measured against what we run today, not against silence."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The welcome, recurring-task, platform-branched device email and calm check-in are all very good. The drop list ties the projects email to the persona's 'perfect on Sunday, gone by Wednesday' trap.",
+  "biggest_mistake": "It spends the fifth email on a Pro upsell instead of finishing the habit work, so users who have one habit are never pushed to the second, the step worth 67% retention.",
+  "what_would_make_it_a_10": "Replace the Pro email with a day-8 'missing habit' email. Move Pro past day 30. Check that set-time reminders really are Pro-only before promising it."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both are calm, on-brand and use the triggers correctly, but Output 1 commits all five emails to the two habits that keep users. Output 2 spends its last email selling Pro and leaves the 'do both' gap open."
+}

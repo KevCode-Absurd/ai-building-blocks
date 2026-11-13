@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Completely eliminates toxic discounting, brings back the high-margin pause, and includes the vital 7-day pre-restart email notice that keeps the brand trustworthy.",
+  "biggest_mistake": "Could have included Output 2's idea of an 8-week holdout/control group to formally validate the new flow against the baseline.",
+  "what_would_make_it_a_10": "It is already a 10—precise, commercially sound, beautifully phrased, and ready to hand to engineering."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Great sprint build notes with an explicit 10% holdout recommendation to measure real lift against baseline.",
+  "biggest_mistake": "Keeps the 50% discount for app switchers despite evidence showing 61% churn post-discount, and miscalculates its monthly revenue by counting it at full price (£9) labeled as 'after discount'.",
+  "what_would_make_it_a_10": "Drop the ineffective 50% discount band and fix the revenue arithmetic on the switching cohort."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 recognizes that the 50% discount is dead weight and cuts it completely, relying on the proven pause and annual switches. Its copy is impeccably on-brand, its arithmetic is flawless, and it even drafts the pause-ending reminder email."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Restores the pause as the main save, drops every discount with a clear evidence-based reason, and the numbers check out: 2,172 kept against 842 today, about £10,700 more a month, with the 2025-tested pause separated from the guessed rows.",
+  "biggest_mistake": "There is no build order or holdout for the product team, and 'not progressing' learners who already have a reminder leave with nothing, which misses an easy product fix.",
+  "what_would_make_it_a_10": "Add a sprint build order with the pause turned on first, a 10% holdout on today's flow to prove the lift, and a light option for learners who already have a reminder."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A buildable sprint plan with a panel for every reason (including a smaller daily goal for learners who already have a reminder), real prices on the switch card (£4.95 a month, £59.40 a year), a 10% holdout, and correct maths showing the pause brings 79% of the subscribers kept.",
+  "biggest_mistake": "It keeps 50% off for 'switching apps' on an untested hunch, even though 61% of discount takers leave when it ends; this adds only about 67 people and £607 a month and weakens the no-discount story.",
+  "what_would_make_it_a_10": "Drop the switcher discount or label it as a test arm judged against the holdout, and give an honest low-to-high range rather than one total."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both rebuild the flow the right way and their numbers hold up. Output 2 is closer to what my team can build next sprint, with build notes, a holdout, real prices and a panel for every case, though I'd question the leftover discount for switchers."
+}

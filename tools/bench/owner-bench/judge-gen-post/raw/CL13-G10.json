@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The whole series is built on the two retention habits (recurring task and second device). It skips emails already done, branches on signup platform, and ends with a day-8 email that points each user to the habit they're missing.",
+  "biggest_mistake": "Success measures are mostly series-level rather than a clear 'worked if' per email. The day-8 email also relies on branching by past behavior, which the tool may not support, and the control group gets no onboarding emails at all.",
+  "what_would_make_it_a_10": "Give each email its own 'worked if' line, make the day-8 branching explicitly rely only on the allowed triggers, and trim to the 1,200-word limit.",
+  "bolder_note": ""
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every email has a trigger, a typed example in quotes, a button, a goal and a baseline-linked 'worked if'. The drop list is detailed with numbers and a sensible plan to bring the team invite back in 2027.",
+  "biggest_mistake": "The fifth email is a Pro upsell with a Pro-feature claim that wasn't in the brief. It spends the final slot on selling instead of closing the gap on the missing habit, so the series never targets the 67% both-habits group.",
+  "what_would_make_it_a_10": "Replace the Pro email with a 'the step that's left' email aimed at the missing habit, and cut the length to the 1,200-word limit."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I'd rather have the series that keeps pushing users toward the two habits, ends on the missing one, and moves Pro out of onboarding. The other has cleaner per-email measures, but it spends its last slot on a Pro upsell."
+}

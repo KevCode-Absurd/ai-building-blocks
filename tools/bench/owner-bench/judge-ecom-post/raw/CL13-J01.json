@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the owner's three key moves with rupee reasons: relaunch the paused creator video first, narrow Women Body Razor to 25 to 34, and cut the COD-heavy Starter Kit. The budget adds to ₹5,60,000 and gives a clear ASC scaling ladder.",
+  "biggest_mistake": "The two-line safe/break-even framework leaves ad sets in an ambiguous middle zone. It also scales Catalog DPA at frequency 5.2 and implies the Starter Kit buyers are the ones who refuse, which blames the COD customers.",
+  "what_would_make_it_a_10": "Use one Shopify-adjusted break-even per ad set, add a way to test whether retargeting and DPA really add sales, and keep to the word limit."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Each ad set gets one break-even built from its own order value, COD share and RTO rate, adjusted for Shopify attribution. The release rules for the reserve are exact, and the geo holdout for retargeting is a fresh, rigorous idea.",
+  "biggest_mistake": "It makes zero scale calls and holds a ₹1,49,100 reserve back, which is cautious when the warehouse can ship 3x. It also cuts retargeting, which is profitable on Meta's own count, on a harsh haircut.",
+  "what_would_make_it_a_10": "Commit more of the budget to the relaunched creator video in ASC and the women 25 to 34 split on day one, and trim the density to stay inside the word limit."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both make the right big calls, and both budgets add to ₹5,60,000. Output 2 judges every ad set on its own after-RTO, Shopify-adjusted break-even and gives sharper day-to-day rules. It also adds a holdout test and keeps COD for Rohan. Output 1 is more willing to scale, but its two-line framework is muddier."
+}

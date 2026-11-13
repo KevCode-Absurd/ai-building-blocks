@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It brings back the switched-off pause as the main save, shows the pause carries 80% of the result, and gives the working, an honest range and a first move this week.",
+  "biggest_mistake": "The cancel button only becomes active once a reason is picked, and the 'trip over' group gets no 'remind me before your next trip' option.",
+  "what_would_make_it_a_10": "Keep the cancel button live from the start, add an optional 'remind me before my next trip' to the trip-over panel, and hold back a group on today's flow to prove the lift."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Fine-grained panels: a remind-me email for trip-over, a smaller goal for learners who already have reminders, real local prices on the annual switch, and a 10% holdout to test the assumptions.",
+  "biggest_mistake": "It keeps a 50% discount for app-switchers and counts those 67 discounted subscribers at full £9 'after discount', which overstates the value. The £136,000 year figure also ignores churn.",
+  "what_would_make_it_a_10": "Drop or justify the switcher discount, value discounted subscribers at the price they actually pay, apply churn to the yearly figure and give a range."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both rebuild the flow around the pause, but Output 1's money is more honest, with a range and churn applied. It flags the risk that everything depends on the pause and gives a sharper first step, while Output 2 brings back a discount and overcounts its value."
+}

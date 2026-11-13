@@ -1,0 +1,29 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 7,
+  "range": 7,
+  "ready": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 1 is slightly better on the numbers that drive the decision: the re-cartoning cost is right at ₹38,400 and the top-5 cover reaches about 13,000 units after re-cartoning, whereas Output 2 mixes up the re-cartoning cost and the effect on top-5 cover. Output 1 also keeps the cash buffer and the pre-order handling clearer and more honest."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the forecast miss, margin drop, Customer A churn, runway, and AI-builder economics in the first screen with the right math.",
+  "biggest_mistake": "It is a little less investor-ready because the assumptions block and a few lines read like internal notes rather than a finished email to send.",
+  "what_would_make_it_a_10": "Tighten the copy, remove or fold in the assumptions, and make the 48-hour pause impact and VP Sales ask sharper."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the three numbers and bad news, explains the AI-builder margin problem plainly, and ends with specific asks with dates and forwardable copy.",
+  "biggest_mistake": "It assumes a ship date and that the VP Sales role is now New York-based, which should be confirmed before sending.",
+  "what_would_make_it_a_10": "Confirm the two assumptions and slightly soften the unproven claim that most of the compute rise came from AI-builder projects."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is closer to something I would send: it is tighter, more phone-readable, puts the asks near the top, and gives investors forwardable language. Output 1 gets the substance right, but needs more cleanup to feel finished."
+}

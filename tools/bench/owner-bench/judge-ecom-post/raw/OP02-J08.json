@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly spots that discounts are not the main fix, gives Monsoon Dark and ex-subscriber tracks, and works from the right ₹557 gross profit per order.",
+  "biggest_mistake": "It does not put the 46-to-90-day at-risk buyers first, even though the 34-day median reorder gap makes them the cheapest win-back segment.",
+  "what_would_make_it_a_10": "Make 46-to-90 days wave one with counts and value, tighten the reachable-count logic using email/WhatsApp opt-in overlap, and make the Monsoon replacement recommendation more concrete."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the key signals well: 46-to-90 days are at risk, Monsoon Dark needs its own recovery path, and subscription win-back must wait for delivery-date control and better on-time performance.",
+  "biggest_mistake": "The Monsoon Dark first message asks the customer to take a quiz instead of leading with the closest replacement coffee, so the most obvious fix is less ready than it should be.",
+  "what_would_make_it_a_10": "Replace the Monsoon quiz-first flow with a named closest-match offer, remove arbitrary calendar dates, and explain the ex-subscriber and reachable-count assumptions more cleanly."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would rather run because it starts with the highest-leverage 46-to-90-day group and makes the delivery problem a hard gate before ex-subscriber win-back. Output 1 is strong, but its first priority skips the warmest lapsed buyers and would leave easy money on the table."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly identifies that the 'Recording a payment' article works well but suffers from a tracking/reach gap, solving a 3,600-ticket problem with a simple link instead of a rewrite.",
+  "biggest_mistake": "The short tip on how to fix a mistakenly edited expense in Article 2 lacks numbered steps, slightly missing the brand's formatting principle.",
+  "what_would_make_it_a_10": "Add clear, numbered steps for the 'Changed an expense by mistake?' section in Article 2 to fully match the formatting rules."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The suggestion to add search keywords directly to the backend for the deleted expense article is a smart, practical way to catch the exact queries.",
+  "biggest_mistake": "It suggests merging the 'Recording a payment' article when the data shows it is already 71% helpful; the real issue is that people on the Settle Up screen can't find it.",
+  "what_would_make_it_a_10": "Realise that 'Recording a payment' just needs an in-app link from the Settle Up screen, and strictly keep to 'one task per article' by not including cancellation steps in the refund guide."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 acts on the data exactly like a sharp owner would. It spots the reach gap for 'Recording a payment', perfectly applies the search terms to the article titles, and keeps strict adherence to the 'one task per article' rule by splitting out the refund article."
+}

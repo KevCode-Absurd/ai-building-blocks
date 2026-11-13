@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The Monsoon Dark email names the discontinued blend and the roasters' closest match, and the subscriber track is held behind a 93% on-time gate that leads with pick-your-date.",
+  "biggest_mistake": "The 9,000 slipping customers at 46 to 90 days, who are the cheapest to win back, are only an aside (a day-28 nudge) and are not first in the ranked plan, while the ₹8.5 lakh rests on a generous two-orders-per-returner assumption.",
+  "what_would_make_it_a_10": "Put the 46 to 90 day group first with its count and reach, remove ex-subscribers from the other groups as promised, and show the break-even lift for each group."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks the slipping 46 to 90 day buyers first with no discount, removes overlap between groups, and builds a careful profit range (₹557, ₹442 and ₹385 per order, ₹535 blended for ex-subscribers) after the holdout.",
+  "biggest_mistake": "The Monsoon Dark draft sends people to a quiz instead of naming the closest coffee still on sale, which weakens the one-clear-fix track.",
+  "what_would_make_it_a_10": "Name the roasters' match in the Monsoon Dark email, and count WhatsApp-only reach in the value table instead of email reach alone."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 starts with the customers who are easiest to win back, keeps every group separate and in order, and gives me a conservative, checkable profit range plus a bold pre-order idea. Output 1 is solid, but it underplays the slipping group and its profit projection is more optimistic."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every number traces back to my data with the working shown, the three fixes are ranked and owner-assigned, and the first move (build the 'On its way' email this week) is genuinely the cheapest win.",
+  "biggest_mistake": "It skips a follow-up fit message after delivery for first-time bra buyers — the one thing I said would delight me — and it invents a mid-November start to claim the plan runs through Christmas, which isn't in my brief.",
+  "what_would_make_it_a_10": "Add a short day-2/3 post-delivery fit check for first-time bra buyers with real fit guidance, and reconcile the 'half of bra visitors' test with a 30-40% fit finder use projection so the day-60 target holds."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It covers the whole post-purchase arc — including the post-delivery 'How's the fit?' nudge I specifically wanted — and every figure reconciles to a clean £11,830 to £19,770 per 90 days, with the unproven upside honestly excluded.",
+  "biggest_mistake": "Nobody's named as the owner of any step and message 4 carries a '[tracking status]' placeholder, so I can't hand it straight to the team and walk away.",
+  "what_would_make_it_a_10": "Put a named owner and a date on each phase, fill the tracking-status field with the real merge tag, and cap the £183,800 'sales kept' figure so it can't be read as profit."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is the one I'd pay for: it writes the post-delivery fit message I asked for, gives me one reconciled cost total, and every number checks out, where Output 1 is tighter on owners but misses that message and builds a Christmas warning on a start date I never gave. Output 2 needs names against the tasks before it goes out."
+}

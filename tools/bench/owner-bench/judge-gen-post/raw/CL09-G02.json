@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It shows the seat math clearly (733 paid seats per 1,000 signups vs 12 for coaching), uses our brand line for the hero, moves round robin, routing and security up, and gives a worked sample size so I know how long to run the test.",
+  "biggest_mistake": "The hero uses our generic 'back and forth' line rather than Priya's own 'email tennis', and the PTO-skipping claim needs confirming against the product before it goes live.",
+  "what_would_make_it_a_10": "Put Priya's 'email tennis' wording in one of the heroes and add security proof right beside the demo form instead of one section above it."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero uses the customer's own words ('No email tennis'), and the deciding metric, which requires a first booking within 7 days, is well argued as a guard against low-quality signups.",
+  "biggest_mistake": "It mixes 'Get started' buttons into team-focused sections, which breaks our rule that teams get 'Book a demo'. It also adds a ninth open-source section that pads the page, and leaves several bracketed gaps I would have to fill.",
+  "what_would_make_it_a_10": "Use 'Book a demo' consistently, fold the open-source section into the security section, tighten the variant B headline, and say how many visitors and weeks the test needs."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick recruiting with correct math. Output 1 is tighter, follows our button rules, and tells me exactly how long to run the test, though Output 2's 'email tennis' hero is the better line."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clearly frames the break-even math on why cutting the commission to 20% is dangerous, showing it only takes a 12.5% drop to wipe out the savings.",
+  "biggest_mistake": "Raises the commission rate to 40% for the top tier, which arguably goes against the owner's note to reward the top 20 'without raising cost across the board'.",
+  "what_would_make_it_a_10": "Keep the commission at 30% for all tiers to strictly follow the budget constraints, and provide more accurate first-year cohort cost modelling for the window extension."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Breathtakingly accurate reverse-engineering of the true number of creator-sent customers, paired with the brilliant, fresh idea of using the signup survey for attribution.",
+  "biggest_mistake": "None; this is a spectacular, deeply reasoned piece of work that perfectly grasps e-commerce cohort dynamics.",
+  "what_would_make_it_a_10": "It is already a 10."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "While both models correctly caught the broken promise of retroactive cuts and the cash-flow pull-forward of faster payouts, Output 2 went above and beyond. It flawlessly reverse-engineered the cohort size from the revenue numbers to project precise year-one costs, included strict FTC guidelines, and offered a highly original survey attribution workaround."
+}

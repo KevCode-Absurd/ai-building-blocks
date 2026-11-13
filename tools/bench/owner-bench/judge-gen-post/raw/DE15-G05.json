@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns every signal in our data into a decision: the overnight UTC gap becomes the first line of the post, the weekend rotation is named up front with the reason, and writing gets 50% of the scorecard with interview at 15%, exactly what the 0.62 versus 0.11 evidence says.",
+  "biggest_mistake": "The 100-word 'why this job?' question adds reading load the 70-hour estimate doesn't count and its answer is never actually scored, so it is homework for 2,100 applicants with no use.",
+  "what_would_make_it_a_10": "Drop the unscored 'why this job' question and show what 00:00 to 08:00 UTC means on the clock for Tokyo, Sydney and Manila, so the right candidate can see themselves in the hours."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The local-hours table and the reviewer-hours table make it real: an applicant in Manila or Sydney can see their own day, and we can see the reading load before we commit.",
+  "biggest_mistake": "It weights interview-observed rows at 45% (cause 15, calm 15, alone 15) and gives 'solves the problem' 30% against writing's 25%, which contradicts the very evidence it quotes (interview 0.11, written reply 0.62) and skips the owner's ask that writing carry the largest weight.",
+  "what_would_make_it_a_10": "Move at least half the interview weight onto the written reply exercise and reproduce the 1/3/5 anchors on a single page the reviewers can score from without cross-referencing the post."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 2 has the better hours table and a smart pipeline idea, but its scorecard puts nearly half the weight on interview judgments when our own data says interview impression is near-worthless and the written reply is everything - and it makes problem-solving the biggest row rather than writing, which is the one thing I asked for. Output 1 I could post largely as written and the hiring team could score with it Monday."
+}

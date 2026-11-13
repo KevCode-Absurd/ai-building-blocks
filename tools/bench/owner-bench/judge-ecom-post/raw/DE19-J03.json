@@ -1,0 +1,30 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 1 ties every concept to a single test variable, names the scratch and front-pocket objections up front, and gives a realistic spend-per-concept plan; Output 2 is cleaner to read but its sampling rule (about ₹4,500) is too thin to call a verdict and it misses the front-pocket objection.",
+ "what_would_make_it_a_10": "Add the exact review quotes you intend to use (so nothing has to be pulled later) and a first-week production schedule for the three priority concepts."
+}

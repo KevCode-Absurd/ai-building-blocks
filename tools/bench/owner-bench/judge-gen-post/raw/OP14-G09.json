@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data correctly and turns it into a practical plan that leans hard into evening sleep posts and narrator clips without breaking team capacity.",
+  "biggest_mistake": "It says weeks 2 to 4 should be sent for review even though its own posts avoid trigger terms, and it lightly undercalculates the 4-week baseline install rate.",
+  "what_would_make_it_a_10": "Tighten the review logic, keep all times aligned to the strongest evening signal unless clearly testing, and make every projected metric trace exactly to the brief."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It uses the audience language well and adds a useful downside case on sleep fatigue instead of assuming the strong theme will scale forever.",
+  "biggest_mistake": "It makes avoidable factual and strategic errors by pausing text-on-screen video entirely, adding unsupported save-rate math, and introducing a live-stream idea that is not clearly within the brief or tracking setup.",
+  "what_would_make_it_a_10": "Remove the speculative extras, fix the calculations, and keep the plan closer to the proven winners in the data with cleaner week-1-to-week-4 execution logic."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team tomorrow with the least repair. It sticks closer to the data, answers the brief more directly, and avoids the speculative detours and factual wobble that make Output 2 riskier."
+}

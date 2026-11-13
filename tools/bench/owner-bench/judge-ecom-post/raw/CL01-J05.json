@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It brings back the paused ₹210 front-of-pack winner in new words. It leads with untested taste and price lines in Aditya's and Priya's own words. The test plan has a control, a budget sized to the purchases each cell needs, cut rules and a fatigue rule.",
+  "biggest_mistake": "The 4 pm samosa line and the gym line sit on the bench instead of in the first four. One of them could have replaced the near-control sugar rewrite (ad D).",
+  "what_would_make_it_a_10": "Pair the price-first ad with the 4 pm desk moment, so the launch set also tests Priya's habit angle against transparency and taste."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data sharply: transparency is tired, not broken; taste is the unused proof; price is the objection. The legal backups for review quotes are a thoughtful touch.",
+  "biggest_mistake": "Nearly every primary text repeats '12 g protein, no added sugar', and P1 and P5 are the same transparency idea. That is the 'six versions of one line' problem I asked to avoid, and there is no real 4 pm snack text.",
+  "what_would_make_it_a_10": "Make the six texts truly distinct, with a real 4 pm angle and less protein-plus-sugar repetition, and add a control cell and a budget that tells me when results are readable."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both caught the paused winner and the taste gap. Output 1 gives me six genuinely different, on-voice lines and a test I can run and read. Output 2's copy keeps saying the same two facts."
+}

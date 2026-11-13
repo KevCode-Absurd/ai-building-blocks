@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data like an owner: sleep plus narrator clips plus evening times, a real stop list, per-post install tracking, and drafts that use the customer's own phrases without triggering review.",
+  "biggest_mistake": "The Tuesday parent clip is scheduled at 14:15, which breaks its own 'nearly all evening' rule, and the claim that no post needs review deserves a sentence on why 'Quit meditation apps by day three?' is safe to post.",
+  "what_would_make_it_a_10": "Tighten the review-timing logic, fix the parent-post time, and make the success thresholds sharper so week-by-week decisions are unambiguous."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 5,
+  "priorities_note": "",
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Clean structure and warm, on-brand drafts, with a strong point that the 5.9% save rate came from only 5 posts and needs checking across 16.",
+  "biggest_mistake": "It schedules the 'engine off before school pickup' parent clip at 14:30, contradicting the evening-save evidence and its own evening rule, while filling 8 of 24 slots with kindness when sleep is the install engine.",
+  "what_would_make_it_a_10": "Reallocate mostly to sleep, keep every post in the evening window or justify the exception with a parent-specific test, and fix the review-batch logic so week 2 posts can actually go live."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 understands the real decision: shift to sleep and narrator clips, post at night, cut the weak themes, and track per-post installs, with drafts that would run tomorrow. Output 2's structure is tidy but its mix and posting times fight the data it is built on."
+}

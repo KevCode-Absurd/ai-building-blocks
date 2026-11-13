@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the in-app checkout bug as a no-test fix, sizes the upside correctly, and then ranks tests around the real blockers: delivery date, size choice, EMI, reviews and hero clarity.",
+  "biggest_mistake": "The parallel test lanes and fixed calendar dates could confuse attribution unless the team is comfortable reading interactions and the actual start date is reset.",
+  "what_would_make_it_a_10": "Make the schedule relative to launch date and simplify the test sequencing or spell out the factorial readout more plainly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly diagnoses the in-app browser checkout break, gives the right gross margin upside, and uses honest sample-size expectations.",
+  "biggest_mistake": "Some tests are less ready to run because they use placeholders or bundled changes, and the size test uses orders as the main metric, making it slower and less sensitive than needed.",
+  "what_would_make_it_a_10": "Replace placeholders with finished copy, separate bundled creative changes, and use add-to-cart or size-selection as the main metric where that better matches the page problem."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I would hand to the team tomorrow: it prioritises the bug, gives ranked tests with sharper metrics and guardrails, and better matches the specific owner notes. Output 2 is strong, but a little less executable and less precise on test design."
+}

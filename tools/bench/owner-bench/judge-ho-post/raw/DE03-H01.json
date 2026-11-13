@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the re-cartoning job and the rush order for the top-5 shades at the front, inside the ₹1.2 crore cash, and plans the sale week at 2.5x.",
+  "biggest_mistake": "The cover table says the matte top-5 stock runs out 30 Nov while the text says 1 Dec, and the rush order lands 7 Dec, so the 6-8 day gap and its back-order handling are folded into the plan without a clean number on how many units the gap costs.",
+  "what_would_make_it_a_10": "Show the exact units short in the 1-8 December gap and how the rush quantity was sized to cover them, so the numbers reconcile everywhere."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sizes the rush order bottom-up (back-orders + sale week + buffer), names the 6-day gap in units, and adds a pro pre-book move aimed at Farah.",
+  "biggest_mistake": "There is no customer-facing back-in-stock line in the brand's voice for Tanvi, and the pro pre-book cap ('inside the rush buffer') contradicts the fact that the rush quantity is already committed to sale-week cover.",
+  "what_would_make_it_a_10": "Add an honest, on-voice back-in-stock message for Tanvi and fix the pre-book cap so it does not eat the sale buffer."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both plans do the one thing that matters — re-carton first, rush the top 5 shades, skip the slow lines — but Output 2 sizes the rush order from the gap and sale week with the working shown, which is what the ops lead can check on Monday. Output 1 is warmer for Tanvi, but Output 2 is the more defensible numbers plan."
+}

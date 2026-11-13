@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Connects each email to a specific number in the data and answers the sunscreen chat fears with the actual review line, while keeping the calm labelled-strength voice.",
+  "biggest_mistake": "Email 5 mixes the 'two-step routines' with a single active plus sunscreen but presents sunscreen as a step for oily skin in a way that subtly contradicts Email 2's 'one product' logic, and the ₹48/₹9 per-click figures, while roughly right, are not shown with working.",
+  "what_would_make_it_a_10": "Show the per-click and code-value arithmetic explicitly and tighten Email 5 so the routine logic matches the earlier branch."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Warm, plain-spoken emails with a strong quiz-conditional structure that speaks to Sneha's and Arjun's words and keeps each email to one job.",
+  "biggest_mistake": "Email 5's '3-step routine' pushes all three products and a ₹1,297 bundle, which contradicts the brand's start-slow, one-active message and risks irritation for beginners; it also assumes a code expiry date placeholder without giving the working.",
+  "what_would_make_it_a_10": "Replace the three-product bundle in the final email with a single matched product plus sunscreen and keep the start-slow promise consistent to the end."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and on brand, but Output 1 grounds every email in the specific numbers, explicitly answers the white-cast and stickiness fears with the review proof, and never pushes the full bundle that contradicts the start-slow promise."
+}

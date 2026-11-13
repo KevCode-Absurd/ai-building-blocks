@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It targets the right segment and trigger, keeps every email link-free, and gives an honest expected reply rate that refuses to multiply the two gains.",
+  "biggest_mistake": "The asks promise a one-page summary and 'three steps' that don't exist, there is no opt-out line, and it runs a little over the word limit.",
+  "what_would_make_it_a_10": "Add the opt-out and postal footer, make the asks things the team can actually deliver, trim to 900 words, and give a send-timing rule and a reply-handling plan."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is operationally complete: a first move for this week, a clear list and exclusion table, link-free emails, an opt-out and address footer, a send window tied to close week, and reply handling.",
+  "biggest_mistake": "Step 1 asks for a 20-minute walkthrough straight away, which is a heavier first ask, and the 12th-to-15th send window delays some freshly flagged pricing changes.",
+  "what_would_make_it_a_10": "Soften the step 1 ask, reconcile the send window with the weekly flag timing, and tighten to the 900-word limit."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick the right people, the right trigger and no links in step 1. Output 2 is the one I could hand over tomorrow: it has a first move for this week, an opt-out footer, send rules, reply handling and a test, and it asks only for things we can deliver."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It answers the 20% question with the lifetime maths, keeps the top 20 at the centre, and turns the 30-day credit window and payout complaints into concrete fixes the one manager can run.",
+  "biggest_mistake": "The $38,000 'saving on new customers only' is a rough assumption and is flagged as needing checking, so finance may challenge that line.",
+  "what_would_make_it_a_10": "Tighten the new-customer saving estimate to one number finance can stand behind, or drop it and lean on the break-even and churn maths."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear, plain-English case for holding 30% and a well-explained 90-day window, with a Partner tier that rewards the top 20 and a first 30 days anyone could run.",
+  "biggest_mistake": "The 40% for 12 months to Partners is a real cost and a divergence from the 'one rate, no menu' simplicity; the $63,000 per 10% credited-revenue estimate is loose and the break-even claim ($262,500) is right but the 'four people wipe it out' logic is hand-wavy.",
+  "what_would_make_it_a_10": "Drop or clearly price the 40% Partner headline (or show why it beats the simpler same-rate tier), and tighten the credited-revenue cost estimate to a defensible range."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the big calls right, but Output 1 is the cleaner single plan: same rate, no menu, sharper step-by-step first 30 days and a short review trigger. Output 2's 40% Partner headline adds cost and complexity without the survey or churn data demanding it."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It zeroes in on the right segment and trigger, with practical list rules and an honest forecast tied to the pilot.",
+  "biggest_mistake": "Step 1 uses the case proof too early and adds an extra threshold condition ('if it runs past five') that was not asked for and weakens the one-ask rule.",
+  "what_would_make_it_a_10": "Keep step 1 fully focused on the pricing-change pain with no proof yet, tighten each CTA to one clean ask, and remove speculative send-window rules not grounded in the brief."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows the data exactly: right persona, right trigger, no links in step 1, clear load/exclude rules, and a grounded reply-rate expectation.",
+  "biggest_mistake": "Step 1 includes the 9-to-4 proof even though the strongest version would hold that for a later step, and the projection that targeting the best segment with the best trigger should meet or beat 7.9% leans slightly beyond the tested data.",
+  "what_would_make_it_a_10": "Move the proof to step 2 or 4, keep step 1 entirely on the pricing-change spreadsheet pain, and make the forecast strictly conservative to the tested floor/ceiling."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I could hand to sales tomorrow with the least editing. It stays closer to the brief, gives cleaner list logic and expectations, and the emails read more like a finance peer writing to a finance peer."
+}

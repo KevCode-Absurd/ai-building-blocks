@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Names the Monday re-cartoning job and the rush order for the top 5 shades, with dates, costs and everything inside the ₹1.2 crore cash ceiling.",
+  "biggest_mistake": "Arithmetic is loose in places: the short version says the top 5 run out 'around 30 November' and elsewhere '1 December', and '3,200 orders waiting' is asserted without a shown calc, so the timing the owner must plan around is not fully traceable.",
+  "what_would_make_it_a_10": "Show every number's working (rush units, weeks of cover, the pre-order backlog) and settle one sold-out date so the dates table and the short version agree."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every number traces to the brief: total ₹1,14,13,400 with ₹5,86,600 held back, a date-by-date top-5 stock table, and an 8-week reorder point the ops lead can run every Monday.",
+  "biggest_mistake": "It leaves a conditional 'check before sending' step on foundation and kohl when the owner asked for one plan, not options, and the customer-facing line is thinner than the brand deserves.",
+  "what_would_make_it_a_10": "Commit to the foundation and kohl split now instead of hedging, and add one honest, ready-to-paste back-in-stock message in Tanvi's and Farah's words."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2's numbers add up to the rupee, its date-by-date stock table proves the plan survives the sale, and it states a reorder trigger the team can run weekly; Output 1 is close but has loose arithmetic and shifting sold-out dates that would confuse Monday's execution."
+}

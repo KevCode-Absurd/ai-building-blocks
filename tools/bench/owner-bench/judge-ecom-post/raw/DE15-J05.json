@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Brings the paused front-of-pack winner back with fresh words, leads with the unused taste reviews, and takes the ₹90 objection head-on with real customer quotes.",
+  "biggest_mistake": "The headline and description character limits are set at 27 (not the ~40/30 in the notes), so some short, plain headlines are avoided and the P1/H2 pairing is fine but the limits shown are wrong for Meta placements.",
+  "what_would_make_it_a_10": "Show correct Meta limits (headline ~40, description ~30) with counts, and tighten the launch plan budget math so each cell's purchases are clearly enough to read."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, tight copy set with honest character counts, a clear A-vs-C logic that isolates fact versus persona, and a sensible backup if review quotes are not allowed.",
+  "biggest_mistake": "The launch rationale skips a direct taste-versus-transparency test by pairing P2 with H2, and describes limits as 27 for both headline and description, which narrows headlines unnecessarily.",
+  "what_would_make_it_a_10": "Use the correct headline (~40) and description (~30) limits, and set the first four so taste is tested head-to-head against the returning front-of-pack angle with a named money read."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nail the signals, but Output 2 is cleaner to hand over: honest counts, tighter lines, a clear A-vs-C logic and a backup plan, with fewer moving parts and no confusing extra control cell."
+}

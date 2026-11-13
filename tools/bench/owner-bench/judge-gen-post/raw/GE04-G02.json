@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The A/B test sample size calculation and the 'bolder move' to put the security page in the demo confirmation email show deep funnel expertise.",
+  "biggest_mistake": "It missed the opportunity to use the persona's exact phrase 'email tennis' in the headline, which was a clear signal in the brief.",
+  "what_would_make_it_a_10": "Use the exact phrasing the persona uses in the hero, and explicitly tie the A/B test variations to the survey and usage data."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Flawless integration of the data into the copy and logic, from the 'email tennis' hook to defining the winning metric using the 7-day booking data point.",
+  "biggest_mistake": "It includes bracketed placeholders (like '[Quote from a paid recruiting customer...]'), which goes against the rubric's definition of being completely ready to paste.",
+  "what_would_make_it_a_10": "Remove the explicit bracketed placeholders by either designing the section without them or using a specific visual instruction instead of dummy text."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are phenomenal and do the math perfectly. Output 2 wins by a hair because its copy hits the persona's exact words ('email tennis') and it brilliantly uses the 7-day booking stat to define a fast, reliable A/B test metric."
+}

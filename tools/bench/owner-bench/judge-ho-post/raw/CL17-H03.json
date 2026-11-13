@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every cost figure checks against the brief (£139,800 in returns, 6,076 day 3–5 tickets, 540–1,080 fewer bra returns, a £11,830–£19,770 total), and there are two bra-specific fit messages after delivery that help before a return.",
+  "biggest_mistake": "Message 4 says 'still on track' even when the courier has not scanned the parcel, which risks a promise we cannot keep. The 23.5% low case is never explained as an adjustment for the type of buyer who uses the quiz.",
+  "what_would_make_it_a_10": "Send the day-3 update only after a courier scan, say why the fit gain is halved, and name owners and a conversion guardrail for moving the quiz."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp, honest reasoning. It halves the fit finder gap because keen buyers self-select, it warns that Christmas will distort results, it tests the button on half of bra visitors with a conversion guardrail, and it sends the day-3 message only after a courier scan, with a warehouse check when there is none.",
+  "biggest_mistake": "There is no follow-up 'how's the fit' message for first-time bra buyers a few days after delivery. The 35–45% exchange share is set as a day-60 target when the portal only goes live in December.",
+  "what_would_make_it_a_10": "Add a bra-specific fit-help message after delivery and give one total gross saving per 90 days, with a more cautious day-60 exchange target."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both get the numbers right. Number 2 thinks like an operator: it adjusts the fit gain for who uses the quiz, flags Christmas, adds owners, dates and a guardrail, and never promises a day it can't keep, so it's the plan I'd rather run."
+}

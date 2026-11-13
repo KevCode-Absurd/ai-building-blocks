@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sees the two big truths in your data: PMax is being propped up by brand and the pointed flat feed issue is the first thing to fix, then it turns that into a concrete budget and week-one plan.",
+  "biggest_mistake": "It parks $118,000 in reserve and even says it may go unspent, which does not really answer your ask to split the full $240,000 for next month.",
+  "what_would_make_it_a_10": "Commit the full $240,000 across channels with cleaner execution details on what is actually possible in PMax exclusions and negatives, while keeping the same profit-first logic."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is very usable and owner-friendly: profit-first, clear on what to cut, strong feed diagnosis, and it uses the customer language well in titles and ads.",
+  "biggest_mistake": "Its forecast leans on shaky assumptions and likely overstates results, especially by assigning brand search a much higher value after the switch and by presenting a budget split that effectively includes a reserve rather than a fully committed operating plan.",
+  "what_would_make_it_a_10": "Tighten the numbers so every forecast traces back to the given data, especially brand demand capture and expected ROAS by line, and be more precise about what can actually be controlled inside PMax."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather pay for because it gets closest to the real economics of this account and puts the feed fix first. Output 2 is easier to read, but its projections and budget logic ask me to trust too much that is not proven by my data."
+}

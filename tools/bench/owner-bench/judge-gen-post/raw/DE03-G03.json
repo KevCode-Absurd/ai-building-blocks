@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Diagnoses the margin problem from the AI-builder channel with the exact arithmetic (0.4% vs 3.1%, 72% idle, $0.9M compute) and pairs it with the two-week 48-hour fix.",
+  "biggest_mistake": "The 'roughly 9 points of margin' passage is muddled — it invokes '$10.4M of monthly revenue' and concludes the compute rise is 'more than the 7-point drop' in a way that invites an arithmetic challenge and slightly overstates it.",
+  "what_would_make_it_a_10": "Tighten the margin arithmetic into one clean, defensible sentence and trim the extra explanation so the bad news lands faster on a phone."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the missed forecast and the Customer A loss in the subject line and first screen, then delivers the asks up front with named profiles, dates and forwardable blurbs.",
+  "biggest_mistake": "The runway row comparing 52 months to 33 months uses September cash against October burn — a subtle mix of periods that a sharp lead investor could flag.",
+  "what_would_make_it_a_10": "Fix the September runway comparison to use consistent period math and keep everything else as it is."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and correctly put the bad news first, but Output 2's subject line and top-of-email ask block make it the one I'd actually want to read between meetings, and its voice is closer to ours. Output 1's murky margin arithmetic is the kind of thing a portfolio CFO would poke at."
+}

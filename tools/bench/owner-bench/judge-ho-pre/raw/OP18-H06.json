@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the right straight answer on the 20% cut, uses the LTV and top-20 math well, and makes the credit-window and payout fixes the first moves.",
+  "biggest_mistake": "The cost estimate for giving Partners 40% in year one is a bit shaky and could understate the finance impact because it applies lifetime/new-customer logic to last-12-month revenue.",
+  "what_would_make_it_a_10": "Tighten the Partner-tier cost model and add a clearer cap or pilot so finance can approve the 40% first-year tier with confidence."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly rejects the 20% cut with the right LTV math and focuses attention on faster payouts, better attribution, and the active creator-educator partners.",
+  "biggest_mistake": "It is a little too cautious on the credit window and tiers, giving most affiliates only 60 days even though the data says the 30-day window is a core reason partners lose credit.",
+  "what_would_make_it_a_10": "Make 90-day attribution the standard plan, sharpen the top-20 treatment, and remove or better substantiate the speculative $38,000 new-customer-only savings point."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 1 feels more like the programme redesign I asked for: it acts on the top-20 signal, fixes attribution and payouts fast, and gives a fuller one-plan structure. Output 2 is safer and very clear, but it underplays the 90-day credit fix and the tier design."
+}

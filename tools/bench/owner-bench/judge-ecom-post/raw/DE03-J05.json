@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the paused 'flip the pack' winner correctly, brings it back with fresh words first, and makes the untested taste reviews (26% of reviews) a real launch test in the customer's own voice.",
+  "biggest_mistake": "The stated display limits are wrong (headline 27, description 27 instead of about 40 and 30), so the character-count discipline the owner asked for is built on a bad rule and leaves room unused.",
+  "what_would_make_it_a_10": "Use the right Meta limits, add the taste quote to a headline, and show the money math behind the ₹210/₹290 bar-to-beat so the first-4 plan lands with a budget figure."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Lines sound exactly like the brand and the buyers — 'minus the samosa', 'Save yourself the flip', 'Fair. Here's your ₹90' — and the launch plan includes a live-ad control, a budget, an early-cut rule and a day-14 read.",
+  "biggest_mistake": "It adds test budget and a 5-cell plan the brief did not give, so some of the launch mechanics are invention the owner must approve.",
+  "what_would_make_it_a_10": "Keep the copy and plan, but flag the ₹6,000/day and ₹6,333/day figures as assumptions drawn from the brief so the owner can swap in real numbers without rework."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 wins on voice and readiness: its lines sound like The Whole Truth and its buyers, the specs are within the right Meta limits, and the launch table comes with a control, a budget and a decision rule I could hand to my team tomorrow. Output 1 is strong and disciplined, but a wrong display-limit assumption and slightly flatter lines make it the second choice."
+}

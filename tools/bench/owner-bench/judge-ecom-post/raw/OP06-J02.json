@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the actual signals in your data into a Monday-ready plan: on-feet worker Spark Ads first, problem-first hooks, proper Shopify/TikTok tracking, phased budget, and a day-30 decision tied to the 90-day economics.",
+  "biggest_mistake": "The day-30 read leans on weak attribution methods like survey and baseline lift without a clean control, and one of the proposed new creator Spark ads assumes rights or fresh creator output that are not fully nailed down.",
+  "what_would_make_it_a_10": "Tighten the measurement plan with a cleaner holdout or geo-test as the main read and make the creative rights/production plan fully explicit for every ad in the first 30 days."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It gets the big strategic calls mostly right: problem-first over mission or discount, real on-feet creators over studio product shots, and a sensible tracking checklist before spend.",
+  "biggest_mistake": "It makes a few owner-level misses that change decisions: the day-30 scorecard relies on shaky metrics like prior-30-day comparison and a required order-count threshold, and the campaign structure opens a SCALE campaign too early without enough proof or budget-per-cell discipline.",
+  "what_would_make_it_a_10": "Rework the budget and decision rules around the true 90-day break-even read, keep structure simpler in month one, and tie every scale/kill call to Shopify-verified new-customer economics rather than platform and before-vs-after shortcuts."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to something I could hand the team on Monday. It reads my data better, uses the winning creator style and hook properly, and gives more decision-ready budget and kill/scale rules tied to the money."
+}

@@ -1,0 +1,29 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 2 gives a range for the forecast with clearer reasoning behind the shares and a smart extra move on the balances screen, while Output 1's single-point 3,743 figure reads more confident than the evidence supports. Output 2 also correctly leaves the 71%-helpful payment article alone and explains why."
+}

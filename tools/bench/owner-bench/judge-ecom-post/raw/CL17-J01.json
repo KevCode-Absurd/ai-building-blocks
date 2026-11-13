@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every ad set is judged on its own order value, COD share and refusal rate after the Shopify attribution haircut. That gives a store-count loss of −₹1,21,700 and a budget that sums exactly to ₹5,60,000, with ₹1,49,100 held back and released only by rule.",
+  "biggest_mistake": "Retargeting is labelled 'Cut' even though the action is a halving, and prospecting assumes 86% of Meta's purchases are real, which is kinder than the 72% Shopify actually shows.",
+  "what_would_make_it_a_10": "Fix the retargeting label, show the forecast at a flat 72% as well as at 86%, and give the Starter Kit a prepaid-only route back instead of only cutting it."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The two lines per ad set are easy for a team to follow, the numbers check out (ASC +₹30,400, Starter Kit break-even ₹271, Women 25 to 34 at ₹414), and the persona-led creative brief is ready to brief.",
+  "biggest_mistake": "Decisions sit on Meta's count. Catalog is scaled, retargeting is held at ₹40,000 even though it loses money on Shopify numbers, and the ASC gate is ₹320, above its own ₹282 safe line.",
+  "what_would_make_it_a_10": "Make the safe line the trigger for scaling and holding, so no budget moves on Meta's inflated count, and add a prepaid or COD-confirmation fix for the Starter Kit."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both catch the paused video, the women 25 to 34 split and the COD trap, and both budgets add up. Output 1 judges every call on the Shopify-adjusted count, which is how I'd actually lose or make money. Output 2 still scales on Meta's own numbers."
+}

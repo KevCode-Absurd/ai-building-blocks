@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the two big levers: Tier 3 RTO cost and order-status chat load, then adds confirmation, shipped and delivery-day flows with sensible timing.",
+  "biggest_mistake": "The prepaid switch is treated as Utility despite being a behavioural nudge, and the plan avoids a real incentive even though the highest-risk COD segment needs a stronger push.",
+  "what_would_make_it_a_10": "Make the prepaid nudge a Marketing template with a tested tiered incentive or advance option, tighten the WhatsApp variables/buttons, and make the after-hours bot cover all top topics including size and exchange."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the owner’s data sharply: Tier 3 gets the harder confirm/call/cancel path, order-status chats get shipped/OFD templates, and every key flow has a holdout or net-profit check.",
+  "biggest_mistake": "The prepaid discounts are introduced without much caveat, and their value still needs to be validated against incremental RTO reduction rather than assumed savings.",
+  "what_would_make_it_a_10": "Add the exact exchange-window wording, make the discount/advance test a clearly approved assumption, and ensure the mixed template buttons are supported by the provider before submission."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is closer to how I would actually run this: it targets the expensive Tier 3 RTO problem, uses correct Utility vs Marketing categories, builds in holdouts, and gives the team a concrete weekly operating plan. Output 1 is strong, but it is softer on the prepaid/RTO lever and has a few template/category issues I would need to fix."
+}

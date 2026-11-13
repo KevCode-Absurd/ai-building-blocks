@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on all three data signals at once (sleep x evening x narrator clips) and handles the 5-day review rule properly, filling week 1 with review-free posts while batching weeks 2-4 on 16 November.",
+  "biggest_mistake": "It is close to the 1,200-word ceiling and the weeks 2-4 content is only sketched as one-line angles, so the team gets no flavour of how later posts differ.",
+  "what_would_make_it_a_10": "Add one-line hooks for each of the 20 later posts and a note on sleep-content fatigue (posting sleep 12 times may dilute the 450 installs per post) with the mix to fall back on."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Sharp, honest framing of the trade-offs, with a low-case install projection that accounts for sleep fatigue and a genuinely fresh live-stream idea with a kill-switch.",
+  "biggest_mistake": "It declares that none of the 24 planned posts needs clinical or legal review and builds no submission date, yet later titles like Awake at 2am name a sleep condition, so a reviewer bottleneck could stop the plan cold.",
+  "what_would_make_it_a_10": "Keep the risk-aware projections but add the review pipeline Output 1 has: submit condition-adjacent weeks on 16 November, nothing reviewed goes live before 23-24 November, and screen every title in the 24-post table against the review rule."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both plans read the data the same way and both write warm, on-voice drafts, but Output 1 is the one I could hand over tomorrow: it tells me exactly what to submit for review on 16 November and keeps week 1 clear of anything needing it, while Output 2 waves away the review rule on a plan that includes a 2am insomnia post."
+}

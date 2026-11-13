@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The application swaps the resume for a real sample customer email that is already written, and the scorecard puts 50% of the weight on writing to customers, which is exactly what the 0.62 correlation supports.",
+  "biggest_mistake": "The 100-word 'why this job?' answer adds reading time without any evidence that it predicts success, and the interview is scored as a vague 'Conversation' row with no set questions.",
+  "what_would_make_it_a_10": "Drop the 'why' question, replace 'Conversation' with specific interview questions tied to the job's hard parts, and add a sense check like 'about 8 or 9 weekends a year' so the rotation feels concrete."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the honest hard parts (hours, 'about 8 or 9 weekends a year', working alone) and gives a local-hours table, which targets the early-leaver problem and the Asia-Pacific gap directly.",
+  "biggest_mistake": "The application exercise is described as 'a real ticket from the last 90 days' but the email itself isn't written, so the team still has to choose and clean one up before posting.",
+  "what_would_make_it_a_10": "Include the actual anonymised customer email and a clear offer threshold on the final weighted score."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both turn our data into a writing-first application and a scorecard I could use. The second puts the hours and weekends up front more concretely, gives set interview questions, and adds smart extras: a sample-size caveat and keeping strong applicants for next time. The first is a bit more ready to paste because its sample email is written."
+}

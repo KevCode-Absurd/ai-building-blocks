@@ -1,0 +1,127 @@
+{
+ "panel": [
+  "CL01:claude-opus-5-5",
+  "OP02:gpt-5.5",
+  "DE03:deepseek-chat",
+  "GE04:gemini-pro-latest",
+  "CL05:claude-sonnet-5-5",
+  "OP06:gpt-5.4",
+  "DE07:deepseek-reasoner",
+  "GE08:gemini-flash-latest",
+  "CL09:claude-opus-5-5",
+  "OP10:gpt-5.5",
+  "DE11:deepseek-chat",
+  "GE12:gemini-pro-latest",
+  "CL13:claude-sonnet-5-5",
+  "OP14:gpt-5.4",
+  "DE15:deepseek-reasoner",
+  "GE16:gemini-flash-latest",
+  "CL17:claude-opus-5-5",
+  "OP18:gpt-5.5",
+  "DE19:deepseek-chat",
+  "GE20:gemini-pro-latest"
+ ],
+ "verdicts": 116,
+ "failed": 4,
+ "tot": {
+  "agent": 73,
+  "plain": 43,
+  "tie": 0
+ },
+ "agent_share_of_decided": 0.629,
+ "perProvider": {
+  "claude": {
+   "agent": 18,
+   "plain": 12,
+   "tie": 0
+  },
+  "openai": {
+   "agent": 19,
+   "plain": 11,
+   "tie": 0
+  },
+  "deepseek": {
+   "agent": 20,
+   "plain": 6,
+   "tie": 0
+  },
+  "gemini": {
+   "agent": 16,
+   "plain": 14,
+   "tie": 0
+  }
+ },
+ "perJob": {
+  "H01": {
+   "agent": 12,
+   "plain": 7,
+   "tie": 0
+  },
+  "H02": {
+   "agent": 12,
+   "plain": 6,
+   "tie": 0
+  },
+  "H03": {
+   "agent": 4,
+   "plain": 16,
+   "tie": 0
+  },
+  "H04": {
+   "agent": 15,
+   "plain": 5,
+   "tie": 0
+  },
+  "H05": {
+   "agent": 13,
+   "plain": 7,
+   "tie": 0
+  },
+  "H06": {
+   "agent": 17,
+   "plain": 2,
+   "tie": 0
+  }
+ },
+ "dims": {
+  "agent": {
+   "fit": 9.08,
+   "insight": 8.66,
+   "priorities": 8.93,
+   "reasoning": 8.77,
+   "correct": 8.72,
+   "clear": 8.84,
+   "voice": 8.62,
+   "range": 7.73,
+   "ready": 8.65,
+   "overall": 8.64
+  },
+  "plain": {
+   "fit": 8.92,
+   "insight": 8.47,
+   "priorities": 8.7,
+   "reasoning": 8.2,
+   "correct": 8.2,
+   "clear": 8.87,
+   "voice": 8.63,
+   "range": 8.09,
+   "ready": 8.54,
+   "overall": 8.27
+  }
+ },
+ "use_as_is": {
+  "agent": {
+   "with small tweaks": 90,
+   "as is": 21,
+   "with major rework": 1,
+   "undefined": 3,
+   "with minor rework": 1
+  },
+  "plain": {
+   "with small tweaks": 84,
+   "with major rework": 9,
+   "undefined": 3,
+   "as is": 20
+  }
+ }
+}

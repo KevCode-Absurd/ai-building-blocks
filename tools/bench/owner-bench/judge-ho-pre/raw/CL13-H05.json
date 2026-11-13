@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Honest, traceable forecast with a stated reach assumption, a 1,500 to 3,400 range, a per-topic table, and a short list of facts to confirm. The three new articles are in the brand voice and answer in the first lines.",
+  "biggest_mistake": "It writes new articles beside the old ones instead of fixing the 38%-helpful 'How balances work', so the old article stays unhelpful and two similar articles now compete. It also applies one 58% help rate to every topic, including Pro refunds, where the help rate is not the right measure.",
+  "what_would_make_it_a_10": "Fix the existing balances article instead of adding a duplicate, and size each topic's saving on its own cause (for example, Apple and Google refunds avoided) rather than one blended help rate."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It rewrites and renames the existing articles, which is the cheapest route to the ticket savings. Each topic is sized separately in a table. It also adds an in-app 'Balances are simplified. Why?' line, search-term tagging, and a currency link.",
+  "biggest_mistake": "The forecast shares (40%, 50%) are asserted with little evidence and look optimistic, so the headline 21% drop is probably too high. The website steps ('Undelete expense', 'Recent activity') and the Apple and Google cancel paths are invented details, and the 'Contact us' form option is assumed.",
+  "what_would_make_it_a_10": "Tie the avoidance shares to the existing help rates or give a low-to-high range up front, and flag the invented UI names as needing a check."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "As the owner, I would rather have the one that rewrites my weakest, biggest article, retitles the delete article in my customers' words, and adds the in-app 'Balances are simplified. Why?' idea. Its forecast is rosier and some details are invented, but it works through each topic, whereas Output 1 is safer and more honest on the numbers but adds duplicate articles."
+}

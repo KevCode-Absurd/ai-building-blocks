@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 6,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Correctly identifies that Product Hunt is a low-retention channel and sets strict, data-driven launch gates to prevent migration issues.",
+  "biggest_mistake": "The drafts rely heavily on placeholders, and giving YouTube creators a private build just two weeks before launch leaves them very little time to produce videos.",
+  "what_would_make_it_a_10": "Replace placeholders with finished, paste-ready copy and move the creator outreach earlier in the timeline."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Masterfully reverse-engineers the timeline from the code freeze to ensure bugs are found in time, while perfectly capturing the crisp, craft-obsessed brand voice.",
+  "biggest_mistake": "It gives early access to the 1,500 extension authors but misses explicitly asking them to share the launch with their followers or providing a share kit.",
+  "what_would_make_it_a_10": "Include a direct ask and a simple share kit for the extension authors to maximize their high-retention promotion channel."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 deeply understands the constraints, working backwards from the code freeze to build a realistic, operational timeline. Its copy is punchy, on-brand, and completely ready to use, avoiding the draft-like placeholders of Output 1."
+}

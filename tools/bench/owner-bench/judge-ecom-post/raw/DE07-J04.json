@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 6,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, shootable scripts that correctly put taste first and handle the $3-a-can price objection inside Script 2.",
+  "biggest_mistake": "It applies the CPA table but never surfaces the real insight — that $24,000 went to the worst-opening style — and its test plan has no budgets or cut/scale rules to act on.",
+  "what_would_make_it_a_10": "Show the money (spend vs CPA misallocation, the pack-price working) and give a concrete test plan with numbers to keep, cut or scale each hook."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It names that $24,000 went to the $44 label opener, reframes the price as '$35.99 ÷ 12 = 12 afternoons,' and backs it with a real test plan with budgets and cut/scale rules.",
+  "biggest_mistake": "It sets a scale target near the $26 taste-test CPA without tying the breakeven to gross profit per order (COGS is unknown), so the profitability ceiling is asserted, not proven.",
+  "what_would_make_it_a_10": "Add the gross-profit-per-order ceiling (AOV $35.99 minus product cost, shipping and fees) so the '$26 scale' and '$32 keep' lines are shown to be profitable, not just better than the old benchmark."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both are on-brand and correct, but Output 2 catches what the owner didn't see — the overspend on the worst-opening label ads — and turns it into a priced test plan with cut/scale rules, while Output 1 just applies the data without flagging the misallocation or giving numbers to act on."
+}

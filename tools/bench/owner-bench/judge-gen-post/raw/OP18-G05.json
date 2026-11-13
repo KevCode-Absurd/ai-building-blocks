@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the real signals in the data: APAC hours, weekend clarity, and writing as the main hiring signal.",
+  "biggest_mistake": "It is a bit over the requested length and does not include the actual customer-reply prompt applicants would answer.",
+  "what_would_make_it_a_10": "Trim it under 1,100 words and add the exact anonymized customer ticket for the application exercise."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 10,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The job post sounds calm, candid, and human, with salary, hours, remote setup, and weekend rotation stated plainly.",
+  "biggest_mistake": "It introduces a longer written exercise without defining it, so the scorecard depends on a missing step.",
+  "what_would_make_it_a_10": "Define the longer exercise or make the single application reply carry the main scorecard, and remove the extra mini-cover-letter question."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and on-brand, but Output 1 is more operationally complete for the hiring team: it gives a fuller scorecard, calibration process, reviewer workflow, and clearer use of the data. Output 2 has the cleaner post, but leaves more for the team to invent before running the process."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "The profit-after-ads table cleanly strips brand out to reveal the $20,100 loss, backed by a disciplined day-by-day week one checklist.",
+  "biggest_mistake": "Holding $104,000 (over 43% of the total budget) in reserve is overly timid and guarantees a sharp revenue drop when proven winners could absorb more capital.",
+  "what_would_make_it_a_10": "Reallocate more of the reserve upfront into dedicated non-brand search campaigns for the winning washable and standing themes rather than leaving $104k idle."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Breaking out the winning high-ROAS themes into their own non-brand search campaign while setting up automatic item updates in Merchant Center to permanently fix the price mismatches.",
+  "biggest_mistake": "Assuming brand search ROAS can hit 25.0 while absorbing all brand queries might be slightly optimistic without gradual bid capping.",
+  "what_would_make_it_a_10": "Include the specific day-by-day team ownership table seen in competitor plans alongside its already superior technical diagnostics."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 provides a more practical media plan: instead of parking $104,000 in cash reserve, it carves out a dedicated $35,000 non-brand search campaign to reliably capture the profitable Claire queries. Its Merchant Center diagnostic (recommending automatic item updates) also shows deeper Google Shopping expertise."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The application really is the 0.62 signal: a ready-to-paste locked-out HEY customer email with a 200-word cap replaces the resume. Writing is weighted 50% and the review maths checks out (160h ÷ 2,100 = 4.6 min; 2,100 × 2 min = 70h, 90h saved).",
+  "biggest_mistake": "The weekend rotation gets its own section, but it sits below hours and pay instead of leading the 'hard parts' list. The 2-minutes-per-reply estimate is an optimistic single number with no range.",
+  "what_would_make_it_a_10": "Lead the hard parts with the weekend rotation, give local times for Tokyo and Sydney, and show a review-hours range with the second-pass cost built in."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post opens with the overnight gap and $82,000, then puts hours and the one-in-six weekend (about 8 or 9 a year) at the top of the hard parts. The local-time table is correct, including Sydney daylight saving, and the costed review plan holds up (94 to 129h, 6 to 9h per reviewer per week).",
+  "biggest_mistake": "It says to use 'a real ticket' but doesn't supply one, so the application isn't paste-ready. It gives 45% of the weight to interview rows and has no offer threshold.",
+  "what_would_make_it_a_10": "Include the actual customer email and an offer rule such as 4.0+ with no row below 3, and keep the interview weight lower given its 0.11 correlation."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are built on our data and sound like us. The second puts the weekend rotation where our leavers needed it, gives local hours for the whole region, costs the review plan realistically and adds the reuse-the-shortlist idea. The first is a bit more paste-ready because it includes the customer email."
+}

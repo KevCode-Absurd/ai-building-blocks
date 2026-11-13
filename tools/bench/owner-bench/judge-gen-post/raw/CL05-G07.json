@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks channels by retained users with correct math, which puts creators and authors first and Product Hunt last. It ties that to a dated calendar with named owners that respects the 1 December freeze, plus a six-point go/no-go gate built on the 58% migration-ticket problem.",
+  "biggest_mistake": "Its support staffing for launch week is thinner than the problem deserves. It sets a 12-hour reply target but gives no extra hands, and the staged-rollout 'bolder move' is tacked on rather than built into the plan.",
+  "what_would_make_it_a_10": "Make the staged rollout and an old-settings undo part of the core gates, add engineers to a launch-week support rota, and trim the length to fit the 1,200-word cap."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Its launch gates are the strongest idea in either plan: 1,000 real-setup beta users, a one-step restore of old settings, a staged rollout, and engineers on support shifts during the freeze. It also refuses to mention anything not in the build.",
+  "biggest_mistake": "It is not ready to paste. The X posts and email are full of placeholders (speed number, author names, support address, first name). The calendar has no owners and is heavy for a team of one launch manager, one designer and one editor.",
+  "what_would_make_it_a_10": "Keep the strong gates, but fill in the copy, add owners to each date, fix the rollout dates (the plan says everyone by day 7, then lists a full rollout on 15 Dec), and cut the workload to what the team can do."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to my team tomorrow: correct math, owners and dates, clear gates, and an X post and email that are finished and answer 'will my hotkeys still work?'. Output 2 has better safety ideas, but it leaves me placeholders, has no owners, and its rollout dates contradict each other."
+}

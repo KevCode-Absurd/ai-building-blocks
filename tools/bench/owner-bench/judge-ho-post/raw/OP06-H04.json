@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It rebuilds the flow around the real signals in the data, especially bringing back the pause for 'no time' and stopping wasteful discounts for trip-finished users.",
+  "biggest_mistake": "It makes a weak, lightly supported call to use the 50% discount for 'switching apps' and the maths mixes 90-day kept counts with monthly revenue in a way that could mislead decisions.",
+  "what_would_make_it_a_10": "Tighten the revenue logic by separating discounted vs full-price value over time, remove the unsupported switching-app discount, and add a clearer launch order with holdout-based measurement."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the two owner-critical truths plainly: the pause is the whole engine of the save rate, and giving discounts to trip-complete users throws away margin.",
+  "biggest_mistake": "Some of the projected revenue math is not fully clean or shown end to end, especially the 12-month total and savings claim, so I'd want the working checked before using it in a plan.",
+  "what_would_make_it_a_10": "Show the full working for the projection with cleaner treatment of discounted revenue and include one concise build order by sprint task and owner."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I'd rather pay for because it tells me the hard truth, ranks the work correctly, and matches the brief's legal and brand constraints while using the data more sharply. Output 1 is strong and usable, but it gives an unsupported discount to switchers and is less disciplined on the money story."
+}

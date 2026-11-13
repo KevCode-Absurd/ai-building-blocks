@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The post-delivery bra copy gives practical, non-judgmental fitting guidance (loosest hook, level band, smooth cups) that actively prevents unnecessary returns.",
+  "biggest_mistake": "The roadmap gives broad two-week windows rather than naming specific operational owners for each technical integration.",
+  "what_would_make_it_a_10": "It is already a 10 for an e-commerce post-purchase plan."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong commercial awareness including the Christmas volume caveat, guardrail metrics for conversion, and an explicit discount for selection bias in the fit quiz.",
+  "biggest_mistake": "The post-delivery message merely sends them back to the quiz rather than coaching them on how to actually check and evaluate bra fit before giving up.",
+  "what_would_make_it_a_10": "Replace the generic 'reply here to chase' in Message 3 (which invites support volume) and write genuine fit-coaching copy for the delivered stage."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers superior, customer-ready copy that actually teaches first-time bra buyers how to test their fit at home, while Output 2's delivery email just pushes them back to an online quiz."
+}

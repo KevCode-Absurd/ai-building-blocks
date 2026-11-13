@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Smartly notes that only half the fit finder gap might come from the quiz itself, adjusting the expected financial impact realistically.",
+  "biggest_mistake": "Mixing weekly, monthly, and 90-day timeframes makes the projected savings harder to digest at a glance.",
+  "what_would_make_it_a_10": "Providing actual fit instructions in the post-delivery email, rather than just linking back to the fit finder."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The post-delivery message offers specific, expert instructions on how a bra should fit (loosest hook, no gaps), perfectly fulfilling the owner's request.",
+  "biggest_mistake": "Including SMS for the day-3 update introduces a new, uncosted channel, although it's a minor addition.",
+  "what_would_make_it_a_10": "It is a 10; the strategic sequencing, consistent math, and vertical-specific copy are outstanding."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 delivers an expert-level post-delivery fit message that directly tackles the main return reason, keeps all math in a consistent 90-day timeframe, and introduces a clever 10-minute post-purchase email to catch size errors before dispatch."
+}

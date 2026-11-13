@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks every move by extra trials with the arithmetic shown (58,000 impressions x 9% CTR = 5,220 clicks, at 31.9 trials per 1,000 = +100 trials, +39 paid) and is honest that the cookie-banner rewrite is worth about 3 trials a month even though it answers Maya's own question.",
+  "biggest_mistake": "It builds the headline ceiling on an aggressive assumption - the head term jumping to a 9%-CTR top-3 slot borrowed from a small brand query - and an invented '+25 trials' docs uplift, then gives no dates, finish lines or drafted title/meta copy, so the writer still has to invent the copy on Monday.",
+  "what_would_make_it_a_10": "Replace the 9% CTR leap with a tested range, add dated monthly finish lines with the actual title and meta written out, and keep its existing zero-click post redirect/merge step."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the same evidence into an operating system: dated month table with finish lines, owners, keep/rollback/scale rules, 46 trials per comparison page versus fewer than 1 per blog post, and a real title and meta the writer can paste on Monday morning.",
+  "biggest_mistake": "It tells the writer to leave decaying posts 'live and unchanged', which drops the consolidation and redirect of dead blog posts I explicitly asked for, and its 42-125 trials range is wide enough that I cannot hold a number to it.",
+  "what_would_make_it_a_10": "Add the zero-click post audit and redirect into the Month 3 developer day without spending writer hours, and tighten the projection into a month-by-month trial forecast tied to each page's expected recrawl date."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both put the writer on comparison and cookie-free pages and both get the 3.2% versus 0.25% maths right, but output 2 hands me dates, finish lines, rollback rules and ready-to-paste copy, and its projections are more carefully calibrated; output 1 wins on the redirect step I asked for but inflates the ceiling and leaves the writer to invent the copy."
+}

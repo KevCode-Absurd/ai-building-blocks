@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Accurately strips out brand performance to reveal that the rest of Performance Max is losing money, presenting a clear contribution margin breakdown.",
+  "biggest_mistake": "Holding nearly 50% of the budget in a weekly reserve is too drastic and could crash the account's momentum instead of actively shifting it to winning channels.",
+  "what_would_make_it_a_10": "Calculate the exact budget needed for bags using the lost impression share data, and propose a more standard way to capture winning search terms rather than relying on exact-match negatives in PMax."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Exceptional technical depth, specifically calculating the exact $29k budget needed for bags using the impression share math and correctly identifying variant URLs and structured data as the root cause of the feed price mismatch.",
+  "biggest_mistake": "Assuming brand search ROAS will jump to 25 is slightly optimistic, though mathematically plausible with PMax cannibalization removed.",
+  "what_would_make_it_a_10": "It is already a 10, delivering exactly the strategic and technical precision an owner would gladly pay for."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 reads like a top-tier e-commerce specialist. It uses the impression share data to calculate the exact budget needed for bags, diagnoses the technical root causes of the feed price mismatch perfectly, and smartly breaks out winning queries into a Search campaign rather than fighting PMax."
+}

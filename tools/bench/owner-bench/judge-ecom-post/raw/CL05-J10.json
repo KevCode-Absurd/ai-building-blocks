@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clear ₹599 / ₹699 comparison with break-even step-up counts for each bundle, plus a sensible bundle ladder on the serum page.",
+  "biggest_mistake": "The ₹599 recommendation rests on a guessed 6% of orders sitting in the ₹499–598 band, which is too low given the 27% in ₹500–699. COD refusals are barely used in the threshold decision and no COD fee or prepaid idea is considered, so the +₹28k gain is weak.",
+  "what_would_make_it_a_10": "Size the affected order band from the given spread, build COD/RTO cost into the threshold choice, and make the face wash + serum routine bundle the lead with a plain two-item version."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses COD refusal rates and the ₹130 RTO cost to shape the whole threshold answer: keep ₹499, add a lip balm cart offer for orders under ₹499, and try a ₹49 COD fee. It also explains why Glow Routine adds a lip balm rather than cutting the pair's price.",
+  "biggest_mistake": "The threshold advice is somewhat hedged: it keeps ₹499 but wants a ₹699 test with a wide −₹0.72 to +₹2.35 lakh range. The answer is also dense with numbers and runs near the word limit.",
+  "what_would_make_it_a_10": "Commit to one threshold with a point estimate, trim the density, and show the working behind the ₹60/₹91 lift per lip-balm add."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 handles COD refusals, the lip balm add-on and a safe test plan the way I hoped, with a bold COD fee idea and a proper holdout. Output 1's threshold maths relies on a thin guess about order volume and mostly ignores RTO."
+}

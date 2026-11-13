@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the writer's first week on paper as a genuine Monday-to-Friday task list and ranks moves by trials with the working shown.",
+  "biggest_mistake": "Its ranked table mixes blog-rate math into the cookie post and leaves the docs trial-prompt gain as a vague 'about +25' with no basis, muddying the forecast.",
+  "what_would_make_it_a_10": "Tighten every projection so all five moves use consistent per-page trial math and trim the table-heavy opening so a busy owner can read the order in one pass."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Leads with the bad news, the decision and a ranged forecast, then gives a dated week-one brief in Maya's exact words with rollback and scale rules.",
+  "biggest_mistake": "Puts the agency/DPO page on the bolder-move list but schedules it into a Month 3 writer slot that also says 'refresh next 3 vs pages,' so the four-slot month is one page over capacity.",
+  "what_would_make_it_a_10": "Reconcile the Month 3 slot count so the agency page and the three vs refreshes both fit the four-page cap, or defer one explicitly."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 opens with the decision and the bad news, ties every move to a ranged trial projection, and hands the writer a dated brief in Maya's own words with rollback rules; Output 1 is solid but its forecast math is patchier and its week-one list is less specific.",
+ "reason2": "Output 2's dated Monday-to-Friday brief, stop/keep/rollback rules and ranged forecast feel like a plan I could run; Output 1 is close but its numbers wobble and the first step is less concrete."
+}

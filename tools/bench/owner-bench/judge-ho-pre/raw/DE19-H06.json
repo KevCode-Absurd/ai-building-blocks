@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the core decision with the lifetime-value maths, keeps 30%, and turns the broken 30-day window and slow payouts into the first fixes.",
+  "biggest_mistake": "The 90-day window cost estimate ('every 10% rise adds $63,000') is looser and less clearly bounded than the other figures, so the owner must accept a guess.",
+  "what_would_make_it_a_10": "Tighten the 90-day window cost into a bounded range with the assumption spelled out, so the owner can sign off without re-doing the maths."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every number is shown in a plain 'how I got it' table, and it finds the $38,000 real saving versus the $210,000 headline, which is the sharpest single insight in either plan.",
+  "biggest_mistake": "It labels the programme '2027' and dates the calendar (December/January) without stating that as an assumption, so the owner has a small inconsistency to fix.",
+  "what_would_make_it_a_10": "Set the dates explicitly to the owner's next-year calendar and state the new-vs-existing customer split assumption behind the $38,000."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and say no to the 20% cut with the right lifetime maths, but Output 2 shows every number's working and finds that the real saving is only about $38,000, not $210,000, which is the fact I'd most want before facing finance.",
+ "reason_short": "Output 2 wins on the money logic: it shows every figure's working and exposes the $210k saving as really ~$38k, the one fact I'd most want before talking to finance."
+}

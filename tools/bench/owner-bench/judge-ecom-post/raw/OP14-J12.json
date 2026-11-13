@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the flows around the real cost drivers in your data, especially Tier 3 COD risk and the missing shipped/out-for-delivery updates that should cut chat load fast.",
+  "biggest_mistake": "It stretches a few assumptions and numbers, including using a marketed prepaid nudge inside the post-confirmation chat and slightly off RTO totals/baselines.",
+  "what_would_make_it_a_10": "Tighten the arithmetic to your stated baselines, make the prepaid nudge categorisation fully compliant in every case, and add the explicit after-hours menu/buttons as a finished template."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is easy to read and practical, and it correctly adds shipped and out-for-delivery updates to reduce order-status chats.",
+  "biggest_mistake": "It misses key owner signals by treating Tier 2 and Tier 3 too similarly, gives the prepaid switch the wrong WhatsApp category, and the after-hours setup is too light for the volume you actually get.",
+  "what_would_make_it_a_10": "Segment the COD flow harder by pincode risk, fix template categories and compliance, and add a stronger automated after-hours menu plus a weekly scorecard tied to RTO savings by group."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels more like it understood your business, not just WhatsApp templates. It goes after the expensive Tier 3 COD problem, the missing status updates, and the need for holdouts and weekly money tracking, so I could use it faster and trust the priorities more."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A straight no to the 20% cut, backed by the lifetime maths ($1,677 vs $1,130, net $1,174) and a per-change cost estimate for the 90-day window, the Partner tier and the payout timing.",
+  "biggest_mistake": "The Partner tier adds 40% for the first 12 months and a 90-day window for everyone. That raises cost across the board when the data points to payouts and credit, and the first-30-days plan has day ranges with no dates or named owners.",
+  "what_would_make_it_a_10": "Keep the extra cost on the top tier, put real dates and owners on the first 30 days, and spend the perk budget on the top 20 rather than on first-customer bonuses for new affiliates."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clean maths table that says no to the cut, plus the point that the $210,000 saving would hit customers already promised 'for life'. It names what would change its mind, and it keeps the rate at 30% while fixing the payout and window complaints.",
+  "biggest_mistake": "The $38,000 'new customers only' saving rests on a derived assumption of about 104 new referred customers a month. The 60-day window for ordinary members also gives less than the 90 days the data supports.",
+  "what_would_make_it_a_10": "Give the 90-day window to everyone and add a rough cost for the window change, so the finance lead sees the full price of the fixes."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both reject the 20% cut with correct lifetime maths. Output 2 rewards the top partners with time, no minimum and a named contact instead of a higher rate. It also has a dated, owner-assigned 30-day plan the one partner manager can run, firmer disclosure rules, and a clear trigger for changing course. Output 1 is strong too, but its plan has no dates and its tier raises cost."
+}

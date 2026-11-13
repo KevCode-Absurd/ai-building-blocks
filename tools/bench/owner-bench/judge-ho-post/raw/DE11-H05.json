@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The three articles are written in the right voice with the answer in the first two lines, and the ranked list is built on removable tickets with the maths shown.",
+  "biggest_mistake": "Article 2 gives restore steps (Restore / Undelete expense) and Article 1 gives tap-by-tap paths without confirming these controls exist; a wrong step in a help article creates more tickets than it saves.",
+  "what_would_make_it_a_10": "Verify every button path against the live app and cover the currency gap in the forecast with the same rigour as the top three."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranked by tickets removed with a range rather than a false-precision number, and the bold Simplify-debts banner idea plus the named risk (groups switching it off and making more payments) is a genuinely fresh, owner-level move.",
+  "biggest_mistake": "Same exposure as its rival: unverified in-app steps and labels (e.g. 'Budget & history', 'Report a problem', the Restore button) stated with confidence in copy meant to publish today.",
+  "what_would_make_it_a_10": "Confirm every menu label and button against iPhone, Android and web before publishing, and add the currency article's expected saving into the main forecast."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and on-brief, but Output 2 edges it with a forecast given as an honest range, a sharper reason for leaving 'Recording a payment' alone, and the in-app Simplify-debts banner idea with its risk named. Output 1's single-point 3,743 forecast reads as more certain than the evidence supports."
+}

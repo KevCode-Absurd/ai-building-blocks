@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data well and turns the three biggest signals—skip the belt, women lifting it alone, and quiet wheels—into distinct, usable ad ideas in Mokobara’s voice.",
+  "biggest_mistake": "The suggested cut/scale threshold of about ₹4,500 per concept is too thin to judge purchases reliably, even though the concepts themselves are strong.",
+  "what_would_make_it_a_10": "Tighten the testing rule to a more realistic spend or purchase threshold and add a little more production detail for each format."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is highly actionable: it names the winning audiences, handles the scratch/front-pocket risks, gives clear production rules, and chooses the first three concepts for the right data-backed reasons.",
+  "biggest_mistake": "It occasionally treats typical review lines as direct buyer quotes, so the team should verify exact wording before launch.",
+  "what_would_make_it_a_10": "Replace any implied direct testimonials with verified review copy and add one more fresher non-static idea in place of the simpler gift/product frame."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable tomorrow, but Output 2 is a bit more production-ready and has the better test-read rules. It also puts the under-served women 25 to 40 opportunity first while still covering work flyers and quiet wheels."
+}

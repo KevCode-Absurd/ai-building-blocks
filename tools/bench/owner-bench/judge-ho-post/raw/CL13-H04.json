@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A full, build-ready flow with exact copy for every reason and outcome. It brings the pause back for \"no time\" and gives goal-reached people a kind exit with a \"remind me\" option. The Cancel button is always live, and the maths ties out (842 vs 2,239 kept, about £11.3k a month more).",
+  "biggest_mistake": "It gives a single point estimate with no honest range. It also leaves the 50% off in place for app-switchers and builds the reminder and annual-switch numbers on the discount's take rate without flagging how shaky that is.",
+  "what_would_make_it_a_10": "Add a low-to-high range on the untested offers and a plain warning that the flow depends on the pause, and cut the discount for the switching group or justify it with data."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the money and the bad news. The pause does 80% of the work, and without it the flow keeps fewer than today. It gives a range (+1,230 to +1,680), names rebuilding the pause as this week's first move, and adds a measurement plan with a threshold.",
+  "biggest_mistake": "The \"goal reached or trip over\" screen is a plain exit with no remind-me-later option. The Cancel button is inactive until a reason is picked, and the 12-month revenue figures rest on unexplained churn assumptions.",
+  "what_would_make_it_a_10": "Add a \"remind me before my next trip\" option on the trip-over screen, keep the Cancel button live at all times, and show the working behind the 12-month revenue numbers."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both flows are close on the facts. Output 2 tells me the uncomfortable truth that the whole plan rests on the pause, gives an honest range, and says what to build first and what to watch. Output 1 has slightly kinder copy for trip-over learners and an always-live cancel button, but it feels less candid about risk."
+}

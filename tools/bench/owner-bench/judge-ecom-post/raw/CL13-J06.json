@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the 10-note cash figure in the subtitle, bullets, spec, FAQ and under-button line, sets the first-week snugness expectation, and includes a measurement plan with correct return math (3.3 and about 1.0 per 100 orders).",
+  "biggest_mistake": "Adds a measurement section and a 'not the right wallet for you' line that go beyond the brief; the 'sweet spot 10 to 11 mm' figure for 6 or 7 cards is slightly extrapolated.",
+  "what_would_make_it_a_10": "Make the first-week break-in note visible in the above-the-fold bullets or under the button, and drop the extrapolated thickness figure."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Frank 'what to know before you buy' paragraph and a 'what fits' ladder (light day, full day, most it takes) that state the cash limit plainly, plus a break-in note in a bullet.",
+  "biggest_mistake": "Invents that the hidden pocket holds one extra flat note beyond the 10, which risks overstating cash capacity, the very thing driving returns, and it contradicts the 'about 10' in the brief.",
+  "what_would_make_it_a_10": "Remove the invented extra-note claim and state that the hidden pocket is part of the roughly 10-note total."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 treats cash capacity cautiously and consistently, which is what cuts the 44% of returns. Output 2 invents an extra note in the hidden pocket, which could raise the returns the owner wants to cut, though its break-in bullet is a plus."
+}

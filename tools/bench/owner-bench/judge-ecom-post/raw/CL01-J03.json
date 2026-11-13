@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns all three data signals (quiet wheels, women 25 to 40 at ₹1,058, work flyers skipping the belt) into concepts, puts all three in the first three to make, and sets a sensible test budget of 15 purchases per concept, about ₹63,000 in total.",
+  "biggest_mistake": "Concepts 2, 6 and 8 are statics. Concept 6 is big type on a clean colour, which sits too close to the same-looking product-on-colour style I said is flat.",
+  "what_would_make_it_a_10": "Replace one or two of the statics with a different format, such as a creator or UGC piece, and trim the primary text to fewer, shorter lines for grade 7."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The primary text is short and calm and sounds like us, for example 'Land. Roll. Leave.' It picks the same right three concepts, keeps a control ad running, and checks its numbers: 26% of purchases for women, ₹292 a trip, about 63 more purchases.",
+  "biggest_mistake": "It puts 'quiet wheels' and 'rolls quiet' into brand copy in concepts 5 and 8, a claim beyond the approved specs. Its kill rule of about ₹4,500 per concept is too thin to judge cost per purchase.",
+  "what_would_make_it_a_10": "Keep 'quiet' only inside buyers' own review quotes, raise the test budget to a meaningful number of purchases, and rank the cheaper women concept above the belt concept."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both found the quiet wheels, the solo women and the belt-skippers. Output 1 is stricter on claims, deals honestly with the dark-colour scuff objection, and gives me a test budget I can actually read, so it's closer to ready to shoot."
+}

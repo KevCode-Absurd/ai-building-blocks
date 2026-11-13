@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clean, plain-language split of proved facts from checks, with working that traces to my data: Meta would have blended to about $79, a loss of $33 per first order, and $94 as the 18-month breakeven. Every check and move has an owner.",
+  "biggest_mistake": "Moves are ranked by High/Medium/Low rather than a single gross-profit number, and the '$100k cut adds $23k to $41k' line is loosely supported. I can't tell how much each move is worth to the board's contribution goal.",
+  "what_would_make_it_a_10": "Size each move in contribution points or dollars with the working shown, add action thresholds to the scorecard, and give a firm contribution target instead of 'set a baseline in week 1'."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It rebuilds a contribution baseline (7.8% now against 13.6% a year ago) and sizes every move in contribution points with low, likely and high cases. That is the exact lens the board asked for.",
+  "biggest_mistake": "It is dense and a little jargon-heavy (gain ranges, week 4/8 lines, stacked assumptions). The 'practitioner yardstick' on flows and the dated calendar are not grounded in my data.",
+  "what_would_make_it_a_10": "Keep the quantified ranking but write it in plainer words with fewer stacked assumptions, and drop the ungrounded benchmark."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both find the same causes: Meta cost, the linen shrink and the half-off email. Output 2 turns them into a contribution-margin baseline, sizes each move with working, and adds a post-purchase survey and a swatch-kit test. It keeps the brand safe by not using the 'nice hotel' line in ads or running sitewide discounts, and it gives action thresholds on the scorecard. Output 1 is easier to read, but its ranking is vaguer."
+}

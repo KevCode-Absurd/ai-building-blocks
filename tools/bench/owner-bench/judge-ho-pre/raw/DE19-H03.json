@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on all three signals in the data (dispatch silence, fit-finder reach, refund-first portal) and does the arithmetic openly, with a real expected range rather than one perfect number.",
+  "biggest_mistake": "It puts the fit-finder and portal fixes behind the tickets work even though bras are half of all returns and £139,800 of postage, so the biggest money lever is not first, and its quiz-return assumption is quietly generous.",
+  "what_would_make_it_a_10": "Rank the three fixes by pounds saved and show why the fit finder (9,300 bra returns, 77% size-related) comes before or alongside the tickets, with the bra-size-switch swap as step one."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets the arithmetic right (6,076 day-3-to-5 tickets, 5,394 too-small returns, £14,852 saved) and names the two-day silence as the first, cheapest fix with a clean target table.",
+  "biggest_mistake": "It keeps the old delivery confirmation and treats the swap savings as cash kept (£209,600) rather than gross profit, and its email 2 depends on an order-change ability it only lists as 'to confirm'.",
+  "what_would_make_it_a_10": "Give every message the fit help in our own words and put a stop-or-skip rule beside each move, while showing swap savings net of the new-size postage."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 feels more built around our actual customers and our voice, and it names what to stop; Output 2 is tidier on the numbers but its swap figure reads like sales kept rather than profit, so I'd trust Output 1's shape slightly more.",
+ "overall": 8
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A tight diagnosis that separates proved from to-check, with every number tracing to the brief, and moves ranked by gross profit and effort with clear owners and first steps.",
+  "biggest_mistake": "The payback math assumes repeaters' order value and margin match first orders, which may be optimistic; the plan should check this assumption explicitly.",
+  "what_would_make_it_a_10": "Add a short scenario showing downside risk (e.g., if repeat value is lower) and tie each weekly scorecard line to a specific action threshold, not just a target."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Genuinely fresh angles like the swatch kit and quantified upside ranges, with a clear contribution margin focus.",
+  "biggest_mistake": "The weekly scorecard target for new customer orders ('Down 11% or better') is unclear and likely a mistake, and the plan is dense with jargon like 'points' and 'line' that could confuse a non-expert owner.",
+  "what_would_make_it_a_10": "Clarify the scorecard targets (e.g., set a realistic improvement like -5%), simplify the language, and ensure every projection is clearly tied to a simple assumption check."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more usable: it traces every number, ranks moves clearly, and gives actionable first steps without jargon. Output 2 has good ideas but buries them in complexity and has a confusing scorecard target that could mislead the team."
+}

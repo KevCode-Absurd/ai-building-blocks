@@ -1,0 +1,29 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 6,
+  "voice": 6,
+  "range": 8,
+  "ready": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives me exactly what I asked for: one clear call per ad set with the rupee reason, and the very first move is turning the proven 'Dad's razor' ad back on before anything else. Output 2 is smart but hedges the calls (it even cuts retargeting when the data says trim and hold), buries the lede, and spends more energy on forecast modelling than on what Monday should look like."
+}

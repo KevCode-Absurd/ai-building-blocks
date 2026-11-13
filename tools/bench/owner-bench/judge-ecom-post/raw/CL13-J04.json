@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Three distinct angles (blind test, 3 pm swap, family cooler), each with timed shot list, two alternate hooks and a creator brief, with price answered in the 3 pm script.",
+  "biggest_mistake": "Script 3 and the pack lines use hooks like 'my kids think this is regular soda' as a flat claim, and there is no on-screen 'Ad' from the first frame. Disclosure sits only in the caption and toggles, and the test plan is thin with no budget or kill rules.",
+  "what_would_make_it_a_10": "Add budget and kill rules for the hook test, visible disclosure inside each video, and a stronger answer to the $3 objection in all three scripts."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ties each script to the cost-per-purchase data and comment shares, answers price on camera, writes disclosure into each script, and adds a numbered test plan with budget and cut rules plus a bolder reply-video idea.",
+  "biggest_mistake": "Some lines are crowded and the sub-claims overload scripts (for example the three-claim line in script 2), and the fixed $800 per ad budget is tight for the stated purchase counts. It also runs past the 1,300-word limit and is dense.",
+  "what_would_make_it_a_10": "Trim the density and word count, and make the price answer more vivid, for example a coffee-shop comparison."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 builds disclosure into the scripts and briefs, gives a concrete test budget with cut rules, and ties every choice to the data. It also adds a fresh reply-video idea. Output 1 is clean and usable but less thorough on disclosure and testing."
+}

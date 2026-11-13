@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks the 46-90 day 'at risk' group first with no discount, gives Monsoon Dark its own match track, gates ex-subscribers behind a delivery fix, and works everything off the correct ₹557 per-order profit with discount-adjusted figures (₹442, ₹385).",
+  "biggest_mistake": "The ₹535 profit-per-order for group G6 is unexplained, and it never gives the explicit numeric break-even lift per group the owner specifically asked for (only 'keep if true gain above zero').",
+  "what_would_make_it_a_10": "Add the exact break-even lift per group and explain the ex-subscriber profit figure."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong explicit reasoning — why A and B start with no discount, a stated 1.5-point break-even lift, and a fix mapped to each subscription cancel reason (late, too much, price, moving).",
+  "biggest_mistake": "Group A is sized at 13,100 (only Monsoon Dark removed) even though it says ex-subscribers are pulled out of every group, so A still overlaps with D — customers would get two sequences and A's ₹3.7 lakh is overstated.",
+  "what_would_make_it_a_10": "Fix the group overlap so ex-subscribers are truly removed from A, and rank the 46-90 at-risk group as the first win-back wave rather than a side nudge."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 starts where my data says the money is (the 46-90 day buyers), keeps everything on my ₹557 per-order profit, gives Monsoon Dark a real match trail and even a pre-order idea, and stays clean on opt-in and unsubscribe rules. Output 2 is sharp on break-even and cancel reasons, but it double-counts my ex-subscribers inside group A and buries the group I most wanted reached."
+}

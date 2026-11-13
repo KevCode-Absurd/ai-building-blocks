@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The break-even arithmetic is clean and correct: a 12.5% drop, or $262,500, wipes out the cut, and losing 4 of the top 20 at $74,550 each does it. It pairs this with the right lifetime maths ($1,677 vs $1,130; $1,174 net).",
+  "biggest_mistake": "The 40% first-year Partner rate adds about $46k a year of extra commission. The 90-day window cost is left open-ended. The first 30 days has no dates or owners.",
+  "what_would_make_it_a_10": "Put real dates and owners on the 30-day plan. Give the 90-day window cost a projected range, as it does for the payout cash, rather than a per-10% rule."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It says up front that the plan costs more, not $210k less. It shows the true saving if the lifetime promise is kept (about $38k) and projects the 90-day window cost ($62k–$89k) from customer counts that check out (3,365 active, about 1,250 new a year).",
+  "biggest_mistake": "The $350k break-even figure rests on an assumed 80% gross margin. A couple of rules ('we pay on new customers who keep their plan') are vague enough to cause partner disputes.",
+  "what_would_make_it_a_10": "Tighten the ambiguous payout rule. Replace the margin-assumed break-even with a single revenue-based figure, or flag it clearly as a scenario."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both say no to the 20% cut with the right maths. Output 2 tells me what the plan really costs, shows the cut saves only about $38k without breaking our promise, keeps tiers cost-neutral on rate, and gives my partner manager a dated plan with owners. Output 1 leaves the scheduling and the window cost for me to work out."
+}

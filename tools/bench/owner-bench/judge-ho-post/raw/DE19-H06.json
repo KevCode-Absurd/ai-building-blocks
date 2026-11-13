@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It answers the 20% question straight with lifetime maths (referred customer worth $1,677, nets $1,174 after commission, still beats $1,130) and builds the plan around the 20 partners who bring 71% of revenue.",
+  "biggest_mistake": "The 90-day window cost is hand-waved as 'may be the biggest cost' with only a 'every 10% adds $63,000' rule of thumb, when this is the main new spend and needed a real projection.",
+  "what_would_make_it_a_10": "Show a proper year-one cost for the 90-day window and a tighter, tested way to credit the creator-sent buyers who pay after day 30."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is honest that the plan costs more, not less, gives a real projection for the 90-day window ($62,000-$89,000), and adds a genuinely fresh move: crediting partners through the 'Who sent you?' signup question.",
+  "biggest_mistake": "The window-cost projection rests on invented volumes (3,365 paying referred customers, 1,250 new a year) that are not in the brief, and the break-even range ($262,500 to $350,000) mixes revenue with an assumed 80% margin without showing the working.",
+  "what_would_make_it_a_10": "Tie every projection number back to the brief's data, state the margin assumption clearly, and cut the dense tables so the plan reads fast."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 2 is braver and more original, but Output 1 is the cleaner, safer plan with tighter maths and fewer invented numbers, which is what I would rather hand to my one partner manager."
+}

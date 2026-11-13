@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the real profit leak in low-value COD orders and ties bundles, add-ons and threshold testing back to delivered gross profit instead of AOV alone.",
+  "biggest_mistake": "It recommends a Glow bundle that includes lip balm instead of making the proven face wash + serum pair the core lead bundle, and some maths/volume assumptions are shaky enough that I would want them checked before acting.",
+  "what_would_make_it_a_10": "Make bundle one the face wash + serum routine set around the proven pair, tighten the arithmetic on monthly order estimates and threshold scenarios, and keep the same strong COD/RTO logic."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It protects the vitamin C serum reorder by avoiding a ₹699 threshold and explains the bundle ladder in a simple, brand-friendly way.",
+  "biggest_mistake": "It underplays the strongest signal in the data—face wash + serum as the bundle customers already built—and its threshold maths relies on a made-up 6% slice for ₹499 to ₹598 orders, which is too weak for a pricing decision.",
+  "what_would_make_it_a_10": "Base the threshold recommendation on actual value-band maths, build the lead bundle around face wash + serum first, and show fuller profit working including COD/RTO by band."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads my data more like an owner would: it sees the COD/RTO leak, uses the lip balm as the natural threshold add-on, and gives me a safer testing plan with clearer money logic. Output 2 is tidy, but it leans too hard on assumptions where I needed the maths to be nailed down."
+}

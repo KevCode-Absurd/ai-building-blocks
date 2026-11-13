@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the three numbers, the forecast miss, Customer A, the margin problem, and the specific fixes and asks in the order investors need them.",
+  "biggest_mistake": "It makes a couple of small assumptions as facts, such as moving the VP Enterprise Sales role to New York and keeping full service through Customer A's exit.",
+  "what_would_make_it_a_10": "Quantify or at least frame the expected compute-saving range from the 48-hour pause and keep assumed decisions clearly marked before sending."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly explains that AI app-builder growth is low-converting and margin-negative, with the right denominator and a concrete 48-hour pause fix.",
+  "biggest_mistake": "Customer A is not surfaced as early as it should be, and the margin-point calculation is a little overconfident for the data provided.",
+  "what_would_make_it_a_10": "Put Customer A and the three asks in the first screen, and soften or remove the inferred margin-point claim unless finance has confirmed it."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to the brief and owner notes: the bad news is visible immediately, the asks are specific and dated, and the update feels ready to send. Output 2 is strong, but it slightly buries Customer A and makes a finance inference that needs checking."
+}

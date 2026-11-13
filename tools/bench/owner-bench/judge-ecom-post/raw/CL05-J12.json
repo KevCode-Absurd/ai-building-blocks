@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The flow is tiered by pincode risk. Tier 3 gets the call and cancel rule, and each prepaid discount (₹20 for Tier 2, ₹40 for Tier 3) is sized against that tier's expected RTO loss. Holdouts and a net-saving metric back it up.",
+  "biggest_mistake": "The calling workload falls on the same 4 chat agents with no staffing change, and the after-hours cover is only a bot menu, so size and exchange questions at night just wait until morning.",
+  "what_would_make_it_a_10": "Add a staffing or shift change for the evening wave and tighten the length, so the plan stands on its own with no other changes.",
+  "gap_note": "n/a"
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sends the prepaid nudge as a free-form chat message right after Confirm, inside the open 24-hour window, and it moves one agent to a 2 pm to midnight shift to cover the evening wave.",
+  "biggest_mistake": "Prepaid handling is the same for every pincode group, with no incentive and no per-tier loss working. Template 3, \"skip cash at the door\", is promotional but is submitted as Utility, so it risks recategorisation.",
+  "what_would_make_it_a_10": "Work out expected RTO loss per order by pincode group, scale the prepaid push and the confirmation firmness to each tier, and file the prepaid nudge under Marketing."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 builds the whole flow around the Tier 3 problem, sizes the prepaid incentive by tier, and measures real lift with holdouts. Output 2 is clean and usable, but it treats the tiers almost the same apart from one 48-hour hold, and its utility-labelled prepaid template is a category risk."
+}

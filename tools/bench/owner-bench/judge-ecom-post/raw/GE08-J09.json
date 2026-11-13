@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Superbly written in plain, punchy language with an airtight diagnosis that separates what the data proves from what needs checking.",
+  "biggest_mistake": "The financial impact of the 6 moves is stated qualitatively ('High', 'Medium') rather than projected in net contribution dollars or margin points.",
+  "what_would_make_it_a_10": "Tie each move directly to a specific contribution margin percentage or dollar gain target to satisfy the board's exact mandate."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless financial modeling that calculates exact baseline contribution margin (7.8%) and models each move's impact in margin points with explicit operational trigger thresholds on the scorecard.",
+  "biggest_mistake": "Recommending a 6-email cart sequence and 5-email browse sequence is somewhat heavy-handed for a premium bedding brand.",
+  "what_would_make_it_a_10": "Slightly pare back the density of the email flow cadence to ensure it stays fully aligned with Brooklinen's warm, non-spammy brand feel."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are masterclasses in DTC growth strategy, but Output 2 wins by explicitly modeling contribution margin after marketing (the board's exact concern), including 'if/then' action thresholds in the scorecard, and astutely warning never to use Sarah's 'nice hotel' quote because of the brand ban on 'hotel-quality'."
+}

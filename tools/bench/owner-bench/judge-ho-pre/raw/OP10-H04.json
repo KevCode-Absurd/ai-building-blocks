@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the main data signal and makes the paused 1-month break the centre of the new flow, with exact copy and solid build notes.",
+  "biggest_mistake": "It gives the 50% discount to switchers without evidence that this segment is price-sensitive or worth discounting, which risks repeating the old margin leak.",
+  "what_would_make_it_a_10": "Remove or test-gate the switching-app discount, tighten the revenue math around discounted months, and keep every offer tied only to proven behaviour."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the right strategic shift: bring back pause, stop blanket discounts, protect full-price trip returners, and treat lack of progress as a product fix.",
+  "biggest_mistake": "Some no-offer cards say or imply the cancellation is already complete before the user has tapped the visible cancel button, and the final legal note introduces an unneeded outside claim.",
+  "what_would_make_it_a_10": "Clarify the no-offer copy so cancellation only happens after the button press, remove the speculative legal line, and add a sharper sprint build order."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 2 is more disciplined with the money: it stops discounts entirely where the data does not prove they work. Output 1 is very build-ready, but the unsupported 50%-off offer for switchers is exactly the kind of margin leak this redesign should avoid."
+}

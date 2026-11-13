@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It resurrects the paused front-of-pack winner with fresh words, builds the taste angle straight from the 26% review phrase, and faces the ₹90-a-bar objection head-on, all in blunt brand voice.",
+  "biggest_mistake": "The 27-character headline limit is more conservative than Meta's actual ~40, which is fine, but P4 ('Not even a little') repeats a line identical to a live ₹290 ad and is only parked, so the six are slightly less differentiated than claimed.",
+  "what_would_make_it_a_10": "Tighten the price/value angle so it reads as value rather than just repeating the objection, and add per-ad expected lift or kill rules with rupee targets."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It pairs buyer-phrase headlines and copy (including 'Your 4 pm, minus the samosa') with a real test plan, a control cell, per-cell rupee maths and a 20% win rule that tells you exactly when to act.",
+  "biggest_mistake": "It invents a ₹6,000/day test budget and ties ad C's success to retargeting without brief support, and the early-cut rule (₹1,140 with no purchase) is noisy at these cell sizes.",
+  "what_would_make_it_a_10": "Drop the invented budget and instead say how to size cells off actual traffic, and make the price ad lead with the ₹90 value rather than quoting the objection."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and on-brand; output 2 edges it because its copy sounds more like our customers talking and its launch plan gives me a control, a rupee budget and a clear win rule I can hand to the team tomorrow."
+}

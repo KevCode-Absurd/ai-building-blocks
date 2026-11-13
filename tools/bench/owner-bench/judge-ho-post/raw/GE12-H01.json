@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It perfectly connects the data constraints (like the 2,000-unit MOQ for the 20-shade foundation line) and customer personas to concrete, highly precise operational actions.",
+  "biggest_mistake": "Assuming the held stock was already counted in the on-hand stock leads to a slightly different out-of-stock date than the owner's private math, but it states this assumption clearly.",
+  "what_would_make_it_a_10": "It is already a 10; it is a masterclass in reading e-commerce constraints and responding accurately in the brand's voice."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Shows excellent and transparent arithmetic for calculating the exact rush order volume needed to bridge the gap and the 2.5x sale week.",
+  "biggest_mistake": "Unnecessarily delays the standard purchase orders to Friday, giving up four days of valuable lead time for no financial or operational reason.",
+  "what_would_make_it_a_10": "Place all POs on Monday, explain the foundation MOQ constraint rather than just picking 4 shades silently, and weave the customer personas more naturally into the strategy."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 operates exactly like a seasoned store owner. It catches the hidden MOQ constraint on the foundation line, perfectly calculates the cash buffer down to the rupee, handles the out-of-stock gap with smart marketing levers (capping orders, pausing ads), and uses the brand's voice flawlessly."
+}

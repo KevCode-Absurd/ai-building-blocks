@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sees the real problem in this programme: under-crediting and payout friction, not commission rate, and it builds the plan around the top creator-educators who actually drive revenue.",
+  "biggest_mistake": "Its added maths around window cost and break-even is shakier than it should be, with assumptions and calculations that are not well grounded in the brief.",
+  "what_would_make_it_a_10": "Tighten the financial modelling to only what the data supports, especially the cost of the 90-day window, while keeping the same clear focus and execution plan."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the straight answer the owner wants with the right lifetime-value logic, ties the plan to the top affiliates who matter, and turns that into a focused programme design the team could run.",
+  "biggest_mistake": "It adds a 40%-for-12-month top tier that may be more generous than necessary and uses a cost estimate for it that is more directional than proven from the data given.",
+  "what_would_make_it_a_10": "Keep the strong argument against the 20% cut but either justify the 40%-for-12-month tier more rigorously or replace it with non-rate perks and faster payouts to protect margin."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I'd rather pay for because it answers my core finance question more cleanly, uses the lifetime-value signal correctly, and gives me a tighter, more usable plan around the top partners who matter. Output 1 is strong too, but its extra financial estimates feel less reliable and make me work harder to trust the numbers."
+}

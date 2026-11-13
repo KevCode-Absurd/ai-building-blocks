@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It rewrites the main balances article around Jordan's question, with a hedged \"probably\" and an answer in the first lines. It also covers the currency gap in the plan and the forecast, and it shows the working.",
+  "biggest_mistake": "The forecast is a single point estimate (3,743) with only a loose \"half my shares\" fallback, not a real range. The Android refund steps are vague, and the merge advice for \"Recording a payment\" is muddled.",
+  "what_would_make_it_a_10": "Give a proper low-to-high ticket range, tighten the Apple and Google steps, and add one bolder idea beyond the plan, such as an inline balance note with its risk."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the decision and a ticket and dollar range, then gives a clear ranked table. Retitling and linking the delete article in searchers' own words is a cheap same-day fix, and a short \"bad news\" note says honestly that 2,000 refund tickets can't be removed.",
+  "biggest_mistake": "It writes the Simplify article as a new page and only links to the old one, instead of rewriting \"How balances work\". It also states flatly that the group has Simplify turned on, and it leaves currency out of the forecast.",
+  "what_would_make_it_a_10": "Rewrite the existing balances article directly, hedge the Simplify claim, and trim the length to fit the 1,200-word cap."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both rank the right three fixes and write usable articles. Output 2 gives a clearer lead decision and a ticket range as asked, plus the Apple/Google reality and a bolder in-app idea with its risk. Its delete article title also matches what people search."
+}

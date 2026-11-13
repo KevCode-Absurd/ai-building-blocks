@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A data-faithful scorecard that puts 50% on writing and only 15% on the interview, matching the 0.62 vs 0.11 correlations, wrapped in an on-brand post that leads with $82,000, the APAC hours and the weekend rotation.",
+  "biggest_mistake": "It never specifies the 'longer written exercise' or the questions for the video conversations, so the hiring team still has homework before the scorecard can be used.",
+  "what_would_make_it_a_10": "Specify the longer exercise and the exact interview questions so every scorecard row is scorable without further design work."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A concrete, executable package: a real ticket as the application, a local-time table for the APAC persona, staged behavioral interview questions with 1/3/5 anchors, and the honest 'nine hires is a small sample' caveat.",
+  "biggest_mistake": "It quotes the 0.11 interview-impression correlation and then puts 45% of the score on interview-derived rows, an internal contradiction, plus a slightly off-brand 'we will never ask you for money or bank details' line.",
+  "what_would_make_it_a_10": "Rebalance the scorecard so most weight sits on the written exercise it says predicts performance, and drop the scam-warning line."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 avoids the one thing the owner flagged as annoying by keeping 50% on writing and only 15% on interviews, and it reads more like us; Output 2 is more complete and fresher in ideas but contradicts itself by citing the weak interview signal then leaning on interviews for nearly half the score."
+}

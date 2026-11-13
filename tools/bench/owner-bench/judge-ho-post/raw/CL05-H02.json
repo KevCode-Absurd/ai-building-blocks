@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It strips brand out of the 4.0 and shows each line's profit against the 2.5 break-even. The profit table is right and the split adds to exactly $240,000.",
+  "biggest_mistake": "The forecast is optimistic. It assumes brand search jumps to about 25 ROAS, a brand-new non-brand Search campaign earns 3.2, and the reserve is fully spent. That gives a ROAS of 4.6 and +$61k of profit while PMax is cut by $82k.",
+  "what_would_make_it_a_10": "Use a defensible forecast with an honest range, including the likely fall in reported revenue. Add clear week 2 to 4 cut and scale rules, and put an owner and a done-when on each action."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It shows that non-brand Google lost about $20k last month and that brand hides this inside the 4.0. It then gives a profit range, says plainly that reported revenue will fall, and sets explicit weekly reserve and cut rules.",
+  "biggest_mistake": "The plan holds $104k in reserve and the base profit forecast assumes only the $136k committed is spent, so it can read as under-deploying the budget. The $61.9k feed upside is also a rough guess.",
+  "what_would_make_it_a_10": "Give a clearer base case for how much of the reserve is likely to be spent. Add a dedicated non-brand Search campaign for the washable and standing terms, and tighten the length."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 gives the honest picture an owner wants: non-brand Google loses money, reported revenue will fall, and profit should still rise, with a range and clear rules for the month. It also adds a smart incrementality test and a week-one table with owners. Output 1 is solid, but its 4.6 ROAS and +$61k forecast look too rosy."
+}

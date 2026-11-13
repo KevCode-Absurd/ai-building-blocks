@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built entirely around the two retention habits with platform branching, trigger logic that respects the tool's limits, and a clear drop list with numbers.",
+  "biggest_mistake": "Email 5 tries to branch on which habit is missing, but the allowed triggers can't reliably tell 'neither habit' from 'one habit' in a single send, and the call to keep mobile branching conditional is slightly under-specified.",
+  "what_would_make_it_a_10": "Make email 5 a single clear next step or split it into two trigger-based sends so the branch logic is actually executable."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, calm, well-structured series with real screenshots, typed examples, and a sensible holdout and guardrail plan.",
+  "biggest_mistake": "It puts Pro upgrade back into the five-email series at day 14 for engaged users instead of focusing all five emails on the two retention habits, and the 0.4% guardrail is set above the old day-1 unsubscribe rather than as a stricter standard.",
+  "what_would_make_it_a_10": "Use all five emails to drive recurring tasks and second-device sign-in, and move Pro out of onboarding entirely."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is tighter on the core insight and triggers, drops Pro from onboarding, and gives a more executable branching and measurement plan, though both are strong and close."
+}

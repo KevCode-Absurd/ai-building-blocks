@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the three biggest money signals: relaunch the paused best creator ad, cut the Starter Kit COD trap, and split Women Body Razor to 25-34 instead of killing it.",
+  "biggest_mistake": "It invents an 86% attribution assumption for prospecting instead of mainly using the given 72% Shopify-to-Meta gap, which makes the store-count loss look less severe than the brief suggests.",
+  "what_would_make_it_a_10": "Use the 72% Shopify-adjusted read as the main decision line, then keep the same strong budget and action rules."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a clean decision for every ad set, correctly flags the paused winner, the Women 25-34 opportunity, the Starter Kit COD/RTO problem, and the Meta tracking gap.",
+  "biggest_mistake": "It still scales ASC and Catalog fairly aggressively while current costs are above the safe Shopify-adjusted line, and treats Women 25-34 as near break-even on Meta count rather than on the safer store count.",
+  "what_would_make_it_a_10": "Make the budget more conditional, with ASC and Catalog increases released only after the revived creative proves a safe cost for 3 days, and tighten Women 25-34 rules against the safe line."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are usable, but Output 1 is the one I would rather hand to the team tomorrow because the rupee logic is more complete and the reserve rules protect cash while we relaunch the paused winner. Output 2 is clearer in places, but it is a little too willing to scale before the Shopify-adjusted economics prove out."
+}

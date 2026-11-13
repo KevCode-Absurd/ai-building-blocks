@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Spots the wasted $24k spend on the label-reading hook and uses the historical CPA and view rate data to set exact mathematical guardrails for the test plan.",
+  "biggest_mistake": "Having the creator say 'Olipop paid me for this one' out loud mid-script eats into precious seconds and disrupts the native UGC feel.",
+  "what_would_make_it_a_10": "Rely on the built-in platform labels and on-screen text to handle the disclosure instead of forcing creators to announce payment mid-script."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 5,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 7,
+  "use_as_is": "as is",
+  "biggest_strength": "Delivers very clean, ready-to-shoot scripts that strictly follow the brand guidelines and beautifully capture the natural language of the target personas.",
+  "biggest_mistake": "The test plan is completely generic ('after about a week, compare') and fails to use the valuable CPA and view rate data provided in the brief.",
+  "what_would_make_it_a_10": "Use the provided data to set exact cut-off rules for the test and point out what the brand was doing wrong with its previous ad spend."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 didn't just write scripts; it acted like a true partner by spotting the $24k overspend on a bad hook and setting strict, data-backed guardrails for testing the new ads."
+}

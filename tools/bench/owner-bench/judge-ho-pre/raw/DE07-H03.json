@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It names the real ticket cause (the 2.1-day wait for the courier's first scan) and writes a 'Packed' email that pre-explains 'no updates yet', then shows the working behind every saving.",
+  "biggest_mistake": "It hands over single-point targets (tickets 6,762, bra returns 28.7%) as what to expect when the owner asked for a range, and it fires fit and swap prompts at leggings buyers whose 18% return rate is below average.",
+  "what_would_make_it_a_10": "Carry the selection-bias caveat into a low-to-high range for each fix, and send the post-delivery fit help only to first-time bra buyers."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every fix comes with an honest low-to-high range and the arithmetic, plus a delivered-bra message that actually teaches a first-time buyer how the band and cups should feel before she decides to return.",
+  "biggest_mistake": "It slips on rigor by adding a day-3 SMS and by calculating the swap gain on the full 18,640 returns while still claiming the quiz cuts that base, without costing the SMS or the second-return risk.",
+  "what_would_make_it_a_10": "Cost the SMS into the saving, apply the quiz reduction before the swap arithmetic, and keep the copy as warm and tight as the order-confirmation subject line."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and the numbers check out, but Output 2 gives me the honest ranges I asked for and a post-delivery message that helps a first-time bra buyer get her size right instead of just nudging a swap; Output 1 is the cleaner read but sells me single-point targets and spreads effort to leggings buyers."
+}

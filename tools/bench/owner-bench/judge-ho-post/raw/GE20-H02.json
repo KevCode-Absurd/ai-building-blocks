@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The masterfully realistic projection that top-line revenue will fall 13% while profit rises, explicitly addressing the math behind cutting unprofitable volume.",
+  "biggest_mistake": "The $21,000 regional holdout test for broad terms might be an unnecessary distraction when the immediate goal is to cut losses.",
+  "what_would_make_it_a_10": "It is a 10: a masterclass in Google Ads strategy, technical implementation, and managing an owner's expectations."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 5,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 6,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The historical profit breakdown by segment clearly separates the real losses from the blended 4.0 ROAS.",
+  "biggest_mistake": "Projecting $128,000 of PMax spend at a 2.6 ROAS after extracting its only profitable non-brand themes to Search, while failing to add negative keywords for the broad terms causing the 1.2 ROAS.",
+  "what_would_make_it_a_10": "Include exact-match negative keywords in PMax to stop the broad term bleeding, and provide a more realistic projection of top-line revenue dropping when cutting the fat."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 correctly uses negative keywords to stop PMax from bleeding on broad terms, whereas Output 2 leaves PMax exposed. Most importantly, Output 1 warns the owner that cutting unprofitable spend will cause top-line revenue to drop while profit rises—a crucial reality check that top media buyers provide."
+}

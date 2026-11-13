@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the strongest signals into shootable ads: the 3 pm soda habit, blind taste test, family/game-day use, and the $3-a-can objection without drifting into health claims.",
+  "biggest_mistake": "Disclosure is mostly in the general rules rather than clearly built into each script’s first frames, so I would tighten FTC/platform compliance before launch.",
+  "what_would_make_it_a_10": "Add a clear first-frame ad disclosure to every script and make the price objection feel as intentional in the blind test and family scripts as it does in the 3 pm script."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data well, especially calling out that label-read ads got the most spend despite worse performance, and it gives strong production, disclosure, testing, and rights guidance.",
+  "biggest_mistake": "The scripts feel a little compliance-heavy and less warm/playful, with repeated spoken paid-disclosure lines that may weaken the customer-facing hook.",
+  "what_would_make_it_a_10": "Keep the strong operating detail but make the spoken lines feel more like real creator language and less like legal copy, while fixing small script-rule inconsistencies around the approved claims."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I’d rather shoot Output 1 because the ads feel more like Olipop: taste-led, warm, simple, and built around real customer language. Output 2 has sharper operational detail, but the customer-facing lines are less natural and would need more voice work."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the two signals that matter—the in-app checkout bug sized in gross profit (₹34 lakh/month) and the 81% four-size insight—and ranks delivery date and size first with honest traffic-aware sample maths.",
+  "biggest_mistake": "The pop-up fix gain is presented as a clean ceiling without noting that in-app browsers may lose cookies/attribution, so the ₹34 lakh is optimistic and the test baselines may be polluted until the fix and tracking are live; also leaves firmness rating and EMI amounts as blanks.",
+  "what_would_make_it_a_10": "Show the working for each sample-size figure and flag the in-app attribution/cookie caveat beside the ₹34 lakh gain, so the owner can trust the numbers rather than adjust them."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Treats the bug as a fix-first move with a ranged, honest ₹17–34 lakh projection, then sequences five tests in two lanes with dated windows, per-test smallest effects tied to real traffic, guardrails that include gross profit after EMI/COD costs, and a ship rule.",
+  "biggest_mistake": "Still leaves the EMI 'X' and delivery date as live-data placeholders (acceptable but not paste-ready), and the 'two lanes' schedule is tight, so it needs a logistic sanity check before committing to dates.",
+  "what_would_make_it_a_10": "Add the exact arithmetic behind the 9.9% and 6.3% detectable effects and a one-line cookie/attribution caveat for in-app traffic so the owner never has to re-derive a number."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I'd pay for: it sizes the bug honestly as a range, gives each test a real date, baseline, sample and smallest effect, and adds guardrails on gross profit after EMI costs, whereas Output 1 is excellent but asks me to fill commercial blanks and doesn't flag the in-app cookie risk."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 6,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The rush and standard orders for the top 5 shades are sized from the sale-week 2.5x demand and a named 6-day gap, and the total is ₹1.17 crore with checked arithmetic. It also spots that the draft sends 82% of matte money to shades that bring 42% of sales.",
+  "biggest_mistake": "It runs well over 900 words and is dense with extras (a reorder-point table, a check sheet, a bolder pre-book idea), and it delays the standard order to 20 Nov with no reason given.",
+  "what_would_make_it_a_10": "Cut it to 900 words with one dated action list, place the standard order on Monday as well, and add a short on-brand back-in-stock message for Tanvi."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a tight plan the ops lead can run Monday: a PO table with dates, a dated action table, and an honest plan for the 1 to 8 Dec gap, with a notify message in the brand's voice that uses Tanvi's \"wait a week\" line.",
+  "biggest_mistake": "It accepts a sell-out of the hero shades and pauses their ads. It also bundles the palette with kohl, a line it is buying, and clears palettes only at cost on 1 Feb, which recovers little cash.",
+  "what_would_make_it_a_10": "Keep the dated plan and add a stronger plan to turn the palette stock into cash, for example bundling it with the slow liquid lipsticks and releasing it earlier."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the key moves right: rush the top 5 shades, re-carton on Monday, buy nothing for liquid or glitter, and stay inside the cash. Output 2 is easier to act on, with a dated action table and a notify-me message in our voice, while Output 1 is denser and over the word limit."
+}

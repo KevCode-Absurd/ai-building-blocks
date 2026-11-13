@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every key number checks out against my data: 60% of Semrush losses from agencies, Lite at 70% of churners, 42% of AWT conversions from multi-site accounts. It names PPC parity as the wrong fight.",
+  "biggest_mistake": "Move 5 (link-data content studies) is the generic 'do more content' advice I didn't want, and its success metric is loosely tied to the action.",
+  "what_would_make_it_a_10": "Swap move 5 for something tied to the agency pipeline or reporting habit, and add an exec summary that says what to start this month."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "An up-front summary lists lose, tie, win and 'not a Semrush problem', plus stop and don't-spend calls. A bold free-report-in-AWT move turns the 21,000 multi-site accounts into an agency reporting habit.",
+  "biggest_mistake": "Move 1's report leads with organic traffic and rankings, not the leads agencies say they care about. 'Don't spend on backlink roadmap' risks starving our clearest lead.",
+  "what_would_make_it_a_10": "Have the report join client ad and analytics data to show leads, and soften the backlink advice to 'defend, don't over-invest'."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both found the agency gap, the Lite limit leak and the multi-site pipeline, and both got the numbers right. Output 2 gives me sharper targets, a 'do this first' summary and a fresh idea that ties the free tier to agency reporting, while Output 1's fifth move is generic content."
+}

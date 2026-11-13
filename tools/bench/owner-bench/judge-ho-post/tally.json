@@ -1,0 +1,126 @@
+{
+ "panel": [
+  "CL01:claude-opus-5-5",
+  "OP02:gpt-5.5",
+  "DE03:deepseek-chat",
+  "GE04:gemini-pro-latest",
+  "CL05:claude-sonnet-5-5",
+  "OP06:gpt-5.4",
+  "DE07:deepseek-reasoner",
+  "GE08:gemini-flash-latest",
+  "CL09:claude-opus-5-5",
+  "OP10:gpt-5.5",
+  "DE11:deepseek-chat",
+  "GE12:gemini-pro-latest",
+  "CL13:claude-sonnet-5-5",
+  "OP14:gpt-5.4",
+  "DE15:deepseek-reasoner",
+  "GE16:gemini-flash-latest",
+  "CL17:claude-opus-5-5",
+  "OP18:gpt-5.5",
+  "DE19:deepseek-chat",
+  "GE20:gemini-pro-latest"
+ ],
+ "verdicts": 115,
+ "failed": 5,
+ "tot": {
+  "agent": 70,
+  "plain": 45,
+  "tie": 0
+ },
+ "agent_share_of_decided": 0.609,
+ "perProvider": {
+  "claude": {
+   "agent": 23,
+   "plain": 7,
+   "tie": 0
+  },
+  "openai": {
+   "agent": 15,
+   "plain": 15,
+   "tie": 0
+  },
+  "deepseek": {
+   "agent": 14,
+   "plain": 11,
+   "tie": 0
+  },
+  "gemini": {
+   "agent": 18,
+   "plain": 12,
+   "tie": 0
+  }
+ },
+ "perJob": {
+  "H01": {
+   "agent": 7,
+   "plain": 11,
+   "tie": 0
+  },
+  "H02": {
+   "agent": 10,
+   "plain": 8,
+   "tie": 0
+  },
+  "H03": {
+   "agent": 4,
+   "plain": 16,
+   "tie": 0
+  },
+  "H04": {
+   "agent": 18,
+   "plain": 2,
+   "tie": 0
+  },
+  "H05": {
+   "agent": 19,
+   "plain": 1,
+   "tie": 0
+  },
+  "H06": {
+   "agent": 12,
+   "plain": 7,
+   "tie": 0
+  }
+ },
+ "dims": {
+  "agent": {
+   "fit": 9.09,
+   "insight": 8.9,
+   "priorities": 9.09,
+   "reasoning": 8.71,
+   "correct": 8.47,
+   "clear": 8.62,
+   "voice": 8.5,
+   "range": 8.34,
+   "ready": 8.57,
+   "overall": 8.63
+  },
+  "plain": {
+   "fit": 8.86,
+   "insight": 8.17,
+   "priorities": 8.59,
+   "reasoning": 8.2,
+   "correct": 8.36,
+   "clear": 8.9,
+   "voice": 8.7,
+   "range": 7.83,
+   "ready": 8.57,
+   "overall": 8.23
+  }
+ },
+ "use_as_is": {
+  "agent": {
+   "with small tweaks": 90,
+   "with major rework": 4,
+   "as is": 19,
+   "undefined": 2
+  },
+  "plain": {
+   "with small tweaks": 91,
+   "with major rework": 3,
+   "undefined": 2,
+   "as is": 19
+  }
+ }
+}

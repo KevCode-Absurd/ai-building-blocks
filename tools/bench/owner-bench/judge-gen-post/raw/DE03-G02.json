@@ -1,0 +1,29 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick recruiting and nail the math and Priya's words, but version 2 has the tighter hero ('without the back and forth' is her phrase, not a coined 'email tennis'), folds open source into the security answer it belongs to, and adds test sizing and a bolder security-send move I'd actually use. Version 1 is strong and close behind."
+}

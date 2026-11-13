@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It prices each tier's prepaid discount below the loss it removes (₹40 vs ₹70 in Tier 3, ₹20 vs ₹41 in Tier 2, nothing in Metro) and proves it with a Tier 3 holdout.",
+  "biggest_mistake": "It answers the 31% after-hours wave with a bot only and never considers a staffing change, and its Tier 3 call plan of ~260 calls a day leans hard on the same 4 agents who carry chat.",
+  "what_would_make_it_a_10": "Add a concrete staffing or shift move for the 8pm-midnight chats and show the call plan fits the agents' day alongside chat."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It pairs the evening chat wave with a real staffing fix — moving one agent to a 2pm-midnight shift on the same hours — and sizes the cart opportunity (~18,000 abandoned carts, ~180 orders per 1% recovered).",
+  "biggest_mistake": "It files the prepaid nudge (template 3) as Utility when the owner expects the prepaid nudge as Marketing, and it gives no opt-out footer on the marketing sends, which risks Meta re-categorisation and blocks.",
+  "what_would_make_it_a_10": "Put the prepaid nudge in Marketing with a STOP footer, and add an explicit this-week first step and the call-load check against the 4 agents."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and correctly target Tier 3 and the order-status chat load, but Output 1 gets the template categories right (prepaid nudge with an incentive as Marketing, with a STOP footer) and justifies every discount against the RTO loss it removes, while Output 2 mislabels the prepaid nudge and skips the opt-out."
+}

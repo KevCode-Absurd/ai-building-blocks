@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It brings back the pause as the main save, drops discounts entirely with a data reason, and its maths matches my numbers exactly (1,771 kept, about £15,900 a month), with an honest note that only the pause row is proven.",
+  "biggest_mistake": "It gives the team no clear build order or holdout group; the launch checks are there but not sequenced.",
+  "what_would_make_it_a_10": "Add a short sprint build order and a small holdout on today's flow so we can prove the gain rather than assume it."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Practical build notes: it puts the pause first, reads plan and reminder status on load, and holds out 10% on today's flow, which my team could start next sprint.",
+  "biggest_mistake": "It keeps 50% off for switchers when that offer only holds 39% of takers, and labels the £607 as 'after discount' although it counts those people at full price.",
+  "what_would_make_it_a_10": "Drop the switcher discount or count it at half price for the first three months, and keep the build plan and holdout."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both rebuild the flow the way I hoped, but Output 1 cuts discounts cleanly and gets every number right. Output 2 keeps a weak discount and overstates what it is worth, though its build notes are better."
+}

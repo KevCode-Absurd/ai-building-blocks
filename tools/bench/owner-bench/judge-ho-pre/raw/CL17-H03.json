@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives honest low-to-high ranges for each fix, all checking out (2,430 to 3,646 tickets, 540 to 1,080 bra returns, £11,830 to £19,770 saved), and adds a real bra fit-check in the delivered email that could stop a return before it starts.",
+  "biggest_mistake": "Measurement is thin: there is a 10% hold-out but no A/B test of the portal, no guardrail such as time to refund, and no note that returns lag orders, so a day-60 read will be misleading.",
+  "what_would_make_it_a_10": "Add a 50/50 portal test with a time-to-refund guardrail and a note on return lag, and rank the three fixes in one money table that includes the cost of shipping swaps."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong measurement design: the portal runs 50/50, there is a hold-out, a time-to-refund guardrail and a return-lag caveat, and every working is shown and correct, including the self-selection haircut on the fit finder (684 fewer returns).",
+  "biggest_mistake": "It gives single-point targets, not the range I asked for, and the £209,600 'sales kept' headline mixes fit-finder returns into refunds avoided. The post-delivery message is a generic swap prompt with no bra fit guidance.",
+  "what_would_make_it_a_10": "Turn the targets into low/high ranges and give first-time bra buyers a short how-to-check-the-fit message after delivery, before they reach for a return."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the numbers right and fix the three real problems. Output 1 gives me honest ranges and a delivered-email fit check that actually saves bra returns. Output 2 measures more carefully, but it hands me single numbers and a generic swap nudge."
+}

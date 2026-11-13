@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It matches every reason to the right offer, restores the proven pause as the main save and puts its build first.",
+  "biggest_mistake": "The revenue headline stacks twelve monthly groups into £1.18m, which is easy to read as profit rather than gross revenue from each month's cancellers.",
+  "what_would_make_it_a_10": "Show the money in gross profit with churn and the switchers' real plan price worked in, and keep the totals to a single month's group."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It gives every reason a tailored panel and useful split for monthly versus annual 'too expensive' cancellers.",
+  "biggest_mistake": "It keeps the 50% discount for 'switching apps', a group the owner explicitly does not want discounted, and its 14%/8% reason split has no basis in the data.",
+  "what_would_make_it_a_10": "Drop the discount for switchers, use the real reason counts, and make the money model trace cleanly to the brief's figures."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gets the whole strategy right — pause first, no discount for people who would return anyway, the money shown with working — while Output 2 keeps a wasteful discount and has shakier numbers."
+}

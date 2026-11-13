@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every line has a call against the 2.5 break-even. Exact negatives kill the three losing pockets, and the forecast math (non-brand +$41,400, total $217,208) checks out, with a downside case and a Black Friday break-even reset I hadn't thought of.",
+  "biggest_mistake": "It commits only $122,000 and parks $118,000 in reserve. That gives up about $114,000 of non-brand sales, and it never builds a dedicated home for the winning washable and work-comfort searches. The feed fix also skips how to stop price mismatches coming back.",
+  "what_would_make_it_a_10": "Put part of the reserve into a non-brand Search campaign on the winning themes, add a root-cause check and automatic item updates to the feed fix, and get Claire's 'stand all day' wording into the title."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The feed fix is the most practical part: compare feed, page and structured-data prices, use sale_price with dates, turn on automatic item updates. It also adds a non-brand Search campaign and ad copy that use Claire's and Nina's own words.",
+  "biggest_mistake": "It leaves $128,000 in a brand-excluded PMax that currently runs at 2.03, adds no negatives for 'women's flats' or 'sustainable shoes', and banks profit on PMax hitting 2.6 even though its best themes are moving to Search. The cautious case keeps spending at 2.2, below break-even.",
+  "what_would_make_it_a_10": "Block the broad and sustainable terms in PMax, cut its budget to what the proven themes support, and stop spend in any line whose cautious case falls below 2.5."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 actually stops the money-losing spend and shows a profit plan I can trust, including a downside case and a Black Friday break-even reset. Output 2 has a better feed fix and better copy, but it keeps most of the losing PMax budget running on a hopeful 2.6."
+}

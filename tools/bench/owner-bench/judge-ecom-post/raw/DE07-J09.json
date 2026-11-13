@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It isolates Meta as the cost driver ($121 vs $92 Google), shows the first order loses $33 and that a Meta customer never pays back at $94 lifetime value, and turns that into a simple, runnable $94 cap plus a linen pause.",
+  "biggest_mistake": "The scorecard asks new customer orders to improve to -5% while the plan deliberately cuts paid spend and says to 'accept fewer new orders', and the '$23k to $41k' upside from cutting $100k of Meta spend is never explained.",
+  "what_would_make_it_a_10": "Bridge today's contribution margin to the day-90 number in one line of working, and set a new-customer order target that is consistent with cutting paid spend."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It answers the board's actual ask by valuing everything in points of contribution margin (7.8% today, 12.9% at day 90) with the working shown, per-move effort scores, week-4/week-8 lines and a stop rule on each line, and it flags that Sarah's 'nice hotel' line would read as the banned hotel-quality claim.",
+  "biggest_mistake": "Two sizing inputs are invented rather than sourced or ranged - the welcome flow 'earning about 1.8% of revenue' and the flow rebuild adding 2.75% of revenue when 22% x 11 points is 2.4% - and the plan is pinned to a specific 16 Nov 2026 start with Black Friday in week 2 that the brief never gave.",
+  "what_would_make_it_a_10": "Source or explicitly range the two pressure-tested inputs in moves 2 and 3, and lead with this week's three actions so the density does not bury them."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nail the diagnosis and the numbers that matter ($104 blended, $71 a first order, $94 lifetime, Meta up 68%), but output 2 gives me the contribution-margin story the board asked for with the working, per-move gain and effort, threshold lines and stop rules, so I could run Monday from it. Output 1 reads better and is cleaner, but it is thinner on margin sizing and its new-customer target fights its own decision to cut spend."
+}

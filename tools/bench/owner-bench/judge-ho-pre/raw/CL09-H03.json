@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data sharply and the working holds up. It explains the 2.1-day courier silence with an honest 'Packed' email, and it halves the fit-finder gain because early quiz users chose themselves, so it doesn't take the full 19 points as given.",
+  "biggest_mistake": "It gives single-point targets (6,762 tickets, 28.7% bra return rate) instead of a range. It also skips a day-3 'still on track' nudge, the very days when 62% of tickets arrive.",
+  "what_would_make_it_a_10": "Give low and high ranges for each saving, add a short day-3 update, and put real fit tips in the post-delivery bra email."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives honest ranges for every fix, and the maths checks out (2,430 to 3,646 fewer tickets, 540 to 1,080 fewer bra returns, £11,830 to £19,770 saved). It also adds a day-3 'nearly there' update and a delivery email for bra buyers with practical fit tips, written in our voice.",
+  "biggest_mistake": "The order confirmation says 'We're packing your order now', which may not be true. The size-return portal pre-selects swap. Refund is still one tap away, but some customers could read that as nudging.",
+  "what_would_make_it_a_10": "Make the confirmation copy literally true, test the swap-first portal against a control instead of only using a hold-out on messages, and trim the six messages to the ones that pay their way."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both plans find the same three problems and get the numbers right. Output 2 gives me honest ranges, a day-3 update that catches the ticket spike, and fit tips that could stop a return before it starts, which is what I hoped for."
+}

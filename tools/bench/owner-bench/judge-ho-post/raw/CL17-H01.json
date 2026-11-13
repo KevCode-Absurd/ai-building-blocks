@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Shows its working, and the maths checks out: 24,000 rush sized from back-orders plus sale week at 2.5x plus a buffer, an exact ₹117.46 lakh total, and the 82%-of-matte-money-to-42%-of-sales critique of the draft.",
+  "biggest_mistake": "It counts the 6,400 held units as already on hand, so it concludes the top 5 still run out on 1 December and plans a back-order gap that re-cartoning might close; that assumption isn't challenged.",
+  "what_would_make_it_a_10": "Settle whether held stock adds to the 9,100, and add a single dated day-by-day timeline for the ops lead instead of dates spread across several tables."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A single dated action calendar the ops lead can run on Monday, plus smart gap tactics (ad pause, per-shade cap, pro pre-order, honest 'back on 9 December' copy that uses Tanvi's 'I'll wait a week').",
+  "biggest_mistake": "Same held-stock assumption creates a 1 to 8 December gap. Pausing top-5 ads from 16 November gives up sales while stock still exists, and the liquid lipstick leftover (~27,900) doesn't quite reconcile with plain run-rate.",
+  "what_would_make_it_a_10": "Test whether re-cartoned stock extends cover to the rush arrival, and time the ad pause and cap to a stock trigger rather than day one."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both fit the cash and fix the hero shades correctly, but Output 2 hands my ops lead a dated calendar and better tactics for the stockout week, in our voice."
+}

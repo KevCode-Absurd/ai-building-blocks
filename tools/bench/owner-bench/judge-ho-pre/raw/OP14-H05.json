@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the three biggest avoidable drivers fast, ranks them by likely ticket reduction, and gives publishable drafts plus in-app link changes tied to the data.",
+  "biggest_mistake": "It states as fact that deleted expenses can be restored and gives exact restore steps without support from the brief, which is a risky made-up product detail.",
+  "what_would_make_it_a_10": "Tighten any unverified product steps, make the forecast a clearer range with slightly more conservative assumptions, and keep every article strictly to proven flows."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly identifies the missing-answer problem and gives a more honest forecast range with explicit assumptions.",
+  "biggest_mistake": "It says 'Nothing needs merging' even though a sensible merge or restructuring opportunity exists, and it delays the currency article on a dependency that is not in the brief.",
+  "what_would_make_it_a_10": "Rank actions more tightly by removable tickets, avoid adding unsupported dependencies, and make the drafts fully ready without vague 'contact us' or unverified product steps."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I asked for: stronger prioritisation by ticket impact, better use of the signals in my data, and more concrete in-app link recommendations. Output 2 is solid, but it leaves more for me to resolve and misses a few leverage points."
+}

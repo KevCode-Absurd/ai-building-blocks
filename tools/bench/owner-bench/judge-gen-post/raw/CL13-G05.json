@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds everything on the 0.62 writing signal: it drops experience, tool and degree requirements, gives writing 50% of the scorecard, and puts a ready-to-paste customer email into the application in place of the resume and letter.",
+  "biggest_mistake": "It adds a 100-word 'why this job?' question, which brings back a mini cover letter and extra reading, and the whole piece probably runs slightly over the word limit.",
+  "what_would_make_it_a_10": "Drop the 'why this job' question, add a local-time table for more APAC cities, and trim to the word cap."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post opens with the hard parts (hours, weekend rotation, quiet hours) and a local-time table, which is candid, useful, and answers the leavers' complaint.",
+  "biggest_mistake": "The reply exercise is left as a description ('a real ticket from the last 90 days') rather than written out, and 45% of the scorecard weight sits on interview rows even though interview impression correlated only 0.11.",
+  "what_would_make_it_a_10": "Write out the actual sample ticket, put the heaviest weight on the written reply, and trim to fit the 1,100-word limit."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is closer to something I could publish tomorrow: the sample customer email is written, and the scorecard puts half its weight on writing, as our data says it should. Output 2 has nice touches like the time-zone table and the returner idea, but it leaves homework and leans more on interviews."
+}

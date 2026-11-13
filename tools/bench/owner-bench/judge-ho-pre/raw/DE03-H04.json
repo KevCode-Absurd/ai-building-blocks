@@ -1,0 +1,29 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 respects the brand and the data — it brings back the pause as the hero save, refuses discounts to people who return anyway, and shows its money working honestly with a range. Output 2 gives 50% off to 'switching apps' (against our no-discount-for-everyone principle and without evidence it works) and invents a 'smaller goal' save with no data behind it, while its maths hides that the discount costs margin."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A straight no to the 20% cut, backed by the lifetime maths ($1,677 vs $1,130, net $1,174). It then costs the 90-day window honestly and says the plan costs more than today, with a dated 30-day plan the one partner manager can run.",
+  "biggest_mistake": "Some figures are thin or unsupported: the '$38,000 if we cut only new referrals' line has no working, the window-cost projection rests on a guessed 65-75% pay-by-day-90 rate, and the length probably runs over 1,100 words.",
+  "what_would_make_it_a_10": "Show the working for the $38,000 figure, give a total plan cost against the finance saving, and say how the plan holds the top creators against the rival's 40% offer without a rate change."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers on the 20% cut are clear and correct: a 12.5% break-even, four top affiliates wiping out the saving, first-year commission at 20%, 30% and 40%, and lifetime value net of commission. It also answers the rival's 40% offer with a partner-tier rate.",
+  "biggest_mistake": "The cost of the 90-day window is left vague ('may be the biggest cost', $63,000 per 10% rise) and no total plan cost is given. The 30-day plan uses day ranges instead of dates, and the $100 first-customer bonus nudges toward more recruiting.",
+  "what_would_make_it_a_10": "Add a total cost of the plan against the $210,000 saving, put calendar dates on the first 30 days, and spend the perk budget only on the top partners."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both reject the cut with correct lifetime maths and the same 90-day and payout fixes. Output 1 is more finished: dated actions, an honest 'this costs more' headline, tighter one-page rules with proper disclosure wording, and a fresh 'Who sent you?' credit idea. Output 2's 40% partner tier is a good answer to the rival, but its cost picture is looser."
+}

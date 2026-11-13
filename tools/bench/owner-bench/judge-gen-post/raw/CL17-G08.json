@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds both levers: a flat Agency plan for the 9.6%-churn Essentials 8+ group, and showing yearly billing to everyone now. The math checks: $63.91 per account, $23,900 MRR lost each month, $2.21M total, and the $58.09 vs $60 yearly working is correct.",
+  "biggest_mistake": "The yearly section is dense with numbers like $32.59 and 3.4% that a grade 7-8 reader will struggle with. It also never estimates how many more people a visible yearly option would convert.",
+  "what_would_make_it_a_10": "Simplify the yearly paragraph and add an estimate of the retention gain from moving yearly uptake from 19% to a target share, with its own stop rule."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clear Agency plan with traceable math: $249k Essentials 8+ revenue, +$2.7k on day of switch and +$23.0k at month 6. It has an honest downside case, the 1-in-3 Team move-down break-even, and a warm customer email that shows each person's own bill.",
+  "biggest_mistake": "It treats yearly billing only as an offer at the moment of switching. That misses the cheap fix of defaulting or re-offering yearly to everyone. It also quotes 11 channels on Team at $121, which is the 10.4-channel figure (the real cost is about $128), and it presents the $276k annualized run rate as if it were earned within the board's two quarters.",
+  "what_would_make_it_a_10": "Add a store-wide yearly-visibility change with its retention math, and separate run-rate from revenue actually earned inside the two quarters."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both pick the right flat plan for the leaking 8+ group with sound math. Output 1 also fixes the hidden yearly option for everyone and is honest about what it can and can't deliver inside two quarters, so I'd rather have paid for it."
+}

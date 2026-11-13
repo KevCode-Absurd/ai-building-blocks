@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 7,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts cash behind the real problem: top 5 matte shades, not the slow shades, and gives a usable PO plan inside the ₹1.2 crore limit.",
+  "biggest_mistake": "It misreads the re-cartoning impact: the 3,900 held top-5 units should lift usable top-5 stock to about 13,000 and largely bridge the rush-order gap, so the stated 1–7 December back-order gap is overstated.",
+  "what_would_make_it_a_10": "Fix the held-stock maths, remove the false gap, tighten it under the 900-word limit, and make the Monday actions/date logic fully consistent."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clear, operational, inside budget, and correctly rejects the ₹1.86 crore draft while focusing spend on the hero matte shades, foundation and kohl.",
+  "biggest_mistake": "It assumes the 3,900 held top-5 units are already inside the 9,100 units, so it creates an unnecessary sell-out gap and demand pause that the re-cartoning job should mostly prevent.",
+  "what_would_make_it_a_10": "Treat re-cartoned top-5 stock as lifting availability to about 13,000 units, remove the unnecessary ad pause/sell-out plan, and refine the clearance bundle so it does not lean on constrained kohl stock."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would rather hand to ops: it is shorter, cleaner, dated, and more internally coherent. Both miss the re-cartoning stock lift, but Output 1 has more contradictions and is harder to use as-is."
+}

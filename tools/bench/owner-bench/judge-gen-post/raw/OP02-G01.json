@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly shifts capacity away from decaying blog traffic and into comparison pages, with clear capacity control, projections, and a practical week-one workflow.",
+  "biggest_mistake": "It puts /vs-google-analytics first and pushes the cookie-banner and cookie-free analytics cheap wins too far down, despite those being high-impression near-page-one queries in Maya's own words.",
+  "what_would_make_it_a_10": "Move the first week to the cookie-banner rewrite, the cookie-free page retitle, and the Fathom comparison brief, then add a small consolidation plan for decaying blog posts."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It grounds the plan in the right trial economics, showing trials per 1,000 clicks and ranking work by likely trial impact rather than traffic.",
+  "biggest_mistake": "The first week still starts with /vs-google-analytics instead of the cookie-banner and cookie-free analytics wins, and Month 3 includes some unspecified pages that need tighter evidence.",
+  "what_would_make_it_a_10": "Make week one match the highest-leverage cheap wins, give exact titles/briefs for those pages, and replace the placeholder Month 3 comparison choices with a firm rule tied to Search Console impressions."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is the one I would rather use because the numbers are cleaner and the trial-priority logic is easier to defend. Output 1 is also strong, but it is a little less aligned with the near-page-one cookie-related opportunities in the data."
+}

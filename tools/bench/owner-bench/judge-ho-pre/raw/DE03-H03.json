@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It fixes the three problems in the exact order the data demands (silence, then swap-first portal, then fit finder), with the money working shown for each and honest halved assumptions rather than the full 19-point fit gain.",
+  "biggest_mistake": "The 'Sales kept' figure of about £209,600 is presented next to real cost savings, which flatters the plan; it is sales held, not profit, and the owner notes warn swaps are often one item, so it should be labelled and discounted.",
+  "what_would_make_it_a_10": "Separate cash saved from sales kept into two clearly labelled pools (and flag the swap margin unknown), so the headline number an owner repeats cannot be mistaken for profit."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The copy is the best-written of the two in our voice, plain and warm with no banned words, and the delivered-fit message ('band on the loosest hook', 'comfort beats the number on the tag') is a genuinely useful post-delivery fit helper.",
+  "biggest_mistake": "The money is fuzzier: the fit quiz saving range (540 to 1,080 fewer returns) implies new users return somewhere between 14% and 23.5% without saying which assumption drives which end, and the total saved is a range rather than a figure the owner can hold the team to.",
+  "what_would_make_it_a_10": "Tie every range to a stated assumption and give one planning number per fix, as the owner asked for a number to expect, not a spread that hides the decision."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both are strong and on-brand, but Output 1 gives the owner a single working number per fix, tells her where to stop, and keeps the swap sale in profit terms, which is what she will actually hold the team to. Output 2's copy is lovely but its ranges and unlabelled 'sales kept' leave her guessing."
+}

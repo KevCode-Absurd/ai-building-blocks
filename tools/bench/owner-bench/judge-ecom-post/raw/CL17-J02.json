@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Gets the money right ($27.10 first order, about $38.50 over 90 days, a $38 target). It builds on the nurse and server Spark Ads, keeps the mission line as a closer, and has a phased budget that adds to exactly $30,000 with a reserve rule.",
+  "biggest_mistake": "Some scorecard measures don't line up. It says to judge on days 15 to 30, yet the order target is 790 orders over all 30 days at $38, which ignores the learning-period cost. It also assumes the March licences cover the month instead of planning around them.",
+  "what_would_make_it_a_10": "Write every hook as a finished on-screen line in Maria's and Tasha's words, add a geo holdout, and make the day-30 targets match the days-15-to-30 window."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Twelve ready-to-shoot hooks use the customers' own lines, including 'My feet don't ache by hour ten' and 'Pricey, but I'm never going back' to meet the price objection head-on. It also judges day 30 on three reads plus a state holdout, which gives a solid answer on whether TikTok brings new customers rather than claiming Meta's.",
+  "biggest_mistake": "It plans only three new on-feet creators across the month and leans on staff phone videos, which is a thin pipeline for the style the data shows works. The 25-and-up age floor rests on weak reasoning.",
+  "what_would_make_it_a_10": "Brief 6 to 10 new on-feet worker creators from week 1 so owned winners are ready before the March licences end."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both get the economics and the on-feet-worker insight right. The second gives my team finished hooks in our customers' words, catches that our trend sound isn't cleared for ads, and sets a day-30 test I'd trust."
+}

@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The day-30 verdict is tied to the 90-day break-even ($38.46) and read three ways (store tags, survey, blended lift against baseline), with a holdout as a fourth. The phased budget adds to exactly $30,000 and has a dollar release rule for days 21 to 30.",
+  "biggest_mistake": "It is very dense, with tables everywhere and probably slightly over the word limit. It also assumes two new posts (\"Clogs test\", \"Hour ten\") from the existing creators that may not exist.",
+  "what_would_make_it_a_10": "Trim it to fit the word limit and plainly mark which creator posts already exist and which must be commissioned. The rest is already strong.",
+  "overall_note": "Owner would hand it over with light edits."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is a clean, Monday-ready plan with a Week 0 checklist, named owners, banned words restated, price handled inside the ad rather than with a discount, and budget phases (including the $1,000 reserve) that add to $30,000.",
+  "biggest_mistake": "The day-30 pass bar leans mainly on TikTok-reported cost per first order. The incrementality check is a single row and the survey is only a secondary check. It also adds a separate Smart+ Scale campaign that muddies the read.",
+  "what_would_make_it_a_10": "Make the day-30 decision rest on the 90-day break-even with store, survey and holdout reads that must agree, and give more worked hook scripts in Maria's words."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both use the problem-first, on-feet-worker insight, the $27.10 and ~$38 math, and the Spark Ads on day 1. Output 1 has the more rigorous day-30 proof (three reads plus a holdout) and sharper hooks in Maria's words. Output 2 is a bit easier to read and hand over, but its verdict rests more on platform numbers."
+}

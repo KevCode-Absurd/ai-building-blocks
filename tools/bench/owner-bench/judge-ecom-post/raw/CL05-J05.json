@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Six truly different angles in Aditya's and Priya's own words. It brings back the paused ₹210 winner in fresh wording, leads with taste, and tackles the ₹90 price head-on. It adds a clean test design, with budget maths that checks out (5 cells × ₹1,200 × 14 days = ₹84,000).",
+  "biggest_mistake": "It uses 27 characters as the limit for headlines and descriptions, which is stricter than needed. The 5-cell test with a control and the ₹84,000 spend is also an assumption the owner never gave.",
+  "what_would_make_it_a_10": "State the Meta limits as a single rule and note that the budget is adjustable, then offer a lighter-spend version of the test."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clear read of the past 90 days, with each of the four launch ads tied to one question (comeback, taste, label reader, price). It also supplies backup copy in case review quotes are not allowed.",
+  "biggest_mistake": "Four of the six primary texts repeat \"12 g protein / no added sugar\", the sameness the owner dislikes. The 4 pm angle is weak and the gym angle is missing.",
+  "what_would_make_it_a_10": "Make each primary text open on a different hook without repeating the spec line, and add a budget split with concrete day-to-day rules."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives six really different, voicey angles and a launch plan where each ad tests one thing, with budget and cut rules. Output 2 leans on repeating the spec line and is less distinct."
+}

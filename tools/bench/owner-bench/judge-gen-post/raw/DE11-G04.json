@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the data: writes for the winning segment, uses the pricing-change trigger to time and personalize step 1, keeps step 1 link-free, and gives honest reply-rate math.",
+  "biggest_mistake": "The proof sentence in step 1 states the close improvement as already true for a company that just moved to Chargebee, which could be read as a guarantee unless clearly framed as an approved case study.",
+  "what_would_make_it_a_10": "Tighten the voice in a few lines (e.g., 'the reason I wrote') and ensure the case proof is clearly attributed as an anonymous customer without implying cause."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It identifies the same winning segment and trigger, and adds practical send-window and compliance details plus a test plan.",
+  "biggest_mistake": "It introduces a specific send window (12th–15th) as if it were a known best practice, which is not in the data and could backfire if close timing varies.",
+  "what_would_make_it_a_10": "Remove the unsupported send-window assumption and ensure every email has exactly one question and one ask (step 2 has two potential actions)."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 follows the pilot data more faithfully—step 1 opens on the pricing change with no link, the proof is used subtly, and the reply-rate projection is careful; Output 2 adds useful extras but its unsupported send window and slightly clunkier asks make it a close second."
+}

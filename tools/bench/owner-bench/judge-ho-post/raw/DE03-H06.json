@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It answers the finance question with the lifetime maths, then builds the whole plan around the top 20 creator-educators and the credit window that is silently losing them.",
+  "biggest_mistake": "The 90-day window cost of $62,000 to $89,000 is a rough projection with an unexplained 65-75% credit assumption and a muddled break-even line that switches between revenue and gross margin.",
+  "what_would_make_it_a_10": "Show the window-cost arithmetic in one clean line (extra credited customers x lifetime commission) so finance can defend the number without asking."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the 20% decision arithmetic finance can check in seconds (12.5% break-even, four partners to wipe out) and still keeps the human plan (tiers, perks, first week) intact.",
+  "biggest_mistake": "The 40% first-year Partner rate is a real cost and a fairness question the plan under-counts, and the window cost is still an estimate rather than a worked projection.",
+  "what_would_make_it_a_10": "Model the combined cost of the 40% partner tier and the 90-day window in one table, with the years it pays back."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 gives finance a break-even they can check and a tier ladder that rewards the 17 creator-educators without a blanket raise; Output 1 is equally sound but slightly less disciplined on the numbers and on what the Partner rate really costs."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every rule is tied to our own money and our own data: the $38.46 90-day break-even, the $28.97 problem-first vs $50.85 mission-first hook costs, the 11.4s vs 2.8s watch times, and the March licence end all drive the plan.",
+  "biggest_mistake": "It never names who owns creative and comments after set-up, and the 'creator brief' is only a hook table, so the creative lead still has homework on Monday.",
+  "what_would_make_it_a_10": "Add a named owner per workstream and a one-page creator brief sheet (shot list, do and don't, banned claims) so the team can hand it straight to creators."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads easily and covers the whole job in plain words: set-up, structure, creative, budget, kill/scale, day-30 test, plus a Monday owner list.",
+  "biggest_mistake": "The measurement plan is softer and it opens a SCALE campaign on Day 8 when no ad can yet have 10 purchases at $34 or less, so the structure contradicts its own scale rule.",
+  "what_would_make_it_a_10": "Replace the loose day-30 read with a store-tagged plus survey read that must agree, and tie every kill, scale and budget move to a dollar figure from our own data."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand over Monday: its kill, scale and release rules are all in dollars, its day-30 test needs two of three reads to agree instead of trusting TikTok's ROAS, and its creative table spells out the first two seconds and the exact customer line for each ad. Output 2 is clean and readable, but its scale campaign opens before any ad can qualify and its day-30 bar is easier to game."
+}

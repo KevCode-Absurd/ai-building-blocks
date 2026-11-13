@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 6,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Correctly diagnosed that a swap should not require a new order and clearly communicated this in the copy.",
+  "biggest_mistake": "Ignored the specific request to provide an expected range rather than one perfect number, and missed sending a day-3 update.",
+  "what_would_make_it_a_10": "Model the expected outcomes as a range, include a specific day-3 ticket deflection message, and aggressively pre-select size swaps in the portal."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Nailed the expected range calculations and included brilliant e-commerce logic like pre-selecting the next size up or down for fit returns.",
+  "biggest_mistake": "Message 6 doesn't explicitly state to skip sending it if the customer has already initiated a return in the portal.",
+  "what_would_make_it_a_10": "It is already a 10; simply adding an exclusion rule for Message 6 if a return is active would make it utterly flawless."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 caught every signal in the data, respected the explicit request for a range of projections, and provided exceptionally thoughtful, brand-accurate copy that solves the actual customer pain points."
+}

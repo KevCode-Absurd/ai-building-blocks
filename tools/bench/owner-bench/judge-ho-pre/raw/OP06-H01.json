@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the real constraint fast: re-carton on Monday, rush the top 5 matte shades now, and stop funding slow lipstick and palette stock.",
+  "biggest_mistake": "It invents a pre-order volume and a foundation/kohl rush fallback without the shade data to support the exact numbers, which makes parts of the plan less tight than they should be.",
+  "what_would_make_it_a_10": "Tighten the top-5 unit math around the sale and gap, and keep every operational step grounded only in the data given."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very close to the owner's hoped-for plan: it puts the cheap re-carton fix first, protects cash, and clearly says not to reorder liquid lipstick, slow matte shades, or palettes.",
+  "biggest_mistake": "Its glitter clearance floor is wrong and risky: selling to a clearance buyer at no less than unit cost ignores handling and channel costs, which the brief explicitly warns against.",
+  "what_would_make_it_a_10": "Fix the clearance economics and show the top-5 coverage math a bit more explicitly so the PO quantities feel fully proven, not just plausible."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both understand the business, but Output 2 is the cleaner Monday-ready operating plan and stays more focused on the owner’s main decision. Output 1 is also strong, but it adds a few speculative mechanics that make it feel slightly less disciplined."
+}

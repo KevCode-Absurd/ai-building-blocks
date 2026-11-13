@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly picks Controllers/Heads of Finance at 50–300 person SaaS companies with recent pricing-page changes and writes usable finance-to-finance emails around rev rec spreadsheets and close time.",
+  "biggest_mistake": "The list math is a bit inconsistent: it says to load only pricing-change accounts but also implies all 1,900 controller contacts are loaded and 4,100 are left out.",
+  "what_would_make_it_a_10": "Tighten the list rules and projection, remove the risky generic watch-list idea, and move the 9-to-4 proof out of step 1 into a later touch."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It cleanly follows the pilot signal: target the winning segment, use the pricing-change trigger, avoid links, hold non-triggered contacts, and forecast an honest 6.8%–7.9% reply range.",
+  "biggest_mistake": "It still uses the 9-to-4 proof in step 1 rather than saving it for a later step, and a couple of asks point to sending summaries instead of booking a meeting.",
+  "what_would_make_it_a_10": "Make the calls to action more meeting-oriented while keeping one small ask, and save the anonymous close-time proof for step 2 or 3."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is cleaner, more internally consistent, and easier to run tomorrow. Output 1 has strong copy, but its list sizing and optional generic send create avoidable confusion and risk."
+}

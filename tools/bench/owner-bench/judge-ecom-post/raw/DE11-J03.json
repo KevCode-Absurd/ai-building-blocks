@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every concept is anchored to a real signal in the data — quiet wheels, women's cheaper CPA, belt-skip desire — with hooks lifted straight from review language.",
+  "biggest_mistake": "The '₹292 a trip' and the '63 more purchases' uplift are illustrations without showing the division or flagging the assumption beyond a light touch, and concept 7's proof carousel risks showing a scuffed dark shell if shot carelessly.",
+  "what_would_make_it_a_10": "Show the arithmetic for every rupee figure (spend shares, per-trip maths, uplift) inline so nothing has to be trusted on faith."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tight, scannable table plus honest risk callouts (dark-shell scuffs, front-pocket gap, mute-viewer risk) make it easy to brief a team.",
+  "biggest_mistake": "Concept 7 'Four specs' is a generic spec-demo that adds little range, and the ₹24,000/₹16,000/₹23,000 spend-per-concept test math is heavier and less clear than it needs to be for a first read.",
+  "what_would_make_it_a_10": "Replace the weakest spec-demo concept with a genuinely fresh angle and simplify the budget-per-test calculation to a single line."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and on-data, but Output 1 reads faster in the owner's own voice, gives cleaner per-concept tests, and has a genuinely distinct eight (the gift and per-trip framing land better than Output 2's spec demo)."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It aims at the right segment and trigger, opens on the pricing change and the rev rec rebuild, and keeps every step link-free. Each email has a low-friction one-word reply ask, and the 1,900-contact projection is correct (about 130 replies, 65 positive, 55 meetings).",
+  "biggest_mistake": "It omits the basic compliance pieces (opt-out line, postal address) and does not exclude current customers or open deals.",
+  "what_would_make_it_a_10": "Add an opt-out footer and exclusions for customers and open deals, and move the 9-to-4 proof out of step 1 to keep the opener tighter."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is strong operationally: a this-week first move, a clean exclusion table, an opt-out footer, exclusions for customers and open deals, reply handling, and an A/B test plan.",
+  "biggest_mistake": "Holding step 1 until the 12th to 15th can delay sends by weeks after a pricing flag and weaken the trigger that drove 7.9%. Asking for a 20-minute call from step 1 onward is heavier than a cold finance lead will want.",
+  "what_would_make_it_a_10": "Send within days of the flag and swap the early 20-minute asks for a one-word reply, keeping the operational extras."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both found the right segment, trigger and no-link rule. I'd load Output 1 because its emails read more like a peer and ask less of a cold Controller. Output 2's extra ops detail is useful, but its close-window timing risks wasting the pricing trigger."
+}

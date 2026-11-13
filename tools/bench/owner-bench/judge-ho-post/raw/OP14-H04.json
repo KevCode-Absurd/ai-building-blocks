@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the real lever—the paused 'no time' winner—and builds the whole flow around reason-matched saves with clear copy and honest economics.",
+  "biggest_mistake": "It assumes extra saves for the reminder and annual switch without enough caution, and the 12-month revenue framing is a bit over-extended for a sprint build brief.",
+  "what_would_make_it_a_10": "Tighten the revenue model for each offer with a cleaner base-case/range and add one simple holdout test design for the unproven saves."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 5,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It gives a usable one-screen flow with mostly on-brand copy and does bring back the pause as the main save.",
+  "biggest_mistake": "It keeps a 50% discount for switchers with no evidence, invents a save path for that segment, and its segmentation math and value logic are shakier.",
+  "what_would_make_it_a_10": "Remove unsupported discounting, focus the saves on the reasons the data supports, and tighten the math and testing plan."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads the data the way I hoped: it restores the paused winner, stops wasting discounts on people likely to return anyway, and treats 'not making progress' as a product fix. Output 2 is usable in parts, but it gives away margin with an unsupported discount and is less disciplined on the numbers."
+}

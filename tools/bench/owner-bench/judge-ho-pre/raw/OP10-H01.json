@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the real problem: top 5 matte shades, not the matte line overall, and puts rush production plus re-cartoning ahead of the over-budget draft.",
+  "biggest_mistake": "It treats the held top-5 stock as already inside the 9,100 units, so it creates a December stockout gap that should mostly be closed by re-cartoning.",
+  "what_would_make_it_a_10": "Correct the held-stock math so top-5 stock rises to 13,000, update the date-by-date plan, and make the foundation/kohl shade orders less dependent on a last-minute check."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a clean Monday-ready plan inside the ₹1.2 crore cash limit, cuts liquid/glitter/slow matte ordering, and protects the top 5 shades for wedding season.",
+  "biggest_mistake": "It also misreads the held matte stock as included in the 9,100 top-5 units, so the planned sellout gap and some demand-control actions are more severe than needed.",
+  "what_would_make_it_a_10": "Fix the re-cartoning assumption so top-5 stock becomes 13,000, then adjust the Dec 1–9 customer and ad plan around low stock rather than a full stockout."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is easier for an ops lead to run: the order table, cash use, dates, no-order lines and Monday actions are cleaner and more coherent. Both make the same held-stock math mistake, but Output 2 is the more usable plan after that correction."
+}

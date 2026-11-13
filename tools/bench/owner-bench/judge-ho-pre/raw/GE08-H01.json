@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "The date-by-date inventory tracker for the top 5 shades clearly demonstrates how the inventory gap is managed and bridged through the sale.",
+  "biggest_mistake": "Leaves a conditional check for the ops lead regarding whether to rush foundation and kohl out of held-back funds rather than making a firm call.",
+  "what_would_make_it_a_10": "Commit decisively to the foundation and kohl allocations up front instead of leaving a contingency check for the ops lead on Monday morning."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawlessly balances cash and cover across all lines through February 6, pairing exact PO numbers with practical operational tactics like order caps to prevent hoarders.",
+  "biggest_mistake": "Assumes leftover glitter palettes can be cleared at full cost (₹310) in February liquidation without factoring in liquidator discount haircuts.",
+  "what_would_make_it_a_10": "A realistic liquidation price band below cost for any remaining glitter palettes in February."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both plans are world-class, but Output 2 gives my ops lead a firmer, cleaner action checklist for Monday morning and includes an order cap to prevent bulk buyers from wiping out our remaining hero shades before brides can buy them."
+}

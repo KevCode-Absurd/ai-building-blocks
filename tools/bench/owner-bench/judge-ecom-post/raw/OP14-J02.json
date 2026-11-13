@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns your actual signals into a Monday-ready plan: on-feet worker Spark Ads from day 1, problem-first hooks, full setup list, phased budget, and clear kill/scale rules tied to your margin.",
+  "biggest_mistake": "The day-30 scorecard uses a prior-30-days comparison for store new customers, which is a weaker causal read than a cleaner holdout or more explicit incrementality method.",
+  "what_would_make_it_a_10": "Tighten the incrementality read for day 30 and make the landing-page assumptions explicit with a fallback if those pages do not exist."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly centers on-feet workers, problem-first hooks, tracking setup, and a money-based $38 target, with some useful safeguards like returning budget to Meta if TikTok misses.",
+  "biggest_mistake": "It introduces risk and unnecessary complexity with a no-spend setup delay, an age restriction to 25+, and a state holdout idea that is not well grounded in the brief or likely clean enough for this budget.",
+  "what_would_make_it_a_10": "Simplify the launch into a cleaner test-and-scale structure, remove arbitrary targeting constraints, and make the budget release and day-30 decision rules rely on stronger store-based evidence."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team on Monday with minimal changes. It follows my data more closely, especially on Spark Ads, creative style, hook order, and the budget and decision rules tied to actual contribution, while Output 2 adds a few assumptions and complications I would not want in a first TikTok launch."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every rule is tied to my own numbers: the $38.46 break-even, the 4-second watch-time cut drawn from our organic hits and misses, and hooks written in Maria's and Tasha's exact words.",
+  "biggest_mistake": "Spend can't start until day 4. The new on-feet creators (warehouse, teacher, line cook) don't arrive until the later rounds. The day 14 to 20 release read leans partly on TikTok-reported cost.",
+  "what_would_make_it_a_10": "A one-paragraph creator brief for 6 to 10 new on-feet workers, ready for day 1 outreach so new rights are secured well before the March licences end."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A thorough, practical set-up list (event-ID dedup, domain check, comment moderation, Day -2 upload) plus a clear test/scale split. It also requires winners that don't sit on licensed posts before the March expiry.",
+  "biggest_mistake": "The hooks use less of my customers' real words and Tasha's quotes go unused. The day-30 '790 first orders' bar assumes $38 across all spend, which clashes with judging cost on days 15 to 30 only. Smart+ scaling from day 8 is early.",
+  "what_would_make_it_a_10": "Write hooks from Maria's and Tasha's quotes, and make the day-30 targets consistent with each other, using two independent reads agreeing on cost per new customer."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are solid and Monday-ready, but Output 1 hooks every rule and every ad to my data and my customers' words, and settles day 30 with two agreeing reads plus a holdout. Output 2's scorecard is a bit muddled."
+}

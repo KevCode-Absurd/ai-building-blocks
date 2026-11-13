@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every signal is acted on with evidence and a fix: Customer A and the missed forecast up front, the AI-builder channel explained with the 48-hour pause as the accountable next step, and three asks that name a profile, a city and a date with forwardable text.",
+  "biggest_mistake": "It states 'The role is now based in New York' as a decision while the assumptions call it a move, which slightly overcommits a call the owner may want to make with investors.",
+  "what_would_make_it_a_10": "Tighten the New York base to a proposal to confirm, and trim a few table rows so the whole thing fits a phone screen faster."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The separate burn-driver table and the persona-labelled asks (everyone, angels, lead partner) make the money story and the requests very easy to scan.",
+  "biggest_mistake": "The claim that the extra $0.9M compute is 'roughly 9 points of margin, more than the 7-point drop' is a loose calc that invites the question of what offset the other 2 points, and then leaves it unanswered.",
+  "what_would_make_it_a_10": "Fix or drop the 9-vs-7-point margin aside and add forwardable one-liners to each ask so the team can send them without rewriting."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both are accurate and on-brief, but Output 1 is the one I would send after a light edit: bad news is cleaner up front, the fix has a ship date and an accountability line, and the asks come with forwardable text my angels can act on immediately."
+}

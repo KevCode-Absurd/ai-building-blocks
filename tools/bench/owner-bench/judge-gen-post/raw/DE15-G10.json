@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Builds the whole series around the two habits the data proves (recurring task 52%, second device 48%, both 67% vs 11%), and the fifth email attacks the gap directly by pushing whichever habit a user is missing, with a stated skip logic.",
+  "biggest_mistake": "Email 5 is left as a sketch with branch markers and 'the image from email 2 or 3' instead of two fully written versions, so the last and most important email is not paste-ready.",
+  "what_would_make_it_a_10": "Write email 5 out as two complete, paste-ready variants (one habit missing, the other habit missing) and put the trigger line at the top of every email instead of only in the summary table."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every email is complete and paste-ready with trigger, subject, preview, body, button, goal and success measure in the exact shape the brief asked for, and the drop rationale is tight and backed by the right numbers (1.4% unsub on the team invite, 0.3% mobile clicks on shortcuts).",
+  "biggest_mistake": "It spends the last email of a five-email onboarding series on Pro for engaged users only, so anyone who has done just one of the two habits gets no final push toward the other — the biggest retention lever in the data is left on the table.",
+  "what_would_make_it_a_10": "Swap email 5 for a day-8 guilt-free 'one habit left' nudge driven by the recurring-task and second-device triggers, and move Pro to a separate post-day-14 send."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and correct, but Output 1 makes the sharper strategic call: it spends all five emails on the two habits that actually predict retention, tells me what to do first this week, and comes with a control group and the 1,800-people-per-point math; Output 2 is cleaner to paste but gives its last email away to Pro before everyone has both habits."
+}

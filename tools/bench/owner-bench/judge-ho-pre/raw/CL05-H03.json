@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers are worked step by step and all check out. It also builds in a 50/50 portal test and a 10% holdout, and it admits that fit-finder users chose the quiz themselves by closing only half the 19-point gap.",
+  "biggest_mistake": "It gives single-point estimates (tickets halved, 35% swap share) instead of an honest range. It has no short day-3 'still on track' nudge and no fit guidance for first-time bra buyers after delivery, only a generic 'swap my size' email.",
+  "what_would_make_it_a_10": "Show low and high ranges, add a day-3 status message, and put real how-to-check-your-fit guidance in the post-delivery bra email."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the cost of the problem (£139,800 in returns, £31,360 in tickets) and gives low-to-high ranges for every lever. It also covers every message the owner hoped for, including a day-3 update and a bra-specific fit-check email after delivery.",
+  "biggest_mistake": "The swap-first headline of 'up to £183,800 in sales kept' is a loose upper bound. The portal pre-selects swap for size reasons, which edges toward a nudge, and it has no explicit portal A/B test.",
+  "what_would_make_it_a_10": "Add a controlled test of the new portal against the old one, and use a firmer, more cautious figure for sales kept."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both plans have correct maths and good copy. Number 2 has honest ranges, the day-3 nudge, more useful fit guidance in the post-delivery bra email, and a clear 8-week order of work, so it fits what I asked for slightly better."
+}

@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranks channels by retained users with the math shown, and turns the 58% migration-ticket problem into a hard launch gate with a staged rollout and undo.",
+  "biggest_mistake": "The finished X posts and email are riddled with bracketed placeholders ([Opens in __ ms on a __ Mac], [@author1], [support address], [first name]), so they cannot be posted as delivered.",
+  "what_would_make_it_a_10": "Fill every placeholder with real names, numbers and the support address so the X thread and email can ship untouched."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Its launch-day X post and email are complete, on-voice and answer 'will my hotkeys survive' directly, with no placeholders.",
+  "biggest_mistake": "Leans on a speculative install projection ('about 16,500', '6,980 to 9,240 users') that mixes assumptions into the decision table and could mislead on channel payoff.",
+  "what_would_make_it_a_10": "Keep the copy as delivered but strip the invented projection and anchor the plan on last year's measured retained users only."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the ranking, gating and migration logic right, but output 2 hands me a launch-day post and email I could actually send, while output 1 leaves placeholders and homework.",
+ "reason_extra": "Output 1's plan is slightly sharper on the support rota and staged update, so it's close — but ready-to-use copy is what I'd pay for."
+}

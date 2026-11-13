@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The forecast is an honest range with every share explained, and all the numbers check out: 2,703–4,276 tickets, $11,082–$17,532, plus a priced 'Simplify debts is on' banner idea.",
+  "biggest_mistake": "It writes a new Simplify debts page and leaves 'How balances work' alone apart from a pointer. That keeps a 38%-helpful page as the one most people land on, where a full rewrite would have fixed it.",
+  "what_would_make_it_a_10": "Rewrite 'How balances work' itself with the Simplify answer up top, and add the no-click search phrases as search terms so the restore page is found straight away."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It retitles the existing pages in searchers' words, maps 'undo delete', 'restore expense' and 'recover deleted' to the delete article as search terms, and adds web and cancel-subscription steps.",
+  "biggest_mistake": "The forecast is a single point estimate that counts 225 tickets from a currency article it never writes and that won't go live until week 2. It also spends week 2 merging a page that already helps 71% of readers.",
+  "what_would_make_it_a_10": "Give a real low-to-high range, leave out the unwritten currency article, and drop the needless merge of 'Recording a payment'."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and I could publish either with light edits. Output 1's forecast is the more honest one, a defensible range with the bad news stated plainly, while Output 2 inflates its number with an article it hasn't written."
+}

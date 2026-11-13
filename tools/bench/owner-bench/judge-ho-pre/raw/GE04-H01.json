@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The operational brilliance of capping site orders at 4 to stretch inventory while routing pros to a dedicated pre-order to secure high-value sales.",
+  "biggest_mistake": "It misses explicitly mentioning India's high COD RTO rate as the reason for avoiding standard site-wide pre-orders, though the tactical choice to use a notify button was correct.",
+  "what_would_make_it_a_10": "It is already a 10, but explicitly tying the notify-me strategy to avoiding COD pre-order cancellations would show total mastery of the Indian market."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The day-by-day inventory table brilliantly proves the math and reassures the owner that the stock gap and sale demand are perfectly covered.",
+  "biggest_mistake": "The liquidation advice to 'never sell below what it costs to pick, pack, ship and pay fees' ignores the ₹310 product cost, misstating the floor for gross profit.",
+  "what_would_make_it_a_10": "Provide clearer promotional mechanics for the overstocked liquid lipstick instead of just advising to 'lead the sale with it', and correct the liquidation price floor."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both outputs showed exceptional mastery of the inventory math, cash constraints, and brand voice. Output 1 wins for providing sharper e-commerce operational tactics, like specific profitable bundle pricing for dead stock and capping order quantities to buy time before the stock-out."
+}

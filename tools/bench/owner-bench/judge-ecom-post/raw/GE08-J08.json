@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It perfectly nails the data signals by putting the 46–90 day 'slipping' group first with zero discount, creating dedicated tracks for Monsoon Dark and ex-subscribers, and applying the exact unit economics.",
+  "biggest_mistake": "The schedule table is slightly compressed and packed with dates, requiring careful calendar alignment.",
+  "what_would_make_it_a_10": "It is already a 10—an exceptional, commercially grounded plan ready to launch tomorrow."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong understanding of the courier gate for ex-subscribers and clean, well-crafted message drafts that follow the brand rules.",
+  "biggest_mistake": "It missed putting the 46–90 day at-risk cohort as Wave 1 of the win-back sequence, relegating them to an aside note rather than prioritizing the easiest revenue first.",
+  "what_would_make_it_a_10": "Incorporate the 46–90 day slipping buyers directly into the primary campaign waves and use conservative first-order holdout math rather than speculative 12-month multi-order assumptions."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 captured every strategic nuance in the data: it prioritized the 46–90 day slipping buyers as Wave 1, treated Monsoon Dark and ex-subscribers with dedicated operational logic, and executed flawless contribution margin economics."
+}

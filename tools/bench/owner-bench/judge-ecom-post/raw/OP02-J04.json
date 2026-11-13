@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the actual signals into shootable ads: taste-test first, the 3 pm habit, price handled plainly, family/flavour angle, and paid disclosure built in.",
+  "biggest_mistake": "It is a little overbuilt and likely over the word limit, with extra testing and rights detail that may distract from the scripts.",
+  "what_would_make_it_a_10": "Trim the extra testing/rights section and tighten the creator assumptions while keeping the same scripts and compliance rules."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clean, shootable, on-brand, and correctly leads with the winning taste-test and swap formats instead of label reading.",
+  "biggest_mistake": "The disclosure and price handling are less embedded in the actual scripts, and the family script uses 'My kids think this is regular soda' without the stronger 'if true' guardrail.",
+  "what_would_make_it_a_10": "Add first-frame/on-camera ad disclosure, make the price objection more explicit in at least the taste-test or family script, and tighten the child/family claims with 'if true' guidance."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather hand to creators tomorrow: it uses the data more sharply, handles the $3 objection better, and gives fuller compliance and production direction. Output 2 is strong and cleaner, but it leaves more judgement calls for the team."
+}

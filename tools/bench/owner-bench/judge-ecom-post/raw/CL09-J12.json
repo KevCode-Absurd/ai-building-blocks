@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A complete, pincode-aware confirmation flow with shipped and out-for-delivery messages, an after-hours bot, and a smart idea to move one agent to a 2 pm to midnight shift for the 31% evening wave.",
+  "biggest_mistake": "The prepaid nudge carries no incentive and is filed as Utility, so it gives Tier 3, where half the RTO money sits, no stronger push than a metro buyer gets; it also assumes a 7-day exchange window that may not be ours.",
+  "what_would_make_it_a_10": "Size a prepaid incentive per pincode tier against the RTO loss it removes, submit it as Marketing, and add a net-saving metric to the scorecard."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Works out the RTO loss per COD order by tier (₹70 / ₹41 / ₹27) and sizes each prepaid discount below that loss, with calls and a firm 48-hour cancel only for Tier 3, plus holdouts to prove the saving.",
+  "biggest_mistake": "The cart template says 'Cash on delivery is on' for every cart, which is wrong where COD isn't offered on that pincode, and it misses staffing the evening shift.",
+  "what_would_make_it_a_10": "Add a prepaid-only cart variant for non-COD pincodes and shift one agent into the 8 pm to midnight window alongside the night bot."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both are usable, but the second treats my Tier 3 towns as the money problem they are. It prices each nudge against the refusal cost, files the offer as Marketing, measures the net saving, and gives me a bold ₹99 advance test I can run safely."
+}

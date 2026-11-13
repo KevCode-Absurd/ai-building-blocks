@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns my top pair into a ₹999 three-step routine priced at the same ₹537 profit I'd work out myself, keeps ₹499 because that is where COD refusals drop from 29% to 17%, and adds a lip balm cart nudge plus a ₹49 COD fee test aimed at the ~800 refused small orders.",
+  "biggest_mistake": "It is dense and number-heavy, with lakh ranges everywhere, so it takes a slow read. It also never prices a COD-only threshold, such as free shipping at ₹499 for prepaid and higher for COD, before jumping to a fee.",
+  "what_would_make_it_a_10": "Cut it down to a scannable page and work out the COD-versus-prepaid threshold split alongside the COD fee."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "A clean serum price ladder (₹599, ₹749, ₹999), clear per-bundle profit and break-even, and a sensible case for avoiding ₹699 because it puts the fee on Ishita's serum.",
+  "biggest_mistake": "It recommends moving to ₹599 using an arbitrary assumption that only 6% of orders (~1,000) sit between ₹499 and ₹598, when the 27% band suggests about 2,300. It also leaves RTO out of the threshold maths and spends a bundle slot discounting the lip balm instead of using it as an add-on.",
+  "what_would_make_it_a_10": "Size the ₹499–598 slice from the actual band data, put COD refusal cost into the threshold decision, and use the lip balm as a cart add-on so the third bundle can be body care."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads my data the way I do. It keeps the threshold where COD refusals fall, prices the routine bundle without killing skin-care margin, and goes after the small-COD leak. Output 2 wants to move my threshold on a guessed order count and mostly ignores refusals."
+}

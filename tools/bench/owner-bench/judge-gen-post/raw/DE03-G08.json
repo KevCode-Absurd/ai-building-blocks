@@ -1,0 +1,30 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and on-brand, but Output 1 gives the owner a cleaner decision with tighter, more defensible math, an honest admission that the yearly push won't move revenue in two quarters, and a test with a real stop rule — Output 2's half-switch base case is too optimistic and it drifts into model-menu territory with the revenue table.",
+ "what_would_make_it_a_10": "Show the churn-reduction value (the ~214 customers/$14k a month saved at 4.1% churn) directly in the headline math rather than as a secondary table row, so the owner sees the leak plugged in one line."
+}

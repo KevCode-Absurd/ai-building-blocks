@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the real issues the data shows—Customer A, the margin drop from AI-builder traffic, and the missed forecast—then turns them into specific actions and asks.",
+  "biggest_mistake": "It states 'we believe most of the $0.9M compute rise comes from them' rather than sticking to the clearer evidenced point that the AI-builder idle projects drove the margin problem.",
+  "what_would_make_it_a_10": "Tighten the one speculative line, and explicitly note that Customer A's exit is likely to pressure NRR as well as February ARR."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly identifies the AI app-builder channel as the main economic problem and explains the burn increase cleanly.",
+  "biggest_mistake": "It misses the owner's strongest priority by not putting Customer A—the clearest bad news—up front, and it introduces a shaky margin calculation that could undermine trust.",
+  "what_would_make_it_a_10": "Reorder it so Customer A and the forecast miss are visible in the first screen, remove the questionable '$10.4M monthly revenue' margin math, and make the asks more concrete and investor-friendly."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like the update the owner asked for: candid, specific, phone-friendly, and built around the actual signals in the data. Output 2 is solid, but it buries the most important bad news and takes a risk with unnecessary math."
+}

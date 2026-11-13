@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the paid-video data properly (taste-test $26 beats label $44) and builds all three scripts on that plus the real comment themes, with the 3 pm hook, the $3-a-can answer and the kids hook pulled straight from Dana and Marcus's words.",
+  "biggest_mistake": "The 3 pm script's price line ('12 afternoons for me') is a bit soft and one hook ('$3 a can for a soda? Here's my honest take') drifts toward the defensive, plus the test-plan projections add extra balls the brief didn't ask for and dilute the finished scripts.",
+  "what_would_make_it_a_10": "Tighten the price rebuttal in Script 2 to a concrete comparison (a $5 coffee-shop drink) and keep the whole thing under 1,300 words by trimming the test plan."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, fast, shootable scripts with good hook alternates (the 2:59 clock, the mid-sip start) and disclosure baked in, and it correctly keeps the label after the taste moment.",
+  "biggest_mistake": "It gives the blind-test reveal an odd 'pull a can from behind her back' staging and lets Script 3's claims land on the dad reading the label, which is the losing format, so it edges closer to the label-led trap than it should; it also has no in-script price answer beyond 'it's my one soda of the day'.",
+  "what_would_make_it_a_10": "Make Script 3 earn its family angle without a label read from Dad, and give the price objection a real on-camera answer in more than one script."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd actually shoot: it uses my numbers to justify every opening, names the buyer for each script, answers the $3-a-can doubt on camera, and gets the disclosure and child-release details right. Output 2 is tidy and usable but leans back toward the label-read habit I'm trying to get away from."
+}

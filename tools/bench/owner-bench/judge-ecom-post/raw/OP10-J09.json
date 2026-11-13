@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It directly names the real slowdown drivers—Meta cost inflation, linen returns, and broken email capture—and turns them into ranked moves with owners, targets, stop rules, and working math.",
+  "biggest_mistake": "A few modeled gains and targets lean on assumptions that should be labelled more cautiously, and the $94 ad-set cap slightly conflicts with the $100 Meta target.",
+  "what_would_make_it_a_10": "Tighten the assumptions and reconcile the paid-media thresholds so every target, cap, and projected contribution gain lines up cleanly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a clean, practical diagnosis and correctly prioritizes stopping linen promotion, enforcing payback rules, and rebuilding the switched-off email flows.",
+  "biggest_mistake": "The plan is less quantified than requested, with gross-profit impact often shown as high/medium rather than ranked point estimates, and the scorecard avoids calculating the contribution-margin baseline even though the data supports it.",
+  "what_would_make_it_a_10": "Add the contribution-margin baseline and targets, quantify each move’s expected profit impact, and make the first-week operating rules as specific as the diagnosis."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would hand to the team: it has the sharper money model, ranked moves, owner assignments, stop rules, and weekly thresholds. Output 2 is strong and clearer in places, but it leaves more work for the owner on sizing and targets."
+}

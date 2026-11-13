@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole series around the two retention-driving habits, uses allowed triggers and platform branching, and drops the weak current emails with the right numbers.",
+  "biggest_mistake": "Email 5 is a little complex for the 'one tip and one button' rule, and the unsupported line that mobile signups rarely use a computer should be softened.",
+  "what_would_make_it_a_10": "Make the final email cleaner with one clear variant per missing habit and remove the unsupported mobile-computer claim."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The copy is calm, on-brand, and the first four emails are tightly tied to the retention signals and supported triggers.",
+  "biggest_mistake": "It keeps a Pro email inside the onboarding series instead of using the fifth email to finish the recurring-task plus second-device habit loop.",
+  "what_would_make_it_a_10": "Replace the Pro email with a missing-habit email that helps users complete either the recurring task or second-device action before monetization."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather run because it stays focused on the two actions that predict retention and makes the final email close the habit gap. Output 2 is well written, but the Pro email weakens the onboarding strategy."
+}

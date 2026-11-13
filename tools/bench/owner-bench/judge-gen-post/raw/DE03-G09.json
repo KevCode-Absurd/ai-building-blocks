@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, correct, evidence-led plan with a simple weekly rhythm and drafts that use real customer phrases ('replaying today's emails', 'stopped by day three') in a warm voice.",
+  "biggest_mistake": "Drafts drift slightly toward instruction ('Breathe out, slow and long', 'Feel your hands') and some on-screen lines read more like cues than invitations, which weakens the 'invite, don't instruct' principle.",
+  "what_would_make_it_a_10": "Tighten each draft so every on-screen line is an invitation in the customer's own words and ends with one clear, gentle action."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Shifts the mix decisively to sleep plus narrator clips, uses the exact customer phrases as hooks, and adds a genuinely fresh 'Lights down' live stream idea with a clear gate.",
+  "biggest_mistake": "The review logic is slightly loose ('no post names a condition, so none needs review') and one draft's 'Awake at 2am' title would in fact trip review rules, so the review plan needs tightening.",
+  "what_would_make_it_a_10": "Remove or flag any condition-adjacent title (e.g. 'Awake at 2am') and restate the review rule cleanly so every reviewed post has a safe submission date."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and on-brief; Output 2 wins on brand voice and originality, with stronger use of the customer's own words and a bolder, well-gated live-stream idea, though its review note needs one fix."
+}

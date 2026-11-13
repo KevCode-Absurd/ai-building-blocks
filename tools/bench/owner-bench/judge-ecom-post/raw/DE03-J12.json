@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "RTO cost is split by pincode group with per-order refusal math that justifies tiered discounts and calls, and the holdout is built in.",
+  "biggest_mistake": "T4 (prepaid switch) is submitted as Marketing but the body carries a ₹20/₹40 discount that only works after Confirm, which risks Meta rejecting or recategorising it, and the discount is never sized against margin.",
+  "what_would_make_it_a_10": "Make the prepaid and cart templates clean Marketing with the incentive properly sized and the STOP footer on every template, and put the after-hours bot menu live before chats are rerouted."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The reply scripts are the most usable part: short, light Hinglish, and clearly mapped to the five real questions with an after-hours menu.",
+  "biggest_mistake": "Template 3 is filed as Utility but tries to switch COD buyers to prepaid with a UPI link, which is Marketing and will be recategorised or rejected, and the 7-day exchange claim is stated as fact without the store's real policy.",
+  "what_would_make_it_a_10": "Get the categories right (template 3 as Marketing, template 1 as Utility without any payment link), make the exchange wording an assumption rather than a fact, and show the money behind each move like Output 1 does."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 would actually cut RTOs, because it splits the discount by pincode risk and shows the refusal cost per order, and its metric table maps straight to a weekly scorecard. Output 2 has clearer scripts and a smarter after-hours plan, but its Utility prepaid template and the unverified exchange promise are exactly the kind of mistakes that get templates rejected and customers annoyed."
+}

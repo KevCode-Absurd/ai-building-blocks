@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It works the groups in the order my data argues for, starting with the 9,000 at 46 to 90 days at no discount, then the 5,200 Monsoon Dark buyers, and it holds the ex-subscribers behind a hard delivery gate of 93% on-time for four weeks.",
+  "biggest_mistake": "Two numbers are left hanging: the ₹4.2 to 8.6 lakh 12-month headline has no working behind it, and the ₹535 profit used for ex-subscribers doesn't match the 15% offer it gives some of them.",
+  "what_would_make_it_a_10": "Show the break-even lift per group in points (message cost plus discount over ₹385 to ₹557 margin) next to the projected range, so I can see at a glance which waves are worth sending even on a weak read."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The day-28 running-low nudge attacks the leak before customers lapse, and the honest note that discounting people who would buy anyway costs about ₹70,000 shows real commercial thinking.",
+  "biggest_mistake": "My 9,000 customers at 46 to 90 days, the cheapest group to bring back, are not in the target table with a size, offer and holdout, and group A is counted at 13,100 even though the assumptions say ex-subscribers are pulled out of every group.",
+  "what_would_make_it_a_10": "Put the 46 to 90 day group first as its own wave with a light no-discount message, a holdout and a value line, and make the group counts reconcile with the ex-subscriber carve-out."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both are competent and on brand, but output 1 starts where my data says to start, gives ranges with the held-out maths spelled out, and its reachable and gross-profit figures reconcile, while output 2 buries the 9,000 at-risk buyers and has a group count that contradicts its own assumption."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds the three real leaks in the data and ranks them well: WISMO silence, low fit-finder use, and a refund-biased returns portal.",
+  "biggest_mistake": "It invents a November/Christmas timeline and its day-3 message only goes to parcels with a courier scan, which misses part of the silence causing tickets.",
+  "what_would_make_it_a_10": "Remove the invented calendar, add a proper post-delivery fit help message for first-time bra buyers, and report retained swaps as gross profit or clearly as revenue only."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into a practical 60-day flow with ready-to-send copy, the right portal changes, holdout measurement, and realistic ranges.",
+  "biggest_mistake": "It treats swap value mostly as sales kept rather than gross profit and adds SMS without covering consent or cost.",
+  "what_would_make_it_a_10": "Add gross-profit assumptions for swaps, tighten the SMS/legal note, and make the day-3 message work cleanly even when there is no courier scan yet."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I could hand to CRM, CX and web tomorrow: the copy is more complete, it includes the first-bra fit check and post-delivery fit nudge, and the numbers are easier to read. Output 1 is strong, but the invented dates and weaker day-3 handling would need more editing."
+}

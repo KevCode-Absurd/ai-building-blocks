@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The local time zone table and the tiered review workload calculation directly address the operational bottlenecks from our 2025 hiring round.",
+  "biggest_mistake": "It describes the written application exercise in the abstract rather than drafting the actual customer email prompt for the applicant to answer.",
+  "what_would_make_it_a_10": "Include the actual draft customer email prompt in the application instructions so the form is ready to publish immediately."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It provides the complete, ready-to-publish customer prompt right in the job post, perfectly capturing the 37signals tone and addressing every data point.",
+  "biggest_mistake": "Does not list as many specific Asia-Pacific city time translations as Output 1, though it names Singapore, Manila, and Perth.",
+  "what_would_make_it_a_10": "A flawless submission that could be copy-pasted onto Basecamp's job board today."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs nailed the data insights and our brand voice, but Output 2 went the final step by actually drafting the customer prompt for the application form rather than just describing it."
+}

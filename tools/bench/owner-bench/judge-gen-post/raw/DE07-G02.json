@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The seat math is right (2,100 signups at 9.4% x 7.8 seats = ~1,540 of 2,717 paid seats, 57%) and the page moves security next to the demo button, then adds a bolder move — pushing the security page into the demo confirmation email to preempt Priya's IT blocker.",
+  "biggest_mistake": "The hero settles for the survey's generic 'back and forth' instead of Priya's own 'email tennis,' and the page never says what to stop or skip this week.",
+  "what_would_make_it_a_10": "Swap the H1 to Priya's words and add one line on what to stop doing (e.g. drop the 5 unused demo fields) so the first action is obvious."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The hero nails Priya's language ('Let candidates book the right interviewer. No email tennis.') and the segment math frames it as over four times the next best segment (0.73 vs 0.17 paid seats per signup), which sells the choice.",
+  "biggest_mistake": "Too many bracketed placeholders ([certifications], [logo list], [customer quote]) make it a draft the owner must fill in, and the invented 'three or four emails per interview' breaks the no-made-up-facts rule.",
+  "what_would_make_it_a_10": "Replace the bracketed placeholders with concrete, true proof or explicit 'cut this' guidance, and define a single clean metric (demo requests or team signups) so the test can be called in two weeks."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both pick recruiting with correct seat math and put security next to the demo button, but Output 1 is finished (test size, projection, no placeholder homework) and adds a sharp security-in-confirmation-email move; Output 2 has the better hero but leaves brackets for me to fill."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It breaks the 4.0 apart against the 2.5 break-even, puts the feed fix first, and splits every dollar to exactly $240,000 with a reserve rule.",
+  "biggest_mistake": "The payback on the feed fix ($61,900 a month) is a rough, generous estimate built on a share of PMax value and could overpromise.",
+  "what_would_make_it_a_10": "Tighten the feed-fix upside with its method shown and confirm how many of the brand values would have bought anyway without paid search."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, quick to read, with a clear plan and a cautious case alongside the base case.",
+  "biggest_mistake": "The forecast tables assume ROAS numbers for new lines (non-brand Search 3.2, brands holding at 95%) that are guesses presented with precision, which can flatter the profit promise.",
+  "what_would_make_it_a_10": "Show the working behind each forecast ROAS and be blunt that the numbers are unproven assumptions, not estimates."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 1 puts the profit maths and the exact $240,000 split on firmer footing, with a reserve rule and a ranked week one the owner can act on immediately."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives Monsoon Dark buyers their own track, with a draft that names the blend and the roasters' closest match, and it holds ex-subscribers behind a 93% on-time gate, so it treats the real reasons people left rather than reaching for discounts.",
+  "biggest_mistake": "It leads with the 91 to 180 day group and handles the 9,000 slipping 46 to 90 day buyers only as a side day-28 nudge, leaving the cheapest group to win back out of the waves and out of the value sum.",
+  "what_would_make_it_a_10": "Make the 46 to 90 day group wave one with a no-discount reminder, size its value, and back the 70% reachable figure with real email and WhatsApp overlap data."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Its order follows the data: slipping 46 to 90 day buyers first with no code, Monsoon Dark next, and ex-subscribers gated on delivery and date choice. Its contacted counts, ₹385 at the 15% cap and 13%-weighted ₹535 for subscribers all check out.",
+  "biggest_mistake": "The Monsoon Dark first email asks for a quiz instead of naming the closest match, and the 365+ day group gets 15% off in a single email with no test of whether that discount pays.",
+  "what_would_make_it_a_10": "Name the recommended match in the Monsoon Dark email, put the quiz second, and test the 365+ day offer at 0% against 15% before rolling it out."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both find the discontinued blend and the courier problem, but the second starts with the cheap-to-win slipping buyers, keeps its maths conservative and checkable, and adds a pre-order idea for Monsoon Dark that I wouldn't have come up with."
+}

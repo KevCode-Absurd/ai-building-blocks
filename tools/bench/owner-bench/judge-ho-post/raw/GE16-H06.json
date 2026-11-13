@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Presents airtight lifetime value math and break-even calculations that decisively prove cutting to 20% would lose money.",
+  "biggest_mistake": "Unnecessarily inflates programme costs by adding a 40% first-year commission bump when the survey clearly showed payout mechanics and credit windows, not the rate, were the pain points.",
+  "what_would_make_it_a_10": "Hold the line at 30% recurring rather than matching the rival's 40% first-year rate, and add concrete dates/owners to the 30-day rollout."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Smartly recognizes that commission rate wasn't the complaint, keeping 30% flat across tiers while fixing payouts, and introduces a brilliant, zero-cost attribution backstop using the existing signup survey.",
+  "biggest_mistake": "The perk allocation puts $5,000 toward transfer fees which is an operational expense rather than a true partner-facing perk.",
+  "what_would_make_it_a_10": "Reallocate the $5,000 transfer fee line item to partner-facing assets or community building."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs nail the lifetime revenue math and reject the 20% cut decisively. Output 2 wins because it doesn't give away an unnecessary 10% commission bump, provides a dated execution roadmap for our solo manager, and adds a clever attribution fix via our existing signup survey."
+}

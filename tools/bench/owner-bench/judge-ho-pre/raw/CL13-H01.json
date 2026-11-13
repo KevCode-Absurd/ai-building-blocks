@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds the top-5 matte stock-out and fixes it with re-cartoning, a rush order and a January trigger. The sums are right (25,000 x ₹207, total ₹1,14,13,400) and the glitter clearance steps avoid fake urgency.",
+  "biggest_mistake": "It leaves ₹5.87 lakh unspent and hedges with if/else rules on foundation shades and the January order, when the owner asked for one plan. It also looks over the 900-word limit.",
+  "what_would_make_it_a_10": "Cut it to under 900 words, take out the conditionals so it reads as one decisive plan, and put the spare cash to work."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives one decisive plan: a rush and a standard order for the top 5 (₹1.187 crore total, all sums right), the re-carton job on Monday, and a dated action table. It shows stock at 6 Feb for every line and spells out the one-week gap honestly, with a back-in-stock line in the brand's voice and a nod to Tanvi's and Farah's words.",
+  "biggest_mistake": "The cap of 4 per shade works against Farah, who buys 6 to 10 units. The \"any 2 for ₹999\" liquid lipstick deal is roughly 29% off, even though the text says no deep discount.",
+  "what_would_make_it_a_10": "Exempt pre-ordering artists from the cap, size the liquid lipstick offer to margin, and show the pre-order demand working."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the core call right: re-carton, rush the top 5, order nothing for slow lines, and stay inside ₹1.2 crore. Output 2 is tighter and more like one plan I can hand to my ops lead on Monday, with a dated action table, a cover forecast for every line and the cash put to work. Output 1 is a bit longer and hedgier."
+}

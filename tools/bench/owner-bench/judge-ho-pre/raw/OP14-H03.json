@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the three real leaks in your data and ranks them in the right owner order: stop the day-3-to-5 silence, fix bra fit, then make swaps easier than refunds.",
+  "biggest_mistake": "It overstates the portal impact by quoting 'sales kept' on swaps without netting shipping or proving how many swaps truly save the order.",
+  "what_would_make_it_a_10": "Tighten the financial model for swaps to gross profit kept, not sales kept, and add a cleaner measurement plan for the portal test."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is disciplined with the numbers, especially on fit-finder uplift, and gives a sensible test structure instead of assuming the full observed gap is causal.",
+  "biggest_mistake": "It misses the owner's hoped-for post-delivery bra help before return in a more specific way, and its portal choice to leave nothing pre-selected is less decisive against the current refund bias.",
+  "what_would_make_it_a_10": "Add a stronger first-time bra post-delivery fit-help moment and a clearer money-ranked case for making size swap the default path for fit reasons while keeping refunds easy."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the one I'd rather pay for because it catches my key signals and turns them into a more complete, owner-ready plan with copy, portal changes and sequencing. Output 2 is more careful on causality, but it is a little less bold on the portal fix and slightly less tailored to the post-delivery fit problem I care about."
+}

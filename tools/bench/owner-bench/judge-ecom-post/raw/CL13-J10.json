@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 6,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ties the threshold decision to COD refusals, using the 29% vs 17% RTO split, the ₹130 and ₹70 costs, a lip-balm cart add-on for sub-₹499 carts and a ₹49 COD-fee test, and it covers three product categories with break-even for each bundle.",
+  "biggest_mistake": "It is dense and likely over the word limit, with many lakh-level projections built on stacked assumptions. It also keeps ₹499 without fully working out the 27% band between ₹500 and 699, leaving that to a test.",
+  "what_would_make_it_a_10": "Tighten it to plain, grade 6 to 7 prose under 1,300 words, and show a worked per-order gross-profit comparison for the ₹500 to 699 band at ₹499 against ₹699, split by COD and prepaid."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clear and easy to act on: a price ladder on the serum page, break-even per bundle, the point that ₹599 keeps Ishita's serum free, and a tidy test plan with stop rules.",
+  "biggest_mistake": "It guesses that only about 6% of orders sit at ₹499 to 598 (the data suggests more) and builds the ₹599 maths on that. It barely uses the COD/RTO data in the threshold decision, and the serum + lip balm bundle is not really a routine.",
+  "what_would_make_it_a_10": "Estimate the affected order share from the order-value spread and put COD refusals (₹130) into the threshold maths by order band. Replace the serum + lip balm bundle with a body or hair routine, and use the lip balm as a cart add-on."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one that deals with the COD leak on small orders, the main money problem in the data. It also gives bundles that make sense as routines, plus the lip-balm add-on I hoped for. Output 2 is easier to read, but its ₹599 maths rests on a guessed order share and mostly ignores RTO."
+}

@@ -1,0 +1,35 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 5,
+  "clear": 6,
+  "voice": 6,
+  "range": 6,
+  "ready": 7,
+  "overall": 6
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 6,
+  "voice": 6,
+  "range": 7,
+  "ready": 7,
+  "overall": 7
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick the same three bundles and right pairings, but Output 2 keeps the ₹499 threshold that matches the COD-refusal cliff and adds a COD fee idea and clear test rules; Output 1 moves to ₹599 with invented take-rate assumptions that weaken the money case.",
+ "biggest_strength_1": "Strong ladder logic and a clear bundle-first test order.",
+ "biggest_mistake_1": "Moves free shipping to ₹599 on made-up add/pay/walk rates, ignoring that ₹499 is the COD-refusal cliff.",
+ "what_would_make_it_a_10_1": "Work the threshold off real order-band data and show the COD/RTO cost of every option, not assumed rates.",
+ "biggest_strength_2": "Keeps ₹499 for the right reason (COD refusal cliff and serum reorder) and adds a COD fee test with stop rules.",
+ "biggest_mistake_2": "Several money figures are rough projections built on assumed 20-35% add rates, so the owner can't fully trust them.",
+ "what_would_make_it_a_10_2": "Replace assumed ranges with an order-export calculation and give the bundles one clean unit-economics table."
+}

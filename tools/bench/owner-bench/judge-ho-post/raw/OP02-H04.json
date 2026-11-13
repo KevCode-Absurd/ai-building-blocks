@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the real win: turn the paused 1-month pause back on for the no-time segment, stop blanket discounting, and make that the sprint critical path.",
+  "biggest_mistake": "The value model for the untested reminder and annual-plan saves is a little soft and would need clearer separation between proven saves and assumed saves before launch reporting.",
+  "what_would_make_it_a_10": "Tighten the forecast into proven, assumed, and upside lines, and make the reminder action explicitly confirm that the learner is keeping the subscription."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a buildable one-screen flow with good segmentation, strong use of the pause, and mostly clear, friendly copy.",
+  "biggest_mistake": "It invents customer-facing prices from ARPS and keeps a 50% discount for switchers without evidence, then partly counts that discount save too generously.",
+  "what_would_make_it_a_10": "Remove the unsupported switching-app discount, use live billing variables instead of £9/£59.40 in copy, and make the revenue math distinguish discounted months from full-price retained months."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather hand to product: it puts the paused winner first, avoids wasting discounts, respects the cancel rule, and is more honest about the business risk. Output 2 is useful, but the unsupported half-price offer and invented prices make it less safe to ship."
+}

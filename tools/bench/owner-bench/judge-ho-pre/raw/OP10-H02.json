@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It takes apart the blended 4.0 ROAS correctly, shows profit by pocket, puts the pointed-flat feed fix first, and gives a disciplined budget/release rule tied to contribution.",
+  "biggest_mistake": "The large $118,000 reserve and reliance on a few exact PMax negatives may be too blunt operationally and could leave the team without a fully controlled way to cut broad/display waste.",
+  "what_would_make_it_a_10": "Make the PMax control plan more concrete, with campaign structure or Shopping/Search splits that actually isolate washable, comfort, bags, broad and display traffic while keeping the full $240,000 plan forecasted."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very usable tomorrow: the budget adds to $240,000, the feed diagnosis is practical, and it cleanly moves money toward bags, washable searches and comfort searches.",
+  "biggest_mistake": "It leaves $128,000 in non-brand PMax and forecasts improvement from 2.03 to 2.6 too optimistically, despite the data showing broad, sustainable and display/video are losing money.",
+  "what_would_make_it_a_10": "Cut or isolate the weak PMax inventory more aggressively and show tighter weekly rules for shifting spend only after two reads prove the new structure is profitable."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 1 is more profit-disciplined and closer to the owner's real problem: brand is masking losses and the feed issue is the first unlock. Output 2 is easier to execute, but its PMax budget and forecast are a little too trusting given the loss data."
+}

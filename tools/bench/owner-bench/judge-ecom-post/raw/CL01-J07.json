@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Email 2 is split three ways by quiz answer, and the sunscreen email answers white cast, stickiness and makeup using the dusky-skin review as proof.",
+  "biggest_mistake": "Email 5 pushes one 3-step routine to everyone. It includes salicylic wash morning and night, and it goes to the dry, sensitive and beginner readers it told earlier to avoid acids. That undoes the personalisation and the start-slow promise.",
+  "what_would_make_it_a_10": "Make the final email's routine match each quiz answer, with one active plus sunscreen, and add a holdout and a rupee value for the lift."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Personalisation by quiz answer runs through the whole series, and every routine is two steps by concern. It adds sound Klaviyo plumbing (entry filter, cart pause, WhatsApp only to non-clickers) and a holdout with correctly worked rupee value.",
+  "biggest_mistake": "The WhatsApp and Email 5 say 'every other night' generically, so sunscreen-only recipients get night-use advice for a morning product. Also, no email ever pairs niacinamide with sunscreen as the morning step for the dark-spot path in the early emails.",
+  "what_would_make_it_a_10": "Fix the start-slow line per matched product, and say plainly in Email 1 or 2 that dark-spot readers need daily sunscreen alongside niacinamide."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both answer the sunscreen fears well. Output 2 keeps each person on one matched product right to the code reminder and shows me what a lift is worth with a holdout. Output 1's last email throws everyone onto a three-product acid routine."
+}

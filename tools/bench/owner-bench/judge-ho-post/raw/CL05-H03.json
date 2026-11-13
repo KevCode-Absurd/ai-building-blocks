@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers are rigorous and honest: it halves the fit-finder gap to allow for self-selection, builds a holdout and a conversion guardrail into the rollout, flags Christmas distortion, and adds a creative 'ship the swap first' option.",
+  "biggest_mistake": "It gives only four messages and no fit coaching after delivery beyond a quiz link. It also mixes monthly and 90-day units, which makes the money harder to compare, and never states the baseline cost of returns and tickets.",
+  "what_would_make_it_a_10": "State the £139,800 and £31,360 baselines up front, add a real post-delivery fit-coaching message, and keep every saving in one unit ranked by gross profit."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the cost baseline (£139,800 returns, £31,360 tickets, 6,076 day 3-5 tickets), then gives six short one-button messages, including fit-coaching copy at delivery and a day-5 fit check-in, and a table of savings with working in one unit.",
+  "biggest_mistake": "It leans on an unproven 2-hour size-switch window before picking. The high case also assumes quiz users keep the full 14% return rate, and the £183,800 'sales kept' figure is a loose ceiling, though both are caveated.",
+  "what_would_make_it_a_10": "Show the swap-first portal's net gross-profit effect rather than a sales ceiling, drop the size-switch dependency from the core plan, and add one bolder idea beyond the standard flow."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the three big fixes right and the numbers check out. Output 2 leads with the cost baseline, gives a fuller set of ready-to-send messages, including post-delivery fit help for bra buyers, and keeps its savings table in one unit. Output 1's holdout design and bolder idea are strong, but it is thinner on messages."
+}

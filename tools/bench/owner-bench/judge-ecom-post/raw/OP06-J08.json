@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the two big owner signals and acts on them: a dedicated Monsoon Dark track and a hard gate before winning back ex-subscribers into a broken delivery experience.",
+  "biggest_mistake": "It weakens itself with avoidable arithmetic and planning errors, especially the odd 'lapsed at 68' rule, inconsistent reachable counts after removing ex-subscribers, and some unsupported timing choices.",
+  "what_would_make_it_a_10": "Tighten the maths and segment counts, justify the trigger timing from the actual 34-day median, and make the profit model fully traceable segment by segment."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It uses the brand voice well and gives a clean, owner-friendly plan with the right message logic for Monsoon Dark and subscription churn.",
+  "biggest_mistake": "It misses the owner's key priority by not starting with the 46 to 90 day at-risk group as the main win-back wave, and its reach and profit maths rely on loose assumptions that are not anchored tightly enough to the given data.",
+  "what_would_make_it_a_10": "Re-rank the programme around the 46 to 90 day group, replace assumed reach with explicit reachable counts from the brief, and show a stricter break-even and lift model by segment."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to how I would actually run the programme: it prioritises the cheapest-to-win-back group, gives Monsoon Dark its own track, and properly gates ex-subscriber win-back behind a delivery fix. Output 2 is strong on tone and clarity, but it misses the most important priority signal in my data."
+}

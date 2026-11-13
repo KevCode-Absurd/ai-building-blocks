@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Primary text is short, calm and in our voice. The data read is sharp: women are 26% of purchases on 18% of spend, and it adds a worked illustration of what lowering men's cost per purchase is worth.",
+  "biggest_mistake": "Its rule of 'about ₹4,500 per concept' (three times blended cost) is too little spend to judge whether to scale. It is really a stop-loss rule passed off as a test budget.",
+  "what_would_make_it_a_10": "Add headlines and a proper test budget per concept, and put the cheaper women's audience first, as the data supports."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ready to hand to a team. It gives headlines with character counts, Reels safe zones, scene timings, a worked test budget per concept (15 purchases of spend, ₹63,000 total), and it handles both the scuff and front-pocket objections.",
+  "biggest_mistake": "Primary text runs longer and more spec-heavy than our short-line voice. Concepts 2 and 8 are statics that drift back toward the product shots we already have.",
+  "what_would_make_it_a_10": "Cut the primary text to short calm lines, and turn one of the two statics into a fresher format."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both caught quiet wheels, solo women and belt-skipping, and both got the numbers right. The second leads with the cheaper women's audience, handles the pocket objection, and gives me a real testing budget and headlines, so it is closer to something I can launch tomorrow, though the first sounds more like us."
+}

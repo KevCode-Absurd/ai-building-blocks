@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The 'Measures and plan B' section provides clear, data-driven targets and an actionable fallback plan if tickets spike.",
+  "biggest_mistake": "Relying only on 'author and staff Macs' for the carry-over test leaves the migration risk too high compared to testing on actual power users.",
+  "what_would_make_it_a_10": "Expanding the beta test to your heaviest hotkey users and making the staged rollout a core launch requirement rather than a 'bolder move'."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The operational rigor in the 'must be true' gates is exceptional, specifically demanding an undo button, a 1000-user beta, and redeploying engineers to support.",
+  "biggest_mistake": "The timeline lacks a dedicated column for team owners, which requires a bit of reading between the lines to see who is doing what.",
+  "what_would_make_it_a_10": "Adding explicit owners to the timeline table and setting concrete numerical targets for launch week success measures."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 demonstrates exceptional product sense by demanding an undo button, testing migration on 1000 power users, and pushing Product Hunt to Day 2. Both nailed the data and channels, but Output 2's operational rigor to de-risk the migration is exactly what an owner would pay for."
+}

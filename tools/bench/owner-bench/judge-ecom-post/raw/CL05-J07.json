@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses all three data signals: it leads with the best-converting niacinamide for the 55% with tone, dullness or no answer, it gives the sunscreen leak (2.2% order rate, white cast and stickiness questions) its own email with the 'dusky skin' review, and it builds a slow-start plan for the 61% who are new to actives. It also adds a holdout test and a gross-profit estimate.",
+  "biggest_mistake": "It probably runs slightly over the 1,800-word limit, and it spends space on test and projection sections the owner didn't ask for. Email 5's 'one active at night' wording is also a little loose.",
+  "what_would_make_it_a_10": "Trim to the word limit, and give the dark-spot routine (sunscreen plus niacinamide) its own focused email instead of folding it into the product match and Email 5.",
+  "bold_note": ""
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 6,
+  "reasoning": 6,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 8,
+  "overall": 6.5,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Email 2 has three versions split on the quiz answer, and the sunscreen FAQ email answers white cast, stickiness and makeup with the review quote.",
+  "biggest_mistake": "Email 5 sends everyone the same routine of face wash, sunscreen and serum, ₹1,297 in total. That contradicts its own 'one product at a time' advice and its advice to dry or sensitive readers not to start with an acid.",
+  "what_would_make_it_a_10": "Personalise Email 5 by quiz answer, replace the cosmetic claims like 'helps clear out oil' with calmer wording, and add a holdout and a worth estimate.",
+  "bold_note": ""
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 acts on the quiz split, the sunscreen leak and the beginner fear throughout, and its closing routine matches each person's skin concern. Output 2's closing email pushes all three products on beginners and contradicts its own slow-start advice."
+}

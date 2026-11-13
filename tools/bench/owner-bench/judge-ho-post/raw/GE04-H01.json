@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Delivers a perfectly calculated, highly actionable Monday plan that uses smart e-commerce levers like pausing ads and launching pro pre-orders to manage the stockout gap.",
+  "biggest_mistake": "Assumes the crushed-carton units are included in the on-hand figures rather than additive, though it explicitly states this assumption and does the math flawlessly based on it.",
+  "what_would_make_it_a_10": "Recognising that adding the 3,900 held units to the 9,100 on-hand units pushes the run-out date to early December, closing the gap before the rush order arrives."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The bundle strategy pairing the dead-stock glitter palettes with liquid lipsticks is a smart way to clear cash without destroying brand value.",
+  "biggest_mistake": "Inexplicably delays placing standard purchase orders to Friday, losing precious days on a 42-day lead time and contradicting the request for a Monday plan.",
+  "what_would_make_it_a_10": "Moving all PO placements to Monday, dropping the textbook reorder-point formulas, and explaining how to handle the stockout without relying solely on back-orders."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 provides a masterclass in e-commerce operations. It hits every constraint, matches the brand voice perfectly, and offers highly practical solutions (like pausing top-5 ads) to stretch inventory, whereas Output 2 creates unnecessary delays and relies on generic inventory formulas."
+}

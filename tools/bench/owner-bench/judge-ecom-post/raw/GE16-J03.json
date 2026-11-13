@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "The ad copy is completely finished, speaks in our authentic customer voice, and includes thoughtful operational guards like avoiding dark shell close-ups and giving a statistically sensible 15-purchase test budget.",
+  "biggest_mistake": "Concept 8 (gifting) is slightly generic in its visual execution compared to the sharp airport and morning hallway scenes of the other concepts.",
+  "what_would_make_it_a_10": "Add a concrete visual storyboard frame or hook overlay detail for the static gift concept to match the specificity of the video concepts."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Great conceptual range across formats and awareness stages that directly maps to our survey segments.",
+  "biggest_mistake": "Leaked internal brief notes directly into customer-facing ad copy, including 'Warranty and returns are on our site' and 'Quiet wheels are the top theme in our 1,150 reviews.'",
+  "what_would_make_it_a_10": "Rewrite the primary text drafts to remove internal brief artifacts and increase the test budget per cell beyond ₹4,500, which is far too low to judge scale."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 wrote launch-ready copy that sounds like our brand, whereas Output 2 accidentally pasted brief instructions like 'Warranty and returns are on our site' straight into the consumer ad copy."
+}

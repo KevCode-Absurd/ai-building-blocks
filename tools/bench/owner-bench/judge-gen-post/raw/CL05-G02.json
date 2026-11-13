@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It states the segment case in two lines with correct seat math (about 733 paid seats per 1,000 recruiting signups against 12 for coaching). It also gives a rigorous test plan with sample size, a projection and a 4-field demo form.",
+  "biggest_mistake": "The hero ('book interviews without the back and forth') uses brand-safe wording but not Priya's own 'email tennis'. The copy runs well past 1,000 words, and the security section mixes instructions to the team into the page copy.",
+  "what_would_make_it_a_10": "Build the hero around Priya's own phrase, cut the extras (test maths, bolder move) to fit 1,000 words, and keep the security section as pure page copy."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero uses the customer's own phrase ('No email tennis') and names round robin that skips anyone off. It ties each proof point to the data, and its metric (qualified team starts with a first booking within 7 days) fits the segment.",
+  "biggest_mistake": "Several slots are left as [bracketed] placeholders. It also mixes 'Get started' into team sections where the brand rule says 'Book a demo', and it adds unsupported details such as text reminders and 'three or four emails' per interview.",
+  "what_would_make_it_a_10": "Fill or remove the bracketed slots, use 'Book a demo' on every team section, drop the unsupported claims, and make the two hero variants test truly different ideas (pain versus outcome)."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 sounds more like Priya and the brand ('email tennis', one idea per section, honest about missing proof) and stays a bit tighter. Output 1 is a little more finished and has the stronger test plan, but it is longer and its hero is less sharp."
+}

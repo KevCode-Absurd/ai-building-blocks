@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A complete, buildable spec: a panel per reason split by plan type and reminder status, the 'remind me in 3/6 months' option for trip-over, done screens for every outcome, and a 10% holdout for eight weeks.",
+  "biggest_mistake": "It hands 50% off to the 'switching apps' group with no evidence behind it — the one thing I said to stop — and the £607 'after discount' figure is actually 67 × £9 full price, not the discounted £4.95.",
+  "what_would_make_it_a_10": "Put the pause rebuild at the top as the launch gate it is, show an honest range on the kept subscribers, and give the money per group with the discount actually applied."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It tells me the thing that changes my sprint: without the pause this flow keeps about 440 a month, fewer than today's 842, so the pause rebuild is the critical path and the flow must not launch without it — plus it names the £29,160 a month of half-price discounts to stop.",
+  "biggest_mistake": "The money table gives only totals — 2,210 and £18,650 — without the per-group working, so I have to reverse-engineer how the 304 annual switchers and 135 reminder-setters add up, and it drops the 'remind me before my next trip' email for the trip-over group.",
+  "what_would_make_it_a_10": "Show the per-group kept-and-value table with the discount applied and the range per group, and add the next-trip reminder plus confirmation screens for the reminder and discount outcomes."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 tells me what decides the build — the pause is the whole flow and without it I would be worse off than today — and it stops the discount money, while Output 1 quietly sells 50% off to switchers with no evidence and mislabels the discounted revenue. Output 1 is more complete as a spec, but Output 2 is the one that changes what I do on Monday."
+}

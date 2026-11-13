@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly spots Tier 3 RTO and order-status chat load as the two big money and workload problems, and gives usable flows plus short Snitch-style scripts.",
+  "biggest_mistake": "The prepaid nudge is treated as Utility with no incentive, has a broken variable in the pay link, and the Tier 2/Tier 3 hold rules are a little inconsistent.",
+  "what_would_make_it_a_10": "Make the prepaid switch a Marketing template with a tested incentive or Tier 3 advance, clean up the variables, and make the risk-tier rules fully explicit."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole plan around the real cost driver, Tier 3 COD refusals, while also reducing the 54% order-status and delivery-date chat load.",
+  "biggest_mistake": "A few details still need operational checking, mainly the exact discount economics, button combinations, and whether repeat COD buyers still get a basic order confirmation.",
+  "what_would_make_it_a_10": "Add exact margin-adjusted savings after discounts and message costs, and tighten the repeat-buyer confirmation and template submission details."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is more owner-ready: it uses the right WhatsApp categories, gives tiered actions by RTO risk, includes holdouts, incentives, after-hours automation and a bolder Tier 3 advance test. Output 1 is solid, but the prepaid Utility classification and variable issues would need more cleanup before submission."
+}

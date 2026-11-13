@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Rock-solid arithmetic on paid seat yield and rigorous consistency with the brand's CTA rules for team buyers.",
+  "biggest_mistake": "Hero headline plays it slightly too safe compared to using Priya's punchier 'email tennis' phrasing directly.",
+  "what_would_make_it_a_10": "Incorporate Priya's vivid 'email tennis' hook directly into Hero A's headline and tighten section 2's copy to match."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Great use of the customer's exact voice in the hero headline ('No email tennis').",
+  "biggest_mistake": "Inconsistent section CTAs that flip erratically between 'Book a demo', 'Get started', and 'See security details', confusing the buyer journey.",
+  "what_would_make_it_a_10": "Standardize all section CTAs to 'Book a demo' for this team buyer and remove bracketed placeholder homework."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 delivers a cleaner, more disciplined conversion path that respects the CTA rules for team buyers, backs up the A/B test with real sample size math, and doesn't leave bracketed placeholders."
+}

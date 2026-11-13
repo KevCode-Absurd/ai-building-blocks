@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the real issue: the top 5 matte shades, not the matte line overall, and redirects cash away from liquid lipstick, glitter and slow matte shades.",
+  "biggest_mistake": "It assumes the held top-5 units are inside the 9,100 on hand, so it creates a stockout gap that the re-cartoning fix should largely close before the rush order lands.",
+  "what_would_make_it_a_10": "Rework the top-5 stock bridge using 9,100 plus the 3,900 re-cartoned units, then adjust the ad pause, preorder and customer messaging around the real lower-risk gap."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a tight Monday action plan inside cash, with the right first move: re-carton held matte stock and rush the top 5 shades before the sale.",
+  "biggest_mistake": "It also treats the 3,900 held top-5 units as part of the 9,100 on hand, which overstates the December stockout problem and drives unnecessary preorder/paid-ad actions.",
+  "what_would_make_it_a_10": "Fix the top-5 inventory math to show re-cartoning lifting stock to about 13,000 units, then make the December operating plan match that corrected bridge."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both plans catch the main business signal and are usable, but Output 2 is cleaner, keeps more cash back, and is easier for the ops lead to run on Monday. The shared error is the held-stock assumption, which needs correcting before execution."
+}

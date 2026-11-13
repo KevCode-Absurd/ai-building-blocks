@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is built around the actual winning signal: problem-first, on-feet worker creative, with the nurse and server Spark Ads live from day one and a $38 90-day payback target.",
+  "biggest_mistake": "The day-30 scorecard slightly mixes a Days 15-30 CPA read with a full-month 790-order target, and the incrementality check is weaker than it could be.",
+  "what_would_make_it_a_10": "Tighten the day-30 measurement into two or three agreeing Shopify/survey/lift reads and add a more specific creator brief for the next 6 to 10 on-feet workers."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It has the strongest measurement plan, using Shopify tags, post-purchase survey, blended lift, and a proposed state holdout instead of trusting TikTok ROAS.",
+  "biggest_mistake": "It underbuilds the new on-feet creator pipeline and has a few shaky operating rules, especially the 25-purchase learning bar and a $50 store-tagged CPA pass line.",
+  "what_would_make_it_a_10": "Add a fuller creator production plan around nurses, servers, warehouse, retail and teachers, and make all scale rules tie cleanly to the $38 90-day contribution target."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 1 is the more Monday-ready media-buying plan: cleaner budget flow, clearer kill/scale rules, and better use of the proven nurse/server creative. Output 2 has better measurement ideas, but I would need to tighten parts of it before handing it to the team."
+}

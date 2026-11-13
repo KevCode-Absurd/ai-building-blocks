@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clean, readable diagnosis that pins the cost rise on Meta and linen, with correct working: $71 contribution, $33 loss per first order, $94 18-month value, linen adding 1.8 points of returns.",
+  "biggest_mistake": "The impact column is mostly High/Medium/Low rather than sized in profit, and the scorecard leaves key targets vague ('pre-January level', 'set baseline in week 1'), so the moves are not truly ranked by gross profit.",
+  "what_would_make_it_a_10": "Size each move in contribution dollars or points with the working, and give every scorecard line a hard number and a trigger."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Turns the plan into a contribution-margin model: today's baseline of about 7.8% against 13.6% a year ago, each move sized low/likely/high in points, week-4 and week-8 go/stop lines, and action thresholds on every scorecard row.",
+  "biggest_mistake": "Several sizings rest on stacked assumptions (Meta holding the same customers at $100, 'half new' revenue, an unsourced 'about half' flow benchmark), and the density makes it harder to read than it needs to be.",
+  "what_would_make_it_a_10": "Keep the model, but simplify the wording for a non-expert and flag more plainly which gains depend on the week-1 tracking and linen checks."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both find Meta, linen and the switched-off email as the real causes. The second one ranks the moves by actual profit points, with stop-or-continue lines and thresholds I can run every Monday, and it catches brand traps like the 'nice hotel' line and Black Friday discounting."
+}

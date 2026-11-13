@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It flawlessly captures the unmistakable 37signals voice and brilliantly drops resumes entirely in favor of a short writing prompt to solve the screening bottleneck.",
+  "biggest_mistake": "Estimating two minutes to score a 200-word reply and a 100-word 'why this job' is slightly optimistic for reviewers reading continuously.",
+  "what_would_make_it_a_10": "It is already a 10, but explicitly mentioning how you filter the 'why this job' question in the scoring process would make it perfectly watertight."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 4,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 6,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The inclusion of a local time zone table and reading the rotation rules out loud at the start of the interview are great practical steps.",
+  "biggest_mistake": "It contradicts the data by giving the interview 45% of the scorecard weight, despite explicitly noting that interview impression has a mere 0.11 correlation with success.",
+  "what_would_make_it_a_10": "Rebalancing the scorecard to overwhelmingly favor the written components and adjusting the tone to sound less like standard corporate HR."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 writes a job post that feels exactly like a real 37signals listing and builds a scorecard that strictly obeys the data. Output 2 contradicts the brief's most critical data point by weighting the interview almost as heavily as the written exercise."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the real bad news, explains the margin problem behind database growth, and turns it into specific actions and asks investors can act on now.",
+  "biggest_mistake": "The runway row in the table shows September as 52 months, which does not trace to the provided data and weakens trust in the numbers.",
+  "what_would_make_it_a_10": "Fix the incorrect September runway row and, if possible, tighten the expected impact of the 48-hour pause on compute and margin."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly identifies that AI app-builder growth is low-quality and is the main driver of the margin decline, with the right fix.",
+  "biggest_mistake": "It puts Customer A second instead of first among the bad news and includes a shaky margin calculation that could confuse or undermine confidence.",
+  "what_would_make_it_a_10": "Put Customer A and the forecast miss in the first screen, remove the questionable margin math, and make the asks more concrete with clearer profiles and firmer decisions."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather send after minor edits: it follows the brief more closely, gets the bad news in front of investors fast, and makes sharper asks. Output 2 is solid, but it buries the most important risk and introduces a less reliable calculation."
+}

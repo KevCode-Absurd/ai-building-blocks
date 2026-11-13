@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Brings back the proven pause as the core save, matches an offer to each reason, and shows the money with an honest range and the risk named.",
+  "biggest_mistake": "The 12-month switch is projected at today's 9% take-up and counted as kept for a year, which flatters the number; the £9 'average' also mixes plan prices without saying so.",
+  "what_would_make_it_a_10": "Label the switch and reminder maths as untested upper bounds, and show a low/high table for the headline kept figure so the owner can see the floor."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear one-screen flow with good per-reason panels and a clean, readable money table.",
+  "biggest_mistake": "Keeps a 50% discount for the 'switching apps' group, which is the exact waste the owner wanted gone, and splits 'not making progress' into two offers without support.",
+  "what_would_make_it_a_10": "Drop the switching-apps discount and use the freed budget to test the reminder offer properly against a holdout."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 respects the owner's rule about not discounting people who come back anyway, and its pause-first plan with the money and risk shown is what I would hand my product team. Output 2 is readable but still gives half price to a group where it does not belong."
+}

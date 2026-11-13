@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It perfectly captures both customer personas, including a concrete 'Email me in 3/6 months' option for Greg's trip-based learning and exact price calculations for the annual plan switch.",
+  "biggest_mistake": "Retaining the 50% discount for app switchers is questionable margin give-away, though at least it is fenced to that single 8% cohort.",
+  "what_would_make_it_a_10": "Swap the app-switcher discount for a product-comparison or pause option to completely eliminate margin dilution."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Exceptional executive clarity that calls out the critical dependency ('The pause does 80% of the work; do not launch without it') and identifies selection bias in the reminder data.",
+  "biggest_mistake": "It misses the concrete 'remind me before my next trip' capture for the trip-completed cohort, and relies on template variables ({annual_price}) instead of calculating the exact figures.",
+  "what_would_make_it_a_10": "Add an actionable re-engagement opt-in for trip learners and hardcode the calculated price comparisons in the copy."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are exceptional, specialist-grade proposals with flawless math. Output 1 takes it by a hair because its copy is immediately ready to drop into Figma and production—filling in exact prices and giving Greg an actionable future reminder button—whereas Output 2 leaves template placeholders and misses the trip-reminder capture mechanism."
+}

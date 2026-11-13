@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The opening picks and the spend rules are built on my numbers: women at ₹1,058 on 18% of spend, 15 purchases per concept at ₹24k/₹16k/₹23k, total ₹63k, with a stop rule, and it also kills the scratch claim and the missing front pocket before they happen.",
+  "biggest_mistake": "Concepts 6, 8 and partly 7 fall back on the big-type-on-clean-colour static the owner is tired of, and their test definitions are vague ('whether the top review theme sells broad') rather than a single measurable variable.",
+  "what_would_make_it_a_10": "Give the last three concepts the same scene-level visual detail and one clear test variable each as the first four."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every concept is complete to the same template, and the set has the freshest single idea in either answer: the cabin-sizer demo that answers Karan's gate-check worry head-on, plus the 26%-of-purchases read and the '63 more purchases' illustration, which are all arithmetically right.",
+  "biggest_mistake": "Its running rule ('three times blended cost per purchase, about ₹4,500') would have me cutting or scaling on roughly three purchases, and it then puts three segment-specific concepts in one broad campaign with no budget split, losing the audience learning its own opening sets up.",
+  "what_would_make_it_a_10": "Replace the read rule with a purchase count that can survive noise and give each concept its own cell, budget and stop number."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 2 has the better single creative idea and a cleaner per-concept template, but Output 1 is the one I can act on tomorrow: the ₹63k plan, the per-concept budgets and the stop rule all trace correctly to my spend and cost per purchase. Output 2's 'cut or scale after ₹4,500' would have me treating three purchases as an answer, and its broad single campaign undoes its own segment logic."
+}

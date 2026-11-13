@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sees the real levers in this programme: keep 30%, fix the credit window and payouts fast, and spend the perk budget on the small group that drives the business.",
+  "biggest_mistake": "It introduces a two-tier credit window and monthly payout timing that may add operational complexity without proving why non-top partners should get a shorter window or same-speed payout as proposed elsewhere.",
+  "what_would_make_it_a_10": "Show the cost and expected lift of the longer window a bit more tightly, and simplify the tier design so the team can run it with less edge-case handling."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It gives a clear no on the 20% cut and correctly centers the programme on creator educators and the broken 30-day window.",
+  "biggest_mistake": "It proposes a richer 40% first-year top tier without enough evidence that rate is the problem, which raises cost and weakens the owner's hoped-for focused fix on payouts and attribution.",
+  "what_would_make_it_a_10": "Keep 30% as the base and top-tier rate, focus perks on faster pay and service, and tighten the cost maths around the 90-day window and credited-revenue assumptions."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to the plan I would actually run: it protects the economics, targets the top partners, fixes the known complaints first, and uses the perk budget with more discipline. Output 2 has good instincts, but the 40% first-year tier is a costlier bet than the data supports."
+}

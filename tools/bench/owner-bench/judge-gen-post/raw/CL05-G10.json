@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every email serves the two habits (recurring task and second device). Email 5 adapts to whichever habit is missing, the series stops once both are done, and the mobile-signup variant of email 3 comes with a fallback test.",
+  "biggest_mistake": "The series runs over the 1,200-word limit and is dense in places. Email 5 is a branched email that is harder to build than a simple one, and the 10% control group gets no onboarding emails at all.",
+  "what_would_make_it_a_10": "Trim it to the word limit, and add a short typed example to the inactivity email and a per-email 'worked if' target for every email.",
+  "biggest_strength_note": ""
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Each email is clean and ready to paste: trigger, subject, preview, body, button, goal and a 'worked if' measure. The 'what to drop' section is persuasive and uses the data well, including a plan to bring the team invite back in 2027.",
+  "biggest_mistake": "Email 5 spends a slot on a Pro upsell instead of reinforcing the missing habit, and email 3 goes out on a fixed day 3 rather than responding to what the user did. Users who haven't built either habit by day 14 get no further help.",
+  "what_would_make_it_a_10": "Replace the Pro email with a habit-gap email that adapts to the user, trim to the word limit, and make the inactivity email feel more distinct.",
+  "biggest_strength_note": ""
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 keeps all five emails on the two habits that predict retention. Its last email adapts to the missing habit, and it plans for mobile users not converting on the web nudge. Output 2 is tidier per email, but its Pro upsell slot is weaker and it is longer."
+}

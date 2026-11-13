@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 7.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks the right segment and trigger, keeps step 1 link-free, uses the 9-to-4 proof as a plain sentence, and gives an honest expected reply rate with per-100 and full-list math.",
+  "biggest_mistake": "It promises assets that don't exist (a one-page summary, the 'three steps that team took') and asserts product claims. Step 1 also pairs a question with a separate ask, and there is no opt-out line.",
+  "what_would_make_it_a_10": "Remove the invented deliverables, keep each email to one question and one clean ask, add the opt-out and sender footer, and trim the supporting text to fit the 900-word cap with room to spare."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the decision and a first move for this week, gives clear load and exclude rules in tables, and adds send rules (opt-out, stop on reply, timing window) that make it launchable. It also includes an honest projection and a sensible bolder test.",
+  "biggest_mistake": "Step 1 asks a cold reader for a 20-minute walkthrough, a heavier ask than the pilot's best performers suggest. Step 4's 'going from 9 to 4 is worth 20 minutes' edges toward implying a result.",
+  "what_would_make_it_a_10": "Use a softer, lower-friction ask in step 1, keep the proof framed as one company's result, and drop the 12th-to-15th send window that delays fresh triggers."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is more ready to launch: it gives a first move, clear load and exclude tables, opt-out and send rules, and asks that don't rely on made-up attachments. Output 1's copy is slightly softer in its asks, but it invents a one-pager and 'three steps' we don't have."
+}

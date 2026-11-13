@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with a blunt answer (we lose on agency reporting, not data quality) and quantifies that Lite usage-limit exits are 32% of all churn — 1.6% of paying customers a month — then puts a stop-list and a don't-spend list beside the five moves.",
+  "biggest_mistake": "Move 5 (free Monday report inside AWT) partly duplicates moves 1 and 3, so one of the five slots is spent on a variant rather than an independent bet.",
+  "what_would_make_it_a_10": "Replace the overlapping fifth move with something independent — for example a Lite-to-Standard step-pricing test aimed squarely at the in-house 'price jump' complaint — and give each move a revenue estimate or state plainly why it can't be sized."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The trial-loss working (27 trials x 89% x 54% = 13.0 per 100, and winning back a quarter lifts conversions from 16.7 to 19.9) is tight and traceable, and interviewing 20 lost agencies before speccing the report is a genuinely cheap first step.",
+  "biggest_mistake": "Move 5, 'teach with our link data', is the 'do more content' advice I explicitly didn't want; its success metric (in-house share of trials rising above 38%) has no credible causal link to publishing one study.",
+  "what_would_make_it_a_10": "Swap move 5 for a move that acts on a number in the data — the Lite-to-Standard price step or an Advanced save-play against the 28% Semrush exits — and set real target deltas, not just 'rises above today's figure'."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the core call right — fight on agency reporting, refuse PPC parity, fix Lite limits — but Output 1 says it faster, tells me what to stop and not spend on, and its fifth move is an idea I hadn't had, while Output 2's fifth move is the generic content advice I warned against."
+}

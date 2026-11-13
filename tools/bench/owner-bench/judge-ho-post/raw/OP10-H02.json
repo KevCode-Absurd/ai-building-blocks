@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly exposes the real problem: brand is hiding unprofitable non-brand Google spend, and it ties decisions to contribution profit and the 2.5 break-even ROAS.",
+  "biggest_mistake": "It overcorrects by holding back a very large $104,000 reserve and expecting meaningful underspend, which may not match the owner's request to split the $240,000 for next month.",
+  "what_would_make_it_a_10": "Tighten it under the word limit, make the reserve smaller or more clearly conditional, and remove or soften the shakier PMax 'products only/no images or video' instruction."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the owner a clean, profit-based read of what is working, what is losing money, and a budget split that adds exactly to $240,000.",
+  "biggest_mistake": "The forecast assumes brand demand can be absorbed into brand search at about 25 ROAS, which is plausible but optimistic and should be flagged as a risk.",
+  "what_would_make_it_a_10": "Add slightly firmer rules for cutting broad/display waste inside PMax and a clearer fallback if the brand-search transfer does not hold impression share or value."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would hand to the team tomorrow: it gets the core math right, fixes the feed first, moves money to the winners, and is cleaner to execute. Output 1 has strong insight, but the oversized reserve and extra geo-test make it less directly usable."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Each ad set gets a clear verdict with rupee working, a budget table that adds to ₹5,60,000, and a creative brief in Rohan's and Ananya's words, so the team can start Monday.",
+  "biggest_mistake": "It scales Catalog DPA and ramps ASC while using the Meta-count break-even as the main yardstick. DPA at frequency 5.2 is probably over-counted, and the ₹282/₹394 two-line approach leaves the call ambiguous.",
+  "what_would_make_it_a_10": "Commit to one Shopify-adjusted break-even per ad set instead of two lines, and do not scale an over-counted, high-frequency DPA."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sets a separate attribution-adjusted break-even for each ad set (86% for prospecting, 72% for retargeting and catalog), states the real account loss, and opens with concrete first moves: relaunch the creator video, cut Starter Kit and Gift Sets, narrow women to 25 to 34.",
+  "biggest_mistake": "It puts ₹56,000 into a UGC test running at ₹581 per purchase against a ₹359 break-even, and it labels Retargeting a \"cut\" while still giving it ₹28,000, so the call counts don't match the table.",
+  "what_would_make_it_a_10": "Fund the UGC test at a capped, smaller amount and make the retargeting label match its budget, and cut the geo-holdout section down to one line the team can run."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both reach the three key calls (relaunch the creator video, cut the Starter Kit COD trap, narrow women to 25 to 34) with budgets that add up. Output 2 judges every ad set on one attribution-adjusted break-even, opens with first moves, and adds a holdout test for retargeting. Output 1 is a bit easier to read and includes creative briefs, but it scales DPA and ASC on the more generous Meta-count lines."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean ranked plan with the Simplify-debts signal front and centre, three usable articles and honest working on the ticket forecast.",
+  "biggest_mistake": "The 'How to undo a deleted expense' article invents Restore and Undelete buttons without flagging the risk they may not exist, and the search-term fix is buried below the in-app link section.",
+  "what_would_make_it_a_10": "Verify every button name on all three platforms before shipping and turn the single-number forecast into a defensible range with the in-app-link dependency shown."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the decision and the bad news, separates evidence from projection with a defensible range, and adds a bolder move with its risk named.",
+  "biggest_mistake": "The 'Settle up' and Google Play steps lean on button names that still need checking, and the bolder move risks pushing extra payments on friends.",
+  "what_would_make_it_a_10": "Ship the three articles after a same-day button check across iPhone, Android and web, keeping the bolder move as an optional add-on you gate on one week's ticket data."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 leads with the decision and the bad news, gives a defensible range from the old 38% and best 71% benchmarks, and flags the bolder move with its risk. Output 1 is cleaner to scan but its single forecast number and buried search-term fix make it less safe to run with."
+}

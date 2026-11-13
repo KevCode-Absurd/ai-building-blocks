@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks recruiting with the seat math, builds the hero on Priya's 'email tennis' language, and surfaces security near the demo as the data says.",
+  "biggest_mistake": "Several sections carry [bracketed] placeholders for proof, security details and customer quotes, so the page is not fully paste-ready and the seat total (2,717) isn't shown deriving from the table.",
+  "what_would_make_it_a_10": "Replace every placeholder with real Cal.com proof or cut the section, and show the full 2,710 seat working so the 57% claim traces cleanly."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tight segment math (733 seats per 1,000 signups vs 12 for coaching), strong CRO craft with sample-size guidance and a projection, and a clean 4-field demo form.",
+  "biggest_mistake": "Section 6 'Fits how you hire' is thin and risks implying ATS integration without naming real tools, while section 7 mixes open-source proof into a security block rather than stating certifications and data regions.",
+  "what_would_make_it_a_10": "Make the security section give Priya the actual detail her IT team asks for (data regions, certifications, hosting) and name only verified integrations, with the source showing full seat math."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both choose the right segment and nail Priya's language, but Output 2's page is more paste-ready and adds test sample size and a revenue projection an owner would value; Output 1 leans on more placeholders and a vaguer security section."
+}

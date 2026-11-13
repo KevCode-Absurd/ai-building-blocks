@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ties every email to the two retention habits, adds a fifth email that nudges whichever habit is still missing, and uses triggers/skips the tool can actually run.",
+  "biggest_mistake": "Per-email success bars are soft — it gives the baseline metric but leaves the numeric target to a single global measurement section, so it's unclear what each email must hit to count.",
+  "what_would_make_it_a_10": "Put a concrete numeric 'worked if' on each email (e.g. recurring-task rate from 14% to 20% in 7 days) rather than only at series level."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Each email ships with trigger, subject, preview, body, button, goal and a numeric 'worked if', and the drop rationale names the 'perfect on Sunday, gone by Wednesday' trap precisely.",
+  "biggest_mistake": "The fifth slot is a Pro upsell instead of a nudge toward the still-missing habit, so the sequence stops pushing users toward the 67% both-habits group after email 3.",
+  "what_would_make_it_a_10": "Spend the fifth email converting one-habit users into both-habit users and move Pro to a later lifecycle point."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are accurate, on-brand and use the real triggers, but Output 1 builds the whole arc around reaching both habits — including a fifth email that pushes whichever habit is still missing — while Output 2's fifth email sells Pro instead."
+}

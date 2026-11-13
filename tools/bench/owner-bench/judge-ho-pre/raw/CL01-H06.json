@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It refuses the 20% cut with the right lifetime maths ($1,677 vs $1,130, net $1,174) and the 12.5% break-even, then sets the 90-day window and faster payouts at the heart of the plan.",
+  "biggest_mistake": "Adding 40% first-year commission for Partners plus a 90-day window for everyone raises cost on top of the base, against the aim of rewarding the top 20 without lifting cost across the board, and the 30-day plan has no real dates or owners.",
+  "what_would_make_it_a_10": "Drop the 40% tier in favour of non-rate perks, put calendar dates and owners on the first 30 days, and model what cutting only new customers would actually save."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It shows the honest saving from cutting only new customers is about $38,000, not $210,000, which ends the finance debate, and it holds 30% while fixing the window, minimum and payout speed exactly where the survey points.",
+  "biggest_mistake": "The 60-day window for ordinary members still leaves part of the 41-day-median tail uncredited, and its cost isn't sized in dollars the way the other numbers are.",
+  "what_would_make_it_a_10": "Estimate the dollar cost of the 60/90-day windows and show what payout-fee and perk spend returns in referred revenue."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both say no to the cut with the right maths, but the second one also shows the real saving is only about $38,000, keeps cost flat instead of adding a 40% tier, and hands my partner manager a dated plan with owners that I could run in January."
+}

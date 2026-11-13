@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds that the top 5 shades run out around 30 November and spends the cash on a rush order plus a standard order for them. The total is ₹1.187 crore, inside the budget, and no slow line gets an order.",
+  "biggest_mistake": "It counts the 3,900 held units inside the 9,100 rather than as extra stock, which hides how much the re-carton job helps. The 4-per-shade cap also works against bridal artists who buy 6 to 10 units.",
+  "what_would_make_it_a_10": "Count the re-cartoned units as added stock and show the top 5 shades week by week, so the gap and the order sizes are traced through the sale."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A date-by-date stock table for the top 5 shades shows the pre-order gap, the sale at 2.5 times a normal week and the restock. Each task has a named owner, and there is a costed fallback for foundation and kohl inside the held-back cash.",
+  "biggest_mistake": "Like the other plan, it treats the held units as part of the 9,100 rather than as extra stock, and the January rule and liquidation floor are a little vague.",
+  "what_would_make_it_a_10": "Count the re-cartoned units as extra top-5 stock and set a firm clearance price for the glitter palettes."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both catch the real problem and stay inside the cash. Plan 2 traces the top 5 shades week by week, names who does what, and leaves money for surprises, so my ops lead can run it on Monday with fewer questions."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Finds the top-5 stock-out and fixes it with a rush order, a standard order and re-cartoning, all inside cash (₹1,14,13,400, arithmetic checks) with ₹5.87 lakh held back. It also unloads the glitter palettes through a lipstick add-on and a dated clearance rule.",
+  "biggest_mistake": "It hands the ops lead conditional homework (move foundation or kohl shades under 8 weeks to rush, a January rule that depends on sales, a liquidator decision) when the owner asked for one plan, and its date-by-date stock table is hard to follow.",
+  "what_would_make_it_a_10": "Remove the conditionals, give one dated action table and a full back-in-stock message in the brand voice, and trim to 900 words."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A decisive plan with a clean PO table (₹1.187 crore, arithmetic checks), a cover and ending-stock table that shows why each line gets what it gets, and a dated action list the ops lead can run from Monday.",
+  "biggest_mistake": "Bundling glitter palettes with kohl uses a line that is itself tight on stock. The 4-per-shade cap also sits awkwardly with bridal artists who buy 6 to 10 units, and it leaves only about ₹1.3 lakh spare.",
+  "what_would_make_it_a_10": "Pair the palette with the slow-moving lipsticks instead of kohl, exempt pre-booked artists from the cap, and keep a larger cash buffer."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both catch the top-5 stock-out, use rush plus re-cartoning and stay inside cash. Output 2 is the more decisive single plan, with a plain dated action list and a clearer back-in-stock message. Output 1 has a better palette clearance idea but leaves more conditional homework."
+}

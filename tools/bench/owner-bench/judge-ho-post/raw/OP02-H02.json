@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It takes the blended 4.0 ROAS apart correctly, shows that non-brand is below the 2.5 break-even, puts the pointed-flat feed fix first, and moves money toward bags, washable and standing-all-day demand.",
+  "biggest_mistake": "The plan is a little over-engineered, with a very large reserve, a questionable PMax 'products only/no images or video' setup, and a regional test that may be more complexity than the first 30 days need.",
+  "what_would_make_it_a_10": "Tighten the budget into a simpler spend-and-reserve plan, remove the odd unexplained testing-cost line, and make the PMax controls fully aligned with what Google Ads actually allows."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clear, practical, and gets the core math right: 2.5 break-even, PMax without brand at about 2.03 ROAS, bags starved by budget, and the pointed-flat disapproval costing access to about 15.6% of site revenue.",
+  "biggest_mistake": "It leaves too much money in brand-excluded PMax after showing that non-brand PMax is unprofitable, especially while also moving the winning washable and work-comfort queries into Search.",
+  "what_would_make_it_a_10": "Cut or cap PMax harder, give stricter release rules for the reserve, and make the forecast less dependent on an optimistic PMax rebound."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both outputs catch the big issues, but Output 1 is more profit-disciplined and less willing to keep funding the parts of PMax the data says are losing money. Output 2 is cleaner to read, but its $128,000 PMax allocation is the decision I would be most nervous to run."
+}

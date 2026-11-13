@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting for the right reason and turns the actual product-usage and security signals into a page order the team could build now.",
+  "biggest_mistake": "It mixes self-serve and demo CTAs throughout the page, which weakens the single-path focus for this segment.",
+  "what_would_make_it_a_10": "Tighten the CTA strategy to one primary conversion path for recruiting teams and trim a little copy so the page feels even more launch-ready."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It not only picks the right segment and message but adds practical testing and rollout detail, including sample size logic and a smart security follow-up idea.",
+  "biggest_mistake": "Its winning metric is slightly weaker because it counts recruiting signups without the stronger activation filter, and a few lines drift into extra planning beyond the copy brief.",
+  "what_would_make_it_a_10": "Use an activation-qualified test metric, keep the page copy as the center of gravity, and remove a bit of the surrounding experimentation detail."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and owner-aware, but Output 1 is a little more faithful to the brief's core ask: finished page copy in the right order, with the strongest metric tied to real recruiting intent and activation. Output 2 is excellent, but it spends more space on test mechanics and broadens the success metric in a way that could reward lower-quality conversions."
+}

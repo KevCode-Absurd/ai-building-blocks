@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It splits the 4.0 into brand versus non-brand (non-brand at 2.26, losing about $20,100 a month) and cuts all $146,300 of below-break-even spend outright, with a split that adds to exactly $240,000.",
+  "biggest_mistake": "The plan is hard to follow in places: the $104,000 reserve and the separate regional test that brings back image and video spend need careful reading, and the 'products only, no images or video' PMax setup is stated more simply than Google allows in practice.",
+  "what_would_make_it_a_10": "Give a fuller price-mismatch diagnosis (sale_price, variant links, automatic item updates) and add the customer's own words, like 'eight hours', in search-facing copy."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent feed-fix steps (check page, feed and structured data; sale_price with dates; variant links; automatic item updates) plus customer-language titles and ad copy, with base and cautious profit cases that add up.",
+  "biggest_mistake": "It keeps $128,000 in brand-excluded PMax with no explicit cut or negatives on 'women's flats' and 'sustainable shoes', even though its own cautious case runs PMax at 2.2, below break-even.",
+  "what_would_make_it_a_10": "Cut or exclude the 1.2 and 1.6 search categories directly, size PMax to the proven winners, and add explicit rules for cutting money in weeks two to four."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 actually stops the money-losing spend and gives me hard rules for the month; Output 2 has the better feed fix and copy, but it still trusts PMax with $128,000 that the data says loses money."
+}

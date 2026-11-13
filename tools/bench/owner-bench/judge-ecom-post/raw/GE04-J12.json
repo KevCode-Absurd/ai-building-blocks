@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the 8 pm to midnight gap and practically suggests moving one agent to an evening shift rather than relying purely on bots.",
+  "biggest_mistake": "It categorizes the prepaid switch message as a Utility template, which Meta is likely to reject as Marketing since it pushes a different payment method.",
+  "what_would_make_it_a_10": "Size different interventions and offers based on the mathematical risk of each pincode tier, rather than just delaying the shipment for Tier 3."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "The brilliant owner-level math that sizes the prepaid discount directly to the expected RTO loss of each pincode tier (₹70 risk gets ₹40 off, ₹27 risk gets no discount).",
+  "biggest_mistake": "It relies on sending a free-form marketing message (the Metro plain nudge) within the 24-hour window opened by the Utility reply, which violates WhatsApp's policy requiring a Marketing template for promotional content even within open windows.",
+  "what_would_make_it_a_10": "Submit the Metro prepaid nudge as an official Marketing template with zero discount, to ensure strict compliance with WhatsApp's latest messaging policies."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 thinks exactly like a sharp e-commerce operator. It uses expected-value math to size the discounts, mandates holdouts for every flow so you can measure true lift, and suggests a proven ₹99 advance tactic for the riskiest tier."
+}

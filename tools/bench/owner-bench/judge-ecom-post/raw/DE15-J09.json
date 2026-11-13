@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Builds a coherent, internally consistent contribution-margin story (7.8% today to 12.9% target) with per-move sizing, owners, stops and a runnable numeric scorecard that a team could start Monday.",
+  "biggest_mistake": "It is dense and leans on jargon, and a few projections are rounded optimistically (the swatch kit's '5.6 points across all of Meta', $94 vs $93 payback), while the scorecard omits a separate Google cost-per-first-order line.",
+  "what_would_make_it_a_10": "Plain down the language, tighten the looser projections, and add the Google line to the scorecard without losing the working shown."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "A clean, honest proved-versus-needs-checking table with owners and check-by dates, and plain-language moves a small team can follow.",
+  "biggest_mistake": "It never sets the current contribution-margin baseline (leaves it 'set baseline in week 1') and keeps targets vague ('pre-January level'), so the board's headline metric can't be tracked from day one and per-move sizing is thin.",
+  "what_would_make_it_a_10": "Compute and state today's contribution margin, then give each move a numeric gain target and a fixed scorecard baseline so the plan can be run and judged weekly."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives me the board's number - where contribution margin sits now and where each move takes it - with working shown and a scorecard I can run; Output 2 reads nicely and sorts proved from unchecked well, but it leaves my key metric unset and targets fuzzy."
+}

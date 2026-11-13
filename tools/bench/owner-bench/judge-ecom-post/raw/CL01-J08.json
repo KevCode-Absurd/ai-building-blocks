@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks the 46 to 90 day 'slipping' group first with no discount, gives Monsoon Dark buyers their own track, and gates ex-subscribers on 93% on-time delivery plus pick-your-date. That is exactly how I read my own data.",
+  "biggest_mistake": "The Monsoon Dark email asks customers to fill in a brew quiz instead of naming the closest roast up front. The ₹535 profit-per-subscriber figure and the specific calendar dates appear without explanation.",
+  "what_would_make_it_a_10": "Name the closest dark roast in the first Monsoon Dark email, and show proof of the delivery fix (the actual on-time rate) in the ex-subscriber message."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The ex-subscriber track has a fix for each cancel reason and an email that proves the delivery fix with the live on-time rate. The Monsoon Dark email names the roasters' closest match.",
+  "biggest_mistake": "It puts 91 to 180 days first and treats the cheap 46 to 90 day group as a side nudge rather than the top wave. Group A's 13,100 also contradicts its own claim that subscribers were removed from the other groups.",
+  "what_would_make_it_a_10": "Lead with a targeted, no-discount wave for the 9,000 at 46 to 90 days, and reconcile the group counts so no one is double-counted."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and usable. Output 1 starts with my cheapest, warmest group, keeps every number consistent, and adds a smart Monsoon Dark pre-order idea. Output 2's subscriber email is better, but its priority order is weaker."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The subject line and the opening admit the forecast miss and the margin drop. Customer A is the first item under 'what went wrong', each problem is paired with its fix, and the asks come with dates and forwardable blurbs.",
+  "biggest_mistake": "It runs well past the 700-word cap. It also invents a 27 November ship date and states the New York base as already decided, though both are only flagged in the assumptions.",
+  "what_would_make_it_a_10": "Trim to 700 words by cutting the preview line and some table rows, give a ranged estimate of the compute saving from the 48-hour pause, and mark the dates and the New York decision as proposals."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clear three-number opening with a 33 to 37 month runway range, a burn breakdown table, and a candid section that ties idle AI-builder traffic to the margin drop and the low conversion.",
+  "biggest_mistake": "It leads the bad news with the AI-builder channel and puts Customer A second. It also adds a confusing margin calculation (9 points against a 7-point drop), and the update runs over 700 words.",
+  "what_would_make_it_a_10": "Put Customer A first, drop the confusing margin arithmetic, merge the burn table into one line, cut to 700 words, and give each ask a short forwardable blurb."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 puts Customer A and the forecast miss up front, pairs each problem with its fix, and gives asks with named profiles, dates and ready-to-forward text. Output 2 is tidy and adds a useful pricing ask, but its margin reasoning is muddled and it has more filler."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A dated calendar with owners that fits the 1 December freeze, six clear go/no-go gates, and channels ranked by retained users with the math shown.",
+  "biggest_mistake": "Extension authors are ranked #2 even though X kept more users (3,740 vs 2,470) and the reason isn't given; the 6,980–9,240 projection range is also muddled.",
+  "what_would_make_it_a_10": "Add engineering hours to the launch-week support rota and explain why authors rank above X despite X keeping more users."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong migration gates: a 1,000-user real-setup beta, one-step undo, top-200 extension testing, and engineers freed by the freeze joining daily support shifts.",
+  "biggest_mistake": "No owner per task, creators get the build only two weeks before launch, and the X thread and email are full of [placeholders], so the drafts aren't finished.",
+  "what_would_make_it_a_10": "Name an owner for every row, get creators the build earlier, and fill in the author credits and copy so the drafts are ready to paste."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the core right: retention over installs, migration as a launch gate, and the community first. Output 1 is the one I could hand my small team tomorrow, with owners, targets, a plan B and finished copy. Output 2 has smarter support ideas but leaves too many blanks."
+}

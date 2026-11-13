@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It isolates the real drivers the data proves—Meta acquisition costs, switched-off CRM capture/flows, and linen returns—and turns them into an ordered plan with owners, stop rules, first steps, and a usable scorecard.",
+  "biggest_mistake": "It overstates confidence on 18-month payback by assuming one repeat order at first-order margin and value, which is useful but not fully proven from the brief.",
+  "what_would_make_it_a_10": "Tighten the financial targets with one cleaner contribution baseline and call out tracking validation before any permanent Meta reallocation."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It adds some genuinely useful framing, especially a contribution-after-ads baseline and quantified upside ranges by move.",
+  "biggest_mistake": "It introduces shaky or external assumptions that change decisions—like 'common practitioner yardsticks,' dated timing, specific flow structures, and contribution math built on inferred revenue mix—so the numbers feel less trustworthy.",
+  "what_would_make_it_a_10": "Strip out unsupported assumptions and external benchmarks, ground every impact estimate only in the brief's data, and simplify the plan to the highest-confidence moves with cleaner stop rules."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could run tomorrow with very little editing. It sticks closer to what my data proves, gets the priorities right, and avoids the extra assumptions and speculative math that make Output 2 harder to trust."
+}

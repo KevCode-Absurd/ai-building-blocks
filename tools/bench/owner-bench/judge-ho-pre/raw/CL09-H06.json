@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a straight 'no' to the 20% cut with correct lifetime maths and the 12.5% break-even. It also shows that cutting only new customers saves about $38,000, not the $210,000 finance expects.",
+  "biggest_mistake": "Paying the top tier the same rate and relying on perks leaves some risk that top partners go to the rival paying 40%. The plan doesn't fully test that risk beyond the July review trigger.",
+  "what_would_make_it_a_10": "Model a fallback response if a named top-20 partner is offered 40% elsewhere, and show the extra cost of the 60/90-day windows in dollars."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It shows all the numbers clearly: lifetime maths, break-even, first-year commission at 20/30/40%, and a cost for each change. It sets measurable day-90 targets, such as raising the credited share from 42% toward 70%.",
+  "biggest_mistake": "It adds a 40% first-year rate for Partners and a 90-day window for everyone. That adds roughly $46,000 plus $63,000 per 10% lift in credited revenue, which pushes costs up even though the survey said payout speed was the main problem. Regular affiliates are still paid 30 days after month end with a $50 minimum.",
+  "what_would_make_it_a_10": "Drop or test the 40% tier, make payouts faster and the minimum lower for everyone, and put real dates on the 30-day plan."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both say no to the cut with the right maths. Output 1 fixes the real complaints (payouts and lost credit) without adding commission cost, catches that the $210,000 saving is really about $38,000, and gives my one partner manager a dated plan I could start on Monday."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It judges every ad set on order value after COD refusals, with its own break-even, then forecasts the result honestly: the plan cuts the loss from about −₹1.2 lakh to about −₹33,000 on the store's count, and it says plainly that nothing has earned a raise yet.",
+  "biggest_mistake": "The 86% 'real purchases' figure for prospecting is a loosely argued midpoint, and labelling retargeting 'Cut' when it is only halved muddles the verdicts.",
+  "what_would_make_it_a_10": "Justify the attribution haircut with the Shopify data instead of a midpoint, and use plainer labels and a simpler table so a non-expert can act on it in two minutes."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clear: the two-line idea (a safe line and a break-even line), a separate budget table that adds to ₹5.6 lakh, a creative brief in Rohan's and Ananya's words, and a sharp lesson that pausing the creator video cost about ₹65,000.",
+  "biggest_mistake": "It scales ASC and catalog against Meta-count break-even, which breaks its own 'scale only under the safe line' rule. ASC's gate of ₹320 sits above its own ₹282 safe line, so it can buy money-losing orders.",
+  "what_would_make_it_a_10": "Make the scaling gates match its own safe lines, and don't scale catalog at frequency 5.2 without a holdout check."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both catch the paused video, the women 25 to 34 split and the Starter Kit COD trap. Output 1 is stricter about real store profit, its scaling rules are consistent with its own numbers, and its retargeting holdout tells me whether that spend pays at all. Output 2 is easier to read but would let the team scale on numbers that may not be real."
+}

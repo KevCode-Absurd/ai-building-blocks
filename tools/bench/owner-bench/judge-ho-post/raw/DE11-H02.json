@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes the 4.0 ROAS apart against the 2.5 break-even, puts the 212-variant feed fix first, and moves the cut money into bags and the customer's-words terms inside a $240,000 split that adds up.",
+  "biggest_mistake": "The regional holdout test and the large $104,000 reserve add complexity and risk for a first month, and the state-split test leans on a weak total-revenue comparison.",
+  "what_would_make_it_a_10": "Cut the regional test and simplify the reserve rule so the month is judged on clean store totals with a tighter expected-profit range."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, correct teardown of where the 4.0 hides losses, a budget split that adds to $240,000, a precise feed diagnosis, and brand-voiced titles and ads using the customers' own words.",
+  "biggest_mistake": "The optimistic brand-search forecast (about 25 ROAS on $18,000) inflates the base case, so the $205,900 profit looks better than it likely is.",
+  "what_would_make_it_a_10": "Use a cautious brand forecast and a clearer range of expected profit, and drop the flat 'reserve earns 3.0' assumption."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the real story right, but Output 2 is cleaner to run: a correct budget split, a precise feed fix, and customer-word titles and ads, without a risky state test. Output 1 is strong but the regional test and big reserve distract from the first month."
+}

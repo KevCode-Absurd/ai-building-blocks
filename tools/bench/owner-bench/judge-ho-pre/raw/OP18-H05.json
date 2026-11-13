@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the three biggest signals in the data: Simplify debts, missing restore-search language, and App Store/Google Pro refunds, then turns them into publishable articles and targeted in-app links.",
+  "biggest_mistake": "It slightly overreaches by proposing a merge of the already-helpful payment article and by relying on assumed restore/refund button names that need a quick product check.",
+  "what_would_make_it_a_10": "Keep the payment article as a lower-priority retitle, add a tighter ticket-savings range, and verify the exact app and store steps before publishing."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clear, concise, and correctly identifies the three highest-leverage fixes plus the right in-app Help links.",
+  "biggest_mistake": "The savings model is too blunt, using one generic reach/help-rate across very different issues and counting all Pro billing tickets instead of separating the 2,000 Apple/Google cases more carefully.",
+  "what_would_make_it_a_10": "Make the top three articles more complete and less contact-us driven, model each topic separately, and include the currency article plan without leaving it dependent on more input."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would hand to the team: it is more directly built from the ticket signals, the articles are fuller and closer to ready, and the forecast shows topic-by-topic working. Output 2 is good, but its ticket forecast and article readiness need more owner cleanup."
+}

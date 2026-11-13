@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Gets the money right ($27.10 first order, about $38.50 over 90 days, $38 target), runs the nurse and server Spark Ads from day 1, and phases a budget that adds to $30,000 with dollar kill and scale rules.",
+  "biggest_mistake": "The family and mission concepts are thin: Concept 5's hook is just 'Same as Concept 1', and few hooks use Maria's or Tasha's exact words.",
+  "what_would_make_it_a_10": "Write every hook in the customers' own phrases and add a geo holdout so the day-30 call doesn't rest only on a before-and-after comparison."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A Monday-ready plan: no spend until the test order passes, a learning bar worked out in dollars, 12 hooks written in Maria's and Tasha's own words, and a day-30 verdict that needs two of three independent reads plus a state holdout.",
+  "biggest_mistake": "The day-21 release rule counts TikTok-reported cost as one of its three reads, so platform numbers can help unlock the scale budget.",
+  "what_would_make_it_a_10": "Replace the TikTok-reported read in the release rule with the holdout or blended lift, and say how many new on-feet creators to brief and when."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both plans get the numbers right, but Output 2 is the one my team could run on Monday. It catches things I'd have missed: the trend sound isn't cleared for ads, the pixel has to pass a test order before any spend, and each ad group needs a minimum budget to finish learning. It also writes the ads in my customers' words and gives me a cleaner way to judge day 30."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Starts immediately with the highest-leverage 46–90 day slipping cohort, separates Monsoon Dark and ex-subscribers with exact tactical gates, and nails customer copy down to Aarav's and Nisha's exact words.",
+  "biggest_mistake": "The equipment-only sub-group is deferred to later messaging rather than having an explicit draft in the copy section.",
+  "what_would_make_it_a_10": "Include a ready-to-paste draft for the equipment-only segment alongside the other excellent email drafts."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clean structure with strong copy and a clear gate for subscription churn tied to the courier delivery rate.",
+  "biggest_mistake": "Ranks 91–180 days as priority 1 and relegates the 46–90 day slipping buyers to an afterthought note, missing the easiest win-back revenue.",
+  "what_would_make_it_a_10": "Prioritize the 46–90 day at-risk cohort as Wave 1 instead of starting with older cohorts, and calculate immediate lift rather than speculative multi-order LTV."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 understood the data immediately: the 46–90 day slipping group is the cheapest, highest-leverage cohort to win back and belongs in Wave 1. Output 1 also has sharper copy that speaks directly to Aarav and Nisha, tighter opt-in math, and an inspired roaster-specific idea in the Monsoon Dark pre-order."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly reverse-engineers the product costs and gross margins to calculate the exact break-even point for the new bundles.",
+  "biggest_mistake": "It recommends moving the free shipping threshold to ₹599 without realizing that a likely cross-category combination (shampoo + lip balm) equals ₹598, which would deeply frustrate shoppers.",
+  "what_would_make_it_a_10": "Keep the threshold at ₹499 to align with the RTO drop-off, build a third bundle using the body care pair, and deploy the lip balm strictly as a cart add-on."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It perfectly connects the 29% RTO rate to the ₹499 line, spotting the ₹598 cart gap and proposing a brilliant COD fee to fix the real leak.",
+  "biggest_mistake": "The baseline profit assumption used to calculate the incremental lift per new buyer (e.g., the ₹262 lift) isn't explicitly spelled out in the text.",
+  "what_would_make_it_a_10": "It is already a 10, but briefly stating the assumed baseline profit of the one-item shoppers it references would make the math completely transparent to read."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 acts like a true owner. It catches every subtle signal in the data, identifies that a ₹599 threshold would create a frustrating ₹598 cart gap, positions the lip balm perfectly as a cart add-on, and proposes a targeted COD fee to plug the exact segment leaking money."
+}

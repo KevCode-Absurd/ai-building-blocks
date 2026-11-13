@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It plans all 24 posts by title inside the 4-clip, 6-post limits, sets evening times and sleep-heavy themes, and gives a dated first move, a projection with the working shown, and decision rules for 30 November and 14 December.",
+  "biggest_mistake": "Some drafts tell rather than invite ('Grab a scrap of paper', 'Lower the volume and press play'), and the install projection is a couple off (6,582 and 4,782 should be 6,580 and 4,780).",
+  "what_would_make_it_a_10": "Recast the instructive lines as invitations, and flag that the week-3 'Awake at 2am' post must be worded so it doesn't imply insomnia and trigger review."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The drafts are warm and invitational ('Want to try?'), use the customers' own phrases, end with one small action, and are backed by correct per-theme install, save and share baselines plus a sensible check on whether the 5.9% narrator result holds at scale.",
+  "biggest_mistake": "It sends all of weeks 2 to 4 into review on 16 November, then says posts can go live from Tuesday 24 November, which strands the Monday 23 November post that the same plan schedules.",
+  "what_would_make_it_a_10": "Send only posts that name a condition for review, so the Monday 23 November slot isn't blocked, and give per-post topics for weeks 2 to 4 rather than just weekly angles."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both read my data right, but the first gives me all 24 posts planned and a review approach that actually works on the calendar. The second's blanket review batch blocks a post it schedules, and it leaves weeks 2 to 4 as vague angles."
+}

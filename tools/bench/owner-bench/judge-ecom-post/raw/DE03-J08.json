@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data the way the owner does: the Monsoon Dark track, the ex-subscriber delivery gate, and starting with the 46-90 day 'slipping' band are all handled with the right offer logic and the maths shown.",
+  "biggest_mistake": "A few arithmetic or consistency slips: 'a buyer is lapsed at 68' is unexplained, and G1's reachable math (8,060 × 62% = 4,997, not 4,497) affects the profit projection.",
+  "what_would_make_it_a_10": "Reconcile every reachable and profit figure to a single worked sheet and drop the cryptic 'lapsed at 68' line."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Strong, warm message drafts that name the coffee and the farm, and a sharp point that the day-28 nudge is the cheapest fix for the repeat-rate fall.",
+  "biggest_mistake": "It starts with the 91-180 day band instead of the cheaper 46-90 day at-risk group, and its profit table leans on assumed 2-order repeats rather than the owner's per-order gross profit, which inflates the number.",
+  "what_would_make_it_a_10": "Put the 46-90 day slipping group first with a no-discount reminder, and rebuild the worth table from ₹557/₹442/₹385 per order with the working shown."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gets the order, the offers and the money right in the way this owner asked for, and its few slips are fixable; Output 2 is warmer in places but starts with the wrong group and its profit figure rests on invented repeat assumptions."
+}

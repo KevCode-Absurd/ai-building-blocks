@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It shows the money with the working and an honest range, and warns that without the pause the flow keeps about 440 a month, fewer than today's 842, which makes rebuilding the pause the critical path.",
+  "biggest_mistake": "'Trip over' leavers get a kind goodbye but no 'remind me before my next trip' option, so it leaves Greg's 'maybe next spring, for Portugal' return on the table.",
+  "what_would_make_it_a_10": "Add an opt-in 'remind me in 3 or 6 months' for trip-over leavers and hold out 10% of cancellers on today's flow so the gain is measured, not assumed."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every reason gets a clean panel, including a 'remind me in 3 or 6 months' for trip-over leavers and a 10% holdout to test the assumed rates.",
+  "biggest_mistake": "It keeps the 50% off for 'switching apps' with no evidence it works there, and the £136k-a-year figure assumes no churn and comes with no range.",
+  "what_would_make_it_a_10": "Drop or test the switcher discount, give a range with churn after 90 days, and say what to watch per reason in month one."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both fix the flow the right way and bring back the pause. Output 1 is more honest about the money, with a range, churn after 90 days, and a warning that the flow falls below today without the pause. It also doesn't hand out an untested discount, though I'd add Output 2's 'remind me later' and holdout."
+}

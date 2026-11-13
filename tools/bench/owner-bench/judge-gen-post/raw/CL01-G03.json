@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The three numbers, the forecast miss, Customer A ($2.6M, 31 Jan) and a preview of the asks all sit in the first screen, and the runway math is correct for both September (52) and October (33/37).",
+  "biggest_mistake": "It commits to a 27 November ship date and moving the role to New York as facts. Both are only noted as assumptions at the bottom, not flagged for the owner to confirm.",
+  "what_would_make_it_a_10": "Tie Customer A's exit to the expected NRR hit, and mark the ship date and the NY decision as to-confirm before sending."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The burn-driver table makes the $2.2M rise easy to read at a glance, and the runway range of 33 to 37 months is correct.",
+  "biggest_mistake": "The '$0.9M is roughly 9 points of margin, more than the 7-point drop' math is shaky. It ignores revenue growth. 'Costing us more than it earns' is also an unsupported claim an investor could challenge.",
+  "what_would_make_it_a_10": "Drop the overreaching margin math, put Customer A ahead of the channel story, add forwardable intro blurbs, and show runway in the table."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both are candid and accurate on the core numbers. Output 1 puts the asks in the first screen, gives angels text they can forward, and avoids Output 2's questionable margin claim, so I could send it almost as is."
+}

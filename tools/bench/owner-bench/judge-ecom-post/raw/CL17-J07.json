@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the 2.2% vs 8.0% sunscreen gap correctly and gives sunscreen its own email built on the dusky-skin review, with a clean three-way quiz split in Email 2.",
+  "biggest_mistake": "Email 5 sends every non-buyer the same three-product routine with the salicylic wash morning and night, which contradicts Email 2C's 'don't start with an acid' advice to dry and sensitive people; Email 1 also prints 'brightening', a word we avoid, even if only as a contrast.",
+  "what_would_make_it_a_10": "Branch Email 5 by skin concern, drop the banned word, and add a holdout plus the gross-profit value of a lift."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It personalises from Email 1 onward and keeps every email consistent with the quiz branch, so dry or sensitive people never get an acid. It adds smart Klaviyo logic (entry filter, cart pause, WhatsApp only to non-clickers), and every number checks out: ₹48 vs ₹9 per click, the 940-person holdout, and ₹32,900 per point of lift.",
+  "biggest_mistake": "Paise-level prices like ₹628.20 read awkwardly in a calm brand email, and the projections stop at revenue rather than gross profit.",
+  "what_would_make_it_a_10": "Round prices to whole rupees, show the profit value net of the 10% code, and have Email 1 introduce the 'what's inside, and how much' promise so the brand's story lands on day 0."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both answer the sunscreen fears well, but Output 2 keeps the quiz branch all the way through to the final routine, tells me how to prove the lift with a holdout, and every number I checked is right. Output 1's last email pushes an acid on the sensitive-skin people it told to avoid acids."
+}

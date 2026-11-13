@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the writing exercise the whole application, ties every element to the correlations and the overnight gap, and states the weekend rotation plainly near the hard parts.",
+  "biggest_mistake": "The post is titled 'Asia-Pacific hours' but says the shift is 00:00-08:00 UTC Monday to Friday, which quietly drops the weekend-rotation coverage question and could confuse whether weekend shifts follow the same window.",
+  "what_would_make_it_a_10": "Fold the calendar for say the next 12 weeks into the post so an applicant can see exactly which weekends and hours they'd work, and confirm weekend shifts fall within the same UTC window."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It sounds exactly like 37signals, uses the real HEY lockout ticket to make the application feel like the job, and weights writing 50% with plain 1/3/5 examples a hiring team can use tomorrow.",
+  "biggest_mistake": "It adds a 100-word 'why this job' answer that isn't tied to any predictive signal and slightly undercuts the 'no cover letter, one exercise' efficiency argument.",
+  "what_would_make_it_a_10": "Drop or justify the optional 'why this job' prompt and add the exact 12-week weekend calendar so no one can claim the rotation wasn't clear."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 reads like it was written by 37signals — the HEY lockout ticket, the 'Not by tickets per hour' line, and the 50% writing weight all land — while Output 1, though sharp and data-tied, feels slightly more like a consultant's brief. Both would be worth paying for; Output 2 is the one I'd publish mostly untouched."
+}

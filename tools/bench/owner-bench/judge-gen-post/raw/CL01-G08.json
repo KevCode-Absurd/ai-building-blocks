@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It pairs a flat Agency plan for the leaky Essentials 8+ group with an honest fix to the hidden yearly option, backed by correct math and a candid point that yearly will not lift revenue inside two quarters.",
+  "biggest_mistake": "Jargon and density (MRR, 'fence', per-account figures to the cent) push it past a grade 7–8 read, and hiding Agency from half of new visitors sits uneasily with our transparency stance.",
+  "what_would_make_it_a_10": "Plainer wording, and a test design that keeps the public pricing page the same for everyone (for example, test via invites) so nobody sees a hidden plan."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear, on-brand Agency plan with exact, verifiable math, a named break-even point on Team move-downs, and go/stop rules that respect our principles.",
+  "biggest_mistake": "It treats yearly billing as an aside offered only at the switch, instead of fixing the monthly-default pricing page and the missing in-app yearly offer for the whole base.",
+  "what_would_make_it_a_10": "Add a base-wide, honest yearly push (show yearly on the page, offer it in-app after 60 days) with its own numbers alongside the Agency plan."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both nail the Essentials 8+ leak with correct math. Output 1 also fixes our hidden yearly billing and is blunt about what the board can and can't expect in two quarters. Output 2 reads cleaner and sounds more like us."
+}

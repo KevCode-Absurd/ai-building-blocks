@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Rock-solid data synthesis that clearly proves agencies account for 60% of all trials lost to Semrush and frames the Lite limit as our main churn driver.",
+  "biggest_mistake": "Move 5 defaults to generic advice ('publish studies built on link data') without the same commercial bite or measurable mechanics as the other moves.",
+  "what_would_make_it_a_10": "Replace the generic content move with a product-led or lifecycle tactic that directly attacks the agency or in-house credit problem."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Captures the exact brand voice ('Here's the data') and delivers a brilliant, original fifth move—using AWT to seed the weekly reporting habit before agencies even evaluate competitors.",
+  "biggest_mistake": "Lite credit top-up could be ranked as move #1 for immediate cash-flow and churn relief, though ranking reporting first directly answers the competitive brief.",
+  "what_would_make_it_a_10": "A flawless delivery that already gives the exact executive clarity, arithmetic, and actionable steps needed."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both outputs nail the arithmetic and correctly identify that our Semrush problem is confined to agencies, but Output 2 feels written by someone who truly understands Ahrefs. Its fifth move—offering a free Monday report in Ahrefs Webmaster Tools—is high-leverage product thinking, whereas Output 1 resorted to generic content advice."
+}

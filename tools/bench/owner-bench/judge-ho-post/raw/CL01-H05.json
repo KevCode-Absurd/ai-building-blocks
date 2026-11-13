@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A ranked plan built on tickets removed, three tight answer-first articles, and an honest range forecast with full working, plus a balances-screen banner idea priced in tickets and dollars.",
+  "biggest_mistake": "It adds new articles rather than retitling the old ones or adding search synonyms. The existing 'How balances work' and 'Deleting expenses' titles still don't match what people search, and the restore article has no web steps.",
+  "what_would_make_it_a_10": "Retitle or add the search terms 'undo delete', 'restore expense' and 'recover deleted' so the 4,900 no-click searches land on the new article, and add web steps."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The articles are more complete, with web steps, cancel-subscription steps and edit history, and it fixes the search mismatch both by retitling and by adding search terms.",
+  "biggest_mistake": "It proposes merging 'Recording a payment', which already helps 71% of readers, and gives a single point forecast that includes week-2 currency savings rather than a true range.",
+  "what_would_make_it_a_10": "Drop the needless merge and present the forecast as a range with the currency article's contribution kept separate."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both nailed the three signals, but Output 1 gives me the honest range I asked for, leads with the bad news, and doesn't touch a page that already works. Output 2's articles are slightly more complete, which narrows the gap."
+}

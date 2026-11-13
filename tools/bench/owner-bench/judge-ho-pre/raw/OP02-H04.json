@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds the main signal in the data—the paused 1-month break for 'no time'—and builds a compliant, respectful one-screen flow around it with clear copy and solid revenue working.",
+  "biggest_mistake": "The reminder and annual-plan rows rely on broad assumptions from the old discount flow, so those estimates should be treated as planning guesses, not proven saves.",
+  "what_would_make_it_a_10": "Tighten the test plan and remove the unsupported legal note, while adding exact instrumentation and success thresholds for each reason-specific panel."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a clean one-screen cancellation flow with reason-specific panels, visible cancellation, good copy, and a clear build list for the sprint.",
+  "biggest_mistake": "It reintroduces the 50%-off discount for switchers without evidence, uses the £9 average as if it were the monthly-plan price, and partly counts discounted subscribers too generously.",
+  "what_would_make_it_a_10": "Remove the unsupported switching-app discount, fix the pricing placeholders and value maths, and keep the save logic tied only to the proven pause, annual switch, and reminder interventions."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather hand to the product team: it respects the legal and brand constraints, stops wasting discounts, brings back the proven pause, and shows more careful money. Output 2 is usable, but the invented price-match discount and shaky pricing math would make me rework it before launch."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the actual signals in your data into distinct concepts and picks the first three in the right order for your business.",
+  "biggest_mistake": "A few execution details go beyond the brief and one static concept still leans close to the clean product style you already know is tired.",
+  "what_would_make_it_a_10": "Tighten one or two concepts further so every format feels unmistakably fresh on platform, and keep every test variable even cleaner."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clear, on-brand and correctly spots the three concepts you should make first: belt-skip, solo women lifting it alone, and quiet wheels.",
+  "biggest_mistake": "It slips on a few factual and platform-risk points, especially the cabin sizer visual and the weak spend rule of only ₹4,500 before cutting, which is too little to judge purchase performance.",
+  "what_would_make_it_a_10": "Make the proof and test rules more rigorous, avoid the sizer scene, and ground every recommendation more tightly in the exact approved claims and evidence."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels more like it was built from your notes, not just the brief. It catches the under-served women segment, the quiet-wheels hook, the scuff objection and the right launch order, then turns that into concepts you could brief to a team tomorrow."
+}

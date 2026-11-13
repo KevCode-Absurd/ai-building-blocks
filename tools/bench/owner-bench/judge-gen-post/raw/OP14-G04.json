@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It aims squarely at the winning segment and trigger, with clear list rules and a usable sequence that mostly follows the brand and pilot data.",
+  "biggest_mistake": "Step 1 includes the 9-to-4 proof even though the owner's strongest preference was to keep that proof for a later step, and the final projection stretches a bit by applying all 1,900 over time without clarifying trigger volume.",
+  "what_would_make_it_a_10": "Move the proof out of step 1, tighten the projection to triggered contacts only, and keep the rest as is."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly narrows the list to Controllers/Heads of Finance with recent pricing changes and gives a strong first-step focus based on the pilot.",
+  "biggest_mistake": "It breaks the brief and brand rules in a few places: step 1 uses the proof too early, several asks are heavier than needed, and it adds unsupported send-window/compliance footer rules that were not in the brief.",
+  "what_would_make_it_a_10": "Strip out the invented operational rules, simplify the asks, and align the sequence more tightly to the owner's exact constraints and pilot evidence."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team tomorrow with minor edits. It follows the data more closely, sounds more like a finance peer, and the list guidance and reply expectations are more grounded."
+}

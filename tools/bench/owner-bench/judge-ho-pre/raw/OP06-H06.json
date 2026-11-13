@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sees the real levers in this business: keep 30%, fix the broken 30-day window, and spend the perk budget on the small set of creator-educator partners who drive the programme.",
+  "biggest_mistake": "It adds a two-tier credit window and caps the focus list at 40 without fully proving those are the best operational choices versus a simpler 90-day rule for all.",
+  "what_would_make_it_a_10": "Tighten the few assumptions, make the tracking and payout mechanics fully consistent, and show a cleaner estimate of the cost and upside from extending attribution."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It gives the straight answer the owner wants on not cutting to 20% and clearly focuses on the top creator-educator partners instead of broad recruitment.",
+  "biggest_mistake": "It raises Partner commission to 40% for 12 months and claims a cost estimate that does not tie cleanly to the programme's actual referred revenue base or customer timing, which weakens the core recommendation.",
+  "what_would_make_it_a_10": "Keep the strong focus and clarity, but rebuild the commission design around the proved signals in the data and show airtight maths for the incremental cost of each change."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to how I'd actually run this: it protects the winning economics, fixes the cheap structural problems first, and uses the perk budget on the partners who matter. Output 2 has good instincts, but the 40%-for-12-months tier adds cost and complexity without enough evidence for this case."
+}

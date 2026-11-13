@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It says no to the 20% cut with the lifetime maths, names the honest extra cost, and gives a dated first-30-days plan with named owners the one partner manager can actually run.",
+  "biggest_mistake": "The two new-cost numbers are soft: the 90-day window is costed at $62k–$89k when ~$500 lifetime commission per newly credited buyer points higher, and the '$38,000 saving on new referrals only' is never derived, so finance will pick at both.",
+  "what_would_make_it_a_10": "Show the working on the window cost and the new-referral saving, and answer the rival's 40% with a targeted counter for the top 20 rather than arguing the rate is fine."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every figure traces: 12.5% break-even, $1,677 vs $1,130 lifetime, $46k for the partner rate, $63k per 10% of credited revenue, and the $158/$106/$211 first-year comparison that shows the owner would become the lowest payer.",
+  "biggest_mistake": "It spreads the partner manager across three segments and never totals what the plan costs, so the finance lead has to add $40k perks, $46k partner rate and the open-ended window themselves.",
+  "what_would_make_it_a_10": "Add one total year-one cost line and where it is funded, and give the first 30 days calendar dates and a named owner per step."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both say no to the cut with the right lifetime maths, but output 2's numbers all trace and its first-year commission comparison ($158 vs the rival's $211) is the argument that actually holds the 17 creator-educators; output 1 is more ready to hand over with dates and owners but its window cost is understated and the 40% rival goes unanswered on rate."
+}

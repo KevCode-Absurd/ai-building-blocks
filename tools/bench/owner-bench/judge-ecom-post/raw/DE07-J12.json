@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It builds the flow around the pincode reality — expected refusal loss per COD order (₹70 Tier 3, ₹41 Tier 2, ₹27 Metro) with the prepaid discount sized below it — and still names the downside (confirmation cancels orders that might have delivered, discounts reach buyers who'd have paid) with holdouts to measure net.",
+  "biggest_mistake": "It assumes checkout opt-in covers marketing cart messages and does not size the 30%-abandoned cart volume, so the cart case rests on a stated assumption rather than a number.",
+  "what_would_make_it_a_10": "Show the cart opportunity in rupees (carts reaching the shipping step, expected recovery, gross profit) and confirm the opt-in language the two Marketing cart templates depend on."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It flags that checkout opt-in may cover only order updates, sends the prepaid nudge as a free-form chat inside the 24-hour window to save template cost, and quantifies the leverage cleanly — each 1% moved to prepaid removes ~63 RTOs (~₹11,000).",
+  "biggest_mistake": "It drops the prepaid incentive the owner asked for and files the pay-online message as Utility, and it leaves the 7-day exchange policy as an assumption that appears in a template and two scripts, so a wrong policy would ship to customers.",
+  "what_would_make_it_a_10": "Deliver a Marketing prepaid offer sized below the expected refusal loss by pincode tier, and cover all five after-hours topics (including size and exchange) in the night menu instead of three buttons."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both are accurate and usable, but Output 1 gives the tiered COD flow with the discount math and agent capacity worked out, a full after-hours menu for the 44% order-status load, hold-outs for cart and COD, and a fresh ₹99-advance test — closer to what I would actually pay for. Output 2 is solid but skips the prepaid incentive I asked for and carries an assumed exchange window into live templates."
+}

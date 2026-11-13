@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots that the top 5 matte shades run out about 30 November even though the line shows 8 weeks of cover, then fixes it with re-cartoning, a rush order and a standard order inside ₹1.2 crore, and the maths checks out.",
+  "biggest_mistake": "The glitter palette is bundled with kohl instead of the top lipsticks. The 4-per-shade cap also sits awkwardly with pros like Farah, who buy 6 to 10, although the pro pre-order softens this.",
+  "what_would_make_it_a_10": "Pair the glitter palette with the top lipsticks as a gift or add-on, and show the shade-level cover check for foundation and kohl rather than assuming it."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a date-by-date stock table for the top 5 shades with the sale planned at 2.5 times a normal week. It holds back cash to rush any foundation or kohl shade under 8 weeks, and it sets clear January decision rules with an owner for every task.",
+  "biggest_mistake": "There are small date slips (held stock back on 18 Nov in one place and 19 Nov in another), and the restock message is a little flatter in our voice than it could be.",
+  "what_would_make_it_a_10": "Tighten the copy so it lands well under 900 words, fix the date mismatch, and give the back-in-stock line more of our bold voice."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both find the top-5 stockout, use re-cartoning plus rush and standard orders, and stay inside the cash. Output 2 edges ahead because it pairs the glitter palette with lipstick orders, keeps a funded fallback for foundation and kohl, and hands my team named owners and clear January rules."
+}

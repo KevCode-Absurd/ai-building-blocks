@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the in-app checkout bug as a no-test fix, sizes the upside correctly at about 560 orders and ₹34 lakh gross margin a month, and builds the tests around the real objections: delivery, size, firmness, EMI and trust.",
+  "biggest_mistake": "The test schedule needs cleaner rules for overlapping tests, and the MDEs should be refreshed after the checkout bug changes the baseline.",
+  "what_would_make_it_a_10": "Recast the schedule as a clear factorial or sequential plan using the post-fix baseline, with gross-profit-per-visitor as the final ship metric for every test."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the owner the right first move immediately: fix the in-app checkout bug before testing, with the key browser split, order upside and gross-profit range shown plainly.",
+  "biggest_mistake": "It under-serves the firmness objection by folding it into review filters instead of testing a clear firmness answer, and it adds arbitrary calendar dates that may not fit the owner’s actual launch window.",
+  "what_would_make_it_a_10": "Replace the weaker hero/review split with a direct firmness-and-trial clarity test, remove invented dates, and add the missing event tracking for pincode, size, EMI and firmness interactions."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 1 is a little closer to the customer evidence: it fixes the bug, ships the obvious trust elements, and covers all major chat objections including firmness. Output 2 is clearer and more operator-like, but its test set is slightly less aligned to the strongest page doubts."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Eight distinct concepts with hooks lifted from customer language. Each has a clear awareness level and test, and the data work is right (26% of purchases on 18% of spend, ₹292 a trip, ₹1,515 blended cost).",
+  "biggest_mistake": "Some copy drifts from the brand voice and the approved claims. \"Zero belt time\" and \"Quiet wheels are the top theme in our 1,150 reviews\" read as stats, not understated copy. The scuff objection is only a brief assumption and does not shape the visuals.",
+  "what_would_make_it_a_10": "Add headlines and exact shot or format specs, keep every line strictly within approved claims and the brand voice, and show how the scuff problem changes each visual."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It handles the data signals and brand risks head-on. The first three put women 25 to 40 first, then belt-skip, then quiet wheels. It names the scuff and front-pocket problems and sets claim rules (review lines only, no scratch implication). Each concept comes with headline, sizes and a test budget.",
+  "biggest_mistake": "It ignores the 41-plus audience, and some concepts (the specs reel, the gift static) are plainer. The one-hand cab lift in concept 1 hints at lightness beyond the specs.",
+  "what_would_make_it_a_10": "Give each concept its own one-line test variable and success threshold instead of leaving it in a table, and add a concept or note for the underperforming 41-plus group."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is closer to something I could brief a shoot from. It puts solo women first, takes care with claims, scuffs and the pocket gap, and gives headlines, formats and a costed test plan. Output 1 has good ideas but its copy is less on-brand and it is less finished."
+}

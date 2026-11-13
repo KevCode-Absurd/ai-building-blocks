@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Great operational thinking with the APAC timezone table and a two-pass reviewer scoring model based on calibration.",
+  "biggest_mistake": "Leaves the test customer ticket as a theoretical placeholder rather than providing the actual text to publish in the form.",
+  "what_would_make_it_a_10": "Draft the actual customer reply prompt so the application form is 100% ready to launch tomorrow."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Provides the complete package including a realistic, perfectly tuned HEY customer email prompt ready to drop into the application form immediately.",
+  "biggest_mistake": "Could have included a quick time conversion table for APAC applicants like Output 1 did.",
+  "what_would_make_it_a_10": "Include local time examples across key APAC cities in the hours section."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs understand the data and nail the 37signals voice, but Output 2 actually wrote the customer ticket prompt ready to publish, saving the hiring team an extra step."
+}

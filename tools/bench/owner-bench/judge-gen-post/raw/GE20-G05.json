@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The scorecard and process perfectly reflect the data by effectively replacing the resume with a written test and weighting writing at 85% over the interview.",
+  "biggest_mistake": "It introduces a 'longer written exercise' step without fully calculating the additional reviewer hours it would require.",
+  "what_would_make_it_a_10": "Providing a quick time estimate for reviewing the longer written exercise to ensure the team won't drown in that second phase."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The time zone table in the job post and the transparent 'pass or fail' weekend check at the very start of the interview are incredibly practical.",
+  "biggest_mistake": "It assigns 45% of the scorecard weight to the interview stage, contradicting the brief's data that interview impression only correlates 0.11 with success.",
+  "what_would_make_it_a_10": "Adjusting the scorecard weights to heavily favor the written application and writing a real test prompt instead of using a placeholder."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 correctly interpreted the correlation data by minimizing the interview's weight and centering the entire process on the written exercise, all while perfectly nailing the brand's unique tone."
+}

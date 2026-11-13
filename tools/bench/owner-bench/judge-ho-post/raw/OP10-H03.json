@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds the three real levers in the data: courier-silence WISMO tickets, low fit finder use on bras, and a refund-biased returns portal.",
+  "biggest_mistake": "The day-3 update is weaker than it should be because it only goes to scanned parcels, even though the biggest silence problem is before the courier scan, and it misses a dedicated post-delivery bra fit follow-up.",
+  "what_would_make_it_a_10": "Add a proper first-time bra post-delivery fit message, send the day-3 reassurance even when tracking is quiet, and tighten the swap-sales estimate so it is less ceiling-led."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into a practical flow: stop the delivery silence first, push first-time bra buyers into fit help, and make size swaps easier than refunds without hiding refunds.",
+  "biggest_mistake": "It assumes some operational extras, especially the 2-hour size switch, SMS, and free swap wording, that would need confirming before launch.",
+  "what_would_make_it_a_10": "Keep the same plan but mark the operationally uncertain pieces as fallbacks and soften any copy that may over-encourage swaps after delivery."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 2 gives the fuller message journey, including a pre-dispatch fit check and post-delivery bra fit follow-up, while keeping the numbers cleaner and easier to track."
+}

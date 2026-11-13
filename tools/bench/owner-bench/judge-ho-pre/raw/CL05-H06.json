@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It answers the 20% question straight, with the lifetime maths ($1,677 vs $1,130, net $1,174). It adds a break-even test (a 12.5% revenue loss, or four top partners) and a calendar-dated 30-day plan with owners.",
+  "biggest_mistake": "It is probably a little over the 1,100-word limit, and it names the cost of the wider credit window as 'the cost to watch' without putting a dollar figure on it.",
+  "what_would_make_it_a_10": "Cut it to the word limit and give the 60/90-day window a dollar estimate, instead of leaving it as 'the cost to watch'."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a straight no on the cut, with the lifetime maths and break-even. It also puts dollar figures on the costs of its own proposals ($46k Partner rate, $63k per 10% window rise, $52.5k payout timing).",
+  "biggest_mistake": "The payout fix is weak: 30 days after month end with a $50 minimum, when payouts were the top complaint. The plan runs on 'Days 1-7' labels, not dates, and it plans to recruit 30 more creators beyond the top 20.",
+  "what_would_make_it_a_10": "Fix payouts more boldly (a lower minimum and a faster schedule for everyone), use calendar dates in the first 30 days, and show how the $46k Partner-rate cost sits alongside the $40k perk budget."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both say no to the cut and show the lifetime maths. Owner 1 fixes the payout complaint more fully, gives a dated first-30-days plan the one partner manager can run, and adds a sharp point about what the cut would really save. Owner 2's costed 40% first-year tier is a good idea, but its payout fix is thin and its plan has no dates."
+}

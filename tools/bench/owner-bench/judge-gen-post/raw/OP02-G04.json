@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows the pilot signal tightly: Controllers/Heads of Finance at 50–300 person SaaS companies with a recent pricing-page change, no links, and an honest 6.8%–7.9% reply expectation.",
+  "biggest_mistake": "The 9-to-4-day proof appears in step 1, when the stronger play would be to keep step 1 entirely about their pricing change and spreadsheet pain, then use proof in a later touch.",
+  "what_would_make_it_a_10": "Move the proof to step 2 or 4, sharpen step 1 around the pricing-change trigger only, and make the reply ask slightly softer than 'reply yes'."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly identifies the winning segment, the pricing-page trigger, the no-link rule, and gives practical list exclusions and projections from the pilot.",
+  "biggest_mistake": "The invented send window between the 12th and 15th works against the key timing signal, which is to send soon after the weekly pricing-change flag while the change is fresh.",
+  "what_would_make_it_a_10": "Remove the calendar-window rule and bolder generic watch-list test, keep the sequence tied to fresh pricing-change flags, and soften the meeting-heavy CTAs into lower-friction finance-to-finance replies."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to something I could load tomorrow: the list logic, projections, and sequence are more faithful to the data and the asks are lower-friction. Output 2 has good thinking, but adds timing and watch-list ideas that dilute the strongest trigger."
+}

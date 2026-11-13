@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly makes sleep, evening posting, and narrator clips the core of the plan, with strong use of the customer’s exact bedtime language.",
+  "biggest_mistake": "The review timing is a little muddled, saying later reviewed posts can only go live from Tuesday 24 November while the plan still uses Monday 23 November as part of the rhythm.",
+  "what_would_make_it_a_10": "Add a full 24-post calendar or clearer week-by-week variations, and tighten the review flags so the schedule and approval dates match exactly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into a concrete 24-post rhythm with owners, deadlines, draft copy, stop-list, and a useful high/low success forecast.",
+  "biggest_mistake": "A couple of details are off or loose, especially the Tuesday 24 November review note and the imprecise “sleep posts nearly triple” line.",
+  "what_would_make_it_a_10": "Polish a few lines to feel more unmistakably Headspace, remove the small number/timing slips, and flag review risk post by post."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 2 is a little more operational: it gives the owner the 24-post map, first production moves, and decision rules without needing much extra planning. Output 1 is slightly warmer in places, but less complete as a four-week calendar."
+}

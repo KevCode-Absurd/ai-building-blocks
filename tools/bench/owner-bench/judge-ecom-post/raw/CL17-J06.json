@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts both return drivers above the fold: 'about 10 notes laid flat' in the subtitle and a bullet, and 'slots start snug and ease in over about a week' in a bullet, backed by a frank 'What to know before you buy' section.",
+  "biggest_mistake": "It assumes the hidden pocket takes one more note beyond the 10. That could overstate cash capacity on the very issue the page is meant to fix, although the assumption is flagged.",
+  "what_would_make_it_a_10": "Treat 10 notes as the total, use Tom's 'brick in my back pocket' language, and put the break-in note in the line under the button."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Cash is stated conservatively as about 10 notes in total, hidden pocket included. It adds inches for US buyers, uses Tom's 'brick in your back pocket' line, and gives a measurement plan with the correct arithmetic: 3.3 cash returns and 1.0 early tight-slot returns per 100 orders, plus a conversion guardrail.",
+  "biggest_mistake": "The break-in expectation is missing from the bullets and the line under the button. Also, '10 to 11 mm' for 6 or 7 cards is an interpolation the data doesn't give.",
+  "what_would_make_it_a_10": "Add 'snug for the first week, then it settles' to a bullet or the line under the button, and test against a holdout instead of a before-and-after comparison."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are honest, on-voice pages that hit the cash and card numbers. I'd take the second because it never risks overstating cash, speaks in Tom's words and tells me how to check that returns fell, though I'd move its break-in note above the fold the way the first one does."
+}

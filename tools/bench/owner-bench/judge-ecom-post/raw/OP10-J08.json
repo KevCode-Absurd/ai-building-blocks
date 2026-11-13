@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the main signals: 46-90 day buyers first, Monsoon Dark as its own track, subscription win-back only after the courier/date-choice fix, and profit measured against holdouts.",
+  "biggest_mistake": "The Monsoon Dark track still does not name a concrete closest replacement coffee or farm, so the most important customer-facing message is not fully ready to launch.",
+  "what_would_make_it_a_10": "Name the actual replacement roast/farm for Monsoon Dark, tighten the odd fixed dates, and make the reachable-count logic include email plus WhatsApp overlap rather than email-only."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It understands that price is not the main problem and gives strong separate fixes for Monsoon Dark buyers and subscription cancellers.",
+  "biggest_mistake": "It makes 91-180 day buyers the first win-back group and only treats the 46-90 day customers as a side leak, missing the cheapest and most urgent segment in the data.",
+  "what_would_make_it_a_10": "Rebuild the plan around 46-90 day buyers first, then Monsoon Dark, then older lapsed groups, with cleaner holdout-adjusted gross profit maths and exact reachable counts."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I would hand to the team tomorrow because it prioritises the right segments and sizes the gross profit from the actual order economics. Output 2 has good thinking and copy, but the first campaign order is wrong for the data."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Uses the real signals well: sunscreen leak explained and answered in a dedicated email, quiz branching into three product paths, and a slow-start email built for the 61% beginners.",
+  "biggest_mistake": "The WhatsApp/SMS reminder sits on day 13 with the code ending day 14, which is fine, but the email 5 day-11 timeline is long and one product line ('broad sun protection at SPF 50') is vague where the brand promise is naming actives; also the claim 'it works inside the pores' for salicylic acid edges toward a medical/mechanism claim the brand would want softened.",
+  "what_would_make_it_a_10": "Tighten to the winning dark-spot path with stronger persona language from Sneha and Arjun, and replace vague product claims with exact, approved lines from the product pages."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Fits the data and the people: matched product from quiz, evening send logic for a working Pune buyer, and a hard look at the sunscreen numbers that also names a test and what a lift is worth.",
+  "biggest_mistake": "Email 1 repeats the personalised product pick that Email 2 then explains, so the first two emails overlap and the code is buried before the reader has a reason to want it; also the 'about 157 sign-ups a day' and '4,700 a month' figures are asserted without showing the working from 9,400 in 60 days (which does support them, but it should say so).",
+  "what_would_make_it_a_10": "Give Email 1 the welcome-and-code job only, put the product match in Email 2 as the first real teaching moment, and show the sign-up and lift arithmetic so the projection is checkable."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and on-brand, but Output 2 reads like the owner's own brief: it leads with the converting product, sends at hours that fit Sneha's day, names what to test, and says what a lift is worth. Output 1 is cleaner to scan but slightly more generic in its teaching moments and flirts with a mechanism claim."
+}

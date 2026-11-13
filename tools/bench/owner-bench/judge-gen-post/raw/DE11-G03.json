@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Leads with the three numbers and puts the missed forecast, margin drop and Customer A all in the first screen, then ties the margin fix to the 48-hour pause.",
+  "biggest_mistake": "The margin arithmetic comparing $0.9M to 'about $10.4M of monthly revenue' is off (that's ARR/12, not gross profit) and the '9 points of margin' claim doesn't hold cleanly.",
+  "what_would_make_it_a_10": "Tighten the margin explanation to the real numbers and add a forward-looking range for the November forecast, then it's ready to send."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Same discipline as the best version but cleaner: asks up front with dates, AI-builder databases quantified (about 1.46M of 2.4M, up 48%), the 33-month runway stated plainly, and a fixes-with-dates section.",
+  "biggest_mistake": "The runway table shows September at 52 months without the actual $4.1M burn basis being visible in the same row logic — minor, but a careful reader may want the working.",
+  "what_would_make_it_a_10": "Add a one-line working for the runway table (cash ÷ that month's net burn, deposit excluded on request) so no reader has to reconstruct it."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and on-brief, but Output 2 puts the asks in the first screen where the phone-reading lead partner wants them, quantifies the AI-builder database split, dates the 48-hour pause ship (27 November), and avoids the shaky margin arithmetic in Output 1."
+}

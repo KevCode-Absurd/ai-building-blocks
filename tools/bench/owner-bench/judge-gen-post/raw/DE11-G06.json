@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp, number-led diagnosis that correctly isolates agency reporting as the Semrush battleground and Lite usage limits as the self-inflicted leak, with ranked moves, owners, first steps and metrics.",
+  "biggest_mistake": "The headline claim 'Agencies cause 60% of the trials we lose to Semrush' rests on an assumption that losses equal non-converting trials, which the owner data doesn't quite state; that should be flagged or softened.",
+  "what_would_make_it_a_10": "Tighten the assumptions so the 60% attribution is clearly labelled as modelled from trial shares, and trim a little of the projection detail to keep under length with more punch."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very readable, honest where-we-lose/where-we-don't framing, with the Lite churn math and agency recommendation landing cleanly and in the brand's blunt voice.",
+  "biggest_mistake": "Move 5 ('Teach with our link data') is the sort of generic content advice the owner explicitly dislikes, with no number behind it, and the dated 'November 2026' header is invented detail not in the brief.",
+  "what_would_make_it_a_10": "Replace the content-marketing move with a bolder, data-backed option (e.g. a free report inside AWT) and ground every projection in the given numbers."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and on-brief, but Output 1 wins narrowly because all five moves are high-leverage and data-tied, including the bolder free-report idea, whereas Output 2's fifth move is generic content advice the owner said would annoy them."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It brings back the paused transparency winner, adds the missing taste angle from reviews, and gives a tight first-4 launch plan tied to what each ad is testing.",
+  "biggest_mistake": "It uses review-share phrasing like \"1 in 4\" and legal caveats around quotes instead of keeping every line cleaner and more directly launchable.",
+  "what_would_make_it_a_10": "Tighten the copy set further around brand voice and use more owner-delighting display limits by keeping headlines closer to 40 and descriptions closer to 30 while making the launch plan even more execution-ready."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly sees the three key signals: relaunch transparency, test taste, and handle price honestly with genuinely different angles.",
+  "biggest_mistake": "It invents budget, test duration, sample-read rules and a control setup that were not asked for, and some of those numbers are shaky enough to reduce trust.",
+  "what_would_make_it_a_10": "Remove the made-up media plan details, stick to the approved brief, and keep the output focused on launch-ready copy plus the four combinations and what each tests."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to the brief I actually gave, uses my data well, and is more ready to run tomorrow. Output 2 has good instincts, but it overreaches into invented test planning and loses trust."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, sprint-ready layout with precise financial modelling tracing every cohort back to the source data.",
+  "biggest_mistake": "Kept the 50% discount alive for 'switching apps' despite the data proving that 61% of discounted learners churn anyway.",
+  "what_would_make_it_a_10": "Drop the discount entirely across all segments to fully protect margins, and weave Lena and Greg directly into the concept presentation."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Disciplined decision to completely eliminate wasteful discounts, combined with warm, persona-grounded copy that perfectly matches Babbel's voice.",
+  "biggest_mistake": "Could explicitly outline the holdout test structure directly in the launch checklist as Output 1 did.",
+  "what_would_make_it_a_10": "Virtually flawless execution of the brief, meeting every product, legal, financial, and brand requirement."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 made the bold, data-backed call to eliminate margin-eroding discounts entirely, and its copy feels more empathetic and attuned to Lena and Greg."
+}

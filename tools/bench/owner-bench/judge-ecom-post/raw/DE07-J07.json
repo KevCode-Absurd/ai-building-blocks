@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole series on the signals that matter — 44%/55% dark-spots branch, the 61% beginner fear, and the sunscreen's 2.2% click-to-order answered with the 'No white cast, even on my dusky skin' review — and the emails are written out complete with greeting, sign-off, CTA and links, so they can go into Klaviyo almost as they stand.",
+  "biggest_mistake": "Email 5 gives everyone the same three-step routine with salicylic acid wash morning and night plus niacinamide at night, which contradicts the brand's own 'one new active at a time, start every other night' rule and ignores the quiz branch in the highest-intent email; it also invents the 'two thin layers instead of one thick one' sunscreen instruction and gives no holdout or lift maths.",
+  "what_would_make_it_a_10": "Branch Email 5 by skin concern with one active plus sunscreen and correct per-branch prices, and add a holdout plan showing what one extra point of 14-day orders is worth in rupees."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It translates the data into money per click (₹48 for niacinamide vs ₹9 for sunscreen), branches the final email into three concern-specific routines with exact prices (₹698/₹628.20, ₹998/₹898.20, ₹399/₹359.10), quotes Sneha and Arjun in their own words, and adds a 60-day holdout with correct lift maths (about 940 people, about ₹32,900 per point).",
+  "biggest_mistake": "The body copy is thinner than a finished welcome letter — no greeting, no sign-off, and the footer given as a spec rather than copy — and Email 4 'read the label' is a soft brand-education slot that points beginners at all three products, adding the choice load the series is meant to remove.",
+  "what_would_make_it_a_10": "Finish every email with a human opening and team sign-off and real footer copy, and swap Email 4 for a proof or social-proof email (the dusky-skin review, or the plain team photo) that still moves people to buy before the code ends."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 1 is the closer-to-paste set of letters, but its final email tells a beginner to run two actives at once, which breaks the brand's start-slow promise for the 44% who came for dark spots. Output 2 is a bit thin on greetings and sign-offs, yet it gets the segmentation, the money per click, the exact branch prices and a real holdout right, so I'd rather pay for it and spend ten minutes adding hellos and goodbyes."
+}

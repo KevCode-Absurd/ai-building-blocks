@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly identifies that Ahrefs mainly loses to Semrush in agencies while the biggest overall leak is self-inflicted Lite churn, and it turns that into a focused, ranked plan.",
+  "biggest_mistake": "It ranks the agency reporting build ahead of the Lite usage-limit fix, even though the owner was hoping to see the Lite fix treated as the fastest money.",
+  "what_would_make_it_a_10": "Put the Lite limit and pricing fix first or make the case even more explicitly with revenue impact, while keeping the strong agency focus and clear tests."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It nails the core truth from the data: agencies are the real Semrush battleground, PPC parity is the wrong response, and multi-site AWT plus reporting is the focused way to win.",
+  "biggest_mistake": "Move 5 risks overlapping with move 1 and move 3, so the fifth recommendation is a bit less clean and more speculative than the first four.",
+  "what_would_make_it_a_10": "Tighten move 5 so it feels less like an extension of earlier moves and more like a distinct, proven lever."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is the one I'd rather pay for because it is sharper on what to stop, clearer on first priorities this month, and more directly reflects the signals in the data and my private notes. Output 1 is also strong, but it misses my hoped-for emphasis on the Lite fix as the fastest money."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly rebuilds onboarding around the two retention signals: typed recurring tasks and signing in on a second device, with good platform branching and calm copy.",
+  "biggest_mistake": "It uses one of the five onboarding emails for a Pro upsell instead of using every email to build the two habits that drive retention.",
+  "what_would_make_it_a_10": "Replace the day-14 Pro email with a targeted missing-habit email and keep the whole series focused on recurring tasks plus second-device use."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the right strategic call: teach only the two habits that predict retention, stop when both are done, and move Pro out of onboarding.",
+  "biggest_mistake": "There are a few implementation rough edges, especially the contradictory assumption that every button opens the signup platform while the second-device email must send people elsewhere.",
+  "what_would_make_it_a_10": "Tighten the branching rules and polish the conditional fifth email into clean one-button variants that are ready to load into the email tool."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 2 is closer to the retention job I asked for because it drops the upsell and uses the fifth email to push the missing habit. Output 1 has better finished copy in places, but keeping Pro inside the five-email onboarding series is the bigger strategic miss."
+}

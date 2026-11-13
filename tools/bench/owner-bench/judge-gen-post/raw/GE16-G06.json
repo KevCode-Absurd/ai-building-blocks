@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "The math and data synthesis are exact, showing clearly that 60% of all losses to Semrush come from agencies while our biggest overall churn is self-inflicted on Lite.",
+  "biggest_mistake": "Move 5 ('Teach with our link data') is a standard, safe marketing tactic rather than a high-leverage structural move.",
+  "what_would_make_it_a_10": "Swap the generic content marketing study in move 5 for a product or activation move that compounds the agency reporting strategy."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Move 5 (a free branded Monday report inside Ahrefs Webmaster Tools) is a brilliant product-led growth hook that seamlessly connects the multi-site AWT pipeline to the agency wedge.",
+  "biggest_mistake": "None worth noting; it nails the brand voice, math, constraints, and operational next steps.",
+  "what_would_make_it_a_10": "It already hits a 10 by giving actionable, ranked moves that directly address our agency gap without chasing PPC parity."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs do the exact trial-loss math and capture the strategic brief flawlessly, but Output 2 wins with a punchier executive summary and a much more inventive fifth move that turns free Webmaster Tools into an agency reporting wedge."
+}

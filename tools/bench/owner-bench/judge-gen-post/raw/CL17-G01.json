@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every forecast traces to my data: the 18–46 trials on the GA page come from a 4.5–6% CTR on 58,000 impressions converting at 3.2%, and the 42–125 total sums exactly from the rows. It is dated (16 Nov is a Monday), and it gives keep, roll-back and scale rules.",
+  "biggest_mistake": "It says to leave decaying blog posts live and unchanged instead of consolidating or redirecting them into the pages that convert. The move-4 cell ('0 on page two, 29 at 3.5% CTR') is too cryptic to scan.",
+  "what_would_make_it_a_10": "Add a merge-and-redirect step for dead blog posts in a developer day, and rewrite the move-4 projection in plain words."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The trials-per-1,000-clicks table makes the case at a glance (31.9 for comparison pages, 2.5 for blog). It adds a GA4 migration page aimed at Maya's real blocker, and it plans to merge and redirect dead posts.",
+  "biggest_mistake": "The headline of 175 extra trials rests on /vs-google-analytics jumping from position 4.2 into the top 3, which is a ceiling and not a forecast. It also hands an audit to a 'strategist' I don't have on the team.",
+  "what_would_make_it_a_10": "Give a realistic month-by-month trial range rather than a ceiling, and write the actual new title and meta for Monday instead of asking the writer to come up with them."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both plans fit my 12 pages and stop the blog, but the first one's numbers are honest ranges I can hold people to. It has real dates, rules for keeping or rolling back each change, and copy my writer can paste on Monday."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent numerical clarity and clean separation of the burn drivers in its own dedicated table.",
+  "biggest_mistake": "Splits 'What went wrong' and 'What we're doing about it' into two disconnected sections rather than pairing problems directly with their fixes.",
+  "what_would_make_it_a_10": "Pair each issue directly with its solution and provide forwardable blurbs for the investor asks."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Directly pairs each bad news item with its fix, summarizes asks immediately after the top three numbers for mobile reading, and provides copy-paste forwardable blurbs for intros.",
+  "biggest_mistake": "Omitted the separate mini-table for the $2.2M burn breakdown, though it explained the math clearly in text.",
+  "what_would_make_it_a_10": "Keep the burn breakdown in a small dedicated table alongside the main metrics table."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are world-class investor updates that nailed every test metric, but Output 2 is built better for how investors actually work: it puts what is needed right beneath the three headline numbers on screen one, pairs the bad news immediately with the fix, and writes forwardable blurbs for the asks."
+}

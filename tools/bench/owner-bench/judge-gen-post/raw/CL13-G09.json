@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole plan on the data: sleep-led, narrator clips as the core format, evening slots. It maps all 24 posts and writes six drafts in the warm voice, using the customer's own hooks and ending each on one small thing to do.",
+  "biggest_mistake": "It probably runs over the 1,200-word cap. The live-stream 'bolder move' is also an untested extra, and 'Awake at 2am' in week 3 may trigger review that the plan doesn't flag.",
+  "what_would_make_it_a_10": "Trim to the word limit, drop the live-stream tangent, and flag which later-week titles (like 'Awake at 2am') would need review and when to submit them."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is concise and clear. It leads with sleep, narrator video and evening posting, and gives a sensible success test: 5,000 installs and a 4% save rate on narrator videos, with the caveat that the 5.9% came from only 5 posts.",
+  "biggest_mistake": "It sends all of weeks 2 to 4 for review, which the plan doesn't need, and then says approved posts go live from Tuesday 24 November while still scheduling a Monday 23 November post. It also gives only weekly themes for weeks 2 to 4, not post-level ideas.",
+  "what_would_make_it_a_10": "Give a post-level calendar for all four weeks, fix the Monday 23 November conflict with the review timing, and cut stress at work and kindness carousels further in favour of sleep and narrator clips."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like a plan I can run: every one of the 24 slots is named, the drafts sound like us and use our customers' words, and it is open about trade-offs like sleep fatigue. Output 2 is tighter but thinner after week 1, and its review timing clashes with its own Monday 23 November post."
+}

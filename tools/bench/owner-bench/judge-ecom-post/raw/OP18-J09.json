@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the real causes—Meta cost inflation, linen returns, and broken email capture—and turns them into ranked moves with owners, thresholds, and profit math.",
+  "biggest_mistake": "A few projected contribution gains rely on assumptions that are a bit thin or not fully proven, especially email-flow sizing and the 90-day contribution target range.",
+  "what_would_make_it_a_10": "Tighten the assumptions behind the uplift estimates and add a cleaner first-week action list without the extra bolder-move distraction."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly identifies the slowdown as Meta plus linen returns plus switched-off lifecycle capture, and it keeps proven facts separate from checks.",
+  "biggest_mistake": "The plan is less financially sized and less operationally sharp, with vague scorecard targets like contribution 'up every month' and flow revenue at 'pre-January level'.",
+  "what_would_make_it_a_10": "Add numeric contribution targets, clearer gross-profit sizing by move, and stricter week-by-week decision rules for spend and lifecycle rebuilds."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the plan I could run on Monday: it has better profit math, clearer targets, owners, stop rules, and ranked actions. Output 2 is directionally right and readable, but it leaves more work for the team to size and manage."
+}

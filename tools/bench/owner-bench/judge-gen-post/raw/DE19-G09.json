@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 7,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The plan is built on the data: it makes narrator clips and evening sleep posts the core, uses the customer's phrases as hooks, and gives a clear stop list and per-post success measures with working shown.",
+  "biggest_mistake": "The review section is wrong in a way that could bite: it says nothing needs clinical or legal review, yet drafts 3 and 4 talk about lying awake and a busy mind at bedtime, which is the kind of sleep content the review rule covers, and it also misdates the earliest go-live as Tuesday 24 November rather than Monday 23 November.",
+  "what_would_make_it_a_10": "Flag which drafts need review, submit them on 16 November, and keep week 1 free of anything that names or implies a sleep condition."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets the practical constraints right: a full batch review submitted on 16 November with approval from Monday 23 November, a sensible Wednesday pickup-time test, and honest caution that the 5.9% save rate came from only 5 posts.",
+  "biggest_mistake": "The plan leaves the parent persona served by kindness content rather than sleep or winding down, and the kindness carousel is about quitting meditation apps, which is a weaker fit than the owner's own 'switch my brain off at night' and 'replaying every email' hooks.",
+  "what_would_make_it_a_10": "Tie each persona to the theme and phrase the data supports, and use the owner's exact customer phrases as the hooks in the drafts."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and built on the data, but Output 2 handles the review timing correctly and does not claim that review-free sleep drafts are safe, so I would trust it more to run. Output 1 has the sharper hooks, but its review claim is the kind of mistake that costs a week."
+}

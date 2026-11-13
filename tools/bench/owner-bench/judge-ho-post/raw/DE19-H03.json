@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranked the three fixes by money saved with the working shown, and tied every message and portal change to the owner's data signals (2.1-day dispatch delay, fit finder gap, pre-selected refund).",
+  "biggest_mistake": "The 'swap-first portal' saving of up to £183,800 (or up to £61k-£97k a month) hugely outweighs the £58 AOV and the actual postage cost of £7.50 per return—it's presented as sales kept rather than gross profit and looks overblown next to the other two savings.",
+  "what_would_make_it_a_10": "Show the swap/refund saving properly as retained gross profit per return (the £7.50 handling plus contribution per kept order), capped so it doesn't dwarf the whole plan, and drop the £183,800 ceiling."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the three fixes in a clear order with a week-one first move, adds a return-friendly 'still on track' email that names the 3-5 day window, and honestly flags the Christmas/January distortion.",
+  "biggest_mistake": "The numbers are shakier—the ticket saving is stated as £2,590 to £3,890 a month but the 40-60% of 6,076 tickets at £3.20 is more like £2,900 a month, and the swap saving claims 1,056-1,678 refunds turned into swaps with up to £61k-£97k of sales a month, an overreach on a £58 AOV.",
+  "what_would_make_it_a_10": "Rebuild the money table on gross profit per order, reconcile the monthly vs 90-day figures, and drop the £61k-£97k 'sales kept' ceiling in favour of a defensible retained-margin number."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more complete and more usable—it has all six messages written, the portal steps, the order of work, and the numbers per 90 days with the working; Output 2 is close but its money figures are looser and it leaves some messages for me to finish.",
+ "reason_short": "Clearer, more usable, better-numbered."
+}

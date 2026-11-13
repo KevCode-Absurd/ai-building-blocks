@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the top-5 matte shade crisis correctly, makes the re-cartoning job the Monday task, and keeps the whole order inside ₹1.2 crore with dated actions, a useful rule for the 19 slow shades, and honest back-in-stock copy in the brand voice.",
+  "biggest_mistake": "The plan adds 22,000 rushed units on top of 13,000 sellable top-5 units, giving about 35,000 units against roughly 19,000 weeks-of-sale demand through early February, so it carries a real overstock risk; the stock-left figures in the table (about 4,700 on 6 February) do not match that buffer.",
+  "what_would_make_it_a_10": "Tie the rush order size precisely to the sale week and January demand, show the stock-left arithmetic so it is consistent, and put the buffer into the February-order trigger rather than stock on hand."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers are unusually consistent: 25,000 rush + 19,000 standard against 2.5x sale week leaves about 9,650 units after the sale, the foundation/kohl rush fallback is priced, and the reorder point is stated as 8 weeks, so an owner can trust the arithmetic.",
+  "biggest_mistake": "The back-in-stock page leans on pre-orders for a week, which is a harder promise to keep than a notify button and depends on the manufacturer hitting 7 December, and the customer-facing copy is a bit plainer and less in the brand voice than it should be.",
+  "what_would_make_it_a_10": "Keep the same numbers but tighten the customer message to the brand voice, use a notify option as well as pre-order so the promise is safe if the rush slips, and show the held-stock effect on the sell-out date more clearly."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both plans work and are inside the cash, but Output 2's unit maths holds together end to end and it protects the sale week, while Output 1's rush volume looks like it leaves too much top-5 stock sitting after February; I would hand Output 2 to the ops lead with fewer worries about the arithmetic."
+}

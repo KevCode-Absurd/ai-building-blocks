@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data correctly and turns the key signals into three distinct, ready-to-shoot scripts built around taste-first openings, the 3 pm habit, and price handling.",
+  "biggest_mistake": "Script 3 slips into a label-read moment that is a bit too prominent for an angle where taste and family reactions should stay in front.",
+  "what_would_make_it_a_10": "Tighten the family script so the label/claims are even more secondary and make the creator briefs a touch more specific on exact disclosure wording."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly uses the store's performance data to choose taste-first openings and handles the $3-per-can objection on camera instead of dodging it.",
+  "biggest_mistake": "It adds unnecessary testing and projection math with shaky logic, and the scripts are less owner-ready because disclosure and label lines are worked in more clumsily and less naturally.",
+  "what_would_make_it_a_10": "Drop the speculative media math, tighten the scripts to feel more natural aloud, and make the family and 3 pm concepts as crisp and native as the blind taste test."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd rather hand to creators tomorrow: it catches the actual signals in my brief, stays on-brand, and gives me three usable angles without wandering into extra planning or shaky numbers."
+}

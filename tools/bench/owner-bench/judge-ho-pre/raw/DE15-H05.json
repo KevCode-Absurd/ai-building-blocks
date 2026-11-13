@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The forecast is built topic by topic from our own numbers (2,961 Simplify-debts tickets, 2,000 App Store/Google Play payments we can't refund), and all three articles are written out in full with app and web steps, including the exact iOS and Android cancel paths.",
+  "biggest_mistake": "It recommends merging the 71%-helpful 'Recording a payment' article into a new 'Settle up' article instead of just retitling it to match the 3,600 tickets searching 'payment not showing', which risks losing a page that already works.",
+  "what_would_make_it_a_10": "Give the ticket forecast as a proper worked low-to-high range rather than one expected number plus a downside, and drop the unnecessary merge in favour of the cheap payments retitle."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the answer and an honest worked range (about 2,400 fewer tickets, 1,500 to 3,400, roughly $9,900), and it catches the cheap win we would miss: 3,600 payments tickets landing on a 71%-helpful article is a findability problem, fixed by a retitle not a rewrite.",
+  "biggest_mistake": "It leaves the 21,000-view, 38%-helpful 'How balances work' article almost untouched - two linking lines only - when that page is exactly where most of the 2,961 Simplify-debts tickets are arriving.",
+  "what_would_make_it_a_10": "Rewrite 'How balances work' itself so Simplify debts is explained in the first two lines, and base the deflection rate on our own article performance rather than borrowing the 58% 'did this help' score as a deflection rate."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both give me three publishable articles and forecast working, but output 2 opens with the answer, offers a proper range I can defend upward, and finds the cheap payments retitle I would have paid for on its own. Output 1 edges it on article depth and per-topic forecast detail, but its unnecessary merge of a 71%-helpful page and its single-number forecast make it the slightly riskier pick."
+}

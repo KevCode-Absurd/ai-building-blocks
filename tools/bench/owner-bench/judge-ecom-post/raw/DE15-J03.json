@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Copy is genuinely in our voice — short, calm lines like 'Land. Roll. Leave.' — and it turns quiet wheels, belt-skipping and lift-it-alone into three separate shootable concepts with hooks pulled from real review lines.",
+  "biggest_mistake": "Its test plan is too thin to judge anything: three times blended cost per purchase is about ₹4,500, roughly three purchases per concept, and running a women-specific concept inside one broad campaign muddles the very read it is asking for.",
+  "what_would_make_it_a_10": "Set a real sample per concept (15+ purchases), pair it with a proper budget, and name the 85 scuff reviews and the 60 front-pocket requests up front so the team knows what not to shoot."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the two awkward truths in my data — scuffs on dark shells and the missing front pocket — then hands my team sizes, safe zones, CTA, link, paid-partnership labelling, character-counted headlines and a ₹63,000 test budget with a 15-purchase rule.",
+  "biggest_mistake": "Primary texts drift into spec-listing, so a few read denser than our 'short lines, grade 7' voice, and showing a real luggage-scale reading risks displaying a number that disagrees with 'about 2.6 kg'.",
+  "what_would_make_it_a_10": "Tighten every primary text to our calm short-line rhythm and make the weight demo a craft shot or a scripted 'about 2.6 kg' rather than an unscripted scale reading."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 tells me about the scuff and front-pocket problem before I shoot, and gives sizes, safe zones, labels and a ₹63,000 test with a 15-purchase rule, so the team can run it and I can trust the read; Output 1's copy is a touch calmer, but its ₹4,500-per-concept test is barely three purchases."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the cash number (about 10 flat notes, total) in the subtitle, bullets, button line, specs and FAQ, handles the break-in, and shows return maths (3.3 per 100 orders, about 1.0 per 100 for early 'too tight') with a measurement plan and conversion fallback.",
+  "biggest_mistake": "The first-week break-in note is missing from the bullets and the button line, so it sits lower down where some buyers won't see it. The 'Browse our other wallets' link is also a placeholder-style path.",
+  "what_would_make_it_a_10": "Move the 'snug for the first week, then it settles' note into a bullet or the button line, and drop the extra measurement section in favour of tighter page copy."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the break-in expectation in a bullet and states the trade-offs plainly ('We would rather tell you now than have you send it back'), with a clear 'what fits in real life' scenario list.",
+  "biggest_mistake": "Invents a hidden pocket that takes one extra note beyond the 10, which risks overstating cash capacity, the very thing driving 44% of returns. It also says the slots are tight 'so cards stay put' and that the wallet sits flat in a back pocket, neither of which is in the data.",
+  "what_would_make_it_a_10": "Stick to the given 'about 10 notes' with no invented extra capacity, and explain what the break-in and cash expectations are worth in returns."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both pages are on-voice and put the numbers up front, but Output 1 keeps cash capacity strictly to the data and shows the return savings, while Output 2 invents an extra note in the hidden pocket, which could feed the exact returns the owner wants to cut."
+}

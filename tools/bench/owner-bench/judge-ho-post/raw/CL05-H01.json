@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the money on the top-5 matte shades. Rush and standard orders are costed correctly at ₹117.46 lakh, with working shown, and re-cartoning is a Monday task. Back-orders with honest dates cover the December gap, and a pro pre-book idea is added.",
+  "biggest_mistake": "It is dense and probably over the 900-word limit. The reorder-point table, the split formulas and the check sheet make it harder for an ops lead to scan. It also treats the 9,100 top-5 units as already including the held stock, so it never shows the 13,000 / 3.4-week effect of re-cartoning.",
+  "what_would_make_it_a_10": "Trim it to the word limit with one dated action list for Monday. Show the re-carton effect on top-5 cover. Add a short back-in-stock message in the brand voice for customers like Tanvi."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives one clear plan. Costed POs total ₹1.187 crore and fit the cash. A dated action table runs from Monday to 15 Jan. Honest back-in-stock copy and a Farah pro pre-order protect the key customers without fake scarcity.",
+  "biggest_mistake": "Pausing ads and capping orders at 4 per shade on the hero shades gives up sales and is blunt. Back-orders would keep that revenue. It also never shows the 13,000-unit / 3.4-week effect of re-cartoning, so it still sees a 1 to 8 Dec stockout.",
+  "what_would_make_it_a_10": "Show the stock position after re-carton and test whether back-orders beat the ad pause. Add a shade-level split instead of 'by sales share', and add a tighter glitter plan that recovers more than cost."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both fit the ₹1.2 crore, rush the top 5 matte shades, skip liquid and glitter, and cost everything correctly. Output 2 is easier for the ops lead to act on Monday, with a clean dated table, plain language and a back-in-stock line in our voice. Output 1 is richer but denser and likely over length."
+}

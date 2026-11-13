@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is a sprint-ready flow: the pause is flagged as the first thing to switch on because it carries 79% of the subscribers kept, with logging, a 10% holdout and legal review named.",
+  "biggest_mistake": "The 50%-off-for-switchers row counts 67 people as still paying at day 90 (the exact point 61% of discount takers leave) and values them at roughly full price, so about £600 a month of the gain is not really there.",
+  "what_would_make_it_a_10": "Give an honest low/high range on the kept subscribers and either drop the switcher discount or model its cliff properly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It separates what our own 2025 pause test proves (1,771 kept, 928 more than today's whole flow) from the two rows that are planning guesses, and sets a kill rule for them.",
+  "biggest_mistake": "There is no build order or sequencing for the sprint and no holdout, so the product team has to invent what to do first.",
+  "what_would_make_it_a_10": "Add a week-one build order (pause first, then the plan switch, then the reminder) and a small control group to prove the lift."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are usable and both correctly kill the blanket 50% off, but Output 1 is the one I can hand to the product team on Monday: it names the build order, the logging and a holdout, while Output 2 leaves me to work out what to build first. Output 2's numbers are the more honest of the two, so it is close."
+}

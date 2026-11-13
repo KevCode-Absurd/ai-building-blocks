@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the launch around the real retention signals, the migration risk, the code-freeze deadline, and the unused extension-author community.",
+  "biggest_mistake": "The channel table says it is ranked by users kept but ranks extension authors above X even though last year's retained-user count was lower.",
+  "what_would_make_it_a_10": "Clarify that creators and authors are ranked first because of retention quality and scalable upside, then trim slightly to stay safely under the word limit."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 5,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly spots that migration must be a hard launch gate and that creators plus extension authors should get most of the preparation effort.",
+  "biggest_mistake": "The customer-facing drafts still contain placeholders, which directly breaks the request for finished launch-day copy the team can use without the owner available.",
+  "what_would_make_it_a_10": "Remove all placeholders, assign realistic owners, move creator access earlier, and avoid assuming engineers are free for support during code freeze."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to something a small Raycast team could run tomorrow: it has owners, dates, gates, plan B, and finished copy in the right voice. Output 2 has good thinking, but the placeholders and a few shaky assumptions make it less ready."
+}

@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes the 4.0 ROAS apart against the 2.5 break-even, shows PMax brand masking a 2.03 non-brand ROAS, and puts the size 5-7.5 price-mismatch feed fix first as a revenue recovery, not a budget question.",
+  "biggest_mistake": "The budget split is nearly all cut money ($128,000 to PMax, $30,000 reserve) relying on a shaky 2.6 ROAS recovery, and the expected $1.1m value / $205,900 profit looks optimistic against the cautious case; also its title 'The Pointed Flat, Women's Machine Washable Pointed Toe Flat, All-Day Comfort, Black, Size 6' is too long and repeats 'Pointed Flat' twice.",
+  "what_would_make_it_a_10": "Tighter, testable budget split with explicit range and downside guards on the PMax cut, and a cleaner title pattern in the brand's voice that fits Google's limits."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Finds and names the exact signals that matter — brand masking, the half-switched-off bestseller (15.6% of site revenue), the starved bags campaign — then commits only $122,000 while releasing $118,000 on a clear Friday reserve rule, with a Black Friday discount break-even warning the brief didn't ask for but the owner needs.",
+  "biggest_mistake": "Some density in the tables and a 104-character title that exceeds Google's 150? no, under, but 'Recycled Knit, Rothy's' at the end is weaker than leading with washability; and the 3.48 non-brand ROAS relies on the agency's directional search split without flagging enough that the category table is an estimate until checked.",
+  "what_would_make_it_a_10": "Tighter prose, a cleaner title pattern putting washable/comfort first, and an explicit note that the search-category split is directional before any cut."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nail the brief, but output 2's reserve rule, brand test against Shopify new-customer orders, Black Friday discount break-even warning and owner/done-when first-week actions feel more like how I'd actually run the business next month.",
+ "reason_short": "Output 2 wins on operational realism: reserve-release rules, a Shopify new-customer brand test, and a Black Friday margin warning the brief didn't ask for but I need."
+}

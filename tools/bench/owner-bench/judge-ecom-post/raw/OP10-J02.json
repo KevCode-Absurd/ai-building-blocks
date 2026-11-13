@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole launch around the actual winning signal: on-feet worker Spark Ads, problem-first hooks, and a $38 90-day contribution target checked against Shopify and survey data.",
+  "biggest_mistake": "The day-30 blended lift read is a little overconfident unless the suggested holdout is actually used, because other channel and demand changes can still affect new customers.",
+  "what_would_make_it_a_10": "Make the holdout or another incrementality check part of the core plan, not a bolder optional move, and tighten a few assumptions around attribution and state selection."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly finds the money target and creative direction: worker comfort, real feet, Spark Ads from the nurse and server, problem-first hooks, and mission only as a closing fact.",
+  "biggest_mistake": "The measurement and scaling plan leans more on claimed orders and broad pass/fail thresholds than on a clean Shopify/survey/incrementality read, and the Smart+ scale campaign is a bit loose for month one.",
+  "what_would_make_it_a_10": "Replace the ambiguous Smart+/scale setup with a cleaner test-to-scale structure and make the day-30 decision depend on two store-side reads against the $38 90-day break-even."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more Monday-ready and more tightly tied to the owner's numbers, especially the budget release rules, kill thresholds, Shopify tracking, Spark Ads, and day-30 decision logic. Output 2 is strong, but it is a little less precise on attribution and scaling, which matters for deciding whether TikTok has earned more budget."
+}

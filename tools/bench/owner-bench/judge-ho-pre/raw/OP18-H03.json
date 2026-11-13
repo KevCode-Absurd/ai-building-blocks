@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It directly attacks the two real leaks in the data: the courier-scan silence causing day 3 to 5 tickets, and bra fit uncertainty driving half of all returns.",
+  "biggest_mistake": "The SMS day-3 update needs a consent/transactional check, and the portal sales-kept number is revenue kept rather than gross profit.",
+  "what_would_make_it_a_10": "Add consent-safe channel rules, a tighter gross-profit view for swaps, and specify that post-delivery bra messages prioritise first-time bra buyers."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers are clean, well worked, and honest about the fit-finder selection effect instead of assuming the full 19-point gain.",
+  "biggest_mistake": "It misses the short day-3 proactive update, which is one of the cheapest and clearest fixes for the 6,076 day 3 to 5 tickets.",
+  "what_would_make_it_a_10": "Add the day-3 order-status message, tailor the portal more strongly to size-return reasons, and replace the final 'to confirm' section with stated assumptions."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the post-purchase team fastest: it has the day-3 WISMO fix, the fit messages, and the size-swap portal logic in the right order. Output 2 has slightly cleaner measurement, but it leaves out a key proactive delivery update and is a little less ready to run."
+}

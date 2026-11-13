@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 7,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Fixes the real causes first — a hard gate on ex-subscribers until on-time delivery hits 93%, a dedicated Monsoon Dark match track, and a day-28 'running low' nudge for Aarav-style drifters — with clean ₹557/₹442/₹385 working and a page of on-voice drafts.",
+  "biggest_mistake": "Its own starting priority skips the 46-90 day 'at risk' group that the 34-day median gap says is cheapest to save; it treats them only as a leak to plug, not as a targeted wave.",
+  "what_would_make_it_a_10": "Make the 46-90 day band an explicit first wave with sizes, reach and offer, then keep everything else as is."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Correctly puts the slipping 46-90 day buyers first as a no-discount reminder, names the Monsoon Dark retirement at 29% of the 181-365 band, gates ex-subscribers on delivery, and adds a fresh pre-order-lot idea for Monsoon Dark fans.",
+  "biggest_mistake": "The 15% off in the 365+ 'gone' email contradicts its own 'colder buyers, deeper offer' logic being safe and risks discounting people who would never return anyway; also the pre-order idea depends on a sourcing yes the owner must chase.",
+  "what_would_make_it_a_10": "Drop or hold the 15% on the 365+ goodbye email and state a clear assumption on whether the Monsoon Dark beans can actually be re-sourced before making pre-order the group's plan."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 starts where the data says the money is — the 46-90 day slipping buyers — while Output 1 starts with the colder 91-180 band and only treats the at-risk group as a leak; both get the big things right, but Output 2's ranked order and bolder Monsoon Dark idea make it the one I'd rather pay for."
+}

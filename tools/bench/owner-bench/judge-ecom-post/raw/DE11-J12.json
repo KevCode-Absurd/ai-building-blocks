@@ -1,0 +1,30 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and correct, but Output 2 makes the tier-by-tier money logic explicit (₹70/₹41/₹27 expected refusal loss per COD order), ties discounts below the loss they remove, and adds a properly-framed Tier 3 advance test with a holdout, which is what I would actually pay for. Output 1 is cleaner to read and has better flow timing, but leaves the flow generic across tiers and buries the RTO money in only the intro.",
+ "what_would_make_it_a_10": "Merge Output 2's tier-specific economics and holdout design with Output 1's clean flow timing, quiet-hours rules and ready-to-paste script formatting, and fix the ₹1,259 vs ₹1,299 and '9 templates' inconsistencies."
+}

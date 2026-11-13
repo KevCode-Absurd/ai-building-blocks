@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp, checked analysis: it splits out the AI-builder and direct database counts (direct up only 2.6%), sizes the $0.9M compute rise against about $10.4M of monthly revenue, gets runway right at 33 to 37 months, and breaks down the $2.2M burn rise in a clean table.",
+  "biggest_mistake": "Customer A's $2.6M loss sits second under 'What went wrong', after a long AI-builder paragraph, and is left out of the subject and headline numbers, so a phone reader may not see it on the first screen; the hit to NRR or February ARR is never mentioned.",
+  "what_would_make_it_a_10": "Put Customer A and the asks in the subject or opening lines, say when the loss shows up in ARR and NRR, and give the 48-hour pause a ship date."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built for a partner reading on a phone: the subject names the miss and the margin drop, the preview names the lost customer, the three asks with dates sit above the fold, Customer A leads the bad news with when it hits ARR, and the asks include ready-to-forward blurbs.",
+  "biggest_mistake": "It states decisions as done ('the role is now based in New York', 'ships by 27 November') that the founders have not confirmed, and the 52-to-33-month runway row looks alarming because the one-off deposit is only explained elsewhere.",
+  "what_would_make_it_a_10": "Mark the New York base and ship date as proposals to confirm, add a note on the NRR impact of Customer A, and footnote the runway row with the 37-month figure that excludes the deposit."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both get the numbers right, but Output 2 puts the lost customer, the miss and the asks where a busy partner sees them first, and it hands angels intro text they can forward. Output 1's margin analysis is a bit sharper, but its bad news sits lower down."
+}

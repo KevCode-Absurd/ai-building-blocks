@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It shows profit after ad cost for each line against the 2.5 break-even, puts the money into concrete winners (bags, a new non-brand Search campaign on Claire's searches), and gives a split of $240,000 that adds up with daily budgets.",
+  "biggest_mistake": "Its forecast is too rosy (brand search at about 25 ROAS, profit up $61k, total ROAS 4.6), and it gives thin rules for weeks two to four beyond releasing a reserve.",
+  "what_would_make_it_a_10": "Use a more cautious forecast with a clear profit range, and add explicit week 2 to 4 rules for scaling and cutting, such as a 14-day PMax ROAS floor or a restore trigger."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It combines brand search and PMax brand terms to show that non-brand Google ran at 2.26 and lost about $20,100, and it tells the owner the bad news (reported revenue falls about 13%) with a profit range and explicit assumptions.",
+  "biggest_mistake": "It holds $104,000 in a rule-based reserve and expects $40,000 or more to go unspent, so it does not move the cut money into the winners decisively. The state-split test also adds complexity.",
+  "what_would_make_it_a_10": "Commit more of the reserve up front to the proven winners (washable and work-flat terms, bags) and add a dedicated non-brand Search line."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 takes apart the 4.0 more honestly, with brand combined, a conservative profit range and the revenue drop stated. It also gives week 1 with owners and \"done when\" checks, plus clear cut and scale rules for the month. Output 1 deploys the money more concretely, but its forecast is too optimistic."
+}

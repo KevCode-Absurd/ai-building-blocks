@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It works out RTO loss per order by pincode tier (₹70, ₹41, ₹27) and builds a different confirmation, nudge and cancel rule for each tier. Tier 3 gets the hardest treatment, with calls and a ₹40 UPI saving sized below its loss.",
+  "biggest_mistake": "It says each discount 'sits below the loss it removes' without accounting for switchers who would never have refused, so the tier discounts could cost more than they save. The holdout only covers calls and cancels, not the discount.",
+  "what_would_make_it_a_10": "Add a no-discount holdout for the prepaid nudge, and give the after-hours bot a size-guide button so the 21% fit questions also get an instant answer at night."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean templates with good flow mechanics: quiet hours, a confirm-then-chat-window nudge, and a holdout on the prepaid switch. Moving one agent to a 2 pm to midnight shift for the evening wave is a smart, cheap fix.",
+  "biggest_mistake": "The 'pay by UPI now' nudge is filed as a Utility template. Meta is likely to recategorise it, and I said I didn't want marketing inside Utility. It also gives Tier 3 no stronger nudge and no money breakdown by tier, so the risk targeting stays weak.",
+  "what_would_make_it_a_10": "Make the prepaid nudge a Marketing template with an incentive sized per pincode tier, show the ₹ RTO cost by tier, and swap the size-chart homework in the cart template for an offer to tell the customer their size."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 puts my money where the RTO pain is, with tiered rules for Tier 3 backed by the rupee maths, and keeps every offer out of Utility templates. Output 2 is tidy but treats risk more evenly and slips a sales nudge into a Utility template."
+}

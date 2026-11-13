@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent translation of the raw data into distinct, persona-driven concepts with punchy, on-brand copy.",
+  "biggest_mistake": "Advising to scale a concept after only three times the CPA (around ₹4,500) is too little spend to exit the learning phase or prove scale.",
+  "what_would_make_it_a_10": "More rigorous, realistic media buying rules for testing budgets, and catching the front-pocket objection."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Incredible attention to platform and business reality, from exact testing budgets based on 15x CPA to character counts on Meta headlines.",
+  "biggest_mistake": "None that would hold back an owner.",
+  "what_would_make_it_a_10": "It is already a 10."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Both outputs understood the data and wrote great copy, but Output 2 operates like an expert media buyer. It provides realistic testing budgets (15x CPA for a read, 3x for a stop-loss), catches the 'front pocket' objection in the reviews, and even includes character counts for Meta headlines to prevent truncation."
+}

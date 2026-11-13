@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the three numbers and the forecast miss first, and shows that $0.9M of extra compute on about $10.4M of monthly revenue is roughly 9 margin points, which fully explains the 7-point drop.",
+  "biggest_mistake": "It never says when Customer A's $2.6M loss lands in ARR or what it does to NRR, and the 48-hour fix has no ship date.",
+  "what_would_make_it_a_10": "Give the fix a ship date and expected saving, say when Customer A's loss hits ARR and NRR, and summarize the asks in the first screen."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A phone reader sees the bad news and all three dated asks on the first screen, and two asks come with ready-to-forward blurbs.",
+  "biggest_mistake": "The runway row shows a 19-month drop (52 to 33 months) next to the table without noting that part of the burn rise was one-off, so it looks more alarming than the text explains.",
+  "what_would_make_it_a_10": "Add a note to the runway row about the one-off deposit, and say what Customer A's exit does to NRR."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are honest, correct and on voice. Output 2 is closer to ready to send: the asks appear in the first screen, the fix has a ship date, it says the Customer A loss shows in February ARR, and the intro blurbs can be forwarded as written."
+}

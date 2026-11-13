@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It names the top-5 shade sellout, the cheap re-cartoning fix and the cash ceiling, and builds the whole order plan and Monday task list around them.",
+  "biggest_mistake": "The stock-left projections and the '3,200 back-orders' figure are asserted without showing the full working, so a couple of numbers can't be traced end to end.",
+  "what_would_make_it_a_10": "Show the week-by-week demand and receipt arithmetic behind each line's ending stock so every number can be audited."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the owner a clear ₹1.17 crore decision, the reorder-point logic, a gap plan and a pro pre-book idea that fits Farah.",
+  "biggest_mistake": "The back-order gap is described as 6 days but dated 1 to 7 December, and the extra 'bolder move' and multiple check sheets add options when the owner asked for one plan.",
+  "what_would_make_it_a_10": "Tighten to one dated plan with consistent gap dates and trim the optional ideas so Monday's actions are unambiguous."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both spend inside cash and catch the hero-shade and re-cartoning signals, but Output 1 gives one cleaner dated plan with a customer message in our voice, while Output 2 muddies its gap dates and adds options the owner didn't ask for."
+}

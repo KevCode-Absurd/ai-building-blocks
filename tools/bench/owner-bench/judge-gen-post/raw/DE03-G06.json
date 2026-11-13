@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Zeroes in on agencies as the only real Semrush battleground and names the Lite usage-limit leak as the biggest, cheapest win, with the numbers to back it.",
+  "biggest_mistake": "Move 5 (link-data content studies) is the softest of the five and its success metric is vague next to the others.",
+  "what_would_make_it_a_10": "Swap the weakest move for a sharper lever and tighten every success metric to a specific test with a holdout and a date."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Leads with a crisp lose/tie/win verdict and a free Monday report inside Webmaster Tools as a genuinely fresh, on-brand bolder idea.",
+  "biggest_mistake": "Some projections are shaky: the move 1 lift math and the '0.9% everybody else' conversion rest on an assumption it only half-flags.",
+  "what_would_make_it_a_10": "Fix the conversion arithmetic and projections, and cut the '0.9% other users' figure or label it clearly as derived before relying on it."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both nail where we lose and where we win, but Output 1's moves are cleaner and its numbers hold up better, so it's the one I'd hand to the team without checking the math first."
+}

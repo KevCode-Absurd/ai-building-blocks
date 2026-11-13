@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 6,
+  "correct": 8,
+  "clear": 9,
+  "voice": 10,
+  "range": 7,
+  "ready": 9,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Provides an excellent breakdown of the breakeven ROAS and clear, actionable steps for the feed fix.",
+  "biggest_mistake": "Allocating $128,000 to PMax after moving its profitable search themes to a new campaign, meaning PMax would be forced to spend on the loss-making segments or fail to pace.",
+  "what_would_make_it_a_10": "Size the non-brand PMax budget strictly to the profitable segments that remain in it, rather than leaving a massive budget overhang."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliant owner-level insights: warning that revenue will fall as profit rises, and designing a geo-test to ensure cutting broad spend doesn't kill the funnel.",
+  "biggest_mistake": "Relying on exact-match negatives in PMax, which is sometimes gated behind a Google rep (though standard practice to request).",
+  "what_would_make_it_a_10": "It is already a 10: a masterclass in e-commerce media buying and managing an owner's financial expectations."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 thinks like a seasoned CFO and growth strategist. It not only fixes the immediate profit leaks but anticipates the owner's panic when top-line revenue drops, and builds a smart holdout test to verify the top-of-funnel strategy."
+}

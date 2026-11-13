@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the actual hiring signals into the job post and process: APAC hours, weekend rotation, no experience requirements, and a heavily weighted writing scorecard.",
+  "biggest_mistake": "The application is not fully paste-ready because it tells the team to choose a real ticket instead of providing the written exercise prompt.",
+  "what_would_make_it_a_10": "Cut it under the 1,100-word limit and include the exact customer email prompt and facts applicants will answer."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post is plain, warm, honest, and includes a usable customer-reply prompt in the application.",
+  "biggest_mistake": "It adds an undefined longer exercise and a 'why this job' question after saying there is no cover letter, which weakens the low-friction application design.",
+  "what_would_make_it_a_10": "Make the application a single scored writing exercise plus schedule gate, and add a tighter interview scorecard with fixed questions and clearer 1/3/5 evidence."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more directly built from the data and gives the hiring team a stronger, fairer process and scorecard. Output 2 is cleaner and includes a prompt, but it drifts toward extra hiring steps and is less complete for the team running interviews."
+}

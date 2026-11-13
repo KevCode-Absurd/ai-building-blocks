@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Email 4 answers the white cast, stickiness and makeup questions with the dusky-skin review, and Email 2 splits by quiz answer so each person gets one product in our calm voice.",
+  "biggest_mistake": "Email 5 sends every buyer a salicylic wash twice a day plus niacinamide plus sunscreen. That breaks the one-product, no-acid advice it just gave dry and sensitive skin, and calls four slots '3 steps'.",
+  "what_would_make_it_a_10": "Make Email 5 match each quiz answer, as Email 2 does, and add a holdout and a money estimate so I can tell whether the series pays."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It matches people from the quiz in Email 1 and carries that match through every email. Email 5 gives a separate short routine for each concern, with correct prices, and the projections are all right: ₹48 vs ₹9 per click, about ₹32,900 per extra point.",
+  "biggest_mistake": "The plain-text emails skip a greeting, and prices like ₹628.20 with paise read awkwardly in customer copy.",
+  "what_would_make_it_a_10": "Round the code prices, add a short greeting, and flag the texture and makeup claims to check against the product page."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 keeps one matched product for each person all the way through. It also adds a holdout and a rupee value I can track. Output 1's last email undoes its own careful advice by giving everyone an acid."
+}

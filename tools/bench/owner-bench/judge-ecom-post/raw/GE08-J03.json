@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The creative execution is directly tied to business numbers, including safe-zone video specs, headline character counts, and a mathematically sound 15-conversion testing plan.",
+  "biggest_mistake": "Concept 7 (Four specs) is a bit dry compared to the narrative hooks, though it serves a distinct comparison-stage purpose.",
+  "what_would_make_it_a_10": "It is already practically a 10 for a creative strategy deliverable."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Great data breakdown up front and solid coverage of the core review signals and persona hooks.",
+  "biggest_mistake": "The testing threshold recommendation (cutting or scaling after just ₹4,500 or 3x blended CPA) is far too low for statistical confidence on Meta.",
+  "what_would_make_it_a_10": "Provide full ad components (like headlines), refine ad copy so it sounds less like bullet points, and set realistic sample-size testing budgets."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers production-ready creative assets complete with headline counts, 9:16 safe zones, and a realistic 15-purchase testing budget, whereas Output 2 leaves out headlines and suggests cutting/scaling at an unrealistically low ₹4,500 spend."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the actual signals well: dark spots lead the flow, niacinamide is the default starter, sunscreen gets its own objection-handling email, and beginners are taught to start slowly.",
+  "biggest_mistake": "The code expiry is assumed from the 14-day buying window, so the deadline language should be checked before launch.",
+  "what_would_make_it_a_10": "Confirm the exact code expiry and tighten the final reminder copy slightly so it feels less like a deadline push and more like a calm nudge."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 6,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly spots the sunscreen conversion leak and uses the quiz answer to branch the first-product recommendation.",
+  "biggest_mistake": "It includes off-brand or risky wording in customer copy, especially the banned word “brightening” and stronger acne/oil claims than needed.",
+  "what_would_make_it_a_10": "Remove banned/risky language, make the last email less of a three-product push, and keep every email to one calm beginner-friendly decision."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels more like something Minimalist could actually send: calmer, more data-led, better matched to beginners, and safer on claims. Output 2 is solid structurally, but the banned language and harder product push would need more brand review."
+}

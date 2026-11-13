@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly acts on the biggest signals: sleep, evening posting, narrator clips, and stopping app news, quote cards, focus and most stress content.",
+  "biggest_mistake": "The 4-week plan is mostly one repeated weekly rhythm rather than a fully specified 24-post calendar, and the review timing is a little overcomplicated and slightly conservative.",
+  "what_would_make_it_a_10": "Spell out all four weeks with specific post angles and review flags, while keeping the same strong data-led mix."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into a practical 24-post plan with the right mix: 16 narrator clips, 12 sleep-led posts, mostly evening slots, clear owners and ready-to-post drafts.",
+  "biggest_mistake": "The review guidance is a bit too casual, and the Tuesday parent slot is a justified exception but still moves away from the strongest evening signal.",
+  "what_would_make_it_a_10": "Add explicit review/no-review flags for each of the 24 posts and tighten the success math for parent posts, since that segment does not have its own baseline."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would hand to the team tomorrow because it gives a fuller 4-week calendar, owners, stronger sequencing and equally strong drafts. Output 1 is good, but its repeated weekly plan and review handling make it slightly less launch-ready."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the core insight — agencies are 60% of Semrush losses while Lite usage limits are self-inflicted churn — and ranks the fixes with owners, first steps and sharp success metrics.",
+  "biggest_mistake": "Move 5 is speculative (a free branded report could cannibalise the paid beta) and its 'bolder move' framing sits awkwardly beside the four safer bets.",
+  "what_would_make_it_a_10": "Replacing the free-WMT-report idea with a revenue-weighted view (what each lost segment is worth) so the ranking is by dollars, not customers."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, honest 'where we lose / where we don't lose' framing with correct survey and churn numbers, plus sensible 'what we should not do' section.",
+  "biggest_mistake": "Move 5 (publish link studies) is generic content advice with no number behind it and doesn't earn a top-five slot next to the real leaks.",
+  "what_would_make_it_a_10": "Swap the weak content move for the free-report or top-up monetisation angle and show the projected revenue each move recovers."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 finds the sharper money — Lite usage-limit churn and the multi-site free pipeline — and puts concrete projections and metrics on each move; Output 2 is solid but wastes a slot on generic content advice and ranks the agency move without a beta-ready first step."
+}

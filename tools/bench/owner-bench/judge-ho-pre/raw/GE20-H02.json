@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly identifies that non-brand PMax is losing money and clearly calculates the contribution margin across the account.",
+  "biggest_mistake": "Holding nearly half the budget ($118,000) in a weekly reserve breaks Google Ads budget pacing and algorithm learning.",
+  "what_would_make_it_a_10": "Allocate the budget more realistically across campaigns rather than using a massive manual reserve, and provide deeper troubleshooting steps for the feed."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Moving the winning non-brand search themes out of PMax into a dedicated Search campaign to regain control while hitting breakeven.",
+  "biggest_mistake": "None that would hinder execution; the plan is highly actionable and mathematically sound.",
+  "what_would_make_it_a_10": "It is already a 10."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 provides much better Google Ads strategy by creating a dedicated Non-Brand Search campaign for the winning themes and offers highly specific, actionable steps to fix the feed errors. Output 1's idea to withhold $118k in a manual reserve is too risky for algorithm pacing."
+}

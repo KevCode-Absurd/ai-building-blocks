@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every ad set gets a rupee decision built on after-RTO, Shopify-adjusted economics, and it catches all three owner signals: relaunch the paused creator video, split women 25-34, cut the COD-trap Starter Kit.",
+  "biggest_mistake": "The two-line 'safe ₹282 / break-even ₹394' framework double-counts the attribution gap on top of per-set RTO math and gets confusing (the Starter Kit break-even of ₹271 vs ₹194 is muddled), which risks a wrong pause/scale call.",
+  "what_would_make_it_a_10": "Clean one-number break-even per ad set (no parallel safe line) with the attribution haircut applied once and shown."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "voice": 8,
+  "clear": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Rigorous, traceable economics with a state-split holdout test for retargeting that genuinely answers whether retargeting pays, plus a reserve-released-by-rule budget that caps at ₹5,60,000.",
+  "biggest_mistake": "Dense and over-engineered for a 'I want decisions, not reporting' owner; the holdout test and multiple probability assumptions add reading load, and holding the Starter Kit's COD issue while staying at ₹60,200 on Beard Kit and ₹56,000 on UGC is debatable.",
+  "what_would_make_it_a_10": "Cut the extra frameworks down to decisions and one clean budget table so the Monday actions jump off the page."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both catch the three signals, but Output 2's numbers trace cleanly to one break-even per ad set with a real holdout for retargeting, while Output 1's parallel safety lines risk a wrong call; Output 2 reads heavier but I trust its rupees more."
+}

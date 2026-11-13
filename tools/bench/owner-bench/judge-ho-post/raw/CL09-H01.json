@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A simple Monday plan: rush and standard orders for the top 5 shades, nothing for the slow lines, ₹1.19 crore total, plus an honest 'back on 9 December' message in our voice.",
+  "biggest_mistake": "It assumes the 3,900 held units are already in the 9,100 on hand, so it misses that re-cartoning closes most of the pre-sale gap; it also cuts palettes to ₹699 from 1 December, which throws away margin early.",
+  "what_would_make_it_a_10": "Count the re-cartoned units as extra stock (about 13,000 for the top 5, lasting to about 8 December), and set the palette discount with a sales trigger instead of a blanket early cut."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Shows the working for the rush and standard order sizes (back-orders plus sale week at 2.5 times plus buffer), with reorder points and a Monday check sheet the ops lead can actually run.",
+  "biggest_mistake": "It makes the same wrong assumption that the held units are in the 9,100 on hand, so it overstates the 1 to 7 December gap; the back-order wording is also a bit flat for our voice.",
+  "what_would_make_it_a_10": "Treat the 3,900 re-cartoned top-5 units as added stock, and write the back-order message in our bold, playful voice."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the core call right: rush the hero shades, buy nothing slow, stay under ₹1.2 crore. The second one shows how it sized the orders, gives my ops lead triggers to act on, and clears palettes with a test instead of slashing the price early."
+}

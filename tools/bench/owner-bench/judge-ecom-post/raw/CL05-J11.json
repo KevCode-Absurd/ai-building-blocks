@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It calls the in-app checkout bug first, sizes it correctly (~1,860 checkouts, ~560 orders, ~₹34 lakh margin), and covers all five chat topics, including a separate firmness test with a 100-night return check.",
+  "biggest_mistake": "Firmness rating and EMI amount are left as bracketed blanks. Orders per session is the main metric for the size-picker test, which stretches it to 4 weeks, and the bug fix is not tied explicitly to keeping test results clean.",
+  "what_would_make_it_a_10": "Fill the placeholders, use add-to-cart as the main metric where it fits the size test, and state plainly that the fix must land before any test starts so in-app traffic does not pollute results.",
+  "overall_note": "Strong, clear and usable."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the in-app bug and its money range, says tests start only after the fix, and sizes every test to the real traffic. It also notes that add-to-cart is the wrong metric for the delivery and EMI tests and uses gross profit as the guardrail.",
+  "biggest_mistake": "It has no standalone firmness test (only reviews tabs) and gives less customer-facing copy in the brand voice. The dense rules and fixed calendar dates read as heavy.",
+  "what_would_make_it_a_10": "Add ready-to-paste trial and delivery lines in the brand voice and tighten the rules section.",
+  "overall_note": "More rigorous test design and ship rules."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both catch the in-app bug, the size picker and the delivery date with correct numbers. Output 2 is stricter about the order of work (fix first), metric choice, sample-size per test, stop and ship rules, and gross-profit guardrails, so I could hand it to the team with fewer questions. Output 1 is friendlier and has more copy, but leaves placeholders."
+}

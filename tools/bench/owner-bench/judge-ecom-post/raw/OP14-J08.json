@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the two real causes of lapse—the discontinued Monsoon Dark and the subscription delivery failure—and builds separate tracks around them instead of pushing one blanket discount.",
+  "biggest_mistake": "It underplays the owner's requested 46 to 90 day at-risk group by treating it as a side note rather than a ranked win-back wave with reachable counts and economics.",
+  "what_would_make_it_a_10": "Promote 46 to 90 days into the main target order with its own reachable sizing and profit maths, and tighten a couple of speculative assumptions in the value model."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets the priority order right for this business, especially treating 46 to 90 days as the cheapest save, Monsoon Dark as its own cause-based track, and ex-subscribers as gated on fixing delivery.",
+  "biggest_mistake": "Some numbers and execution details are shaky or unnecessary for a ready plan—most notably dated send schedules, some reach/contact maths choices, and a risky speculative Monsoon Dark pre-order idea not grounded in the brief.",
+  "what_would_make_it_a_10": "Clean up the planning maths and remove speculative calendar and pre-order details so the programme stays tightly tied to the data and can launch with confidence."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 follows the strongest signals in my data more closely: it puts the 46 to 90 day group first, isolates Monsoon Dark properly, and gates ex-subscriber win-back on fixing delivery. Output 1 is strong and more polished in places, but it misses that first priority in the main plan."
+}

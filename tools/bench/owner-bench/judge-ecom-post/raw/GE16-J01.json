@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "The dual-line framing (safe line at ₹282 vs break-even at ₹394) makes attribution reality simple for the media buyer to act on without over-analyzing.",
+  "biggest_mistake": "Commits an increased budget to ASC before confirming whether reintroducing the paused winning creative actually brings CPP back down.",
+  "what_would_make_it_a_10": "Gate the ASC budget expansion behind a reserve release rather than baking a scheduled ladder into the committed budget."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Superb financial discipline with the conditional reserve structure, nuanced attribution weighting by funnel stage, and an actionable geo-holdout test for retargeting incrementality.",
+  "biggest_mistake": "Labeling retargeting as 'cut' while retaining ₹2,000/day creates a slight naming inconsistency, though the operational directive is completely clear.",
+  "what_would_make_it_a_10": "It is already a 10—practically flawless media buying strategy tailored exactly to store economics."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs nailed every single data signal, but Output 2 won on financial prudence: it held ASC flat until creative performance recovered, tied budget releases to strict gate rules, and designed a brilliant geo-holdout test for retargeting."
+}

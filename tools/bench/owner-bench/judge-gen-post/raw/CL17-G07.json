@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A dated calendar with named owners that fits our small team and the 1 December freeze. Authors get the build on 17 November so their bugs land before the freeze. Retention math is correct throughout (4,510 / 2,470 / 3,740 / 2,940 / 3,420; 17,080 total), and the 9-creator projection is right.",
+  "biggest_mistake": "The launch X post credits '1,500 extension authors' generically instead of naming the authors whose extensions appear in the clip. The creator brief is only invite-and-embargo, with no angle per persona.",
+  "what_would_make_it_a_10": "Name specific authors in the X post and email, and give creators a two-angle brief (upgrade for power users, first-day setup for newcomers)."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp safeguards. A one-step settings undo, a 1,000-user real-setup migration beta, any speed claim held until it is measured, and engineers freed by the freeze joining support shifts. Retention math is also right (about 750 per video, about 6,750 for 9 creators).",
+  "biggest_mistake": "The calendar lists audiences, not owners, so I can't see who does what. Creators get the build only on 24 November and clips are cut from 1 December, which is tight. The X thread and email are full of placeholders ([ms], [@author], [first name], [support address]).",
+  "what_would_make_it_a_10": "Add an owner to every dated task, get the build to creators a week earlier, and fill the placeholders so the copy can ship."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both rank channels correctly and make migration a launch gate. Output 1 gives me a calendar with owners and finished copy I could post today. Output 2 has a few clever extra safeguards but leaves me filling blanks and guessing who owns each task."
+}

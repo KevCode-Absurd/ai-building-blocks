@@ -1,0 +1,41 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Rigorous worked numbers that discount fit-finder users' self-selection (9.5 points, not 19) and a 50/50 portal test with a 10% holdout and a guardrail on time to refund.",
+  "biggest_mistake": "It has no day-3 'still on track' update, which is the cheap fix aimed at the day 3-5 ticket spike. It gives a single point estimate for each lever, and the post-delivery fit email is generic rather than a real fit guide for first-time bra buyers.",
+  "what_would_make_it_a_10": "Add a day-3 reassurance message and real bra fit guidance after delivery, show low and high ranges instead of single targets, and trim it to the 1,000-word limit.",
+  "use_as_is_note": "",
+  "use_as_is_extra": ""
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8.2,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It includes a day-3 'nearly there' update and a delivered email that coaches bra fit in plain words ('comfort beats the number on the tag'). Its numbers are low-to-high ranges whose working checks out.",
+  "biggest_mistake": "The portal pre-selects Swap for size reasons, which is a gentle nudge that could feel like pressure, and it never says how the portal change will be tested. It also invents a 2-hour order-edit window and makes a free-switch promise from it.",
+  "what_would_make_it_a_10": "Make the swap first but not pre-selected, add a portal A/B test with a guardrail metric, and confirm the order-edit window rather than assuming it.",
+  "use_as_is_note": "",
+  "use_as_is_extra": ""
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "I'd rather have Output 2: it covers all three fixes in our voice, adds the day-3 update, gives first-time bra buyers real fit help after delivery, and gives honest ranges. Output 1 has tighter test design, but it misses the day-3 message and uses single point targets."
+}

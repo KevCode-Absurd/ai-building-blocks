@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A straight 'no' to the 20% cut, with correct lifetime maths ($1,677 vs $1,130, $1,174 net after commission) and a 40%-for-year-one Partner tier that answers the rival threat with a costed figure.",
+  "biggest_mistake": "The first-30-days plan has no dates or owners, and the 'four people can wipe it out' break-even argument is loosely argued; the plan also runs over the 1,100-word limit.",
+  "what_would_make_it_a_10": "Use dated, owned steps for the first 30 days, tighten the break-even logic, cut to the word limit, and add one fresh idea beyond tiers and perks."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A decisive 'no' to the cut with the lifetime maths, honest about the plan costing more than today, and a dated, owner-assigned 30-day plan that one partner manager can run, led by calling the top 20 by name.",
+  "biggest_mistake": "The window-cost projection and the '$38,000 cut-only-new-referrals' figure rest on thinly explained assumptions, and the plan runs over the word limit.",
+  "what_would_make_it_a_10": "Show the working for the $38,000 and the 65–75% day-90 assumption, trim to the word limit, and say how the top 20 are protected from a rival's 40% offer."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both reject the 20% cut with correct lifetime maths, but Output 2 is more honest about cost and gives a dated 30-day plan with owners. It also has stronger disclosure rules, a payout fix that suits the people-first brand, and a fresh 'Who sent you?' idea. Output 1's 40% Partner tier is a good answer to the rival, but its plan is less concrete."
+}

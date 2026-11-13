@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly picks Controllers and Heads of Finance at 50–300 person SaaS companies with recent pricing-page changes, and ties the hook to rev rec spreadsheet rebuild pain.",
+  "biggest_mistake": "The invented send window and the suggested “bolder move” to email watch-list Controllers without the pricing trigger work against the strongest data signal.",
+  "what_would_make_it_a_10": "Remove the untriggered test, send within days of the weekly pricing-change flag, tighten the list math, and trim the extra playbook material."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is tightly aimed at the winning segment and moment, uses the pricing-change trigger well, and gives a realistic reply-rate expectation from the pilot.",
+  "biggest_mistake": "A few CTAs ask to send a summary or steps rather than moving directly toward a meeting, so the follow-up asset would need to exist and stay tightly controlled.",
+  "what_would_make_it_a_10": "Make the CTA path more meeting-oriented after the first reply and move the 9-to-4 proof to step 2 or later while keeping step 1 purely trigger-led."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would hand to the team: it follows the pilot signals more cleanly, uses weekly pricing-page flags correctly, and gives a clearer loading and expectation plan. Output 1 is strong, but adds unsupported timing rules and an off-strategy generic test."
+}

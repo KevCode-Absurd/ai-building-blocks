@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The funnel table is correct and sized by browser, and it spots that about 4,130 in-app pop-up errors almost match the 4,800 in-app carts that never reach checkout, so the bug fix is money I can bank (₹34 lakh a month).",
+  "biggest_mistake": "Every test, including the 30-plus size picker, is read on orders per session, so the plan stretches to 11 weeks, and the firmness rating and EMI amounts are left as blanks.",
+  "what_would_make_it_a_10": "Use add to cart where it reads faster on mobile, shorten the schedule, and fill in real firmness and EMI wording so it can go live at once."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The rigour is honest. It says no test starts until the in-app fix is live, explains why add to cart would mislead on the delivery and EMI tests, warns that no-cost EMI eats margin, and sets no-peeking, split-check and ship rules with real dates.",
+  "biggest_mistake": "Firmness, the second biggest chat topic, gets no test of its own and is only folded into a review filter, and the sample delivery date of '1 Dec' clashes with the couple's move-in on the 10th.",
+  "what_would_make_it_a_10": "Add a plain-words firmness test and lighten the dense sections so a non-expert can scan them faster."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both found the broken in-app checkout and sized it correctly. The second plan is stricter: tests wait for the fix, each test uses the metric that fits it, it protects margin, and it finishes sooner with clear rules for when to ship. That makes it the plan I'd rather pay for, even though the first reads more easily and covers firmness."
+}

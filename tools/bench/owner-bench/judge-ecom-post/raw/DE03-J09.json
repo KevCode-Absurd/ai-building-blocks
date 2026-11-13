@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Separates proved from to-check cleanly and ranks the real money leaks (Meta/linen, switched-off flows) with owners and first-week steps.",
+  "biggest_mistake": "The payback math ($94 LTV) bakes in assumptions that aren't stress-tested, and the comforter 'too warm' fix is thin; expected order is slightly loose.",
+  "what_would_make_it_a_10": "Tighten the repeat-value assumption with an actual repeat order value and margin, and quantify each move's gross profit in dollars rather than vague 'medium/high' bands."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts every move in one unit (points of contribution margin) with sizing, lines and stop thresholds, plus a genuinely fresh swatch-kit concept and a sharp brand catch on the 'hotel' line.",
+  "biggest_mistake": "The contribution baseline (7.8% vs 13.6%) is built on an unstated, fragile solver (w × −11% + (1−w) × 6% = −4%) and stacked assumptions; a couple of projections (5.6-point swatch upside) look optimistic.",
+  "what_would_make_it_a_10": "Show the baseline working plainly and flag it as an estimate, and trim the optimistic range on the swatch test so the numbers hold up under scrutiny."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nail the diagnosis, but Output 2 gives me one ranked unit, dollar-sized savings and stop rules I can run Monday, plus a brand catch that protects us. Its contribution baseline is the shakier part, so I'd use it with a finance check."
+}

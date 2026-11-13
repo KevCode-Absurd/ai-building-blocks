@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the big RTO and chat-load signals, adds shipping/OFD updates, after-hours automation, and gives usable Snitch-style templates and flows.",
+  "biggest_mistake": "The prepaid switch is submitted as Utility with a payment CTA and no real incentive, and the payment URL variable is wrong, which could cause review or implementation issues.",
+  "what_would_make_it_a_10": "Make the prepaid nudge a Marketing template with a tiered incentive or advance test, fix the variable mapping, and tighten the tier-3 hold/call rules around the ₹5.5 lakh RTO problem."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It targets the real profit leak—Tier 3 COD refusals—with differentiated flows, incentives sized below expected RTO loss, holdouts, and order-status automation.",
+  "biggest_mistake": "A couple of Utility templates have borderline CTAs such as 'Order again', and the assumed prepaid discounts would need margin approval before launch.",
+  "what_would_make_it_a_10": "Remove any borderline marketing CTA from Utility templates and add exact margin guardrails for the ₹20/₹40 prepaid incentive and ₹99 advance test."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would rather run: it uses the pincode RTO economics to change the flow by risk tier, puts prepaid incentives in Marketing, and measures net savings with holdouts. Output 1 is strong, but its prepaid template/category choice and variable error make it less launch-ready."
+}

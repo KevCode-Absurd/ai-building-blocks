@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Primary text is short and calm in our voice, hooks come straight from review and persona lines, and the first three (belt-skip, lift-it-yourself, 5 am quiet wheels) are tied to the right numbers.",
+  "biggest_mistake": "The test budget of three times blended cost, about ₹4,500 per concept, is roughly three purchases, too thin to scale or cut on. The gift copy also states 'rolls quiet' as a brand claim rather than a buyer quote.",
+  "what_would_make_it_a_10": "Give each concept a realistic read budget and a headline, keep 'quiet' as quoted buyer words only, and add the shot-level detail an editor needs."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Production-ready. It has scene timings, safe zones, headlines with character counts, quiet and light kept as buyers' own words, the front-pocket and scuff objections handled, and a costed read plan (15 purchases per concept, ₹63,000 total) that checks out.",
+  "biggest_mistake": "The primary texts run as dense paragraphs rather than the short grade-7 lines our voice asks for, and the gift concept is a flat static that drifts back toward today's look.",
+  "what_would_make_it_a_10": "Break the primary text into short lines and give the gift concept a real moment instead of a doorway static."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both found quiet wheels, solo women and the belt-skip, but the second one I could hand to my editor tomorrow, and its test budget is one I'd actually trust to make a call."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built every rule off the owner's own money math and data: problem-first hooks, on-feet creators, Spark Ads from day one, and a $38 day-30 bar tied to 90-day break-even.",
+  "biggest_mistake": "The budget table's stated reserve ($1,000) sits outside the phase rows, so a reader has to trust the total; and 33 ads in 30 days may be more creative than the team can actually produce.",
+  "what_would_make_it_a_10": "Show the budget table adding cleanly to $30,000 including the reserve and confirm the creative team's real weekly capacity for 15+6 ads."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The three independent reads (store tags, survey, blended lift) plus a matched-state holdout is the sharpest day-30 measurement design of the two, and it correctly holds spend until the pixel is proven.",
+  "biggest_mistake": "The zero-spend days 1 to 3 and lighter creative volume are sensible, but the dense tables and the holdout add complexity that could slow a team on Monday, and the 25+ targeting drops Maria/Tasha-adjacent younger buyers without saying why.",
+  "what_would_make_it_a_10": "Simplify the measurement section to one page and justify the 25+ age cut so the team isn't guessing."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and use our data properly, but Output 1 reads like the page I'd actually hand the team on Monday: hooks in Maria's words, a phased budget that adds to $30,000, and kill/scale rules in dollars. Output 2's holdout and three reads are smarter measurement, but the extra complexity costs it the edge."
+}

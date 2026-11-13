@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the in-app checkout bug first with the money (₹17–34 lakh gross profit a month), then gives five ranked tests whose detectable effects (9.9%, 6.3%, 5.5%) match the real traffic, each with a profit value and calendar dates.",
+  "biggest_mistake": "Using add to cart as the main metric for the size and reviews tests and valuing them on an assumed 'half reaches orders' is a soft link to profit. There is also no per-browser diagnostic table to show where mobile leaks beyond the bug.",
+  "what_would_make_it_a_10": "Add a short device-by-browser funnel table and replace the ₹X EMI placeholder with a worked example, so the owner can see every leak and paste the copy straight away."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A sharp diagnostic table by device and browser, and the check that the 4,130 in-app errors nearly match the 4,800 lost in-app carts, make the bug case airtight. Adding an A/A test and event tracking before testing is mature practice.",
+  "biggest_mistake": "Test 5 bundles the hero image and the reviews move into one variant, so a win cannot be attributed to either change. Hypotheses also lack the minimum lift they are sized for, and tests carry no money value.",
+  "what_would_make_it_a_10": "Split test 5 into separate hero and reviews tests, and state each hypothesis with its detectable lift and gross-profit value."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both find the in-app bug and size it correctly, but Output 1 gives me tighter per-test maths, profit values, clear lanes and no-peeking rules. Output 2's diagnosis is lovely, but it muddles its last test by combining two changes."
+}

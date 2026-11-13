@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It brilliantly reverse-engineers the store's complete P&L from the provided data to calculate the exact contribution margin drop, proving total mastery of the numbers.",
+  "biggest_mistake": "None—this is a flawless, highly commercial response that exactly matches an owner's mindset.",
+  "what_would_make_it_a_10": "It is already a perfect 10."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Provides excellent, concrete merchandising fixes for every specific product return reason named in the data.",
+  "biggest_mistake": "It misses the trap with Sarah's 'nice hotel' quote, which would violate the brand's rule against making 'hotel-quality' claims.",
+  "what_would_make_it_a_10": "Adding a deeper quantitative sizing of the contribution margin gap and spotting the 'hotel-quality' compliance trap in the customer's quote."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "While both candidates did the core math perfectly, Output 1 operates on another level. It builds a complete financial model of the business to size the exact contribution margin, and astutely catches that using the customer's 'nice hotel' quote would violate the brand's banned claims."
+}

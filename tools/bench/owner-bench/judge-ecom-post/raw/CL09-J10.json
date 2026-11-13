@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the plan around the real money leak: a ₹199 lip balm cart add-on lifts small carts over ₹499, it sizes the COD refusal cost under ₹499 (₹1.04 lakh a month), and it proposes a ₹49 COD fee test, while the bundles mirror the pairs people already buy.",
+  "biggest_mistake": "The threshold table does not show how COD refusals change in each scenario, and the dense lakh figures and break-even per-order values (₹262 and others) come without enough working for a non-expert to follow.",
+  "what_would_make_it_a_10": "Show the ₹599 and ₹699 maths line by line with refusal cost included, and consider free shipping at a lower bar for prepaid orders only."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It explains in plain words, with a clear outcome table, why ₹599 beats ₹699 (the serum-only reorder stays free), and the pricing ladder on the serum page is easy to follow.",
+  "biggest_mistake": "It assumes only 6% of orders fall between ₹499 and ₹598 when an even spread of the 27% band gives about 13%, which understates the risk of raising the threshold, and it leaves COD refusals out of the threshold decision.",
+  "what_would_make_it_a_10": "Recalculate the ₹599 slice from the order-value spread, bring COD refusal cost into the threshold choice, and use the lip balm as a cart add-on with a body or hair routine as the second bundle instead of a discounted serum and lip balm set."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 goes after my real leak, small COD orders getting refused, with a lip balm add-on and a COD fee test, and it keeps the threshold where refusals drop. Output 2 raises the threshold using a slice estimate that looks too small and skips COD."
+}

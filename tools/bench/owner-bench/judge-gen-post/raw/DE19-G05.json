@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails every owner signal: salary first, the Asia-Pacific hours gap stated as the fix, the weekend rotation up front, and a writing-first application that drops the resume and cover letter.",
+  "biggest_mistake": "It swaps the written exercise in as the whole application but leaves the 2,100-application reviewer cost as an estimate rather than a worked plan with calibration and shortlist numbers spelled out.",
+  "what_would_make_it_a_10": "Add the reviewer-hour arithmetic and shortlist ladder as concrete steps (calibration sample, pass-one timings, re-read rule) so the hiring team can run it this week without building the plan themselves."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It turns every data signal into a working machine: the reply exercise as the application, a weighted scorecard with plain 1/3/5 anchors, a real reviewer-hour budget of 94 to 129 hours, interview questions tied to the scored rows, and a bolder returner idea.",
+  "biggest_mistake": "It runs slightly long and the local-hours table plus the bolder decline-email idea risk distracting from the core post, though both are useful.",
+  "what_would_make_it_a_10": "Trim the post by about a tenth and put the bolder returner move in one line so the whole thing reads in under five minutes."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both sound like 37signals and use the data well, but output 2 gives the hiring team a runnable plan with worked hours, interview questions and a decision rule, so the owner could start tomorrow rather than finishing the plan themselves."
+}

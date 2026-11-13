@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting for the right reason and proves it with seat math, then restructures the page around the actual recruiting buying triggers: email back-and-forth, round robin, routing, and security.",
+  "biggest_mistake": "The hero subhead says 'next free interviewer' rather than clearly stressing fair rotation, which is a stronger recruiting-specific promise in the data.",
+  "what_would_make_it_a_10": "Tighten a few lines around fair distribution and keep every CTA choice fully aligned to page intent without mixing self-serve and demo actions so often."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It uses the customer's language well and correctly elevates recruiting, round robin, routing, and security instead of generic homepage messaging.",
+  "biggest_mistake": "It is less ready to run because it includes placeholders and one deciding metric that mixes in a 7-day activation event, making the test slower and muddier than needed.",
+  "what_would_make_it_a_10": "Remove placeholders, make the CTA strategy consistent, and use a cleaner primary test metric tied directly to recruiting demo or signup starts from this page."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could put in front of the team tomorrow. It does the key math, orders the page around the highest-leverage recruiting signals, and gives me a cleaner test setup with fewer gaps to fill."
+}

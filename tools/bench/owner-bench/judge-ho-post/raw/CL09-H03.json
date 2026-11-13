@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tight, honest maths: it halves the 19-point fit-finder gap to allow for keen buyers self-selecting, and it flags that a Christmas run will distort results unless judged against a holdout.",
+  "biggest_mistake": "The delivered message only links to the fit finder and gives first-time bra buyers no real fit help, and it never totals what the whole plan saves.",
+  "what_would_make_it_a_10": "Add a short post-delivery fit-check message for first-time bra buyers and a single total-savings line ranking the three fixes by money."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Starts from where the money sits (£139,800 of returns, £31,360 of tickets) and adds practical bra fit guidance on delivery plus a day-5 'How's the fit?' nudge, which hits the fit problem before a return is booked.",
+  "biggest_mistake": "The day-3 'Nearly there' message can fire before any courier scan, so the [tracking status] field may be empty or confusing. Six messages also stretches the 'short and few' principle.",
+  "what_would_make_it_a_10": "Send the day-3 message only after a courier scan (warehouse check otherwise) and add a Christmas or seasonality caveat to the expected numbers."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both get the three big fixes and the maths right, but the second gives me a total saving, a pre-dispatch size check and real fit help after delivery, which is exactly where my bra returns come from."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches all three signals in my data. It relaunches 'Dad's razor vs mine' with new cuts, splits out women 25 to 34 instead of killing the ad set, and cuts the Starter Kit as a COD trap (₹271 break-even against a ₹463 cost). The 14-day split adds to exactly ₹5,60,000, and the ASC ladder sums correctly.",
+  "biggest_mistake": "It plans ₹2,80,000 for ASC and scales DPA 20% while ASC sits above its own safe line and DPA runs at 5.2 frequency. The ₹65,000 'cost of pausing the video' is stated as fact, but it is a projection.",
+  "what_would_make_it_a_10": "Add a store-count forecast for the plan's profit, and make the ASC and DPA scaling depend explicitly on the UTM-adjusted line rather than on Meta's count."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 7,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the most honest money picture: store-count profit for each ad set, a forecast of what the plan does to the loss, and a smart geo holdout that tests whether retargeting is real lift.",
+  "biggest_mistake": "It contradicts itself. Retargeting is called 'cut' in the table and 'cut by half' in the notes, budgeted at ₹2,000 a day and then run at ₹1,000 a day in the holdout. The UGC 'hold' is actually a raise to ₹4,000 a day. The 86% prospecting attribution is a guessed midpoint, and the calendar dates are invented.",
+  "what_would_make_it_a_10": "Make retargeting and UGC consistent between the table, the notes and the holdout, test 2 or 3 cuts of the creator hook, and justify the attribution split instead of picking a midpoint."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both find the paused creator video, the women 25 to 34 split and the Starter Kit COD trap. Output 2 has the sharper profit forecast and the retargeting holdout, but Output 1 is cleaner and internally consistent, so my team could run it Monday without arguing over which number is right."
+}

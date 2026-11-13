@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every number traces back to the brief and checks out — the funnel table, the 4,300 errors versus 4,800 in-app abandoned carts, the 1,860 extra checkouts, the 560 orders and ₹34 lakh margin, and the ₹1,209 no-cost EMI guide all reconcile exactly, with a clean 4-week sample-size calculation.",
+  "biggest_mistake": "It makes orders per session the main metric for the mobile-only size test at a 12% detectable effect, so the most promising page fix sits on a 4-week read that will probably land flat, when add-to-cart with orders as guardrail would have answered it in two weeks.",
+  "what_would_make_it_a_10": "Use add-to-cart or checkout reach as the primary metric on the mobile-only, low-traffic tests with orders as a guardrail, and show the money each test is worth so the priority order has a rupee reason."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the traffic honestly — add-to-cart as the primary metric where orders per session could never reach significance, orders as guardrail, an explicit warning that small real lifts will read flat — and names the right segment per test (desktop for EMI, in-app versus other mobile for the hero), with a half-to-all range on the checkout fix instead of a single ceiling.",
+  "biggest_mistake": "The per-test rupee projections are inconsistent: tests 2, 4 and 5 halve a relative effect that was computed on add-to-cart and then apply it to orders, giving an implausibly small ₹4.5 lakh for the size test, while test 1 does no halving at all.",
+  "what_would_make_it_a_10": "Apply one stated money method across all five tests so each detectable effect translates into a rupee figure the owner can compare, and give a single all-device read for the hero-image test rather than an underpowered sub-segment."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are accurate and usable, but Output 2 makes the technical call I care about most — add-to-cart as the read where orders are underpowered, with orders as guardrail — and its dated two-lane plan with a ship rule is what I'd actually run; Output 1's cleaner funnel diagnosis is undercut by a 4-week order-based read on the mobile size test that will likely come back flat."
+}

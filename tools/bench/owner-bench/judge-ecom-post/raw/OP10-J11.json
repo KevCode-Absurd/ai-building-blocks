@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly calls the in-app checkout issue a bug, not a test, sizes the likely upside at about 560 orders and ₹34 lakh gross margin a month, and ranks tests around the real customer blockers.",
+  "biggest_mistake": "The test schedule and parallel-split language is a little unclear, and a couple of variants still need real inputs filled in before the team can build them.",
+  "what_would_make_it_a_10": "Make the testing lanes/factorial setup clearer and add a stricter ship rule based on gross profit per visitor and store-order tracking match."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the broken in-app checkout first with the right maths, gives realistic detectable effects, and has clear test rules the team could follow.",
+  "biggest_mistake": "It slightly underplays COD and the dedicated firmness explanation, and the dated schedule is assumed rather than given in the brief.",
+  "what_would_make_it_a_10": "Add COD/prepaid display to the EMI test and make the firmness treatment more direct instead of relying mainly on review filters."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 2 is a little more operational: the summary table, no-peeking rules, gross-profit guardrails and tracking check make it easier to hand to the team tomorrow. Output 1 is very close and has a slightly richer customer-facing treatment, especially around firmness and COD."
+}

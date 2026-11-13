@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data and acts on it: each person gets one product matched to their quiz answer, the sunscreen doubts get their own email using the 'no white cast' review, and the exit rule, cart pause and code deadline are all worked out in detail.",
+  "biggest_mistake": "It is dense and probably runs past the 1,800-word cap, with a long data preamble and a test section the owner didn't ask for. The sunscreen email also leans on application tips that aren't confirmed against the product.",
+  "what_would_make_it_a_10": "Cut the extra material to fit the word limit, and add a quiz-matched dark-spot routine that pairs sunscreen with niacinamide inside Email 1 or 2, so the series leads harder with the 44% segment.",
+  "what_would_make_it_a_10_note": ""
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 6,
+  "reasoning": 5,
+  "correct": 6,
+  "clear": 8,
+  "voice": 6,
+  "range": 6,
+  "ready": 8,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Email 2 has three quiz-matched versions with their own subject lines and a 'start slowly' line, which answers 'I don't know which serum is for me' well.",
+  "biggest_mistake": "Email 5 tells everyone to use the acid face wash morning and night plus the serum and sunscreen. That is a full routine for beginners and contradicts the one-product, go-slow message in the other emails.",
+  "what_would_make_it_a_10": "Make the final routine two steps matched to the quiz answer, remove invented claims such as 'more questions than anything else we sell' and the 'brightening' example, and make Email 1 do more than a generic welcome.",
+  "what_would_make_it_a_10_note": ""
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives each person one product and a gentle start, and answers the sunscreen fears with the real review. Output 2 sets beginners up with a 4-product routine and makes some claims we can't back, which goes against what the brand stands for."
+}

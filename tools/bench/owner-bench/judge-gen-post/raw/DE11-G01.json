@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every recommendation traces to the owner's October numbers and the plan ranks by projected trials with a real Week 1 task list in Maya's words.",
+  "biggest_mistake": "Some projections stretch the data: ranking #1 rewrite /vs-google-analytics at 18-46 trials and the docs box estimate lean on CTR assumptions that are optimistic, and the plan spreads four writer slots over five moves in Month 1 when only four exist.",
+  "what_would_make_it_a_10": "Tighten the trial projections to defensible ranges and make the Month 1 writer workload exactly four pages with no partial fifth."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Strong data table (trials per click, trials per page) and a sensible stop list that reframes reporting around trials by landing page.",
+  "biggest_mistake": "The headline '175 extra trials and 67 extra paid a month' is a full-ceiling fantasy that treats top-3 rankings as near-certain and overstates the return, plus the Month 2 'moving from GA4' page depends on an unverified product capability.",
+  "what_would_make_it_a_10": "Replace the ceiling math with probability-weighted, month-by-month trial forecasts and only propose pages the product can actually support."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like a plan I could hand the writer on Monday, keeps every projection anchored to my conversion rates, and gets the stop list and Week 1 right; Output 2 has good tables but sells me a 175-trial ceiling I don't believe and adds a page we may not be able to ship."
+}

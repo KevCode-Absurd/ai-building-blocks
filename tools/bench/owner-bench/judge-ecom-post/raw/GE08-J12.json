@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Excellent operational clarity on WhatsApp template categorization and smart after-hours staffing recommendations to handle the 8 pm to midnight chat surge.",
+  "biggest_mistake": "Misses offering a financial incentive for the prepaid switch, leaving money on the table in high-risk Tier 3 pincodes where an offer pays for itself.",
+  "what_would_make_it_a_10": "Tie the prepaid nudge directly to tiered margin savings so Tier 3 customers get a compelling reason to prepay."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Grounding prepaid discount sizes directly in the expected RTO loss per tier (₹70 in Tier 3 vs ₹41 in Tier 2) is masterclass e-commerce math.",
+  "biggest_mistake": "The out-for-delivery templates combine a URL button and a quick reply button, which Meta's Cloud API limits in certain template configurations.",
+  "what_would_make_it_a_10": "Ensure button combinations strictly adhere to Meta's single-category button rules (quick reply vs call-to-action)."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 does what an owner dreams of: it sizes prepaid switch incentives strictly below the calculated RTO loss by pincode tier, includes a bold partial-payment test for Tier 3, and formats everything for instant team execution."
+}

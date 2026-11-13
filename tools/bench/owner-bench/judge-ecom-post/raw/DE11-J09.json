@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Kills the linen-on-Meta money leak with a hard $94 payback rule and fixes the switched-off flows in week one, both sized in margin points with owners.",
+  "biggest_mistake": "The contribution math and the $94 threshold rest on thin assumptions (repeat value, flow revenue) that are stated but could be firmer on repeat order margin; some sizing numbers are projections dressed as precise.",
+  "what_would_make_it_a_10": "Tighten the assumptions behind the $71/$94 payback and margin-point gains, and trim the swatch-kit tangent so the plan stays lean."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Plain, readable diagnosis with a clean proved-vs-check table and a clear 'stop advertising linen' call that a team could act on.",
+  "biggest_mistake": "Moves are not ranked with real gross-profit numbers — impacts are vague ('high', 'medium') and the scorecard leaves contribution target as 'set baseline in week 1', which is homework for the owner.",
+  "what_would_make_it_a_10": "Put a working number on each move's gross-profit impact, rank by that, and give a contribution target instead of asking the owner to set one."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives me the money reason and first steps I can run Monday — $104 vs $71, a $94 payback cap, and sized margin gains — while Output 2 reads well but leaves me to do the ranking and set my own contribution target."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the key signals well: face wash + serum, lip balm as the natural add-on, and COD/RTO leakage under ₹500 all drive the plan.",
+  "biggest_mistake": "The Glow Routine break-even logic is a little muddy, and the owner may have expected the face wash + serum routine to be the hero bundle rather than adding lip balm into it.",
+  "what_would_make_it_a_10": "Tighten the break-even workings for Glow Routine and add a prepaid/COD-specific shipping threshold test as the main threshold idea, not just as a later bold move."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It has clean bundle-level profit math and sensibly protects the ₹599 serum from a ₹699 free-shipping shock.",
+  "biggest_mistake": "It turns lip balm into a discounted main bundle and recommends ₹599 using an unsupported 6% affected-order assumption, while not really solving the under-₹500 COD/RTO leak.",
+  "what_would_make_it_a_10": "Use lip balm mainly as a cart add-on, make face wash + serum the clear hero routine, and base the threshold recommendation on the actual ₹500-₹699 band plus COD/RTO economics."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team: it catches the COD/RTO money leak, uses lip balm in the right role, shows more of the threshold math, and gives safer test rules. Output 2 is polished, but its ₹599 recommendation rests on a weak assumption and misses the bigger COD issue."
+}

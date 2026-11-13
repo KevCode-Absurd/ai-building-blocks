@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Catches every single signal in the brief—from the ₹34 lakh in-app checkout bug down to the 19% firmness chats—and addresses them with rigorous, disciplined test designs.",
+  "biggest_mistake": "The schedule assumes running two tests simultaneously on separate splits without detailing how it avoids traffic collision or interaction effects until the note at the end.",
+  "what_would_make_it_a_10": "Specify exact lane assignments and traffic allocation mechanics for the concurrent test pairs."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very crisp financial calculations, clear dual-lane calendar execution, and realistic consideration of MDE limitations on low-converting mobile traffic.",
+  "biggest_mistake": "Splits hero image and reviews into two separate weak tests (ranking hero image last despite weak evidence) while completely omitting a dedicated test for firmness, which was the second-biggest chat driver at 19%.",
+  "what_would_make_it_a_10": "Replace the separate hero-image test with a dedicated firmness/feel selector to address the 19% chat objection directly instead of relying on review filters."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both outputs correctly identify and price the ₹34 lakh in-app checkout bug, but Output 1 builds a much tighter test suite that directly addresses the top pre-sale chat topics (especially firmness, which Output 2 sidelines into a review filter)."
+}

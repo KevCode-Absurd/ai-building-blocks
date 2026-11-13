@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the core data signals into a practical 60-day plan with strong worked numbers, especially on fit finder uptake, refund-to-swap movement, and ticket savings.",
+  "biggest_mistake": "It does not add a specific day-3 proactive delivery update, which is one of the clearest fixes for the 62% of WISMO tickets arriving on days 3 to 5.",
+  "what_would_make_it_a_10": "Add the day-3 update, give expected ranges rather than mainly point targets, and tighten the final assumptions so the team can launch without needing owner confirmation."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches all three money levers: the courier-scan silence, low fit quiz visibility, and the refund-biased portal, then ranks them in the right order with realistic ranges.",
+  "biggest_mistake": "One message says the parcel is already with the courier when it has only left the warehouse, so that copy needs tightening to avoid creating trust issues.",
+  "what_would_make_it_a_10": "Polish a few customer-facing lines for exact operational truth and Lounge’s softer fit language, while keeping the strong day-3 update and swap-first flow."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the plan I would hand to the team because it includes the missing day-3 WISMO update, gives honest expected ranges, and makes the returns portal reason-specific without hiding refunds. Output 1 is strong, but it misses that day-3 proactive message and is a little more dependent on point estimates."
+}

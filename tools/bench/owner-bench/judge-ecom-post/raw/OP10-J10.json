@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives usable bundle pricing, cannibalisation break-evens, and a clear test plan tied to profit per visitor.",
+  "biggest_mistake": "The free-shipping recommendation rests on a thin assumption that only 6% of orders sit between ₹499 and ₹598, and it does not fully use the COD/RTO leak to shape the threshold decision.",
+  "what_would_make_it_a_10": "Use the actual ₹500-699 band more carefully, add a COD/prepaid threshold or COD-fee option, and make the proven face wash plus serum routine the obvious lead offer."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the real money leak in small COD orders, uses lip balm as the natural threshold add-on, and judges offers on delivered gross profit rather than AOV.",
+  "biggest_mistake": "The threshold section slightly mixes messages by recommending keeping ₹499 while planning a ₹699 test, and the top face wash plus serum pair is folded into a three-item bundle rather than made the unmistakable hero.",
+  "what_would_make_it_a_10": "Show the full working behind the ₹599/₹699 ranges and make the next threshold test explicitly compare ₹499, ₹599, and a small COD-under-₹499 fee or prepaid nudge."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would hand to the team because it is more faithful to the data: it protects the serum reorder, uses lip balm as the add-on, and brings COD/RTO into the money decision. Output 1 is strong, but its ₹599 recommendation depends too much on an unproven slice assumption and is weaker on the COD leak."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It cleanly identifies the real slowdown drivers: Meta cost inflation, linen returns, and the switched-off email capture/flows, then turns them into specific stop-do and week-one actions.",
+  "biggest_mistake": "The gross profit sizing is directionally right but not always expressed in one consistent unit, so a few impact claims would need tightening before board use.",
+  "what_would_make_it_a_10": "Add a simple contribution-margin bridge by move, in percentage points of revenue, while keeping the same clear operating plan."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It adds useful financial modelling, including contribution after ads, paid spend as a share of revenue, and a fresh swatch-kit test tied to Sarah's objection.",
+  "biggest_mistake": "It leans on several speculative assumptions and has some inconsistencies, especially the Meta $94 cap versus a $100 target and product-fix priority being lower than the linen problem deserves.",
+  "what_would_make_it_a_10": "Keep the strong contribution model but separate firm math from estimates more sharply and move the linen product fix higher in the ranked plan."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the one I would run with fewer edits: it is cleaner, more operational, and less dependent on invented benchmarks. Output 2 has sharper modelling and a good fresh idea, but it needs more cleanup before I would hand it to the team."
+}

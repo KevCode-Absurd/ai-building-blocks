@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It brings the pause back as the main save for 'no time' and gives a clear sprint build order, with turning the pause on first and a 10% holdout on today's flow.",
+  "biggest_mistake": "It keeps a 50% discount for 'switching apps' on an unsupported 3.5% guess, and the line 'worth £607 after discount' multiplies by the full £9, which is the discounted-as-full-price error the owner dislikes.",
+  "what_would_make_it_a_10": "Drop the unfounded switching discount, show an honest range on the guessed rows, and add first-month signals with a stop rule."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the result first, with working that traces to the data: 1,771 kept from the pause, 2,172 against 842 today, +£10,734. It separates the proven pause from the guessed rows and says how to measure them, including when to drop an offer.",
+  "biggest_mistake": "It runs past the 1,000-word limit and has no explicit build order for the sprint, only a confirm-before-launch checklist.",
+  "what_would_make_it_a_10": "Trim to 1,000 words, add a numbered build sequence and a day-30 scorecard with targets, and give the savings as a range."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both bring back the pause and drop the blanket discount. Output 2 is warmer and kinder in its copy, gives no discount to anyone, is more honest about how safe each number is, and says how we will know it works. Output 1 still hands out half price and slightly overstates the value of the switching group."
+}

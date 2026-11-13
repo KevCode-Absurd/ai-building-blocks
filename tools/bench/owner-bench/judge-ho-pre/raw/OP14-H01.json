@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 7,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the real constraint fast: re-carton first, rush only the top 5 matte shades, and stop funding slow stock.",
+  "biggest_mistake": "Its matte rush and standard quantities look heavier than needed, and the timing table says the top 5 are back on 9 December even though the rush PO is shown landing 7 December.",
+  "what_would_make_it_a_10": "Tighten the top-5 unit math by shade through the sale and January, and make the restock dates fully consistent across the plan."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It turns the owner's signals into an action-ready Monday plan with cash-safe orders, dates, owners and a sensible use for held-back cash.",
+  "biggest_mistake": "It assumes a short stockout before the rush lands instead of using the re-cartoned top-5 units to stretch closer to the 7 December arrival.",
+  "what_would_make_it_a_10": "Make the top-5 date-by-date inventory bridge fully explicit from re-cartoned stock through the rush arrival so there is no ambiguity about the gap."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is the one I could hand to ops on Monday with less editing: the PO table is cleaner, the cash math is tighter, and it protects some budget for exceptions. Output 1 is strong too, but it has a couple of internal date and quantity inconsistencies that I'd want fixed first."
+}

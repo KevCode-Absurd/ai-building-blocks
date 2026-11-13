@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the main signals in the data: Simplify debts in the first lines, delete searches in the title and search terms, App Store/Google refund routing, and screen-level in-app links.",
+  "biggest_mistake": "The ticket reduction assumptions are plausible but optimistic, and the restore article makes broad claims like “nothing is lost for good” that should be checked before publishing.",
+  "what_would_make_it_a_10": "Tighten the few unproven product claims and make the forecast a slightly more cautious range while keeping the same ranked plan."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clear, calm, usable, and gives a more honest ticket-saving range with the arithmetic shown.",
+  "biggest_mistake": "It treats the biggest broken article as mostly a new separate article with only two link lines added to “How balances work,” even though that existing high-view article is where the leak is.",
+  "what_would_make_it_a_10": "Rewrite the existing balances article around Simplify debts, add the currency in-app link plan, and size Pro savings around the 2,000 Apple/Google refund contacts rather than all billing contacts."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would hand to the team tomorrow because it fixes the exact articles and links causing the largest avoidable contacts, and its drafts are ready to publish. Output 2 is strong, but it under-fixes the high-view balances article and misses a couple of owner signals."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the real story: the database growth headline is hiding weak AI-builder conversion, idle free-tier cost, a 7-point margin drop, the Customer A churn, and the missed ARR forecast.",
+  "biggest_mistake": "It is a little more detailed than a phone-first investor update needs to be, and the asks are not previewed near the top despite the audience asking for them quickly.",
+  "what_would_make_it_a_10": "Move the three asks into the first screen, tighten the body slightly, and add a ship date for the 48-hour pause."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the three numbers, names the bad news immediately, explains the margin and burn problem clearly, and gives three specific dated asks with forwardable language.",
+  "biggest_mistake": "It assumes a 27 November ship date and that the VP Enterprise Sales role has already moved to New York; those should be confirmed before sending.",
+  "what_would_make_it_a_10": "Keep the structure, but verify the assumed dates and add the burn bridge table or one-line breakdown so the $2.2M increase is even easier to scan."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 2 is more phone-readable for investors and gets the asks into the first screen while still handling the missed forecast, Customer A, margin drop, burn, and New York VP Sales issue plainly."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The delivered message includes practical bra-fitting guidance (loosest hook, level band, cup check) that stops returns at the mirror, and the projections provide an honest range while discounting for quiz selection bias.",
+  "biggest_mistake": "The financial table could explicitly rank the three initiatives by net savings in a single unified column, though the working is clear.",
+  "what_would_make_it_a_10": "It is already a 10; adding an explicit guardrail metric like refund turnaround time would be the final polish."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Superb modeling of the fit finder selection bias (explicitly closing half the 19-point gap) and direct call-outs to customer personas Jess and Amira.",
+  "biggest_mistake": "Gave single-point financial estimates instead of an expected range, and left the existing delivery confirmation untouched rather than using delivery day to guide fit.",
+  "what_would_make_it_a_10": "Include an expected range for savings rather than point estimates and add immediate fit-at-unboxing guidance in the delivery email."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 provides an honest expected range rather than point estimates, and its copy for the delivered message teaches customers how to check bra fit on unboxing (loosest hook, level band), which directly prevents fit returns."
+}

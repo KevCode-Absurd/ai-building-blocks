@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 5,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly makes re-cartoning and hero-shade rush ordering the first moves and keeps the plan inside cash.",
+  "biggest_mistake": "Its top-5 stock math is wrong in a way that changes the risk call: after re-cartoning the top 5 have about 3.4 weeks of cover, not 2.4, so the claimed 1 Dec stockout and 6-day gap are off.",
+  "what_would_make_it_a_10": "Fix the top-5 timing and quantities from the corrected stock position, then keep the same cash-disciplined prioritisation and honest clearance plan."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is built around the real constraint in the data: hero matte shades sell out before the sale, so cash goes to rush plus standard orders there while overstock lines get no reorder.",
+  "biggest_mistake": "It still overstates the unavoidable gap by saying the top 5 are out from about 1 to 8 December when re-cartoning lifts cover to roughly 8 December and materially changes the exposure.",
+  "what_would_make_it_a_10": "Tighten the stockout-date math after re-cartoning and make the glitter clearance economics a bit more explicit so every pricing move is tied to cash recovery and margin."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I'd rather hand to my ops lead on Monday: it catches the winning segment, stays within cash, rejects the bad draft logic, and gives a cleaner execution plan. Output 1 has the right instinct but a bigger math miss on the key stock timing."
+}

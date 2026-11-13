@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The dual CPA targets (safe vs break-even) provide a brilliant, practical way for the team to manage the UTM attribution gap daily without complex guesswork.",
+  "biggest_mistake": "The budget table for ASC notes 'rising to 25,000' which makes the strict daily pacing a bit ambiguous to hit exactly ₹2,80,000, though the ladder rules clarify the intent.",
+  "what_would_make_it_a_10": "It is already a 10, but explicitly mapping out the exact daily spend trajectory to hit the ₹2,80,000 ASC budget would make it flawless."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 10,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The proposal for a geo-holdout incrementality test on retargeting is an excellent, sophisticated way to prove whether the ad spend is actually driving net-new sales.",
+  "biggest_mistake": "Assuming an 86% real purchase match rate for prospecting as a 'midpoint' is a risky logical leap that could cause the team to overspend if the real match rate is closer to the global 72%.",
+  "what_would_make_it_a_10": "Using a bounded range for CPA targets rather than inventing an 86% midpoint multiplier for attribution would make the daily rules much safer to execute."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both outputs correctly identified the hidden signals and performed excellent margin calculations. Output 1 wins because its 'safe vs break-even' lines offer a safer, more realistic way to handle the tracking gap compared to Output 2's assumption of an 86% midpoint."
+}

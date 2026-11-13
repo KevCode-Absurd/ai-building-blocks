@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks the in-app pop-up bug first with correct money (about 558 orders, ₹17 to ₹34 lakh a month), and its sample-size maths checks out for every test: 9.9% on 0.70%, 6.3% on 4.0% mobile add to cart, 5.5% on 4.4% add to cart. Each test also carries a gross-profit value.",
+  "biggest_mistake": "It invents calendar dates (16 November to 17 January) the brief never gave, and it never gives firmness, the 19% chat topic, its own test. Firmness is only folded into the reviews tabs.",
+  "what_would_make_it_a_10": "Add a plain-words firmness module (with the 100-night line) as a test or a ship, and drop the made-up calendar in favour of week numbers."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The browser-split funnel table is accurate and diagnostic: 3.7% vs 4.2% add to cart, 24% vs 53% cart to checkout. It ties the 4,300 errors to the 4,800 lost in-app carts and adds tracking events, an A/A test and a firmness test.",
+  "biggest_mistake": "Test 5 bundles the hero image and the reviews move, so a win or loss can't be attributed to either change. Placeholders for the firmness rating and EMI amount leave homework.",
+  "what_would_make_it_a_10": "Split test 5 into its two changes, and put the gross-profit value of each test's smallest detectable effect beside it."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both nail the checkout bug and the honest sample-size maths. Output 1 gives me money per test, clean single-change tests and firm stop and ship rules, so I can run it with less rework, though Output 2's firmness test and tracking prep are good ideas I'd borrow."
+}

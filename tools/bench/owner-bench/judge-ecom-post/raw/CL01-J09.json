@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the diagnosis into a contribution baseline (13.6% a year ago, 7.8% now) and sizes every move in points of margin, with low/likely/high ranges, week-4 and week-8 kill lines and action thresholds. That is exactly the gross-profit ranking I asked for.",
+  "biggest_mistake": "It is dense and number-heavy for a grade-8 read. It leans on an unsourced 'flows should be about half of email revenue' yardstick. The scorecard drops a line for flow revenue, even though rebuilding the flows is move 2.",
+  "what_would_make_it_a_10": "Add flow share of email revenue and the returns-cost line to the scorecard, and turn a few of the denser sizing paragraphs into plain sentences."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads clearly and quickly. The checks table gives each item an owner and a deadline, there is a sensible week-by-week 90-day arc, and the scorecard includes flow share and the returns cost line. It also extends the returns fix to the other product lines.",
+  "biggest_mistake": "The moves are ranked with vague 'high/medium' impact rather than sized gross profit, and contribution margin, the board's key number, is left as 'set baseline in week 1' when it could have been computed from the brief.",
+  "what_would_make_it_a_10": "Calculate the current contribution baseline and put a profit estimate on each move so the ranking rests on numbers rather than adjectives."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both found the real causes: Meta, linen returns and the switched-off email. Output 1 actually puts a contribution number on the problem and on each fix, with kill lines I can manage against. Output 2 is easier to read, but its ranking is more gut feel."
+}

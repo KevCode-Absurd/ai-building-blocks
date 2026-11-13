@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Complete, paste-ready templates with correct categories for most, plus clear event-based timing, an after-hours menu and a shift change for the 31% evening wave.",
+  "biggest_mistake": "The prepaid nudge is the same for every pincode group, and the pay-online template is filed as Utility although it pushes a payment choice. Tier 3, which causes about half the RTO cost, gets only a firmer hold step.",
+  "what_would_make_it_a_10": "Size the prepaid nudge and the confirm window by pincode group, with a stronger Tier 3 offer, and file the payment push as Marketing."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The flow is tiered by pincode risk. It works out expected RTO loss per COD order (₹70 / ₹41 / ₹27), sizes each prepaid discount below that loss, limits calls to Tier 3, and measures the result against holdouts and a net-saving metric.",
+  "biggest_mistake": "The ₹20 and ₹40 discounts and the ₹99 advance projections are assumed, not drawn from the data, and the table format is a bit dense. The tool does not describe moving agent hours to cover the evening chats.",
+  "what_would_make_it_a_10": "Add a staffing change for the after-hours load and show the working behind the discount sizes and the ₹99 advance projection."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 builds the flow around the Tier 3 RTO problem, with the money worked out per tier, the right Marketing category for the discounted nudge, holdouts to prove lift, and a bold ₹99 advance option. Output 1 is solid but treats pincode groups mostly alike."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the in-app checkout bug, sized correctly (1,860 more checkouts, about 558 orders, ₹34 lakh a month) and fixed before any test. Sample sizes are honest and right: 9.9% on orders per session, 6.3% on mobile add to cart, each with a rupee value.",
+  "biggest_mistake": "Test 5 (hero image) rests on thin evidence and takes a slot that a firmness test could have used. The text is also dense, with jargon like \"server-side split\" and \"named segment\", and it runs over 1,500 words.",
+  "what_would_make_it_a_10": "Plainer language, a firmness-in-plain-words test in place of the hero image, and a trimmed word count."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The funnel table by device and browser makes the in-app bug obvious. It matches the 4,300 pop-up errors to the 4,800 in-app carts that never reach checkout. It also adds a firmness test that speaks to \"too soft for us\", and an A/A check.",
+  "biggest_mistake": "Most tests use orders per session over four weeks with about 10 to 12% detectable lifts, and the schedule stretches to 11 weeks. Test 5 bundles hero image and reviews, so a result cannot be traced to either. There are no per-test money values.",
+  "what_would_make_it_a_10": "Cheaper add-to-cart reads where they fit, so the plan finishes sooner. Each test needs a rupee value, and the hero image and reviews should be tested separately. The firmness and EMI blanks should be filled with example copy."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both put the in-app bug first with the right money. Output 1 matches its metrics to the traffic, shows what each test is worth in gross profit, and finishes faster with two lanes. Output 2 reads a little easier and has the firmness test, but its sizing is heavier and slower."
+}

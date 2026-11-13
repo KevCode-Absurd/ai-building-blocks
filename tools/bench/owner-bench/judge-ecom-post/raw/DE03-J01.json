@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts a rupee verdict on every ad set (Store profit column) and leads with the cheapest fix — reviving the paused 'Dad's razor' video — with the exact week-by-week cost-per-purchase evidence.",
+  "biggest_mistake": "The launch-date framing ('14 to 27 November', 'Saturday 14 November') is invented and will look wrong if the owner runs this any other week; and the 86% attribution haircut for prospecting is asserted with no source, which quietly inflates the prospecting break-evens.",
+  "what_would_make_it_a_10": "Drop invented dates, show one worked example of the attribution haircut, and make the bolder retargeting holdout the headline move rather than an appendix."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Twin safe/break-even lines per ad set make the attribution risk usable at a glance, and the copy cues ('No razor burn after a week', 'Finally not a flimsy pink razor') are on-voice and ready to shoot.",
+  "biggest_mistake": "It scales Catalog DPA 20% and holds Retargeting on Meta's own 37%/-17% COD numbers without applying the heavier attribution haircut it itself says retargeting needs — a ₹38,000-and-₹40,000 decision resting on numbers the brief warns are inflated.",
+  "what_would_make_it_a_10": "Apply the retargeting/DPA attribution haircut consistently before scaling them, and show the arithmetic behind each break-even line rather than just the total."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 wins because every decision is anchored to an explicit store-profit number per ad set and it refuses to raise anything until ASC proves itself, whereas Output 2 scales a retargeting/catalog pair on exactly the inflated Meta numbers it warns against. Output 1's invented launch dates are the one thing I'd make it fix before Monday."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the core owner signals: fix the price-mismatch disapprovals first, strip brand from PMax, and reallocate around the 2.5 break-even with exact working.",
+  "biggest_mistake": "It leaves $118,000 in a reserve instead of giving a fully committed channel split for the whole $240,000, which makes the plan less runnable for a fixed monthly budget.",
+  "what_would_make_it_a_10": "Give a complete spend plan to exactly $240,000 by channel/campaign with clearer assumptions for where the reserve will likely land and a slightly tighter Google-rules-safe approach to PMax query control."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly exposes that brand traffic is masking weak non-brand performance and gives a practical first-week sequence with a strong feed diagnosis section.",
+  "biggest_mistake": "Its forecast math is not credible—especially brand search jumping to about 25 ROAS and the resulting value/profit estimates—which is a serious fault because the owner asked what results to expect.",
+  "what_would_make_it_a_10": "Rebuild the budget and forecast model from the given data with realistic, traceable assumptions and show expected profit by line against the 2.5 break-even."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could trust more with my money: it gets the feed issue first, the brand-in-PMax problem, and the profit math mostly right. Output 2 is useful, but the aggressive forecast assumptions would make me question the whole plan."
+}

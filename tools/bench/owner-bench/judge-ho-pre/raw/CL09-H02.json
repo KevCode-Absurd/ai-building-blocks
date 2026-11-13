@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It breaks the 4.0 ROAS down line by line against the 2.5 break-even, shows contribution after ads for each line, and ties the new $240,000 split to Friday reserve rules, dated first-week owners and a Black Friday freeze and discount warning.",
+  "biggest_mistake": "It cuts broad 'women's flats' and 'sustainable shoes' only with exact-match negatives, which leaves most of that losing broad traffic running. It also holds $118,000 in reserve, which may underspend the month.",
+  "what_would_make_it_a_10": "Use a stronger way to cut the broad and sustainable themes (theme-level or phrase exclusions, or a separate non-brand Search campaign), and put the customers' own words into ad assets as well as titles."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The price-mismatch diagnosis is practical and prevents a repeat: it checks the feed against the page and structured data, uses sale_price with dates, and turns on automatic item updates. It adds a non-brand Search campaign and writes ad copy in Claire's own words.",
+  "biggest_mistake": "It keeps $128,000 in Performance Max without explicitly cutting the losing broad and 'sustainable' pockets, and assumes that line jumps from 2.03 to 2.6 ROAS. The profit forecast leans on that optimism.",
+  "what_would_make_it_a_10": "Cut or cap the 1.2 and 1.6 ROAS themes directly, size Performance Max to what is proven above break-even, and give the first week owners and dates."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both show me the brand terms are hiding a loss and both put the feed fix first. Output 1 is stricter about not paying for spend below break-even and gives me dated owners and Black Friday guardrails. Output 2 has the better feed diagnosis but keeps too much money in a Performance Max that only just breaks even."
+}

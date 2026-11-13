@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the 46 to 90 day group first with no code, gives Monsoon Dark its own track and gates ex-subscribers on a delivery fix. Group counts are netted so nothing overlaps, and the profit table is worked from ₹557 and ₹442 per order.",
+  "biggest_mistake": "The Monsoon Dark email only sends people to a quiz and never names the closest match. It also hard-codes dates and a 'stopped in March' claim, and the whole piece is dense and probably over the 1,500-word limit.",
+  "what_would_make_it_a_10": "Name the closest match in the Monsoon Dark email, trim the length with plainer words, and state the break-even lift for each group."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It says plainly that people left because something broke, not over price. It names the match in the Monsoon Dark draft, gates ex-subscribers on on-time delivery, and ties each cancel reason to a fix.",
+  "biggest_mistake": "It starts with the 91 to 180 day group and treats the 9,000 at-risk customers at 46 to 90 days as a later day-28 nudge. That misses the cheapest win-back and leaves the first wave less sharp.",
+  "what_would_make_it_a_10": "Make the 46 to 90 day group wave one with a light reminder, then fill the draft placeholders with real examples. Also work out the break-even lift for each group."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 starts with the cheapest group, the 9,000 at 46 to 90 days, and covers every segment with its own offer, timing and exit rule. Its gross-profit working is the more cautious and checkable of the two. Output 2 is easier to read and its Monsoon Dark draft is better, but its order of targets is weaker."
+}

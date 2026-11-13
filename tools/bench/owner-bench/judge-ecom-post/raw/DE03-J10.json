@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Builds a clear price ladder from the real top pair and picks ₹599 with worked profit-per-order maths and break-evens per bundle.",
+  "biggest_mistake": "The ₹599 band assumption (about 6% of orders, 1,000/month) is invented and the walk-away loss of ₹271 per order is not traceable to the data, so the +₹28,000 net is shaky.",
+  "what_would_make_it_a_10": "Show the ₹499–₹598 slice from the order export instead of assuming it and tie the walk-away loss to the stated ₹620 AOV gross profit."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the refusal cliff correctly, keeps ₹499, and puts the real money in the 6,880 sub-₹499 carts with a lip-balm lift and a COD fee test, all with break-evens and ranges.",
+  "biggest_mistake": "The ₹699 projection range (−₹0.72 to +₹2.35 lakh) is very wide and the band shares (2,320 and 4,650 orders) are asserted rather than shown from the order spread.",
+  "what_would_make_it_a_10": "Show the band arithmetic for ₹599 and ₹699 orders from the stated spread and tighten the ranges so the owner can trust the decision."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 keeps the ₹499 line that protects the serum reorder, finds the real leak in sub-₹499 COD carts, and sizes a lip-balm lift and COD fee test with break-evens, while Output 1's ₹599 case rests on an invented band share. Both are usable; Output 2 is the one I would pay for."
+}

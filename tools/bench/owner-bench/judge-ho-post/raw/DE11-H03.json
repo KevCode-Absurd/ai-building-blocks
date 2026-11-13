@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Connects each of the three cost drivers to a concrete message or portal change with money working, and every piece of copy is written in the brand's voice with a single button.",
+  "biggest_mistake": "It quotes a single 14% return rate for fit-finder users as if it were the quiz's causal effect in the low-case model, which likely overstates the saving; the £183,800 swaps figure is also too optimistic even with its caveat.",
+  "what_would_make_it_a_10": "Show the fit-finder saving with an explicit causal hedge (e.g. a low case based on 33%–14% only partially attributed) and rank the three fixes by net saving per pound of build effort at the top, not just in the table."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Its weekly and monthly view of the plan, the honest 'bad news' about Christmas, the holdout and guardrail, and the bolder 'ship the swap first' idea make it feel like a real operating plan.",
+  "biggest_mistake": "Key numbers are muddled: it calls the swap sales figure £61,000–£97,000 a month when the brief's 90-day window is the unit, and the ticket and bra-return savings look understated versus its own formulas, which weakens trust in the money story.",
+  "what_would_make_it_a_10": "Clean up every number so the monthly and 90-day figures reconcile with the brief's arithmetic, and make the fit-finder gain an explicit low/high range like Output 1."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and readable, but Output 1's cost-and-saving working is cleaner and easier to check against my own data, and its messages and portal changes are ready to hand to the team."
+}

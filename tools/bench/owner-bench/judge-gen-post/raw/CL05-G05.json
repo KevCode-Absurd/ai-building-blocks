@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 6,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Writing carries the heaviest weight (50%) on the scorecard, in line with the 0.62 correlation. The application is a ready-to-paste customer email prompt that replaces the resume and cover letter. The post puts $82,000, the overnight hours and the weekend rotation up front.",
+  "biggest_mistake": "It adds a 100-word 'why this job?' question, which is cover-letter-like and adds reading load without any proven signal behind it. The interview signal (15%) is also thinly specified, with no set questions.",
+  "what_would_make_it_a_10": "Drop the 'why this job' question, add fixed interview questions, and tighten the whole piece to the 1,100-word cap."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post names the hard parts at the top. It includes a local-time table for APAC cities, and the hour estimates are correct. The 'ask 4+ scorers to be contacted next time' idea is original, and it gives structured interview questions.",
+  "biggest_mistake": "45% of the weight sits on interview rows, even though interview impression predicted performance at only 0.11. The application ticket is also left as a description ('a real ticket from the last 90 days') rather than written out, so the team still has homework.",
+  "what_would_make_it_a_10": "Write out the actual reply prompt, move more weight onto the written exercise, and cut to the 1,100-word limit."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to something I could publish tomorrow. It gives me the actual customer email to answer, and it puts half the score on writing, which is what our data says predicts success. Output 2 has nice touches like the time-zone table, but it leans on interviews that predicted little and leaves the exercise ticket for me to write."
+}

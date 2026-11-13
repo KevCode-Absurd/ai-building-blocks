@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches and acts on every signal in the data: the Monsoon Dark gap gets its own named track, the courier problem gates the ex-subscriber win-back, and the at-risk 46-90 day group is worked first with no discount.",
+  "biggest_mistake": "The message drafts rely on merge fields with template syntax ('{{ last_coffee | default: \"your coffee\" }}') that will need cleaning before a non-technical team can paste them into a real ESP, and the 46-90 day group is placed first while it is technically 'at risk' rather than 'lapsed', which could confuse a reader expecting a purely lapsed audience.",
+  "what_would_make_it_a_10": "Plain-text merge fields with a one-line note on what each field pulls, so the team can load the drafts into their email tool without touching the code."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The offer logic is immediately usable and the reasoning about why a 10% discount costs ₹115 of a ₹557 order is clear enough for a non-expert to follow and defend to a founder.",
+  "biggest_mistake": "The 12-month gross profit projection double-counts value by assuming each won-back buyer places two orders (worth ₹999) while the table is presented as the return from the programme, and the assumed lift rates are not tested against a break-even threshold the way the brief asked.",
+  "what_would_make_it_a_10": "Show the break-even lift rate per group (the minimum lift needed to cover discounts and message costs) and drop the invented multi-order value assumption so the projection is conservative and defensible."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like it was written by someone who knows the store: it names the discontinued blend, gates the ex-subscriber track on the delivery fix, holds out 10% everywhere and builds gross profit from ₹557 per order, while Output 2 is solid but pads its projection with multi-order assumptions and never gives a break-even lift rate."
+}

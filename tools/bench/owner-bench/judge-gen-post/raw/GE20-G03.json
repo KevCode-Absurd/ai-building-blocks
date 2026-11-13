@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless execution of the brand voice and constraints, coupling each problem directly with its fix and providing forwardable text for the asks.",
+  "biggest_mistake": "The burn breakdown is written as a text paragraph rather than a small table, which would have made the numbers easier to scan.",
+  "what_would_make_it_a_10": "Format the $2.2M burn increase breakdown into a small table to maximize scannability."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent financial reasoning in calculating that the extra compute cost accounts for roughly 9 points of gross margin on the estimated monthly revenue.",
+  "biggest_mistake": "Separating 'What went wrong' from 'What we're doing about it' misses the mandated brand phrase and forces the reader to bounce back and forth to connect problems to solutions.",
+  "what_would_make_it_a_10": "Group each problem with its corresponding solution under the mandated brand header, and add forwardable blurbs for the angel investor asks."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 perfectly targets the specific investor personas by summarizing asks up front for the lead partner and providing forwardable blurbs for the angels. It also strictly follows the required brand phrasing and explicit denominator rules, making it ready to send immediately."
+}

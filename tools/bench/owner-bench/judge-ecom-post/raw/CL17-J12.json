@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers are tight and correct throughout: ₹11.3 lakh RTO, 3,050 Tier 3 refusals, ₹45k per RTO point, and an 18,000-cart sizing. It also adds a practical 2 pm to midnight agent shift for the evening wave.",
+  "biggest_mistake": "The prepaid nudge (template 3) is filed as Utility even though it persuades the buyer to switch payment. Meta will likely recategorise it, and the nudge isn't stronger for Tier 3, where half the RTO cost sits.",
+  "what_would_make_it_a_10": "Make the prepaid nudge a Marketing template with a tier-scaled incentive, and take a firmer Tier 3 stance (call plus cancel, or a small advance) from day one instead of easing it in."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The flow is properly tiered by RTO risk. Expected loss per COD order (₹70 / ₹41 / ₹27) sets the prepaid discount for each band, Tier 3 gets calls and a 48-hour cancel, and repeat buyers skip confirmation. It also tests a ₹99 UPI advance against a holdout.",
+  "biggest_mistake": "T1 waits 15 minutes and includes an expected delivery range, which adds a promise surface. It also states the prepaid discount amounts without checking them against margin beyond the RTO loss.",
+  "what_would_make_it_a_10": "Send T1 within 2 minutes, add an evening agent shift alongside the night menu, and state the exchange window explicitly in the size and exchange scripts."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 got the Utility versus Marketing categories right and spent its prepaid discounts and calls where the refusals actually happen, in Tier 3. Output 1 is accurate and clean, but its prepaid nudge risks rejection as Utility, and it treats the pincode bands too evenly."
+}

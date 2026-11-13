@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It retires the blanket discount and matches each reason to the right move: the pause for \"no time\", the 12-month switch for monthly payers, a kind exit for \"trip over\" and a reminder for \"not progressing\". It also says plainly that the pause does 80% of the work and the flow keeps fewer people than today's offer without it.",
+  "biggest_mistake": "The \"+£98k first year\" and \"£1.18m\" figures multiply the monthly gain without a clear churn adjustment. The button reads \"active once a reason is picked\", which sits a little uneasily with always-visible, one-tap cancelling.",
+  "what_would_make_it_a_10": "Add a holdout or control cell to the measurement plan, apply churn explicitly to the annual figures, and drop the 'active once a reason is picked' wording so the cancel button is always live."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers are shown group by group (2,239 kept vs 842, about £11,340 more a month). The build notes are practical, including a 10% holdout on today's flow for 8 weeks.",
+  "biggest_mistake": "It gives 50% off for 3 months to people switching apps, the same discount that 61% of takers abandon. It also adds a \"smaller goal\" offer with no data behind it, and it shows no range or risk on its guesses.",
+  "what_would_make_it_a_10": "Give a plain exit to the switchers instead of a discount, state a low-to-high range on the projection, and fill in the placeholders."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both rebuild the flow around the pause and the reminder. Output 1 is more disciplined: no discount anywhere, an honest range, the warning that the flow depends on the pause, and a clear way to measure it. Output 2 keeps the half-price offer for one group and gives less risk context, though its holdout test is a nice touch."
+}

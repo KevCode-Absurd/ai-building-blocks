@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting for the right reason, shows the seat math, then builds the page around Priya’s real pain, round robin, routing, and the under-used security page.",
+  "biggest_mistake": "A few copy points assume product specifics like video links, PTO handling, and supported tool logos that should be verified before launch.",
+  "what_would_make_it_a_10": "Tighten the copy slightly under the 1,000-word limit and verify every product-capability claim against the live product before pasting."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 5,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly identifies recruiting as the segment, uses the right math, and frames the A/B test around pain versus round robin outcome.",
+  "biggest_mistake": "It leaves placeholders and homework for the owner, and includes unsupported claims such as three or four emails per interview, text reminders, and bracketed proof slots.",
+  "what_would_make_it_a_10": "Remove all placeholders, keep claims only to supplied facts or clearly verified product capabilities, and make the CTAs consistent with the brand rules for team buyers."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to something I could hand to the team tomorrow: it uses the data sharply, orders the page well, and gives a usable test plan. Output 2 has the right strategy but is less finished and asks me to fill in too many missing pieces."
+}

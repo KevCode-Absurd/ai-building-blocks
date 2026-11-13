@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the key owner-level calls the data supports: relaunch the paused ASC winner, cut the Starter Kit COD trap, and split Women Body Razor to ages 25 to 34 with rupee logic.",
+  "biggest_mistake": "It says the account spent ₹5,80,000 at ₹407 per purchase and reports 1,425 purchases in total, which mixes account spend with total-account purchases rather than the listed ad-set purchases.",
+  "what_would_make_it_a_10": "Tighten the arithmetic around total purchases/spend and make the Women 25 to 34 rebuild even more explicit as a separate ad set with expected CPA improvement."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly spots the three big moves—revive the paused ASC creative, cut Starter Kit, and narrow Women Body Razor to 25 to 34—while giving concrete reserve-release rules.",
+  "biggest_mistake": "It introduces unsupported attribution assumptions like counting 86% of prospecting purchases as real and labels retargeting as both cut and funded, which weakens trust in the numbers and decisions.",
+  "what_would_make_it_a_10": "Remove invented assumptions, make each ad-set verdict internally consistent, and base every budget call on the store-count and after-RTO math directly from the brief."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team on Monday: it uses my data the way I wanted, catches the Women 25 to 34 and paused-creative signals, and gives cleaner ad-set decisions in rupees. Output 2 has some good ideas, but it adds assumptions I did not give and gets less consistent in the verdicts."
+}

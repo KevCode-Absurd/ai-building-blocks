@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the key money signals: 46–90 day buyers first, Monsoon Dark as its own track, and ex-subscribers only after the delivery problem is fixed.",
+  "biggest_mistake": "The Monsoon Dark first message should name a specific replacement coffee or sample path rather than sending people into another quiz.",
+  "what_would_make_it_a_10": "Add email and WhatsApp reachable counts by segment, name the closest Monsoon Dark replacement, and tighten a few assumptions around subscriber profit and dates."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It understands that price is not the main problem and correctly makes delivery repair and Monsoon Dark replacement central to the win-back.",
+  "biggest_mistake": "It does not start with the 46–90 day at-risk buyers, which are the cheapest and highest-leverage group in the data.",
+  "what_would_make_it_a_10": "Make 46–90 days the first wave, calculate value after holdouts rather than total reachable customers, and replace the Monsoon Dark placeholders with a concrete recommended coffee."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather hand to the team because it follows the real priority order and sizes the work more carefully. Output 2 is good, but it misses the cheapest win-back segment as the first target and slightly overstates value by not applying the holdout in the forecast."
+}

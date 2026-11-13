@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It splits the 4.0 ROAS into profit after ads for every segment against the 2.5 break-even, shows that non-brand Google loses about $20,100 a month, and names each loss-making line it cuts.",
+  "biggest_mistake": "It holds $104,000 (43% of budget) in reserve and adds brand negatives to the 4.8 bags Shopping campaign, which could starve one of the real winners; some lines are cryptic, such as the unexplained $59,948.",
+  "what_would_make_it_a_10": "Put more of the reserve straight into the proven winners from day one, drop the brand negatives on bags, and explain jargon such as structured data and final URL expansion in plain words."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A thorough feed fix that also stops it recurring (sale_price with dates, automatic item updates), plus title and Search ad copy built from Claire's and Nina's own words, with checked base and cautious profit cases.",
+  "biggest_mistake": "It leaves $128,000 in brand-excluded Performance Max with no explicit negatives on 'women's flats' or 'sustainable shoes', relying on the target ROAS to fix a 2.0 campaign, and its 2.6 base-case ROAS looks optimistic.",
+  "what_would_make_it_a_10": "Explicitly cut the broad and sustainable terms and the display spend, and add clear week two to four rules for when to cut each line, not only when to release reserve."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both did the maths right and put the feed fix first. Output 1 is more decisive: it names and cuts the money-losing spend and gives clear rules for the rest of the month. Output 2 has better copy and prevention steps but still trusts Performance Max with too much budget."
+}

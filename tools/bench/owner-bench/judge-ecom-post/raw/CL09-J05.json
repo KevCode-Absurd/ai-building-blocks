@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It brings back the paused ₹210 winner in fresh words, tests taste and price head-on, and gives six truly different angles in Aditya's and Priya's own words, each with a character count.",
+  "biggest_mistake": "Ad B pairs the taste text with a protein headline, so a win won't show cleanly whether taste or protein did the work.",
+  "what_would_make_it_a_10": "Pair the taste text with a taste-led headline built from 'Doesn't taste like a protein bar', so test B isolates taste cleanly."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data well: the fatigued winner, the never-run taste phrase and the price objection. It also adds a sensible backup in case legal blocks the review quotes.",
+  "biggest_mistake": "Almost every primary text ends on '12 g protein. No added sugar.' That makes the set feel like six versions of one ad, and two of the four launch slots go to the same transparency angle.",
+  "what_would_make_it_a_10": "Cut the repeated spec line from each text, give the 4 pm snack its own witty angle in Priya's words, and set a real budget and a control cell for the test."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives me six ads that really feel different and sound like us, a sharper way to say ₹90 a bar, and a test plan with a budget, a control and cut rules that I could launch tomorrow. Output 2 reads the data just as well, but its copy keeps repeating the same spec line."
+}

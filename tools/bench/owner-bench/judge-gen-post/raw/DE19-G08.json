@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sees that the grandfathering promise means the two-quarter gain must come from churn reduction and yearly uptake, and builds the whole plan and test around the Essentials 8+ leak.",
+  "biggest_mistake": "The churn-savings math is loosely shown — the mid-case +$28.6k MRR and +$128k revenue figures aren't reconcilable from the stated inputs without the reader doing hidden work, and the base MRR ($2.21M) is asserted rather than computed.",
+  "what_would_make_it_a_10": "Show every step of the churn-savings and upgrade math from the raw group numbers so the board can trace each dollar, and drop the hedging that dilutes the single recommendation."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The clearest statement of the leak — 9.6% churn, $24k/month lost, 29% of all churned revenue — plus a customer email that shows the customer's own current bill next to the new price, which is exactly the transparency brand.",
+  "biggest_mistake": "The headline math is off: the table says Essentials 8+ is $249k/month, but 3,900 x 11 x $6 is about $257k, and the base case's +$24.6k day-one uplift plus $21.9k downgrade loss doesn't cleanly reconcile to +$2.7k net.",
+  "what_would_make_it_a_10": "Fix the revenue figure to the true $257k and show the churn-savings bridge from 9.6% to 5.0% line by line, with the Team downgrade drag subtracted explicitly."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2's customer email that puts the person's own current bill beside the new price is the most on-brand, usable piece, and its leak math and stop rules are tighter; but both need their revenue arithmetic reconciled before I'd put either in front of the board."
+}

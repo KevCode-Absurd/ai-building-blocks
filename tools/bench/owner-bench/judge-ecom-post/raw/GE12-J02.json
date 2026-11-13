@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Correctly calculates the 90-day break-even point to establish a hard metric for success and maps out a logical pacing plan.",
+  "biggest_mistake": "Suggests measuring lift using a before-and-after comparison of store orders, which the e-commerce rubric explicitly rejects in favor of a holdout test.",
+  "what_would_make_it_a_10": "Incorporate a geo-holdout test for a clean read on incrementality, and use the verbatim customer quotes from the brief as ad hooks."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Perfectly applies verbatim customer quotes into the creative plan and introduces a geographic holdout test to solve the attribution problem.",
+  "biggest_mistake": "Leaving 10% of the US out of targeting for the holdout test requires careful setup to ensure statistical significance, but it is well worth the effort.",
+  "what_would_make_it_a_10": "It is already a 10; it executes perfectly against the data constraints and delivers exactly what a sharp operator needs to launch."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 executes the brief perfectly by using the exact customer phrases for ad hooks, accurately mapping organic watch time directly to the media buying kill rules, and providing a true geo-holdout test to measure lift rather than relying on flawed before-and-after comparisons."
+}

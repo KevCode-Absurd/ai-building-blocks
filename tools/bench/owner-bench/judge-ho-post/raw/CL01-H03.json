@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A sharp decision up front with the cheapest fix first, honest ranges that credit the quiz with only half its 19-point gap, and a scan-conditioned day-3 message that never over-promises.",
+  "biggest_mistake": "It never states the baseline cost of returns or tickets, and its post-delivery message only links to the quiz instead of helping a first-time bra buyer judge fit herself; the November and Christmas dates are an unstated assumption.",
+  "what_would_make_it_a_10": "Show the £139,800 and £31,360 baselines with a total saving, and add simple try-on fit tips for first-time bra buyers after delivery."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It starts from the real cost base (£139,800 in returns, £31,360 in tickets), totals the saving at £11,830 to £19,770 with the working shown, and gives first-time bra buyers fit help: a pre-dispatch fit check plus try-on tips on delivery.",
+  "biggest_mistake": "Message 4 says 'Still on track' even when the courier hasn't scanned the parcel, which risks a promise we can't keep, and the 5-day 'How's the fit?' nudge could add swap traffic that still costs £7.50 each.",
+  "what_would_make_it_a_10": "Send the day-3 message only after a courier scan, add a conversion guardrail on the fit-quiz button, and rank the three fixes explicitly by money saved."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are solid and honest about ranges. Output 2 shows me what the problem costs today and what I save in total, and actually helps first-time bra buyers find their fit before they return, which is the return-cutting move I wanted most."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A tight, buildable one-screen flow: the pause comes back for 'no time', there is no discount for trip-enders, and the 'Email me in 3 or 6 months' box speaks straight to Greg's next-spring trip.",
+  "biggest_mistake": "It keeps 50% off for switchers with no data behind it, and that row's £607 'after discount' is really close to full price (67 × £9), since half price would be about £300.",
+  "what_would_make_it_a_10": "Drop or test the switcher discount, fix its value, and give an honest range around the 1,400 lift instead of a single point."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the decision, the lift with a range (+1,368, £11k a month, £98k per yearly group) and the hard truth that without the pause the flow keeps fewer than today, which makes rebuilding the pause the clear first task.",
+  "biggest_mistake": "Trip-enders get a kind but plain exit with no 'remind me before your next trip' option, which leaves Greg's 'maybe next spring' unused, and 'It helps us help you' reads a little like a retention script.",
+  "what_would_make_it_a_10": "Add an opt-in reminder for trip-enders, tighten the copy to stay safely under 1,000 words, and keep a holdout on today's flow to prove the lift."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both rebuild the flow the right way around the pause. Output 2 gives me the decision, an honest range, the risk if the pause slips and what to watch from day one, while Output 1 keeps an unproven discount for switchers and mis-values it."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 5,
+  "clear": 7,
+  "voice": 6,
+  "range": 8,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly exposes that non-brand Google is below the 2.5 break-even and puts the price-mismatch feed issue near the top.",
+  "biggest_mistake": "It invents an unspent-budget plan despite the brief asking how to split the full $240,000 next month, and it includes risky or inaccurate Google tactics like PMax negatives and 'products only' phrasing that do not hold cleanly.",
+  "what_would_make_it_a_10": "Give a compliant budget plan that allocates exactly $240,000, keep the feed fix first, and remove speculative or incorrect execution details while tightening the expected-results math."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets to the real issue fast: PMax is propped up by brand, the feed break on pointed flats is urgent, and money should move to bags and washable/comfort intent.",
+  "biggest_mistake": "Its forecast is too optimistic and partly speculative, especially the jump in brand search value and the assumed ROAS on new non-brand Search and resized PMax.",
+  "what_would_make_it_a_10": "Keep the same priorities but make the forecast more grounded, show the profit math line by line with tighter assumptions, and state the limits of what can be controlled inside PMax more precisely."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I could hand to the team tomorrow: it fixes the right thing first, reallocates the full budget to exactly $240,000, and stays closer to my brief. Output 1 has good diagnosis, but the holdback budget and some shaky platform details make it harder to trust."
+}

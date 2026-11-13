@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 6,
+  "reasoning": 6,
+  "correct": 5,
+  "clear": 8,
+  "voice": 7,
+  "range": 5,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The bundle maths checks out: ₹537 vs ₹572, +₹61 and +₹150 per step-up, with break-even counts. It also explains why a ₹849 duo would only discount 1,033 orders a month that already happen.",
+  "biggest_mistake": "It says ₹599 touches only about 6% of orders (~1,000 a month). The ₹500 to 699 band is 27%, so about 13% (~2,300) sit between ₹499 and ₹598. That understates the risk behind its main threshold recommendation, and it never makes a COD-specific move against the 29% RTO.",
+  "what_would_make_it_a_10": "Size the ₹499 to ₹598 slice from the 27% band, build COD and RTO into the threshold choice (a COD fee or a different bar for prepaid), and turn lip balm into a cart add-on rather than a discounted main bundle."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ties the threshold to the RTO cliff at ₹500 and sizes the order bands correctly (2,320 at ₹599, 4,650 at ₹699). It then puts the money where the leak is: a lip balm cart add-on for orders under ₹499 and a COD fee test, with RTO counted at −₹130 in the main measure.",
+  "biggest_mistake": "It keeps ₹499 but still tests ₹699, which mostly threatens the serum reorder it says it wants to protect. It also turns the proven face wash + serum pair into a trio instead of testing a plain routine duo.",
+  "what_would_make_it_a_10": "Test ₹699 for prepaid only, or drop that test in favour of the COD fee, and trial a face wash + serum duo against the trio."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 gets the threshold bands right and deals with COD refusals, which is where my money leaks, with a cart add-on and a COD fee test. Output 1 talks itself into ₹599 using a slice of orders less than half its likely real size."
+}

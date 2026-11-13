@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The ticket forecast is built from your own 'Did this help?' rates and a stated reach assumption, with a low-to-high range (1,455 to 3,395 fewer tickets), so I can check it against reality after four weeks.",
+  "biggest_mistake": "It puts the Simplify debts answer in a new article and only adds two link lines to 'How balances work', so the 21,000-view article that people actually land on still doesn't answer them in its first lines.",
+  "what_would_make_it_a_10": "Rewrite 'How balances work' itself so it opens with Simplify debts, and add the website restore steps and cancel-renewal steps to the articles."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The three articles are the most complete and usable: web and app steps for restore, exact cancel-renewal paths, and a smart in-app 'Balances are simplified. Why?' line on the balance screen.",
+  "biggest_mistake": "The forecast rests on avoidance shares it simply picks (40%, 50%), counts a currency article that can't be written until the conversion rules are known, and gives no high end, so the 3,700 headline looks firmer than it is.",
+  "what_would_make_it_a_10": "Tie the avoidance shares to the help-rate data, give a full range, and treat 'Recording a payment' as a findability problem (3,600 tickets despite 71% helpful) instead of a low-gain merge."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both give me three articles I could publish almost straight away. Output 1's ticket estimate is grounded in my own data with an honest range, and it spotted that the payments article is good but hard to find. Output 2's articles are slightly more complete, but its forecast is guesswork."
+}

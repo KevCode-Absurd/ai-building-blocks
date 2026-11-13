@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the real leverage first: creators and extension authors before Product Hunt, and it makes migration safety a hard launch gate tied to the freeze and support reality.",
+  "biggest_mistake": "The channel ranking table is ordered inconsistently with the retained-user math, placing extension authors below X despite lower retained users, which could confuse execution.",
+  "what_would_make_it_a_10": "Make the ranking order fully consistent with the retained-user numbers and tighten one or two assumptions around rollout mechanics."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly sees that creators and extension authors should lead, and it directly addresses the carry-over problem with staged rollout and support preparation.",
+  "biggest_mistake": "It invents major operational requirements and promises not grounded in the brief—1,000 beta users, undo/restore, top-200 extension testing, engineers joining support—and the drafts still contain placeholders.",
+  "what_would_make_it_a_10": "Strip out unsupported assumptions, align every gate to what this small team can actually do before the freeze, and finish the copy without placeholders."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I'd actually run next week: it uses my data, respects my team size, and gives a practical dated plan with usable copy. Output 2 has good instincts but adds too many invented requirements and is not finished enough to launch from."
+}

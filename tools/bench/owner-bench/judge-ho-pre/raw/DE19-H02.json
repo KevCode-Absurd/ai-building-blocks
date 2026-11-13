@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes the 4.0 ROAS apart against the 2.5 break-even, puts the feed fix first with the revenue math, and commits only $122,000 with a weekly reserve rule that adds to exactly $240,000.",
+  "biggest_mistake": "The runner-up feed-only PMax change is a little hedged and the expected-range table is slightly optimistic on PMax holding 3.69 on proven themes.",
+  "what_would_make_it_a_10": "Tighten the expected-range table to one clearly stated downside and make the PMax feed-only switch a firm dated decision rather than a runner-up note."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Good diagnosis of brand hiding inside PMax, a clear feed fix checklist and a title pattern that puts washability and comfort in the first 70 characters.",
+  "biggest_mistake": "The budget table does not add to $240,000 ($210,000 committed plus $30,000 reserve) and two overlapping reserve buckets confuse the split, while the base-case profit of $205,900 assumes a PMax recovery that the plan does not justify.",
+  "what_would_make_it_a_10": "Make the budget add to exactly $240,000, remove the duplicate $30,000 reserve in the expectation table, and show the profit working line by line against the 2.5 break-even."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 puts the feed fix first and commits real money only to lines above break-even, with a reserve rule that adds up, while Output 2 has budget numbers that do not reconcile and an optimistic profit estimate. Output 1 also speaks more in the brand's voice and keeps claims factual."
+}

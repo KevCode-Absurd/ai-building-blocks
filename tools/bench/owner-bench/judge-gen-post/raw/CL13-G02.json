@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 6,
+  "overall": 7.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero, \"Let candidates book the right interviewer. No email tennis.\", uses Priya's own phrase. The segment math is also right (1,540 of 2,717 seats, 0.73 seats per signup against 0.17 for sales demos).",
+  "biggest_mistake": "It leaves several bracketed placeholders (security proof, tool logos, customer quote) and uses \"Get started\" on many sections of a team page, which breaks the \"Book a demo\" rule for teams.",
+  "what_would_make_it_a_10": "Remove the placeholders, use \"Book a demo\" consistently on the team page, add a sample-size plan for the test, and trim to 1,000 words."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is nearly paste-ready and rigorous: the seat math is right, \"Book a demo\" is used consistently for teams, and security sits near the demo form. It adds a test plan whose sample size (about 13,400 per arm) and seat projection both check out.",
+  "biggest_mistake": "The hero uses the generic \"back and forth\" line rather than Priya's sharper \"email tennis,\" and a few lines mix instructions into the copy (\"Send this to your security team\"). It also likely runs past the 1,000-word cap.",
+  "what_would_make_it_a_10": "Make Hero A hit harder with Priya's \"email tennis\" wording, separate the copy from the build notes, and cut to 1,000 words."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick recruiting with correct math and a sensible page order. Output 2 is more finished, with consistent demo buttons, no placeholders, a correct sample-size plan and a revenue projection. Output 1's \"email tennis\" hero is a nice touch but doesn't offset its gaps."
+}

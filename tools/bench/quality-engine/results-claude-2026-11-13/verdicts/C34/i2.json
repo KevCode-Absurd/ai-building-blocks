@@ -1,0 +1,269 @@
+{
+ "judge": "i2",
+ "pairs": [
+  {
+   "id": "F01",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Fair Trade line is accurate and concrete (premium, worker-elected committee); under 150 words, guarantee and Worn Wear covered."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 7,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Near-identical; 'earned a premium' is looser on how Fair Trade works and 'room for a layer' is an unsupported fit detail."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "F02",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Full numbered SOP with scripts, bagging and count; end-of-day count has no ready sheet."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Same SOP plus a fill-in count sheet table and a concrete script for how the credit is used; more usable on day one."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "F03",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Calm, factual, under 120 words, no fix-time guess; lacks status-page fields."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Same text with title, status and affected component fields, ready to paste into Statuspage; still no jargon or guess."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "F04",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 9,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 9,
+    "note": "Summary table, sourced reference list, dated checks and a clear confirm box; about 4 pages, over the 2 to 3 asked."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Closer to length, inline [Confirm] notes work well; states early deletion on request as fact without sourcing, fewer references."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "F05",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Clear policy with log fields and three correct worked cases; misses listing-problem route and does not flag that MDE excludes personal illness."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Adds a four-check order, Rebooking policy routing, paste-in log line, and flags that MDE may not take illness, which is a real gap."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "F06",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 9,
+    "note": "Grounded in airbnb.jp conventions, spots that a yen amount eats 12 of 20 title characters; covers all requested items; slightly over one page."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Equally complete; adds invented target age 20 to 35 and a 60-character body guide, and yen format claim is less grounded."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "F07",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 7,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Clean FAQ with 10 Q&As in plain UK English and no cheapest claim; generic on fees and on what the setup fee covers."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Uses the given figures and adds specifics (volume-discount rules, receive fees, links); a few details need checking against the live price page."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "F08",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 7,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Strong and direct, but invents a 0.60% floor proposal and claims an August commitment in the last update, neither in the brief."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Same sound maths and honest slip and take-rate sections; asks are framed without inventing numbers or history."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "F09",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Funny, on-brand, ad marked, no health or dairy claims; host note says only say you use it if you do, good for endorsement rules."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Similar but opens with 'I've learned in my kitchen', scripting a personal claim for the host; lacks the honesty note."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "F10",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Under 180 words, no exclamation marks, clear ask."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Identical to the other answer."
+   },
+   "winner": "tie"
+  },
+  {
+   "id": "F11",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Honest, warm announcement; adds a confirm box flagging real gaps (per flight vs journey, rail time, Billund has no station, booked trips)."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Same announcement text but no flags on ambiguities colleagues will ask about on day one."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "F12",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Sound weights and maths, correct 350m spare for Option 4, sensitivity table, conditions; adds a few unverified specifics (FSC licence number, bag spec)."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Same core scorecard but states 400m spare capacity for Option 4 when 950 minus 600 is 350, a visible arithmetic error."
+   },
+   "winner": "X"
+  }
+ ]
+}

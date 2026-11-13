@@ -1,0 +1,269 @@
+{
+ "judge": "i2",
+ "pairs": [
+  {
+   "id": "F01",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Accurate Fair Trade detail (premium, worker committee); tight, within limit."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 7,
+    "specificity": 7,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 7,
+    "note": "Says workers earned a premium, which blurs where Fair Trade premium goes; 'room for a layer' is invented fit detail."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "F02",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Solid SOP with scripts, tag/bag steps and count; credit-use line is generic."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Same SOP plus fill-in count sheet and specific credit redemption script; very usable."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "F03",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 7,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Calm, factual, within limit, no guess at fix time."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Same text plus status-page fields (status, component, partial outage) ready to paste."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "F04",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 9,
+    "clarity": 8,
+    "craft": 9,
+    "overall": 9,
+    "note": "Summary table, sourced references, careful confirm list, flags early-deletion question; long but strong."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Inline confirm notes helpful; states early deletion on request and audit-log scope without flagging."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "F05",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Clear and usable, but sends all illness to MDE without flagging that Airbnb's MDE excludes illness; no listing-problem routing."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Adds routing to Rebooking and Refund Policy (72 hours), host-request route, paste-in log template, and flags the MDE illness gap."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "F06",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Matches airbnb.jp yen/date format and button style; no invented audience."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 7,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Invents 20-35 age band and a 60-character push body guide; yen format unverified."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "F07",
+   "X": {
+    "usefulness": 7,
+    "accuracy": 7,
+    "specificity": 6,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 7,
+    "note": "Fine, but vague on what setup fee covers and receiving fees; no specifics."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Figures check against Wise page: 22 currencies, free currencies list, 6.11 USD wire fee, GBP20k discount; links included."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "F08",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 6,
+    "specificity": 7,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 7,
+    "note": "Invents 0.60% floor and claims we committed to August; calls growth 'strong' (spin)."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Same numbers, correct maths, no invented floor; defers floor to next meeting. Direct on slip and take rate."
+   },
+   "winner": "Y"
+  },
+  {
+   "id": "F09",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 8,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 8,
+    "note": "Distinctive tone, host told to only say they use it if true; good ad-lib spot and double code."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 8,
+    "specificity": 7,
+    "clarity": 8,
+    "craft": 8,
+    "overall": 7,
+    "note": "Host says 'what I've learned in my kitchen' which implies a personal endorsement; otherwise fine."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "F10",
+   "X": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 7,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Meets all asks, under 180 words."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 9,
+    "specificity": 7,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Identical to the other."
+   },
+   "winner": "tie"
+  },
+  {
+   "id": "F11",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Honest, warm; adds useful pre-publication questions (Billund has no station, per-flight vs journey)."
+   },
+   "Y": {
+    "usefulness": 9,
+    "accuracy": 8,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 8,
+    "note": "Same announcement without the confirmation list; unverified bonus claim unflagged."
+   },
+   "winner": "X"
+  },
+  {
+   "id": "F12",
+   "X": {
+    "usefulness": 9,
+    "accuracy": 9,
+    "specificity": 9,
+    "clarity": 9,
+    "craft": 9,
+    "overall": 9,
+    "note": "Correct maths throughout; cites LEGO's FSC licence C117818 (verified), real factories, sensible 240m cap."
+   },
+   "Y": {
+    "usefulness": 8,
+    "accuracy": 7,
+    "specificity": 8,
+    "clarity": 9,
+    "craft": 8,
+    "overall": 8,
+    "note": "Spare-capacity for Option 4 wrongly 400m (should be 350m); less site detail."
+   },
+   "winner": "X"
+  }
+ ]
+}

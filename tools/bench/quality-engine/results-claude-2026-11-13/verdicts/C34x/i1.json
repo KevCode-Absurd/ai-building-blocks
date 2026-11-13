@@ -1,0 +1,77 @@
+{
+  "judge": "i1",
+  "pairs": [
+    {
+      "id": "F01",
+      "X": {"usefulness": 8, "accuracy": 9, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Under 150 words, right structure and dry voice. Pockets and 'machine wash warm, tumble dry low' match Patagonia's listing, and the Fair Trade line correctly says the premium goes to a fund that a worker-elected committee spends. 'Hip length' I could not check live."},
+      "Y": {"usefulness": 8, "accuracy": 7, "specificity": 8, "clarity": 9, "craft": 8, "overall": 7, "note": "Almost the same as X. But 'the people who made it earned a premium for their work' is a loose Fair Trade claim (the premium goes to a worker-controlled fund, not into pay), and 'room for a layer underneath' is an added fit claim."},
+      "winner": "X"
+    },
+    {
+      "id": "F02",
+      "X": {"usefulness": 8, "accuracy": 9, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Clear numbered SOP that covers every rule, decline scripts, tag and bag, and the end-of-day count. 'Credit works in store and online' is vague but safe."},
+      "Y": {"usefulness": 9, "accuracy": 8, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "Same SOP plus a fill-in count sheet table and a fuller credit script. The script matches Worn Wear (a gift card usable in Patagonia-owned stores and on patagonia.com), though it leaves out wornwear.com and the card-number and PIN step is unverified."},
+      "winner": "Y"
+    },
+    {
+      "id": "F03",
+      "X": {"usefulness": 8, "accuracy": 9, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Calm, factual, under 120 words, no jargon, no fix time. 'Have seen' reads a little past-tense for an ongoing incident."},
+      "Y": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "Same body text in present tense, plus ready status-page fields (title, Identified status, affected component). It can be pasted straight in."},
+      "winner": "Y"
+    },
+    {
+      "id": "F04",
+      "X": {"usefulness": 9, "accuracy": 8, "specificity": 9, "clarity": 9, "craft": 9, "overall": 8, "note": "Strong RFP answer with a summary table for procurement and the CISO, a references list, and a separate confirm box. TLS 1.2+, AES-256, 15-day deactivation and 60-day retention match Atlassian's security practices page. It says 60 days 'after the subscription ends', but the page counts 60 days for deactivated sites, so the wording is slightly loose. CSA STAR date unverified."},
+      "Y": {"usefulness": 8, "accuracy": 7, "specificity": 9, "clarity": 8, "craft": 8, "overall": 7, "note": "Similar content, with [Confirm] notes inline that must be removed before sending. It leaves out the 15-day deactivation step and states 'you can ask Atlassian to delete your data before the 60-day period' as fact without support. It lists Guard data as pinnable, then flags the contradiction."},
+      "winner": "X"
+    },
+    {
+      "id": "F05",
+      "X": {"usefulness": 7, "accuracy": 7, "specificity": 7, "clarity": 9, "craft": 8, "overall": 7, "note": "Clear rules, correct cap maths in the examples, and a good log list. It routes serious illness to MDE without noting that Airbnb's published MDE policy excludes personal illness, so agents could send guests to a dead end."},
+      "Y": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "Adds a four-check order, routing to the Rebooking and Refund Policy (72-hour reporting) and the Resolution Centre, and a paste-in log template. It correctly flags that the MDE policy excludes illness (verified on Airbnb's help page)."},
+      "winner": "Y"
+    },
+    {
+      "id": "F06",
+      "X": {"usefulness": 8, "accuracy": 8, "specificity": 9, "clarity": 8, "craft": 8, "overall": 8, "note": "Tight brief that covers every item asked, plus placeholder rules ({name}さん), the right law (景品表示法), warikan, kanji and keisha warikan points, and PayPay. The airbnb.jp yen format and button examples are plausible but unverified."},
+      "Y": {"usefulness": 8, "accuracy": 7, "specificity": 8, "clarity": 8, "craft": 8, "overall": 7, "note": "Much the same and very readable, but it adds an invented 60-character push-body guide and an assumed '20 to 35' age group. It has no placeholder handling and runs a little long for one page."},
+      "winner": "X"
+    },
+    {
+      "id": "F07",
+      "X": {"usefulness": 7, "accuracy": 5, "specificity": 6, "clarity": 9, "craft": 7, "overall": 6, "note": "Clean, compliant and no 'cheapest' claim. But 'a small fixed fee plus a percentage' is wrong: Wise Business pricing is now percentage-based. The setup-fee description ('getting your business verified') is invented, and the volume-discount detail is vague."},
+      "Y": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "Matches the live Wise pages: £50 for every feature and account details in 22 currencies, free local receiving in the nine named currencies, 6.11 USD for a USD wire, and calendar-month volume that excludes same-currency transfers. It includes links. The 'minimum fee' line is unverified."},
+      "winner": "Y"
+    },
+    {
+      "id": "F08",
+      "X": {"usefulness": 8, "accuracy": 7, "specificity": 8, "clarity": 8, "craft": 8, "overall": 7, "note": "The maths is right (Q2 £37.6m, prior year £29.7m, about £3m mix cost) and it is honest about the problems. But it invents a 0.60% floor for the board to approve, and claims 'we committed to August in our last update', which the request does not say."},
+      "Y": {"usefulness": 8, "accuracy": 9, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Same correct maths. The what-happened, cause and fix bullets make it easier to scan. The decisions avoid made-up numbers (the floor comes to the next meeting with partner-level economics). Direct, with no spin."},
+      "winner": "Y"
+    },
+    {
+      "id": "F09",
+      "X": {"usefulness": 8, "accuracy": 9, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Marked as sponsored, offbeat tone that fits, an ad-lib slot, and the code said twice. No health claims and no knocking dairy. The host note 'only say you use it if you do' covers the endorsement rules."},
+      "Y": {"usefulness": 7, "accuracy": 7, "specificity": 7, "clarity": 8, "craft": 7, "overall": 7, "note": "Also marked as sponsored, but it scripts a first-person 'something I've learned in my kitchen' claim for the host, with no rule that the host must have actually used it (an endorsement-guide risk). 'Some things go flat... split' hints at a comparison, and the frother line is muddled."},
+      "winner": "X"
+    },
+    {
+      "id": "F10",
+      "X": {"usefulness": 8, "accuracy": 9, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Meets every constraint: about 160 words, no fake familiarity, no exclamation marks, news in two sentences, a clear ask. Identical to Y."},
+      "Y": {"usefulness": 8, "accuracy": 9, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Word-for-word the same as X."},
+      "winner": "tie"
+    },
+    {
+      "id": "F11",
+      "X": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "Honest, warm announcement. The real facts check out (37% cut by 2032 against 2019, net zero 2050, the 2024 bonus KPI that includes business travel). It adds a useful internal confirm box, for example that Billund has no railway station and how the time limits are measured."},
+      "Y": {"usefulness": 8, "accuracy": 8, "specificity": 9, "clarity": 9, "craft": 8, "overall": 8, "note": "Same page without the confirm box. It states 'flights of 5 hours or more follow current policy' and leaves gaps (pre-booked trips, how hours are measured) unflagged."},
+      "winner": "X"
+    },
+    {
+      "id": "F12",
+      "X": {"usefulness": 9, "accuracy": 9, "specificity": 10, "clarity": 8, "craft": 9, "overall": 9, "note": "All the arithmetic checks, including Option 4 spare capacity of 350m. Real LEGO details are correct: FSC C117818, the >95% paper bag with a thin plastic coating, the Jiaxing and Binh Duong sites. It also gives a clear rule for sizing C's share."},
+      "Y": {"usefulness": 8, "accuracy": 7, "specificity": 8, "clarity": 8, "craft": 8, "overall": 7, "note": "Same scorecard, but Option 4 spare capacity is wrong (400m stated; 950m minus 600m is 350m), and its reason for rejecting Option 4 is thinner. It has fewer next steps (no coated-bag spec check)."},
+      "winner": "X"
+    }
+  ]
+}

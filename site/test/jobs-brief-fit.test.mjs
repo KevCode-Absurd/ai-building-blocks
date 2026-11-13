@@ -16,7 +16,9 @@ test('short non-selling copy gets no stock check, no required competitors and no
   assert.equal(annex.quality_engine.depth, 'light');
   assert.equal(annex.buyer_can_act, null);
   assert.doesNotMatch(brief, /in stock/);
-  assert.equal(annex.context_requirements.find(row => row.id === 'competitors').required, false);
+  // A short card-shaped piece asks for no competitors at all, and no site capture or taste brief.
+  assert.equal(annex.context_requirements.find(row => row.id === 'competitors'), undefined);
+  assert.equal(annex.production_gate.requires.brand_dna, false); assert.equal(annex.taste_brief, null); assert.equal(annex.capture, null);
   assert.equal(annex.candidates.family_reference, undefined);
   assert.match(brief, /BUILD: reframe true facts/);
 });

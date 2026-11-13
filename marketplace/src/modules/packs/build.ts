@@ -144,6 +144,7 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "quality/cards/launch-plan.md", purpose: "Quality Engine v3: cards/launch-plan.md" },
   { name: "quality/cards/lifecycle-email.md", purpose: "Quality Engine v3: cards/lifecycle-email.md" },
   { name: "quality/cards/notification-copy.md", purpose: "Quality Engine v3: cards/notification-copy.md" },
+  { name: "quality/qe-check.cjs", purpose: "Quality Engine v3: one command for every text check" },
   { name: "quality/cards/creative-brief.md", purpose: "Quality Engine v3: cards/creative-brief.md" },
   { name: "quality/cards/analysis-memo.md", purpose: "Quality Engine v3: cards/analysis-memo.md" },
   { name: "quality/cards/onboarding-flow.md", purpose: "Quality Engine v3: cards/onboarding-flow.md" },
@@ -159,6 +160,15 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "quality/cards/social-calendar.md", purpose: "Quality Engine v3: cards/social-calendar.md" },
   { name: "quality/cards/support-macros.md", purpose: "Quality Engine v3: cards/support-macros.md" },
   { name: "quality/cards/webinar-script.md", purpose: "Quality Engine v3: cards/webinar-script.md" },
+  { name: "quality/cards/audio-ad-script.md", purpose: "Quality Engine v3: cards/audio-ad-script.md" },
+  { name: "quality/cards/internal-announcement.md", purpose: "Quality Engine v3: cards/internal-announcement.md" },
+  { name: "quality/cards/localisation-brief.md", purpose: "Quality Engine v3: cards/localisation-brief.md" },
+  { name: "quality/cards/policy-doc.md", purpose: "Quality Engine v3: cards/policy-doc.md" },
+  { name: "quality/cards/press-pitch.md", purpose: "Quality Engine v3: cards/press-pitch.md" },
+  { name: "quality/cards/product-description.md", purpose: "Quality Engine v3: cards/product-description.md" },
+  { name: "quality/cards/rfp-response.md", purpose: "Quality Engine v3: cards/rfp-response.md" },
+  { name: "quality/cards/sop.md", purpose: "Quality Engine v3: cards/sop.md" },
+  { name: "quality/cards/vendor-scorecard.md", purpose: "Quality Engine v3: cards/vendor-scorecard.md" },
 ];
 
 /**

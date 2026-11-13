@@ -1,0 +1,20 @@
+{
+  "schema": "claude-v34-blind/1",
+  "frozen": "2026-11-13, before any task was authored or answered",
+  "question": "Does Quality Engine v3.4 (card-fit questions, tests and gates; grounding sized to the card; one fresh final reader at light and standard depth; one check command; trimmed front door) beat a plain one-pass answer from the same model, blind, on brands and task types never benchmarked before?",
+  "method_under_test": "branch claude/next10-quality: QUALITY-ENGINE-v3.md v3.4, CHECKER-v3.md, cards, profiles, card-shapes.mjs, prepareJobContext and leadAgentFor from site/src/jobs. Frozen before the first engine-arm answer; no method edits during the run.",
+  "sample": "12 new requests (F01-F12), 2 per company for 6 real companies never used in any earlier AI Blocks benchmark (not Grüns, Linear, Allbirds, Ramp, Sweetgreen, Duolingo or Gehna), 12 different deliverable types not used in earlier sets, Markdown only, written by a separate agent that sees no method file, card, answer or result. All 12 are held-out.",
+  "arms": {
+    "plain": "Fresh Claude Opus 5.5 context per batch, request only, one pass, web allowed.",
+    "v34": "Fresh Claude Opus 5.5 context; reads the request, the plain answer, the prepare_job_context kit, the lead specialist's method and the v3.4 method; builds; runs the one check command; a fresh sub-agent makes the final choice where the host allows (else SAME-CONTEXT). May ship the plain answer unchanged only as v3.4 allows."
+  },
+  "judging": "4 fresh judge contexts, each sees all 12 shuffled X/Y pairs: j1 (Opus) and j2 (Sonnet) with judge-brief-v3.md; i1 (Opus) and i2 (Sonnet) with judge-brief-independent-v3.md. Key sealed until all 48 verdicts validate. Judges' tool calls audited for opening anything outside their folder.",
+  "supplementary_judging": "Added 13 Nov at the owner's request ('add as many subagents as possible'), before any pair was packed: panel C34x holds the same shuffled pairs and key, judged by 4 more fresh contexts (Opus and Sonnet on each brief). Reported separately; the ship gate uses the 4 pre-registered judges of panel C34 only.",
+  "cost_measure": "Each engine-arm agent reports its total tokens and tool calls from the agent result; compared with the C33 engine arm per task where available. Reported, not gated.",
+  "gates": {
+    "ship": "v3.4 wins more verdicts than it loses AND mean clarity and accuracy do not fall against plain.",
+    "strict_majority": "Also reported: more than 50% of all 48 verdicts are wins with no clarity regression.",
+    "if_fail": "Do not release the method text changes (one fresh pass, grounding sizing); routing, card-fit question and gate fixes, the check command and the front-door trim are covered by unit tests and are reviewed separately."
+  },
+  "limits": ["Single model family (Claude) generates and judges.", "AI preference, not customer acceptance or business lift.", "12 tasks is small; the task-clustered interval will be wide.", "Markdown only."]
+}

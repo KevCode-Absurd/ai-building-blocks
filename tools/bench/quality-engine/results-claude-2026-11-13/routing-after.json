@@ -1,0 +1,122 @@
+[
+ {
+  "id": "F01",
+  "job": "run-your-store",
+  "lead": "faye-product-pages",
+  "card": "product-description",
+  "depth": "light",
+  "kind": "copy",
+  "route": "single",
+  "capture": false
+ },
+ {
+  "id": "F02",
+  "job": "document-work",
+  "lead": "faisal-sops",
+  "card": "sop",
+  "depth": "standard",
+  "kind": "ops_doc",
+  "route": "single",
+  "capture": false
+ },
+ {
+  "id": "F03",
+  "job": "write-and-tell-stories",
+  "lead": "makena-incident-reports",
+  "card": "crisis-response",
+  "depth": "light",
+  "kind": "copy",
+  "route": "single",
+  "capture": false
+ },
+ {
+  "id": "F04",
+  "job": "sell-and-negotiate",
+  "lead": "terrence-rfps",
+  "card": "rfp-response",
+  "depth": "standard",
+  "kind": "ops_doc",
+  "route": "single",
+  "capture": false
+ },
+ {
+  "id": "F05",
+  "job": "document-work",
+  "lead": "hyejin-returns",
+  "card": "policy-doc",
+  "depth": "standard",
+  "kind": "ops_doc",
+  "route": "single",
+  "capture": false
+ },
+ {
+  "id": "F06",
+  "job": "write-and-tell-stories",
+  "lead": "behrouz-translation",
+  "card": "localisation-brief",
+  "depth": "standard",
+  "kind": "copy",
+  "route": "single",
+  "capture": true
+ },
+ {
+  "id": "F07",
+  "job": "document-work",
+  "lead": "ankit-help-docs",
+  "card": "help-docs",
+  "depth": "standard",
+  "kind": "web_page",
+  "route": "single",
+  "capture": true
+ },
+ {
+  "id": "F08",
+  "job": "track-numbers",
+  "lead": "shalini-kpireports",
+  "card": "investor-update",
+  "depth": "standard",
+  "kind": "copy",
+  "route": "single",
+  "capture": false
+ },
+ {
+  "id": "F09",
+  "job": "write-ad-copy",
+  "lead": "malik-audio-ads",
+  "card": "audio-ad-script",
+  "depth": "standard",
+  "kind": "ad_creative",
+  "route": "single",
+  "capture": true
+ },
+ {
+  "id": "F10",
+  "job": "write-and-tell-stories",
+  "lead": "bayo-press-releases",
+  "card": "press-pitch",
+  "depth": "light",
+  "kind": "email",
+  "route": "single",
+  "capture": false
+ },
+ {
+  "id": "F11",
+  "job": "document-work",
+  "lead": "rebecca-internal-comms",
+  "card": "internal-announcement",
+  "depth": "standard",
+  "kind": "copy",
+  "route": "single",
+  "capture": false
+ },
+ {
+  "id": "F12",
+  "job": "think-and-decide",
+  "lead": "huong-sourcing",
+  "card": "vendor-scorecard",
+  "depth": "standard",
+  "kind": "plan",
+  "route": "single",
+  "capture": false
+ }
+]

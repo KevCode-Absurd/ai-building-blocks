@@ -2,7 +2,7 @@
 // lead or a team should do it (routeJob). Job knowledge stays in the published approach data.
 import {isStaticAdRequest} from './studio-discovery.mjs';
 import {DELIVERABLE_KINDS,suggestDeliverableKind} from './grounding.mjs';
-import {askOf} from './quality-engine.mjs';
+import {askOf,documentAboutChannels} from './quality-engine.mjs';
 import {deliverableLead} from './lead-agents.mjs';
 const STOP = new Set('a an and are as at be by for from get give have i in into is it its me my of on or our please that the their them these this to us want we with you your'.split(' '));
 const VERBS={create:'make',generate:'make',produce:'make',draft:'write',redesign:'design',audit:'check',review:'check',read:'check',analyze:'analyse',analyses:'analyse'};
@@ -90,7 +90,16 @@ const GENERIC_VERBS=new Set(['prepare','do','fix','update','improve','translate'
 const NAMED_DELIVERABLES=[
  [/\b(?:faqs?|help (?:articles?|pages?|docs?|centre|center)|support (?:articles?|pages?|docs?)|knowledge base)\b/,['help-customers','document-work']],
  [/\b(?:press|media|news) releases?\b|\bpress kits?\b/,['write-and-tell-stories','grow-social']],
- [/\bproduct (?:descriptions?|listings?|titles?)\b/,['run-your-store','set-up-store','write-landing-page']],
+ [/\bproduct (?:detail )?(?:page )?descriptions?\b|\bproduct (?:listings?|titles?)\b/,['run-your-store','set-up-store','write-landing-page']],
+ // 13 Nov 2026: a host-read ad went to an ad-checking job, an RFP answer to a custom-GPT builder, and an internal
+ // announcement to a meetings planner. Each plain name below goes to the job whose lead writes that thing.
+ [/\b(?:radio|podcast|audio) (?:ad |sponsor(?:ship)? )(?:scripts?|spots?|reads?)\b|\b(?:radio|audio|podcast) ads?\b|\bradio (?:spots?|scripts?)\b|\bhost[- ]read\b/,['write-ad-copy','work-with-audio']],
+ [/\brf[piq]s?\b|\brequests? for (?:proposals?|information|quotes?)\b|\btenders?\b|\bbid responses?\b|\b(?:security|vendor|due diligence|procurement) questionnaires?\b/,['sell-and-negotiate']],
+ [/\b(?:press|media|pr|story) pitch(?:es)?\b/,['write-and-tell-stories']],
+ [/\bsupplier (?:scorecards?|comparisons?|evaluations?|selection)\b/,['plan-supply-chain','think-and-decide']],
+ [/\b(?:vendor|tool|software|platform|provider) (?:scorecards?|comparisons?|evaluations?|selection)\b/,['think-and-decide']],
+ [/\ball[- ]hands (?:announcements?|e-?mails?|notes?|memos?|posts?)\b|\binternal (?:announcements?|memos?)\b|\b(?:staff|company[- ]wide|all[- ]staff) (?:announcements?|memos?|notes?|messages?)\b/,['lead-people','organise-work']],
+ [/\b(?:locali[sz]ation|translation|transcreation|translator) (?:briefs?|style guides?|guides?|kits?)\b|\btranscreation\b/,['write-and-tell-stories']],
  [/\bjob (?:descriptions?|adverts?|ads?|postings?|specs?)\b/,['hire-people']],
  [/\b(?:resumes?|cvs?|cover letters?)\b/,['find-a-job']],
  [/\b(?:linkedin|instagram|facebook|twitter|tiktok|social(?: media)?) (?:posts?|captions?|content|calendars?|threads?|carousels?)\b|\bcontent calendars?\b/,['grow-social']],
@@ -98,7 +107,7 @@ const NAMED_DELIVERABLES=[
  [/\bcase stud(?:y|ies)\b|\bcustomer stor(?:y|ies)\b|\bwhite ?papers?\b|\bebooks?\b|\bblog posts?\b|\barticles?\b/,['write-and-tell-stories','get-found-in-search']],
  [/\bbusiness plans?\b/,['plan-strategy']],
  [/\b(?:privacy|refund|returns?|shipping|cookie) polic(?:y|ies)\b|\bterms (?:of service|and conditions)\b/,['check-contracts','help-customers','document-work']],
- [/\b(?:sops?|runbooks?|handover (?:notes?|docs?)|meeting (?:minutes|notes))\b/,['document-work','organise-work']],
+ [/\b(?:sops?|procedures?|runbooks?|work instructions?|handover (?:notes?|docs?)|meeting (?:minutes|notes))\b/,['document-work','organise-work']],
  [/\bproposals?\b/,['sell-and-negotiate']],
  [/\b(?:speech(?:es)?|keynotes?|toasts?|elevator pitch(?:es)?)\b/,['speak-and-persuade']],
  [/\b(?:pitch|slide|sales|investor|board) decks?\b|\bpresentations?\b/,['work-with-files','speak-and-persuade']],
@@ -229,6 +238,8 @@ export function requestedWork(request) {
   const trimmed=phrase.trim(),first=(phrase.match(/[a-z0-9]+/)??[])[0];
   if(/^[;:.]$/.test(trimmed))context=false;
   if(!first||/^(?:[,;:.&+]|and|plus|as well as|along with)$/.test(trimmed))continue;
+  // A negated phrase names nothing to make: "not like they're reading our packaging", "no images".
+  if(/^(?:not|no|never|without|dont|do not|avoid)$/.test(first==='do'?trimmed.split(/\s+/).slice(0,2).join(' '):first))continue;
   if(context&&(MAKE_VERB.test(first)||LIST_ITEM.test(first)))context=false;
   // A phrase with its own verb says whether it checks something or makes something; a phrase without one carries on.
   if(ASSESS_VERB.test(first)){assessing=true;assessed||=trimmed;}else if(MAKE_VERB.test(first)){assessing=false;making=true;}
@@ -273,6 +284,9 @@ export function routeJob({ request, mode = 'auto', item_id, role_id, persona_id,
   const work = requestedWork(askOf(request)), asked = TEAM_ASKED.test(text) || dials?.depth === 'deep';
   const result = (chosen, mode_reason, extra = {}) => ({ ok: true, mode: chosen, mode_reason, job_type: classification, work, ...extra });
   if (asked) return result('team', 'You asked for a team.');
+  // A brief, memo or plan that lists the channels it covers is one document: the channels are its subject, not extra
+  // deliverables. "A creative brief, plus 3 Meta ads and a landing page" asks for the ads and the page too: a team.
+  if (work.kinds.length > 1 && documentAboutChannels(request)) return result('single', 'This is one document about several channels, so one lead writes it.');
   if (work.kinds.length > 1) return result('team', `This needs different kinds of work (${list(work.kinds.map(kind => kind.label))}), so one lead runs a small team of helpers.`);
   if (work.count > SINGLE_LEAD_MAX) return result('team', `${work.count} pieces is a large batch, so one lead shares the making with helpers.`);
   if (!deliverable && !goal && words(request).length <= 5) return result('single', 'The request does not yet say what to make. Ask, then one lead does it.', { ask: true, question: 'What would you like to have at the end of this job?' });

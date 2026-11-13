@@ -51,7 +51,7 @@ test("the rules carry the round 2 changes", () => {
   assert.match(rule("Brand brain first."), /never ship[^]*reading level[^]*own phrases[^]*segment the data ranks[^]*each with its number/);
   assert.match(rule("Brand brain first."), /stored brand file[^]*never per job[^]*back to the file/);
   assert.match(rule("Map every signal to an asset."), /past winner gets a relaunch[^]*best segment[^]*top return or complaint reason[^]*about 10%[^]*gap to close/i);
-  assert.match(rule("Look it up before you decide."), /ask-knowledge\.mjs[^]*per data signal and per major decision[^]*context\/trace\.md[^]*never in the deliverable/);
+  assert.match(rule("Look it up before you decide."), /prepare-job\.mjs <brief>[^]*per data signal and per major decision[^]*context\/trace\.md[^]*knowledge-brief\.md[^]*never in the deliverable/);
   assert.match(rule("Ship what was asked, in full."), /copy job ships copy[^]*unless the brief asks[^]*one line on what to watch[^]*every branch[^]*merge fields[^]*fallback/);
   assert.match(rule("Write for a busy owner."), /two plain lines[^]*one number[^]*one table per decision, five columns or fewer[^]*no formulas[^]*stop when the job is done/);
   assert.match(rule("Only the brief's facts run the business."), /dates[^]*age ranges[^]*product specs[^]*relative time[^]*Quote product facts/i);

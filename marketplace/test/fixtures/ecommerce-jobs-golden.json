@@ -1,0 +1,902 @@
+{
+  "schema": "ai-blocks-ecommerce-jobs-golden/1",
+  "author": "independent",
+  "created": "2026-11-13",
+  "briefs": [
+    {
+      "id": "b01",
+      "module": "ADC",
+      "brief": "We sell pre-seasoned cast-iron cookware made at a small foundry in Ohio. Shopify store, US only, AOV $118. Gross margin after shipping, fees and returns is 52%, so our break-even ROAS is about 1.9. Meta is our main channel at about $1,800 a day ($54k a month), all in one Advantage+ sales campaign with 12 live ads across 9 products.\nI need a 60-day plan to scale to $2,500 a day without losing money: budget steps, campaign structure, and which numbers to judge it on.\nLast 30 days (7-day click):\nAge band | Spend | ROAS\n25-34 | $9,800 | 1.5\n35-44 | $16,200 | 2.0\n45-54 | $17,900 | 3.3\n55+ | $10,100 | 2.6\nAdvantage+ reports ROAS 3.4 overall, but the audience breakdown shows 36% of spend reaching existing customers, and ROAS on new customers is 1.7. One ad holds 70% of spend.",
+      "signals": [
+        "The 45-54 age band has the best ROAS (3.3) on the largest spend.",
+        "36% of spend reaches existing customers; new-customer ROAS of 1.7 is below the 1.9 break-even even though blended ROAS looks like 3.4."
+      ],
+      "must": [
+        "ADC-0034",
+        "ADC-0049",
+        "ADC-0024",
+        "ADC-6080",
+        "ADC-0055",
+        "ADC-0056",
+        "ADC-0025",
+        "MEA-0025",
+        "ADC-0014"
+      ],
+      "good": [
+        "ADC-0021",
+        "ADC-0068",
+        "ADC-0029",
+        "MCR-0059",
+        "MCR-0078",
+        "ADC-0058",
+        "MCR-0040",
+        "MEA-0042",
+        "MCR-6023",
+        "ADC-0064"
+      ],
+      "wrong": [
+        "ADC-0038",
+        "MCR-0071",
+        "ADC-0052",
+        "MCR-0070"
+      ]
+    },
+    {
+      "id": "b02",
+      "module": "ADC",
+      "brief": "I run a Shopify store in the UK selling hand-poured soy candles (AOV £34, break-even CPA £15). Meta works but costs keep climbing, so 4 days ago we started TikTok web conversion ads at £120 a day, with the TikTok pixel firing on purchase. We sell only on our own site.\nI need a read on this test and a plan for the next two weeks: what to keep, what to cut, ad group budgets and what creative to make next.\nAd group | Interests | Creative | CTR | Watch time | CPM | Purchases | CPA\nA | 17 stacked | ASMR wax pour close-up | 2.9% | 31% | £6.10 | 2 | £61\nB | 2 | Founder studio tour | 1.2% | 22% | £5.40 | 6 | £19\nC | 2 | Friends smelling the candles, reacting | 1.4% | 27% | £5.80 | 7 | £16\nThe ASMR video looks like our best ad on clicks but barely sells.",
+      "signals": [
+        "Ad group A stacks 17 interests and has the highest CTR (2.9%) but a £61 CPA, four times break-even.",
+        "The scent-reaction creative (C) has the lowest CPA (£16), close to the £15 break-even."
+      ],
+      "must": [
+        "ADC-0035",
+        "ADC-0036",
+        "ADC-0037",
+        "ADC-0063",
+        "MCR-0028"
+      ],
+      "good": [
+        "MCR-0029",
+        "MCR-0045",
+        "MCR-0063",
+        "MCR-0061",
+        "MEA-0040",
+        "MCR-0027",
+        "MCR-0013",
+        "MCR-0026"
+      ],
+      "wrong": [
+        "ADC-0062",
+        "MCR-0046",
+        "ORG-0036"
+      ]
+    },
+    {
+      "id": "b03",
+      "module": "MCR",
+      "brief": "We sell magnesium glycinate sleep gummies in the US from our Shopify store ($39 a bottle, most buyers take a 3-pack). Meta spend is about $40k a month. Creative is our bottleneck: we need 10 new ad concepts for next month, each with angle, format, hook and who it is for.\nLast 60 days by concept:\nConcept | Format | Share of spend | ROAS\nFounder story | talking head | 62% | 2.4\nSleep routine demo | UGC video | 21% | 2.1\nIngredient explainer | static | 4% | 2.6\nBundle offer | static | 13% | 1.8\nPost-purchase survey (n=1,240): \"my mind will not switch off at night\" 41%, \"I wake at 3am\" 22%, \"jet lag and shift work\" 9%.\nMost of our recent \"new\" ads are recuts of the founder story with new backgrounds and colours.",
+      "signals": [
+        "The founder story concept holds 62% of spend, and recent new ads are only background and colour recuts of it.",
+        "The top survey pain is \"my mind will not switch off at night\" at 41%."
+      ],
+      "must": [
+        "MCR-0022",
+        "MCR-0078",
+        "MCR-0008",
+        "MCR-0057",
+        "MCR-0050",
+        "MCR-0044",
+        "MCR-0036",
+        "MCR-6044",
+        "MCR-6022",
+        "MCR-0009"
+      ],
+      "good": [
+        "MCR-0018",
+        "MCR-6023",
+        "MCR-0005",
+        "MCR-0059",
+        "MCR-0042",
+        "MCR-0058",
+        "MCR-0023",
+        "MCR-0019",
+        "MCR-0014",
+        "MCR-0052"
+      ],
+      "wrong": [
+        "MCR-0081",
+        "MCR-0071",
+        "MCR-6024",
+        "MCR-0066",
+        "MCR-0065"
+      ]
+    },
+    {
+      "id": "b04",
+      "module": "MCR",
+      "brief": "We are a Bengaluru brand selling a cold-pressed onion and bhringraj hair oil (Rs 549, Shopify, India only). Creators post the videos on their own Instagram as paid collaborations, and we also run them as Meta ads from our brand page. I need 5 UGC video scripts of 30 to 45 seconds that creators can shoot at home, with the hook, on-screen text and what to show in each part.\nWhat we know from 1,100 ad comments and 300 reviews:\nTheme | Share\n\"Too sticky or greasy\" | 34%\n\"Hair fall reduced in about 6 weeks\" | 22%\n\"Smell is strong\" | 15%\n\"Tried many oils before\" | 12%\nOur current UGC ads lose people early: only 17% of viewers reach the halfway point, and creators show the bottle in the first second. All claims must be safe for Indian advertising rules, and creators must label the posts correctly.",
+      "signals": [
+        "The top objection is \"too sticky or greasy\" at 34% of comments and reviews.",
+        "Only 17% of viewers reach the halfway point, and the product is shown in the first second."
+      ],
+      "must": [
+        "MCR-0077",
+        "MCR-0027",
+        "MCR-0028",
+        "MCR-0013",
+        "MCR-0016",
+        "ORG-6406",
+        "ADC-6146",
+        "AVT-0010"
+      ],
+      "good": [
+        "MCR-0063",
+        "MCR-0014",
+        "MCR-0015",
+        "MCR-0043",
+        "MCR-6024",
+        "MCR-6602",
+        "MCR-0010",
+        "MCR-0047"
+      ],
+      "wrong": [
+        "MCR-6025",
+        "MCR-6060",
+        "ORG-6405",
+        "MCR-0066"
+      ]
+    },
+    {
+      "id": "b05",
+      "module": "ADC",
+      "brief": "We make Goodyear-welted leather work boots in Maine and sell them on Shopify across the US (AOV $240). Every pair can be resoled by us for as long as the original buyer owns it. I need Meta ad copy for cold audiences: 3 primary texts and 5 headlines for a feed carousel and a single static. The first-order offer is $40 off.\nPost-purchase survey, top answers (n=860):\nWhy they bought | Share\n\"My last boots fell apart in a year\" | 38%\nThe resole programme | 27%\n\"Made in the USA\" | 19%\nOur best headline so far is \"Boots built to be rebuilt\". Please keep every claim one we can back up: we have our own stitch-strength test data but no third-party lab report.",
+      "signals": [
+        "AOV is $240 and the offer is a fixed $40 off, so a dollar figure reads bigger than the equivalent percentage.",
+        "The top buying reason (38%) is that the last boots fell apart within a year, which invites a comparison claim that must be substantiated."
+      ],
+      "must": [
+        "OFF-0026",
+        "OFF-0023",
+        "MCR-6041",
+        "OFF-6502",
+        "MCR-6020",
+        "MCR-6022",
+        "ADC-0018",
+        "MCR-0054"
+      ],
+      "good": [
+        "MCR-0019",
+        "MCR-0056",
+        "ADC-0019",
+        "LPG-0045",
+        "AVT-0010",
+        "OFF-0064",
+        "MCR-6040",
+        "OFF-0017",
+        "LPG-0067"
+      ],
+      "wrong": [
+        "MCR-6024",
+        "ADC-6146",
+        "ADC-6142",
+        "OFF-6603"
+      ]
+    },
+    {
+      "id": "b06",
+      "module": "LPG",
+      "brief": "We are a cotton bedsheet store in Pune selling on our own Shopify site across India. Our bestseller is a 300 thread count percale sheet set at Rs 2,499 for one set. I want the product page rewritten: headline, first-screen copy, bullets, bundle labels and where reviews should sit.\nFacts: 84% of traffic is mobile. The bundle picker offers 1, 2, 3, 4 and 6 sets, and almost nobody picks 4 or 6. The page has 46 reviews.\nReturns last quarter (n=212):\nReason | Share\n\"Colour looks different from the photos\" | 31%\n\"Fitted sheet too shallow for my mattress\" | 24%\n\"Changed my mind\" | 18%\nThe price on the page does not include the Rs 99 shipping fee, which only appears at checkout.",
+      "signals": [
+        "The top return reasons are colour not matching photos (31%) and a shallow fitted sheet (24%).",
+        "A Rs 99 shipping fee is revealed only at checkout, and the bundle picker has five options where 4 and 6 are rarely chosen."
+      ],
+      "must": [
+        "LPG-0034",
+        "LPG-0005",
+        "LPG-0006",
+        "LPG-0035",
+        "LPG-6600",
+        "CRO-6606",
+        "LPG-0053"
+      ],
+      "good": [
+        "LPG-0020",
+        "LPG-0021",
+        "LPG-0060",
+        "LPG-0038",
+        "LPG-0062",
+        "LPG-0063",
+        "OFF-6603",
+        "LPG-6604",
+        "LPG-0036",
+        "CRO-0018"
+      ],
+      "wrong": [
+        "OFF-6145",
+        "OFF-6501",
+        "AMZ-6446",
+        "CXP-6160",
+        "LPG-0014"
+      ]
+    },
+    {
+      "id": "b07",
+      "module": "LPG",
+      "brief": "We sell a heated, vibrating knee wrap in the US through Shopify ($129, 60-day money-back guarantee). Cold Meta traffic sent to the product page converts at 1.1%, and ROAS is 1.5 against a break-even of 1.6, after about $1,200 of test spend on our best angle. I want a long-form advertorial (a pre-sell page between the ad and the product page) for that angle.\nBuyers by age: 45-54 21%, 55-64 46%, 65+ 24%.\nWhat buyers tried before (quiz, n=2,300):\nPast fix | Share\nKnee braces | 52%\nCreams and gels | 47%\nPhysical therapy | 31%\n\"Nothing works for long\" | 38%\nWe cannot make medical claims. The winning ad opens on \"stiff knees on the stairs every morning\" and does not show the product.",
+      "signals": [
+        "70% of buyers are 55 or older.",
+        "Most buyers already tried braces (52%) and creams (47%), so failed past fixes are the main belief to overcome."
+      ],
+      "must": [
+        "LPG-0004",
+        "LPG-0024",
+        "LPG-0025",
+        "LPG-0026",
+        "LPG-0030",
+        "LPG-0044",
+        "LPG-0013",
+        "LPG-0028",
+        "LPG-0047",
+        "LPG-0011"
+      ],
+      "good": [
+        "LPG-0003",
+        "LPG-0012",
+        "LPG-0054",
+        "LPG-0027",
+        "LPG-0052",
+        "LPG-0060",
+        "MCR-6022",
+        "LPG-0029",
+        "LPG-0046",
+        "OFF-6501"
+      ],
+      "wrong": [
+        "LPG-0014",
+        "LPG-0015",
+        "LPG-0033",
+        "LPG-6600",
+        "LPG-0069"
+      ]
+    },
+    {
+      "id": "b08",
+      "module": "EML",
+      "brief": "We sell organic cotton baby clothing in sizes 0 to 24 months from our Shopify store, shipping across the US (AOV $68). Email runs on Klaviyo. I need a welcome flow: how many emails, timing, subject lines, and the sign-up offer.\nCurrent state:\nMetric | Value\nPop-up sign-up rate | 2.1% of visitors\nPop-up offer | 10% off\nPop-up trigger | the moment a visitor lands\nWelcome flow | 2 emails over 2 days\nTraffic on mobile | 78%\nFirst-time buyers who reorder within 90 days | 34%\nMost reorders are the next size up. We also want to start collecting phone numbers for text messages.",
+      "signals": [
+        "The pop-up converts only 2.1% of visitors and fires the instant a visitor lands.",
+        "The welcome offer is 10% off on a $68 AOV."
+      ],
+      "must": [
+        "EML-0019",
+        "EML-0045",
+        "EML-0060",
+        "EML-0058",
+        "EML-0047",
+        "EML-0065",
+        "EML-0026",
+        "EML-0027",
+        "EML-6327",
+        "OFF-0026"
+      ],
+      "good": [
+        "LPG-0022",
+        "EML-0020",
+        "EML-0040",
+        "EML-0038",
+        "EML-6340",
+        "EML-6341",
+        "EML-0015",
+        "EML-6345",
+        "EML-0034",
+        "OFF-0036"
+      ],
+      "wrong": [
+        "EML-6324",
+        "EML-0048",
+        "OFF-0028",
+        "OFF-0037"
+      ]
+    },
+    {
+      "id": "b09",
+      "module": "EML",
+      "brief": "We sell air-dried natural dog treats from a small kitchen in Yorkshire, UK. Shopify plus Klaviyo, about 1,900 orders a month, AOV £27. I need a win-back and second-purchase programme: which segments, when to send, what to say and what offer.\nLast 12 months:\nMetric | Value\nAverage days between orders | 34\nCustomers who never place a 2nd order | 61%\nLapsed (no order in 90+ days) | 9,400\nLapsed customers who had a refund or complaint | 22%\nShopify dashboard \"returning customer rate\" | 41% and rising\nOur only win-back email goes out at 180 days with 20% off. We do not send text messages. The team thinks retention is improving because of the dashboard number.",
+      "signals": [
+        "Customers reorder every 34 days on average, yet the win-back email waits until day 180.",
+        "22% of lapsed customers had a refund or complaint, and the rising \"returning customer rate\" is being read as better retention."
+      ],
+      "must": [
+        "EML-0050",
+        "EML-0019",
+        "EML-0049",
+        "EML-0053",
+        "EML-0062",
+        "EML-6325",
+        "EML-6326",
+        "MEA-0014",
+        "MEA-0021"
+      ],
+      "good": [
+        "EML-0051",
+        "CXP-0020",
+        "EML-0011",
+        "EML-0052",
+        "CXP-0009",
+        "CXP-0016",
+        "MEA-0048",
+        "MEA-0052",
+        "EML-0021",
+        "CXP-0017"
+      ],
+      "wrong": [
+        "EML-0006",
+        "EML-0008",
+        "EML-0029",
+        "EML-6345",
+        "EML-0001"
+      ]
+    },
+    {
+      "id": "b10",
+      "module": "EML",
+      "brief": "We are a Mumbai skincare store (Shopify, India only, AOV Rs 890) selling a vitamin C serum and sunscreens. I want a WhatsApp and SMS plan: which automated journeys to build, which broadcasts to keep, message templates, and the order to set them up.\nWhat we have:\nItem | Value\nCustomers opted in to WhatsApp at checkout | 41%\nBroadcast click rate, last 5 sends | 1.9%\nTop chat topic (of 6,300 chats) | \"Where is my order?\" 38%\nSecond chat topic | \"Which product for oily skin?\" 17%\nTypical reorder gap for the serum | 45 days\nWe send SMS through a provider but have never checked our templates or sender headers. Our WhatsApp Business number was set up 3 weeks ago and the business is not verified yet.",
+      "signals": [
+        "\"Where is my order?\" is the top chat topic at 38% of chats.",
+        "Broadcasts click at only 1.9%, and the WhatsApp account is new and unverified, so its daily messaging limit is low."
+      ],
+      "must": [
+        "EML-0048",
+        "EML-6320",
+        "EML-6321",
+        "EML-6322",
+        "EML-6343",
+        "OPS-6286",
+        "EML-6324",
+        "EML-6344",
+        "CXP-0014",
+        "CRO-6361"
+      ],
+      "good": [
+        "CXP-6302",
+        "CXP-0012",
+        "EML-0049",
+        "EML-6363",
+        "OFF-6607",
+        "CXP-0009"
+      ],
+      "wrong": [
+        "EML-0024",
+        "EML-0025",
+        "EML-6345",
+        "EML-6323",
+        "EML-0037"
+      ]
+    },
+    {
+      "id": "b11",
+      "module": "OFF",
+      "brief": "We sell high-protein pancake and waffle mix in the US from our Shopify store. One bag is $29, two bags $54. Gross margin is 62% before shipping, and shipping costs us $6 per order whether it holds 1 or 4 bags. Most new customers come from Meta at a blended ROAS of 2.8. I need our Black Friday offer: the mechanic, the free-shipping threshold, and how to present it on site and in email.\nOrder value distribution, last 90 days:\nOrder value | Share of orders\nUnder $35 | 48%\n$35 to $55 | 9%\n$55 to $65 | 31%\nOver $65 | 12%\nThe team wants 25% off sitewide. Our free-shipping threshold is $45, set from our mean AOV of $44.",
+      "signals": [
+        "Order values cluster in two peaks (one bag under $35, two bags at $55 to $65), but the free-shipping threshold was set from the $44 mean.",
+        "The team wants 25% off sitewide on a 62% gross margin product bought mostly through paid Meta traffic."
+      ],
+      "must": [
+        "OFF-0005",
+        "OFF-0013",
+        "OFF-0079",
+        "OFF-0066",
+        "OFF-0069",
+        "OFF-0016",
+        "OFF-0030",
+        "OFF-0068",
+        "OFF-0003",
+        "OFF-0065"
+      ],
+      "good": [
+        "OFF-0008",
+        "OFF-6145",
+        "OFF-6500",
+        "OFF-0007",
+        "OFF-0049",
+        "OFF-0080",
+        "MCR-0069",
+        "OFF-0014",
+        "OFF-0035",
+        "ADC-0043"
+      ],
+      "wrong": [
+        "OFF-6603",
+        "OFF-0020",
+        "OFF-0022",
+        "OFF-0024"
+      ]
+    },
+    {
+      "id": "b12",
+      "module": "CRO",
+      "brief": "We sell high-waisted leggings and sports bras from Melbourne, Australia, on Shopify (Basic plan, not Plus). I want a three-month testing and conversion plan: what to test, in what order, and how to read the results.\nLast 30 days:\nMetric | Value\nSessions | 42,000\nOrders | 880\nConversion rate | 2.1%\nSessions on our top product page | 14,500\nReturn rate | 18%, top reason \"too small\" 44%\nDead clicks on the size chart icon | 9% of product page sessions\nAn agency pitched us weekly A/B tests on button colours, a test of our checkout layout, and a test of two different prices for the same leggings.",
+      "signals": [
+        "About 880 orders and 42,000 sessions a month: enough for a few large-effect tests, far too little for weekly small tests.",
+        "Sizing is the friction: 9% of product page sessions dead-click the size chart and 44% of returns are \"too small\"."
+      ],
+      "must": [
+        "CRO-0011",
+        "CRO-0019",
+        "CRO-0016",
+        "CRO-0009",
+        "CRO-0024",
+        "CRO-0015",
+        "CRO-0017",
+        "CRO-0023",
+        "CXP-6161"
+      ],
+      "good": [
+        "CRO-0013",
+        "CRO-0003",
+        "CRO-0005",
+        "CRO-0018",
+        "CRO-0007",
+        "CRO-0010",
+        "CRO-0012",
+        "CRO-0014",
+        "LPG-0042",
+        "CRO-0020"
+      ],
+      "wrong": [
+        "CRO-0021",
+        "CRO-0006",
+        "CRO-0002",
+        "LPG-0014"
+      ]
+    },
+    {
+      "id": "b13",
+      "module": "OPS",
+      "brief": "We sell handmade women's ethnic footwear from Jaipur on our Shopify store, shipping across India (AOV Rs 1,450). Meta ads bring most orders and are optimised for Purchase. I need a plan to cut returned-to-origin (RTO) orders without killing sales, and to get Meta to find buyers who actually accept delivery.\nLast 90 days:\nPayment | Share of orders | RTO rate\nCash on delivery | 72% | 27%\nPrepaid (UPI, cards) | 28% | 4%\nMost COD RTOs come from tier-3 pincodes. We confirm COD orders by phone when staff have time. We charge a Rs 49 COD fee, shown only on the payment step. About 60% of buyers opt in to WhatsApp at checkout.",
+      "signals": [
+        "72% of orders are cash on delivery, with a 27% RTO rate against 4% for prepaid.",
+        "The Rs 49 COD fee appears only at the payment step, and COD RTO is concentrated in tier-3 pincodes."
+      ],
+      "must": [
+        "MEA-6085",
+        "MEA-6086",
+        "SET-6187",
+        "SET-6186",
+        "EML-0048",
+        "EML-6320",
+        "OPS-6286",
+        "CRO-6606",
+        "LPG-6600"
+      ],
+      "good": [
+        "EML-6322",
+        "EML-6343",
+        "CRO-6361",
+        "OPS-6601",
+        "CRO-6181",
+        "ADC-0022",
+        "EML-6321",
+        "MEA-0030"
+      ],
+      "wrong": [
+        "CRO-6180",
+        "OPS-6282",
+        "FIN-6240",
+        "EML-6345",
+        "SEC-0005"
+      ]
+    },
+    {
+      "id": "b14",
+      "module": "AMZ",
+      "brief": "We are a US private-label seller on Amazon.com only (FBA for every order, Brand Registry approved, no website). Our first product, a silicone baking mat 2-pack at $18.99, has 41 reviews and 4.4 stars. Next month we launch a second ASIN, a single silicone bread-proofing basket at $24.99. I need its listing (title, bullets, backend search terms, A+ outline) and a 30-day Sponsored Products plan.\nCurrent numbers on the baking mat:\nMetric | Value\nACoS | 48%\nAverage CPC | $1.12\nConversion rate | 11%\nTitle length | 231 characters\nWe want reviews fast on the new ASIN. A consultant suggested putting a review request card in the box.",
+      "signals": [
+        "The current title is 231 characters, over Amazon's 200-character limit.",
+        "Both products sit under $25 with a $1.12 CPC, and a review request insert is being proposed."
+      ],
+      "must": [
+        "AMZ-6160",
+        "AMZ-6445",
+        "AMZ-6446",
+        "AMZ-6447",
+        "AMZ-6440",
+        "AMZ-6448",
+        "AMZ-0004",
+        "AMZ-0003",
+        "AMZ-6383"
+      ],
+      "good": [
+        "AMZ-6442",
+        "AMZ-6444",
+        "AMZ-0002",
+        "AMZ-0001",
+        "AMZ-6441",
+        "AMZ-0005"
+      ],
+      "wrong": [
+        "AMZ-6443",
+        "AMZ-0007",
+        "MEA-0029",
+        "LPG-0062",
+        "GAD-6043"
+      ]
+    },
+    {
+      "id": "b15",
+      "module": "GAD",
+      "brief": "We sell linen tablecloths, napkins and runners from a Shopify store, US only, 140 SKUs, AOV $86. Google Ads spend is about $12,000 a month, all in one Performance Max campaign with image and video assets, target ROAS 500%, about 180 conversions a month. Reported ROAS is 5.2, but Shopify shows Google-driven new-customer revenue flat for 4 months. Outside our past customers, few people know our name. I want a restructure plan for Shopping and Performance Max.\nWhat we found:\nItem | Value\nBrand-name searches | 31% of PMax conversions\nSpend on YouTube and Gmail placements | 18% (was 3%)\nFeed titles | Shopify defaults, brand name first\nGross margin | napkins 68%, runners 54%, tablecloths 38%",
+      "signals": [
+        "Brand-name searches drive 31% of PMax conversions, inflating reported ROAS.",
+        "YouTube and Gmail placements jumped from 3% to 18% of spend; margins spread from 38% to 68% across product types."
+      ],
+      "must": [
+        "GAD-0003",
+        "GAD-0010",
+        "GAD-6121",
+        "GAD-0055",
+        "GAD-0011",
+        "GAD-0014",
+        "GAD-0044",
+        "GAD-0040",
+        "GAD-0043",
+        "GAD-0009"
+      ],
+      "good": [
+        "GAD-0008",
+        "GAD-0019",
+        "GAD-6123",
+        "GAD-6043",
+        "GAD-0007",
+        "MEA-0017",
+        "GAD-0018",
+        "GAD-0026",
+        "GAD-0037",
+        "GAD-0027"
+      ],
+      "wrong": [
+        "GAD-0045",
+        "GAD-0016",
+        "GAD-0049",
+        "GAD-0025"
+      ]
+    },
+    {
+      "id": "b16",
+      "module": "ORG",
+      "brief": "We make handmade brass home decor (diyas, planters, bowls) in Moradabad and sell on our Shopify store across India. Instagram is our main free channel: 6,200 followers, 2 posts a week, mostly product photos. I need a 30-day organic Instagram plan with formats, posting rhythm, hooks, and how to turn views into sales.\nLast 60 days of Reels:\nReel | Views | From followers | Shares\nPolishing an old diya, before and after | 21,400 | 18% | 640\nNew planter launch | 3,900 | 76% | 22\nFestive table styling | 4,300 | 72% | 41\nAverage of other Reels | 4,100 | 74% | 25\nMost DMs ask for the price and a link. We have a small ad budget for Diwali.",
+      "signals": [
+        "The polishing before-and-after Reel got about 5x normal views, mostly from non-followers.",
+        "Every other Reel gets 72 to 76% of its views from existing followers."
+      ],
+      "must": [
+        "ORG-0029",
+        "ORG-0035",
+        "ORG-0026",
+        "ORG-0016",
+        "ORG-0017",
+        "ORG-0019",
+        "ORG-0021",
+        "ORG-6364"
+      ],
+      "good": [
+        "ORG-0011",
+        "ORG-0023",
+        "ORG-0013",
+        "ORG-0020",
+        "ORG-0022",
+        "ORG-6404",
+        "ORG-0018",
+        "ORG-0012",
+        "ORG-6365",
+        "MCR-0041"
+      ],
+      "wrong": [
+        "ORG-6405",
+        "ORG-0005",
+        "ORG-0032"
+      ]
+    },
+    {
+      "id": "b17",
+      "module": "SEO",
+      "brief": "We run a Shopify aquarium supply store in Florida with about 220 products (filters, heaters, live plants, test kits), selling across the US in English only. Organic search brings about $3,100 a month. I want a 6-month SEO plan: which pages to build or fix first, content, and links.\nLast 90 days:\nPage type | Share of organic sessions | Conversion rate\nBlog posts (80 posts) | 85% | 0.2%\nCollection pages (12, about 40 words each) | 9% | 2.8%\nProduct pages | 6% | 1.9%\nProduct links in our collection grids go to /collections/.../products/... URLs, so the same product appears at several URLs. Competitors ranking for \"planted aquarium starter kit\" have about 3 times our referring domains.",
+      "signals": [
+        "Blog posts bring 85% of organic sessions but convert at 0.2%, while 12 thin collection pages convert at 2.8%.",
+        "Collection-aware product URLs create several URLs per product."
+      ],
+      "must": [
+        "SEO-0001",
+        "SEO-0003",
+        "SEO-0005",
+        "SEO-0012",
+        "SEO-0004",
+        "SEO-6464",
+        "SEO-0006",
+        "SEO-0011",
+        "SEO-0008",
+        "SEO-0013"
+      ],
+      "good": [
+        "SEO-0007",
+        "SEO-0009",
+        "SEO-6160",
+        "SEO-6463",
+        "AEO-0028",
+        "LPG-0071",
+        "AEO-0018",
+        "SEO-6465",
+        "SEO-6461"
+      ],
+      "wrong": [
+        "SEO-6462",
+        "AMZ-6445",
+        "SEO-0010"
+      ]
+    },
+    {
+      "id": "b18",
+      "module": "PRD",
+      "brief": "Two of us in Texas plan to launch a new DTC dog grooming brand on Shopify, US only, selling mostly through Meta and TikTok ads. We have about $40,000 for first inventory. All products would be our own private label. I want a ranked shortlist and a go or no-go call on three ideas, with what to check before ordering stock.\nIdea | Target price | Landed unit cost | Notes\nDeshedding comb | $14 | $2.10 | Amazon page one full of $9 to $16 combs\nCordless grooming vacuum kit | $129 | $41 | bulky box, 4.8 kg shipped\nPaw balm, 60-day tin | $32 | $4.60 | could sell on subscription\nAmazon reviews of the top three vacuum kits (4.1 to 4.3 stars) mostly complain that suction clogs with long hair. Google Trends shows \"paw balm\" rising every winter.",
+      "signals": [
+        "The $14 comb is too cheap to fund paid acquisition in a crowded price band.",
+        "Rival vacuum kits are criticised for clogging with long hair, a fixable spec gap; the paw balm has repeat and seasonal demand."
+      ],
+      "must": [
+        "PRD-0006",
+        "PRD-0013",
+        "PRD-0002",
+        "PRD-6480",
+        "PRD-6483",
+        "FIN-0012",
+        "MEA-0019"
+      ],
+      "good": [
+        "PRD-6481",
+        "AVT-0013",
+        "AVT-0009",
+        "COG-0009",
+        "COG-0010",
+        "COG-0008",
+        "COG-6261",
+        "OFF-0029",
+        "ADC-0002",
+        "BRD-0011"
+      ],
+      "wrong": [
+        "PRD-6482",
+        "AMZ-0004",
+        "AMZ-0006",
+        "PRD-0010",
+        "PRD-0009"
+      ]
+    },
+    {
+      "id": "b19",
+      "module": "AVT",
+      "brief": "We sell cushioned, slip-resistant work shoes from a Shopify store in Leeds, UK (£85 a pair). Most sales come from Meta ads about comfort for \"people on their feet all day\". I want three buyer avatars we can build ads and pages around, plus a research plan for the next 4 weeks.\nFrom our 1,900 reviews:\nPhrase or theme | Share of reviews\n\"As a nurse\" / \"on the ward\" | 14%\n\"12-hour shifts\" | 11%\n\"Chef\" / \"in the kitchen\" | 6%\n\"Too narrow for wide feet\" (1 and 2 star) | 9%\nWe have 5,800 past buyers on email and about 40,000 site visitors a month. Nobody on the team has ever spoken to a customer.",
+      "signals": [
+        "Reviewers self-identify as nurses in 14% of reviews (plus 11% mention 12-hour shifts).",
+        "\"Too narrow for wide feet\" is the main complaint in low-star reviews (9%)."
+      ],
+      "must": [
+        "AVT-0016",
+        "AVT-0003",
+        "AVT-0017",
+        "AVT-0024",
+        "AVT-0007",
+        "AVT-0019",
+        "CRO-0018",
+        "AVT-0015"
+      ],
+      "good": [
+        "AVT-0006",
+        "AVT-0021",
+        "AVT-0018",
+        "AVT-0025",
+        "LPG-0042",
+        "LPG-0065",
+        "MCR-0050",
+        "AVT-0013",
+        "ADC-0032",
+        "MCR-0044"
+      ],
+      "wrong": [
+        "AVT-0004",
+        "AVT-0002",
+        "AVT-0001"
+      ]
+    },
+    {
+      "id": "b20",
+      "module": "FIN",
+      "brief": "We sell tri-ply stainless steel cookware from Chennai on our Shopify store, India only. Our hero 3-litre pressure pan sells at Rs 2,199 (GST included) and costs Rs 640 ex-factory. We are about to launch a 5-litre version and need its price, our true margin per order, and our break-even ROAS for Meta ads.\nPer-order costs on the 3-litre:\nItem | Amount\nInbound freight and retail box | Rs 55\nOutbound shipping | Rs 110\nPayment gateway | 2% of price\nCOD handling (65% of orders) | Rs 40\nReturns and RTO allowance | 11% of orders\nGST | 18%, inside the price\nMeta clicks cost about Rs 9 and the site converts at 1.6%. We usually run a 20% festive discount.",
+      "signals": [
+        "The pan looks like a 70% margin product on price versus factory cost, but GST, freight, shipping, COD and returns cut the true gross margin far lower.",
+        "A 20% festive discount on that thinner margin sharply raises break-even ROAS."
+      ],
+      "must": [
+        "MEA-0023",
+        "MEA-0037",
+        "FIN-0007",
+        "FIN-0012",
+        "OFF-0065",
+        "OFF-0069",
+        "MEA-0019",
+        "MEA-0026",
+        "FIN-6205"
+      ],
+      "good": [
+        "FIN-0016",
+        "MEA-0032",
+        "FIN-0008",
+        "MEA-0024",
+        "COG-6264",
+        "MEA-0020",
+        "OFF-0005",
+        "FIN-0017"
+      ],
+      "wrong": [
+        "OFF-0047",
+        "MEA-0047",
+        "FIN-6206",
+        "AMZ-6383",
+        "FIN-6243"
+      ]
+    },
+    {
+      "id": "b21",
+      "module": "OFF",
+      "brief": "We roast single-origin coffee in Portland and sell subscriptions on Shopify through a third-party subscription app with Klaviyo for email, US only. Default plan: two 12 oz bags every 30 days at 15% off. I need a retention plan: cancel flow, cadence options, emails around renewals, and a realistic growth ceiling.\nLast 6 months:\nMetric | Value\nActive subscribers | 2,300\nNew subscribers a month | 280\nMonthly churn | 11%\nTop cancel reason | \"Too much coffee piling up\" 37%\nSecond reason | \"Too expensive\" 21%\nCancel flow save rate | 6%\nBiggest cancel day | day 30, right after the first renewal order confirmation\nWe also offer \"pause indefinitely\"; about 1 in 10 paused subscribers ever comes back.",
+      "signals": [
+        "The top cancel reason (37%) is too much coffee piling up, a cadence mismatch.",
+        "11% monthly churn against 280 new subscribers a month caps the base near 2,500, and cancels spike at day 30 after the renewal confirmation."
+      ],
+      "must": [
+        "OFF-0040",
+        "OFF-0042",
+        "CXP-0001",
+        "CXP-0004",
+        "CXP-0005",
+        "OFF-0062",
+        "OFF-6304",
+        "EML-0002",
+        "EML-0003",
+        "MEA-0027"
+      ],
+      "good": [
+        "OFF-0029",
+        "OFF-0039",
+        "CXP-0002",
+        "EML-0001",
+        "EML-0006",
+        "OFF-0043",
+        "OFF-0072",
+        "FIN-0014",
+        "CXP-0021",
+        "EML-0004"
+      ],
+      "wrong": [
+        "OFF-6307",
+        "CXP-6608",
+        "OFF-0059",
+        "OFF-6306"
+      ]
+    },
+    {
+      "id": "b22",
+      "module": "OPS",
+      "brief": "We sell weighted blankets (7 to 11 kg) from a Shopify store, US only. One factory in China makes them and we ship by sea to a 3PL in Nevada. Q4 is 45% of our yearly revenue, and Meta ads run all year. I need a Q4 inventory and fulfilment plan: purchase order quantities and timing, 3PL terms, and how to handle customer messages.\nLast year:\nItem | Value\nDays out of stock in November | 19\nProduction lead time | 25 days\nSea freight, door to door | 35 days\n3PL pick time promised | 24 hours\n3PL pick time at Black Friday | 6 days\n\"Where is my order\" contacts | 11% of orders\nOur forecast copies last year's monthly sales. We pay the factory a 30% deposit and 70% before shipping, with no inspection.",
+      "signals": [
+        "The forecast copies a year that had 19 stockout days in November, so it understates demand.",
+        "\"Where is my order\" contacts hit 11% of orders after 3PL pick times slipped from 24 hours to 6 days at Black Friday."
+      ],
+      "must": [
+        "OPS-0014",
+        "COG-0008",
+        "OPS-0015",
+        "OPS-0008",
+        "CXP-0012",
+        "CXP-0014",
+        "COG-0006",
+        "ADC-0023"
+      ],
+      "good": [
+        "OPS-6287",
+        "OPS-0012",
+        "FIN-0005",
+        "FIN-0011",
+        "COG-6261",
+        "COG-6262",
+        "OPS-6281",
+        "OPS-6283",
+        "OPS-0001",
+        "OPS-0019"
+      ],
+      "wrong": [
+        "COG-6260",
+        "OPS-6601",
+        "FIN-0020",
+        "OPS-0022"
+      ]
+    },
+    {
+      "id": "b23",
+      "module": "ORG",
+      "brief": "We sell high-protein snack bars from our Shopify store, US only (AOV $42, gross margin 58%). We want a creator and affiliate programme: 40 micro creators on Instagram and TikTok, $12,000 a month, paid by commission through Shopify Collabs plus some flat fees. We also want to run their best videos as ads from their handles on Meta, where we spend about $35,000 a month. I need the deal structure, the creator brief and the rules.\nOur pilot with 9 creators:\nItem | Value\nCode redemptions from coupon sites | 31%\nCreators who disclosed the deal in the post | 4 of 9\nBest creator video | 5x her usual views\nRefunds on creator orders | 6%\nWe do not sell on TikTok Shop and judge every channel on tracked clicks and orders.",
+      "signals": [
+        "31% of creator code redemptions come from coupon sites, so codes are leaking.",
+        "Only 4 of 9 creators disclosed the paid deal; the best video ran at 5x the creator's usual views."
+      ],
+      "must": [
+        "ORG-6405",
+        "MCR-6025",
+        "MCR-6060",
+        "ORG-6422",
+        "ADC-6081",
+        "ORG-6421",
+        "ORG-0035",
+        "ADC-0011"
+      ],
+      "good": [
+        "OFF-0004",
+        "ORG-0004",
+        "ORG-0033",
+        "ORG-0009",
+        "CXP-6303",
+        "MCR-0021",
+        "ORG-0037",
+        "MCR-6021",
+        "ORG-6404"
+      ],
+      "wrong": [
+        "ORG-0036",
+        "ORG-0041",
+        "FIN-6423",
+        "ORG-6406",
+        "ADC-0062"
+      ]
+    },
+    {
+      "id": "b24",
+      "module": "MEA",
+      "brief": "We sell ergonomic office chairs from a Shopify store across the US (AOV $480, about $4.2M revenue last year, website only). We spend about $95,000 a month on Meta and $30,000 on Google. I need a measurement plan: which numbers to report weekly, attribution settings, and how to tell what is really working.\nLast 30 days:\nSource | Reported\nMeta ROAS (7-day click + 1-day view) | 6.1\nShare of Meta purchases from view-through | 41%\nGoogle Ads ROAS | 4.4\nShopify blended MER | 2.3\nReturning customers' share of revenue | 34%\nGA4 \"conversion rate\" by channel | 9.8%, counts all key events\nIn Google Ads, purchases from the Shopify Google app and a GA4 import are both set as primary.",
+      "signals": [
+        "41% of Meta-reported purchases come from view-through, while blended MER is only 2.3.",
+        "Google Ads has two primary purchase actions (double counting), and GA4 conversion rate counts every key event, not just purchases."
+      ],
+      "must": [
+        "MEA-0042",
+        "MEA-0025",
+        "MEA-0039",
+        "MEA-0031",
+        "MEA-0053",
+        "MEA-0017",
+        "MEA-0002",
+        "MEA-0041",
+        "MEA-0045",
+        "MEA-0055"
+      ],
+      "good": [
+        "MEA-0051",
+        "MEA-6125",
+        "ADC-0027",
+        "MEA-0003",
+        "MEA-6221",
+        "MEA-0024",
+        "MEA-0043",
+        "GAD-0042",
+        "MEA-0009",
+        "MEA-0018"
+      ],
+      "wrong": [
+        "MEA-0033",
+        "MEA-0029",
+        "MEA-6100",
+        "MEA-0049",
+        "MEA-0034"
+      ]
+    }
+  ]
+}

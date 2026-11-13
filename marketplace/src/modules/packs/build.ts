@@ -117,6 +117,7 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "check-handover.mjs", purpose: "Checks a finished deliverable before hand-over: nothing internal or unfinished a reader would see, and its length against a plain answer (plain Node)." },
   // Knowledge and review tools (agent-rag): every agent pack carries them, brand-facing or not.
   { name: "ask-knowledge.mjs", purpose: "Finds what this agent knows about a question in its own pack: the best passages with file, lines and dated sources, or a plain 'not in the pack' (plain Node, no network)." },
+  { name: "prepare-job.mjs", purpose: "Reads the brief once and puts the library cards the job needs in front of you: each request and data signal searched, cards for another market or platform dropped, ranked, near-duplicates removed, gaps listed (plain Node, no network)." },
   { name: "blind-review.mjs", purpose: "Runs a fair blind pick between drafts: writes the review sheet in both orders, then counts a winner only when both orders agree, and flags a length gap (plain Node)." },
   { name: "quality/QUALITY-ENGINE-v3.md", purpose: "Quality Engine v3: QUALITY-ENGINE-v3.md" },
   { name: "quality/CHECKER-v3.md", purpose: "Quality Engine v3: CHECKER-v3.md" },

@@ -27,7 +27,7 @@ Unless the slice is none, run `node tools/brand-file.mjs status --for <kind>` an
 2. Or paste `tools/brand-dna-snippet.js` into the site's console; save the result as `context/brand-dna.json`.
 3. Or ask for the URL, screenshots and brand guide.
 
-Save the slice as `context/facts.md`. Use no fact without a source and date. **Look in your own pack first:** `node tools/ask-knowledge.mjs "<question>"` or `knowledge-map.md`; use only what it returns, with sources.
+Save the slice as `context/facts.md`. Use no fact without a source and date. **Look in your own pack first:** `node tools/prepare-job.mjs <brief>`, then `node tools/ask-knowledge.mjs "<question>"` or `knowledge-map.md`; use only what it returns, with sources.
 
 **Can the buyer act today?** Confirm the thing sold is live, in stock, at the stated price and link. If not, build for the option that works and say so in your first line.
 

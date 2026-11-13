@@ -223,7 +223,7 @@ export function personaVerticalLibrary(persona: Persona, bundle: VerticalBundle 
 function lookupSteps(v: Vertical, mcpUrl: string, offline: boolean): string[] {
   return [
     offline
-      ? "- **Look it up before you decide.** Before drafting, run `node tools/ask-knowledge.mjs \"<question>\"` once for each data signal in the brief and once for each major decision. Put two or three phrasings of the question in one call, keep `--k` at 4 to 6, and add `--module CODE` when you know the module. Never read a whole card file."
+      ? "- **Look it up before you decide.** Before drafting, run `node tools/prepare-job.mjs <brief>` once: it searches the library for each request and data signal in the brief, keeps only cards for this market and platform, and writes the ranked cards to `context/knowledge-brief.md` and the lookups to `context/trace.md`. Read that digest, then run `node tools/ask-knowledge.mjs \"<question>\"` only for a decision it did not cover (two or three phrasings in one call, `--k` 4 to 6, `--module CODE` when you know the module). Never read a whole card file."
       : `- **Look it up before you decide.** Before drafting, ask the AI Blocks connector (${mcpUrl}) once for each data signal in the brief and once for each major decision: the \`ask_vertical_knowledge\` tool with vertical \`${v.id}\`. Find the card in the card index first, then ask for it by its words.`,
     "- **Stop when the match is weak.** When the answer says \"Weak match\" or finds no card, the library does not know: use the brief's facts or one stated assumption, and never fill the gap from memory.",
     "- **Keep a trace.** In `context/trace.md`, write one row per query: the question, the card ids you used and the call each one supports. It is a working file. Never cite card ids in the deliverable.",
@@ -270,7 +270,7 @@ export function libraryMapMarkdown(persona: Persona, bundle: VerticalBundle, min
   const firstLine = (s: string) => s.trim().replace(/\s+/g, " ").replace(/[.]$/, "");
   return [
     `# ${v.name} library map`, "",
-    `The whole ${v.name.toLowerCase()} library is in this pack: ${bundle.cards.length} cards in ${rows.length} modules. Read this map, never the library. To find a card, run \`node tools/ask-knowledge.mjs "<question>" "<another phrasing>" --k 6\`, and add \`--module ${rows.slice(0, 2).map(m => m.code).join(",")}\` to search only those modules. One query per data signal and per major decision; when the answer says "Weak match", the library does not know.`, "",
+    `The whole ${v.name.toLowerCase()} library is in this pack: ${bundle.cards.length} cards in ${rows.length} modules. Read this map, never the library. To prepare a job, run \`node tools/prepare-job.mjs <brief>\` first: it reads the brief's requests and data signals and lists the cards they need. To find one more card, run \`node tools/ask-knowledge.mjs "<question>" "<another phrasing>" --k 6\`, and add \`--module ${rows.slice(0, 2).map(m => m.code).join(",")}\` to search only those modules. One query per data signal and per major decision; when the answer says "Weak match", the library does not know.`, "",
     "## Modules", "",
     "| Code | Module | Cards | What it covers |", "|---|---|---|---|",
     ...rows.map(m => `| ${m.code}${mine.includes(m.code) ? " (mine)" : ""} | ${m.name} | ${count(m.code)} | ${moduleScope(bundle.cards, m.code).replace(/\|/g, "/")} |`), "",

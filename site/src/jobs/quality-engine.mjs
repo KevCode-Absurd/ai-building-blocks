@@ -1,7 +1,8 @@
 // Model-free routing. The host confirms the family and depth against the brief.
 import { QUALITY_PROFILES } from './quality-profiles.mjs';
+import { cardShape, shortWordLimit } from './card-shapes.mjs';
 
-export const QUALITY_ENGINE_VERSION = '3.3';
+export const QUALITY_ENGINE_VERSION = '3.4';
 const BASE = 'https://agents.useaiblocks.com/tools/quality/';
 // Checked in order, specific before general: every card in cards/INDEX.md is reachable. The words follow INDEX.md and
 // the plain names people use in briefs ("going viral", "ticket types", "interview scorecard").
@@ -79,7 +80,11 @@ export function qualityEngineContext(request = '', kind = 'other') {
   const profile = QUALITY_PROFILES[family] ?? QUALITY_PROFILES._any;
   // A reviewer's discipline never creates a second writing role.
   const mixed = isMixedRequest(text);
-  const light = /reply|short email|push notification|support macro|social post/i.test(text) && !/plan|series|guide|policy|analysis/i.test(text);
+  // Light is decided on the ask, not the whole request: "assume our policy is ..." in a later sentence does not make a
+  // 180-word reply a policy document. The card, a short word limit or the old short-piece words make it light.
+  const ask = askOf(text), head = askHead(ask), shape = cardShape(family, ask);
+  const light = (Boolean(shape?.light) || /reply|short email|push notification|support macro|social post/i.test(head) || shortWordLimit(ask))
+    && !/\b(?:plans?|series|sequences?|guides?|policy|policies|playbooks?|analysis|macros|sop)\b/i.test(head);
   const full = /(?:distinct|alternative|different|three|3) (?:concepts|directions|structures)/i.test(text);
   const depth = mixed ? 'team' : light ? 'light' : full ? 'full' : 'standard';
   return {
@@ -90,10 +95,14 @@ export function qualityEngineContext(request = '', kind = 'other') {
     routing_url: BASE + 'ROUTING.md',
     drafts: depth === 'full' ? ['expert', 'plain', 'creative'] : depth === 'team' ? ['specialist parts integrated by lead', 'plain'] : ['expert', 'plain'],
     checks: ['family must-haves', 'core design choice', 'clarity and reading level', 'dated claim sources', 'arithmetic and working links', 'visual inspection when applicable', 'hand-over leaks', 'fresh anonymous final choice with a native-piece clarity floor'],
-    tool_urls: Object.fromEntries(['wordcount', 'readability', 'proof', 'render', 'leakcheck', 'check-format', 'check-logo-contrast'].map(name => [name, BASE + name + '.cjs'])),
+    // One command runs every applicable text check and prints one short report; the scripts it calls sit beside it.
+    tool_urls: { 'qe-check': BASE + 'qe-check.cjs', base: BASE, files: ['qe-check.cjs', 'wordcount.cjs', 'readability.cjs', 'proof.cjs', 'leakcheck.cjs', 'check-format.cjs', 'render.cjs', 'check-logo-contrast.cjs'] },
+    check_command: 'node tools/quality/qe-check.cjs <final> --plain <plain> --audience <consumer|business|specialist> [--sources <facts files>] [--max-words <n> | --contract <contract.json>]',
     precedence: 'Task and brand first. This method governs draft depth and family length; existing truth, access and delivery gates still apply. No library search at job time. A same-context review is never independent.',
     length: 'The family ceiling is a cap, never a target. The brief can ask for more. Keep directly used customer copy no longer than the plain version.',
     learning: 'Only opted-in feedback proposes scoped changes. No feedback is stored by this response. Blind evaluation decides method changes.',
+    ...(shape?.scope_note ? { scope_note: shape.scope_note } : {}),
+    reviewers: depth === 'light' || depth === 'standard' ? 'One fresh final reader does the checker gates and the final choice.' : 'A fresh checker on the drafts, then a fresh final reader.',
     final_choice: { fresh_context: true, clarity_below_plain: 'VETO', material_usefulness_below_plain: 'VETO', edit_base: 'Correct useful content of the fresh plain draft; preserve action and evidence coverage while improving structure.', expert_edge: 'Before editing, list up to 3 edge items specific to this client: a current fact that changes the work, a card must-have plain misses, a card failure plain commits, or a ready-to-use piece the reader would otherwise build. Build them in within the family aim. General advice and caveats are not edge items.', tie: 'EXPERT_IF_VERIFIED_EDGE: on equal clarity and usefulness, choose the candidate whose edge items the fresh reader confirms; ship plain unchanged only when none survives.', requested_artifact_first: true, requested_template_fields: 'PRESERVE', no_fresh_reader: 'Plain base plus its verified edge items and necessary repairs; disclose SAME-CONTEXT.' },
     assurance: 'Guidance and host-reported checks do not prove semantic quality, independent review, customer acceptance or business results.',
   };

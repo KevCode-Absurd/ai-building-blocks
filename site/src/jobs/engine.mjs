@@ -315,15 +315,16 @@ function singleLeadJob(input, routed, catalogue) {
   const questions = context.annex.questions;
   const contextArgs = { request: input.request, deliverable_kind: kind, ...(input.site_url ? { site_url: input.site_url } : {}), ...(typeof input.has_existing_asset === 'boolean' ? { has_existing_asset: input.has_existing_asset } : {}) };
   return {
-    schema: 'ai-blocks-job/1', brief: context.brief, job_id: 'job_' + crypto.randomUUID(), ...routed, tier: 'quick',
+    schema: 'ai-blocks-job/1', ...(input.from_context ? {} : { brief: context.brief }), job_id: 'job_' + crypto.randomUUID(), ...routed, tier: 'quick',
     estimate: { seats: 1, council_rounds: 0, token_multiple: [1, 1], source: 'estimated' }, host_profile: input.host_profile ?? (host.parallel_agents && host.max_parallel >= 2 ? 'parallel' : 'sequential'), phase: 'ROUTE',
     deliverable: { kind, source: deliverable.source },
     lead: lead ? { ...lead, load: library, ...(agent ? { agent } : {}) } : null,
-    questions, questions_note: INTAKE_ASK,
-    rubric: { criteria: craftRubric(kind), gates: gatesFor(kind), pass: `Every gate passes, and the weighted criteria score at least ${Math.round(CRAFT_PASS * 100)}% with none under ${CRAFT_FLOOR} out of 10.` },
+    // With from_context the host already holds the brief, questions and rubric (annex.craft_rubric and annex.gates).
+    ...(input.from_context ? { from_context: 'Use the brief, questions, annex.craft_rubric and annex.gates from your prepare_job_context result.' } : { questions, questions_note: INTAKE_ASK,
+    rubric: { criteria: context.annex.craft_rubric, gates: context.annex.gates, pass: `Every gate passes, and the weighted criteria score at least ${Math.round(CRAFT_PASS * 100)}% with none under ${CRAFT_FLOOR} out of 10.` } }),
     next_action: { event: null, ...load, instruction: routed.unsure ? `Ask this one question before anything else: ${routed.question}\nThen call start_job again with the answer added to the request. Do not pick a lead or start work on a guess.` : SINGLE_LEAD_METHOD + (lead ? '' : '\nNo lead matched this request in the catalogue: pick one with find_specialist.') + (routed.ask ? '\nFirst ask: ' + routed.question : ''), questions_allowed: questions.length, ...(routed.ask ? { question: routed.question } : {}),
-      // The full spec, capture steps and annex. Skip it when it was already called for this request.
-      context: { tool: 'prepare_job_context', args: contextArgs } },
+      // The full spec, capture steps and annex, unless the host says it already has them.
+      ...(input.from_context ? {} : { context: { tool: 'prepare_job_context', args: contextArgs } }) },
     files: [], model_calls: 0, stored_by_service: false, hosted_execution: false,
   };
 }

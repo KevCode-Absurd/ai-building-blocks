@@ -12,7 +12,7 @@ test('the front door returns the questions and who should do the job', async () 
   assert.deepEqual(Object.keys(page).slice(0, 5), ['schema', 'brief', 'questions', 'questions_note', 'route']);
   assert.deepEqual(page.questions.map(q => q.id), ['one_action', 'proof', 'offer']); assert.match(page.questions_note, /you decide/);
   assert.equal(page.route.mode, 'single'); assert.match(page.route.reason, /one lead/);
-  assert.deepEqual(page.route.next.arguments, { request: 'Build a landing page for our Tree Runner shoes that we can send Meta ad traffic to', deliverable_kind: 'web_page' }); assert.equal(page.route.next.tool, 'start_job');
+  assert.deepEqual(page.route.next.arguments, { request: 'Build a landing page for our Tree Runner shoes that we can send Meta ad traffic to', deliverable_kind: 'web_page', from_context: true }); assert.equal(page.route.next.tool, 'start_job');
   const mixed = await callJobTool('prepare_job_context', { request: 'Launch our new product: landing page, 6 ads and a 5-email sequence' });
   assert.equal(mixed.route.mode, 'team'); assert.match(mixed.route.next.why, /lead and helpers/);
   assert.equal((await callJobTool('prepare_job_context', { request: 'I need more customers' })).route.next.tool, 'start_outcome');
@@ -51,7 +51,7 @@ test('nothing tells an AI to search the library before it builds', async () => {
   for (const kind of ['web_page', 'ad_creative', 'email', 'audit', 'plan', 'code']) {
     const next = prepareJobContext({ request: 'Help with our launch', deliverable_kind: kind }).annex.next;
     // Single mode goes to the lead start_job names, never to a library search.
-    assert.equal(next.single.tool, 'start_job', kind); assert.equal(next.single_skill, undefined, kind); assert.ok(next.single.then.endsWith(NO_SEARCH), kind);
+    assert.equal(next.tool, 'start_job', kind); assert.equal(next.single_skill, undefined, kind); assert.ok(next.then.endsWith(NO_SEARCH), kind);
     assert.doesNotMatch(JSON.stringify(next), /"tool":"search_library"/, kind);
   }
   const door = await callJobTool('prepare_job_context', { request: 'Write a 3-email welcome series' });

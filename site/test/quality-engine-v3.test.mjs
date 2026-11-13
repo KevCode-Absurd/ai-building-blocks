@@ -23,15 +23,17 @@ test('mixed deliverables get a lead; a reviewer alone does not create a writing 
   assert.equal(qualityEngineContext('Help organize a cupboard').family, '_any');
 });
 
-test('job context exposes the portable v3 method and all seven check tools without executing a model', () => {
+test('job context exposes the portable v3 method and its one check command without executing a model', () => {
   const context = prepareJobContext({request: 'Build a procurement landing page', deliverable_kind: 'web_page'});
   assert.equal(context.model_calls, 0);
   assert.equal(context.stored_by_service, false);
-  assert.equal(context.annex.quality_engine.version, '3.3');
+  assert.equal(context.annex.quality_engine.version, '3.4');
   assert.equal(context.annex.quality_engine.final_choice.material_usefulness_below_plain, 'VETO');
   assert.match(context.annex.quality_engine.final_choice.edit_base, /useful content of the fresh plain draft/);
   assert.equal(context.annex.quality_engine.family, 'landing-page');
-  assert.equal(Object.keys(context.annex.quality_engine.tool_urls).length, 7);
+  assert.match(context.annex.quality_engine.tool_urls['qe-check'], /\/tools\/quality\/qe-check\.cjs$/);
+  assert.equal(context.annex.quality_engine.tool_urls.files.length, 8);
+  for (const file of context.annex.quality_engine.tool_urls.files) assert.ok(fs.existsSync(new URL(`../../marketplace/packs/shared/tools/quality/${file}`, import.meta.url)), file);
   assert.match(context.brief, /annex.quality_engine/);
   assert.equal(context.annex.quality_engine.profile.ceiling, QUALITY_PROFILES['landing-page'].ceiling);
   assert.ok(context.annex.production_gate.requires.brand_dna);

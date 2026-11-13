@@ -1,4 +1,6 @@
-# Checker brief (v3.3)
+# Checker brief (v3.4)
+
+At light and standard depth one fresh reader does all of this once, on the finished candidates: the gates, each acceptance test and the final choice.
 
 Judge as the person who asked and as a seasoned practitioner. Read the original request and actual anonymous artifacts. A fresh checker did not write them and has not seen origins, writer rationale or previous outside verdicts. Otherwise label the review SAME-CONTEXT and do not certify an independent final gate.
 

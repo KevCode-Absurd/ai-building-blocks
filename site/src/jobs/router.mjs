@@ -2,7 +2,8 @@
 // lead or a team should do it (routeJob). Job knowledge stays in the published approach data.
 import {isStaticAdRequest} from './studio-discovery.mjs';
 import {DELIVERABLE_KINDS,suggestDeliverableKind} from './grounding.mjs';
-import {askOf} from './quality-engine.mjs';
+import {askOf,qualityFamily} from './quality-engine.mjs';
+import {cardShape} from './card-shapes.mjs';
 import {deliverableLead} from './lead-agents.mjs';
 const STOP = new Set('a an and are as at be by for from get give have i in into is it its me my of on or our please that the their them these this to us want we with you your'.split(' '));
 const VERBS={create:'make',generate:'make',produce:'make',draft:'write',redesign:'design',audit:'check',review:'check',read:'check',analyze:'analyse',analyses:'analyse'};
@@ -273,6 +274,8 @@ export function routeJob({ request, mode = 'auto', item_id, role_id, persona_id,
   const work = requestedWork(askOf(request)), asked = TEAM_ASKED.test(text) || dials?.depth === 'deep';
   const result = (chosen, mode_reason, extra = {}) => ({ ok: true, mode: chosen, mode_reason, job_type: classification, work, ...extra });
   if (asked) return result('team', 'You asked for a team.');
+  // A brief, memo or plan that lists the channels it covers is one document: the channels are its subject, not extra deliverables.
+  if (work.kinds.length > 1 && cardShape(qualityFamily(request), askOf(request))?.document) return result('single', 'This is one document about several channels, so one lead writes it.');
   if (work.kinds.length > 1) return result('team', `This needs different kinds of work (${list(work.kinds.map(kind => kind.label))}), so one lead runs a small team of helpers.`);
   if (work.count > SINGLE_LEAD_MAX) return result('team', `${work.count} pieces is a large batch, so one lead shares the making with helpers.`);
   if (!deliverable && !goal && words(request).length <= 5) return result('single', 'The request does not yet say what to make. Ask, then one lead does it.', { ask: true, question: 'What would you like to have at the end of this job?' });

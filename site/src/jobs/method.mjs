@@ -6,8 +6,8 @@ export const SINGLE_LEAD_METHOD = [
   '1 Ask the `questions` in one message. Each has a default, so "you decide" is an answer.',
   '2 Write the spec sheet (`next_action.context` pre-fills it): the job in one sentence, deliverables with counts, 5 to 7 acceptance tests.',
   '3 Load the lead with `next_action` (or its `pack.one_file`). Hand it the answers, the spec sheet and the brief. It works from its toolbox.md and does not search the library.',
-  '4 The lead grounds the job in the client\'s real site, files or data, makes about three candidates of the part that decides the outcome and builds the best.',
-  '5 A fresh reviewer who has not seen the drafts checks the work against `rubric`: a new sub-agent, or a separate pass labelled SAME-CONTEXT. Every gate must pass.',
+  '4 The lead grounds the job in what the tests need, makes the drafts its depth names (expert and plain; a third only at full depth) and builds the best.',
+  '5 One fresh reviewer who did not draft checks the finished candidates against `rubric` and picks: a new sub-agent, or a separate pass labelled SAME-CONTEXT. Every gate must pass.',
   '6 The lead hands back. Check each acceptance test and each gate against the work yourself. Any fail: send it back once, naming the failed tests. Hand over the work first, opened by 3 to 5 lines: what this is, the main decision and why, what to check before use.',
   'Nothing here permits sending, spending, publishing or deleting. Those stop for the owner.',
 ].join('\n');

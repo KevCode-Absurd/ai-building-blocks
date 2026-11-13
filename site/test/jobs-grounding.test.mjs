@@ -321,7 +321,7 @@ test('the spec sheet comes back pre-filled from the request, with job-specific a
   const ads = prepareJobContext({ request: 'Make 6 image ads for our Tree Runner shoes', deliverable_kind: 'ad_creative', site_url: 'https://www.allbirds.com' }).annex;
   const s = ads.spec_sheet;
   assert.equal(s.path, 'context/spec.md'); assert.equal(s.job.text, ''); assert.match(s.job.prompt, /who must do what after seeing this/i);
-  assert.deepEqual(s.deliverables.map(d => [d.kind, d.count, d.in_client_words]), [['ad_creative', 6, 'Make 6 image ads for our Tree Runner shoes']]);
+  assert.deepEqual(s.deliverables.map(d => [d.kind, d.count, d.in_client_words]), [['ad_creative', 6, 'annex.request_verbatim']]);
   assert.ok(s.decisions.length >= 2); assert.match(s.decision_rule, /Never hand back a menu/);
   assert.deepEqual(s.context_needed.levels, ['none', 'facts', 'voice', 'look', 'full']); assert.equal(s.context_needed.level, 'full');
   assert.match(s.assumptions[0], /^Mode: extend\./);
@@ -352,17 +352,20 @@ test('brand context is asked for by slice: strategy, plans, code and operations 
 test('candidates are real work chosen by someone else, and the checks put truth first', () => {
   const page = prepareJobContext({ request: 'Build a landing page', deliverable_kind: 'web_page' });
   assert.match(page.brief, /CANDIDATES: Follow annex\.quality_engine depth and annex\.candidates/);
-  assert.match(page.brief, /A fresh reviewer picks\./); assert.match(page.brief, /reframe true facts, add none/); assert.match(page.brief, /cut what has none, never flag it/);
+  // Standard depth: one fresh reader checks the finished candidates and picks.
+  assert.match(page.brief, /one fresh reader with only the request, both finished candidates \(unlabelled\) and the facts/); assert.match(page.brief, /reframe true facts, add none/); assert.match(page.brief, /cut what has none, never flag it/);
   assert.match(page.brief, /Check what is sold is live, in stock, at that price and link\./);
   const a = page.annex;
   assert.match(a.candidates.make, /One expert draft and one plain/); assert.equal(a.candidates.differ_on_at_least, null); assert.deepEqual(a.candidates.axes, []);
   const full = prepareJobContext({ request: 'Build three distinct concepts for a landing page', deliverable_kind: 'web_page' }).annex;
   assert.equal(full.candidates.differ_on_at_least, 2); assert.deepEqual(full.candidates.axes, [...CANDIDATE_AXES]);
-  assert.match(a.reviewer.who, /SAME-CONTEXT/); assert.match(a.reviewer.choose.rounds, /One extra round at most/);
-  // The client's-eye reviewer sees only the brief, the work and the captured facts, and lists every claim as sourced or not.
-  assert.equal(a.reviewer.clients_eye.gets.length, 3); assert.match(a.reviewer.clients_eye.gets[2], /captured facts/);
-  assert.equal(a.reviewer.clients_eye.answers.length, 5); assert.ok(a.reviewer.clients_eye.answers.some(q => /sourced or not/.test(q)));
-  assert.match(a.reviewer.clients_eye.then, /Never leave one in with a flag or a footnote/);
+  assert.match(a.reviewer.who, /SAME-CONTEXT/); assert.equal(a.reviewer.passes, 1);
+  assert.equal(a.reviewer.final_reader.gets.length, 3); assert.ok(a.reviewer.final_reader.answers.some(q => /sourced or not/.test(q)));
+  // Full depth keeps a fresh chooser on the drafts and a client's-eye check on the finished work.
+  const r = full.reviewer; assert.equal(r.passes, 2); assert.match(r.choose.rounds, /One extra round at most/);
+  assert.equal(r.clients_eye.gets.length, 3); assert.match(r.clients_eye.gets[2], /captured facts/);
+  assert.equal(r.clients_eye.answers.length, 5); assert.ok(r.clients_eye.answers.some(q => /sourced or not/.test(q)));
+  assert.match(r.clients_eye.then, /Never leave one in with a flag or a footnote/);
   assert.ok(a.craft_floor.some(line => /New framing of true facts, never new facts/.test(line)) && a.craft_floor.some(line => /never as a revenue forecast/.test(line)));
   assert.match(a.buyer_can_act.if_not, /say so in the first line/); assert.equal(prepareJobContext({ request: 'x', deliverable_kind: 'plan' }).annex.buyer_can_act, null);
   assert.ok(a.hand_over.never_in_the_deliverable.some(x => /agent or persona names/.test(x)));
@@ -421,15 +424,15 @@ test('the method names the craft skill for each step as a toolbox item with its 
   for (const kind of DELIVERABLE_KINDS) {
     const r = prepareJobContext({ request: 'x', deliverable_kind: kind }), a = r.annex, selling = ['web_page', 'ad_creative', 'copy', 'email'].includes(kind);
     if (names[kind]) {
-      assert.ok(r.brief.includes(`A fresh reviewer picks. Your toolbox has "${names[kind]}".`), kind);
+      assert.ok(r.brief.includes(`Your toolbox has "${names[kind]}".`), kind);
       assert.deepEqual(a.candidates.method, { name: names[kind], slug: a.candidates.method.slug, address: `https://useaiblocks.com/skills/${a.candidates.method.slug}`, where: 'Your toolbox has it.' }, kind);
     } else { assert.equal(a.candidates.method, undefined, kind); assert.doesNotMatch(r.brief, /Your toolbox has/, kind); }
     assert.equal(a.candidates.when_the_look_is_open?.name, ['web_page', 'ad_creative'].includes(kind) ? 'Make three design directions' : undefined, kind);
-    assert.equal(a.reviewer.choose.method.name, 'Outside chooser', kind); assert.equal(a.reviewer.clients_eye.method.name, 'Client\'s-eye check', kind);
+    assert.equal(a.reviewer.final_reader.method.name, 'Client\'s-eye check', kind);
     assert.equal(a.truth.method.name, 'Claim source trace', kind); assert.match(a.truth.rule, /Never flag it and leave it in/, kind);
     assert.equal(a.buyer_can_act?.method.name, selling ? 'Buyer can act check' : undefined, kind);
     // The compare tool comes with work a buyer sees, and with nothing else.
-    assert.equal(a.capture.tools.some(tool => tool.file === 'compare-candidates.mjs'), selling, kind); assert.equal(Boolean(a.candidates.compare_with), selling, kind);
+    assert.equal(a.capture?.tools.some(tool => tool.file === 'compare-candidates.mjs') ?? false, selling, kind); assert.equal(Boolean(a.candidates.compare_with), selling, kind);
     for (const part of [a.candidates, a.reviewer, a.truth, a.buyer_can_act]) assert.doesNotMatch(JSON.stringify(part ?? {}), /search/i, kind);
   }
   // Every named skill is a real library item, under the plain name its page uses.

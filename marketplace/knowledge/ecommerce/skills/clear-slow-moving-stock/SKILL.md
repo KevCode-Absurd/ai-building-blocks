@@ -125,7 +125,7 @@ For each product and route: expected units x (price minus variable cost) by week
 
 ## Output
 
-1. **One-screen summary:** cash tied up in slow stock now, cash back by 30, 60 and 90 days, the 5 biggest products and their routes, what goes to liquidation, and the runner-up plan in one line.
+1. **One-screen summary:** cash tied up in slow stock now, cash back by 30, 60 and 90 days, the 5 biggest products and their routes, and what goes to liquidation.
 2. **Clearance sheet**, one row per SKU:
 
 | Column | What goes in it |

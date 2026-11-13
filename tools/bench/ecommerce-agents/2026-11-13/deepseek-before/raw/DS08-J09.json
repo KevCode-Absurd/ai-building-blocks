@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the more runnable plan (per-metric 'if it misses' actions, week-4/week-8 stop lines, dollar impacts per 1,000 customers) while Output 2 is slightly cleaner commercially (it quantifies contribution margin at ~7.8% falling from ~13.6% and sets a 10% day-90 target), but Output 1's example overstates the quarterly saving from cutting a $150-cost campaign because it ignores the repeat contribution baked into its own $94 ceiling."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both meet the 6/6/3 + launch-plan brief with correct ₹90 math and solid compliance, but Output 1's keep/cut decision rules (3x target CPA, purchase-count thresholds, replacement plan) are more realistically executable for a small launch test, while Output 2's '30+ purchases per ad' target is statistically ideal but impractical here and its add-to-cart fallback muddies the success metric."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole post around the data. Writing is weighted 50% in the scorecard, the application is a single customer reply, and the hours are given in local cities (Singapore, Manila, Perth) so Asia-Pacific readers see the fit at once.",
+  "biggest_mistake": "It gives 15% to a conversation score even though interview impression correlated only 0.11. The career-changer welcome is also thinner than it could be, and the post leaves out the data behind dropping experience requirements.",
+  "what_would_make_it_a_10": "Cut the interview-based weight, welcome career changers by name with the evidence in the post, and give every scorecard line a 1, 3 and 5 in one scannable table."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post is candid and warm in the brand's voice. It puts the weekend rotation (about 8 or 9 a year) and the lone overnight work among the hard parts, tells teachers and hospitality staff plainly that their experience counts, and shares the real evidence for dropping experience requirements.",
+  "biggest_mistake": "Writing gets only 40% and the second application question (a fixing-problems story) is not a writing sample. The post also gives only UTC hours with no local-time translation, and the length probably runs a little over the 1,100-word cap.",
+  "what_would_make_it_a_10": "Raise the weight on the written reply, make the second application question a second customer reply, add local-time examples for Asia-Pacific, and trim to the word limit."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both catch the three big signals and get the numbers right. Output 2 sounds more like us, is more honest about the hard parts, welcomes career changers, and has a fuller scorecard with plain 1/3/5 descriptions and a worked reviewer-hours table. Output 1 weights writing more heavily and gives local times, but it is a little thinner on warmth."
+}

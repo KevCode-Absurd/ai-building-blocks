@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 wins on conversion architecture and hand-off precision — a coherent 7-day countdown repeated in every email (6/4/2/1 days, arithmetic checks), a plain-text co-founder nudge paired with the WhatsApp reminder, a checkout-in-progress pause, a first-order-ever filter so existing customers never get the 10%, character-counted subject options and a sample-sized test plan — while Output 2 spends its midpoint on a brand-trust email, gives three competing CTAs in Email 2, and leaves a five-day silent gap before the day-11 reminder; Output 2's 14-day expiry assumption is slightly safer than Output 1's invented 7-day expiry that narrows the offer beyond the pop-up promise and caps the 14-day window it claims to optimise, which keeps the margin narrow."
+}

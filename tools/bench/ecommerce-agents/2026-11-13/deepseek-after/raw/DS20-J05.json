@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 7,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 changes only the primary text across the four launch ads (a clean read on which angle sells), adds numeric keep/cut rules tied to target CPA plus retargeting and practical setup details, and its copy is sharper and less repetitive — Output 1 is accurate and well compliance-checked but repeats the front-of-pack line in five of six texts and bundles three variables per test."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It centers the launch on the real drivers of retained users and makes migration safety a hard launch gate, which is exactly where the risk and upside are.",
+  "biggest_mistake": "It misorders X and extension authors in the ranking table despite showing the right math, and it adds a few assumptions like backup/rollback that may ask more of engineering than the brief proves.",
+  "what_would_make_it_a_10": "Fix the ranking/order inconsistency, remove the stray 'to confirm' section, and tighten every launch gate to only what this team can definitely ship before freeze."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 5,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly makes creators and extension authors the main bet and clearly explains why Product Hunt should not lead the plan.",
+  "biggest_mistake": "It is not ready to run because it leaves placeholders in the customer-facing copy and includes a few risky or unsupported specifics like 'top 200 extensions tested' and a separate Product Hunt day.",
+  "what_would_make_it_a_10": "Replace all placeholders with finished copy, align the timeline tightly to the small team and freeze, and make the launch gates and rollout rules fully grounded in the data and resources given."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to something I could actually run next week: it is more complete, more grounded in the migration risk, and more useful on support readiness and launch gating. Output 2 has good instincts but still feels like a draft with placeholders and a few choices I would want reworked before trusting it."
+}

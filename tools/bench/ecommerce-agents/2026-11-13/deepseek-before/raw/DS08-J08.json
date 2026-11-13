@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 maps cleanly to the brief's bands and median (day-46 start), uses both email and WhatsApp reach, and its holdout math, break-even and smallest-detectable-lift figures all reconcile, whereas Output 2 is well-crafted and smartly segmented but shifts the lapse line to 68 days, caps reach at email-only 62%, and headlines a different-scope annual figure that is harder to verify against the brief."
+}

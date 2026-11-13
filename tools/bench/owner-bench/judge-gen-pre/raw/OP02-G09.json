@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the right strategic shift: sleep-heavy, evening-heavy, narrator clips as the core format, with install math and save-rate targets tied to the data.",
+  "biggest_mistake": "The review section creates a timing contradiction: it says later reviewed posts can only go live from Tuesday 24 November, but the repeating plan has a Monday 23 post.",
+  "what_would_make_it_a_10": "Fix the review timing, either by confirming later posts avoid review or by moving the first reviewed post to Tuesday 24 November, and keep all six slots in the evening unless clearly framed as a small parent test."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows the strongest signals cleanly: all posts are 20:00 to 22:00, narrator clips get four slots a week, and the drafts sound warm, simple and on-brand.",
+  "biggest_mistake": "The success bar is too low; 'above 143 installs per post' only beats the old blended baseline, when this new sleep-and-narrator mix should be expected to do much better.",
+  "what_would_make_it_a_10": "Add a stronger forecast and target based on the proposed mix, such as expected installs from 12 sleep posts plus 8 kindness posts, and use narrator save-rate targets closer to the 5.9% signal rather than just above 2.0%."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are usable and on strategy, but Output 1 is the one I would rather run because it shows the business impact of the mix and sets a more meaningful four-week target. Output 2 is cleaner on evening timing and review avoidance, but its measurement plan under-asks for the result the data says this shift should deliver."
+}

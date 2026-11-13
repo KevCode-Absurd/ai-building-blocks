@@ -118,7 +118,7 @@ Give one verdict and the runner-up in one line.
 
 ## Output
 
-**One-screen verdict:** take, take with changes, or decline; amount; effective annual cost (base and downside); months to repay; lowest cash point and week; extra gross profit expected versus cost; the best alternative; terms to change; and a short "To confirm" list.
+**One-screen verdict:** take, take with changes, or decline; amount; effective annual cost (base and downside); months to repay; lowest cash point and week; extra gross profit expected versus cost; the best alternative; terms to change; and up to three assumption lines where an unknown term changes the verdict.
 
 **Repayment schedule:**
 

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns my RTO table into money per pincode group, then sizes the prepaid nudge to the real saving (₹30 pays only if refusals there are 17%+), and it flags that cancelling unconfirmed tier 3 orders loses real orders, not just parcels.",
+  "biggest_mistake": "It leaves three items in a 'To confirm' list (exchange window, reduced-amount payment link, per-message cost), so a few parts are homework rather than finished, and the COD template's 'usually arrives {{6}}' still leans on a courier date the owner may not want quoted at that step.",
+  "what_would_make_it_a_10": "Close out the open items with a stated default (7-day exchange, gateway capability, message cost) and put the metro/tier 2/tier 3 prepaid break-even numbers beside each offer so I can approve it without a follow-up."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is the cleaner read, and it catches two things I would have missed: that my checkout opt-in may not cover marketing messages, and that moving one agent to a 2 pm to midnight shift answers the 31% evening wave with a person instead of only a bot.",
+  "biggest_mistake": "It drops the prepaid incentive and does not vary the prepaid nudge by pincode group, so the tier 3 towns that cause half my ₹11.2 lakh RTO cost get the same soft 'pay by UPI' pitch as metros, and that pitch is filed as Utility with a payment link whose URL variable is the customer's name.",
+  "what_would_make_it_a_10": "Tier the prepaid nudge with a margin-sized offer for tier 2 and tier 3 as Marketing, and fix the pay link variable and the tier 2 hold contradiction."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 does the thing I actually asked for: it puts the RTO money per pincode group on the page, prices the prepaid switch so I can see it pays, and still shows what a no-reply cancel costs me. Output 2 is easier to read and has a good staffing idea, but it leaves the tier 3 prepaid switch unpriced and unfocused, which is where half my refusal cost sits."
+}

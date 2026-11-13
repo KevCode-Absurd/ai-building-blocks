@@ -1,0 +1,43 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The copy strictly obeys every brief constraint—especially 'one question and one ask'—while seamlessly weaving in the persona's top objections ('billing belongs to engineering' and 'not during an audit') in Step 3.",
+  "biggest_mistake": "The subject line for Step 2 ('5 days back every month') leans slightly into generic marketing speak compared to the finance peer-to-peer tone of the others.",
+  "what_would_make_it_a_10": "It is already a 10; making Step 2's subject line feel slightly more like an internal finance note would be the only minor polish.",
+  "winner": "1",
+  "margin": "clear",
+  "reason": "Output 1 strictly honours the 'one question and one ask' rule and provides a realistic tiered roll-out for the entire 1,900 list instead of forcing an impractical hold on contacts until their pricing page updates."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clever use of friction-reducing reply micro-CTAs ('reply yes', 'reply steps', 'reply now or later') designed to elicit responses.",
+  "biggest_mistake": "Violates the 'one question and one ask' constraint by asking a discovery question and then immediately piling on an alternative reply call-to-action in steps 1 and 2.",
+  "what_would_make_it_a_10": "Remove the dual-ask confusion in steps 1 and 2, and provide a realistic plan for the majority of the 1,900 contacts who won't change pricing pages this quarter.",
+  "winner": "1",
+  "margin": "clear",
+  "reason": "Output 2 breaches the single-ask constraint by combining open questions with reply-keyword prompts, and its list recommendation of holding contacts indefinitely until pricing changes would stall pipeline generation."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers flawless execution against the brief: it strictly observes the 'one question and one ask' rule, directly handles the persona's core audit/engineering objections in Step 3, and offers a sensible waterfall to work the full 1,900 contact list rather than parking them indefinitely."
+}

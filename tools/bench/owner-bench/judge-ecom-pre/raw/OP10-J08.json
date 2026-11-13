@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the two biggest money signals: Monsoon Dark buyers need their own non-discount match track, and ex-subscribers should not be won back until delivery is fixed.",
+  "biggest_mistake": "It wrongly trims the 46-to-90-day at-risk group down to an assumed 68-to-90 segment, so it misses some of the cheapest customers to save.",
+  "what_would_make_it_a_10": "Target the full 46-to-90-day group first, add email and WhatsApp reachable counts, and replace the Monsoon Dark placeholder with the actual closest current roast or sample offer."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It understands that lapsing is mostly about habit, discontinued coffee and failed subscription delivery, not price, and it sizes the gross profit upside clearly.",
+  "biggest_mistake": "It does not put the 46-to-90-day at-risk customers into the win-back order, even though the median reorder gap makes them the easiest group to recover.",
+  "what_would_make_it_a_10": "Rebuild the target order around 46-to-90 days first, use the real 62% email and 40% WhatsApp reach instead of a broad 70% assumption, and remove placeholders from the first messages."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to something I could hand to the team tomorrow: it has the right main tracks, better sequencing, correct gross profit math, and a stronger holdout plan. Output 2 has good thinking, but missing the 46-to-90 group and leaving key message fields as placeholders would require more rework."
+}

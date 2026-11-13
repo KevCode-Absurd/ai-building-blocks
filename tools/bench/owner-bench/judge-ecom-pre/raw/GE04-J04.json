@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 10,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It provides a concrete, data-backed media buying protocol for testing hooks and practical legal advice for filming children.",
+  "biggest_mistake": "It drops the word 'Classic' from Classic Root Beer in the third script and misses the opportunity to use the brand tagline as a consistent sign-off.",
+  "what_would_make_it_a_10": "Correct the flavor name and ensure the mandated 'A new kind of soda' tagline appears in every script."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It flawlessly includes the required brand tagline at the end of every video and uses the exact flavor names.",
+  "biggest_mistake": "The testing protocol is generic ('after about a week') and ignores the CPA data provided in the brief to set concrete budget thresholds.",
+  "what_would_make_it_a_10": "Build a testing framework based on the provided CPA numbers and incorporate more of the exact customer quotes into the alternate hooks."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both outputs deliver strong, on-brand scripts, but Output 1 thinks like a true media buyer by setting exact CPA thresholds for testing and smartly repurposing customer quotes as alternate hooks."
+}

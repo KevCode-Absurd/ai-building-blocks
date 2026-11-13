@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The unit economics on RTO by pincode tier—specifically calculating why metro gets no prepaid discount while Tier 3 gets ₹30—is masterclass commercial thinking.",
+  "biggest_mistake": "The COD confirmation flow assumes the order status message is completely replaced, which requires tight webhook logic in checkout to prevent duplicate order alerts.",
+  "what_would_make_it_a_10": "Already a 10; handing this to an engineer and CRM lead requires almost zero clarification."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clean, actionable templates with practical operational suggestions like shifting one support agent to the 2 pm–midnight window.",
+  "biggest_mistake": "Classifying the post-purchase pay-online nudge as Utility will trigger Meta template rejections or re-categorization penalties.",
+  "what_would_make_it_a_10": "Fix template categorizations, add an incentive-based prepaid nudge tailored by pincode risk, and add an NDR/failed-delivery workflow."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 acts like an owner-operator who understands unit economics: it works out the math on Tier 3 RTO savings down to the rupee, correctly structures the prepaid offer without risking Meta utility rejections, and includes an NDR flow."
+}

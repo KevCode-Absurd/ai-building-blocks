@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and the ₹45 break-even math is right in each, but Output 2 adds a cancellation template, missed-delivery template, call script, holdout testing and a cleaner flow table, making it more complete and defensible for a CFO-minded operator."
+}

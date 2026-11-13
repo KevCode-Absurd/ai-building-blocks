@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the plan around the real winning signal: on-feet worker creators, problem-first hooks, the nurse/server Spark Ads, and a $38 90-day payback target tied to Shopify checks.",
+  "biggest_mistake": "The main weakness is that the final measurement plan depends on holiday and Meta-spend assumptions, and a few items are left as 'to confirm' rather than fully locked assumptions.",
+  "what_would_make_it_a_10": "Tighten the day-30 incrementality read into one cleaner scorecard with fixed assumptions and exact ownership for the licensed creator deadline."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly identifies the money target, avoids mission/discount-first ads, uses the nurse and server Spark Ads, and gives the team a workable Monday setup list.",
+  "biggest_mistake": "The day-30 decision rules are weaker: they mix Days 15-30 with full-month order thresholds, lean too much on rough platform/store comparisons, and do not use two independent reads as cleanly.",
+  "what_would_make_it_a_10": "Rework the budget and scorecard around Shopify-verified first orders, survey/incrementality checks, and a clearer $38/$57 decision framework."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would hand to the team because it is more tightly tied to our data, shows the profit math, phases the full $30,000 cleanly, and gives stronger kill/scale and day-30 budget rules. Output 2 is usable, but its measurement and scaling logic would need more owner rework."
+}

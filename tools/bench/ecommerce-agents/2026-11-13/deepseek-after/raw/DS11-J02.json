@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1's arithmetic and budget phasing reconcile cleanly ($700×10 + $1,000×10 + $1,300×10 = $30,000) with a coherent kill/scale ladder and a defensible day-30 test, while Output 2's $57 ceiling and $136/day learning bar are looser and its $30,000 phasing only lands by holding unspent money, muddying the 'earned more budget' verdict."
+}

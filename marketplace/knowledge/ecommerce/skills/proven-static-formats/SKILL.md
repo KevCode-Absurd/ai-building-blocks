@@ -78,7 +78,7 @@ Rules: a format without its proof is not allowed; pick a different one. Never us
 
 ### 3. Pick the format
 
-Rank gaps by: fills the biggest flagged problem first, then lowest effort, then lowest production cost. Statics cost about a quarter of video, which matters most when returns are thin [MCR-0023]. One recommendation, the runner-up in a line.
+Rank gaps by: fills the biggest flagged problem first, then lowest effort, then lowest production cost. Statics cost about a quarter of video, which matters most when returns are thin [MCR-0023]. One recommendation. Add a second format only when it fills a different gap and the budget funds both reads.
 
 ### 4. Use outside ads for structure only
 
@@ -120,11 +120,11 @@ Launch only with the owner's yes. Then, per format, read at 3 times target cost 
 
 ## Output
 
-1. **One-screen summary:** the format chosen, the gap it fills, the runner-up, and the read date.
+1. **One-screen summary:** the format chosen, the gap it fills, any second format and its gap, and the read date.
 2. **Gap table:** format, ads, share of spend, store-side purchases, cost per purchase, tested (yes or no), proof available (yes or no), gap (yes or no).
 3. **Ad spec** (same-day) or **review deck** (batch): per ad, format, concept, layout zones, copy with counts, proof rows, files at 1080 x 1350 and 1080 x 1920.
 4. **`format-scorecard.csv`**, updated after the read.
-5. **To confirm:** proof the owner must supply.
+5. **Proof used:** each claim with its source. A claim without proof is cut, not listed.
 
 ## Common mistakes
 

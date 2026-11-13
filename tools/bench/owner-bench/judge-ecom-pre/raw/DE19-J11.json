@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the in-app checkout bug first with the rupee impact worked out, then ranks the five tests with honest sample-size maths tied to the real traffic.",
+  "biggest_mistake": "Some numbers are slightly off (e.g. 'in-app close rate 30%' is really 450/1,500, and the mobile baseline quoted as 0.70% is actually 0.56%), and Test 5's main metric switches to add-to-cart while others use orders, which muddies the ranking logic.",
+  "what_would_make_it_a_10": "Tighten every baseline and conversion figure to the exact funnel numbers and show full working for the ₹34 lakh gain."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The ranking, ship-list and test sizing are cleaner: it separates the bug fix from the tests, states the confirmed ₹6,090 gross profit per order, and shows the sample-size formula against the real weekly traffic.",
+  "biggest_mistake": "A few figures are rounded loosely (e.g. the 16xp(1-p)/d² result is stated as 'about 227,000' and later '196,000 after the fix') without showing the substitution clearly, and it leaves some to-confirm items rather than placing a firm line on the page.",
+  "what_would_make_it_a_10": "Show one fully worked sample-size calculation line by line and give an explicit sentence for the trial/delivery copy in brand voice so it can be pasted."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nail the in-app fix and the five-test order, but Output 2's numbers and sample-size maths are tighter and its ship list is easier to act on tomorrow; Output 1 is close but slips on a few baselines."
+}

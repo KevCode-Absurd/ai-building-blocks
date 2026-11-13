@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built tightly around the two retention habits with platform-branched copy, a guilt-free inactive nudge, and a clear drop list backed by the numbers.",
+  "biggest_mistake": "Email 5 keeps a shared-list push (with a 'Groceries' project example) even though shared projects retain worse (34%) and are not the habits the data supports, which slightly muddies the series' focus.",
+  "what_would_make_it_a_10": "Replace the leftover share email with a second-device or recurring-task reinforcement that fits the allowed triggers and further lifts the 67% both-habits group."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 7,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Very clean, scannable structure with each email's trigger, subject, preview, tip, button, goal and measure laid out in a calm voice.",
+  "biggest_mistake": "Breaks two owner rules: several subject lines exceed 45 characters ('Let Todoist remember the repeats', 'Your list on a second device', 'When you're ready for a bit more') and email 5 pitches Pro, which the owner wanted out of the early series—plus it assumes skip-trigger logic that wasn't confirmed.",
+  "what_would_make_it_a_10": "Keep every subject under 45 characters, move Pro fully out of week one, and use the confirmed triggers only while branching copy by signup platform."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 follows the owner's rules more closely—short subject lines, exactly five user-facing emails built on the two habit triggers, and a cleaner drop rationale—while Output 2 is prettier but breaks the 45-character subject rule and keeps Pro in the series."
+}

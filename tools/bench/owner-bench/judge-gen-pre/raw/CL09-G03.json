@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts runway in the top three numbers and shows that the $0.9M of free-tier compute alone explains the whole margin drop, so the AI-builder problem is clear.",
+  "biggest_mistake": "Customer A's $2.6M loss sits second in the list, and the NRR hit it will cause after January is never mentioned. The 48-hour pause fix has no ship date.",
+  "what_would_make_it_a_10": "Date the 48-hour fix, say how losing Customer A will move NRR, and state the main ask in the opening screen."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The asks are ready to act on: a named profile, a city and a date for each, plus forwardable one-liners the angels can paste straight into intros. The urgent New York hire is flagged in the first screen.",
+  "biggest_mistake": "It never states that the $0.9M of compute caused the 7-point margin drop. It probably runs past 700 words, and runway is in the table rather than the top three.",
+  "what_would_make_it_a_10": "Tie the compute cost to the margin drop in one line, add runway to the headline numbers, and trim to 700 words."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are honest and the numbers check out. I'd send the second because the fix has a date, the key hire shows up in the first screen, and the forwardable blurbs mean my angels can act on the asks right away."
+}

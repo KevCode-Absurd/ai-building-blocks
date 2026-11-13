@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is cleaner and tighter on Meta's real limits and ad-testing structure, while Output 2 overstates headline/description length rules, buries the keep-or-cut logic in vague target-CPA terms, and its P6 brand-name angle leans on an unapproved claim."
+}

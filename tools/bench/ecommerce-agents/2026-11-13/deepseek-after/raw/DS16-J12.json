@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 1 is a clean, complete playbook with the fuller weekly dashboard, but Output 2 edges it on things a solo founder can use immediately: the correct ₹25 ÷ ₹180 breakeven logic for the prepaid incentive, a ready call script and escalation rules, sample template values for submission, and a holdout test plus keep/kill formula that turns the weekly numbers into decisions."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The in-app checkout bug comes first and is sized correctly: 1,860 more checkouts, about 558 orders and about ₹34 lakh a month. The sample-size maths is right, including the 0.81% baseline after the fix and the 12-week desktop-only estimate.",
+  "biggest_mistake": "Every test uses one blanket setup: all traffic, orders as the main metric and a 10% detectable lift. That includes Test 2, which fixes a mobile-only problem, and the hero-image test, where it admits a 10% order lift is unlikely instead of using add-to-cart.",
+  "what_would_make_it_a_10": "Fit the main metric and the traffic to each test: mobile-only for the size picker, add-to-cart for the hero image. Give the smallest detectable effect for each test separately."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The funnel table splits the full path by device and browser, and the 4,130 in-app errors nearly match the 4,800 lost in-app carts. Each test has its own split, length and correctly calculated smallest effect. The mobile-only size test detects 12%, and the hero test uses add-to-cart as its main metric with orders as a guardrail.",
+  "biggest_mistake": "Each test block repeats the same split and length lines. Profit is given as gross margin with no note that delivery, fees and returns would lower it.",
+  "what_would_make_it_a_10": "Cut the repeated lines. Add a note on how to read two tests run at once together, and add a list of things the team must confirm (trial terms, firmness facts, how accurate pincode dates are)."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both put the in-app checkout fix first and got the money right. Output 2 sized each test to its own audience and metric, and its funnel table makes the case for the bug fix plain to see, so it is the plan I'd rather run."
+}

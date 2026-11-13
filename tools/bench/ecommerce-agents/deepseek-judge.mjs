@@ -48,7 +48,7 @@ const rnd = () => ((seed = (seed * 1103515245 + 12345) % 2147483648) / 214748364
 const scrub = t => t.replace(/\s*\[(?:[A-Z]{3}-\d{4}(?:\s*,\s*)?)+\]/g, "").replace(/\bAI Blocks\b/gi, "").replace(/—|–/g, ", ");
 const read = (dir, j, arm) => scrub(readFileSync(path.join(dir, `${j}-${arm}.md`), "utf8"));
 
-async function call(model, system, user, tries = 4) {
+async function call(model, system, user, tries = 7) {
   for (let t = 1; t <= tries; t++) {
     try {
       const r = await fetch("https://api.deepseek.com/chat/completions", {

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every number I checked is right, with the working shown: agencies at 60% of Semrush losses (13.0 of 21.6 per 100 trials), 4.9% blended churn, 1,932 multi-site conversions at 42% of the total, and the 6,250-per-arm sample size. Each success metric is a hard threshold I can judge against.",
+  "biggest_mistake": "The Lite fix is only a top-up. It drops the warning before the limit and the Lite-to-Standard step that my in-house leads complain about. It also never calls this the fastest money, even though it shows Lite usage-limit exits are 32% of all churn.",
+  "what_would_make_it_a_10": "Rank the Lite limit fix as the quickest win, with warnings, a top-up and a smoother step to Standard. Say plainly that PPC-first agencies are not our fight."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clean read of where we lose and where we don't, with correct maths (60% agency share, 37% Lite 12-month retention, churn falling to about 4.1% if usage exits halve) and a fuller Lite fix: a warning, a top-up and a review of the Standard step.",
+  "biggest_mistake": "It stamps 'Data as of November 2026' on figures that came with no date. That invents the dated sourcing my brand rules require instead of flagging that the date is missing.",
+  "what_would_make_it_a_10": "Drop the made-up date and replace soft targets like 'rises above 11%' and 'falls below 54%' with specific thresholds and test sizes."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both found the same story, but Output 1 is the one I'd hand the team: its targets are measurable, its sample sizes are worked out, and it flags the missing dates instead of inventing one. Output 2 reads well, but the invented 'November 2026' and its vague success bars cost it."
+}

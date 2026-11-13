@@ -38,7 +38,7 @@ Access: read only (level 1) to write the library. Loading quick replies into a l
 
 ## Before you start: the gates
 
-1. **Facts are sourced.** Every number, time, ingredient, material and promise in a reply links to a page or document dated within 90 days. Fail: leave that reply out and list the missing fact under "To confirm".
+1. **Facts are sourced.** Every number, time, ingredient, material and promise in a reply links to a page or document dated within 90 days. Fail: leave that reply out and name the missing fact in one line.
 2. **Claims are allowed.** Health, safety, results and comparison claims need proof the store can show on demand; in India the ASCI Code requires it [ADC-6146]. Fail: rewrite to what the proof says.
 3. **Gross profit per product known.** Pass: step 4 recommends from it. Fail: recommend by fit only and mark it.
 4. **Someone owns hand-offs.** A named person takes chats the scripts must not answer. Fail: hand-off rule says "email us" with a stated reply time.
@@ -117,7 +117,7 @@ Write in the brand's voice (read 5 real brand lines beside 5 of yours). For Hind
 1. **One-screen summary:** the top 10 questions by count, the share of chats they cover, and the 3 replies most likely to lift orders.
 2. **Reply library:** Rank, Question type, Buyer's words (example), Short reply, Full reply, Clarifying question, Recommend rule, Proof line (review, date), Order step, Fact source and date, Hand-off rule, Quick reply shortcut.
 3. **Fact sheet:** Fact, Value or lookup rule, Source, Date checked, Owner.
-4. **To confirm:** facts or claims the client must check before loading.
+4. **Left out:** each reply dropped for a missing fact, with that fact in one line.
 
 Example row (fill with the store's facts):
 

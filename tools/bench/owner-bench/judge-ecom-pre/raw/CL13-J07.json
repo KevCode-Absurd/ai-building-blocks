@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data well, with correct per-click revenue (₹48, ₹20, ₹9) and the sunscreen gap. It uses customers' own words in subject lines and hooks (\"Which serum is for me?\", \"Just tell me what to use\", \"Every sunscreen makes me look grey\") and gives A/B subjects and a ready-to-submit WhatsApp template.",
+  "biggest_mistake": "It probably runs over the 1,800-word cap with its measurement plan and extra setup notes. It also invents a named co-founder signature, and the dark-spot email never pairs the serum with daily sunscreen.",
+  "what_would_make_it_a_10": "Trim to the word limit, drop the invented signatory, and make the dark-spot path a serum-plus-SPF routine with the strength named in the subject lines."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is calm, clean and within the word limit. The dark-spot email pairs the serum with sunscreen, and Email 5 gives a 3-step routine with correct bundle maths (₹1,297 to ₹1,167).",
+  "biggest_mistake": "The Email 5 routine puts everyone on a salicylic face wash twice a day plus a serum, which clashes with its own \"one product at a time\" advice. The sunscreen email also claims it \"gets more questions than anything else we sell\", which isn't supported.",
+  "what_would_make_it_a_10": "Give a safer, concept-matched starter routine in Email 5, add subject-line variants that use the customers' phrases, and drop the unsupported claim."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are on brand and use the quiz and sunscreen data. Output 1 is richer: it works out revenue per click, uses Sneha's and Arjun's own words, gives A/B subjects and a submittable WhatsApp template. Output 2 is tighter but plainer, and its closing routine contradicts its slow-start message."
+}

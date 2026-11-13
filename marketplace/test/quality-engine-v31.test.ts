@@ -56,3 +56,13 @@ test('native field names retain underscores and visible link labels use their ow
   const r=run('quality/check-format.cjs',file,'--contract',contract);
   assert.equal(r.status,0,r.stdout+r.stderr);
 });
+
+test('qe-check passes the owner-finish flags through to leakcheck and gates the raw limit',()=>{
+  const file=put('finish.md','# Emails\n\n**Subject:** Start small (test: Clear your head)\n\nRunner-up: a three-item set.\n');
+  assert.equal(run('quality/qe-check.cjs',file).status,1);
+  const ok=run('quality/qe-check.cjs',file,'--options-requested');
+  assert.equal(ok.status,0,ok.stdout);
+  const over=run('quality/qe-check.cjs',file,'--options-requested','--limit','10');
+  assert.equal(over.status,1,over.stdout);
+  assert.match(over.stdout,/FAIL\s+limit/);
+});

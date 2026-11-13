@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives a cleaner ranked plan with a sensible 2×2 for delivery/EMI, correct MDE math and a realistic 8-week schedule, while Output 2's 10% MDE and 6-week single test are less practical and its fixed dates are less useful."
+}

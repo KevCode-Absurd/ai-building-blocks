@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the paused winner as fatigue not failure, brings it back in fresh words as the lead test, and pairs it against the never-run taste review phrase, which is exactly what the data is shouting.",
+  "biggest_mistake": "Its headlines are the softest part of the set (H6 'Read it. Then eat it.' is the only one with real voice), and the first-4 plan leaves the price objection as the weakest-led test rather than giving Priya's segment its own taste hook.",
+  "what_would_make_it_a_10": "Give the taste review its own headline and description instead of burying it under the protein number, so the hook sells the idea, not just the primary text."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It structures the launch as two clean message pairs with everything else held constant, so each test answers one question, and it budgets off the owner's real ₹5,70,000 spend with a rupee-per-purchase read.",
+  "biggest_mistake": "It leaves placeholders for the owner to confirm (landing page price and stock, current review count) and the pairing logic ties each test to a fixed audience, so the price and taste tests are not cleanly separated from the segment.",
+  "what_would_make_it_a_10": "Remove the 'To confirm' homework and lock in the assumptions, so it is a complete paste-in brief rather than a plan that waits on the owner."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both do the important thing: bring the paused winner back and test taste against it. Output 2 is better structured as a live test because the two clean pairs and the rupee-based budget and kill-lines make it easier to run tomorrow, while Output 1 is a touch cleaner to paste but leaves its strongest insight, taste, in the primary text only."
+}

@@ -21,7 +21,7 @@ This is general pricing practice, not legal, tax or accounting advice. Check thi
 3. The client's minimum margin, or permission to suggest one.
 4. Current price and sales volume, if it exists.
 5. Rival prices the client found or that are public, with what each includes. Never anything a rival shared privately.
-6. Buyer evidence: interview or call notes, survey answers, win and loss reasons, reviews. If none, I write the questions first (the buyer-pricing-questions prompt).
+6. Buyer evidence: interview or call notes, survey answers, win and loss reasons, reviews. If none, mark it missing and lean on costs and rivals; the buyer-pricing-questions prompt can gather it later.
 7. Markets: which countries, for how the price is shown.
 
 **Access:** level 1 is enough (exports, pasted figures, accounting reports). Level 2 lets me build the model in a copy of the client's sheet or prepare a new price unused in billing. Level 3 lets me apply an approved price for new buyers within the agreed limits. Raising the price for existing customers needs a fresh yes every time.
@@ -48,11 +48,11 @@ For a price rise: maximum share of customers you can lose before profit falls = 
 
 ### 5. Recommend one price
 
-One suggested price with three reasons: the floor it clears, where it sits against rivals on the same basis, and what buyers said. State the risk and what would change your mind.
+One suggested price with three reasons: the floor it clears, where it sits against rivals on the same basis, and what buyers said. The recommendation may combine the price with billing or packaging moves that serve the same goal; name a runner-up only when the options truly exclude each other. State the risk and what would change your mind.
 
 ### 6. Plan a small test
 
-New buyers only, a set period, one measure (profit per visitor or per deal), and a stop rule. Existing customers keep their price until the client decides on a rise separately.
+Test on the people the change is for. For a price rise or a new list price: new buyers only, and existing customers keep their price. For an opt-in plan or offer aimed at current customers: offer it to a random share of them against a matched control group. Read the owner's goal metric (profit per visitor or per deal when no other goal is stated) inside the owner's time window, with a stop rule.
 
 ### 7. Check the display
 
@@ -66,7 +66,8 @@ How the price will be shown in each market: total price including mandatory fees
 - Buyer evidence is real and counted, or marked missing.
 - Each option shows margin and the volume needed.
 - The suggested price clears the floor.
-- The test is small, has a stop rule and leaves existing customers alone.
+- The test is small, has a stop rule, and runs on the people the change is for, on the owner's goal metric and window.
+- No existing customer's price changes without the client's fresh yes.
 - The deliverable says to check this with local rules and when to ask a qualified accountant or lawyer.
 
 ## Output format
@@ -76,7 +77,7 @@ How the price will be shown in each market: total price including mandatory fees
 3. **Buyer evidence** summary with counts.
 4. **Options table:** price, margin per unit, margin %, volume needed, risk.
 5. **Recommendation:** one price, three reasons, the risk.
-6. **Test plan:** who, how long, measure, stop rule.
+6. **Test plan:** who (the people the change is for), how long (inside the owner's window), goal metric, stop rule.
 7. **Display note** per market, and questions for a qualified adviser.
 
 ## Example of good output
@@ -105,6 +106,6 @@ How the price will be shown in each market: total price including mandatory fees
 
 **Recommendation:** $520 a month as a fixed package with a month-end close by the 5th. It clears the floor by $73, matches rival B on the same basis, and sells the outcome eight clients named.
 
-**Test:** offer it to new clients for eight weeks; keep it if profit per proposal sent beats the last eight weeks at hourly rates (the decision rule you approve before starting). Existing clients stay on hourly until you decide on a rise.
+**Test:** offer it to new clients for eight weeks; keep it if profit per proposal sent beats the last eight weeks at hourly rates (the decision rule, set before starting). Existing clients stay on hourly; a rise for them is a separate decision with its own notice.
 
 Check this with local rules for how fees are shown, and ask a qualified accountant whether sales tax applies to the package.

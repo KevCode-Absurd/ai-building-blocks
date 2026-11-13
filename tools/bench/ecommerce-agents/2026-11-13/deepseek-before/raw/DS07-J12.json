@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is slightly stronger on commercial rigor—it correctly flags that the ₹45 break-even shrinks (~₹22) once confirmation halves RTO, adds a cart holdout for real incrementality, and includes a cancellation template and missed-delivery reattempt—while Output 1's ₹30 discount is set against the un-halved ₹45 and risks eating the margin."
+}

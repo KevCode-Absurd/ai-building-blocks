@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It chains the emails on the real triggers: first task leads to the repeat email, and the recurring task leads to the second-device email. Fallback send days, skip rules, platform branching and a no-two-emails-a-day rule make it ready to load into the tool.",
+  "biggest_mistake": "Email 5 asks everyone to share a list, a habit that retains only 34% and that the tool can't trigger on or skip. It brings back a gentler team invite in the slot most worth spending on the two winning habits or on revenue.",
+  "what_would_make_it_a_10": "Replace the share email with one that serves the two habits or a segmented Pro email. Pick one subject line per email instead of listing parenthetical test alternates."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every email chases one of the two retention habits, and the team invite is dropped completely. Pro moves to day 14 and goes only to users who have hit a habit, so the series protects revenue without spending a slot on sharing.",
+  "biggest_mistake": "The second-device email goes on fixed day 3 instead of firing off the recurring-task trigger. That is a missed chance to sequence the two habits, and the welcome email has no mobile tailoring.",
+  "what_would_make_it_a_10": "Trigger email 3 on 'recurring task created', with day 4 or 5 as the fallback, and give the welcome email a mobile line, so the series uses every trigger the tool offers."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are calm, on-brand and built around repeats plus a second device. Output 2 is cleaner: one subject per email and a goal and measure under each. It also drops the team email entirely and keeps a well-targeted Pro ask, where Output 1 spends its last slot on sharing."
+}

@@ -81,7 +81,7 @@ If an alternative's fact cannot be found publicly, leave that cell as "not state
 | Claim on page | Evidence (file, link or screenshot) | Who checked | Date | Jurisdiction notes (US, India) | Expires |
 |---|---|---|---|---|---|
 
-**To confirm:** facts the client must supply, rows awaiting legal review.
+**Assumptions:** one line each, at most three, only where an unknown changes what to do. A row without a sourced fact is left out. A row that makes a claim about a named rival carries one line beside it: "legal review before publishing".
 
 ## Common mistakes
 

@@ -83,7 +83,7 @@ If delivery data is missing, do not publish cutoff dates; publish "order by" dat
 | Region or zone | Method | Processing days at peak | Transit p90 days | Buffer | Order by | Payment note (COD or prepaid) |
 |---|---|---|---|---|---|---|
 
-**To confirm:** extras pricing, capacity sign-off, any pick needing approval.
+**Assumptions:** extras pricing and packing capacity, where not given, as the figure used, one line each.
 
 ## Common mistakes
 

@@ -1,0 +1,20 @@
+{
+ "job": "J10",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 works the threshold economics correctly (700 vs 270 free-shipped orders, ₹42,000 vs ₹23,100 shipping), sizes break-even at ~21% of the affected band, and gives a full dated test plan with COD handling, while Output 2's 40%/45%/15% split is optimistic and its '6% of all orders' break-even is mis-stated against its own model."
+}

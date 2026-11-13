@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every move is sized in points of contribution with low, likely and high cases and the working shown, ranked by gain over effort. A $94 payback cap drives the Meta cut, and a week-by-week plan and a scorecard with act-when thresholds sit on top.",
+  "biggest_mistake": "It is dense and probably runs over the 1,600-word limit. The 13.6% and 7.8% contribution baseline rests on an assumed 54.5% first-order revenue split, and the plan targets down 11% on new orders, which is no improvement.",
+  "what_would_make_it_a_10": "Trim it to the word limit, flag the contribution baseline as an estimate more plainly, and add a fresher idea such as a swatch offer for Sarah's fear of buying sheets unfelt."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads cleanly. The proven-versus-to-check table gives owners, methods and dates, the tracking check on Meta against store orders is included, and the swatch offer speaks directly to Sarah's fear of paying $200 for sheets she hasn't touched.",
+  "biggest_mistake": "Ranking is mostly qualitative (High, Medium, Low), and some figures are loose or unexplained, such as the $23k to $41k per $100k cut. The contribution baseline is left as 'set in week 1', and there are no week-1 steps per move or act-when thresholds.",
+  "what_would_make_it_a_10": "Size each move in gross profit dollars or points with the working shown, set a numeric contribution baseline and target, and add trigger thresholds to the scorecard."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 puts a number on every move, gives a concrete $94 cap rule, a week-by-week plan and a scorecard with action triggers, so the team can run it tomorrow. Output 2 is easier to read and has the nicer swatch idea, but it is vaguer on ranking and baselines, and Output 1's extra length is a real but smaller cost."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 7,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 front-loads the six-day window with a precise Klaviyo flow (order filter, checkout pause, separate WhatsApp consent, coupon-tag caveat), an honest 7-day expiry, and a clear per-email job, while Output 2 stretches to 14 days with the code expiring the same day as the last email and offers a weaker, less operational setup."
+}

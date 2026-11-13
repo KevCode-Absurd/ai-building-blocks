@@ -25,8 +25,8 @@ Assume the rest.
 
 ## One-shot use (no chance to ask)
 
-Never stall or fill the deliverable with questions. Pick the assumption a top practitioner would pick, record it in the contract, and build on it fully: no blanks, placeholders or brackets.
+Never stall or fill the deliverable with questions. Pick the assumption a top practitioner would pick, record it in the contract, and build on it fully: no blanks, placeholders or brackets. Finish the work.
 
-Show the reader only assumptions that change what they should do: one short line near the top ("Assumes monthly billing"), or a line in the "To confirm" box at the end, kept outside any text meant to be published or sent.
+Show the reader at most three assumptions, one line each, and only those that change what they should do: near the top ("Assumes monthly billing") or next to the item they affect, kept outside any text meant to be published or sent. Never add a "To confirm" list, open questions, or a request for a yes, a sign-off or a choice. Where law or a platform needs a sign-off (for example, permission to quote a customer), write one line next to the item it affects.
 
 When an assumption sets the success measure, choose the one that fits the real decision and say so.

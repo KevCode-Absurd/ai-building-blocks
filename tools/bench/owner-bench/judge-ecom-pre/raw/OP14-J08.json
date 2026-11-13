@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the two real causes of lapse in this data—the discontinued Monsoon Dark blend and the subscription delivery failure—and builds separate, usable win-back tracks around them.",
+  "biggest_mistake": "It mis-prioritises the 91 to 180 day group ahead of the cheaper 46 to 90 day at-risk customers, and its lift/sample-size claims are a bit loose.",
+  "what_would_make_it_a_10": "Start with the 46 to 90 day band as the first win-back/at-risk move, tighten the measurement maths, and show reachable counts by channel more explicitly."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly separates proven causes from assumptions and gives a disciplined holdout-based measurement plan with sensible caution on sample size.",
+  "biggest_mistake": "It invents a 68-day lapse rule and an even split inside the 46 to 90 day band, then treats those assumptions as planning facts, which weakens the targeting and value estimates.",
+  "what_would_make_it_a_10": "Use the given bands without speculative splitting unless clearly framed as a test, add reachable counts for WhatsApp too, and make the subscriber win-back contingent on the delivery fix with less ambiguity."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is more built around my actual business signals and gives me more of what I asked for: segment order, offer logic, message drafts, holdout logic and a worked gross-profit view. Output 2 is thoughtful, but it leans more on assumptions and feels a bit less grounded in the exact cuts I gave you."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 bakes the paid-partnership disclosure into every script and adds buyer-stage, deliverables, dates and rights, while Output 1 leaves disclosure mostly to the brief and is thinner on production terms."
+}

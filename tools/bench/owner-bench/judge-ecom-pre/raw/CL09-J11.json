@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The funnel table by device and browser makes the in-app checkout bug obvious: 4,130 in-app pop-up errors against 4,800 lost in-app carts. It sizes the fix correctly at about 560 orders and ₹34 lakh gross margin a month and ships it first, with an A/A test.",
+  "biggest_mistake": "It states the smallest detectable effect for each test without showing the working, so I can't check the 10% and 12% figures myself or learn how they were reached.",
+  "what_would_make_it_a_10": "Show the sample-size sum once, add stop rules and say how to treat COD orders, so I can trust and reuse the timings."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It shows the sample-size maths (0.70% baseline, about 227,000 per version for a 10% lift in 4 weeks). It also adds practical safeguards an owner wouldn't know: server-side splitting, stop rules, counting only delivered or prepaid orders for COD, and waiting out the 100-night return window for the firmness test.",
+  "biggest_mistake": "Test 5 judges a hero-image change on orders at a 10% detectable lift and lists add-to-cart only as a guardrail. Add-to-cart should be the main read for a top-of-page change.",
+  "what_would_make_it_a_10": "Use add-to-cart as the main metric for Test 5, with orders as the guardrail, and add the funnel-rate table by browser so the diagnosis can be seen at a glance."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both find the in-app bug, value it at ₹34 lakh and rank the same sensible tests. The second shows its sample-size working and adds stop rules, the COD and returns read timing, and the profit caveats, so I learn more and can trust the run times."
+}

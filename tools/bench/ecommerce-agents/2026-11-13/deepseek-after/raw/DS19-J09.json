@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are excellent and analytically sound, but Output 2's per-$1M quantification, explicit kill/scale decision lines, and Black Friday discount-margin arithmetic give it a slight edge in commercial rigor and testability."
+}

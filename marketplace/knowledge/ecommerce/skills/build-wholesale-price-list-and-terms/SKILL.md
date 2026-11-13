@@ -34,7 +34,7 @@ Required:
 
 Optional: what 2 or 3 target shops say they expect as margin; competitor wholesale terms if a shop shares them; current bank or card fees for trade payments.
 
-If retail-buyer margin expectations are unknown, use the practitioner defaults in step 3 and mark them "to confirm with 3 shops". Building the sheet needs read access only. Publishing a wholesale page or B2B catalog on the store needs draft access (level 2) and the client's yes.
+If retail-buyer margin expectations are unknown, use the practitioner defaults in step 3 and mark them "assumed: practitioner default". Building the sheet needs read access only. Publishing a wholesale page or B2B catalog on the store needs draft access (level 2) and the client's yes.
 
 ## Before you start: the gates
 
@@ -115,7 +115,7 @@ Show the sheet with failed SKUs highlighted and the terms page. The client appro
 - Credit days are shorter than supplier float, or the gap is funded.
 - Opening and reorder minimums are set and match case packs.
 - The pricing policy suggests, never forces, a resale price.
-- Shop margin assumptions are marked confirmed or "to confirm".
+- Shop margin figures are marked as given by shops or assumed.
 - Nothing was published or sent without a client yes.
 
 ## Output

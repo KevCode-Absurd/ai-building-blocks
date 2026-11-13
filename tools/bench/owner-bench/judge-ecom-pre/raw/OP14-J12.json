@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It targets the real cost driver by pincode, adds the missing shipped and delivery updates to cut WISMO chats, and gives ready-to-submit templates plus flows the team can run.",
+  "biggest_mistake": "It leaves a few assumptions and confirmations at the end, so it is not fully finished for immediate submission without minor internal edits.",
+  "what_would_make_it_a_10": "Tighten the final assumptions into fixed fallback wording and add the after-hours auto-reply as a fully specified template with buttons."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is easy to read and sensibly adds shipped and out-for-delivery updates plus an after-hours automation to reduce simple chat load.",
+  "biggest_mistake": "It misclassifies the prepaid nudge as Utility despite being promotional, skips the owner-wanted delivery-day reminder follow-up for missed delivery, and uses rougher numbers and a weaker pincode-risk plan.",
+  "what_would_make_it_a_10": "Use the correct WhatsApp categories, work the pincode economics through properly, and make the high-risk Tier 3 COD flow materially stricter with clearer measurement and holdouts."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels built for my data, not for any store. It catches the Tier 3 RTO problem, the missing order-status updates, and the need to keep Utility clean, so I could hand it to the team with only small fixes."
+}

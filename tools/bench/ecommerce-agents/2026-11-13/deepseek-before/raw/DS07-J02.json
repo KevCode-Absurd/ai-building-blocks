@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives a more rigorous, self-consistent measurement system — Shopify-verified cost per first order with a calibration factor, a $114 kill line tied to the $38 ceiling, and a clean day-30 read — while Output 2 muddies the target by introducing a $45 ceiling and a $55 gate that weaken the parity logic."
+}

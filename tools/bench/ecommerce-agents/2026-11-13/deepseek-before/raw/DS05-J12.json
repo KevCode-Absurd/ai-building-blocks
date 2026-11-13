@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gets the prepaid-offer economics right (₹30 discount under the ₹45 RTO break-even) and ties messaging category to the discount, while Output 2's ₹20 offer is safe but it under-specifies the timing flow and omits a delivery-day prepaid variant and the 'I'm available/Not home' handling detail that Output 1 covers."
+}

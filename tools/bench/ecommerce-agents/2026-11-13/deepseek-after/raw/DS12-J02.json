@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is more deployable on Monday (named owners and done-when criteria, dates that correctly land on Thanksgiving/Black Friday/Cyber Monday, coherent $38 gates, and a sharp Shopify-vs-TikTok purchase correction step), while Output 2's day-10 gate of $55 per first order contradicts its own $45 ceiling and its $76/$57 ad-kill lines sit awkwardly against a thin 8-ads-per-$350-group structure."
+}

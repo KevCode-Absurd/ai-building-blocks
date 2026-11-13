@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 6,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers all eight briefed elements with compliant, testable execution and correct test math, while Output 2's 'cost per trip' concept invents a 24-trip/₹292 framing that is a misleading price claim and its test plan is vaguer."
+}

@@ -109,7 +109,7 @@ Sale weeks bend ad-level results toward whichever product was discounted; read c
 
 **Deadline sheet:** Phase, Brief due, Shoot date, Assets due, Ad review, Go-live, Switch-off, Readout date.
 
-**To confirm:** courier peak times, packing staff, e-gift card set-up, and the offer.
+**Assumptions:** courier cut-off dates, packing staff and the offer, where not given, as the value used and what moves if it differs, one line each, at most three.
 
 ## Common mistakes
 

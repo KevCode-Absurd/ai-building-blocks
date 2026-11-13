@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built directly on the store's data: problem-first hooks, the two licensed on-feet worker Spark Ads from day one, and a day-30 bar of ~$38 per first order from the 90-day payback math.",
+  "biggest_mistake": "The 90-day value shown as 'about $38.50' is off the owner's working ($48.40 minus about $9.90 = $38.50, but the owner guides to ~$38); minor, yet the day-30 scorecard uses $38 so the reader must reconcile two numbers.",
+  "what_would_make_it_a_10": "Tighten the creative hooks to Maria's and Tasha's exact phrases and spell out the March rights date explicitly in the kickoff list."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Uses the data sharply: the ~25 purchases/ad-group math sets four $200 cells, session dates with a hard tracking gate, and three reads (tagged, survey, lift) before the day-30 verdict.",
+  "biggest_mistake": "The budget table's phase totals don't add up ($5,600 + $5,600 + $4,000 + $4,600 + $10,200 = $30,000, which does add up, so no fault there); the real issue is that the schedule assumes a Thanksgiving-week holiday effect without store evidence.",
+  "what_would_make_it_a_10": "Tie the day-30 verdict to a single crisp number the owner can read at a glance and drop the speculative holiday-cost note."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is the one I'd hand the team on Monday: dated set-up with a hard launch gate, the $136/day-per-ad-group math behind four cells, and a multi-read day-30 test that protects against TikTok over-counting. Output 1 is solid and usable, but slightly less rigorous on tracking and verdict."
+}

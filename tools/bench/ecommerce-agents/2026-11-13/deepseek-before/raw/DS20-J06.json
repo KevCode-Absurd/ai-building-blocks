@@ -1,0 +1,20 @@
+{
+ "job": "J06",
+ "o1": {
+  "job_done": 7,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 7,
+  "overall": 7
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both execute the same sound 'cash is backup, cards first' strategy, but Output 1 leaves an unfilled [X] placeholder in the live spec and FAQ (not publishable as delivered), while Output 2 keeps its 'a few flat notes' copy ready to run and moves the note-count check into a to-confirm list."
+}

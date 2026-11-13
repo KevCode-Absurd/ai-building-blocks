@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the right money-led calls: cuts the COD-trap Starter Kit, splits Women 25-34, relaunches the paused winning creator ad, and uses the Shopify/Meta attribution gap in the rupee math.",
+  "biggest_mistake": "It leaves a large reserve conditional and ends with items to confirm, when the brief asked for finished decisions without questions.",
+  "what_would_make_it_a_10": "Remove the confirmation section, give a firmer Monday launch plan for the reserve/prepaid offer, and tighten the wording a little."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the three big account signals: the paused Dad’s razor winner, Women 25-34, and the Starter Kit COD/RTO loss.",
+  "biggest_mistake": "It relies too much on Meta-count profitability in the decision table and scaling rules, so it scales/holds some spend that is not clearly profitable on the safer Shopify-adjusted line.",
+  "what_would_make_it_a_10": "Make the safe Shopify-adjusted CPA the main operating target, stop scaling DPA at high frequency, and be stricter on the UGC test unless it beats the safe line."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to how I would actually run the next 14 days: it protects gross profit, uses the attribution haircut, and gives stronger rupee-backed cut/fix/hold decisions. Output 2 is good, but its budget and rules are a bit too willing to spend above the safe profit line."
+}

@@ -141,7 +141,7 @@ Deliver the PNGs, the HTML sources and the check results. After launch (owner's 
 4. **Forecast table:** ads, target cost per purchase, test spend per ad, total test spend, daily budget, expected winners, read date.
 5. **Concept table:** ad ID, angle, image job, visual idea, base image file, headline options with character counts, support line.
 6. **Finals:** PNG at 1080 x 1920 and 1080 x 1350, HTML sources, `layout-check.json`.
-7. **To confirm:** proof the owner must supply.
+7. **Proof used:** each claim on the ad with its source. A claim without proof is cut, not listed.
 
 ## Common mistakes
 

@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both deliver all 6/6/3 assets with accurate character counts and correct ₹90-a-bar maths, but Output 2 holds headline and description constant so each test isolates one variable, and adds spend-based keep/cut rules and the warning to switch off Meta's automatic text changes, which a first-time founder running this alone actually needs; Output 1's per-ad matched headlines read better but leave it unclear which element moved the result."
+}

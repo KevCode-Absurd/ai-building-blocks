@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 8,
+  "commercial": 6,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 wins on a budget table that reconciles exactly to $30,000, an owner/'done when' set-up checklist, a weekly TikTok-vs-Shopify purchase correction factor and consistent $38 target / $57 kill thresholds with creator-disclosure compliance, while Output 2's coherent $45 ceiling is contradicted by its own $55 day-10 gate and $57 ad-kill line and it omits paid-partnership disclosure and any handoff ownership."
+}

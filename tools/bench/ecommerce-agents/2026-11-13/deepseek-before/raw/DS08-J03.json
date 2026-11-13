@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both deliver eight distinct concepts with correct claims and math, but Output 1 is far more ready to hand to a media buyer — character-counted primary text that survives Meta truncation, a headline per ad, and a test protocol with real 3x/5x CPA thresholds and keep/cut rules, versus Output 2's weaker \"three ads in one broad campaign\" plan and over-length primary texts."
+}

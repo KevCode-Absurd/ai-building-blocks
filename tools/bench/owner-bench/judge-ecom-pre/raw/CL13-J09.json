@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clear diagnosis that separates what is proven from what needs checking. It shows Meta is the cost problem, that each first order loses $33, and that Meta customers do not pay back over 18 months, and it adds a good swatch idea for Sarah.",
+  "biggest_mistake": "The moves are ranked only as High, Medium or Low rather than by a gross-profit number, so the ranking is hard to defend. The week-1 steps are scattered across the plan instead of sitting with each move.",
+  "what_would_make_it_a_10": "Put a dollar or contribution-point estimate and a first-week step on each move, and add trigger rules to the scorecard so it says what to do when a line misses.",
+  "overall_note": ""
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every move is sized in one unit, contribution points, with low, likely and high cases and the working shown. It estimates contribution after ads at 7.8%, adds an effort score and an overlap discount, and gives week-by-week owners and 'act when' triggers on the scorecard.",
+  "biggest_mistake": "It is dense and probably over the word limit, and a couple of estimates are shaky, such as the 13.6% year-ago contribution and some email sizing. The Meta tracking check is also weaker than comparing platform purchases to store orders.",
+  "what_would_make_it_a_10": "Trim it to the word limit, tighten the assumed contribution figures, and add a direct platform-versus-store order reconciliation for Meta.",
+  "overall_note": ""
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 reads like a plan I could run: each move is sized in gross-profit terms with its working, has an owner, and carries a checkpoint, and the scorecard says what to do when a number slips. Output 1 diagnoses just as well but ranks vaguely and is thinner on week-one steps."
+}

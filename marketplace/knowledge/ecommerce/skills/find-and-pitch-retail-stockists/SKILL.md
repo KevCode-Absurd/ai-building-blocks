@@ -124,7 +124,7 @@ Show the client the A-tier list, the pack and the three emails. Send nothing unt
 
 ## Output
 
-1. **One-screen summary:** clusters chosen, shop count by tier, the 10 to 15 shops to pitch first, stock and cash check result, and one runner-up approach in a line.
+1. **One-screen summary:** clusters chosen, shop count by tier, the 10 to 15 shops to pitch first, and the stock and cash check result.
 2. **Stockist target sheet** with columns: Shop, City, Pincode or zip, Buyer name, Role, Channel, Neighbour brands stocked, Score per factor, Total, Tier, Reason it fits, Status, Next step, Date.
 3. **Line sheet layout:** Photo, Product, SKU, Case pack, Wholesale price, Suggested retail, Shop margin (money and %), Opening minimum, Lead time.
 4. **Email set** for each A-tier shop: Subject, Pitch, Follow-up 1, Follow-up 2, each with send day.

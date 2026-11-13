@@ -1,0 +1,20 @@
+{
+ "job": "J06",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 avoids citing the test figures as live facts (no '400 reviews' claim, no paraphrased quotes as quotes), puts the cash limit in the subtitle and add-to-cart line for stronger returns defense, and gives a cleaner under-button line, while Output 2's only weakness is leaning on a test input and slightly cluttered button copy."
+}

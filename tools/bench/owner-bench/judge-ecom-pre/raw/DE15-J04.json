@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every angle and hook decision is tied back to the owner's own cost-per-purchase numbers, and the hook test gives a real money rule (about $520 per hook at $26 CPA, keep under $32), which a small team can run tomorrow.",
+  "biggest_mistake": "The blanket 'must say all three approved claims word for word' instruction risks creators cramming all three into 40 seconds, and the closing 'To confirm: creator fees and shoot dates' is a small piece of homework for an owner who said they are unavailable.",
+  "what_would_make_it_a_10": "Make the claims instruction explicit per script (which claims belong in which ad) so creators don't cram, and close it as a finished brief with no open items."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The cleanest, most natural-reading scripts of the two, with the 'A new kind of soda' tagline closing every ad and consistent rules that keep taste first and the label late.",
+  "biggest_mistake": "The hook test plan is too vague to act on: 'run all nine at the same budget, after about a week compare' gives no purchases-per-hook or cost thresholds, so the team cannot judge a winner reliably.",
+  "what_would_make_it_a_10": "Add a money-based testing rule (purchases per hook, cost per purchase against $26/$32) and usage-rights/delivery terms so the creator briefs are complete."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both give three strong, on-data scripts with correct numbers and disclosure, but Output 1 is the one I can hand to a producer and media buyer tomorrow: it includes the day-to-day hook rules with money math, delivery specs and usage terms, while Output 2's test plan is too loose to call a winner."
+}

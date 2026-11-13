@@ -4,11 +4,12 @@ Families: creative-brief; also: agency brief, campaign brief, creative brief, de
 
 **MUST-HAVES**
 1. The objective as one measurable outcome with its audience, time window and how it will be read (for example "win back X% of lapsed app customers within 30 days, read against a holdout"). Business target and creative job are separate lines.
-2. The audience as a real situation, not a demographic: what they do now, why they stopped or never started, and the one tension the work must resolve. Use the client's own facts; mark anything not yet known as a fill-in.
+2. The audience as a real situation, not a demographic: what they do now, why they stopped or never started, and the one tension the work must resolve. Use the client's own facts and the audience's own words where the brief gives them; where a fact is missing, state the assumption in one line.
 3. One single-minded message in one sentence. If two ideas compete, pick one and say why in a line.
 4. Reasons to believe that are true and checkable today: product facts, program terms, prices, proof from the client's own site or data, each with its source. Anything unverified stays a clearly marked placeholder.
 5. Mandatories: brand name style, logo and legal lines, claims the work may and may not make, required disclosures and opt-in rules per channel, accessibility, and what must appear on every piece.
 6. Deliverables per channel with real specs (format, size or length, count, versions), and a timeline with review rounds, owners and the launch date.
+7. Two to four starting routes, one line each, that differ on at least two of angle, format, persona and hook source; hooks drawn from the audience's own lines when the brief gives them; one route labelled as the bolder move.
 
 **FAILURE MODES**
 1. Several messages dressed as one ("fresh, warm, local and rewarding").
@@ -17,8 +18,9 @@ Families: creative-brief; also: agency brief, campaign brief, creative brief, de
 4. A timeline with no feedback rounds or approval owners.
 5. Tone described with adjectives only, with no example line or "say this, not that".
 6. Strategy essays and research summaries that push the brief past one page.
+7. Routes that are one idea in different words, or hooks written in brand language when the audience's own words were on hand.
 
-**SHAPE:** One page, in this order unless the request sets one: objective, audience and tension, single-minded message, reasons to believe (with sources or placeholders), tone (with one example line), mandatories, deliverables table (channel, format and spec, count, due), timeline table (week, milestone, owner). Fill-ins in square brackets. No appendix unless asked.
+**SHAPE:** One page, in this order unless the request sets one: objective, audience and tension, single-minded message, reasons to believe (with sources or placeholders), tone (with one example line), starting routes, mandatories, deliverables table (channel, format and spec, count, due), timeline table (week, milestone, owner). Square-bracket fill-ins only for proof the client has not supplied. No appendix unless asked.
 
 **RULES AND RISKS:** Nutrition, allergen, health, environmental and price claims must be true and qualified where rules require it. Marketing texts and pushes need prior consent; emails need an opt-out and postal address. Paid creators or partners must disclose the relationship. Rewards and promotions need clear terms. Never invent results, awards or customer quotes as proof.
 

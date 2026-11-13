@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Eight concepts that really differ in angle and format (sound-led Reel, carousels, a price reframe, gifting), with short, calm primary text in Mokobara's voice and the buyers' own words.",
+  "biggest_mistake": "The per-trip price concept (₹292 a trip) is a weaker, more transactional idea, and the test setup is lighter and less specific than it could be.",
+  "what_would_make_it_a_10": "Add per-ad-set budgets and kill/scale thresholds, and one concept built for women that goes beyond a single lift moment."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 6,
+  "ready": 9,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Production-ready detail (safe zones, headlines with character counts, a test plan with budgets and decision thresholds) tied to the ₹1,058 and ₹1,615 figures, and it keeps scuffed dark shells off camera.",
+  "biggest_mistake": "Several concepts are static product-in-scene images with longer, feature-heavy copy, so it feels closer to the 'same ads, new headline' pattern, and it likely runs over the 1,500-word limit.",
+  "what_would_make_it_a_10": "Replace the static-heavy concepts with more varied formats, and make the copy shorter and calmer in brand voice."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives me more varied ideas in our quiet, confident voice, and its copy sounds like our customers. Output 2 is better on test mechanics, but its concepts lean on statics and longer, more feature-led copy."
+}

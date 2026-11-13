@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It targets the Essentials 8+ leak with one flat Agency plan and checks the revenue math against our numbers: about $249k a month at risk, $24k lost each month, and $2.21M total. It also names the break-even point where Team customers moving down would erase the gain.",
+  "biggest_mistake": "It says 11 channels on Team cost 'about $121'. That figure is the Team 8+ average of 10.4 channels; 11 channels actually cost about $128 blended or $132 at list. It also gives the yearly-billing push only one line, when it could be a separate quick win.",
+  "what_would_make_it_a_10": "Show the yearly default or in-app yearly offer as a costed, fast churn win alongside Agency, and fix the Team comparison price."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 7,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very concrete. It gives a clear pricing page table, low, mid and high cases with break-even, a dated rollout, and a smart first step that counts single-user Team 8+ accounts before anything launches.",
+  "biggest_mistake": "It rejects the yearly-billing push and claims it only pays back after 12 months. That ignores 0.9% versus 4.0% monthly churn and misses a cheap, honest win. Its main test also uses only new logged-out visitors, so it never measures whether existing 8+ customers churn less, which is where the board's two-quarter gain has to come from.",
+  "what_would_make_it_a_10": "Test Agency with existing at-risk Essentials 8+ customers against a control group, and treat the yearly prompt as a near-term retention lever rather than a reason to say no."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both pick the right fix, but Output 1 tests it on the customers who are actually leaving and shows how much keeping them is worth. Output 2 talks itself out of the yearly-billing win, and its test can't show the churn drop the board needs within two quarters."
+}

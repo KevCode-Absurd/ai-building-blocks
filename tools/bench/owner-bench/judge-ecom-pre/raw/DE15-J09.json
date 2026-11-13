@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds a full contribution-margin model from my numbers (7.8% now vs 13.6% a year ago, 11% target) and ranks every move by quantified gross-profit gain against effort, so I can defend the order in a board meeting.",
+  "biggest_mistake": "It leaves the other return reasons untouched (comforter too warm, sateen feel, colour) and its Meta-at-$110/$100/$90 blended costs are each a point or two light ($100.7/$95.2/$89.7 rather than $99/$94/$89).",
+  "what_would_make_it_a_10": "Add one cheap product-page fix move for the non-linen return reasons, each tied to the stated top reason, without dropping any of the current rigour."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It finds angles I would not have thought of - the swatch offer aimed straight at Sarah's fear of spending $200 on sheets she has not touched, and page fixes for each non-linen return reason - and it ties the Meta check to the January platform move.",
+  "biggest_mistake": "It ranks moves on 'High/Medium/Low' instead of gross profit, and its scorecard has no baselines or numbers ('set baseline in week 1', 'up every month', 'pre-January level'), so I cannot actually run it weekly as asked.",
+  "what_would_make_it_a_10": "Give each move a gross-profit number and effort score in one unit, and fill the scorecard with my real baselines and week-13 targets, especially contribution margin and flow revenue."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both diagnose the same three leaks well, but only output 1 answers the two things I asked for precisely: moves ranked in gross profit with an effort score, and a weekly scorecard with baselines, targets and act-when triggers. Output 2 has the better single idea (swatches) but I would have to rebuild its ranking and scorecard before my team could run it."
+}

@@ -96,7 +96,7 @@ Per concept: ratios (9:16, 4:5, 1:1), video length, static versions, email heade
 
 **Smoke-test sheet:** Angle, Text line, Spend, Clicks, Cost per click, Add to carts or waitlist sign-ups, Pick.
 
-**To confirm:** stock landing date, restock time, launch offer end date, creators and their disclosure.
+**Assumptions:** the stock landing date, restock time and offer end date used, one line each. Every creator post carries its paid-partnership label.
 
 ## Common mistakes
 

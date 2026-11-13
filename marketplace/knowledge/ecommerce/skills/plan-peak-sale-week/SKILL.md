@@ -118,7 +118,7 @@ Book returns daily at the expected rate, since Shopify records them on the refun
 
 ## Output
 
-**One-screen summary:** dates, the offer and its break-even, total spend by phase and channel, expected peak orders per day against capacity, the three cost guards, and the biggest risk. Runner-up plan in one line.
+**One-screen summary:** dates, the offer and its break-even, total spend by phase and channel, expected peak orders per day against capacity, the three cost guards, and the biggest risk.
 
 **Sale calendar** (`peak-sale-plan.csv` or a Google Sheet):
 

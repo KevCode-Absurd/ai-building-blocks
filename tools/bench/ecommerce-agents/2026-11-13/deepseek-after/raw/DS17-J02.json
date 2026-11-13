@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, complete plans with correct unit economics ($27.10 contribution, $38 target), but Output 1's cleaner budget phasing, explicit blended-lift check against prior-period new customers, and simpler kill/scale thresholds make it marginally more executable and harder to game than Output 2's denser multi-gate structure."
+}

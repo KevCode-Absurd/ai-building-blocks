@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and arithmetically sound (contribution $27.10, $30k phasing, kill/promote thresholds all check out), but Output 1 gives a fuller Monday-ready handoff — a 10-step tracking verification list (test order, advanced matching, domain verification, Spark rights, UTMs, survey) that gates launch, a broader creative concept set, and a day-30 verdict that tests TikTok's claimed orders against prior-period and year-on-year new-customer lift — while Output 2's stronger compliance detail (music library, paid-partnership disclosure) is offset by an unflagged invented start date and a thinner setup checklist."
+}

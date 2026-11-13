@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It moves every writer slot to comparison and buying pages, and it adds a GA4 migration page and an agency DPO page aimed straight at what stops Maya and Tomas.",
+  "biggest_mistake": "The headline forecast of about 100 trials from /vs-google-analytics assumes the page reaches the 9% click rate /vs-matomo gets on a far less competitive search, so the 175-trial total looks too rosy to plan on.",
+  "what_would_make_it_a_10": "Use realistic click-rate targets, rewrite the cookie banner post and the cookies page in week one, and give the blog audit a named owner inside capacity."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 6,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every forecast shows its working from my numbers. It gives dated deadlines, a 'done when' for each month, a ready-to-paste title and description, and clear rules for when to cut, keep or scale a page.",
+  "biggest_mistake": "It leaves the cookie banner rewrite until month 2 and spends all of week one on one page, so the cheapest near-page-one win waits too long.",
+  "what_would_make_it_a_10": "Pull the cookie banner rewrite into month 1, give Tomas his own agency or migration page, and make sure tagging 140 posts fits inside the writer's hours."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both plans move my writer to comparison pages and stop the blog. Output 2 does it with honest, checkable maths, real dates and rules I can run without asking anyone. Output 1's trial forecast is too optimistic to plan on."
+}

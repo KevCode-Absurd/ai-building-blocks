@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 isolates one variable per ad (same headline and description) so the 'which reason to buy wins' question is actually answerable, plus it gives harder kill/scale thresholds and sharper, doubt-addressed copy, while Output 1 changes primary, headline and description together and so confounds its own test."
+}

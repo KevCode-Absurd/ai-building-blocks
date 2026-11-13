@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly focuses the sequence and list on Controllers/Heads of Finance at 50–300 person SaaS companies with recent pricing-page changes, and ties the copy to the spreadsheet rev rec pain.",
+  "biggest_mistake": "It uses the 9-to-4-day proof in step 1 instead of saving it for a later touch, and the expected 7%+ lift is a little optimistic without a combined segment/trigger test.",
+  "what_would_make_it_a_10": "Move the proof to step 2, keep step 1 even more focused on the pricing-change pain, and frame 6.8% as the planning rate with 7.9% as upside for flagged contacts."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The email copy is clear, short, link-free, and uses the pricing-change trigger and 9-to-4-day proof well.",
+  "biggest_mistake": "The list plan contradicts the brief by loading all 1,900 controllers and sending hiring-trigger or generic versions, instead of holding non-pricing-change contacts until the moment the pilot says works.",
+  "what_would_make_it_a_10": "Limit the send to Controllers/Heads of Finance at 50–300 person SaaS companies with a pricing-page change in the last 60 days, and remove the fallback generic and hiring-trigger sends."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could run with small edits because it follows the winning segment and trigger instead of diluting the play. Output 2 has good copy, but its list strategy would spend volume on weaker moments the data specifically warns against."
+}

@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers are traced and checked (10,900 installs from 76 posts, a projected 6,580 installs against a 3,390 baseline), and the success targets include a mid-point check.",
+  "biggest_mistake": "The weeks 2 to 4 content is only a one-line angle per week, and the review logic is muddled: it sends all of weeks 2 to 4 for review, yet week 2's Monday 23 Nov post can't go live until the 24th. It also puts a 14:30 afternoon test slot in every week.",
+  "what_would_make_it_a_10": "Keep every post in the evening, list the weeks 2 to 4 posts one by one, and say clearly which posts need review and when to submit them.",
+  "o1_note": ""
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8.2,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts everything in the evening and makes narrator clips the core format (4 a week, 16 in the month). It also lists a working title for every post in weeks 2 to 4, and its drafts use the customer's own phrases and the brand line 'Take a breath. You've got this.'",
+  "biggest_mistake": "The success target is weak: beating the 143-installs-per-post average (about 3,440 in total) is barely above the 90-day baseline, even though the sleep-led mix should do much better. The editor notes also lean on 'pick a clip that mentions X'.",
+  "what_would_make_it_a_10": "Set a higher install target based on a projection, and write the narrator clip scripts or exact clip picks so the editor has no choices left.",
+  "o2_note": ""
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 sticks to the evening slots, covers all four weeks with a title per post, has a clean no-review week 1 with a fallback, and its drafts sound more like Headspace and its customers. Output 1 has the better install projection and targets, but its afternoon test slot and muddled review timing for weeks 2 to 4 cost it."
+}

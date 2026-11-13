@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It elegantly operationalizes the tracking gap by creating a 'Safe' and 'Break-even' bracket, setting day-to-day rules that hold budget when performance falls between the two.",
+  "biggest_mistake": "Using a 3-day window for evaluating cost per purchase is slightly aggressive for Meta's 7-day click attribution delay, though acceptable for rapid decision-making.",
+  "what_would_make_it_a_10": "It is a 10; extending the evaluation window slightly would make it flawless."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The explicit, step-by-step breakdown of how break-even is calculated for an ad set builds massive trust and educates the owner.",
+  "biggest_mistake": "Setting the target to scale exclusively at the strict UTM-tracked lower bound (₹282) ignores view-throughs and would likely choke the account's growth.",
+  "what_would_make_it_a_10": "Create a dual-target system for scaling rather than holding the reserve hostage to the strictest possible tracking metric."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both outputs performed incredibly complex and accurate math, tailoring break-even metrics to the unique AOV and RTO rates of each ad set. Output 1 wins because its media buying rules are more realistic; it uses the tracking gap to create a 'hold' bracket, whereas Output 2 strictly caps scaling at the lowest tracked denominator, which would likely stall the account."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers all eight concepts with hooks, formats, visuals, primary text and tests, plus sharper build specs, a clear first-three rationale and a concrete spend-based kill rule, while Output 2 is strong but slightly thinner on production detail and testing discipline."
+}

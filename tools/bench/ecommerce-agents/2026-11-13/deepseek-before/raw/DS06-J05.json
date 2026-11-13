@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 wins on a sounder test plan (30+ purchases per ad or add-to-cart fallback) and a stricter claim checklist; Output 2 is polished but its 3-purchase keep/cut rule is too noisy to pick a winner and it drops “per bar” in H2/P2."
+}

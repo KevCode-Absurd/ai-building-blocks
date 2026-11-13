@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 6,
+  "commercial": 6,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is operationally exact (7-day unique code, checkout pause, WhatsApp opt-in and category, testing plan with sample sizes, honest assumptions) and its skin-concern matching is correct, while Output 2 invents a 14-day expiry, mismatches niacinamide to oily skin, and gives a vaguer, less testable plan."
+}

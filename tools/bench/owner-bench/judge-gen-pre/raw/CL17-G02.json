@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The seat math is exact (about 1,540 of 2,717 paid seats; 0.73 seats per signup against 0.17 for team sales demos), and the hero uses Priya's own 'email tennis' line.",
+  "biggest_mistake": "The hero promises round robin 'skips anyone who is busy or off' without saying this works only if time off is on the calendar, and the section buttons switch between 'Get started' and 'Book a demo', which splits a team buyer's one action.",
+  "what_would_make_it_a_10": "Use one demo action all the way down, move security higher and nearer the button, say plainly how PTO detection works, and swap the bracketed logo and quote slots for honest copy that is ready to ship."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The page follows Priya's worries in order: time lost, a three-step how-it-works built on routing, round robin and reminders (88/74/61%), security in section 4, then an honest hiring-tools section that makes no integration claims. Every section points to one 'Book a demo' action.",
+  "biggest_mistake": "The hero headline uses the generic brand line 'without the back and forth' and leaves Priya's sharper 'email tennis' wording to section 2.",
+  "what_would_make_it_a_10": "Put the 'email tennis' language in the Version A hero, and give the 48% security stat to Version B as its proof line so the two heroes test even more distinct ideas."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick recruiting with correct seat math, but the second keeps one demo action throughout, puts security where Priya hits it, handles PTO honestly instead of overpromising, and defines a qualified-demo metric with a sample size that is correct. I could ship it sooner."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and ready to shoot, but Output 1 keeps every script inside the 30-45s limit and gives a cleaner hook-testing plan, while Output 2's 45s ranking script and extra deliverables risk scope creep and its 'flavours' spelling is a US mismatch it flags but leaves unresolved."
+}

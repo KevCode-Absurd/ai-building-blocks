@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data well, especially the underfunded women 25 to 40 audience, work flyers, and the unused quiet-wheels hook.",
+  "biggest_mistake": "A couple of concepts are less ready or slightly speculative, especially the per-trip maths and review/testimonial handling, and the first-priority order is a bit too spend-led versus the cheaper under-served audience.",
+  "what_would_make_it_a_10": "Tighten the retargeting concepts, make every proof line launch-ready, and put the women-solo and quiet-wheels opportunities even more sharply at the top."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the strongest signals into distinct, shootable concepts, especially solo women, quiet wheels, and work flyers, while handling the dark-colour scuff issue practically.",
+  "biggest_mistake": "The testing setup with separate ad sets for each concept could create audience overlap and is a little more rigid than needed for a Meta creative test.",
+  "what_would_make_it_a_10": "Move the creative test to a cleaner ad-level structure or clearly explain how overlap will be controlled, and soften any lines that could imply guaranteed gate acceptance."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would hand to the team first: it is more production-ready, prioritises the under-served women 25 to 40 segment correctly, and includes useful guardrails like light shell colours, safe zones, stock checks and store-order validation. Output 1 is strong, but Output 2 feels closer to a finished creative brief we could shoot tomorrow."
+}

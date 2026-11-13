@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 checks every number coherently (spend +19%, $71 contribution vs $104 CPO, 7.8% vs 13.6% margin), ranks moves by contribution-per-10-hours with owners, test thresholds, stop-doing rules and a goal-first scorecard, while Output 2 is solid but weaker on arithmetic linkage and gives softer, less testable targets."
+}

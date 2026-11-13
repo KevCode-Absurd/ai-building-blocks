@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both hit the brief and get the ₹6,999÷24=₹292 arithmetic right, but Output 2 is more hand-off ready (Meta headlines, pixel/aspect/safe-zone build notes, paid-partnership labelling, a spend-based keep/cut rule, and shown working) while Output 1 wins only on creative spark and a slightly broader cold-plus-warm test portfolio."
+}

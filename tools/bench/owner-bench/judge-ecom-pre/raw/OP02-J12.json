@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It covers the full WhatsApp system the owner asked for, including COD confirmation, cart recovery, shipped/out-for-delivery updates, after-hours automation, and a useful weekly scorecard.",
+  "biggest_mistake": "The prepaid nudge is too generic and has no incentive or stronger Tier 3 treatment, even though Tier 3 is the main RTO cost driver.",
+  "what_would_make_it_a_10": "Add pincode-risk-based prepaid/advance rules with offer economics, and tighten template categorisation so anything promotional is clearly Marketing."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the money problem first, correctly shows Tier 3 as the biggest RTO cost driver, and builds the COD hold/prepaid nudge flow around that risk.",
+  "biggest_mistake": "It leaves a few operational details to confirm and the after-hours automation is less fully built out than it could be.",
+  "what_would_make_it_a_10": "Make the after-hours bot flow and all template button structures fully submission-ready, with no remaining confirmation list."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would rather run because it targets the expensive Tier 3 RTO problem, sizes the prepaid offer against refusal cost, and gives a cleaner rollout. Output 1 is strong and more complete in some template coverage, but it misses the highest-leverage prepaid/RTO targeting move."
+}

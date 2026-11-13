@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 paces the series across the full 14-day window the brief's data describes (code expiry day 14, WhatsApp day 13) and matches the slow, irritation-wary buyer, while Output 2's 7-day code expiry and 5 touches in 6 days leave buyers in days 8-14 with no nurture or reminder."
+}

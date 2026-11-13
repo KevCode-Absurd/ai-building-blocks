@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 keeps orders per visitor (not add-to-cart) as the north-star metric on every test, quantifies the money at each funnel step with arithmetic that checks out, and uses delivered orders for the EMI/COD test, while Output 2's faster 8-week ATC-led design and honest evidence grading make it a close second."
+}

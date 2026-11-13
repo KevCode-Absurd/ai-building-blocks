@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1's fully verifiable reconstruction of the contribution-margin collapse (13.6% to 7.8%, roughly -45% contribution) directly answers the board's mandate with no invented benchmarks, while Output 2's sharper decision gates and 'if-it-misses' responses are slightly undercut by an unsupported '300 screen' threshold."
+}

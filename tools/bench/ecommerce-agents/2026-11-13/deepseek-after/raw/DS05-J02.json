@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1's budget phasing, gates and day-30 decision table tie cleanly to the $30,000 and $38 target with correct contribution math ($27.10), while Output 2 leaves ~$1,600 of its own budget unallocated, sets a looser $57 ceiling without justification, and its date-specific plan adds risk without improving the decision."
+}

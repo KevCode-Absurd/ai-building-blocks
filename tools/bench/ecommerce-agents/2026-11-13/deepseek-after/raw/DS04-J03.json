@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more operationally complete, with production specs and a spend-based purchase decision rule, and it keeps its first three cold tests consistent while reserving retargeting for the value ad; Output 2 is strong creatively but puts a warm cost-per-trip ad into a broad-targeting test."
+}

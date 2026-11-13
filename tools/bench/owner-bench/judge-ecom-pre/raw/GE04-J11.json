@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Exceptional grasp of Indian e-commerce reality, particularly the insight that COD orders are not actual revenue until delivered and require a delayed read.",
+  "biggest_mistake": "None. This is a masterclass in conversion rate optimization and business logic.",
+  "what_would_make_it_a_10": "It is already a 10."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "The opening funnel table beautifully synthesizes the raw data, instantly highlighting the massive drop-off caused by the in-app browser bug.",
+  "biggest_mistake": "Recommends a two-week run time for Test 5 despite acknowledging earlier that mattress buyers have a multi-week consideration cycle.",
+  "what_would_make_it_a_10": "Ensure all test run times accommodate the long purchase cycle of high-ticket furniture, rather than cutting Test 5 to two weeks."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both outputs correctly identified and perfectly sized the million-rupee bug, which is rare and excellent. Output 1 wins for slightly deeper operational rigor, specifically noting server-side testing to prevent flicker and highlighting the delayed read needed for COD orders."
+}

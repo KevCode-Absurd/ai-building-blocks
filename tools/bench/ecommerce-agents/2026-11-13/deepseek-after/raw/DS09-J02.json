@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is a more complete, numerically tight plan: its budget table sums exactly to $30,000, its kill/scale thresholds are internally consistent with the $27.10 contribution and $38 target, and it includes a proper tracking-validation gate and weekly attribution correction, while Output 2 has a weaker ceiling logic and looser gates."
+}

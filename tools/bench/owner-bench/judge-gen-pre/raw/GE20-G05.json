@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Directly weaves the target personas' pain points—like being judged on tickets per hour and having hospitality experience—into the job post.",
+  "biggest_mistake": "The scorecard uses a list format for the 1-3-5 descriptions, which is slightly harder to scan quickly than a single matrix.",
+  "what_would_make_it_a_10": "It is already a 10; formatting the scorecard as a single table would make it absolutely flawless."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The scorecard matrix is beautifully designed for immediate use, and sharing the hiring data directly in the job post perfectly captures the brand's radically transparent voice.",
+  "biggest_mistake": "Adding a second written question to the initial application form might slightly push up the review time compared to a single exercise.",
+  "what_would_make_it_a_10": "It is a 10; I would gladly pay a premium for work of this caliber and readiness."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are exceptional 10s that perfectly grasp the data, the constraints, and the brand's unique voice. Output 2 edges ahead because its scorecard is formatted as a highly usable matrix, and its decision to candidly share the company's past hiring data within the job description is a brilliant cultural fit."
+}

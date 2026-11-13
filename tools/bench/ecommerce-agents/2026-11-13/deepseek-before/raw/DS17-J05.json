@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and compliant, but Output 1 gives cleaner, fairer test design (A/B tool or equal ad sets, 30+ purchases per ad, add-to-cart fallback) and tighter copy, while Output 2's '3x target cost' rule needs a number the owner doesn't have and its H5 'Don't take our word for it' slightly undercuts the front-of-pack proof."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 correctly derives the board's key metric (contribution margin 13.6%→7.8%) with error-free arithmetic throughout, while Output 2's '0.94' first-order coverage row wrongly uses pre-shipping gross margin ($97.76) and overstates first-order profitability, though its core $32.56 loss and $94 ceiling are right."
+}

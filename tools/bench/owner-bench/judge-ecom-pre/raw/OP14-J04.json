@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It reads the data correctly and turns it into three genuinely different, shoot-ready ads that hit the winning hooks, handle price, and stay on-brand.",
+  "biggest_mistake": "The disclosure instruction says to start the caption with #ad rather than explicitly covering an in-video disclosure too, which is a small execution gap.",
+  "what_would_make_it_a_10": "Add a simple in-video disclosure cue for each script so the creator brief leaves no ambiguity on branded-content compliance."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly uses the performance data to avoid weak openings and gives practical creator instructions and testing guidance.",
+  "biggest_mistake": "It breaks the brand rules by using banned framing like 'low-sugar' and by claiming all approved claims must be said or shown word for word even though each script does not consistently include all three.",
+  "what_would_make_it_a_10": "Remove banned language, tighten the hooks around the real customer comments, and make the claims/disclosure instructions precise and fully compliant with the brief."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels like it was built for my exact brief and brand constraints, and I could hand it to creators tomorrow. Output 2 has useful structure, but the banned wording and muddled claim instructions create avoidable brand and compliance risk."
+}

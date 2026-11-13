@@ -1,0 +1,20 @@
+{
+ "job": "J10",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1's threshold math is internally consistent and conservative (cautious case +₹10,854, break-even at 21% leaving), while Output 2 assumes an optimistic 40% top-up rate that drives its +₹7,992 and understates the downside; Output 1 also gives sharper bundle mechanics, ASCI-safe 'free' handling, and COD stop rules."
+}

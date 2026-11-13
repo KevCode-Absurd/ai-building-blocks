@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the three signals — agency-only Semrush losses, the self-inflicted Lite usage cliff, and the under-nurtured multi-site free accounts — and ranks the Lite fix within the top two with a concrete A/B test.",
+  "biggest_mistake": "Move 5 ('Teach with our link data') has no real number behind it and reads like the generic content advice the owner said would annoy them; the success metric (in-house trial share rising) is not plausibly attributable to one blog study.",
+  "what_would_make_it_a_10": "Replace Move 5 with a harder-lever move (or cut to four), and tighten the per-100-trial math table so the working is unambiguous in one line."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with a clear 'position to own' (the data SEOs trust, wrapped in the Monday report), shows its working transparently (churn weighting, trial-loss math, survey margin), and explicitly separates what it is sure and unsure about.",
+  "biggest_mistake": "Move 1 commits to a rising target (15%) and the move set is slightly safer — Move 5 again drifts into vague content marketing with a soft metric rather than a hard lever like the multi-site or top-up test.",
+  "what_would_make_it_a_10": "Swap the weakest move for a sharper commercial lever and add one non-obvious insight the owner hadn't already flagged, rather than tuning the known ones."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the three signals and the 'don't chase PPC' call right, but Output 2's transparent working, careful survey-margin handling and explicit 'what this is built from / to confirm' make it the version I'd actually forward. Output 1's Move 5 is the one bit I'd bin."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the three scripts around the actual winning signals: blind taste test, the 3 pm soda habit, and family/game-day use, while handling price directly.",
+  "biggest_mistake": "It is a little overlong and adds a few extras the brief did not ask for, including a final confirmation note despite the owner saying they are unavailable for questions.",
+  "what_would_make_it_a_10": "Trim it under 1,300 words and put the required #ad or disclosure cue directly into each opening shot, not only in the global notes."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is concise, on brief, and correctly avoids label-led openings while using the 3 pm habit, blind taste test, price objection, and family angle.",
+  "biggest_mistake": "Some scripts are slightly less ready to shoot because the final CTA/pricing and disclosure are not always built into the scene-by-scene lines, and the creator briefs are thinner than Output 1.",
+  "what_would_make_it_a_10": "Make each script more executable by adding the paid disclosure in the first seconds, a clear spoken CTA/price line, and tighter creator-specific guardrails."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather hand to creators tomorrow: it uses the data more sharply, answers the price objection better, and gives fuller shoot direction. Output 2 is cleaner and shorter, but it feels a bit less finished."
+}

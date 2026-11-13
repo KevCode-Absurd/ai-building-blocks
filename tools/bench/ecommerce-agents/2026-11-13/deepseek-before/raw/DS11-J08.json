@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives a complete, arithmetically coherent plan with explicit per-group offers, sequencing, drafts and a defensible lift model, while Output 2 is polished but its headline ₹7.9 lakh rests on an under-specified 12-month flow projection and a less rigorous worth calculation."
+}

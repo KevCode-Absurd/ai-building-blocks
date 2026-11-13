@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 6,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 has correct math ($27.10 contribution, $38 target, $45 ceiling), a clean 10/10/10 budget phasing with explicit gates, and a balanced blended-lift check, while Output 2 miscalculates the kill line ($114 is 3x $38, not the stated '$114 spend: 0 or 1 purchase, kill' logic tied to 3x) and uses a looser $57 day-30 cutoff that weakens the decision."
+}

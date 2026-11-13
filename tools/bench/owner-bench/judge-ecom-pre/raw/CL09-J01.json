@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 7,
+  "range": 6,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every ad set is judged on the store's real order count (the 72% Shopify match) and after COD refusals. That shows the account lost about ₹1,85,000 in 14 days, not the ₹29,000 Meta implies. The ₹1,82,000 reserve goes to ASC only at ₹282 a purchase or better.",
+  "biggest_mistake": "It shows next-period orders dropping to about 790 but never plainly tells the owner to expect fewer orders. It also only hints at fresh cuts of the 'Dad's razor vs mine' hook instead of ordering 2 or 3 new versions of it.",
+  "what_would_make_it_a_10": "Say up front that volume will dip at first and why that is the right trade, and order 2 or 3 new edits of the paused creator video alongside the relaunch."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 6,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very easy to read. It shows the Women Body Razor age-by-age losses, includes the 'never pause a winning ad to refresh' rule, and writes creative briefs in Rohan's and Ananya's own words.",
+  "biggest_mistake": "It lets the team scale ASC at up to ₹320 a purchase and hold anything under ₹394, when its own store-count numbers say ₹282 is break-even. Raising Catalog DPA 20% at frequency 5.2, and running the losing UGC test another week at ₹25,000, also spend money that loses on real orders.",
+  "what_would_make_it_a_10": "Set every scale gate at or under the store-count break-even (₹282 for ASC), and do not scale DPA or extend the UGC test until they clear that line."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both found the paused winner, the Starter Kit COD trap and the 25 to 34 women's audience. Output 1 only lets money out when it pays on my real Shopify orders. Output 2 would keep scaling at costs its own numbers show lose money on real orders."
+}

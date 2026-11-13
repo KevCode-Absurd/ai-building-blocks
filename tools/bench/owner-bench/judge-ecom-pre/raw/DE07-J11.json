@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole plan on the browser split, and ties the 4,130 in-app pop-up errors to the 4,800 in-app carts that never reach checkout, so the bug fix and its money are argued from the data rather than asserted.",
+  "biggest_mistake": "Test 5 bundles a new hero image with moving the review block, so a win cannot be attributed, and the copy still carries bracketed placeholders like the EMI amount and the firmness rating.",
+  "what_would_make_it_a_10": "Show the sample-size working next to each detectable effect (as a formula with the numbers plugged in) and split Test 5 into two clean single-change tests, or drop the review move to the ship list."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The maths is shown and checkable (16 x p x (1-p) / d squared, the post-fix baseline of 0.81% needing 196,000 per version, and the 12-week desktop-only figure), and the operational rules on stop, split drift and sale weeks are what a team actually needs.",
+  "biggest_mistake": "It gives every test the same 10% orders-per-session target, then admits an image change rarely moves orders that much, so Test 5 is designed to find nothing when add-to-cart would have read the answer in half the time.",
+  "what_would_make_it_a_10": "Tailor the main metric and detectable effect per test, using add-to-cart for the hero-image test with orders as the guardrail, so no test is sized to a lift the change cannot realistically produce."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are accurate and both put the in-app checkout bug first with the ₹34 lakh, but Output 1 sizes each test to its own realistic effect and switches to add-to-cart where orders cannot be read in time, while Output 2 runs one uniform 10% order test and then admits its own image test will not move that much. Output 2 shows its sample-size working more openly, which is the only thing pulling this back to a slight margin."
+}

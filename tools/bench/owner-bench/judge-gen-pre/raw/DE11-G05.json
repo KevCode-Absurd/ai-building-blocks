@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 8,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Every data signal lands in the actual artifact: the 0.62 writing correlation kills the years/tool requirements and drives the 50% weight, the 27%/7.1h/81% overnight gap becomes the stated Asia-Pacific hours, and the weekend rotation is named up front with its own section.",
+  "biggest_mistake": "The application step 1 says 'three things' but then lists a yes/no gate plus two questions, and the reviewer-hour math (70+7=77 vs the stated 90 hours saved) is a touch loose against the 160-hour baseline.",
+  "what_would_make_it_a_10": "Tighten the application instructions to a clean numbered list and reconcile the saved-hours figure so every number in the plan traces exactly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The scorecard is the more complete instrument, with a five-row weighted model, explicit 1/3/5 anchors, a 40% writing weight, and an honest small-sample caveat that keeps the team from over-trusting nine hires.",
+  "biggest_mistake": "It leaves two open 'To confirm' items (the step 2/3 reply window and whether to pay for the exercise) and hedges the hours with an if-not clause, so the owner still has homework the brief said they didn't want.",
+  "what_would_make_it_a_10": "Commit to the hours and reply windows as decisions rather than confirmations, and add the handover-note and angry-email examples to the application itself so the step 2 scorecard rows have something to score."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and built on the data, but Output 1 reads more like 37signals wrote it, states the overnight and weekend facts plainly without hedging, and arrives finished with no open questions for me to answer.",
+ "overall": 10
+}

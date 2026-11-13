@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives a fuller, better-sequenced programme with a clearer discount ladder and an explicit offer-vs-no-offer test, while Output 2's stronger writing is undercut by a dubious 'gift up to ₹100 at product cost' that is not in the brief's margin logic and a day-68 threshold that ignores the brief's own bands."
+}

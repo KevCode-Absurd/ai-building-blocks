@@ -117,7 +117,7 @@ Add each event's expected discount money (discount per order x expected orders) 
 
 **Budget block:** last year's discount money and share of gross profit, this year's cap, running total by quarter.
 
-**To confirm:** cap, marketplace event dates, PO dates with suppliers.
+**Assumptions:** the cap, marketplace event dates and supplier PO dates used where not given, one line each with what moves if it changes.
 
 ## Common mistakes
 

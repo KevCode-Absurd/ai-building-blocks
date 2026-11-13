@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 6,
+  "actionable": 6,
+  "commercial": 5,
+  "craft": 7,
+  "overall": 6
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 correctly sizes each test with a 2x2 split and per-test MDEs, ranks tests by evidence and impact, and includes practical decision rules, guardrails, and a ship-without-testing list, while Output 2 has arithmetic errors in sample sizing, mislabels the trial test's effect, and omits key elements like the 2x2 split and detailed MDEs."
+}

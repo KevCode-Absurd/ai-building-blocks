@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawlessly calculates the expected installs from the new mix to set a realistic, data-driven success metric, and smartly tests an afternoon time for the school-pickup post.",
+  "biggest_mistake": "The weekly themes are a bit brief compared to a full table of working titles, but this is minor.",
+  "what_would_make_it_a_10": "Including a few specific working titles for weeks 2 to 4 to give a clearer picture of the upcoming content."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 9,
+  "reasoning": 6,
+  "correct": 8,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The drafts are exceptionally well-written, naturally incorporating the exact brand phrases and customer quotes provided in the brief.",
+  "biggest_mistake": "It blindly schedules a post about 'school pickup' at 8:30 PM and uses the old average to set the new success goal, ignoring that shifting the mix to sleep will dramatically raise the baseline.",
+  "what_would_make_it_a_10": "Adjusting the school pickup post to an afternoon time slot and projecting the success metrics based on the weighted average of the new theme mix."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 showed much stronger strategic reasoning. It correctly projected how changing the content mix would multiply installs, and it intelligently scheduled the 'school pickup' post in the afternoon as a test, whereas Output 2 scheduled it at 8:30 PM."
+}

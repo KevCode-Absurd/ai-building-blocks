@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "The forwardable snippets included with each ask make it frictionless for investors to forward intros immediately.",
+  "biggest_mistake": "Failed to include runway directly in the top-three bulleted numbers, burying it further down in the table.",
+  "what_would_make_it_a_10": "Include runway in the opening three metrics and provide explicit action steps for Customer A and the VP search rather than only fixing the AI builder compute."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Smartly segments the three asks by audience (lead partner vs. devtools angels) and captures runway directly in the opening three numbers.",
+  "biggest_mistake": "Missed providing ready-to-send forwardable blurbs for the intro asks.",
+  "what_would_make_it_a_10": "Add short forwardable copy to asks 1 and 2 so angels and partners can broker introductions with one click."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are exceptional, but Output 2 gets the opening three metrics exactly right (including normalized runway) and thoughtfully maps each ask to the specific investor personas described in the brief."
+}

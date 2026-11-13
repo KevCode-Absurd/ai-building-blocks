@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "The strategic decision to hold non-triggered contacts on a watch list instead of burning them with a low-performing generic opener.",
+  "biggest_mistake": "Using a highly structured 'reply [word]' format for the call to action in every single email, which feels slightly like an automated marketing sequence rather than a peer-to-peer note.",
+  "what_would_make_it_a_10": "Soften a couple of the calls to action so they read more like a natural conversation."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 10,
+  "clear": 9,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The copy in step 1 is extremely concise, natural, and perfectly links the pricing trigger to the persona's daily pain.",
+  "biggest_mistake": "Recommending sending a generic version to the remaining unflagged contacts, which wastes your limited TAM on an opener the data shows is highly likely to fail.",
+  "what_would_make_it_a_10": "Hold the unflagged list until they hit a trigger, and replace the high-friction '20 minutes next week' ask in step 2 with a softer gauge of interest."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 realizes that sending a generic opener to the rest of the list wastes good leads (given the 1.8% reply rate) and intelligently suggests a watch list instead. Output 1 also uses low-friction asks, whereas Output 2 jumps straight to asking for a 20-minute meeting in step 2."
+}

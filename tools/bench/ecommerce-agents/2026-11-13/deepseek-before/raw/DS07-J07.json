@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers the full brief with a clean, honest code timeline (14-day expiry, day-13 WhatsApp reminder the day before expiry) and actionable setup notes, while Output 2 compresses the series into six days and pairs a 7-day code expiry with a day-6 'ends tomorrow' email that miscounts and undercuts the pop-up's perceived value."
+}

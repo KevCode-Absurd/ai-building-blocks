@@ -35,7 +35,7 @@ Section by section, in plain words, keeping the original numbering so a lawyer c
 
 ### 3. Mark what depends on the business's facts
 
-Highlight thresholds, exemptions and definitions that decide whether a duty applies (size, revenue, role such as controller or processor, provider or deployer, type of data). Do not decide them. Write each as a question.
+Highlight thresholds, exemptions and definitions that decide whether a duty applies (size, revenue, role such as controller or processor, provider or deployer, type of data). Do not decide them. Write each as a question for the lawyer, and in the checklist plan as if the stricter reading applies, marked "assumed" with the question number, so the list is usable today.
 
 ### 4. Turn duties into tasks
 
@@ -88,7 +88,7 @@ Turn every unclear point, every fact-dependent threshold and every penalty into 
 | Task | Section | Applies to | Deadline | Proof to keep | Owner | Status |
 |---|---|---|---|---|---|---|
 | Take measures to support AI literacy of staff who use the CV tool | Art. 4 | Deployers | In force now | Training record and short guide | Ops lead | Open |
-| List every AI tool used in hiring and what it decides | Annex III (employment uses) | To confirm | Before 2 Dec 2027 | AI use register | Ops lead | Open |
+| List every AI tool used in hiring and what it decides | Annex III (employment uses) | Assumed: deployers (see question 1) | Before 2 Dec 2027 | AI use register | Ops lead | Open |
 
 **Questions for a qualified lawyer or auditor**
 1. Is the firm a deployer of a high-risk system under Annex III (employment uses) when the tool ranks candidates for EU clients, given the firm is based in the UK?

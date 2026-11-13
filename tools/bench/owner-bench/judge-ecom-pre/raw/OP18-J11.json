@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly treats the Instagram/Facebook in-app checkout issue as a ship-now bug, sizes the upside at about ₹34 lakh gross margin per month, and ranks tests around the real customer blockers.",
+  "biggest_mistake": "It applies one broad 4-week, all-traffic, 10% order-lift testing rule too evenly, instead of tailoring sample size and main metric more clearly for mobile-only or top-of-page tests.",
+  "what_would_make_it_a_10": "Give each test its own explicit traffic scope, duration and detectable effect, especially for mobile-only size and hero tests, while keeping the bug fix first."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the browser split correctly, calls the in-app checkout bug a no-test fix with the money attached, and gives each ranked test a clear metric, guardrail, split, runtime and MDE.",
+  "biggest_mistake": "It leaves a few implementation blanks such as EMI amount and firmness rating, and Test 5 partly overlaps with the ship-now reviews change.",
+  "what_would_make_it_a_10": "Remove the remaining placeholders by wording them as dynamic values from the product/payment systems and separate the already-shipped review summary from the hero-image test."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 2 is a little easier to run tomorrow because it shows the funnel cuts, mobile-specific test sizing, and per-test split/duration/MDE more plainly. Output 1 is very good, but its one-size-fits-all test sizing needs a bit more owner rework."
+}

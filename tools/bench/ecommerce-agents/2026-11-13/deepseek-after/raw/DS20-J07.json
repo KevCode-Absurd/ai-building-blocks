@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 7,
+  "commercial": 6,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 solves the offer mechanics correctly with unique per-person Shopify codes so the day-6 deadline is true, and it keeps the brand's active-and-strength naming throughout, whereas Output 2 leaves the active/% as placeholders and pairs a single shared WELCOME10 code with a per-person 14-day expiry, making its 'your code ends soon' reminders untrue."
+}

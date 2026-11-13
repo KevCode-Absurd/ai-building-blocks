@@ -28,7 +28,7 @@ People read these messages tired, on a phone, between other things. This skill w
 ## Steps
 
 1. **Sort the items.** Put them in order of what readers must act on, then what they should know, then what is nice to know. Anything urgent also goes out separately.
-2. **Check the facts.** Dates, times, places, costs and names against the calendar and the organiser. List gaps as "[needs: ...]" and do not guess.
+2. **Check the facts.** Dates, times, places, costs and names against the calendar and the organiser. Never guess: write the item so it does not need a missing fact (for example, point to the office instead of an unnamed leader), and note the choice in one assumption line.
 3. **Lead with the point.** Each item opens with what is happening and what to do: "Trip forms are due on Friday 7 March. Return them to the office or the app." Then the detail.
 4. **Write plainly.** Short sentences (split anything over 25 words), familiar words, active voice, terms explained, no in-group acronyms. Use the community's words for itself. Warm, never pushy.
 5. **Make it scannable.** Clear headings, short paragraphs, dates in bold, one link per action with link text that says where it goes.
@@ -41,7 +41,7 @@ People read these messages tired, on a phone, between other things. This skill w
 9. **Policy reminders.** Rule, one-line reason, what to do, and who to ask. Kind wording, never "you failed to".
 10. **Parent updates.** Three parts from staff notes: what went well, what we are working on, something to try at home. No grade promises and no diagnosis; anything touching health, development or safeguarding goes to the professional who owns it.
 11. **Accessibility pass.** Real text not images of text, alt text, headings, contrast, link text (use the accessible-documents-and-emails skill).
-12. **Approval and send.** Send the draft to the approver named in the sign-off chain, with any gaps listed. Send at level 3 only after approval and within limits; log it.
+12. **Approval and send.** Send the draft to the approver named in the sign-off chain. The approval request goes in your message, not in the notice. Send at level 3 only after approval and within limits; log it.
 
 ## Checks
 
@@ -57,8 +57,7 @@ People read these messages tired, on a phone, between other things. This skill w
 1. Newsletter or notice text, in order of action.
 2. Read-aloud version, with its timed length.
 3. Short version for app, text or social, with a link.
-4. Gaps and facts to confirm.
-5. Approval request with the approver's name.
+4. Assumptions: at most three lines, only those that change what readers do.
 
 ## Example of good output (short)
 
@@ -76,4 +75,4 @@ People read these messages tired, on a phone, between other things. This skill w
 
 Youth group is back on Friday the seventeenth, from seven until half past eight, for ages eleven to sixteen. Parents, the new contact form is on the website and on the welcome desk."
 
-**To confirm:** who is leading youth group this term [needs: name for the contact line].
+**Assumption:** this term's youth group leader was not given, so the contact line points to the church office.

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It moves the writer's 12 slots onto comparison pages, adds pages for both personas (a GA4 migration page for Maya and an agency page for Tomas), and links docs, including the 21% CTR WordPress doc, to the trial.",
+  "biggest_mistake": "The headline forecast assumes /vs-google-analytics jumps from 3.5% to 9% CTR, which gives an optimistic +100 trials, and the cookie-free page ranked #2 is put off until month 2.",
+  "what_would_make_it_a_10": "Use conservative, sourced CTR targets, order the months to match the ranking, and give dates and a sample title for the first page."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every forecast shows its working at the 3.2% comparison rate and the arithmetic checks out (69 trials, 26 paid, quarter goal 1,171); the plan is dated, with a ready title, cut/keep/scale rules and a clear stop list backed by numbers.",
+  "biggest_mistake": "The cookie banner rewrite slips to month 2, and docs are barely used as an internal-link source for the new comparison pages.",
+  "what_would_make_it_a_10": "Move the cookie banner rewrite into week one and add docs-to-comparison and docs-to-trial links to the first developer day."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 gives me honest, checkable numbers, dates and a title the writer can use on Monday. Output 1 has good ideas, but its forecast leans on a CTR jump I can't count on."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 6,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 builds a sharper brand story around the printed active strength, front-loads the series to the first week when intent is highest, and adds a WhatsApp quick-reply skin-type chooser, while Output 2 stretches to 14 days, leaves product names vague, and misses a real expiry/consent discipline."
+}

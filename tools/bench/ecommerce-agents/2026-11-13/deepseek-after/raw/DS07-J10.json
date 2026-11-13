@@ -1,0 +1,20 @@
+{
+ "job": "J10",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1's threshold economics are internally consistent and correctly break-even (18% of affected band), while Output 2's 6%-of-all-orders break-even and ₹378 loss figure are looser and its bundles leave the ₹500-699 shopper without a true sub-₹699 route; Output 1 also handles COD and the serum-at-₹599 risk more rigorously."
+}

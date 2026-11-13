@@ -59,6 +59,18 @@ test('house packages separate integrity from presentation and preserve current p
   }
 });
 
+test('readiness blocks missing artifacts and tools, while a one-shot job states its assumption and finishes',()=>{
+  // Missing native artifacts, tools and checks still block a ready-to-use claim in every runtime.
+  assert.match(READINESS_RULE,/^Missing native artifacts, tools or access and unrun required checks block a ready-to-use claim: return a labelled blocked handoff with the gap\./);
+  // A missing fact is not homework for an owner who cannot reply, and it is never filled with an invented fact.
+  assert.match(READINESS_RULE,/Ask for a missing fact when the person can reply; in a one-shot job, state the assumption a careful expert would pick in one line and finish\./);
+  assert.match(READINESS_RULE,/Never present it as fact or base a claim on it\./);
+  assert.match(READINESS_RULE,/Requested template placeholders are not missing facts\./);
+  assert.doesNotMatch(READINESS_RULE,/To confirm|sign-off|approval/i);
+  assert.ok(READINESS_RULE.length<=400,'the studio validator caps each checklist line at 400 characters');
+  for(const rule of [NATIVE_DELIVERY_RULE,HOSTED_TEXT_LIMIT])assert.match(rule,/blocked handoff/);
+});
+
 test('text-only hosted pipeline cannot promise a native implementation from Markdown',()=>{
   const native={...LANDING_PAGE,id:'interactive-tool',title:'Interactive calculator',deliverable:'Working calculator source with tested interactions'};
   const pkg=buildHousePackage(null,native);
@@ -109,7 +121,7 @@ test('approved studio style does not outrank the current task and verified autho
   assert(merged.skill.instructions.includes('style preferences do not override the active task'));
   assert(merged.skill.instructions.includes('verified sources authorised for this task'));
   assert(merged.skill.instructions.includes('including permitted research and connected data'));
-  assert(merged.skill.instructions.includes('required placeholders'));
-  assert(merged.skill.instructions.includes('requested in a template'));
+  assert(merged.skill.instructions.includes('Requested template placeholders are not missing facts'));
+  assert(merged.skill.instructions.includes('in a one-shot job, state the assumption'));
   assert.equal(withRuleBlock(merged).skill.instructions,merged.skill.instructions,'rule blocks stay idempotent');
 });

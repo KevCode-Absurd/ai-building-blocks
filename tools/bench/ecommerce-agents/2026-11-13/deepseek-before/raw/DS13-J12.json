@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more compliant and commercially precise: it correctly keeps offers out of Utility templates, uses the 24-hour service window for the free-form prepaid nudge, specifies a ₹20 discount below the ₹45 RTO break-even, and includes holdout measurement and opt-out monitoring, whereas Output 2 puts a discount in a Marketing template with an undefined 'Keep COD' button and has a less defensible ₹30 discount."
+}

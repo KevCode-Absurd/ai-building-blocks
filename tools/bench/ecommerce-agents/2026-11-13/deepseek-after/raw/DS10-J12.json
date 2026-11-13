@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both deliver complete, compliant, correctly-costed playbooks (₹27,000 RTO, ₹45 break-even, ₹1,080 per point all check out), but Output 2 edges it with a sharper prepaid break-even (₹25 pays above ~14% refusal), holdout testing to prove ROI, a usable call script, edge-case templates and anti-fraud guidance, while Output 1 only matches via a few more granular team metrics."
+}

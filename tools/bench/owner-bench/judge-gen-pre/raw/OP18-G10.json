@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly centers the series on the two strongest retention habits: recurring tasks and second-device sign-in.",
+  "biggest_mistake": "It keeps a sharing email for everyone even though shared projects are low-reach, lower-retention, and close to the current highest-unsubscribe email.",
+  "what_would_make_it_a_10": "Replace the sharing email with a higher-leverage habit or lifecycle email, remove the stray test labels from subject lines, and make the series fully paste-ready."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into a calm, focused onboarding flow around the two actions most tied to retention, with good platform branching and a guilt-free inactivity email.",
+  "biggest_mistake": "The Pro email at day 14 is still a little early for an onboarding series and depends on a targeting assumption that should be checked against the email tool.",
+  "what_would_make_it_a_10": "Either move Pro later or replace it with one more habit-building email, while confirming the day-14 engaged-user targeting is technically supported."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is much closer to something I could run: it follows the brand voice, uses the available triggers, branches by platform, and drops the weak emails for the right reasons. Output 1 has strong pieces, but the universal sharing email and non-paste-ready subject lines would require real rework."
+}

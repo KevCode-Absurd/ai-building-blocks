@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data well, especially the underfunded women 25 to 40 segment, the work-flyer belt insight, and the unused quiet-wheels hook.",
+  "biggest_mistake": "Concept 6 is a weaker value-maths idea that makes an assumption about usage and feels less Mokobara than the stronger customer-language concepts.",
+  "what_would_make_it_a_10": "Tighten the weaker retargeting concepts, add more precise production/testing details, and make every test variable as clean as the best three concepts."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the strongest data signals into distinct, shootable ads and correctly puts women solo travellers, work flyers, and quiet wheels first.",
+  "biggest_mistake": "A few details are over-specified or slightly shaky, such as character counts, review-count phrasing, and invented ad-description mechanics not asked for in the brief.",
+  "what_would_make_it_a_10": "Clean up the small accuracy issues and make the proof language more careful, especially where review themes are turned into ad claims."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 2 is a little more ready to shoot and run: it gives clearer production guardrails, a sharper test plan, and puts the underfunded women 25 to 40 opportunity first."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both deliver all eight concepts with hooks, formats and test plans, but Output 1 adds concrete build specs, character counts, a clear decision rule for cutting ads and a corrected cost-per-trip framing, making it more ready to hand to a team on Monday."
+}

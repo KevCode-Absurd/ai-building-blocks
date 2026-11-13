@@ -1,0 +1,35 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 7,
+  "voice": 8,
+  "range": 6,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly centers the series on the two habits that most strongly predict retention and uses platform-based branching for the second-device push.",
+  "biggest_mistake": "It spends the fifth email on sharing, even though the owner's own data says shared projects are weaker and the private notes explicitly want the team invite dropped rather than kept in a softer form."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It translates the retention signals into a practical, calm series that prioritizes recurring tasks and second-device usage, with sensible platform branching and a guilt-free inactivity check-in.",
+  "biggest_mistake": "Its holdout recommendation keeps 10% of users on the old series rather than testing against a cleaner control, and the Pro email adds a monetization goal where the brief mainly wanted onboarding habits."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is much closer to what I'd actually run: it follows the brand better, uses the available triggers realistically, and puts the highest-leverage actions first. Output 1 understands the data but loses me by keeping a sharing email when the clearest signal was to drop that path."
+}

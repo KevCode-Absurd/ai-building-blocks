@@ -1,0 +1,20 @@
+{
+ "job": "J06",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both handle the cash-returns tension well, but Output 1 keeps the slim-by-design promise at the top, states the cash limit consistently across every decision point without undermining the hero claim, and offers a cleaner test plan and fit section; Output 2 is strong but lets the 'not for you' framing and cash caveats crowd the voice slightly more."
+}

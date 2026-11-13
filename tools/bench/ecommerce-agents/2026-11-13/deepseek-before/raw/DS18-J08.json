@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 wins on commercial discipline: it starts at day 68, holds offers to message three, segments by value and support risk, and gives a clearer holdout-based value with break-even ranges, while Output 2 is solid but discounts earlier and has a group-2 offer-test ambiguity."
+}

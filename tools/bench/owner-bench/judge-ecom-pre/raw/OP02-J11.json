@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the in-app checkout bug as a ship-now fix, sizes the upside correctly at about 560 orders and ₹34 lakh gross margin a month, then ranks tests against the actual page leaks.",
+  "biggest_mistake": "It slightly over-combines some changes, especially the hero image plus reviews test, and a few variant details still need real product/EMI values filled in.",
+  "what_would_make_it_a_10": "Use post-bug-fix baselines for the final sample-size plan and separate the review-placement effect from the hero-image effect if traffic allows."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets the most important call right: fix the in-app checkout bug first, with the right math and a sensible warning that the ₹34 lakh gross profit is a ceiling.",
+  "biggest_mistake": "It uses a blanket test setup instead of giving each test its own explicit main metric, guardrail, split, runtime and detectable effect, which was a core part of the ask.",
+  "what_would_make_it_a_10": "Make the five tests fully specified one by one, especially mobile-only reads for the size and hero changes, and bring the reviews/trial visibility issue into the ranked plan more sharply."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the growth team tomorrow: it gives the bug fix, the money, and all five tests with evidence, metrics, guardrails, splits, duration and MDEs. Output 2 is strong on the bug and sample-size logic, but it is less complete against the exact testing-plan brief."
+}

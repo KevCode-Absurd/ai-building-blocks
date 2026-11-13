@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It quantified the real story from our own numbers — agencies are 27% of trials but 60% of trials lost to Semrush, while the Lite usage cliff is 32% of all churn — and built five ranked moves with owners, first steps and testable targets on top of that.",
+  "biggest_mistake": "It ranks the agency reporting build above the Lite fix, and Move 5's success metric (in-house trial share rising above 38%) has no credible causal link to a content study, so it reads as filler.",
+  "what_would_make_it_a_10": "Put the Lite limits/top-up fix first as the cheapest money this quarter, and replace Move 5 with a measurable play or drop it to get under the 1,100-word limit."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 5,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The 60%/24%/10%/6% split of trials lost to Semrush is shown with its working, and the line that only 37% of a Lite cohort survives 12 months makes the churn problem land immediately.",
+  "biggest_mistake": "Its headline impact figure is wrong by roughly a factor of nine — it claims winning back a quarter of agency trials lifts new paid customers from 16.7 to 19.9 per 100, which assumes those trials convert at 100%, not the stated 11%, so the real gain is about 2% — and it invents a \"November 2026\" data date that is nowhere in the brief.",
+  "what_would_make_it_a_10": "Fix the recovered-trial arithmetic and set real numeric targets on every move, and stop asserting data dates we never supplied."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd hand to the team: every number traces to my data with the working shown, the survey margin caveat is handled properly, and each move carries a real target. Output 2 is just as readable but overstates its main move's impact by about nine times and invents a data date, which is exactly the kind of claim I can't stand behind."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ties every choice to our data. Writing is weighted 40 with experience left unscored. The overnight gap is the reason for the role. The review-hours table is checked and correct (83.5 hours against 160).",
+  "biggest_mistake": "The post names the 00:00 to 08:00 UTC hours but never says this is Asia-Pacific daytime, so the people we most want to reach may not see that it suits them. The weekend rotation also sits as the second bullet under hard parts rather than standing on its own.",
+  "what_would_make_it_a_10": "Say plainly in the post that these are daytime hours in places like Singapore or Sydney, and give the weekend rotation its own short line near the top."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails our three signals in the post itself. The title says Asia-Pacific hours and gives local times. The weekend rotation gets its own section that admits past hires found it unclear. Writing is weighted 50% with a realistic, stressed customer email to answer.",
+  "biggest_mistake": "It scores a 15% 'Conversation' line, which lets some interview impression back in when our data says impression barely predicts results. The 'why this job?' question adds reading time without adding signal.",
+  "what_would_make_it_a_10": "Cut the interview line to a structured pass/fail check and swap 'why this job' for a short handoff note, so all the scoring rests on writing."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are publishable and grounded in our numbers. Output 2 says the Asia-Pacific hours and the weekend rotation more plainly, and its sample customer email sounds more like us, so it more directly fixes the overnight gap and the early leavers."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole series around the two retention habits that matter most: recurring tasks and a second device, with platform branching and a calm inactivity email.",
+  "biggest_mistake": "The Pro email depends on segmentation by prior tracked events at a fixed day, which is probably allowed but should be confirmed in the tool setup.",
+  "what_would_make_it_a_10": "Add a simple send-conflict rule and tighten the small measurement claim around labels so every operational detail is fully launch-ready."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 5,
+  "reasoning": 6,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 5,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly identifies the two main retention habits and gives good platform-specific second-device copy.",
+  "biggest_mistake": "It keeps a shared-list email even though shared projects are low-reach, lower-retention than the two key habits, and the current team invite is the email we most need to drop.",
+  "what_would_make_it_a_10": "Replace the shared-list email with a habit or value-based follow-up, remove the unfinished subject-line test notes, and align every email with the two proven retention actions."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 is the one I could nearly run: it uses the actual retention signals, drops the losing emails, branches by platform, and stays in Todoist’s voice. Output 2 has good parts, but keeping sharing as email 5 goes against the clearest data signal and would need real rework."
+}

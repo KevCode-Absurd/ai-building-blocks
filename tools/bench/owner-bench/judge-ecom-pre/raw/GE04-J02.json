@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It calculates the exact daily budget an ad group needs to exit the learning phase based on the $38 target CPA, which drives the entire campaign structure.",
+  "biggest_mistake": "The creative concepts rely heavily on the same visual structure, slightly limiting the variety of formats.",
+  "what_would_make_it_a_10": "It is already a 10, though introducing one completely wild-card format could have pushed the creative range even further."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The math for the 90-day new customer profit is spot-on, and tying the lack of discount hooks to that margin reality is excellent reasoning.",
+  "biggest_mistake": "It allocates $200 a day to ad groups without doing the math on whether that volume of spend will generate enough conversions to exit the learning phase at a $38 CPA.",
+  "what_would_make_it_a_10": "Show the math behind why an ad group gets a specific budget (tying it to the platform's learning phase requirements) and structure a stricter day-30 triangulation model."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 writes exactly like an elite media buyer. It builds the daily budget structure around the math required to exit the learning phase, holds off on automated campaigns (Smart+) so it can actually learn which hooks work, and builds a bulletproof three-way tracking read for day 30."
+}

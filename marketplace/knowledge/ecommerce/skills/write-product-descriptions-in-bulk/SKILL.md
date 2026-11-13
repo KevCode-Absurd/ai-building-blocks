@@ -92,7 +92,7 @@ If specs are missing for many products, run the fact sheet step first and hand t
 | Handle | Title | Missing fact | Who supplies it | Due date |
 |---|---|---|---|---|
 
-**To confirm:** template approval, claims awaiting sign-off.
+**Claims left out:** each claim with no proof on file, one line each. Health or safety claims that need legal sign-off carry one line beside them.
 
 ## Common mistakes
 

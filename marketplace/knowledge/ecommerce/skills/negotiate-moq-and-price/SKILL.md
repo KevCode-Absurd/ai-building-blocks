@@ -129,7 +129,7 @@ Send one message at a time, wait for the reply, update the plan. Stop at the wal
 1. **Thanks and frame:** "Thank you for the quote. We want to work with you and plan [12-month volume]. Before we order, we need to close three points: [terms]."
 2. **The main ask with the give:** "If we commit to [give], can you offer [ask]? Our other quote is at [number] on [basis]."
 3. **The second ask:** "On payment, we can [give]. Could you accept [deposit or terms]?"
-4. **Protection terms:** "To confirm: price held until [date], spec version [x] with no material changes without our written OK, and balance paid after inspection passes."
+4. **Protection terms:** "Please confirm in writing: price held until [date], spec version [x] with no material changes without our written OK, and balance paid after inspection passes."
 5. **Close or walk:** "Thank you. We can confirm at [terms]." or "We cannot make [term] work, so we will proceed elsewhere for this order and would like to stay in touch for the next."
 
 ## Common mistakes

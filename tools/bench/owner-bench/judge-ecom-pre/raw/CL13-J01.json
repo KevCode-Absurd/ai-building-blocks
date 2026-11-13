@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Decisive and owner-aligned: it relaunches the paused 'Dad's razor vs mine' video first, cuts Starter Kit and Gift Sets, narrows women's razors to 25 to 34, and gives a 14-day split that adds to exactly ₹5,60,000 with numeric daily rules.",
+  "biggest_mistake": "The two-line break-even (₹394 and ₹282) blurs the verdict on some ad sets. Catalog DPA is scaled on the lenient line, and the claim of '₹65,000 lost' from the pause is more certain than the data supports.",
+  "what_would_make_it_a_10": "Judge every ad set on the Shopify-adjusted line only, add a prepaid or COD fix for the kit, and trim the length to the 1,300-word limit."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 6,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Rigorous and honest: one worked break-even example, every row judged on the Shopify-adjusted count, a before/after table, and a useful prepaid-versus-COD lever worth ₹124 per order.",
+  "biggest_mistake": "It holds back ₹1,82,000 as a gated reserve and ends with 'your yes before anything goes live', although the owner said they are unavailable and wants decisions. The relaunch of the best ad is not made the clear first move.",
+  "what_would_make_it_a_10": "Commit the full ₹5,60,000 with a clear Monday-first relaunch of the creator video, drop the confirmation request, and give persona-worded creative using Ananya's and Rohan's actual phrases."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 reads like decisions I can act on Monday: relaunch the creator video, cut the kit, split out women 25 to 34, and a budget that fully adds up with numeric rules. Output 2 is careful, but it leaves a big reserve unallocated and asks for my sign-off when I said I'm not available."
+}

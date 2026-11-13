@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 fixes a coherent 7-day code and 6-day series with a true 24-hour deadline, checks the ₹70 discount against gross profit, and gives a testable 14-day KPI and A/B plan; Output 2's 14-day code undercuts the 'ends in 3 days' email 5 timing and its WhatsApp reminder math is loose."
+}

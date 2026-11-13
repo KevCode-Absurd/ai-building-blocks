@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is more submission-ready (sample variable values, holdout test, skip lists) and gets the prepaid-discount economics right by pricing against the residual ~₹22 RTO risk after confirmation rather than the full ₹45, while Output 1's ₹30 offer can lose money and its cart template promises COD everywhere, which Output 2 correctly gates by pincode."
+}

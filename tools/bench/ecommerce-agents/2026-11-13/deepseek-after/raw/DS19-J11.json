@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 6,
+  "craft": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives a cleaner ranked plan with correctly sized 2-week MDEs and a sensible 2x2 for delivery/EMI, while Output 2 mis-sizes the size-picker test to 6 weeks at 10% MDE and stacks four all-device tests whose baselines mix device rates."
+}

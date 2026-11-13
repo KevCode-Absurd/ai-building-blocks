@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 wins on transparent, correct test sizing and orders-based decision metrics, while Output 2 has a COD/pincode dependency flaw in its 2x2 and risks shipping ATC-only wins that do not improve orders."
+}

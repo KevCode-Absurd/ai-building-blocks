@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Rigorous attention to character counts and clear identification of the fatigue on the paused ₹210 winner.",
+  "biggest_mistake": "The test matrix changes headlines and descriptions across ads rather than isolating the primary text variable cleanly.",
+  "what_would_make_it_a_10": "Isolate the creative variables in the launch combinations so headlines and descriptions don't confound primary text readouts."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Sets up disciplined paired testing that holds headline and description constant, backed by an exact budget derived from historical spend.",
+  "biggest_mistake": "H4 at 27 characters is right at the display ceiling and might truncate on certain narrow mobile views.",
+  "what_would_make_it_a_10": "Provide a couple of backup hooks if review quotes require legal clearance."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 wins on media-buying rigor: it isolates variables across paired tests and derives a concrete daily budget from past spend to guarantee purchase-level statistical significance."
+}

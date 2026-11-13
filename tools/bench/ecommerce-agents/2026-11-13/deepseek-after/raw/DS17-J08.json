@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives a cleaner, fully reconciled profit model (₹2.9 lakh first wave, ₹5.7 lakh with follow-on) with correct discount/cost arithmetic and explicit break-even lifts, while Output 2's always-on ₹9.1 lakh extrapolation and code-cost assumptions are more speculative and its net figures less transparent."
+}

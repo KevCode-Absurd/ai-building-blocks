@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes one rupee-reasoned decision per ad set and acts on the three real signals: relaunch the paused ₹250-ad first, split out women 25-34, and cut the Starter Kit COD trap.",
+  "biggest_mistake": "The account-level 'lost ₹29,000/₹1,85,000' and the '₹394 break-even' are applied loosely across ad sets whose COD mix differs, so some per-row break-evens lean on the wrong base; the two-line safe/break-even framing muddies it slightly.",
+  "what_would_make_it_a_10": "Show each ad set's own break-even worked from its own AOV, COD share and RTO (like O2's ASC example) instead of two account-wide lines, so every rupee verdict is defensible row by row."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It works out each ad set's break-even from its own order value, COD share and refusal rate, shows the ASC sum line by line, and reconciles the 72% attribution gap into every target.",
+  "biggest_mistake": "It leaves the owner with homework — 'to confirm: your yes on the budget changes', the prepaid reward amount, and a ₹1,82,000 reserve that is only partly committed — so it reads more as a plan to approve than decisions already made.",
+  "what_would_make_it_a_10": "Commit the full ₹5,60,000 into named ad sets with a default prepaid reward amount, so the owner can hand it to the team on Monday without confirming anything."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "O2 wins narrowly because its rupee math is traceable row by row, but O1 is the one I'd actually run on Monday since it commits the budget and names the first move."
+}

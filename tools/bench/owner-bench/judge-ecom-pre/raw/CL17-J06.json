@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts both return drivers on the page above the fold: about 10 flat notes in the subtitle and a bullet, and the week-long break-in in the cards bullet, then repeats them in the description, the what-fits section and the FAQ.",
+  "biggest_mistake": "It invents a capacity (the hidden pocket takes 'one more flat note') in customer copy, and its SEO title runs past 60 characters.",
+  "what_would_make_it_a_10": "Drop the invented hidden-pocket figure, give a sharper front-pocket answer with inches for US buyers, trim the SEO title to 60 characters, and add how to measure whether returns fall."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Copy is honest and on-brand, using Tom's 'brick in my back pocket' phrase and inch conversions. It comes with a measurement plan: cash returns at 3.3 per 100 orders and tight-slot returns at 1.6, with page conversion as a guardrail and a fallback subtitle if sales drop.",
+  "biggest_mistake": "The break-in note sits below the fold, not in the bullets or under the button, and the cards bullet drops the 5-to-12 count.",
+  "what_would_make_it_a_10": "Add 'snug for the first week, then it settles' to a bullet or the line under the button, and put the 5-to-12 card count back into the cards bullet."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both fix the cash-expectation returns well. Output 2 gets every number right, includes the SEO character counts, adds inches for US buyers and gives me a way to check the returns drop, while Output 1 makes up a hidden-pocket capacity."
+}

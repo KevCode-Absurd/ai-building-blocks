@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are launch-ready and within limits, but Output 1 gives a concrete keep/cut rule (3x target CPA with replacement ads), a pre-launch confirmation list including FSSAI substantiation of 'no added sugar', and a clearer rationale for the four chosen combinations, while Output 2's '30+ purchases per ad' benchmark is less usable at launch budgets despite its stronger Meta personal-attributes compliance note."
+}

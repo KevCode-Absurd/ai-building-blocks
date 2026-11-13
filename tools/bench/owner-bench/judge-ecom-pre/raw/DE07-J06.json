@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Cash capacity and break-in are stated as plain numbers in the above-the-fold bullets, and the 'What fits, in real life' scenarios (light day, full day, most it takes, what doesn't fit) make the trade-off concrete.",
+  "biggest_mistake": "It puts an invented detail in customer copy (the hidden pocket holding one extra note) and leaves the front-pocket FAQ half-answered, so the page needs owner confirmation and a fix before it can ship.",
+  "what_would_make_it_a_10": "Answer the front-pocket question with the numbers in hand (10 mm at 6 cards, 14 mm at 12) and show the returns math and guardrail metric for the cash-return fix."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sizes the problem in money terms (44% of 7.5% returns = about 3.3 per 100 orders, tight slots about 1.6 per 100, 63% within 7 days), builds the copy against those numbers, and adds a conversion guardrail with a fallback subtitle.",
+  "biggest_mistake": "It runs past the 1,000-word limit by adding measurement and rationale sections the brief did not ask for, and the repeated reviewer-count citations ('142 of our 400', '54 reviewers', '61 reviewers') make the copy read more like evidence-stacking than brand voice.",
+  "what_would_make_it_a_10": "Trim the appendix to a few lines and move the snug-slot expectation into an above-the-fold bullet so the 7-day returns are stopped before the scroll."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are on-brand and get the numbers right, but Output 2 answers the front-pocket question with real figures and shows me the return-money math, the holdout-style read and a conversion guardrail, which is what I actually asked for when I said cut returns without hurting sales. Output 1's scenario block is better than anything in Output 2, but its hidden-pocket claim needs confirming and it leaves the front-pocket answer vague."
+}

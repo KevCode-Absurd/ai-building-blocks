@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gets to a decision faster with a correctly sized 2×2 for the two checkout tests (8 weeks versus 12), and shows sharper money judgement by guarding gross profit per session against no-cost EMI subvention, warning that part of the device gap is habit, and handling sale periods, while Output 2's edge is its transparent sample-size formula and COD settlement lag."
+}

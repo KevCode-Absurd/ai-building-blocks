@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the three highest-leverage calls the owner wanted: relaunch the paused winner, cut the Starter Kit COD trap, and split Women Body Razor to 25 to 34 with a full 14-day budget plan that adds up.",
+  "biggest_mistake": "It overstates the profit upside from relaunching the paused ASC ad and its 'safe line' math is a bit muddled, so a few rupee claims would need checking before action.",
+  "what_would_make_it_a_10": "Tighten the attribution-adjusted break-even math per ad set and show the ASC relaunch upside with cleaner, fully traceable working."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 6,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly distrusts Meta's purchase count, spots the paused ASC winner and the Women 25 to 34 pocket, and ties most calls back to rupee economics.",
+  "biggest_mistake": "It gives a budget plan that deliberately leaves a huge reserve, changes the owner's requested full allocation into a conditional spend plan, and includes a 'to confirm' section even though the brief said the owner is unavailable.",
+  "what_would_make_it_a_10": "Commit the full 14-day budget in a ready-to-run split, remove the unanswered confirmations, and clean up the break-even and projected-order math so the owner can act without rework."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team on Monday: it gives a complete budget split near ₹5.6 lakh, nails the key signals in the data, and is more action-ready. Output 2 has good analysis, but it leaves too much in reserve and still asks me to confirm decisions when I explicitly said I would not be available."
+}

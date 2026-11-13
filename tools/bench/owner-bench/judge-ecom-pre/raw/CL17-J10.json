@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 5,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The serum price ladder (₹599, ₹749, ₹999) is a smart way to step Ishita up, and the per-bundle profit maths is correct (₹337, ₹398, ₹376, ₹537).",
+  "biggest_mistake": "It assumes only 6% of orders sit between ₹499 and ₹598, which understates the threshold impact. The data's ₹500 to 699 band is 27%, which puts it nearer 13%, and that clashes with its own 4,250-order figure for ₹699. It also turns the lip balm into a discounted main bundle and largely leaves RTO out of the threshold decision.",
+  "what_would_make_it_a_10": "Size the affected band from the data, build RTO cost into every profit line and the threshold, and use the lip balm as an undiscounted cart add-on with face wash + serum as the headline bundle."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every profit figure nets out RTO by order band with the working shown (Duo ₹454, serum alone ₹306, break-even 485 upgrades), and the threshold table sizes the affected orders from the data (about 2,370 at ₹599) with a clear 15% walk-away break-even.",
+  "biggest_mistake": "The lip balm, the second most common pair, is never used as the cheap add-on to cross ₹599. There is also no COD-specific threshold or fee, even though under-₹500 COD orders are refused 29% of the time.",
+  "what_would_make_it_a_10": "Add the lip balm as a ₹199 cart add-on for carts near the line, and test free shipping at ₹499 for prepaid orders only, with a higher line or a fee for COD."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 makes face wash + serum the lead bundle at a sensible ₹869, counts refusals in every number, and sizes the ₹599 change from my actual order spread. Output 1 is readable but rests on a 6% guess that understates how many orders the new line touches."
+}

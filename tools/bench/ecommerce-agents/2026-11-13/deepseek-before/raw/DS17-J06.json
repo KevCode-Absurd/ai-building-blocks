@@ -1,0 +1,20 @@
+{
+ "job": "J06",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and complete, but Output 1 handles the cash-expectation problem more decisively by putting a concrete note count placeholder [X] in the subtitle, specs, FAQ and add-to-cart line, plus a clearer test plan, while Output 2 leaves 'a few' vague and pushes fixes to a 'to confirm' list."
+}

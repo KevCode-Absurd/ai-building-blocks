@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 wins on commercial discipline — a fuller compliance checklist (Meta personal-attributes rule, never 'sugar-free', no 'healthy' claim), verified character counts, and a statistically sound '30+ purchases' test read plus round-2 plan, while Output 2's otherwise excellent keep/cut rule fires on only ~3 purchases and its 'to confirm before launch' list fights the brief's 'owner not available'."
+}

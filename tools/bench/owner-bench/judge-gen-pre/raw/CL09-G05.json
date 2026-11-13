@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A tight, on-voice post that leads with $82,000 and Asia-Pacific hours, gives the weekend rotation its own section (with the honest reason why), and swaps the resume for a realistic angry-customer reply.",
+  "biggest_mistake": "It still gives a scored 'Conversation' row 15% when interview impression predicted almost nothing (0.11). It also says the new process saves '90 hours' but then adds about 7 hours of second reads, so the real saving is closer to 83.",
+  "what_would_make_it_a_10": "Replace the conversation score with specific, evidence-based rows such as calm under pressure and working alone, and show the full reviewer-hours sum, including the second reads, in one place."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The scorecard follows the data: impression, years and tools are not scored at all, it warns that nine hires is a small sample, and its reviewer-hours table (83.5 hours, about half of last time) adds up correctly.",
+  "biggest_mistake": "The shortlist rule doesn't fit its own numbers: if about 210 replies score a 5, 'two 5s go to step 2' could send far more than the 20 people it aims for. The post also likely runs past the 1,100-word limit.",
+  "what_would_make_it_a_10": "Make the shortlist rule match the target of about 20 (for example, 'top 20 by score'), and trim the post to stay within the word limit."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are usable and sound like us. I'd pay a bit more for the second because it stops scoring interview impression entirely, turns the weekend rotation into 8 or 9 weekends a year, and shows the hour savings with honest caveats. The first is tighter and easier to read."
+}

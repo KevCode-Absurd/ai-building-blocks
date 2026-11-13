@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Retained-user math is correct throughout (17,080 of 93,500 = 18.3%; 1,392 migration tickets; about 6,800 from 9 creators), and the dated plan has an owner and a done-when for every step, plus pass/fail gates, numeric targets and a Plan B trigger on day 4.",
+  "biggest_mistake": "The day-one email sends all 420,000 users to an 'Update Raycast' button while the gates count on a staged 10% auto-update, which undercuts the staging that protects 3 support staff; the creator-and-author target of 9,200 should be about 9,280.",
+  "what_would_make_it_a_10": "Match the email to the staged rollout ('it reaches everyone this week, or update now if you like') and name one or two featured authors in the X post itself rather than only in the thread."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong gates: 1,000 real-setup migrations with zero loss, the top 200 extensions tested, rollout tied to a 50-tickets-a-day limit, and engineers on support shifts during the freeze. Product Hunt also gets its own day.",
+  "biggest_mistake": "The power-user beta starts on 23 Nov, only a week before the 1 Dec freeze, so there is little time to find and fix the carry-over bugs its own gate depends on. The table is labelled 'users who stay' but is not ordered that way (X at 3,740 sits below authors at 2,470).",
+  "what_would_make_it_a_10": "Start the developer beta and creator builds on 16–18 Nov, add owners and targets with a Plan B trigger, and fill in the author and speed placeholders so the copy can be pasted as is."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both get the ranking and the migration risk right, but Output 1 gives me a plan my small team can actually run: owners on every date, enough lead time before the freeze, real targets and a fallback. Output 2 squeezes the beta into the week before the freeze and leaves placeholders in the copy."
+}

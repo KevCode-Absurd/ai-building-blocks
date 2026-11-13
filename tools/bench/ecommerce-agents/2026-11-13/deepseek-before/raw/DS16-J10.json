@@ -1,0 +1,20 @@
+{
+ "job": "J10",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both deliver three bundles, a ₹699 threshold and a test plan, but Output 1 shows its arithmetic in a cautious/bad-case range with a correctly derived 21%-of-band break-even (≈5–6% of all orders), quantifies the ₹849 counterfactual, and gives a dated calendar with numeric stop rules a solo founder can run, while Output 2's single optimistic scenario and its ₹90 duo gain (which shrinks to ~₹20 once the serum loses free shipping under the new line) are weaker decision inputs."
+}

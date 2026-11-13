@@ -124,6 +124,13 @@ test("own skills go to the agents they name, else to the module's agents, with a
   const ruled = verticalBundle({ ...VERTICAL, house_rules: ["Rank in one unit. Size every option the same way."] }, [card("MCR-0001")], [src("S0001")], { toolbox, vendor });
   const ruledKit = personaVerticalFiles(copywriter, ruled).find(f => f.path.endsWith("toolkit.md"))!;
   assert.match(ruledKit.content, /## Rules for every deliverable\n\n1\. \*\*Rank in one unit\.\*\* Size every option the same way\.\n\n## Check and diagnose/, "house rules sit above the skills");
+  // The real house rules: finished work, customer words, tests scoped to the change, spend plans that add up.
+  const real = personaVerticalFiles(copywriter, b).find(f => f.path.endsWith("toolkit.md"))!.content;
+  assert.match(real, /\*\*Publishable means finished\.\*\* [^\n]*no list of things to confirm[^\n]*assumption in one line/);
+  assert.doesNotMatch(real, /To confirm/, "no rule asks for a confirmation list");
+  assert.match(real, /\*\*Each variant earns its own words\.\*\* [^\n]*customers' own phrases[^\n]*only when the count is the claim/);
+  assert.match(real, /\*\*Test where the change lands\.\*\* Scope each test to the visitors the change touches[^\n]*funnel step the change moves/);
+  assert.match(real, /\*\*Spend plans add up\.\*\* A spend plan adds up to the owner's budget for the period\. Any amount held back has a release rule the account can meet within that period/);
 });
 
 test("query options from loose input keep only known modules and values", () => {

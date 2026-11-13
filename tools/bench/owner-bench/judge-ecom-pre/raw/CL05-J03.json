@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is ready to hand over: every concept has awareness level, hook, format, visual, paste-ready text, headline, character counts and a single test. A costed 7-day test plan with kill and scale rules sits on top, and the sums check out (₹7,700 per ad set is about 5x the ₹1,515 blended cost per purchase).",
+  "biggest_mistake": "It is well over the 1,500-word limit. Some padding, like the sizes block and the \"never show a laptop pocket\" rule, adds length without adding much.",
+  "what_would_make_it_a_10": "Cut it to the 1,500-word limit and add one more format that really differs, such as a creator-led or UGC concept, so the set is less dependent on shot-in-a-scene Reels and statics."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with a sharp reading of the numbers (women are 18% of spend but 26% of purchases, and the working for 63 extra purchases is correct). It also adds fresher angles: a creator selfie Reel for Meera and a per-trip price reframe for the ₹6,999 objection.",
+  "biggest_mistake": "Some copy goes past the approved specs: \"wheels that just glide\", \"looks good and rolls quiet\" and \"looks sharp\" are stated as the brand's own claims. The ₹292 per trip line also rests on an unstated assumption about trips.",
+  "what_would_make_it_a_10": "Keep the fresh angles but quote quiet and looks only as reviews, and add a concrete test budget with kill and scale rules instead of a loose \"three times blended cost per purchase\" guide."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is more finished and safer. It has headlines, a costed test plan with decision thresholds, and claims kept strictly to the specs. Output 2 has a couple of fresher ideas, but its copy drifts past the approved claims and it gives less to run with tomorrow."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J06",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both deliver the full page and handle the cash-return fix well, but Output 1 adds a concrete note-count placeholder and a sharper fit/not-fit split with a redirect link, giving the owner slightly more to act on."
+}

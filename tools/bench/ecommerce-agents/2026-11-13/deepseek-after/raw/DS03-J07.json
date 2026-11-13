@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is more complete and ready to use (all five emails, WhatsApp placement, exit rule, monitoring and test plan) and keeps a 14-day expiry that matches the brief's 14-day buy window, while Output 2 invents a 7-day code expiry and a co-founder signature that the brief did not supply and adds unsupported benchmark data."
+}

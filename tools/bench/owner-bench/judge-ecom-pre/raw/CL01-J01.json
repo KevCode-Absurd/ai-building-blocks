@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds all three signals and turns them into a clean budget that adds up to exactly ₹5,60,000: relaunch 'Dad's razor vs mine' with new cuts, cut the COD-trap Starter Kit, and split out women 25 to 34. A clear ASC ladder makes it runnable on Monday.",
+  "biggest_mistake": "The main decision line is the ₹394 break-even on Meta's count, with the attribution-adjusted ₹282 kept only as a 'safe' line, and it scales Catalog DPA 20% even though DPA is only at break-even after the haircut and already at frequency 5.2.",
+  "what_would_make_it_a_10": "Set every target on the Shopify-adjusted break-even, project before-and-after profit for the new split, and add a prepaid nudge for the COD-heavy segments."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every verdict rests on store-count, after-RTO profit per ad set with the working shown, and it adds a before-and-after projection (−₹1,85,300 down to about −₹63,200) plus a sized prepaid lever (₹124 per switched order, ₹201 on the starter kit).",
+  "biggest_mistake": "It closes the UGC test and moves its ad into ASC after only 5 days. It also asks for a sign-off on the prepaid offer and the pauses when the brief said I can't be reached.",
+  "what_would_make_it_a_10": "Commit to a specific prepaid offer, give the UGC concept a fair read before merging it, and keep the creative brief in our voice and our customers' words a bit more vividly."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both make the right big calls. Output 2 judges everything on real store orders and shows what the new split does to my profit, and the prepaid lever is money I didn't see. Output 1 is a little easier to read but still leans on Meta's count."
+}

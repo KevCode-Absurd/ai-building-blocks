@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both correctly diagnose the new-customer payback gap and size the $94 ceiling, but Output 1 gives a more complete ranked plan with clearer per-move impact, a fuller weekly scorecard, and tighter stop-doing discipline, while Output 2's per-1,000 impact framing and a couple of softer numbers (e.g. 0.94 ratio vs the correct $71.44/$104) are slightly less crisp."
+}

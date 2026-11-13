@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 correctly sizes tests on mobile-only traffic and uses a 2×2 for the two checkout tests, while Output 2 mis-sizes samples on all-visitor traffic and runs tests sequentially for 12 weeks, making it slower and less statistically sound."
+}

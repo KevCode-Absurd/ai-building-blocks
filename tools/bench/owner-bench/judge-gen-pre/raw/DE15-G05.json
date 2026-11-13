@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post leads with the $82,000 salary, names the exact Asia-Pacific hours (Singapore/Manila/Perth) and states the weekend rotation with the leaver rationale — precisely closing the three gaps the data shows.",
+  "biggest_mistake": "Conversation still carries 15% of the score even though interview impression correlated only 0.11, and the whole piece likely runs past the 1,100-word cap.",
+  "what_would_make_it_a_10": "Trim it to the word limit and cut or hard-structure the conversation row so every scored line is backed by the data that actually predicts success."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "range_comment": "",
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The 8-9-weekends-a-year translation and the 'nine is a small sample, recheck after this hire' caveat make the hours real and the scorecard intellectually honest.",
+  "biggest_mistake": "It never names Asia-Pacific or local hours, so the overnight-gap fix is stated in UTC the candidate must translate, and it leaves an offer threshold and two 'to confirm' items as homework.",
+  "what_would_make_it_a_10": "Name the Asia-Pacific time zones in the title and hours, add a clear offer decision rule, and close the 'to confirm' open items so the owner has nothing left to resolve."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and on-brand, but Output 1 turns the overnight gap into an Asia-Pacific-titled post with local hours and a stated offer threshold, which is what the data and my notes were pointing at."
+}

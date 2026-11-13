@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly builds most of the series around the two retention-driving habits: recurring tasks and a second device, with good platform branching and calm copy.",
+  "biggest_mistake": "It keeps a shared-list email for everyone even though shared projects are a weaker retention signal, low-reach, and too close to the high-unsubscribe team invite email we wanted to drop.",
+  "what_would_make_it_a_10": "Replace the shared-list email with a higher-leverage habit or engaged-user follow-up, remove the confusing “test:” subject-line text, and make every subject final and under 45 characters."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into a focused onboarding path: five tasks, recurring task, second device, gentle inactivity recovery, then Pro only after value is shown.",
+  "biggest_mistake": "The day-14 Pro email depends on being able to target users by completed tracked events, which is plausible but should be confirmed against the email tool’s actual segmentation rules.",
+  "what_would_make_it_a_10": "Add explicit send-suppression rules so users do not get multiple emails too close together, and state exactly how the conditional Pro audience will be built in the current tool."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would hand to the team tomorrow: it follows the retention signals, respects the trigger limits, branches by platform, and drops the weak team/shortcut emails cleanly. Output 1 is strong, but the shared-list email and unfinished subject-line test notes make it less ready and less aligned with the data."
+}

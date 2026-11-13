@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It works out RTO cost by pincode group (₹27, ₹41 and ₹70 lost per COD order) and builds a different flow for each: tier 3 orders are held until confirmed, and the prepaid offer goes only to tier 2 and tier 3 and is sized by break-even (₹30 pays at 17% refusal).",
+  "biggest_mistake": "Holding every tier 3 order until the buyer says yes risks losing real orders, and the cancelled template's 'order again any time' is a slight marketing leak inside a Utility template. The plan also runs somewhat over the 1,500-word limit.",
+  "what_would_make_it_a_10": "Add a staffing move for the 31% of chats that arrive after hours, and tighten the length to fit the limit.",
+  "vikram_note": "Fit, COD and delivery-date scripts use Vikram's own questions, and Arjun's 'just tell me when it ships' is answered by the shipped template."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It handles chat volume well: the after-hours auto-reply has buttons, one agent moves to a 2 pm to midnight shift, and the bot takes the order-status load. It also adds quiet hours and a holdout for the prepaid nudge.",
+  "biggest_mistake": "The prepaid nudge has no incentive and goes to everyone, not tier 3 harder, and there is no RTO money table by pincode group. The tier 3 hold is delayed by a 2-week pilot and a call step, and its 'pay now' template is labelled Utility.",
+  "what_would_make_it_a_10": "Give the prepaid nudge a margin-sized offer targeted at tier 2 and tier 3, and show the RTO rupees by pincode group.",
+  "vikram_note": "Scripts use 'COD hai!' and an exchange line aimed at Arjun, but the plan is more generic across pincode groups."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 does what an owner with this data would want: it shows where the RTO money is, hardens tier 3 and sizes a targeted prepaid offer with break-even math. Output 2 has a better after-hours staffing idea but treats all pincodes much the same."
+}

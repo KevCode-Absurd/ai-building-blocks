@@ -305,7 +305,7 @@ const SLICES: Record<DeliverableFamily, { taste: string; diverge: string; build:
   strategy: {
     taste: "Ask where they want to be positioned, at what price point, and which brands they admire or avoid.",
     diverge: CANDIDATES.strategy,
-    build: "Recommend one, with the runner-up in a line, the first moves, their owners and the measure of success.",
+    build: "Recommend the move, combining moves that work together (a runner-up only for a true either-or choice), with the first moves, their owners and the measure of success.",
     check: "Check that each claim about the business or market traces to context/, and that every number adds up with its sum shown.",
   },
   plan: {
@@ -361,7 +361,7 @@ export const WORD_BUDGETS: Record<DeliverableFamily, string> = {
  * that left blanks or ran 2 to 4 times longer than a plain answer lost on clarity; complete proposals and a length
  * near the plain answer won 88% of 128 blind verdicts.
  */
-export const HANDOVER_FINISH = "No unintended blanks or placeholders; preserve explicitly requested template fields with --requested-template. Put sign-offs once in To confirm outside publishable copy. Follow the matched quality family profile aim, ceiling and shape; the brief can ask for more. tools/check-handover.mjs with --profile <family> passes, along with the applicable v3 clarity, proof and visual checks.";
+export const HANDOVER_FINISH = "No unintended blanks or placeholders; preserve explicitly requested template fields with --requested-template. State at most three one-line assumptions instead of a to-do list; a legal or expert sign-off is one line next to its item, never inside publishable copy. Follow the matched quality family profile aim, ceiling and shape; the brief can ask for more. tools/check-handover.mjs with --profile <family> passes, along with the applicable v3 clarity, proof and visual checks.";
 
 /**
  * Proven conversion levers by family (the same as grounding.mjs PROVEN_LEVERS). The blind test also found plain

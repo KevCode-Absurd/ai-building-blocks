@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are correct and complete, but Output 2 directly answers the board's actual KPI — quantifying contribution margin falling from ~13.6% to ~7.8% with a 10%+ target and a board-friendly '$10 cost cut = 2.9% of revenue' rule of thumb — while Output 1, though more operationally detailed with stop-lines and scorecard escalation, never states the overall contribution margin or a margin target."
+}

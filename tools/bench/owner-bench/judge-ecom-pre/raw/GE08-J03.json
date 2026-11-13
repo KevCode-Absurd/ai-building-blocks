@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Exceptional operational thoroughness, including safe-zone margins, character counts, and a clear 7-day budget and kill/scale testing protocol.",
+  "biggest_mistake": "The primary text is slightly standard and explanatory compared to the punchy, staccato tone typical of premium Indian D2C luggage brands.",
+  "what_would_make_it_a_10": "Sharpen the primary ad copy into shorter, punchier poetic lines rather than conventional paragraph descriptions."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliant copy cadence perfectly tuned to Mokobara's understated voice, paired with clever angles like the 'per-trip maths' to disarm price hesitation.",
+  "biggest_mistake": "Testing framework is slightly more directional (3x CPP) compared to Output 1's explicit daily spend and cut/scale conversion thresholds.",
+  "what_would_make_it_a_10": "Add concrete daily cell budgets and platform safe-zone guidelines to match its outstanding creative copy."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs nailed every single data signal and owner priority, but Output 2 captures the brand voice far better with punchy, modern copy and introduces a brilliant 'per-trip maths' angle to tackle price hesitation."
+}

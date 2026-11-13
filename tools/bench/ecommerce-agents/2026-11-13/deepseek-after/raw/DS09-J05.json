@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives a cleaner single-variable test design (fixed headline/description, four texts isolating facts vs sugar doubt vs gym vs office) plus concrete spend-based decision rules, while Output 2 mixes variables across ads and its character claims need checking."
+}

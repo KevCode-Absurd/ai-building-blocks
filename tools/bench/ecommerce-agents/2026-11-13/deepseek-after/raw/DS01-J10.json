@@ -1,0 +1,20 @@
+{
+ "job": "J10",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1's math is internally consistent and its break-even (18% of the affected band, ~5% of all orders) is derived correctly, while Output 2's break-even is muddled and its ₹729 bundle is weaker; both are actionable but Output 1 is safer to hand to a team."
+}

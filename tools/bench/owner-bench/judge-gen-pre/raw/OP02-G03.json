@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the real story: ARR growth missed the promise, AI-builder database growth is hurting gross margin, Customer A is leaving, and the VP Enterprise Sales ask needs a New York profile.",
+  "biggest_mistake": "Customer A is still not in the opening three-number section or subject line, even though it is one of the bad-news items investors should see immediately.",
+  "what_would_make_it_a_10": "Put Customer A in the first screen alongside ARR, margin and runway, trim a few lines, and add a tighter expected impact for the 48-hour AI-project pause."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clean, candid, phone-readable, and the math on ARR growth, margin, burn, runway and conversion rates is mostly right.",
+  "biggest_mistake": "It buries Customer A after the AI and burn sections and does not put runway in the opening three numbers, which misses two explicit owner priorities.",
+  "what_would_make_it_a_10": "Move Customer A and runway into the first screen, make the VP Enterprise Sales ask the sharper lead ask, and connect the margin drop more directly to the AI-builder compute fix."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather send because it better surfaces the hidden margin problem, explains the burn bridge, calculates runway, and names the right investor asks. Output 2 is very usable, but it hides Customer A too far down for this brief."
+}

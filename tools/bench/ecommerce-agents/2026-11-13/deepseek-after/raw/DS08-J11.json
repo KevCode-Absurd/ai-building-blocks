@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both size samples correctly and rank sensibly, but Output 1 makes orders per session the primary metric on every test, validates tracking before starting, and adds proper SRM/no-peek/segmentation governance, whereas Output 2 leans on add-to-cart proxies for three tests (an underpowered orders guardrail) and has a cruder restart rule — O2's efficient 2×2 and shorter 8-week plan keep it close."
+}

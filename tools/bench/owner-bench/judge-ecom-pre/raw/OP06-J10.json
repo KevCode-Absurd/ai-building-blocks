@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 5,
+  "clear": 8,
+  "voice": 7,
+  "range": 5,
+  "ready": 8,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly puts the face wash + serum routine first and gives a practical test order with profit-per-visitor as the main score.",
+  "biggest_mistake": "It misses the natural lip balm threshold add-on and instead proposes a two-serum bundle, while several profit figures and threshold maths rest on shaky assumptions and some wrong comparisons.",
+  "what_would_make_it_a_10": "Use the face wash + serum duo, a second routine bundle, and a lip balm-led threshold add-on, then redo the threshold economics with cleaner band-level maths and explicit COD/RTO treatment by order band."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sees the key owner signal that lip balm is the natural add-on and builds a sensible bundle ladder around the serum while protecting the serum-only reorder with a ₹599 threshold.",
+  "biggest_mistake": "It skips the most proven existing bundle as a standalone face wash + serum duo and leans on assumed mix rates and walk-away/add-on rates that need checking before launch.",
+  "what_would_make_it_a_10": "Make bundle one the face wash + serum routine customers already built, keep lip balm as the threshold add-on, and tighten the threshold model with verified counts for the ₹499–598 slice and explicit gross-profit-by-band working."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is closer to how I would actually run this store: it uses lip balm the right way, protects the hero serum reorder, and gives safer bundle logic. Output 1 has a good structure, but it misses a key signal in my data and I would have to rework the offer set and some of the maths before using it."
+}

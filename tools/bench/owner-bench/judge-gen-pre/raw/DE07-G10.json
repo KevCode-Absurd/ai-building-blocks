@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It chains the two retention habits through triggers the tool actually has (first task to recurring task, recurring task to second device) with explicit skip and fallback days, and puts the real baselines in a scannable table.",
+  "biggest_mistake": "It spends one of five emails at day 10 asking everyone to share a list, when shared projects reach only 6% of users at 34% retention and the owner's data pointed at dropping invite-style emails; the inline '(test: ...)' subject lines also break the 45-character rule as written.",
+  "what_would_make_it_a_10": "Replace the day-10 share email with a habit-reinforcing or gated Pro email, and hand over clean single subject lines under 45 characters with test variants noted outside the subject field."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Every email carries one tip, one button, typed examples in quotes, a goal and a worked-if baseline, and it makes the right drops (shortcuts, invite, projects and labels) while gating Pro to users who already have a habit.",
+  "biggest_mistake": "Email 2 only fires on 'first task added', so a user who signs up and adds nothing never gets the recurring-task lesson; there is no fallback send day, which loses exactly the light users (44% at 11% retention) the series exists to save.",
+  "what_would_make_it_a_10": "Add a fallback day-2 send of the recurring-task email for users with no first task, and chain the second-device ask off the recurring-task trigger so more users reach the 8% both-habits cohort."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is the cleaner buy: it drops the invite email outright and keeps Pro only for people who already have a habit, with every baseline number right and subject lines that actually fit the 45-character rule. Output 1's trigger chaining and measurement are sharper, but it spends a fifth of the series on a share email the data says is weak (6% of users, 34% retention) and its inline '(test: ...)' annotations break the subject-line rule as written."
+}

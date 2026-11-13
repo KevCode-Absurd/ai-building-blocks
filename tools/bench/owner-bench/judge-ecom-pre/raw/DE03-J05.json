@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Names the paused winner as fatigued not failed, brings it back in fresh words, and pairs it with the never-run taste proof from the reviews.",
+  "biggest_mistake": "Quotes review lines as ad copy without a note that review quotes need permission, only addressed in a backup, and the 125-character assumption is stated more confidently than Meta's placement variation allows.",
+  "what_would_make_it_a_10": "Add a one-line legal/permission note on quoting reviews before launch and tighten the display-limit caveat to match Meta's placement reality."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The test plan is unusually concrete: two matched pairs, budget sized to the past spend, and a numeric keep/cut line at ₹290 and ₹380.",
+  "biggest_mistake": "The 2.5 frequency rule contradicts the data (old winner only tired at 4.2), and the ₹6,333/day math anchors budget to past spend without knowing margin.",
+  "what_would_make_it_a_10": "Justify the 2.5 frequency threshold against the observed 4.2 and tie the daily budget to gross profit per order rather than past spend."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are launch-ready and on-brand; Output 2 edges it because the matched-pair test design and explicit keep/cut numbers make the first week easier to run, even though its frequency rule needs a sanity check."
+}

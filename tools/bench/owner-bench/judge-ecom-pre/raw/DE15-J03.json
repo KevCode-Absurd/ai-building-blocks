@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every hook and script line is lifted from real review and survey language, and the first-three order is argued from actual spend and cost per purchase (women 26% of purchases on 18% of spend, 3x blended CPP as the kill bar).",
+  "biggest_mistake": "The launch plan drops three concepts, two of them built for specific audiences (men work flyers, solo women), into one broad-targeted campaign, so the women 25 to 40 test it argues for cannot be read cleanly.",
+  "what_would_make_it_a_10": "Split the first three into separate ad sets with a stated daily budget and a day-8 cut rule, and check store orders against Meta before trusting the cost per purchase."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is runnable as written: per-ad-set budget of 1,100 rupees a day for 7 days, day-8 decision rules, feed and Reels size with safe zones, headline character counts, and a platform-versus-store order check before scaling.",
+  "biggest_mistake": "It runs roughly 1,900 words against a 1,500-word cap, and the '121 characters' hook-line note does not match the primary text it labels.",
+  "what_would_make_it_a_10": "Cut it to the word cap and add what the first three are worth in money, showing how many purchases shifting budget to women 25 to 40 buys at 1,058 versus 1,615."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both pick the same three concepts for the right reasons, but Output 2 can be handed to the team tomorrow: budget per ad set, decision thresholds, ad sizes and a tracking check, while Output 1 leaves me to design the test myself. Output 2 is long and has one sloppy character count, but the extra words are all things I would have to write anyway."
+}

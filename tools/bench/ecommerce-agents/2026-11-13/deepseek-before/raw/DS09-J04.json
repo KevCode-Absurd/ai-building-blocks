@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 7,
+  "commercial": 6,
+  "craft": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers fuller, safer scripts (spoken disclosure baked into each timeline, honest-limit beat, creator contract/rights/dates, flavour-matching assumption) while Output 2 has weaker claim discipline, no spoken disclosure timing, and a vague 'skip flavours you dislike' rule that undermines the ranking ad."
+}

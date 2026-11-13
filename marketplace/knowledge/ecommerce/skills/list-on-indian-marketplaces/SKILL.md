@@ -74,7 +74,7 @@ Planning is level 1. Creating listings in a seller panel is draft work (level 2)
 
 ## Output
 
-**One-screen summary:** channels chosen and the order to launch, products listed, priced up or skipped per channel, expected gross profit per order per channel, cash tied up for one payout cycle, and the "To confirm" list (rates, tax treatment, approvals).
+**One-screen summary:** channels chosen and the order to launch, products listed, priced up or skipped per channel, expected gross profit per order per channel, cash tied up for one payout cycle, and up to three assumption lines (for example a fee rate read from the public rate card on the day). Tax treatment carries one line: "accountant check before listing".
 
 **Decision sheet:** SKU | Channel | Selling price | MRP | Net revenue | Commission | Fixed fee | Collection fee | Shipping | Pick and pack | Returns allowance | RTO allowance | Landed cost | Gross profit per order | Floor | Verdict.
 

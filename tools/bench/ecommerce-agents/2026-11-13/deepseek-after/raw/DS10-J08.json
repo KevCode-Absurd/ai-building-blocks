@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 answers every element of the brief in full — day-by-day sequence and drafts for all four groups on both channels, plus a profit model whose arithmetic, break-even lifts and anyway-cost logic roughly hold together — while Output 2's sharper code-testing rule is offset by thinner drafts and an unexplained always-on figure (₹75,600/month implies about ₹378 per order against a stated ₹557)."
+}

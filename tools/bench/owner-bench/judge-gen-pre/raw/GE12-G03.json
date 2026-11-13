@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 8,
+  "voice": 6,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Exceptional data analysis, correctly calculating that direct database growth was only 2.6% and translating the $0.9M compute cost into 9 points of MRR margin.",
+  "biggest_mistake": "Failed to include the denominator for the conversion rates, directly violating the angel investor persona's specific request.",
+  "what_would_make_it_a_10": "Add the denominators for your conversion percentages and format the asks to be easily forwardable."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Masterfully catered to the investor personas by explicitly showing the denominator (4 in 1,000) and adding ready-to-use forwardable snippets for the asks.",
+  "biggest_mistake": "The 'We missed our own forecast' paragraph is slightly redundant since the ARR miss was already clearly explained in the top three numbers.",
+  "what_would_make_it_a_10": "Remove the repetitive forecast miss paragraph and incorporate the impressive math on direct database growth (only 2.6%) to highlight the AI volume issue."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "While Output 1 found deeper mathematical insights in the data, Output 2 followed the exact persona constraints by showing the denominator and provided highly practical forwardable blurbs, making it perfectly ready to send."
+}

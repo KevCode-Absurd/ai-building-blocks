@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds bundle one on the top face wash + serum pair at a modest ₹869. Every profit figure includes RTO cost (₹130 × 40% COD × band rate) as well as the ₹70 shipping, and each bundle and the ₹599 line get clear break-even points.",
+  "biggest_mistake": "It never treats COD differently: there is no COD fee, no higher COD bar and no prepaid-only free shipping, even though under-₹500 COD orders are refused 29% of the time. The lip balm is not used as a cart add-on to cross the threshold.",
+  "what_would_make_it_a_10": "Add a COD-specific rule (a COD fee or a higher free-shipping bar for COD) with the RTO saving worked out, and make the lip balm a cart add-on that lifts ₹400–599 carts over the line."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 5,
+  "clear": 7,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The price ladder on the serum page (₹599 → ₹749 → ₹999) is smart, and the case against simply discounting the 1,033 pair orders a month the store already gets is thoughtful.",
+  "biggest_mistake": "Its core profit maths leaves out RTO cost. The threshold sizing assumes only 6% of orders fall between ₹499 and ₹598, when an even spread of the 27% band from ₹500 to ₹699 gives about 13%, and that clashes with its own ₹699 figure. The add/pay/walk shares are made up, so the ₹3.4 lakh a year claim is shaky.",
+  "what_would_make_it_a_10": "Put RTO into every profit line, size the affected orders consistently from the band data, handle COD separately, and keep the lip balm as an add-on instead of a discounted main bundle."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 puts my best pair first at a sensible price, counts refused COD orders in every rupee and keeps its threshold maths consistent. Output 2 has nice ideas, but its threshold numbers don't hold together and it drops RTO from the profit maths."
+}

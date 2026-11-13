@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting for the right reason, shows the seat math, and builds the page around Priya’s real pain: email tennis, fair round robin, routing, and security review.",
+  "biggest_mistake": "It includes a few product/security claims that need sign-off, especially PTO/calendar behavior and what the security page proves.",
+  "what_would_make_it_a_10": "Make the proof assets fully paste-ready with an approved real screenshot and verified security/calendar language."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 5,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The segment choice and paid-seat math are strong, and the page mostly follows the right recruiting story with round robin, routing, security, and a better demo form.",
+  "biggest_mistake": "It leaves placeholders and asks the owner to fill or cut proof, while also using mixed team CTAs like “Get started” and making unverified claims about text reminders, integrations, and time-off handling.",
+  "what_would_make_it_a_10": "Remove all placeholders, use only verified claims and proof, standardize the team CTA to “Book a demo,” and tighten the page order around pain, routing/round robin, security, then demo."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to launch-ready and more disciplined about the brief: it uses the right math, the customer’s words, the hidden security asset, and a clean deciding metric. Output 2 has the right strategy but needs real rework because it contains placeholders, mixed CTAs, and several unsupported claims."
+}

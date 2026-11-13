@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The trigger logic is the tightest: each habit email fires on the step before it, has a day-based fallback and a skip rule, and a no-same-day rule prevents collisions.",
+  "biggest_mistake": "Email 5 keeps a softened team-invite email for every user, even though shared projects retain only 34% and the tool cannot tell who has already shared.",
+  "what_would_make_it_a_10": "Replace the day-10 sharing email with one that reinforces the habits or gates Pro, and drop the stray '(test: ...)' alternates in the subject lines so the copy is paste-ready."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole series around the two habits and drops the team invite entirely; the Pro email goes only to users who formed a habit, and the drop list ties projects and labels to the 'perfect on Sunday, gone by Wednesday' trap.",
+  "biggest_mistake": "There is no fallback for users who never add a first task, so they skip the recurring-task email. The fixed day-3 device email can also land on the same day as the 3-day-inactive email, with no rule to space them.",
+  "what_would_make_it_a_10": "Add a day-2 fallback for email 2 and a rule against two emails on one day, and confirm that 'reminders' is really a Pro-only feature before claiming it."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and the numbers check out. I'd take Output 2 because it fully drops the team invite and gates Pro behind the habits, though Output 1's trigger and fallback design is tighter."
+}

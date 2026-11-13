@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the launch around the real signal: creators and extension authors bring users who stay, and migration is the launch risk that must be gated before the freeze.",
+  "biggest_mistake": "It slightly blurs the channel-ranking logic by saying it ranks by stay share while also showing retained-user counts that would put X and Product Hunt above extension authors on raw retained users.",
+  "what_would_make_it_a_10": "Tighten the channel ranking explanation, remove the 'to confirm' items, and only include backup/staged rollout promises if engineering has already committed them."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly shifts prep effort away from Product Hunt and toward creator walkthroughs, extension authors, migration testing, support readiness and channel tracking.",
+  "biggest_mistake": "The customer-facing drafts are not finished: they contain placeholders for names, authors, clips, speed numbers and support details, so they are not ready to paste.",
+  "what_would_make_it_a_10": "Replace all placeholders with final copy, move creator outreach earlier, and avoid assumptions like engineers being free during code freeze unless already agreed."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team and mostly run: it has better dated ownership, stronger launch gates, ready-to-use copy, and a sharper support plan. Output 2 has the right strategy, but the launch-day assets still need filling in before they can go live."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It perfectly translates the data signals into a highly targeted sequence, using the allowed triggers and platform branching to drive the highest-retention habits.",
+  "biggest_mistake": "It relies on the 'First task added' trigger for Email 2 without specifying a fallback if they never add a task, though the inactivity email catches them later.",
+  "what_would_make_it_a_10": "It is already a 10; adding a fixed-day fallback for the 'first task' trigger would make it bulletproof."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly identifies that habit data shows correlation rather than causation, proposing a smart holdout test to measure true impact.",
+  "biggest_mistake": "It dedicates the fifth email to list sharing, a low-retention habit that it explicitly admits cannot be tracked with current triggers.",
+  "what_would_make_it_a_10": "Dropping the untrackable sharing email and instead using that slot to pitch the Pro upgrade to users who have successfully formed the core habits."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 followed all instructions perfectly, using the exact allowed triggers to drive the highest-retention habits while staying strictly on-brand. Output 2 wasted the final email on a feature (sharing) that it admitted couldn't be tracked and has poor retention data."
+}

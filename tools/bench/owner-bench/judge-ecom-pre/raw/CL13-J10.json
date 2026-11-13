@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the face wash + serum pair bundle number one, with a modest ₹75 saving and Kavya's own words. It then works the money through RTO-adjusted profit per order, break-even upgrades and a break-even walk-away rate for the ₹599 line.",
+  "biggest_mistake": "The third bundle is two vitamin C serums at ₹1,079. That is not a routine and does not match how people buy today, and it is a stretch for a budget shopper like Ishita. The lip balm add-on is also left out.",
+  "what_would_make_it_a_10": "Swap the double-serum bundle for a lip balm add-on or a body routine, and show a COD-specific shipping rule (for example a lower free-shipping bar for prepaid orders only)."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the lip balm as a ladder step (serum, then serum + lip balm, then full routine). It shows a clear break-even for each bundle and explains why ₹699 is risky.",
+  "biggest_mistake": "It guesses that only 6% of orders are affected by ₹599, but the data implies about 13%. The threshold gain (about ₹28k a month) rests on invented add-on and walk-away rates. It also never offers the plain face wash + serum duo, the bundle customers already built, and instead bundles a lip balm into a 'routine'.",
+  "what_would_make_it_a_10": "Make face wash + serum a straight modest-saving bundle, size the ₹599 band from the stated order spread, and bring COD refusal by order value into the threshold decision."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 builds on the pair customers already buy and works the threshold maths properly from the order spread, including COD refusals. Output 2 has good ideas, such as the lip balm ladder, but its threshold sizing rests on a guessed 6% that doesn't match the data."
+}

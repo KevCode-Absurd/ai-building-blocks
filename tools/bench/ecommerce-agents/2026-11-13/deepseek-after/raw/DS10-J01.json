@@ -1,0 +1,20 @@
+{
+ "job": "J01",
+ "o1": {
+  "job_done": 7,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 has stronger, internally reconciled money maths, full budget allocation and more actionable rules, while Output 1 is usable but leaves ₹57,800 unallocated and has small arithmetic slips."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 puts a dollar range and hours on every move, gives dated scale/kill thresholds (including a matched-state test for the spend cut) and correctly prices discount erosion into a lower sale-week CAC ceiling, whereas Output 1 is cleaner to read and its arithmetic also checks out but leaves the spend cut unquantified and never addresses sale periods."
+}

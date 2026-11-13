@@ -5,7 +5,7 @@ description: "Make Meta ad images for an online store that show the real product
 
 # Meta ad images that show the real product
 
-**You get:** Meta ad image files that show the real product, logo and price, in a folder per concept, with an asset manifest, designer briefs where needed and a short list for the owner to confirm.
+**You get:** Meta ad image files that show the real product, logo and price, in a folder per concept, with an asset manifest and designer briefs where needed.
 
 A store's ad image makes a promise about a physical thing the buyer will hold. If the label, colour or size in the ad differs from what arrives, the store pays twice: in returns that eat gross profit, and in trust. This skill makes images that sell the product as it really is, on any tool or none.
 
@@ -123,11 +123,11 @@ For path A with no designer on hand, write a one-page design brief per concept: 
 
 ## Output
 
-1. **One-screen summary:** images made per concept, which passed, which were dropped and why, anything waiting on the owner.
+1. **One-screen summary:** images made per concept, which passed, which were dropped and why.
 2. **Asset manifest table:** file, concept ID, placement, width x height, path (A, B or C), product photo used, fidelity pass, claims pass, safe-zone pass, price capture date.
 3. **The image files** in `ad-assets/{concept-id}/`.
 4. **Design briefs** for any image left to a designer.
-5. **To confirm:** reviewer permissions, compare-at prices, any Meta enhancement the owner must approve.
+5. **Use notes:** each image quoting a reviewer carries one line beside it: "reviewer's permission before use". Compare-at prices are shown only with a dated source. Meta's automatic enhancements are off unless the brief allows them.
 
 ## Common mistakes
 

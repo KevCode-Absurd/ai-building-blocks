@@ -1,0 +1,20 @@
+{
+ "job": "J06",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is slightly stronger on the page itself: it leads with the top review theme, ties the cash limit to the slim promise, and flags that the hidden pocket shares space with spare cards, which is the real return driver; Output 1 is equally commercial but leans on a [X] placeholder and a slightly clunkier structure."
+}

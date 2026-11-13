@@ -130,7 +130,7 @@ Each row gets one plain sentence a merchandiser can act on: "Push: earns 4.10 a 
 
 ## Output
 
-**One-screen summary:** counts in each group; the 5 biggest moves (which products, what to do, profit or cash at stake per month); total cash tied up in cut products and the expected recovery; one runner-up decision in one line; and a short "To confirm" list.
+**One-screen summary:** counts in each group; the 5 biggest moves (which products, what to do, profit or cash at stake per month); total cash tied up in cut products and the expected recovery; and up to three assumption lines where a missing cost changes a product's group.
 
 **Ranking sheet:**
 

@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers a complete, date-agnostic 90-day plan with correct break-even math and simple owner-ready actions, while Output 2 is strong but relies on an invented Nov 2026/BFCM timeline and unnecessary approvals that weaken usability for a solo founder."
+}

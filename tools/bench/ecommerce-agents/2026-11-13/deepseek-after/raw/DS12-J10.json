@@ -1,0 +1,20 @@
+{
+ "job": "J10",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives fuller decision support (four threshold options priced out, break-even floors with and without top-ups, cannibalisation caps, ₹140 COD refusal cost) and its core arithmetic checks out, while Output 2 is cleaner on the test design but covers only the ₹699 case and leaves the COD refusal loss unquantified."
+}

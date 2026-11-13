@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the in-app checkout bug first with correct money (558 orders, about ₹34 lakh margin at ₹6,090 each), calls it a ceiling, and shows its sample-size working.",
+  "biggest_mistake": "It runs every test on all devices with orders as the only main metric, so the mobile-only size picker and hero changes get diluted by desktop traffic, and it never uses add-to-cart as a faster primary read.",
+  "what_would_make_it_a_10": "Target the mobile-only changes at mobile traffic, use add-to-cart as the primary metric for top-of-page tests, and break down the funnel by segment to show where each leak sits."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A correct stage-by-stage funnel table by segment shows in-app add-to-cart is normal and the leak is cart to checkout. Matching the roughly 4,130 in-app errors to the 4,800 lost carts nails the bug, sized at ₹34 lakh margin.",
+  "biggest_mistake": "The review block appears both in the ship list (rating under the name) and in Test 5, which blurs what that test is measuring.",
+  "what_would_make_it_a_10": "Separate the reviews-up change cleanly from the hero test, and give each test's minimum detectable effect in rupees of gross margin, not just percent."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both find the checkout bug and price it right, but the second shows me exactly where each segment leaks. It also targets mobile tests at mobile, and uses add-to-cart where a page change should be read fast. It is the plan a real testing lead would hand me."
+}

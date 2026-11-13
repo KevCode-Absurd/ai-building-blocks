@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses Plausible's own data well, especially the trial-rate gap between comparison pages and blog posts, and turns that into a capacity-aware 12-page plan.",
+  "biggest_mistake": "The forecast is a bit aggressive, and the first week starts with the GA comparison instead of the cheaper cookie-banner and cookie-free page wins the brief hints are urgent.",
+  "what_would_make_it_a_10": "Move the cookie-banner rewrite and cookie-free page retitle into week one, tighten the forecast to separate conservative targets from upside, and make the dev-day tasks less crowded."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is disciplined about trials over traffic, shows the maths clearly, and gives a realistic ranked plan inside the 12-page limit.",
+  "biggest_mistake": "It underuses the docs pages as internal-link/trial-signup assets and pushes the cookie-banner rewrite too late despite that query being a near-page-one Maya pain point.",
+  "what_would_make_it_a_10": "Add the docs/internal-link work, pull the cookie-banner and cookie-free fixes into week one, and reduce the broad 140-post tagging work to a smaller high-impression audit."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "I would rather hand Output 2 to the team because the forecasts are more believable and the ordering is a little cleaner. Output 1 has some good extra ideas, especially around docs, but it overstates upside and crowds the dev work more."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives a cleaner separation of proof versus checks, a more disciplined evidence-based ranking of moves with a coherent ceiling logic, and a tighter, more usable scorecard, while Output 2 is strong but slightly muddier on impact sizing and prioritisation."
+}

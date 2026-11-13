@@ -144,7 +144,7 @@ Use the order-volume rules in `storefront-conversion-audit` to size the test.
 
 ## Output
 
-1. **One-screen summary:** the recommended threshold, bundle tiers, gift, upsells and discount rules, with the change in gross profit per session and per month. One runner-up in one line.
+1. **One-screen summary:** the recommended threshold, bundle tiers, gift, upsells and discount rules, with the change in gross profit per session and per month, for the levers combined.
 2. **Order value chart** with peaks and the chosen threshold marked.
 3. **Offer table:** Offer, Placement, Price, Units, Gross profit per order, Expected take, Gross profit per session change, Stock check, Break-even ROAS.
 4. **Upsell table:** Item, Slot, Take rate (planning), Value added, Margin, Added profit per exposed order.

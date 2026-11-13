@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The dual-target framework ('safe line' at ₹282 vs 'break-even line' at ₹394) elegantly resolves the UTM tracking gap while pinpointing every underlying profit leak.",
+  "biggest_mistake": "Could explicitly clarify whether the creative test campaign has an isolated CBO or ad-set budget.",
+  "what_would_make_it_a_10": "It is already an exemplary, specialist-level media buying deliverable."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Shows the exact unit economics formula step-by-step so any team member can audit the break-even math.",
+  "biggest_mistake": "Recommends moving an unproven UGC creative (at ₹581 CPP) directly into ASC after only 5 days, and holds back nearly a third of the budget in reserve despite the warehouse having 3x capacity.",
+  "what_would_make_it_a_10": "Allow the UGC test to finish its statistical sample in isolation and provide a smoother ASC scaling plan instead of withholding ₹1,82,000 uncommitted."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both outputs are exceptional, but Output 1 provides a more practical media-buying execution plan: it lets the early UGC test finish rather than injecting an expensive ad directly into ASC, and its 'safe vs break-even' threshold ladder is immediately actionable for the team."
+}

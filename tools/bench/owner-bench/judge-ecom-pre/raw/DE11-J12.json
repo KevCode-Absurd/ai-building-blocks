@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly isolates Tier 3 as the RTO cost centre, builds a differentiated hold-then-ship flow for it, and backs every move with per-pincode-group money (about ₹5.5 lakh from Tier 3).",
+  "biggest_mistake": "The prepaid nudge (template 3) has no incentive and is pitched as Utility while being sent as a chat follow-up, so it likely converts few COD buyers and blurs the Utility/Marketing line the owner cares about.",
+  "what_would_make_it_a_10": "Size a tested prepaid incentive per pincode band to the real refusal saving and show the payback, so the switch actually moves money."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every element is tied to a pincode band and a rupee figure — it builds a tiered confirmation flow, offers the prepaid nudge only where refusal cost justifies it, and sizes the incentive (₹30/₹20) to the actual loss per order.",
+  "biggest_mistake": "It leaves several items as 'To confirm' (exchange wording, reduced-amount payment link, message costs) rather than stating firm assumptions, so a couple of pieces are not fully paste-ready.",
+  "what_would_make_it_a_10": "Lock those three confirmations into stated assumptions with fallback wording so the templates and flows can be submitted without a follow-up with the owner."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and correct, but Output 2 does the thing I actually need — it treats each pincode band differently, puts a costed prepaid incentive only where the money justifies it, and shows the loss per COD order — which Output 1's one-size, no-incentive nudge does not."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and correctly diagnose the new-customer payback gap, but Output 1's cleaner ranking, explicit $94 ceiling, and more defensible margin math make it slightly easier to run Monday, while Output 2's Black Friday timing and per-$1M framing add useful specificity but risk the spend-cut decision on a less clearly justified $250 marginal cost assumption."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 correctly sizes the mobile-vs-desktop gap from the largest funnel step (add to cart ~1,470 orders) and gives a coherent 12-week paired-lane plan with sample-size math, while Output 2 runs everything on mobile only and misattributes the checkout gap to a delivery-date surprise."
+}

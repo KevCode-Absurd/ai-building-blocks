@@ -1,0 +1,20 @@
+{
+ "job": "J01",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 sets a coherent midpoint working target (86% of break-even) and applies it consistently to every ad set with tighter, more specific day-to-day rules and a clearer reserve mechanic, while Output 2 mixes two break-even bases and leaves its scale rule (₹300 CPA) disconnected from the per-ad-set economics."
+}

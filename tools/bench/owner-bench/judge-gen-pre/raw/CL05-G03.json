@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Bad news and the missed forecast come early. The asks each name a profile and a date, with forwardable blurbs the angels can paste. The AI-builder funnel is laid out with denominators and a dated fix (48-hour pause by 30 November).",
+  "biggest_mistake": "Runway is not among the three headline numbers (burn takes that slot) and appears only in the table. The draft probably runs over 700 words, with the forwardable blurbs adding to it.",
+  "what_would_make_it_a_10": "Put runway in the top three, cut to 700 words, and add the expected margin or compute effect of the 48-hour pause with a range."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The headline puts ARR, margin and cash with a 33-37 month runway range up top, as the owner wants. The asks are aimed at the right reader (everyone, angels, lead partner), and the AI-builder cost is quantified at about 9 margin points.",
+  "biggest_mistake": "The line that $0.9M is about 9 points of margin, 'more than the 7-point drop', is muddled and unexplained. The 48-hour fix has no date or expected effect, and two tables plus the longer text push the length.",
+  "what_would_make_it_a_10": "Explain the margin arithmetic cleanly, date the 48-hour pause and give its expected effect as a range, and trim to 700 words with one table."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are candid, correct and well structured. Output 2 puts runway in the headline numbers, tailors each ask to the right investor, and adds a sharper cost insight, so I would take it by a small margin. Output 1's forwardable blurbs and dated fix are nice, but its top three misses runway."
+}

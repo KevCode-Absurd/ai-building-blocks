@@ -1,0 +1,20 @@
+{
+ "job": "J10",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both land the same ₹699 recommendation and verify the ₹308-per-lost-order break-even, but Output 1's bundle economics are deeper and all arithmetic checks (per-bundle GP after shipping, the 4-in-10 cannibalisation threshold, duplicate-pair and free-claim rules, a quantified cautious and bad case, and a costed rejection of ₹849), whereas Output 2 rests on an optimistic 40% top-up assumption, overstates the Glow Duo uplift under its own new threshold, and its 2,000-orders-per-arm test is underpowered for the size of effect being measured."
+}

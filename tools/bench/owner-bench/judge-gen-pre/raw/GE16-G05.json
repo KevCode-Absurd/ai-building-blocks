@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Thoroughly connects the correlation data and reviewer math, building a complete end-to-end recruitment pipeline that addresses every pain point in the brief.",
+  "biggest_mistake": "Puts raw internal correlation data directly into the candidate-facing job post text, which reads a bit meta and awkward for an applicant.",
+  "what_would_make_it_a_10": "Tone down the meta-explanations inside the public job ad and make the customer reply prompt test emotional de-escalation rather than a simple missing-project ticket."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Captures the calm, candid 37signals voice perfectly—especially translating UTC to Singapore/Perth hours, owning past weekend-rotation mistakes plainly, and providing an authentic, high-signal customer scenario.",
+  "biggest_mistake": "Leaves the reviewer math slightly more summarized than Output 1's detailed calibration table.",
+  "what_would_make_it_a_10": "It is essentially a 10—ready to publish on Basecamp's job board right now."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are stellar and catch every signal in the data, but Output 2 nails the 37signals voice effortlessly. Its customer reply scenario is far more realistic for testing empathy under pressure, and translating the UTC hours into actual APAC cities makes the post immediately actionable for candidates."
+}

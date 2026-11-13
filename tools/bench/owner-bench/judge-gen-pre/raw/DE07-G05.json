@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post nails the brand and both personas — 'Not by tickets per hour,' 'classroom, a hotel or a restaurant... you already do a big part of this job' — and the HEY lockout prompt is a genuinely real-feeling test of the one signal that predicts performance.",
+  "biggest_mistake": "The '90 hours less than last round' claim is loose: it compares the 70-hour first read to 160, ignoring the extra 7 hours of second reads, so the real saving is closer to 83 hours — a number-checking owner will catch it.",
+  "what_would_make_it_a_10": "Tighten the review-cost math so every figure reconciles to one total, and add the small-sample caveat (nine hires) so the scorecard weights read as evidence, not certainty."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The review maths is fully traceable (3 + 70 + 7 + 3.5 = 83.5 hours, 'about half of last time, 28 hours each over five weeks'), and it adds real honesty the owner didn't ask for — 'nine is a small sample, so recheck after this hire,' weekends-per-year made concrete, and 'impression' explicitly listed as not scored.",
+  "biggest_mistake": "It scores 'Learns new things' 10% on the call alone with no supporting data, nudging weight back toward interview-stage judgement the owner is wary of, and the 'To confirm' block leaves a little homework.",
+  "what_would_make_it_a_10": "Drop or ground the non-data-backed 'Learns new things' row so every point of weight ties to the correlation data, and tighten the post to the reading level while staying under 1,100 words."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both hit the core signals — writing predicts (0.62) so requirements go and the reply moves into the application, the overnight UTC gap is addressed, and the weekend rotation is stated up front. Output 2 edges it because its review maths reconciles line by line, it flags the small sample, and it explicitly names impression as not scored — exactly what a number-checking owner wants; Output 1 is warmer and its test prompt is better, but its '90 hours less' claim doesn't quite add up."
+}

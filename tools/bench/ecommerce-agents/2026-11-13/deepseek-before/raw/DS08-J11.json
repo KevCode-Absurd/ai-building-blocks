@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both have correct funnel maths and MDEs, but Output 1 makes orders per visitor the primary metric throughout and frames every test in profit per session (with a provisional-ship rule while 100-night returns settle and a delivered-orders metric for COD), while Output 2 ships three tests on add-to-cart as a proxy and never justifies ranking the trial line fourth."
+}

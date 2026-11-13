@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both deliver the full five-email flow within the limit, but Output 2 edges it on commercial and operational care — unique single-use codes, a checkout-pause rule, day-counts that check out against the assumed expiry with a no-expiry fallback, and an offer-cost check — while Output 1's warmer copy is offset by a shared static code, a borderline 'BHA works inside the pore' mechanism claim, and a three-product routine that mildly undercuts its own 'start with one product' rule."
+}

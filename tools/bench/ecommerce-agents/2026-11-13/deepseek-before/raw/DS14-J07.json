@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 spreads five touches plus a WhatsApp across the real 14-day buying window with cleaner, warmer copy and a sane holdout/test plan, whereas Output 2's whole six-day cadence and day-6 'code ends tomorrow' urgency rest on an invented 7-day expiry, so its no-expiry swap still leaves eight dead days in the window and a weak final email if the owner's real code has no deadline."
+}

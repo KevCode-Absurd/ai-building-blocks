@@ -1,0 +1,20 @@
+{
+ "job": "J06",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "tie",
+ "margin": "slight",
+ "reason": "Both outputs deliver complete, well-structured page copy that surfaces the cash limit early and frames it as the reason for slimness, with nearly identical commercial logic and only minor differences (Output 1 leaves a testable [X] placeholder and adds a conversion test plan; Output 2 ties the cash limit to slimness more tightly but cites the 400-review count)."
+}

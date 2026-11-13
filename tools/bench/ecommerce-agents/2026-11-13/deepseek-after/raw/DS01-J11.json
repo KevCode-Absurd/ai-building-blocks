@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives a stronger, more complete test design with correct all-device sizing, explicit run dates, a proven sample-size formula, and better commercial guardrails, while Output 2's mobile-only plan and 2×2 reasoning are weaker and its MDE/traffic assumptions less rigorous."
+}

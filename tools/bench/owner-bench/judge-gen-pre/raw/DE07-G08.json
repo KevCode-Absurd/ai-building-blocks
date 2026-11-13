@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A dated, staged plan with real gates (data check, 8-week new-visitor test, launch, 90-day read) that respects the 12-month promise and never touches an existing bill.",
+  "biggest_mistake": "The break-even is misstated: on its own mid case the plan stays profitable down to about 1 in 4.8 Team 8+ downgrades (roughly 21%), not 1 in 6, so the stop rule would kill a profitable plan; the LTV comparison also mixes prices ($690 at $66 vs $1,950 at $80) and the $41k 'first five months' contradicts the $57k six-month figure in the table.",
+  "what_would_make_it_a_10": "Get the break-even and LTV arithmetic right, and instead of dismissing the yearly lever on a confused payback argument, quantify it (0.9% vs 4.0% churn, cash collected up front) and fold it into the plan."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every number traces and ties: $2.21M total, Essentials 8+ at $249k (11% of revenue) but 29% of churned revenue, blended $76.53 Agency price, and a correctly derived break-even at about 1 in 3 Team downgrades.",
+  "biggest_mistake": "It under-specifies sequencing and dates around the test (no start date, and an 8-week window is thin for reading 5-6% monthly churn), and the 2-user allowance plus approvals invites more Team cannibalisation than the 1-user guard it replaced.",
+  "what_would_make_it_a_10": "Add the dated stage gates (data check, test start/end, launch, 90-day read) with the same discipline it applies to the numbers, and say what the 15-channel cliff does to a 16-channel Agency customer."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both pick the right target and the right shape, but output 2's arithmetic survives checking line by line — including the 29%-of-churn framing and the correct 1-in-3 break-even — while output 1's headline stop rule rests on a wrong break-even and it waves away the yearly-billing lever the data most clearly points to. Output 2 also literally uses our 'Here's exactly what you'd pay' line and keeps claims honest; it needs only dates and a slightly tighter test window before I'd run it."
+}

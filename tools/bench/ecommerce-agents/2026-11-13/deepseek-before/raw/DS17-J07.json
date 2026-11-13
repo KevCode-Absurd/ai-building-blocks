@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 has tighter, accurate timing with a 7-day code expiry (Output 2's 14-day expiry clashes with its 18%-in-14-days logic and makes the day-11 urgency reminder feel stretched), plus a cleaner exit/pause rule and a WhatsApp placed where it actually helps rather than the day before expiry."
+}

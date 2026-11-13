@@ -81,12 +81,14 @@ Build 6 to 9 sets. Each set has one objection and one structure:
 |---|---|
 | Quote lead | Quote as the first line, then one line of product fact, then the offer and call to action |
 | Doubt then answer | Name the doubt in the buyer's words ("Worried it won't fit?"), then the quote that answers it |
-| Many voices | Three short quotes from three customer types on one theme, then the review count |
+| Many voices | Three short quotes from three customer types on one theme; at most one plain claim line after them, such as the rating with its review total |
 | Before and after in words | The failed fix quote, then the result quote, from the same or different buyers, clearly attributed |
 
 Attribution: first name and last initial, or the display name the reviewer used, plus "verified buyer" only when the flag is true. Show where the review is from when it is not the store's own site. Named, sourced reviews read as real; bare anonymous quotes now read as fake [LPG-0037].
 
-Headlines: the strongest 3 to 6 words of a quote ("Fine after a 10-hour shift") or a count line such as "Helping 2,400 runners with wide feet" from the real review count [LPG-0049]. Count only reviews that exist today.
+Hooks and headlines: when the brief gives the buyer's own phrases (from interviews, surveys or the persona), open with them; otherwise use the strongest 3 to 6 words of a quote ("Fine after a 10-hour shift"). A count appears only when the count is the claim, as one plain line such as "Helping 2,400 runners with wide feet" from the real review count [LPG-0049]. Count only reviews that exist today.
+
+Customer words, not tallies: never write how many reviewers said something ("N reviewers mention the fit") in the copy. That tally is evidence for the owner, so it goes in the summary beside the set it supports. In the copy, let one customer say it.
 
 ### 6. Add typicality where results vary
 
@@ -94,7 +96,7 @@ If a quote describes a result that not every buyer gets (a fast effect, a big ch
 
 ### 7. Fit each platform
 
-- **Meta:** quote in the first line of primary text so it shows before "See more"; headline from the quote; description with the review count or rating.
+- **Meta:** quote in the first line of primary text so it shows before "See more"; headline from the quote; description with the rating and review total as one plain claim, or left for the offer.
 - **Google Search:** short quote fragments of 30 characters or fewer as headlines, rating and count as a description, only if true on the landing page.
 - **TikTok and Reels:** on-screen quote text over product footage; never have an actor or AI voice read a review as if they wrote it.
 
@@ -109,13 +111,14 @@ Lead with the set answering the objection most often named in abandoned checkout
 - Every quote has a register row: review ID, source, date, rating, reviewer name as shown, verified flag, permission basis.
 - No quoted health, result or safety claim the store cannot prove.
 - Staff, gifted or incentivised reviews are excluded or labelled.
-- Review counts and ratings match the live site today.
+- Review counts and ratings match the live site today, and appear in the copy at most once per set, as one plain claim.
+- No copy line tallies reviewers ("N reviewers say"); tallies sit in the summary.
 - No actor or AI voice presents a review as their own.
 - Nothing published without the client's yes; "permission pending" quotes are held.
 
 ## Output
 
-**1. One-screen summary:** top objections, the set for each, test order, permission status.
+**1. One-screen summary:** top objections, the set for each and the evidence behind it (how many reviews raise or answer that objection), test order, permission status. The evidence stays here, out of the copy.
 
 **2. Copy sets:**
 
@@ -127,7 +130,7 @@ Lead with the set answering the objection most often named in abandoned checkout
 | Quote ID | Review ID | Source | Date | Product | Rating | Reviewer (as shown) | Verified | Incentivised | Full original text | Text used | Trim made | Translated | Permission basis |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 
-**4. To confirm:** reviewers to ask for permission, claims needing proof.
+**4. Permissions:** each quoted review carries one line beside it: "reviewer's permission before use". A claim with no proof is cut.
 
 ## Common mistakes
 
@@ -136,6 +139,7 @@ Lead with the set answering the objection most often named in abandoned checkout
 - **Stitching two reviews into one testimonial.** Banned in step 4.
 - **Quoting a result claim the store cannot make.** Gate 3.
 - **Anonymous quotes.** Step 5 attributes every one.
+- **Copy that reads like a report.** "N of our reviewers say" belongs in the summary; the ad lets one customer say it.
 - **A creator reading a review as their own.** Step 7.
 
 ## Sources

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting with clean seat math (733 vs 12 paid seats per 1,000 signups) and builds a tight page ordered around Priya's worries, with security moved up and the form cut to 4 fields.",
+  "biggest_mistake": "The hero headline uses the brand line 'back and forth' and saves Priya's own 'email tennis' for section 2, so the hero is a bit less vivid than it could be.",
+  "what_would_make_it_a_10": "Put 'email tennis' in the hero and give routing forms their own short section instead of folding them into a list."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero uses Priya's words ('No email tennis'), the segment math is right, and routing forms get their own section, moved up from section 6.",
+  "biggest_mistake": "Buttons switch between 'Get started' and 'Book a demo' on a page whose job is team demos, and the hero subhead promises round robin 'skips anyone who is busy or off' without flagging that this depends on calendars being kept current.",
+  "what_would_make_it_a_10": "Use 'Book a demo' as the one action throughout, cut it to under 1,000 words, and qualify the time-off claim honestly."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick recruiting and get the numbers right. Output 1 is tighter, keeps every section on one action, and is honest that round robin only knows about PTO if it's in the calendar. That honesty matters when security and IT are watching."
+}

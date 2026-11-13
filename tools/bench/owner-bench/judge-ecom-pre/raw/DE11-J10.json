@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds all three bundles from pairs customers already buy and does the full break-even and hazard-rate maths on the ₹599 threshold, protecting the hero serum alone.",
+  "biggest_mistake": "The '17,500 orders a month' volume and the ₹1.08 lakh saving are derived from a stack of assumptions and the 2% loss tolerance is asserted without working.",
+  "what_would_make_it_a_10": "Tie the ₹599 threshold to COD specifically (a COD fee or a higher COD bar) instead of treating all orders the same, and show the 15% walk-away tolerance from stated inputs."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The ₹999 three-item Glow Routine refuses to simply discount the 1,033 pairs that already happen, and the state-by-state triage of ₹599 outcomes is genuinely useful.",
+  "biggest_mistake": "It puts a discount in front of the 1,033 existing pair buyers, and the ₹28,000 net is built on invented add-on and walk-away splits, not the store's own 29%/17% COD refusal data.",
+  "what_would_make_it_a_10": "Price the Glow Routine to protect the 68% skin-care margin and base the ₹599 forecast on the RTO rates in the data rather than a guessed 45/40/15 split."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 wins on the money: its bundles are the pairs the data already shows, its threshold break-even is worked from the refusal rates, and the ₹1,079 reorder bundle is a smarter use of the COD data than a discounted three-item box. Output 2 has the fresher Glow Routine idea but more invented numbers and a discount that eats into orders that already happen."
+}

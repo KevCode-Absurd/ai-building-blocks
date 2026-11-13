@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every ad set is judged on store-count, after-RTO profit with the working shown (ASC ₹394 per order, ₹282 Meta-count break-even, −₹37,900). The money is gated to that line, and the budget adds up exactly.",
+  "biggest_mistake": "Women 25 to 34 keeps ₹23,800 at ₹414 per purchase against its own ₹311 store-count break-even, with no explicit test-and-cut rule. The plan also commits only ₹3,78,000, so growth depends entirely on the reserve rule.",
+  "what_would_make_it_a_10": "Give the Women 25 to 34 relaunch and the 'Dad's razor' new cuts their own spend gates and expected cost, and add a sharper Monday checklist so the team knows the exact first actions."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear per-ad-set narratives: an age-by-age loss breakdown for Women, a strong rule never to pause a winner to refresh, and good persona-based creative briefs in Rohan's and Ananya's words.",
+  "biggest_mistake": "It scales ASC on a ₹320 gate and its reserve on ₹300, both above its own ₹282 safe line. It also scales Catalog DPA 20% at frequency 5.2, so it spends more where the store count says money is lost.",
+  "what_would_make_it_a_10": "Make the scale gates match the store-count safe lines, keep Catalog held rather than scaled, and treat the ₹65,000 'cost of pausing' as a hypothesis, not a fact."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both find the paused video, the Starter Kit COD trap and the women 25 to 34 split. But Output 1 actually runs my money on Shopify-real orders and only spends at break-even, while Output 2 states the safe line and then scales above it."
+}

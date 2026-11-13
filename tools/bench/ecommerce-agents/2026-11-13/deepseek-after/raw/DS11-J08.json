@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives a cleaner, fully reconciled profit model with per-group offer logic, holdout sizing and break-even lifts, while Output 2's code-cost arithmetic double-counts discounts and its ₹9 lakh always-on figure is over-optimistic."
+}

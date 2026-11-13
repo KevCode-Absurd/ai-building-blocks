@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more submission-ready and commercially disciplined: it gives variable samples, a safer ₹20 prepaid nudge below the post-confirmation RTO saving, pincode-aware cart messaging, agent capacity math, suppression/holdout rules, and a missed-delivery template, while Output 2 relies on placeholder-heavy copy, omits variable samples, claims COD is open without a pincode check, and bases its ₹30 discount on the wrong ₹45 break-even after confirmation."
+}

@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ties each angle to the data (taste test $26, swap $32, label $44) and adds a hook-testing rule with correct arithmetic (20 purchases x $26 = $520). Each script has a full shot list, hooks and a creator brief, and the price objection is answered in the 3 pm ad.",
+  "biggest_mistake": "It clearly overruns the 1,300-word limit by adding creator contract terms, delivery specs and platform-safe-zone notes nobody asked for. It also forces 'exact' word-for-word claim lines despite the brief saying scripts are guides, and it only uses the 'A new kind of soda' line in one hook.",
+  "what_would_make_it_a_10": "Cut it to 1,300 words by dropping the contract and delivery sections, keep the claims in a guide-not-script style, and use the brand tagline in every ad close.",
+  "verdict_note": "Strong content, but the length breach makes it harder for a small team to use."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens the 3 pm script on a 2:59 desk clock with 'It's 3 pm. You know what that means', and ends every ad on 'A new kind of soda.' That matches Dana's words and the brand voice, and it puts taste first with the label held back until after it.",
+  "biggest_mistake": "The shared rules cover the approved claims and disclosure only briefly. The hook alternates change several things at once, and the per-hook test budget is vague.",
+  "what_would_make_it_a_10": "Trim the last few words to meet the 1,300 cap, give each creator brief its own claims and banned-words line, and add a numeric decision rule for the hook test.",
+  "verdict_note": "Tighter, more on-voice and easier to hand to a creator."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick the right angles (blind taste test, 3 pm swap, game-day family), and both keep the label out of the opening. Output 2 is tighter and closer to the word limit, it sounds more like Olipop, and the 3 pm opener is stronger. Output 1 is richer but padded well past what I asked for."
+}

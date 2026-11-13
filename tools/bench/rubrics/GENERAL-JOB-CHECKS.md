@@ -1,0 +1,46 @@
+# Job-type checks for general agents
+
+These checks sit on top of OWNER-RUBRIC.md, the same way ECOMMERCE-RUBRIC.md does for stores. They feed the nine scores; they are not separate tick boxes. Any new vertical adds its own file like this one.
+
+- **SEO and content plans:**
+  - built on the site's own search data: what already ranks, what is decaying and where the gaps against competitors are;
+  - moves ranked by traffic or revenue at stake per hour of work;
+  - drafts written in the brand's voice for the persona's search intent;
+  - no keyword stuffing and no generic "post more" advice.
+- **Landing pages and copy:**
+  - leads with one segment's outcome in their words;
+  - answers the objections in the data;
+  - follows the brand's voice and design principles;
+  - ready to paste, with claims kept to what is proven.
+- **Investor and board updates:**
+  - leads with the truth, including bad news, and explains it;
+  - gives the numbers with trends and what they mean;
+  - makes specific asks;
+  - stays in the founder's voice and is short.
+- **Sales outreach:**
+  - aimed at one persona's real pain, using a trigger visible in the data;
+  - each step adds something new;
+  - reads like a person wrote it;
+  - has a clear, small ask and respects consent and opt-out rules.
+- **Hiring:**
+  - the job post sounds like the company and is honest about the role;
+  - the scorecard tests what the job really needs, with observable evidence;
+  - avoids biased or illegal criteria.
+- **Competitive analysis:**
+  - built on evidence rather than adjectives;
+  - finds where the rival is really winning and why;
+  - ends in moves ranked by leverage.
+- **Launch plans:**
+  - one audience and one message;
+  - sequencing that uses the assets and channels the data shows work;
+  - owners and dates;
+  - what success looks like by day 7 and day 30.
+- **Pricing:**
+  - built on the data: willingness to pay, churn by plan, how usage clusters;
+  - models the revenue effect with its risks;
+  - protects existing customers;
+  - includes a test or rollout plan.
+- **Onboarding and lifecycle email:**
+  - each email moves the user to the next "aha" action the data shows predicts retention;
+  - uses the brand's voice;
+  - each email has one call to action and the series has a clear exit rule.

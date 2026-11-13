@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the $27.10 break-even and $38 parity right, but Output 1 is more Monday-ready with owner/done-when setup tables, a precise UTM-reconciliation formula and tighter $38-based scale rules, while Output 2's looser $45 ceiling and thinner operational detail slightly weaken it."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It aims the sequence at the one segment and one moment the pilot actually proves — Controllers at 50–300 people with a live pricing-page change — and its expected-rate logic (6.8% floor, 7.9% ceiling, no multiplying of gains, review at 300 sends) is the honest number the owner asked for.",
+  "biggest_mistake": "It has no opt-out line or sender postal address, so it is not fully paste-ready cold outreach, and it leaves the non-flagged controllers with only a watch-list mention and no defined next action.",
+  "what_would_make_it_a_10": "Add a one-line opt-out and sender address to every email and state plainly what happens to the held contacts whenever their pricing page changes."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is the more complete, sendable kit — compliance footer and opt-out, field-fill rules, a hiring-trigger variant, a clean A/B test — with the copy pinned to the persona's own words.",
+  "biggest_mistake": "It loads all ~1,900 controllers and pushes the unflagged ones with an untested first line, which goes against the owner's read that the pricing-change moment is what works, and its exclusion bullets mix positive-reply rates with meeting rates in a way that can mislead.",
+  "what_would_make_it_a_10": "Keep the full sequence to contacts with a live pricing-change flag, hold the rest on a watch list, and label every rate in the exclusion list as replies or meetings."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both would get used, but Output 1 stays on the segment and moment my pilot proves and gives me a reply number I can hold it to; Output 2 is better dressed for compliance yet widens the list against my own data and blurs the rate it is promising."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more rigorous and internally consistent: it budget-phases the full $30,000 with explicit gates, a learning-bar calculation ($136/day) that justifies its ad-group sizing, and a coherent kill/scale system, whereas Output 2's $45 ceiling contradicts its own 'not competitive above $45' logic and its phasing is looser on creative volume and pacing."
+}

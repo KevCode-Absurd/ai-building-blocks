@@ -43,7 +43,7 @@ Missing input: ask once. Rating, review count, customer count and offers are nev
 
 1. **Proof gate.** Each reason needs at least one real piece of proof. A reason without proof is cut, not padded; the page carries as many reasons as the proof supports, five to seven.
 2. **Offer gate.** Price, bundles, gifts and stock on the page match the product page and checkout today.
-3. **Claims gate.** Health, beauty and performance claims follow the ad platform's rules and local law (for example FTC guidance in the US, the CAP Code in the UK, ASCI in India). Unsure: cut the claim and list it under "To confirm".
+3. **Claims gate.** Health, beauty and performance claims follow the ad platform's rules and local law (for example FTC guidance in the US, the CAP Code in the UK, ASCI in India). Unsure: cut the claim.
 4. **Money gate.** Gross profit per purchase known, so the page is judged on profit per visit. Fail: build, but no paid traffic until it is known.
 5. **Traffic gate.** Enough planned traffic to judge the page; practitioner default: about 1,000 visits in two weeks, test it.
 
@@ -113,7 +113,7 @@ PageSpeed Insights on mobile plus a real phone. Pass marks (Core Web Vitals "goo
 
 ## Output
 
-**One-screen summary first:** angle and buyer, the reasons in order, the design chosen, speed results, the comparison plan with dates, and the "To confirm" list.
+**One-screen summary first:** angle and buyer, the reasons in order, the design chosen, speed results, the comparison plan with dates, and any assumption that changes the page (one line each, at most three).
 
 **Files:** `listicle-[product].html`, `images/`, and the optional Shopify set: `sections/listicle-[product].liquid`, `templates/page.listicle-[product].json`, `assets/`, `INSTALL.md`.
 

@@ -137,7 +137,7 @@ Pick the perk with the best contribution per order that still answers the barrie
 | Full-price-day switch list (page, cart, feed, ads, emails) | |
 | Day-14 check: metric and pass line | |
 
-**Offer lines:** one line each for ad, product page and email, stating exact terms and end date. **To confirm:** cap, end date, perk cost.
+**Offer lines:** one line each for ad, product page and email, stating exact terms and end date. **Assumptions:** where the cap, end date or perk cost was not given, the figure used, one line each.
 
 ## Common mistakes
 

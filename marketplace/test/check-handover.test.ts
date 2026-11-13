@@ -58,3 +58,11 @@ test("a stock line repeated across variants is noted without failing", () => {
   const r = run(put("variants.md", `A. Hook one. ${line}.\nB. Hook two. ${line}.\nC. Hook three. ${line}.\n`));
   assert.equal(r.status, 0, r.stdout); assert.match(r.stdout, /Worth a look/); assert.match(r.stdout, /repeats on 3 lines/);
 });
+
+test("homework left for the owner fails: a To confirm box, an ask for a yes, test alternates and editor notes", () => {
+  const r = run(put("homework.md", "# Plan\n\n**Subject:** Start small (test: Clear your head)\n\nThe copy never mentions price.\n\n## To confirm\n\n- Your yes before anything goes live.\n"));
+  assert.equal(r.status, 1);
+  for (const what of ["homework \"To confirm\"", "an ask for the owner's yes", "a test alternate inside a field", "an editor note"]) assert.ok(r.stdout.includes(what), what);
+  const options = run(put("options.md", "# Emails\n\n**Subject:** Start small (test: Clear your head)\n"), "--options-requested");
+  assert.equal(options.status, 0, options.stdout); assert.match(options.stdout, /Options-requested mode: 1 alternate/);
+});

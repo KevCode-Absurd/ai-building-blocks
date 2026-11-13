@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both deliver three timed scripts with hooks and a creator brief, but Output 1 additionally gives the first-time founder the things needed to actually hire and run these as paid ads — usage rights, dates, deliverables, safe-zone specs, whitelisting steps, a taster release, and a flavours/'flavors' sign-off — while Output 2's creator brief omits rights, timing and usage term."
+}

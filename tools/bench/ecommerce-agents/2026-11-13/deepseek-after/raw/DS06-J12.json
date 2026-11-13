@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nail the templates, flows, scripts and math, but Output 2 adds holdout A/B testing, profit-based decision formulas, a cancelled-order and a missed-delivery template that directly attack the ₹45-per-COD-order RTO cost, giving slightly sharper commercial rigor at equal platform compliance."
+}

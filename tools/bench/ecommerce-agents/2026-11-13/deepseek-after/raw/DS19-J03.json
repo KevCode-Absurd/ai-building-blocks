@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 matches the brief's exact deliverable structure (angle, buyer/awareness, hook, format, visual, primary text, what it tests) with tighter, more distinctive concepts and a sharper test-and-kill rule, while Output 2 is strong but folds several required fields together and leans slightly more generic."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent draft messages that perfectly capture the required tone and seamlessly incorporate the specific constraints of the lapsed segments.",
+  "biggest_mistake": "It addresses the 46-90 day 'at risk' group by suggesting a new day-28 automation, but forgets to send a win-back campaign to the 9,000 customers currently sitting in that band.",
+  "what_would_make_it_a_10": "Calculate the exact break-even lift required for the discount and include the current 46-90 day cohort in the immediate campaign rollout."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Incredible analytical rigor: it calculates the exact break-even incrementality for the discount (21%), sizes the holdout for statistical significance, and defines 'lapsed' logically as 2x the median gap.",
+  "biggest_mistake": "Grouping all subscription cancellation reasons to start on the exact same day could slightly overwhelm the team if many customers reply to the brew quiz.",
+  "what_would_make_it_a_10": "It is already a 10; practically flawless execution of e-commerce strategy, commercial math, and brand voice."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both outputs are exceptional and deeply understand the data. Output 2 wins clearly because of its elite commercial reasoning: it calculates the break-even incrementality for the discount (1 in 5 orders), sizes the holdout for statistical significance, segments the 'at-risk' cohort brilliantly, and uses the store's repeat rate to project the true follow-on value of a won-back customer."
+}

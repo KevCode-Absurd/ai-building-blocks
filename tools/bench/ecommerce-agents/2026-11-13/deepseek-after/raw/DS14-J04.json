@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both deliver three tight, correctly-claimed scripts with hooks and creator briefs, but Output 2's mandatory on-screen-plus-spoken disclosure, safe-zone percentages, usage rights term and TikTok ad authorization code make it the version a paid buyer can actually run without compliance rework."
+}

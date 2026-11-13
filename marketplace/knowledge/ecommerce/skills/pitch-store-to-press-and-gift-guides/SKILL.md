@@ -127,7 +127,7 @@ Some guides charge a fee or require an affiliate deal. A paid placement is an ad
 
 | Outlet | Tier | Writer | Recent relevant piece (link, date) | Price band | Affiliate needed? | Lead time | Pitch by | Contact route | Found at | Angle | Status | Sample sent (date, cost) | Coverage (link, date) | Sessions | Orders |
 
-**Pitch emails:** gift guide, feature and follow-up templates with the fields marked. **Media kit** one-pager. **To confirm:** sample budget, claims list, sending address.
+**Pitch emails:** gift guide, feature and follow-up templates with the fields marked. **Media kit** one-pager. **Assumptions:** sample budget and sending address, where not given, as the figure or place used, one line each. Claims are only those with proof on file.
 
 ## Common mistakes
 

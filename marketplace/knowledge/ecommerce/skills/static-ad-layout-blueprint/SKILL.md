@@ -127,12 +127,12 @@ Test each wireframe:
 
 ## Output
 
-1. **One-screen summary:** the recommended variant, why, one master or separate files, and the runner-up in one line.
+1. **One-screen summary:** the recommended variant, why, one master or separate files, and the second variant to test against it.
 2. **Placement table:** placement, canvas, safe area, master or own file.
 3. **Zone table per variant:** zone, x, y, width, height (px), share of safe area, content, type size, colour.
 4. **Wireframes:** one PNG per variant and placement, plus the HTML source.
 5. **Designer or tool notes:** product photo to use, fonts, colours, what must not move.
-6. **To confirm:** open questions for the owner.
+6. **Assumptions:** one line each, at most three, only where an unknown changes what to do.
 
 ## Common mistakes
 

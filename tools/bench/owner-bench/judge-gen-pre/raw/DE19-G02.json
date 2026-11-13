@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks recruiting with the seat math (57% of paid seats), leads the hero on Priya's 'email tennis' language, and moves routing forms and security proof up from where the current page buries them.",
+  "biggest_mistake": "Leaves real placeholders — bracketed security certifications, a customer quote slot, and tool logos — that make it not quite paste-ready, and the nine-section page is one section longer than the brief's spine.",
+  "what_would_make_it_a_10": "Replace every bracket with true, verified proof or cut the slot so the page can ship tomorrow unchanged."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tight, recruiter-focused page with an honest FAQ that admits round robin can only see PTO if it's in the calendar, and a fix-the-sample calculation for the A/B test.",
+  "biggest_mistake": "The 'works with your hiring tools' section is weaker proof than the brief needs (just a screenshot of a link in an email template) and hero B leads with fairness, which only 12% named, so the test is less decisive than it claims.",
+  "what_would_make_it_a_10": "Give the tools section real integration proof and make hero B test a genuinely different idea from A rather than the same story with a feature swapped in."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 does the seat math more completely, uses Priya's own words in the hero, and lays out the page in the exact order the owner asked for; Output 2 is close and cleaner in places but its tool section and hero test are weaker."
+}

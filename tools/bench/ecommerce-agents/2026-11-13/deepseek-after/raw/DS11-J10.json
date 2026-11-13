@@ -1,0 +1,20 @@
+{
+ "job": "J10",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 has correct, internally consistent arithmetic (₹42k shipping cost, 600 free-ship orders, 18% break-even) and a sharper threshold analysis with a runner-up option, while Output 2's break-even framing muddles per-order vs store-wide loss and its bundle set is weaker."
+}

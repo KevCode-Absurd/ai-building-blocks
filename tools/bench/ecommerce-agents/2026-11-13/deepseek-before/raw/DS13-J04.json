@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives tighter compliance control (disclosure timed on-screen from second 3-6 plus spoken, explicit safe-zone percentages, no health-adjacent lines, no invented price), while Output 2 relies on platform toggles as primary disclosure, uses a vague 'bottom fifth' safe zone, and scripts 'if you want less sugar' framing that flirts with implied health benefit."
+}

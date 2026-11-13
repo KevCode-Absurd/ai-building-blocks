@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ties every angle to my own numbers ($26 taste test, $32 swap, 23% 3 pm theme), answers the $3 price head on in Ad 2, and adds a test plan with real thresholds: about 20 purchases per hook, about $520, and cut anything above $32.",
+  "biggest_mistake": "Ad 3 opens on a generic 'And yes, it's soda' and pushes Marcus's real line to an alternate; the disclosure note also says 'Paid partnership label' for TikTok instead of its branded content toggle.",
+  "what_would_make_it_a_10": "Lead Ad 3 with 'My kids think it's real soda,' close each ad on 'A new kind of soda,' and name TikTok's branded content toggle correctly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Warm, on-brand lines ('Still fizzy. Still sweet. Still my treat.'), every ad ends on 'A new kind of soda,' Marcus's real comment opens Script 3, and the disclosure is right for both platforms.",
+  "biggest_mistake": "The test plan is vague ('about a week,' no purchase threshold or cost cutoff), and there are no deliverable specs or usage terms, so I'd still have to write the creator contract side myself.",
+  "what_would_make_it_a_10": "Add a test rule with numbers (purchases per hook, a cost-per-purchase cutoff), creator deliverables and usage terms, and tighten weak alternates like 'Testing my two-sodas-a-day friend.'"
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both nail the right three angles and keep the claims clean. Output 1 is the one I could hand to creators and my media buyer tomorrow: deliverables, usage terms and a hook test with real cutoffs. Output 2 sounds a bit more like us."
+}

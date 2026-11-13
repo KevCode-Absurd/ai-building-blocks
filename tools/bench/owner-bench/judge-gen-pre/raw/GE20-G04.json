@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The low-friction, one-word reply CTAs are a brilliant way to drive engagement without using links, perfectly fitting the plain-text constraint.",
+  "biggest_mistake": "Promising to send a one-page summary upon a 'yes' reply means the reps will need a fulfillment template ready to go, which isn't included.",
+  "what_would_make_it_a_10": "It's a 10, but adding a quick note on how the sales team should fulfill the 'yes' and 'steps' replies would make it absolutely flawless."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 10,
+  "clear": 9,
+  "voice": 5,
+  "range": 5,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Extrapolating the 9-to-4-day close into '60 fewer days in close' over a year is a smart, concrete translation of the proof.",
+  "biggest_mistake": "Advising the team to send the sequence to unflagged contacts with a generic opener burns the best segment for a meager 1.8% reply rate.",
+  "what_would_make_it_a_10": "Hold the unflagged contacts on a watchlist until their pricing changes, and replace the generic SDR CTAs with peer-to-peer questions."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 perfectly nails the peer-to-peer voice and uses highly effective, low-friction asks to navigate the no-link constraint. It also correctly advises holding unflagged contacts back to preserve the TAM, whereas Output 2 suggests burning the rest of the list on a low-converting generic opener and uses standard, high-friction sales CTAs."
+}

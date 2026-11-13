@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 8,
+  "commercial": 6,
+  "craft": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 fixes H1/D1 across all four launch ads so only the angle varies (clean test), adds spend-based decision rules and a visual spec, while Output 2 changes headline and description per ad, confounding the test, and its 'you'+body-state compliance rule is invented."
+}

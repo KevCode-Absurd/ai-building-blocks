@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks every move by extra trials rather than traffic, names the comparison-page shift and the cookie-banner/cookies page as the cheap wins, and gives the writer a real Monday-to-Friday start.",
+  "biggest_mistake": "The headline numbers are inflated by assuming a position-4.2 page can jump to a 9% click rate like the position-2.8 Matomo page, so the '175 extra trials and 67 paid customers a month' ceiling is a stretch the owner could challenge.",
+  "what_would_make_it_a_10": "Use conservative CTR targets with the arithmetic shown, and state plainly that the forecast is a ceiling that will only partly arrive by day 90."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It does the trial maths transparently with moderate click-rate targets, keeps every task inside the writer's 12 slots and three developer days, and carries the brand voice rules right into the Monday drafting brief.",
+  "biggest_mistake": "The month-by-month table is dense and the 4-week kill rule for rewritten pages slightly undercuts the case for the cookie-banner rewrite, though it is honest about it.",
+  "what_would_make_it_a_10": "Move one developer-day item (the month-3 blog tagging) earlier so the stale-blog cleanup does not crowd the final month."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both plans are on-strategy, but Output 2's figures are the ones I can defend to my team, and its month-by-month table plus week-one brief is what I would hand to the writer on Monday."
+}

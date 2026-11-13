@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1's economics are internally consistent and fully specified (channel reach, discount costs, net-of-anyway-cost profit, break-even lifts, sample-size thresholds), while Output 2 contains a materially wrong claim that a 15% blanket code loses ₹17,000 and turns the 46–90 group negative, plus an inflated ₹9 lakh always-on figure that its own per-customer math doesn't support."
+}

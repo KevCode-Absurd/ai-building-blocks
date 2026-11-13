@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the more complete production package — exact disclosure wording and placement, releases, usage rights and term, dates, b-roll deliverables and safe-zone specs, plus the drinkolipop.com URL in every script — while Output 2 is crisper and better hooked but omits creator usage rights and the site CTA, which are the gaps that would bite first when running UGC as paid ads."
+}

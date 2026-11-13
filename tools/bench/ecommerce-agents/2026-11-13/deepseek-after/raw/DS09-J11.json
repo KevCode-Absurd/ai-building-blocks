@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 sizes every test correctly with explicit sample math, plans two parallel lanes with realistic 10% MDE, and gives sharper guardrails (delivered/prepaid orders, RTO, cancellations), while Output 2's mobile-only 2-week MDE of 6.2% on add-to-cart is optimistic and its 2×2 half-vs-half claim understates the sample needed."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Gates the whole sequence on the pricing-change flag for the right segment, and uses each step to take on a real persona objection (billing ownership, audit timing) with low-friction one-word reply asks.",
+  "biggest_mistake": "It holds unflagged contacts on a watch list but still projects 55 meetings 'if all 1,900 are loaded'. Volume depends on how many get flagged, which it never estimates, and it leaves out an opt-out footer, the postal address, and exclusions for current customers and open opportunities.",
+  "what_would_make_it_a_10": "Estimate how many of the 1,900 are likely to be flagged per week so the meeting forecast matches the gating rule, and add the compliance footer and standard exclusions."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ready to run. It orders sends by trigger strength, adds a compliance footer and the right exclusions (customers, open opportunities, pilot no's, one contact per company), and gives a forecast with checked arithmetic and no invented lift.",
+  "biggest_mistake": "It also sends to unflagged controllers with a pain-line opener that is close to the 1.8% generic case, which dilutes the trigger. The 'Reply no' footer adds a second ask to every email.",
+  "what_would_make_it_a_10": "Give a separate, lower forecast for the unflagged fallback group, and keep the opt-out line in the footer so it doesn't compete with the email's one ask."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both found the segment, the trigger and the no-link rule, and both quote the numbers correctly. Output 2 is the one I could hand to the team tomorrow: compliance, exclusions and send order are done, and the forecast holds up."
+}

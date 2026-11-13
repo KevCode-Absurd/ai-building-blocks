@@ -1,0 +1,20 @@
+{
+ "job": "J01",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both deliver solid per-ad-set decisions and budget splits, but Output 1's cleaner break-even math (₹394 with transparent per-order walk-through, ₹282 strict CPA) and tighter day-to-day rules make it slightly more usable, while Output 2's blended 0.50 over-claim factor for retargeting/catalog is a weaker assumption and its 'fix' calls on Beard Kit and DPA are less clearly money-justified."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads my data correctly — Product Hunt's 91-in-100 churn, the 58% carry-over ticket flood, and 1,500 authors who never got early access — and turns each into a specific gate or move.",
+  "biggest_mistake": "The channel table is headed 'ranked by users who stay' but shows 2,470 retained authors above 3,740 for X with no stated criterion, so the numbers visibly contradict the rank order.",
+  "what_would_make_it_a_10": "Name the owners on each timeline step, add explicit week-4 success targets with a pause threshold like the ticket limit, and clear the [brackets] out of the X post and email."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Every step has an owner and a done-when, the gates are pass/fail at a named 4 December meeting, and it adds a real baseline (18.3% of 93,500 stayed) with targets and a plan B for pausing the rollout.",
+  "biggest_mistake": "The creator/author retained-user target says 9,200 when 6,800 plus last time's 2,470 comes to 9,270, and it drops the email reach math (420,000 at 46%).",
+  "what_would_make_it_a_10": "Fix that target arithmetic, add the email open-reach figure, and gate the creator videos and author posts as held-and-scheduled rather than just checked for accuracy."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both got the data right — retention over installs, migration as the real risk, authors and creators as the under-used bet — but only one is a document I could hand to my team on Monday: named owners, done-when criteria, targets, plan B thresholds, and an X post and email I could post almost verbatim. The other needs its ranking table fixed and a dozen placeholders filled."
+}

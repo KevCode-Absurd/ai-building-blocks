@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 reconciles every figure (phasing sums exactly to $30,000, $27.10 contribution, $114 per-ad read, $136/day learning bar, $8,400 stop-out) behind one coherent ladder from a $38 target to a $57 ceiling, while Output 2 mixes $45, $55 and $57 thresholds and its day-3 alarm (under 10 purchases against 55 expected) would not catch a broken launch promptly."
+}

@@ -125,7 +125,7 @@ Write the concept card (Output, item 2) and pass it to `layered-static-productio
 
 ## Output
 
-1. **One-screen summary:** the idea in one sentence, the headline, why it should stop this buyer, and the runner-up idea in one line.
+1. **One-screen summary:** the idea in one sentence, the headline, why it should stop this buyer, and a second idea to run beside it in one line.
 2. **Concept card:** product, buyer group, customer phrase and source, angle, opening, headline (with character count), reason-why line, stop type, visual idea, tension, pairing, style, product role and size, awareness stage, landing page, proof rows.
 3. **Test notes:** the five tests, pass or fail, one line each.
 4. **History check:** similar past ads, their spend and results, and how this idea differs.

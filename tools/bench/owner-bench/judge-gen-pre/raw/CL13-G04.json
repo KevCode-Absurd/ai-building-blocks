@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Targets Controllers at 50 to 300 person SaaS companies on the pricing-change trigger, keeps every email link-free, and holds non-flagged contacts on a watch list instead of sending them the generic 1.8% opener.",
+  "biggest_mistake": "Steps 1 and 2 each carry a question plus a separate 'reply yes/steps' offer, which breaks the one-question, one-ask rule, and they promise a one-page summary and 'three steps' that were never supplied.",
+  "what_would_make_it_a_10": "Give each email a single question that is also the ask, drop the invented follow-up assets, and add an opt-out footer."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Each email is short with exactly one question that is the ask, step 1 opens on the pricing change and the 9-to-4-day proof, and it gives tiered send rules with fallback first lines plus an opt-out footer.",
+  "biggest_mistake": "It loads all 1,900 contacts, including ones with no pricing trigger, who will get a weaker opener. Step 2's '60 fewer days in close' stretches the arithmetic, and 'last note' edges toward urgency.",
+  "what_would_make_it_a_10": "Hold untriggered contacts until their pricing page changes, or test them as a separate small cell, and drop the 60-days-a-year framing."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 follows my copy rules better, with one question and one ask per email, no invented assets, and a compliant footer. Its list rules are also practical, putting pricing-change contacts first and giving the rest a sensible fallback opener, and its expected rates are honest."
+}

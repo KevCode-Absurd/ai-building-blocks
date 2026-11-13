@@ -129,7 +129,7 @@ Each Monday: new-customer revenue / spend, first-order gross profit / acquisitio
 3. **Budget table:** line, formula, inputs, monthly amount, daily amount.
 4. **Calendar:** date, channel, stage, asset, product, offer, audience, budget or send size, owner, status.
 5. **Creative and email brief lists** by stage.
-6. **To confirm:** short list for the owner.
+6. **Assumptions:** one line each, at most three, only where an unknown changes what to do.
 
 ## Common mistakes
 

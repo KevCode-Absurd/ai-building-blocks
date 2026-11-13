@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots that the paused 'Flip the pack' winner was fatigued rather than beaten, brings it back in fresh words, and adds a taste text built on the 26% review phrase.",
+  "biggest_mistake": "None of the six headlines is about taste or texture, and each launch ad changes the primary text, headline and description together, so the tests are muddied (A vs C both test transparency).",
+  "what_would_make_it_a_10": "Add a taste headline and make each launch combination change one thing, so transparency versus taste is a clean test with the 4 pm angle given its own text."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It covers exactly the six angles that matter (flip, taste, no added sugar, protein and texture, 4 pm, price). Its launch plan runs two clean pairs where only the primary text changes, and it sizes budget and decision rules from the real numbers (₹10,500 per ad buys about 36 purchases at ₹290).",
+  "biggest_mistake": "It tells the owner to pause the ₹340 and ₹380 ads without weighing the risk. The 'dense and chewy, not chalky' headline is also written but never used in a launch ad.",
+  "what_would_make_it_a_10": "Use the texture headline in a launch combination and add a short note on how to handle the paused ads' audience overlap."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 gives the six distinct angles I asked for, including a taste headline in Aditya's words. Its four launch ads test one thing per pair (transparency vs taste, 4 pm vs price), with a budget and keep/cut rules I could run this week. Output 1 is good, but its tests are muddier and it has no taste headline."
+}

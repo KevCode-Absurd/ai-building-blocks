@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 6,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 has correct RTO/prepaid math, handles prepaid-only pincodes and gives more ready-to-use flows, while Output 2 wrongly treats each pre-shipment cancellation as saving the full ₹180 and leaves more placeholders."
+}

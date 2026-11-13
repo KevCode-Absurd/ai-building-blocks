@@ -38,7 +38,7 @@ If rival prices cannot be checked on the day, mark them "unchecked" and do not d
 ## Before you start: the gates
 
 1. **Delivered cost per product is complete.** Product cost against price is not gross margin [MEA-0037]. Fail: build the cost rows first.
-2. **Profit target is agreed.** Fail: use the store's current average contribution percentage and mark it "to confirm".
+2. **Profit target is agreed.** Fail: use the store's current average contribution percentage and state it as the assumption in one line.
 3. **Price rules for the market.** India: the selling price may not exceed the printed MRP, which includes all taxes [COG-6264]. US: prices show before sales tax. Feed prices must match the page exactly or Google disapproves products [GAD-6122].
 
 ## Steps
@@ -114,13 +114,13 @@ For the recommended price: contribution per order, contribution %, break-even RO
 
 ## Output
 
-**One-screen summary:** products to raise, hold, cut, reshape or drop; the average change in contribution per order; the three biggest moves and why; runner-up approach in one line.
+**One-screen summary:** products to raise, hold, cut, reshape or drop; the average change in contribution per order; the three biggest moves and why.
 
 **Price sheet** (`price-sheet.csv` or Google Sheet):
 
 | SKU | Product | Delivered cost | Ad cost per new customer | Profit target % | Floor | Rival min / median / max per unit | Spread read | Proof level | Position | Recommended price | MRP or pre-tax price | Contribution per order | Contribution % | Break-even ROAS | Orders a rise can lose | Current price | Change | Action (raise, hold, cut, reshape, drop) | Date checked |
 
-**Change plan:** dates, list announcement, subscriber rule, feed and ad updates, test candidates. **To confirm:** profit target, entry products, rival list.
+**Change plan:** dates, list announcement, subscriber rule, feed and ad updates, test candidates. **Assumptions:** the profit target, entry products and rival list used where not given, one line each.
 
 ## Common mistakes
 

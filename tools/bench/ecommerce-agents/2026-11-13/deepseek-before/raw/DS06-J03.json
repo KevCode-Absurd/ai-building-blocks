@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both deliver eight genuinely distinct, fully specced concepts, but Output 2 is more usable on Monday — character-counted primary text and headlines, Reels safe-zone guidance, multiple hook variants per ad set, explicit spend-multiple decision rules (3x target CPA, keep/cut thresholds), and a first-three test design that deliberately isolates whether the 'idea' or the 'flat product look' is the problem against the existing control."
+}

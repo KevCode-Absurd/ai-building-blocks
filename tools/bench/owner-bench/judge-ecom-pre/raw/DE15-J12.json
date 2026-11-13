@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the pincode data into money and action: ₹27/₹41/₹70 loss per COD order, tier 3 ships only after a yes, and the ₹30/₹20 prepaid offers are sized against the 17%/11% refusal breakeven.",
+  "biggest_mistake": "The COD confirm template still carries a courier date range (\"Usually arrives 18 to 21 Nov\"), which sits close to the promised-delivery line the brand banned.",
+  "what_would_make_it_a_10": "Add the operational fix Output 2 spotted (moving an agent to cover the 8pm-midnight wave) and make the marketing opt-in requirement explicit for the prepaid nudge."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Two fresh operational catches: the checkout opt-in may not cover marketing, and shifting one agent to a 2pm-midnight shift answers the 31% after-hours chats instead of only botting them.",
+  "biggest_mistake": "The pay-by-UPI button points to snitch.co.in/pay/{{1}}, which is the customer name, not the order, so the template breaks when it goes live.",
+  "what_would_make_it_a_10": "Size a real prepaid incentive for tier 3 (the owner's ₹5.5 lakh problem) with the refusal-rate breakeven, and fix the pay-link variable."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 does the thing the data screams for — it prices the loss per COD order by pincode band, gates tier 3 shipping on a yes, and gives a margin-checked prepaid offer, which is what cuts the ₹5.5 lakh tier-3 bill. Output 2 has sharper ops ideas (evening shift, opt-in gap) and a cleaner test-and-scale rhythm, but it leaves money on the table with no incentive and ships one broken pay link."
+}

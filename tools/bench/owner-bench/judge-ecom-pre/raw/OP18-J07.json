@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the actual signals well: dark spots lead the personalisation, beginners get slow-start guidance, and the weak sunscreen click-to-order rate gets its own objection-handling email.",
+  "biggest_mistake": "The WhatsApp reminder says to use the chosen product every other day, which is not quite right for sunscreen and slightly weakens the otherwise careful slow-start guidance.",
+  "what_would_make_it_a_10": "Make the WhatsApp copy product-neutral, add the 10% code consistently to each CTA path, and tighten the sunscreen email with one clearer texture proof if the product page supports it."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly spots the main data issues, especially sunscreen getting many clicks but few orders, and builds a clear objection-handling email around white cast and stickiness.",
+  "biggest_mistake": "Email 5 pushes a generic 3-product routine with Salicylic Acid 2% to everyone, including dark-spot and sensitive-skin subscribers, which goes against the data and the beginner-first brief.",
+  "what_would_make_it_a_10": "Replace the generic final 3-step routine with personalised one-product or two-product paths, remove the off-brand 'brightening' wording, and keep every email to one calm, beginner-safe job."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more ready to run and more disciplined: it keeps one idea per email, leads with the winning dark-spot segment, and handles the sunscreen objection without overloading beginners. Output 2 is good, but the final routine undercuts the personalisation and risks pushing too many actives at once."
+}

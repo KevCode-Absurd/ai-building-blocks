@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 wins on operational and commercial precision: unique per-person codes, a coherent 7-day expiry that matches the series length, a true 24-hour reminder, and a checkout-pause rule, while Output 1 leaves a 7-day gap before its day-13 WhatsApp and uses a shared code with a mismatched expiry story."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 provides the sample variable values (needed for Meta template submission), a call-capacity plan, an OTP/UPI-PIN fraud warning, a 10% holdout to measure real lift, and Shopify tags, so it is genuinely submittable and runnable by one founder, whereas Output 1 is clean and WhatsApp-rule-aware but omits sample values and says to send confirmation 'any hour'."
+}

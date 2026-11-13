@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 6,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both deliver eight distinct concepts, but Output 1 adds a concrete test protocol (spend multiples, decision thresholds, 7-day click read, control ad) and tighter platform-safe specs, while Output 2's cost-per-trip math (₹6,999÷24=₹292) is a minor but questionable value framing and its testing advice is thinner."
+}

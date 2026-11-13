@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers every requested artefact in a ready-to-submit table with correct, decision-relevant maths (₹45 expected RTO per COD order, ₹1,080 per point, 14% real break-even on the ₹25 nudge), realistic holdout tests and a costed keep-or-drop rule, while Output 2 is structurally sound but leans on unfilled [X] placeholders, invents an unbudgeted cart discount code and wrongly treats every pre-ship cancellation as a clean ₹180 saving."
+}

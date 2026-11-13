@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A concrete plan with dates: a data check on Team 8+ single-user accounts, then a dated test, then a dated launch, backed by low, mid and high scenarios that use our real numbers.",
+  "biggest_mistake": "It drops the yearly-billing push as a 'runner-up', even though yearly payers churn 0.9% vs 4.0% a month and we never offer yearly after signup. Its test only covers new visitors, so it never measures churn among the existing 8+ customers who are actually leaving.",
+  "what_would_make_it_a_10": "Add an honest in-app yearly offer, and test Agency on the existing at-risk Essentials 8+ base with a churn-based stop rule."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It goes straight at the 9.6% churn leak with correct revenue math, tests on existing Essentials 8+ customers against a control group and on a slice of Team 8+ to measure downgrades, and sets clear go and stop thresholds.",
+  "biggest_mistake": "Yearly billing only appears as an offer at the moment of switching. It is not a broader fix to the monthly default or the missing post-signup yearly offer, which could be the fastest win inside two quarters.",
+  "what_would_make_it_a_10": "Add a separate, cheap yearly-default and in-app yearly offer test with its own math, and give launch dates mapped to the board's two-quarter window."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both pick the right fix and get the numbers right. Output 2 tests it on the customers who are actually leaving, sets churn-based stop rules, uses our 'here's exactly what you'd pay' voice, and at least brings in yearly billing, which Output 1 dismissed."
+}

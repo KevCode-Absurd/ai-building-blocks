@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 answers the brief's two hardest asks more decisively — an explicit offer ladder per recency group with self-consistent gross-profit maths (₹557/order, anyway-costs that reconcile exactly, per-group break-even lifts) and a bounded ₹2.9 lakh first-wave + ₹5.7 lakh 12-month figure — while Output 2's superior A–E segmentation is undermined by an offer logic keyed to customer type rather than the requested groups and a headline ₹7.9 lakh that rests on an assumed 6,000 new lapsers a month and spans ₹2.8–13.0 lakh, too wide to plan against."
+}

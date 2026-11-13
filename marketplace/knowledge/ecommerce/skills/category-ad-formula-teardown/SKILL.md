@@ -101,7 +101,7 @@ Write the store's baseline: formulas it already runs and formulas it does not. F
 
 ### 6. Write the adaptation briefs
 
-For the top three: beat sheet with timings from the log's medians, three to five hooks in the store's and customers' words (never a rival's line), the claim for the proof beat, shot list, people, length cuts (for example 15, 30 and 45 seconds), ratios (9:16 first, then 4:5 and 1:1), production route and cost, test budget at three times target cost per purchase, and the keep or cut rule on store-side purchases. Add one line per example ad on how this store would rework it. Recommend one formula first and name the runner-up.
+For the top three: beat sheet with timings from the log's medians, three to five hooks in the store's and customers' words (never a rival's line), the claim for the proof beat, shot list, people, length cuts (for example 15, 30 and 45 seconds), ratios (9:16 first, then 4:5 and 1:1), production route and cost, test budget at three times target cost per purchase, and the keep or cut rule on store-side purchases. Add one line per example ad on how this store would rework it. Recommend one formula first, and the second to add once the first has its read.
 
 ### 7. Build the report and write back
 

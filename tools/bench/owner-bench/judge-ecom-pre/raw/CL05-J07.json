@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the click data into money per click (about ₹48 serum, ₹20 face wash, ₹9 sunscreen), splits email 2 by quiz answer, and gives the sunscreen fears their own email that quotes customers' words and the white-cast review.",
+  "biggest_mistake": "The dark-spot version of email 2 sells the serum alone and never pairs it with daily sunscreen, which misses the core routine for uneven tone; the series is also likely over the 1,800-word cap, and it signs email 5 as an invented 'Mohit, Co-founder'.",
+  "what_would_make_it_a_10": "Add sunscreen as the second step in the dark-spot path, trim it to the word limit, and sign off as the team rather than a named person."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is tight and easy to use, with the quiz split, a dedicated sunscreen-questions email, discounted prices worked out correctly (₹359, ₹1,167), and a day-11 email that answers 'just tell me what to use' with a 3-step routine.",
+  "biggest_mistake": "The day-11 routine uses the salicylic acid face wash morning and night and stacks three products, which contradicts the slow-start message; the 'Yes' on wearing the sunscreen under makeup is also unverified.",
+  "what_would_make_it_a_10": "Fix the routine so it starts with one product and uses the face wash once a day, add subject-line variants and a more specific WhatsApp template, and add one fresh angle beyond the standard sequence."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 finds more in the data (value per click, quiz branching, a clear day-13 deadline reminder) and gives A/B subjects, a submit-ready WhatsApp template and a measurement plan. Output 2 is cleaner and shorter, but thinner, and its final routine clashes with the slow-start advice."
+}

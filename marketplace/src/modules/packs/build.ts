@@ -398,13 +398,15 @@ Pack version {{version}}, updated {{updated}}. Profile: {{profile_url}}
   // Only the outline: the full method is packs/shared/WORK-METHOD.md, which always wins when it exists.
   "WORK-METHOD.md": `# Work method
 
-0. Frame: write context/spec.md, one screen: the job (who must do what after seeing this), the deliverables, 5 to 7 acceptance tests, mode (patch whenever something exists) and the brand context the job needs.
-1. Ground: capture only what the acceptance tests depend on into context/, each fact with its source and date. Check the buyer can act today.
+If a rule here would make the work worse for this owner's stated goal and data, follow the owner and say why in one line. In a one-shot job (the owner cannot answer), decide every open point, state at most three assumptions and finish: no confirmation lists or approval asks in the work.
+
+0. Frame: write context/spec.md, one screen: the job (who must do what after seeing this), the deliverables (count and format), a signal pass (the three strongest signals in the owner's data, each with its number, what it means and where the work acts on it), mode (patch whenever something exists) and the brand context the job needs.
+1. Ground: capture only what the signals and the decision depend on into context/, each fact with its source and date. Check the buyer can act today.
 2. Taste and tools: for work a buyer sees, note the brand codes to keep and the defaults to avoid. Pick what fits from toolbox.md.
 3. Diverge: make about 3 real candidates of the part that decides the outcome; a fresh reviewer picks.
-4. Build: new framing of true facts, never new facts. Decide, be specific, finish the format.
-5. Check: a fresh reviewer gets the brief, the deliverable and the facts, and tests each acceptance test and each claim. Gates pass or fail.
-6. Hand over the native work first, with context only when needed; nothing internal reaches the client. Keep working notes in DECISIONS.md.
+4. Build: new framing of true facts, never new facts. Decide (one recommendation, which may combine complementary moves), act fully on each signal, be specific, finish the format.
+5. Check: a fresh reviewer gets the brief, the deliverable and the facts, and checks how fully the work acts on each signal, what it leaves the owner to do, and each claim. Gates pass or fail.
+6. Hand over the native work first: its first screen holds the decision, the numbers asked for, the bad news and the first move. Nothing internal reaches the client. Keep working notes in DECISIONS.md.
 `,
   // Only a pointer: the licence text itself lives in packs/shared/LICENSE.md, which always wins when it exists.
   "LICENSE.md": `# Licence

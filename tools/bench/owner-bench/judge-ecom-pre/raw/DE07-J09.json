@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Separates proved from to-check with an owner, a deadline and a method on every open question, and it names the tracking gap (Meta's purchase count versus store orders since the January move) that decides whether Meta's $121 is real.",
+  "biggest_mistake": "It ranks the moves on a soft High/Medium impact label instead of gross profit, and leaves the board's headline metric as 'set baseline in week 1 / up every month', so the scorecard has no contribution number to manage against.",
+  "what_would_make_it_a_10": "Put each move in one unit (points of contribution on revenue, with the working) and give the contribution scorecard a baseline and a week-13 target instead of 'up every month'."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It converts everything into one currency - points of contribution on revenue - derives a 7.8% baseline and 11% week-13 target with the working shown, and gives each move a decision threshold, a holdout and an owner, so the plan can actually be run on a Monday.",
+  "biggest_mistake": "The Meta sizing is about $2 light: at $110/$100/$90 per first order the share-weighted blended cost is roughly $101/$95/$90, not $99/$94/$89, and its tracking check never compares platform purchase counts to store orders, which is the gap that would prove or disprove the Meta number.",
+  "what_would_make_it_a_10": "Fix the blended-cost arithmetic and add the platform-versus-store order gap check, while keeping the one-unit ranking and the act-when triggers."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both diagnose the same three leaks correctly, but output 2 answers the actual ask - moves ranked in gross profit with a real contribution baseline, target and act-when triggers - where output 1 gives impact as High/Medium and a scorecard with no contribution number; output 1 is the easier read and catches the tracking gap, so it is close, but I would pay more for the one I can hand to the team and run."
+}

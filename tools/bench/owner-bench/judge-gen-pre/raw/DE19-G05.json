@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses every signal in our data: a writing exercise replaces the resume, hours/weekends are stated up front, and the post sounds like us.",
+  "biggest_mistake": "It locks the hire to 00:00-08:00 UTC as a hard 8-hour shift when the fix could be coverage, not a single overnight body; the post reads a bit more like a shift-listing than our calm voice in places.",
+  "what_would_make_it_a_10": "Frame the Asia-Pacific hours as coverage of the overnight gap with a little flexibility, and trim the post so every sentence sounds like us."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 10,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post sounds most like us: honest hard parts, plain language that welcomes career changers, and the weekend rotation stated as 'please tell us now, not in month two.'",
+  "biggest_mistake": "It leans on 'if 2,100 apply' and a 28-hours-each working figure without the one-page simplicity of the other, and its scorecard splits writing across two rows, blurring the single strongest signal.",
+  "what_would_make_it_a_10": "Weight the written reply as one clear 50-60% row and make the reviewer-hours plan as concrete as Output 1's, without walking it back with 'to confirm' at the end."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are excellent and data-driven; the second post sounds more like us and keeps the reader's trust with candidate-first lines, while the first is a touch more of a shift listing. Output 1's cleaner single writing weight and concrete reviewer plan nearly tie it, so it's close."
+}

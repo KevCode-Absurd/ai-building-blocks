@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 5,
+  "clear": 7,
+  "voice": 6,
+  "range": 6,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Uses the real face wash + serum pair as the hero routine instead of discounting it, and pins the shipping move to ₹599 to protect the serum reorder.",
+  "biggest_mistake": "The ₹599 threshold maths rests on an invented 6% slice and assumed 45% add / 40% pay / 15% walk split, and its ₹28k net is not tied to the brief's order bands, so the key saving is guessed rather than earned from the data.",
+  "what_would_make_it_a_10": "Redo the ₹599 calculation from the brief's actual ₹400-499 and ₹500-699 shares, show the margin and RTO effect per band, and let the lip balm cross-sell sit as an add-on rather than a serum bundle."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 6,
+  "reasoning": 6,
+  "correct": 4,
+  "clear": 7,
+  "voice": 7,
+  "range": 7,
+  "ready": 5,
+  "overall": 5,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Clean voice and a well-argued case for testing the shipping line, with a careful 15% walk-away break-even formula.",
+  "biggest_mistake": "Bundle one is a two-serum pack that ignores the owner's top pair and the lip balm add-on, and the ₹599 table claims ₹1.08 lakh extra profit while also saying 2,370 orders lose free shipping — the arithmetic contradicts itself.",
+  "what_would_make_it_a_10": "Use the face wash + serum pair and the ₹199 lip balm as the real bundles, and rebuild the shipping table from the actual order-value bands with gross profit and RTO cost shown per band."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 at least builds on the pair customers already buy and keeps the lip balm as the add-on, even though its numbers are softer than they look; Output 2 invents a serum-only bundle and its shipping profit figure is internally inconsistent."
+}

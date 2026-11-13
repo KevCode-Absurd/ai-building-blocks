@@ -2,7 +2,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { buildPack, filesIndex, oneFileText, type BuiltPack, type PackInput } from "../src/modules/packs/build.ts";
+import { FALLBACK_TEMPLATES, buildPack, filesIndex, oneFileText, type BuiltPack, type PackInput } from "../src/modules/packs/build.ts";
 import { lintPack } from "../src/modules/packs/lint.ts";
 import { bestRoute, relevantSections } from "../src/modules/packs/route.ts";
 import { contextRequirements, familyOf } from "../src/modules/packs/families.ts";
@@ -132,4 +132,58 @@ test("every job skill carries the hand-over word budget; conversion jobs also ch
   // 10 Nov rerun: the deliverable stands on its own, and plans keep the detail someone needs to act.
   for (const family of Object.keys(WORD_BUDGETS) as (keyof typeof WORD_BUDGETS)[]) assert.match(familyGates(family)[0], /never in a file the client does not have/, family);
   assert.match(WORD_BUDGETS.plan, /10,000 words/);
+});
+
+// 13 Nov 2026 owner bench: one-shot work is finished and decided, and the method an agent must read stays small.
+const visibleWords = (t: string) => (t.replace(/[|#*_>`-]+/g, " ").match(/[A-Za-z0-9$%€£][^\s]*/g) ?? []).length;
+const quality = (p: string) => shared(`tools/quality/${p}`);
+
+test("the built-in method outline matches WORK-METHOD.md: owner first, signal pass, no homework", async () => {
+  const outline = FALLBACK_TEMPLATES["WORK-METHOD.md"];
+  assert.match(outline, /follow the owner and say why in one line/);
+  assert.match(outline, /In a one-shot job \(the owner cannot answer\), decide every open point, state at most three assumptions and finish/);
+  assert.match(outline, /0\. Frame:[^\n]*a signal pass \(the three strongest signals in the owner's data, each with its number, what it means and where the work acts on it\)/);
+  assert.match(outline, /1\. Ground: capture only what the signals and the decision depend on/);
+  assert.match(outline, /4\. Build:[^\n]*one recommendation, which may combine complementary moves[^\n]*act fully on each signal/);
+  assert.match(outline, /6\. Hand over[^\n]*first screen holds the decision, the numbers asked for, the bad news and the first move/);
+  assert.doesNotMatch(outline, /acceptance tests?|To confirm|runner-up/i);
+  // The full method says the same in step 0.
+  assert.match(shared("WORK-METHOD.md"), /## 0\. Frame[\s\S]*\*\*Signal pass:\*\* the three strongest signals in the owner's data[\s\S]*## 1\./);
+  // A pack built without the shared method falls back to the outline.
+  const { "WORK-METHOD.md": _, ...noMethod } = TEMPLATES;
+  assert.match(file(await build({ templates: noMethod }), "WORK-METHOD.md")!, /a signal pass/);
+});
+
+test("approval rules govern live actions, never the content of a plan; the method files ask for no confirmation lists", async () => {
+  const agents = file(await build(), "AGENTS.md")!;
+  assert.match(agents, /These approval rules govern live actions in the client's tools\. Ask for them in your own message, outside the work\. They never appear as approval requests inside a plan, a recommendation or copy/);
+  assert.match(agents, /In a one-shot job \(the brief holds everything and the owner cannot reply\), ask nothing: decide, state at most three assumptions and finish/);
+  assert.match(agents, /get a yes before the first live action/, "live-action approvals stay");
+  assert.match(shared("train/AGENTS.md"), /Decide: one recommendation, which may combine complementary moves that serve the same goal; name a runner-up only when the options truly exclude each other\./);
+  const engine = quality("QUALITY-ENGINE-v3.md");
+  assert.match(engine, /4\. \*\*The owner's data first\.\*\* The standard playbook is the default where the data says nothing new\./);
+  assert.match(engine, /Every plan, strategy or recommendation carries one labelled \*\*bolder move\*\*: one idea beyond the standard playbook, sized in the owner's unit, with its first step and its risk, inside the length budget\./);
+  assert.match(engine, /Light and standard have no third draft, but the expert draft of any plan, strategy or recommendation carries the bolder move/);
+  assert.match(engine, /differs on at least two of angle, format, persona and hook source/);
+  assert.match(engine, /the first screen holds the decision, the numbers the owner asked for by name, every piece of bad news, and the first move this week/);
+  assert.match(engine, /Aim at about 85% of the owner's limit, counted the way the owner counts/);
+  assert.match(engine, /Projections from the owner's own numbers are welcome, with the working and a range, labelled as projections\./);
+  assert.match(quality("ROUTING.md"), /\*\*standard\*\*[\s\S]*No creative third draft, but the expert draft of a plan, strategy or recommendation carries one labelled bolder move/);
+  assert.match(quality("INTAKE.md"), /Show the reader at most three assumptions, one line each/);
+  // "To confirm" survives only where a rule forbids it.
+  for (const [name, text] of [["WORK-METHOD.md", shared("WORK-METHOD.md")], ["AGENTS.md", shared("AGENTS.md")], ["train/AGENTS.md", shared("train/AGENTS.md")],
+    ["QUALITY-ENGINE-v3.md", engine], ["INTAKE.md", quality("INTAKE.md")], ["ROUTING.md", quality("ROUTING.md")]] as const)
+    for (const line of text.split("\n").filter(l => /To confirm/i.test(l))) assert.match(line, /(never|no) (holds a |add a |end with a )?(a )?"?To confirm/i, `${name}: ${line.slice(0, 80)}`);
+});
+
+test("a one-shot job's required reading stays under 6,000 words in a pricing-strategist pack", async () => {
+  // AGENTS.md, WORK-METHOD.md, the quality engine sections the fast path names (rules, steps 2 to 4 and 8), one card
+  // and one job skill. About 13,560 words before 13 Nov 2026.
+  const agents = file(await build(), "AGENTS.md")!;
+  const engine = quality("QUALITY-ENGINE-v3.md").split(/\n(?=## )/).filter(s => /^(# |## (Rules|[2-4]\.|8\.))/.test(s)).join("\n");
+  assert.match(shared("WORK-METHOD.md"), /read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill/);
+  const skills = ["price-recommendation", "price-test-and-readout", "tiers-and-packaging"]
+    .map(s => readFileSync(new URL(`../packs/roles/pricing-strategist/skills/${s}/SKILL.md`, import.meta.url), "utf8"));
+  const total = visibleWords(agents) + visibleWords(shared("WORK-METHOD.md")) + visibleWords(engine) + visibleWords(quality("cards/pricing.md")) + Math.max(...skills.map(visibleWords));
+  assert.ok(total < 6000, `one-shot reading is ${total} words`);
 });

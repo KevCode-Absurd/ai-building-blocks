@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It singles out the Essentials 8+ leak with real numbers (about 29% of churned revenue, 73% of exits tied to cost or approvals), and its test uses a control group and clear go and stop thresholds on switch rate, churn and Team downgrades.",
+  "biggest_mistake": "The base case is optimistic (half of the 8+ group switching, churn falling to 5%), and the yearly-billing fix, which is the faster win, gets only one line instead of a proper role.",
+  "what_would_make_it_a_10": "Make a yearly-billing nudge an explicit early move that helps the board window, and make the base case more cautious so the downside is not so far from it.",
+  "vs_note": "Customer email and public post are in the brand voice, with no urgency and the customer's own bill shown beside the new price."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is honest about the downside (a low case of -$104k), adds a quick data check on single-user Team accounts before anything launches, and includes a clear pricing page table and dated plan.",
+  "biggest_mistake": "It waves away yearly billing as a \"runner-up\" that misses the board window, which overlooks the 0.9% vs 4.0% churn signal, and it adds a second option to a brief that asked for one recommendation.",
+  "what_would_make_it_a_10": "Fold a yearly-billing offer into the single recommendation, and test the churn effect on existing 8+ customers rather than only measuring 60-day revenue from new visitors.",
+  "vs_note": "The new-visitor test has a small sample and a short window, so it cannot show whether churn improves, which is the main source of the gain."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Owner would rather have the plan whose test directly checks the churn and downgrade assumptions with a control group, and which at least offers yearly billing at the switch. The other has a sharp data check and honest cases but dismisses the yearly lever and tests mostly new visitors."
+}

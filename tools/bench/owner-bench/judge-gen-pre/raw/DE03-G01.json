@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built every move on the owner's own numbers, correctly diagnosing that comparison pages convert 12.8x better than blog posts and putting the near-page-one cookie and cookie-free pages first.",
+  "biggest_mistake": "The trial estimates use a slightly generous click-rate lift (e.g. 3,190 extra clicks from a 3.5% to 9% CTR jump on /vs-google-analytics) presented as a near-ceiling, which could overstate the day-90 forecast.",
+  "what_would_make_it_a_10": "Tighten the forecast to a conservative and a ceiling case and add a clear day-90 trial target per month tied to October's baseline."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Shows its arithmetic openly, uses 'working figures to tune, not forecasts', and builds in cut/keep/scale rules with a 4-week check that make the plan self-correcting.",
+  "biggest_mistake": "Uses a 5.0% CTR target for /vs-google-analytics and 3.0% for the cookies page without saying where those come from, and the month-3 'tag all 140 blog posts' task quietly loads work onto a capacity already full.",
+  "what_would_make_it_a_10": "Source or bound the CTR targets and confirm the month-3 audit sits outside the writer's four pages."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and on-brief, but Output 2's transparent sums, explicit keep/cut/scale rules and built-in checkpoints make it the one I'd actually run and defend; Output 1 is sharper on the 'stop' list and voice but its bigger numbers are less honest about their uncertainty."
+}

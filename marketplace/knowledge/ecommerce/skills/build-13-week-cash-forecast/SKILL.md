@@ -111,7 +111,7 @@ Each Monday: replace last week's forecast with actuals, add week 14, record the 
 
 ## Output
 
-**One-screen summary:** today's cash, lowest projected cash and its week (base and downside), number of weeks below buffer, the top three actions with their cash effect, and a short "To confirm" list.
+**One-screen summary:** today's cash, lowest projected cash and its week (base and downside), number of weeks below buffer, the top three actions with their cash effect, and up to three assumption lines where an unknown input changes the actions.
 
 **Cash sheet (13 weeks):**
 

@@ -86,7 +86,7 @@ If return reasons are missing, use reviews that say "wrong one", "too strong", "
 
 **Targets:** starters, results reached, add-to-cart from results, drop-off per question.
 
-**To confirm:** offer costs, consent wording, products excluded and why.
+**Assumptions:** offer cost where not given, as the figure used in one line. **Left out:** each product excluded, with its reason in one line. The consent line under the email field carries one line beside it: "legal check before publishing".
 
 ## Common mistakes
 

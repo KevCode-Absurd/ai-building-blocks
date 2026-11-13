@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the pairs the store already sells, prices each bundle as a clear step-up, and shows break-even step-ups so the owner can see when each move pays.",
+  "biggest_mistake": "The top bundle skips the face wash + serum pair the data points to most, so the strongest existing routine is not made into bundle number one as it should be.",
+  "what_would_make_it_a_10": "Make the face wash + serum routine the headline bundle, with margin and break-even shown, then keep the lip balm as the threshold add-on."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the face wash + serum pair first, gives a clear ₹599 threshold with a 15% walk-away break-even, and shows the working so the owner can follow the money.",
+  "biggest_mistake": "The second bundle prices two serums as a reorder pair, which is a thin idea and risks pulling repeat orders forward rather than adding a new routine.",
+  "what_would_make_it_a_10": "Replace the two-serum pair with the lip balm add-on or a hair/body routine, and tighten the COD refusal effect into the threshold maths."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 wins narrowly because it builds the first bundle from the face wash + serum pair the data already shows customers buying, and its threshold maths is clearer with a named walk-away break-even. Output 1 is close but its top bundle misses that strongest pair."
+}

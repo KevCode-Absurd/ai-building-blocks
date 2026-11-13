@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The Monsoon Dark track names the closest match through {{match_roast}}, and the gross-profit maths checks out line by line: ₹557, ₹442, ₹2,113 per subscriber and ₹8.5 lakh net after discount waste and WhatsApp cost.",
+  "biggest_mistake": "The 9,000 at-risk customers at 46 to 90 days, the cheapest to win back, are left out of the ranked target list and treated only as a side 'day-28 nudge', so 91 to 180 days is ranked first.",
+  "what_would_make_it_a_10": "Rank the 46 to 90 day group first with a no-discount reminder, and size the holdout on contactable customers with the power working shown (1,310 is 10% of all of group A, not of those reachable)."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The measurement is tight: a holdout per group, a working sample-size calculation (1,900 per side, with the pooled read clearing it and single groups flagged as direction only), a code break-even rule of 115/557 = 21%, and a decision rule set in advance. Every group count reconciles to 44,600.",
+  "biggest_mistake": "The Monsoon Dark draft sends people to a brew quiz instead of naming the closest current roast, and the lapsed-buyer value counts only email reach, so it probably understates the prize.",
+  "what_would_make_it_a_10": "Put the named closest match in the Monsoon Dark day-0 message, and include WhatsApp-only opt-ins in reach and value."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the numbers right and gate the ex-subscribers on fixing delivery. Output 2 starts with the just-lapsed group the data says is cheapest to win back and gives me lift measurement I can trust, though I'd borrow Output 1's Monsoon Dark email."
+}

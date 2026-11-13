@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 builds a fully reconciled $30,000 phased budget with explicit gates, kill/scale rules and a three-read Day 30 verdict, while Output 2's phasing and $45 ceiling are looser and its arithmetic on order volume and gates is less defensible."
+}

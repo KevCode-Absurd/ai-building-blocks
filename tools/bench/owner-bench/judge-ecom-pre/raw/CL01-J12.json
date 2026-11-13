@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It works out RTO cost by pincode group (₹2.7L, ₹3.0L, ₹5.5L, plus loss per COD order) and builds a tiered flow on it: tier 3 ships only after a yes, metros get no nudge, and prepaid discounts are sized to break-even refusal rates of 17% and 11%.",
+  "biggest_mistake": "The after-hours fix is one away message with a single Track button, not a proper button menu covering size, exchange and COD, and there is no idea for adding evening agent cover.",
+  "what_would_make_it_a_10": "Add a buttoned after-hours menu (track, size, exchange, COD) and shift one agent into the 8 pm to midnight wave."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 6,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Practical operations: a buttoned after-hours auto-reply, moving one agent to a 2 pm to midnight shift, quiet hours, and a sensible staged rollout of the hold from tier 3 to tier 2.",
+  "biggest_mistake": "The prepaid nudge goes to every tier with no incentive, as a Utility template, so it ignores the pincode economics and risks a category rejection. RTO cost is slightly off (₹11.3L vs ₹11.2L) and never broken out in rupees by tier.",
+  "what_would_make_it_a_10": "Size and target the prepaid nudge by tier with the money worked out, add a missed-delivery template, and give the cart and size copy more Snitch boldness."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 shows me where the ₹11 lakh is leaking by tier and spends a prepaid discount only where it pays back. Output 2 is tidy on chat operations but nudges everyone the same way and leaves money on the table."
+}

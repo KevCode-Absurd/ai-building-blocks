@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every number checks out: the per-move sums, the 69 trials and 26 paid, the 0.7 vs 45.8 trials per page, and the 1,171-trial quarter goal. It also has dated weekly tasks and cut, keep and scale rules.",
+  "biggest_mistake": "The cheap cookie-banner and cookie-free fixes are pushed behind /vs-google-analytics, so the cookie post waits until month 2. Month 3 also asks the writer to tag all 140 posts on top of 4 pages.",
+  "what_would_make_it_a_10": "Put the cookie-banner rewrite and retitle in week one alongside /vs-google-analytics, and add one page aimed squarely at Tomas the agency developer."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Broad persona coverage within the 12-page limit: a GA4 migration page for Maya's data fear, an agency/DPO page for Tomas, a docs trial prompt and a /compare hub.",
+  "biggest_mistake": "The headline gain of +100 trials assumes /vs-google-analytics reaches a 9% CTR in the top 3 on a competitive head term, which inflates the 175-trial ceiling. The month order also contradicts its own ranking: rank 2 ships in month 2 while rank 4 ships in month 1.",
+  "what_would_make_it_a_10": "Use conservative CTR targets and schedule work in the order of the trial ranking so the forecast matches the calendar."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both plans move the writer to comparison pages and stop the blog. Output 1's numbers are conservative, its sequencing matches its ranking, and it has hard dates and kill rules I can manage against. Output 2 has better persona pages but sells me an optimistic headline forecast."
+}

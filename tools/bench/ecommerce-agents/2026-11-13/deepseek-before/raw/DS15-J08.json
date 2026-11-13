@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 7,
+  "commercial": 6,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives a complete, arithmetically coherent plan with per-group offers, sequences, drafts, holdout sizing and a defensible ₹2.9 lakh first-wave gross-profit figure, while Output 2's ₹7.9 lakh headline rests on an unexplained 4-point lift over a 12-month flow and a 40% offer-redemption assumption that inflate the value and blur the offer logic."
+}

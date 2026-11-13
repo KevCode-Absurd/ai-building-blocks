@@ -1,0 +1,20 @@
+{
+ "job": "J01",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both reach similar verdicts, but Output 1's per-set break-even math, stricter scale-vs-cut logic, and cleaner budget (planned ₹3.82L plus reserve, staying under the ₹5.6L 14-day share) are more defensible than Output 2's ₹4.3L plan with a ₹40k/day cap and a looser working target."
+}

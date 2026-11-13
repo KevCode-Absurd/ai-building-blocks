@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks recruiting with the seat math in two lines and builds the whole page on Priya's words and the buried round-robin/routing/security assets.",
+  "biggest_mistake": "Leaves a few [bracket] placeholders and a logo-row section that is homework for the owner; also slightly over-corrects toward five CTA sections.",
+  "what_would_make_it_a_10": "Strip every placeholder and pre-fill security/tool proof with only verified facts so it can be pasted and launched tomorrow."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tight, honest page order that follows Priya's worries, with a strong security section and a test plan that fixes sample size before launch.",
+  "biggest_mistake": "Uses an internal activation stat (71% first booking) as customer-facing proof and its hero subhead buries the 'no email tennis' phrase that the data says is the hook.",
+  "what_would_make_it_a_10": "Make the hero lead with the candidate email-tennis phrase and replace internal stats with real, approved proof."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick recruiting and do the math, but Output 1's hero and section copy sound more like Priya and follow the brand voice more closely, while Output 2 is cleaner but slightly colder and leans on internal activation stats as public proof."
+}

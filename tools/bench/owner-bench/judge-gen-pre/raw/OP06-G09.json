@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the big signals clearly: push sleep, use narrator clips up to capacity, post at night, and cut low-value themes and formats.",
+  "biggest_mistake": "It weakens the plan with a Wednesday 14:30 post despite the strong evening signal, and its success math/baseline claims are a bit overconfident and not fully grounded in the data shown.",
+  "what_would_make_it_a_10": "Keep every planned post in the 20:00 to 22:00 window unless explicitly testing, and tighten the KPI math so every target cleanly traces to the brief."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It is tightly built on the actual signals in the data and constraints, especially the sleep/evening/narrator-clip combination, while staying on-brand and production-feasible.",
+  "biggest_mistake": "It says no post here needs review, which is workable by wording, but it could have been stronger by explicitly flagging clip-transcript review risk for every sleep audio choice, not just generally.",
+  "what_would_make_it_a_10": "Add one sharper expected-outcome model for the proposed mix, not just threshold KPIs, so the owner can judge upside against baseline more confidently."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I'd rather hand to the team tomorrow: it follows the strongest signals without drifting into daytime posting, stays truer to the brand voice, and is more immediately usable. Output 1 is good, but the midday test and shakier KPI logic make it slightly less owner-safe."
+}

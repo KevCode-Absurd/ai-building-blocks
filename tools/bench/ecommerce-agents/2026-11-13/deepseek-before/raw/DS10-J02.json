@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are complete and hand-off ready with correct unit economics, but Output 1's day-30 verdict rests on a blended new-customer lift check against a Meta-flat baseline (with a tighter $45 stop line), while Output 2 would keep funding up to $57 per first order and defers the incrementality proof to a month-2 holdout."
+}

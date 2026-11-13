@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very tight on claims: 'quiet', 'light' and looks appear only as quoted reviews. It pairs this with a concrete test plan (four ad sets, ₹1,100 a day, purchase-count cut rules, control ad) that I could launch tomorrow.",
+  "biggest_mistake": "The primary text runs long and cites review counts ('290 of our reviews mention…'), so it reads like a report, not our short, calm, grade-7 voice.",
+  "what_would_make_it_a_10": "Rewrite the primary text in short brand-voice lines and add one genuinely unexpected concept, such as a price reframe, alongside the solid core."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots that women get 18% of spend but bring 26% of purchases. Its copy is short and on-voice, and the per-trip maths concept (about ₹292 a trip) is a fresh idea I hadn't considered.",
+  "biggest_mistake": "It puts 'Quiet wheels' and 'rolls quiet' in our own voice in concepts 5 and 8. That is a claim beyond the approved specs, which I explicitly said to avoid.",
+  "what_would_make_it_a_10": "Keep 'quiet' inside quoted reviews only, and give the test plan real budgets, dates and cut thresholds instead of 'at least 3x CPA'."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both found the quiet wheels, the women's opportunity and the scuff issue. The first stays strictly inside my approved claims, leads with the cheaper women's audience and hands me a testing plan I can run. The second writes nicer, tighter copy but slips 'quiet' in as our own claim and is vaguer on how to test."
+}

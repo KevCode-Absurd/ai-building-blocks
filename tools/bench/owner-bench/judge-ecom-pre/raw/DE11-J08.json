@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on every signal in my data — the discontinued Monsoon Dark blend gets its own match-led message, the courier problem gates the ex-subscriber track, and the 46-90 day drifters get a day-28 nudge — with gross profit worked from ₹557 and honest holdout maths.",
+  "biggest_mistake": "The value table's upside is quietly generous (assumed lifts like 4% and 8% compound into ₹9.4 lakh) and the ₹70,035 'discount to people who would have bought anyway' fudge is an invented figure rather than shown working, so the headline '₹8.5 lakh' reads more confident than the assumptions justify.",
+  "what_would_make_it_a_10": "Show the lift assumptions as explicit ranges with the discounted-order and discount-leakage arithmetic fully traced to the ₹557/₹442 figures, so the ₹8.5 lakh net is auditable line by line."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_mistake": "It buries the cheapest, highest-leverage group — the 46-90 day at-risk customers — inside a re-derived 68-day 'lapsed' definition (4,600) instead of starting there with a light, no-discount reminder, and it led the Monsoon Dark track with 'it's gone' rather than the closest-match lead my notes asked for.",
+  "biggest_strength": "Clean, disciplined measurement: a pooled holdout with a worked sample-size calculation and a pre-set decision rule, plus an honest line that coupon payback needs more than one in five code orders to be truly incremental."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 follows my notes more closely — it starts where the data says it is cheapest (46-90 days), gives Monsoon Dark a match-led track with a named blend, gates the ex-subscribers on the courier fix, and puts a rupee value on the whole thing, whereas Output 2 is well measured but redefines 'lapsed' away from my at-risk group and pads the brief with process detail.",
+ "reason_final": "Output 1 wins."
+}

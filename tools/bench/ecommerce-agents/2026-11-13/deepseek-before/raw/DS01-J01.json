@@ -1,0 +1,20 @@
+{
+ "job": "J01",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gets the money math right (₹394 profit/order, midpoint ₹340 target, correct break-evens per ad set), keeps a coherent scale/hold/fix/cut logic with a reserve and day-to-day rules, while Output 2 makes a serious arithmetic error by defining strict break-even as ₹394×0.72=₹282 (should be ₹394/0.72≈₹547) and its scale rule (CPA ≤₹300) contradicts its own cut logic, misdirecting budget decisions."
+}

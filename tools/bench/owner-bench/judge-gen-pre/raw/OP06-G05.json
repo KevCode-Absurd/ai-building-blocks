@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts directly on the real signals in the data by centering writing, making the overnight UTC gap the purpose of the role, and replacing cover letters with a short application exercise.",
+  "biggest_mistake": "It adds a few process details the brief did not ask to finalize yet, including a four-step hiring flow and a specific triage rule for 5s that may be too rigid without validation.",
+  "what_would_make_it_a_10": "Tighten the hiring process details to only the essentials, remove the extra 'to confirm' homework, and make the title and role consistently match the requested specialist role."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sounds like the company, states the salary and hard parts plainly, and clearly shifts selection toward writing instead of years of experience.",
+  "biggest_mistake": "Its scorecard under-specifies what 1, 3 and 5 look like across some key dimensions and gives too much weight to conversation relative to the weak predictive signal of interview impression.",
+  "what_would_make_it_a_10": "Make the application exercise and scorecard more tightly tied to the hiring data by reducing interview weight, adding fuller anchored examples for each row, and giving a more operational screening plan."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could run with tomorrow because it sees more of what matters in my data: the overnight coverage gap, the weekend-rotation retention issue, and the need to use a short written exercise to cut review time. Output 2 is good, but it leans a bit more generic in the scorecard and process."
+}

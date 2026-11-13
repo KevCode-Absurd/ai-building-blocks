@@ -36,7 +36,7 @@ Optional: the page this replaces (URL and its GA4 or Shopify numbers), `product-
 
 Access: read (level 1) to build. Installing on a duplicate theme needs draft access (level 2). Publishing needs the client's yes.
 
-Missing input: ask once. Without a phone screenshot, build the phone layout from the desktop one and log "mobile interpreted". Without brand files, read colours and fonts from the store's live site and mark them "to confirm".
+Missing input: ask once. Without a phone screenshot, build the phone layout from the desktop one and log "mobile interpreted". Without brand files, read colours and fonts from the store's live site and mark them "read from live site".
 
 ## Before you start: the gates
 

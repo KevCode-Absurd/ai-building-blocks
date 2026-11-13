@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives a cleaner, fully specified plan with correct unit economics, a coherent kill/promote/scale system and a three-read day-30 decision rule, while Output 2 muddies the target with a $57 cut-off and shifts the measurement window to days 15-30, weakening comparability."
+}

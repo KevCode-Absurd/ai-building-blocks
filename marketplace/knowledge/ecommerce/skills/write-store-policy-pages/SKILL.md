@@ -32,7 +32,7 @@ Required:
 
 Optional: competitor policies (2), courier SLA document, chargeback history.
 
-Writing is level 1 work. Publishing pages is level 2 (draft) then live with the client's yes. If an operations fact is missing, do not invent it: mark the line "to confirm" and ask once.
+Writing is level 1 work. Publishing pages is level 2 (draft) then live with the client's yes. If an operations fact is missing, do not invent it: leave the line out and name it in the summary.
 
 ## Before you start: the gates
 
@@ -99,7 +99,7 @@ Footer (all five), checkout policy links (Shopify settings, Policies), product p
 
 ## Output
 
-**One-screen summary:** the 5 pages, what changed from the old versions, open "to confirm" items, and the lawyer list.
+**One-screen summary:** the 5 pages, what changed from the old versions, any operations fact left out, and the lawyer list.
 
 **Operations fact sheet:** Fact, Value, Source, Owner, Confirmed date.
 

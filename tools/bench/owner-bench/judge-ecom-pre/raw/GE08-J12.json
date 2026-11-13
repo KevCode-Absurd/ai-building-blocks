@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent operational thinking, including shifting one agent to 2 pm–midnight to handle the 31% evening chat spike.",
+  "biggest_mistake": "Assumed no monetary incentive for prepaid switch, missing the opportunity to size a discount against the ₹180 RTO cost for high-risk pincodes.",
+  "what_would_make_it_a_10": "Size a tiered prepaid incentive against the RTO loss per tier instead of relying solely on an ease-based pitch."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless unit economics that break down RTO loss per COD order (₹27 Metro vs ₹70 Tier 3) and size the prepaid discounts (₹20/₹30) directly against the ₹180 courier loss while excluding low-risk metros.",
+  "biggest_mistake": "Scripts for the 5 questions could lean slightly more into the distinctive, bold Snitch persona.",
+  "what_would_make_it_a_10": "It is already an exceptional specialist output that directly executes every owner signal."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 demonstrates superior e-commerce acumen by calculating the loss per COD order by tier and sizing prepaid discount offers strictly against RTO savings, while adding crucial real-world touches like a missed-delivery template and exempting repeat buyers from friction."
+}

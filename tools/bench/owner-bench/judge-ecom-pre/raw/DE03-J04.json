@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every angle is justified straight from the owner's own numbers (taste test $26 at 33%, 3 pm habit 23%, price 15%) and the price objection is handled inside the script in the customer's own words.",
+  "biggest_mistake": "Ad 3 puts a label-read moment at 22-32 s for Marcus, which edges toward the weakest opening the data warns against and risks feeling like the $44 label-read ad; the creative beats in Ad 3 also feel less naturally 'soda joy' than the other two.",
+  "what_would_make_it_a_10": "Sharpen Ad 3 so the label line is a throwaway mid-action beat rather than a framed 'read the label' shot, and trim the 'For every creator' section so the whole piece sits comfortably under 1,300 words."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tight, well-voiced scripts with an end-line brand tag ('A new kind of soda') and clean disclosure, easy for a creator to shoot and edit down.",
+  "biggest_mistake": "It under-uses the data: no per-purchase numbers in the rationale and the hook-testing section is vague ('after about a week') where the owner wanted a cost-per-purchase rule with a benchmark.",
+  "what_would_make_it_a_10": "Add the money read (benchmark $26 taste test, $32 swap, $44 label) into each angle and the hook-testing playbook, and give the creator briefs the same exact-claim guardrails as the script body."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is built on the owner's real numbers and shows the working: it names the winning opening, answers the $3-a-can objection inside a script, and gives a hook-testing rule with a dollar ceiling. Output 2 is cleaner and nicer to read but its hook test and rationale are loose, so the owner would pay for Output 1."
+}

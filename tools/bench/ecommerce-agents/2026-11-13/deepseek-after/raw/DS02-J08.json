@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are complete and usable, but Output 1's discount discipline (24% safe ceiling, verifiable code-pass thresholds of 557/442 and 557/384.5, and the checked +₹1.29L→−₹62k blanket-code loss) plus sized holdouts give sharper decision-ready guidance, edging Output 2 whose per-order math is cleaner but which mislabels the ₹2.9L total as the 'first wave' and discounts earlier on softer assumptions."
+}

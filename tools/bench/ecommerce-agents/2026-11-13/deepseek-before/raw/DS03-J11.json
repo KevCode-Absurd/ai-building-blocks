@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 sizes tests correctly on mobile-only traffic (2-week MDE 6.2% for add-to-cart tests, 4-week 11.9% for order tests) and pairs tests 2 and 3 in a 2×2 to save time, while Output 2 runs every test on all visitors for 4 weeks with a 10% MDE that is underpowered for its own add-to-cart tests and spends 12 weeks for less evidence."
+}

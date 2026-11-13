@@ -1,0 +1,20 @@
+{
+ "job": "J06",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both deliver the full page and handle the cash-expectation problem well, but Output 2 edges it commercially: it puts a hard, quantified bound on cash in the spec table, routes wrong-fit buyers to a full-note wallet range instead of just telling them to go elsewhere, and gives a concrete fallback test if conversion drops — while Output 1 is the cleaner ship only because Output 2 leaves one [X] placeholder."
+}

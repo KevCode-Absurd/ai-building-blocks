@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 correctly sizes tests on the right baseline (mobile-only vs all visitors), computes sample sizes transparently, schedules five tests in 12 weeks with proper COD settlement lag, and includes the ship-without-testing list; Output 2's 2-week add-to-cart tests miss the revenue metric, its 2×2 design muddies attribution, and its 8-week plan is over-optimistic on effect detection."
+}

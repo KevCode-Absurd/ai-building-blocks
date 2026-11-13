@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a clear verdict and rupee reason for every ad set, relaunches the paused 'Dad's razor vs mine' video first (worth about ₹65,000), and has a budget that sums to ₹5,60,000 with a 20% scaling ladder and numeric daily rules.",
+  "biggest_mistake": "Several verdicts rest on Meta's own count (scaling Catalog DPA at frequency 5.2 even though it flags retargeting-type over-counting). It also offers no prepaid or COD fix for the Starter Kit, only a cut.",
+  "what_would_make_it_a_10": "Judge every ad set on Shopify-adjusted numbers alone, add a prepaid-only or COD-confirmation route to bring the Starter Kit back, and move extra money into women 25 to 34 instead of just holding their spend flat."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 6,
+  "voice": 7,
+  "range": 7,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It judges every ad set against Shopify-adjusted break-even (₹282 for ASC), shows the working, and adds a prepaid-versus-COD lever with numbers (₹124 per order, ₹201 on the Starter Kit) plus honest caveats on what the data can't prove.",
+  "biggest_mistake": "It holds back ₹1,82,000 in a reserve gated at ₹282, a level ASC is unlikely to reach soon. The relaunched winner is therefore not scaled, and the answer ends with 'to confirm' asks and invented dates even though the owner is unavailable.",
+  "what_would_make_it_a_10": "Cut the length to the 1,300-word limit, commit the reserve with a realistic scaling gate, make the prepaid fix a concrete Starter Kit offer, and drop the approval requests."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is more decisive and easier to run on Monday: it relaunches the winning video, sets a scaling ladder, and spends the full ₹5,60,000 with numeric rules. Output 2 is more rigorous on attribution and has the better prepaid insight, but it is longer, leaves a third of the budget parked, and asks for sign-off."
+}

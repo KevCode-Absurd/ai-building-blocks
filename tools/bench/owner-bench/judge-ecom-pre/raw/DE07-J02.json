@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Builds the plan on the real signals: the nurse and server Spark Ads from day 1, problem-first hooks, mission as the closer, no discount, and a day-30 check that also asks whether we own winning creative before the March licences end.",
+  "biggest_mistake": "The day-30 new-customer test is a before-and-after against the prior 30 days with an unexplained 70% threshold, which is exactly the kind of pre/post read that flatters a Q4 launch, and it passes a days 15-30 cost bar while quoting a 30-day order count, so the pass line doesn't line up.",
+  "what_would_make_it_a_10": "Replace the prior-30-day comparison with a seasonally adjusted or holdout read, exclude existing customers from targeting, and make the day-30 cost and order-count rows use the same date window."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every rule traces to money and the store's own data: $27.10 first-order profit, $38.46 90-day payback, hook costs to the cent, the 13x and 7x median-view multiples, the 32% share-of-spend benchmark for the survey, and a two-of-three reads verdict that adjusts lift for last year's seasonal jump.",
+  "biggest_mistake": "It commits to dated weeks around Thanksgiving without that date being in the brief, so the team could be testing a brand-new channel with unproven tracking in the most expensive week of the year, and the comment moderation and community staffing never gets an owner.",
+  "what_would_make_it_a_10": "Add the launch date to the 'to confirm' list with a fallback start, and give the social lead a daily comment and paid-partnership label check so the Spark Ads don't sit unattended."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both are strong and both get the money right, but Output 2 is the one I'd hand over on Monday: dated set-up tasks with owners and a 'tracking fail means no launch' gate, learning-phase maths that explains four ad groups rather than eight thin ones, and a day-30 verdict built on three reads rather than a pre/post comparison I couldn't defend to my own team."
+}

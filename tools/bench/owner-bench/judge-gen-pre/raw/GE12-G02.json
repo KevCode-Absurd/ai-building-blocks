@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Flawlessly extracts the winning segment's math and builds a page flow that directly answers the persona's blockers in order without placeholders.",
+  "biggest_mistake": "Including the statistical sample size formula in the A/B test section is a bit of unnecessary math that distracts from the core marketing strategy.",
+  "what_would_make_it_a_10": "Remove the statistical formula and add slightly more detail on what the A/B test variations would visually look like."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 4,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The segment math is presented extremely clearly, establishing the exact value of a single recruiting signup versus the other segments.",
+  "biggest_mistake": "Leaves multiple bracketed placeholders for the owner to fill in (e.g., quotes, tools, certifications), which makes it a draft rather than ready-to-use copy.",
+  "what_would_make_it_a_10": "Write out all the copy instead of leaving placeholders, and standardize the CTA to 'Book a demo' throughout since this is a team page."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivered a complete, ready-to-launch page with no placeholders and correctly stuck to the team CTA. Output 2 left brackets and homework for the owner, directly violating the 'ready to use' criteria."
+}

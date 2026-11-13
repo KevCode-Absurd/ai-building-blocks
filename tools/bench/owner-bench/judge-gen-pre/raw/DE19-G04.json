@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It targets the winning segment and trigger, and keeps step 1 link-free, with clear list rules and an honest expected reply rate based directly on the pilot.",
+  "biggest_mistake": "The step 4 closing question offers 'now' or 'later' as the ask, which is two options and slightly muddies the single-ask principle.",
+  "what_would_make_it_a_10": "Tighten the emails to genuinely sound like a finance peer talking, and make each ask a single, unambiguous question without extra options."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It adds a clear compliance footer and a sensible send-order for the list, but still keeps the main segment and trigger focus.",
+  "biggest_mistake": "The step 2 math invents a '5 days back every month' benefit that is not in the approved proof and could overpromise; also it includes a fallback generic opener that the data shows performs poorly.",
+  "what_would_make_it_a_10": "Stick strictly to the approved proof without extrapolating new claims, and remove the weak fallback generic opener to keep the sequence tight."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 sticks closer to the pilot's winning formula, keeps the math honest, and is ready to run with minor edits; Output 2 adds a nice compliance footer but makes a small unsupported claim and dilutes focus with a generic fallback."
+}

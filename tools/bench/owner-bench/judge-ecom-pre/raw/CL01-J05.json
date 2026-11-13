@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Six truly different angles (transparency, taste, sugar, protein/texture, 4 pm, price) with a launch plan that changes only the primary text inside each pair, so every result is clean.",
+  "biggest_mistake": "Pausing the ₹340 and ₹380 ads to fund the test is a reasonable call, but it doesn't check whether those ads still bring in profitable volume at our margin first.",
+  "what_would_make_it_a_10": "Tie the keep and cut lines to gross profit per order rather than just the best live CPA, and add one wittier headline for the taste angle in Aditya's 'brownie, not a supplement' words."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A sharp read of the data (paused winner, untested taste proof, price objection) plus a thoughtful backup set in case legal blocks the review quotes.",
+  "biggest_mistake": "Several texts repeat the '12 g protein, no added sugar' formula. Two angles are transparency and two are taste, with no standalone 4 pm angle. Each launch combo also changes the headline and description at the same time, which muddies what it tests.",
+  "what_would_make_it_a_10": "Make the six angles distinct, hold the headline and description steady across the tests, and give a concrete budget and duration so the test can reach purchase-level reads."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives me six angles that actually differ, a clean head-to-head of the paused winner against taste, and a budget I can launch tomorrow. Output 2 reads the data just as well, but its copy leans on the same protein-and-sugar line again and again, and its tests mix up too many variables at once."
+}

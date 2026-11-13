@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 7,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 keeps H1 fixed so the four launch ads isolate the primary-text angle, and it gives concrete spend/purchase stop rules; Output 1's launch matrix confounds angle with different headlines and descriptions, though both are otherwise strong and compliant."
+}

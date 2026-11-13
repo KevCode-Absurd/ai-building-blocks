@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 6,
+  "commercial": 6,
+  "craft": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 ties the offer expiry, send cadence, exit and pause rules and the WhatsApp timing into one coherent, testable system with correct arithmetic and a real deadline, while Output 2's 14-day code and day-13 reminder leave a dead gap after email 5 and its Email 5 subject ('ends in 3 days') contradicts a day-11 send."
+}

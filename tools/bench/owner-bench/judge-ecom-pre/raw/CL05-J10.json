@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The three bundles do different jobs (lip balm add-on, hair duo, 3-item routine). Each has profit and break-even worked out, and the reasoning about not just discounting the existing face wash + serum pair is sound.",
+  "biggest_mistake": "The threshold maths rests on a guessed 6% of orders sitting between ₹499 and ₹598. The order spread implies about 13% (a figure also guessed, since it assumes even spread inside the ₹500 to 699 band), so the ₹28k a month gain is understated and uncertain. COD refusal is only lightly built into the threshold decision.",
+  "what_would_make_it_a_10": "Derive the affected-order share from the order-value bands, build RTO cost into profit per order, and consider a COD-specific or prepaid-only free shipping bar.",
+  "use_as_is_note": ""
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The face wash + serum duo is bundle one, with Kavya's words. The money is rigorous: RTO is built into profit per order, the threshold is compared across ₹599, ₹699 and ₹799 with break-even walk-away rates, and the test plan has guardrails and stop rules.",
+  "biggest_mistake": "The Two-Serum Pair is a stock-up deal, not a routine, and ₹1,079 is a stretch for budget-tight Ishita. The lip balm add-on, the second most common pair, is missed. The answer also likely runs past the 1,300-word limit.",
+  "what_would_make_it_a_10": "Swap the double-serum bundle for a lip balm add-on bundle, add a COD-specific threshold idea, and cut the length to fit the limit."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 makes the pair customers already buy bundle one and shows its working, including RTO, down to the threshold table and a rigorous test plan. Output 1 has a better-balanced bundle set with the lip balm add-on, but its threshold maths rests on a guessed share of orders."
+}

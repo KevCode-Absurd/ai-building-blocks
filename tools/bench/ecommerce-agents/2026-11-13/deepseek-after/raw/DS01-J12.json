@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is tighter and more complete: it correctly prices the prepaid incentive against the ₹45 expected RTO loss (₹25 vs break-even ~14%), includes the missed-delivery template and a proper holdout test to prove impact, whereas Output 2 adds a cart discount code and ₹30 incentive that dilute margin and omit a missed-delivery template."
+}

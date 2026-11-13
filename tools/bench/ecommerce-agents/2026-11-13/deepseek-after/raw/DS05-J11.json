@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more rigorous on the money math and test design—correct sample sizing, explicit MDE, 2x2 avoidance handled via lanes, and a coherent profit-at-stake ranking—while Output 2 is solid but its 2x2 for tests 2 and 3 muddies attribution and its MDE framing is looser."
+}

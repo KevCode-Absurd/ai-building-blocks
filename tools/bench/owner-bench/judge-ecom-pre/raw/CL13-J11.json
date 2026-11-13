@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the in-app checkout fix first and sizes it correctly (about 1,860 more checkouts, about 558 orders, about ₹34 lakh). It also shows honest sample-size working: a baseline of 0.70%, about 227,000 sessions per arm, and a 10% detectable lift.",
+  "biggest_mistake": "It uses orders per session as the main metric for every test and runs them all on all-device traffic. That dilutes the mobile-only size picker and the hero image, and the hero test is held to a 10% lift it is very unlikely to deliver.",
+  "what_would_make_it_a_10": "Match the metric and traffic to each test, for example mobile-only for the size picker and add-to-cart for the hero image. Show the in-app versus Chrome funnel split in a table, and spell out the brand-voice copy for each variant.",
+  "ready_note": "Several variants still depend on facts the owner must supply: firmness details, EMI plans and trial terms."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A funnel table by device and browser makes the in-app bug obvious. It matches the 4,130 in-app errors to about 4,800 stuck carts, sizes the fix correctly (about 560 orders, ₹34 lakh), and adds an A/A test to get a clean baseline.",
+  "biggest_mistake": "Test 5 bundles a new hero image with a reviews block, so a win cannot be attributed to either change. Some copy is left as blanks such as [real rating] and ₹[amount], and the sample-size working is stated rather than shown.",
+  "what_would_make_it_a_10": "Split the hero image and the reviews block into separate changes, show the sample-size calculation for each test, and fill the blanks with ready-to-paste brand-voice lines.",
+  "ready_note": "Minor placeholders only."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 tailors each test to the right traffic and metric: mobile-only tests where the change is mobile, and add-to-cart for the image test. Its browser and device funnel table also makes the in-app bug and the mobile gap easier to see. Output 1 is solid on stats rigor but applies one blanket metric and traffic setup to every test."
+}

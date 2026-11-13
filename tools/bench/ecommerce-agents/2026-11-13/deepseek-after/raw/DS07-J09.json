@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and the arithmetic checks out (first-order contribution $71 vs $104 cost, $94 break-even, ~7.8% vs 13.6% margin), but Output 1 is cleaner to run Monday—tighter ranked moves with a clear $94 ceiling and a simpler scorecard—while Output 2's per-$1M framing, date-specific Black Friday assumptions and denser tables add friction without changing the decision."
+}

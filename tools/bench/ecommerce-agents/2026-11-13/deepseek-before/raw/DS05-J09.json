@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 has cleaner, fully-checkable unit economics (first-order contribution $71.44, $32.56 loss, $94 break-even) and ties every move to a concrete per-1,000 impact, while Output 2's contribution-margin and percentage-impact figures rely on unstated volume assumptions and are less auditable."
+}

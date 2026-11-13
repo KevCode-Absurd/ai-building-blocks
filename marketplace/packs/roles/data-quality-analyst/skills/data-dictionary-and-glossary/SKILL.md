@@ -1,6 +1,6 @@
 ---
 name: data-dictionary-and-glossary
-description: Writes a data dictionary for exports, spreadsheets, CRM fields or database tables (what one row is, then each column's plain meaning, type, allowed values, example, blanks allowed, owner and notes), gathers code lists into lookup tables, flags columns that hold two things or mean the same thing in two files, notes how files link, adds a business glossary of reporting terms, and can turn the result into a data contract (ODCS or a dbt model contract). Marks every unclear meaning "to confirm" instead of guessing. Reads at access level 1; drafts dictionary pages or field descriptions at level 2; publishes them or updates field descriptions and pick lists at level 3 within limits. Use when handing data to a new analyst, after a system move, or when teams disagree on what a column or term means.
+description: Writes a data dictionary for exports, spreadsheets, CRM fields or database tables (what one row is, then each column's plain meaning, type, allowed values, example, blanks allowed, owner and notes), gathers code lists into lookup tables, flags columns that hold two things or mean the same thing in two files, notes how files link, adds a business glossary of reporting terms, and can turn the result into a data contract (ODCS or a dbt model contract). States every unclear meaning as a marked assumption with its evidence, never as fact. Reads at access level 1; drafts dictionary pages or field descriptions at level 2; publishes them or updates field descriptions and pick lists at level 3 within limits. Use when handing data to a new analyst, after a system move, or when teams disagree on what a column or term means.
 ---
 
 # Data dictionary and glossary
@@ -39,7 +39,7 @@ For each column, one line in a fixed pattern:
 - **Owner:** the role that keeps it right.
 - **Notes:** traps, history, related columns.
 
-Where the meaning is not clear from the brief or samples, write the best reading and mark it "to confirm". A guess is never shown as fact.
+Where the meaning is not clear from the brief or samples, write the best reading, mark it "assumed" and give the evidence in a few words ("assumed from the sample values"). A guess is never shown as fact.
 
 ### 3. Gather code lists
 
@@ -74,32 +74,32 @@ Markdown tables, plus CSV for a sheet or Notion, plus dbt YAML descriptions if t
 - Every file starts with what one row is.
 - Examples come from the samples and are masked where personal.
 - Descriptions follow one pattern.
-- Every unclear meaning is marked "to confirm" and listed at the end.
+- Every unclear meaning is marked "assumed" with its evidence; the ones that change how the data is used are listed at the end.
 - Code lists are complete for the samples seen.
 - No personal data is copied from samples.
 
 ## Output format
 
-1. Summary: files, rows, columns, how many marked "to confirm".
+1. Summary: files, rows, columns, how many meanings are assumed.
 2. One table per file: column, meaning, type, allowed values, example, blanks, owner, notes.
 3. Lookup tables for codes.
 4. Problems found (two-in-one columns, clashes, unused fields).
 5. Links between files.
 6. Glossary.
-7. "To confirm" list.
+7. Assumptions: only the readings that change how the data is used or counted, one line each with the evidence and what it affects.
 8. CSV or YAML files, as asked.
 
 ## Example of good output (short)
 
 *Illustrative structure, not a real organisation: a food bank with an Airtable export of visits. Copy the shape, never the content: every fact comes from the client's own context.*
 
-> **visits** — One row is one household's visit to one site on one day. 18,204 rows.
+> **visits:** One row is one household's visit to one site on one day. 18,204 rows.
 >
 > | Column | Meaning | Type | Allowed values | Example | Blanks | Owner | Notes |
 > |---|---|---|---|---|---|---|---|
 > | visit_id | Unique ID of the visit | Text | `V-` then 6 digits | V-004812 | No | Site lead | Key |
 > | site | The site visited | Text | 5 site codes (see lookup) | NTH | No | Ops manager | |
 > | hh_size | People in the household on that day | Whole number | 1 to 15 | 4 | Yes | Volunteer at desk | Blank on 9% of sample rows |
-> | status | **Holds two things**: visit outcome and referral source | Text | Mixed | "Collected / GP" | No | To confirm | Suggest splitting into `outcome` and `referral_source` |
+> | status | **Holds two things**: visit outcome and referral source | Text | Mixed | "Collected / GP" | No | Assumed: ops manager | Split into `outcome` and `referral_source` |
 >
-> To confirm: does "active household" mean a visit in the last 3 months or the last 12? Sites NTH and EST count differently.
+> Assumption: "active household" is read as a visit in the last 12 months, the wider of the two site rules. Sites NTH and EST count it differently (3 and 12 months), so site totals are not comparable until one rule is used everywhere.

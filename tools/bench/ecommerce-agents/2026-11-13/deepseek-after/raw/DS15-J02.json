@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 10,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is fully costed to exactly $30,000 with a $30k cap, a coherent test-then-scale structure, and kill/scale rules tied to the economics; Output 2's budget table sums correctly but its $45 ceiling and looser gates are less disciplined, and it omits a spend cap and the 7-day learning bar."
+}

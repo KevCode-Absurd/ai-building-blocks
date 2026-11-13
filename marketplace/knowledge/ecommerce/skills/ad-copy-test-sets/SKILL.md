@@ -28,7 +28,7 @@ A copy set is a full argument for buying. This skill writes three to five of the
 **Required**
 
 - The concept: product SKU, buyer group, angle, offer, destination URL, awareness stage.
-- A facts file: approved claims with source and date. If none exists, draft one from the live product, policy and about pages and the label or spec sheet, and ask the owner to approve it once.
+- A facts file: claims with source and date. If none exists, draft one from the live product, policy and about pages and the label or spec sheet; only claims with a source go in.
 - Customer words: reviews CSV (rating, title, body, reviewer name, date, verified flag); survey answers and pre-sale support questions if any.
 - Brand voice: five real lines from the site, emails or best ads. Optionally rate the voice on three scales from 1 to 10: formal to casual, quiet to bold, data-led to feeling-led. If missing, use middle values and say voice was not calibrated.
 - Gross profit per purchase and target cost per purchase.
@@ -42,7 +42,7 @@ A copy set is a full argument for buying. This skill writes three to five of the
 ## Before you start: the gates
 
 1. **Money known.** Gross profit per purchase and target cost per purchase exist; offer copy has its own break-even at the discount. Fail: run `store-meta-math`.
-2. **Facts file approved.** Fail: mark every claim "pending approval" and do not hand copy over as ready.
+2. **Facts file sourced.** Every claim has a source and date. Fail: cut the unsourced claim from the copy.
 3. **Test cash.** Each set tested needs about 3 times target cost per purchase [ADC-0039]. Fail: test two sets only.
 4. **Tracking.** Meta purchases within about 20% of Shopify paid-social orders over 30 days (practitioner default, test it). Fail: give each set its own UTM content value and read Shopify.
 
@@ -57,7 +57,7 @@ From reviews, survey answers and pre-sale questions, list what nearly stopped bu
 | Structure | Shape | Fits |
 |---|---|---|
 | Problem to fix | Situation, what they tried, why this works, proof, ask | Buyers who know the problem, not the product |
-| Proof first | Dated review count or quote, what it means, product, ask | Stores with strong, dated proof |
+| Proof first | One customer's words, or one plain claim line with a real, dated review count (a rating with its total); what it means, product, ask | Stores with strong, dated proof |
 | Objection answer | The doubt in the buyer's words, the answer, the guarantee, ask | Considered buys; warm audiences |
 | Mechanism | Cause, how this product works, proof, ask | New or unusual products; the why, not an ingredient list [MCR-0032] |
 | Versus the usual way | The common option, where it falls short, what this does instead | Crowded categories; compare with "the usual way" unless a named-rival fact is provable |
@@ -71,9 +71,10 @@ Pick three to five that fit the facts file and stage. Skip proof first if proof 
 Per set: headline, subhead or link description, body (short and long), call to action, and the objection and facts rows it uses.
 
 - **Headline and subhead work as a pair:** the subhead adds something new. If the headline is feeling-led, the subhead carries the proof; if the headline is proof, the subhead carries the feeling.
-- Open with curiosity, proof or a promise, not the pain every rival names [LPG-0045].
+- **Hooks in the buyer's words.** When the brief gives the persona's own phrases, the hook uses them; otherwise lift the exact phrase from step 1. Open with curiosity, proof or a promise, not the pain every rival names [LPG-0045].
 - Each testimonial is a real, dated review answering one objection; a generic "love it" earns no space [LPG-0053]. Never label a quote "verified" unless the review app marks it so.
 - **Each body leads with its own proof** (the review, mechanism, label fact or scene that answers its objection). A price or spec line appears in at most 2 bodies; headlines and descriptions can carry it. Bodies that share one string test less and can group as one ad [MCR-0078].
+- **Proof is a customer's words or one plain claim.** A count appears only when the count is the claim. Tallies such as "N reviewers say" are evidence for the owner: they go in the summary and objection table, never the copy.
 - One awareness stage per set [MCR-0056]; the call to action matches it: softer ("See how it works") early, direct ("Shop now") late.
 - No "it's not X, it's Y" lines [MCR-0016]; no launch openers ("Introducing", "Meet"); no hype words (game-changer, revolutionary, unlock); no all-caps sentences.
 - Match voice by ear: five brand lines beside five of yours; fix any that sound like someone else.
@@ -127,19 +128,19 @@ Score each set 0 to 2 on: objection rank, proof strength, fit with the destinati
 4. Every line shows its count and fits its placement; every set has a call to action.
 5. Every testimonial is real, dated and answers a named objection.
 6. The first pair isolates one stated variable; test cost fits the test cash.
-7. Each body opens on its own proof; no price or spec string sits in more than 2 bodies.
+7. Each body opens on its own proof, as a customer's words or one plain claim; no copy line tallies reviewers; no price or spec string sits in more than 2 bodies.
 8. Every read bar is reachable at its budget, or the plan names the upstream or pooled read.
 9. Nothing is live; paused drafts only with a yes.
 10. A plain one-pass draft would not beat the top set on proof and clarity.
 
 ## Output
 
-1. **One-screen summary:** concept, the two sets to test first, the variable isolated, test cost, read date, claims struck.
+1. **One-screen summary:** concept, the two sets to test first, the variable isolated, the evidence behind each set (how often its objection comes up), test cost, read date, claims struck.
 2. **Objection table:** rank, objection, customer phrase, review date, facts row that answers it.
 3. **Copy sets:** set ID, structure, objection, proof that opens the body, headline (chars), subhead (chars), body short (chars), body long (chars), call to action, facts rows, score.
 4. **Compliance log:** line, rule, verdict, rewrite.
 5. **Test plan:** set, ad set, daily budget, purchases reachable (budget / target cost per purchase), read metric, UTM content value, start, read date, keep or cut rule, what a win means.
-6. **To confirm:** short list for the owner.
+6. **Assumptions:** one line each, at most three, only where an unknown changes what to do. A claim with no proof on file is left out of the copy, not listed.
 
 ## Common mistakes
 
@@ -150,6 +151,7 @@ Score each set 0 to 2 on: objection rank, proof strength, fit with the destinati
 - **Judging on a thousand impressions.** Step 7 reads purchases.
 - **Calling a flat test a win.** Step 7 sets the tie rule.
 - **One price and spec line in every body.** Step 3 caps it at 2.
+- **Copy that reads like a report.** "N of our reviews mention it" belongs in the summary; the ad lets one customer say it.
 - **A read bar the budget cannot reach.** Step 7 sizes it first.
 
 ## Sources

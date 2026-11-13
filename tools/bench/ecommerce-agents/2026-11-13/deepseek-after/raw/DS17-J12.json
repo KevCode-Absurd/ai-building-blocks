@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 gives tighter, shorter template bodies with sample values, a call script, holdout testing to prove ROI, and a sharper incentive break-even (₹25 vs 14% refusal), while Output 1 leaves more placeholders and pads with extra rows; both get the core arithmetic right."
+}

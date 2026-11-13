@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are excellent and complete, but Output 2 has cleaner, fully consistent math and frames impact as % of revenue (immediately usable, directly tied to the board's contribution-margin ask), whereas Output 1 contains an internal slip (the $97.76/$104=0.94 'gross profit' ratio uses margin before shipping/fees while its core loss figure uses contribution) and leans on per-1,000-unit scaling plus an invented '$300 screen'."
+}

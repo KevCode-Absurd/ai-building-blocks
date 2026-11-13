@@ -1,0 +1,20 @@
+{
+ "job": "J01",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, decision-ready plans, but Output 1's profit math is cleaner and its rules are more internally consistent, while Output 2 contains a break-even arithmetic slip (₹394 × 0.72 = ₹284, not ₹282) and a looser 'scale on strict, cut on Meta' logic."
+}

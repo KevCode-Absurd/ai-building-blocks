@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The series is built on behaviour triggers with fallbacks and skip rules (recurring task leads to second device, 3-day inactivity nudge). The drop list gives checked numbers (1.4% is 7x 0.2%, 44% is about 79,200) and the plan includes a holdout test.",
+  "biggest_mistake": "The fifth email promotes sharing a list, a habit the data shows reaches only 6% of users and keeps 34%. The inline \"(test: ...)\" subject alternates and the table-heavy layout add clutter and probably push it past 1,200 words.",
+  "what_would_make_it_a_10": "Use the last slot for something tied to the two habits (for example a second-device reminder for web users), remove the inline test-subject clutter, and keep it under 1,200 words."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Each email is clean and paste-ready, with trigger, subject, preview, a single quoted tip, button, goal and \"worked if\". The calm inactivity email is guilt-free and on brand.",
+  "biggest_mistake": "The last slot is a Pro sales email, not a habit-building email. The second-device email goes out on a fixed day 3 rather than after the recurring-task trigger, and the welcome email has no mobile branch.",
+  "what_would_make_it_a_10": "Chain the emails off behaviour triggers with fallbacks, branch the welcome for mobile, and spend the fifth slot on reinforcing the two habits instead of a Pro pitch."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 reads the data more closely: triggers chain with fallbacks and skip rules, and the drop reasoning uses checked numbers. Output 2 is a bit cleaner to paste, but its Pro email uses a slot that should reinforce the two habits."
+}

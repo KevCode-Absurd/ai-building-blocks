@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Perfectly captured the data signals, translating the comments and CPAs into three distinct, highly relevant video concepts.",
+  "biggest_mistake": "The testing advice is a bit generic ('after about a week'), lacking specific volume or budget thresholds for statistical significance.",
+  "what_would_make_it_a_10": "Adding clear, quantitative rules for when to call a winning hook and including platform-specific video safe zone notes."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Combines excellent data-backed scriptwriting with practitioner-level media buying execution, like safe zones, 4:5 cropping, and a math-based testing rule.",
+  "biggest_mistake": "Missed the opportunity to use Marcus's exact quote 'My kids think it's real soda' as one of the hooks for the third ad.",
+  "what_would_make_it_a_10": "Using the exact customer language provided in the brief for the family angle hook."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs follow the data and constraints flawlessly, but Output 2 takes the win by providing elite execution details like video safe zones and a mathematically sound testing rule based on 20 conversions."
+}

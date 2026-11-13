@@ -1,0 +1,20 @@
+{
+ "job": "J01",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both get the ₹394 unit economics and core cuts right, but Output 2 wins on rigor: it differentiates over-claim (retargeting/catalog 0.50 vs prospecting 0.78) instead of a flat 0.72, holds the 5-day UGC test rather than pre-judging and raising its budget, ties scale/cut lines directly to break-even ROAS, fully reconciles spend to the ₹5.6L cap, and flags the GST risk."
+}

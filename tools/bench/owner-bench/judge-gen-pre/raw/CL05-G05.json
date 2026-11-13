@@ -1,0 +1,41 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It states the Asia-Pacific hours concretely (08:00 to 16:00 in Singapore, Manila or Perth), puts the salary and the weekend rotation in the post, and moves a realistic HEY lockout reply into the application in place of the resume.",
+  "biggest_mistake": "It runs over the 1,100-word cap, and it gives 15% of the scorecard to a video 'conversation', which is close to the interview impression its own data says barely predicts results.",
+  "what_would_make_it_a_10": "Trim to the word limit, fold the conversation score into the work-sample evidence or cut its weight, and drop the extra 'why this job' question.",
+  "insight_note": "",
+  "extra": ""
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The scorecard is a clean table with 1, 3 and 5 anchors for every row, it scores no impression, and it flags that nine hires is a small sample. The reviewer-hours working is transparent.",
+  "biggest_mistake": "It is well over the word limit and leaves open questions ('To confirm') for an owner who can't be asked. It also gives the hours only in UTC with no Asia-Pacific framing, so the right candidates may not see the hours are meant for them.",
+  "what_would_make_it_a_10": "Cut about 250 words, name the Asia-Pacific time zones in the post, and settle the open questions as stated assumptions.",
+  "insight_note": "",
+  "extra": ""
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both catch the three big signals and weight writing heaviest. Output 1 is tighter and tells Asia-Pacific candidates plainly the hours are theirs, and its applicant-facing language welcomes career changers more directly. Output 2 has the better scorecard table but is longer and leaves loose ends."
+}

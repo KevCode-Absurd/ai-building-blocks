@@ -40,13 +40,13 @@ Every job for a store needs the same facts. This skill writes them down once, ea
 - Meta Ads Manager export, last 180 days, ad level: ad name, ad ID, first delivery date, spend, purchases, purchase value, attribution setting. Google Ads and TikTok exports with the same fields.
 - Email platform flow and campaign report, last 90 days (Klaviyo, Shopify Email or Omnisend).
 
-**When something is missing.** Ask once, in one message. If cost per item is missing, ask for landed cost of the top five products by net sales. If the site blocks reading, ask the owner to paste the about page and a product list with prices. Anything still missing is written as `null` with a "To confirm" line; never guess a cost. Connected platform tools save time but are never required; every input has a manual export path.
+**When something is missing.** Ask once, in one message. If cost per item is missing, ask for landed cost of the top five products by net sales. If the site blocks reading, ask the owner to paste the about page and a product list with prices. Anything still missing is written as `null` and listed under Gaps; never guess a cost. Connected platform tools save time but are never required; every input has a manual export path.
 
 **Access.** Level 1, read. The owner sends exports or grants read access through the platform's own sign-in; never ask for a password. Publishing the facts page in step 11 needs publish access and the owner's yes.
 
 ## Before you start: the gates
 
-1. **Gross profit per purchase can be computed.** Per product: price actually paid (after the usual discount), minus landed cost, pick, pack and shipping, payment fees and expected returns cost; in COD markets also RTO cost (RTO rate times forward plus return shipping). Use cost delivered to the door [MEA-0037]. Fail: build the rest, mark the products table "not ranked: gross profit unknown", and put the missing costs first in "To confirm".
+1. **Gross profit per purchase can be computed.** Per product: price actually paid (after the usual discount), minus landed cost, pick, pack and shipping, payment fees and expected returns cost; in COD markets also RTO cost (RTO rate times forward plus return shipping). Use cost delivered to the door [MEA-0037]. Fail: build the rest, mark the products table "not ranked: gross profit unknown", and put the missing costs first under Gaps.
 2. **Cash and capacity are stated.** Monthly marketing cap, orders per day the team or warehouse can ship, days of stock cover per product. Fail: write "limits unknown" at the top of the README; later jobs add no spend or volume until answered.
 3. **Tracking is good enough for the ads record.** Compare Meta purchases with Shopify orders for the same 30 days. If Meta reports more, or the gap swings week to week, label every ad result "platform-reported, not store-checked". The rest runs on store data.
 
@@ -121,7 +121,7 @@ Add per product the HSN code and GST rate, the COD share and RTO rate in the cos
 
 ## Output
 
-1. `README.md`, one screen first: the diagnosis; the product to lead with and why in money; cash and capacity limits; the three strongest customer phrases with counts; the three strongest Verified proofs; biggest gaps; "To confirm"; a file index with checked-on and recheck-by dates.
+1. `README.md`, one screen first: the diagnosis; the product to lead with and why in money; cash and capacity limits; the three strongest customer phrases with counts; the three strongest Verified proofs; biggest gaps (missing costs first); a file index with checked-on and recheck-by dates.
 2. `00-recent-changes.md`, `01-facts.md`, `02-products.csv` (product, SKU, variant, price paid, landed cost, ship and pack, fees, returns cost, RTO cost, gross profit per purchase, break-even ROAS, days of cover, lead time, status).
 3. `03-voice-and-look.md`: five real brand lines, three voice traits each backed by a line, banned words, link to the visual identity sheet.
 4. `04-customers.md` and `05-customer-words.csv` (quote, tag, group, source, stars, date, ads permission).

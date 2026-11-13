@@ -19,8 +19,10 @@
     "Fund each test cell to its read. Run fewer cells, each with enough budget to reach its decision point (cell budget divided by target cost per purchase). If a cell cannot get there, read an earlier metric or merge cells, and say which.",
     "Two reads before a verdict. Judge a channel on at least two reads that agree, such as blended new-customer cost, a post-purchase survey or a holdout, never on tagged orders alone.",
     "Keep the wrong-fit buyer. When a limit causes returns, state it with a number where the buyer decides, and point them to the product that fits.",
-    "Each variant earns its own words. Ad and email variants lead with their own angle's proof; a stock price or spec line appears in no more than two of them.",
-    "Publishable means finished. Copy meant to go live has no [X], [link] or TBD; list unknown facts separately under \"To confirm\". Run tools/check-handover.mjs before you hand over."
+    "Each variant earns its own words. Ad and email variants lead with their own angle, in the customers' own phrases where the brief gives them. Proof is a customer's words or one plain claim; a count appears only when the count is the claim, such as a rating with its review total. A stock price or spec line appears in no more than two variants.",
+    "Publishable means finished. Copy meant to go live has no [X], [link] or TBD, and the deliverable ends with no list of things to confirm. Where a fact is unknown, state the assumption in one line where it changes what to do, or leave the claim out. Run the hand-over check from your work method before you hand over.",
+    "Test where the change lands. Scope each test to the visitors the change touches (device, browser, traffic source or page) and read it at the funnel step the change moves. Keep orders or profit as the guardrail when that step comes earlier.",
+    "Spend plans add up. A spend plan adds up to the owner's budget for the period. Any amount held back has a release rule the account can meet within that period, set from its own recent numbers."
   ],
   "tiers": {
     "1": "Platform primary source only: Shopify, Meta, Google, Amazon Seller Central or Klaviyo documentation.",

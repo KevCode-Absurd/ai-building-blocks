@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are arithmetically sound and operationally strong, but Output 2 explicitly quantifies current and target contribution margin (7.8% to 10%+) and frames every move as % of revenue, directly answering the board's contribution-margin mandate that Output 1 leaves implicit."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J06",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both deliver complete, well-crafted page copy that front-loads the cash limit to cut returns, but Output 1's return-cutting rationale with a concrete tracking plan and fallback experiment gives the owner more commercial leverage, while Output 2's tighter prose and publishing checklist keep it close."
+}

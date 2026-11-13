@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It works inside the real trigger limits — fallback send on day 2 if no first task, explicit skip conditions, a never-two-emails-a-day rule — and puts the current baseline beside every measure, so the team can run and read it.",
+  "biggest_mistake": "It spends the fifth slot on a day-10 'share one list' email to everyone, the weakest-retaining action in the data (34%) and one the tool can't trigger or measure, while dropping Pro from the series entirely and leaving a stray editor's note ('The copy never mentions the quiet days') in the finished copy.",
+  "what_would_make_it_a_10": "Swap the share email for a Pro email gated to users who already made a recurring task or a second device, and delete the leftover note so the whole thing is paste-ready."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "All five emails pull toward a retention habit, and Pro at day 14 goes only to users who already typed a recurring task or signed in on a second device — so the series never asks for money or a share before the user has value.",
+  "biggest_mistake": "Email 2 fires only on 'first task added' with no fallback, so the roughly quarter of signups who add no task in week one never get the recurring-task tip, which is the single highest-leverage habit (52% retention).",
+  "what_would_make_it_a_10": "Add a day-2 fallback send of the recurring-task email for users who have added nothing, plus one line on what happens when two triggers collide."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are on-voice and numerate, but Output 2 keeps every one of the five slots on a habit that predicts retention and turns the Pro email into a gated ask instead of binning it, while Output 1 gives a slot to a share email the data rates weakest and the tool can't measure, and ships with a stray editor's note in the copy."
+}

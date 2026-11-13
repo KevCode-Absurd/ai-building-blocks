@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers all eight concepts with tighter copy, sharper test design (spend multiples, cut rules, 7-day click, control ad) and better guardrails on claims, while Output 2's cost-per-trip framing invents a 24-trip assumption that risks a shaky value claim."
+}

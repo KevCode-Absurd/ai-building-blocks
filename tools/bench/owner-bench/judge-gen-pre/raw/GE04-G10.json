@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The copy is clean, adheres nicely to the calm brand voice, and uses realistic examples well.",
+  "biggest_mistake": "Triggering the second-device email off the creation of a recurring task creates confusing logic, and keeping a 'share list' email ignores the data showing sharing is a low-retention action.",
+  "what_would_make_it_a_10": "Drop the shared list email entirely, fix the trigger dependencies so emails aren't waiting on unrelated actions, and find a better place for the Pro upgrade."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It perfectly translates the data into email tool logic, using skips and branches to push the two highest-leverage habits without annoying active users.",
+  "biggest_mistake": "Relying on a Day 14 fixed send that filters for engaged users might stretch the explicitly stated tool capabilities, though it's a very logical assumption.",
+  "what_would_make_it_a_10": "It is already a 10; including the exact personalization tags (like first name fallbacks) would make it completely copy-paste ready."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 read the data signals perfectly: it dropped the low-performing team invite completely, built the logic seamlessly around the allowed triggers and skips, and wrote genuinely empathetic, on-brand copy. Output 1 struggled with trigger logic and held onto a version of the sharing email that the data didn't support."
+}

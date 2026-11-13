@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the arithmetic right ($71 contribution vs $104 cost, $94 break-even, 7.8% vs 13.6% margin), but Output 2 turns it into money per $1M of revenue, gives each move a test with a scale/kill line, and its Black Friday discount rule (20% off drops first-order contribution to $39, so cap sale-week cost per order at $50) is the kind of operator detail Output 1 lacks — though Output 1 is more honest that the move gains overlap rather than simply adding."
+}

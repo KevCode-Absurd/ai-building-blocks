@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 6,
+  "insight": 6,
+  "priorities": 8,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Provides a very clear, scannable layout and a logical testing plan that changes one variable at a time.",
+  "biggest_mistake": "Ignored the data pointing to a simple Face Wash + Serum duo, and calculated core profit margins without integrating the expected RTO losses.",
+  "what_would_make_it_a_10": "Calculate expected profit by factoring in COD and RTO rates per order, and offer the ₹849 duo routine the data specifically points to."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Exceptional financial modelling that correctly calculates expected gross profit per order by factoring in category margins, the 40% COD share, and specific RTO rates.",
+  "biggest_mistake": "Missed the opportunity to use the ₹199 lip balm (the second most common pair) as a dedicated, low-price threshold add-on.",
+  "what_would_make_it_a_10": "Include the lip balm as a cart add-on or small bundle to help customers just below the threshold easily cross it."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 does flawless expected-value math on gross margin, COD, and RTO, whereas Output 1 invents a random 6% order volume for the threshold gap and fails to bake RTO into its core break-even math."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is ready to submit (sample variable values, headers, a cancellation and failed-delivery template, a 10% holdout, and capacity math), and its ₹20 prepaid discount is correctly calibrated to a ~₹22 saving on confirmed orders rather than Output 1's looser ₹30-under-₹45 break-even."
+}

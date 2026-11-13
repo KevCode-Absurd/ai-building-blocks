@@ -6,7 +6,7 @@ Families: onboarding-flow; also: user onboarding, customer onboarding, welcome s
 1. A first win per user type: one visible result, a target time from sign-up, and the event that measures it.
 2. A step map to the first win with owner, done state and known drop-off per step; extra fields, permissions, tours and upsells moved after it.
 3. In-product help: a checklist with progress, empty states with a template or sample data, tips when a feature is first met, all skippable.
-4. Messages triggered by behaviour, not the calendar: each gives one next step and a help route; the series stops at the first win.
+4. Messages triggered by behaviour, not the calendar: each serves a behaviour the owner's data ties to retention, and gives one next step and a help route; the series stops at the first win. A step the data shows is weak is dropped, not softened or kept as a gentler email.
 5. Stuck signals: which events or silences flag a stalled user and who acts; measures are activation rate, time to value, drop-off per step, early retention.
 
 **FAILURE MODES**
@@ -15,6 +15,7 @@ Families: onboarding-flow; also: user onboarding, customer onboarding, welcome s
 3. Fixed-day emails ignoring what the user already did.
 4. Invented product steps, screens or settings.
 5. Activation defined as "signed up"; nothing measured.
+6. A message for a behaviour the data itself shows is weak, kept in a softer form, so a slot that could push a proven habit is wasted.
 
 **SHAPE**
 A flow spec: first win and measures; step map table (step, channel, user action, copy, done state); key screen copy; 3 to 5 messages over about 14 days (trigger, subject, body, call to action, stop rule); stuck signals; what to test first. One flow; variants only for distinct user types.

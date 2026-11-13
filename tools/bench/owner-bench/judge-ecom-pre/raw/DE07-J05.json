@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data the way I do — revives the paused ₹210 winner in fresh words, makes the untested taste proof (26% of reviews) the main challenger, and faces the ₹90-a-bar objection head on, with the historic ₹5.7 lakh ÷ 90 = ₹6,333/day spend turned into a real ₹1,500/day-per-ad-set test budget and 36-purchase sample.",
+  "biggest_mistake": "It states Meta's display limit as \"about 27 characters for each\" for headlines and descriptions, which contradicts the brief's own guidance (about 40 and 30) — harmless here since every line still fits, but it is a wrong platform fact stated as fact.",
+  "what_would_make_it_a_10": "Fix the character-limit statement to the brief's 40/30 rule and put the taste headline into the launch set so the taste angle gets a headline as well as a primary text."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is careful and honest — review lines are quoted with their shares, the ₹90 a bar sum is shown, and it even provides legal-safe backup copy if review quotes can't be used.",
+  "biggest_mistake": "The four-ad test is confounded: each ad changes primary text, headline and description at once, so the claim that \"A vs C shows if the win came from the fact or from who the line speaks to\" does not hold, and with no budget figures or explicit pause list I cannot run or fund it tomorrow.",
+  "what_would_make_it_a_10": "Hold headline and description constant inside each test pair so one variable changes at a time, give each ad set a daily rupee budget and a keep/cut line, and replace the second transparency text with a standalone 4 pm or protein angle so the six concepts are genuinely six."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is built the way I would build it: the tired ₹210 winner comes back in new words, taste is the challenger, the ₹90 bar is faced openly, the budget is derived from my own spend with a 36-purchase sample, and the pairs isolate one variable — Output 2 has the same insights but a test I cannot read, no budget and two of its six angles are the same transparency idea."
+}

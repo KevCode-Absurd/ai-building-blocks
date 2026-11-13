@@ -108,7 +108,7 @@ Rank lines by money at stake: the gap between this month's share and the best of
 
 ## Output
 
-**One-screen summary:** net revenue, contribution 2 and net profit with their change versus last month and last year; first-order versus returning contribution; the three things to act on with money at stake; and a short "To confirm" list.
+**One-screen summary:** net revenue, contribution 2 and net profit with their change versus last month and last year; first-order versus returning contribution; the three things to act on with money at stake; and up to three assumption lines where a missing cost changes a number.
 
 **P&L sheet:**
 

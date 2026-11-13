@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The drafts beautifully capture the warm brand voice and perfectly execute the micro-actions at the end of each caption.",
+  "biggest_mistake": "Scheduling a post about waiting in the car for school pickup at 8:30 PM blindly follows the evening rule while ignoring real life.",
+  "what_would_make_it_a_10": "Calculate expected installs based on the new heavy-sleep mix rather than just aiming to beat the old baseline, and fix the pickup post timing."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Brilliantly calculates the weighted averages for projected installs and save rates based on the new content mix to set accurate success metrics.",
+  "biggest_mistake": "Draft 5 ends by asking for a comment, which deviates from the brand principle of ending with a small mindfulness action.",
+  "what_would_make_it_a_10": "Ensure every single draft ends with a mindfulness micro-action rather than engagement bait."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 provides an exceptional level of business logic by correctly modeling the expected installs and save rates for the new strategy. It also smartly bends the 'evening posts only' rule to schedule the school pickup post in the afternoon, avoiding Output 1's scheduling mistake."
+}

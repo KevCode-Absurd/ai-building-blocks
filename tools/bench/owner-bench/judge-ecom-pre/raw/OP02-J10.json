@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives practical bundles with clear jobs, good break-even thinking, and protects the ₹599 serum by recommending a ₹599 free-shipping line instead of ₹699.",
+  "biggest_mistake": "The free-shipping maths rests on an unsupported assumption that only 6% of orders sit between ₹499 and ₹598, when the order spread suggests the affected pool is likely much larger, and it does not lead with the proven face wash + serum pair.",
+  "what_would_make_it_a_10": "Rework the threshold sizing from the actual ₹500-699 band, include COD/RTO in the bundle economics, and make the face wash + serum routine the lead bundle while using lip balm mainly as the threshold add-on."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows the money well: the top face wash + serum pair is bundle one, the ₹599 threshold is sized from the order bands, and COD/RTO is included in the profit maths.",
+  "biggest_mistake": "It misses the lip balm as the natural low-price threshold add-on and uses a two-serum bundle that may just pull future reorders forward rather than build a useful routine.",
+  "what_would_make_it_a_10": "Replace or supplement the two-serum bundle with a lip-balm add-on/threshold offer and add a little more customer-facing Plum-style copy for the cart and PDP placements."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would rather pay for because the numbers are cleaner, it sizes the ₹599 threshold correctly from the order bands, and it treats COD/RTO as part of profit. Output 1 has better use of the lip balm idea, but its threshold maths is too shaky for a sharp store owner to trust without rework."
+}

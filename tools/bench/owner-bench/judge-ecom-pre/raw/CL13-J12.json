@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 6,
+  "reasoning": 6,
+  "correct": 7,
+  "clear": 7,
+  "voice": 7,
+  "range": 6,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A complete, usable flow set with sensible guardrails (quiet hours, 10% holdout, a staged tier 3 hold, an after-hours auto-reply and an agent shift moved to cover the evening wave).",
+  "biggest_mistake": "The prepaid nudge goes to everyone after confirmation with no incentive and no pincode targeting, and the 'pay online' template is filed as Utility even though it is a sales push. The money is split by pincode group only in prose, so the high-risk tier 3 band gets just a cautious two-week pilot.",
+  "what_would_make_it_a_10": "Work the RTO cost per COD order by pincode group, then give tier 3 a firmer confirmation window and a sized prepaid incentive while keeping metro light, with the payment push kept out of Utility."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the RTO data into a per-group cost table (₹27 / ₹41 / ₹70 per COD order) and builds different flows from it: tier 3 ships only after a yes, prepaid offers go only to tier 2 and 3, and the ₹30 / ₹20 incentives come with break-even math.",
+  "biggest_mistake": "The 48-hour auto-cancel for tier 3 could cost real orders, and the confirmation template says 'Usually arrives {{6}}', which edges toward a delivery promise. It does say to watch lost orders and loosen the hold.",
+  "what_would_make_it_a_10": "Add a human call step before cancelling tier 3 orders, and add the agent-shift change for the after-hours load."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 builds its flows around where the RTO money is lost: a firm tier 3 hold, a sized prepaid incentive for tier 2 and 3 only, and a light touch for metro and repeat buyers. Output 1 sends nearly the same flow to everyone and files its payment push as Utility."
+}

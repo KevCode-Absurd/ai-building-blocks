@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the real hiring signals: Asia-Pacific/00:00-08:00 UTC coverage, the weekend rotation, and moving the written customer reply into the application because writing predicts success.",
+  "biggest_mistake": "It is a little long and ends with a few items to confirm, which makes it feel slightly less final than requested.",
+  "what_would_make_it_a_10": "Trim it under the word limit and remove or resolve the final confirmation questions, especially the paid-exercise point."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is calm, candid, very publishable, and puts the salary, hours, weekend rotation, and no-resume written exercise in the right places.",
+  "biggest_mistake": "The application filter is a bit weaker because the second question is a generic 'why this job' rather than another work-sample signal, and the scorecard gives interview conversation more room than the data supports.",
+  "what_would_make_it_a_10": "Replace the generic motivation question with a short problem-solving/writing sample and tighten the interview stage so it does not over-weight conversation."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 2 is cleaner, but Output 1 is the one I would rather hand to the hiring team tomorrow: the scorecard is more complete, the application process is more thought through, and it uses the data more directly to avoid another 2,100-application slog."
+}

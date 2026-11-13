@@ -119,7 +119,7 @@ Give support a one-page rule: who approves, what evidence, refund route, and a f
 
 **Cost model table:** Product | Fear | Guarantee type | Claim rate | Cost per claim | Cost per order | Gross profit per order | Lift needed | Cash held.
 
-**Terms text** for the policy page, ready to paste. **Guarantee lines:** product page line (under 12 words), cart trust bar text, ad line, email block. **Support rule card.** **To confirm:** window length, refund method, store credit or cash.
+**Terms text** for the policy page, ready to paste. **Guarantee lines:** product page line (under 12 words), cart trust bar text, ad line, email block. **Support rule card.** **Terms decided:** window length, refund method, and store credit or cash, each with its reason in one line.
 
 ## Common mistakes
 

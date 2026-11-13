@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and fully compliant, but Output 1 gives richer creative direction (hooks, shot lists, primary text) plus a clearer test design with a control and a next-round plan, while Output 2 leans on tighter build specs and a sharper kill rule — Output 1 is marginally more useful to hand to a team."
+}

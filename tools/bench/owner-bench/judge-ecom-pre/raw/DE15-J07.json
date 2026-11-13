@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns my data into money per click (₹48 serum, ₹20 face wash, ₹9 sunscreen), then restructures the series and the WhatsApp around that and around the quiz answer, with Klaviyo-level setup detail (entry filter, cart suppression, exit rule) I can hand to my team.",
+  "biggest_mistake": "The day-13 code expiry and the co-founder signature are invented and load-bearing (email 5 and the WhatsApp both lean on them), so a wrong assumption would break the last two touches.",
+  "what_would_make_it_a_10": "Turn the per-click revenue into gross profit per order using real product cost and shipping, and replace the invented expiry and signature with a stated default the team confirms in one line."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Clean, calm copy with good beginner-safety teaching and a genuinely useful sunscreen email that answers white cast, stickiness and makeup in the customer's own words.",
+  "biggest_mistake": "Email 5 recommends the full three-step routine (including a 2% salicylic wash twice a day) to everyone regardless of quiz answer, which directly contradicts the sensitive-skin version's \"don't start with acids\" and the one-new-thing-at-a-time advice.",
+  "what_would_make_it_a_10": "Keep the last email inside the person's quiz branch and use it as a plain code reminder, and drop the banned word \"brightening\" even as a negative example."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like it was written by someone who has run a Klaviyo flow: money per click, branch-specific advice kept consistent to the last email, a WhatsApp template that is actually submittable, and a test plan with sample size and a guardrail. Output 2 has lovely copy but its final email sends the sensitive-skin segment straight into the acid it was told to avoid, and I would have to rebuild that before sending."
+}

@@ -1,0 +1,51 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and correctly lead with taste and the 3 pm angle, but Output 1's scripts and creator briefs are slightly fuller (a clearer price-handling line, per-scene reaction guidance) while Output 2 adds a small hook-testing math and disclosure detail edge. Output 1 is the more finishable set.",
+ "o1_props": {
+  "fit": "Builds on the right signals: taste-test and swap openings lead, label/founder never open, price handled head-on in script 2, and 3 pm and Marcus angles used.",
+  "insight": "Adequately applies the data: taste-first, price objection inside the story, variety pack as no-fake-discount answer.",
+  "priorities": "Clear structure per script with hooks and briefs; first action is shoot each once then cut hooks.",
+  "reasoning": "Scene timings add to 38/38/40 s, within 30-45; taste-before-claims rule explained.",
+  "correct": "Numbers check out: $35.99 = $3.00/can, 4x3 mix, CPAs $26/$32/$44/$51, three approved claims, disclosure on both.",
+  "clear": "Tables and plain lines are easy to scan and shoot.",
+  "voice": "Playful, warm, avoids banned words and health claims; customer phrases used.",
+  "range": "Three genuinely different concepts plus two alternates each.",
+  "ready": "Complete scripts, shot lists, on-screen text, creator briefs; minor ambiguity on some exact-claim lines but shootable."
+ },
+ "o2_props": {
+  "fit": "Same correct signals, adds a useful opening-angle table and hook-test budget math; strong fit.",
+  "insight": "Ties angles directly to the CPA and view-rate table and to comment themes.",
+  "priorities": "Clear three-ad order with reasons; testing rules give a cost gate.",
+  "reasoning": "Explains why label/founder are excluded and why taste comes first; logic holds.",
+  "correct": "Price, pack mix, CPAs correct; one claim line in Ad 2 says 'real fruit juice and botanical flavours' as exact, which is approved, but exactness tags are slightly loose.",
+  "clear": "Very scannable with tables and short briefs.",
+  "voice": "On-brand, playful, no banned terms; customer language present.",
+  "range": "Three different angles with alternates; game-day cooler is a fresh family take.",
+  "ready": "Mostly ready; 'To confirm: creator fees and shoot dates' leaves a small open item, but scripts are complete."
+ }
+}

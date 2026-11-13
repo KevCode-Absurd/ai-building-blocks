@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are complete and well crafted, but Output 1's 14-day code expiry and gentler 11-day cadence match the brief's 18%-within-14-days data and better suit hesitant non-buyers, whereas Output 2's tighter 7-day window and 5-emails-in-6-days pace risk capping late converters and list fatigue despite its useful A/B subjects and pause rule."
+}

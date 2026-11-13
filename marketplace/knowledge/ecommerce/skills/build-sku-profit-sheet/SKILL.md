@@ -119,7 +119,7 @@ For each loser, name the line that sinks it and the fix to test: price, bundle, 
 - Products that lose money: name, units, loss, the line that sinks them.
 - Top 5 products by share of gross profit.
 - Three cost lines to fix first, with the money at stake per month.
-- "To confirm": estimated costs the owner should replace with real ones.
+- "Estimated": each cost that is an estimate, marked in its cell, with its basis and the profit it moves, one line each.
 
 **2. The sheet** (one row per SKU; COD and prepaid sub-rows where relevant)
 

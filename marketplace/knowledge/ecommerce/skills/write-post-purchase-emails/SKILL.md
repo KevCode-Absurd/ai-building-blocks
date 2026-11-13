@@ -122,7 +122,7 @@ Sources: [delivery data / claims list line / review id]
 ```
 
 4. **Review timing table:** Product type, Days after delivery, Reason.
-5. **To confirm:** claims and incentive wording for sign-off.
+5. **Assumptions:** one line each, at most three, only where an unknown changes what to do. Claims are only those with proof on file; incentive wording follows the review platform's rules.
 
 ## Common mistakes
 

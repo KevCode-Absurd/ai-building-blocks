@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 7,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 keeps the decision logic tied to Meta parity and a disciplined $45 ceiling, while Output 2 is likely over the 1,400-word limit and relies on an unsupported $57 ceiling that could justify scaling at costs well above the brief's $38 benchmark."
+}

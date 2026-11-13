@@ -1,0 +1,20 @@
+{
+ "job": "J06",
+ "o1": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 8,
+  "craft": 7,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is tighter and more actionable: it ties the cash limit to the slim promise in every decision point, places the under-button link to roomier wallets, and gives cleaner test/guardrail instructions and assumptions, while Output 1's [X] placeholder and weaker under-button line make it less ready to use."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks the right segment with the right seat math and builds the page around the real recruiting jobs-to-be-done, especially routing, round robin and security.",
+  "biggest_mistake": "It ends with a 'To confirm' list and includes a sample-size formula, which makes the delivery feel less finished than asked and slightly breaks the 'finished in one go' brief.",
+  "what_would_make_it_a_10": "Tighten it into a fully paste-ready page with no follow-up asks and make every CTA consistently team-focused while keeping the security proof near the main demo action."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly identifies recruiting as the winning segment and uses the right customer language, moving routing and security much higher than the current page.",
+  "biggest_mistake": "It mixes self-serve and demo CTAs for a team buyer, includes unsupported claims like 'text reminders' and 'skips anyone who is busy or off,' and leaves multiple bracket placeholders, so it is not ready to run.",
+  "what_would_make_it_a_10": "Use one conversion path for Priya, remove or verify unsupported product claims, and replace every placeholder with real proof so the page can ship tomorrow."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd rather pay for because it is more coherent about the segment, conversion goal and page flow, and it stays closer to the facts I gave. Output 2 has good instincts, but the mixed CTAs, placeholders and a few risky claims create too much cleanup before launch."
+}

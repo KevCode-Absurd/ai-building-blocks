@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data correctly and turns it into three distinct, usable scripts that match the brand voice and the winning openings.",
+  "biggest_mistake": "Script 3 leans into a label-read moment for a family angle and is a bit weaker than the first two on taste-first energy.",
+  "what_would_make_it_a_10": "Make the family script open with a stronger taste or flavour-choice moment and tighten a few lines so every script feels effortlessly shootable within 35 to 40 seconds."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly uses the performance data to choose three different angles and gives practical creator instructions and testing notes.",
+  "biggest_mistake": "It breaks the approved-claims rule by saying all approved claims must be said or shown word for word in every creator asset even though the scripts do not consistently do that, and it adds awkward or risky lines like 'low-sugar soda' and an incorrect TikTok paid partnership label reference.",
+  "what_would_make_it_a_10": "Keep strictly to the approved claim language and platform disclosure wording, remove contradictions, and align every brief with exactly what the scripts require."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to creators faster with less cleanup. It stays closer to my brand rules, uses my comment language better, and avoids the claim and disclosure sloppiness that makes Output 2 harder to trust."
+}

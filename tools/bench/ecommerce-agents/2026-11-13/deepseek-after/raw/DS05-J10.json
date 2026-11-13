@@ -1,0 +1,20 @@
+{
+ "job": "J10",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1's shipping math is internally consistent and decision-correct (break-even ~18% of the affected band, +₹11,700 planning case), while Output 2's headline +₹8,000 nets to a per-order figure that contradicts its own table and its break-even is derived from a different top-up assumption, muddying the core recommendation."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 7,
+  "commercial": 6,
+  "craft": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is complete, internally consistent and commercially sharper: it sets a 7-day code with a true 24-hour deadline and matching WhatsApp timing, a checkout-pause rule, correct ₹70 discount math, and a concrete email 2 split test, while Output 2 contradicts itself with a 14-day code ending 'in 3 days' on day 11 and a day-13 'last reminder' sent the day before expiry."
+}

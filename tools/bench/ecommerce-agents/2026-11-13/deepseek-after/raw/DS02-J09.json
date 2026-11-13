@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 answers the brief's core ask most directly, ranking moves by quantified gross-profit impact with a per-10-hours effort column and adding concrete incremental-test and rollback mechanics plus Q4 timing, which outweighs Output 2's cleaner prose and slightly more honest target-setting (Output 1 also makes a minor discount-arithmetic slip on the BFCM sale-week cap)."
+}

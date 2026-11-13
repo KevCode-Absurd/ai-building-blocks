@@ -21,7 +21,7 @@ This is general pricing practice, not legal or tax advice. Check this with local
 3. Cost to serve per customer, per unit of the likely value metric (seat, project, order, message), plus payment fees.
 4. Current plans, prices, how many customers sit on each, and churn.
 5. Rival plans on the same basis, if public.
-6. The billing tool (Stripe, Chargebee, Paddle, the store) and what it supports.
+6. The billing tool (Stripe, Paddle, the store) and what it supports.
 
 **Access:** level 1 to read plans, subscriptions and usage. Level 2 to create the new prices unused in billing and a pricing page draft. Level 3 to point the pricing page at approved prices for new buyers within the agreed limits. Moving existing customers to new plans or prices needs a fresh yes every time.
 
@@ -57,7 +57,7 @@ For each tier, at the smallest and largest customer it allows: price − cost to
 
 ### 7. Set the annual option
 
-State the discount for paying yearly and show its cost: revenue given up versus cash brought forward and churn avoided. The client decides the depth.
+State the discount for paying yearly and show its cost: revenue given up versus cash brought forward and churn avoided. Recommend a depth with the working. If the owner's data shows the annual option serves their goal, make it part of the main recommendation, not a side note.
 
 ### 8. Decide what happens to existing customers
 
@@ -65,7 +65,10 @@ Options: keep them on their current plan and price (grandfathering), move them w
 
 ### 9. Plan the test
 
-New buyers only, the new pricing page against the old, a set period, profit per visitor as the measure, and a stop rule.
+Test on the people the change is for, and read the owner's goal metric inside the owner's time window, with a stop rule.
+
+- **A new ladder or higher prices for new buyers:** new visitors see the new pricing page against the old; measure profit per visitor.
+- **A new plan, billing term or offer aimed at current customers:** offer it to a random share of the group it is for and hold back a matched control group; measure what the owner is buying (churn, revenue kept, upgrades). Their current price does not change.
 
 ## Checks
 
@@ -74,6 +77,7 @@ New buyers only, the new pricing page against the old, a set period, profit per 
 - The middle tier is the default and is the best fit for most buyers.
 - Every tier and customer size has positive contribution.
 - The billing tool supports the model.
+- The test runs on the people the change is for, on the owner's goal metric and window.
 - Existing customers are not moved without the client's fresh yes.
 - Plan prices are shown in each market's required form (UK minimum-term plans show the total or the monthly price with the number of months).
 - The deliverable says to check this with local rules.
@@ -83,7 +87,7 @@ New buyers only, the new pricing page against the old, a set period, profit per 
 1. **Value metric** and why.
 2. **Tier table:** pitch, buyer, contents, price, annual price, default marked.
 3. **Margin table:** tier, customer size, price, cost to serve, fees, contribution, margin %.
-4. **Existing customers:** the options and what each needs.
+4. **Existing customers:** the recommended treatment, and what any move would need.
 5. **Test plan.**
 6. **Billing notes** for the tool in use.
 
@@ -105,7 +109,7 @@ New buyers only, the new pricing page against the old, a set period, profit per 
 | Team, 5 calendars | $49 | $10 | $1.47 | $37.53 | 77% |
 | Business, 15 calendars | $99 | $30 | $2.97 | $66.03 | 67% |
 
-**Existing customers on $39:** keep them on $39 until you decide. Moving them needs your fresh yes, a check of your terms and a notice that names every plan they can choose, including Solo at $19.
+**Existing customers on $39:** stay on $39 (grandfathered). Any later move gives notice under your terms and names every plan they can choose, including Solo at $19.
 
 **Test:** show the three-tier page to new visitors for six weeks against the current page; measure revenue and contribution per visitor; stop early if sign-ups fall and contribution per visitor is lower two weeks running.
 

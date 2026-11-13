@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Translates the UTC gap into local APAC cities (Singapore, Manila, Perth) and provides a highly realistic, meaty customer prompt for the application test.",
+  "biggest_mistake": "Leaving a slightly ambiguous note about estimating reviewer hours at the top instead of integrating it into the math section at the bottom.",
+  "what_would_make_it_a_10": "It's already a 10, but moving the assumption note to the application plan section would make it slightly cleaner."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The math breakdown table for estimating reviewer hours clearly shows how the new process saves time.",
+  "biggest_mistake": "Sharing the exact statistical correlation figures (0.04, 0.62) directly with applicants in the job post feels overly clinical and slightly breaks the fourth wall, even for a transparent brand.",
+  "what_would_make_it_a_10": "Tone down the HR statistics in the candidate-facing job post and provide a more robust customer prompt for the writing test."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 perfectly captured the 37signals brand voice, making the post candid and warm without becoming clinical. Its choice to map the UTC hours to real APAC cities and provide a realistic customer email for the test makes it incredibly ready to use."
+}

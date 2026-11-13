@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Brings the paused front-of-pack winner back in fresh words and pits it against the untapped taste hook in clean one-variable launch pairs, with decision math grounded in the actual past spend (₹5,70,000 ÷ 90 = ₹6,333/day, so ₹1,500/ad set funds it).",
+  "biggest_mistake": "It quotes customer reviews in ads without flagging the permission/legal risk, and it states Meta's headline and description limit as 'about 27' when the owner's own note says ~40/30 (safe, but wrong rule).",
+  "what_would_make_it_a_10": "Add a one-line note on clearing the review quotes for ad use, fix the character-limit statement, and write at least one hook in the raw cadence of Aditya's or Priya's own words."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp strategic read plus a proactive legal fallback (backup lines if review quotes aren't cleared), and genuinely fresh angles like the 'label reader' voice and the added texture hook.",
+  "biggest_mistake": "Its launch comparisons change headline and description alongside the primary text (A vs B, C vs D), so the 'what it tests' claims like 'fact vs who the line speaks to' are confounded and won't isolate the variable, and it leaves the budget un-sized.",
+  "what_would_make_it_a_10": "Make each comparison change only one element (controlled pairs) so each test truly isolates one thing, and size the budget from past spend so the team can fund and read it."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and on-brand, but Output 1 hands me a cleaner experiment (only the message changes inside each pair) and grounds the budget and keep/cut lines in my real spend, so I'd trust what it tells me to do next more than Output 2's confounded comparisons."
+}

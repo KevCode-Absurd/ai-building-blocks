@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built tightly on the data: sleep-first all-evening mix, narrator clips as the core, week 1 kept review-free, and drafts that use the customer's own phrases.",
+  "biggest_mistake": "The review logic is a little optimistic: it claims no post needs review while some drafts ('brain still busy at bedtime', 'replaying emails') sit close to condition talk, and it hedges this only in the assumptions; also two night-sleep posts run back-to-back any risk it slightly underplays.",
+  "what_would_make_it_a_10": "Tighten the review flags per draft (say exactly which phrases are safe and which would trigger review) and trim the 'small pauses' theme so it doesn't drift from the data's winners."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp headline numbers and a clear stop list, with a bold 'batch submit weeks 2-4' review move and honest notes on the small narrator sample.",
+  "biggest_mistake": "Puts a parent 'kindness' post at 14:30 mid-afternoon, breaking its own evening-posting rule and the data's evening signal, and keeps stress-at-work in the weekly mix when the data says drop it.",
+  "what_would_make_it_a_10": "Fix the Wednesday slot to evening (or make the pickup test genuinely separate from the 6) and replace the stress-at-work carousel with a kindness or sleep slot that follows the data."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 follows the data more faithfully (all-evening, no stress-at-work slot, sleep heaviest) and its drafts sound most like us, while Output 2's mid-afternoon parent post and retained work-stress slot fight its own evidence."
+}

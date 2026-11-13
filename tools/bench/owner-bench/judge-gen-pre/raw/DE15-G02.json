@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 7,
+  "voice": 9,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting with the per-signup seat math (0.73 paid seats vs 0.17 for team sales demos) and writes the hero in Priya's own words, with proof specified section by section.",
+  "biggest_mistake": "It scatters self-serve \"Get started\" buttons through a page whose buyer needs a demo and a security review, and stretches to nine sections with bracketed proof slots the team has to fill before it can ship.",
+  "what_would_make_it_a_10": "Commit to one action across the page, cut to the six or seven sections that earn a demo, and define a metric the team can actually read in two weeks rather than a 60-day seat confirmation."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "One clear action and one readable metric (qualified demo requests per visitor) with sample size worked out, plus an honest answer to the calendar-hygiene blocker Priya names.",
+  "biggest_mistake": "The security section answers \"where does the data live\" with \"we're open source\", which is not what IT signs off on, and the hero headline is long and drops Priya's own phrase, email tennis.",
+  "what_would_make_it_a_10": "Put \"email tennis\" in the hero and rewrite security around data residency, hosting options and certifications, so it can be sent straight to IT."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick recruiting and get the seat math right, but Output 2 gives me a page I can build with one button, a test I can size today, and no placeholder homework, so I'd pay for that one."
+}

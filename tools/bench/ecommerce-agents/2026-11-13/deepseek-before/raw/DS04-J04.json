@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more producible and commercially rigorous — accurate platform safe zones, specified disclosure timing, deliverables/dates/rights-and-pay, framing for a 4:5 crop, and an authenticity 'honest limit' beat — while Output 2 is clean and has a stronger hook-metric section but a lighter creator brief and less robust spoken disclosure."
+}

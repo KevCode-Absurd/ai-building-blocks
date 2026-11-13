@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Its success measures are modeled from my own data: about 6,580 projected installs from the theme mix and a 3.4% projected save rate, giving targets I can actually hold the team to.",
+  "biggest_mistake": "Weeks 2 to 4 are only one-line angles, and it tells me to send them all for review without saying which posts name a condition or what fills Monday 23 November, which can't go live until the 24th.",
+  "what_would_make_it_a_10": "Add working titles for weeks 2 to 4, mark which ones need review, and move the Wednesday parent post to the evening or show evidence for the 14:30 slot."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It plans all four weeks with working titles and words every post so none needs clinical review, with a fallback if the clinical team reads the rule more widely.",
+  "biggest_mistake": "Its main success bar, just above 143 installs per post, only matches my baseline even though its own sleep-heavy mix should roughly double it.",
+  "what_would_make_it_a_10": "Set the target from the planned mix, about 6,500 installs and a 3.4% save rate, instead of 'above baseline'."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both make the right calls: more sleep, narrator clips, evening posts, and cutting app news, focus and quote cards. The second hands me a full four weeks with titles and avoids review delays, though I'd raise its success target to the first one's numbers."
+}

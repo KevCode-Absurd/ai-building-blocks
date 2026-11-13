@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the signals in your data well and turns them into genuinely distinct concepts, especially the work-flyer, solo-woman and quiet-wheels angles.",
+  "biggest_mistake": "It makes a risky unsupported claim by stating quiet wheels are the top theme in the reviews inside ad copy, and concept 6 reframes price without enough care on whether that math belongs in-brand.",
+  "what_would_make_it_a_10": "Tighten any proof claims to quoted review language only, remove the weak price-maths concept, and keep every execution fully within approved, ready-to-run copy."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is more usable tomorrow because each concept is tightly specified, it clearly prioritises the right three from the data, and it directly builds for the under-served women 25 to 40 segment and the quiet-wheels hook.",
+  "biggest_mistake": "A few details overreach the brief or ad relevance, like exact safe-area specs and references such as reviewer permission, while some copy leans a touch more mechanical than the brand voice.",
+  "what_would_make_it_a_10": "Trim the over-specified production rules, keep the copy a little more understated, and remove any line that implies evidence standards the brief did not ask for."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong, but output 2 is the one I'd hand to my creative team first because it is more execution-ready and even more tightly tied to the winning audience and hooks in my data."
+}

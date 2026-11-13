@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into a practical plan that strongly shifts toward evening sleep content and narrator clips while handling week-1 review constraints sensibly.",
+  "biggest_mistake": "It unnecessarily includes a daytime Wednesday slot every week even though the strongest data points to evening posting, and its projected installs target is a bit optimistic and inconsistently benchmarked.",
+  "what_would_make_it_a_10": "Make all regular posts evening-first except for a clearly labeled one-off test, and tighten the success targets so the math and baseline comparison are fully consistent."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly focuses the plan on the real winners—sleep, narrator clips, and evening posting—and the drafts sound warm, simple, and on-brand.",
+  "biggest_mistake": "It claims none of the planned posts need review, which is too loose given sleep-related language and the stated review rule, and it drops a sleep slot in favor of kindness despite the much stronger install data for sleep.",
+  "what_would_make_it_a_10": "Handle review risk more carefully and push the content mix harder toward sleep in the actual weekly grid, with success targets tied more directly to the expected uplift from that mix."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels more like it was built from your actual signals and constraints: it uses the winner format, keeps week 1 safe, gives a sharper stop list, and sets a more owner-useful measurement plan. Output 2 is strong on voice, but it softens the review constraint and leaves some performance on the table by shifting too much into kindness."
+}

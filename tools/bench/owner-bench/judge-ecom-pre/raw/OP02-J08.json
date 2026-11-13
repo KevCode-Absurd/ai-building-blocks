@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly spots the two big hidden causes of lapse: Monsoon Dark disappearing and subscription delivery falling from 95% to 79%, and builds separate tracks for both.",
+  "biggest_mistake": "It does not put the 46 to 90 day at-risk buyers first, even though they are the cheapest group to save given the 34-day median reorder gap.",
+  "what_would_make_it_a_10": "Move the 46 to 90 day group into wave 1 with reachable counts, tighten the holdout/breakeven maths, and replace the Monsoon Dark match placeholder with the actual closest current roast."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It rightly prioritises the at-risk 68 to 90 day buyers, calls out the 5,200 Monsoon Dark buyers, and uses holdouts and gross profit rather than coupon redemptions.",
+  "biggest_mistake": "The Monsoon Dark draft does not actually recommend the closest current roast, and the subscriber plan starts some ex-subscriber win-backs before the delivery problem is fully fixed.",
+  "what_would_make_it_a_10": "Give Monsoon Dark buyers a named replacement coffee, gate all subscriber win-back behind a delivery-date/on-time fix, and show combined email plus WhatsApp reachable counts instead of email-only reach."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is more ready to run and handles the discontinued coffee and subscription delivery problem better, with cleaner gross-profit working. Output 2 is better on the 46 to 90 day at-risk segment, but it leaves more operational gaps and its Monsoon Dark message does not deliver the promised match."
+}

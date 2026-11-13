@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Presents dual break-even and safe-line targets based on real unit economics and the 72% Shopify attribution gap.",
+  "biggest_mistake": "Commits ₹5.02L upfront despite the account actively losing money on real store orders, rather than keeping tighter control on unproven spend.",
+  "what_would_make_it_a_10": "Model the before-and-after bottom-line impact in net rupees so I can see projected profit improvement alongside the budget changes."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Shows the exact step-by-step unit economics math, models before/after cash impact, and prudently reserves ₹1.82L until ASC proves profitability at ₹282.",
+  "biggest_mistake": "Holding ₹1.82L in reserve might be overly conservative if ASC rebounds immediately upon turning the paused winner back on.",
+  "what_would_make_it_a_10": "Give a concrete recommended prepaid discount or gift offer size based on the ₹124 margin gap."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both answers are masterclasses that catch every signal in my data, but Output 2 wins by showing the exact step-by-step math for the attribution-adjusted break-even, modeling the before-and-after bottom line, and analyzing the prepaid discount lever."
+}

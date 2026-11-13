@@ -1,33 +1,33 @@
 # Work method
 
-Make work the client will use.
+**The owner comes first:** if a rule in this pack would make the work worse for this owner's stated goal and data, follow the owner and say why in one line.
 
-**Version 3.2:** follow `tools/quality/QUALITY-ENGINE-v3.md`: routing, cards, profiles, clarity, proof and visual checks. Task and brand come first; existing gates apply. No library search at job time.
+Follow `tools/quality/QUALITY-ENGINE-v3.md`; task and brand come first.
+
+**One-shot jobs** (the brief holds everything; the owner cannot answer): decide every open point with the assumption a top practitioner would pick, and finish. At most three assumption lines, only where they change what to do. Never ask for confirmation, a yes, a sign-off or a choice inside the deliverable; no "To confirm" list. A sign-off that law or a platform needs is one line next to its item. **Fast path:** when the brief carries the data, skip site capture, brand DNA, the taste brief and knowledge reading; read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill.
 
 ## 0. Frame: the spec sheet
 
-Read `context/brand-file/worked.md` first, if any: what this client kept and killed. Then write `context/spec.md`, one screen:
+Read `context/brand-file/worked.md` first, if any. Then write `context/spec.md`, one screen:
 
 - **The job:** who must do what after seeing this.
 - **Deliverables:** exact count and format, in the client's words.
-- **Acceptance tests:** 5 to 7 questions the client would ask: two or more on the commercial job, one each on readiness, truth and clarity.
-- **Expert and playbook:** who would own this, and their standard approach in 3 lines.
-- **Depth:** light, standard, full or team, using `tools/quality/ROUTING.md`; stakes add a claims check, not more drafts.
-- **Decisions and assumptions**, one line each. **Mode:** `patch` (default), `extend`, or `new` only when nothing exists. **Brand file slice:** none, facts, voice, look or full.
+- **Signal pass:** the three strongest signals in the owner's data (a winner hidden in an average, an under-used asset, a timing constraint). For each: its number, what it means for the decision, and where the deliverable acts on it.
+- **Expert and playbook:** who would own this, and their standard approach in 3 lines; the owner's data overrides it.
+- **Depth:** light, standard, full or team (`tools/quality/ROUTING.md`).
+- **Assumptions**, one line each. **Mode:** `patch` (default), `extend` or `new`. **Brand file slice:** none, facts, voice, look or full.
 
 ## 1. Ground: only what the job needs
 
-Capture what the acceptance tests depend on, and no more (`context/README.md`), including the buyer's real setting. Re-check on the day facts that change: prices, offers, stock, ownership, lawsuits.
+Capture what the signals and the decision depend on, and no more (`context/README.md`), including the buyer's real setting. Re-check on the day facts that change: prices, offers, stock, ownership, lawsuits.
 
 Unless the slice is none, run `node tools/brand-file.mjs status --for <kind>` and do only what it lists. To capture:
 
 1. Run `node tools/capture-brand-dna.mjs <url>`.
-2. Or paste `tools/brand-dna-snippet.js` into the site's console and save the result as `context/brand-dna.json`.
+2. Or paste `tools/brand-dna-snippet.js` into the site's console; save the result as `context/brand-dna.json`.
 3. Or ask for the URL, screenshots and brand guide.
 
-Save the slice as `context/facts.md`; read only that. Use no fact without a source and date, or from a RECHECK line.
-
-**Look in your own pack first:** `node tools/ask-knowledge.mjs "<question>"`, `ask_agent_knowledge` or `knowledge-map.md`. Use only what it returns, with sources; recheck a STALE one. A weak match means ask or research, never guess.
+Save the slice as `context/facts.md`. Use no fact without a source and date. **Look in your own pack first:** `node tools/ask-knowledge.mjs "<question>"` or `knowledge-map.md`; use only what it returns, with sources.
 
 **Can the buyer act today?** Confirm the thing sold is live, in stock, at the stated price and link. If not, build for the option that works and say so in your first line.
 
@@ -39,42 +39,41 @@ Your `toolbox.md` lists what to use when; pick at your own discretion and open o
 
 ## 3. Diverge: real candidates, and someone else chooses
 
-First check the proven levers in the job skill against the live asset.
+First check the proven levers in the job skill against the live asset. At full depth, make about 3 candidates of the part that decides the outcome, as real work, not descriptions. One is the expert's standard playbook done excellently; clever ones must beat it. They differ on at least two of: promise, proof, structure, buyer moment, offer, visual world. Also write a plain one-pass answer from the brief alone: the yardstick.
 
-At full depth, make about 3 candidates of the part that decides the outcome, as real work, not descriptions. Light and standard use an expert draft and the plain yardstick; full adds a creative draft; team uses specialist parts and a lead. One is the expert's standard playbook done excellently; clever ones must beat it. They differ on at least two of: promise, proof, structure, buyer moment, offer, visual world. Also write a plain one-pass answer from the brief alone: the yardstick.
-
-Give the brief, spec and unlabelled drafts to a fresh reviewer who has not seen your reasoning (else label the pass SAME-CONTEXT). They check each acceptance test, pick a base and name what to graft. If none passes, make one more round only. `node tools/blind-review.mjs` shows the drafts in both orders; a pick counts only when both agree.
+A fresh reviewer who has not seen your reasoning (else label the pass SAME-CONTEXT) checks how fully each draft acts on each signal, picks a base and names grafts. If none passes, make one more round only. `node tools/blind-review.mjs` runs both orders; a pick counts only when both agree.
 
 ## 4. Build: the craft floor
 
 - **New framing of true facts, never new facts.**
-- **Facts and proposals differ.** Facts carry a source. Recommendations are complete; sign-offs go once in a short "To confirm" list outside publishable copy. Keep explicitly requested template fields; otherwise no blanks or placeholders.
-- **Decide.** One recommendation, the runner-up in a line. Never a menu.
-- **Be specific where the client will act:** real names, prices, dates, steps. Working figures only for planning numbers the client tunes; never in what a buyer reads, never as a revenue forecast.
+- **Facts and proposals differ.** Facts carry a source. Recommendations are complete and decided. Keep explicitly requested template fields; otherwise no blanks or placeholders.
+- **Decide.** One recommendation, which may combine complementary moves; a runner-up only when the options truly exclude each other. Never a menu. Plans add one labelled bolder move (quality engine rule 4).
+- **Act fully.** If the deliverable keeps anything a signal says to cut, say why in one line with the number.
+- **Be specific:** real names, prices, dates, steps. Project from the owner's own numbers, with working and a range, labelled as a projection; never in what a buyer reads, and never an invented result.
+- **Fit the persona's real moment** in every time, place, unit and channel (quality engine step 4).
 - **Match the voice by ear:** 5 real brand lines beside 5 of yours.
-- **Length follows use:** the family profile in `tools/quality/profiles.json` sets the aim, ceiling and shape. A ceiling is never a target. The brief can ask for more. Customer copy stays no longer than the plain draft; one page is about 450 words.
+- **Length follows use:** aim at about 85% of the owner's limit, counted the way the owner counts; without one, the family profile in `tools/quality/profiles.json`. A ceiling is never a target. No sections about method or assumptions.
 - **Finish the format.** Ads: every platform field, character counts, safe areas, landing URL. Emails: subject, preview, one ask, links, exit rule. Plans: totals that add up, dated steps, owners. Pages: one action, proof, mobile, load.
 
 ## 5. Check: the client's-eye review
 
 A fresh reviewer (as in step 3) gets only the client's brief, the finished deliverable and `context/facts.md`, and answers:
 
-1. Each acceptance test: pass or fail, with the line that proves it.
+1. Each signal: acted on fully, partly or not at all.
 2. Each claim a buyer or the client will read (prices, counts, ratings, policies, names, delivery times, quotes, product properties): sourced or not.
-3. The weakest piece, and why a buyer would skip it.
-4. What the client must ask before using it.
+3. The weakest piece.
+4. What is left for the owner to do: questions, sign-offs, choices, placeholders.
 5. What can be cut.
 
-Remove each unsourced claim, or rewrite it to what the source says. Never flag or footnote it. A cited source must say what the line claims, or the citation goes. Fix 1, 3 and 4, cut 5. Check with outside evidence (a tool run, an opened source, facts.md), never by rereading alone. Two repair rounds at most; a step that fails twice the same way needs a new approach or a question. Run `node tools/check-handover.mjs <deliverable> <plain answer> --profile <family>` and fix every hit. Run the v3 reading and proof checks; render visual work at phone and desktop sizes, inspect it, then repair. Last, a fresh reader chooses between anonymous final and plain. Lower clarity vetoes the final; choose the clearer usable draft.
+Remove each unsourced claim, or rewrite it to what the source says. Never flag or footnote it. Fix 1, 3 and 4, cut 5, checked with outside evidence, not rereading; two repair rounds at most. Run `node tools/check-handover.mjs <deliverable> <plain answer> --profile <family>` and fix every hit. Then run the v3 reading, proof and render checks. Last, a fresh reader chooses between anonymous final and plain; lower clarity vetoes the final.
 
 **Gates.** Answers 1 and 2, the buyer-can-act check, access, the finished format, the hand-over check and the job skill's own gates are pass or fail. No craft score makes up for a failure.
 
-**Craft.** "Does the job" (for the buyer or the decision) weighs most, 30 of 100. "Own material" weighs 10: an idea or proof from this business that a generic answer would lack.
+**Craft.** "Does the job" (for the buyer or the decision) weighs most, 30 of 100. "Own material" weighs 10: proof or ideas a generic answer would lack.
 
 ## 6. Hand over, and learn
 
-- The native work comes first; add context only when needed to use it.
-- Nothing internal reaches the client. Supporting detail goes in an appendix inside the deliverable; open questions in one short "To confirm" list.
-- Headings state the point; sentences are short; tables only compare.
+- The native work comes first; its first screen holds the decision, the numbers the owner asked for by name, every piece of bad news, and the first move this week.
+- Nothing internal reaches the client. Supporting detail goes in an appendix inside the deliverable, only if needed.
 
-Keep working notes in `DECISIONS.md`. Record client feedback with `node tools/brand-file.mjs learn`. Add shared lessons to "Rules I learned" in playbook.md: scoped, naming what won and failed, and checked against the rules already there first (add, sharpen, replace or skip). Opted-in outcome signals propose changes; blind evaluation decides.
+Keep working notes in `DECISIONS.md`. Record client feedback with `node tools/brand-file.mjs learn`. Add shared lessons to "Rules I learned" in playbook.md: scoped, naming what won and failed.

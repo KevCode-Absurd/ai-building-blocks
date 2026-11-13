@@ -16,11 +16,12 @@ This is general analysis practice, not legal advice. Check this with local rules
 ## What you need
 
 **For a test plan:**
-1. The question (which price, which product or plan, for whom).
-2. Weekly volume (visitors, enquiries, bookings or orders) and current conversion.
-3. Costs, so profit per visitor or per deal can be measured.
-4. How prices can be shown: the store, billing tool, test tool or quotes.
-5. Markets.
+1. The question (which price, plan or offer, for whom).
+2. The owner's goal metric and time window (for example, profit per deal this quarter, or cancellations over the next six months).
+3. Weekly volume (visitors, enquiries, bookings or orders) and current conversion.
+4. Costs, so profit per visitor or per deal can be measured.
+5. How prices can be shown: the store, billing tool, test tool or quotes.
+6. Markets.
 
 **For a readout:**
 1. Weekly units, prices and revenue for the product that changed, for the weeks before and after (or the test arms).
@@ -34,18 +35,21 @@ This is general analysis practice, not legal advice. Check this with local rules
 
 ### 1. Write the question and the decision rule
 
-"If [new price] gives higher [profit per visitor or per deal] than [current price] over [period], we keep it; if it is lower, we roll back." Write it before starting, with the client's approval.
+"If [the change] gives a better [owner's goal metric] than [the control] within [the owner's window], we keep it; if not, we roll back." Use the metric the owner is buying: profit per visitor or per deal when no other goal is stated; churn or revenue kept when the goal is keeping customers. Never conversion alone. Write the rule into the plan before the test starts.
 
 ### 2. Choose the design
 
-- **New buyers only:** the new price shows to new visitors or new enquiries; existing customers keep theirs.
+Test on the people the change is for. A group that never meets the change cannot show its effect.
+
+- **New buyers only:** for a price rise or a new list price. The new price shows to new visitors or new enquiries; existing customers keep theirs.
+- **Existing customers against a control group:** for an opt-in plan, billing term or offer aimed at current customers. Offer it to a random share of the group it is for and hold back a matched control group; their current price does not change.
 - **Time switch with a comparison:** change the price for a period and compare against products or regions that did not change.
 - **Split by product or market:** when showing two prices at once is not possible or not wanted.
 - **Quote-level (B2B):** alternate price points across new proposals and track win rate and margin.
 
 ### 3. Check the volume
 
-Say plainly whether the weekly volume can show a difference in the time available. Use the growth marketer kit's sample-size method; if volume is too small, choose a longer test or a before-and-after with a comparison group, and say how sure the answer can be.
+Say plainly whether the weekly volume can show a difference in the time available, and whether the goal metric can move inside the owner's window (cancellations, for example, need at least one full billing cycle). Use the growth marketer kit's sample-size method; if volume is too small, choose a longer test or a before-and-after with a comparison group, and say how sure the answer can be.
 
 ### 4. Check the claims
 
@@ -88,15 +92,16 @@ Three lines: units, revenue, profit. Then how sure we can be, and what else chan
 - The decision rule was written before the test started.
 - A comparison group is used, or its absence is flagged.
 - Every percentage uses the midpoint method, with the sum shown.
-- Profit, not only units or conversion, decides.
+- The test audience is the people the change is for, and the measure is the owner's goal metric read inside the owner's window.
+- The owner's goal metric decides (profit when no other goal is stated), never units or conversion alone.
 - Other changes in the period are listed under the result.
 - No test arm shows a false price claim.
-- Existing customers' prices did not change without the client's fresh yes.
+- No existing customer's current price changed without the client's fresh yes. An opt-in offer that leaves their price as it is may be tested on them against a control group.
 - The deliverable says to check this with local rules.
 
 ## Output format
 
-**Test plan:** question, design, prices, audience, period, measure, decision rule, stop rule, fairness rule, claim check, what needs approval.
+**Test plan:** question, design, prices, audience (the people the change is for), period (inside the owner's window), goal metric, guardrail, decision rule, stop rule, fairness rule, claim check.
 
 **Readout:** three-line verdict; before-and-after table with the comparison group; elasticity sum written out; revenue and profit table; "also changed" list; next step; spreadsheet formulas using the client's column names.
 

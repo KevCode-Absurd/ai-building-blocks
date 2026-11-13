@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are launch-ready, but Output 1 has cleaner character-count discipline (P6 at 123 vs 125), a stronger 'what each tests' framing, and clearer round-2 sequencing, while Output 2 adds a useful 3x-CPA cut rule but its P6 leans on the brand name rather than an approved claim and its headline H5 is vaguer."
+}

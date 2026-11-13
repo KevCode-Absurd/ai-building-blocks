@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 wins on commercial rigor and brand voice: it correctly defines lapse at day 68 (2x the 34-day median) rather than day 46, gates discounts behind a code-vs-no-code test with explicit 26%/45% thresholds, includes a proper sunset and fix-first path, and leads with help not codes, while Output 2 over-discounts early (10% from day 0 in group 2), mis-times the lapse point, and reports an inflated ₹2.9 lakh first-wave figure that ignores its own code cost on baseline buyers."
+}

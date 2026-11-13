@@ -1,0 +1,20 @@
+{
+ "job": "J10",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1's money is more thorough and internally consistent—multi-scenario threshold comparison, correct cannibalisation break-evens, and the sharp catch that serum+lip balm (₹798) narrowly misses a ₹799 line—while Output 2 is cleaner but simpler and slips on its break-even figure (61 vs ~66 lost orders)."
+}

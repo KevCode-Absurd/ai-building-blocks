@@ -124,7 +124,7 @@ Sort products into three groups: can carry 20% or more, can carry 10 to 15%, no 
 
 | SKU | Product | Net price | Landed cost | Delivery per unit | Fee % | Return allowance | RTO allowance | Delivered cost | Contribution at full price | Lift needed at 10 / 15 / 20 / 25 / 30% | Break-even ROAS at full / 10 / 15 / 20 / 25 / 30% | Min profit rule | Deepest safe discount | Better mechanic | Cash floor? | Stock cover (weeks) |
 
-**Notes block:** data sources and dates, products with missing costs, and a "To confirm" list (minimum profit per order, acquisition push yes or no, accountant check on GST).
+**Notes block:** data sources and dates, products with missing costs, and up to three assumption lines (for example the minimum profit per order used, or whether the sale aims at new buyers). GST treatment carries one line: "accountant check before the sale runs".
 
 ## Common mistakes
 

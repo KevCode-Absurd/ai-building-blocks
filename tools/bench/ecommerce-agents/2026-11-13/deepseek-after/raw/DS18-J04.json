@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 edges ahead on commercial depth — awareness-staged hooks, sequenced paid-partnership disclosure, FTC note, and creator rights/usage/dates/deliverables — though its 'to confirm' list cuts slightly against the 'owner unavailable, state assumptions' instruction and its creator brief runs longer than the 'short brief' asked for."
+}

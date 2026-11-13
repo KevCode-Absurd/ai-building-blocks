@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless data extraction, with a transparent methodology section that shows exactly how the weighted numbers were calculated, building immediate trust.",
+  "biggest_mistake": "Ranking the usage limit fix second instead of first, since it is the fastest, lowest-effort win and entirely within your control.",
+  "what_would_make_it_a_10": "It is a 10, but moving the Lite usage top-up to the number one priority would make it absolutely perfect."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The insight in Move 1 to pull in the client's own ad data, smartly solving the PPC requirement for agencies without actually having to build a PPC tool.",
+  "biggest_mistake": "Inventing a fake date (November 2026) to satisfy brand guidelines, and an illogical experiment design for Move 2.",
+  "what_would_make_it_a_10": "Remove the hallucinated date and refine the Move 2 first step to analyze churned accounts for pricing research rather than trying to offer top-ups to a past cohort."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both outputs demonstrate exceptional analytical skills, pulling the exact hidden signals from the brief and calculating complex weighted metrics perfectly. Output 1 wins because its operational first steps are flawless, it transparently shows its math, and it cleverly flags the missing dates as an assumption rather than hallucinating them."
+}

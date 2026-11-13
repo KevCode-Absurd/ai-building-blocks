@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting for the right reason, shows the seat math, and builds the page around Priya’s pain: email tennis, fair round robin, routing, and security.",
+  "biggest_mistake": "It includes a few product/security claims that need sign-off before publishing, especially PTO/calendar behavior and data-location wording.",
+  "what_would_make_it_a_10": "Tighten the security and PTO copy to only verified product facts, then make every section’s final action follow the approved CTA system exactly."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 5,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It gets the winning segment and core math right, and the page order mostly follows the buyer’s real concerns.",
+  "biggest_mistake": "It is not ready to use because it contains bracketed placeholders, several unverified feature/integration claims, and uses 'Get started' repeatedly on a team page where the required CTA is 'Book a demo'.",
+  "what_would_make_it_a_10": "Remove all placeholders and unsupported claims, use only approved team CTAs, and replace generic/integration copy with verified recruiting proof."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to a finished page I could hand to the team: it uses the data, the customer language, and the right conversion goal. Output 2 has good thinking, but the placeholders and CTA/claim issues mean I would have to rewrite substantial parts before launch."
+}

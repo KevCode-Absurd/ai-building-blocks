@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 front-loads the series in the critical first week, includes explicit exit/pause/filter rules and a clean WhatsApp placement, while Output 2 spreads sends over 13 days and leaves WhatsApp to the last day before expiry, weakening the personal-help use case."
+}

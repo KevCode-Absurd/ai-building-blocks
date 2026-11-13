@@ -1,0 +1,20 @@
+{
+ "job": "J01",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1's unit economics are correct (₹394/order, 2.3 break-even), it derives per-ad-set break-evens from actual order values, and its scale rules correctly require profit on both Meta and store counts, whereas Output 2 miscomputes order profit (~₹394 vs its own ₹394 stated but built from a different, tighter cost stack) and its scale rule (CPA ≤ ₹300) ignores that retargeting/DPA need a higher bar than prospecting."
+}

@@ -137,7 +137,7 @@ Never use popular songs from a personal account's sound list in business posts o
 4. **Contact sheet** PNG.
 5. **Montage files:** per size, silent and with music, named `<sku>_montage_<width>x<height>_<music|silent>.mp4`.
 6. **`SOURCES.txt`** for music.
-7. **To confirm:** any image the owner must approve before public use.
+7. **Use rights:** each image that shows a real person or a customer's photo carries one line beside it: "permission before public use".
 
 ## Common mistakes
 

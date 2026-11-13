@@ -125,7 +125,7 @@ The ad starts the story and the page continues it; advertorials beat product pag
 
 ## Output
 
-**One-screen summary first:** teller and format and why, consent status, the beliefs the page earns, the offer, the test plan, and the "To confirm" list.
+**One-screen summary first:** teller and format and why, consent status, the beliefs the page earns, the offer, the test plan, and any assumption that changes the page (one line each, at most three).
 
 **Files:** `advertorial-[product].html`, `images/`, optional Shopify template files, and `claims-check.csv` (Line, Claim, Source, Status).
 

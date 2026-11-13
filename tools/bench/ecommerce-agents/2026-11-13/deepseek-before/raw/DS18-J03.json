@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both deliver eight genuinely distinct, brief-compliant concepts with sound assumptions, but Output 2 is closer to a Monday handoff — headlines with character counts, placement safe-zone specs, CTA and partnership-label rules, and an explicit spend/decision rule for the test — plus the smarter control design of running 'Skip the belt' in the current format to isolate idea-versus-look; Output 1's cost-per-trip maths (₹6,999 ÷ 24 = ₹292) is correct and its upgrade/Q&A angles are good, but it leaves production detail and budget thresholds looser."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The strategic decision to place unflagged controllers on a weekly watch list rather than burning them with the 1.8% generic opener shows genuine ownership and commercial restraint.",
+  "biggest_mistake": "Step 1 technically separates the question and the ask into two sentences instead of combining them into one punchy sentence, though the low-friction 'reply yes' ask works very well.",
+  "what_would_make_it_a_10": "It is already top-tier work that can be loaded straight into an outreach sequence today."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strict adherence to the 'one question that serves as the ask' rule across every step, paired with helpful compliance footers.",
+  "biggest_mistake": "Recommends blasting the remainder of the 1,900 list with lower-performing hiring and generic openers rather than holding them on a trigger watch list.",
+  "what_would_make_it_a_10": "Replace the generic fallback sends with an automated weekly trigger queue, and soften the Step 2 ask from a 20-minute meeting to a low-friction conversation starter."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 recognizes that with weekly monitoring tools, you should never burn valuable controller leads on a 1.8% generic email. Its low-friction CTAs ('reply yes', 'reply with the month') will yield far more conversations than Output 2's premature 20-minute meeting request."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the in-app checkout bug first as a no-test fix with the money sized (~560 orders, ~₹34 lakh gross margin), then ranks five evidence-tied tests with honest sample-size maths that admits page tests can only detect large lifts.",
+  "biggest_mistake": "Leaves blanks in customer-facing copy ('EMI from ₹[amount]/month', '[real rating] out of 10'), so it needs real figures filled in before the team can use it.",
+  "what_would_make_it_a_10": "Fill every placeholder with real figures or clearly flagged assumptions and carry the in-app browser split through as a guardrail on each mobile test."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, well-evidenced plan that leads with the checkout fix and the ₹34 lakh gross-profit figure, and names the pre-fix baseline caveat (0.70% before, ~0.81% after the fix).",
+  "biggest_mistake": "Applies a uniform 10% detectable lift to all five tests without adjusting to each metric's traffic and baseline, and ranks the hero-image test high despite admitting no chat data backs it.",
+  "what_would_make_it_a_10": "Vary the minimum detectable effect and run length per test to match each metric's real traffic, and split mobile by in-app versus Chrome and Safari so the bug's pollution is handled explicitly."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both lead with the checkout fix and the money, but Output 1 shows its sample-size working test by test, tailors the detectable effect to each metric (6% for add-to-cart, 12% for mobile sizes) and picks a lower-ranked, better-justified final test, so it is the one I would hand to my team."
+}

@@ -136,7 +136,7 @@ Sources: [review id / policy URL / founder note]
 ```
 
 4. **Offer decision page:** Offer, Cost per redeemed order, Gross profit after offer, Expiry method, Runner-up.
-5. **To confirm:** the short list of founder lines and claims for sign-off.
+5. **Assumptions:** one line each, at most three, only where an unknown changes what to do. Founder lines are only those the brief gives; claims are only those with proof on file.
 
 ## Common mistakes
 

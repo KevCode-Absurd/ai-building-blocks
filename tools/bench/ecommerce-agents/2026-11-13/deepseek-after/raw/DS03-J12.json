@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 covers all four template families plus a missed-delivery template, gives precise multi-step flows with hold rules and a call script, and its commercial math (₹45 per COD order, ₹25 incentive break-even at 14%) is correct and decision-driving, while Output 2 leaves policy in brackets, has an incoherent 2-hour offer window in template 3, and omits the missed-delivery flow."
+}

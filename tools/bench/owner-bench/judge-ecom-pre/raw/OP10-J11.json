@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the in-app checkout bug as a ship-now fix, sizes the money clearly at about 560 orders and ₹34 lakh gross margin a month, then ranks tests around the real customer doubts.",
+  "biggest_mistake": "A few implementation values are left as blanks or examples, and the parallel test schedule could be clearer as a factorial setup.",
+  "what_would_make_it_a_10": "Add the sample-size working in one short line for each test and tighten the run plan so there is no ambiguity about overlapping tests."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It has the strongest sample-size and profit-per-session thinking, including the right bug value, gross profit per order, post-fix baseline, and stop rules.",
+  "biggest_mistake": "It uses one blanket all-traffic, 4-week, 10% MDE rule for every test, which is less tailored for the mobile size-picker and hero-image tests and less directly answers the 'for each test' ask.",
+  "what_would_make_it_a_10": "Make the traffic split, main metric, guardrail and MDE explicit inside each test, with mobile-only reads where the evidence is mobile-specific."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 1 is a little more owner-ready because each ranked test is tied directly to the evidence, metric, split, runtime and MDE, and it handles the mobile/browser split more carefully."
+}

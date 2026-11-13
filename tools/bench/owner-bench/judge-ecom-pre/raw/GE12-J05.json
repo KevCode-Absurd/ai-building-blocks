@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 4,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Captures the blunt, short-sentence brand voice well and integrates the review quotes naturally.",
+  "biggest_mistake": "The testing logic changes multiple variables at once (primary text, headline, and description) across ads, making it impossible to isolate why an ad won.",
+  "what_would_make_it_a_10": "Create clean, single-variable tests and include specific daily budgets with day-to-day kill/scale rules based on the CPA data."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Exceptional media buying logic, particularly deducing the daily budget from past spend and structuring clean, single-variable tests with exact CPA targets.",
+  "biggest_mistake": "While it wrote a taste headline, it didn't include it in the initial launch matrix, leaving that specific asset untested in round one.",
+  "what_would_make_it_a_10": "Swap the headline in one of the test pairs to test the taste headline directly against the transparency headline."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 acts like a senior media buyer. It calculates your exact past daily budget from the 90-day spend, structures mathematically sound single-variable tests, and gives hard day-7 rules based on CPA limits."
+}

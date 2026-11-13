@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Turns the brief into per-ad-set rupee verdicts, relaunches the paused 'Dad's razor vs mine' video first, splits out women 25-34, and lands a budget that adds to exactly ₹5,60,000.",
+  "biggest_mistake": "Its two-line 'safe/break-even' framing muddles the very number that decides everything — the 72% UTM gap — so a few calls (Beard Kit 'hold', DPA 'scale') sit on shakier ground than presented.",
+  "what_would_make_it_a_10": "Anchor every verdict on one Shopify-adjusted contribution number and show the exact per-ad-set COD/RTO arithmetic behind each line, not a blended short-cut."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Shows the full worked break-even per ad set (own AOV, own COD mix, own refusal rate) and applies the 72% Shopify gap correctly, so every decision is defensible on rupees; last-14-days loss of −₹1,85,300 reconciles.",
+  "biggest_mistake": "Holds back ₹1,82,000 as a reserve and opens with 'to confirm' items, so the owner doesn't get a fully committed 14-day plan and has homework before Monday.",
+  "what_would_make_it_a_10": "Commit the full ₹5,60,000 to named ad sets and creative tests, keep the reserve as a rule inside ASC rather than an unspent block, and pitch the copy in Rohan and Ananya's own words."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2's per-ad-set break-even working and honest reconciliation of the 1,425 vs 1,020 gap makes its cut/fix calls more trustworthy; Output 1 is cleaner to act on but its dual 'safe/break-even' lines blur the exact number the owner cares about. I'd pay slightly more for Output 2's defensible math, then strip out its reserve and 'to confirm' list before Monday."
+}

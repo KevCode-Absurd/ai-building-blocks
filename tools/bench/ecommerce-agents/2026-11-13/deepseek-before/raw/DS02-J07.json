@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and compliant, but Output 2 arrives fully ready (its label-reading email works without inventing strengths, versus Output 1 leaving a fill-in-the-% to-do), and it adds sharper performance mechanics — checkout-pause rule, subject A/B variants, cost-per-redemption and sample-size guidance — while Output 1's edge is only aligning the code expiry to the 14-day window."
+}

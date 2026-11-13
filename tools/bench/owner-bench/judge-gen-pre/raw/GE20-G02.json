@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Impeccable use of the data to drive the segment choice, page structure, and A/B test design, complete with sample size math.",
+  "biggest_mistake": "The FAQ answer about PTO is slightly clunky, putting the burden back on the user rather than smoothly positioning it as a calendar best practice.",
+  "what_would_make_it_a_10": "Smoothing out the FAQ copy and detailing exactly what proof image to use in the final CTA section."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 5,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Brilliant calculation of seat value per signup (0.73 vs 0.17) to decisively prove that recruiting is the right segment.",
+  "biggest_mistake": "Leaving literal bracketed placeholders (like '[Quote from a paid recruiting customer...]') creates homework for the owner, violating the 'ready to use' requirement.",
+  "what_would_make_it_a_10": "Removing all bracketed placeholders and sticking to a single unified call to action throughout the page, as recruiting teams need to book a demo."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both models flawlessly executed the math and identified the correct signals in the data. However, Output 1 is much closer to being ready to publish because it avoided lazy placeholders and maintained a consistent CTA strategy."
+}

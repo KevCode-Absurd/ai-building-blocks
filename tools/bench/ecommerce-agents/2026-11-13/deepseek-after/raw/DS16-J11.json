@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are complete and usable, but Output 1 sizes every test on orders per session with fully verified arithmetic (its 10%/8% sample-size sums, ceilings and profit-at-stake all check out) and sets a stronger shipping bar, while Output 2's faster proxy-metric plan, slightly optimistic 11.9% MDE, 'orders not lower' ship rule and pincode-dependent COD badge inside a 2×2 leave small but real holes."
+}

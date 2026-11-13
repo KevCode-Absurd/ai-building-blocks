@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 keeps orders (and, for the COD test, delivered orders) as the decision metric everywhere, quantifies each test in orders and rupees, and handles the 100-night return lag, while Output 2's clever 2x2 and 8-week schedule rests on 2-week add-to-cart tests whose 17% order-level MDE could let a profit-diluting change ship."
+}

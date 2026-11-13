@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly connects the AI app-builder growth to the margin problem and gives the right two-week fix, while explaining burn and runway with the correct math.",
+  "biggest_mistake": "Customer A’s $2.6M churn risk is not in the opening three-number screen, even though it is one of the most important pieces of bad news.",
+  "what_would_make_it_a_10": "Put Customer A and runway in the first screen, trim the draft under 700 words, and make the send-ready assumptions invisible or confirmed."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is tight, candid, phone-readable, and gives investors specific forwardable asks with dates and profiles.",
+  "biggest_mistake": "Customer A’s notice is buried below the AI-builder and burn sections rather than shown in the first screen, and runway is not one of the three headline numbers.",
+  "what_would_make_it_a_10": "Move Customer A and runway into the opening section, keep the AI-builder diagnosis, and add the expected effect or measurement plan for the 48-hour pause."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and mostly correct, but Output 2 is more investor-readable and closer to a send-ready email. Output 1 has slightly better burn/runway explanation, but it is longer and less crisp."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 5,
+  "range": 6,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly identifies the exact return metrics and writes copy that targets those specific failure points.",
+  "biggest_mistake": "It quotes raw survey data directly in the customer-facing copy ('142 of our 400 reviewers say'), making a premium brand sound like an Amazon listing.",
+  "what_would_make_it_a_10": "Translate the raw review counts into natural, confident brand copy rather than citing statistics to the customer."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The 'What fits, in real life' section is a brilliant, highly scannable way to clearly define capacity without sounding defensive.",
+  "biggest_mistake": "The SEO title is 65 characters, slightly over the 60-character target.",
+  "what_would_make_it_a_10": "Trim a few characters from the SEO title to ensure it doesn't truncate in search results."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 completely nails the brand voice and effortlessly weaves the data insights into honest, premium-sounding copy. Output 1 relies on citing raw review statistics to the customer, which breaks the brand's calm, precise tone."
+}

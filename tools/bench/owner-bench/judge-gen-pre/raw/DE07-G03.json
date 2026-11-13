@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts Customer A and the missed forecast immediately after the three headline numbers, and shows the $0.9M compute rise is essentially the whole margin story.",
+  "biggest_mistake": "Says the $0.9M compute is 'roughly 9 points of margin, more than the 7-point drop' but never says what offset the remaining points, leaving a question a sharp investor will ask.",
+  "what_would_make_it_a_10": "Close the margin loop (name what offset the extra points) and give the partner conversion rates as n-per-1,000 so the angels see the denominator."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Gives every ask a named profile, a date and a forwardable blurb, and shows the denominators (4 vs 31 in 1,000) exactly as the angel readers asked.",
+  "biggest_mistake": "Puts Customer A after the burn breakdown, further into the update than the brief's 'bad news in the first screen' intent.",
+  "what_would_make_it_a_10": "Pull Customer A up next to the $0.5M forecast miss so every piece of bad news lands in the opening screen."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and accurate, but Output 2 answers both investor personas precisely with denominators and forwardable intros and is cleaner to read; Output 1's better bad-news placement is offset by a dangling margin claim and denser prose."
+}

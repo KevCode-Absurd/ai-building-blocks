@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It cleanly separates what the data proves from what needs checking, then turns that into a practical ranked plan with owners, stop rules and a usable scorecard.",
+  "biggest_mistake": "It slightly overstates certainty on lifetime payback by assuming one repeat order at first-order economics, and it misses a tighter quantified target for flow revenue.",
+  "what_would_make_it_a_10": "Show a slightly sharper impact model for each move using explicit revenue or contribution math for flows and repeat, while keeping the same crisp prioritisation."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It goes beyond diagnosis by ranking moves in one unit, assigning effort, and adding concrete operating rules like holdouts and spend thresholds.",
+  "biggest_mistake": "Some of the maths and assumptions are too shaky for an owner-level plan, especially the contribution-after-ads baseline/target logic and the formula tying blended CPA change to contribution points.",
+  "what_would_make_it_a_10": "Tighten the financial model so every impact estimate clearly traces to the brief's numbers without debatable shortcuts or internal inconsistencies."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the safer plan to run because its core diagnosis and money logic are cleaner and more directly tied to the data. Output 2 has strong operating detail, but I would trust it less because a few financial calculations are too loose for board-facing decisions."
+}

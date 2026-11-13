@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post names the Asia-Pacific shift in local terms (08:00 to 16:00 in Singapore, Manila or Perth) and gives the weekend rotation its own section, citing past leavers. It also replaces the resume with a realistic, emotionally loaded HEY lockout email.",
+  "biggest_mistake": "The scorecard gives 15% to a 'Conversation' line scored from video calls, which partly brings back interview impression (0.11). It also says nothing about how small a 9-hire sample is.",
+  "what_would_make_it_a_10": "Score the calls only against specific behaviours such as working alone and calm with upset customers, and add a short plan to recheck the weights after this hire."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The rotation sits first among the hard parts and is made concrete as 8 or 9 weekends a year. The scorecard puts its 1, 3 and 5 anchors in one table and explicitly excludes impression, with a caveat about the small sample. A worked hours table (83.5 hours, correct) shows the review cost.",
+  "biggest_mistake": "The post gives the hours only in UTC and never says Asia-Pacific or a local time, so the people it most needs to reach have to do the conversion. It also likely runs past the 1,100-word limit, and its sample customer email is thinner than it could be.",
+  "what_would_make_it_a_10": "Add 'that's 08:00 to 16:00 in Singapore or Perth' to the title area, use a more stressful test email, and trim to fit the word limit."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are usable and on-brand with correct numbers. Output 2 is the more complete hiring system: weekend count, impression explicitly excluded, sample-size caveat, accessibility, and a full hours budget. Output 1 is tighter and names the Asia-Pacific hours better."
+}

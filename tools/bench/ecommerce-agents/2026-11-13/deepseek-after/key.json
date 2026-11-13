@@ -1,0 +1,1042 @@
+{
+ "DS01": {
+  "model": "deepseek-chat",
+  "lens": "a founder who runs a profitable DTC store doing $5M a year and spends their own money",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "DS02": {
+  "model": "deepseek-reasoner",
+  "lens": "the head of performance marketing at a fast-growing DTC brand",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "DS03": {
+  "model": "deepseek-chat",
+  "lens": "a retention and lifecycle marketing lead",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "DS04": {
+  "model": "deepseek-reasoner",
+  "lens": "a creative director who has shipped thousands of paid social ads",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "DS05": {
+  "model": "deepseek-chat",
+  "lens": "a CFO-minded operator who checks every number and cares about contribution margin",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "DS06": {
+  "model": "deepseek-reasoner",
+  "lens": "an India D2C operator who knows COD, RTO, WhatsApp and Indian consumers well",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "DS07": {
+  "model": "deepseek-chat",
+  "lens": "a US DTC consultant who audits agencies for brand owners",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "DS08": {
+  "model": "deepseek-reasoner",
+  "lens": "a conversion rate specialist who runs A/B tests for stores",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "DS09": {
+  "model": "deepseek-chat",
+  "lens": "a senior direct response copywriter",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "DS10": {
+  "model": "deepseek-reasoner",
+  "lens": "a generalist e-commerce agency strategist who must hand this work to a client tomorrow",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "DS11": {
+  "model": "deepseek-chat",
+  "lens": "a Shopify Plus merchant success manager",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "DS12": {
+  "model": "deepseek-reasoner",
+  "lens": "a marketplace and Amazon seller who also runs a D2C site",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "DS13": {
+  "model": "deepseek-chat",
+  "lens": "a compliance-minded marketer who knows FTC, ASCI and platform ad policies",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "DS14": {
+  "model": "deepseek-reasoner",
+  "lens": "a media buyer who manages $1M a month across Meta and TikTok",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "DS15": {
+  "model": "deepseek-chat",
+  "lens": "an email and SMS agency owner",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "DS16": {
+  "model": "deepseek-reasoner",
+  "lens": "a first-time founder in their first year who needs work they can act on alone",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "DS17": {
+  "model": "deepseek-chat",
+  "lens": "a private equity operating partner reviewing a portfolio brand",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "DS18": {
+  "model": "deepseek-reasoner",
+  "lens": "a head of growth at an Indian D2C beauty brand",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "DS19": {
+  "model": "deepseek-chat",
+  "lens": "a brand strategist who cares about voice and positioning",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "DS20": {
+  "model": "deepseek-reasoner",
+  "lens": "a data analyst who distrusts unsupported numbers",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J06",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 spells out that the hidden pocket is shared between spare cards and notes (more cards means less cash room), which is the real root of the 'holds less cash' returns, and its copy is launch-ready with no [X] placeholders, while Output 1 leaves brackets in the spec and FAQ and skips that trade-off."
+}

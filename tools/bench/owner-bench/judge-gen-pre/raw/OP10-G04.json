@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows the pilot signals closely: controllers at 50-300 person SaaS companies, pricing-change trigger first, no links, and honest reply-rate expectations.",
+  "biggest_mistake": "The proof appears in step 1 instead of being saved for a later touch, and it stretches beyond the clean pricing-change hook.",
+  "what_would_make_it_a_10": "Move the 9-to-4-day proof out of step 1, tighten step 1 around the pricing-change spreadsheet pain, and keep the rest largely as written."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly focuses on the best segment and best moment: Controllers or Heads of Finance at 50-300 person SaaS companies after a pricing-page change.",
+  "biggest_mistake": "The CTAs are weaker and a bit gimmicky, asking for replies like 'yes' or 'steps' instead of moving naturally toward a finance conversation or meeting.",
+  "what_would_make_it_a_10": "Replace the reply-word CTAs with one plain meeting-oriented ask, remove the extra asks in steps 2-4, and clarify how many of the 1,900 are loaded now versus held for the trigger."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more usable as a sales sequence tomorrow: it has cleaner meeting asks, better list rules, correct math, and stronger operating guidance. Output 2 reads well and finds the right audience, but its CTAs and load logic would need more rework before giving it to the sales team."
+}

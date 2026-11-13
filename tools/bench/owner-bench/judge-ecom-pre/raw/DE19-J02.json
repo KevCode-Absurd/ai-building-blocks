@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Builds everything on the two signals that matter — on-feet worker creators and problem-first hooks — and back-solves the day-30 bar from 90-day contribution ($38.46), with a concrete Monday set-up table and dollar kill/scale rules.",
+  "biggest_mistake": "A few sharpenable slips: the '13 and 7 times our median organic views' claim is loose (median of the six posts is ~13,850, so it's more like 13x and 7x — fine, but the median isn't shown), and the fixed November dates assume a launch window the brief didn't fix.",
+  "what_would_make_it_a_10": "Trim the dated calendar assumption and show the organic median working so the '13x/7x' claim is checkable at a glance."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean money first, correct hook cost table, sensible phase plan with a reserve, and a pass/hold/fail day-30 scorecard that includes a 'winning ads not on licensed posts' check — a smart guard against the March rights cliff.",
+  "biggest_mistake": "It scales the bar to $45,000 on a pass without tying that to the 90-day payback math, and the $34 scale threshold contradicts the $38 target it just set, which an owner would trip over.",
+  "what_would_make_it_a_10": "Reconcile the $34 vs $38 scale threshold and justify the month-two $45,000 with the 90-day contribution math."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are Monday-ready and use the data well, but Output 1's day-30 decision is tied cleanly to the 90-day break-even and its kill/scale rules are internally consistent, while Output 2's $34-vs-$38 threshold and unearned $45k jump leave two loose ends."
+}

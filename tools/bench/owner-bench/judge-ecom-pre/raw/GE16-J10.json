@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The break-even maths factoring in delivered share versus COD RTO losses is rigorous and clean.",
+  "biggest_mistake": "Completely missed the lip balm signal from the pair data, offering a 2x serum bundle instead of an add-on mechanic.",
+  "what_would_make_it_a_10": "Swap the 2x serum bundle for a lip balm add-on offer to help sub-₹500 orders cross the threshold."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliant commercial insight to add the lip balm to the face wash + serum routine at ₹999 rather than discounting the existing pair that already sells 1,000+ units a month.",
+  "biggest_mistake": "Could have explicitly modeled the full 3-way RTO impact on the threshold scenario table rather than just net profit estimates.",
+  "what_would_make_it_a_10": "Include full unit economics with RTO cost formulas detailed directly in the threshold scenario table."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 caught the lip balm signal in the pair data and built an exceptional PDP ladder (₹599 single, ₹749 duo, ₹999 3-step routine), protecting margins against cannibalizing the existing face wash + serum buyers while hitting every requirement in the brief."
+}

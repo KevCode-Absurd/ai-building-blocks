@@ -85,7 +85,7 @@ If filter usage data is missing, rank filters by how often each attribute appear
 
 **Copy:** top intro (1 to 2 sentences); bottom guide (150 to 400 words); FAQs (3 to 5, with ticket source).
 
-**To confirm:** data gaps, pins needing sign-off, any badge rule the client must approve.
+**Assumptions:** where data is missing, the default used for pins and badge rules and what it changes, one line each, at most three.
 
 ## Common mistakes
 

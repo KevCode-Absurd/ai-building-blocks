@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Makes the face wash + serum pair bundle one at a modest ₹869. Every profit figure includes the ₹70 shipping and the expected RTO cost, and the working is shown so I can check it.",
+  "biggest_mistake": "Lip balm, the natural ₹199 add-on, is not used as a bundle or cart add-on, and there is no COD-only threshold or prepaid nudge, even though RTO is in the maths.",
+  "what_would_make_it_a_10": "Swap the serum pair for a lip-balm cart add-on to cross the line, and add a COD-specific rule such as free shipping at ₹599 for prepaid only."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 5,
+  "clear": 7,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "A clear price ladder on the serum page and a well-argued case against a plain duo discount that would just give money away on 1,033 existing orders.",
+  "biggest_mistake": "The ₹599 threshold maths rests on an unsupported guess that only 6% of orders sit between ₹499 and ₹598, when my 27% band suggests nearer 13%. Profit figures also leave out RTO cost, so the threshold verdict is shaky.",
+  "what_would_make_it_a_10": "Size the affected orders from the real band data, put COD refusal cost into every profit line, and use lip balm as a cart add-on instead of a main bundle."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both pick ₹599 and a sensible test plan. Output 1 builds bundle one on my top pair, counts refusals in every number, and sizes the threshold change from my own data. Output 2's threshold case leans on a made-up 6% slice."
+}

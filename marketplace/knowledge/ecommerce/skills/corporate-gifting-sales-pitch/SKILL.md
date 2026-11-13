@@ -123,7 +123,7 @@ Show the client the offer, list, emails and quote template. Send nothing until t
 
 ## Output
 
-1. **One-screen summary:** the season, three boxes with price from and gross profit per box, order-by dates, season cap, top 10 companies to contact first, and the runner-up offer in one line.
+1. **One-screen summary:** the season, three boxes with price from and gross profit per box, order-by dates, season cap, and the top 10 companies to contact first.
 2. **Gifting offer sheet:** Box, Contents, Packaging, Customisation, Price per band (25 to 99, 100 to 499, 500 plus), Shipping options, Minimum, Order by.
 3. **Target sheet:** Company, City, Staff size, Source (own orders or research), Past spend, Buyer name, Role, Channel, Reason, Status, Next step.
 4. **Messages:** pitch email, one follow-up, LinkedIn note.

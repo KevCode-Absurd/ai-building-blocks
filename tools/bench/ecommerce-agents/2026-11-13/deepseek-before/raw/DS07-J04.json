@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 7,
+  "commercial": 6,
+  "craft": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is a more complete, platform-compliant production package (spoken+on-screen disclosure, safe zones, creator contract/rights/dates, continuous-take and 4:5 crop specs), while Output 2 leans on platform toggles and #ad alone and specifies no usage rights, pay terms, or delivery schedule."
+}

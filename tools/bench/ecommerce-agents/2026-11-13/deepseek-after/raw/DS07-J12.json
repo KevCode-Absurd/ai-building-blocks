@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 2 wins slightly on commercial rigor and honesty: it flags that the ₹25 incentive depends on refusal rates, adds a holdout test to prove lift, and includes a missed-delivery template and call script while matching Output 1's template and metric coverage."
+}

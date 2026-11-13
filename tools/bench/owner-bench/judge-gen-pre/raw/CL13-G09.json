@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A complete 4-week plan, with every post slotted in the evening and working titles for weeks 2 to 4. It is built around sleep and narrator clips, and the drafts use the customer's hooks (replaying emails, quit by day three, ten minutes a fantasy) in a warm voice.",
+  "biggest_mistake": "The success bar is weak: beating the 143-installs-per-post baseline, with no forecast from the theme data. The shoulders draft (4) is only loosely sleep and has a hedgy editor note.",
+  "what_would_make_it_a_10": "Set a success target forecast from the theme averages, and replace the shoulders draft with a sharper 'can't switch my brain off' sleep hook.",
+  "overall_note": "none"
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The success measures are the strongest part. They forecast about 6,580 installs and a 3.4% save rate from the theme data, and set a 5,000-install target, a 4% narrator-video threshold and a week-2 check.",
+  "biggest_mistake": "Wednesday is scheduled at 14:30 against the evening data, and weeks 2 to 4 are only a repeated pattern with one-line angles. Stress-at-work carousels stay in the mix despite weak installs.",
+  "what_would_make_it_a_10": "Keep every slot in the evening, with a clearly framed pickup test, and give real post ideas for weeks 2 to 4 instead of a repeated pattern.",
+  "overall_note": "none"
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I'd pick the one that keeps every post in the evening and gives me a fuller 4-week plan, with a title for each post and a clear, safe week 1. The other has the better forecast and targets, but its 14:30 slot goes against my own data and weeks 2 to 4 are thin."
+}

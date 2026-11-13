@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is built tightly on your data, especially the under-spent women 25 to 40 segment, the quiet-wheels review theme, and the work-flyer belt-skip motive, then turns those into usable concepts and a practical first-test plan.",
+  "biggest_mistake": "It overreaches a bit on execution details and testing rules the brief did not ask for, including some confident production specs and a benchmarking approach that is helpful but not fully grounded in profit data.",
+  "what_would_make_it_a_10": "Trim a little of the extra media-planning detail and tighten any claims around reviews and testing thresholds so every line stays strictly inside what the brief proves."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly spots the three most important signals in the brief and translates them into distinct, on-brand concepts with especially strong first picks.",
+  "biggest_mistake": "The 'per-trip maths' concept is weak and risky because it invents a value frame from assumptions, and the recommendation to use the expensive 41-plus segment in retargeting is not well justified by the data.",
+  "what_would_make_it_a_10": "Replace the speculative price-justification concept with a stronger data-led angle and be stricter about only recommending audiences and claims that the brief clearly supports."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels more like something I could hand straight to my team tomorrow: it uses my customer language better, gives more distinct concepts, and makes the right first-three choices with stronger evidence from my data."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both nail the diagnosis and the per-first-order math, but Output 1 quantifies the contribution-margin collapse (13.6%→7.8%) and sets a numeric board target, while Output 2 leans on directional 'up on last year' language that leaves the board's central ask under-specified."
+}

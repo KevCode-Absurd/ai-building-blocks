@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both are strong, but Output 1's day-30 judgment uses three independent reads plus a blended new-customer check against prior-year seasonality, whereas Output 2 judges on TikTok-UTM Shopify orders alone (which it admits undercounts) and its $57 cut-off lets a losing channel persist, weakening the core 'did TikTok earn budget' decision."
+}

@@ -1,0 +1,106 @@
+{
+ "verdicts": 220,
+ "failed": 20,
+ "tot": {
+  "agent": 133,
+  "plain": 86,
+  "tie": 1
+ },
+ "share_of_decided": 0.6073059360730594,
+ "perJob": {
+  "J01": {
+   "agent": 4,
+   "plain": 7,
+   "tie": 1
+  },
+  "J02": {
+   "agent": 14,
+   "plain": 6,
+   "tie": 0
+  },
+  "J03": {
+   "agent": 20,
+   "plain": 0,
+   "tie": 0
+  },
+  "J04": {
+   "agent": 15,
+   "plain": 5,
+   "tie": 0
+  },
+  "J05": {
+   "agent": 10,
+   "plain": 10,
+   "tie": 0
+  },
+  "J06": {
+   "agent": 10,
+   "plain": 10,
+   "tie": 0
+  },
+  "J07": {
+   "agent": 13,
+   "plain": 7,
+   "tie": 0
+  },
+  "J08": {
+   "agent": 6,
+   "plain": 11,
+   "tie": 0
+  },
+  "J09": {
+   "agent": 6,
+   "plain": 14,
+   "tie": 0
+  },
+  "J10": {
+   "agent": 10,
+   "plain": 3,
+   "tie": 0
+  },
+  "J11": {
+   "agent": 10,
+   "plain": 8,
+   "tie": 0
+  },
+  "J12": {
+   "agent": 15,
+   "plain": 5,
+   "tie": 0
+  }
+ },
+ "perModel": {
+  "deepseek-chat": {
+   "agent": 68,
+   "plain": 51,
+   "tie": 1
+  },
+  "deepseek-reasoner": {
+   "agent": 65,
+   "plain": 35,
+   "tie": 0
+  }
+ },
+ "criteria": {
+  "job_done": {
+   "agent": 8.67,
+   "plain": 8.44
+  },
+  "actionable": {
+   "agent": 8.63,
+   "plain": 8.27
+  },
+  "commercial": {
+   "agent": 8.31,
+   "plain": 7.97
+  },
+  "craft": {
+   "agent": 8.43,
+   "plain": 8.21
+  },
+  "overall": {
+   "agent": 8.51,
+   "plain": 8.24
+  }
+ }
+}

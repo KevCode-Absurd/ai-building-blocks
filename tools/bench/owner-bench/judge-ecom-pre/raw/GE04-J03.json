@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Translates the data into flawless constraints (avoiding dark colours for scuffs, catching the front pocket gap) and provides a rigorous, mathematically sound testing plan.",
+  "biggest_mistake": "The primary text for the gift concept is slightly generic, but it still perfectly follows the brand guidelines.",
+  "what_would_make_it_a_10": "It is already a 10; a masterclass in reading data and turning it into ready-to-launch creative."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The upfront breakdown of the numbers is excellent and sets a very clear strategic foundation for why the specific concepts were chosen.",
+  "biggest_mistake": "The ad copy in several concepts is slightly too fragmented and staccato (e.g., 'Land. Roll. Leave.'), which reads less like natural confident copy and more like bullet points.",
+  "what_would_make_it_a_10": "More natural flow in the primary text and a more concrete daily budget and timeframe for the testing plan."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 delivers an incredibly thorough, expert-level response. It catches every nuance in the data (including the front pocket missing feature), writes superior, on-brand copy, and provides a highly specific media buying test plan with exact daily budgets based on the blended CPA."
+}

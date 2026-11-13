@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is more commercially rigorous—₹20 discount justified against ₹22–45 RTO cost, holdout measurement, capacity and missed-delivery flows—while Output 1 overstates cancellation savings as ₹180 each."
+}

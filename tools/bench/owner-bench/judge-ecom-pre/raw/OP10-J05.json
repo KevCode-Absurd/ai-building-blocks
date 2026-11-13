@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the paused winner correctly, brings back the front-of-pack angle, and uses the review language for taste and texture.",
+  "biggest_mistake": "The six angles are not fully distinct: transparency appears twice, taste and texture overlap, and there is no real taste-led headline despite taste being the big missing hook.",
+  "what_would_make_it_a_10": "Add a taste headline, make the six angles exactly transparency, taste, no added sugar, protein, 4 pm snack, and price/value, and trim the extra caveats."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into a clean launch set led by the paused transparency winner and the untested taste hook, with clear first tests and solid budget logic.",
+  "biggest_mistake": "The launch combinations isolate primary text well, but some pairings use non-matching headlines, so the ads are slightly less sharp creatively than they could be.",
+  "what_would_make_it_a_10": "Use the taste headline in the taste launch ad and make each winning angle feel fully matched across primary text, headline and description."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is closer to what I could hand to the team tomorrow: it has the right six angles, better customer language, a taste headline, and a concrete launch plan with sensible math. Output 1 is strong, but it misses the taste headline and repeats a couple of angles."
+}

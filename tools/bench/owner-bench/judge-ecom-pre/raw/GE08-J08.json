@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Catches every hidden signal in the data—from gating ex-subscribers behind a 95% courier fix to immediately tackling the freshest at-risk buyers (68–90 days) with zero discount.",
+  "biggest_mistake": "The Monsoon Dark draft asks them how they brew instead of naming a specific replacement roast right away.",
+  "what_would_make_it_a_10": "Pre-populate the Monsoon Dark email draft with a specific recommended roast from the catalog rather than routing to a brew questionnaire."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Thorough financial modeling that explicitly accounts for cannibalized full-price orders and WhatsApp delivery costs.",
+  "biggest_mistake": "Ranks 91–180 days ahead of the freshest at-risk group (46–90 days), relegating the easiest segment to an ad-hoc day-28 side note.",
+  "what_would_make_it_a_10": "Make the 46–90 day at-risk segment Wave 1 in the win-back rollout and tighten the courier gate to the historical 95% rather than 93%."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both outputs are world-class, but Output 1 puts the freshest at-risk customers (68–90 days) in Wave 1 where they belong, holds the courier fix to the strict historical 95% standard, and provides exact sample-size statistics for the holdout test."
+}

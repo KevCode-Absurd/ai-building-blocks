@@ -41,7 +41,7 @@ Access: level 1. The deck is shared by the client with whom they choose.
 ## Before you start: the gates
 
 1. **Gross profit per order known.** Fail: stop. A money figure from revenue or product margin overstates the stakes badly: a 70% product margin was 24% once every delivered cost was counted [MEA-0023]. Gross margin must be the delivered cost to the customer's door [MEA-0037].
-2. **Cash and capacity stated.** Pass when the client has said what they can spend on fixes and who can do the work. Fail: rank fixes, but the action plan slide shows "budget and owner to confirm" and no dates.
+2. **Cash and capacity stated.** Pass when the client has said what they can spend on fixes and who can do the work. Fail: rank fixes, state the budget and owner assumed in one line each, and date the plan on that basis.
 3. **Findings trusted.** Each finding needs evidence. A finding with no number or source is dropped from the deck, not softened.
 
 ## Steps

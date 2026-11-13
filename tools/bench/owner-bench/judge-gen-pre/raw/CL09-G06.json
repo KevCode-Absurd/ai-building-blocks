@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the raw data into sharp, checkable conclusions, such as agencies being 60% of Semrush losses and Lite usage limits causing 32% of all churn, and every move has a hard numeric target.",
+  "biggest_mistake": "The Lite fix offers only a top-up, with no warning before the limit and no look at the price step to Standard, even though in-house buyers name that step as their top loss reason.",
+  "what_would_make_it_a_10": "Add a pre-limit warning and a review of the Lite-to-Standard step to Move 2, and make Move 5's success metric tie directly to the study rather than to overall in-house trial share."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear, readable framing with the right moves: a client report that also covers Advanced churners, a fuller Lite fix with a warning, a top-up and a review of the Standard step, and a well-designed holdout test.",
+  "biggest_mistake": "It puts an invented 'Data as of November 2026' date on the analysis, and several success metrics are vague, such as 'rises above 11%' and 'beats the holdout', so they could not show whether a move really worked.",
+  "what_would_make_it_a_10": "Replace the made-up date with the real data periods and give each move a specific numeric target, such as agency trial-to-paid reaching 15%."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both find the same truths and get the maths right. I'd pay slightly more for Output 1 because its targets are concrete enough to judge success, and it asks me to confirm the dates instead of inventing one."
+}

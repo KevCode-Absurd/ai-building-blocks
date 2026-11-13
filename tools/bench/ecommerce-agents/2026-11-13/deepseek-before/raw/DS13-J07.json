@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers the full brief cleanly with sound compliance (patch test, no medical claims, monitored replies, WhatsApp opt-in and STOP) and a sensible 14-day code timeline, while Output 2's 7-day expiry and day-3 WhatsApp are tighter and its coupon-tag mechanics are riskier; both are strong but Output 1 is more complete and safer to ship."
+}

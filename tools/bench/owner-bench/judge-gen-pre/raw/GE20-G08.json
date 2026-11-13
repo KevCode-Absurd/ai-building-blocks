@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Executes flawlessly on the data signals, including the exact cohort math for churn reduction and the push to yearly billing.",
+  "biggest_mistake": "Inviting a random 20% of Team customers to downgrade as part of the test is a risky way to measure cannibalization, even if it yields perfect data.",
+  "what_would_make_it_a_10": "Replace the active downgrade test on existing Team customers with a backend data check (like counting active users) to estimate risk safely."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 10,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The suggestion to count Team accounts with only one active user before launching is a brilliant, zero-risk way to measure downgrade exposure.",
+  "biggest_mistake": "Explicitly advising against a yearly push by focusing purely on short-term recognized MRR, missing the immediate cash flow and LTV benefits of dropping churn to 0.9%.",
+  "what_would_make_it_a_10": "Include the yearly billing push as requested by the data signals, rather than dismissing it."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both models perform miraculously accurate cohort survival math, but Output 1 perfectly captures the owner's private signals, including the push to yearly billing and the exact brand phrase requested. Output 2 actively advises against the yearly push, which would frustrate an owner looking for that specific fast win."
+}

@@ -141,7 +141,7 @@ After about 30 launched ads with results (practitioner default, test it), compar
 2. **Verdict table:** ad ID, file, placement, T1 to T6 (pass or fail), verdict, top fix, who can make it, effort (minutes).
 3. **Fix notes per ad:** the failing line or frame, why it fails, the rewrite or edit.
 4. **`prelaunch-log.csv`** columns: ad ID, check date, T1 to T6, verdict, fixes made, launch date, spend, store-side purchases, cost per purchase, target cost per purchase, CTR (link), hook rate, review verdict.
-5. **To confirm:** claims the owner must prove or drop.
+5. **Claims cut:** each claim with no proof on file, cut from the ad, one line each.
 
 ## Common mistakes
 

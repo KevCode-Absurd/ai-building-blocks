@@ -119,7 +119,7 @@ On day 15, compare each format against its metric. Keep formats above the accoun
 
 3. **Story set sheet**: Date, Frame number, Content, Sticker (poll, link, question), Product, Link.
 4. **Mid-month review table**: Format, Posts, Median metric, Account median, Keep or replace, New format.
-5. **To confirm** list for the client: offers, dates, any creator involved.
+5. **Assumptions:** offers, dates or creators the calendar relies on that the brief did not give, one line each, at most three.
 
 ## Common mistakes
 

@@ -114,7 +114,7 @@ US note: a quote used in an ad must be a real review that reflects the buyer's r
 
 **Quote bank file** (`review-quote-bank.csv`): review_id, date, rating, product, verified, media, buyer, trigger, failed_fix, result, doubt, exact_quote, translation, permission_status, used_in_angle.
 
-**To confirm:** one short list (quote permissions, any product question raised by contradicting reviews).
+**Permissions:** each quote meant for an ad carries one line beside it: "reviewer's permission before use". **Contradictions:** where reviews disagree on a product fact, one line on the claim the ads leave out and why.
 
 ## Common mistakes
 

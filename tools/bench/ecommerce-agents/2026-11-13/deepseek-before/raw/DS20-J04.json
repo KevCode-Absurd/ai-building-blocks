@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both deliver three timed scripts with hooks, but Output 1's creator brief covers usage rights, flat fee, revision timing and a 12-month paid-use term, and its disclosure plus honesty controls (spoken and on-screen paid-partnership line, no 'can't tell the difference' claim) are more robust, while Output 2's brief omits rights and pay and tells creators to skip disliked flavours, undercutting the ranking ad."
+}

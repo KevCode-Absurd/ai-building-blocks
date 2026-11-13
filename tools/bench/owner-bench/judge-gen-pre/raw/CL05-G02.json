@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The segment math is right (57% of paid seats, 733 vs 12 seats per 1,000 signups). The page keeps \"Book a demo\" throughout, puts security before the form, and cuts the form to 4 fields. It admits what round robin can't see, and gives a sample-size method for the A/B test.",
+  "biggest_mistake": "The hero headline says \"without the back and forth\" and leaves Priya's own phrase, \"email tennis\", to section 2. The piece also runs well over the 1,000-word limit, and fewer sections give each feature its own idea.",
+  "what_would_make_it_a_10": "Put \"email tennis\" in the hero, give round robin and routing forms their own early sections, and trim to 1,000 words."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero uses Priya's words (\"No email tennis\"). Round robin and routing forms get their own early sections, with the 88% and 74% figures as proof. The seat math is sharp (0.73 vs 0.17 per signup), and the security page is moved up and linked from the top menu.",
+  "biggest_mistake": "It mixes \"Get started\" and \"Book a demo\" on a team-buyer page, against the brand rule. Bracketed placeholders (security proof, logos, quote) leave homework, and the text-reminder and \"skips anyone off\" claims are unverified.",
+  "what_would_make_it_a_10": "Use \"Book a demo\" on every button, fill or cut the brackets so it pastes cleanly, and give Version B full copy with proof."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is closer to paste-ready, with consistent buttons, honest caveats and a rigorous test plan. Output 2 has the better hero line and section structure but leaves placeholders and mixes calls to action. It's close."
+}

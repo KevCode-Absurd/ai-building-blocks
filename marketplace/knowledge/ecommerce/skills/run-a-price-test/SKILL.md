@@ -120,7 +120,7 @@ Turn the result into money per month: effect per visitor x monthly product sessi
 
 **Test plan:** Question | Product | Current price | Test price | Design | Contribution per order at each price | Profit line (max order drop) | Main metric | Guardrails | Orders needed | Start | End | Stop rule | Owner.
 
-**Set-up list** for approval, **support answer**, and the **reading template** above. **To confirm:** prices, refund-the-difference rule, comparison products.
+**Set-up list** for approval, **support answer**, and the **reading template** above. **Decisions made:** test prices, the refund-the-difference rule and comparison products, one line each with the reason.
 
 ## Common mistakes
 

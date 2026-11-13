@@ -1,0 +1,20 @@
+{
+ "job": "J01",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 1's dual break-even framework (Meta vs strict UTM count) applied per ad set is cleaner and its daily rules are more precise and operationally usable, while Output 2's ROAS thresholds are slightly muddled by mixing counts and its per-set store-count attribution is more speculative."
+}

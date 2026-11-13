@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the more complete hand-off — owner-assigned setup steps with 'done when' checks, exact per-campaign budget splits that sum to $30,000, ad- and ad-group-level kill rules plus a marginal-cost-after-raise check, and creator/AI disclosure guardrails — while Output 2 is crisper on contribution math and adds a good blended incrementality read, but lets spend scale at a $55 day-10 gate (a $27.90 loss per first order) and omits paid-partnership/'ad' disclosure."
+}

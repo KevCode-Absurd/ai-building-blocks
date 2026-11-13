@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It cleanly separates what the data proves from what still needs checking, then turns that into a practical plan with owners, stop rules and a usable scorecard.",
+  "biggest_mistake": "It slightly overstates certainty on paid economics by assuming repeat-order value and margin match first orders, and one scorecard target ('flow share of email revenue') is left relative rather than numeric.",
+  "what_would_make_it_a_10": "Tighten the paid payback logic with one clearer sensitivity range for repeat value/margin and give every scorecard line a hard numeric target."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is ruthlessly owner-minded: it ranks moves in contribution terms, gives stop/go thresholds, and directly tackles the two real leaks—Meta and linen—while restoring the switched-off CRM engine.",
+  "biggest_mistake": "A few of the contribution estimates and formula-based sizing assumptions are more speculative and harder to verify from the brief, which makes the financial precision feel less solid than the confidence of the plan.",
+  "what_would_make_it_a_10": "Keep the ranking structure, but simplify and de-risk the impact math so every number clearly traces back to the brief without layered assumptions."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and clearly built on the data, but Output 2 feels more like the plan I could run with a board and team tomorrow because it ranks the moves in one owner metric, sets firmer decision lines, and is sharper about what happens each week."
+}

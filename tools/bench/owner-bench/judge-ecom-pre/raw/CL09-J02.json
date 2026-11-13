@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The money math ($27.10 first order, about $38.50 over 90 days, $38 target) is correct and drives every rule, and the creative plan centres on on-feet workers, opens problem-first and closes with the mission.",
+  "biggest_mistake": "The day-30 lift check compares new customers with the prior 30 days, with no seasonal adjustment. Mixing a Days 15 to 30 cost bar with a 30-day order count also blurs the verdict.",
+  "what_would_make_it_a_10": "Exclude current customers, cut the hooks more tightly from Maria's and Tasha's own words, and use a day-30 test that adjusts for seasonality with two reads that must agree."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The measurement is rigorous: learning-phase budget math, a tracking-mismatch kill rule, current buyers excluded, and a day-30 verdict that needs two of three reads to agree (tagged orders, survey, seasonally adjusted lift). The hooks are written shot by shot in Maria's and Tasha's words.",
+  "biggest_mistake": "It picks dates that launch the test into Thanksgiving and Black Friday week, when ad costs are inflated. It flags this, but a cleaner window would make the first read more trustworthy.",
+  "what_would_make_it_a_10": "Start outside the holiday spike, or set a holiday-adjusted target, and trim the copy so the team can scan it faster."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both get the money and the creative direction right. The second plan is more ready to hand over on Monday: dated owners, customer exclusions, cleared music, creator usage rights, and a day-30 test I can trust that does not rely on TikTok's own numbers."
+}

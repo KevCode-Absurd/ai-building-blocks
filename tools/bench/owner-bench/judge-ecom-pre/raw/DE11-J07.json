@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Builds the series tightly on the real signals: quiz-answer branching (44% dark spots, 26% acne, 19% dry/sensitive), a dedicated sunscreen-fears email using the 'dusky skin' review, and beginner-slow-start teaching for the 61%.",
+  "biggest_mistake": "The day-11 'code ends in 3 days' vs WhatsApp 'one day before code ends' at day 13 is inconsistent arithmetic, and the 3-step routine ignores the fact that sunscreen is a struggle for buyers rather than a settled upsell.",
+  "what_would_make_it_a_10": "Fix the code-deadline arithmetic, and make the routine email respect beginner safety (e.g. not morning-plus-night salicylic in week one)."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Turns click-to-order into a money-per-click cut (₹48 serum / ₹20 wash / ₹9 sunscreen), uses that to justify the series structure, and answers sunscreen fears with the review line rather than pushing harder.",
+  "biggest_mistake": "Signs email 5 as 'Mohit, Co-founder' and promises a human reads every reply, plus makes metric and volume claims (4,700 per side, 2-point detectability) the owner can't verify without permission and stats.",
+  "what_would_make_it_a_10": "Drop or confirm the founder signature and reply promise, and simplify the testing section to targets the owner can actually run and check."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both hit the data hard, but Output 2's money-per-click framing and tighter decision logic read like a specialist who owns the P&L; Output 1 is nearly as good but a step behind on prioritisation and has the same deadline muddle plus a less disciplined testing section."
+}

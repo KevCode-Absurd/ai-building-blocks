@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and the arithmetic checks out in each (₹27,000 RTO loss, ₹45 per COD order, ₹1,080 per RTO point), but Output 2 is the more submittable, team-ready kit — sample variable values for Meta submission, suppression/holdout rules, Shopify status tags, the 'Not ordered' and no-OTP safeguards, a missed-delivery template and agent call-capacity math — while Output 1's edge is only its tighter compliance notes and richer metric formulas."
+}

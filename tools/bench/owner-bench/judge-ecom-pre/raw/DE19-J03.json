@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every concept is built on a real signal in the data — quiet wheels (290 mentions), women 25-40 at ₹1,058, lifting it alone — and the brief's numbers are used correctly to rank the first three.",
+  "biggest_mistake": "The test plan's 'past buyers excluded' and 7-day read at 6+ purchases threshold are reasonable but the ₹1,100/day cell budget may still be too thin for Meta's learning phase on a ₹1,515 CPA, and the owner is asked to confirm several items rather than getting a fully locked plan.",
+  "what_would_make_it_a_10": "Lock the test budget to a learning-phase-safe number without asking the owner to confirm five things, and state the gross-profit math behind the ₹1,515 bar rather than only cost per purchase."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Puts the money-first logic up front and ranks the first three well, with a clear per-trip maths concept that gives the owner a fresh price-reframe angle.",
+  "biggest_mistake": "Concept 6 invents 'about ₹292 a trip' from 'two flights a month is 24 trips a year' — but a bag is bought once, not per trip, so the arithmetic is a stretch that may mislead, and the test plan gives no ad-set structure or day-by-day read rules.",
+  "what_would_make_it_a_10": "Replace the invented per-trip maths with a claim that holds up, and give a concrete campaign structure with budget per cell and read dates instead of a loose 'three times blended CPA' rule."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is ready to hand to a media buyer tomorrow: it has the exact ad sets, daily budgets, read dates and cut rules, and every concept traces to a real review or survey line without inventing a number. Output 2 is smart but its per-trip maths is a claim I would not want to defend, and it leaves the test structure for me to work out."
+}

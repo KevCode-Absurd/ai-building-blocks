@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the more hand-off-ready plan (task table with owners and done-when, a phased budget that sums exactly to $30,000 with gated steps, and explicit no-raise/compare-to-Meta rules for Black Friday week), while Output 2 is analytically sharp on attribution but sets a $55 gate above its own $45 ceiling and never plans the Thanksgiving/Black Friday week it launches into."
+}

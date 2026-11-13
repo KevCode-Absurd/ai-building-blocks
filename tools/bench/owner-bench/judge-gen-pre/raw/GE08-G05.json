@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Systematically builds the application funnel and reviewer workload model around the 0.62 writing correlation to slash review hours in half.",
+  "biggest_mistake": "Leaving the hours strictly in UTC without translating them to target local times (like Singapore or Perth) makes the job post less immediately relatable to APAC candidates.",
+  "what_would_make_it_a_10": "Embed the specific customer prompt directly inside the job post copy and translate the UTC shift into local Asian-Pacific business hours."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Nails the 37signals voice completely while translating the data signals into actionable copy—specifically converting UTC to Singapore/Manila/Perth hours and providing a stellar customer email prompt in the post itself.",
+  "biggest_mistake": "Could explicitly remind reviewers to calibrate on the 'Writing for teammates' prompt just as they do for the customer email.",
+  "what_would_make_it_a_10": "A flawless output that could be published to basecamp.com/jobs right now."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both caught every single data signal and constraint, but Output 2 feels genuinely written by 37signals: it translates the UTC gap into local APAC hours (Singapore/Perth), puts the customer test email right in the job post, and crafts a prompt that tests both problem-solving and emotional de-escalation."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J06",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and complete, but Output 1's [X] cash-capacity placeholder and explicit 'fill in the real number before launch' instruction give the owner a concrete lever to cut the cash returns, whereas Output 2 only lists it as a to-confirm item."
+}

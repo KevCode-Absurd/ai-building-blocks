@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are excellent and ready to submit, but Output 1 ties every template to a clear flow with explicit timing, break-even math (₹45 per COD order, discount capped below it), and a fuller weekly dashboard with decision rules, while Output 2's ₹20 offer rationale and some metrics are slightly less rigorous."
+}

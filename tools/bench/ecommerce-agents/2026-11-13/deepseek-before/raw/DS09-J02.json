@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 has tighter, internally consistent kill/scale math ($114 kill line, 20-30% raises, attribution-correction factor applied to every rule) and a cleaner manual-first structure, while Output 2's higher $45/$55/$57 thresholds and Smart+ scale campaign dilute the parity-with-Meta test and its gates are looser."
+}

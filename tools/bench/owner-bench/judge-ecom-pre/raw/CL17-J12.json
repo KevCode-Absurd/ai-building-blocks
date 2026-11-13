@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A tight end-to-end system. It has a tiered no-reply rule (metro ships, tier 2 and 3 get a call, a 48-hour hold piloted in tier 3), a 10% prepaid holdout, a three-button after-hours bot, and a smart idea to move one agent to a 2 pm to midnight shift for the 31% evening wave.",
+  "biggest_mistake": "The prepaid nudge is the same weak, no-incentive message for every pincode group, so it barely moves tier 3, where half the RTO money sits. The plan also gives no RTO cost by group. It rounds RTOs to 6,300 instead of the 6,240 the group data gives, and submitting pay_online_option as Utility risks reclassification.",
+  "what_would_make_it_a_10": "Work out RTO cost per COD order by pincode group, then size a stronger prepaid incentive (or small advance) for tier 3 and tier 2, sent as Marketing or in-window chat."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Builds the whole plan on the per-group money. The RTO table is exact (1,512 / 1,681 / 3,047 parcels; ₹27 / ₹41 / ₹70 loss per COD order). Tier 3 ships only after a yes, and the ₹30 and ₹20 prepaid offers are sized to break-even refusal rates (17% and 11%) with the working shown.",
+  "biggest_mistake": "After-hours handling is thin: the away message has only a Track order button, with no size, COD or exchange buttons. The scorecard also drops after-hours response time, even though 31% of chats arrive then.",
+  "what_would_make_it_a_10": "Add a multi-button after-hours bot (track, size help, COD check, exchange) with an evening-response metric, and consider an evening agent shift."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 shows me exactly where the RTO money leaks by pincode group and spends a sized prepaid incentive only where it pays. It also adds a missed-delivery fix and skips confirmation for proven repeat buyers. Output 1 is solid but runs one soft nudge for everyone."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranks channels by retained users with the math, then builds the whole timeline and go/no-go gate around the migration risk the data exposes.",
+  "biggest_mistake": "The X post and email are a bit plain and the plan's tables are dense; nothing seriously wrong, just less craft in the customer-facing voice than the brand asks for.",
+  "what_would_make_it_a_10": "Make the X thread and email feel more like Raycast (playful, one crisp demo) and trim the date table to the steps that matter."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Also ranks by retention, adds sharper gates (1,000 beta migrations, top-200 extension test, staged rollout thresholds) and gives a multi-post X thread with real craft and specific author credits.",
+  "biggest_mistake": "Still has bracketed placeholders ([first name], [Opens in __ ms], [author]) and a Product Hunt day that adds sequencing risk; a speed post tied to a made-up number is hinted at.",
+  "what_would_make_it_a_10": "Fill or clean out the placeholders and lock the speed claim to a measured number so nothing in the drafts promises an unshipped figure."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the channel ranking and migration gate right, but Output 2's gates are sharper and its X thread feels more like Raycast; Output 2 just needs its placeholders cleaned before it can ship."
+}

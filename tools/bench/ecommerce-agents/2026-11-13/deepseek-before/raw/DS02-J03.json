@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both deliver eight distinct, on-claim concepts, but Output 2 is more immediately usable (headlines with character counts, extra hook variants, safe zones, creator partnership label) and its test design (one ad set per concept, CPA-multiple spend thresholds, clear keep/cut rules) is materially sounder than Output 1's equal-budget single campaign, which lets ads compete in the auction; Output 1's cost-per-trip concept and correct ₹292 arithmetic are the one place it edges ahead."
+}

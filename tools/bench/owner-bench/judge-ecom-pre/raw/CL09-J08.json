@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It has a clean Monsoon Dark track and a delivery gate for ex-subscribers, and every value line checks out from ₹557 and ₹442 to one clear net figure of about ₹8.5 lakh.",
+  "biggest_mistake": "It puts 91 to 180 days first and gives the 9,000 at-risk customers at 46 to 90 days only a day-28 nudge after future orders, so the cheapest group to win back gets no wave of its own.",
+  "what_would_make_it_a_10": "Make the 46 to 90 day group wave one with a no-discount reminder, and check whether each group's holdout is big enough to read lift on its own."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It starts with the just-lapsed group and Monsoon Dark buyers with no discount. It splits ex-subscribers by cancel reason behind a 95% on-time gate, and it gives a break-even rule for the code (more than 21% of code orders must be true extras), a holdout size check, and the value of each point of repeat rate.",
+  "biggest_mistake": "The Monsoon Dark draft sends people to a brew quiz without naming the closest roast still on sale, and the value is split across separate lapsed, subscriber and repeat-rate figures with no single total.",
+  "what_would_make_it_a_10": "Name the closest match to Monsoon Dark in the draft and add up one headline gross profit figure, net of discounts and WhatsApp cost."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both catch the dead blend and the courier problem. The second one also goes after the nearly lapsed customers first, shows me exactly when a discount pays for itself, and is honest about which results the holdout can actually prove."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 makes cleaner test design (one variable per ad across all four combinations, with Round 2 sequencing) and better use of the full copy set, while Output 2 fixes headline/description and buries its strongest angles (price, label-reader) in Round 2 despite a tighter brief on limits."
+}

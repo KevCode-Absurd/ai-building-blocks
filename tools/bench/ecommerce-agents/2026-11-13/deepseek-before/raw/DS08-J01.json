@@ -1,0 +1,20 @@
+{
+ "job": "J01",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1's arithmetic is internally consistent and checks out end-to-end (₹394 break-even, ₹5.6L 14-day share, ₹383/₹362 per-set break-evens, profit bridge and reserve all reconcile), and it makes the money-correct call to cut the Razor Starter Kit (₹463 CPA vs ₹366 break-even, losing ~₹20k/fortnight), whereas Output 2 keeps that known loser at ₹4,000/day and contains several arithmetic slips in its 'current daily' figures (claims ₹44,900/day when the correct sum is ~₹41,400, with wrong UGC and Gift daily values)."
+}

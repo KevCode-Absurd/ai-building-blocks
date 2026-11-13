@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the three big signals: relaunch the paused 'Dad’s razor vs mine' winner, cut the COD-heavy Starter Kit, and split Women Body Razor to 25–34 instead of killing it.",
+  "biggest_mistake": "The ASC scale gates use ₹300–₹320 even though the Shopify-adjusted safe target is ₹282, so it could knowingly scale into first-order losses.",
+  "what_would_make_it_a_10": "Make every budget and daily rule use the Shopify-adjusted, after-RTO break-even numbers, especially ASC and Women 25–34, and tighten the scale gates accordingly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the right money call by using Shopify-adjusted orders and ad-set-level COD/RTO economics, not Meta ROAS, and it keeps reserve spend locked until ASC hits ₹282.",
+  "biggest_mistake": "It weakens the finished-work brief by ending with confirmations and leaving the prepaid reward as 'you decide the offer'.",
+  "what_would_make_it_a_10": "Remove the confirmation asks, state the exact first-week prepaid/COD test if included, and make the reserve release plan fully launch-ready."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would rather run because it is stricter on first-order gross profit and attribution, which is the main trap in this account. Output 1 is strong, but its scale rules drift back toward Meta-count economics and could spend above the real break-even."
+}

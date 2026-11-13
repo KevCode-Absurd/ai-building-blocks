@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 7,
+  "commercial": 6,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers the complete brief with sensible, legally safe copy and a workable 14-day flow, while Output 2 invents a 7-day code expiry and a signed co-founder email without basis, adds a questionable WhatsApp statistic, and leans on unverified assumptions that complicate use."
+}

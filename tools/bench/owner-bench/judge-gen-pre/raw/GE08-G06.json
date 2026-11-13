@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless arithmetic and rigorous synthesis that isolates agencies as 60% of Semrush losses while identifying internal churn drivers.",
+  "biggest_mistake": "The first step for Move 5 is a bit generic compared to the sharp, highly operational first steps in Moves 1 through 4.",
+  "what_would_make_it_a_10": "Already a 10; making Move 5's first step as concrete as the others would be perfection."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Superb data-led clarity, including sample size sizing for Move 3 and the sharp suggestion to pull clients' Google Ads data into the reporting layer to blunt PPC churn without building competitive PPC tools.",
+  "biggest_mistake": "Separating the calculations into a distinct 'How the numbers were worked' sub-block breaks the reading flow slightly compared to weaving them into the narrative.",
+  "what_would_make_it_a_10": "Integrating the math breakdown directly into the loss/win narrative rather than appending it under a separate methodology header."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are masterful, nailing the exact data signals, arithmetic, and prioritized moves. Output 2 takes a slight win due to its exceptional scannability, sample-size testing rigor on Move 3, and the clever insight to integrate Google Ads data into agency reporting."
+}

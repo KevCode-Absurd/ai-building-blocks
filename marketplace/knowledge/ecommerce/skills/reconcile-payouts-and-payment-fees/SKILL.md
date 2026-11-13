@@ -110,7 +110,7 @@ For each recoverable gap above a floor (practitioner default: the larger of 10 d
 
 ## Output
 
-**One-screen summary:** total sales, total received in the bank, total gap split into timing and real money; the five largest real gaps; effective fee rate per gateway against agreed; chargeback rate; money recoverable through claims; and a short "To confirm" list.
+**One-screen summary:** total sales, total received in the bank, total gap split into timing and real money; the five largest real gaps; effective fee rate per gateway against agreed; chargeback rate; money recoverable through claims; and up to three assumption lines where a missing record changes a total.
 
 **Gap register:**
 

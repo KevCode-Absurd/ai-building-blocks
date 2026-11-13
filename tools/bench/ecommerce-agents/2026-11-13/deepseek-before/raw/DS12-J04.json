@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more ready to shoot and compliant: it builds paid-partnership disclosure into every script and its creator brief covers rights, dates and deliverables, while Output 2 omits disclosure from the scene tables and conflicts with its own 'rank every flavour' script by letting creators skip disliked flavours."
+}

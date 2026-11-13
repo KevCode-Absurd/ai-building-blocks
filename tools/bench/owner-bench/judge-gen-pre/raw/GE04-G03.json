@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Translating the $0.9M compute cost into a 9-point margin hit on MRR, proving the core business margin actually improved.",
+  "biggest_mistake": "The paragraph explaining the AI app-builder traffic is slightly dense with numbers and could have been broken into bullets.",
+  "what_would_make_it_a_10": "Use bullet points for the AI traffic stats to make them scannable, and add forwardable blurbs to the angel asks."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 10,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Including 'Forwardable' blurbs for the asks is a brilliant, frictionless way to get angels to act.",
+  "biggest_mistake": "Treating all three asks as intro requests ignores the lead partner's role and misses a chance for strategic help.",
+  "what_would_make_it_a_10": "Give the lead partner a strategic ask based on their portfolio, and include the MRR margin math to explain the 7-point drop."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both drafts astutely caught the hidden 2.6% direct database growth. Output 1 wins by proving the compute cost fully explains the margin drop, and by perfectly tailoring a strategic ask to the lead partner."
+}

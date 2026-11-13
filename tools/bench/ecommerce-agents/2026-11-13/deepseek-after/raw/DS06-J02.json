@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 6,
+  "craft": 9,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "O1 keeps ad groups large enough to learn and its budget/kill rules reconcile cleanly to $30k, while O2's 25-purchase learning bar is wrong for TikTok and makes its four $150 ad groups structurally unsound."
+}

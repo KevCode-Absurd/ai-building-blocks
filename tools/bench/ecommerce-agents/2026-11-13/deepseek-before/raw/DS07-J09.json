@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and numerically sound, but Output 1 delivers a more complete, explicitly ranked plan with a clearer stop list, weekly scorecard, and timeline, while Output 2's per-1,000 framing is slightly less decision-ready for the owner."
+}

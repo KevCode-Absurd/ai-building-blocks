@@ -1,0 +1,20 @@
+{
+ "job": "J01",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1's per-ad-set break-even ROAS correctly scales with each set's own order value (2.3/0.78 and 2.3/0.50), making its scale/hold/cut calls arithmetically sound, while Output 2 applies a flat ₹394 CPA and a 0.72 strict multiplier that understate break-even and mislabel the DPA as efficient; Output 1 also gives a cleaner reserve rule and a sharper COD lever."
+}

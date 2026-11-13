@@ -137,7 +137,7 @@ Confirm each landing page's price, offer and stock against the copy; rerun the c
 3. **Copy deck:** concept ID, variant, primary text, characters, headline, characters, description, characters, CTA.
 4. **Visual briefs**, one per concept.
 5. **Test plan table:** ad set name, concepts, daily budget, purchases reachable, read metric, start date, read date, keep or cut rule, store-side check.
-6. **To confirm:** a short list for the owner.
+6. **Assumptions:** one line each, at most three, only where an unknown changes what to do.
 
 Save it all as `campaign-brief.md`.
 

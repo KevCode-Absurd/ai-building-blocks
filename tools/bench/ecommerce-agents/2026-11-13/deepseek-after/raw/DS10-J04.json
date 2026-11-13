@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is more complete on the things that actually protect the client — FTC endorsement, spoken + on-screen disclosure with #ad not just #gifted, music licensing, taster release, rights/dates/pay and precise safe zones — while staying within the word limit and adding an explicit drinkolipop.com CTA; Output 1 is clean and tight but thinner on legal and production detail."
+}

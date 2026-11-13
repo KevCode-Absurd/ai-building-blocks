@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the real causes: Meta cost inflation, linen returns, and the switched-off email capture/flows, then turns them into clear stop/start actions.",
+  "biggest_mistake": "The impact sizing is less disciplined than it could be, with some targets like flow recovery left as 'pre-January level' rather than a contribution target.",
+  "what_would_make_it_a_10": "Add a tighter contribution-margin model with estimated point impact for each move and clearer decision thresholds by week."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the board-ready version: proved causes, gross-profit math, ranked moves by contribution points and effort, weekly owners, triggers, and stop rules.",
+  "biggest_mistake": "The Meta tracking check is a bit light, leaning on post-purchase attribution rather than explicitly reconciling platform data to store orders after the platform move.",
+  "what_would_make_it_a_10": "Strengthen the tracking audit and make the flow/sign-up revenue targets less assumption-heavy by tying them to the pre-January baseline."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are very usable, but Output 2 is the one I would rather hand to the team and board because it ranks moves in contribution points, gives thresholds, and shows more of the working behind the 90-day target."
+}

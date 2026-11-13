@@ -127,7 +127,7 @@ For each variant, list every setting with lock or vary and its value. Make a con
 2. **Style results table (path A):** style, ads, spend, store-side purchases, cost per purchase, production cost per ad, gross profit per ad, enough data (yes or no).
 3. **Direction spec per variant:** variant ID, concept ID, placement, mood, lighting, composition, angle, palette, photo style, depth, motion, setting world, who appears, lock or vary per field.
 4. **Contact sheet** of the variant previews.
-5. **To confirm:** the owner's calls on locked settings.
+5. **Assumptions:** where a locked setting was not given, the setting used and why, one line each, at most three, only where an unknown changes what to do.
 
 ## Common mistakes
 

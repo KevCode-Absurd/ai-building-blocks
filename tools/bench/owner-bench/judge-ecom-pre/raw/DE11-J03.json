@@ -1,0 +1,29 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I'd pay for: it runs the numbers further (spend, days, read rules, budget as a share of last month), reads the scratch objection and the colour stock in the concepts themselves, and adds a fresh 'four details' angle Output 1 doesn't have. Output 1 is strong on the strategy but leaves more for me to work out and never touching the dark-colour fix inside the concepts."
+}

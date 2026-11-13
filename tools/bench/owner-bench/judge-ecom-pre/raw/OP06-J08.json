@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the two real causes in the data—the discontinued Monsoon Dark blend and the subscription delivery failure—and turns them into separate, practical win-back tracks with holdouts and profit math.",
+  "biggest_mistake": "It excludes WhatsApp reachable counts from the targeting table and makes a few debatable assumptions on timing and future repeat value that are not tied as tightly to the brief as they could be.",
+  "what_would_make_it_a_10": "Add channel-level reachable counts including WhatsApp, tighten the value model to incremental gross profit only, and replace the calendar dates with relative launch timing."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 5,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It gives sensible segment-specific messaging, especially for Monsoon Dark and ex-subscribers, and includes a proper holdout-based measurement plan.",
+  "biggest_mistake": "It misses the biggest cheap win by not prioritising the 46 to 90 day at-risk group, and several numbers and assumptions are shaky enough to weaken trust in the plan.",
+  "what_would_make_it_a_10": "Re-rank the target order around the 46 to 90 day group, correct the reach and profit math, and ground every assumption in the supplied data rather than new invented rates."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads the data more like an owner would: it starts with the cheapest and clearest wins, treats Monsoon Dark and subscriber delivery as distinct problems, and shows more reliable unit economics. Output 2 has good ideas, but its wrong priority order and looser math make it harder to trust with budget."
+}

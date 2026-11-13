@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are arithmetically sound and fully specified, but Output 1 wins on experimental design and priority logic: it sizes tests mobile-only with the traffic maths, runs delivery date and EMI/COD as a 2x2 that preserves each main effect's 11.9% MDE while exposing any clash, finishes in 8 weeks instead of 12, ranks the checkout-stage leaks above the thinly-evidenced trial line, and ships the event tracking the later tests need, whereas Output 2's 12-week calendar and trial-at-#2 ranking are less well grounded even though its delivered-orders-per-visitor metric for the COD test is the sharper commercial call."
+}

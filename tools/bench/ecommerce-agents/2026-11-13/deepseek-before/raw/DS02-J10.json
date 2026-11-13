@@ -1,0 +1,20 @@
+{
+ "job": "J10",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are arithmetically sound, but Output 1 stress-tests the threshold with a cautious and a bad case, gives a cannibalisation break-even for the Glow Duo (4 in 10), explains why ₹849 fails and flags the 'free' claim rules, whereas Output 2 stakes its recommendation on an unsupported 40% top-up rate and offers no downside case, though its test protocol (no alternate weeks, region split) is slightly cleaner."
+}

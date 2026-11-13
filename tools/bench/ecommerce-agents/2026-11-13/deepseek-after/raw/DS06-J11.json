@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the funnel maths and ₹6,090 gross profit per order right, but Output 1 turns that into a tighter 8-week plan with a correctly-powered 2×2 for the delivery-date and EMI/COD tests and a per-test profit-at-stake figure, while Output 2 takes 12 weeks, hard-codes an unverified 23 Nov–14 Feb calendar, and calls tests 2–5 a profit-ranked order when their stake is identical."
+}

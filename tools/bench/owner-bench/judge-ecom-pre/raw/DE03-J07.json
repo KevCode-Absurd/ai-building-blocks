@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It starts from the owner's real numbers — sunscreen clicks but doesn't convert, niacinamide does — and builds the flow and email 4 around the exact white-cast/stickiness objections, with each email doing one calm, on-brand job.",
+  "biggest_mistake": "Sending the plain-text 'code ends tomorrow' note signed by 'Mohit, Co-founder' invents a specific person and signature the brief never confirmed, and the WhatsApp template uses placeholder IDs rather than Klaviyo-ready syntax.",
+  "what_would_make_it_a_10": "Confirm the code expiry, sign-off and WhatsApp opt-in as real, and give the WhatsApp template in submittable form with the actual variable mapping."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Clear structure and a sensible branch by quiz answer, with a gentle short-routine email 5 that fits Arjun's 'just tell me what to use'.",
+  "biggest_mistake": "Email 5 builds a fixed three-product routine and quotes ₹1,297/₹1,167 for everyone, which contradicts the 'one product, start slowly' advice and pushes all three products at beginners — against the brand's own rule and the brief.",
+  "what_would_make_it_a_10": "Keep the series one-product-at-a-time, fix the bundle pricing contradiction, and use the sharper sunscreen-click data as the organising insight rather than a flat summary."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is written by someone who read the store's numbers and built the flow around the products and objections the data actually shows; Output 2 looks tidy but its three-product bundle email and less precise handling of the sunscreen problem would make the owner rework it."
+}

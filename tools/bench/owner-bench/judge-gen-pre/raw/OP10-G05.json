@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts directly on the strongest signals: overnight UTC coverage, writing as the best predictor, no experience requirements, and the weekend rotation made plain.",
+  "biggest_mistake": "It slightly over-delivers and ends with a few 'to confirm' items instead of fully final choices, which makes it feel a touch less ready to publish.",
+  "what_would_make_it_a_10": "Trim it to the 1,100-word limit and turn the final confirmations into stated assumptions or decisions."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The job post is calm, candid, publishable, and puts salary, hours, weekend rotation, and the no-degree/no-tool-experience message in the right places.",
+  "biggest_mistake": "The application plan is a little thinner than it could be and uses a weaker 'why this job' question instead of a second concrete evidence prompt about fixing problems.",
+  "what_would_make_it_a_10": "Replace the motivation question with a practical support/problem-solving prompt and make the later hiring steps and reviewer rules as operational as the job post."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 1 is more useful for the hiring team tomorrow: it gives a sharper scorecard, a stronger application filter, blind-review mechanics, and workload math tied to the last round. Output 2 has the cleaner post, but Output 1 better solves the owner's operational problem."
+}

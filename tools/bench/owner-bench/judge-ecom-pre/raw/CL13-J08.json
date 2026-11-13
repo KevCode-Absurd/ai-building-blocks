@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads all three signals in the data: a Monsoon Dark track, a delivery gate before ex-subscribers are contacted, and 46 to 90 days handled as at-risk. Behind that sit group sizes that reconcile, a 21% break-even for the code, and a 10% holdout with a sample-size check.",
+  "biggest_mistake": "It is dense and likely runs slightly over the 1,500-word cap. The 'even spread' assumption for the 68 to 90 day group is also a guess.",
+  "what_would_make_it_a_10": "Trim it under the word limit and name the closest roast to Monsoon Dark, so the first message needs no later fill-in."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It gates ex-subscribers on delivery being fixed, sets up a Monsoon Dark match track, and adds a day-28 reorder nudge and a hot-brew angle for cold brew buyers.",
+  "biggest_mistake": "The value case rests on optimistic invented lifts (two orders per win-back in 12 months, 4 to 8% lift). Its claim that a 1.5-point lift is detectable on a 1,310 holdout is not supported, and there is no break-even test for the discount.",
+  "what_would_make_it_a_10": "Replace the merge-field drafts with finished copy, show the discount break-even, and use conservative, defensible lift numbers."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more rigorous and closer to launch-ready: sizes reconcile, break-even logic is explicit, drafts are finished, and the holdout maths is sound. Output 2 has good ideas, but it uses placeholder-heavy drafts and a rosier ₹8.5 lakh estimate built on guessed lifts."
+}

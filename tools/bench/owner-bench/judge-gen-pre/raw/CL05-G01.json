@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It covers both personas, with a GA4 migration page for Maya and an agency page for Tomas, and it adds a docs-to-trial prompt idea. It also fits 12 pages into the capacity and has a concrete Monday-to-Friday week one.",
+  "biggest_mistake": "The forecast is inflated. It assumes /vs-google-analytics goes from position 4.2 to 9% CTR, borrowing the rate from a branded 'matomo vs plausible' query, which gives +100 trials. Adding a speculative +25 from docs brings the 'ceiling' to 175 trials a month.",
+  "what_would_make_it_a_10": "Use realistic click-rate targets for each query, show the arithmetic for every trial forecast, and give dates and clear 'done when' checks for each month."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 6,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "as is",
+  "biggest_strength": "Every trial forecast shows its working from the owner's own numbers (for example 58,000 × 1.5% × 3.2% ≈ 28). The calendar is dated, week one has a ready title and description, and the cut/keep/scale rules give clear checks after four weeks.",
+  "biggest_mistake": "Maya's migration fear and Tomas's agency need are handled only as sections inside other pages, not as their own pages. The cookie banner post waits until month 2, even though the owner would want it early.",
+  "what_would_make_it_a_10": "Add a stand-alone page for Maya's 'old data' fear and one for the agency buyer, and bring the cookie-banner retitle into week one."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2's numbers are honest and traceable, its plan is dated and fits capacity, and its decision rules let the team run it tomorrow. Output 1 has good extra ideas but promises 175 extra trials a month on optimistic CTR assumptions."
+}

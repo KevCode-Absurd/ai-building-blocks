@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 isolates the variable correctly (only primary text changes, headline and description fixed, auto-text-variations off, concrete spend/kill rules) so the four launch ads actually answer 'which reason to buy works', while Output 1 changes primary, headline and description together and so cannot attribute its own result — though Output 1's price-led launch test and stricter compliance list are real compensations against Output 2's minor issues (a 'to confirm' list the brief forbade and a dubious 'no claim in more than two texts' check)."
+}

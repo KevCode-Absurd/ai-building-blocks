@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the in-app checkout bug first, sizes it honestly at about ₹34 lakh gross profit a month with the ceiling caveat, and ranks the five tests by evidence from the owner's own data.",
+  "biggest_mistake": "The test maths is dense and a 10% detectable effect on all traffic still needs four weeks of two concurrent tests, so the calendar is ambitious and the owner may trip on the formula block.",
+  "what_would_make_it_a_10": "Give the ranked table the money each test stands to win in gross profit so the owner can see the order is ranked by rupee impact, not just by chat topic."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clearest read of the funnel by browser and device, with a sharp line on the pop-up errors nearly matching the in-app carts that never reach checkout, and a light 2-week test 5 on add-to-cart.",
+  "biggest_mistake": "Test 5 bundles the hero image and moving reviews above the tiles into one test, so if it wins or loses the owner cannot tell which change did it, and the 6% detectable effect on a 4.0% add-to-cart baseline is optimistic for two weeks.",
+  "what_would_make_it_a_10": "Split the image and review changes into separate, cleanly measured tests or ship the reviews block without testing, and show the rupee impact of each ranked test."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both fix the bug first and rank on the same evidence, but Output 1 ranks tests by expected profit, keeps the reviews and trial as ship-without-testing, and gives a more disciplined sample-size story the owner can defend. Output 2 reads more easily but bundles two changes into Test 5, which muddies the read."
+}

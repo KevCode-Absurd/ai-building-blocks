@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives a cleaner one-variable test design plus real decision rules (3x target CPA spend, 3 purchases keep / 2 one more round / 0-1 cut, 7-day click, auto-text-changes off), which makes it genuinely runnable Monday, while Output 2 changes text, headline and description together so the learning is confounded and its '30+ purchases per ad' bar is unrealistic for a ₹540 box."
+}

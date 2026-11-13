@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers all eight concepts with tighter, ready-to-use hooks and copy, plus a concrete test-spend decision rule and sharper sequencing logic, while Output 2's cost-per-trip math (₹292/trip) is a reasonable but unsupported framing and its test plan is vaguer."
+}

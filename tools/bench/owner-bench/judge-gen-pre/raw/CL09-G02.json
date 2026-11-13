@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting with sharp seat math (733 paid seats per 1,000 signups against 12 for solo coaches), moves security up to section 4 next to the demo path, and answers the PTO worry honestly instead of overpromising.",
+  "biggest_mistake": "Every section repeats the same 'Book a demo' button, and there is no slot for real customer proof once it exists, so the page leans entirely on internal stats.",
+  "what_would_make_it_a_10": "Add a clearly marked slot for a real recruiting customer quote or logo near the final form, and soften 'that is your Monday gone' into something Priya would say herself."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The segment math is correct and well compared (0.73 seats per signup against 0.17 for the next best segment), routing is explicitly moved up, and every unknown is bracketed rather than invented.",
+  "biggest_mistake": "Security sits at section 6 of 9, behind three feature sections, and the hero subhead promises round robin 'skips anyone who is busy or off' without the condition that time off must be on the calendar.",
+  "what_would_make_it_a_10": "Cut to seven sections, move security up next to the demo path, and drop the open source proof line from the hero so it stays supporting proof."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both pick the right segment and test pain against fairness. Output 1 is tighter: it puts security where Priya needs it, is honest about the PTO limit, and gives me a test I can size and run."
+}

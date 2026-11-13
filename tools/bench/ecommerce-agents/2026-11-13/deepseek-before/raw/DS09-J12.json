@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives cleaner, rule-compliant templates with explicit timing and a sharper ₹45 break-even discipline, while Output 2 adds useful extras (holdout test, call capacity) but risks over-offering and slightly muddier offer logic."
+}

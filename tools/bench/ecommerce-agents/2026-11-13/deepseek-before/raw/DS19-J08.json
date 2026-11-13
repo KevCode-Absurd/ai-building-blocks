@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 has a sharper, brand-true voice (no discount as default, gift for full-price buyers, an honest 'should we keep writing?' break-up email), a cleaner 68-day lapse line tied to the 34-day median, and a more disciplined holdout/decision rule; Output 2 is solid but leads with discount ladders and a heavier, more generic structure."
+}

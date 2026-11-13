@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more complete and operational: it specifies awareness levels for every concept, gives exact hooks, headlines and character-counted primary text, adds a concrete testing rule with spend multiples and cut thresholds, and flags the one-finger claim risk, while Output 2's cost-per-trip math is sound but its test plan is vaguer and one concept (old bag) drifts toward implied competitor contrast."
+}

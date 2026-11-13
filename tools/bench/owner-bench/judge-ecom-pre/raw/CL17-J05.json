@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly reads 'Flip the pack' as fatigued, not failed, relaunches it in fresh words, and puts the unused taste review phrase into the first launch set.",
+  "biggest_mistake": "There is no taste headline among the six, and two of the six primary texts (P1 and P5) cover the same front-of-pack angle. Ads A and C also change primary text, headline and description together, so the 'fact vs who it speaks to' test can't isolate its cause.",
+  "what_would_make_it_a_10": "Add a taste or texture headline, swap the second transparency text for a true sixth angle, and hold headline and description fixed so each pair tests one variable, with a budget and duration attached."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The test design is clean: in each pair only the primary text changes, so the result is readable. The budget is checked against real spend (₹5,70,000 ÷ 90 = ₹6,333 a day) and against how many purchases ₹10,500 per ad buys, with numeric keep and cut lines.",
+  "biggest_mistake": "The taste headline (H4 'Dense and chewy, not chalky') is written but not used in the launch four. The taste ad A2 runs with the protein headline, which dulls the taste-vs-transparency test.",
+  "what_would_make_it_a_10": "Run the taste ad with H4 and a matching transparency headline, or explicitly keep headlines fixed across the pair with a stated reason, and show at least one line of blunt wit in each angle."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both catch the paused winner and the taste gap. Output 2 covers six real angles, gives taste a headline, and hands me a controlled test with a budget and numeric kill and keep rules that I can launch Monday."
+}

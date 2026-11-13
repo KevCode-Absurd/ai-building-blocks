@@ -1,0 +1,20 @@
+{
+ "job": "J01",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "tie",
+ "margin": "slight",
+ "reason": "Both correctly compute ~₹394 break-even, reconcile Meta vs Shopify counts, give per-ad-set money decisions and day-to-day rules; O1 is tighter on budget discipline and O2 slightly stronger on fatigue/refusal guardrails, so neither clearly wins."
+}

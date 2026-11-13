@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 separates proven from to-check more rigorously, quantifies each move with low/likely/high contribution, gives explicit test-and-rollout decision lines and a sale-week cost ceiling, while Output 2 is solid but less precise on impact and lacks the same kill/scale thresholds."
+}

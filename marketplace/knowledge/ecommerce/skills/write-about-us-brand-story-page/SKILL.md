@@ -32,7 +32,7 @@ Required:
 
 Optional: photos of the founder, team and workshop or supplier (owned or licensed), press links, the brand's opponent statement, early product versions.
 
-If the founder will not be interviewed, use their past posts, emails and talks, and mark every story line "to confirm". Publishing needs draft access (level 2) and the founder's and client's yes.
+If the founder will not be interviewed, use their past posts, emails and talks, and keep only story lines one of those sources supports, noting the source beside each in the working file. Publishing needs draft access (level 2) and the founder's and client's yes.
 
 ## Before you start: the gates
 
@@ -84,7 +84,7 @@ If the founder will not be interviewed, use their past posts, emails and talks, 
 
 **Interview log:** question, answer summary, exact quote used, timestamp.
 
-**To confirm:** facts awaiting documents, permissions for names and photos.
+**Left out:** each fact with no document behind it, one line each. Each named person or photo carries one line beside it: "permission before publishing".
 
 ## Common mistakes
 

@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 has tighter, internally consistent kill/scale math ($114 = 3x$38, 25-purchase learning threshold, $27.10 break-even) and a cleaner phased structure with explicit launch gates, while Output 2 introduces a softer $45/$55 ceiling that muddies the parity test and its kill rule ($76 with no purchase) is more arbitrary."
+}

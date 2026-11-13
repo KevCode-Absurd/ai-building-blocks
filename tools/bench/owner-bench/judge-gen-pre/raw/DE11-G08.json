@@ -1,0 +1,29 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 7
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 checks the key protection number (Team 8+ accounts with one active user) before betting the plan, gives a cleaner break-even of 1 in 6, and its revenue math and test sequencing are more honest. Output 1 is strong and has a better switcher-focused test, but its headline $249k vs the owner's $257k and the heavier reliance on guessed churn make it the less trustworthy of the two."
+}

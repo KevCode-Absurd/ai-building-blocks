@@ -38,7 +38,7 @@ A sales sequence is a short conversation with one person who has shown some inte
    5. *Break the habit:* compare the cost of carrying on as now with the cost of acting.
    6. *Decide:* a plain summary of the offer, the real deadline if there is one, and an easy "not for me" option.
 4. **Write each email** with: subject line, preview text, one idea, one link or button, and a plain sign-off from a real person. Short paragraphs. The call to action names the outcome.
-5. **Subject lines:** specific and honest. Use the reader's words. No fake "Re:" or "Fwd:", no false urgency, no bait that the email does not pay off. Write two per email for testing.
+5. **Subject lines:** specific and honest. Use the reader's words. No fake "Re:" or "Fwd:", no false urgency, no bait that the email does not pay off. Write one final subject line per email, within any character limit in the brief. If the brief asks for options, label them as options below the email, never inside the subject field, each within the same limit.
 6. **Timing:** space the first three emails a day or two apart, then slow down. Put the decision email close to any real deadline, not before it.
 7. **Compliance and deliverability:** a working unsubscribe link in every email. Gmail requires one-click unsubscribe for bulk senders (over 5,000 messages a day to Gmail) since February 2024; most email platforms handle it. Any deadline or limited quantity must be real. Testimonials must be real and permissioned.
 8. **Measure:** judge by clicks, replies and sales per email. Open rates are unreliable because Apple Mail Privacy Protection loads images for many readers whether or not they open.
@@ -55,11 +55,11 @@ A sales sequence is a short conversation with one person who has shown some inte
 
 ## Output format
 
-1. **Sequence plan:** table with email number, day, job, force addressed, subject line options, call to action.
+1. **Sequence plan:** table with email number, day, job, force addressed, subject line, call to action.
 2. **Stop rules and segment rules.**
-3. **Full copy** for each email: subject A and B, preview text, body, button text, sign-off.
+3. **Full copy** for each email: subject line, preview text, body, button text, sign-off.
 4. **What to measure** and what would make you change the sequence.
-5. **Assumptions** and anything the client must confirm (deadline, guarantee terms, permission for quotes).
+5. **Assumptions:** at most three lines, only those that change what to do. Where the law needs a sign-off (such as permission to quote a customer), put one line next to the email it affects.
 
 ## Example of good output (short)
 
@@ -67,13 +67,13 @@ A sales sequence is a short conversation with one person who has shown some inte
 
 **Sequence plan**
 
-| # | Day | Job | Force | Subject options | CTA |
+| # | Day | Job | Force | Subject | CTA |
 |---|---|---|---|---|---|
-| 1 | 0 | Prepare for the taster | Pull | "What to wear on Saturday (and what not to)" / "Your taster: 3 things to know" | Add to calendar |
-| 2 | 1 after taster | Celebrate the first pot | Pull | "Your pot goes in the kiln on Tuesday" / "What happens to your pot now" | See the six-week course |
-| 3 | 3 | Answer "I'm not artistic" | Anxiety | "Most of our students said this first" / "Nobody arrives knowing how" | Read three students' first pots |
-| 4 | 6 | Habit: "I'll do it next term" | Habit | "Next term starts in 9 days" / "Why we cap courses at 8" | Book my place |
-| 5 | 8 | Decide | Push | "Last 2 places for the March course" (only if true) / "Course starts Monday" | Book my place, or tell us not now |
+| 1 | 0 | Prepare for the taster | Pull | "What to wear on Saturday (and what not to)" | Add to calendar |
+| 2 | 1 after taster | Celebrate the first pot | Pull | "Your pot goes in the kiln on Tuesday" | See the six-week course |
+| 3 | 3 | Answer "I'm not artistic" | Anxiety | "Most of our students said this first" | Read three students' first pots |
+| 4 | 6 | Habit: "I'll do it next term" | Habit | "Next term starts in 9 days" | Book my place |
+| 5 | 8 | Decide | Push | "Course starts Monday" | Book my place, or tell us not now |
 
 **Stop rules:** stop on booking, reply, or unsubscribe. Anyone who replies "not now" moves to the monthly newsletter.
 
@@ -97,4 +97,4 @@ If you finish the course and feel it was not for you, we refund the last two wee
 Maya
 [Business]
 
-*Why this works:* it answers the top doubt in the customer's own words, shows proof from people like the reader, states the guarantee plainly, and asks for one thing. Email 5 uses "last 2 places" only if that is true on the day it sends; otherwise it uses the real start date.
+*Why this works:* it answers the top doubt in the customer's own words, shows proof from people like the reader, states the guarantee plainly, and asks for one thing. Email 5 uses the real start date; a scarcity line such as "last 2 places" goes in only if it is true on the day it sends.

@@ -21,15 +21,18 @@ const allJobTypes = (): JobType[] => readdirSync(DATA).filter(f => f.endsWith(".
 
 test("WORK-METHOD.md is under 1,120 words and still covers every part of the method", () => {
   const words = METHOD.split(/\s+/).filter(Boolean).length;
-  // 1,000 until 13 Nov 2026; the pack lookup, outside-evidence checks and two-order blind pick added about 100.
+  // 1,000 until 13 Nov 2026; the pack lookup, outside-evidence checks and two-order blind pick added about 100. The
+  // owner rules (13 Nov) fit inside the same cap: their detail lives in the quality engine, and the whole one-shot
+  // reading list is held under 6,000 words in packs-grounded.test.ts.
   assert.ok(words < 1120, `WORK-METHOD.md has ${words} words`);
   const parts: [string, RegExp][] = [
-    ["spec sheet", /## 0\. Frame: the spec sheet[\s\S]*who must do what after seeing this[\s\S]*Acceptance tests:\*\* 5 to 7 questions/],
-    ["ground only what the job needs", /## 1\. Ground: only what the job needs\n\nCapture what the acceptance tests depend on, and no more/],
+    ["spec sheet", /## 0\. Frame: the spec sheet[\s\S]*who must do what after seeing this[\s\S]*\*\*Deliverables:\*\* exact count and format/],
+    ["signal pass", /\*\*Signal pass:\*\* the three strongest signals in the owner's data[^\n]*For each: its number, what it means for the decision, and where the deliverable acts on it\./],
+    ["ground only what the job needs", /## 1\. Ground: only what the job needs\n\nCapture what the signals and the decision depend on, and no more/],
     ["toolbox", /\nYour `toolbox\.md` lists what to use when; pick at your own discretion and open only what you pick\.\n/],
     ["real candidates", /make about 3 candidates of the part that decides the outcome, as real work, not descriptions/],
     ["outside chooser", /fresh reviewer who has not seen your reasoning[\s\S]*SAME-CONTEXT[\s\S]*one more round only/],
-    ["craft floor", /New framing of true facts, never new facts\.[\s\S]*Never a menu\.[\s\S]*never as a revenue forecast[\s\S]*5 real brand lines beside 5 of yours/],
+    ["craft floor", /New framing of true facts, never new facts\.[\s\S]*Never a menu\.[\s\S]*labelled as a projection; never in what a buyer reads, and never an invented result[\s\S]*5 real brand lines beside 5 of yours/],
     ["truth gate with sourced claims", /Each claim a buyer or the client will read \(prices, counts, ratings, policies, names, delivery times, quotes, product properties\): sourced or not\.[\s\S]*Remove each unsourced claim, or rewrite it to what the source says\. Never flag or footnote it\./],
     ["buyer can act", /\*\*Can the buyer act today\?\*\* Confirm the thing sold is live, in stock[\s\S]*say so in your first line/],
     ["format completeness", /\*\*Finish the format\.\*\* Ads:[\s\S]*Emails:[\s\S]*Plans:[\s\S]*Pages:/],
@@ -39,8 +42,18 @@ test("WORK-METHOD.md is under 1,120 words and still covers every part of the met
     // The Quality Engine v2.1 rules (11 Nov 2026 benchmark: 88% of 128 blind verdicts against a plain model).
     ["expert and playbook", /\*\*Expert and playbook:\*\*[\s\S]*One is the expert's standard playbook done excellently; clever ones must beat it\./],
     ["plain yardstick and final pick", /plain one-pass answer from the brief alone: the yardstick[\s\S]*a fresh reader chooses between anonymous final and plain/],
-    ["facts versus proposals", /\*\*Facts and proposals differ\.\*\*[\s\S]*"To confirm"[\s\S]*Keep explicitly requested template fields; otherwise no blanks or placeholders\./],
-    ["length against the plain answer", /\*\*Length follows use:\*\*[\s\S]*family profile[\s\S]*ceiling is never a target/],
+    ["facts versus proposals", /\*\*Facts and proposals differ\.\*\* Facts carry a source\. Recommendations are complete and decided\. Keep explicitly requested template fields; otherwise no blanks or placeholders\./],
+    ["length against the owner's limit", /\*\*Length follows use:\*\* aim at about 85% of the owner's limit, counted the way the owner counts; without one, the family profile[\s\S]*ceiling is never a target\. No sections about method or assumptions\./],
+    // The owner rules (13 Nov 2026 owner bench): finish one-shot work, combine complementary levers, act fully, project.
+    ["owner override", /^# Work method\n\n\*\*The owner comes first:\*\* if a rule in this pack would make the work worse for this owner's stated goal and data, follow the owner and say why in one line\./],
+    ["one-shot finish", /\*\*One-shot jobs\*\*[^\n]*decide every open point with the assumption a top practitioner would pick, and finish\. At most three assumption lines[^\n]*Never ask for confirmation, a yes, a sign-off or a choice inside the deliverable/],
+    ["legal sign-off next to its item", /A sign-off that law or a platform needs is one line next to its item\./],
+    ["fast path", /\*\*Fast path:\*\* when the brief carries the data, skip site capture, brand DNA, the taste brief and knowledge reading; read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill\./],
+    ["decide, combining complementary moves", /\*\*Decide\.\*\* One recommendation, which may combine complementary moves; a runner-up only when the options truly exclude each other\. Never a menu\./],
+    ["act fully", /\*\*Act fully\.\*\* If the deliverable keeps anything a signal says to cut, say why in one line with the number\./],
+    ["persona's real moment", /\*\*Fit the persona's real moment\*\* in every time, place, unit and channel \(quality engine step 4\)\./],
+    ["first screen", /its first screen holds the decision, the numbers the owner asked for by name, every piece of bad news, and the first move this week\./],
+    ["nothing left to the owner", /4\. What is left for the owner to do: questions, sign-offs, choices, placeholders\.[\s\S]*Fix 1, 3 and 4, cut 5,/],
     ["fresh facts", /Re-check on the day facts that change/],
     ["hand-over check tool", /Run `node tools\/check-handover\.mjs <deliverable> <plain answer> --profile <family>` and fix every hit\./],
   ];
@@ -52,6 +65,9 @@ test("WORK-METHOD.md is under 1,120 words and still covers every part of the met
   // The method names every axis candidates must differ on, as the shared list has them.
   assert.ok(METHOD.includes(`at least two of: ${CANDIDATE_AXES.join(", ")}.`));
   assert.doesNotMatch(METHOD, /job[- ]card|search the library|one-screen summary/i);
+  // No homework: "To confirm" appears only in the rule that forbids it, and the runner-up is never the default.
+  assert.deepEqual(METHOD.split("\n").filter(l => l.includes("To confirm")).map(l => /no "To confirm" list/.test(l)), [true]);
+  assert.doesNotMatch(METHOD, /acceptance tests?|runner-up in a line|revenue forecast|Please confirm/i);
 });
 
 test("craft weights are job-first in every family and carry the own-material row", () => {

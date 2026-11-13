@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both are numerically sound and cover every required element, but Output 2 matches each test's primary metric to the funnel stage it moves (add-to-cart for the picker/trial/hero at a 6.2% MDE in two weeks, orders per session for the checkout tests), packs the delivery-date and EMI/COD changes into one 2x2 without losing power, and finishes all five tests in eight weeks versus twelve, with better-tailored guardrails (return-to-origin, non-serviceable pincodes, LCP)."
+}

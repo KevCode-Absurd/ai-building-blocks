@@ -79,7 +79,7 @@ If a channel's current rules cannot be opened, do not write for that channel; no
 
 **Rollout plan:** wave, products, upload method, start date, read date, metric.
 
-**To confirm:** missing attributes, products excluded from marketplaces, brand placement exceptions.
+**Gaps:** products with a missing attribute (that attribute is left out of the title), products kept off a marketplace and why, one line each.
 
 ## Common mistakes
 

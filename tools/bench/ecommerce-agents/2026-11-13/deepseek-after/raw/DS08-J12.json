@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both get the arithmetic right (600 COD, 150 RTOs, ₹27,000, ₹45 per order, ₹1,080 per point), but Output 2 adds genuinely usable operational assets Output 1 lacks—a confirm-call script, a two-week holdout to prove uplift, the marketing-vs-utility opt-in compliance flag, and a never-ask-for-OTP warning, plus sample values for template review—while keeping the same correct 14% incentive threshold."
+}

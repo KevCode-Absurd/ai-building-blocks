@@ -112,7 +112,7 @@ Score each survivor 1 to 3 on: trend shape, delivered margin against cost per bu
 
 ## Output
 
-**One-screen summary:** the top pick and runner-up, why, the margin against cost per buyer for each, and the test to run next.
+**One-screen summary:** the top pick and why, the margin against cost per buyer, and the test to run next. Add a second pick to the same test only if the budget funds both reads.
 
 **Shortlist table:**
 

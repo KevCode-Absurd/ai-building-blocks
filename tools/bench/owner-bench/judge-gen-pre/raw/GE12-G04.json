@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Perfectly isolates the winning segment and trigger, using a watchlist strategy to ensure contacts are only emailed when their pricing changes.",
+  "biggest_mistake": "Step 1 offers a 'one-page summary', which implies you'll need an attachment ready for the follow-up, though the sequence itself remains plain text.",
+  "what_would_make_it_a_10": "It is already a 10; drafting the few bullet points for the 'one-page summary' follow-up would be the only cherry on top."
+ },
+ "o2": {
+  "fit": 6,
+  "insight": 5,
+  "priorities": 4,
+  "reasoning": 5,
+  "correct": 9,
+  "clear": 9,
+  "voice": 7,
+  "range": 6,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Strictly adheres to the formatting constraints, keeping every email extremely short with exactly one question serving as the low-friction ask.",
+  "biggest_mistake": "Advises blasting the rest of the list with a generic opener (which the data shows only gets a 1.8% reply rate), directly violating the instruction to target the specific 'moment' that works.",
+  "what_would_make_it_a_10": "Hold the non-triggered contacts on a watchlist instead of burning through them with generic messaging, and replace the high-friction 20-minute meeting ask in step 2."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 acts like a true owner, holding back valuable contacts until the high-converting trigger occurs rather than burning the list. It also nails the peer-to-peer finance tone, whereas Output 2 misses the strategic mark by recommending a generic blast to everyone else."
+}

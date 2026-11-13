@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more complete and disciplined: it gives explicit hooks, headlines, build specs, a clear kill/keep rule and correctly labels the ₹292 assumption, while Output 2 is strong but leaves headlines and production guidance thinner and its test plan is vaguer."
+}

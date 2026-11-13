@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the browser-split funnel table, leads the ship list with the in-app checkout fix sized correctly (about 1,860 checkouts, 560 orders, ₹34 lakh), and then sizes each test to the right traffic: mobile-only tests for mobile changes, and add-to-cart as the main metric for the hero image test, with checked detectable effects.",
+  "biggest_mistake": "Test 3 and the EMI test leave placeholders such as [real rating] and [amount], and the first-image test bundles a hero swap with a reviews move, so the two effects cannot be separated.",
+  "what_would_make_it_a_10": "Fill the placeholders with draft trial and delivery copy, keep it clearly under 1,500 words, and split the hero image and reviews changes into separate reads.",
+  "note": ""
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It shows its sample-size working (16pq/d², about 227,000 per arm), adds a 'why test, not ship' line for each test, and sets sensible stop rules, a server-side split and gross-profit-per-session as the ship call.",
+  "biggest_mistake": "It runs every test on all devices with orders per session and a 10% detectable lift, including mobile-only changes like the size picker and hero image, which dilutes the effect. The hero test is also given four weeks and a 10% orders target with no data behind it.",
+  "what_would_make_it_a_10": "Scope each test to the device it changes, use add-to-cart as the main metric for the hero image test, and give each test its own split, run time and detectable effect instead of one shared line.",
+  "note": ""
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both catch the in-app bug, the top-4 sizes and the delivery-date gap, and both size the bug fix correctly. Output 1 fits each test to the traffic it actually touches (mobile-only for mobile changes, add-to-cart for the image test) and gives split, duration and detectable effect per test, which is what I asked for. Output 2's one-size-fits-all setup is less tailored."
+}

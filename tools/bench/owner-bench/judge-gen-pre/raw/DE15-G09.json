@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It does the maths the owner would do: 450 installs a sleep post, a projected 6,580 installs and 3.4% saves for the mix, a 5,000 install success bar against a 3,390 baseline, and a warning that the 5.9% clip figure rests on only 5 posts.",
+  "biggest_mistake": "The Wednesday 14:30 pickup-line test spends one of 24 scarce slots against the 2.2x evening evidence and only gets reviewed after week 2.",
+  "what_would_make_it_a_10": "Replace the 14:30 slot with an evening post and find a cheaper way to test pickup timing, and tie the 5,000 install bar explicitly to the 6,580 projection."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The drafts read most like Headspace: the brand line lands naturally, the paper-line Sunday carousel and the parked-car minute are fresh, practical ideas, and the four-week working titles show the whole arc.",
+  "biggest_mistake": "Its success bar is 143 installs per post (about 3,440 total), which is just the current average, so a month that delivers none of the shift the plan promises would still be scored a win.",
+  "what_would_make_it_a_10": "Project the installs the new mix should produce and set the bar against that (with the save-rate floor), and replace conditional editor notes like 'if yours names another body part, change line 1' with a fixed shot."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both drafts are ready to post and on voice, but Output 1 tells me how I'll know it worked with a real bar and a kill rule, while Output 2 sets success at today's average and would let a flat month pass as a win."
+}

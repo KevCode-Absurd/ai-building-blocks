@@ -1,0 +1,20 @@
+{
+ "job": "J03",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more complete and operationally ready — it includes headline copy with character counts, exact build specs (sizes, safe zones, logo placement), a correct cost-per-trip calculation, and a concrete kill/keep decision rule, whereas Output 2 omits headlines and build specs and gives vaguer test guidance."
+}

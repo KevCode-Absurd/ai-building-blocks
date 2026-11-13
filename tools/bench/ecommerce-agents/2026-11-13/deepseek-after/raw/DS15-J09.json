@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more decision-ready: it ranks moves by contribution per 10 hours with explicit kill/scale thresholds, a test-state design for the spend cut, and corrects the sale-week discount math, whereas Output 2 is solid but its impact figures are less precisely tied to effort and its claims softer."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It thinks like an owner by calculating the cannibalisation cost of the discounts and fixing the root cause of the lapse with a day-28 nudge.",
+  "biggest_mistake": "Assuming cold brew buyers only want hot brew in November might exclude people who drink cold brew year-round.",
+  "what_would_make_it_a_10": "It's essentially perfect, though borrowing the statistical sample-size check for the holdouts would make the testing bulletproof."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Exceptional mathematical rigour in calculating the required sample size for the holdout and the 21% break-even point for the discount code.",
+  "biggest_mistake": "The 'That was on us' line touches on the banned guilt framing, and arbitrarily defining 'lapsed' as 68 days ignores the drift happening in the 46-67 day window.",
+  "what_would_make_it_a_10": "Tighter brand voice in the drafts and a proactive plan to stop the leak in the 46-67 day group rather than just relabelling them."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both outputs are exceptional and highly usable, but Output 1's drafts are perfectly pitched to the requested personas and brand voice. Output 1 also provides a smarter operational fix for the 46-90 day cohort by introducing a day-28 nudge, directly answering the root cause of the falling repeat rate."
+}

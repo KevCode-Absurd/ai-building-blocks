@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the more complete, ship-ready programme — complaint/refund suppression, re-permission instead of discounting the 11k dormant list, an offer held to message 3 with a two-thirds-margin floor, and clear holdout decision rules — while Output 2's genuinely useful 'anyway cost' table doesn't offset its over-discounting of the oldest groups, 70% reachability assumption and missing list-hygiene safeguards."
+}

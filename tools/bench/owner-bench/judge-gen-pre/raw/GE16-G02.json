@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Executes flawless CRO strategy by committing solely to 'Book a demo' for this mid-market team buyer while addressing Priya's exact PTO and security anxieties.",
+  "biggest_mistake": "Putting verbatim internal survey statistics directly into candidate-facing proof blocks on the live page requires a fast sanity check.",
+  "what_would_make_it_a_10": "Already an exceptional, expert-level deliverable that can be published immediately."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Crisp headline writing that incorporates Priya's 'email tennis' pain point right in the hero.",
+  "biggest_mistake": "Inconsistent calls to action across sections, flipping back and forth between 'Get started' (self-serve) and 'Book a demo' (teams) on a page explicitly built for a mid-market team lead.",
+  "what_would_make_it_a_10": "Align all section CTAs to a single primary conversion path instead of confusing the visitor with alternating self-serve and sales flows."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 understands landing page CRO for mid-market software: it keeps a single clear conversion path ('Book a demo'), directly answers Priya's core worries like calendar PTO visibility, and provides a rigorous A/B test setup."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clean, correct diagnosis: Meta explains the cost rise (about $79 blended if Meta had held at $72), first orders lose $33, and Meta fails the 18-month $94 payback. It pairs this with practical page fixes for every product's return reason and a swatch offer that answers Sarah's fear of buying sheets she hasn't touched.",
+  "biggest_mistake": "The 'gross profit impact' column is mostly High/Medium labels rather than a common number, so the ranking is judgement more than math. The 'shipping, fees and returns under 12.5%' target isn't backed by any sizing.",
+  "what_would_make_it_a_10": "Size each move in one unit, such as contribution points with a likely range, and give each scorecard line an 'act when' trigger."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every move is sized in contribution points with low, likely and high cases, scored against effort, and adjusted for overlap. The numbers check out: $10 off blended cost is about 2.9 points, linen is about 1.8 of the 1.9-point rise in returns, and 20% off a $188 order cuts gross profit from $97.76 to $60.16. It also sets kill lines for each move, a 13-week ship schedule and holdouts on the flows.",
+  "biggest_mistake": "It leaves out the cheap return fixes on comforter, sateen and colour that Output 1 caught. Its Meta target ($100) also sits above its own $94 ad-set cap, which needs a line of explanation.",
+  "what_would_make_it_a_10": "Add the low-effort product-page fixes for the other return reasons, and give the copy a little more of the brand's warmth and wit."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both found the real causes and got the math right. Output 2 is the one I'd hand my team: every move has a dollar-backed rank, a kill line and a week it ships."
+}

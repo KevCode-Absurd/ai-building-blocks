@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Builds the whole plan around the pincode RTO split, making tier 3 ship only after a yes and pricing the prepaid nudge off the real loss per order (₹30 in tier 3, ₹20 in tier 2), with the money shown.",
+  "biggest_mistake": "Leans on a 'Confirm order' quick-reply gate for tier 3 that risks losing buyers who never tap, a risk it partly names but does not size against the delivered-order loss.",
+  "what_would_make_it_a_10": "Size the tier 3 confirm-gate against lost delivered orders and offer a callback path for no-reply buyers so the RTO saving is not eaten by silent cancels."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "over_as_is": "with small tweaks",
+  "overall": 8,
+  "biggest_strength": "Clean template set with quiet hours, an explicit marketing-opt-in caveat, a no-nudge holdout and a 2 pm-midnight agent shift that puts a person on the evening wave.",
+  "biggest_mistake": "Skips the prepaid offer entirely ('sells ease, not a deal'), so the tier 3 buyer who is at 39% refusal gets no money-based reason to switch, and the ₹11 lakh saving is smaller than it needs to be.",
+  "what_would_make_it_a_10": "Add a tier-3-weighted prepaid incentive sized to the ₹180 RTO loss, submitted as Marketing, so the highest-risk band actually switches."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are usable and on-brand, but Output 1 does the owner's money homework by pincode group and puts a priced prepaid nudge where the RTO cost actually sits, which is the whole point of the job; Output 2 is cleaner on compliance but leaves the biggest saving on the table."
+}

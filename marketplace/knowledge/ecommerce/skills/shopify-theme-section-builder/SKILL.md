@@ -74,7 +74,7 @@ Pick the right file type: a **section** for a full-width module the owner places
 - Schema: valid JSON inside `{% schema %}`, unique setting ids, the right setting types, `max_blocks` where needed, and presets. Use `visible_if` to hide settings that do not apply. Accept app blocks where the theme does, so apps can still slot in.
 - Liquid traps: no brackets or ternaries in conditions (nest `if` tags instead); `render`, never the old `include`; loops stop at 50 items unless paginated.
 - A landing page section also gets one CTA link setting that drives every button, and a page template (`templates/page.<handle>.json`) preloaded with the real copy so the page renders on install.
-- Never ship default proof: no placeholder star rating, review count or customer count. Leave the field empty and list it under "To confirm".
+- Never ship default proof: no placeholder star rating, review count or customer count. Leave the field empty and hide the block until real proof exists.
 - Put `{{ block.shopify_attributes }}` on each block's wrapper so the editor can select it, and scope ids and CSS with `section.id`.
 - No hard-coded shopper-facing text: use translation keys with the `t` filter, adding keys to `locales/en.default.json` and schema labels to `locales/en.default.schema.json`. Add other store languages if they exist.
 - Escape owner-entered text where it lands in attributes.

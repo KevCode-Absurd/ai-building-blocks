@@ -129,7 +129,7 @@ Sources: [stock report date / tester permission / spec sheet]
 ```
 
 4. **Stock and claims sheet:** Line, Claim, Source, Date checked.
-5. **To confirm:** units, ship date, deadline wording, tester disclosures.
+5. **Assumptions:** units and ship date, where not given, as the value used and what moves if it differs, one line each. Each tester quote carries its disclosure.
 
 ## Common mistakes
 

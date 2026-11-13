@@ -112,7 +112,7 @@ Run each macro against five real past tickets of its reason. If any needs heavy 
 
 **Routing macros** for rare high-risk reasons: reason, acknowledgment text, owner, response time.
 
-**To confirm:** each offer cap and each bend line, signed off by the owner.
+**Caps and bend lines:** each offer cap and bend line set from the store's own numbers, with the working in one line.
 
 ## Common mistakes
 

@@ -122,7 +122,7 @@ Run each language to its region or language audience, with the English ad as the
 | Ad | Field | English | Hinglish | Language 2 | Language 3 | Characters (platform) | Back-translation | Checker OK |
 |---|---|---|---|---|---|---|---|---|
 
-**4. To confirm:** WhatsApp language support, any regional delivery exceptions.
+**4. Assumptions:** WhatsApp language support and regional delivery exceptions, where not given, as the value used and what it changes, one line each.
 
 ## Common mistakes
 

@@ -1,6 +1,6 @@
 ---
 name: cold-email-sequence
-description: "Writes a short cold email sequence for one buyer type (first email of four sentences or fewer, follow-ups that each add something new, two subject lines per email and send gaps), personal first lines for up to 25 leads from the notes given, and a matching LinkedIn note set, then checks every message against honesty, opt-out and sender basics for the US, UK and EU. Use it for outbound to a defined segment, or when an old sequence gets no replies. Never invents facts about a lead. Loads and sends sequences only with level 3 access, within the client's limits. Not legal advice: check the rules where your prospects are."
+description: "Writes a short cold email sequence for one buyer type (first email of four sentences or fewer, follow-ups that each add something new, one final subject line per email and send gaps), personal first lines for up to 25 leads from the notes given, and a matching LinkedIn note set, then checks every message against honesty, opt-out and sender basics for the US, UK and EU. Use it for outbound to a defined segment, or when an old sequence gets no replies. Never invents facts about a lead. Loads and sends sequences only with level 3 access, within the client's limits. Not legal advice: check the rules where your prospects are."
 ---
 
 # Cold email sequence
@@ -41,6 +41,8 @@ One problem the buyer feels now, one result you can show. If there is no proof, 
 
 Use a dated fact from the notes: a new site, a job post, a change of rules in their sector. If there is none, do not invent one. Use a plain problem-first opener instead.
 
+If the client's own results show that leads with a trigger reply far better than leads without one, send to the triggered leads first. Put the rest on a watch list and write to them when a trigger appears, rather than loading everyone with a weaker opener.
+
 ### 3. Write email 1
 
 Four sentences or fewer:
@@ -57,7 +59,7 @@ Three or four more, each shorter than the last and each adding something new: a 
 
 ### 5. Subject lines
 
-Two per email, short and honest, matching the content. Never fake "Re:" or "Fwd:", never a fake invoice or meeting. US law requires subject lines that do not mislead.
+One final subject line per email, short and honest, matching the content, and within any character limit in the brief. If the brief asks for options, label them as options below the email, never inside the subject field, each within the same limit. Never fake "Re:" or "Fwd:", never a fake invoice or meeting. US law requires subject lines that do not mislead.
 
 ### 6. First lines for named leads
 
@@ -75,11 +77,11 @@ For every message and the plan:
 - **UK (PECR):** companies and LLPs may be emailed without prior consent, but sole traders and some partnerships need consent or the soft opt-in; always identify the sender and give a way to opt out.
 - **EU:** email rules for companies differ by country; a named person's work email is personal data, so tell them where you got it and honour objections.
 - **Senders:** SPF, DKIM and DMARC set up on the sending domain; one-click unsubscribe where the volume needs it; spam rate watched.
-Point to the official pages in `knowledge.md` and flag anything the client must check. Do not rule on whether the campaign is lawful.
+Point to the official pages in `knowledge.md`. Where the law needs a sign-off (for example, permission to name a customer), put it in one line next to the message it affects. Do not rule on whether the campaign is lawful.
 
 ### 9. Plan the test
 
-Test one thing per round: the opener or the subject line, not both. Name the measure (positive replies per hundred contacted), the minimum batch before judging, and when to stop.
+Test one thing per round: the opener or the subject line, not both. A subject-line test is a later round with a new line; it does not put alternates into the sequence. Name the measure (positive replies per hundred contacted), the minimum batch before judging, and when to stop.
 
 ### 10. Run it (level 3)
 
@@ -98,11 +100,11 @@ Show the action list and limits, get a yes, then enrol only the approved contact
 ## Output format
 
 1. Problem, proof and reason-to-write summary
-2. Sequence table: step, gap in working days, subject A, subject B, body, goal
+2. Sequence table: step, gap in working days, subject line, body, goal
 3. First lines table: lead ID, line, fact used
 4. LinkedIn note and follow-ups
 5. Reply scripts for common answers (see the `reply-handling-scripts` prompt)
-6. Compliance and sender check, with points for the client to confirm
+6. Compliance and sender check, with any legally needed sign-off as one line next to the item
 7. Test plan
 8. Facts I left out because the brief did not give them
 
@@ -111,8 +113,7 @@ Show the action list and limits, get a yes, then enrol only the approved contact
 *Illustrative structure, not a real business: an agency running paid search for dental clinics. Copy the shape, never the content: every fact comes from the client's own context.*
 
 > **Email 1** (day 0)
-> Subject A: new patient bookings at [clinic]
-> Subject B: question about your Invisalign page
+> Subject: new patient bookings at [clinic]
 >
 > Hi Dr Shah, I run [Business], a small agency that only works with dental clinics. Many clinics with two to five dentists tell us their ads bring calls about check-ups, not the treatments they want to grow. For [Clinic A] we moved spend to implant searches and their implant consults went from 4 to 11 a month (shared with permission). Would a 15-minute call next week be useful?
 >
@@ -120,4 +121,4 @@ Show the action list and limits, get a yes, then enrol only the approved contact
 >
 > **Follow-up 2** (day 4): one short note on the three search terms that wasted most budget for clinics last quarter, from our own accounts.
 >
-> **Compliance flags:** two leads are sole traders (UK): removed until consent exists. Postal address and opt-out present. Client to confirm the Clinic A result may be named.
+> **Compliance flags:** two leads are sole traders (UK): removed until consent exists. Postal address and opt-out present. Clinic A result: named only with the clinic's written permission.

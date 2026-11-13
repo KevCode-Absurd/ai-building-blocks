@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 7,
+  "commercial": 6,
+  "craft": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is fully specified and commercially tighter: 7-day expiry front-loads urgency, an explicit checkout-pause rule, WhatsApp opt-in consent, a named sign-off, and a correct 1,000-per-arm test sizing, while Output 2 leaves expiry at 14 days with a day-13 WhatsApp that collides with the expiry, weakens urgency, and omits the checkout pause."
+}

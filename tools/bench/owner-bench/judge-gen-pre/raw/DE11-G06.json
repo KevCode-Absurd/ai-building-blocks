@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the core insight — agencies are 60% of Semrush losses, Lite usage limits are the self-inflicted biggest leak, and multi-site AWT accounts are an under-used pipeline — and builds five ranked moves with owners, first steps and metrics on top of it.",
+  "biggest_mistake": "The 'To confirm' section (dates, billing terms, Google Ads pull) leaves a little homework despite the brief saying the owner isn't available for questions; it should have stated dates as an explicit assumption instead.",
+  "what_would_make_it_a_10": "State the data period and top-up billing feasibility as firm assumptions with the consequences, so the owner can act this week without confirming anything."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the same sharp diagnosis, adds useful flourishes (Lite 12-month retention, per-100-trials math shown, 63-point PPC gap named), and its first-step interviews are concrete and immediate.",
+  "biggest_mistake": "Fabricates a specific date ('Data as of November 2026') not given in the brief, which violates the brand rule that every claim carries a real, sourced date, and its success metric for Move 1 ('falls below 54%') is weaker than a real target.",
+  "what_would_make_it_a_10": "Replace the invented date with an explicit stated assumption and give Move 1 a concrete target threshold rather than an undefined 'below current level'."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are excellent and hit every owner signal, but Output 2's tighter prose, the 12-month Lite retention illustration and the sharper interview first-step edge it ahead — though its invented November 2026 date is a real brand-rule risk Output 1 avoided."
+}

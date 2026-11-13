@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Solid, ready-to-submit set: a COD confirmation with a call and a 48-hour hold for riskier pincodes, shipped and out-for-delivery updates that tackle the 44% \"where is my order\" load, and a smart idea to move one agent to a 2 pm to midnight shift.",
+  "biggest_mistake": "The prepaid nudge has no incentive and goes to everyone the same way, so it barely pushes tier 3, where half the RTO money is lost. Filing a 'skip cash, pay now' prompt as a Utility template also risks a rejection or a reclassification.",
+  "what_would_make_it_a_10": "Size a prepaid incentive by pincode group from the loss per order, and show me the RTO cost per group so I can see where the money goes."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It works out RTO cost and loss per COD order for each pincode group (₹27, ₹41, ₹70) and uses that to set a ₹30 or ₹20 prepaid offer only where it pays, showing the break-even. It skips metros, ships tier 3 only after a yes, and skips proven repeat buyers.",
+  "biggest_mistake": "The order-status reply says the order is \"on its way\" even before it ships. It also has no staffing or shift fix for the 31% of chats that come in after hours, only an away message.",
+  "what_would_make_it_a_10": "Add an evening agent shift or an after-hours response-time target to the scorecard, and make the order-status reply match the order's real stage."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 shows me exactly where the refusal money is lost by town type and spends a prepaid discount only where it pays back, with the maths. It also adds a rollout plan and a missed-delivery message. Output 1 is good, but it treats the prepaid nudge the same for everyone."
+}

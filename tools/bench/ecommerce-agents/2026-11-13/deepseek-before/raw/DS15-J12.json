@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives a cleaner, more complete template set with explicit timing, break-even discount logic (₹30 under ₹45), and a fuller weekly metrics table, while Output 2 is strong but slightly less complete on the prepaid nudge numbers and template coverage."
+}

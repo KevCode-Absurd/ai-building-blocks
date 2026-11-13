@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the real signals: puts the UTC overnight gap, $82,000 salary, weekend rotation, and writing-first selection right where they belong.",
+  "biggest_mistake": "It is a bit overbuilt and ends with a few confirmation items, including whether to pay for the exercise, which makes it feel slightly less finished than requested.",
+  "what_would_make_it_a_10": "Trim it to stay safely under the word limit and turn the final confirmation notes into firm assumptions or decisions."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The job post is calm, direct, and very publishable, with salary, Asia-Pacific hours, and the weekend rotation stated plainly up front.",
+  "biggest_mistake": "The scorecard gives 15% to conversation/video calls, which risks over-weighting the weak interview signal the data says not to trust, and the time-saved math is a little loose.",
+  "what_would_make_it_a_10": "Make the written and work-sample evidence dominate even more, define the longer exercise more fully, and tighten the reviewer-hour calculation."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather pay for Output 1 because it gives the hiring team a more complete operating system, especially for blind review and calibration, while still sounding like the company. Output 2 has the cleaner post, but Output 1 better uses the data to prevent another 2,100-application slog and a repeat weekend-rotation miss."
+}

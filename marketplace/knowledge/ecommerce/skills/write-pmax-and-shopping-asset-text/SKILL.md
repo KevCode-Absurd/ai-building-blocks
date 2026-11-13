@@ -130,7 +130,7 @@ After 30 days, read asset performance labels and store orders by asset group. Re
 
 **3. Settings note:** business name, call to action, final URL expansion on or off, auto-generated assets on or off (off for feed-only groups).
 
-**4. To confirm:** any fact needing a client yes.
+**4. Assumptions:** one line each, at most three, only where an unknown changes what to do. A fact with no source is left out.
 
 ## Common mistakes
 

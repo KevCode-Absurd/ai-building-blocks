@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both deliver complete, compliant, well-crafted sets, but Output 1's self-executing keep/cut rule tied to target cost per purchase (spend 3x CPA; 3+ keep, 2 retry, 0-1 cut) plus the FSSAI 'no added sugar / never sugar-free' flag make it the more Monday-ready plan, while Output 2's 30-purchases-per-ad bar is statistically right but harder to run on a launch budget."
+}

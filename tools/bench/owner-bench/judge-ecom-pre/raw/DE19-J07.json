@@ -1,0 +1,29 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads the data correctly (sunscreen's 2.2% vs 8.0% serum), answers the white-cast fear with the review line, and ships a tighter plan with a test and a WhatsApp placed where it helps — Output 2 is good but blurs the dark-spot lead with a full 3-product routine and has a sloppier sunscreen claim ('spread in two thin layers') that could mislead."
+}

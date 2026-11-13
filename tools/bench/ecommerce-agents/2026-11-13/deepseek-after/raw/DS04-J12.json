@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers every required template plus a failed-delivery template, sharper math (₹45 breakeven at 14% refusal, ₹1,080/point, holdout testing, hold-until-confirm rule) and fully specified flows, while Output 2 is solid but leaner, leaves more policy in [brackets] and frames ₹3,90,000 cart value loosely as worth."
+}

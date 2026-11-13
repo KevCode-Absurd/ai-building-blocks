@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every concept is tied to a real review theme or buyer group, with the quiet-wheels gap and the cheaper women 25 to 40 audience both given their own ad and put in the top three.",
+  "biggest_mistake": "The test budget of about ₹7,700 per ad set buys roughly five purchases, nowhere near enough to separate ₹1,058 from ₹1,615, and there is no read split by gender, so the women-first bet cannot actually be proved.",
+  "what_would_make_it_a_10": "Size each cell to a read you can trust and specify a gender and age breakdown plus a store-order reconciliation before any scale or cut decision.",
+  "what_would_make_it_a_10_note": ""
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The opening read is sharper than the brief: women 25 to 40 take 18% of spend but 26% of purchases, and the ₹292-a-trip reframe is a genuinely different angle on the ₹6,999 objection.",
+  "biggest_mistake": "The rollout is not fundable as written: three cells under broad targeting with a ₹4,500 floor buys about three purchases each, so no concept can be judged, and it contradicts its own women-only concept while also spending on the ₹2,188 41-plus group.",
+  "what_would_make_it_a_10": "Give each concept its own audience and enough budget and a stated decision rule to produce a readable cost per purchase, and say what to stop instead of spreading to every group.",
+  "what_would_make_it_a_10_note": ""
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team tomorrow: character-counted headlines, safe zones, light-colour shoot rules, a control cell, money thresholds for keep or cut, and a clear 'leave out 41 and over'. Output 2 opens with a better read of my numbers and has one idea I had not thought of, but its test plan would burn budget and prove nothing."
+}

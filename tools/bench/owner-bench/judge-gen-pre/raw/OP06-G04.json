@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It locks onto the winning segment and trigger, gives precise list rules, and uses the pilot numbers honestly to drive both the sequence and the forecast.",
+  "biggest_mistake": "Step 1 uses the 9-to-4 proof earlier than ideal given the owner's preference to save proof for later, even though it stays link-free and compliant.",
+  "what_would_make_it_a_10": "Move the case proof from step 1 to step 2 while keeping the pricing-change and spreadsheet-rebuild pain as the sole opening hook."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It targets the right persona and timing, and the opening hook uses the pricing-change pain in the customer's own words.",
+  "biggest_mistake": "It breaks the brief's one-question-one-ask rule in multiple emails and overreaches on expected reply rate by implying the combined segment-plus-trigger should hit 7.9% or better.",
+  "what_would_make_it_a_10": "Tighten each email to one clear ask, remove extra CTAs, and set expectations strictly from the pilot without leaning on an unproven combined lift."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team tomorrow. It follows the data more faithfully, gets the list strategy exactly right, and is more disciplined about what to expect from the pilot."
+}

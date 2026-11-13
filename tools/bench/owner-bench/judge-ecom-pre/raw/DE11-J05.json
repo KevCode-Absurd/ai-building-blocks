@@ -1,0 +1,36 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Rebuilds the paused ₹210 'flip the pack' winner in fresh words and pairs it head-to-head with the top review phrase 'Doesn't taste like a protein bar' that no past ad ever used.",
+  "biggest_mistake": "Sizes the Meta limits at 27 characters for headline and description when the owner's notes say about 40 and 30, so some copy is shorter than it needs to be; also a few review-quote lines (P2, P3) could be cut by legal.",
+  "what_would_make_it_a_10": "Show the ₹90-per-bar working briefly and use the full 40/30 character headroom so the headlines do more work."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Pairs the relaunched winner against taste inside one audience, and sizes a real budget (₹6,000/day, ₹10,500 per ad per week, ~36 purchases) so the day-7 test can actually be read.",
+  "biggest_mistake": "Understates the headline/description display limits at ~27 characters instead of the ~40/~30 in the brief, and the 'To confirm' section leaves two loose ends for the owner."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both brought the paused winner back and found the taste hook; Output 2 edges it because it pairs the tests inside one audience and gives a budget and sample size I could actually run tomorrow."
+}

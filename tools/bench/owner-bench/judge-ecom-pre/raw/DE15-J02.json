@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every rule hangs off the money: the $38 per-first-order target, the $57 stop line and a day-30 test that triangulates tagged Shopify orders, survey share and baseline-adjusted lift, so we don't take TikTok's word for it.",
+  "biggest_mistake": "It says an ad group needs about 25 purchases in 7 days to learn, when TikTok's learning phase is closer to 50 a week, which quietly under-funds the $200-a-day groups; the 2026 launch dates are also invented rather than flagged as an assumption.",
+  "what_would_make_it_a_10": "Fix the learning-phase number (and size the ad groups to it) and mark the calendar dates as an assumption."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Plain and easy to hand over: the set-up steps are practical (event-ID dedup, domain check, ads uploaded by Day -2 so review doesn't eat Day 1) and the 'we lose about $11 on the first order and earn it back on repeat buys' line makes the target obvious.",
+  "biggest_mistake": "It judges day 30 mainly on the platform's own cost per first order over days 15 to 30 while the order target is counted over 30 days, and it spreads spend evenly across families and general 'real day' groups instead of loading into the on-feet workers the data shows win.",
+  "what_would_make_it_a_10": "Replace the platform cost-per-order pass mark with a Shopify-plus-survey read, fix the measurement window, and push more of the daily budget behind the nurse/server style."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both are usable Monday, but Output 1 tells me exactly how I'll know TikTok earned the money without trusting its own reporting, and it leans the creative and spend on the on-feet worker videos and problem-first hooks the data says win; Output 2 is tidier to read but judges success more on platform numbers and spreads the budget too evenly."
+}

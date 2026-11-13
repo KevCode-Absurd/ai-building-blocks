@@ -1,0 +1,20 @@
+{
+ "job": "J06",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 keeps the brief's test-only review count out of live copy and repeats the cash limit/commercial logic cleanly across every decision point, while Output 2 wins on crisper framing and a sharper shared-pocket tradeoff note but leads its top bullet with the unconfirmed 400-review figure."
+}

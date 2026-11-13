@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The media buying math is airtight: it calculates the exact daily budget required to exit the learning phase ($136/day derived from 25 weekly purchases at $38 CAC) and establishes a brilliant three-way attribution triangulation model for Day 30.",
+  "biggest_mistake": "The creative table could have explicitly detailed a couple more variations for Tasha's family persona.",
+  "what_would_make_it_a_10": "It is already a 10—one of the sharpest, most commercially grounded launch plans an owner could ask for."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very thorough Week 0 setup checklist and clean handling of both customer personas in the creative matrix.",
+  "biggest_mistake": "Opening the scale campaign on Day 8 is premature on TikTok with only $600/day total spend across 3 ad groups, leaving insufficient conversion volume to exit learning before splitting budget.",
+  "what_would_make_it_a_10": "Hold the test phase to 14 days before introducing the scale campaign and sharpen the Day 30 attribution logic beyond simple platform/store comparison."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 feels like it was written by an elite TikTok media buyer who understands platform mechanics deeply—its learning-phase math, Day 15 scaling cadence, and three-way attribution triangulation make it completely ready to run on Monday."
+}

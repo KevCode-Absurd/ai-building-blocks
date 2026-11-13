@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Cash capacity is stated as a plain number ('about 10 notes, laid flat') in the subtitle, bullet, what-fits section, FAQ and button line, which directly attacks the 44% cash-expectation return driver.",
+  "biggest_mistake": "The line under the add-to-cart button misses the strongest return-cutting lever — the one-week break-in note — and instead repeats capacity already stated three times above it.",
+  "what_would_make_it_a_10": "Put 'Snug for the first week, then it settles' under the button (or pair it with the warranty) to catch the 63% of tight-slot returns that arrive within 7 days."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It quantifies each return driver in the owner's own units (3.3 and 1.6 per 100 orders), states a guardrail metric, and gives a fallback subtitle change if conversion drops — exactly the accountability a founder wants.",
+  "biggest_mistake": "The copy is a touch lean in the description and the FAQ answers sometimes lean on review counts rather than the customer's situation, so the 'look good in five years' Jen angle is handled lightly.",
+  "what_would_make_it_a_10": "Sharpen the gift/Jen angle in the description and keep the measured-return working in a short box so it reads as finished copy first, analysis second."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and on-brand, but Output 2 ties every return driver to a number in per-100-orders terms, sets a guardrail and a pre-planned subtitle fallback, which is what I would actually hand to my team and measure against."
+}

@@ -84,7 +84,7 @@ Planning is level 1. Filing a trademark, submitting Brand Registry and publishin
 
 ## Output
 
-**One-screen summary:** brand, mark and classes, office and filing status, Brand Registry status, store pages planned, protection owner, and the "To confirm" list for the attorney.
+**One-screen summary:** brand, mark and classes, office and filing status, Brand Registry status, store pages planned, protection owner, and the questions for the trademark attorney in one line beside the mark they concern.
 
 **Trademark plan:** Mark (exact text) | Type (word, design) | Classes | Goods description | Office | Owner | Search done (date, findings) | Filing basis | Fee (from office page, dated).
 

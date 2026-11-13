@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every rule traces back to the money. It works out a $38 target from 90-day profit, sizes ad groups from learning-phase maths ($136 a day), and settles day 30 with three reads (tagged orders, survey, lift) where two must agree.",
+  "biggest_mistake": "It picks calendar dates (23 Nov launch, Thanksgiving) and a ~$65k Meta monthly spend we never gave, and it only writes a full creator brief for new on-feet worker creators from week 2 onward.",
+  "what_would_make_it_a_10": "Add a short creator brief for 6 to 10 new on-feet workers (nurse, server, warehouse, retail) at launch, with hooks taken word for word from Maria's lines."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A thorough, practical set-up (event-ID dedup, domain verification, comment moderation), a sensible way to handle price without discount hooks, and named Monday owners.",
+  "biggest_mistake": "The day-30 scorecard doesn't say which source the cost per first order comes from, mixes a days 15 to 30 cost test with a 30-day order count, and opens scaling on day 8, before groups have learned.",
+  "what_would_make_it_a_10": "Make the day-30 verdict depend on Shopify, survey and lift reads agreeing at $38 or less, and hold scaling until groups have enough purchases."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both plans get the money and the creative direction right. Plan 1 ties tighter rules to our numbers, gives a cleaner day-30 decision that doesn't trust TikTok's own count, and has hooks in Maria's own words, so I'd hand it to the team Monday."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 holds headline, description and image constant so the launch test isolates the one variable that matters (the angle), backs it with a budget-based decision rule (spend 3x target CPA; keep at 3+ purchases, cut at 0-1), and writes less repetitive, more brand-voiced copy, while Output 2's four launch ads change headline and description alongside the primary text and set an unrealistically high 30-purchases-per-ad bar."
+}

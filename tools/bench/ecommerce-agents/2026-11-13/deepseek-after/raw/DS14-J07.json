@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 matches the brief's 14-day purchase window (series spans days 0-13 with a day-13 WhatsApp), states safe, flagged assumptions and gives complete ready-to-send copy, while Output 2 invents a 7-day expiry that ends nurturing on day 6, leaving days 7-14 untouched, and leans on an unverifiable GoKwik stat and a named co-founder sign-off."
+}

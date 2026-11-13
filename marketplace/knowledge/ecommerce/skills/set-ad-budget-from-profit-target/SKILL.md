@@ -113,7 +113,7 @@ Weekly pacing: split the month by last year's weekly order share, not evenly. Pe
 
 ## Output
 
-**One-screen summary:** total ceiling, which limit bound it (profit, cash or stock), allowed cost per new customer, expected new customers, expected contribution and profit against target, and the one risk to watch. Runner-up plan in one line (for example, a lower ceiling if a stock order slips).
+**One-screen summary:** total ceiling, which limit bound it (profit, cash or stock), allowed cost per new customer, expected new customers, expected contribution and profit against target, and the one risk to watch. Fallback in one line, with its trigger (for example, a lower ceiling if a stock order slips).
 
 **Budget sheet** (`ad-budget-<month>.csv` or a Google Sheet with live formulas):
 
@@ -125,7 +125,7 @@ Weekly pacing: split the month by last year's weekly order share, not evenly. Pe
 | Cash by week | Week, Opening cash, Payouts in, Stock and bills out, Ad spend out, Closing cash, Floor |
 | Stock check | SKU, Units available, Inbound date, Days of stock, Lead time, Ad status (push, hold, pause) |
 
-**To confirm** (short list): the profit target, the cash floor and any inbound stock date the plan depends on.
+**Assumptions:** the profit target, cash floor and inbound stock date used where not given, one line each with what moves if it differs.
 
 ## Common mistakes
 

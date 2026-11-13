@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Each email does one clear job. Email 2 splits by quiz answer, Email 4 answers the white-cast and stickiness questions with the real review line, and the arithmetic (8.0/6.8/2.2%, ₹359, ₹1,167) is right.",
+  "biggest_mistake": "Email 5 tells every non-buyer to use a salicylic acid wash twice a day plus niacinamide. That contradicts the 'don't start with an acid' advice to sensitive readers and the slow-start rule. Email 1 also uses 'brightening' and 'clear skin', even though only as contrast.",
+  "what_would_make_it_a_10": "Make Email 5 a reminder tailored to each person's concern instead of one acid-heavy routine for everyone, drop the off-brand contrast words, and add a holdout test to prove the series lifts the 18%."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the click data into revenue per click (₹48 serum vs ₹9 sunscreen) to justify the plan. Each step stays one product and slow-start, and the plain-text founder note on day 13 repeats each concern's single pick. Arjun gets a clean two-step routine.",
+  "biggest_mistake": "The test claim is a bit optimistic: 4,700 per side gives only about 70% power to detect an 18% to 20% change. The dark-spot email also doesn't tie niacinamide to morning sunscreen.",
+  "what_would_make_it_a_10": "Add the sunscreen-every-morning line to the dark-spot version and give an honest test length (about 6,000 per side, or a longer run)."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 keeps every reader on one product and a slow start, shows me what each click is worth, and comes with filters, A/B subjects, a ready WhatsApp template and a real test plan. Output 1 is solid but ends by pushing a twice-daily acid routine on everyone, beginners and sensitive skin included."
+}

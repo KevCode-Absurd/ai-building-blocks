@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives a cleaner, fully costed four-wave plan with explicit reach, offer ladders, holdout sizing, stop rules and a transparent ₹2.9 lakh first-wave / ₹5.7 lakh 12-month gross-profit model, while Output 2 is polished but its blanket-15%-loses-₹17,000 claim and code-pass thresholds are less well supported and its economics are muddier."
+}

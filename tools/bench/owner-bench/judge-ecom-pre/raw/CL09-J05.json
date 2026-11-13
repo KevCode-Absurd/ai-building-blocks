@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches all three signals: the paused winner, the taste reviews and the ₹90-a-bar objection. It then builds a clean test where only the primary text changes within each pair, so every result is readable, and backs it with a budget plan that checks out (₹5,70,000 ÷ 90 = ₹6,333 a day).",
+  "biggest_mistake": "The revived 'flip the pack' ad is paired with the protein headline instead of 'Ingredients on the front'. That is clean for the test, but it waters down the old winner's message in the one ad meant to show whether that angle still works.",
+  "what_would_make_it_a_10": "Add one more blunt, witty taste line in Aditya's words, such as a brownie-not-supplement hook, and explain why the transparency ad doesn't carry its own headline."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 5,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data sharply: the winner was 'tired, not broken', the untried taste phrase is our best proof, and price is the stated objection. It also adds a sensible backup in case legal blocks the review quotes.",
+  "biggest_mistake": "Almost every primary text repeats '12 g protein. No added sugar.', and two of the six angles plus two of the four launch ads are both transparency. The range I asked for shrinks, and the tests change headline and description at the same time, so I can't tell which part won.",
+  "what_would_make_it_a_10": "Give each primary text its own single proof, put a taste headline in the set, and hold the headline and description steady across compared ads so each test measures one thing."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both spotted the paused winner and the taste gap. Output 1 gives me six truly different angles, a test where each pair changes one thing, and a budget I can launch tomorrow. Output 2 repeats the same protein-and-sugar line and muddles its tests."
+}

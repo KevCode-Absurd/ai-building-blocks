@@ -1,0 +1,20 @@
+{
+ "job": "J01",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and numerically sound, but Output 2's differentiated over-claim ratios by ad set (0.78 prospecting vs 0.50 retargeting/catalog) give more defensible break-even lines and its rules are cleaner to execute, edging out Output 1's uniform 0.72 haircut."
+}

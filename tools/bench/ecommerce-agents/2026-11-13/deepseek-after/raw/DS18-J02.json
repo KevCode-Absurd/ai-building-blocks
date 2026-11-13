@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is internally consistent and fully reconciled to the $30,000 (dated calendar, owner/done-when setup table, one CPA target/ceiling used throughout, an explicit Shopify-vs-TikTok correction factor before any call), while Output 2 has a sharper $45 ceiling and a good 'taking credit vs creating customers' test but contradicts itself on thresholds (day-10 gate at $55 vs a $45 ceiling) and jumps scale 50% in phase 3 against its own 20%/48-hour rule."
+}

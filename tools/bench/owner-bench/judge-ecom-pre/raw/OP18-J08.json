@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the key signals in the data: Monsoon Dark buyers need their own track, subscription churn is a delivery problem, and recent lapsers should be approached before cold customers.",
+  "biggest_mistake": "The Monsoon Dark draft does not actually recommend the closest current roast, so the most important customer-facing message is not fully finished.",
+  "what_would_make_it_a_10": "Add the current closest Monsoon Dark replacement, include WhatsApp-reachable counts as well as email, and tighten the value model around contactable customers without the confusing assumptions."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly sees that the win-back should fix the reason for lapse first, especially the discontinued Monsoon Dark and the subscription delivery issue.",
+  "biggest_mistake": "It misses the 46-to-90-day at-risk group as the first priority and instead starts with 91-to-180-day customers, which goes against the clearest low-cost opportunity in the data.",
+  "what_would_make_it_a_10": "Rebuild the target order around the 46-to-90-day group, use exact opt-in reach rather than a 70% assumption, remove placeholders by naming the actual replacement roast, and make the lift and gross profit maths cleaner."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could mostly hand to the team: it has the right order, better gross profit discipline, a proper holdout, and stronger rules for pausing subscription win-back until delivery is fixed. Output 2 has good instincts, but the missed 46-to-90-day priority and rougher assumptions would need more rework."
+}

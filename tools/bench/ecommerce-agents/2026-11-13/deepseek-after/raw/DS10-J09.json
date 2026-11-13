@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 edges it with an effort-adjusted (per-10-hour) ranking, explicit roll-out/reverse decision lines for each move, and BFCM/January sale guardrails that make it more runnable, though it runs a touch over the 1,600-word cap and has a minor per-$1M spend inconsistency; Output 2 is cleaner and within limit but omits any sale-event planning and leaves effort qualitative."
+}

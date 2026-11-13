@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Judges every ad set on Shopify-adjusted after-RTO profit in rupees, relaunches the paused 'Dad's razor vs mine' first, and splits out women 25-34 instead of killing the body razor.",
+  "biggest_mistake": "Holds back 1.82 lakh in ASC reserve and commits only 3.78 lakh, which leaves a large share of the 14-day budget unspent and could undershoot the volume the owner wants.",
+  "what_would_make_it_a_10": "Commit closer to the full 5.60 lakh with a clear release ladder so the budget actually gets used while still protecting break-even."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Two-line safe/break-even framework makes the attribution haircut usable, and the budget table adds up to the full 5.60 lakh with a clear ASC ladder.",
+  "biggest_mistake": "Scaling Catalog DPA 20% contradicts its own frequency warning at 5.2, and the 'hold' on the UGC test risks carrying a 581 cost-per-purchase ad set past its natural cut point.",
+  "what_would_make_it_a_10": "Apply its own frequency ceiling to Catalog DPA and put a hard 7-day cut gate on the UGC test before committing more money."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and do the key things right, but Output 2 commits the full 5.60 lakh with a clean ladder and a sharper safe-line framework, while Output 1 leaves 1.82 lakh in reserve and could undershoot volume; the DPA scaling flaw is fixable, the underspend risk is structural.",
+ "overall": 9
+}

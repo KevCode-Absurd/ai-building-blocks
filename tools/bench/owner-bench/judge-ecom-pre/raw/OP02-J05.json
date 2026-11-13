@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly brings back the paused winner, adds the missing taste hook, shows character counts, and gives four sensible first tests.",
+  "biggest_mistake": "The six primary texts are not quite six distinct angles because P1 and P5 both lean on transparency, and there is no standalone protein-number primary text.",
+  "what_would_make_it_a_10": "Swap one transparency repeat for a sharper pure protein angle and make the copy a little more blunt and witty without adding risk."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the exact six angles the data calls for, leads with the paused transparency winner against the new taste hook, and includes a practical launch plan with sound budget math.",
+  "biggest_mistake": "P2 is a strong review hook but is a little light on what is inside the bar, so it could be more The Whole Truth-specific in the primary text.",
+  "what_would_make_it_a_10": "Add one approved product fact to the taste primary text and keep the headline limit note closer to Meta's usual 40-character guidance."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are usable, but Output 2 is the one I would rather launch: the angles are cleaner, the customer language is stronger, and the first-four test plan is more disciplined. Output 1 is strong too, but it repeats transparency and misses a clean protein primary text."
+}

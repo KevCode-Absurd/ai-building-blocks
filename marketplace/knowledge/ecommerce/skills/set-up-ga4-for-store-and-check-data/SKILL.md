@@ -111,7 +111,7 @@ For each gap: what is missing, how many orders a week, likely cause, fix, owner 
 
 ## Output
 
-**1. One-screen summary:** capture rate and band, revenue match, the top three gaps with orders per week at stake, and the fix order. "To confirm" list for the client.
+**1. One-screen summary:** capture rate and band, revenue match, the top three gaps with orders per week at stake, and the fix order. Up to three assumption lines where a missing setting changes the fix order.
 
 **2. Setup checklist**
 

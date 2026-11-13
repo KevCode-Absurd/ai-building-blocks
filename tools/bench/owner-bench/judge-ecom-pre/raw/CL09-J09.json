@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the Meta–linen link and shows the payback math: $71 first-order contribution, about $94 eighteen-month value, Meta losing $27 per customer. The swatch sign-up offer goes straight at Sarah's fear of paying $200 for sheets she hasn't touched.",
+  "biggest_mistake": "The ranking uses vague High/Medium/Low labels rather than one shared gross-profit number, so I can't see how much each move is worth compared with the others.",
+  "what_would_make_it_a_10": "Size each move in dollars or points of contribution and add a week-by-week list of what ships, with clear trigger points for when to act."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks every move in one unit, points of contribution with low, likely and high ranges and an effort score, and adds a 13-week ship plan with 'act when' triggers. I could run my Monday meeting off this tomorrow.",
+  "biggest_mistake": "Some targets don't line up. Meta's week-13 target is $100 while the cap is $94, and the new-customer target of 'down 11% or better' is soft. The 13.6% baseline for a year ago is an estimate and the working isn't fully shown.",
+  "what_would_make_it_a_10": "Make the Meta target match the $94 cap, show the working for the 13.6% and 7.8% contribution baseline, and add one fresher customer-facing idea, like Output 1's swatch offer."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both find the same causes: Meta, linen, and the switched-off email flows. Output 2 tells me what each fix is worth in contribution, ranks the fixes on that basis, and gives each line a trigger for when to act, which is the kind of plan my board asked for."
+}

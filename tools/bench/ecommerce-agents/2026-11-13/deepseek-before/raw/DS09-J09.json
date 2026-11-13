@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 separates proof from checks more sharply, sizes each move with clean per-unit arithmetic, and its contribution-margin math is more conservative and defensible than Output 2's unsupported 45% decline and 13.6%/7.8% margin claims."
+}

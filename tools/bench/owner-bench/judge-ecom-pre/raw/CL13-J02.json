@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A complete, Monday-ready plan built on the right signals: on-feet workers as Spark Ads from day 1, problem-first hooks with the mission as a closing fact, no discount ads, a $38 target tied to 90-day payback, and a budget that sums to $30,000 with dollar-based kill and scale rules.",
+  "biggest_mistake": "The day-30 verdict leans on TikTok-reported cost per order plus a new-customer lift check, with survey answers as only a back-up. It has no holdout or geo test, and its Hold and Fail bands are loosely reasoned.",
+  "what_would_make_it_a_10": "Make a holdout or survey-based read decisive for the day-30 verdict, write out the actual hook lines in Maria's and Tasha's words for each concept, and size the new-creator brief explicitly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Rigorous and specific throughout: a dated set-up table with owners, a test order that must pass before launch, ad-group budgets sized to the learning-phase math (25 purchases a week is about $136 a day), a nine-hook table in customers' words, and a day-30 verdict that needs two of three reads to agree (tagged orders, survey, lift) with a geo holdout as the fallback.",
+  "biggest_mistake": "It fixes calendar dates around Thanksgiving and December and then plans as if that period behaves normally, apart from one line. It also runs close to the word limit and packs a lot into tables.",
+  "what_would_make_it_a_10": "Account for holiday-season CPM inflation more explicitly, give the new-creator brief a headcount, and trim some table text for easier scanning."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both build around on-feet workers, problem-first hooks and a $38 break-even target. Output 2 is more careful: a go/no-go tracking test, budgets sized to learning-phase math, a day-30 verdict that triangulates three reads instead of trusting TikTok's own numbers, and ready-to-shoot hooks in Maria's and Tasha's words."
+}

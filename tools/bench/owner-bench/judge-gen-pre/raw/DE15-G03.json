@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Candid and precise throughout: forecast miss and margin drop in the first three lines, every figure with its denominator (0.4% = 4 in 1,000), and asks with a named profile, city, date and paste-ready forwardable text.",
+  "biggest_mistake": "Customer A's $2.6M notice is the fourth bad-news item, roughly 450 words in behind the AI-builder analysis, when it is the news the lead investor most needs in the first screen.",
+  "what_would_make_it_a_10": "Move Customer A and the missed forecast into the opening three numbers, then the margin cause and the 48-hour fix, so the whole bad-news picture lands before the first scroll."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The sharpest diagnosis of the month: it shows nearly all database growth came from the low-converting partner channel and quantifies the $0.9M compute cost against monthly revenue, then turns it into an ask about pricing partner traffic.",
+  "biggest_mistake": "The AI-traffic paragraph is a dense wall of prose, and the \"roughly 9 points of margin, more than the 7-point drop\" line reads like it contradicts the 7-point drop stated above.",
+  "what_would_make_it_a_10": "Break that paragraph into short lines, put Customer A first, and add the paste-ready intro text so angels can forward it without editing."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the numbers right, but Output 1 is the one I could send tomorrow: numbers first, plain short paragraphs, and asks an angel can forward as written, even though it should have pushed Customer A higher up."
+}

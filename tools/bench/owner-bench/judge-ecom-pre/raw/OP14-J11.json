@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the in-app checkout bug as the first move, sizes the prize in gross margin, and ties most tests to the strongest evidence in the brief.",
+  "biggest_mistake": "It claims every test can detect a 10% lift in 4 weeks and mixes devices in places where the brief's biggest leak is mobile, which is too confident on test sizing.",
+  "what_would_make_it_a_10": "Use realistic MDEs by test segment, make the no-test ship list crisper, and tighten a few correctness issues around sample size and traffic handling."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the funnel the way the owner hoped: bug first with money, then ranked tests tied to the actual objections and the mobile/browser split.",
+  "biggest_mistake": "A few sizing claims are still a bit neat for the real traffic, especially the short 2-week image test and the mobile-only MDE estimate.",
+  "what_would_make_it_a_10": "Show the sample-size working for each test's chosen metric and segment, and separate what should ship now from what truly needs an experiment even more sharply."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would rather pay for because it follows my data more closely, especially the browser split and the honest 'fix first, then test' flow. Both are useful, but 2 feels more like my case and is easier to run with tomorrow."
+}

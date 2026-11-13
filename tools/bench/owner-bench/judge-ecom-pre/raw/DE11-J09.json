@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Splits proved from needs-checking cleanly and puts a hard $94 payback cap on paid with the working ($71 first-order contribution, $94 break-even with repeats) shown.",
+  "biggest_mistake": "The 'gain in points of revenue' unit and blended numbers are dense and take re-reading to act on; the score column is a bit of a vanity construct.",
+  "what_would_make_it_a_10": "Translate each move's gain into plain dollars and a one-line first action so any owner can run their line without decoding the scoring."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads like a human wrote it, uses Sarah and Mike naturally, and adds fresh low-cost angles like a swatch offer and page fixes for returns reasons.",
+  "biggest_mistake": "The scorecard has a placeholder ('Set baseline in week 1') and vaguer targets, so it is less ready to run than the brief demands; the 'every $100k cut adds $23k to $41k' sizing is loosely derived.",
+  "what_would_make_it_a_10": "Replace the baseline placeholder and vague targets with concrete week-13 numbers and a first-week owner-step for each move."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives me a plan I can hand to owners on Monday with hard numbers, a payback cap and thresholds; Output 2 is better written but leaves me with a placeholder scorecard and looser sizing."
+}

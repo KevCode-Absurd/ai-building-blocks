@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Perfect identification and sizing of the ₹34 lakh in-app checkout bug, paired with rigorous statistical sample-size math.",
+  "biggest_mistake": "Runs Test 2 on all traffic instead of scoping it to mobile where the problem actually exists, forcing an unnecessary all-device test.",
+  "what_would_make_it_a_10": "Scope Test 2 to mobile traffic with mobile-specific baseline math, and use add-to-cart as the primary metric on visual/hero tests."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Superb commercial grasp that scopes Test 2 to mobile, smartly shifts Test 5's primary metric to add-to-cart, and opens with an instantly clear funnel conversion breakdown.",
+  "biggest_mistake": "Slightly blurs the distinction between shipping the review score in the ship list and testing the review block in Test 5.",
+  "what_would_make_it_a_10": "Show the explicit sample-size formula working alongside the stated detectable effect numbers."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are world-class responses that catch the ₹34 lakh checkout bug immediately, but Output 2 wins by scoping Test 2 specifically to mobile and pragmatically choosing add-to-cart as the primary metric for Test 5 to keep run-times realistic."
+}

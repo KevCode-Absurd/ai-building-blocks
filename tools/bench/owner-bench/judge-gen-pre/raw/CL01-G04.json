@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It goes all in on what the pilot says works: controllers, sent within 60 days of a pricing-page change, no links, the 9-to-4 proof written as a sentence, and an honest 6.8% to 7.9% reply target that doesn't multiply untested gains.",
+  "biggest_mistake": "Holding most of the 1,900 controllers on a watch list until their pricing page changes could leave a lot of my best segment unsent for months, and the plan never sizes how many will actually get flagged.",
+  "what_would_make_it_a_10": "Estimate how many of the 1,900 get flagged per week, add a fallback opener for the rest, and add the opt-out footer and the suppression rules (current customers, open opportunities)."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A complete, runnable playbook: the right segment, trigger-first send order with a fallback opener for unflagged contacts, an opt-out footer, suppression rules, and pilot-based expectations with the arithmetic shown.",
+  "biggest_mistake": "Loading unflagged controllers with a pain-statement opener mixes in a weaker version the pilot never tested for this role, and step 2's meeting ask comes early for cold finance leads.",
+  "what_would_make_it_a_10": "Show the expected rates for the flagged and unflagged groups separately, and make step 2's ask lighter than a 20-minute meeting."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick the right people, the right moment and no links. The second one I could hand to my reps tomorrow because it has a send order, fallbacks, an opt-out footer and exclusions, while the first could leave most of my best list idle."
+}

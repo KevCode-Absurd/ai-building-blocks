@@ -133,7 +133,7 @@ Number of headlines the budget funds = test cash / (3 x target cost per purchase
 3. **Struck lines:** headline, claim, reason.
 4. **Google pack (if used):** 8 headlines, 2 descriptions, 2 paths, counts.
 5. **Test plan:** variant, ad set, daily budget, start, read date, keep or cut rule, store-side check.
-6. **To confirm:** short list for the owner.
+6. **Assumptions:** one line each, at most three, only where an unknown changes what to do. A claim with no proof on file is left out, not listed.
 
 ## Common mistakes
 

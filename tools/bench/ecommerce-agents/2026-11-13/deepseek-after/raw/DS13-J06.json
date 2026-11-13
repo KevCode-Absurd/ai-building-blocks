@@ -1,0 +1,20 @@
+{
+ "job": "J06",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and compliant, but Output 1 handles the cash-capacity fix more honestly with a clean [X] placeholder and avoids citing the test-only '400 reviews' figure, while Output 2 repeats that unverified count in customer-facing copy."
+}

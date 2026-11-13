@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the brief's main signals into a contribution-led plan with clear caps, owners, first-week actions, stop rules, and a usable weekly scorecard.",
+  "biggest_mistake": "It is a little dense and slightly over-engineered for a small team, with some estimates that should be labeled as working assumptions in the main plan rather than buried at the end.",
+  "what_would_make_it_a_10": "Tighten the wording, make the estimate assumptions even more explicit, and simplify the scorecard to the few lines the team will actually review every Monday."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly identifies the real slowdown: Meta CAC, linen returns, and switched-off email capture and flows, without drifting into discount-led growth.",
+  "biggest_mistake": "The plan is less operational than Output 1: the impact sizing, week-by-week actions, and scorecard targets are looser, so the team would need to translate more before running it.",
+  "what_would_make_it_a_10": "Add firmer contribution math, specific stop/start thresholds by week, and a more concrete 13-week action plan with first-week tasks for every owner."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather hand to the team tomorrow because it gives sharper contribution math, explicit caps, owners, first steps, and stop rules. Output 2 is strong and clear, but it needs more translation into weekly operating actions."
+}

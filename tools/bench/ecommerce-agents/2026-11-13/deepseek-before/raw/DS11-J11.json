@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 sizes all tests on the full traffic base with correct sample-size arithmetic, ranks by money at stake, and gives a coherent 12-week two-lane plan, while Output 2 restricts to mobile, uses add-to-cart as a main metric for several tests, and its MDE/order arithmetic is less reliable."
+}

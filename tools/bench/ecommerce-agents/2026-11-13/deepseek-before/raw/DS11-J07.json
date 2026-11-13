@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 spreads the series over 14 days with a day-13 WhatsApp and an explicit 14-day code expiry that matches the 18%-within-14-days benchmark, while Output 2 compresses everything into 6 days with a 7-day code and puts the WhatsApp at day 3, cutting the long-tail window the brief is aimed at."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Six primary texts that are genuinely different angles (transparency, taste, no added sugar, protein and texture, 4 pm, price) in a blunt, witty voice. The launch plan is two clean pairs, each changing only the primary text, with a budget and keep/cut rules that check out (₹10,500 per ad buys about 36 purchases at ₹290).",
+  "biggest_mistake": "It tells the owner to pause the ₹340 and ₹380 ads to fund the test, which is a bold call with no check on whether those ads feed other goals. It also holds back the live no-added-sugar and protein angles.",
+  "what_would_make_it_a_10": "Add a short fallback in case review quotes are not allowed, and soften the pause call into a staged shift of budget."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Opens with a clear read of the past 90 days: the winner was fatigued, not beaten, and taste and texture reviews never ran. It also adds a backup plan in case review quotes are not allowed.",
+  "biggest_mistake": "Five of the six primary texts repeat \"12 g protein. No added sugar\" as a tail, so the angles blur together, which is the sameness the owner hates.",
+  "what_would_make_it_a_10": "Let each primary text carry a single distinct hook, and drop the repeated protein and sugar tail from most of them."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives six truly different angles in a sharper voice, and its two-pair launch plan makes each test readable. Output 2 has good analysis, but most of its copy ends on the same \"12 g protein, no added sugar\" tail."
+}

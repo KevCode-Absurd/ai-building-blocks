@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are launch-ready and compliant, but Output 1 adds a concrete keep/cut decision rule (spend 3x target CPA; 3+ purchases keep, 2 retest, 0-1 cut) and FSSAI claim guidance, making it more actionable for a hands-off owner."
+}

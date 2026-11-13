@@ -113,7 +113,7 @@ Re-rank every two weeks; collect new ideas through one form or one tab in betwee
 
 | ID | Idea (change X on Y so that Z) | Source | Proposed by | Scored by | Lane | Number it moves | Effect if it works | Evidence (count and list) | Chance | Gross profit per order | Reach per month | Expected profit per month | Goal-metric impact (sum) | One-off cost | Monthly cost | Effort hours | Cash needed | Time to result | Score | Rank | Owner | Signal baseline | Target | Action threshold | Status | Start | Read date | Result |
 
-**To confirm:** owners' hours, cash available, any lane 1 item the client wants to accept as a known risk.
+**Assumptions:** owner hours and cash available, where not given, as the figures used, one line each. A lane 1 item the brief accepts as a known risk is named with that risk in one line.
 
 ## Common mistakes
 

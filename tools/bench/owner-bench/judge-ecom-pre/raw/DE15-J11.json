@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the in-app checkout bug first, sizes it (about 1,860 extra checkouts, about 560 orders, about ₹34 lakh gross margin a month) and gives every test in exactly the format asked for, with on-brand lines like \"Not sure? Try it for 100 nights.\"",
+  "biggest_mistake": "The detectable effects are asserted without the sample-size working, and two of them are marginally beyond the traffic available (the mobile size test at four weeks and the two-week add-to-cart test), plus bracketed placeholders for the EMI amount and firmness rating.",
+  "what_would_make_it_a_10": "Show the sample-size arithmetic per test, recompute the baseline after the bug fix, and say plainly that ₹6,090 is gross profit before shipping, payment fees and returns."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It does the sample-size maths in the open, recomputes the baseline to about 0.81% after the checkout fix, and admits ₹6,090 is before delivery, fees and returns — the honest-money read the owner asked for.",
+  "biggest_mistake": "It forces every test onto all traffic for the same four weeks, so the mobile-specific size test is diluted, and the copy examples and \"To confirm\" list leave some work with the owner rather than finishing it.",
+  "what_would_make_it_a_10": "Run the size and hero tests mobile-only with their own smaller detectable effect, and finish the trial, EMI and firmness lines as paste-ready copy with a stated fallback figure."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nail the in-app checkout bug, the ranking and the ship list, but Output 2 shows the sample-size working, re-baselines after the fix and is honest about what ₹6,090 excludes — which is exactly what I said would delight me. Output 1 is easier to scan and its per-test copy is a touch more on-brand, so the gap is small."
+}

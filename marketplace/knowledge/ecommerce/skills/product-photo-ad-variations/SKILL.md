@@ -129,7 +129,7 @@ File names: `<sku>_<variation>_<placement>_<width>x<height>_v<n>.png`. AI-made s
 3. **The files**, in one folder per placement.
 4. **Chat-tool prompts** (path C) in copyable blocks with the reference photo named.
 5. **Edit log:** file, version, change.
-6. **To confirm:** claims or offers the owner must confirm.
+6. **Claims and offers:** only those the brief or proof file gives; anything else is left out.
 
 ## Common mistakes
 

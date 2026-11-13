@@ -34,7 +34,7 @@ Required:
 
 Optional: the brand voice sheet (`store-visual-identity-sheet`), the store's own reviews CSV, support tickets.
 
-If buyer words are missing, use search-bar suggestions and say so in the summary. If the proof file is missing, write the listing without that claim and list it under "To confirm". Writing is level 1 work. Uploading needs draft access (level 2) through Seller Central or a flat file, and the client approves before it goes live.
+If buyer words are missing, use search-bar suggestions and say so in the summary. If the proof file is missing, write the listing without that claim and name it under claims removed. Writing is level 1 work. Uploading needs draft access (level 2) through Seller Central or a flat file, and the client approves before it goes live.
 
 ## Before you start: the gates
 
@@ -70,7 +70,7 @@ If buyer words are missing, use search-bar suggestions and say so in the summary
 
 ## Output
 
-**One-screen summary:** product, marketplace, main buyer phrase, the three buyer worries the listing answers, Brand Registry status, claims removed for lack of proof, and the "To confirm" list.
+**One-screen summary:** product, marketplace, main buyer phrase, the three buyer worries the listing answers, Brand Registry status, claims removed for lack of proof, and up to three assumption lines where an unknown changes the listing.
 
 **Listing file (paste-ready):**
 

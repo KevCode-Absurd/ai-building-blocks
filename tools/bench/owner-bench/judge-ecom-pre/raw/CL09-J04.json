@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ties every angle to the cost-per-purchase and comment data, and it adds real production detail: exact-claim lines, platform safe zones, usage terms, and a hook-test rule with a $520-per-hook read and a $32 cut line.",
+  "biggest_mistake": "Its main hooks mostly don't use the customers' own words. The 3 pm ad opens on \"Wait. Not today.\" and the family ad on \"Packing the game-day cooler.\" It also calls TikTok's disclosure a \"Paid partnership label\" instead of the branded content toggle.",
+  "what_would_make_it_a_10": "Open with the real comment lines (\"This is my 3 pm soda now\", \"My kids think it's regular soda\") as the main hooks, and end each ad on \"A new kind of soda.\""
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Its hooks come straight from customer language (\"My kids think this is regular soda\", \"My 3 pm soda\"). Lines like \"Still fizzy. Still sweet. Still my treat.\" sound like the brand, every ad lands on \"A new kind of soda\", and disclosure is named correctly for both Meta and TikTok.",
+  "biggest_mistake": "The hook-test plan is thin: nine ads at equal budget for \"about a week\", with no purchase threshold or cut line. It also skips creator deliverables and usage terms.",
+  "what_would_make_it_a_10": "Add a test rule with a minimum purchases per hook and a cost-per-purchase cut line tied to the $26 and $32 benchmarks, plus a deliverables and usage-rights checklist for creators."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both give me three on-brand, taste-first scripts with the right angles. Output 2 sounds more like us and like our customers, and it gets the disclosure exactly right, though I'd borrow Output 1's testing rules and creator terms."
+}

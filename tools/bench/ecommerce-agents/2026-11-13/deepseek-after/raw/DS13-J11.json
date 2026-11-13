@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 7,
+  "commercial": 6,
+  "craft": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 covers every required element with correct funnel math, sensible sequencing, and platform/legal care (real EMI/COD terms, trial wording, guardrails), while Output 2 has a misplaced MDE calculation, weaker commercial logic on test sequencing, and omits the required 'what to ship without testing' depth and assumptions clarity."
+}

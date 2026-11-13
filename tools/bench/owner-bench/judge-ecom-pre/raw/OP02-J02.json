@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the key signals into a usable plan: worker/on-feet Spark Ads from day 1, problem-first hooks, a $38 target tied to 90-day contribution, and a $30,000 budget that adds up.",
+  "biggest_mistake": "It is a little lighter on attribution hygiene and compliance details, such as excluding current buyers, paid-partnership disclosure, and checking TikTok against Shopify during the month.",
+  "what_would_make_it_a_10": "Add current-customer exclusion, paid creator disclosure, weekly Shopify-vs-TikTok reconciliation, and a slightly stronger two-read incrementality test for the day-30 decision."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very Monday-ready and operational, with the right worker-first creative, learning-phase budget logic, tracking gates, Spark Ads, rights planning, and a day-30 read that does not blindly trust TikTok ROAS.",
+  "biggest_mistake": "It invents or over-assumes a few items, especially the $95,000 paid-spend share/Meta-at-$65,000 assumption and the 'to confirm' section when the owner asked for assumptions, not follow-up questions.",
+  "what_would_make_it_a_10": "Remove the invented Meta spend assumption, rewrite the confirmation list as stated assumptions, and keep the day-30 incrementality read tied only to known Shopify, survey, and baseline data."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 2 is the one I would rather hand to the team because it has better learning-phase logic, tracking gates, creator-rights details, and a more realistic measurement plan. Output 1 is safer on assumptions, but Output 2 gives the media buyer more of the operating system needed for the first 30 days."
+}

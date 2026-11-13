@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is fully shoot-ready with tighter compliance (spoken disclosure, safe zones, rights/dates, creator release) and better commercial mechanics (equal-budget hook test judged on 3-second view rate then cost per purchase), while Output 2 leaves flavour placeholders and weaker disclosure/test detail."
+}

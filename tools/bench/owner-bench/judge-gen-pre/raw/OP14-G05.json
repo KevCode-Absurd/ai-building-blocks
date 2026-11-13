@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts directly on the real signals in the data: it centers APAC hours, makes the weekend rotation explicit, drops experience requirements, and moves the predictive writing test into the application to cut review load.",
+  "biggest_mistake": "It changes the requested role title from recruitment marketing specialist to customer support specialist without acknowledging the mismatch, and the process design relies on one reviewer for most first-pass scoring.",
+  "what_would_make_it_a_10": "Keep this structure but tighten the hiring process design for fairness and consistency, and resolve the role-title mismatch explicitly."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The job post sounds like the brand and does a strong job of welcoming career changers while clearly stating the overnight hours and weekend rotation.",
+  "biggest_mistake": "It spreads weight too broadly instead of making writing clearly dominant, and it introduces assumptions and extra asks that make the deliverable feel less decisive and less ready than it should.",
+  "what_would_make_it_a_10": "Make the written reply the unmistakable main hiring signal in both scoring and process, remove the unresolved assumptions, and finish the workflow as a firm recommendation rather than a draft."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more tightly built on your data and your actual pain points. It gives the stronger owner-ready answer because it makes the highest-leverage change first: replacing resumes and cover letters with a short writing exercise tied to the signal that really predicts success."
+}

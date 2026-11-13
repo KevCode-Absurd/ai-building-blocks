@@ -1,0 +1,20 @@
+{
+ "job": "J10",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and correctly work the ₹699 threshold, but Output 2 gives a cleaner comparison table across candidate thresholds, prices the COD refusal risk at ₹140, and ties bundle savings to a coherent ladder; Output 1's break-even and bundle math are sound but its 'stops paying at 6% of all orders' framing understates the affected-band break-even that Output 2 states more usefully."
+}

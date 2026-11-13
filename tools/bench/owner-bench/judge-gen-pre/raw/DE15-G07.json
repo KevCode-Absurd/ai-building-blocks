@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 7,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the support data into a capacity argument (2,400 tickets is 240 a day for three people) and then builds gates around it: 1,000 real beta setups, the top 200 extensions tested, an undo, and a staged rollout that only widens if migration tickets stay under 50 a day.",
+  "biggest_mistake": "The customer-facing copy is full of blanks ([Opens in __ ms], [@author1], [support address], [Extension] by [author]) and the whole thing runs a little over the 1,200-word cap, so the parts I'd paste tomorrow still need homework.",
+  "what_would_make_it_a_10": "Fill or standardise the placeholders in the X posts and email, add an owner column to the dated table, and trim about 150 words so it lands inside the brief."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives me targets against last time's 18.3% week-4 retention and a pre-agreed Plan B with numeric triggers (pause auto-update above 40% carry-over tickets, put me and the designer on replies above 24 hours), plus paste-ready copy with owners and done-when for every date.",
+  "biggest_mistake": "It under-uses the community credit principle — the email thanks '1,500 community authors' without naming any — and the retention target has a small arithmetic slip (6,800 plus 2,470 is about 9,270, not 9,200), with a 'To confirm' list that asks questions I said I wouldn't be around to answer.",
+  "what_would_make_it_a_10": "Name two or three extension authors in the email and X post, show the support-capacity sum (240 tickets a day across three people) with harder gate thresholds, and fix the arithmetic and 'to confirm' items."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both spot the migration trap and the unused author base, but Output 1's gates are harder and its copy sounds more like us, names authors and handles the staged rollout honestly — I'd just have to fill its blanks before posting."
+}

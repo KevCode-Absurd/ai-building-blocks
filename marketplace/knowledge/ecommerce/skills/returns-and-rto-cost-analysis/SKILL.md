@@ -129,7 +129,7 @@ Match billed weight, RTO charges and COD fees to the orders. Overcharging is com
 
 ## Output
 
-**One-screen summary:** total monthly loss from RTO and returns, as money and as a share of gross profit; the three cells that cause most of it; the recommended fixes in order with net gain per month; the runner-up fix in one line; and a short "To confirm" list.
+**One-screen summary:** total monthly loss from RTO and returns, as money and as a share of gross profit; the three cells that cause most of it; the recommended fixes in order with net gain per month; and up to three assumption lines where a missing cost changes the order of fixes.
 
 **Sheet 1, cost per event:**
 

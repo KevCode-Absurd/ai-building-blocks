@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It brings back the paused transparency winner, adds the missing taste angle from reviews, and gives a tight first-4 launch plan tied to the actual signals in the data.",
+  "biggest_mistake": "A few lines lean a bit more analytical than necessary for a pure copy brief, and the review-quote caveat adds minor friction.",
+  "what_would_make_it_a_10": "Trim a little of the analysis and make every launch combo isolate one variable even more cleanly while keeping the same strong copy set."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly spots that the paused transparency ad should return and sets up a sensible transparency-vs-taste test plan.",
+  "biggest_mistake": "Several copy lines use or imply claims outside the approved set, and the launch combinations mismatch headlines to angles in ways that muddy what is being tested.",
+  "what_would_make_it_a_10": "Keep strictly to approved claims, sharpen the brand voice, and rebuild the launch matrix so each ad tests one clear angle with matching copy elements."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I can actually launch tomorrow: it respects the brand rules better, uses my best signals more fully, and gives stronger, more varied copy with a cleaner first-test plan. Output 2 has good instincts, but the claim discipline and test design are looser."
+}

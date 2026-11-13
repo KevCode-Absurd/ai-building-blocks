@@ -35,7 +35,7 @@ A flow is a short series of emails that starts when someone does something: sign
    - *Exit rules:* purchase, booking, reply, unsubscribe, or entering a more relevant flow. If the platform cannot exit on an event, say so and propose a workaround (a tag set by the store, or a filter on each email).
    - *Timing:* first email immediately (people expect it), then space the next ones a day or two apart, then slow down.
    - *Suppression:* people in another active flow, recent buyers of the same product, complainers.
-2. **Map each email to one job.** Typical shapes:
+2. **Map each email to one job.** When the client's data ties certain actions to retention or sales, give every email to one of those actions. Drop a step the data shows is weak; do not keep a softened version of it. Typical shapes:
    - *Welcome (4 to 5 emails over about 10 to 14 days):* deliver what was promised and say what to expect and how often; the most useful thing you know for a beginner; a story or proof from someone like them; answer the biggest doubt; one clear, soft offer.
    - *Lead nurture (5 to 6 emails over about 4 weeks):* remind them what they asked about; help with one practical tip; prove with a short case; answer a doubt; offer a next step (a call, a quote, a visit); close the loop politely.
    - *Post-purchase or post-booking (3 to 4 emails):* how to get the most from it; check-in and help; review request (ask everyone, not only people likely to be happy); a relevant next purchase at the right time.
@@ -43,10 +43,10 @@ A flow is a short series of emails that starts when someone does something: sign
    - *Win-back (2 to 3 emails):* what is new or improved; a reason to come back; a simple question ("Still want to hear from us?").
    - *Sunset (2 to 3 emails):* ask whether they want to stay; offer a lower frequency or topic choice; confirm you will stop if they do nothing, then stop.
 3. **Write each email.** Subject line that is specific and honest; preview text that adds to it; an opening line that pays off the subject; one idea; one link or button that names the outcome; a real person's sign-off. Keep nurture and quote emails under about 120 words; welcome and post-purchase emails can be longer if every line helps.
-4. **Write two subject lines per email** for testing over time, in the reader's words. No fake "Re:" or "Fwd:", no invented urgency.
+4. **Write one final subject line per email,** in the reader's words and within the brief's character limit. No fake "Re:" or "Fwd:", no invented urgency. Give options only when the brief asks for them: label them as options below the email, never inside the subject field, and keep each within the same limit.
 5. **Add compliance basics.** Visible unsubscribe link, sender identity and contact address, postal address for US mail, and one-click unsubscribe headers from the platform. Testimonials must be real and permissioned. Deadlines must be real.
 6. **Set measures.** For each email: clicks, the goal action, unsubscribes and complaints. For the flow: share of entrants who reach the goal, and how long it takes. Do not judge flows on opens.
-7. **List what the client must confirm** (offers, prices, guarantee wording, names, quotes, dates).
+7. **Decide open points.** Where a fact is missing, use the choice a top lifecycle marketer would make and state it in one assumption line, only where it changes what to do (at most three). Keep any legally needed sign-off (such as permission to quote a customer) as one line next to the email it affects. Approval to switch the flow on goes in your message, not in the deliverable.
 
 ## Checks
 
@@ -62,10 +62,10 @@ A flow is a short series of emails that starts when someone does something: sign
 ## Output format
 
 1. **Flow map:** trigger, filters, exit rules, suppression, timing.
-2. **Email table:** number, day, job, subject A and B, main action, goal metric.
-3. **Full copy:** for each email, subject lines, preview text, body, button text, sign-off.
+2. **Email table:** number, day, job, subject line, main action, goal metric.
+3. **Full copy:** for each email, subject line, preview text, body, button text, sign-off.
 4. **Measures** and the date to review.
-5. **Facts to confirm** before the flow is switched on (by the client, or by me at level 3).
+5. **Assumptions:** at most three lines, only those that change what to do.
 
 ## Example of good output (short)
 
@@ -73,11 +73,11 @@ A flow is a short series of emails that starts when someone does something: sign
 
 **Flow map:** Trigger: no click and no order in 9 months, still subscribed. Exit: clicks "Keep me on the list", orders, or unsubscribes. After email 3 with no action, the platform removes them from marketing sends (suppressed, not deleted, so they are never re-added by accident).
 
-| # | Day | Job | Subject A / B | Action |
+| # | Day | Job | Subject | Action |
 |---|---|---|---|---|
-| 1 | 0 | Ask | "Still want our tea letters?" / "Should we keep writing to you?" | Keep me on the list |
-| 2 | 5 | Offer a lighter option | "Fewer emails, same tea" / "Just the seasonal ones?" | Choose seasonal only |
-| 3 | 12 | Close the loop | "This is our last email unless you say so" / "We'll stop here" | Keep me on the list |
+| 1 | 0 | Ask | "Still want our tea letters?" | Keep me on the list |
+| 2 | 5 | Offer a lighter option | "Fewer emails, same tea" | Choose seasonal only |
+| 3 | 12 | Close the loop | "This is our last email unless you say so" | Keep me on the list |
 
 **Email 3 (body)**
 

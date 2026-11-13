@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks groups the way my data says to. The just-lapsed 68 to 90 days come first with no offer, then the 5,200 Monsoon Dark buyers. Every count is clean, the offers stop at 10%, and the subscriber restart is held until delivery is fixed.",
+  "biggest_mistake": "The Monsoon Dark first email never names a replacement roast; it only asks how I brew. That breaks our 'name the farm or roast' rule, and the match is pushed back to step 2.",
+  "what_would_make_it_a_10": "Name the closest current dark roast in the Monsoon Dark opener, and show WhatsApp-reachable counts alongside the email reach."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The drafts are ready to send with merge fields. The Monsoon Dark email names the blend and the roasters' pick, the subscriber track leads with date choice behind a delivery gate, and gross profit is worked out group by group, net of discounts.",
+  "biggest_mistake": "It starts with the 91 to 180 day group and treats the 9,000 customers at 46 to 90 days only as a future day-28 nudge, so the cheapest people to win back get no win-back wave of their own.",
+  "what_would_make_it_a_10": "Make the 46 to 90 day at-risk group wave one with a no-discount reminder, ahead of the colder bands."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both caught the discontinued blend and the courier problem. Output 1 goes after my cheapest-to-win customers first, and its holdout sizing and decision rules are tighter. Output 2 has the more polished drafts, but it put the wrong group first."
+}

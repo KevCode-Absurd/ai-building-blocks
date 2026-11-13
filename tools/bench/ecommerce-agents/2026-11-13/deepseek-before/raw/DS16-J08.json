@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 keeps every offer at or below 15% so nothing waits on an unavailable founder, warns against training the list to wait for codes, protects deliverability with a no-discount re-permission sweep and a complaint/refund exclusion, and gives dated, self-contained launch actions; Output 2's arithmetic is clean and its measurement rigour (SDLs, stop rules, 5% always-on holdout) is a touch stronger, but the optional 20% test depends on an absent founder and the 15% discounts to the oldest group plus discount ladder are looser."
+}

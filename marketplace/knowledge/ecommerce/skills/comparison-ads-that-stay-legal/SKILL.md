@@ -107,7 +107,7 @@ Hand concepts to `write-one-page-creative-brief`. Put the claims sheet recheck o
 | Line as written | Attribute | Our value | Our evidence (file, date) | Their product and variant | Their value | Their evidence (URL, screenshot, date) | Basis (size, unit, tax) | Market | Recheck date | Owner | Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 
-**To confirm:** lawyer review of flagged lines, and who owns weekly price rechecks.
+**Legal check:** each flagged line carries one line beside it: "lawyer review before launch". **Price rechecks:** weekly, by whoever runs the ads unless the brief names someone else.
 
 ## Common mistakes
 

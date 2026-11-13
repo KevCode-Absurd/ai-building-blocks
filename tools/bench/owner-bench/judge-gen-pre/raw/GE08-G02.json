@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent data synthesis and segment rationale that zeroes in on the seat math and user behavior.",
+  "biggest_mistake": "Alternates inconsistently between 'Get started' and 'Book a demo' across sections instead of driving a unified conversion goal for a B2B team lead.",
+  "what_would_make_it_a_10": "Commit to a single primary CTA suited for Priya's team purchase and address her explicit concern regarding interviewers' PTO."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Directly resolves Priya's specific objections (including PTO and security) while maintaining a strict, disciplined CRO focus with one team CTA ('Book a demo').",
+  "biggest_mistake": "The headline for Hero Version A could be slightly punchier, though it closely adheres to brand voice.",
+  "what_would_make_it_a_10": "Include an explicit mention of interview count within the hero subhead."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are exceptional, but Output 2 shows superior CRO discipline by keeping a single CTA ('Book a demo') tailored to Priya's buying process, addressing her specific PTO objection directly in the copy, and defining a qualified conversion metric tied to company size."
+}

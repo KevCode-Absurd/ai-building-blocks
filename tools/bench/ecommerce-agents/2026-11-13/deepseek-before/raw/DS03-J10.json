@@ -1,0 +1,20 @@
+{
+ "job": "J10",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 6,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1's threshold math is internally consistent and its bundle economics hold up, while Output 2's headline ₹10,850 cautious case is mis-stated (the component math gives ~₹4,000) and its Glow Duo break-even framing is muddled, though its free-shipping and COD/legal notes are good."
+}

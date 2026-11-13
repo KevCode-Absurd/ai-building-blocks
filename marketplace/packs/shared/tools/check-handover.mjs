@@ -11,6 +11,10 @@
 //    aim; over 1.6 times fails unless the brief asked for more. --one-page fails over about 450 words.
 // --profile <family> uses the shipped v3 family aim and ceiling. Legacy calls retain their old limits.
 // --requested-more records that the brief explicitly requests more; it waives only the ratio ceiling.
+// 3. Homework: finished work hands nothing back to the owner. It fails on a "To confirm" or "Open questions" box, an ask
+//    for the owner's yes or sign-off, an approval gate inside the plan, editor notes about the copy, and alternates
+//    (a "Runner-up:" line, "(test: ...)" inside a subject or headline). --options-requested lets alternates pass when
+//    the brief asks for options. These rules mirror quality/leakcheck.cjs.
 // It exits 1 when anything fails, so it can gate a hand-over. Plain Node, no packages.
 import { readFileSync } from "node:fs";
 
@@ -28,10 +32,11 @@ if (profileAt >= 0) {
 }
 const requestedMore = args.includes("--requested-more");
 const requestedTemplate = args.includes("--requested-template");
-let acceptedTemplateFields = 0;
+const optionsRequested = args.includes("--options-requested");
+let acceptedTemplateFields = 0, acceptedOptions = 0;
 const [file, plain] = args.filter((a, i) => !a.startsWith("--") && !(profileAt >= 0 && i === profileAt + 1));
 if (!file) {
-  console.error("Usage: node tools/check-handover.mjs <deliverable> [plain-answer] [--one-page]");
+  console.error("Usage: node tools/check-handover.mjs <deliverable> [plain-answer] [--one-page] [--profile <family>] [--requested-more] [--requested-template] [--options-requested]");
   process.exit(2);
 }
 
@@ -72,6 +77,51 @@ text.split(/\r?\n/).forEach((line, i) => {
   }
 });
 
+// Homework: work handed back to an owner who cannot be asked. Keep in step with quality/leakcheck.cjs.
+const labelOf = line => {
+  const s = line.replace(/^\s*>?\s*/, "");
+  const m = s.match(/^#{1,6}\s+(.+?)\s*#*\s*$/) || s.match(/^(?:[-*+]\s+)?(?:\*\*|__)(.+?)(?:\*\*|__)/) || s.match(/^(?:[-*+]\s+)?([A-Za-z][\w ,&'-]{0,60}?)\s*:/)
+    || s.match(/^([A-Za-z][\w ,&'()-]{0,60}?)\s*$/); // a short bare line, such as an HTML heading
+  return m ? m[1].replace(/^\s*(?:\d+[.)]|[A-Z][.)])\s+/, "").replace(/[:.\s]+$/, "") : null;
+};
+const HOMEWORK_LABEL = /^(?:(?:assumptions?|items?|points?|things|details|facts|figures|numbers|questions|left|still|and)\s+){0,3}to (?:confirm|be confirmed|approve|check with you)\b(?!\s+(?:your|you|the order|an order|order|it|that you)\b)|^(?:[\w'-]+\s+)?(?:open|outstanding|unanswered|remaining) questions?\b|^questions? (?:for|to) (?:you|the owner|the client)\b|^(?:needs?|awaiting|pending) (?:your )?(?:confirmation|approval|sign-?off|yes)\b/i;
+const HOMEWORK = [
+  [/\byour (?:yes|go-ahead|sign-?off)\b/i, "an ask for the owner's yes"],
+  [/(?<!\b(?:no|without)\s)\b(?:board|owner|founder|product|management|client|final|exec(?:utive)?|leadership)\s+sign[- ]?off\b|\b(?:awaiting|pending)\s+(?:a\s+|the\s+|your\s+)?sign[- ]?off\b/i, "a sign-off ask"],
+  [/\bplease confirm\b(?!\s+(?:your|you|so|by|here|below|the order|order|that you)\b)/i, "an ask to confirm"],
+  [/\bbefore anything (?:goes|is|gets) (?:live|sent|published|launched)\b/i, "an approval gate inside the plan"],
+];
+const ALTERNATES = [
+  [/^\s*(?:[-*+>|]\s*)*(?:\*\*|__)?(?:email\s+\d+\s+)?(?:subject(?:\s+line)?|headline|preview(?:\s+text)?|preheader)\b[^:|]{0,20}(?::|\|).*\(\s*(?:test|alt|alternate|alternative|variant|option|or)\s*:/i, "a test alternate inside a field"],
+  [/^\s*(?:[-*+>|]\s*)*(?:\*\*|__)?runner[- ]up\s*(?:\*\*|__)?\s*:/i, "a runner-up option"],
+];
+const EDITOR = [
+  [/^\s*(?:[-*+>]\s*)*(?:\*\*|__|_|\*)?(?:the|this) (?:copy|draft|email)\s+(?:never|doesn'?t|does not|avoids?|leaves out|omits?|steers clear|stays away|deliberately|intentionally|on purpose)\b(?!.*\b(?:because|so that|since)\b)/i, "an editor note"],
+  [/\b(?:editor|writer|designer|copywriter)'?s'? notes?\b|\bnotes? (?:to|for) (?:the )?(?:writer|designer|copywriter)\b/i, "an editor note"],
+];
+// Copy a customer reads ("Please confirm so we can pack it.") is not an ask to the owner.
+const COPY_FIELD = /^\s*(?:[-*+|]\s*)*(?:\*\*|__)?(?:primary text|headline|body(?: copy)?|description|caption|subject(?: line)?|preview(?: text)?|preheader|hook|script|voice-?over|vo|on-screen(?: text)?|overlay|cta|message|copy|post|answer|a)(?:\s*\d+)?\s*(?:\([^)]*\))?\s*(?:\*\*|__)?\s*:/i;
+const inCopy = (line, m) => /^\s*>/.test(line) || COPY_FIELD.test(line)
+  || [...line.matchAll(/"([^"]{12,})"|\u201c([^\u201d]{12,})\u201d/g)].some(q => (q[1] || q[2]).includes(m[0]));
+text.split(/\r?\n/).forEach((line, i) => {
+  const show = line.trim().slice(0, 100);
+  const label = labelOf(line);
+  if (label && HOMEWORK_LABEL.test(label)) problems.push(`line ${i + 1}: homework "${label}": decide each point, or write one assumption line where it changes what to do: ${show}`);
+  else for (const [re, what] of HOMEWORK) {
+    const m = line.match(re);
+    if (m && !inCopy(line, m)) { problems.push(`line ${i + 1}: ${what} "${m[0]}": approvals belong outside the deliverable: ${show}`); break; }
+  }
+  for (const [re, what] of ALTERNATES) {
+    if (!re.test(line)) continue;
+    if (optionsRequested) acceptedOptions++;
+    else problems.push(`line ${i + 1}: ${what}: give one final answer unless the brief asks for options: ${show}`);
+  }
+  for (const [re, what] of EDITOR) {
+    const m = line.match(re);
+    if (m) { problems.push(`line ${i + 1}: ${what} "${m[0].trim()}": ${show}`); break; }
+  }
+});
+
 // Repetition: the same run of 6 or more words in 3 or more separate lines (variants that all lean on one stock line).
 // A note, not a failure: a repeated legal line can be right, a repeated price or spec string in every variant rarely is.
 const notes = [];
@@ -105,8 +155,9 @@ if (onePage && n > 450) problems.push(`length: ${n} words is more than one page 
 
 console.log(`Hand-over check: ${lengthNote}.`);
 if (requestedTemplate) console.log(`Requested-template mode: ${acceptedTemplateFields} intentional field matches accepted; field completion is not claimed.`);
+if (optionsRequested) console.log(`Options-requested mode: ${acceptedOptions} alternate matches accepted.`);
 if (notes.length) console.log(`Worth a look (does not fail):\n- ${notes.join("\n- ")}`);
 if (problems.length) {
   console.log(`${problems.length} to fix:\n- ${problems.join("\n- ")}`);
   process.exitCode = 1;
-} else console.log("Clean: nothing internal or unfinished found.");
+} else console.log("Clean: nothing internal, unfinished or left for the owner to do.");

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data exactly as the owner does — sleep at night, narrator clips as the core format, and a week 1 deliberately built so nothing waits on review — and the drafts use the audience's own phrases ('replaying today's emails', 'parked car').",
+  "biggest_mistake": "The 'stress at work' stop is slightly muddled — the plan keeps a 'small pauses' theme that is essentially the stress/parent slot, so the stop list and the calendar don't quite line up, and the kindness 'small pauses' Wednesday post drifts from one segment.",
+  "what_would_make_it_a_10": "Tighten the theme taxonomy so the stop list, the calendar and the totals tell one consistent story, and name the parents' segment explicitly where it is being served."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Sensible structure with a clear baseline and a quantified installs forecast, and it correctly identifies sleep, narrator clips and evening posting as the levers.",
+  "biggest_mistake": "It defies the review rule it quotes: it claims all six week-1 drafts and weeks 2-4 can be batched for approval on 16 November, but week 1 posts on 16 November and the rule says reviewed posts cannot go live before 23 November — so either week 1 is unreviewed (contradicting its own 'send all of weeks 2 to 4') or the dates are impossible.",
+  "what_would_make_it_a_10": "Get the review logic right, drop the 14:30 'pickup test' that the data says underperforms, and make week 1 genuinely review-free instead of asserting it."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 builds week 1 so nothing waits on the 5-day review, uses the customer's phrases as hooks, and stops the right things; Output 2 contradicts the review timing it states and adds a daytime slot the data says underperforms. Output 1 is the plan I'd hand to the team on Monday."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Asks are concrete and easy to act on: a named profile, a city, a date, and a ready-to-forward line for each, plus a dated fix (48-hour pause by 30 November).",
+  "biggest_mistake": "Customer A's $2.6M loss sits under the AI-builder and burn sections instead of near the top, runway appears only in the table, and the NRR hit isn't flagged.",
+  "what_would_make_it_a_10": "Move Customer A and runway (33 to 37 months) into the first screen and say what the churn does to NRR."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The first screen has the three numbers with a correct runway range (33 to 37 months), followed by Customer A and the forecast miss. The margin math is tied back to free-tier compute (about 9 points on roughly $10.4M monthly revenue), which shows the database growth is a cost problem.",
+  "biggest_mistake": "The 48-hour pause fix has no ship date, and the Customer A churn isn't tied to the expected NRR drop.",
+  "what_would_make_it_a_10": "Give the pause fix a ship date and expected margin recovery, and add a forwardable one-liner to each ask."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are honest and on-voice. Output 2 puts runway and Customer A where my lead partner sees them on a phone, and its margin math shows me the AI-builder cost problem more clearly. Output 1's forwardable asks are nicer."
+}

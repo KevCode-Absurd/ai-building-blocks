@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Executes the required structure flawlessly, leading with the three metrics and explaining the gross margin and burn drivers with rigorous math.",
+  "biggest_mistake": "Separates 'What went wrong' from 'What we're doing about it' into two different sections instead of pairing problems with their solutions inline.",
+  "what_would_make_it_a_10": "Add forwardable snippets to the asks so busy investors can literally forward them to candidates or peers in two clicks."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Pairs every bad news item immediately with its fix and provides ready-to-forward blurbs for every investor ask, saving lead partners and angels maximum time.",
+  "biggest_mistake": "Could have explicitly highlighted the partner attribution in the subject line like Output 1 did.",
+  "what_would_make_it_a_10": "Already a 10; it is an exemplary investor update that hits every single brief requirement and persona nuance."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are elite and ready to send, but Output 2 wins by including forwardable blurbs for the asks and integrating fixes directly alongside problems under the exact brand header ('What went wrong, and what we're doing about it')."
+}

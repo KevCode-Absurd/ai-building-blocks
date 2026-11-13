@@ -1,0 +1,20 @@
+{
+ "job": "J10",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1's threshold maths is transparent and internally consistent (₹7,992 net, 6% break-even), while Output 2's cautious case mislabels its own break-even as 5% and its 'cautious' scenario is the optimistic one, though its bundle economics are sharper."
+}

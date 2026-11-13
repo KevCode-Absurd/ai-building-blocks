@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It targets the real leak, Essentials customers with 8+ channels, with a clear flat Agency plan, honest customer messaging, and a test that watches Team cannibalization.",
+  "biggest_mistake": "It underplays the wider yearly-billing opportunity and the month-six revenue math could show the retention assumptions more transparently.",
+  "what_would_make_it_a_10": "Add a simple, honest yearly-billing prompt beyond Agency switchers and tighten the revenue table so every number traces directly to the stated assumptions."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a clean flat Agency plan, explains who it is for, and includes a useful guardrail around Team customers with one active user.",
+  "biggest_mistake": "It dismisses yearly billing even though the data shows it is an underused churn lever, and its first real test focuses on new visitors rather than the existing at-risk 8+ Essentials segment.",
+  "what_would_make_it_a_10": "Move the first test to existing Essentials 8+ customers, include a transparent yearly-billing nudge, and make the six-month revenue math easier to audit."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather run: it goes straight at the churn pocket, protects small customers, gives customer-facing copy in Buffer's voice, and tests the main risk before launch. Output 2 is good, but it makes a weaker priority call by sidelining yearly billing and testing new visitors before the customers who are already leaking."
+}

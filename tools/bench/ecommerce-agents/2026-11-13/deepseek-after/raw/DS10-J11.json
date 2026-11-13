@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both deliver all five required tests with correct funnel arithmetic, but Output 1 sizes each test's MDE to the metric it actually moves (2-week ATC reads at 6.2%, 4-week order reads at 11.9%), sequences tests 2–3 after the picker winner ships, and finishes in 8 weeks, while Output 2's uniform 10% orders-per-session MDE stretches the plan to 12 weeks and runs a mobile-only test concurrently with an all-device test on the same page area."
+}

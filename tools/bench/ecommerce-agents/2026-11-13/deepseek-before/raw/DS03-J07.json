@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers a complete, correctly sequenced 14-day series with a true 3-day expiry reminder, a fair last-chance WhatsApp placement, and a clean holdout test, while Output 2 compresses to six days and invents a 7-day expiry that contradicts the brief's 14-day window and weakens the deadline logic."
+}

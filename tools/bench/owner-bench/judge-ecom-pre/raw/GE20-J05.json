@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 5,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Provides strong, punchy copy that fits the brand's blunt voice and stays strictly within Meta's character limits.",
+  "biggest_mistake": "Mixes different primary texts, headlines, and descriptions in the launch combinations, making it a multivariable test where you can't isolate what actually caused a win.",
+  "what_would_make_it_a_10": "Hold headlines and descriptions constant across test combinations to isolate the copy change, and include a headline focused specifically on taste."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawlessly isolates the primary text in its test pairs while using the brand's past data to calculate precise daily budgets and CPA keep/cut rules.",
+  "biggest_mistake": "None; it successfully weaves the customer verbatim, constraints, and media buying fundamentals into a highly professional deliverable.",
+  "what_would_make_it_a_10": "It is already a 10."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 understands how to construct a true A/B test by isolating variables, correctly includes the requested taste headline, and provides brilliant budget and sample-size math based on the owner's past CPA data."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and ready-to-shoot, but Output 2 adds stronger commercial guardrails—spoken disclosure by second 6, a hard no-'you'-health-questions rule for Meta, an explicit end card, creator rights/pay/dates, and a blind-test structure that avoids unverifiable 'can't tell the difference' claims."
+}

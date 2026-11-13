@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 keeps the discount window consistent with the brief's 14-day purchase baseline and invents nothing about the brand, while Output 2 unilaterally cuts the code to 7 days (shrinking the measured window and the offer the pop-up promised), signs the email as a named co-founder, and cites an unsourced WhatsApp benchmark; Output 2's subject-line variants, unique codes and checkout-pause rule are good but don't outweigh that."
+}

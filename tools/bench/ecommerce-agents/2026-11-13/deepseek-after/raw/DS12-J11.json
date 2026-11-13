@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are accurate and complete (funnel, ceiling, MDE and profit sums check out in each), but Output 1 ties the metric to the mechanism — leading add-to-cart metric with 2-week runs and 6.2% MDE for up-funnel changes, orders with 4-week runs and 11.9% for checkout changes — packages tests 2 and 3 into an efficient 2×2, and adds a mass-free ship list (star rating, tracking, mobile image weight), while Output 2 sizes everything on orders per session at a coarse 10% MDE, which pushes its top test to 6 weeks and a 12-week calendar for no clear gain."
+}

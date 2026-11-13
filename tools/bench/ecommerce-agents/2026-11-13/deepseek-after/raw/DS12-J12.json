@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and complete, but Output 1 wins on compliance and rigor: it correctly flags that checkout opt-in may cover order updates only (holding marketing templates until cleared), while Output 2 assumes marketing consent for cart messages — a real block risk — and Output 1 adds a hold rule, call script, holdout testing and precise break-even math that give it the edge."
+}

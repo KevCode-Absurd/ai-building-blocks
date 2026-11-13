@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the real bad news in the first screen, explains the AI-builder margin problem clearly, and makes the VP Enterprise Sales ask specific and useful.",
+  "biggest_mistake": "The runway row is wrong for September at 52 months, and the assumptions note undermines a draft that should feel finished.",
+  "what_would_make_it_a_10": "Fix the runway math, remove the assumptions footer by making the few open points decisions, and tighten the email into a fully sendable final version."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It best explains the core issue that AI-builder growth is dilutive today, quantifies why margin fell, and ties that directly to a near-term fix.",
+  "biggest_mistake": "Customer A should be even higher in the bad-news ordering, and the third ask on pricing is a bit less anchored in the owner's stated top need than the hiring ask.",
+  "what_would_make_it_a_10": "Move Customer A into the very first bad-news block after the three numbers and make the final asks even more explicitly tied to named profiles and dates without the assumptions footer."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is the one I'd rather send after a light edit because the math is cleaner and it gives me one extra useful insight: the compute overage is enough to explain the whole margin drop. Output 1 is also strong, but the runway error is the kind of mistake that makes me double-check the rest."
+}

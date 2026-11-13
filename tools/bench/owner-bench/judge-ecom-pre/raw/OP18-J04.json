@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It builds the three scripts around the real winning signals: 3 pm soda, blind taste test, family/game day, price objection, and taste before claims.",
+  "biggest_mistake": "The third script has a small label-reading beat that could feel less taste-led than the other two, even though it comes after the family reaction.",
+  "what_would_make_it_a_10": "Add the paid disclosure note inside each individual creator brief and sharpen the family script so the taste/ranking moment carries more of the ad than the label moment."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly uses the performance data to choose the angles and avoids the weak label-read and founder-story openings.",
+  "biggest_mistake": "It adds unnecessary assumptions and unfinished production terms, and the 'must say all approved claims' instruction conflicts with scripts that do not use all three claims in every ad.",
+  "what_would_make_it_a_10": "Remove the placeholders and extra assumptions, fix the disclosure wording for Meta and TikTok, and make the claim rules match the actual scripts."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 1 feels cleaner, more brand-safe, and more ready to send to creators without edits. Output 2 has useful production detail, but the contradictions and 'to confirm' loose ends make it slightly less finished."
+}

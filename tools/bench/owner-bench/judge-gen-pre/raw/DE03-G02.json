@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks recruiting with the seat math shown and builds the whole page around Priya's 'email tennis' pain, with round robin and routing forms pulled up and security moved next to the demo button.",
+  "biggest_mistake": "The '1,540 of 2,717' share is a little confusing because the segment total mixes solo and team seats, and several proof blocks are bracketed placeholders that still need real material.",
+  "what_would_make_it_a_10": "Replace the placeholders with real screenshots and one approved customer quote, and state the seat-share math in one clean line that separates solo seats from team seats."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tightly organised around Priya's worries, with a strong FAQ that handles PTO and lock-in honestly in plain words.",
+  "biggest_mistake": "The 733-seats-per-1,000 figure is a per-1,000 rate presented next to a raw seat count, which muddies the '57% of paid seats' claim, and the 'fair load' hero is chosen partly on a metric (12% fairness) that undercuts it.",
+  "what_would_make_it_a_10": "Show the seat math in raw seats with the same clean logic as the winner, and make the two heroes test genuinely different buyer beliefs rather than pain versus feature."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 nails the owner's brief: seat math in two lines, Priya's own words in the hero, the buried proof pulled up, and two genuinely different hero ideas with a revenue-linked metric, while Output 2 is tidy but its seat math and test logic are less convincing."
+}

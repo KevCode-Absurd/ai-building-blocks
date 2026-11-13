@@ -1,9 +1,11 @@
 # Length and shape profiles
 
+**The owner's limit wins.** When the brief sets a word, page or time limit, it beats any family ratio. Aim at about 85% of it, counted the way the owner counts (every word, tables included), and never go over. Spend no words on method, assumptions or how the work was made. The family ratios below apply only when the brief sets no limit.
+
 How the editor uses a profile:
 
 1. Match the request to a family in `tools/quality/profiles.json` (`_any` if none fits). Where a card and its profile differ on length or counts, the profile wins.
-2. Count the plain draft with `node tools/quality/wordcount.cjs <final> <plain>`. `ceiling` (times the plain draft's words) is a cap, never a target; pass it only when the brief asks for more. `aim` is the typical winning ratio, reached only with parts the reader will use.
+2. Count the plain draft with `node tools/quality/wordcount.cjs <final> <plain>`. `ceiling` (times the plain draft's words, 1.1 or less in every family) is a cap, never a target; pass it only when the brief asks for more. `aim` is the typical winning ratio, reached only with parts the reader will use.
 3. Follow `shape`. Its counts apply to the piece the reader uses directly (an ad, email, buyer page, public reply), which stays no longer than the plain draft's version. Kits, tables and scripts follow under labels.
 4. Read time fits `reader_minutes` at about 230 words a minute.
 5. Short is not clear: spell out codes, say shared lines once, define each term once.

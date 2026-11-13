@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 gives correct sample-size math with a transparent working, realistic 10% MDE and honest run times, while Output 1's 2-week/6.2% MDE for add-to-cart is arithmetically implausible and would set the owner up to underpower every test."
+}

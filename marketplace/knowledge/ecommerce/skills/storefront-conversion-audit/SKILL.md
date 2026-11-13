@@ -111,7 +111,7 @@ One change per mockup, everything else identical. Best: make the change in a dup
 
 ### 10. Build the deck
 
-Eight to twelve slides in Google Slides or the store's template, in brand colours and fonts: summary, funnel by device, one slide per ranked fix (real before with the problem boxed, after mockup, evidence, gross profit, ship or test), test plan, "To confirm".
+Eight to twelve slides in Google Slides or the store's template, in brand colours and fonts: summary, funnel by device, one slide per ranked fix (real before with the problem boxed, after mockup, evidence, gross profit, ship or test), test plan, and up to three assumption lines where an unknown changes a fix.
 
 ## Checks before you hand it over
 
@@ -130,7 +130,7 @@ Eight to twelve slides in Google Slides or the store's template, in brand colour
 3. **Surface table:** Surface, Verdict (fine or leak), Evidence, Fix.
 4. **Findings table:** Rank, Surface, Finding, Evidence (two), Fix, Gross profit a month, Chance, Build hours, Ship or test, Owner.
 5. **Test plan:** Hypothesis, Page, Primary metric, Sample needed, Run length, Stop rule.
-6. **Files:** before and after images (PNG, 9:16), the deck, `conversion-findings.csv`; plus "To confirm".
+6. **Files:** before and after images (PNG, 9:16), the deck, `conversion-findings.csv`.
 
 ## Common mistakes
 

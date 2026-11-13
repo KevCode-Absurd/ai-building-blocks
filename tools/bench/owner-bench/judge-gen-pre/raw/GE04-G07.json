@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Translates the data directly into smart operational gating (like tying the staged rollout to daily ticket limits) and delivers exceptional, brand-perfect launch copy.",
+  "biggest_mistake": "Inviting power users to beta test on November 23 only leaves one week to fix complex migration bugs before the December 1 code freeze.",
+  "what_would_make_it_a_10": "Moving the power-user beta test earlier in November to give engineering a bigger buffer before the code freeze (though it is already a 10)."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The inclusion of specific, numerical success metrics and a pre-planned 'Plan B' to pause the rollout if support gets overwhelmed.",
+  "biggest_mistake": "The X launch post is only a single tweet, which is too brief for a major version launch and misses the chance to fully showcase the features.",
+  "what_would_make_it_a_10": "Expanding the X post into a multi-tweet thread that highlights each new feature with its own short screen recording."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are phenomenal, data-driven plans that perfectly diagnose the retention signals and support risks. Output 1 wins because its launch copy is much stronger—particularly the multi-post X thread that perfectly executes the brand voice and video principles."
+}

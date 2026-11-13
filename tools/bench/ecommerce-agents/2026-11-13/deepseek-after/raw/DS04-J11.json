@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both have correct funnel and sample-size maths, but Output 1 gives a tighter, faster plan — the combined 2×2 for delivery date and EMI/COD and an eight-week schedule with per-test MDE stated inline — while Output 2 is sharper on measurement hygiene (consent check, delivered-order reads for COD) but stretches to a twelve-week calendar hung on invented, unstated dates."
+}

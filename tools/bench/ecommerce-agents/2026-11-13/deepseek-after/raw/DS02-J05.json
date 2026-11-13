@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are launch-ready and compliant, but Output 1 fixes headline and description so only the primary-text angle varies and adds graduated, budget-aware kill rules, whereas Output 2 changes copy, headline and description together (learning can't be attributed) and sets a high 30-purchases-per-ad bar."
+}

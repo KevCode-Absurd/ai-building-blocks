@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the data analysis, accurately calculating retained users to build a channel strategy that works.",
+  "biggest_mistake": "Relying heavily on placeholders in the draft copy means it isn't ready to launch without my input.",
+  "what_would_make_it_a_10": "Write the draft copy so it can be pasted directly, rather than leaving me 'fill in the blank' homework."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Pairs a flawless reading of the retention data with a highly actionable 'Plan B' for the migration risk.",
+  "biggest_mistake": "The launch day X post is slightly dry and could have leaned a bit more into the playful brand voice.",
+  "what_would_make_it_a_10": "A touch more of the 'craft-obsessed, playful' tone in the email and social copy."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both plans read the data perfectly and correctly prioritize retention and support capacity over vanity metrics. Output 2 wins because it avoids placeholders, making it immediately usable, and its inclusion of a data-driven 'Plan B' shows deep operational understanding."
+}

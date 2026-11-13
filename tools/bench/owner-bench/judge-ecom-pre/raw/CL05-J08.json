@@ -1,0 +1,39 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches all three signals in the data: a separate Monsoon Dark track, a delivery-fix gate before winning back ex-subscribers, and the 46 to 90 day band treated as at-risk (it starts at 68 days with no discount). Each is backed by group sizes, email reach, a stepped offer and a worked ₹557 / ₹442 gross profit per order.",
+  "biggest_mistake": "The 46 to 90 band is split by an assumed even spread, and the lift and break-even logic is rough (the 1-in-5 rule). The piece also likely runs over the 1,500-word limit and is dense in places.",
+  "what_would_make_it_a_10": "Trim to the word limit, state the break-even lift per group plainly, and add a Monsoon Dark draft that names the actual closest roast instead of leaving it as an open question.",
+  "fit_note": "none"
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 7,
+  "voice": 7,
+  "range": 7,
+  "ready": 6,
+  "overall": 6.5,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It gates ex-subscriber win-back on a delivery fix, has a Monsoon Dark track, and gives a clean worked table of won-back customers and gross profit that nets to about ₹8.5 lakh. It also adds a day-28 running-low nudge and offer tests such as free shipping versus 10% off.",
+  "biggest_mistake": "It starts with the 91 to 180 day group and never targets the 9,000 customers at 46 to 90 days who are drifting now. It only adds a nudge for future orders, so the cheapest win is missed, and group C gets 10% off from the first message.",
+  "what_would_make_it_a_10": "Put the 46 to 90 day customers first with a light reminder and no discount, replace the {{placeholders}} with real copy, and base the lift and break-even sizes on the actual holdout counts.",
+  "fit_note": "none"
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 starts with the cheapest group (46 to 90 days), gives the Monsoon Dark buyers their own track, holds the ex-subscribers until delivery is fixed, and sizes the holdout properly. Output 2 has good ideas but misses the at-risk band, relies on invented reach and WhatsApp cost figures, and its drafts are full of merge-field placeholders."
+}

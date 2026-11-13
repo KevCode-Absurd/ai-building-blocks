@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It plans all four weeks: an evening-only rhythm that fits 6 posts and 4 clips, with working titles for weeks 2 to 4, and six drafts built on our customers' own phrases ('replaying today's emails', 'quit by day three') that each end in one small action.",
+  "biggest_mistake": "The success bar is set too low: beating 143 installs per post (about 3,440 in total) barely improves on baseline when a sleep-heavy mix should do far better, and the parents' school-pickup clip posts at 20:30, when no one is waiting at the school gate.",
+  "what_would_make_it_a_10": "Project the installs the new mix should deliver and set the success target near that figure, then time or reframe the pickup post for when parents are actually in the car."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Its success measure is sharp: it projects about 6,580 installs from theme history and sets a 5,000 target (1.5 times baseline) plus save-rate floors for the narrator clips.",
+  "biggest_mistake": "Weeks 2 to 4 get only one-line angles, and it says to batch-submit those weeks for review on 16 November even though no drafts exist yet and none of them needs review. It also keeps a weekly stress-at-work post and a 14:30 slot that cut into the evening-sleep focus.",
+  "what_would_make_it_a_10": "Write working titles for every post in weeks 2 to 4, send for review only the posts that name a condition, and give the stress-at-work slot to sleep or kindness."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both read our data correctly and write in our voice. Output 1 hands me all four weeks and keeps every post in the evening, so I could run it tomorrow. Output 2 has the better success model but leaves weeks 2 to 4 vague."
+}

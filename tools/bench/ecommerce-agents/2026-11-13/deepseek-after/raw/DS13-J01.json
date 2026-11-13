@@ -1,0 +1,20 @@
+{
+ "job": "J01",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 1's decision table and day-to-day rules are cleaner and its strict-count break-even logic is more transparent, while Output 2's arbitrary 0.50 retargeting attribution factor and ROAS framing add unnecessary complexity."
+}

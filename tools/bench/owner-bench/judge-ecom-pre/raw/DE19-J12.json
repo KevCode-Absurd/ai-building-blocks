@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Targets the Tier 3 RTO money directly with a pincode-split COD hold, a sized prepaid offer, and holds back a metro nudge because it loses money.",
+  "biggest_mistake": "The prepaid switch is a paid offer (₹30/₹20 off) dressed as a 'normal chat message' in the utility window, which is fuzzy on the Marketing boundary and the owner may need resubmission.",
+  "what_would_make_it_a_10": "Make the prepaid nudge cleanly Marketing (or prove it stays utility-safe without an incentive) and tighten the prepaid-offer margin math so the owner sees the break-even in one line."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The flow timing is the most operationally complete: two-minute confirm, call at 24h, hold at 48h, quiet hours, and a staffing fix (one agent on a 2pm-midnight shift) that Output 1 misses.",
+  "biggest_mistake": "It leans on a no-discount prepaid nudge that does little against a 39% Tier 3 refusal rate, so it leaves most of the ₹5.5 lakh Tier 3 RTO cost untouched.",
+  "what_would_make_it_a_10": "Add a measured, margin-sized incentive or advance-payment option aimed at Tier 3 to actually move the refusal band it correctly identifies."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and correctly split the pincode risk, but Output 2's exact timings, quiet hours and the 2pm-to-midnight agent shift make it the one I could hand to my team tomorrow; Output 1's sharper money targeting is let down by a murky 'chat as offer' shortcut."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 7,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 turns the same correct diagnosis into a runnable plan — dollar-quantified moves ranked by contribution per 10 hours of effort, dated decision rules (roll the spend cut forward only if the removed spend was buying customers above $94), a matched-state test design, and the Q4 discount math (20% off cuts first-order contribution from $71 to $39, so cap sale-week cost per first order at $50) with a scorecard that has an explicit action trigger on every line — where Output 2 stays at percentage-of-revenue impacts, unquantified effort and a scorecard without triggers, offsetting its slightly cleaner payback arithmetic."
+}

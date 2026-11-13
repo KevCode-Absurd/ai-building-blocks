@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Accurately calculated the blended CPA and identified the core data signals to build distinct, highly relevant concepts without resorting to generic travel clichés.",
+  "biggest_mistake": "Missed providing ad headlines and lacked a strict, mathematically defined media buying protocol with tracking checks.",
+  "what_would_make_it_a_10": "Include headlines, exact platform safe zones, and a concrete media testing plan with specific daily budgets and instructions to verify tracking."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Exceptional attention to detail, from catching the laptop pocket objection to providing Meta safe zones, character limits, and a rigorous media test plan that includes checking tracking.",
+  "biggest_mistake": "Filming Concept 2 at a real airline gate with a sizer might prove logistically difficult without building a set, though the concept itself is entirely correct for the audience.",
+  "what_would_make_it_a_10": "It is already a 10."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 goes beyond great creative strategy by giving the owner exactly what is needed to execute on Meta: safe zones, exact character counts, ad headlines, and a precise testing protocol rooted in the math."
+}

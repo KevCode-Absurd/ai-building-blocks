@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 6,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 5,
+  "correct": 5,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Provides a clear and logical two-phase testing plan with proper guardrail metrics.",
+  "biggest_mistake": "Calculates expected profit without factoring the COD RTO rate into the unit economics, leading to a mathematically flawed rejection of the face wash and serum bundle.",
+  "what_would_make_it_a_10": "Bake the COD refusal probabilities directly into your expected profit calculations instead of treating them as a separate, afterthought bucket."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Flawlessly calculates expected profit per order by baking the COD refusal probability and two-way shipping costs directly into the unit economics.",
+  "biggest_mistake": "Misses the opportunity to feature the lip balm as a low-price cart add-on to help shoppers cross the new threshold.",
+  "what_would_make_it_a_10": "Add a dedicated lip-balm cart bump to perfectly answer the brief's signal about a low-price threshold builder."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 executes the unit economics of Indian e-commerce flawlessly, calculating expected profit by adjusting for COD refusal rates per price band. Output 1 calculates profit assuming a 100% delivery rate, leading it to reject the obvious winning bundle."
+}

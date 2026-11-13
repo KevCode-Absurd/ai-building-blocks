@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches both hidden signals — the stopped Monsoon Dark blend as the real cause for 5,200 lapsed buyers and the courier-driven late-delivery churn — and gives each its own track before touching discounts.",
+  "biggest_mistake": "The messaging leans a little mechanical (group tables, gates) and the first-message drafts, while on-voice, don't quite land the warm, curious Blue Tokai tone in every line.",
+  "what_would_make_it_a_10": "Tighten the copy so every draft sounds like a person at Blue Tokai wrote it and add one genuinely fresh creative idea (e.g. a 'find your match' brew quiz series) rather than only offer logic."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The copy is warm, specific and unmistakably Blue Tokai — naming the farm and roast, adding one brew tip, and the 'Now you pick the day your coffee arrives' draft is exactly the tone the brand wants.",
+  "biggest_mistake": "The gross-profit case rests on assumed lift rates and a 2-orders-per-buyer assumption that isn't grounded in the data, so the ₹8.5 lakh figure reads as a forecast dressed up as a plan.",
+  "what_would_make_it_a_10": "Replace the assumed lift rates with a break-even/lift-scenario table tied to the ₹557 gross profit and show what each group must clear to pay for itself."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and on-brand, but Output 1's economics and holdout logic are tighter and it handles the two hidden causes — the stopped blend and the courier problem — with more discipline, while Output 2's warmer copy is let down by lift assumptions presented as results.",
+ "overall": 9
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J05",
+ "o1": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 has sharper, fresher copy (\"Not the back. Not in small print.\", a better sixth taste angle) and a deeper compliance check including Meta's personal-attributes rule, while Output 1's crisper keep/cut thresholds are the only real edge it holds."
+}

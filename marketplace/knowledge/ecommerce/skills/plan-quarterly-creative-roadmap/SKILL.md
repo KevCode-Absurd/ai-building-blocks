@@ -103,7 +103,7 @@ Weeks 4, 8 and 12: compare results by tag, move unused budget to what won, rewri
 
 **Budget tab:** Week, Test spend, Scale spend, Production cost, Total, Running total against signed-off budget.
 
-**To confirm:** sale dates, launch dates, creator bookings and any week the plan assumes stock that has not landed.
+**Assumptions:** at most three lines, for the sale or launch dates, creator bookings or stock landing the roadmap depends on, each with what moves if it slips.
 
 ## Common mistakes
 

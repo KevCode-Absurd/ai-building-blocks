@@ -112,7 +112,7 @@ If the owner has a target, show the gap and what would close it in each driver: 
 
 ## Output
 
-**One-screen summary:** base orders and net revenue for the month with the low and high range; split new and returning; the three inputs the forecast is most sensitive to; gap to target and the cheapest way to close it; a reminder that spending against it needs gross profit per order; and a short "To confirm" list.
+**One-screen summary:** base orders and net revenue for the month with the low and high range; split new and returning; the three inputs the forecast is most sensitive to; gap to target and the cheapest way to close it; a reminder that spending against it needs gross profit per order; and up to three assumption lines where an unknown input moves the forecast.
 
 **Input table:** Input, Value, Source, Date pulled. Rows: planned spend by channel, cost per new customer (base, low, high), organic new customers per day, returning orders by group, new order value, returning order value, discount rate, return rate, COD share, RTO rate, seasonal index, sale days and lift, stock caps.
 

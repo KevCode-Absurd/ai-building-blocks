@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 aligns the code expiry with the 14-day purchase window the brief benchmarks and invents no external data or brand names, while Output 2 shortens the offer to 7 days against that 14-day benchmark and leans on an unverifiable GoKwik click-rate stat and an unconfirmed founder signature, tilting the commercial decision toward Output 1."
+}

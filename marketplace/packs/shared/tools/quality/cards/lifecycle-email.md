@@ -4,7 +4,7 @@ Families: lifecycle-email; also: email flow, abandoned cart emails, win-back, re
 
 **MUST-HAVES**
 1. A flow map: trigger, segment, delays, channel, goal, metric and exit rule (stops on purchase or conversion) for every flow.
-2. Every message finished: subject under about 60 characters, preview text, body, one idea, one call to action; two subject options for key sends.
+2. Every message finished: one final subject line within the brief's character limit (or about 60 characters), preview text, body, one idea, one call to action. Give subject options only when the brief asks, labelled as options below the email, never inside the subject field, each within the same limit.
 3. Value before the ask: at least half the messages help (how to use, care, story, proof) rather than only sell.
 4. True reasons to act now: real proof, discounts only when approved and margin-checked, renewal terms beside every price.
 5. A compliant footer and clean tokens: sender identity, postal address, working unsubscribe; texts only to opted-in people, with a stop keyword; merge tags in the tool's syntax, with fallbacks.

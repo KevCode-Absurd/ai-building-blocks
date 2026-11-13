@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 wins on test design: concentrating on mobile (where the loss is), sizing MDE per metric and duration, and pairing the delivery-date and EMI/COD tests as a 2×2 that preserves power cuts the plan to 8 weeks, while Output 2's all-visitor, 12-week lanes dilute the mobile effect and its invented 2026 calendar dates are unsupported — though Output 2's sample-size formula and 'delivered orders per visitor' COD guardrail are sharper than Output 1's add-to-cart primary metrics."
+}

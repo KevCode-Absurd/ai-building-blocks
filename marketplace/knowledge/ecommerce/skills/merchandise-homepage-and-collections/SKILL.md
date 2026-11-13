@@ -124,7 +124,7 @@ Compare with the two weeks before: homepage view-product rate, collection conver
 
 | Page | Section or position | Product | Category | Merch score | Contribution per order | View-to-order rate | Stock cover (weeks) | Size run complete? | Return rate | Rating | Reason | Trial slot? | Review date |
 
-**Weekly rules card** and **set-up list** (homepage sections to edit, collections to switch to manual for the pinned rows, products to pin). **To confirm:** rating floor, stock cover line, collections in scope.
+**Weekly rules card** and **set-up list** (homepage sections to edit, collections to switch to manual for the pinned rows, products to pin). **Assumptions:** the rating floor, stock cover line and collections in scope, where not given, as the value used and why, one line each.
 
 ## Common mistakes
 

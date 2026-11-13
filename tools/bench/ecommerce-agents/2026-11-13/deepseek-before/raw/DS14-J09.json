@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is cleaner and more commercially reliable: it correctly quantifies the contribution-margin collapse and adds stronger media-buyer checks, while Output 1 has an inconsistent acquisition-cost coverage calculation and an unsupported '300 screen' benchmark."
+}

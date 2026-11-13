@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 7,
+  "commercial": 5,
+  "craft": 7,
+  "overall": 6
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is a fully specified, internally consistent handover with correct arithmetic, explicit gates, kill/scale rules and a defensible $38 target/1.5x ceiling, whereas Output 2 builds its gates around a $45 ceiling that exceeds the brief's parity benchmark and weakens the day-30 decision logic."
+}

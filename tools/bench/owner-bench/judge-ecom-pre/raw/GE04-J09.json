@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It translates every tiny signal in the data—including minor return reasons and specific customer quotes—into practical, margin-improving actions like a swatch test and a warmth guide.",
+  "biggest_mistake": "It does not include pre-agreed pivot triggers or thresholds in the scorecard to automatically force decisions if targets are missed.",
+  "what_would_make_it_a_10": "Adding an 'Act when' column to the scorecard (like the second output did) to make weekly course corrections automatic."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The 'Act when' column in the scorecard is exceptionally operational, giving the team clear, pre-agreed triggers for when to cut spend or change tactics.",
+  "biggest_mistake": "The financial sizing paragraphs are dense and hard to scan, and the 'Score' column in the ranked table uses opaque math that appears incorrect when calculating from the rounded numbers shown.",
+  "what_would_make_it_a_10": "Simplifying the dense sizing calculations into plain language, fixing the confusing math in the scoring column, and acting on the non-linen return data."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 caught all the nuanced signals in the brief, including the minor return reasons and customer quotes, and turned them into brilliant, highly specific moves like a swatch test. Its math is flawless and perfectly communicated, whereas Output 2 got bogged down in dense, slightly confusing sizing calculations."
+}

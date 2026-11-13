@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Phenomenal data synthesis, perfectly identifying the self-inflicted Lite churn and calculating the exact revenue impact of fixing it.",
+  "biggest_mistake": "The 'How the numbers were worked' section is a bit dense and slows down the otherwise punchy read.",
+  "what_would_make_it_a_10": "Present the derived trial loss math in a clean table rather than text, and explicitly use the brand phrase 'Here's the data'."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The table showing 'Trials lost to Semrush, per 100 trials' is a masterclass in making complex derived math instantly scannable for an owner.",
+  "biggest_mistake": "Invented the date 'November 2026' to satisfy the date rule, rather than using a placeholder or flagging the missing data as an assumption.",
+  "what_would_make_it_a_10": "Flag the missing date as an assumption instead of inventing one, and explicitly weave in the requested brand phrase 'Here's the data'."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs did phenomenal, advanced math to find the true business leaks and ignore the wrong battles. Output 2 wins slightly because its table for trial losses is much easier to digest, and its first step for Move 1 (collecting actual Monday reports) is a superb product discovery tactic."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows the pilot's signals closely by focusing on controllers after pricing changes, excluding weak segments, and giving a realistic expected reply range.",
+  "biggest_mistake": "Step 1 includes an extra asset offer and uses the case proof too early, which slightly weakens the clean trigger-first, one-ask pattern the brief wanted.",
+  "what_would_make_it_a_10": "Tighten each email to one cleaner ask with less extra framing in step 1 and keep the proof for a later step while preserving the same targeting and forecast."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 9,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The writing style is strong: plain, finance-to-finance, on-brand, and mostly disciplined on word count and asks.",
+  "biggest_mistake": "It ignores the owner's main instruction to write for the moment that worked by recommending sends to all 1,900 controllers, including generic and hiring-trigger variants that the brief did not ask for.",
+  "what_would_make_it_a_10": "Limit the program to controllers with pricing-page changes, cut the generic fallback paths, and align the forecast and loading rules exactly to that trigger-led segment."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to the actual decision the owner needs to make: who to send, who to exclude, and what honest response to expect based on the pilot. Output 2 is well written, but it drifts into a broader playbook the owner did not ask for and weakens the clear targeting signal in the data."
+}

@@ -2,6 +2,8 @@
 
 Triage every job in step 1 (intake and frame), before any draft. Record one depth and the deciding signal. When torn, take the lower depth.
 
+**One-shot fast path.** When the brief carries the data and the owner cannot be asked, use light for short copy and standard for a working document. Skip INTAKE.md, site capture, brand DNA, the taste brief and library or knowledge reading; read the card and one job skill.
+
 ## Signals
 - **Reader:** one person reading once points down; a team that will build, decide or present from it points up.
 - **Length:** under about 400 words per piece points to light; a working plan, page or kit points higher.
@@ -11,10 +13,10 @@ Triage every job in step 1 (intake and frame), before any draft. Record one dept
 
 ## Depths
 **light**: a reply, short email, post, or up to about five short pieces in one voice.
-Runs: one expert draft written with the card and the pack's soul.md, plain draft, the checker's quick check, merge, clarity edit, hand-over check, final pick; proof only when the piece has figures or links. No creative third draft. Keep it human; each piece no longer than the plain draft's version. Disclosures go where the law needs them, rewritten to fit, never one block pasted into every piece.
+Runs: one expert draft written with the card and the pack's soul.md, plain draft, the checker's quick check, merge, clarity edit, hand-over check, final pick; proof only when the piece has figures or links. No creative third draft. A creative set (ads, hooks, posts) still differs on at least two of angle, format, persona and hook source, and includes one bolder concept. Keep it human; each piece no longer than the plain draft's version. Disclosures go where the law needs them, rewritten to fit, never one block pasted into every piece.
 
 **standard**: one expert, a working document (plan, analysis, test design, guide, page, response plan with its reply).
-Runs: expert playbook draft, plain draft, check, merge, clarity edit, proof, visual review if people look at it, hand-over check, final pick. The check confirms the core design choice (metric and horizon, audience, the main charge answered) before polish.
+Runs: expert playbook draft, plain draft, check, merge, clarity edit, proof, visual review if people look at it, hand-over check, final pick. No creative third draft, but the expert draft of a plan, strategy or recommendation carries one labelled bolder move: sized in the owner's unit, with its first step and its risk, inside the length budget. The check confirms the core design choice (metric and horizon, audience, the main charge answered) before polish.
 
 **full**: standard plus a distinct creative draft, only when a real alternative concept or structure could beat the playbook and the reader rewards it.
 

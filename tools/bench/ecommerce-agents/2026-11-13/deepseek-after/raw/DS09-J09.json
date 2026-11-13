@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives a sharper diagnosis (break-even $94 vs $104, first-order loss $32.56), a tested spend-cut with a matched-state design and explicit roll-out/reverse line, and a fuller weekly scorecard with act-when triggers, while Output 2 is solid but leaves more of the plan as untested advice."
+}

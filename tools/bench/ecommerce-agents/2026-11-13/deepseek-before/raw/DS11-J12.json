@@ -1,0 +1,20 @@
+{
+ "job": "J12",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers every requested element with tighter, correctly-priced flows (₹30 discount under the ₹45 break-even, explicit utility-vs-marketing categorisation, and a fuller weekly metrics table), while Output 2 is solid but pads with extra templates and leaves the discount logic slightly looser."
+}

@@ -1,0 +1,20 @@
+{
+ "job": "J09",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "tie",
+ "margin": "slight",
+ "reason": "Both deliver a complete, numerically sound 90-day plan with proven-vs-check split, ranked moves, owners, stop list and scorecard; Output 2 adds sharper per-$1M math and a BFCM timing catch, while Output 1 is cleaner and slightly more readable, leaving them effectively equal in value."
+}

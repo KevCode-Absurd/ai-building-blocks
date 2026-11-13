@@ -34,7 +34,7 @@ Required (read access, level 1):
 
 Optional: post-purchase survey answers, heatmap or scroll map of the homepage, a list of press mentions with links.
 
-If analytics are missing, write the copy but mark every "proof it works" metric as "baseline not captured" and add setting up the view-product measure to the To confirm list. Theme edits need draft access (level 2) on a duplicate theme; publishing needs a client yes.
+If analytics are missing, write the copy but mark every "proof it works" metric as "baseline not captured" and put setting up the view-product measure first in the fix order. Theme edits need draft access (level 2) on a duplicate theme; publishing needs a client yes.
 
 ## Before you start: the gates
 
@@ -87,7 +87,7 @@ If analytics are missing, write the copy but mark every "proof it works" metric 
 | 9 | FAQ strip | new | doubts | | | | |
 | 10 | Footer trust | both | reassurance | | | | |
 
-**To confirm:** facts and sign-offs needed before publishing.
+**Assumptions:** one line each, at most three, only where an unknown changes what to do. A fact with no source is left out.
 
 ## Common mistakes
 

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Directly tackles the 44% cash return driver across all required sections with crisp numbers and a thorough measurement plan.",
+  "biggest_mistake": "Reads like a data analyst wrote the body copy by citing raw survey counts ('142 of our 400 reviewers say...', '88 reviewers say...'), which feels clumsy on a live product page.",
+  "what_would_make_it_a_10": "Remove the clinical review statistics from the customer-facing body copy and write them naturally into consumer proof."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Immaculate brand voice that puts the 1-week break-in expectation right into the above-the-fold bullets and uses a brilliant 'light day / full day / max' everyday-carry breakdown.",
+  "biggest_mistake": "The FAQ misses the specific Chicago engineer quote for Tom, though it captures his exact dilemma.",
+  "what_would_make_it_a_10": "Add outer dimensions placeholders (height x width) explicitly to the specs table for front-pocket shoppers."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 sounds like authentic Bellroy copy ready to publish today. Output 1 awkwardly puts raw data stats like '142 of our 400 reviewers' into the actual customer body description, whereas Output 2 smartly integrates the break-in warning into the top bullets and creates an intuitive 'What fits, in real life' guide."
+}

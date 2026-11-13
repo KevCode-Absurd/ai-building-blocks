@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks the face wash + serum routine as the lead bundle, ties the shipping decision to the serum price, and gives a practical test sequence with guardrails.",
+  "biggest_mistake": "It misses the natural lip balm threshold role and instead uses a weak two-serum bundle, while also using shaky maths in places like the monthly order estimate and threshold economics.",
+  "what_would_make_it_a_10": "Use lip balm as the low-price threshold add-on, show cleaner threshold band maths tied to the real ₹499–598/₹500–699 exposure, and tighten the profit calculations."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 5,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It spots that ₹699 would endanger the serum-only reorder and gives a sensible, owner-friendly testing plan focused on profit per visitor.",
+  "biggest_mistake": "It skips the obvious face wash + serum bundle the data clearly supports and replaces it with a made-up three-item routine, with several unsupported assumptions and incorrect or inconsistent economics.",
+  "what_would_make_it_a_10": "Make the top bundle the face wash + serum duo, ground the threshold decision in the actual affected order bands and COD/RTO maths, and remove speculative assumptions that drive the result."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what the data is really saying: the face wash + serum routine is the winner and it gives the owner a more usable launch and test plan. Output 2 has some good instincts, but it talks itself out of the bundle customers already built and leans too hard on assumptions."
+}

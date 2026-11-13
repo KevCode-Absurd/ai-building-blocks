@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The copy drafts (both the full 5-part X thread and the existing-user email) are pitch-perfect for Raycast's voice, highlighting the single shortcut and reassuring users on hotkeys.",
+  "biggest_mistake": "The timeline mixes internal team owners and target audiences in the same column, making operational accountability slightly muddier than it should be.",
+  "what_would_make_it_a_10": "Add an explicit owner column to the timeline and include fallback/contingency thresholds if migration tickets spike after launch."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Exceptional operational execution with designated owners (LM, D, VE, S, E), strict code-freeze pacing, and an actionable Plan B with explicit support thresholds.",
+  "biggest_mistake": "The X post draft provides only the anchor post with instructions for replies rather than spelling out the subsequent thread tweets.",
+  "what_would_make_it_a_10": "Flesh out the follow-up tweets in the launch-day X thread to make the social kit 100% ready to paste."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are elite, but Output 2 feels like it was written by an experienced launch manager who accounted for team roles, code-freeze realities, and explicit Plan B thresholds if support is overwhelmed."
+}

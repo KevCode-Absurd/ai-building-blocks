@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks every move in one unit (contribution points of revenue, divided by effort) and sets hard cut lines like '$94 cap after $940 spend', which turns the diagnosis into a plan my team can run on Monday.",
+  "biggest_mistake": "Linen is pulled only from Meta, not from email campaigns, and the gain ranges for the email moves are working guesses stacked on guesses, so they look more precise than they are.",
+  "what_would_make_it_a_10": "Add the tracking check against store orders since the January move, pull linen from all promotion, and include one fresh idea for Sarah's 'touch it first' fear, such as swatches."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp diagnosis: we spend about 19% more for 11% fewer new customers. It also checks Meta tracking since the January move and offers a swatch sign-up that answers Sarah's real objection.",
+  "biggest_mistake": "The moves are ranked with 'High/Medium' labels instead of real numbers, and the scorecard leaves contribution as 'set baseline, up every month' and flow share as 'pre-January level', so the key line has no target.",
+  "what_would_make_it_a_10": "Put every move into one gross-profit number with effort, set a hard contribution baseline and target, and add a week-by-week plan with owners."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both find Meta, linen and the switched-off email, but the first gives me ranked gains in one unit, hard cut rules and a week-by-week plan I can hand to the board. The second has better ideas in places but softer numbers where it counts."
+}

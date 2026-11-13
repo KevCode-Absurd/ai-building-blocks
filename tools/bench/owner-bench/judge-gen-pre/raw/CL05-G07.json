@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A dated plan with named owners and pass/fail go/no-go gates, ranked channels with the retained-user math, and week-4 targets with a plan B tied to last year's 58% carry-over tickets and 31-hour replies.",
+  "biggest_mistake": "The channel table is labelled as ranked by share who stay but puts X (3,740 retained) below authors (2,470). The email's backup sentence also depends on a gate that may not pass. The doc likely runs over the 1,200-word limit.",
+  "what_would_make_it_a_10": "Trim to the word limit, name the real creators and authors to credit, and make the email and X post independent of unconfirmed engineering features."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Strong gates: 1,000 beta users with zero lost hotkeys, an undo, the top 200 extensions tested, a staged rollout with a ticket cap, and engineers on support shifts. Putting Product Hunt on its own day is a smart touch.",
+  "biggest_mistake": "The X thread and email are full of bracketed placeholders and conditional posts, and the timeline has no named owners, so the drafts are not ready to post.",
+  "what_would_make_it_a_10": "Fill in the placeholders, assign owners to each dated step, and cut length so the plan fits in 1,200 words."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both rank the channels correctly and build the carry-over gate, but Output 1 gives owners, success targets, a plan B and a finished X post and email I could send. Output 2 leaves placeholders and no owners, so there is more homework for my small team."
+}

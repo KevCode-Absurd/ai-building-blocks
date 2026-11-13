@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 10,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 builds every rule off a correct break-even ($27.10) and a single $38 ceiling with a clean Shopify-vs-TikTok reconciliation, while Output 2 invents a $45 ceiling and a $55 gate that loosen the brief's parity standard and risks over-crediting TikTok."
+}

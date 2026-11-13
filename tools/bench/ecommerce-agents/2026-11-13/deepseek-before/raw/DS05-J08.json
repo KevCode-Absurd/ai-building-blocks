@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 9,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives a cleaner, better-ordered four-group plan with per-group offers and a transparent ₹2.9 lakh net-profit build, while Output 2's 68-day lapse line and ₹7.9 lakh figure rest on a loosely justified assumption; Output 1's commercial logic is tighter despite slightly weaker writing."
+}

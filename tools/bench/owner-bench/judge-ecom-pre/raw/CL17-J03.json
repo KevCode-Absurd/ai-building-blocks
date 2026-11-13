@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data sharply and the numbers check out: women at 26% of purchases on 18% of spend, a blended ₹1,515, and the illustration of 63 more purchases at ₹1,300. It also covers all three signals: the quiet wheels, the women solo travellers and lighter colours to hide scuffs.",
+  "biggest_mistake": "Some primary text states \"quiet wheels\" and \"rolls quiet\" as our own claims rather than as quoted reviews, which steps past the approved specs. The test budget of about ₹4,500 per concept is too thin to judge on cost per purchase.",
+  "what_would_make_it_a_10": "Lead the first three with the cheaper women's audience, keep every benefit word not in the specs inside quoted reviews, and give each concept a test budget that can actually reach a cost-per-purchase verdict."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is strict on claims: \"quiet\", \"light\" and \"looks\" appear only as quoted reviews. It puts the women solo concept first with a data reason. Its test plan works: ₹7,700 per ad set is about 5x the ₹1,515 blended cost, the purchase thresholds are clear, and it checks Meta against store orders.",
+  "biggest_mistake": "Three of the eight concepts are statics, so the format range is narrower than it could be. A few lines carry odd character-count notes that add clutter.",
+  "what_would_make_it_a_10": "Swap one static for a fresh format, such as a creator-led or price-reframe angle, and drop the stray character counts so the copy reads cleaner."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both hit the quiet wheels, women solo travellers and scuff signals, but the second keeps claims inside the approved specs, picks the cheapest audience first, and gives me a test budget and decision rules I can run tomorrow."
+}

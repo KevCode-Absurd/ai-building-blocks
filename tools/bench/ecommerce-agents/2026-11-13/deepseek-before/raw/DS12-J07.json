@@ -1,0 +1,20 @@
+{
+ "job": "J07",
+ "o1": {
+  "job_done": 9,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 9,
+  "overall": 9
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is the tighter, more plug-and-play Klaviyo deliverable — coupon tag, smart-sending off, checkout pause, A/B subject options with character counts, and a WhatsApp with quick-reply buttons and sample values — while Output 1's edge of using the full 14-day code window is offset by its plainer copy and marginally weaker product ladder."
+}

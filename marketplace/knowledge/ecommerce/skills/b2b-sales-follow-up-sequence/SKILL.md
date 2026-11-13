@@ -122,7 +122,7 @@ Show the client all five sequences, the lead list with stages and the stop rules
 
 ## Output
 
-1. **One-screen summary:** leads by stage, the next 10 touches due this week, assets used, and the runner-up approach in one line.
+1. **One-screen summary:** leads by stage, the next 10 touches due this week, and assets used.
 2. **Sequence sheet**, one tab per stage: Touch #, Send day, Channel, New thing added, Message text (subject and body, or WhatsApp template name and text), Ask, Stop if.
 3. **Tracker:** Lead, Business, Type, Stage, Channel, WhatsApp opt-in (yes, no, date), Last touch, Next touch date, Status, Outcome, Park until.
 4. **Call script card:** opener, reason they fit, one question, how to log the answer.

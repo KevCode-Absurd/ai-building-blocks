@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 makes the sharper commercial call (no discount for the freshest 46–90 group, backed by the \"one big code\" loss math and the 26%/45% break-even rule), defines lapse from the 34-day median, and adds fix-first for unhappy buyers, while Output 2 discounts the newest lapsers without justifying the wasted margin."
+}

@@ -7,6 +7,7 @@ Start from the plain draft's correct useful content. Keep a private coverage led
 
 ## 1. Answer first
 - The first two sentences answer the request. No date line, audience list, method note or "what we won't do" list before it.
+- Follow the first-screen rule in WORK-METHOD.md: the first screen holds the decision, the numbers the owner asked for by name, every piece of bad news and the first move this week.
 - Over 1,200 words: open with a one-screen summary (5-7 bullets or a two-column table).
 - Meet the reader's actual objection head-on before adding guards.
 
@@ -38,7 +39,8 @@ Start from the plain draft's correct useful content. Keep a private coverage led
 - Avoid packing long reasoning into cells. If a useful field needs more space, use a narrower table or a repeatable record; do not delete the field or its condition to meet a word target.
 
 ## 7. Cut or move
-- Method talk: how the work was made, files, "checked live", inline sign-off stamps, review tags. Open items go in one short "To confirm" box at the end.
+- Method talk: how the work was made, files, "checked live", inline sign-off stamps, review tags, notes to the writer.
+- Open items: decide each one with the assumption a top practitioner would pick. Where it changes what to do, state it in one assumption line next to the part it affects (at most three in the piece). No confirm lists, open questions or requests for the owner's yes.
 - Repeated blocks (the same disclaimer in every variant): say shared lines once. Where each piece runs alone and the law or platform needs a disclosure in it, keep a short one fitted to that piece.
 - Build specs, tokens, rosters and sources go after the content.
 

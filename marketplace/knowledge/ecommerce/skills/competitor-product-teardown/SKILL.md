@@ -92,7 +92,7 @@ For each weak spot, write one move in one of four lanes:
 3. **Offer.** A better bundle, guarantee or delivery promise. Price each with the store's gross profit; a rival with better margins or repeat can outbid the store in ad auctions even with weaker ads, so a price war is the last resort [ADC-0057].
 4. **Message.** Answer the rival's top complaint on the store's page, in the store's own words, without naming the rival unless the comparison passes gate 4.
 
-Rank moves by gross profit effect, evidence strength and effort. Name the first move and the runner-up.
+Rank moves by gross profit effect, evidence strength and effort. Name the first move, and any second move that adds to it with its own gross profit effect.
 
 ### 7. India and US notes
 
@@ -111,7 +111,7 @@ Rank moves by gross profit effect, evidence strength and effort. Name the first 
 
 ## Output
 
-**One-screen summary:** the rival's delivered price against the store's, their top two strengths, their top two weak spots with counts, the recommended first move and its gross profit effect, and the runner-up.
+**One-screen summary:** the rival's delivered price against the store's, their top two strengths, their top two weak spots with counts, the recommended first move and its gross profit effect, and any second move that combines with it.
 
 **Teardown sheet:**
 

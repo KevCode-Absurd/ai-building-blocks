@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the quiz to split Email 2 into three versions, and Version A pairs niacinamide with daily sunscreen for dark spots, which is the routine the 44% need.",
+  "biggest_mistake": "Email 5 gives everyone the same 3-product routine with the salicylic wash morning and night, which contradicts Version C's 'don't start with an acid' advice to dry and sensitive subscribers and leaves out the moisturiser Email 2 told them to use.",
+  "what_would_make_it_a_10": "Branch Email 5 by skin concern so each person gets a 2-step routine built on their Email 2 product, and add A/B subject lines plus a holdout test against today's single email."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the click data into revenue per click (₹48 serum, ₹20 wash, ₹9 sunscreen, all correct), sets a concern-based one-product rule that holds all the way to the day-13 reminder, and arrives build-ready with A/B subjects, entry and checkout filters, and a full WhatsApp template.",
+  "biggest_mistake": "Version A for dark spots never pairs the serum with morning sunscreen, the core routine for uneven tone, and the 50/50 test is slightly underpowered to detect an 18% to 20% change with about 4,700 per side.",
+  "what_would_make_it_a_10": "Add 'sunscreen every morning' to the dark-spot version, trim the copy to stay under 1,800 words, and state the test's real statistical power."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both get the numbers right. Output 2 keeps every subscriber on one matched product through the final reminder, and it hands me the A/B subjects, filters, WhatsApp template and a proper test against today's email, so I can switch it on. Output 1's last email pushes all three products, including an acid, on the sensitive people it told not to start with acids."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The after-hours bot flow effectively uses buttons and scripts to automatically resolve the 31% of chats that arrive at night.",
+  "biggest_mistake": "Applies a one-size-fits-all approach to the prepaid switch, missing the chance to use the massive ₹70-per-order loss in Tier 3 to fund a profitable discount.",
+  "what_would_make_it_a_10": "Calculate the exact loss-per-order by pincode group to justify a targeted discount for the riskiest areas."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The brilliant financial breakdown that calculates expected loss per COD order by tier to perfectly size and target the prepaid discounts.",
+  "biggest_mistake": "The after-hours away message only offers a tracking button, missing the chance to fully automate the sizing and COD queries too.",
+  "what_would_make_it_a_10": "Add buttons for size and COD queries to the after-hours auto-reply to resolve those lookups instantly without an agent."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 acts exactly like a top-tier growth operator. It calculates the expected RTO loss per order for each tier, proving why a discount on Metros loses money but a discount on Tier 3 is highly profitable, and entirely excludes loyal buyers from the friction of confirmation."
+}

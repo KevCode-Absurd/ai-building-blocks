@@ -1,0 +1,20 @@
+{
+ "job": "J11",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 7,
+  "commercial": 6,
+  "craft": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 ranks tests by evidence with correct MDE math and a coherent 2x2 schedule, while Output 2's sample-size formula yields an implausible 5.8-week run for a 10% lift and misstates the checkout-to-order loss figure."
+}

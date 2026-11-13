@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It starts where the money is cheapest (the 46-90 day group, no discount), gives the 5,200 Monsoon Dark buyers their own match-first track, and holds the ex-subscriber win-back behind a return to 95% on-time delivery.",
+  "biggest_mistake": "It treats the 91-180 band as one blob and skips a cold-brew-specific angle (2,400 customers in November), and it labels the 62% email count as 'contacted', which understates WhatsApp reach.",
+  "what_would_make_it_a_10": "Add a per-segment break-even lift in points (message cost plus expected discount cost over ₹557) next to each group so the holdout read has a number to clear."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The day-28 'Running low?' reorder nudge plus the seasonal cold-brew timing are ideas I would actually have my team build, and the 12-month gross profit table with a downside/upside range is easy to defend.",
+  "biggest_mistake": "It puts 91-180 days first and never actually messages the 9,000 at 46-90 days, the cheapest group to win, and its stated removal of cancellers from every group is contradicted by its own group counts (13,100 and 10,700 still include them).",
+  "what_would_make_it_a_10": "Lead with the 46-90 day at-risk group on a light reminder, fix the segment counts so no one is double counted, and ship the drafts without merge-field placeholders so I can paste them tomorrow."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both are usable, but Output 1 does what I said mattered most - starts with the 46-90 day at-risk group, gives Monsoon Dark its own match-first track, gates ex-subscribers on delivery returning to 95%, and every rupee ties back to my 557 - while Output 2 chases the colder group first, leaves merge fields for my team to fill, and has an internal counting inconsistency."
+}

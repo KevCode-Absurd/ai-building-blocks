@@ -79,7 +79,7 @@ The Shopify plan matters: since checkout extensibility, client-side tools cannot
 
 **Before and after measure:** step, rate before, date, rate after, date.
 
-**To confirm:** policy questions, fee changes, lines needing Plus.
+**Assumptions:** where a policy or fee was not given, the one used, one line each. Lines that need Shopify Plus are marked in the sheet.
 
 ## Common mistakes
 

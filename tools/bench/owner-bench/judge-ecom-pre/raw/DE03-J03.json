@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built tightly on my data: the review quotes are the hooks, women 25 to 40 get a dedicated lift-it-alone concept, quiet wheels become a sound-led Reel, and the copy stays in our calm voice with only approved specs.",
+  "biggest_mistake": "The test plan is slightly under-specified for a real read (7 days at ₹1,100/day may not clear learning phase per ad set, and concept 2's 'check your airline's limit' sits close to a guarantee-adjacent claim that needs legal sign-off).",
+  "what_would_make_it_a_10": "Tighter production-ready scripts (shot list and on-screen text per beat) and a test plan sized to real traffic so the first three picks can be judged with confidence."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp framing of the spend gap (women get 18% of spend but 26% of purchases) and a clean, well-argued first-three pick with a concrete money illustration.",
+  "biggest_mistake": "The per-trip maths concept invents a ₹292 figure and a 24-trip assumption that are not in my data, and they are unapproved price-framing claims a customer could hold us to.",
+  "what_would_make_it_a_10": "Drop the invented per-trip maths, ground every hook in a real review line, and tighten copy to grade-7 short lines throughout."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is closer to what I can shoot and run tomorrow: tighter hooks from real reviews, cleaner voice, and no invented numbers, while Output 2's ₹292 per-trip claim is the kind of made-up figure I would have to kill before launch."
+}

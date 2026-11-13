@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds a lever the brief never named — 24,600 docs clicks converting at only 4.8 per 1,000 — and proves with trials-per-page math (45.8 for a comparison page vs 0.7 for a blog post) why the writer's slots must move.",
+  "biggest_mistake": "The table is labelled 'ranked by trials' yet puts a +25-trial docs prompt at rank 5 below a +3-trial cookie banner rewrite, and the headline +100 trials rests on a 9% CTR lifted from a far smaller query than 'google analytics alternative'.",
+  "what_would_make_it_a_10": "Make the ranking match its own trial counts, ground the /vs-google-analytics forecast in a more conservative CTR, and hand the writer the actual title and meta description instead of an instruction to write one."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every move shows its working (impressions × CTR gap × 3.2%), the plan ends in 4-week cut/keep/scale rules and a checkable quarter goal of 1,171 trials against October's 1,102, and the writer gets a ready title (56 characters) and description that stay inside the brand's claims.",
+  "biggest_mistake": "It adds no lever beyond the brief's own notes — the high-traffic docs get a fact check and a link rather than a conversion fix — and Month 3 quietly hands the part-time writer a 140-post tagging audit on top of her four pages.",
+  "what_would_make_it_a_10": "Add one idea the brief didn't contain (the docs' 24,600 clicks at 4.8 per 1,000 is sitting right there) and keep the writer's Month 3 to four pages, with the post audit owned by someone else."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nail the real signal — kill the blog, feed comparison pages, fix the two near-page-one buying pages — but Output 2's numbers all trace and hold together, its tasks are dated and paste-ready, and it tells me when to cut a page that fails. Output 1 has the sharper extra idea (a docs conversion fix) but its 'ranked by trials' table contradicts its own trial counts, which is the one thing I asked to be ranked."
+}

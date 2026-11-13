@@ -148,7 +148,7 @@ Judge headlines on store results, not CTR alone. CPA equals CPC divided by conve
 
 **3. Spare bank:** unloaded headlines and descriptions, tagged by job, for the 30-day refresh.
 
-**4. To confirm:** any fact that needs the client's yes (a delivery promise, a review count date).
+**4. Assumptions:** one line each, at most three, only where an unknown changes what to do (for example a delivery promise or the date of a review count).
 
 ## Common mistakes
 

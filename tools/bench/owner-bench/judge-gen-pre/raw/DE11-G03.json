@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the missed forecast, margin drop and Customer A up front with the fix (48-hour pause) and a genuinely sharp second ask aimed at learning why customers leave.",
+  "biggest_mistake": "The margin arithmetic (\"$0.9M is roughly 9 points of margin\" on $10.4M monthly revenue) is an invented derivation that doesn't reconcile with the stated data and risks undermining trust in the numbers.",
+  "what_would_make_it_a_10": "Drop the speculative margin-percentage calculation, keep every figure traceable, and tighten to a crisp first screen with the runway math shown explicitly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, honest, phone-readable update: bad news first, simple traceable numbers, runway shown with the one-off removed, and three specific forwardable asks with named profiles and dates.",
+  "biggest_mistake": "The runway table row (52 months Sept vs 33 months Oct) is slightly confusing since September's $4.1M burn is a different base and could be read as a deterioration caused by burn rather than cash; a note would help.",
+  "what_would_make_it_a_10": "Add one line explaining the September runway comparison and confirm the 48-hour pause saving estimate so the margin fix reads as quantified."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both are strong and honest, but output 2 is cleaner, more traceable on the numbers (no invented margin derivation), phone-friendly with forwardable asks, and reads exactly like our voice with bad news in the first screen. Output 1's speculative margin math is the kind of unverifiable claim an owner would flag."
+}

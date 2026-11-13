@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 6,
+  "voice": 7,
+  "range": 7,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The bad news comes right after the three numbers, and each of the three asks names a profile, an audience and a date, including a pricing ask aimed at the lead partner.",
+  "biggest_mistake": "The margin logic is muddled: it says $0.9M is 'roughly 9 points of margin, more than the 7-point drop', which confuses the reader. The 'Ask 2 helps' line is cryptic, and the email likely runs over 700 words.",
+  "what_would_make_it_a_10": "Cut to under 700 words, give a clean margin explanation with the expected effect of the 48-hour pause, and remove the cryptic and muddled lines."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the three numbers and the forecast miss first, then ties the AI-builder volume to the idle rate, the 0.4% vs 3.1% conversion and the compute cost, with a fix, an owner date and a promised follow-up. Each ask comes with a forwardable blurb for the angels.",
+  "biggest_mistake": "It does not quantify the expected effect of the 48-hour pause on margin, and it does not say that Customer A will pull NRR down. The email is also probably a little over the 700-word limit.",
+  "what_would_make_it_a_10": "Trim to 700 words and add a range for the margin recovery from the pause, plus the NRR impact of Customer A leaving."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 reads faster on a phone, explains the AI-builder margin problem more cleanly, and gives angels forwardable blurbs with named profiles and dates. Output 1 has a muddled margin calculation and a cryptic line that would make an owner wince."
+}

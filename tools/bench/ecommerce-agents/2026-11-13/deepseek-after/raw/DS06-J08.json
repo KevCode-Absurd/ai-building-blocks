@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 9,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 7,
+  "actionable": 8,
+  "commercial": 6,
+  "craft": 8,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1's unit economics check out end to end (₹557 GP, break-even code thresholds 1.26x/1.45x, reachable counts from 77% overlap, ₹3.4L backlog) and it protects margin with a testable code rule, whereas Output 2 mislabels the ₹2.9L four-group total as the 'first wave' return, uses 70% reachability for an email-only group 4 and leans on more optimistic lifts/0.5 follow-on orders that overstate the prize."
+}

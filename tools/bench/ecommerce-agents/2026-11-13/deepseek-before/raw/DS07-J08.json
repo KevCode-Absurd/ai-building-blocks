@@ -1,0 +1,20 @@
+{
+ "job": "J08",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives a cleaner, fully quantified per-group plan with correct gross-profit math (557, 499.50, 419, 384.50), explicit break-even lifts and a concrete offer test, while Output 2's 'one-time full price' gift logic and vaguer ₹7.9 lakh range are weaker commercially; both are strong, but O1 is more decision-ready."
+}

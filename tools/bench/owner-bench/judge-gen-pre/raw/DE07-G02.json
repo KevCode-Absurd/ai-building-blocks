@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks recruiting on the seat math and builds the whole page around Priya's real objections: email tennis in her words, an honest PTO answer, and the security page moved out of the footer next to the demo, all under one consistent 'Book a demo' action.",
+  "biggest_mistake": "It asserts 57% of paid seats without showing the 1,540-of-2,717 working, and it uses internal funnel stats (71%, 88%) as buyer proof where a customer outcome would land harder.",
+  "what_would_make_it_a_10": "Show the seat math in full on the page-one line, add a distinct fair-load section, and replace one internal adoption stat with real customer proof or an explicit note that it still has to be collected."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 5,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The segment case is fully shown (about 1,540 of 2,717 paid seats, 0.73 seats per recruiting signup against 0.17 for the next best segment) and the hero 'No email tennis' uses Priya's exact words, with a running order close to what was asked for.",
+  "biggest_mistake": "Five bracketed placeholders plus mixed 'Get started' and 'Book a demo' buttons leave it as homework on a page whose single job is qualified demo requests.",
+  "what_would_make_it_a_10": "Resolve or cut every placeholder into real, checkable proof and commit to one action across all sections so the page can be pasted and launched tomorrow."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both pick the right segment and get the seat math right, but only output 1 hands me a page I could publish this week with one clear action; output 2 makes me fill five blanks and decide which button it wants, and it shows the 57% working better than output 1 does, which is the one thing I'd steal from it."
+}

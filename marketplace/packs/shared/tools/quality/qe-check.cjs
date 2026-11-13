@@ -2,17 +2,20 @@
 // qe-check: every applicable Quality Engine text check in one command, with one short report.
 // Plain Node 18+, no packages. Runs the scripts beside it: wordcount, readability, leakcheck, proof, check-format.
 // Usage: node qe-check.cjs <final> [--plain <plain>] [--audience consumer|business|specialist]
-//          [--sources <file|dir> ...] [--contract <contract.json> | --max-words <n>] [--online] [--requested-template]
+//          [--sources <file|dir> ...] [--contract <contract.json> | --max-words <n>] [--limit <n> [--fail-above <pct>]]
+//          [--online] [--requested-template] [--options-requested] [--customer-copy]
 // Proof runs offline unless --online is given. --max-words writes a one-rule contract for check-format.
+// --limit is the owner's word limit, counted raw the way the owner counts (every word, tables included): over 85% of it
+// warns, over the owner's limit fails (--fail-above 95 tightens the fail line). WARN rows never fail the run.
 // Exit 0 = no check failed, 1 = at least one failed, 2 = usage error. Readability stays advisory unless --strict.
 'use strict';
 const fs = require('fs'), path = require('path'), os = require('os');
 const { spawnSync } = require('child_process');
 
 const argv = process.argv.slice(2);
-const opt = { sources: [], audience: 'business', online: false, template: false, strict: false };
+const opt = { sources: [], audience: 'business', online: false, template: false, options: false, customerCopy: false, strict: false };
 const AUDIENCES = ['consumer', 'business', 'specialist'];
-const usage = 'Usage: node qe-check.cjs <final> [--plain <plain>] [--audience consumer|business|specialist] [--sources <files...>] [--contract <json> | --max-words <n>] [--online] [--requested-template] [--strict]';
+const usage = 'Usage: node qe-check.cjs <final> [--plain <plain>] [--audience consumer|business|specialist] [--sources <files...>] [--contract <json> | --max-words <n>] [--limit <n> [--fail-above <pct>]] [--online] [--requested-template] [--options-requested] [--customer-copy] [--strict]';
 const bad = message => { console.error(message + '\n' + usage); process.exit(2); };
 let file = null;
 for (let i = 0; i < argv.length; i++) {
@@ -31,9 +34,13 @@ for (let i = 0; i < argv.length; i++) {
   else if (a === '--sources') { if (inline !== undefined) opt.sources.push(value()); while (i + 1 < argv.length && !argv[i + 1].startsWith('--')) opt.sources.push(argv[++i]); }
   else if (a === '--contract') opt.contract = value();
   else if (a === '--max-words') opt.maxWords = Number(value());
-  else if (inline !== undefined && ['--online', '--requested-template', '--strict'].includes(a)) bad(a + ' takes no value');
+  else if (a === '--limit') opt.limit = Number(value());
+  else if (a === '--fail-above') opt.failAbove = Number(value());
+  else if (inline !== undefined && ['--online', '--requested-template', '--options-requested', '--customer-copy', '--strict'].includes(a)) bad(a + ' takes no value');
   else if (a === '--online') opt.online = true;
   else if (a === '--requested-template') opt.template = true;
+  else if (a === '--options-requested') opt.options = true;
+  else if (a === '--customer-copy') opt.customerCopy = true;
   else if (a === '--strict') opt.strict = true;
   else if (!a.startsWith('--') && !file) file = a;
   else bad('Unknown option ' + a);
@@ -45,6 +52,9 @@ if (!AUDIENCES.includes(opt.audience)) bad('--audience must be one of ' + AUDIEN
 if (opt.contract && !fs.existsSync(opt.contract)) bad('Cannot read the contract ' + opt.contract);
 for (const source of opt.sources) if (!fs.existsSync(source)) bad('Cannot read the source ' + source);
 if (opt.maxWords !== undefined && !(Number.isInteger(opt.maxWords) && opt.maxWords > 0)) bad('--max-words needs a positive whole number');
+if (opt.limit !== undefined && !(Number.isInteger(opt.limit) && opt.limit > 0)) bad('--limit needs a positive whole number');
+if (opt.failAbove !== undefined && !(opt.failAbove > 0)) bad('--fail-above needs a positive number');
+if (opt.failAbove !== undefined && opt.limit === undefined) bad('--fail-above needs --limit');
 
 const here = __dirname, rows = [];
 const run = (name, script, args, { advisory = false } = {}) => {
@@ -52,8 +62,10 @@ const run = (name, script, args, { advisory = false } = {}) => {
   if (!fs.existsSync(target)) { rows.push({ name, status: 'NOT_RUN', detail: script + ' is not beside qe-check.cjs' }); return; }
   const r = spawnSync(process.execPath, [target, ...args], { encoding: 'utf8', timeout: 120000 });
   const out = `${r.stdout ?? ''}${r.stderr ?? ''}`.trim().split(/\r?\n/).filter(Boolean);
-  const status = r.status === 0 ? 'PASS' : r.status === 2 ? 'ERROR' : advisory && !opt.strict ? 'ADVISORY' : 'FAIL';
-  // Keep the report short: the lines that say what failed, else the summary line.
+  // A passing script that printed a WARN line is a warning: shown in the report, never a failure.
+  const warned = r.status === 0 && out.some(l => /^WARN\b/.test(l));
+  const status = r.status === 0 ? (warned ? 'WARN' : 'PASS') : r.status === 2 ? 'ERROR' : advisory && !opt.strict ? 'ADVISORY' : 'FAIL';
+  // Keep the report short: the lines that say what failed or warned, else the summary line.
   const worded = out.filter(l => /[A-Za-z]{3}/.test(l));
   const keep = status === 'PASS' ? worded.slice(-1) : worded.slice(0, 8);
   rows.push({ name, status, detail: keep.join('\n    ') });
@@ -61,7 +73,8 @@ const run = (name, script, args, { advisory = false } = {}) => {
 
 run('wordcount', 'wordcount.cjs', [file, ...(opt.plain ? [opt.plain] : [])]);
 run('readability', 'readability.cjs', [file, '--audience', opt.audience], { advisory: true });
-run('leakcheck', 'leakcheck.cjs', [file, ...(opt.template ? ['--requested-template'] : [])]);
+if (opt.limit) run('limit', 'wordcount.cjs', [file, '--raw', '--limit', String(opt.limit), ...(opt.failAbove ? ['--fail-above', String(opt.failAbove)] : [])]);
+run('leakcheck', 'leakcheck.cjs', [file, ...(opt.template ? ['--requested-template'] : []), ...(opt.options ? ['--options-requested'] : []), ...(opt.customerCopy ? ['--customer-copy'] : [])]);
 run('proof', 'proof.cjs', [file, ...(opt.sources.length ? ['--sources', ...opt.sources] : []), ...(opt.online ? [] : ['--offline'])]);
 let contract = opt.contract, temp = null;
 if (!contract && opt.maxWords) { temp = path.join(os.tmpdir(), `qe-contract-${process.pid}.json`); fs.writeFileSync(temp, JSON.stringify({ max_words: opt.maxWords })); contract = temp; }

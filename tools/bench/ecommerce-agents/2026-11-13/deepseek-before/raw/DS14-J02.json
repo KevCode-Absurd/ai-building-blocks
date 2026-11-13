@@ -1,0 +1,20 @@
+{
+ "job": "J02",
+ "o1": {
+  "job_done": 9,
+  "actionable": 9,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 8,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the more handover-ready plan — named owners with done-when gates, one $38 ceiling driving every kill/scale rule, an incremental-cost check after each raise, the Shopify-UTM correction factor and creator/AI ad disclosures — while Output 2's day-10 gate at $55 contradicts its own $45 ceiling and it omits paid-partnership disclosure and the donation-cost assumption."
+}

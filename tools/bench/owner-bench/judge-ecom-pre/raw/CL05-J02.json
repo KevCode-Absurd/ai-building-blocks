@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The set-up table (owners, dates, 'done when', no launch if the test order fails), the $38 target worked from 90-day profit ($38.46), and kill, scale and day-30 rules in dollars make it ready to hand over on Monday.",
+  "biggest_mistake": "It is dense and probably runs past the 1,400-word cap, and its 'Feet first' group is the least tied to the data (Maria and Tasha's words); it also has no separate mission concept.",
+  "what_would_make_it_a_10": "Trim it under the word limit and add hooks taken word for word from Maria's and Tasha's phrases, while keeping the dated set-up and the two-of-three-reads day-30 verdict."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean 90-day maths, a creative plan built on on-feet workers (including new warehouse and teacher creators) with price answered inside the ad, and a budget that sums to $30,000 with a reserve released only on performance.",
+  "biggest_mistake": "The day-30 scorecard leans on cost per first order and a store-lift check against a flat Meta spend, with the survey only a secondary check, and the set-up list lacks dates, owners and 'done when' tests.",
+  "what_would_make_it_a_10": "Make the day-30 verdict rest on Shopify-based reads (tagged orders, survey, baseline or holdout) tied explicitly to the 90-day break-even, and give the set-up a dated checklist with pass tests."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more finished: a dated set-up with owners and a go/no-go test, and a day-30 verdict built on two of three independent reads against the 90-day break-even. Output 2 is good but less concrete on set-up and leans more on platform-reported cost."
+}

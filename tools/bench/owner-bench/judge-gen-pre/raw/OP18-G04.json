@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the winning segment, the pricing-change hook, the no-link rule, and gives realistic expectations tied to the pilot data.",
+  "biggest_mistake": "It broadens the send plan into hiring-trigger and generic variants even though the brief asked for the people and moment the pilot says work: finance leads after pricing-page changes.",
+  "what_would_make_it_a_10": "Keep the list focused on pricing-change contacts first, move the 9-to-4 proof out of step 1, and avoid sending a generic version unless there is a separate test plan."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the right strategic call to focus on Controllers and Heads of Finance at 50 to 300-person SaaS companies with recent pricing-page changes, and it sets an honest 6.8% to 7.9% reply-rate range.",
+  "biggest_mistake": "Several emails have two asks or awkward reply prompts, and they promise assets like a one-page summary and three steps that were not provided in the brief.",
+  "what_would_make_it_a_10": "Rewrite the CTAs so each email has one natural finance-person question, remove the promised extra assets, and make the copy feel less like a sales automation template."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more ready to run tomorrow: cleaner voice, fewer CTA problems, better compliance hygiene, and stronger use of the pilot numbers. Output 2 has sharper list discipline, but the email copy needs more cleanup before I would put it in front of customers."
+}

@@ -1,0 +1,35 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "biggest_strength": "It puts the 46-90 day drifters first, gives the 5,200 Monsoon Dark buyers their own track with a named closer roast, and gates ex-subscribers on a fixed on-time rate, all keyed to my data.",
+  "biggest_mistake": "The three-month repeat assumption behind the subscriber and repeat-rate value lines is a bit loose and not separated from proven numbers.",
+  "what_would_make_it_a_10": "Show the break-even and value ladder from the holdout in one clean line so I can see exactly what lift pays for the programme."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "biggest_strength": "It asks for a day-28 running-low nudge and shows a full profit table with costs, which is genuinely useful for planning.",
+  "biggest_mistake": "Drafts are full of {{braces}} placeholders, so I cannot send anything tomorrow without a developer, and the money numbers rest on assumed lift rates dressed as forecasts.",
+  "what_would_make_it_a_10": "Replace placeholders with real copy and put the 46-90 day drifters first, with a holdout-based break-even rather than assumed lift rates."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 puts the 46-90 day drifters first, gives Monsoon Dark its own track, and gates subscribers on the delivery fix, matching exactly what my data says. Output 2 is strong too but leaves placeholders in the drafts and buries the cheapest win under a 'stop the leak' afterthought."
+}

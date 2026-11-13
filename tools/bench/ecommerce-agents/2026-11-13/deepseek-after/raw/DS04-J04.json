@@ -1,0 +1,20 @@
+{
+ "job": "J04",
+ "o1": {
+  "job_done": 8,
+  "actionable": 9,
+  "commercial": 9,
+  "craft": 8,
+  "overall": 9
+ },
+ "o2": {
+  "job_done": 8,
+  "actionable": 8,
+  "commercial": 7,
+  "craft": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 ships a genuinely production-ready creator brief (usage rights, dates, pay, deliverables, safe-zone numbers) plus stronger disclosure (spoken + on-screen + platform tools) and awareness-staged hooks, whereas Output 2's cleaner scripts come with a thin brief that omits usage rights and timing — a real commercial gap — and only slightly undercuts it by running a shade over the word limit."
+}

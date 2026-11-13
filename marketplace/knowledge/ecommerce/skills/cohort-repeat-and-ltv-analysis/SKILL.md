@@ -115,7 +115,7 @@ Choose one, with the number that justifies it:
 - 90, 180 and 365-day repeat rate and gross profit per customer for the store, against last year if available.
 - Best and worst first product and channel by 180-day gross profit.
 - Affordable CAC for the top 3 segments, with window and ratio.
-- The one next move and its number. Runner-up in one line.
+- The one next move and its number. A second move that adds to it goes into the same plan, with its own number.
 
 **2. Cohort by month** (rows: first-order month; blanks where immature)
 

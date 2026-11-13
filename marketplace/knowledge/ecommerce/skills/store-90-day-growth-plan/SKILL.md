@@ -121,7 +121,7 @@ The client approves the plan, budget caps and owners, with dates logged. Nothing
 
 ## Output
 
-**One-page plan:** the goal metric (baseline, how it moved, day-90 target), baseline (five numbers), the constraint in one sentence, bets with owners, total budget, day-90 targets as ranges, the runner-up bet in one line.
+**One-page plan:** the goal metric (baseline, how it moved, day-90 target), baseline (five numbers), the constraint in one sentence, bets with owners, total budget, and day-90 targets as ranges.
 
 **Bets table:** Rank | Bet | Constraint it works on | Goal-metric impact (sum shown) | Money per month | Owner (agent) | Approver | Hours a week | Cost | Profit per month low / likely / high | Test or ship | Leading signal | Week 4 line | Week 8 line.
 

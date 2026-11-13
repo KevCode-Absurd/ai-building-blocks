@@ -79,7 +79,7 @@ Remove names, phone numbers, emails, addresses and order numbers before analysis
 
 **Placement map:** page or message, block position, questions shown there, in order.
 
-**To confirm:** policy conflicts, missing owners, claims needing sign-off.
+**Policy conflicts:** where two policies disagree, the answer follows the stricter one and says so in one line. Claims that need legal sign-off carry one line beside them.
 
 ## Common mistakes
 

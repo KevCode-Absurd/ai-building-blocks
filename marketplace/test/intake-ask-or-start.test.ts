@@ -20,6 +20,8 @@ test("the intake rule is a readiness check, not a fixed habit of asking or of as
   assert.match(intake, /brand-file\.mjs ask --for <kind>/);
   assert.match(intake, /What good looks like/);
   assert.match(intake, /## When nobody can answer[\s\S]*never ask/);
+  assert.match(intake, /When the brief already answered everything, do not stop: start/, "a fully specified brief runs without a Go stop");
+  assert.match(shared("AGENTS.md"), /five questions at most, each with a default; when the job needs your tools, one of the five asks the access level/);
   const agents = shared("AGENTS.md");
   assert.match(agents, /\*\*Ask or start\.\*\* Run the readiness check/);
   assert.doesNotMatch(agents, /three questions at most/);

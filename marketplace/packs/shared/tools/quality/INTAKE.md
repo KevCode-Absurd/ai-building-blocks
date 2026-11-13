@@ -33,7 +33,7 @@ Write the answers to `context/intake.md` (`node tools/make-rubric.mjs template` 
 
 ## Spec and rubric
 
-When you asked, or the job is a plan, campaign or more than one deliverable: run `node tools/make-rubric.mjs`, then show the spec sheet and `context/rubric.md` together in one short message and ask "Go, or change anything?" For a specific, single deliverable that needed no questions, build the rubric and start without the extra stop.
+Always run `node tools/make-rubric.mjs` before you build. When you asked questions, or you had to assume something that changes the work, show the spec sheet and `context/rubric.md` together in one short message and ask "Go, or change anything?" When the brief already answered everything, do not stop: start, and give the spec and rubric with the finished work.
 
 At hand-over, give the scorecard in your own message, after the work and never inside it, and run `node tools/make-rubric.mjs check <scorecard file>`.
 

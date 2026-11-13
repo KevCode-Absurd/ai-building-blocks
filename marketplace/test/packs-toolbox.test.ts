@@ -423,10 +423,10 @@ test("intake fits the role: only brand-facing work is asked about brands, and on
   }
   const riley = await build("riley-carousels"), russell = await build("russell-bookkeeping");
   assert.match(file(riley, "AGENTS.md")!, /ask for the business name, the website \(or what they can paste\) and what they need done/);
-  assert.match(file(riley, "AGENTS.md")!, /position, price point, what must never change, brands they admire and avoid, a fact only the owner knows\): ask first[\s\S]*plus the access level for each tool you need/);
+  assert.match(file(riley, "AGENTS.md")!, /position, price point, what must never change, brands they admire and avoid, a fact only the owner knows\): ask first[\s\S]*one of the five asks the access level for each tool you need/);
   const agents = file(russell, "AGENTS.md")!;
   assert.match(agents, /ask for the business name, what they need done, and the files, exports or account the job runs on/);
-  assert.match(agents, /the period to cover, the accounting software and the bank or payout exports, cash or accrual basis, who the records are for, a fact only the owner knows\): ask first[\s\S]*plus the access level for each tool you need/);
+  assert.match(agents, /the period to cover, the accounting software and the bank or payout exports, cash or accrual basis, who the records are for, a fact only the owner knows\): ask first[\s\S]*one of the five asks the access level for each tool you need/);
   assert.doesNotMatch(agents, /brands they admire|the website/);
   // The brand-capture tools: in the designer's pack, not in the bookkeeper's. The list of AI defaults to avoid
   // covers copy, audits and plans too, so every pack keeps it.

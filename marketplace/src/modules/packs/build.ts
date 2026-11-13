@@ -21,7 +21,7 @@ import { CAPTURE, FAMILY_LABELS, contextNeed, contextRequirements, craftWeightsL
 import { brandFileLine } from "./brand-file.ts";
 import { bestRoute, type RouteCandidate } from "./route.ts";
 import { KnowledgeIndex, indexedPath, knowledgeMap } from "./retrieve.ts";
-import { personaVerticalFiles, verticalKnowledgeSection, type VerticalBundle } from "../knowledge/bundle.ts";
+import { personaVerticalFiles, personaVerticalLibrary, verticalKnowledgeSection, type VerticalBundle } from "../knowledge/bundle.ts";
 import { agentFrontmatter, megaSources, teamListMarkdown, type MegaKit } from "./mega.ts";
 import {
   ONE_FILE_ITEMS, TYPE_LABELS, buildToolbox, checkToolbox, fallbackToolbox, toolboxItemPath,
@@ -1290,6 +1290,17 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     path: toolboxItemPath(item.type, item.slug), group: "toolbox" as const, source: "toolbox" as const, content: item.text,
     purpose: `${upperFirst(TYPE_LABELS[item.type])}: ${firstSentence(item.summary || item.name)}`,
   }));
+  // A vertical agent also carries the library items its vertical toolbox names for its modules (knowledge/<vertical>/
+  // toolbox.json), once each, beside the role toolbox's.
+  const haveItems = new Set(libraryItemDrafts.map(d => d.path));
+  for (const ref of personaVerticalLibrary(persona, input.vertical)) {
+    const item = input.library?.[ref.slug];
+    if (!item) continue;
+    const p = toolboxItemPath(item.type, item.slug);
+    if (haveItems.has(p)) continue;
+    haveItems.add(p);
+    libraryItemDrafts.push({ path: p, group: "toolbox", source: "toolbox", content: item.text, purpose: `${upperFirst(TYPE_LABELS[item.type])}: ${firstSentence(item.summary || item.name)}` });
+  }
   // A curated agent pack has no library.md: the toolbox carries those items in full. Training packs keep it,
   // because packs/shared/train/AGENTS.md names it.
   const withLibraryMd = !builtToolbox || !agent;

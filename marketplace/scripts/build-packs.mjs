@@ -282,7 +282,32 @@ if (existsSync(KNOWLEDGE)) {
     const bad = cards.flatMap(c => cardProblems(c, vertical, byId).map(p => `${c.id}: ${p}`));
     if (bad.length) fatal(`knowledge/${id}: ${bad.length} card problem(s):\n  ${bad.slice(0, 20).join("\n  ")}`);
     if (new Set(cards.map(c => c.id)).size !== cards.length) fatal(`knowledge/${id}: duplicate card ids`);
-    verticals.set(id, verticalBundle(vertical, cards, sources));
+    // The vertical toolbox (toolbox.json) and the open-source skills vendored beside it (vendor/<set>/...).
+    const toolbox = existsSync(path.join(dir, "toolbox.json")) ? JSON.parse(readFileSync(path.join(dir, "toolbox.json"), "utf8")) : null;
+    const vendor = {};
+    const vendorDir = path.join(dir, "vendor");
+    if (existsSync(vendorDir)) for (const f of walk(vendorDir).filter(f => f.endsWith(".md"))) vendor[`knowledge/${id}/vendor/${f}`] = normalizeText(readFileSync(path.join(vendorDir, f), "utf8"));
+    const names = { library: {}, vendor: {} };
+    const verticalNotes = [];
+    for (const [code, items] of Object.entries(toolbox?.modules ?? {})) for (const i of items) {
+      if (i.ref.startsWith("library:")) {
+        const slug = i.ref.slice(8);
+        if (!(slug in library)) {
+          const got = readLibraryItem(slug, i.type);
+          library[slug] = got.item ?? null;
+          if (!got.item) verticalNotes.push(`knowledge/${id}/toolbox.json ${code}: library item ${slug} ${got.skip}, so it is left out`);
+        }
+        if (library[slug]) names.library[slug] = { name: library[slug].name, type: library[slug].type };
+      } else if (i.ref.startsWith("local:")) {
+        const [set, skill] = i.ref.slice(6).split("/");
+        const p = `knowledge/${id}/vendor/${set}/skills/${skill}/SKILL.md`;
+        if (vendor[p]) names.vendor[`${set}/${skill}`] = { name: `${skill.replace(/-/g, " ")} (open-source ${set} skill)`, path: p, set };
+        else verticalNotes.push(`knowledge/${id}/toolbox.json ${code}: ${i.ref} is not vendored, so it is left out`);
+      }
+    }
+    for (const slug of Object.keys(library)) if (!library[slug]) delete library[slug];
+    warnings.push(...verticalNotes);
+    verticals.set(id, verticalBundle(vertical, cards, sources, { toolbox, vendor, names }));
   }
 }
 

@@ -34,6 +34,8 @@ const rewrite = text => text
   // Shared references, wherever the skill says they are.
   .replace(/(?<![\w/.-])(?:\.\.\/)*(?:[\w-]+\/)?references\/([\w.-]+\.md)/g, (m, f) => files.has(`references/${f}`) ? `${base}/references/${f}` : m)
   .replace(/(?<![\w/.-])(?:\.\.\/)*agents\/([\w.-]+\.md)/g, (m, f) => files.has(`agents/${f}`) ? `${base}/agents/${f}` : m)
+  // A skill's own assets or templates stay in the repository too.
+  .replace(/(?<![\w/.:-])(?:\.\.\/)*(skills\/[\w-]+\/(?!SKILL\.md)[\w./-]+\.\w+)/g, (_, p) => `${repo}/blob/main/${p}`)
   .replace(/(?<![\w/.-])(?:\.\.\/)*skills\/([\w-]+)\/SKILL\.md/g, (m, d) => files.has(`skills/${d}/SKILL.md`) ? `${base}/skills/${d}/SKILL.md` : m)
   // Scripts and anything else in the plugin stay in its repository.
   .replace(/(?<![\w/.:-])(?:\.\.\/)*((?:scripts|evals|tests)\/[\w./-]+\.\w+)/g, (_, p) => `${repo}/blob/main/${p}`)

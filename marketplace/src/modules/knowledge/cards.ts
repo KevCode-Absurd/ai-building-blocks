@@ -136,10 +136,16 @@ export interface CardQuery {
 export interface CardHit { card: Card; source: Source | null; score: number; stale: boolean; matched: string[] }
 export interface CardAnswer { question: string; hits: CardHit[]; coverage: number; enough: boolean; missing: string[] }
 
-/** Tier prior on the fused rank score. */
-export const TIER_WEIGHT: Record<Tier, number> = { 1: 1.3, 2: 1.15, 3: 1, 4: 0.8 };
+/**
+ * Tier prior on the fused rank score: a tie-breaker toward better sources, not an override of relevance. On the
+ * 80-question golden set (13 Nov 2026) 1.3/1.15/1/0.8 cut Hit@5 from 0.83 to 0.66; this light prior keeps Hit@5 0.83
+ * and MRR 0.69 (no prior: 0.72).
+ */
+export const TIER_WEIGHT: Record<Tier, number> = { 1: 1.05, 2: 1.02, 3: 1, 4: 0.98 };
 /** Score kept by a card past its module's review window. */
-export const STALE_WEIGHT = 0.85;
+export let STALE_WEIGHT = 0.98;
+/** Tuning only (scripts/eval-vertical.mjs). */
+export function setStaleWeight(w: number): void { STALE_WEIGHT = w; }
 
 const daysBetween = (a: string, b: string) => {
   const x = Date.parse(`${a.slice(0, 7)}-${a.slice(8, 10) === "00" ? "15" : a.slice(8, 10)}T00:00:00Z`), y = Date.parse(`${b}T00:00:00Z`);

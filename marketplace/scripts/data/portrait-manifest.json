@@ -9,7 +9,7 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:10:13.786Z"
   },
-  "spent_usd": 7.53708,
+  "spent_usd": 7.74705,
   "achieng-content-strategy": {
     "sha256": "cdbf62328530e34274fd6540619171144daa5628682630d5ebec8bc0360954fa",
     "model": "gpt-image-2.5-flare",
@@ -2654,5 +2654,80 @@
     "sha256": "2a23073d2e6d431549d49b6f3c1c18f0c502477cafe49c7a326df34f7cd0856e",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-13T06:03:21.606Z"
+  },
+  "jared-performance-marketing": {
+    "sha256": "3034309d7ce70588bcc656347ed16ab9cbf8db7768512689bd60f951c90ded83",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:17:27.009Z"
+  },
+  "margaret-job-orchestrator": {
+    "sha256": "1f82b25b0a2ff5cf132d9fa7a9d868e5b52e5060799635d73c4ddb440b5c71f1",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:17:28.674Z"
+  },
+  "imogen-retention": {
+    "sha256": "cafb045ac9912960b416cdb57cc6dcbc95bf3ed016e544d7dec17b91fef73c97",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:17:29.196Z"
+  },
+  "kemal-creative-director": {
+    "sha256": "0c99ef8468859cd521bb9b9499355e48d54ae2c67c69749b2eb943c539367cb6",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:17:30.263Z"
+  },
+  "shannon-market-research": {
+    "sha256": "62b71d2b0027ca7d10490dd51d152fb72ee3f20e963949cb027407537bcac28c",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:17:41.091Z"
+  },
+  "thanh-product-sourcing-lead": {
+    "sha256": "b25f9bf457f7885005432917d88d3f41de0935cceb5510a9bd3f443d916b1ba7",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:17:41.126Z"
+  },
+  "sipho-product-hunter": {
+    "sha256": "f4707f3442267fe4cf26b8e7bf96f0bcfb85b20b9ee942a345e8036d7f09ba31",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:17:42.495Z"
+  },
+  "ayaka-ad-design": {
+    "sha256": "995ee81b4ebec6309dc463dd4babc96c20022290776a55cf289591bc41c065a7",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:17:43.472Z"
+  },
+  "aurelio-product-photos": {
+    "sha256": "4893e7c726db4e18ed272976ea183942c454796bdcf75564daa5431a96da0d73",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:17:52.573Z"
+  },
+  "devon-video-ugc": {
+    "sha256": "548cf4739e6a7a66b9b07bc6c005a79d7afb027727c2fe84061b349688570a11",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:17:52.743Z"
+  },
+  "georgia-product-copy": {
+    "sha256": "b86d8519c471ca7f33a0f6502e0384be9c8f78f16bca432a5882965940c6d1f4",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:17:54.883Z"
+  },
+  "ploy-tiktok-shop": {
+    "sha256": "a6310139a6fb960fa7939cd8c1928f41aec48aff934f5ae25f1760ff09c73f34",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:17:56.018Z"
+  },
+  "omar-inventory-planning": {
+    "sha256": "365fe8d1aa2f407e42f41bbe9fdd9f37a52f8531a86dafedab92bfb82f76eb85",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:18:05.732Z"
+  },
+  "darlene-support-lead": {
+    "sha256": "7abc36c8e74784b58ad0160bc6a9ca26772a37a9d79e246b0b4798c29816c21b",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:18:06.026Z"
+  },
+  "juliet-merchandising": {
+    "sha256": "07533e391a15116c5a04075ed8a887e4537ac69ae3f03df4a9d847619bb84154",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:18:06.800Z"
   }
 }

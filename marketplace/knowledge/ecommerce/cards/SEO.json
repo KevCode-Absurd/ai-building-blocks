@@ -53,7 +53,7 @@
     "conditions": "Ecommerce stores competing on transactional keywords where competitors hold more referring domains.",
     "fails_when": "Google detects a paid-link pattern and discounts the links or issues a manual action; brands that cannot accept search-policy risk; links on irrelevant or low-quality sites.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$100 to $400 per link insertion",
       "20 to 30% cheaper than guest posts",
@@ -93,7 +93,7 @@
     "conditions": "Shopify stores with roughly 50 or more products across several categories; commercial queries in competitive niches.",
     "fails_when": "Single-product or very small catalogues, where the product page is the main ranking page; or brands whose demand is mostly branded searches.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "over 50 products: collections drive about 80%+ of organic revenue (agency observation)",
       "organic product page conversion about 5 to 15%; collection pages about 2 to 5% (agency client data)",
@@ -132,7 +132,7 @@
     "conditions": "Shopify themes that still use collection-aware product URLs in grids.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Why do my Shopify product URLs include the collection name?",
@@ -167,7 +167,7 @@
     "conditions": "Shopify collection pages targeting commercial category queries.",
     "fails_when": "Very slow themes where 48 products per page hurts load time; tiny collections with too few products for long copy to stay relevant.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "title tag up to about 60 characters, keyword first",
       "36 to 48 products per collection page",
@@ -206,7 +206,7 @@
     "conditions": "Shopify stores in competitive niches where competitors have built links; ongoing monthly budget for outreach.",
     "fails_when": "Niches where competitors have few links (on-page work wins first) or brands that earn links naturally through PR; aggressive anchor targeting can trigger penalties.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example gap 98 referring domains (105 vs competitor average 203) over 24 months, about 4 per month, aim 6 to 8",
       "first 3 months: 50 to 75% of links to homepage, 25 to 50% to collections ranking 4 to 10",
@@ -249,7 +249,7 @@
     "conditions": "Shopify product pages for products with specifications and buyer questions; organic search as a meaningful channel.",
     "fails_when": "Simple impulse products with nothing to specify, where long text adds no value; brands selling mostly through paid social where page length can slow mobile buyers.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "summary 50 to 150 words",
       "detailed description 500 to 1,000 words"
@@ -288,7 +288,7 @@
     "conditions": "New or low-authority Shopify stores choosing first SEO targets; thresholds are one practitioner's rules of thumb using Semrush metrics.",
     "fails_when": "Niche categories where the best buying terms have 100 to 500 searches and still convert; established stores with authority that can win higher-difficulty terms; markets where CPC is low because few advertisers compete, not because the term does not sell.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "over 1,000 monthly searches",
       "keyword difficulty under 40",
@@ -412,7 +412,7 @@
     "conditions": "Brands in categories with established competitors that people search by name; Shopify blog or similar.",
     "fails_when": "Categories with no searched competitors; comparison content that makes unsubstantiated or false claims about rivals (comparative advertising and trademark risk); search results dominated by collection pages or marketplaces.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "10-15 posts",
       "money-page link in first 100-200 words; 3-5 related links; 2-4 word anchors",
@@ -450,7 +450,7 @@
     "conditions": "Shopify stores in categories with existing search demand and many modifiers (apparel, skincare, home); sub-collections need unique copy, not duplicates.",
     "fails_when": "Invented categories with no search demand; thin near-duplicate collections with no unique content can be treated as low quality; very small catalogues where every sub-collection shows the same two products.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "keyword difficulty filter below 35",
       "5 to 10 sub-collections per main category"
@@ -489,7 +489,7 @@
     "conditions": "Stores investing in content SEO or AEO with limited budget, especially blogs and buying guides.",
     "fails_when": "Programmatic pages built from unique structured data (product, location or compatibility pages) can still work at scale; very early sites may not yet know which topics will win and need some breadth to find out.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 1 in 20 landing pages drives about 85% of traffic",
       "19 in 20 pages drive little or none"

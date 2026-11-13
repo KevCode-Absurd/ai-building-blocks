@@ -12,7 +12,7 @@
     "conditions": "Private sale of an ecom brand; multiples quoted around 2025 in an Australian and UK context; EBITDA-based valuation.",
     "fails_when": "Buyer market is hot (multiples rise sharply, as in 2021) or frozen; the business has unusual recurring revenue or strategic value to a specific acquirer; a revenue-based deal for a high-growth brand.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "dropshipping store about 1 to 2x EBITDA",
       "branded ecom about 3 to 6x EBITDA",
@@ -56,7 +56,7 @@
     "conditions": "US mass and grocery retail (Target, Walmart, grocery, specialty like GNC), consumable CPG with a low shelf price; figures as stated by one founder in beverage.",
     "fails_when": "Direct-to-store distribution without a distributor (removes the 15 to 25% layer); specialty or boutique retail with different margin norms; categories where retailers buy on consignment or marketplace terms; non-US markets.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "retailer margin 45 to 50% of shelf price",
       "distributor margin 15 to 25%",
@@ -100,7 +100,7 @@
     "conditions": "Profitable DTC companies with $2M+ EBITDA and audited accounts; US-style corporate lending market (he references a C corp); stable or growing earnings.",
     "fails_when": "Volatile earnings that can breach interest-cover covenants (ad cost spikes, tariff shocks); brands needing the cash for growth; founders without audited history; lenders demanding personal guarantees; confirm structure and tax with an accountant.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Minimum ~$2M EBITDA for 3 years, last year audited",
       "Borrow ~3x EBITDA",
@@ -144,7 +144,7 @@
     "conditions": "Brands buying meaningful volume ($ millions a year) from Chinese or Southeast Asian exporters; clean payment history; open-book BOM relationship.",
     "fails_when": "Small buyers below insurers' and banks' thresholds; buyers with disputes or late payments on record (C grade); factories outside export-credit schemes; rates differ by country and change with interest rates.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Invoice factoring ~1% per 90 days, ~6% APR in China",
       "$12M purchases -> ~$600k financing cost (~$6/unit on 100k units)",
@@ -188,7 +188,7 @@
     "conditions": "DTC brands buying manufactured inventory from overseas factories; brands with enough volume and clean payment history to negotiate terms; global mechanics, but tax and legal set-up varies.",
     "fails_when": "New or small brands without credit history (factories ask for deposits up front); products with low resale or recourse value, making consignment unacceptable to the supplier; long-tail SKU complexity that eats the float through overstock.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Float = payment terms - lead time to warehouse (net 90 - 30 days = 60 days)",
       "Typical brand: net 30 to 45 terms vs 45 to 90 day lead times",
@@ -273,7 +273,7 @@
     "conditions": "Brands that buy finished goods in (not manufacturers, which add a further cost layer); statutory accounts; confirm treatment with your accountant.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "What counts as cost of goods sold for an online store?",
@@ -311,7 +311,7 @@
     "conditions": "Ecommerce brands with branded product packaging plus separate shipping materials; confirm with your accountant.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Is packaging part of COGS?",
@@ -348,7 +348,7 @@
     "conditions": "Brands with meaningful return rates (apparel, footwear); statutory accounts; confirm with your accountant.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "How do I account for customer returns?",
@@ -385,7 +385,7 @@
     "conditions": "Shopify brands whose bookkeeping imports summarised payouts or net sales into Xero, QuickBooks or similar.",
     "fails_when": "Setups whose connector already imports gross sales, discounts and refunds as separate lines; very small stores where the monthly bridge adds little.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example: gross $120k both months; refunds $20k -> $10k explained net $100k -> $110k"
     ],
@@ -469,7 +469,7 @@
     "conditions": "DTC brands launching or repricing products sold mainly through paid acquisition.",
     "fails_when": "Marketplaces or retail-led brands with low CAC; loss-leader products deliberately priced to acquire customers for a high-LTV range; categories with strict price anchors where any premium fails.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "keystone = 2x unit cost; about 40% of new brands price this way (estimate)",
       "example: 10% net + 10% opex -> 20% contribution target; CAC $30, allowances 3% + 3%, shipping $11, COGS $6 -> about $70 price"
@@ -508,7 +508,7 @@
     "conditions": "Inventory-holding DTC brands, especially fashion and multi-SKU catalogues, with stock aged beyond normal sell-through.",
     "fails_when": "Perishable or low-value stock where liquidation or bundling is cheaper than paid media; when marketing is not actually driving revenue, raising spend just deepens the loss; heavy discounting in the main market can train customers to wait.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example: $2M profit, $3M unsold inventory -> -$1M cash",
       "launches often sell 30-40% then stall; 400 days of inventory on hand example",
@@ -636,7 +636,7 @@
     "conditions": "DTC ecommerce brands, roughly seven and eight figures; percentages are of net revenue; benchmarks from Common Thread Collective's client portfolio.",
     "fails_when": "Subscription or high-repeat businesses, where marketing share should fall well below 40% and opex can run higher; brands in heavy investment years that deliberately run above these marketing ratios; marketplace-led brands with different fee structures.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "cost of delivery 30% to 40% of revenue",
       "marketing 40% to 50% of revenue for low-LTV hard goods; Ridge about 50%",
@@ -679,7 +679,7 @@
     "conditions": "Physical product brands preparing a P&L, investor reporting or a gross margin benchmark comparison.",
     "fails_when": "Brands whose accountant includes outbound shipping and fulfilment in cost of sales, a disclosed policy choice many retailers make; comparisons across brands then need the same definition.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Does shipping to customers count as cost of goods sold?",
@@ -715,7 +715,7 @@
     "conditions": "Founder-led brands preparing for a majority sale to private equity or a strategic buyer.",
     "fails_when": "Brands where the founder genuinely is the product (founder-face brands), where hiding them is not credible; buyers who require founder rollover regardless.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "How do I sell my brand without having to stay on?",
@@ -751,7 +751,7 @@
     "conditions": "Profitable, founder-controlled brands with strong growth that want personal liquidity without selling control; US private equity market.",
     "fails_when": "Unprofitable or slow-growing brands that will not attract minority secondary interest; founders who need primary capital for the business rather than personal liquidity.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 15 PE bidders",
       "closing took the full 45-day window",
@@ -793,7 +793,7 @@
     "conditions": "Profitable brands with inventory cycles and wholesale or retail customers; US lending market.",
     "fails_when": "Unprofitable or early brands that cannot secure a revolver; DTC-only brands with no POs to factor; debt recap that leaves the business over-levered for a downturn.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "retail payment terms 90 to 120 days",
       "Ridge raised about $200,000 on Kickstarter; no equity sold"
@@ -833,7 +833,7 @@
     "conditions": "Profitable DTC brands considering a sale; US PE market; figures are one founder's rules of thumb.",
     "fails_when": "Strategic acquirers paying for a specific asset; venture-backed high-growth brands valued on revenue; very hot or very cold M&A markets.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 20% EBITDA growing about 20% a year",
       "example: $20M EBITDA, 5x, $100M price, $50M fund equity + $50M debt",
@@ -917,7 +917,7 @@
     "conditions": "Fast-growing, profitable or near-profitable brands with a concentrated supplier who benefits from their growth.",
     "fails_when": "New brands without a sales record; suppliers with tight cash themselves; missing the growth plan leaves you with stock and debt; terms extended without paying on time destroy the relationship.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "net 30 to net 60 to net 90",
       "about $40M inventory bet",
@@ -957,7 +957,7 @@
     "conditions": "Established DTC brands with dense regional online customer bases considering physical retail; US malls.",
     "fails_when": "Brands without online density data; standalone locations; brands unable to fund losses during ramp-up.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "9 owned stores",
       "mall leases $20k-40k/month",
@@ -997,7 +997,7 @@
     "conditions": "Consumer brands with meaningful revenue considering a sale or recapitalisation; US M&A context.",
     "fails_when": "Small brands below the size PE or strategics buy, where exits are to individuals or aggregators with different maths; the 2x in 2 years figure is an illustration, not a market standard.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "PE example: $300 million purchase, about 2x return within about 2 years"
     ],
@@ -1037,7 +1037,7 @@
     "conditions": "Brands carrying slow stock after launches or seasons; cash is the constraint rather than profit; media team able to run separate funnels.",
     "fails_when": "Stock is genuinely unsellable at any price (liquidate or write off instead); discounting in the main market would damage brand pricing; the brand is profit-constrained with ample cash.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example: $100k sold of $1M stock, about 400 days of inventory",
       "$2M profit with $3M unsold stock = $1M cash down",
@@ -1079,7 +1079,7 @@
     "conditions": "Brands where paid media drives most new revenue and cash is tied in inventory; seven to nine figure DTC; requires shared data between finance and marketing.",
     "fails_when": "Marketing is not actually driving revenue (cutting it would not reduce sales); no slow stock to clear; financing costs or covenants make any extra spend unaffordable.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example P&L: delivery 30%, marketing 25%, opex 15%, profit 30%",
       "marketing rises to 30% of revenue; CFO cuts 40%",
@@ -1124,7 +1124,7 @@
     "conditions": "Inventory-holding DTC brands, bootstrapped or cash-constrained, ordering stock monthly against sell-through.",
     "fails_when": "Made-to-order or dropship models with little inventory; brands with long supplier lead times or MOQs that prevent smaller reorders; price rises that cut conversion more than markup gains; model outputs taken as forecasts without your own numbers.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "model brand: ~$92.5k revenue/month, $30k marketing, $50k inventory, $50k cash",
       "sell-through 30% to 40%: cash $50k to ~$70k, net income unchanged",
@@ -1169,7 +1169,7 @@
     "conditions": "Bootstrapped DTC brands with repeat-purchase products and monthly inventory buying; teams able to model cash monthly.",
     "fails_when": "One-time-purchase categories with little repeat; brands where retention requires paid staff or agencies whose cost offsets the gain; numbers taken from the presenter's model rather than your own cohorts.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "AOV $150 to $180: net income ~$2.6k to ~$16.3k/month (modelled)",
       "returning revenue share 25% to 35%: revenue ~$98k to ~$113k, gross profit ~$60k to ~$69k, +~$10k net income",

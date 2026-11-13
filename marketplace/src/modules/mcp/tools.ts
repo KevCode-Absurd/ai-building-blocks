@@ -515,7 +515,7 @@ export const TOOLS: ToolDef[] = [
     inputSchema: schema({
       vertical: { type: "string", enum: ["ecommerce"], description: "The library: ecommerce." },
       questions: { type: "array", minItems: 1, maxItems: 4, items: { type: "string", minLength: 3, maxLength: 300 }, description: "One to four phrasings of one question, such as [\"how many new ad creatives should we test each week\", \"creative testing volume by spend\"]." },
-      modules: { type: "array", maxItems: 23, items: { type: "string", pattern: "^[A-Z]{3}$" }, description: "Only cards whose modules include one of these codes." },
+      modules: { type: "array", maxItems: 23, items: { type: "string", enum: ["PRD", "AVT", "OFF", "BRD", "SET", "MEA", "LPG", "SPD", "CRO", "MCR", "ADC", "GAD", "ORG", "EML", "SEO", "AEO", "CXP", "COG", "WLD", "FIN", "OPS", "AMZ", "SEC"] }, description: "Only cards whose modules include one of these codes." },
       jurisdiction: { type: "string", enum: ["IN", "US", "UK", "EU"], description: "The brand's market, for tax, finance and law cards." },
       marketplace: { type: "string", enum: ["IN", "US", "UK", "EU"], description: "The Amazon marketplace, for Amazon cards." },
       mode: { type: "string", enum: ["dtc_first", "amazon_first", "new_product", "expansion"], description: "dtc_first or amazon_first for Amazon cards; new_product or expansion for product research." },

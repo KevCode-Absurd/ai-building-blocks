@@ -51,7 +51,7 @@
     "conditions": "Subscription brands on portals supporting cancel-flow splash media (Skio, Recharge, Stay, Loop); founder or face of brand available.",
     "fails_when": "Brands already saving 15-20% will not see a 10-point jump; a video that delays or obstructs cancellation can conflict with click-to-cancel rules, so the cancel path must stay clear.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "save rate 5-6% to about 15% after founder video",
       "video length about 1 minute"
@@ -126,7 +126,7 @@
     "conditions": "Subscription apps with branching cancel flows; brands with enough monthly cancels to read reason-level save rates.",
     "fails_when": "Margins so thin that a 30-50% next-order discount loses money even if the subscriber stays one more cycle; customers trained to threaten cancellation for a discount, visible as repeat cancel attempts.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "save offer 20% vs 30%",
       "6 to 7 cancel reasons",
@@ -166,7 +166,7 @@
     "conditions": "Subscription consumables on portals that allow configuring pause, skip, delay and frequency options.",
     "fails_when": "Seasonal or travel-driven products where a long pause genuinely precedes return; the 200% LTV link is correlational (engaged subscribers adjust more), so forcing adjustments will not create it.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 10% reactivation from indefinite pauses",
       "delay cap about 30 days",
@@ -207,7 +207,7 @@
     "conditions": "Subscription brands considering surprise or milestone gifts after purchase.",
     "fails_when": "Gifts that are cheap cross-sell samples double as product expansion and can pay through later add-on revenue; brands with very high month-2 churn may see a larger lift than 5%.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "1,000 cohort, 900 reach month 2, $2-5 gift = about $2,000",
       "5% lift = about 45 extra orders"
@@ -600,7 +600,7 @@
     "conditions": "Brands with enough cohort history to compare discount and non-discount buyers; paid social accounts testing many angles.",
     "fails_when": "Brands where discount cohorts retain as well as full-price ones (some large retailers), or where the discount is the brand's permanent positioning.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 60% of the presenter's brands see worse LTV from discount-acquired customers",
       "$20 AOV TikTok Shop buyers versus $200 first orders (illustration)",
@@ -802,7 +802,7 @@
     "conditions": "DTC subscription brands for consumables; churn measured monthly by cohort.",
     "fails_when": "Non-subscription products; brands that hide cancellation, which breaches consumer-protection rules in several markets and erodes trust; giveaways where prize rules or sweepstakes law are not followed.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "churn peaks at day 1, about day 28, and days 31 to 45",
       "first 7 days of heavy onboarding communication",
@@ -842,7 +842,7 @@
     "conditions": "Brands with a CRM showing customer value and a support team able to personalise gestures.",
     "fails_when": "Without logging and comparison, the spend cannot be evaluated; gestures that customers learn to game by complaining.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "How do we turn angry customers into fans?",

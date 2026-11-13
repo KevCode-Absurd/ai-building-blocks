@@ -94,7 +94,7 @@
     "conditions": "Venture-paced consumer brands growing fast; revenue bands as stated by one founder.",
     "fails_when": "Bootstrapped brands growing slowly, which may stay generalist far past $10M; highly technical early needs (regulated formulation, compliance) that require a specialist from day one.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "generalists from about $1M to $10M",
       "specialist 'spikes' from about $10M to $50M",
@@ -250,7 +250,7 @@
     "conditions": "Brands past founder-only stage with repeatable specialist work; teams able to manage across time zones; ecommerce functions with clear daily metrics.",
     "fails_when": "Roles needing deep local market, brand or customer context; very small teams where one generalist covers many jobs; data, privacy or IP rules restricting offshore access; daily task reporting can feel like micromanagement and raise attrition.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "~$100k New York role ~ $20k to $30k in Shenzhen; Philippines ~ $10k",
       "~110-person front office; ~70 on daily task channels",
@@ -366,7 +366,7 @@
     "conditions": "Seasonal DTC brands planning headcount; consistent with an overall opex target of about 10 to 12% of revenue.",
     "fails_when": "Roles that need deep, continuous knowledge (finance, operations lead, core product) are pushed into flex labour and quality or control suffers; or the business is non-seasonal, where the lowest month is close to average and the rule adds nothing.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "full-time payroll about 12% of the lowest month's revenue",
       "months from $500,000 to $1,000,000 imply about $60,000/month full-time payroll",
@@ -407,7 +407,7 @@
     "conditions": "Inventory-holding DTC brands planning systems by revenue stage.",
     "fails_when": "Simple catalogues (few SKUs, one warehouse) that can run well past $50M on Shopify plus an inventory planner; brands with complex B2B or multi-entity needs that need an ERP earlier.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "ERP threshold about $30M to $50M revenue",
       "ERP implementation over $200,000; his own about $500,000",
@@ -446,7 +446,7 @@
     "conditions": "Brands outsourcing fulfilment with monthly invoices from a 3PL and couriers.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "30 to 40% of mentored brands overcharged (practitioner estimate)",
       "landed-to-customer cost $21 vs $28 after negotiation, $7 a unit, about 14% more profit at $50 CAC (illustration)"
@@ -483,7 +483,7 @@
     "conditions": "Brands with enough ticket volume to split tiers (roughly a multi-agent team); seasonal peaks.",
     "fails_when": "Very small brands where one person handles everything; categories needing regulated or technical support (medical devices, financial products) that must stay local or specialised.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "local agents up to about 2x as efficient as offshore (practitioner estimate)",
       "cost per service = total CS cost / ticket volume"
@@ -520,7 +520,7 @@
     "conditions": "Inventory-holding DTC brands with long supplier lead times and seasonal peaks.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "exclude stockout days: e.g. 15 of 30 days out of stock",
       "days of stock target 4, 8 or 12 weeks",
@@ -564,7 +564,7 @@
     "conditions": "Brands using a third-party warehouse, especially with heavy Q4 or promotional peaks.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "pick promise 24 to 48 hours can slip to 7 days at peak",
       "investigate when delivered-on-time is under 95%",
@@ -646,7 +646,7 @@
     "conditions": "Performance-marketing-led DTC brands with high gross margins; Ridge at roughly $100M+ revenue, US-based.",
     "fails_when": "Retail, wholesale or manufacturing-heavy businesses that need larger operations teams; early brands where a few hires are a large share of small revenue; content-heavy or service-heavy models.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "payroll about 7% of revenue, about 45 full-time US staff",
       "marketing up to about 50% of revenue (MER about 2)",
@@ -768,7 +768,7 @@
     "conditions": "DTC brands spending up to about $30,000 a month (founder-run) or $5M to $20M revenue (in-house versus agency decision); Meta-heavy acquisition.",
     "fails_when": "Founders with no time or numeracy for daily account review; brands needing multi-channel expertise an agency already holds; when the in-house hire has no creative production support.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "founder runs ads up to about $10,000 to $30,000 monthly spend",
       "agency fees about $10,000 to $40,000 per month for $5M to $20M brands",
@@ -808,7 +808,7 @@
     "conditions": "Brands or agencies with enough repetitive marketing work to keep a developer busy, typically dozens of staff.",
     "fails_when": "Very small teams where off-the-shelf tools cover the need; teams without managers to filter requests, where the developer gets a scattered queue.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about $3,500 a month for an offshore AI developer (vs about $15,000 US equivalent, speaker's estimate)",
       "requests reviewed every 2 weeks",

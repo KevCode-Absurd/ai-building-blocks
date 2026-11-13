@@ -131,7 +131,7 @@
     "conditions": "Stores and publishers deciding whether to allow Google's AI features to use their content; 2026, UK first then wider rollout per the source.",
     "fails_when": "The site earns revenue from page views rather than sales, so AI answers that remove the visit cost money; the toggle is not available in the site's country yet; Google documentation describes a different scope or ranking effect.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "rollout began with UK site owners, then global (2026)"
     ],
@@ -170,7 +170,7 @@
     "conditions": "Sites with informational or comparison content that ranks on page one; Search Console property where the beta report has rolled out; 2026 onwards.",
     "fails_when": "The report is not yet on the property; the click loss coincides with a ranking or demand drop (seasonality, algorithm update), which needs the comparison-by-page method instead; queries where Google shows no AI feature.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "generative AI performance report released June 2026, beta",
       "report gives impressions by page, country and device; no clicks or position yet",
@@ -210,7 +210,7 @@
     "conditions": "Brands with product categories people ask assistants about; measured by manual citation checks for buyer questions.",
     "fails_when": "The study is unnamed and unverified; AI citation patterns change quickly and differ by assistant; categories where assistants mainly cite marketplaces or major publishers.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 768,000 AI citations studied; over half from product pages, comparisons, buying guides (unverified)",
       "10-20 buyer questions as a tracking set"
@@ -579,7 +579,7 @@
     "conditions": "Brands tracking mentions or citations in ChatGPT and similar assistants with automated tools.",
     "fails_when": "Assistants or modes that always search the web, where the no-search problem does not arise; behaviour changes as providers update models and defaults.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Are AI visibility tracking tools accurate?",
@@ -614,7 +614,7 @@
     "conditions": "Stores and brands targeting commercial queries that assistants answer with web search.",
     "fails_when": "Fan-out wording shifts as models update, so findings need re-checking; the developer-tools method may stop working if the interface changes.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "How can I see what ChatGPT searches for when answering a question?",
@@ -691,7 +691,7 @@
     "conditions": "Established ecommerce or brand sites considering AI-generated content at volume or hiring a GEO/AEO vendor.",
     "fails_when": "Disposable affiliate or churn-and-burn sites that accept the crash; carefully edited, genuinely useful content added at a measured pace is not what this describes.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 100 to 1,000+ blog pages within weeks",
       "decline typically after about 3 months",
@@ -732,7 +732,7 @@
     "conditions": "Content planning for stores that publish guides and answer content; figures from Ahrefs keyword samples.",
     "fails_when": "The query is commercial or transactional, where AI Overviews appear far less and clicks remain the goal; or the brand cannot realistically be cited for the topic, so effort is better spent on pages that convert.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "AI Overviews on about 21% of keywords",
       "about 58% of question queries trigger AI Overviews",
@@ -771,7 +771,7 @@
     "conditions": "Stores measuring AI search impact; Ahrefs' numbers are for a SaaS sign-up, not an ecommerce purchase.",
     "fails_when": "Survey response rates are low or the option list is poorly designed, so self-reports skew; a store's AI traffic may convert differently from a software tool's sign-ups.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "AI referrals 0.5% of Ahrefs visits but 12.1% of sign-ups",
       "23x higher conversion rate than organic search",
@@ -811,7 +811,7 @@
     "conditions": "Content and collection or guide pages competing for informational and comparison prompts; figures are Ahrefs' 2025-era samples.",
     "fails_when": "Freshness is faked (date bumped without real changes), which may not help and can mislead readers; for transactional queries, product data and reviews matter more than article format; these figures will shift as engines change.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "174,000 AI-Overview-cited pages: word count correlation about zero; over half under 1,000 words",
       "89.7% of ChatGPT top-cited pages updated in 2025; 76% within 30 days",
@@ -851,7 +851,7 @@
     "conditions": "Brands seeking recommendation in ChatGPT and Google AI Overviews; correlations from Ahrefs' brand sample, not controlled experiments.",
     "fails_when": "Mentions are bought or seeded inauthentically (Reddit and publishers remove them, and they can damage trust); correlation may reflect that big brands get both mentions and citations, so small brands may see slower effects.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "75,000 brands studied: branded mentions the strongest correlate of AI Overview visibility",
       "YouTube mentions 0.737 correlation with ChatGPT visibility",
@@ -893,7 +893,7 @@
     "conditions": "Informational and buying-guide content intended for AI Overviews, ChatGPT and Perplexity citation, and for featured snippets; question-led categories with factual answers.",
     "fails_when": "Narrative brand content, lookbooks and opinion pieces where a Q&A skeleton reads as robotic and lowers human engagement; and answers that need nuance or regulated wording (health, safety claims) where a 25-word answer can mislead.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "capsule answer 20 to 25 words (up to 50 acceptable)",
       "60 to 70 percent of article in capsule format"
@@ -931,7 +931,7 @@
     "conditions": "Consumer and prosumer brands planning AEO work in 2026; channel influence observed for a horizontal SaaS product.",
     "fails_when": "Engine sourcing changes quickly (data deals, model updates), so the ranking may be stale within months; categories with little Reddit discussion will see less effect from Reddit work; enterprise or B2B buyers follow different engines.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 30 to 40% playbook overlap across engines",
       "Claude cites about 5x less than ChatGPT (guest's recollection of studies)"
@@ -973,7 +973,7 @@
     "conditions": "Brands investing in AEO content, PR or community work that need a way to judge it; consumer and prosumer audiences where ChatGPT dominates assistant usage.",
     "fails_when": "Low order volume makes survey shares noisy; survey option order biases answers (rotate options); and respondents may not remember which AI tool they used, so treat it as directional.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "ChatGPT-referred click traffic grew about 8x but stayed under 1% of traffic",
       "guest estimates over 90% of Gamma's AEO acquisition comes from ChatGPT"
@@ -1011,7 +1011,7 @@
     "conditions": "Brands publishing content aimed at answer-engine citation, tracking a defined prompt set.",
     "fails_when": "Lags shift with engine updates and crawl behaviour; very competitive prompts may never cite a new source regardless of time; the half-life idea is the guest's untested theory.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "ChatGPT pickup about 30 to 45 days",
       "Perplexity pickup as fast as next day",
@@ -1052,7 +1052,7 @@
     "conditions": "Brands with real category discussion on Reddit; aimed at ChatGPT visibility; consumer or prosumer products.",
     "fails_when": "Categories with no active subreddits, or communities hostile to brand participation; undisclosed or astroturfed posting breaks Reddit rules and FTC endorsement guidance and can backfire into the very negative threads that persist in AI answers.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "How do I use Reddit to get recommended by ChatGPT?",
@@ -1090,7 +1090,7 @@
     "conditions": "Any online store that wants to be recommended by ChatGPT, Perplexity, Gemini or Google AI Overviews; especially headless or app-heavy themes that render content in JavaScript.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Is my store blocking ChatGPT from reading it?",
@@ -1125,7 +1125,7 @@
     "conditions": "Categories where shoppers ask assistants for recommendations and answers cite third-party roundups; brands able to do outreach or PR.",
     "fails_when": "Paying for undisclosed placements or publishing self-serving fake 'independent' rankings breaches FTC endorsement rules and search spam policies, and engines may discount such sources; categories where answers cite mainly marketplaces need marketplace work instead.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "unverified: consistent Reddit engagement gave 4 to 5x visibility",
       "unverified: average cited Reddit post over 1 year old"
@@ -1168,7 +1168,7 @@
     "conditions": "Stores with buying guides, comparison content or considered purchases where shoppers ask assistants which product to choose.",
     "fails_when": "Impulse or low-consideration products where few shoppers ask assistants; comparison pages with misleading claims about competitors invite legal risk and erode trust if cited.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "direct answer of 2 to 4 sentences at top",
       "comparison pages against 3 to 4 bigger competitors",
@@ -1210,7 +1210,7 @@
     "conditions": "Stores with technical, compatibility-sensitive or considered products (electronics accessories, parts, skincare, supplements, outdoor gear) that get many specific pre-sale questions.",
     "fails_when": "Simple products with few pre-sale questions; help platforms that cannot be moved to a subdirectory need a reverse proxy, which may not be worth it for a small store.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "chat prompts about 25 words versus about 6 for Google searches (figure attributed to Perplexity or similar)"
     ],
@@ -1248,7 +1248,7 @@
     "conditions": "Brands deciding how much of an existing SEO programme transfers to AI answers; measurements from Graphite's 2025 study.",
     "fails_when": "Overlap figures shift as engines change their retrieval partners and models; your category's overlap may differ from the cross-category average, so measure on your own prompt set.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "ChatGPT citation overlap with Google results about 35%",
       "Perplexity overlap about 70%",
@@ -1288,7 +1288,7 @@
     "conditions": "Stores producing blog, guide or collection content at scale for search and answer engines.",
     "fails_when": "Detector-based studies carry error (about 8% false positives); engines' tolerance could change; heavily edited AI-assisted content is not what the study measured.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 10 to 12% of ranking or cited content AI-generated, about 90% human",
       "detector false positive rate about 8%",
@@ -1327,7 +1327,7 @@
     "conditions": "Brands in categories where shoppers ask assistants 'what is the best X'; especially newer brands without search authority.",
     "fails_when": "Categories where answers cite mostly marketplaces or one dominant publisher; paid affiliate mentions without disclosure breach FTC rules; the 6x conversion figure is one B2B SaaS client and may not hold for impulse products.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Webflow: LLM traffic converts about 6x Google search traffic",
       "LLMs about 8% of Webflow sign-ups",
@@ -1371,7 +1371,7 @@
     "conditions": "Brands with enough relevant prompts (around 200) to split into groups and an answer-tracking tool; any category.",
     "fails_when": "Very narrow categories without enough distinct prompts to form comparable groups; tactics that spill over (a brand-wide PR mention lifts control prompts too) blur the comparison.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 200 questions: 100 control, 100 test",
       "a couple of weeks baseline and a couple of weeks after",

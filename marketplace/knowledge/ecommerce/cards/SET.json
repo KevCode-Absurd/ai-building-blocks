@@ -283,7 +283,7 @@
     "conditions": "Shopify stores using Shopify Payments in markets where Shop Pay is available; mobile-heavy traffic.",
     "fails_when": "Stores outside Shop Pay markets or on third-party gateways; audiences with low Shop Pay adoption (new markets, B2B buyers paying by invoice); the 1.91x includes self-selection of returning users, so expect a smaller real lift.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Shop Pay: 1.91x higher mobile checkout-to-order rate than regular checkout (Shopify's figure)"
     ],
@@ -322,7 +322,7 @@
     "conditions": "Small, light, high-value products; meaningful revenue per international market; brands able to manage several Shopify stores and 3PLs.",
     "fails_when": "Low revenue per market (cross-border tools cheaper than local overhead); bulky items; teams without capacity to run separate stores; Shopify pricing has changed since the interview.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "7 warehouses, separate Shopify stores per market",
       "UK processing about 0.5% vs US about 2.5% (as stated)",

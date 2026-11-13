@@ -57,7 +57,7 @@
       "conditions": "Meta-led acquisition for a single hero product sold to cold traffic; product with few close substitutes; early-stage brand relying on low CPMs for its unit economics.",
       "fails_when": "Demand is broad and growing fast enough to absorb new entrants; the brand wins on product, brand or retention so it can pay higher CPMs; acquisition is mostly search, retail or organic rather than Meta auctions.",
       "scope": "growth",
-      "tier": 4,
+      "tier": 3,
       "numbers": [
         "2 to 3 direct competitors on the same product is the point where CPMs rise sharply (no CPM figures given)"
       ],

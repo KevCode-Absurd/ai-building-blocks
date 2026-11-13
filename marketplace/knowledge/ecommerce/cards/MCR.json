@@ -15,7 +15,7 @@
     "conditions": "Awareness and prospecting creative where brand recall matters; categories where the model is not the product benefit.",
     "fails_when": "The attractive body is itself the product promise (lingerie, swimwear, fitness transformation), or controversy is the strategy and reach outweighs recall; the figures come from a single commercially run study and may not replicate.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "brand recall 9.8% (sexual ads) vs almost 20% (neutral), men",
       "brand recall 10.85% vs 22.3%, women",
@@ -59,7 +59,7 @@
     "conditions": "Crowded problem-solution categories on Meta (the operator's own list: teeth whitening, pain relief devices, supplements, anti-aging, shapewear, sleep aids, pet hair); products appealing to buyers about 35 and older who read long copy on Facebook.",
     "fails_when": "The niche is uncrowded, where top desires still convert and splitting into narrow angles slows learning; or the unclaimed buyer is too small a market, or targets minors or health conditions in ways that breach Meta ad policy.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 5 angles per CBO test campaign",
       "about 10 native images per ad set",
@@ -144,7 +144,7 @@
     "conditions": "Direct-response creative for consumables in trend-sensitive categories (wellness, food, beauty); time-sensitive, judged at the moment of writing.",
     "fails_when": "Fear-based trend hooks without evidence that the product addresses that cause invite FTC and platform action; a trend that has passed into the laggard stage feels stale; brand-led premium positioning may reject fear angles.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "How do I make my ad feel timely?",
@@ -177,7 +177,7 @@
     "conditions": "Founder-story brands where the founder is unavailable or unwilling to appear; accounts needing format diversity under Andromeda.",
     "fails_when": "Proxy or animation versions lose the authority that made the story credible (claims that only a founder or expert can make); AI animation that looks generic or breaches ad policy for health claims.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "5 involvement levels: on camera, voice, evidence, proxy, absent"
     ],
@@ -215,7 +215,7 @@
     "conditions": "DTC brands with a real founder origin tied to the product problem; cold and problem-aware audiences on Meta; categories where a competitor or industry practice can be credibly challenged.",
     "fails_when": "No provable adversarial claim exists, or claims about competitors create legal or policy risk (comparative claims, health claims); the founder story has no link to the buyer's problem; brands where the founder is a poor fit for the persona.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "top 15 founder ads ranked by lifetime spend and KPIs",
       "agency reports ~$400M/year Meta spend, $1.2B attributed revenue over 5 years"
@@ -255,7 +255,7 @@
     "conditions": "Brands with a founder willing to shoot periodically and someone to script and edit; Meta accounts needing steady creative volume.",
     "fails_when": "No scriptwriter or editor, so the founder carries all the work; hooks written for volume that do not bridge into the body; a founder who stays stiff on camera, which makes the format underperform regardless of volume.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "10 hooks x 3 bodies = 30 ads; x2 CTAs = 60",
       "~4 to 5 minutes of camera time per batch",
@@ -337,7 +337,7 @@
     "conditions": "Brands with a genuine founder story and one or more SKUs; Meta accounts that need concept diversity, not only format diversity.",
     "fails_when": "Inventing story details to fit a persona (the host calls it black hat and an exit-value risk); a founder who visibly cannot represent the buyer; brands with only one true angle, where angle changes run out quickly.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "3 base concepts x 4 founder roles x offers = 20 to 30 ads",
       "role switching most useful at six to seven-figure revenue"
@@ -377,7 +377,7 @@
     "conditions": "Premium-positioned products on paid social using founder or UGC-style openings; problem-agitation scripts with a delayed reveal.",
     "fails_when": "Impulse or visual products where showing the product working in the first seconds is the hook (cleaning demos, gadgets); very short placements where a delayed reveal never gets watched.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "premium product shots held to the final ~20 seconds in the example"
     ],
@@ -415,7 +415,7 @@
     "conditions": "Meta accounts using broad targeting where the same ads must reach cold and warm users; brands trying to grow beyond existing demand.",
     "fails_when": "Small accounts with strong existing awareness (a famous founder, a viral product) where product-aware ads still find enough buyers; retargeting-only budgets.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "~80% of ads in awareness stages 1 to 3, ~20% in stages 4 and 5"
     ],
@@ -492,7 +492,7 @@
     "conditions": "Meta video ads in testing campaigns with daily budgets around $1,000 or less per concept; founder talking-head and UGC formats.",
     "fails_when": "Very large budgets that can fund many variants to significance; static or carousel ads where the 'hook' is the headline; hooks that do not bridge to the body, which raise thumb-stop but cut conversion.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "2 to 4 hooks per body, up to 8",
       "tested extremes: 9 and 40 hooks on one body",
@@ -532,7 +532,7 @@
     "conditions": "Problem-aware or unaware cold traffic; educational and VSL-style video ads for supplements and wellness.",
     "fails_when": "Product-aware retargeting audiences who already know the mechanism, where extra education slows the path to the offer.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "4 to 6 extra seconds of mechanism education suggested before the bridge",
       "example ad had 3 likes after about 2 weeks running (weak signal of underperformance)"
@@ -571,7 +571,7 @@
     "conditions": "Paid social video ads (Meta feed and Reels) for DTC products, especially supplements and wellness.",
     "fails_when": "Products with broad, impulse appeal where almost any viewer is a prospect, so a pure attention hook followed by a quick product pitch can still sell.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Why does my ad get views but no sales?",
@@ -606,7 +606,7 @@
     "conditions": "Any brand using AI to draft ad scripts or hooks for paid social video.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "How do I make AI-written ad scripts sound less like AI?",
@@ -642,7 +642,7 @@
     "conditions": "Mass-market supplements and wellness products whose benefits apply beyond the niche named in the ad; brands aiming to scale paid social.",
     "fails_when": "Premium or performance brands whose edge is credibility with a specialist niche, or small markets where owning a narrow segment is the whole strategy.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Should I market my supplement to athletes or to everyone?",
@@ -677,7 +677,7 @@
     "conditions": "Health, wellness and supplement ads that rest on a named condition or mechanism; cold problem-aware audiences.",
     "fails_when": "Regulated claims where implying a viewer has a medical condition breaks platform or advertising policy; or when no credible prevalence data exists.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "40% prevalence line used in the example ad",
       "3 symptom personas called out in the hook",
@@ -717,7 +717,7 @@
     "conditions": "Cold-traffic static image ads on Meta for consumer products, especially supplements and functional products that need explanation.",
     "fails_when": "Retargeting and product-aware audiences, where a plain product-and-offer static is right; brands without capacity to build separate landers for curiosity ads.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example rewrite: '$6 a day' coffee vs about 50 cents per gum, $2,000 to $3,000 a year saved"
     ],
@@ -755,7 +755,7 @@
     "conditions": "Health, wellness and personal-care products addressing visible or sensitive conditions; cold Meta audiences.",
     "fails_when": "Meta's health and personal-attributes policies still apply to illustrations: copy that implies the viewer has a condition ('your hair loss') or before-and-after framing can be rejected; regulated claims (drug interactions, treatment of disease) need substantiation in any format; the CPM effect is the presenter's guess, not measured.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "headline of about 5 to 6 words naming persona and problem"
     ],
@@ -835,7 +835,7 @@
     "conditions": "Meta accounts under the Andromeda delivery system producing statics or other creative in volume.",
     "fails_when": "Retargeting or catalogue contexts where small creative refreshes are only meant to fight frequency fatigue among the same audience; if Meta's grouping behaviour changes, the reach argument weakens but the measurement argument still holds.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "1 to 2% likely effect of a background colour change"
     ],
@@ -875,7 +875,7 @@
     "conditions": "Meta accounts running both statics and video with enough ads per format to compute averages.",
     "fails_when": "Categories where video materially outperforms statics on returns (demonstration-heavy products), or compliance-limited accounts; when static averages are inflated by bottom-of-funnel retargeting while video carries prospecting.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "static $20 vs video $200 production cost in the example",
       "$880 vs $700 expected gross profit per ad at 10x ROAS",
@@ -918,7 +918,7 @@
     "conditions": "Cold prospecting on Meta with static images, especially health, wellness and problem-solution products.",
     "fails_when": "Impulse or visually obvious products where a clear product image already sells; brands without a pre-sell page or long-form copy capacity; regulated categories where curiosity claims break ad policy.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "3 to 4 seconds to understand a clear static"
     ],
@@ -957,7 +957,7 @@
     "conditions": "Meta accounts with enough history to measure winner churn and hit rate; typically brands spending enough to run dozens of ads a month.",
     "fails_when": "New or small accounts without a reliable hit rate, where the formula gives false precision; accounts where winners rarely churn (evergreen offers), which need far fewer new ads.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "5 to 15% creative hit rate typical in large accounts",
       "10 winners at 20% churn means 2 replacements a month",
@@ -999,7 +999,7 @@
     "conditions": "Paid social video and static ads on Meta, particularly cold prospecting.",
     "fails_when": "Categories where the broad entertainment audience is the buyer (gaming, mass-market impulse products); organic posts, where free reach makes broad hooks worthwhile.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 50 conversions per campaign or ad set before optimisation should rely less on soft signals"
     ],
@@ -1037,7 +1037,7 @@
     "conditions": "Direct-response video ads (UGC and talking-head formats) on paid social.",
     "fails_when": "Bottom-of-funnel retargeting or offer ads for viewers who already know the product, where an early product reveal and fast CTA are appropriate.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Why do people drop off right after the hook in my ads?",
@@ -1074,7 +1074,7 @@
     "conditions": "Video ads on Meta and TikTok where hooks are tested in volume against one body.",
     "fails_when": "Low-spend accounts that cannot fund enough impressions per hook to compare them; regulated categories where exaggerated overlays break health-claim rules.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 2x hook rate from one exaggerated overlay (anecdote)",
       "20 to 30 hooks from combining audio, copy and visual variants"
@@ -1116,7 +1116,7 @@
     "conditions": "Meta prospecting with small to mid budgets; products whose value needs demonstration (skincare routines, gadgets).",
     "fails_when": "Impulse products where curiosity alone sells, so attention-only creative can convert; single small-sample tests (a few days at $30/day) are directional, not proof.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "CTR 10.9% ad with almost no purchases vs 6.3% CTR ad that converted, one account at $30/day",
       "CTR to link-CTR drop over 3 points (weak) vs under 2 points (strong)"
@@ -1156,7 +1156,7 @@
     "conditions": "Meta static and short video ads for DTC brands that run a mix of quiz, advertorial and direct product page destinations; agency observation across client accounts, no figures given.",
     "fails_when": "Retargeting and product-aware audiences, where a curiosity-only ad wastes the click and a direct offer converts better; and accounts optimising for purchase with a thin funnel, where curiosity clicks inflate CTR without sales.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "claimed attention window about 0.5 seconds in feed (practitioner opinion)",
       "brief fields: concept, creative type, angle, headline, CTA, visual direction"
@@ -1195,7 +1195,7 @@
     "conditions": "Long-form VSL ads on Meta with a working body script; enough spend to test several variants.",
     "fails_when": "Before the body itself is proven, when hook tests only optimise a weak argument; accounts too small to give each variant meaningful spend.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 80% of viewers drop during the hook",
       "3 to 6 hooks per VSL body",
@@ -1236,7 +1236,7 @@
     "conditions": "VSL-style video ads for education-heavy products on Meta or TikTok.",
     "fails_when": "Brand-awareness ads where a hard close is not the goal; funnels deliberately sending viewers to Amazon search, where an on-ad CTA may be omitted on purpose.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "7 script parts",
       "about 25,000 vs about 400 likes for the VSL with and without CTA and risk reversal",
@@ -1279,7 +1279,7 @@
     "conditions": "Complex, low-trust or new-category products, often supplements or health; brands whose repeat purchase economics justify a modest first-order ROAS; Meta paid social.",
     "fails_when": "Simple, well-understood or impulse products where a short demo converts; brands needing first-order profitability; traffic sent to a generic product page with no message continuity.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about $360,000 spent on one VSL",
       "2.5 to 3 first-purchase ROAS",
@@ -1321,7 +1321,7 @@
     "conditions": "Brands building a Meta creative pipeline in a category with several active advertisers of different sizes; using the Ad Library or a paid tool such as Magic Brief.",
     "fails_when": "Few competitors advertise in the category; long-running ads are evergreen brand or retargeting ads rather than prospecting winners; copying a concept too closely creates trademark or claim issues.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "study brands about 10x your size (e.g. $1M studies $10M)",
       "example competitor concept live 469 days"
@@ -1401,7 +1401,7 @@
     "conditions": "Meta Advantage+ or broad ad sets where Andromeda distributes spend across ads; brands with enough creative capacity for 10 to 15 formats.",
     "fails_when": "Small budgets, where spreading spend across 15 ads leaves each without enough conversions; accounts where low-ROAS ads take meaningful spend without measurable assist value; brands lacking production capacity.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "10 to 15 distinct formats live at once",
       "old pattern: spend concentrated in top 3 to 4 ads"
@@ -1441,7 +1441,7 @@
     "conditions": "Meta accounts using broad targeting and consolidated ad sets after the Andromeda update; brands able to seed product to creators.",
     "fails_when": "Very low budgets that cannot feed 15 ads in one ad set; regulated categories where AI or creator claims are risky; brands without product margin to seed creators.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "~33% AI / 33% UGC / 33% in-house",
       "5 top + 5 middle + 5 bottom funnel ads = 15 per ad set",
@@ -1484,7 +1484,7 @@
     "conditions": "Accounts spending thousands to $10,000+ per day that have plateaued on one avatar; products with several genuine use cases.",
     "fails_when": "Early accounts that have not exhausted their first avatar; products whose claims do not cover the new problem (health and supplement claims need substantiation); avatars invented without review or customer evidence.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "applies at thousands to $10,000+ per day spend",
       "sleep example: 3 avatars from one product"
@@ -1690,7 +1690,7 @@
     "conditions": "Stores with enough abandoned checkouts to call (and contact consent); considered purchases with clear objections such as price, durability, fit or shipping.",
     "fails_when": "Impulse or low-price products where abandoners are casual browsers; markets where cold-calling abandoners breaches privacy or telemarketing rules; competitor comparisons that cannot be substantiated.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "competitor warranty framed as 1 to 3 years vs lifetime"
     ],
@@ -1729,7 +1729,7 @@
     "conditions": "Meta prospecting with broad targeting under Andromeda; brands with more than one avatar or use case.",
     "fails_when": "Very narrow products with one avatar and one problem, where the angle list runs out; categories where naming the avatar's condition breaches Meta personal-attributes policy (health, weight, finances must not imply the viewer has the condition).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "2 creative types: top (problem + solution) and bottom (objection)"
     ],
@@ -1768,7 +1768,7 @@
     "conditions": "Products whose effect is felt within seconds (flavoured supplements, drinks, nasal or cooling products, fragrance, striking clothing changes); TikTok Shop with affiliate and paid amplification.",
     "fails_when": "The benefit is delayed (results over weeks), so there is nothing to react to; reactions look staged, which hurts trust; the goal is efficient sales per view rather than reach.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$14 nasal stick: about 23M views and $38k from one video",
       "about $1.65 revenue per 1,000 views",
@@ -1809,7 +1809,7 @@
     "conditions": "TikTok Shop products roughly $5 to $40, with the same videos posted organically, through affiliates and as ads.",
     "fails_when": "Videos had different ad spend behind them, so organic and paid views are mixed; price points differ enough that unit value drives the ratio; one video is too small a sample to judge a format.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about $385 per 1,000 views: 78k views, $30k, $29 to $39 drink",
       "about $2.35 per 1,000 views: 34.5M views, $81k, $5.99 product",
@@ -1892,7 +1892,7 @@
     "conditions": "Proven video bodies on Meta with long runtime; reviving or extending winners rather than launching untested concepts.",
     "fails_when": "Unproven bodies, where hook volume only multiplies a weak ad; small test budgets that cannot spread across many hooks (see the 2 to 4 hooks guidance for new bodies); hooks that do not bridge into the body.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "4 levers: angle, offer, avatar, format",
       "3 hooks judged too few for a revival",
@@ -1933,7 +1933,7 @@
     "conditions": "Products with several distinct use cases or buyer conditions; broad-targeted Meta or TikTok accounts where creative drives delivery.",
     "fails_when": "Narrow single-use products with one obvious buyer; regulated health categories where condition-specific claims (diabetes, ED) breach ad policy or advertising law.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "3 segment dimensions: outcome, demographic, facet"
     ],
@@ -1972,7 +1972,7 @@
     "conditions": "Brands producing enough ads per month to compare by element, roughly 10+ new creatives a month; Meta or TikTok paid social.",
     "fails_when": "Accounts with only a handful of ads, where element-level patterns are noise; when tags are applied inconsistently by different people.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "7 messaging fields",
       "5 CAST video fields",
@@ -2013,7 +2013,7 @@
     "conditions": "Accounts with at least one proven winning concept and a fixed weekly creative production capacity.",
     "fails_when": "New accounts with no winners yet, where net-new exploration must dominate; markets where the core concept has genuinely saturated, shown by rising CPMs and falling hook rates across all variations.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "10 to 50 ads per week production caps mentioned"
     ],
@@ -2167,7 +2167,7 @@
     "conditions": "Meta video and static ads written for a specific funnel stage.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "product introduced about 9 seconds in signals solution aware",
       "unaware statics can spend about $250,000",
@@ -2209,7 +2209,7 @@
     "conditions": "Meta accounts on broad or Advantage+ targeting, after the 2024-25 Andromeda retrieval changes; brands trying to grow beyond their warm audience.",
     "fails_when": "Small accounts or new brands still under the ceiling of solution- and product-aware demand, where cheaper lower-funnel ads are not yet saturated; brands without the creative skill for unaware ads, which are the hardest to make.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "80% unaware and problem aware, 10% solution aware, 10% product and most aware"
     ],
@@ -2248,7 +2248,7 @@
     "conditions": "Meta ecommerce accounts; bands are monthly ad spend; agency portfolio is mostly 8 and 9 figure brands, Australia-heavy.",
     "fails_when": "US or worldwide targeting with a very large audience, where two concepts can scale beyond $500k; single-SKU brands lacking credible alternate angles; accounts where the bottleneck is volume or quality rather than diversity.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "under $100k a month: 1 to 3 concepts",
       "$100k to $500k: 2 winning concepts, testing 2 to 6",
@@ -2290,7 +2290,7 @@
     "conditions": "Meta ecommerce accounts from roughly $20k to $1M a month in spend; brands with a creative production capacity to match.",
     "fails_when": "Above about $1M to $3M a month (diminishing returns; use churn or winner-value models); very small accounts where 1 per $1k means too few ads to test concepts; when volume is met but concepts are all the same (diversity bottleneck).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "1 new ad per $1,000 monthly spend",
       "$100k a month = about 100 new ads a month",
@@ -2413,7 +2413,7 @@
     "conditions": "Paid social advertisers on Meta in crowded categories where competitors copy the same trending formats.",
     "fails_when": "Niches where the trending format has not yet been adopted by competitors; or formats that still work because they fit the platform natively; judge by your own account data, not by how talked-about a format is.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Are native static ads still working?",
@@ -2450,7 +2450,7 @@
     "conditions": "Paid social video ads on Meta and TikTok for DTC brands; direct-response objectives.",
     "fails_when": "Sound-on, music-led formats (TikTok trends, Reels built around audio) where audio carries far more than 5%; purely visual products (fashion, home decor) where the image is the message; brand awareness objectives judged on recall rather than conversion.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "hook weighting: copy about 80%, visual about 15%, audio about 5%",
       "hook window: first 3 to 5 seconds",
@@ -2493,7 +2493,7 @@
     "conditions": "Large aspirational brands with strong outside-the-account demand (celebrity, retail, culture) and pricing power.",
     "fails_when": "Brands relying on paid social to create demand from cold audiences; new brands with no awareness; library data cannot show which ads get spend.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "21% dynamic catalogue ads",
       "99.6% 'Shop now'",
@@ -2536,7 +2536,7 @@
     "conditions": "Fashion and apparel brands using paid social as the main acquisition engine; fast replenishment available.",
     "fails_when": "Brands whose demand comes from outside the ad account and whose positioning depends on constant newness; slow replenishment (long lead times) so winning SKUs stock out.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 1,023 live creative assets, 190 copy lines",
       "median live ad age 5 days, oldest 24 days",
@@ -2578,7 +2578,7 @@
     "conditions": "Fashion and apparel creator ads; premium price points; men's lines as the safer test ground for problem-led scripts.",
     "fails_when": "Women's aspirational fashion where pain framing clashes with positioning; claims about fabric performance that cannot be substantiated.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "33 of 44 videos transcribed; 3/4 music-only",
       "11 voiced ads, all creator try-ons",
@@ -2661,7 +2661,7 @@
     "conditions": "Meta accounts during heavy discount periods with mixed discount depth across products.",
     "fails_when": "Site-wide uniform discount on a single hero product, where ROAS differences do reflect creative; evergreen periods (use ROAS and incremental measures, not CPC).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "year-round CPC versus ROAS correlation described as very low R-squared"
     ],
@@ -2700,7 +2700,7 @@
     "conditions": "Meta accounts with established evergreen campaigns entering a sale period; fashion-heavy agency portfolio, 2025.",
     "fails_when": "New accounts with no evergreen history; sale messaging that conflicts with evergreen copy in a way that confuses buyers; brands whose evergreen ads are already failing.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "evergreen campaigns about 50 to 60% of Black Friday budget",
       "offer creative: same 1-day ROAS, 4 to 5x more spend (Motion)",
@@ -2743,7 +2743,7 @@
     "conditions": "Meta accounts planning a Black Friday spend peak; figures in AUD from a large-brand agency portfolio, 2025.",
     "fails_when": "Small accounts where one or two ads can carry the whole budget; accounts in other currencies or markets with different CPMs (rescale the ceilings); dynamic catalog-heavy accounts.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "top single ad about $12,500 AUD a day; evergreen ads about $4,000 to $8,500",
       "winner working ceiling about $8,000 to $13,000 a day",
@@ -2787,7 +2787,7 @@
     "conditions": "High-spend Meta accounts (Ridge about $100k a day) with creative production capacity; naming conventions parsed by an attribution tool.",
     "fails_when": "Small accounts that cannot fund hundreds of ads a week; high-AOV products with too little purchase signal (he suggests optimising to a higher-funnel event there); teams without a naming discipline.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about $100,000 a day on Meta",
       "top ad taps out about $100,000 a day",
@@ -2961,7 +2961,7 @@
     "conditions": "New products or new angles; small test budgets on Meta; product benefits that can be stated in a few words.",
     "fails_when": "Products whose value cannot be grasped from a still image and one line; when clicks are judged without checking cart and purchase behaviour, since cheap clicks can come from curiosity.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$15 to $30 CPM range by niche",
       "3 value props tested in the example"
@@ -3000,7 +3000,7 @@
     "conditions": "Video ads on Meta, YouTube and similar feeds; brands with enough spend to give each opener variant data.",
     "fails_when": "Very small budgets where 5 variants split spend too thin; static image ads; judging openers on hook rate alone when they attract the wrong viewers.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "4-5 openers per ad",
       "6 openers on a comedy parody",
@@ -3044,7 +3044,7 @@
     "conditions": "Paid social video ads (Meta, Instagram, TikTok) aimed at cold audiences; UGC, partnership and founder ads.",
     "fails_when": "Retargeting or warm audiences who already know the product, where an early product reveal and offer can work; partnership ads on a creator's page where the creator's credibility is the hook.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 15% of viewers reach the second half of the ad (presenter estimate)",
       "value proposition arriving 7 to 10 seconds in loses most viewers",
@@ -3087,7 +3087,7 @@
     "conditions": "Meta Advantage+ or broad-targeted accounts on the current Andromeda-era delivery system; any spend level running many creatives.",
     "fails_when": "Small accounts with only a few ads, where the bottleneck is spend or offer, not uniqueness; the 200-to-20 figure is illustrative, not a measured ratio.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "illustration: 200 similar ads registered as about 20 unique entities (groups of 10)",
       "concept = angle x offer x persona, plus format"
@@ -3128,7 +3128,7 @@
     "conditions": "Meta accounts launching new creative weekly on broad or Advantage+ delivery; ecommerce creative testing.",
     "fails_when": "Very low budgets where splitting spend across several variations per concept leaves each with too little delivery to judge; variations so similar they share an entity ID.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "1 net-new concept per ad set",
       "about 3 hook variations per concept"
@@ -3209,7 +3209,7 @@
     "conditions": "Brands spending six figures a day on Meta; consumables whose value props work in simple statics.",
     "fails_when": "Small accounts where 1,500 ads would fragment spend; categories where demonstration needs video; brands whose product cannot be sold on direct value props alone.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "~50 to ~1,500 live ads in ~13 months",
       "~75% statics / 25% video",
@@ -3251,7 +3251,7 @@
     "conditions": "Meta-led DTC brands; spend bands are monthly Meta ad spend; agency guidance for 2026.",
     "fails_when": "Founders who cannot or will not appear on camera; categories where professional imagery is the norm (luxury); brands with in-house studios already exceeding these levels.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$4k to $30k a month: 3 concepts, 60 to 80% of budget in testing",
       "$30k to $100k: 2 to 3 UGC creators, 25% of spend on production, 5 to 6 concepts, 30 to 100 new creatives a month",

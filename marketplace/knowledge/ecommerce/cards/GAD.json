@@ -496,7 +496,7 @@
     "conditions": "Ecommerce stores with a clean Merchant Center feed, from launch up to about $5k to $10k a day in spend.",
     "fails_when": "Brands that get real sales from YouTube or Discover creative, or when Google changes how assetless PMax serves; also when the feed is weak, since everything rests on product data.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "one PMax campaign up to about $5,000 to $10,000 a day",
       "search and shopping claimed as about 99% of his ecommerce revenue"
@@ -533,7 +533,7 @@
     "conditions": "Google Shopping for ecommerce products with real variant or tier options; operators able to produce distinct images and offers per listing.",
     "fails_when": "Variants are cosmetic copies of one item at invented price points, which risks Merchant Center disapproval or suspension; single-SKU brands whose buyers search by brand name.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "5 to 6 duplicate listings per winning product",
       "about $3,500 then $50,000 then $270,000 monthly revenue on his first store",
@@ -572,7 +572,7 @@
     "conditions": "New PMax campaigns for ecommerce; budgets scaling into five figures a day for the layering step.",
     "fails_when": "Accounts with tight cash or margin limits that cannot absorb unconstrained early spend; low-margin products where an uncapped campaign can run below break-even for weeks.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "no target ROAS for about the first 3 months",
       "layer standard Shopping at about $20,000 to $25,000 daily spend",
@@ -611,7 +611,7 @@
     "conditions": "Google Shopping and PMax feeds for ecommerce products with several use cases or buyer types.",
     "fails_when": "Brand-led products bought by brand searches; titles stuffed with terms the product does not match, which hurts click-through and can trigger feed policy issues.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 2 paragraphs of keyword-rich description per product"
     ],
@@ -648,7 +648,7 @@
     "conditions": "Ecommerce stores running Google Shopping or PMax with Merchant Center, in markets where store quality badges show.",
     "fails_when": "Products where long return windows invite abuse or carry high reverse-logistics cost (heavy, perishable, made-to-order); the 20% lift is an agency observation without a sample.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "returns window at least 30 days",
       "badge lift: at least 20% Shopping performance (agency observation)",
@@ -685,7 +685,7 @@
     "conditions": "Google Shopping and PMax feed-driven placements in competitive, visually similar categories (apparel, supplements, home goods).",
     "fails_when": "Categories or marketplaces whose image rules require a plain background; images with overlays, badges or text (disapproval risk); niche products with no visual competition, where white images already stand out.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "price, title and image drive about 95% of Shopping performance (practitioner estimate)",
       "lifestyle beats white background on CTR in about 90% of tests"
@@ -721,7 +721,7 @@
     "conditions": "Ecommerce Google Ads in competitive consumer categories; non-brand Search with tightly themed ad groups.",
     "fails_when": "Broad, high-volume generic keywords and new accounts with low Quality Scores, where lower CTR can still be profitable; B2B or very high-ticket categories with different norms; CTR as a target in itself when conversion rate or ROAS falls.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "non-brand Search: 7 to 8%+ CTR",
       "Shopping: about 1% CTR",
@@ -758,7 +758,7 @@
     "conditions": "Ecommerce Search, Shopping and PMax campaigns optimising for purchase value with variable order values.",
     "fails_when": "Fixed-price single-product stores, where Target CPA is the cleaner choice; accounts with fewer than about 20 purchases a month, where smart bidding lacks data; heavy seasonality, where the trailing 30 days misleads.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "manual CPC used about 70 to 80% of the time at launch",
       "switch to tROAS at 30 to 50 conversions per month",
@@ -798,7 +798,7 @@
     "conditions": "DTC ecommerce brands with search demand for their category; mixed paid channel portfolio.",
     "fails_when": "Categories with little search demand (novel products people do not know to search for), where Meta or TikTok will rightly dominate; marketplace-heavy brands where Amazon captures search intent; attribution tools disagree heavily on Google's share.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Google Ads at 20 to 30% of total revenue at scale",
       "Shopping 60 to 80% of ecommerce Google Ads",
@@ -836,7 +836,7 @@
     "conditions": "Smart-bid Google Ads campaigns (Max Conversion Value, tROAS, tCPA) with stable tracking.",
     "fails_when": "Seasonal peaks or launches where faster budget jumps are justified; manual CPC campaigns, where bids not targets control delivery; break-even maths that ignores shipping, fees and returns.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "+10 to 15% budget when spending 100% at KPI (10 to 20% for winners)",
       "under 80% budget spend and missing KPI: loosen tROAS or tCPA",
@@ -877,7 +877,7 @@
     "conditions": "DTC ecommerce brands with meaningful brand search volume that also run non-brand Google campaigns.",
     "fails_when": "New brands with little brand search (the share will naturally be tiny); brands under heavy competitor or reseller conquesting on their name, where brand CPCs and spend share rise legitimately; markets where trademark rules let competitors bid freely.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "brand spend 3 to 8% of monthly Google spend, maximum 10%",
       "80 to 90% of budget on cold traffic",
@@ -917,7 +917,7 @@
     "conditions": "Problem-solving products (supplements, wellness, home remedies, tools) where shoppers search the problem before the product; UK and similar markets.",
     "fails_when": "Health claims that breach Google's healthcare policies or ASA/CAP rules (claims to treat or lower a medical condition need authorisation and evidence); products bought by name or spec, where problem queries do not exist; Google-reported ROAS used without checking against store data.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "£3,500 spend over 3 weeks, 2.18 Google-reported ROAS",
       "8.32% CTR and 3.82% conversion rate on cold non-brand",
@@ -957,7 +957,7 @@
     "conditions": "Ecommerce Google Ads accounts past the foundation phase, with Merchant Center feeds and purchase-value tracking.",
     "fails_when": "Feed-only or very small catalogues where PMax effectively is the Shopping campaign; very small budgets; brands whose only Google inventory is Shopping, where the 20 to 30% cap is arbitrary.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "PMax fit: $50 to $100+ a day, 30 to 50 conversions a month",
       "add mid-funnel campaigns after about 1 conversion a day for 30 days",
@@ -997,7 +997,7 @@
     "conditions": "Ecommerce accounts running Shopping or PMax with existing brand search demand.",
     "fails_when": "Brands with negligible brand volume; very small accounts where splitting starves each campaign of data.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "brand click cost inside smart-bid prospecting: about $4 vs cents in a capped brand campaign",
       "branded Standard Shopping: manual CPC about $1 bid, about $50 a day"
@@ -1035,7 +1035,7 @@
     "conditions": "Ecommerce Google Ads accounts with any meaningful branded search volume.",
     "fails_when": "Brands with negligible brand search, where a separate brand campaign adds little; competitive niches where rivals bid on your brand, which may need higher brand budgets than the $10 to $20 guide.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "branded search about $10 to $20 a day for smaller brands, rarely above $50",
       "branded Shopping about $20 a day"
@@ -1072,7 +1072,7 @@
     "conditions": "Ecommerce accounts with a working Merchant Center feed and at least several weeks of Shopping conversion data.",
     "fails_when": "If Google's rules for Shopping versus PMax priority differ from the speaker's description, the separation breaks; accounts with strong creative that benefit from full-asset PMax on YouTube and Display; brand-new accounts with no data.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "What is a feed-only Performance Max campaign?",
@@ -1106,7 +1106,7 @@
     "conditions": "New or data-poor Google Ads accounts for ecommerce stores with a product feed; modest budgets.",
     "fails_when": "Accounts with large budgets or strong historical conversion data, which can start on conversion-based bidding; single-product stores; very high-AOV catalogues where 30 conversions a month is out of reach and value-based bidding needs a different threshold.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "5 to 10 bestseller products in the first Shopping campaign",
       "switch to Maximize Conversion Value at about 15 to 20 conversions",
@@ -1148,7 +1148,7 @@
     "conditions": "Ecommerce catalogues with many SKUs on limited budgets; cold prospecting on Shopping, Search or PMax; enough product-level conversion data to rank SKUs.",
     "fails_when": "Catalogue businesses where shoppers search for specific long-tail items (parts, replacement items) and each SKU is its own demand; very large budgets where hero SKUs saturate; heroes with poor margin or stock constraints.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Prospecting focused on 1 to a handful of hero products"
     ],
@@ -1186,7 +1186,7 @@
     "conditions": "Ecommerce brands with measured repeat purchase data and stable margins; Google Ads campaigns already profitable at current spend.",
     "fails_when": "LTV is assumed rather than measured, or cash flow cannot wait for repeat purchases to pay back acquisition; small, niche demand where scaling just raises CPCs; ROAS reported by the platform overstates incrementality.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "4x ROAS at $100k/month preferred over 6x at $10k/month",
       "LTV 4x first order ($100 to $400) lifts max cost per purchase from $30 to $120",
@@ -1227,7 +1227,7 @@
     "conditions": "New or low-history ecommerce Google Ads accounts; brands with a clean product feed and working purchase tracking.",
     "fails_when": "Large catalogues with strong feeds and existing conversion history elsewhere (migrated accounts) may run PMax or Standard Shopping well from day one; accounts where PMax cannibalises branded search and inflates reported results; Google changes PMax controls.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Add Performance Max after ~100+ purchases in the account"
     ],
@@ -1450,7 +1450,7 @@
     "conditions": "Ecommerce catalogues with enough products and conversions per tier; Google Merchant Center feed with custom labels.",
     "fails_when": "Very small catalogues or low conversion volume where splitting into 3 to 5 campaigns leaves too little data per campaign for target-ROAS bidding.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "use ROAS tiers when margins are within about 10 percentage points",
       "margin structure example: 30% to 70% margin range",
@@ -1490,7 +1490,7 @@
     "conditions": "Ecommerce Google Ads accounts, especially those set up by non-specialists or older agency structures.",
     "fails_when": "Accounts where GA4 is the only feasible conversion source; deliberate tests of broad match with manual bids for arbitrage; Display used intentionally in a separate, measured campaign.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "GA4 primary conversion misses ~10 to 15% of conversions vs Google Ads tag",
       "budget changes in ~20% steps on Google"
@@ -1528,7 +1528,7 @@
     "conditions": "Ecommerce Google Ads accounts using smart bidding; catalogs with mixed margins or multiple regions.",
     "fails_when": "Accounts already at very high conversion volume where splitting does not starve learning; fashion catalogs where the 80/20 product split is not recommended; B2B-heavy stores where Search should take more share.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example: 50 / 20 / 10 conversions per 30 days across split campaigns",
       "70% vs 35% gross margin collections at one 300% tROAS",
@@ -1566,7 +1566,7 @@
     "conditions": "Ecommerce stores feeding Google Merchant Center, especially from Shopify default titles; new or lesser-known brands.",
     "fails_when": "Well-known brands whose name is itself the main search term; title stuffing beyond Google's policies or length limits; catalogs too small to have reliable search-term data.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "image occupies ~70% of a Shopping listing",
       "4:5 image ratio via supplementary feed",
@@ -1606,7 +1606,7 @@
     "conditions": "Ecommerce Google accounts spending enough to run PMax and Standard Shopping side by side; brands that can read back-end revenue and new-customer revenue.",
     "fails_when": "Small accounts under about $15k to $20k a month where PMax alone is simpler and adequate; brands without back-end revenue tracking; lead-gen accounts (read Search in place of Shopping).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "2x budget ramp over 30 days on each campaign type",
       "PMax platform ROAS held ~5x; Standard Shopping fell to ~3x to 4x with better back-end revenue",
@@ -1646,7 +1646,7 @@
     "conditions": "Ecommerce PMax campaigns serving mainly on Shopping inventory; catalogs with clear product types.",
     "fails_when": "Very small catalogs where one asset group is enough; brand-new campaigns, where signals do help in the first weeks; PMax for lead generation without a feed.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "PMax run on 250+ accounts and ~400 consulted",
       "signals irrelevant in mature campaigns at $30k to $100k/month",
@@ -1684,7 +1684,7 @@
     "conditions": "Ecommerce Google accounts with enough searches in the category to feed a cold campaign; brands measuring blended or new-customer efficiency.",
     "fails_when": "Tight cash or margin where a 0.5x campaign cannot be funded; accounts lacking back-end measurement, where the feeder looks like pure waste; small categories with little cold search demand.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "tROAS raised from ~400% to ~500% to 600% at $1,000/day",
       "feeder campaign tROAS ~50% (0.5x); converter campaign ~600%",
@@ -1759,7 +1759,7 @@
     "conditions": "Ecommerce brands running Google Shopping or Performance Max in more than one country or currency.",
     "fails_when": "Single-country, single-currency stores; setups where Shopify Markets or a feed tool already produces separate local-currency feeds correctly.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "We sell in several countries, do we need separate Google Shopping feeds?",
@@ -1794,7 +1794,7 @@
     "conditions": "Brands running both Meta and Google through a Black Friday sale.",
     "fails_when": "Google is the primary acquisition channel with proven incrementality (holdout-tested); categories with strong non-brand search demand during the sale.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Black Friday weekend period-on-period: Meta CPM about +50% with better CPA and ROAS; Google CPM about +10% with worse CPA and ROAS (Triple Whale 2025)"
     ],
@@ -1833,7 +1833,7 @@
     "conditions": "Established ecommerce accounts with enough conversion volume to feed several campaigns and someone with time to manage them; agency describes it as an advanced, not beginner, setup.",
     "fails_when": "Small accounts or low conversion volume, where splitting data starves each campaign's bidding; teams without time to manage manual campaigns, where PMax alone is the efficient choice. Depends on Google's current auction priority rules between PMax and other campaign types.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "PMax typical spend: 60 to 70% Shopping, 20 to 30% search, 5 to 10% image and video",
       "manual campaigns tROAS 300 to 400%, PMax set to 600 to 700%"
@@ -1870,7 +1870,7 @@
     "conditions": "Ecommerce brands with meaningful branded search volume and a non-brand keyword set; manual Search campaigns alongside or instead of PMax.",
     "fails_when": "Brands with competitors bidding aggressively on their name, where brand campaigns are defensive and a high ROAS target can lose the brand slot; very small accounts where 8 headlines still never get enough impressions.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "8 headlines and 2 descriptions instead of the maximum 15 and 4"
     ],
@@ -1905,7 +1905,7 @@
     "conditions": "Google Shopping, PMax and Search campaigns on smart bidding with modest conversion volume; ecommerce catalogues with mixed price points.",
     "fails_when": "High-volume campaigns where the model has ample data; temporary dips from stockouts or seasonality that will recover without changing targets; brands that need hard efficiency floors for cash reasons.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "max conversion value about 30% exploration (estimate); tROAS above actual about 0%",
       "example: target 4.5 vs actual 4.0",
@@ -1945,7 +1945,7 @@
     "conditions": "Ecommerce brands with a healthy Merchant Center feed; visual or price-sensitive categories.",
     "fails_when": "Products that need explanation before purchase (complex or new-category items); service or lead-gen businesses; feeds with disapprovals or poor images that make Shopping ads weak.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "80 to 90% of Google spend in Shopping for ecommerce",
       "search clicks about $1 to $2 in the example"

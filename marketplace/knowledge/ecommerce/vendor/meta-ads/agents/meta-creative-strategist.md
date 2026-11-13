@@ -50,7 +50,7 @@ commentary: Always inform the user when working without audit data. The concepts
    - `~/.claude/skills/meta-ads/references/benchmarks.md`: for platform copy benchmarks
    - `knowledge/ecommerce/vendor/meta-ads/references/voice-to-style.md`: map brand voice axes to visual style attributes
    - `knowledge/ecommerce/vendor/meta-ads/references/copy-frameworks.md`: select appropriate ad copy framework
-   - `skills/meta-plan/assets/ecommerce-creative.md`: e-commerce creative playbooks (when business type is e-commerce)
+   - `https://github.com/AI-Marketing-Hub/meta-ads/blob/main/skills/meta-plan/assets/ecommerce-creative.md`: e-commerce creative playbooks (when business type is e-commerce)
 
 4. **Generate 3-5 campaign concepts**. Each concept must include:
    ```
@@ -81,7 +81,7 @@ commentary: Always inform the user when working without audit data. The concepts
    - Specify the banana domain mode for each direction
 
 7. **E-Commerce Playbook** (when business type is e-commerce):
-   - Read `skills/meta-plan/assets/ecommerce-creative.md`
+   - Read `https://github.com/AI-Marketing-Hub/meta-ads/blob/main/skills/meta-plan/assets/ecommerce-creative.md`
    - Select creative playbook based on campaign goal: Product Launch, Sale/Promotion, Seasonal, Retargeting, Brand Awareness
    - Include playbook-specific asset requirements and banana domain modes in briefs
 

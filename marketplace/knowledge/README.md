@@ -61,7 +61,7 @@ A card (`src/modules/knowledge/cards.ts`, type `Card`):
   cards), used by the /e-commerce page.
 
 Ranking (`CardIndex`): the per-agent retrieval engine over one passage per card, then hard filters, a tier prior
-(1.3, 1.15, 1, 0.8), a 0.85 discount once a card's source is past its module's review window, and wild bets after
+(1.05, 1.02, 1, 0.98: a tie-breaker), a 0.98 discount once a card's source is past its module's review window, and wild bets after
 every baseline card. When the best card covers too little of the question the answer says so, and the agent asks or
 researches instead of guessing.
 

@@ -392,7 +392,7 @@
     "conditions": "Consumer products solving an emotional or embarrassing problem (hair loss, pet health, weight, skin) sold through long-form Meta copy or advertorials; one hour total, can be split across days.",
     "fails_when": "Low-involvement or purely functional products (cables, storage boxes) where forum discussion is thin and buying is driven by spec and price; or categories with no public forum footprint.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "60 minutes total research time",
       "30 minutes forums plus 30 minutes Amazon reviews",
@@ -434,7 +434,7 @@
     "conditions": "Early-stage or sub-scale DTC brand selling a parity product in a crowded problem-solution category (pain relief, recovery, wellness) on paid social.",
     "fails_when": "The brand has a demonstrably superior product or dominant offer, where a broad avatar can win on product alone; or the narrow segment is too small to exit the learning phase at the planned spend.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Should I target a broad audience or a really narrow one with my ads?",
@@ -510,7 +510,7 @@
     "conditions": "Saturated or commodity products sold against well-funded incumbents on paid social; small or new brands that cannot match incumbent CPA.",
     "fails_when": "Your product genuinely differs in function or form, in which case a new-mechanism angle to the existing avatar can work; or the alternative avatar is too small, does not actually feel the problem acutely, or the claim to it (e.g. postpartum body claims) runs into ad policy limits.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "competitor avatar example: men aged early 40s to mid 60s; Similar Web estimate of 500,000 monthly visits and $149 AOV for one competitor"
     ],
@@ -551,7 +551,7 @@
     "conditions": "Sophisticated, crowded markets where generic claims are worn out; paid social with broad targeting; segment large enough to support spend.",
     "fails_when": "Early, unsophisticated markets where a general promise still converts; segments too small to fund creative production and spend; brands whose product genuinely serves all buyers the same way and lose volume by excluding them.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Should I target a niche audience or go broad on Facebook?",
@@ -588,7 +588,7 @@
     "conditions": "Products with public reviews in the category (footwear, apparel, supplements, tools); brands choosing which segment to build creative and pages for.",
     "fails_when": "Categories where reviewers rarely self-identify (commodity consumables), or very new categories with too few reviews; a recurring identity that is too small a population to reach profitably.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Sub-niche of ~100 to 1,000 people: too small to promote, per speaker"
     ],
@@ -625,7 +625,7 @@
     "conditions": "Persona or buyer-insight research for a single product or segment; works for B2B SaaS and DTC alike; assumes interviewees are actual buyers, not prospects.",
     "fails_when": "The customer base spans several very different segments; 20 calls per segment are then needed, not 20 in total. Also weak when only happy customers are recruited.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "20 interviews per persona project",
       "30 minutes per interview",
@@ -702,7 +702,7 @@
     "conditions": "Building or rebuilding an avatar record; most useful when existing personas are demographic and unused.",
     "fails_when": "Tiny audiences with little online footprint, where audience-intelligence tools return thin or noisy data; then rely on interviews and reviews.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 90% of marketers create buyer personas (practitioner survey with Audiense)",
       "77% never use them for a campaign, launch or copy"
@@ -780,7 +780,7 @@
     "conditions": "Brands with enough customers to have meaningful extremes (a few hundred or more) and an on-site survey or post-purchase survey tool.",
     "fails_when": "Very small customer bases where 3% is a handful of people; or when the decision is about the mainstream buyer's price sensitivity, where the middle matters most.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "top 3% most loyal and bottom 3% most dissatisfied, versus the 94% middle",
       "lapsed-customer outreach example: no purchase for 1 year"
@@ -819,7 +819,7 @@
     "conditions": "Brands already running a quiz or considering one for cold traffic, with enough quiz completions to read answer shares; works for prospects who have not bought.",
     "fails_when": "Low traffic gives too few completions for answer shares to mean anything; or added questions push the quiz past the point where drop-off rises, so test the research questions' effect on completion.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Can I use my quiz to learn about my customers?",
@@ -856,7 +856,7 @@
     "conditions": "Brands running a quiz funnel with paid traffic; at least about 100 completed submissions per analysis window.",
     "fails_when": "Quizzes whose options are written from the founder's assumptions (answers then just mirror the options offered); traffic so low that 100 submissions take months; answer shares shift with whichever ads ran, so a distribution reflects your targeting, not the whole market.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 100 submissions per report",
       "example 70% choosing one pain point",
@@ -894,7 +894,7 @@
     "conditions": "One clearly defined segment at a time; interviews with recent buyers or serious prospects.",
     "fails_when": "Mixing several segments in one interview set (saturation comes much later); very new categories with no buyers yet; using leading questions.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "12-15 interviews yield about 80% of pain points",
       "equal to 7 focus groups of up to 12 people",
@@ -933,7 +933,7 @@
     "conditions": "Brands with an email list of customers and non-buyers; consumer products where store credit has real value.",
     "fails_when": "Low-margin products where a $30 credit costs more than the research is worth; regions with strict rules on prize draws and sweepstakes, which need compliant terms.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "4 to 5 open-ended questions",
       "$1,000 gift card draw",

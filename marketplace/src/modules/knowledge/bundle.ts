@@ -41,7 +41,7 @@ export function moduleToolboxMarkdown(vertical: Vertical, code: string, items: V
   const kept = items.filter(i => toolItemPath(i.ref, names));
   return [
     `# ${vertical.name} toolbox: ${mod.name} (${code})`, "",
-    `What to use for this part of the work, best first, tuned for ${vertical.name.toLowerCase()} brands. Every item is in this pack: open only the one you pick. "For a store" says how to run it here. "Read first" names the knowledge cards to check before you use it (search a card you do not carry by its id with ask_vertical_knowledge).`, "",
+    `What to use for ${mod.name.toLowerCase()} work (${kept.length} items), best first, tuned for ${vertical.name.toLowerCase()} brands. Every item is in this pack: open only the one you pick. "For a store" says how to run it here. "Read first" names the knowledge cards to check before you use it (search a card you do not carry by its id with ask_vertical_knowledge).`, "",
     ...kept.flatMap(i => {
       const name = i.ref.startsWith("library:") ? names.library[i.ref.slice(8)].name : names.vendor[i.ref.slice(6)].name;
       const cards = i.cards.filter(c => publicCards.has(c));

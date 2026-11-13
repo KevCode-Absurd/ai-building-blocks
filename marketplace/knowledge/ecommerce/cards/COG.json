@@ -14,7 +14,7 @@
     "conditions": "Brands with their own manufactured products (private label or custom) spending roughly $1M+ a year on COGS; factories that assemble from bought-in components.",
     "fails_when": "Very small buyers with no volume leverage, where factories refuse open-book costing; fully commoditised catalogue products; relationships where demanding labour costs damages goodwill without a growth story behind it.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "BOM worth building at ~$1M/year COGS (~$100k/month; ~$2.5M revenue)",
       "99 of 100 acquired founders had no BOM",
@@ -55,7 +55,7 @@
     "conditions": "Brands with a dedicated or semi-dedicated production line, open-book BOM, and a credible growth forecast; components with traceable market prices.",
     "fails_when": "Low or erratic volumes that cannot lift utilisation; factories with many small clients and no dedicated line; buying components directly without the working capital or commodity-risk appetite.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Utilisation of ~30 dedicated workers can pass on $2 to $3/unit",
       "Sub-vendor volume break example ~$1/unit on zips",
@@ -95,7 +95,7 @@
     "conditions": "Brands manufacturing private-label or custom products overseas (China and Southeast Asia), with volumes large enough for factories to compete.",
     "fails_when": "Small buyers below a factory's priority threshold, where open shopping around may simply lose the slot; highly specialised suppliers with proprietary tooling or formulas where switching is impractical; cultures and relationships where long-term loyalty earns priority capacity in peak season.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "80-step sourcing checklist per product",
       "example: a 100,000 production run lost to a colour error"
@@ -134,7 +134,7 @@
     "conditions": "Brands with steady volume on core SKUs and enough cash to carry longer lead times; tariff exposure on Chinese imports (e.g. US).",
     "fails_when": "Cash-tight brands that cannot fund extra inventory in transit; trend-driven or seasonal products where a 30% longer lead time misses the selling window; categories where the new country lacks raw materials or skilled factories.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Egypt example: lead time about +30%, cost basis about -30%"
     ],
@@ -171,7 +171,7 @@
     "conditions": "Brands producing custom or private-label goods with a factory, especially apparel, accessories and printed merchandise.",
     "fails_when": "Stock products bought off the shelf with no customisation, where a tech pack adds little; very small first orders where the factory will not follow detailed specs without a minimum.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example placement: 4 inches from top, 2 inches from each side"
     ],
@@ -208,7 +208,7 @@
     "conditions": "Any bulk order from an overseas factory where the balance payment can be tied to an inspection result.",
     "fails_when": "The brand has already paid 100% upfront, so the inspection can document problems but not force a fix; or the order is so small that inspection cost is a large share of order value.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about $200 per pre-shipment QC inspection",
       "can prevent about $20,000 of damaged or inconsistent stock (founder's estimate)"
@@ -285,7 +285,7 @@
     "conditions": "Brands importing stock by sea from Asia; lead times vary by route, product and season.",
     "fails_when": "Production is domestic or made-to-order, or freight markets are disrupted (port congestion, rate spikes), where the typical ranges understate lead time; air is uneconomic for heavy or bulky goods even at launch.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "production 20 to 30 days",
       "sea freight 30 to 40 days door to door",
@@ -408,7 +408,7 @@
     "conditions": "Brands manufacturing their own designs (apparel, textiles, soft goods, custom products), especially from overseas factories.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 90% of supplier errors removed by a full tech pack (practitioner estimate)",
       "6 tech pack components"
@@ -445,7 +445,7 @@
     "conditions": "Personal care and cosmetics brands sourcing contract manufacturers; scaling a hero SKU beyond one plant's capacity.",
     "fails_when": "Formulas that are hard to transfer between plants (consistency risk); early brands below MOQ for multiple manufacturers; regulated categories where each plant needs separate approvals.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 10 contract manufacturers at scale",
       "copycats selling about one tenth as much (founder's claim)"

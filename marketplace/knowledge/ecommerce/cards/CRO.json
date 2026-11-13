@@ -14,7 +14,7 @@
     "conditions": "Ecommerce or lead-gen landing pages deciding testing cadence; thresholds are the agency's rule of thumb, not a calculated power analysis.",
     "fails_when": "Very high conversion-rate pages or very large expected effects can reach significance on less traffic; before-and-after comparisons break down when ad spend, promotions or seasonality change in the same window.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 1,000 visitors per week minimum for one A/B test per week",
       "10,000 to 20,000 monthly visitors: use data-led changes instead of split tests"
@@ -52,7 +52,7 @@
     "conditions": "Pages with enough traffic to split (he was spending heavily on paid and getting large SEO traffic); lead-generation forms or single-offer pages.",
     "fails_when": "Low-traffic stores where each variant gets too few conversions to separate noise from signal; comparing lead-form rates with ecommerce purchase rates.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 40 to 60 landing page variants tested to reach 20% form conversion",
       "typical lead-form conversion 2 to 4% (practitioner's figure)",
@@ -91,7 +91,7 @@
     "conditions": "Landing pages and small stores with under about 25,000 to 30,000 monthly visitors to the tested page.",
     "fails_when": "The page has a high conversion rate and the change is large, so fewer visitors can still show a clear result; or the test metric is an early step (click-through) with far more events than purchases; the threshold is a rule of thumb, not a power calculation.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 25,000 to 30,000 monthly visitors as the floor for A/B testing",
       "50/50 traffic split for split-URL tests"
@@ -131,7 +131,7 @@
     "conditions": "Quiz funnels on cold paid traffic with enough starts per question to read drop-off (hundreds per variant); stores with email/SMS flows that can branch on quiz answers.",
     "fails_when": "Low traffic where a 1 to 2 point drop-off difference is noise; quizzes built to qualify high-ticket buyers, where lower completion is intended; markets where gating results behind email reduces trust.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Quiz completion target ~30% of starters; 25% acceptable",
       "Normal per-question drop-off 1 to 2%; a spike (e.g., 4%) flags a problem question",
@@ -715,7 +715,7 @@
     "conditions": "Ecommerce stores deciding how to run optimisation, with typical conversion rates; threshold is the agency's 2025 internal rule.",
     "fails_when": "Stores with very high order volume per session (high conversion rate) can test smaller changes below 300,000 sessions; big redesigns bundle many changes, so you learn less about which part worked and a losing redesign can hide a winning element.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "300,000 sessions per month threshold",
       "4 to 8 A/B tests per month above the threshold",
@@ -753,7 +753,7 @@
     "conditions": "Brands running an ongoing testing programme with an agency or in-house team.",
     "fails_when": "Programmes that only test obvious repairs (broken elements, missing information) will see higher win rates, and those repairs should simply be fixed rather than tested.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "30 to 35% win rate counts as very good",
       "13 winners out of 135 tests for Boom (about 10%)"
@@ -793,7 +793,7 @@
     "conditions": "Stores running controlled A/B tests, mainly above about 300,000 monthly sessions.",
     "fails_when": "Low-traffic stores cannot reach 50,000 sessions per variant in four weeks and should use big-swing before-and-after changes instead; tests on high-AOV, low-volume products may need longer windows than four weeks.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "50,000 to 100,000 sessions per test",
       "2 to 4 weeks duration, minimum 2 full weeks",
@@ -873,7 +873,7 @@
     "conditions": "Stores and landing pages with a session recording tool installed; most useful when traffic is too low for A/B testing.",
     "fails_when": "Sessions are too few to separate a pattern from one-off behaviour, or bot traffic inflates the signals; the 1-2% threshold is one agency's rule of thumb.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "rage clicks under about 1% to 2% of sessions considered healthy",
       "review window of 90 days to 6 months",
@@ -912,7 +912,7 @@
     "conditions": "Stores running on-page A/B tests or hiring a CRO agency; most relevant to brands under 8 figures with limited traffic per page.",
     "fails_when": "Very high-traffic brands or tests expecting very large effects (a headline or offer change), where fewer conversions can detect the difference; sequential testing methods designed for peeking change the stopping math.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 1,000 conversions per variant to trust a 10 to 20% lift",
       "about 40,000 sessions per variant at 2.5% conversion, 80,000 total",

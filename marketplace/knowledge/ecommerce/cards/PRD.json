@@ -176,7 +176,7 @@
     "conditions": "A brand with a clear core product considering adding products in other categories.",
     "fails_when": "Categories bought without brand preference, or with no strong specialists, where a known name beats unknown ones.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Sara Lee frozen entree loss about $8 million",
       "Saturday Review four-edition loss $17 million"
@@ -215,7 +215,7 @@
     "conditions": "Deciding brand architecture for a new product or category entry; strongest for a brand moving into a category different from its core.",
     "fails_when": "Variants within the same category (new size, flavour, colour) where the shopper already expects one brand; and very small brands that cannot afford to build a second name at all.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "5 rules: expected volume, competition, advertising support, significance, distribution"
     ],
@@ -252,7 +252,7 @@
     "conditions": "New consumable products, pre-product-market-fit, cash-constrained first production runs.",
     "fails_when": "Premium positioning depends on the finish (Cadence's own choice), or a retailer requires printed packaging; at scale, where sleeve unit cost exceeds printed unit cost.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "sleeve can MOQ about one tenth of a printed can MOQ"
     ],
@@ -289,7 +289,7 @@
     "conditions": "Brick-and-mortar retail expansion, especially grocery and convenience consumables with high purchase frequency; US mass retail.",
     "fails_when": "Slow-turn categories (home goods, durable goods) where low weekly velocity is normal and buyers judge on margin per square foot instead; online-only marketplaces where store counts do not apply.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "10 to 20 units per store per week x 3,000 stores = about $20M for one flavour in one account",
       "slow category: about 1 unit per store per week",
@@ -332,7 +332,7 @@
     "conditions": "Consumer packaged goods brands entering retail with limited team and capital; hero-product categories.",
     "fails_when": "Fashion, beauty colour or other assortment-driven categories where breadth is the product; DTC brands whose growth comes from cross-sell and repeat on a range; the $10M figure is one founder's threshold, not a benchmark.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about $10M on the hero SKU before the next",
       "retailers want 2 to 3 options at launch",
@@ -373,7 +373,7 @@
     "conditions": "Brand expanding beyond a low-repeat hero product; performance-marketing-led acquisition; Ridge, US, about $100M+ revenue.",
     "fails_when": "Consumables or replenishment brands where repeat is already high; brands without cash to absorb failed launches; products under about $50 that cannot carry paid CAC.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "CAC product price above about $50",
       "phone cases $40 to $75",
@@ -416,7 +416,7 @@
     "conditions": "New product selection or line extension for DTC brands shipping by parcel.",
     "fails_when": "Durable one-off products sold on high margin, where repeat purchase is not the model; categories where bulk or fragile formats are the point and freight is priced in.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "retail shelf lines often in threes"
     ],
@@ -451,7 +451,7 @@
     "conditions": "High-margin, light, shippable consumables with strong site subscription economics; brands with global awareness from partnerships.",
     "fails_when": "Heavy or low-margin products where cross-border shipping and duties kill payback; categories where retail presence drives trust and trial; brands whose buyers prefer Amazon, making a minimal Amazon presence a lost channel.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "31 countries shipped",
       "98% own site, 2% Amazon",

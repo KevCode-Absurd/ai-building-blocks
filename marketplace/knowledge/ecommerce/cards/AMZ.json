@@ -263,7 +263,7 @@
     "conditions": "DTC-first consumer brands with retail or social demand in replenishable categories where Amazon delivery speed matters.",
     "fails_when": "Brands with little off-Amazon awareness; categories dominated by private label on price; brands that cannot hold price parity across retailers.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "6.3% share of Amazon deodorant category (as stated)",
       "#1 best seller badge before any Amazon ads"

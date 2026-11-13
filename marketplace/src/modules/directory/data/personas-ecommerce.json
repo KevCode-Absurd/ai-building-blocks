@@ -4585,7 +4585,7 @@
     "kind": "house",
     "name": "Shannon",
     "title": "E-commerce market research analyst",
-    "tagline": "Sizes up markets and categories before you commit: demand, rivals, prices and risks.",
+    "tagline": "Sizes up markets before you commit: demand, rivals, what shoppers pay and the risks.",
     "area": "ecommerce",
     "role": "market-research-analyst",
     "status": "live",
@@ -4601,16 +4601,16 @@
         {
           "id": "category_report",
           "title": "A category report for your next move",
-          "deliverable": "Demand trend, number and strength of rivals, price ladder, gaps and the conditions that would kill the idea.",
+          "deliverable": "Demand trend, number and strength of rivals, what shoppers pay at each tier, gaps and the conditions that would kill the idea.",
           "job_type_id": "market-research-report",
           "job_type_hint": "ecommerce category analysis"
         },
         {
           "id": "price_ladder",
-          "title": "A price ladder for your category",
+          "title": "A map of what shoppers pay in your category",
           "deliverable": "Rival products from cheapest to most premium, with what each level offers and where there is room.",
           "job_type_id": "pricing-research",
-          "job_type_hint": "category price ladder"
+          "job_type_hint": "category spend tiers"
         },
         {
           "id": "competitor_map",
@@ -5970,8 +5970,8 @@
     "id": "juliet-merchandising",
     "kind": "house",
     "name": "Juliet",
-    "title": "E-commerce merchandising and pricing manager",
-    "tagline": "Arranges your catalogue and sets prices, bundles and discounts with the margin math.",
+    "title": "E-commerce merchandising manager",
+    "tagline": "Arranges your catalogue, bundles and discounts, with the margin math done first.",
     "area": "ecommerce",
     "role": "pricing-strategist",
     "status": "live",
@@ -5987,10 +5987,10 @@
       "outcomes": [
         {
           "id": "price_ladder",
-          "title": "A price ladder for your range",
+          "title": "A good, better, best range plan",
           "deliverable": "Entry, core and premium levels for your products, with what each offers and the margin at each level.",
           "job_type_id": "pricing-model",
-          "job_type_hint": "ecommerce price ladder"
+          "job_type_hint": "ecommerce spend tiers"
         },
         {
           "id": "discount_rules",

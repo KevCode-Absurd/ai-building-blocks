@@ -199,6 +199,16 @@
     "version": "2026.11.13",
     "updated": "2026-11-13"
   },
+  "annabel-landing-pages": {
+    "hash": "321d06ccb55662993ed3791a354e39bf35fe9380cdba0f51c9939c402b344fb6",
+    "version": "2026.11.13",
+    "updated": "2026-11-13"
+  },
+  "annabel-landing-pages-train": {
+    "hash": "a94317174b3a1cecfabc5f1036c66db56cb9f80d21674142f5f1cad9f408c6c9",
+    "version": "2026.11.13",
+    "updated": "2026-11-13"
+  },
   "anneliese-ld-plan": {
     "hash": "869f90dfb29fd9526705765701a584e6ab0be6d75c61a8f7f1583b42fb7c636c",
     "version": "2026.11.13",
@@ -1248,6 +1258,16 @@
     "hash": "8105dcb860dd096cd7a6471895f3cb713308aa26ff5d3b1a44ca64579056a1c1",
     "version": "2026.11.12",
     "updated": "2026-11-12"
+  },
+  "dustin-ad-deployment": {
+    "hash": "09b8f9c91a62f8802e0fefd8261d71643c4e8a7a4b0ddf7fff014a3f1d3604d8",
+    "version": "2026.11.13",
+    "updated": "2026-11-13"
+  },
+  "dustin-ad-deployment-train": {
+    "hash": "6c400bb0b301e469e1794560fee84c47068c79ee0c8015fb23fc0b3b6fea9e4c",
+    "version": "2026.11.13",
+    "updated": "2026-11-13"
   },
   "earl-debugger": {
     "hash": "7139f137388643391e944e63570856db92840d82d4505907289255a559857a46",
@@ -2889,6 +2909,16 @@
     "version": "2026.11.13",
     "updated": "2026-11-13"
   },
+  "margaret-job-orchestrator": {
+    "hash": "89b90575c7a0d4b156fb9dab26a7df3bd79e392cb41ac4be225fd547b8832ffc",
+    "version": "2026.11.13",
+    "updated": "2026-11-13"
+  },
+  "margaret-job-orchestrator-train": {
+    "hash": "39c5bd14fc831795bf1460dfb5e7133e1c4542f6015073789e50fab146bdf56b",
+    "version": "2026.11.13",
+    "updated": "2026-11-13"
+  },
   "mariam-impact-reports": {
     "hash": "510b8f15bc6b148b37e161f69a4540c6ba165c58fc609181018b0726de9eff88",
     "version": "2026.11.13",
@@ -3146,6 +3176,16 @@
   },
   "monique-membership-train": {
     "hash": "25f8da2f9d0ec1ff5d05625430510219b36dd1141b7910248ae0860b77e87cb7",
+    "version": "2026.11.13",
+    "updated": "2026-11-13"
+  },
+  "morag-email-sms": {
+    "hash": "ee59df26d5558f2f249ca5c24dcb8d47126733ee78b22b6a981801b8d4835d03",
+    "version": "2026.11.13",
+    "updated": "2026-11-13"
+  },
+  "morag-email-sms-train": {
+    "hash": "fd1d76de4f050b0b7643c1a1cfba8e418ee66108c70921da6aab164cd3ce92b9",
     "version": "2026.11.13",
     "updated": "2026-11-13"
   },
@@ -4400,12 +4440,12 @@
     "updated": "2026-11-13"
   },
   "tendai-ad-creative": {
-    "hash": "6b9b4f40c3ec0a8ee6c508f9f24a9fc0115bb9b75514a74e4353f578d1110e84",
+    "hash": "8c248a3bd993736f73367edd317f670400c61d4eff69c8b8948bd0ba84f80a67",
     "version": "2026.11.13",
     "updated": "2026-11-13"
   },
   "tendai-ad-creative-train": {
-    "hash": "c0081fe6a32df3c43dadcdc42fd27c459ac271cc05ff9e733046e867b262d229",
+    "hash": "b5607f5833b5aa7409773e9f9ee0a06aa538c89b047c10f7c5647819fc8537c8",
     "version": "2026.11.13",
     "updated": "2026-11-13"
   },

@@ -53,7 +53,7 @@
     "conditions": "Multi-step advertorial funnels on paid social traffic; benchmarks are one practitioner's, from health and beauty style offers.",
     "fails_when": "Traffic is too low to read page-to-page rates (CTA style tests need thousands of visitors a day); the funnel is a single page to a standard Shopify PDP, where checkout conversion of 15% is not comparable; benchmarks have no stated sample.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "30% to 40% click-through from advertorial to next page",
       "70% to 80% click-through from second pre-sell page",
@@ -98,7 +98,7 @@
     "conditions": "Pre-sell pages for cold paid traffic in categories with trust or claim barriers.",
     "fails_when": "Comparison pages make false or unverifiable claims about named competitors (legal risk), experts are fabricated, or the format does not match the real objection found in research; on low-trust categories, an obviously fake 'news' look can lower trust.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "6 advertorial formats: story, expert, buyer's guide, industry exposé, case study, listicle"
     ],
@@ -136,7 +136,7 @@
     "conditions": "Cold prospecting traffic for products with a mechanism, claim or category that needs explaining; DTC brands on paid social.",
     "fails_when": "The product is simple, impulse-priced or already understood, or the traffic is warm/product-aware, where an extra page adds friction; health and weight-loss claims in advertorials can breach ad platform and consumer-protection rules if not substantiated.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 3 minutes of explanation as the threshold for needing an advertorial",
       "claimed scale of $50,000 to $100,000 per day ad spend on unaware/problem-aware funnels"
@@ -176,7 +176,7 @@
     "conditions": "Product pages where buyers have known, nameable objections (efficacy, fit, comfort, price); works with small review counts.",
     "fails_when": "No customer research to identify objections, so the reviews are guesses; categories where shoppers expect to see full review counts and distributions (marketplaces).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "3-4 hand-picked testimonials",
       "about 30 reviews or fewer: feature quotes rather than counts"
@@ -367,7 +367,7 @@
     "conditions": "Hero and product page sections on desktop; scale proportionally on mobile, where 3-4x can be too large for long headlines.",
     "fails_when": "Long headlines on narrow mobile screens, where 48px wraps into many lines and pushes the CTA below the fold; brands with editorial typography where size contrast is carried another way.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "headline 3-4x body size",
       "16px body on desktop gives 48-57px headline"
@@ -405,7 +405,7 @@
     "conditions": "Story advertorials sending cold traffic to a separate product or offer page; health, wellness and problem-solution products.",
     "fails_when": "The advertorial is the only page before checkout so price must be shown; offer-led promotions (sales events) where the discount is the hook; ad platforms or categories whose policies restrict implied scarcity or testimonial-style claims.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "2 CTAs minimum, one before and one after the author note",
       "more CTAs and shorter copy on native (Taboola) traffic"
@@ -443,7 +443,7 @@
     "conditions": "Long-form advertorials for problem-solution products sold to cold traffic, especially health and wellness.",
     "fails_when": "Readers want specs and comparison (technical or high-consideration products) rather than a story; regulated health claims where a dramatised doctor narrative or invented patient would breach ad or consumer-protection rules; brands whose voice cannot carry a fictional first-person story.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "typical failing draft: 100 to 200 words of story before the pitch takes over"
     ],
@@ -481,7 +481,7 @@
     "conditions": "Story-format advertorials or listicles sent cold traffic from Meta or native ads, where readers arrive problem-aware but not product-aware.",
     "fails_when": "The page is a product page or a short pre-lander for warm or retargeted traffic that already knows the product; very short native advertorials where the product appears in the first screen.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "fixed 50% scroll trigger named as the common mistake"
     ],
@@ -558,7 +558,7 @@
     "conditions": "Sponsored placements on publishers, native ads and frequent promotional email sends to an engaged list where unsubscribes are the main cost of over-pitching.",
     "fails_when": "Direct-response pre-sell advertorials for cold paid traffic, where the page is built to move a reader to a product page and a longer, more explicit pitch is normal; bottom-of-funnel traffic already searching for the product, where value padding delays the sale.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "70% value content to 30% or less promotion",
       "about 750,000 daily AppSumo email recipients"
@@ -718,7 +718,7 @@
     "conditions": "Cold paid-social traffic into a long (20+ step) personalisation quiz for products with a personal outcome (fitness, weight, skincare, supplements); the example is a fitness app subscription.",
     "fails_when": "Short quizzes of 5 to 8 questions, where extra screens only add steps; or products with no personal outcome to reflect back (commodity goods), where info screens feel like padding and raise drop-off.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "one info screen every 3 to 5 questions",
       "example funnel about 30 to 40 steps",
@@ -913,7 +913,7 @@
     "conditions": "Cold Meta traffic for problem-solving products bought by readers about 35 and older; used after an angle is proven, as the step between ad and product page.",
     "fails_when": "The page uses a made-up expert, fabricated reviews, false stock scarcity or unsupported health claims; these breach FTC and UK CMA rules and Meta advertising standards and are a common cause of account bans. Also weak for impulse or fashion products with little problem to explain.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "cost-of-inaction anchor: 40 product versus about 6,000 orthodontic cost",
       "60-day money-back guarantee",
@@ -954,7 +954,7 @@
     "conditions": "Long-form advertorial for cold traffic in problem-aware categories; requires real customer research to supply the specific pain details.",
     "fails_when": "Low-involvement or impulse products where long copy adds friction; audiences already solution-aware; when sections 7 and 10 are filled with invented testimonials or staged comments, which breaches fake-review rules such as the US FTC rule in force since 2024.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "10 sections",
       "3 to 5 core pains and 3 to 5 desires repeated through the page",
@@ -993,7 +993,7 @@
     "conditions": "Cold traffic on paid social; problem-aware products with an explainable cause, typically health, pain relief, supplements or beauty; price low enough for a single-page decision.",
     "fails_when": "Warm or retargeting traffic and brand searchers who already know the product; categories without a hidden 'root cause' story; when the article look relies on fake editorial bylines, which risks ad-policy rejection and consumer-protection action.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "3 to 4% cold traffic conversion claimed for advertorials",
       "1 to 2% typical product page conversion on the same traffic (presenter claim, no sample)"
@@ -1035,7 +1035,7 @@
     "conditions": "Pages for products that replace a costlier or repeated alternative; a store with enough reviews to cover each major objection.",
     "fails_when": "Too few genuine reviews to map to objections; products with no costly alternative to anchor against; any use of invented testimonials, comments or fake list prices.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "top 5 objections, one testimonial each",
       "$59 product anchored against $5,000 spent, $200 per therapy session and $35,000 surgery"
@@ -1073,7 +1073,7 @@
     "conditions": "Products with a plausible, supportable explanation of why the problem happens; problem-aware readers who have tried other fixes.",
     "fails_when": "The root cause cannot be substantiated (regulated health, supplement or medical-device claims need evidence); commodity products where the cause is obvious and a 'secret' cause reads as hype.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "How do I make my product feel different when competitors sell the same thing?",
@@ -1108,7 +1108,7 @@
     "conditions": "Paid social traffic to advertorials or long-form landers; cold traffic, problem-solution products.",
     "fails_when": "Warm or retargeting traffic, or brand-search visitors, who already know the product; a long lead slows them down. Also weaker for impulse, low-consideration products where a product page converts fine.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "clickbait ad: lead runs about 50 to 60% of the page before the product",
       "long ads: 1,000 to 3,000 word copy, 1 to 2 minute UGC, 4 to 5 minute VSL pair with short leads"
@@ -1146,7 +1146,7 @@
     "conditions": "New products or new angles on paid social with enough budget to test ads to a product page first.",
     "fails_when": "Categories where the product page cannot convert cold traffic at all (complex or high-ticket products), so the ad test never reaches break-even without the long page; or when the brand already has proven messaging from other channels.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about $1,000 ad spend at break-even as the validation bar",
       "4 variables: avatar, desire or problem, angle, unique mechanism"
@@ -1224,7 +1224,7 @@
     "conditions": "Paid-traffic quiz funnels of 15 or more questions; enough daily quiz starts to read a completion difference within a week or two.",
     "fails_when": "Very short quizzes (3 to 5 questions) where the hook is the whole quiz; low traffic where a 15-point completion gap cannot be separated from noise; a change that raises completion but attracts lower-intent finishers can lower purchase rate.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "pass-through after first 3 questions: about 70% (A) vs 85% (B), illustrative"
     ],
@@ -1298,7 +1298,7 @@
     "conditions": "Ecommerce product pages receiving mostly mobile traffic.",
     "fails_when": "Complex or high-consideration products where buyers need detailed specs before reviews; desktop-dominant B2B catalogues.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 20% of page content read, 80% scanned (unsourced)"
     ],
@@ -1335,7 +1335,7 @@
     "conditions": "Product pages offering multi-unit bundles or quantity breaks, especially consumables and accessories; low-to-mid price points.",
     "fails_when": "Premium or luxury brands where prominent saving labels cheapen positioning; when the absolute saving is trivially small, a percentage or free-item framing may read stronger.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example labels: 1-pack save 10 euros, 2-pack save 22 euros"
     ],
@@ -1373,7 +1373,7 @@
     "conditions": "Landing pages and product pages serving cold paid traffic that does not yet know the brand.",
     "fails_when": "New brands with no genuine reviews yet, where invented or thin proof damages trust; returning-customer traffic where proof matters less than speed to purchase.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "2 forms of social proof above the fold",
       "example: 5 out of 5 from 800+ reviews"
@@ -1411,7 +1411,7 @@
     "conditions": "Cold paid traffic; brands with real press coverage and reviews that include names or photos; mobile-heavy traffic.",
     "fails_when": "Brands with genuinely famous outlets where a logo alone is persuasive; categories where reviewers will not share photos (intimate health products), so anonymised verified-buyer badges are the realistic ceiling; very long review walls that bury the CTA.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Claimed 38% conversion lift from adding outlet quotes under press logos (no sample given)"
     ],
@@ -1450,7 +1450,7 @@
     "conditions": "Cold traffic from paid social or search landing on a product or landing page; stores that actually offer a guarantee, free returns or trial worth stating.",
     "fails_when": "Risk-reducer claims the business cannot honour or that trigger high return rates on low-margin items; warm returning buyers who already trust the brand; crowding the hero so the CTA loses visual priority.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Claimed 40 to 60% conversion lift from adding FUD reducers under the CTA (no sample given)",
       "Claim: ~60% of visitors never scroll past the hero",
@@ -1531,7 +1531,7 @@
     "conditions": "DTC stores with GA4 ecommerce events correctly configured (view_item, add_to_cart, begin_checkout, purchase) and at least several months of data; multi-product catalogs with collection navigation.",
     "fails_when": "Single-product stores where traffic lands directly on the product page (view rate is near 100 percent by design), stores with broken or duplicated GA4 events, or categories with naturally low add-to-cart rates (high-ticket furniture, considered purchases) where these ranges understate normal.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "view product rate benchmark 50 to 70 percent",
       "add to cart rate 12 to 20 percent",
@@ -1575,7 +1575,7 @@
     "conditions": "Mobile-heavy stores (about 80 percent mobile in the example) with multi-product collections; heatmap tool installed with enough sessions per page to read a scroll curve.",
     "fails_when": "Long-form single-product or advertorial pages where buyers who scroll deep are the intended converters and the hero is not meant to sell; low-traffic pages where a few hundred sessions make click shares noisy.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 60 percent drop-off after the hero section (typical across audits)",
       "about 10 percent additional drop per row of two products on collection pages",
@@ -1618,7 +1618,7 @@
     "conditions": "Any DTC store; most valuable under about 50,000 to 80,000 monthly visitors where quantitative tests are underpowered. Survey tools such as Okendo or similar post-purchase and on-site survey apps.",
     "fails_when": "Very low order volume (a few orders a week) gives too few post-purchase answers to see patterns, and on-site survey pop-ups can hurt mobile conversion if they fire too early or cover the add-to-cart button.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "85 to 90 percent post-purchase survey completion without incentive (presenter's clients)",
       "friction survey trigger at about 60 percent of average session duration",
@@ -1660,7 +1660,7 @@
     "conditions": "Pages with enough sessions for stable click shares (several thousand sessions per page); stores with cluttered product or collection templates, common on Shopify themes with many apps.",
     "fails_when": "Low-click elements that do a non-click job (trust copy, reviews summary, shipping notes read without clicking) should not be removed on click share alone; and on low-traffic pages click shares under a few hundred clicks are noise.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "add to wishlist 0.09 percent of clicks, removed",
       "call an expert 0.36 percent of clicks, removed",
@@ -1702,7 +1702,7 @@
     "conditions": "Cold-traffic advertorials (pre-sell pages between a paid social ad and the product page), mainly problem-solution consumables.",
     "fails_when": "Warm or product-aware traffic that converts better straight to the product page; platforms and regulators require advertorials to be labelled as advertising, and a fake-news look that hides that can breach FTC rules and Meta policy.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "10 advertorial types listed"
     ],
@@ -1740,7 +1740,7 @@
     "conditions": "Cold-traffic advertorials, long-form ads and landing page leads for problem-solution products.",
     "fails_when": "Highly problem-aware searchers who already know the product category may respond to a direct pain headline; very short ad formats may only fit one block.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "one curiosity element per headline, two at most"
     ],
@@ -1780,7 +1780,7 @@
     "conditions": "Direct-response funnels for problem-solution products (supplements, wellness, beauty) on cold paid traffic.",
     "fails_when": "Leading with diseases (fatty liver, blood sugar, heart) that the product is not proven to affect creates disease-claim and substantiation risk with the FTC, FDA and ad platforms; brand-led or slow-cycle products do not need peak urgency.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "testing split about 30% unaware, 30% problem aware, rest solution/product aware"
     ],
@@ -1817,7 +1817,7 @@
     "conditions": "Mass-market direct-response pages and ads read on mobile by cold audiences.",
     "fails_when": "Premium, technical or professional audiences (B2B, expert hobbyists) may read very simple copy as patronising; regulated categories need precise terms even when longer.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "target reading level grade 5 or below; submitted copy measured grade 7 to 8"
     ],
@@ -1852,7 +1852,7 @@
     "conditions": "Single-offer or hero-product landing pages for paid traffic; complex offers lean toward the sales-letter pain section.",
     "fails_when": "Catalogue or category browsing pages; brands whose positioning avoids pain framing (aspirational fashion); the section counts are an agency template, not a tested rule.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "2+ proof elements above the fold",
       "2-4 social proof sections",
@@ -1891,7 +1891,7 @@
     "conditions": "Stores with enough reviews, photos or video testimonials to fill proof sections; visible-result categories gain most from photos.",
     "fails_when": "Brands with very few reviews, where a 'wall' looks thin; regulated health claims, where results-led review headlines may need substantiation.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example count: 110,000+ members"
     ],
@@ -1927,7 +1927,7 @@
     "conditions": "Brands running both paid social and paid or organic search to dedicated landing pages; examples come mainly from service and B2B lead-gen clients.",
     "fails_when": "Social traffic is retargeting or otherwise already product-aware, in which case proof-first fits it too; or search queries are informational (top of funnel), where education-first can still be right.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "3 to 4 value props minimum, up to 8 to 10 for complex offers"
     ],
@@ -1967,7 +1967,7 @@
     "conditions": "Dedicated paid-traffic landing pages with enough sessions for a stable scroll map; mobile and desktop read separately.",
     "fails_when": "The page is a store homepage or collection page where navigation is the job, or a long-form sales page where readers who scroll are the buyers and short scroll depth among non-buyers is expected; percentages come from a few client pages, not a benchmark sample.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 60% never scroll past the hero (practitioner's rule)",
       "audited page: 75% reached below fold, 50% left after first proof block, 33% reached case studies",
@@ -2128,7 +2128,7 @@
     "conditions": "Ecommerce or info products sold to cold traffic, especially health and supplement categories with distinct life-stage segments; the operator owns the product facts to correct the draft.",
     "fails_when": "Regulated claims categories where unverified studies or invented experts create legal risk; markets too narrow to split into several archetypes; teams without traffic to test many variants.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "5 to 10 advertorials per hour after setup",
       "about 17 minutes of one-time input extraction",
@@ -2167,7 +2167,7 @@
     "conditions": "Cold paid traffic; considered or problem-solving purchases, especially health, wellness, supplements and skincare; brands with research on buyer beliefs and objections.",
     "fails_when": "Simple impulse products where any step before the product page is friction; returning or warm traffic that already knows what it wants; health quizzes whose framing creates prohibited medical claims; long quizzes with no reason for each question.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Quiz length 3 to 20 questions; sweet spot 8 to 12",
       "No more than 2 to 3 same-format questions in a row"
@@ -2207,7 +2207,7 @@
     "conditions": "Long-form pre-sell pages (advertorials, VSL scripts) for cold traffic; brands with enough market discussion online for deep research to find real quotes.",
     "fails_when": "Brand-new categories with little online conversation, where research returns generic material; or when the beliefs list grows past six and the page tries to argue everything.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "at most 6 necessary beliefs",
       "8 to 20 minutes for an AI deep-research run (about 11 in the demo)",
@@ -2399,7 +2399,7 @@
     "conditions": "New or newly launched products with few reviews; DTC stores with a review app that supports sorting and filtering.",
     "fails_when": "Markets or platforms where review incentives are restricted (for example Amazon, or rules on incentivised reviews), or categories where buyers rely on expert or clinical proof more than peer reviews.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "0 to about 80 reviews: conversion roughly doubled (presenter's own stores)",
       "80 to 400 reviews: no visible further gain",
@@ -2438,7 +2438,7 @@
     "conditions": "DTC stores deciding whether to charge shipping or fees; mid to high AOV where 10% of AOV covers shipping cost.",
     "fails_when": "Low-AOV items where real shipping cost exceeds 10% of AOV (the brand must bundle or raise AOV instead), or categories where competitors all ship free and price comparison is easy.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "extra costs under 10% of AOV: no material conversion impact (presenter tests 2019-2020)",
       "Baymard: 70% cart abandonment, 43% of abandoners just browsing",
@@ -2478,7 +2478,7 @@
     "conditions": "Brands running several ad angles or personas for one product, especially supplements and skincare; enough spend per angle to justify a page.",
     "fails_when": "Single-angle brands, or accounts so small that splitting traffic across pages leaves too little data per page; branded or returning traffic that wants the full product view.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "4 above-the-fold questions: what, why this one, why now, why trust",
       "60 to 95% of traffic on mobile depending on brand"
@@ -2516,7 +2516,7 @@
     "conditions": "Brands with a clearly identifiable best-fit segment and landing pages that receive mixed traffic.",
     "fails_when": "Mass-market commodity products where most visitors share one need; pages that serve several distinct paid campaigns, which should get their own segment-specific pages instead.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "target 20-35% of visitors",
       "50% of a 20% segment = 10% conversion",
@@ -2598,7 +2598,7 @@
     "conditions": "Paid social traffic going to a dedicated landing or product page the brand can edit; ad sets with enough impressions to separate headlines.",
     "fails_when": "The winning ad headline is a curiosity hook that works in feed but not as a page promise; one page serves many different ads, so it cannot match all of them; the lift claim is taken as a forecast.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "20 to 40 headlines per ad variant",
       "ad headlines reach about 1,000x the people who see the page",
@@ -2640,7 +2640,7 @@
     "conditions": "Brands with named ambassadors or large creators whose ads perform; contracts that allow on-site use of their image.",
     "fails_when": "Usage rights exclude website use; small creators whose ads do not carry enough traffic to justify a page; pages that are mood boards with no products.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Should influencer ads go to a special landing page?",
@@ -2674,7 +2674,7 @@
     "conditions": "Apparel and footwear brands sending paid traffic to collection or category pages with fast-moving size runs.",
     "fails_when": "Non-fashion stores with few variants, where a custom landing page usually beats a grid; small catalogues with stable stock.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 75% of Alo paid traffic lands on category pages",
       "top 6 products drive grid performance",
@@ -2753,7 +2753,7 @@
     "conditions": "Product pages for focused catalogues where the goal is adding the product to cart, with enough traffic to A/B test.",
     "fails_when": "Large catalogues where shoppers need to compare across categories; SEO needs for breadcrumb navigation and markup (keep breadcrumb schema even if visually demoted).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Should product pages have breadcrumbs?",
@@ -2788,7 +2788,7 @@
     "conditions": "Apparel or multi-category brands with repeatable basics and gifts that cost little to add to a shipment.",
     "fails_when": "Single-product stores with nothing to gift; thin margins where the gift cost erases the AOV gain; thresholds set so high almost nobody reaches them.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$100 free shipping, $150 free shirt, $200 free joggers",
       "AOV $36 to $112 over time (with packs and other CRO)"

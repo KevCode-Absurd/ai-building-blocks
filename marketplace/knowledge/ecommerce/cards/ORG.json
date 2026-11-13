@@ -53,7 +53,7 @@
     "conditions": "Educational or how-to video, organic or long-form; the brand or founder has a credible, specific result to cite as proof.",
     "fails_when": "Entertainment or pure product-demo content, where matching the thumbnail promise visually matters more; brands with no credible proof to state.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "first 30 seconds",
       "pattern drawn from the top 35 videos of one channel"
@@ -93,7 +93,7 @@
     "conditions": "Brands already running paid ads and starting or rebuilding an organic presence; content-led categories where prospects research the brand before buying.",
     "fails_when": "Brands with no paid budget, where organic is the only acquisition channel and a soft CTA may be the only path to sale; impulse products where nobody checks the profile before buying.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "roughly 3 organic pieces to 1 paid ad in a prospect's feed"
     ],
@@ -133,7 +133,7 @@
     "conditions": "DTC consumables with an aspirational or performance positioning; Instagram-led creator programmes; brand past early stage with someone to manage creators.",
     "fails_when": "Very early brands without staff to manage dozens of creators; luxury brands where off-brand creators damage price positioning; categories where codes cannibalise full-price buyers (check new versus returning customers on code orders).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "tier 2 and 3 code creators: about 99% of DTC revenue",
       "one 400,000-follower creator: about $20,000 from one swipe-up"
@@ -217,7 +217,7 @@
     "conditions": "Live auction or live shopping shows with many lots (here 250) and low per-item prices (about $10 normal average); platform supports buyer-only giveaways (Whatnot).",
     "fails_when": "Few lots, so the per-lot lift needed becomes large; high-ticket items where a $1 lift is noise; platform or local rules restrict giveaways; the audience comes for the prize and buys only the cheapest lot to qualify.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$250 prize over 250 lots = $1 per-lot bid lift to break even",
       "average selling price about $9.85 normally versus about $22 on this show",
@@ -256,7 +256,7 @@
     "conditions": "Live auction shows with a promoted event and an existing or in-app following; a mix of a few well-known high-value items and many low-cost items.",
     "fails_when": "Concurrent viewers stay well under 300, so $1 anchors sell far below value; the anchors are not promoted beforehand; inventory has no low-cost majority to carry the margin.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 50 of 250 lots (20%) were $50 to $150 items started at $1",
       "$1 starts only with 300 to 500+ concurrent viewers",
@@ -296,7 +296,7 @@
     "conditions": "Live shopping platforms with a bookmark or reminder feature (Whatnot); sellers with at least one outside channel (YouTube, Instagram, Facebook groups) to promote on.",
     "fails_when": "No outside audience to reach, in which case growth must come from in-app discovery; the promoted items are not exciting enough to bookmark; the show is announced only on the day.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "schedule at least 1 week, ideally 2 to 3 weeks ahead",
       "3 promotion touches: about 1 week, 2 to 3 days and a few hours before",
@@ -336,7 +336,7 @@
     "conditions": "Products cheap enough to seed in volume; brands selling on TikTok Shop or able to run TikTok and Meta ads; categories creators want to post about.",
     "fails_when": "High-COGS or bulky products where seeding thousands of units is uneconomic; categories with claim restrictions (supplements, skincare) where creator scripts must be controlled; missing usage rights or disclosure on reposted content.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "100,000 invites in 60 days",
       "~6,000 creators onboarded",
@@ -381,7 +381,7 @@
     "conditions": "Organic short-form (TikTok, Reels, Shorts) for brands or founders with a backlog of posts and identifiable competitors in the same niche.",
     "fails_when": "Small backlogs (under about 10 videos per creator) where no break point exists; brand accounts whose views are mostly paid; applying a competitor's hook format to a topic type it does not fit (a stat-led format on a conceptual topic).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "engagement below ~2% on a high-view video flags likely paid boost",
       "top 10 videos per creator; break point found between #4 and #5 in the example",
@@ -466,7 +466,7 @@
     "conditions": "Brands with low-involvement or 'boring' products doing organic short-form (TikTok, Reels, Shorts) with a small team that cannot afford complex monthly shoots.",
     "fails_when": "The prop has no link to the product, so views do not turn into buyers; destructive formats in categories where they look wasteful or unsafe; or the novelty wears off once copied in the niche, so plan the next vehicle.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "one-off prop budget of a few thousand dollars (hydraulic press example)",
       "speed format example: an apartment tour in 10 seconds"
@@ -508,7 +508,7 @@
     "conditions": "Brands posting organic short-form video and carousels on TikTok and Instagram.",
     "fails_when": "Brands that need TikTok Shop features on the main account; platform algorithm changes that remove these effects; teams large enough that scheduling saves more than any reach loss costs.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "2 to 3 minutes to post natively per platform",
       "scheduler test across hundreds of videos (no figures shown)"
@@ -549,7 +549,7 @@
     "conditions": "Brands and service businesses growing organic accounts with an email list or sales team to receive leads.",
     "fails_when": "Established accounts with existing audiences, where CTAs from day one are fine; high-volume consumer brands where personal DM selling does not scale and automation is needed instead.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 5,000 views per post before adding CTAs",
       "about 2,000 views threshold in narrow B2B-style niches"
@@ -589,7 +589,7 @@
     "conditions": "Brands and service businesses starting or resetting organic social on TikTok and Instagram, late 2025 onward.",
     "fails_when": "Purely aesthetic or impulse products where entertainment or visual content outperforms expertise; teams that cannot produce 4 to 6 posts a week for a month; after the format window the speaker predicts closes.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "2 to 3 format choices",
       "4 to 6 posts per week",
@@ -632,7 +632,7 @@
     "conditions": "Instagram Reels and similar short-form video (TikTok, Shorts), organic or paid, where text overlay or the first spoken line carries the hook; consumer audiences.",
     "fails_when": "Expert or B2B niches where precise technical terms signal relevance to the right viewer; and brands whose voice cannot carry negative framing (luxury, wellness positioning built on calm); the length band is descriptive of viral posts, not a controlled result.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "1,300 viral Instagram Reels analysed (hand-picked, no control group)",
       "average hook length 7.7 words",
@@ -676,7 +676,7 @@
     "conditions": "Short-form vertical video on Instagram, TikTok and Shorts, organic and paid; especially B-roll-with-text formats common for small brands.",
     "fails_when": "Deliberate pattern-interrupt openers (an unexpected or absurd visual) can work precisely because they do not show the topic; those need the text or the next second to connect quickly or retention collapses.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "half-second screenshot test"
     ],
@@ -755,7 +755,7 @@
     "conditions": "Instagram Reels for brands; metrics available in Instagram professional insights.",
     "fails_when": "Accounts whose sales come from search or saves rather than shares; regulated categories where entertainment framing risks implied claims.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "first 3 seconds retention",
       "80% of planning effort on the hook"
@@ -877,7 +877,7 @@
     "conditions": "Small brands and solo founders without a content team, building organic presence from scratch; platforms that down-rank outbound links (X, LinkedIn, Instagram).",
     "fails_when": "Brands with a content team and proven formats that can repurpose across platforms cheaply, and launches or drops where pointing every audience to one destination for a short window is worth the reach penalty; link treatment also changes by platform over time.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "one hero platform plus email for 6 months"
     ],
@@ -919,7 +919,7 @@
     "conditions": "Brand or founder accounts on TikTok, Instagram Reels, YouTube Shorts and LinkedIn whose goal is sales from a defined buyer, during the first months of building an account.",
     "fails_when": "Broad-appeal mass products (snacks, basic apparel) whose buyer is nearly everyone, where wider virality is on-target; and established accounts with a strong, already-classified audience that can test adjacent topics safely.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "30 to 50 consecutive single-topic videos to train the algorithm",
       "check the last 20 posts for topic and avatar consistency"
@@ -963,7 +963,7 @@
     "conditions": "Consumer-facing newsletters, emails, landing pages and social posts read on screens.",
     "fails_when": "Technical or professional audiences (clinicians, engineers) who expect precise terms; very low grade levels can read as childish for premium brands if rhythm is not varied.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "target reading level grade 5 to 8",
       "Buffett letters 1974 to 2013: words per sentence 17 to 13, reading level grade 10 to 4 (secondhand analysis)",
@@ -1003,7 +1003,7 @@
     "conditions": "Brands with a founder or team member willing to write regularly on a few topics; organic social, newsletters and blogs.",
     "fails_when": "Brands with no one able to produce original first-person material, or categories where buyers want product facts and offers rather than a point of view (commodity replenishment items).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "hyper-timely posts capitalise for about 24 hours, then value falls off"
     ],
@@ -1122,7 +1122,7 @@
     "conditions": "Brands posting Reels with at least modest reach and a working email welcome flow; Instagram accounts eligible for DM automation tools.",
     "fails_when": "The freebie attracts freebie-seekers with no buying intent, inflating the list with low-value subscribers; automation messages break Meta messaging policy or spam rules; or there is no welcome flow to convert sign-ups.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "lead magnet on 1 to 2 Reels per week",
       "lead-magnet Reels still collecting leads 6 to 8 months after posting",
@@ -1163,7 +1163,7 @@
     "conditions": "Brands or founders using Instagram Reels for organic reach and new-customer discovery; accounts with stalled growth.",
     "fails_when": "The account's goal is retention of existing customers (launch alerts, community content) where a high follower share is fine; or very new accounts with too few posts to read a pattern.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "70 to 80% of views from followers signals a stalled account",
       "coach reports about 300 creators put through the system"
@@ -1284,7 +1284,7 @@
     "conditions": "Products with broad appeal that fit any audience (Ridge: men's wallets, YouTube's male-skewed audience); US market; 2016 to 2024 pricing.",
     "fails_when": "Niche products that only sell to one interest group; brand-safety-sensitive categories; sponsor markets inflated by a hot category (as with crypto in 2021); trying to buy only top-tier creators.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$5 to $10 CPM for 30-second mid-roll reads",
       "about 5,000 YouTube creators sponsored since 2016",
@@ -1328,7 +1328,7 @@
     "conditions": "Meta advertisers with a steady creative supply; products cheap enough to gift at volume; 2025 to 2026 Meta partner-ads setup.",
     "fails_when": "Expensive products where gifting 100 units is costly; creators who require a revenue share; categories where the creator's personal credibility is the selling point (account identity then matters).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "possibly 50% of Q4 Meta spend on partner ads",
       "about 2 good creators per 100 gifted products"
@@ -1370,7 +1370,7 @@
     "conditions": "US-based LLC-style brands with a valuation baseline; long-term creator or advisor partnerships; jurisdiction-specific tax treatment.",
     "fails_when": "Non-US entities where PIUs do not exist or are taxed differently; short campaigns where cash is simpler; creators whose audience does not match future product lines.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example: participation only above a $50M valuation"
     ],
@@ -1411,7 +1411,7 @@
     "conditions": "Brands posting organic short-form video regularly with a stable baseline; Meta, TikTok or Instagram ad accounts that accept partnership or Spark-style ads.",
     "fails_when": "Accounts too new to have a reliable baseline, posts that went viral with an audience unrelated to buyers, and creator content without documented usage rights or partnership permissions.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "baseline about 800 views vs outlier about 4,000 views (about 5x)"
     ],
@@ -1453,7 +1453,7 @@
     "conditions": "Brands on TikTok Shop with a proven hero product and margin that can fund 15-20% commission plus a $1,000 floor per creator during the start-up phase.",
     "fails_when": "Products that don't demo well on video; margins that cannot carry 15-20% commission; categories with claim restrictions on TikTok Shop; creators who post without guidance.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$1,000/month floor or 15-20% commission, whichever higher",
       "30 videos in 30 days",
@@ -1496,7 +1496,7 @@
     "conditions": "Consumer brands with broad appeal and a library of footage; 2025-era clipping marketplaces on TikTok, Instagram and YouTube Shorts.",
     "fails_when": "Regulated categories where uncontrolled third-party claims create compliance risk; when clips lack sponsorship disclosure, which platforms and ad regulators require; products needing precise education that clippers will not convey.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$5,000 capped budget example",
       "target CPM about $0.85 to $1",
@@ -1540,7 +1540,7 @@
     "conditions": "New consumer product launches with sample-friendly units (snacks, supplements, small consumables) and a founder or brand with some audience.",
     "fails_when": "Heavy, frozen, fragile or expensive products where sampling cost is high; founders without existing credibility (Rahal's RXBAR exit drove much of the attention); long manufacturing lead times that make a sell-out a multi-week stockout.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 6 months of pre-launch anticipation",
       "5,000 free bars to first TikTok sign-ups",
@@ -1582,7 +1582,7 @@
     "conditions": "Brands with credible product proof and equity to offer; categories where athlete or expert endorsement fits (supplements, performance, wellness).",
     "fails_when": "Early brands whose equity is too valuable to dilute or whose product lacks proof; partners who are not real users (audiences see through it); regulated health claims made via the partner; key-person risk if the partner falls out of favour.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "minimum 3-year partnership terms",
       "AI partner video ~$25,000, 3 to 4 weeks to make, ~200M views"
@@ -1623,7 +1623,7 @@
     "conditions": "Brands with enough creator volume to justify full-time staff; categories with a clear avatar and lots of creators.",
     "fails_when": "Small brands that cannot staff a team, where a lean in-house manager or agency is more realistic; regulated products (supplements, alcohol) where creators need compliance guidance, not full freedom.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "in-house creator team of 15 to 25 people",
       "team roughly 94 women to 6 men, matching the avatar"
@@ -1665,7 +1665,7 @@
     "conditions": "Omnichannel consumer brands (retail plus online) with products creators can show naturally; most powerful in beauty, wellness and beverages aimed at a defined avatar.",
     "fails_when": "DTC-only brands that need click attribution to manage cash, where view-based deals without tracking can hide waste; views are not equal to impressions on Meta, so CPM comparisons are approximate; creators with inflated or bought views.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "85%+ of marketing spend on creators, under 5% on Meta",
       "target creator CPM = half of Meta CPM (e.g. $10 versus $20)",

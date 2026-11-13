@@ -12,7 +12,7 @@
     "conditions": "Offers where a refund mostly costs revenue rather than goods: digital products, services, low-COGS items, or products that can be resold after return. Judge after the refund window closes.",
     "fails_when": "High-COGS physical goods that cannot be resold, expensive return shipping, or categories with habitual returners (apparel bracketing). Also when the guarantee attracts buyers who will not use the product; then a conditional guarantee works better.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "sales +30% with refunds 5% to 10% gives +23% net sales (100-5=95 vs 130-13=117)",
       "guarantee quality moved offer conversion 2 to 4x in one practitioner report"
@@ -49,7 +49,7 @@
     "conditions": "Products where perceived value can be added cheaply; brands protecting full-price positioning.",
     "fails_when": "Commodity products bought on price comparison (shopping feeds, marketplaces) where the shopper only sees the price; inflated bonus 'values' for items never sold separately can breach price-reference rules; bonuses that add fulfilment cost or picking complexity.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "bonus value should exceed core offer value",
       "illustration: $3 landed gift perceived at $20 versus 20% off"
@@ -88,7 +88,7 @@
     "conditions": "Time-boxed promotions or launches with an email or SMS list to remind people; works for both discount and bonus-based offers.",
     "fails_when": "Evergreen fake timers or permanent 'sales' that train customers to wait; stock that cannot cover the end spike; markets where regulators police false urgency.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "up to 50-60% of a week-long campaign's sales in the final 4 hours",
       "final 4 hours is about 3% of a 7-day window"
@@ -126,7 +126,7 @@
     "conditions": "High-gross-margin consumables (supplements, cosmetics) with repeat purchase; partners whose audience trusts them.",
     "fails_when": "Low-margin products; codes that leak to coupon aggregators and cannibalise full-price buyers; partners bidding on your brand search terms.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "30% customer discount",
       "40% commission on sales net of discount",
@@ -164,7 +164,7 @@
     "conditions": "Paid-acquisition DTC brands judging a sitewide or category percentage-off promotion; needs true gross margin including shipping and fulfilment.",
     "fails_when": "Clearance of dead stock where the goal is cash, not contribution per order; or a brand whose efficiency genuinely jumps in sales (rare discounters), which the model must include rather than ignore.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$100 AOV, 40% cost of delivery, $60 gross profit, break-even ROAS 1.67",
       "target ROAS 6 gives $43.33 contribution per order",
@@ -205,7 +205,7 @@
     "conditions": "Consumable or replenishable products (supplements, skincare, food) where a 90-day supply is natural and shipping is a meaningful part of cost.",
     "fails_when": "Non-consumable or one-time products; categories where subscription locks feel like a trap and drive refunds or chargebacks; too many stacked extras that confuse buyers.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "AOV about $190 with the stacked offer",
       "shipping $12 for 1 unit, $14 for 2, $17 for 3",
@@ -246,7 +246,7 @@
     "conditions": "Brands with a cheap complementary secondary item and a primary product that can be sold in multiples; shipping cost grows slowly with units.",
     "fails_when": "The gift is irrelevant to the buyer, is expensive or bulky enough to raise shipping, or is never sold standalone so its value is not credible.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "1 towel: $50 price, $15 COGS, $8.50 fulfilment, $26.50 contribution, break-even ROAS 1.89",
       "2 towels plus $4 bag: $100 price, $12.50 fulfilment, $53.50 contribution, break-even ROAS 1.87",
@@ -284,7 +284,7 @@
     "conditions": "Brands with enough margin to choose; applies to established DTC brands planning a promo calendar.",
     "fails_when": "Off-price or value brands whose positioning is the discount, and marketplaces where competitors' constant promotions set the reference price.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "flat discount events limited to 1 to 2 a year",
       "gross margin drift from 60% to about 45% from habitual discounting (example)"
@@ -322,7 +322,7 @@
     "conditions": "Stores running abandonment emails, SMS or exit popups; works for most DTC categories.",
     "fails_when": "Stores where checkout abandonment is caused by price shock or shipping cost at checkout; there a shipping or price fix is the right repair, not withholding an incentive.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "cart abandoners often buy within 1 to 2 days",
       "checkout abandoners often buy within 2 to 3 days"
@@ -359,7 +359,7 @@
     "conditions": "Shopify-style DTC stores with a post-purchase one-click upsell app; consumables and CPG show the highest rates.",
     "fails_when": "Shipping protection where the brand actually absorbs claims rather than carriers, or where add-ons are pre-ticked (consumer-law risk in some markets); chained post-purchase offers that annoy buyers and raise refunds.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "in-cart take rate 5 to 15%",
       "shipping protection $4.99 at about 30% take, $1 to $2 gross profit per order",
@@ -400,7 +400,7 @@
     "conditions": "Any store running cart, checkout or post-purchase upsells or cross-sells.",
     "fails_when": "Upsells that hurt main-offer conversion (shown in cart before the buyer commits); measure main conversion too, not only upsell profit.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "10% take x $50 x 50% margin = $2.50 per order",
       "$2.50 on $20 first-order contribution is about 12% more",
@@ -441,7 +441,7 @@
     "conditions": "Single hero-SKU brands, especially consumables with several plausible benefits; requires angle data from ad testing.",
     "fails_when": "Health or benefit claims are not substantiated or not allowed in the market (supplement and GLP-1 claims are heavily regulated); angle pages split traffic too thin for small accounts.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "6 example persona angles for one SKU",
       "results timeline about 120 days for the hair angle",
@@ -480,7 +480,7 @@
     "conditions": "Stores with enough orders to see the shape of the distribution; multi-SKU catalogues or products sold in multiples.",
     "fails_when": "A single-product store with one fixed price, where the distribution is a spike; there a threshold only works by adding a second item or quantity tier.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "practitioner estimate: 80% or more of brands set thresholds on mean AOV",
       "threshold set just above the mean may only move about 10% of customers"
@@ -517,7 +517,7 @@
     "conditions": "Brands with several past flat-discount periods to model; percentage-off offers on multi-unit-friendly products.",
     "fails_when": "Single-unit, non-repeatable purchases where UPT cannot rise (one mattress, one sofa); there the curve has no upward part and any discount only removes margin.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "5 to 10% off: UPT flat, contribution per order falls",
       "above about 30 to 40% off: profit falls regardless of UPT gain",
@@ -556,7 +556,7 @@
     "conditions": "Any DTC store testing bundles, price points or discount structures with enough traffic per variant to read a difference; most relevant for consumables and multi-unit products.",
     "fails_when": "Subscription or high-repeat products where first-order profit understates value; there, compare profit per session including expected repeat margin (LTV-adjusted), or a lower-AOV entry offer may win despite worse session profit.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example tiers: 2-pack $100, 4-pack $190, 360-day pack $360",
       "claimed AOV move from $93 to $135 with about 40 percent revenue lift (unverified)"
@@ -634,7 +634,7 @@
     "conditions": "Product pages and ads presenting a discount or quantity break; most relevant for bundles of consumables and higher-ticket single items.",
     "fails_when": "Luxury or premium-positioned brands where visible discounting erodes price perception, and markets or categories with rules on reference prices and 'free' claims (e.g. UK and EU price-indication rules require a genuine prior price).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "'$178 saved' instead of '10% off' on a high-ticket item",
       "'61% off' instead of 'save $40' on a low-ticket item",
@@ -674,7 +674,7 @@
     "conditions": "Products whose needed quantity genuinely varies with a buyer's household, space or usage; DTC product pages with tiered bundles.",
     "fails_when": "Products where one unit fully serves any buyer (a single gadget, an apparel item in one size), where a forced use-case ladder reads as manipulative; or when the claimed coverage is not true and invites returns and complaints.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "tier 1 covers about 700 sq ft, tier 2 about 1,400 sq ft"
     ],
@@ -976,7 +976,7 @@
     "conditions": "First-order or welcome offers on DTC stores; the $100 line is a practitioner heuristic across the agency's clients.",
     "fails_when": "AOV sits near $100, where neither framing clearly reads bigger; categories with strong percent-off conventions (fashion sales seasons); when the discount is so small in dollars that it looks trivial.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "AOV above ~$100: lead with dollar off (e.g. $25 off)",
       "AOV below ~$100: lead with percent off (e.g. 20% off)",
@@ -1015,7 +1015,7 @@
     "conditions": "Apparel, accessories and consumables where buying several of the same item is natural; brands that can hold margin at the bundle unit price.",
     "fails_when": "High-ticket or single-use products where multiples make no sense; bundle discounts that drop unit margin below paid acquisition cost; ads promoting a different offer than the pre-selected tier.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "single $35; 3-pack ~$23/item; 6-pack ~$20/item, saves $89",
       "target bundle price ~$120",
@@ -1054,7 +1054,7 @@
     "conditions": "Email and SMS capture pop-up for first-time visitors; high-AOV brand ($250 to $300); equal traffic split across arms; single brand result reported by the agency.",
     "fails_when": "Low-AOV brands, where a dollar figure looks small next to a percentage; when the offer arm wins first orders but lowers 90-day repeat rate; when gross profit after the offer cost is not checked.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "8 offer variants tested, narrowed to 4 on equal traffic",
       "free gift ~520 opt-ins; 10% off 476 opt-ins; $25 credit ~1,800 opt-ins",
@@ -1095,7 +1095,7 @@
     "conditions": "Consumable, replenishable products (supplements, coffee, CPG) with a subscription option on the PDP.",
     "fails_when": "Products without a natural repeat cycle; when cancellation after the first discounted order is high (discount hunters); markets where steep first-order discounts trigger price-anchoring complaints at renewal.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "~10% of one-time buyers later subscribe",
       "month-6 LTV ~$226 subscribers vs ~$138 non-subscribers",
@@ -1134,7 +1134,7 @@
     "conditions": "Repeat-use consumables and staples (toothpaste, supplements, basics) with flavor, color or size variants.",
     "fails_when": "Products nobody needs more than one of; categories where buyers genuinely want a curated kit of different items (gift sets, starter kits); when free units push inventory faster than margin allows.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "buy 2 get 1 free = 33% off 3 units",
       "buy 3 get 2 free = 40% off 5 units"
@@ -1211,7 +1211,7 @@
     "conditions": "Subscription consumables where an accessory or add-on improves daily use; enough gross margin to absorb kit COGS on the first order.",
     "fails_when": "Gifts unrelated to use (totes, stickers) that add cost without value; low-margin products where kit landed cost erases first-order contribution; one-time-purchase categories.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "IM8: $91 subscription vs $130 one-time, kit valued ~$100",
       "AG1: 1-month kit ~$43 value, 3-month ~$72 value",
@@ -1251,7 +1251,7 @@
     "conditions": "Low-price single items (roughly under $25) sold through paid ads where shipping is a large share of order value.",
     "fails_when": "High-AOV items where shipping is a small share of price, or brands whose free shipping is already built into price; there free shipping can be the right conversion lever.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$14 sock, $1,000 ad spend",
       "paid shipping: about 2% conversion, ROAS about 0.56",
@@ -1290,7 +1290,7 @@
     "conditions": "DTC brands with paid acquisition and at least one repeatable or multi-unit product.",
     "fails_when": "Single-purchase, high-ticket products where multipacks, subscriptions and prepaid plans do not apply; some brands sell well on simple discounts during genuine sale events.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Which offers should I set up first?",
@@ -1324,7 +1324,7 @@
     "conditions": "DTC stores with meaningful traffic and an email or SMS program; claimed across many of the agency's brands.",
     "fails_when": "Premium brands where gamified popups clash with positioning, or where popups hurt mobile UX and search (intrusive interstitial rules); bigger lists of low-intent subscribers can also raise email platform costs and lower deliverability.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "no-incentive popup: 1 to 5% opt-in",
       "10% off popup: about 7% opt-in",
@@ -1551,7 +1551,7 @@
     "conditions": "Subscription-led consumable brands with stable monthly churn; most relevant once the active base is approaching new adds divided by churn.",
     "fails_when": "Early brands with tiny bases far below the ceiling, or brands with very high churn caused by a product problem, where fixing retention or the product is the bigger lever.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "10% monthly churn with 2,000 new subscribers per month caps at 20,000 subscribers",
       "opt-in 40% to 45% vs month-3 cohort retention 60% to 65-70%"
@@ -1592,7 +1592,7 @@
     "conditions": "Brands with a large active subscriber cohort running sitewide promotions (BFCM, holidays).",
     "fails_when": "Brands content to let subscribers churn and rebuy because the sale is a cash event; stacking that pushes total discount below contribution margin.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example: 40% sitewide vs 50% off subscriber add-ons",
       "prepay 3 months, get 2 extra months",
@@ -1629,7 +1629,7 @@
     "conditions": "Brands with more than one SKU and at least one low landed-cost item; gross margins high enough that the main lever is discount depth.",
     "fails_when": "Single-SKU brands with nothing cheap to give; customers in price-led categories who value the cash saving more than items; gifts that are not visible on the offer surfaces add cost without lifting conversion.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "10% off $100 = $10 per order; 10% off $50 = $5",
       "gift items with landed cost under $5 to $10",
@@ -1667,7 +1667,7 @@
     "conditions": "Single or few-SKU consumable subscriptions, especially under about $50 per unit.",
     "fails_when": "Products with short shelf life or bulky storage where multi-unit orders create overstock and later cancels; buyers on tight budgets may not convert at all on larger packs.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$50 product: 1 unit $45, 2 units $80, 3 units $120 on subscription",
       "10% off a $20 product is only $2"
@@ -1748,7 +1748,7 @@
     "conditions": "DTC brands at roughly 100k per month or more buying cold traffic on Meta to a product page or listicle; UK or US price levels; first-order economics matter.",
     "fails_when": "Cost per click is far above typical (e.g. B2B, luxury, high-CPM niches) or far below it (low-cost markets such as India), since the right revenue-per-session floor is set by your own CPC and margin; also subscription brands that deliberately accept a first-order loss against proven LTV.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "AOV x conversion rate (percent sign removed) > 250",
       "250 score equals about 2.50 revenue per session",
@@ -1868,7 +1868,7 @@
     "conditions": "DTC stores with a customisable checkout or checkout extensions; low to mid AOV orders where a $10 to $20 add-on is small relative to the basket.",
     "fails_when": "Pre-ticked or misleading bumps (shipping insurance that is never honoured) that trigger chargebacks, complaints or consumer-law problems in some markets; high-AOV purchases where extra checkout choices add hesitation; checkouts where custom bumps are not supported.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Order bump $10 to $20 at ~50% take = ~$5 AOV contribution",
       "$5 per order x 100 orders/day = $500/day"
@@ -1907,7 +1907,7 @@
     "conditions": "DTC funnels with a custom order page or a post-purchase upsell step (supplements, wellness, info-adjacent products); front-end AOV low enough that a second offer is plausible; strong copy.",
     "fails_when": "Premium brands where hard post-purchase pitching damages trust and repeat rate; offers that raise refunds and chargebacks after the emotional peak passes; products with no credible higher-value follow-on; platforms where post-purchase pages cannot be customised.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "OTO1 priced up to 10x the front-end price (e.g., $500 after $50)",
       "$500 OTO at 10% take = $50 AOV contribution; at 5% = $25"
@@ -1947,7 +1947,7 @@
     "conditions": "Brands with a hero product plus at least one adjacent product, or consumables that can be bundled in quantity; post-purchase upsell step available.",
     "fails_when": "One-off durable goods with no follow-on need; buyers who are still unsure the first product works, where a quantity upsell raises refunds; health claims about a 'new problem' that breach advertising rules.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Typical more-of-the-same OTO: extra 3- or 6-month supply at a discount"
     ],
@@ -2061,7 +2061,7 @@
     "conditions": "Brands with complementary SKUs that form a routine or set (skincare, haircare, supplements, coffee); margin to absorb a $4 to $5 gift.",
     "fails_when": "Single-SKU brands with no natural set, or products where buyers want only one item and the upsell nag lowers main conversion; gift with low perceived value.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "routine valued $136 sold for $122; $14 off equals shipping and fulfilment saved",
       "gift priced $30, cost $4 to $5, unlocked at $60",
@@ -2173,7 +2173,7 @@
     "conditions": "Consumables and repeat-purchase products where one trial can show the benefit; acquisition offers to unconverted prospects; tracking by cost per customer.",
     "fails_when": "Free-sample abuse at internet scale (bots, freebie hunters) makes paid or shipping-paid trial kits cheaper per real customer; high-cost products where a free sample destroys unit economics; products whose benefit needs weeks of use. Evidence is 1910s to 1920s print and mail-order data.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Charging ~10 cents for a sample added 40 cents to $1 to cost per reply",
       "3 in 4 to 9 in 10 prospects refuse to pay for a sample (Hopkins' estimate)",
@@ -2213,7 +2213,7 @@
     "conditions": "Subscriptions and memberships with meaningful year-one retention; source example is a $39/month membership, not a consumable product subscription.",
     "fails_when": "The fee is hidden or poorly disclosed (chargebacks, complaints and auto-renewal law exposure in some jurisdictions); replenishment subscriptions where competitors charge no fee and switching is easy; most subscribers churn before month 12, so the fee is rarely collected.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$39/month x 12 = $468; +$99 annual fee = $567, a 21% increase",
       "fee sized at 1 to 3 months of price adds about 8% to 25% annual revenue",
@@ -2254,7 +2254,7 @@
     "conditions": "Low-ticket consumable products (roughly under 100) sold DTC to first-time buyers, with margins able to absorb an unconditional guarantee.",
     "fails_when": "High-ticket or durable goods where buyers do track deadlines (mattresses, electronics), products that can be returned used for resale abuse, or markets where statutory cooling-off rules (e.g. EU 14-day withdrawal) already set expectations; also cash-tight brands that cannot carry a 6-month refund liability.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "30-day versus 180-day guarantee; claim is that 180 days yields fewer returns",
       "forgetting sets in after about 60 days"
@@ -2293,7 +2293,7 @@
     "conditions": "DTC brands with first-order welcome discounts; paid social sending traffic to collection pages; mid-priced products (jewellery in his case).",
     "fails_when": "Price-sensitive categories or competitors offering 20%+ where a lower discount loses share; low traffic where a no-difference test is underpowered; single-product brands where collection ordering is irrelevant.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "First-order discount 15% -> 10%: no conversion impact",
       "10% off vs win-a-gift-card: no difference",
@@ -2448,7 +2448,7 @@
     "conditions": "Any paid-acquisition DTC brand planning promotions; numbers depend on true gross margin including shipping and fees.",
     "fails_when": "Discounts aimed at existing customers or clearance stock can be worth it below acquisition break-even; brands whose LTV supports first-order losses (strong subscription retention) can accept a lower first-order margin.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "break-even ROAS = 1 / gross margin %; break-even CAC = gross margin $",
       "$100 at 40% GM -> 2.5x; 30% off -> GM $10 -> about 7-10x and $10 break-even CAC",
@@ -2578,7 +2578,7 @@
     "conditions": "Brands that set revenue targets for the sale and are willing to change offers mid-event; enough creative capacity to build alternates.",
     "fails_when": "Brands committed to one fixed offer for brand reasons; switching offers mid-sale angers early buyers who paid more; no margin room for deeper rungs.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "What should we do if Black Friday sales are behind target?",
@@ -2613,7 +2613,7 @@
     "conditions": "Any discount-led promotion with paid acquisition; requires COGS, fulfilment and fee data per order.",
     "fails_when": "Gift-with-purchase offers using dead stock, where the cost is not a cash margin cut in the same way; inventory clearance goals that accept negative contribution.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "break-even ROAS = 1 / gross margin after discount",
       "speaker's example: break-even 2.0 becomes about 4.5 at 40% discount",
@@ -2773,7 +2773,7 @@
     "conditions": "Brands with repeat-purchase products and enough data to compare repeat speed by first SKU; Meta CPMs in the $35 to $45 range.",
     "fails_when": "Gifts with low perceived value or high COGS; single-SKU brands with no secondary product to bundle; brands without cohort data, where the entry-SKU effect cannot be measured.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "CPMs $35 to $45 now vs $10 to $15 pre-2020",
       "GWP worth it when CAC falls by more than gift COGS (example $100 COGS on a $500 MSRP item)",
@@ -2815,7 +2815,7 @@
     "conditions": "Brands on platforms with post-purchase upsell support, with low-COGS repeatable products that ship in the same parcel.",
     "fails_when": "High-COGS items where a 70% discount loses money; products that ship separately; upsells unrelated to the cart, which get low take rates.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 70% off upsell",
       "5-15% of net profit",
@@ -2853,7 +2853,7 @@
     "conditions": "Replenishable products with real subscription retention; brands with enough cash or financing to carry negative first-order contribution.",
     "fails_when": "Early-stage or cash-poor brands, products with weak repeat use, or when LTV is measured on revenue instead of margin; the strategy then runs out of cash before payback.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$88 one-time price, 34% subscription discount",
       "month-6 LTV $165 one-time versus $289 subscription (about $124 more)",
@@ -2931,7 +2931,7 @@
     "conditions": "Consumable subscription products where results build over weeks; brands with enough trust to ask for a larger upfront payment.",
     "fails_when": "Products with no habit or results window, where prepaying adds risk; new brands without proof or reviews; high upfront price points that cut conversion more than AOV gains; renewal rates of the 3-month cohort, which were not yet measured.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "US prices: one-time $112, monthly $89, 3-month ~$78/month = $235 upfront",
       "50%+ of buyers chose 3-month plan after international rollout",
@@ -2971,7 +2971,7 @@
     "conditions": "Brands with a cheap secondary SKU that pairs naturally with the hero product; offers aimed at moving buyers from one unit to two; Meta-led acquisition.",
     "fails_when": "The gift has low perceived value to the buyer; gift COGS is a large share of order value; the gift is not listed or credible as a real product, so the '$160 for $100' framing looks fake.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "towel $50; two for $100 plus bag with about $4 COGS",
       "break-even ROAS 1.89 single vs 1.87 offer",
@@ -3010,7 +3010,7 @@
     "conditions": "Stores with enough orders to see the distribution shape; multi-SKU catalogues or offers that create one-unit and multi-unit buyer groups.",
     "fails_when": "Single-peak distributions (a mean-based threshold works roughly as intended); very low order counts; thresholds set for operational reasons such as shipping cost recovery.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "mean-based threshold may move about 10% of customers",
       "about 80%+ of brands set thresholds from mean AOV (practitioner estimate)"
@@ -3050,7 +3050,7 @@
     "conditions": "Products with genuinely limited or fluctuating supply: small-batch runs, drops, seasonal items, restocks with waitlists; product pages, launch emails and SMS.",
     "fails_when": "Scarcity that is not true. Fake low-stock counters and resetting countdown timers are treated as dark patterns by regulators (US FTC, UK CMA and DMCC Act, EU consumer law) and destroy trust once noticed; also staples and replenishment products where 'running out' just sends buyers to Amazon.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 2,
     "numbers": [
       "cookie study: jar of 2 vs jar of 10; newly scarce (10 to 2) rated above constantly scarce; scarcity from others' demand rated highest of all"
     ],
@@ -3089,7 +3089,7 @@
     "conditions": "Post-purchase one-click upsell flows, quantity and bundle tiers, sales and support conversations; offers where a bigger and a smaller version both make sense.",
     "fails_when": "The first offer is clearly irrelevant or wildly overpriced for the buyer (seen as manipulation, no reciprocity), buyers already know the price ladder well, or repeated decline-then-offer screens make checkout feel like a trap and raise refunds.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 2,
     "numbers": [
       "17 percent direct agreement vs 50 percent after a refused larger request (about 3x)"
     ],

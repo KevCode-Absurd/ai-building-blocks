@@ -15,7 +15,7 @@
     "conditions": "Sites without a native CAPI integration (custom builds, hard-coded pixels); audiences with meaningful ad-blocker use; prices as quoted in the video, date unknown.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Meta claim: up to 13% lower cost per result, 7% more conversions with CAPI Gateway",
       "Practitioner estimate: 1 to 2% recovery against browser blockers",
@@ -59,7 +59,7 @@
     "conditions": "Shopify or other stores sending ecommerce events to GA4 with purchase marked as a key event; applies to the standard Traffic acquisition and Landing page reports.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "1.7% purchase conversion rate over 28 days in the presenter's store"
     ],
@@ -99,7 +99,7 @@
     "conditions": "Any store using GA4 (free tier); internal filter only where staff have static IPs; cross-domain only when the journey spans more than one domain.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Default event data retention 2 months; free GA4 max 14 months",
       "Processing lag 24 to 48 hours for new events and dimensions"
@@ -137,7 +137,7 @@
     "conditions": "GA4 web properties; stores where visitors return several times a day or browse long sessions (considered purchases).",
     "fails_when": "When session-level benchmarks or historical comparisons matter more than landing-page completeness; when stakeholders compare GA4 sessions with other tools on default settings; mid-history changes without annotation.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Default session timeout 30 minutes; recommended 4 hours to max 7 hours 55 minutes",
       "Engaged session threshold default 10 seconds; recommended 30 seconds or more"
@@ -176,7 +176,7 @@
     "conditions": "Meta Conversions API sent through server-side GTM or any setup with a manual test event code field.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Why are my Meta conversions showing up as test events?",
@@ -211,7 +211,7 @@
     "conditions": "Meta pixel plus CAPI through server-side GTM fed by GA4 events (Stape or similar hosting).",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "How does Meta know my browser and server events are the same?",
@@ -246,7 +246,7 @@
     "conditions": "Sites using a consent banner with Google consent mode and a Meta pixel managed in GTM (EU, UK and other consent-required markets, or any site gating marketing tags on consent).",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Why is the first page view missing from Meta after someone accepts cookies?",
@@ -280,7 +280,7 @@
     "conditions": "Shopify DTC stores, strongest for FMCG and low-ticket brands where buying decisions are quick.",
     "fails_when": "High-ticket or considered purchases where carts are used as wish lists and more cart abandonment is normal; stores with heavy bot traffic inflating add-to-cart counts.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "4:2:1 add to cart : reached checkout : purchase as a general benchmark",
       "2:1:1 target achieved by good clients",
@@ -319,7 +319,7 @@
     "conditions": "Day-to-day or week-to-week revenue monitoring for an ecommerce store.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "5% AOV dip plus 4% conversion dip gives about 9 to 10% topline drop, treated as noise"
     ],
@@ -357,7 +357,7 @@
     "conditions": "Shopify stores using the native Analytics sales reports for profitability or ad efficiency calculations.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "cash collected = Net sales + Shipping charges",
       "tax excluded, discounts deducted"
@@ -435,7 +435,7 @@
     "conditions": "Shopify stores diagnosing conversion-rate or traffic changes from native analytics.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Why does Shopify show more sessions than Google Analytics?",
@@ -470,7 +470,7 @@
     "conditions": "Shopify stores that charge shipping at checkout or are testing free-shipping thresholds.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "shipping about 7 to 8% of revenue in the client example",
       "true AOV about 7% higher than the Shopify tile in that example"
@@ -509,7 +509,7 @@
     "conditions": "Any Shopify store interpreting retention or loyalty from the native dashboard.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Is Shopify's returning customer rate a good measure of loyalty?",
@@ -546,7 +546,7 @@
     "conditions": "Shopify stores using paid social for acquisition; any brand comparing conversion rate across periods with changing spend mix.",
     "fails_when": "Stores with a stable traffic mix and little paid cold traffic, where blended conversion rate is a fair proxy; GA4 may undercount sessions under consent-mode loss, so check both sources.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "cold Meta 1%, warm 4%, blended 2.8% (example)",
       "store A 9% conversion at $45 to $55 AOV versus store B 1% at $200 million revenue, 50% contribution margin",
@@ -624,7 +624,7 @@
     "conditions": "Ecommerce Google Ads accounts, especially Shopify stores that installed both the Google channel app and GA4 or GTM tags.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "GA4 import undercounts by about 20% vs native tag (practitioner estimate)",
       "micro-conversion exception: $10,000 to $15,000 products with 8 to 20 purchases a month"
@@ -702,7 +702,7 @@
     "conditions": "Paid acquisition through click-based channels (Meta, Google); brands planning budgets or judging agency CAC promises.",
     "fails_when": "Channels where purchases happen without a site click (marketplaces, TikTok Shop in-app checkout, view-through conversions), or where blended conversion rate includes returning customers.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "floor example: $0.70 CPC / 3% conversion = about $23 CAC",
       "realistic example: $1 CPC / 2% conversion = $50 CAC"
@@ -740,7 +740,7 @@
     "conditions": "DTC brands buying customers with paid media and able to pull cohort gross profit by order; currency and tax rules local to the brand.",
     "fails_when": "Brands with heavy debt or investor-funded growth modelled on long paybacks (needs full financial modelling of interest); products with almost no repeat, where 30 and 90-day LTGP equal first-order profit.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "LTGP:CAC bands: below 1, 1 to 2, 2 to 3 (scaling target), above 3",
       "example 30-day LTGP $80 / 2 = $40 CAC; 90-day LTGP $100 / 2 = $50 CAC (+25%)",
@@ -781,7 +781,7 @@
     "conditions": "Shopify stores, or any platform reporting returning-customer share of orders.",
     "fails_when": "Not a retention measure in any setting; it only describes order mix in the period.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "more than 80% of customers never buy twice at most brands (presenter claim)",
       "cohort horizons 30, 90, 180, 365 days"
@@ -819,7 +819,7 @@
     "conditions": "DTC brands with at least 12 months of cohort and daily spend data; Shopify or BI cohort reports.",
     "fails_when": "Young brands with few cohorts or volatile acquisition, where decay curves are unreliable; major changes in pricing, product mix or channel that break the historical spend-efficiency curve.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example repeat decay 7%, 6%, 4%, 2%, 1% ... ~0.1% by month 32",
       "accuracy about 10% from cohorts alone; 1-2% with seasonality and events"
@@ -860,7 +860,7 @@
     "conditions": "DTC brands with outbound shipping, returns and payment fees; especially fashion and other high-return categories.",
     "fails_when": "Not a conditional claim in substance, but the size of the gap varies: high-ticket, low-return products with buyer-paid shipping see much smaller differences; tax treatment (inclusive vs exclusive pricing) depends on market.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$100 tee: $30 unit cost (70% product margin) -> $76 cost of delivery -> 24% gross margin",
       "shipping $11, pick-pack $4, fees $3 (3%), freight-in $4, tax $9, refund/discount allowance $15",
@@ -903,7 +903,7 @@
     "conditions": "Paid-acquisition DTC brands with clean new-customer data (Shopify new vs returning) and true gross margin.",
     "fails_when": "Subscription or high-repeat CPG brands with proven cohort retention can scale profitably at 1-2 on 30 days; very high-ticket single-purchase products may sit above 3 on first order and still be capacity-limited, not underspending.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "bands: <1 losing, 1-2 conditional, 2-3 optimal, >3 underspending (30- and 90-day)",
       "CAC ceiling = first-order gross profit / 2 ($100 -> $50)",
@@ -944,7 +944,7 @@
     "conditions": "DTC brands running paid social and search with Shopify new vs returning customer data; Meta attribution settings as of recording.",
     "fails_when": "Brands with long consideration cycles where view-through and longer windows capture real influence; very small accounts where daily aMER is too noisy, so read it weekly or monthly.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example blended MER 2.0 vs aMER 1.4",
       "Meta reporting: 7-day click, no view-through (1-day view excluded)"
@@ -1066,7 +1066,7 @@
     "conditions": "Brands with meaningful return rates and seasonal peaks, reporting from Shopify or similar processing-date data.",
     "fails_when": "Return rates swing sharply with promotions or product mix, so a single blended rate misstates the accrual; very low return categories where the timing gap is immaterial.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "10% return rate on $1,000,000 December = $100,000 returns, about $3,333/day accrual",
       "January at $500,000 shows a false 20% return rate if December returns land then"
@@ -1105,7 +1105,7 @@
     "conditions": "DTC brands with a meaningful Amazon or retail presence running Meta, YouTube, CTV or TikTok; US market figures.",
     "fails_when": "The brand does not sell on Amazon or retail; or competitors are actively conquesting its brand terms on Amazon, making ads there more incremental; split estimates are portfolio averages, not a rule for every category.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 20% of Meta-created value realised on Amazon, 80% on site",
       "YouTube value about 1:1 Amazon versus site",
@@ -1149,7 +1149,7 @@
     "conditions": "Brands running paid acquisition daily; contribution margin measured on net sales after an estimated returns accrual.",
     "fails_when": "Incremental contribution margin from extra spend is actually negative (measured by attribution that over-credits media), in which case spending more deepens losses; or cash is so tight that fixed bills due this week must override the daily margin view.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$30,000 monthly rent spread as $1,000/day turns a $900 contribution day into an apparent loss",
       "13-week cash flow forecast at CEO level"
@@ -1189,7 +1189,7 @@
     "conditions": "Brands running Meta, Google, TikTok or Pinterest with a store backend that separates new and returning customers; most acute at large retailers with big repeat bases.",
     "fails_when": "New-versus-returning tagging in the store is unreliable; heavy offline or wholesale sales sit outside the store data; a brand with little repeat revenue (gap is then small).",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "aMER about 3 to 7x versus Meta account ROAS about 17x at large retailers",
       "about 95% of accounts: 7-day click or click plus engaged view tracks aMER closely",
@@ -1232,7 +1232,7 @@
     "conditions": "DTC brands with clean new-customer counts and per-SKU COGS; bands are first-order only and assume average retention; agency works mostly with 8 and 9 figure brands.",
     "fails_when": "Strong-retention or subscription brands can accept ratios below 1 to 2 if 90/180/365-day gross profit growth covers it; brands with weak repeat must sit higher; non-paid channels driving most new customers distort blended CAC.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "ratio under 1: losing money on first order",
       "1 to 2: hold, scale only with strong retention",
@@ -1274,7 +1274,7 @@
     "conditions": "Brands large enough for regional splits to have statistical power (the agency applies it to 8 and 9 figure brands), selling across many regions such as US states or Australian states.",
     "fails_when": "Small brands without enough regional volume for a 25-day read; single-region sellers; heavy promotions or seasonality during the test window.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "geo-lift test about 25 days",
       "brand-search holdout by clustered states"
@@ -1312,7 +1312,7 @@
     "conditions": "Brands large enough to run geo holdouts; sale-driven Q4 calendar; US-style regional splits.",
     "fails_when": "Categories with little delay between ad exposure and purchase; brands that do not run a Q4 sale; tests too small to read a post-treatment window.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 105% post-treatment lift for tests ending 3+ weeks before Black Friday",
       "about 75% for tests ending closer",
@@ -1354,7 +1354,7 @@
     "conditions": "DTC brands acquiring many new customers on discount in November; at least two years of cohort data.",
     "fails_when": "Brands whose November cohorts repeat as well as others (2 of 10 in the sample); gifting-led categories where November buyers are recipients' proxies with separate behaviour; subscription offers that lock in retention.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "10-brand sample: November cohort 38.5% six-month repeat lift versus 63% for February",
       "2 of 10 brands showed no difference"
@@ -1393,7 +1393,7 @@
     "conditions": "Brands spending enough on paid media that 1% funds a useful tool or test (Ridge example uses a $100M budget for illustration).",
     "fails_when": "Small budgets where 1% buys nothing meaningful; brands that buy tools but never act on them; single-channel brands where platform lift tests suffice.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 1% of ad budget on measurement tools",
       "break-even if tools improve spend by about 1%; 5% improvement pays several times over"
@@ -1431,7 +1431,7 @@
     "conditions": "Any DTC or omnichannel brand computing gross margin for pricing, CAC tolerance or comparison with public companies.",
     "fails_when": "Internal reports that deliberately separate product margin and fulfilment for operational analysis (fine if labelled); wholesale-only businesses where the retailer pays outbound shipping.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example: $20 COGS on $100 price is 80% product margin, not gross margin",
       "Yeti gross margin about 51%",
@@ -1513,7 +1513,7 @@
     "conditions": "Brands with meaningful returning-customer revenue; metrics on net revenue (after returns, excluding tax and shipping) from Shopify.",
     "fails_when": "Single-purchase categories with almost no repeat revenue, where blended and acquisition MER nearly coincide; or brands deliberately spending on reactivation, which acquisition MER ignores.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "blended MER 4x to 5x while acquisition MER fell 2.0 to 1.8 to 1.6",
       "cohort repeat example: 8%, 6%, 4%, 3%, 2%, 1% by month",
@@ -1593,7 +1593,7 @@
     "conditions": "DTC brands by annual revenue band; geo-lift needs enough spend and regional sales volume to detect lift.",
     "fails_when": "Spend in the test is too small to move regional revenue (results are noise), or tests run back to back in the same regions, contaminating the clustering; small markets need finer regions than states.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$1M to $5M, $5M to $20M, $20M+ revenue bands",
       "geo-lift example: $40,000 extra spend, $100,000 lift = 2.5 incremental ROAS",
@@ -1632,7 +1632,7 @@
     "conditions": "Meta-led paid media programs; more inflated the better known the brand and the larger its returning-customer base.",
     "fails_when": "Very long consideration categories where many genuine purchases happen after 7 days, so 7-day click undercounts; or video-heavy upper-funnel campaigns where engaged-view credit is a real effect; measurement needs lift tests to settle either way.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "30% to 50% of reported ROAS from 1-day view-through in audits",
       "lift example: 2% exposed vs 1% holdout purchase rate halves a 5x ROAS to 2.5x",
@@ -1674,7 +1674,7 @@
     "conditions": "Brands with working email and SMS flows and enough channels that blended CAC is meaningful; spending at a level where daily forecasting is worth the time.",
     "fails_when": "Brands without proven flows that convert captured emails, where 'email winner' ads are just unprofitable spend; early brands that cannot afford spend that does not convert directly.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 20% subscription take rate",
       "spend and return reviewed hourly",
@@ -1716,7 +1716,7 @@
     "conditions": "Consumable or subscription products with proven or strongly expected repeat purchase; brands with cash to fund a loss-making acquisition period.",
     "fails_when": "One-off or rarely repeated products; brands without enough cash runway to wait for repeat revenue; new brands whose repeat rate is assumed rather than measured.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "goal CAC $85 to $90",
       "ceiling CAC $120 to $130 in a bad month",
@@ -1761,7 +1761,7 @@
     "conditions": "Brands spending across several channels with enough orders for stable survey shares (hundreds of responses per month).",
     "fails_when": "Low order volumes; channels people rarely remember (display, retargeting) that surveys under-credit; surveys with too many options or leading wording.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "$80M+ annual ad spend",
       "Meta about 50% of spend",
@@ -1800,7 +1800,7 @@
     "conditions": "Meta advertisers deciding on CAPI gateways or paid server-side tracking; ecommerce and lead-gen funnels.",
     "fails_when": "Accounts with severe tracking loss (broken pixel, heavy consent loss, no CAPI), where fixing signal is clearly worth it and shows up in reported conversions.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example: 100 real conversions, 70 tracked: 2% seen versus 3% actual",
       "server-side tools about $2,000 a month (presenter estimate)",
@@ -1842,7 +1842,7 @@
     "conditions": "Paid social and search acquisition for DTC brands; assumes blended CPCs around $1 to $3.",
     "fails_when": "High-margin, high-repeat brands that can profitably lose on the first order; channels with much cheaper clicks; low-margin products where even 300 is not enough after COGS.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "conversion rate x AOV of at least 300 = $300 revenue per 100 visitors",
       "3% x $100, 5% x $60, 10% x $30, 1% x $300 all equal 300",
@@ -1884,7 +1884,7 @@
     "conditions": "Repeat-purchase categories (supplements, consumables) with enough history for 12-month cohorts.",
     "fails_when": "Young brands with no 12-month-old cohort, single-purchase products, or cash-constrained brands that cannot fund a first-order loss while waiting for repeat profit.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "brand A: $40 first-order gross profit + $400 over 12 months; brand B: $100 + $100",
       "about $380 12-month gross profit after a $20 first-order loss",
@@ -1924,7 +1924,7 @@
     "conditions": "Subscription or high-repeat consumables with reliable cohort data; brands with enough cash to fund months of CAC before payback.",
     "fails_when": "One-time-purchase products where 24-month LTV is speculative; young brands extrapolating LTV from a few months of cohorts; cash-constrained brands where even a 4-month payback strains working capital; payback computed on revenue instead of gross profit.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "CAC:LTV 3 to 3.5 on a 24-month horizon",
       "blended payback under 4 months across 3 SKUs",
@@ -1965,7 +1965,7 @@
     "conditions": "Brands selling across many regions with enough new-customer volume per region; data on spend and new customers by region; US or similar market.",
     "fails_when": "Few regions (Australia by state); low volume per region; running tests back to back, which muddies the clustering data; channels that cannot be geo-targeted.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "3 clustering variables: ad spend, new-customer revenue, new-customer orders",
       "example: $40k extra spend, $100k lift = 2.5 incremental ROAS",
@@ -2007,7 +2007,7 @@
     "conditions": "Google Ads accounts with multi-day purchase journeys; any brand diagnosing a performance drop.",
     "fails_when": "Impulse products bought within hours of clicking (latency small); accounts already reporting by conversion time; drops caused by tracking failures, which need a tag check first.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "last 3 to 4 days most affected by latency",
       "revenue = sessions x conversion rate x AOV",
@@ -2047,7 +2047,7 @@
     "conditions": "DTC brands with at least a year of cohort history; benchmarks are the agency's observations for strong performers.",
     "fails_when": "Brands with unusual repeat models (refills, subscriptions, consumable add-ons in an otherwise durable category), where the vertical benchmark understates achievable lift.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "day-365 gross profit lift: fashion about 55%, CPG/supplements about 110%, furniture/homewares near 0",
       "about 80% of brands at 20 to 40% lift or less"
@@ -2124,7 +2124,7 @@
     "conditions": "DTC brands buying most new customers through paid media; window chosen by repeat purchase cycle.",
     "fails_when": "Brands with genuinely strong retention or subscription lock-in that can run below 1 on first order; brands where a large share of new customers come from unpaid channels, which distorts spend-based CAC.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "LTGP:CAC below 1 loses money; 1 to 2 thin; 2 to 3 scale; above 3 under-investing",
       "window: 30 days for low repeat, 90 to 180 days for consumables",
@@ -2163,7 +2163,7 @@
     "conditions": "Shopify brands with meaningful repeat revenue; most useful from mid seven figures upward.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example: -$50,000/month first-time vs +$300,000/month returning",
       "example: first-time P&L from +$20,000 to -$70,000 a month while total profit $80,000 to $100,000",

@@ -1604,16 +1604,24 @@ export function oneFileText(pack: BuiltPack, origin: string = ORIGIN, inlineItem
   const items = pack.files.filter(f => f.source === "toolbox");
   const inline = new Set((pack.toolbox?.top ?? []).filter(p => items.some(f => f.path === p)).slice(0, inlineItems));
   const away = items.filter(f => !inline.has(f.path)).map(f => f.path);
-  const byAddress = (text: string) => away.length ? text.replace(/(?<![\w/.-])toolbox\/[a-z]+\/[a-z0-9-]+\.md\b/g, p => inline.has(p) || !away.includes(p) ? p : `${site}/packs/${p}`) : text;
+  // A vertical agent's library: its own modules' cards and toolbox stay in the file; the baseline of other modules,
+  // the sources list and the vendored open-source skills are named by address, so the file stays attachable.
+  const verticalAway = pack.files.filter(f => /^knowledge\/[^/]+\/(vendor\/|baseline\.md$|sources\.md$)/.test(f.path));
+  const verticalUrl = new Map(verticalAway.map(f => [f.path, `${site}${fileUrl(pack, f)}`]));
+  const byAddress = (text: string) => {
+    let out = away.length ? text.replace(/(?<![\w/.-])toolbox\/[a-z]+\/[a-z0-9-]+\.md\b/g, p => inline.has(p) || !away.includes(p) ? p : `${site}/packs/${p}`) : text;
+    if (verticalUrl.size) out = out.replace(/(?<![\w/.:-])knowledge\/[a-z0-9-]+\/[\w./-]+\.md\b/g, p => verticalUrl.get(p) ?? p);
+    return out;
+  };
   const files = pack.files
-    .filter(f => !NOT_IN_ONE_FILE.has(f.path) && !isToolScript(f.path) && !(bundled && /^skills\/[^/]+\/SKILL\.md$/.test(f.path)) && !(f.source === "toolbox" && !inline.has(f.path)))
+    .filter(f => !NOT_IN_ONE_FILE.has(f.path) && !isToolScript(f.path) && !(bundled && /^skills\/[^/]+\/SKILL\.md$/.test(f.path)) && !(f.source === "toolbox" && !inline.has(f.path)) && !verticalUrl.has(f.path))
     .sort((a, b) => Number(b.path === "AGENTS.md") - Number(a.path === "AGENTS.md"));
   const head = [
     `# ${m.name}, ${m.title}: the whole agent in one file`,
     "",
     `This is ${m.name}'s agent pack from AI Blocks, version ${m.version}, in one file for chat apps such as ChatGPT, Claude and Gemini. Attach it to a chat, or add it to a project or Gem, and your AI works as ${m.name}. It runs on your own AI plan.`,
     "",
-    `For the AI reading this: each part below is one file of the pack and starts with a line such as "===== FILE: playbook.md =====". When your instructions say to open or read a file, read that part. Start with the AGENTS.md part and follow it.${bundled ? " Every skill is in the skills.md part, under its own heading, so a path such as skills/<name>/SKILL.md means that heading." : ""}${away.length ? ` The toolbox.md part names ${items.length} library items: ${inline.size} are parts of this file, and each of the other ${away.length} is one page at the address beside its name. Open that page when you choose the item; if you cannot open pages, ask the person to paste it or work from the items you have.` : ""}`,
+    `For the AI reading this: each part below is one file of the pack and starts with a line such as "===== FILE: playbook.md =====". When your instructions say to open or read a file, read that part. Start with the AGENTS.md part and follow it.${bundled ? " Every skill is in the skills.md part, under its own heading, so a path such as skills/<name>/SKILL.md means that heading." : ""}${away.length ? ` The toolbox.md part names ${items.length} library items: ${inline.size} are parts of this file, and each of the other ${away.length} is one page at the address beside its name. Open that page when you choose the item; if you cannot open pages, ask the person to paste it or work from the items you have.` : ""}${verticalUrl.size ? ` The knowledge library's baseline cards, sources list and open-source skills are pages at the addresses given where they are named; open one when you need it.` : ""}`,
     "",
     `Free to use and change, not to sell: the LICENSE.md part has the terms. Newest version and ${m.name}'s profile: ${site}/agents/${m.agent_id}`,
   ];

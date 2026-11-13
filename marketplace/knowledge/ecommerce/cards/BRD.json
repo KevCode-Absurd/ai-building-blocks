@@ -127,7 +127,7 @@
     "conditions": "Brands with physical packaging, retail or video presence; the cue must match the product's character.",
     "fails_when": "The cue clashes with the product (food packaging smelling of perfume), triggers allergy or sensitivity complaints, or is repeated to the point of annoyance, as with the Nokia ringtone; studies are small and some are decades old.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "84% preferred shoes in scented room, valued about $10 higher",
       "77% bought French wine on French-music days (Leicester)",
@@ -166,7 +166,7 @@
     "conditions": "Brands with enough repetition and time to build associations; consistent use across ads, site and packaging.",
     "fails_when": "The brand is too new or too small for any asset to have earned association, so the name must still do the work; or the asset is generic to the category (every supplement brand uses green), so it signals the category, not the brand.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "98% linked purple-silk billboards to Silk Cut",
       "about 20% heart-rate rise on receiving an empty Tiffany-blue box"
@@ -205,7 +205,7 @@
     "conditions": "Sponsorships, creator integrations, podcast and video partnerships where the brand pays for presence inside someone else's content.",
     "fails_when": "The audience resents heavy-handed placement (forced product use breaks trust, and disclosure rules still apply); direct-response formats where a clear offer and call to action matter more than memory; single commercially run study, not peer reviewed.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Coke visible about 60% of American Idol running time",
       "Ford sponsorship about $26 million per year",
@@ -287,7 +287,7 @@
     "conditions": "Second or later entrants deciding launch strategy; leaders deciding whether to respond to a rival's new feature.",
     "fails_when": "Categories where buyers switch freely on measurable performance (specifications easily compared online), where a clearly better product can win share without being first.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "GM paid $50 million for Wankel engine rights as cover"
     ],
@@ -323,7 +323,7 @@
     "conditions": "Choosing a price tier for a brand or product line; consumer categories with visible brand ladders.",
     "fails_when": "Another brand already owns the premium spot, the product has no credible reason for the premium, or the category is one where buyers see all brands as interchangeable.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "3 conditions for a premium position: first, valid product story, receptive category"
     ],
@@ -358,7 +358,7 @@
     "conditions": "Naming or renaming a brand that is not yet widely known; spoken and search recall matter.",
     "fails_when": "The full name is already famous and customers already use the short form, so the initials carry the established meaning.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "49% average awareness for initial-named companies",
       "68% for matched name companies",
@@ -396,7 +396,7 @@
     "conditions": "Follower brands entering categories that already have a leader; product or brand concept stage.",
     "fails_when": "The open position exists because buyers do not care about that attribute, or a competitor already claimed it, in which case arriving late is fatal.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Aim toothpaste took about 10% of a market dominated by Crest and Colgate",
       "Lorillard's Luke launched about 20 years too late"
@@ -433,7 +433,7 @@
     "conditions": "Naming a new brand or product entering an existing category; English-language markets for the letter-frequency data.",
     "fails_when": "The product is genuinely first in a new category, where a coined name can work and is easier to trademark; or the descriptive word is so generic it cannot be protected.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "1 in 8 English words starts with S",
       "1 in 3,000 English words starts with X",
@@ -472,7 +472,7 @@
     "conditions": "Categories with clear brand ladders, mostly mature consumer categories; the 'spend when undecided' advice applies to the window before a leader is fixed.",
     "fails_when": "Categories where platform shifts reset the ladder (a new channel or technology), or where buyers do not form brand preferences at all, such as commodity products bought on price.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "first brand gets about 2x the long-term share of No. 2 and 4x No. 3 (authors' historical observation)",
       "close categories settle at about 5:3 or 2:1"
@@ -509,7 +509,7 @@
     "conditions": "New-material or alternative products competing with an established 'real' version.",
     "fails_when": "Regulators restrict the category word (food standards of identity, for example), or the origin genuinely puts off the target buyer.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Our product is an alternative to a well-known product, how should we name it?",
@@ -544,7 +544,7 @@
     "conditions": "Physical products moving from DTC into physical retail, especially crowded consumables shelves; food and beverage with regulated labelling.",
     "fails_when": "DTC-only brands where the box is seen after purchase and unboxing aesthetics matter more; luxury or gift categories where minimalism is the signal; the 3x is one brand's result across two retailers with no control period stated.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "same liquid, redesigned can: 3x sales",
       "about 35% of can surface fixed by regulation and retail requirements",

@@ -188,7 +188,7 @@
     "conditions": "Any store using PageSpeed Insights or CrUX to judge speed work; mobile view.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "28-day rolling field data window",
       "lab test simulates a mid-tier mobile device on a mobile network"
@@ -385,7 +385,7 @@
     "conditions": "Pages with embedded YouTube or Vimeo players or autoplay hero videos, particularly on mobile traffic.",
     "fails_when": "Video is the main selling element and must play above the fold (then optimise format and poster image rather than hide it); self-hosted short muted loops already compressed to a small size.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "YouTube thumbnail about 15 KB",
       "lite embed saves almost 1 MB of page weight per video (Shopify's figure)"
@@ -424,7 +424,7 @@
     "conditions": "Shopify stores, especially those with many installed or previously installed apps and older themes.",
     "fails_when": "",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "more than 20 installed apps: likely some unused (Shopify's rule of thumb)"
     ],
@@ -463,7 +463,7 @@
     "conditions": "Shopify collection pages with quick view enabled through the theme or an app; larger grids of 20 or more products.",
     "fails_when": "Implementations that already lazy-load quick view data on click; catalogues where click maps show quick view is heavily used and drives add-to-cart (then optimise loading rather than remove).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "collection pages with 20 to 30 thumbnails preloading full product data"
     ],
@@ -499,7 +499,7 @@
     "conditions": "WordPress or WooCommerce sites where images are uploaded manually; applies to any platform that does not resize and convert images automatically.",
     "fails_when": "Product zoom or high-detail images where shoppers inspect texture and 50% quality shows artefacts; platforms or CDNs that already serve resized AVIF or WebP automatically.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "161 KB to about 11 KB after resize plus AVIF",
       "intrinsic size set to 2x rendered size (796 by 1,194 px for a 398 by 597 px slot)",
@@ -540,7 +540,7 @@
     "conditions": "WordPress plus WooCommerce sites with content, blog or paid-traffic landing pages that do not use shop features.",
     "fails_when": "Pages that include a mini cart, add-to-cart blocks or cart fragments, where unloading WooCommerce scripts breaks the cart; themes or page builders that rely on jQuery on the front end.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "13 WooCommerce files loading on a non-shop landing page in the demo"
     ],

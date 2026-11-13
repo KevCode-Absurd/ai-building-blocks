@@ -247,7 +247,7 @@
     "conditions": "Subscription brands with recurring card, PayPal and Shop Pay charges; platforms that expose payment-failure type (Skio named).",
     "fails_when": "Platforms that do not pass the failure type to the ESP; very small subscription revenue where a specialist tool costs more than it recovers.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "5-10% of subscription revenue lost to failed payments and weak dunning for brands doing a few million a year"
     ],
@@ -285,7 +285,7 @@
     "conditions": "Subscription brands with moderate cancel volumes and a catalog of two or more SKUs for cross-product offers.",
     "fails_when": "Very large brands with enough volume per reason to test reason-specific flows; cancels driven by product dislike, where an offer for the same product will not convert.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "test cadence every 1 to 2 weeks",
       "example offer: 50% off products A and B together; free product B for 3 months with 3 months of A"
@@ -363,7 +363,7 @@
     "conditions": "Launches with a real deadline (new product drop, limited edition, seasonal sale end, pre-order window); engaged list large enough that resends reach many non-openers.",
     "fails_when": "Evergreen products with no genuine deadline (fake urgency erodes trust and invites complaints); small or cold lists where 20 sends in 10 days spike unsubscribes and spam complaints and hurt deliverability; open-rate-based resend logic is distorted by Apple Mail Privacy Protection auto-opens.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "10 new emails + resends to unopens = ~20 sends",
       "Aggressive cadence ~10 days; moderate ~20 days",
@@ -405,7 +405,7 @@
     "conditions": "Klaviyo accounts (or ESPs that flag Apple privacy opens and bot clicks) with lists large enough to segment; most ecommerce brands.",
     "fails_when": "Very long purchase cycles (furniture, annual purchases) where 180 days of silence is normal; there use longer windows. Tiny lists where a 90-day segment is too small to send to.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "engaged: open or click within 180 days, excluding Apple privacy opens and bot clicks",
       "new subscribers and site visitors count as engaged for 14 days",
@@ -446,7 +446,7 @@
     "conditions": "Klaviyo (or similar) stores with email and SMS consent collected; enough flow volume to A/B test delays.",
     "fails_when": "Markets with strict SMS rules or quiet hours (send times must respect them); brands without SMS consent; very high-ticket purchases where a slower, more considered sequence fits.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Klaviyo template delay 4 hours; test against 2 hours",
       "either-or channel setup can delay the email about 20 hours",
@@ -487,7 +487,7 @@
     "conditions": "Brands using Klaviyo attribution to judge email performance; impulse versus considered purchase decides window length.",
     "fails_when": "Treating any window as incrementality; attribution windows only change what is credited, so holdout tests are needed to know what email really adds.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Klaviyo default attribution: 5-day open, 5-day click",
       "example shorter window for impulse buys: 3-day open, 3-day click",
@@ -527,7 +527,7 @@
     "conditions": "Brands sending regular campaigns from an ESP with engagement-based segments; open-rate floors assume Apple privacy opens are counted as Klaviyo reports them.",
     "fails_when": "Small or very cold lists where higher frequency quickly raises complaints; open-rate floors are unreliable where privacy opens are excluded or ESP reporting differs.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "frequency test: 1 versus 4 campaigns a week",
       "example: unique opens up about 40% while click rate fell about 10%",
@@ -566,7 +566,7 @@
     "conditions": "DTC stores on Klaviyo or similar with an acquisition offer and paid traffic to capture; claims based on the agency's client tests.",
     "fails_when": "Brands that avoid discounts or popups for positioning reasons, or where an immediate full popup harms search rankings or mobile experience; B2B or very high-ticket stores where visitors are not deal-motivated.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "agency popup target: above 9% of site traffic",
       "Klaviyo 'excellent' badge threshold: above 3%",
@@ -604,7 +604,7 @@
     "conditions": "Brands moving away from discount-led email; products that need education (supplements, skincare, functional food).",
     "fails_when": "Brands whose audience joined for deals (off-price, clearance models); very simple products with little to teach; plain-text emails without a call to action.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "4 pillars in equal shares",
       "about 1 sale email a month (sample month: 3 of 14)",
@@ -642,7 +642,7 @@
     "conditions": "DTC brands with an engaged list and enough content to fill 12-16 campaigns a month; sending only to recently engaged subscribers.",
     "fails_when": "Sending this cadence to the whole list including unengaged contacts (deliverability damage); high-ticket, rarely purchased products; small brands without content capacity.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "3-4 campaigns/week to engaged list (about 16/month)",
       "1-2/week under-sends",
@@ -681,7 +681,7 @@
     "conditions": "Shopify stores on Klaviyo (or similar ESPs) whose abandonment flow trigger is Checkout Started.",
     "fails_when": "Stores whose integration already records Added to Cart natively; very low-traffic stores where cart and checkout audiences overlap almost entirely; sending too many reminders to add-to-cart browsers can raise unsubscribes.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 90% of audited brands lack a true cart (not checkout) flow",
       "first cart email 30-45 minutes after add",
@@ -722,7 +722,7 @@
     "conditions": "Shopify and Klaviyo DTC stores building or auditing core flows; repeat-purchase categories for the winback timing.",
     "fails_when": "One-time-purchase categories where winback timing based on repeat interval is meaningless; very small lists where 8-email welcomes add little over 3-4; the $45k to $133k jump is a single anecdote with no control.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "welcome 8 emails over 7-14 days (up to 2 months for ~$5,000 products)",
       "site abandon 1; browse abandon 5; cart and checkout 6-8 each",
@@ -761,7 +761,7 @@
     "conditions": "DTC stores with paid traffic and a Klaviyo-style pop-up; mobile-heavy traffic.",
     "fails_when": "Large intrusive mobile pop-ups can hurt Google rankings and conversion for SEO-driven or high-intent traffic; hiding the close option too well frustrates users and may breach accessibility norms; percentage figures are one agency's experience.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "target opt-in 8-12% vs typical 1-3%",
       "2.5% to 8.75% opt-in, 750 to 2,600 subscribers a month, about $216k a year, one brand",
@@ -801,7 +801,7 @@
     "conditions": "Brands whose authentication (SPF, DKIM, DMARC) is already correct and whose problem is sender reputation; Klaviyo or similar ESP.",
     "fails_when": "Technical setup failures (missing DMARC, shared domain issues) will not be fixed by segmentation; Apple MPP machine opens can make a 50% open threshold misleading, so check click rate and Gmail placement too.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "trigger: campaign opens below about 40%",
       "3 campaigns per week to 14-day engaged until 50%+ opens for 3 straight sends",
@@ -840,7 +840,7 @@
     "conditions": "Brands with a healthy engaged segment and content capacity to produce 3-4 emails weekly; consumables and education-heavy categories benefit most.",
     "fails_when": "Lists with poor deliverability (fix that first); brands without content capacity, where weak filler emails train people to ignore you; active subscription customers, who should get only 1-3 campaigns a month per the same agency's subscription advice.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "3-4 campaigns per week",
       "opens high 40s to 61% after moving from 2x to 4x per week, one client",
@@ -879,7 +879,7 @@
     "conditions": "Klaviyo or similar ESPs with flow-level A/B splits; flows with at least a few thousand entrants a month.",
     "fails_when": "Low-volume flows where order-rate differences of tenths of a percent cannot be read; delays that suit one flow (site abandon) do not transfer to high-intent flows (checkout).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "site abandon: 4-hour delay beat 30 minutes on placed-order rate",
       "long email 2.4% click, 0.2% placed order on ~2,000 recipients",
@@ -917,7 +917,7 @@
     "conditions": "Ecommerce SMS programs on Klaviyo, Attentive, Postscript or similar, billed per segment (US-style pricing).",
     "fails_when": "Plans billed per message rather than per segment; markets or carriers with different pricing; brands where an image genuinely drives much higher revenue (visual product launches) as shown by a test.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "160 GSM-7 characters per single SMS segment",
       "70 characters per segment once an emoji or Unicode character is present",
@@ -956,7 +956,7 @@
     "conditions": "DTC brands with an opted-in SMS list, US-style consent and quiet-hours rules; brands also running email for nurture.",
     "fails_when": "Brands whose SMS list is used as a VIP or drop-alert channel that subscribers expect more often; markets with stricter time-of-day or consent rules; very small lists where weekly sends are not worth the fixed effort.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "1 SMS campaign per week, 2 at most",
       "send windows 11 a.m. to 2 p.m. and 4 to 5 p.m.; avoid before 10 a.m. and after 7:30 p.m.",
@@ -996,7 +996,7 @@
     "conditions": "Shopify-style DTC stores using Klaviyo, Attentive, Postscript or similar pop-up tools; traffic mostly first-time visitors.",
     "fails_when": "Stores where early pop-ups reduce site conversion (high-intent paid traffic landing on product pages); mobile pop-ups that breach Google's intrusive interstitial guidance; markets requiring separate explicit SMS consent wording.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "typical audited form conversion 2 to 3% of visitors",
       "target 8 to 10%",
@@ -1035,7 +1035,7 @@
     "conditions": "DTC Shopify brands with a welcome discount, paid traffic landing on site, TCPA-compliant consent language in the form; US SMS.",
     "fails_when": "Brands that do not discount (no offer to 'activate'); markets with stricter consent rules or low SMS adoption; mobile pop-ups that breach Google's intrusive interstitial guidance on SEO landing pages.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Phone submit rate: native Klaviyo forms ~3 to 4%; typical audited forms 5 to 6%; optimized pop-up 9% to ~16%",
       "~6,000 new SMS subscribers/month for one brand",
@@ -1074,7 +1074,7 @@
     "conditions": "US SMS programmes on Klaviyo, Attentive, Postscript or similar; lists large enough that per-message cost matters; pricing as quoted, which varies by provider and country.",
     "fails_when": "Small lists where MMS cost is trivial versus revenue; markets with different carrier pricing; visually led products where an image is the message (new collection drops), where MMS may win routinely.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "SMS ~1.5 cents per send (1 to 3 cents range)",
       "160 characters per SMS segment; 161 = billed as 2",
@@ -1115,7 +1115,7 @@
     "conditions": "US SMS programmes on Klaviyo or similar; consumables and repeat-purchase brands for replenishment and win-back timing; brands using a welcome discount.",
     "fails_when": "Durable goods with no natural repurchase cycle; subscription brands, where active subscribers should get few or no marketing texts; non-US jurisdictions with different consent and quiet-hour rules; platforms with different abandonment limits.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Welcome SMS on days 1, 3, 5",
       "1 SMS per abandonment event, within 48 hours (Klaviyo, US)",
@@ -1160,7 +1160,7 @@
     "conditions": "DTC brands with an SMS list and frequent news (launches, restocks, sales); US market; costs per message as in the US.",
     "fails_when": "Brands with little genuine news, where two sends a week force filler and raise unsubscribes; framing restocks that did not happen as restocks (he suggests it) risks deceptive-marketing complaints; non-US quiet-hour and consent rules; click-based exclusions are noisy for very new subscribers.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "SMS unsubscribe 3 to 5% per send vs email ~0.3%",
       "~2 SMS campaigns per week for a typical brand; at least 1",
@@ -1200,7 +1200,7 @@
     "conditions": "High-consideration or consult-led purchases (custom furniture, jewellery, made-to-measure, high-ticket bundles, B2B wholesale enquiries), quiz or lead forms, cart recovery for high AOV; staff available to answer within minutes; North America where iPhone share is high.",
     "fails_when": "Low-AOV ecommerce at scale, where one-to-one human conversations cost more than the margin; promotional broadcast campaigns, which need standard SMS compliance; markets with low iPhone share; and any setup that skips documented consent and opt-out handling, which exposes the brand to TCPA claims.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 5 minute delay before the first text",
       "second message about 5 seconds after the intro",
@@ -1242,7 +1242,7 @@
     "conditions": "Lists that have been dormant for months and are being restarted; list sizes large enough that rates are stable.",
     "fails_when": "The list was bought, scraped or never opted in, where a spike signals spam complaints and can damage the sending domain; or unsubscribes stay above the restart level after several sends, which signals a content or frequency problem rather than pulled-forward churn.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "just over 1% unsubscribe on first send to a dormant list",
       "0.42% unsubscribe per email at steady cadence",
@@ -1282,7 +1282,7 @@
     "conditions": "DTC brands with enough reviews to tag by objection; problem-solution and consumable products where objections are specific.",
     "fails_when": "Brands with very few reviews, where cherry-picking makes emails look thin or staged; or regulated categories where a review making a health claim would be treated as the brand's own claim.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "30 to 60 minutes of competitor review mining per product",
       "avoid 3x2 product grids on mobile; use 1 per row or 2x2"
@@ -1322,7 +1322,7 @@
     "conditions": "DTC brands collecting SMS and email on site pop-ups with paid traffic; US double opt-in SMS.",
     "fails_when": "Brands where most subscribers are existing customers (post-purchase opt-ins), for whom SMS really is retention; the 25% figure is the vendor's cross-brand average and varies widely by category and price.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 25% (20-27%) of SMS subscribers buy within 30 days, ~20,000-25,000 brands",
       "priority order for $5-10M brands: list growth, then frequency, then conversation"
@@ -1362,7 +1362,7 @@
     "conditions": "Brands with SMS lists and capacity (human or AI) to answer replies quickly; strongest for high-consideration or personalised products (shade matching, furniture).",
     "fails_when": "No one answers replies promptly, which damages trust; impulse products with short decision cycles gain little; the 1.5x LTV figure is vendor data and correlational.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 5,000 replies in the first week for large brands",
       "conversing subscribers about 1.5x subscriber LTV (Postscript)",
@@ -1401,7 +1401,7 @@
     "conditions": "US SMS programmes with double opt-in lists and per-message costs; brands with enough subscribers to run a holdout split.",
     "fails_when": "Low-margin products where per-message cost exceeds incremental revenue; large lists of long-tenure non-buyers, where extra sends mostly add fees (the Grüns example deliberately limits spend on people unlikely to subscribe); TCPA quiet hours and consent rules still apply.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "8-10 texts per subscriber per month without unsubscribe uptick (Postscript data)",
       "Grüns about 23 messages in first 30 days",
@@ -1438,7 +1438,7 @@
     "conditions": "US SMS programmes on providers supporting RCS; time-sensitive (2026 early-adoption window).",
     "fails_when": "If the per-message premium outweighs the lift once the novelty fades; markets or devices with low RCS support fall back to SMS and gain nothing.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "What is RCS and should my brand use it?",
@@ -1472,7 +1472,7 @@
     "conditions": "US ecommerce brands using a combined email and SMS popup and flows (Klaviyo, Attentive, Postscript).",
     "fails_when": "The brand's margins cannot carry the full discount on both channels, or SMS opt-in quality matters more than volume (activation-gated offers can attract discount-only sign-ups); jurisdictions with different consent or quiet-hour rules.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "doubling list 5,000 to 10,000 raised orders from about 100 to 160-180 per month",
       "1 SMS per abandonment flow; 2 in the welcome flow, second 2 to 3 days later",
@@ -1512,7 +1512,7 @@
     "conditions": "DTC ecommerce brands in the US running SMS alongside email; frequency guidance scaled by purchase cycle and revenue band.",
     "fails_when": "Long-purchase-cycle or high-ticket categories (furniture), where weekly texts will mostly drive opt-outs; markets outside the US with different consent rules; brands where SMS consent was gathered loosely, inflating complaint risk.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "1 SMS campaign per week; 2 per week for brands over 8 figures; more than 2 is overkill",
       "click rate 5% to 15%",
@@ -2043,7 +2043,7 @@
     "conditions": "Brands with large lists that are under-mailed; ESP with engagement segments; healthy sender reputation before adding dormant slices.",
     "fails_when": "Lists with poor deliverability or old, purchased or never-confirmed addresses, where adding dormant profiles raises bounces and spam complaints; Black Friday lift had other causes too (single case).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "80% broad sends, 20% targeted",
       "at least 50% of list in the engaged segment",
@@ -2087,7 +2087,7 @@
     "conditions": "Klaviyo or similar ESP with order history; brands with repeat potential.",
     "fails_when": "One-off purchase categories with little repeat, where first-to-second conversion is structurally low and acquisition economics must stand alone; very small lists where three-way splits leave tiny branches.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "3 flow branches: new, returning, loyal or subscriber",
       "constraint for most brands under $10 to $20 million a year: first-to-second order conversion",
@@ -2168,7 +2168,7 @@
     "conditions": "DTC brands with seasonal revenue gaps and a story or community that can credibly attach to a cultural date.",
     "fails_when": "The chosen moment does not fit the brand, which reads as opportunistic (cause marketing backlash); or the peak relies only on discounting, cutting margin and pulling demand forward rather than creating it.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "4 peaks a year, 1 per quarter"
     ],
@@ -2205,7 +2205,7 @@
     "conditions": "Brands using Klaviyo default attribution (5-day open, 5-day click) and judging email or agencies by attributed revenue share.",
     "fails_when": "Attribution settings have been tightened (click-only, shorter windows) or holdout groups exist, in which case attributed revenue is closer to incremental; the critique is about using it as a target, not about tracking it.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Klaviyo default attribution: 5-day open, 5-day click",
       "common agency promises of 30% to 50% of revenue from email"
@@ -2282,7 +2282,7 @@
     "conditions": "Brands using a discount-led welcome flow with enough sign-ups to test steps of 10 points.",
     "fails_when": "Premium brands that avoid discounting; thin margins where 20% off erases first-order contribution; 'astronomical' is not a number, so the lift must be measured on your list.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "10% to 20%: large lift (unquantified)",
       "20% to 30%: no lift",
@@ -2602,7 +2602,7 @@
     "conditions": "US-based stores with high paid traffic and a strong welcome or abandonment flow to send matched visitors into.",
     "fails_when": "EU, UK or Canadian visitors (GDPR, PECR and CASL require consent to the sender); brands with fragile sender reputation, where complaints from unexpected emails hurt deliverability for the whole list.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 20 cents per matched opt-in (speaker's illustration)"
     ],
@@ -2641,7 +2641,7 @@
     "conditions": "Brands with a real upcoming supply or price change and an engaged repeat-buyer segment; works for B2B wholesale accounts as well as DTC VIP lists.",
     "fails_when": "The shortage is invented or exaggerated, which risks consumer-protection complaints and burns the list's trust; and categories where buyers cannot stock up (perishables, single-use purchases) gain less from early notice.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 2,
     "numbers": [
       "scarcity news: more than 2x the orders of the standard pitch",
       "scarcity news framed as exclusive: 6x the orders of the standard pitch",

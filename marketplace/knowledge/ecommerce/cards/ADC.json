@@ -57,7 +57,7 @@
     "conditions": "Consumables, supplements, food, personal care; products with a natural daily dose; DTC brands relying on repeat purchase.",
     "fails_when": "Products used occasionally by nature (seasonal, durable goods); a ritual so effortful buyers drop it within weeks; health claims tied to a daily routine that regulators treat as therapeutic claims.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "How do I get customers to use my product every day?",
@@ -92,7 +92,7 @@
     "conditions": "Meta partnership ads (formerly branded content or whitelisting) with the founder's Instagram or Facebook profile; founders who post regularly about the brand.",
     "fails_when": "Founder profile is empty, private or off-topic; brands planning an exit where key-person dependency hurts valuation; accounts where the founder may leave.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "partnership ad lift ~5% to 30% vs brand page"
     ],
@@ -133,7 +133,7 @@
     "conditions": "Meta accounts spending roughly $30 to $100 a day on prospecting, especially new pixels with high CPMs.",
     "fails_when": "Larger accounts where Advantage+ creative testing or enough budget lets the algorithm allocate spend; 800 impressions per ad is too few to judge purchase rate, so it reads only top-of-funnel signals and needs a follow-up with more spend on survivors.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "13 ads tested at $30/day",
       "impression cap 1,000 per ad, lowered to 800",
@@ -175,7 +175,7 @@
     "conditions": "Meta prospecting with campaign budget optimisation, enough budget that 1x CPA per new pack is affordable, and a steady flow of new creative.",
     "fails_when": "Very small budgets where even 20% minimums starve existing winners; accounts with only one avatar and few creatives; minimum spend left on after 7 days forces spend on losers.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "4-8 ads per pack (range 2-10)",
       "7-day ad set minimum = 1x target CPA",
@@ -218,7 +218,7 @@
     "conditions": "Meta accounts where the incremental attribution comparison is available and ads have enough spend for stable estimates.",
     "fails_when": "Low-spend ads where incremental estimates are noisy; accounts without the feature; treating Meta's model as ground truth without a holdout or survey check.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "How do I know which Meta ads are actually driving new sales?",
@@ -255,7 +255,7 @@
     "conditions": "Meta prospecting with Advantage campaign budget (CBO), a known target CPA, and enough budget for several packs each spending 1x CPA a day for a week; brands launching new creative weekly.",
     "fails_when": "Total daily budget is too small to fund 1x CPA per active pack alongside proven ads; very high CPA products where 7 days at 1x CPA is a large share of budget; accounts using ABO testing campaigns already.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "4 to 8 creatives per test ad set",
       "ad set daily minimum equal to 1x target CPA (e.g. $50 for a $50 CPA)",
@@ -299,7 +299,7 @@
     "conditions": "Meta accounts with enough spend for ad-level incremental attribution to be meaningful; brand knows its break-even ROAS on new customers.",
     "fails_when": "Low spend where ad-level numbers are noise; the brand has no margin-based ROAS floor so 'above threshold' is undefined; incremental attribution not available on the account or objective.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "14 days, about $97,000 spend, 1.42 ROAS standard and 1.23 incremental",
       "new-customer incremental ROAS floor about 1.1 for this brand",
@@ -588,7 +588,7 @@
     "conditions": "Meta sales campaigns for DTC stores with a working purchase event via pixel and Conversions API; prospecting focused on new customers.",
     "fails_when": "Long purchase cycles or high-AOV products where 30-day and 90-day windows are too short; low-volume pixels where value optimization lacks data; when Meta changes segment or attribution options (verify against current Ads Manager).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "daily budget >= 1x target CPA",
       "engaged = 30-day visitors + 90-day add-to-carts",
@@ -629,7 +629,7 @@
     "conditions": "CBO prospecting campaigns on Meta with frequent creative launches; teams that need to read performance by avatar and angle.",
     "fails_when": "Small budgets where many ad sets fragment spend and none exits learning; Advantage+ shopping campaigns that do not use ad sets this way; teams that duplicate concepts across packs, blurring the read.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "accounts with 30 to 100 ad sets in one CBO campaign"
     ],
@@ -668,7 +668,7 @@
     "conditions": "Meta sales campaigns with CBO or Advantage+ where spend share signals delivery preference; accounts launching dozens of ads a month.",
     "fails_when": "Low-volume accounts where a handful of launches makes the rate noise; campaigns with dozens of ad sets where 5% of budget is an unrealistic bar; when CPA target is set wrong, so 'winners' are unprofitable.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "winner = spend >5% of campaign budget and at target CPA",
       "hit rate 5% (5 of 100 ads) described as normal",
@@ -748,7 +748,7 @@
     "conditions": "Price-competitive categories where rivals' claims have converged; brands willing to disclose cost or margin data; markets that distrust markups.",
     "fails_when": "Disclosing margin invites competitors to undercut, or contradicts a premium positioning; the figure cannot be substantiated under advertising law (comparative and price claims are regulated); buyers who do not care about price.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Net profit disclosed as 3 percent (clothing mail-order)",
       "Auto advertiser: 9 percent profit, $735 hidden costs in a $1,500 car"
@@ -787,7 +787,7 @@
     "conditions": "Meta or similar platforms with customer-list audiences; strongest case in fashion and frequent-drop categories.",
     "fails_when": "Consumables with strong email and SMS reach and replenishment flows, where paid retargeting of customers is mostly non-incremental; small customer lists that fall below platform audience minimums.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "existing-customer CPA target about $20 or lower versus $40 new-customer",
       "$1,000 to $700 a day cut conversions only from 50 to 47 (marginal $100 per order)",
@@ -829,7 +829,7 @@
     "conditions": "Meta Advantage+ and broad prospecting campaigns that serve to existing customers; brands with sizeable customer files.",
     "fails_when": "Launches of new products to the customer base or replenishment-driven categories may justify higher frequency; CPM assumptions far below real costs understate the budget.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "formula: customers x frequency x CPM / 1,000 (300,000 x 3 x $2.50 = $2,250/month)",
       "typical need $10k, at most $30-40k/month even for large brands",
@@ -870,7 +870,7 @@
     "conditions": "Multi-product catalogues on conversion-optimised campaigns where products differ widely in margin and conversion cost.",
     "fails_when": "Single-hero-product brands; very low budgets where splitting campaigns starves learning; when the cheap product is a strong entry point whose buyers go on to high-margin repeat purchases.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "hoodie: $90 price, $21 cost, $45 CPA -> $24 contribution",
       "t-shirt: $27 GM, $15 CPA -> $12 contribution; ~$27 if no ad spend needed"
@@ -910,7 +910,7 @@
     "conditions": "Multi-SKU brands with variant and colour/size inventory risk (apparel especially) and long reorder lead times.",
     "fails_when": "The SKU is the brand's hero product and going dark would cost ranking, audience learning or customer acquisition that matters more than batch margin; pre-orders or backorders are available to keep selling through a stock gap.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "example: 30 days of inventory left versus 80-day reorder lead time",
       "inventory graded A to D by age or days outstanding",
@@ -951,7 +951,7 @@
     "conditions": "Meta Advantage+ shopping or sales campaigns used for prospecting, with an existing customer list connected; brands judging creative by in-platform ROAS.",
     "fails_when": "Campaigns already excluding or capping existing customers and optimising on click-only attribution, where the gap is smaller; very new brands with few existing customers.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "reported ROAS 12.84",
       "about half of budget to existing customers",
@@ -995,7 +995,7 @@
     "conditions": "Meta prospecting or Advantage+ campaigns for DTC brands with an existing customer list and Shopify order data by SKU.",
     "fails_when": "Brands whose growth depends on repeat buyers (consumables) may want some paid reach to existing customers in a separate campaign; Advantage+ settings limit how strictly existing customers can be excluded, so check current Meta options; SKU-level checks are weak when many ads feature the same SKU.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "exclude purchasers from about the last 2 years",
       "claim: about 90% of audited accounts lack these basics"
@@ -1036,7 +1036,7 @@
     "conditions": "Meta ecommerce accounts with a catalog; brands judged on new-customer growth rather than total attributed revenue.",
     "fails_when": "Large-catalog retailers where DPAs prove incremental in a holdout; retention-focused goals where re-engaging existing buyers is the intent; very small accounts with little prospecting creative.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 70% of spend in DPAs flagged as a common mistake"
     ],
@@ -1075,7 +1075,7 @@
     "conditions": "Meta purchase-optimised campaigns for ecommerce, as of late 2025 to 2026.",
     "fails_when": "Meta changes the engaged-view definition again; very long consideration products where a longer click window correlates better with backend revenue; accounts where the correlation check shows a different setting tracks aMER more tightly.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "7-day click plus 1-day engaged view",
       "engaged view includes about 5 seconds watched or a like, comment or share",
@@ -1116,7 +1116,7 @@
     "conditions": "Brands spending enough on paid media to have all three pillars in play; access to store backend and P&L data.",
     "fails_when": "Very early brands with no proven concept, where creative testing is the only real lever; accounts with clean data and structure already, where creative is the only constraint.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "at least 1,000 audits over 6 years; over $400M a year in spend managed",
       "90-day roadmap of prioritised fixes"
@@ -1153,7 +1153,7 @@
     "conditions": "Meta accounts with customer lists and engaged-audience definitions; brands with a meaningful existing-customer base.",
     "fails_when": "Retention-led businesses deliberately spending on existing customers with a measured incremental return; very small audiences where frequency is naturally high; segments not defined so frequency cannot be read.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "30-day frequency about 30 on existing customers = overspend",
       "30-day frequency about 14 on engaged = too much mid-funnel creative"
@@ -1192,7 +1192,7 @@
     "conditions": "Meta and Google ecommerce accounts at any spend level; Advantage+ era broad targeting.",
     "fails_when": "Multi-country, multi-brand or category-managed retailers that need separate budget levers; legal or catalogue constraints that force separate campaigns; structured testing campaigns that are part of a defended method.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "accounts spending $1M to $5M a month often run 4 to 5 campaigns",
       "about half of audited campaigns typically not defendable"
@@ -1233,7 +1233,7 @@
     "conditions": "Accounts testing many ad variations inside CBO campaigns with enough budget to fund a second ad set; speaker's practice is mainly lead generation, so ecommerce use is an extension.",
     "fails_when": "Budget is too small to fund a parallel ad set, which starves the main campaign; ads are revived without a real reason to believe in them; unspent ads were held back for good reason (weak hook, policy issues).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 20% of revived no-spend ads become winners (speaker's claim)",
       "speaker claims over $300M in Meta spend"
@@ -1273,7 +1273,7 @@
     "conditions": "Meta campaigns under Andromeda-era delivery (2025 onward) with broad targeting and enough conversion volume to learn; segments that are clearly named groups.",
     "fails_when": "Very low budgets or few conversions, where broad delivery cannot find the pocket; segments that cannot be named in copy without breaking Meta's personal-attributes ad policy (health, finances, ethnicity); speaker's evidence comes mainly from lead generation.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "build segments from the 20% of customers who give 80% of revenue",
       "7-day side-by-side test of interest stacking versus broad, judged on CPA"
@@ -1351,7 +1351,7 @@
     "conditions": "Profitable offers with contribution margin known per order; cash and inventory available to fund higher spend and higher sales.",
     "fails_when": "Contribution margin is unknown, so break-even ROAS cannot be set; cash or stock cannot support the volume; repeat purchase is low and the business needs first-order profit with margin above break-even; platform-reported revenue is inflated by attribution.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "ROAS dropping from 10x to 5x is acceptable when spend rises from $1,000 to $100,000 a month",
       "example advertiser stuck at 40x ROAS",
@@ -1434,7 +1434,7 @@
     "conditions": "Brands new to TikTok ads with a Shopify store and pixel firing on purchase; can afford $100+/day for the test.",
     "fails_when": "Budgets under $100 a day; products needing long consideration where 3-4 days is too short; very small countries where audiences are too narrow.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "3 creatives x 2 audiences x 1 objective",
       "$50/day minimum per ad group",
@@ -1476,7 +1476,7 @@
     "conditions": "US-style TikTok conversion campaigns for mid-priced consumer products; replace the CPA line with your own break-even figure.",
     "fails_when": "High-ticket or low-margin products where $30 CPA is wrong; markets with very different CPMs; judging before $50 spend or 1,000 impressions.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "24h: CTR >1%, watch time >25%, CPM <$15",
       "day 3: CPC <$2, add to cart <$10, purchase <$30",
@@ -1688,7 +1688,7 @@
     "conditions": "Meta advertisers with customer lists and repeat purchase; Australian and global DTC brands in the agency's portfolio.",
     "fails_when": "Lapsed customers who no longer open email or SMS and have long purchase gaps, where some paid reach can be incremental; a lift test underpowered by a small customer list may falsely show zero lift.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "existing-customer frequency in audits: 20 to 100 per 30 days",
       "about 10 per 30 days considered reasonable",
@@ -1730,7 +1730,7 @@
     "conditions": "Meta-led brands with stock and an offer suitable for late December; markets with a Christmas peak.",
     "fails_when": "Stock is depleted after Black Friday; shipping cutoffs make late-December delivery impossible for the category; markets whose peak season falls elsewhere.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Q5 window about 16 to 31 December"
     ],
@@ -1769,7 +1769,7 @@
     "conditions": "Large Meta accounts during Black Friday; agency portfolio data, 2025.",
     "fails_when": "Small brands with small warm audiences; brands that cut preseason spend; very narrow geographic targeting.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "frequency about 1.75 baseline, 1.96 Black Friday peak, 1.82 in late December",
       "CPMs about 25 to 30% above October baseline by 12 November",
@@ -1809,7 +1809,7 @@
     "conditions": "Meta advertisers planning a large creative ramp for a sale period, especially fashion brands launching many offer variants.",
     "fails_when": "Accounts with modest creative volume well under the limit; Meta changes or removes page-level ad limits.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "November creative volume multiples versus October in fashion: about 2x to 12.6x (Represent 12.6x, Skims 4x)"
     ],
@@ -1848,7 +1848,7 @@
     "conditions": "Brands running a Black Friday or other large sale with Meta prospecting in the 4 to 6 weeks before; agency portfolio of large Australian and US DTC brands, 2025 data.",
     "fails_when": "Brands with no sale event or impulse products bought on first click; a pre-sale period with its own offer; tiny accounts where last year's window ratios are noise.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "1-day vs 30-day click revenue gap about 40% year-round, about 80% in November",
       "example: ROAS 1.0 in real time on 12 to 13 November, about 4.0 once backdated"
@@ -1889,7 +1889,7 @@
     "conditions": "Large Meta spend on Black Friday weekend with someone actively managing budgets; last year's hourly data available.",
     "fails_when": "Small accounts or brands where paid drives little of the day's revenue; no hourly data from last year; teams without weekend coverage.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "spend peak about 5 to 7 a.m.; revenue peak about 7 to 11 a.m. on Black Friday",
       "example: hourly ROAS 1.0 at 5 a.m. effectively about 2.0"
@@ -1929,7 +1929,7 @@
     "conditions": "Brands with a Black Friday sale and Meta-led acquisition; agency portfolio of large DTC brands in Australia and the US.",
     "fails_when": "Cash-constrained brands that cannot fund spend weeks before revenue arrives; brands without a sale; categories where November demand is not driven by discounting.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "31 to 43% of Sept to Dec budget in Sept and Oct",
       "November spend about 1.76x October for $500k to $2M November spenders",
@@ -1974,7 +1974,7 @@
     "conditions": "Any scaling decision, especially intraday Black Friday scaling and year-on-year budget increases; requires new-customer counts and gross margin by day.",
     "fails_when": "Daily volumes so small that day-to-day marginal reads are noise (use 3-day rolling); objective is inventory clearance where negative marginal contribution is accepted.",
     "scope": "baseline",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "baseline CAC $337; +25% spend ($80,000) gave average $392 versus $400 tolerance",
       "76 extra customers, marginal CAC about $1,050",
@@ -2014,7 +2014,7 @@
     "conditions": "Brands spending enough per day that 3-day marginal reads are meaningful; agency or in-house buyer with weekend coverage.",
     "fails_when": "Very low daily spend; brands where most revenue arrives regardless of paid, so pacing reads correlation rather than paid impact.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "3-day rolling marginal reads",
       "decrease after 2 consecutive poor reads",
@@ -2055,7 +2055,7 @@
     "conditions": "Established DTC brand with strong brand search volume, Meta-led acquisition, US market; Ridge at roughly $100M+ revenue.",
     "fails_when": "Competitors bid aggressively on your brand terms so cutting branded search loses sales; brands with high non-brand search intent where Google is the main acquisition channel; new brands with little brand demand.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Meta about 50% (75% in some years)",
       "Google about 20%: search about 5%, YouTube about 15%",
@@ -2099,7 +2099,7 @@
     "conditions": "New brands or new products spending under about $10,000 a month on Meta with a simple product set; physical products in the roughly $30 to $200 range.",
     "fails_when": "Doubling budgets fails at six-figure monthly spend, where smaller increments and broader structures are needed; very low budgets on low-priced products may never exit learning, and high-ticket products need more spend per conversion to read results.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "test campaign $10 to $50 per day",
       "1 to 3 new creatives every few days",
@@ -2144,7 +2144,7 @@
     "conditions": "Meta accounts with at least a few proven ads; brands with a creative team or contractors producing weekly.",
     "fails_when": "Brand-new accounts with no proven ads, where most spend must be testing; accounts using campaign structures that isolate test budget from winners, where launches cannot cannibalise spend.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "70% proven / 30% testing when healthy",
       "90/10 or 100/0 when unprofitable",
@@ -2185,7 +2185,7 @@
     "conditions": "Brands with large paid budgets and gift-friendly products; US market.",
     "fails_when": "Small budgets that cannot fund a new channel test; results from Q4 gifting only; categories where TikTok is strong (beauty, women's fashion) reverse the TikTok finding.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Meta about 50% of $80M+ spend",
       "Google and YouTube about 15-25%",
@@ -2229,7 +2229,7 @@
     "conditions": "Meta ecommerce prospecting with Advantage+ audience or broad targeting; brands with an existing customer list to exclude.",
     "fails_when": "Very niche B2B or regulated categories where Meta's broad delivery cannot find buyers without constraints; check Meta's current documentation, as which inputs are hard controls changes over time.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [],
     "asks": [
       "Should I still use interest targeting on Facebook?",
@@ -2264,7 +2264,7 @@
     "conditions": "Meta prospecting campaigns being scaled; products with a time to purchase of more than a day.",
     "fails_when": "Very low daily budgets or small audiences near saturation, where a large raise mainly raises frequency; accounts still in early learning with few conversions, where volatility is high regardless.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "popular rule: max 20% budget increase (no Meta documentation, per presenter)"
     ],
@@ -2302,7 +2302,7 @@
     "conditions": "Competitive Meta auctions in ecommerce; brands whose CAC is being pushed up by rivals.",
     "fails_when": "Brands whose problem is clearly broken tracking or creative (zero delivery, policy rejections), where economics work will not fix delivery; categories with little competition for the audience.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "Meta-claimed adaptive ranking lift: about 3% conversions, 5% CTR",
       "auction value = bid x estimated action rate + ad quality"
@@ -2342,7 +2342,7 @@
     "conditions": "Meta accounts with several personas, angles or offers and enough budget per ad set to exit learning.",
     "fails_when": "Single-product, single-persona brands spending little, where one Advantage+ campaign with all assets can be enough.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "4 example concepts for one product"
     ],
@@ -2379,7 +2379,7 @@
     "conditions": "Meta accounts running many creatives per month with conversion optimisation; most relevant above about $10k a month in spend.",
     "fails_when": "Very small accounts where each ad set cannot reach enough conversions to read; brands with incrementality tests that show ad-level effects directly.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "5 to 20 ads per ad set",
       "often about 4 of 20 ads take most spend"
@@ -2417,7 +2417,7 @@
     "conditions": "New Meta ad accounts or new campaigns without conversion history.",
     "fails_when": "Accounts with steady conversion volume, where format splits dilute budget and concept splits produce better learnings.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "format splits not recommended above about $10,000 monthly spend",
       "category example: dresses 70% gross margin vs tops 55%"
@@ -2456,7 +2456,7 @@
     "conditions": "Meta accounts producing high creative volume (around 200 new ads a month) across several concepts.",
     "fails_when": "Small accounts that cannot fund several concept tests at once; brands whose single winning angle is the core product promise and not a fatiguing hook.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "4 concepts x 50 creatives = about 200 new ads a month",
       "about 80% of spend to the top 20% of concepts",
@@ -2498,7 +2498,7 @@
     "conditions": "Brands selling through TikTok Shop with affiliate creators and GMV Max campaigns, mainly US.",
     "fails_when": "Low-margin products where 2.2 ROI still loses money once commissions and fees are counted; stores without affiliate content feeding the campaign; settings and defaults that TikTok changes often (verify in Seller Center).",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "top 20% of products in one GMV Max campaign",
       "ROI target: TikTok suggestion + 1.0 (1.2 to 2.2)",
@@ -2541,7 +2541,7 @@
     "conditions": "New or small TikTok ad accounts selling DTC products off-platform; purchase-optimized web conversion campaigns.",
     "fails_when": "High-CPA products (over ~$100) where 2x CPA still cannot buy 25 conversions a week, so optimize to a higher-funnel event; TikTok Shop GMV Max campaigns, which have their own budget logic; mature accounts with stable data.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "learning phase ends ~25 results or 7 days",
       "TikTok guidance ~10x CPA per day ($100 at $10 CPA)",
@@ -2581,7 +2581,7 @@
     "conditions": "Meta advertisers at low to mid spend; accounts tempted to react daily.",
     "fails_when": "Clear breakages (tracking stopped, ads disapproved, spend not delivering), which need same-day action; very high-spend accounts where a single day carries enough data to act on.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "volatility normal from about $50 to $1,000 a day",
       "evaluate over at least 7 days",
@@ -2623,7 +2623,7 @@
     "conditions": "Meta advertisers who analyse creative performance at the ad level; 2025 to 2026 Meta ad formats.",
     "fails_when": "Brands that do not analyse creative and only want delivery; very small accounts with too few assets to test individually; Meta changes flexible-ad reporting to show per-asset results.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "ignore bid and cost caps below about $200k a month in spend"
     ],
@@ -2662,7 +2662,7 @@
     "conditions": "Meta concept or creative tests with a known expected CPA; any spend level.",
     "fails_when": "Very high CPA products where even 20 conversions takes too long (optimise to a higher-funnel event instead); tests where the metric is not purchases; 20 conversions may still be too few to detect small differences.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "20 conversions x $100 CPA / 14 days = about $143 a day",
       "50 conversions in 7 days at $100 CPA = about $714 a day",
@@ -2702,7 +2702,7 @@
     "conditions": "Meta accounts with several ad sets of new creative competing with proven ones; large budgets with active daily management.",
     "fails_when": "Small accounts (management cost outweighs gain); teams without capacity to adjust limits regularly; accounts where all new creative already gets spend.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "about 60% of budget controlled by min/max limits, about 40% free",
       "overkill at about $10k a month spend"
@@ -2742,7 +2742,7 @@
     "conditions": "Meta accounts with customer lists uploaded and audience segments defined; brands with meaningful repeat purchase.",
     "fails_when": "Customer lists with low match rates (reachable audience much smaller than the list); campaigns where existing customers cannot be separated; launch periods where heavier frequency on customers is deliberate.",
     "scope": "growth",
-    "tier": 4,
+    "tier": 3,
     "numbers": [
       "budget = customers x CPM / 1,000 x monthly frequency",
       "illustration: 100,000 customers x $10 CPM x 4 = about $4,000 a month",

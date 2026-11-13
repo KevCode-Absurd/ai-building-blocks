@@ -88,7 +88,7 @@ This agent creates `campaign-brief.md` and writes the strategic sections:
 `## Brand DNA Summary`, `## Campaign Concepts`, `## Image Generation Briefs`, `## Next Steps`.
 
 Additional instructions for `creative-strategist`:
-- For e-commerce businesses, also read `skills/meta-plan/assets/ecommerce-creative.md`
+- For e-commerce businesses, also read `https://github.com/AI-Marketing-Hub/meta-ads/blob/main/skills/meta-plan/assets/ecommerce-creative.md`
   and select the appropriate creative playbook (Product Launch, Sale/Promotion,
   Seasonal, Retargeting, Brand Awareness)
 - Include banana domain mode recommendations in each Image Generation Brief

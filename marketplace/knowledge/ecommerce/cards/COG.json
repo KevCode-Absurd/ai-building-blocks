@@ -1,0 +1,812 @@
+[
+  {
+    "id": "COG-0001",
+    "modules": [
+      "COG",
+      "MEA"
+    ],
+    "topics": [
+      "BOM and should cost",
+      "supplier discovery and vetting"
+    ],
+    "claim": "Above about $1M a year of COGS, get each factory to break every SKU into components, sub-vendors, labour, overhead, financing cost and factory margin.",
+    "body": "Roman Khan, who buys and runs DTC brands, says 99 of 100 founders he meets in acquisitions have no bill of materials, while large apparel brands negotiate from one by default. His BOM columns: each component and its cost, the sub-supplier and source, lead time, country of origin, payment terms, plus separate lines for factory labour, factory overhead, credit insurance, financing cost and the factory's margin. For a gold and lab-grown diamond ring that means the diamond sub-vendor, gold bought at the intraday price when the PO is placed, setting and polishing labour (about $42 in his example), and so on. How he builds it: tell the factory you plan to grow volume several times over, physically take the product apart (zip, buttons, lining, fibre), test claims such as organic cotton, then design the BOM with the supplier; for a new factory, ask it to source sub-vendors and build its own BOM rather than sharing the old one. Benefits: visible margin inflation (an Indian textile supplier was running 25 to 35%, which he calls abnormal for textiles, and gave a concession), tariff impact by line, monthly quotes from 6 or 7 sub-vendors on opaque inputs, and product ideas such as 10K versus 14K gold. His threshold: about $1M a year in COGS (roughly $100k a month wired, as little as $2.5M revenue).",
+    "conditions": "Brands with their own manufactured products (private label or custom) spending roughly $1M+ a year on COGS; factories that assemble from bought-in components.",
+    "fails_when": "Very small buyers with no volume leverage, where factories refuse open-book costing; fully commoditised catalogue products; relationships where demanding labour costs damages goodwill without a growth story behind it.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "BOM worth building at ~$1M/year COGS (~$100k/month; ~$2.5M revenue)",
+      "99 of 100 acquired founders had no BOM",
+      "Textile supplier margin 25 to 35% flagged as abnormal",
+      "Opaque components re-quoted from 6 to 7 sub-vendors monthly",
+      "Example labour line (setting, polishing, QC) ~$42 per ring"
+    ],
+    "asks": [
+      "What is a bill of materials and do I need one?",
+      "How do I find out what my factory is really paying for materials?",
+      "Our factory keeps raising prices. How do I check if it's fair?",
+      "At what size should a DTC brand ask suppliers for cost breakdowns?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0194",
+    "evidence": {
+      "where": "Supply chain section: bill of materials, Linjer ring example, Indian kids-accessory acquisition",
+      "quote": "99 out of a 100 founders"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "COG-0002",
+    "modules": [
+      "COG"
+    ],
+    "topics": [
+      "MOQ and price breaks",
+      "negotiation levers"
+    ],
+    "claim": "Negotiate price breaks per BOM line around how fully the factory uses labour dedicated to your line; such volume credits are worth $1 to $3 a unit.",
+    "body": "Khan's method treats price breaks as a question about the factory's costs, not a haggle over the total. For each BOM line ask: at what volume does this input get cheaper (cotton, zips, labour)? The largest lever is fixed labour: if the factory has, say, 30 workers dedicated to your assembly line, filling that line closer to full utilisation each month lets it pass on $2 to $3 a unit. Sub-vendors also give volume breaks to the factory (he cites about $1 off a zip from a large zip maker), which you can ask to have passed through. These are structured as credits rather than up-front discounts: you hit the volume, then the lower price applies going forward. His head of production sits with the supplier to reconcile sub-vendor invoices, which makes the factory effectively an assembler and procurement arm. The next step he is taking is to buy major components (gold, diamonds) directly and supply the factory, removing the factory's markup on items where it carries inventory risk; he notes this also exposes you to commodity price swings (gold moved from about $2,000 to $5,000). Know competitor COGS for comparable products before the conversation; his volume ask comes with a credible plan to multiply orders.",
+    "conditions": "Brands with a dedicated or semi-dedicated production line, open-book BOM, and a credible growth forecast; components with traceable market prices.",
+    "fails_when": "Low or erratic volumes that cannot lift utilisation; factories with many small clients and no dedicated line; buying components directly without the working capital or commodity-risk appetite.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Utilisation of ~30 dedicated workers can pass on $2 to $3/unit",
+      "Sub-vendor volume break example ~$1/unit on zips",
+      "Gold moved ~$2,000 to ~$5,000 (commodity risk example)"
+    ],
+    "asks": [
+      "How do I negotiate lower unit costs with my manufacturer?",
+      "At what order volume should my price per unit drop?",
+      "My supplier says they can't go lower. What leverage do I have?",
+      "Should I buy components myself instead of through my factory?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0194",
+    "evidence": {
+      "where": "Price breaks section after the BOM walkthrough",
+      "quote": "we can pass on two $3 to you"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "COG-0003",
+    "modules": [
+      "COG"
+    ],
+    "topics": [
+      "negotiation levers",
+      "dual sourcing",
+      "supplier discovery and vetting"
+    ],
+    "claim": "Keep factories aware you have backup suppliers and share competing quotes; a sourcing agent argues hiding alternatives invites price and quality slippage.",
+    "body": "The guest, who runs a sourcing agency serving seven-figure-plus ecommerce brands, says many brands fear that telling their factory or agent about other suppliers will damage the relationship; his view is the opposite. Mechanism: a supplier who believes it has no competition has room to raise prices or relax quality, while one that knows the brand has live alternatives must keep earning the business. How to apply: 1) Maintain at least one qualified backup factory per key SKU, with approved samples on file. 2) Request quotes from alternatives periodically, and show your main supplier the competing price (without naming the factory if that breaches confidentiality). 3) Use the comparison to negotiate unit price, payment terms or quality commitments rather than only switching. 4) Pair it with a documented production checklist; his agency runs an 80-step process per product because small misses (wrong colour, misplaced print) can ruin a run, and a 100,000 run produced wrong costs both the goods and the sales window. 5) Gate any switch on sample approval and a watch on returns after the first run. COVID supply breaks are his example of why brands now build contingencies. No price-reduction figures are given.",
+    "conditions": "Brands manufacturing private-label or custom products overseas (China and Southeast Asia), with volumes large enough for factories to compete.",
+    "fails_when": "Small buyers below a factory's priority threshold, where open shopping around may simply lose the slot; highly specialised suppliers with proprietary tooling or formulas where switching is impractical; cultures and relationships where long-term loyalty earns priority capacity in peak season.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "80-step sourcing checklist per product",
+      "example: a 100,000 production run lost to a colour error"
+    ],
+    "asks": [
+      "Should I tell my factory I'm getting quotes from other suppliers?",
+      "How do I negotiate better prices with my Chinese manufacturer?",
+      "Do I need a backup supplier?",
+      "Our factory keeps raising prices, what leverage do we have?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0195",
+    "evidence": {
+      "where": "'main tips of dealing with China and the suppliers'",
+      "quote": "you want to keep them on their toes as much as possible"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "COG-0004",
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "topics": [
+      "dual sourcing",
+      "incoterms and landed cost"
+    ],
+    "claim": "Moving production out of China is a lead-time versus cost trade: the guest's Egypt example adds about 30% to lead time while cutting cost basis about 30%.",
+    "body": "The guest's agency moves production from China to Cambodia, Sri Lanka, Vietnam, Thailand, Egypt and Pakistan, and frames each move as a calculation, not a trend. Factors he weighs: where the raw material comes from (fabric often still comes from China, which adds transit), labour cost, taxes and duties, and where the country's manufacturing base is heading. His worked example: moving to Egypt might lengthen lead time by about 30% while lowering cost basis by about 30%, and in that case he generally favours cost. How to apply: 1) For each SKU, model landed cost (unit, freight, duty, tariffs for your import market) and total lead time per candidate country. 2) Translate the longer lead time into extra safety stock and cash tied up, since a 30% longer cycle means more inventory on order or on the water. 3) Compare the cost saving per unit times annual volume with the added carrying cost and stockout risk. 4) Prefer the move for stable, predictable best-sellers; keep fast-changing or trend SKUs close to the material source. 5) Run a sample and a small first order before shifting volume. He also notes small-scale hubs (Bali) are good for testing fabrics and short runs but expensive and slow to scale.",
+    "conditions": "Brands with steady volume on core SKUs and enough cash to carry longer lead times; tariff exposure on Chinese imports (e.g. US).",
+    "fails_when": "Cash-tight brands that cannot fund extra inventory in transit; trend-driven or seasonal products where a 30% longer lead time misses the selling window; categories where the new country lacks raw materials or skilled factories.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Egypt example: lead time about +30%, cost basis about -30%"
+    ],
+    "asks": [
+      "Should we move our manufacturing out of China?",
+      "Is it worth a longer lead time for cheaper production?",
+      "Which countries are alternatives to China for apparel manufacturing?",
+      "How do I compare suppliers in different countries?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0195",
+    "evidence": {
+      "where": "discussion of moving production out of China",
+      "quote": "your lead time is going to ... increase by 30%"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "COG-0005",
+    "modules": [
+      "COG"
+    ],
+    "topics": [
+      "quality control",
+      "BOM and should cost"
+    ],
+    "claim": "Write tech packs in exact measurements (e.g. 4 inches from top, 2 from each side), never words like 'centred', and send factories a physical reference sample to copy.",
+    "body": "The guest's quality rule is not to let the factory make any decision for you. Words that feel precise to a brand, such as 'centred', 'small logo' or 'matte', are interpreted differently on the factory floor: centred vertically or horizontally, measured from the seam or the edge. Every open choice is a place for a costly error. How to apply: 1) Build a specification sheet or tech pack for each SKU that states every dimension as a measurement with a tolerance: print position from top and from each side, print size, stitch counts, colours by Pantone code, materials by weight and composition, packaging and labelling. 2) Include annotated photos or drawings for placements. 3) When a client or you already own a product with the right quality but too high a price, ship that physical item to the factory as a reference sample to replicate, rather than describing it. 4) Always get a sample from a new factory before committing, and compare it against the spec sheet line by line. 5) Keep the approved sample as the golden sample for future inspections. These steps sit inside his agency's 80-step sourcing checklist; no defect-rate figures are given.",
+    "conditions": "Brands producing custom or private-label goods with a factory, especially apparel, accessories and printed merchandise.",
+    "fails_when": "Stock products bought off the shelf with no customisation, where a tech pack adds little; very small first orders where the factory will not follow detailed specs without a minimum.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "example placement: 4 inches from top, 2 inches from each side"
+    ],
+    "asks": [
+      "What should a tech pack include for a factory?",
+      "Our factory keeps getting the logo placement wrong, how do I stop it?",
+      "How do I get a factory to copy a product I like but cheaper?",
+      "Do I need samples before ordering from a new supplier?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0195",
+    "evidence": {
+      "where": "specification sheet and centring example",
+      "quote": "don't let them make any decisions for you"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "COG-0006",
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "topics": [
+      "quality control"
+    ],
+    "claim": "Book a roughly $200 third-party inspection before the container leaves the factory, and pay the final balance only after it passes; at sea, faults cannot be fixed.",
+    "body": "Defects found in your warehouse are expensive: the stock is paid for, freight is spent, and the factory has little reason to fix it. Fogarty's rule is a final random inspection at the factory before shipment, costing about $200, which he says can save $20,000 in damaged or inconsistent stock. The inspector pulls random units, checks measurements against the tech pack and the pre-production sample, verifies packaging, labelling and carton weights, and photographs everything. Small inconsistencies are flagged because they multiply at volume. If the report shows problems, the factory reworks before loading; you approve or reject the shipment on that report. The lever that makes this work is payment timing: structure terms so the final balance is paid only after the inspection passes, otherwise the factory has no incentive to correct anything. Treat it as insurance on every bulk order, not only the first one, since quality often drifts on reorders once a factory knows you.",
+    "conditions": "Any bulk order from an overseas factory where the balance payment can be tied to an inspection result.",
+    "fails_when": "The brand has already paid 100% upfront, so the inspection can document problems but not force a fix; or the order is so small that inspection cost is a large share of order value.",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [
+      "about $200 per pre-shipment QC inspection",
+      "can prevent about $20,000 of damaged or inconsistent stock (founder's estimate)"
+    ],
+    "asks": [
+      "Do I need a quality inspection before my order ships?",
+      "How much does a pre-shipment inspection cost?",
+      "Our last shipment arrived with defects, how do we stop that next time?",
+      "When should I pay the factory the final balance?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0196",
+    "evidence": {
+      "where": "chapter 4, final inspection before the container leaves"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "COG-0007",
+    "modules": [
+      "COG"
+    ],
+    "topics": [
+      "quality control",
+      "BOM and should cost"
+    ],
+    "claim": "Never send a factory a product without a tech pack, and approve in three sample stages (strike-off, pre-production, production); keep one golden sample yourself and one at the factory.",
+    "body": "Fogarty's first big calming-blanket order arrived in three different shades of grey and different weights under one SKU, because the factory had no spec sheet and made its own assumptions. A factory optimises for throughput, so anything left undefined gets the cheapest or easiest choice. A tech pack closes those gaps: drawings or photos from every angle, exact materials and finishes (fabric GSM, trims, hardware), measurements for every size and variant, colourways with Pantone codes, labels, packaging and folding, care instructions, and a product name, version and date. A freelance product designer can build one for about $200. Then sample in stages. First a strike-off or small test for materials and prints. Then a pre-production sample that must match the tech pack exactly; for apparel, order several to confirm size grading. This becomes the gold standard: keep one in-house and leave one at the factory as the shared reference. Finally a production sample made just before bulk; if it does not match the pre-production standard, do not proceed. Get samples from several shortlisted suppliers (message 10 to 15 verified factories to start) and judge who follows instructions and updates without being chased, not only who makes the nicest piece.",
+    "conditions": "Brands manufacturing their own or customised products with overseas factories, especially soft goods and apparel.",
+    "fails_when": "The product is a stock catalogue item bought unchanged, where a full tech pack adds little; or the brand lacks the volume to get factories to work to a custom spec at all.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about $200 for a freelance tech pack",
+      "shortlist 10 to 15 verified suppliers",
+      "3 sample stages: strike-off, pre-production, production"
+    ],
+    "asks": [
+      "What should a tech pack include?",
+      "Our second production run came out a different colour, how do we stop that?",
+      "How many samples should I get before bulk production?",
+      "How many suppliers should I contact on Alibaba?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0196",
+    "evidence": {
+      "where": "chapter 1 product definition and chapter 2 suppliers and sampling"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "COG-0008",
+    "modules": [
+      "COG",
+      "OPS",
+      "FIN"
+    ],
+    "topics": [
+      "incoterms and landed cost",
+      "purchase order planning"
+    ],
+    "claim": "Plan reorders on total lead time: production 20-30 days plus sea 30-40 days door to door (air 7-10); launch with an air batch, restock by sea.",
+    "body": "Fogarty's working lead times: production often 20 to 30 days, sea freight 30 to 40 days door to door, air freight 7 to 10 days. So a sea restock takes roughly two months from purchase order to shelf, and a brand that reorders when it is nearly out of stock is already late. His habits: start planning the next shipment the day the current one lands; use a hybrid of a small air batch to start selling quickly and sea freight for the bulk restock, because air is fast but expensive; for large or heavy items, sea is almost always the answer. Feed these lead times into a reorder point (daily sales velocity times total lead time, plus safety stock): at 50 units a day, 60 days of lead time and 500 safety units, reorder at 3,500 units. Review velocity and stock weekly and share forecasts with suppliers and the freight forwarder. The cost of skipping this: when demand spiked to $200,000 days early in COVID, The Oodie sold out within a week and could not fulfil for almost two months; he estimates a dedicated planner would have made the company 30 to 40% bigger.",
+    "conditions": "Brands importing stock by sea from Asia; lead times vary by route, product and season.",
+    "fails_when": "Production is domestic or made-to-order, or freight markets are disrupted (port congestion, rate spikes), where the typical ranges understate lead time; air is uneconomic for heavy or bulky goods even at launch.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "production 20 to 30 days",
+      "sea freight 30 to 40 days door to door",
+      "air freight 7 to 10 days",
+      "reorder point example: 50/day x 60 days + 500 safety = 3,500 units",
+      "COVID stock-out lasted almost 2 months; founder estimates 30% to 40% lost growth"
+    ],
+    "asks": [
+      "How long does sea freight from China take?",
+      "When should I reorder stock?",
+      "Should I ship my first order by air or sea?",
+      "We keep running out of stock, what are we doing wrong?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0196",
+    "evidence": {
+      "where": "chapter 4 freight forwarders and lead times; chapter 5 forecasting"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "COG-0009",
+    "modules": [
+      "COG"
+    ],
+    "topics": [
+      "quality control",
+      "dual sourcing"
+    ],
+    "claim": "Expect defects in bulk Chinese orders (300 of 10,000 here): order about 10% extra or pay for inspection, and test any cheaper new supplier with about 500 units first.",
+    "body": "The poster's 10,000-unit order arrived with about 300 broken or poor-quality pieces, roughly 3%; returning them to the supplier was not worth the time and freight. Alibaba does not inspect goods for you, so the buyer owns quality. Rules drawn from it: 1) Budget an overage of about 10% of needed units, or hire a third-party pre-shipment inspection (the header cites about 200 per inspection), and inspect on arrival before shipping to customers. 2) Never move all volume to a new supplier on price. When a supplier offered the same item for about 20% less, the poster ordered 500 units as a test and most were defective, so the original supplier stayed. 3) Keep at least two qualified suppliers until the new one passes inspection on a real batch. 4) Get the supplier's email and WhatsApp or WeChat, because suppliers go silent on platform chat without notice. 5) Payment: the poster insists on Alibaba's payment gateway (Trade Assurance) over PayPal or direct transfer; a US sourcing agent in the comments disagrees, saying disputes often fail and he prefers bank transfer with a negotiated discount for the fee saved.",
+    "conditions": "Brands importing finished goods from Alibaba suppliers, especially small items like jewellery and accessories.",
+    "fails_when": "Factories with strong QC and an agreed defect allowance in the contract, where 10% overage wastes cash; products where defects are safety-critical, where overage is no substitute for inspection.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "300 defective of 10,000 (about 3%)",
+      "order about 10% extra",
+      "third-party inspection about 200 (header)",
+      "test batch of 500 units from a supplier about 20% cheaper"
+    ],
+    "asks": [
+      "What defect rate should I expect from Alibaba suppliers?",
+      "Should I order extra units to cover defects?",
+      "How do I safely switch to a cheaper supplier?",
+      "Is Alibaba Trade Assurance worth using?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0197",
+    "evidence": {
+      "where": "'You will have to do your own quality check' and 'Never ditch a supplier too early'",
+      "quote": "make sure that you order at least 10% more of what you need"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "COG-0010",
+    "modules": [
+      "COG"
+    ],
+    "topics": [
+      "MOQ and price breaks",
+      "negotiation levers"
+    ],
+    "claim": "Moving from small AliExpress buys to Alibaba bulk cut one jewellery item from 7.80 to about 4.00 per unit, and to 2.00 at 10,000 units.",
+    "body": "A US jewellery store buying about 500 units a week from AliExpress at 7.80 each (selling at 25.99) posted requests for quotation on Alibaba ahead of Q4. Quotes for the same item ranged from about 4.00 to 10.00, and the price at a 10,000-unit order was about 2.00. Separate negotiation on another order took the unit price from 6.00 to 4.80, saving about 3,500 per order. Takeaways: 1) Retail-style marketplaces price for small buyers; once a SKU is proven, RFQs to manufacturers can more than halve unit cost. 2) Quotes for an identical item vary widely, so collect several. 3) Ask for tiered prices at, for example, 1,000, 5,000 and 10,000 units and set the order size against cash and sell-through, not the lowest unit price alone. 4) Negotiate even after quoting; a 20% cut is realistic in this example. 5) Ask long-standing suppliers to upgrade shipping on large orders: this supplier moved from 10 to 14-day ePacket to 4 to 5-day FedEx to California at no extra charge. Plan heavy items early: a 1.2 kg steel product cost about 2,000 by air versus a month by sea container.",
+    "conditions": "Proven SKUs with steady demand, bought from China for the US market; brands with cash to place larger orders.",
+    "fails_when": "Unproven products, where a 10,000-unit order risks dead stock; cash-tight brands for which the bigger order starves ad spend; the post is from before recent US tariff changes on Chinese goods, which alter landed cost.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "AliExpress 7.80 per unit at about 500 a week; retail 25.99",
+      "Alibaba quotes 4.00 to 10.00; about 2.00 at 10,000 units",
+      "negotiated 6.00 to 4.80, saving about 3,500 per order",
+      "air freight about 2,000 for a 1.2 kg item versus about 1 month by sea",
+      "ePacket 10 to 14 days versus FedEx 4 to 5 days"
+    ],
+    "asks": [
+      "How much cheaper is Alibaba than AliExpress for bulk orders?",
+      "What price break should I expect at 10,000 units?",
+      "How do I negotiate unit price with a Chinese supplier?",
+      "When should I switch from small orders to bulk manufacturing?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0197",
+    "evidence": {
+      "where": "'You will get the same product for less' and 'Trust your negotiation skills'"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "COG-0011",
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "topics": [
+      "quality control",
+      "BOM and should cost"
+    ],
+    "claim": "A tech pack with drawings, fabric spec (GSM and treatments), measurements, graphics, hardware and labels removes about 90% of supplier errors and lets you prove spec cutting by weighing fabric.",
+    "body": "Fogarty learned this on weighted blankets: ordering 'a thousand weighted blankets in grey' from Alibaba produced a container where some boxes matched the sample and others did not. His fix is a technical pack for every product, with six parts: complete drawings (including exact print placement), fabric specification (weight in GSM and any treatments such as acid washing), full measurements for every size and grade, graphics files, hardware (zips, pockets, trims) and labels and packaging, plus reference photos of approved samples. In his experience this removes about 90% of supplier errors. It also gives you evidence: if a factory quietly reduces fabric weight, weighing pieces against the GSM in the tech pack proves it, and it makes moving to a new manufacturer far easier because the spec belongs to you. Add a third-party QC inspection (an inspection agent or firms such as SGS) for at least the first few production runs, and build a critical path listing every step from fabric strike-off and first sample to inspection and PO, with a duration on each step.",
+    "conditions": "Brands manufacturing their own designs (apparel, textiles, soft goods, custom products), especially from overseas factories.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [
+      "about 90% of supplier errors removed by a full tech pack (practitioner estimate)",
+      "6 tech pack components"
+    ],
+    "asks": [
+      "What should a tech pack include?",
+      "Our supplier keeps sending products that differ from the sample, what do we do?",
+      "How do I stop a factory from cheapening my product?",
+      "How do I switch manufacturers without losing quality?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0208",
+    "evidence": {
+      "where": "Product development and tech pack section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "COG-0012",
+    "modules": [
+      "COG"
+    ],
+    "topics": [
+      "supplier discovery and vetting",
+      "dual sourcing"
+    ],
+    "claim": "Find personal-care manufacturers by learning who makes for leading brands, then vet capacity and certifications; Salt & Stone now splits volume across about 10 contract manufacturers.",
+    "body": "Salt & Stone's founder (the brand reports $165M+ revenue) says personal-care contract manufacturing is harder to find than overseas factories for hard goods. His method: identify which factories produce for the category leaders, by reaching people who work or worked at those brands on LinkedIn and asking for a few minutes, or paying them as a short-term consultant for manufacturer names. He did the same earlier for sunglasses, tracing where a major eyewear brand produced. His most expensive production mistake was trusting a contract manufacturer without full vetting. Big brands have budgets to audit factories for capacity, quality and certifications, so a manufacturer's existing client list is a useful vetting signal; small brands in a hurry to launch skip this. On formula copying: manufacturers do make variants of successful formulas for others, and brands copied his stick mould, colours and scent names, yet he says the copies sell a tenth as much, so the defence is brand plus product, not secrecy. At deodorant volume he uses about 10 manufacturers rather than one.",
+    "conditions": "Personal care and cosmetics brands sourcing contract manufacturers; scaling a hero SKU beyond one plant's capacity.",
+    "fails_when": "Formulas that are hard to transfer between plants (consistency risk); early brands below MOQ for multiple manufacturers; regulated categories where each plant needs separate approvals.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about 10 contract manufacturers at scale",
+      "copycats selling about one tenth as much (founder's claim)"
+    ],
+    "asks": [
+      "How do I find a contract manufacturer for skincare or deodorant?",
+      "How do I vet a manufacturer before my first big order?",
+      "When should we add a second manufacturer?",
+      "What can I do if a factory makes a copy of our formula?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0232",
+    "evidence": {
+      "where": "about 07:20-10:18 finding manufacturers; 17:14-21:05 contract manufacturing mistakes"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "COG-0013",
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "topics": [
+      "dual sourcing",
+      "negotiation levers"
+    ],
+    "claim": "With a sole-source supplier, secure change-of-control continued supply plus most-favoured-nation clauses on price and on inventory (first right to any open capacity).",
+    "body": "Peter Rahal's RXBAR nearly failed mid-growth when a larger customer bought out the contract manufacturer's volume and RXBAR could not get product made; switching manufacturers mid-scale carried its own risks. At David Protein, the key ingredient (an EPG fat replacer) came from one supplier, so before acquiring that supplier he had negotiated a supply agreement with three protections. First, continued supply on change of control: if the supplier is sold, the new owner must keep supplying. Second, most-favoured-nation pricing: if any other buyer gets a better price, yours is matched. Third, most-favoured-nation inventory: you get first right to any open supply or capacity. He later acquired the supplier outright to remove the dependency and secure the ingredient's other uses. How to apply: list every input with a single qualified source (ingredient, co-manufacturer, packaging), and for each, negotiate change-of-control, MFN price and MFN capacity clauses in the supply agreement before you scale volume through them, while starting qualification of a second source. Acquisition is the extreme option when the input is also your product moat.",
+    "conditions": "Brands with a critical ingredient, formula or manufacturing step available from one supplier; CPG and food especially.",
+    "fails_when": "Small brands with no negotiating leverage, where a supplier will not grant MFN terms; commoditised inputs with many suppliers, where dual sourcing is cheaper than contract protections.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "3 clauses: change-of-control continued supply, MFN price, MFN inventory"
+    ],
+    "asks": [
+      "How do I protect my brand if my only supplier gets bought?",
+      "What is a most favored nation clause in a supply deal?",
+      "Our manufacturer gave our capacity to a bigger client, how do we prevent that?",
+      "Should I buy my key supplier?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0250",
+    "evidence": {
+      "where": "Discussion of the EPG supplier acquisition (about 05:22 to 13:28) and RXBAR date-supplier crisis"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "COG-6260",
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "topics": [
+      "incoterms and landed cost",
+      "GST on imports"
+    ],
+    "claim": "In India, IGST on imported goods is charged on assessable value plus customs duties; a GST-registered importer can claim the IGST back as input tax credit, but never the basic customs duty.",
+    "body": "The government flyer on imports under GST says all imports are treated as inter-State supplies, so integrated tax (IGST) is charged in addition to basic customs duty, collected at the point customs duty is levied. The value for IGST is the assessable value plus the customs duty and any other duty charged in the same manner as customs duty; its worked example takes an assessable value of Rs 100, adds 10% basic duty and a cess to reach Rs 110.30, and charges IGST on that. Input tax credit of the IGST and compensation cess paid at import is available to the importer, so IGST is in essence a pass-through for a registered business. Basic customs duty (and the education cess in the example) is not available as input tax credit. The importer declares its GSTIN. For a landed cost sheet this means: basic customs duty and any surcharge on it are a real cost per unit; IGST is a cash outlay that comes back as credit for a GST-registered store, but is a real cost for a store that cannot claim credit.",
+    "conditions": "Goods imported into India by a business; rates in the example are illustrative and the duty rate for each product comes from the current Customs Tariff by HSN code.",
+    "fails_when": "The importer is not GST-registered or cannot use the credit (for example under the composition scheme), in which case IGST is a cost; duty rates and surcharges change by notification, so the flyer's example rates are not current rates.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Worked example: assessable value Rs 100, basic customs duty 10%, value for IGST Rs 110.30"
+    ],
+    "asks": [
+      "Is GST on imports a cost for my store?",
+      "How is IGST on imported goods calculated?",
+      "Can I claim customs duty back as GST credit?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6260",
+    "evidence": {
+      "where": "Import of Goods; Input tax credit of integrated tax",
+      "quote": "shall in essence be a pass through to that extent"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-6261",
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "topics": [
+      "incoterms and landed cost",
+      "US tariffs"
+    ],
+    "claim": "Duty-free de minimis entry into the US ended for all countries on 29 August 2025, so low-value imports, including small sample and air shipments, now carry duty.",
+    "body": "CBP's release of 29 August 2025 says the president ordered the suspension of de minimis globally from that date, covering shipments moved by cargo carriers, express couriers and postal operators. Personal letters, genuine gifts under 100 dollars and personal travel items under 200 dollars are not affected. For a store this removes the old route of bringing in small batches under 800 dollars free of duty: every commercial shipment, including air-freighted launch batches and paid samples, must be costed with duty and any additional tariffs in force on the day, plus broker or courier clearance fees.",
+    "conditions": "Goods imported into the US from any country for a business, from 29 August 2025.",
+    "fails_when": "Tariff rules have changed repeatedly since 2025; the rate and the treatment of postal shipments must be checked on the day of import with a customs broker.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "De minimis suspended for all countries from 29 August 2025",
+      "Unaffected: bona fide gifts under 100 dollars, personal travel items under 200 dollars"
+    ],
+    "asks": [
+      "Do I pay duty on small shipments into the US?",
+      "Can I still import samples duty-free under 800 dollars?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6261",
+    "evidence": {
+      "where": "Release body",
+      "quote": "the suspension of de minimis globally, effective August 29"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-6262",
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "topics": [
+      "incoterms and landed cost",
+      "US customs value"
+    ],
+    "claim": "US duty is charged on the price paid to the seller excluding international freight and insurance, plus packing costs, selling commissions, assists such as moulds you supply, and royalties.",
+    "body": "CBP's guide to customs value says the transaction value is the price actually paid or payable when sold for export to the US, which excludes international freight, insurance and other C.I.F. charges, plus amounts for packing costs incurred by the buyer, selling commissions incurred by the buyer, the apportioned value of any assist (for example moulds, tools or artwork the buyer gives the factory), and royalties or licence fees paid as a condition of sale. For a landed cost sheet this means duty is calculated on the factory price (adjusted for those additions), not on the freight-inclusive cost, and a mould paid for separately still has to be spread over units and declared. Proof of the actual freight cost should come from the carrier's documents.",
+    "conditions": "Commercial imports into the US valued by transaction value, the primary method.",
+    "fails_when": "Related-party sales, or freight that cannot be documented, where CBP may value differently; other countries such as India value goods differently, so the rule does not carry across.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Is US duty charged on freight too?",
+      "Do I pay duty on moulds I paid the factory for?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6262",
+    "evidence": {
+      "where": "What is the Price Actually Paid or Payable?",
+      "quote": "excluding international freight, insurance, and other C.I.F. charges"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-6263",
+    "modules": [
+      "COG",
+      "SET"
+    ],
+    "topics": [
+      "product specification",
+      "labelling"
+    ],
+    "claim": "A US textile label needs fibre content by percentage, the country of origin on the front of the label, and the maker's name or RN number; at a neck, the origin label sits inside centre of the neck.",
+    "body": "The FTC's guide to the Textile and Wool Acts says each generic fibre must be listed with its percentage by weight in descending order, in English, with fibres under 5% usually grouped as other fibre. The country of origin names the country where the product was made and must be on the front of the label; for garments with a neck it goes inside centre of the neck, between the shoulder seams or next to another neck label, and no other label may hide it. The manufacturer or dealer is identified by full business name or a Registered Identification Number with its RN prefix. Labels must stay attached until the product reaches the buyer, and required terms are not abbreviated. For a factory spec sheet, the label artwork, its wording and its exact sewn position belong in the spec, not left to the factory.",
+    "conditions": "Textile and wool products sold in the US.",
+    "fails_when": "Products outside the Acts' scope, or other categories with their own rules (children's products, cosmetics, electronics).",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Fibres under 5% generally listed as other fiber"
+    ],
+    "asks": [
+      "What must a clothing label say in the US?",
+      "Where does the made-in label go?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6263",
+    "evidence": {
+      "where": "Country of origin; Placement",
+      "quote": "The country of origin must be on the front of the label."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-6264",
+    "modules": [
+      "COG",
+      "SET"
+    ],
+    "topics": [
+      "product specification",
+      "labelling"
+    ],
+    "claim": "In India, a pre-packaged product must declare maker, packer or importer, country of origin for imports, generic name, net quantity, month and year of manufacture, MRP inclusive of all taxes, unit sale price and consumer care details.",
+    "body": "The Department of Consumer Affairs lists the declarations the Legal Metrology (Packaged Commodities) Rules, 2011 require on packaged goods: name and address of the manufacturer, packer or importer; country of origin for imported products; common or generic name; net quantity in a standard unit of weight, measure or number; month and year of manufacture; best-before or use-by date where goods can become unfit; retail sale price as Maximum Retail Price inclusive of all taxes; consumer care details; dimensions where relevant; and unit sale price. For a factory spec sheet, these lines must be on the retail pack artwork before printing, with the Indian importer's details, not the factory's, where goods are imported.",
+    "conditions": "Pre-packaged goods sold to consumers in India.",
+    "fails_when": "Exempt cases such as large industrial packs; rules are amended from time to time, so check the current notification before printing.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Ten mandatory declaration types listed"
+    ],
+    "asks": [
+      "What must my product packaging say in India?",
+      "Does an imported product need the importer's address on the box?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6264",
+    "evidence": {
+      "where": "Declarations on packaged commodities",
+      "quote": "Inclusive of all taxes"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-6265",
+    "modules": [
+      "COG"
+    ],
+    "topics": [
+      "supplier discovery and vetting",
+      "payment terms"
+    ],
+    "claim": "Alibaba.com's order protection holds payment in escrow and covers non-shipment, loss, defects and late delivery only when the order is paid through Alibaba.com.",
+    "body": "The Trade Assurance page says buyers check out with an online payment method or a wire transfer via Alibaba.com; payment is held in escrow and released to the supplier after the product is received and confirmed. A refund can be claimed if the order is not shipped, goes missing or arrives with defects, wrong items or damage, and the scheduled delivery date carries delay compensation. The practical rule for a store: a supplier who asks to be paid off-platform (a personal account, a different company name, or a payment app) is asking the buyer to give up this protection, which is a vetting red flag. The page does not state claim deadlines; read the current terms before ordering.",
+    "conditions": "Orders placed with suppliers on Alibaba.com.",
+    "fails_when": "Large repeat orders placed directly with a factory under a contract, where the protection is replaced by contract terms, an inspection gate and staged payments.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Is it safe to pay an Alibaba supplier directly?",
+      "What does Trade Assurance cover?"
+    ],
+    "platforms": [
+      "alibaba"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6265",
+    "evidence": {
+      "where": "Secure payments; Money-back policy",
+      "quote": "released to the supplier after the product is received and confirmed"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-6266",
+    "modules": [
+      "COG",
+      "SET"
+    ],
+    "topics": [
+      "supplier discovery and vetting",
+      "product compliance"
+    ],
+    "claim": "In India, Quality Control Orders make the BIS Standard Mark, under a licence or certificate of conformity, compulsory for listed products; check the list before choosing a supplier.",
+    "body": "The Bureau of Indian Standards says certification is basically voluntary, but the central government can make compliance with an Indian Standard mandatory on grounds of public interest, health and safety, environment, unfair trade practice or national security. It does this through Quality Control Orders that require the Standard Mark under a BIS licence or a certificate of conformity. For sourcing, if the product appears on a current order, a supplier who cannot show the right BIS licence for that product cannot be used for the Indian market, however good the price.",
+    "conditions": "Products sold in India that fall under a current Quality Control Order.",
+    "fails_when": "Products not covered by any order; the list changes, so it must be checked on the day.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Does my product need BIS certification?",
+      "Can I import a product that has no BIS mark?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6266",
+    "evidence": {
+      "where": "Compulsory certification",
+      "quote": "Quality Control Orders"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-6285",
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "topics": [
+      "inventory reports",
+      "slow stock"
+    ],
+    "claim": "Shopify's inventory reports grade products A, B, C by 80%, 15% and 5% of revenue over the last 28 days, ignoring cost; days of inventory remaining is ending stock divided by average daily sales over 28 days.",
+    "body": "Shopify defines its inventory reports as follows. ABC analysis uses a fixed last-28-day window, updated daily, and ranks by revenue only: A items together make 80% of revenue, B the next 15%, C the last 5%; cost is not a factor. Sell-through rate is quantity sold divided by quantity sold plus quantity left, over the latest 30-day period with about a two-day processing delay. Days of inventory remaining is ending quantity divided by average quantity sold per day over the last 28 days; it shows N/A when nothing sold. Average inventory sold per day is quantity sold divided by days in the period. Month-end inventory value multiplies on-hand units by cost per item, so variants without a cost are not valued.",
+    "conditions": "Shopify stores with the inventory reports available on their plan, as defined in the help article on the date fetched.",
+    "fails_when": "Stock was out for part of the 28 days (velocity reads low), or cost per item is missing, or revenue rank is used as a profit rank.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "ABC: 80% / 15% / 5% of revenue, last 28 days",
+      "days of inventory remaining uses 28 days of sales",
+      "sell-through uses the latest 30 days"
+    ],
+    "asks": [
+      "How does Shopify calculate days of inventory remaining?",
+      "What is Shopify's ABC analysis based on?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6284",
+    "evidence": {
+      "where": "Inventory reports article"
+    },
+    "strength": "platform_rule",
+    "public": true
+  }
+]

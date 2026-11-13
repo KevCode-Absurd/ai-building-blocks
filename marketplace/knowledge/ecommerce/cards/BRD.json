@@ -1,0 +1,878 @@
+[
+  {
+    "id": "BRD-0001",
+    "modules": [
+      "BRD",
+      "PRD"
+    ],
+    "topics": [
+      "positioning",
+      "spec and differentiation"
+    ],
+    "claim": "Design the product so the first purchase is selfish (scent, look, taste) and the repeat purchase is altruistic (better for planet or animals); either alone is weaker.",
+    "body": "Ryan frames every brand at the intersection of narcissism and altruism. With Method, people bought for selfish reasons: they liked the fragrance and how the bottle looked by the sink. The altruistic layer (non-toxic, better for the planet) is what he credits with bringing them back and building loyalty. In the brainstormed chicken brand in the episode, he applies the same split: sell the narcissism that it is the best-tasting, cleanest chicken, and the altruism that the bird had a good life, proven by traceability. The mechanism: a purely virtuous product asks buyers to pay for someone else's benefit at the point of choice, which most will not do at shelf; a purely indulgent product has nothing that makes switching away feel like a loss. How to apply: write the first-purchase promise in terms of the buyer's own senses or status, and keep the ethical claim as the reason to stay, shown on pack and in post-purchase content rather than as the headline. Check that the selfish benefit holds up without the ethical one, because that is what wins trial. This is a framing from one founder's track record, not a tested result.",
+    "conditions": "Consumer packaged goods with a credible ethical or sustainability attribute; premium-priced versus a commodity incumbent.",
+    "fails_when": "Mission-led buyers who choose primarily on ethics (activist niches) where the cause is the headline; products whose sensory benefit is weak, so the altruistic claim is all there is.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "Should I lead with sustainability or with the product benefit?",
+      "Our eco product isn't selling. Is the green message the problem?",
+      "Why do people buy ethical brands once and then not come back?",
+      "How do I balance a feel-good mission with what customers actually want?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S0002",
+    "evidence": {
+      "where": "Brainstorm segment on the chicken farm brand",
+      "quote": "find that intersection of altruism and narcissism"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "BRD-0002",
+    "modules": [
+      "BRD"
+    ],
+    "topics": [
+      "verbal identity",
+      "positioning"
+    ],
+    "claim": "Name a brand from a single 'jumping-off word' for the feeling it must carry; the ideal is one word of about four letters, even if lawyers call it too generic.",
+    "body": "Ryan's naming method starts before any name list: pick one word for the feeling or job the brand must own, then judge candidates only against it. Method's jumping-off word was technique (cleaning by good technique rather than force). Olly's was friendly, chosen because the vitamin aisle was split between pseudo-science names and folksy nature names, so a warm, human name stood apart. Welly came from the idea of care, starting from Nightingale. His stated ideal is one word, four letters, which is very hard because most such words are taken; Olly began as Olly Slate and dropped the second word once the short version could be secured. On legal pushback: counsel said Method was too generic to protect; he asked the lawyer off the clock what he would do if the name mattered to success, and the answer was to go for it. His reading is that lawyers optimise for never being wrong, not for being right. He also says he is not good at generating names but good at spotting one, so he uses outside creatives to generate and keeps the yes or no decision himself. How to apply: write the jumping-off word, map the naming conventions incumbents use, choose a name that breaks those conventions while fitting the word, then clear trademark risk as a business decision, not a veto.",
+    "conditions": "Consumer brands naming a company or product line; categories where incumbent names cluster in one or two styles.",
+    "fails_when": "Categories where a descriptive name is needed for search or marketplace discovery (Amazon-first, SEO-led brands); jurisdictions or classes where a generic word cannot be registered and copycats are likely.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Ideal brand name: 1 word, 4 letters"
+    ],
+    "asks": [
+      "How do I come up with a brand name?",
+      "My lawyer says our brand name is too generic. Should I drop it?",
+      "How long should a brand name be?",
+      "What makes a good name for a consumer product brand?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S0002",
+    "evidence": {
+      "where": "Naming question near the end, after the egg-packaging discussion",
+      "quote": "the holy grail of naming is one word, four letters"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "BRD-0003",
+    "modules": [
+      "BRD",
+      "PRD"
+    ],
+    "topics": [
+      "distinctiveness versus differentiation",
+      "visual identity",
+      "spec and differentiation"
+    ],
+    "claim": "Source design ideas from industries as far from your category as possible; the further apart the borrowed idea, the stronger the differentiation and creative tension.",
+    "body": "Ryan describes himself as a thief who never steals from competitors, only from distant places. Method took colour and fragrance cues from personal care and vase shapes from the housewares floor, so a dish soap read as an object of desire on the counter (people look at it more than they use it). The first Method bottle riffed on a Norwegian camping fuel bottle; a later handwash bottle came from the pillowed facade of a Tokyo building; a Target collaboration put a luxury handbag designer's patterns on a $3 product. Pairing opposing ideas (high design plus deep sustainability, which he calls eco-chic) creates tension that he says deepens loyalty. Copying a competitor gives you at best parity. His process for trend trips: ground the team in the macro trends first, hire a local guide to the most influential retail, give each person a scavenger-hunt assignment, require ideas by end of day, phone the best ones to a design team in another time zone overnight, and present polished concepts the next morning. That turned trips into sold-in products before the flight home. How to apply: brief designers with references from at least two unrelated industries and treat the product as an object, not a package.",
+    "conditions": "Consumer products where the product sits visibly in the home or on a shelf and aesthetics affect choice; teams with design capability.",
+    "fails_when": "Categories bought on spec or price where design is ignored; borrowed cues that confuse what the product is (breaks the one-variable rule); regulated packaging with fixed formats.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Designer collaboration on a $3 Target product"
+    ],
+    "asks": [
+      "Where should I get design ideas for my packaging?",
+      "Our bottle looks like every competitor's. How do we stand out?",
+      "How do I make a cheap household product feel premium?",
+      "How do I run a trend trip that actually turns into products?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S0002",
+    "evidence": {
+      "where": "'I'm a bit of a thief' section; trend-trip 24-hour cycle story",
+      "quote": "I try to steal from as far away as possible"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "BRD-0004",
+    "modules": [
+      "BRD",
+      "CXP"
+    ],
+    "topics": [
+      "visual identity",
+      "distinctiveness versus differentiation",
+      "packaging and inserts"
+    ],
+    "claim": "Congruent scent or sound added to visuals lifts preference and memory; 84% preferred identical Nike shoes in a scented room and valued them about $10 higher.",
+    "body": "Lindstrom's sensory-branding chapter argues sight is overused and that adding a second sense works only when it fits the brand. Numbers he cites: in two identical rooms, 84% of subjects preferred the same Nike running shoes seen in the room with a light floral scent and guessed they cost about $10 more. In a University of Leicester supermarket test, French music made 77% of wine buyers choose French wine, and German music flipped the choice, making the matching country three to four times more likely. In a German DIY store a cut-grass scent led 49% of surveyed customers to rate staff as more knowledgeable. His own fMRI work found three of four brands gained engagement when sound and image were combined congruently, but Nokia's ringtone, heard to the point of irritation, scored negatively: a familiar sensory cue can become a liability. For an online brand the touchpoints are the package and unboxing (a consistent scent on tissue or inserts, a recognisable sound in video sign-offs). Pick one cue that matches the product's promise, use it every time, and drop it if customers find it intrusive.",
+    "conditions": "Brands with physical packaging, retail or video presence; the cue must match the product's character.",
+    "fails_when": "The cue clashes with the product (food packaging smelling of perfume), triggers allergy or sensitivity complaints, or is repeated to the point of annoyance, as with the Nokia ringtone; studies are small and some are decades old.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "84% preferred shoes in scented room, valued about $10 higher",
+      "77% bought French wine on French-music days (Leicester)",
+      "49% rated staff more knowledgeable with grass scent",
+      "3 of 4 brands gained when sound and image were congruent"
+    ],
+    "asks": [
+      "Is it worth adding a scent to our packaging?",
+      "Does a brand sound or jingle actually help sales?",
+      "Our unboxing feels forgettable, what sensory things make people remember a brand?",
+      "Can a signature sound hurt a brand?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0030",
+    "evidence": {
+      "where": "sensory branding chapter: smell, touch and sound sections; Nokia ringtone study"
+    },
+    "strength": "research",
+    "public": false
+  },
+  {
+    "id": "BRD-0005",
+    "modules": [
+      "BRD"
+    ],
+    "topics": [
+      "distinctiveness versus differentiation",
+      "visual identity"
+    ],
+    "claim": "Non-logo brand cues (a colour, shape or scene) can trigger stronger brand association than the logo itself; 98% linked logo-free purple-silk billboards to Silk Cut.",
+    "body": "When tobacco logos were banned, brands moved their identity into owned colours, shapes and scenes. Silk Cut ran billboards of plain purple silk with no name, and a study found 98% of consumers connected them to the brand. In Lindstrom's fMRI test, images associated with Marlboro and Camel (red sports cars, Formula 1, rugged landscapes) with no logo activated craving more strongly than the logo or the packs. In a separate test, women handed an empty Tiffany-blue box showed heart rates up about 20% without seeing a logo. He extends this to a 'smash your brand' test: if the logo were removed from a piece of packaging, an ad or a store, could people still tell whose it is from colour, shape, typography, language or sound? For a growing brand this means choosing a small set of distinctive assets (one colour used consistently, a pack shape, a recurring visual motif or phrase) and repeating them in every ad, page and box until they carry recognition on their own. A logo stamped in the corner does much less work than an asset that is part of the image.",
+    "conditions": "Brands with enough repetition and time to build associations; consistent use across ads, site and packaging.",
+    "fails_when": "The brand is too new or too small for any asset to have earned association, so the name must still do the work; or the asset is generic to the category (every supplement brand uses green), so it signals the category, not the brand.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "98% linked purple-silk billboards to Silk Cut",
+      "about 20% heart-rate rise on receiving an empty Tiffany-blue box"
+    ],
+    "asks": [
+      "How do I make my brand recognisable without the logo?",
+      "Does our logo matter as much as we think?",
+      "What are distinctive brand assets and how many should we have?",
+      "People see our ads but don't know they're from us, how do we fix it?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0030",
+    "evidence": {
+      "where": "subliminal messaging chapter, tobacco logo study; sensory chapter, Tiffany box and 'smash your brand'"
+    },
+    "strength": "research",
+    "public": false
+  },
+  {
+    "id": "BRD-0006",
+    "modules": [
+      "BRD",
+      "MCR",
+      "ORG"
+    ],
+    "topics": [
+      "distinctiveness versus differentiation",
+      "creator and influencer collaboration"
+    ],
+    "claim": "Sponsorship that sits beside content gets forgotten: Ford's $26M of standard American Idol ads lowered recall, while Coke, built into 60% of airtime, was strongly remembered.",
+    "body": "Using steady-state topography on viewers of American Idol, Lindstrom compared sponsors with similar spend and reach. Coca-Cola was physically part of the show for about 60% of its running time: judges' cups, bottle-shaped furniture, Coke-red walls. Ford ran conventional commercial breaks and some ads using contestants, but the brand played no role in the story. After viewing, subjects remembered Coke far better than Cingular and far better than Ford, and remembered less about Ford's ads than before the study, as if the integrated brand crowded the bolted-on one out of memory. Ford's sponsorship was put at $26 million a year. The lesson for a brand paying creators or sponsoring content: a read or pre-roll slot that the viewer recognises as 'just an ad' gets filtered as noise. Pay for placements where the product is used inside the creator's actual routine or storyline, appears repeatedly in context, and is tied to what the audience aspires to. When briefing a creator, specify the moment of use in the narrative, not a scripted ad break, and judge the partnership on recall or branded search, not just impressions.",
+    "conditions": "Sponsorships, creator integrations, podcast and video partnerships where the brand pays for presence inside someone else's content.",
+    "fails_when": "The audience resents heavy-handed placement (forced product use breaks trust, and disclosure rules still apply); direct-response formats where a clear offer and call to action matter more than memory; single commercially run study, not peer reviewed.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Coke visible about 60% of American Idol running time",
+      "Ford sponsorship about $26 million per year",
+      "Ray-Ban sales up over 50% after Risky Business placement, a further 40% after Top Gun"
+    ],
+    "asks": [
+      "Is paying for a sponsored ad read worth it?",
+      "We sponsor a podcast but nobody seems to remember us, what are we doing wrong?",
+      "How should I brief an influencer so people actually remember the product?",
+      "Does product placement work better than a normal ad break?"
+    ],
+    "platforms": [
+      "youtube",
+      "instagram",
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0030",
+    "evidence": {
+      "where": "product placement chapter, American Idol SST study"
+    },
+    "strength": "research",
+    "public": false
+  },
+  {
+    "id": "BRD-0007",
+    "modules": [
+      "BRD",
+      "ORG"
+    ],
+    "topics": [
+      "positioning",
+      "distinctiveness versus differentiation"
+    ],
+    "claim": "Word of mouth compounds only when others see the product in use and asking about it is socially expected; TOMS shoes spread, privately consumed TOMS coffee did not.",
+    "body": "Referral by conversation needs three conditions, and a brand can check them before betting on organic spread. First, visibility: someone other than the buyer must encounter the product in normal use, ideally with a recognisable mark (TOMS put a large logo on the back of a shoe at a time when that was unusual). Second, a social script that prompts the question: friends are expected to comment on new shoes or a new haircut, so the conversation starts on its own. Third, a payoff for the person who answers: status (I'm fashion-forward and I gave a pair away) or affiliation (people like us do this), which creates tension for the listener to buy too. TOMS shoes met all three and grew into a large company; TOMS coffee with the same giving mechanic failed because coffee is usually made alone and, when served to a guest, the label is never seen, so no conversation happens. How to apply: for each product, write down where a non-buyer sees it, what makes them ask, and what the owner gains by answering. If all three are missing, budget for paid acquisition, referral incentives or packaging and serving moments that create visibility, rather than expecting organic spread.",
+    "conditions": "Brands planning for organic or word-of-mouth growth, especially apparel, accessories, home goods, food served to guests, and anything used in public or shared settings.",
+    "fails_when": "Products that are private by nature (supplements, intimate care, medical) still spread through recommendation when the problem is shared in forums or among close friends; there, visibility matters less than an outcome worth reporting, and a referral incentive or review engine does the work.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "TOMS shoes priced around $85 with one pair given per pair sold (as described)"
+    ],
+    "asks": [
+      "why isn't anyone talking about our product",
+      "will word of mouth work for my product",
+      "how do i get customers to tell their friends",
+      "we have happy customers but no referrals, what's missing",
+      "what makes a product spread by itself"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0035",
+    "evidence": {
+      "where": "Step four, 'spread the word', TOMS shoes vs TOMS coffee example",
+      "quote": "the system wasn't created to lead to the conversation taking place"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "BRD-0008",
+    "modules": [
+      "BRD",
+      "PRD"
+    ],
+    "topics": [
+      "positioning",
+      "launch risk"
+    ],
+    "claim": "A follower launching a better copy usually fails; win by launching first in a new position with a bigger launch budget and a new name, not the house name.",
+    "body": "The book says most new products miss their goals because the follower focuses on 'better' instead of 'speed'. The typical pattern: spend a long time improving a copy of the leader's product, launch it with a smaller budget than the leader, and put the house name on it for a quick share. The authors call all three deadly. Being better is not enough because buyers already have the leader in the top spot and will not re-rank on a small improvement. The fix is to launch before anyone else establishes the position, with a heavier launch push and a new, distinct name. Leaders have the opposite option: they can 'cover' a rival's innovation by adopting it quickly, as GM paid $50 million for Wankel engine rights as insurance on a much larger business, while Kodak and 3M declined xerography and lost office copying to Xerox. A follower's copy of the leader is not covering, it is me-too. Leaders also gain nothing from ads that say 'we're No. 1'; they should reinforce the original concept, such as being the original or the inventor.",
+    "conditions": "Second or later entrants deciding launch strategy; leaders deciding whether to respond to a rival's new feature.",
+    "fails_when": "Categories where buyers switch freely on measurable performance (specifications easily compared online), where a clearly better product can win share without being first.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "GM paid $50 million for Wankel engine rights as cover"
+    ],
+    "asks": [
+      "Can we beat the market leader with a better version of their product?",
+      "A competitor launched a new feature, should we copy it?",
+      "Should our ads say we are number one?",
+      "Why do me-too products fail even when they are better?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S0036",
+    "evidence": {
+      "where": "Chapter 7 'Why products fail' and Chapter 6 'What not to do' and 'Covering all bets'"
+    },
+    "strength": "anecdote",
+    "public": false
+  },
+  {
+    "id": "BRD-0009",
+    "modules": [
+      "BRD",
+      "OFF"
+    ],
+    "topics": [
+      "positioning"
+    ],
+    "claim": "A premium price position works only if you claim it first, with a real product reason, in a category open to premiums; signal the tier in ads, not at shelf.",
+    "body": "The book treats price as a position (a 'creneau', or hole in the mind) that can be owned, but sets three conditions for a premium position: be the first to establish the high-price spot, give a valid product story that explains it, and pick a category where shoppers are open to a costly brand. Without all three, the high price just drives buyers away; charging more is not itself a strategy. Price should be positioned in the advertising so there is no price shock at the point of sale: ads need not quote the exact number but should make clear which price tier the brand sits in. The authors add a matching rule for the low-price spot: it suits new products buyers feel they are taking a risk on (if it disappoints, little is lost), while the high-price spot suits old, established categories, especially ones where buyers are unhappy with durability or service. Running high, standard and low tiers under different names is presented as the strongest overall approach.",
+    "conditions": "Choosing a price tier for a brand or product line; consumer categories with visible brand ladders.",
+    "fails_when": "Another brand already owns the premium spot, the product has no credible reason for the premium, or the category is one where buyers see all brands as interchangeable.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "3 conditions for a premium position: first, valid product story, receptive category"
+    ],
+    "asks": [
+      "Can we position our brand as the premium option?",
+      "We want to charge more than competitors, what has to be true for that to work?",
+      "Should a new unknown product launch at a low or high price?",
+      "Should our ads show the price or not?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0036",
+    "evidence": {
+      "where": "Chapter 7, Positioning of a follower, sections 'The high-price creneau' and 'The low-price creneau'"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "BRD-0010",
+    "modules": [
+      "BRD"
+    ],
+    "topics": [
+      "verbal identity"
+    ],
+    "claim": "Initials-only names cost awareness: in the authors' survey, initial-named firms averaged 49% awareness versus 68% for matched name firms. Use initials only after the full name is famous.",
+    "body": "Companies abbreviate their names because they see them in memos all day and assume everyone knows what the letters mean. Ries and Trout argue initials work only when the full name is already well known, so the letters trigger it in the buyer's mind, as with GE or IBM, or FDR and JFK, who used initials only after becoming famous. To test this, they surveyed a Business Week subscriber list and compared awareness of Fortune 500 companies known by initials with a matched group of name companies: initials averaged 49% awareness and names 68%, a 19-point gap. They also point out that initials are often no shorter to say: 'W U' has as many syllables as 'Western Union', and people refer to brands by sound, not by how they look on a logo. For a new online brand, this argues against launching under an acronym or letter mark; build the spoken name first and only shorten once shoppers already use the short form themselves.",
+    "conditions": "Naming or renaming a brand that is not yet widely known; spoken and search recall matter.",
+    "fails_when": "The full name is already famous and customers already use the short form, so the initials carry the established meaning.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "49% average awareness for initial-named companies",
+      "68% for matched name companies",
+      "19 percentage point gap (authors' Business Week subscriber survey)"
+    ],
+    "asks": [
+      "Is it a bad idea to use initials as our brand name?",
+      "We want to shorten our brand name to letters, will that hurt us?",
+      "Do acronym brand names hurt brand awareness?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0036",
+    "evidence": {
+      "where": "Chapter 10, The no-name trap, sections 'Visual shorthand' and 'No shortcuts to success'"
+    },
+    "strength": "research",
+    "public": false
+  },
+  {
+    "id": "BRD-0011",
+    "modules": [
+      "BRD",
+      "PRD"
+    ],
+    "topics": [
+      "positioning",
+      "candidate screening"
+    ],
+    "claim": "Look for an open position in the buyer's mind (size, price, gender, age, time of day, channel, heavy user), not a gap in your own product line.",
+    "body": "The book lists the kinds of openings followers have used to get into the mind: size (Volkswagen's small car when everyone went bigger), high price, low price, gender coding (Marlboro masculine, Virginia Slims feminine), age (Aim toothpaste for children, cited as taking 10% of a market dominated by two giants), time of day (NyQuil as the first night-time cold remedy), distribution (L'eggs as the first hosiery in supermarkets) and the heavy user ('the one beer to have when you're having more than one'). Two warnings come with the list. First, timing: a later copy of an open position fails even with good execution, as Lorillard's masculine cigarette did about 20 years after Marlboro. Second, the factory trap: Ford's Edsel filled a price gap between its own car lines but there was no empty space for another chrome mid-price car in buyers' minds. To apply it, map competitors by how shoppers describe them, find the attribute nobody claims, check it matters to buyers, and only then build the product. Thinking against the obvious direction often finds the opening, as the masculine-named Charlie perfume did.",
+    "conditions": "Follower brands entering categories that already have a leader; product or brand concept stage.",
+    "fails_when": "The open position exists because buyers do not care about that attribute, or a competitor already claimed it, in which case arriving late is fatal.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Aim toothpaste took about 10% of a market dominated by Crest and Colgate",
+      "Lorillard's Luke launched about 20 years too late"
+    ],
+    "asks": [
+      "How do I find a gap in a crowded market?",
+      "Our product fills a gap in our range, but will customers care?",
+      "What angles can a small brand use to stand out against a big leader?",
+      "Is it too late to launch a product like a competitor's if theirs is already popular?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S0036",
+    "evidence": {
+      "where": "Chapter 7, Positioning of a follower, sections on creneaus and 'The factory creneau'"
+    },
+    "strength": "anecdote",
+    "public": false
+  },
+  {
+    "id": "BRD-0012",
+    "modules": [
+      "BRD"
+    ],
+    "topics": [
+      "verbal identity",
+      "positioning"
+    ],
+    "claim": "Name a product with an almost-generic word for its main benefit; a coined, meaningless name is safe only when first with an entirely new product millions want.",
+    "body": "The authors argue the name is the most important positioning decision because it is the hook the mind hangs the brand on. A good name starts the positioning by stating the major benefit (DieHard batteries, Head & Shoulders), sitting just short of generic: close enough to describe the category benefit that me-too rivals cannot easily copy it, but not so generic that it loses trademark protection, as 'Lite' did for Miller once every brewer launched a light beer. Coined names like Kodak or Xerox look like counterexamples, but those brands were first with a new product, and the first brand becomes famous whatever it is called. For anyone else a meaningless name forces the advertising to do all the work. The book adds letter data: about 1 in 8 English words starts with S and 1 in 3,000 with X; the five most common first letters are S, C, P, A and T, the least common X, Z, Y, Q and K. Names also date: Esquire and Yachting lost ground when their words stopped matching how readers lived. Check a candidate name by asking whether a stranger can guess the benefit.",
+    "conditions": "Naming a new brand or product entering an existing category; English-language markets for the letter-frequency data.",
+    "fails_when": "The product is genuinely first in a new category, where a coined name can work and is easier to trademark; or the descriptive word is so generic it cannot be protected.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "1 in 8 English words starts with S",
+      "1 in 3,000 English words starts with X",
+      "most common initial letters S, C, P, A, T; least common X, Z, Y, Q, K"
+    ],
+    "asks": [
+      "Should our brand name describe what the product does or be a made-up word?",
+      "Is a made-up brand name a bad idea for a new store?",
+      "We have a name nobody understands, is that hurting us?",
+      "How close to a generic word can a brand name be?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0036",
+    "evidence": {
+      "where": "Chapter 9, The power of the name, sections 'How to choose a name' and 'When to use a coined name'"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "BRD-0013",
+    "modules": [
+      "BRD",
+      "PRD"
+    ],
+    "topics": [
+      "positioning",
+      "category entry points"
+    ],
+    "claim": "The first brand into the mind averages about twice the long-term share of No. 2 and four times No. 3; neck-and-neck categories settle at roughly 5:3 or 2:1.",
+    "body": "The authors report that the first brand to establish itself in a category, on average, ends up with about twice the long-term market share of the second brand and twice again the third. When two brands run level, the authors argue the situation is unstable: one will pull ahead and the ratio tends to settle around 5 to 3 or 2 to 1, after which it rarely changes. The practical consequences: when leadership in a category is still undecided, that is the moment to spend extra, because winning the lead for a single year can lock it in for years; once a leader is set, a follower spending to go head-on usually wastes money. Big companies entering a category late with copies (Coke's Mr. Pibb against Dr Pepper, IBM copiers against Xerox) stayed distant seconds despite huge resources. For an online brand, this argues for defining a narrow category it can be first in, rather than entering an established one as a better copy. Treat the ratios as the authors' historical observation across US categories, not a measured law.",
+    "conditions": "Categories with clear brand ladders, mostly mature consumer categories; the 'spend when undecided' advice applies to the window before a leader is fixed.",
+    "fails_when": "Categories where platform shifts reset the ladder (a new channel or technology), or where buyers do not form brand preferences at all, such as commodity products bought on price.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "first brand gets about 2x the long-term share of No. 2 and 4x No. 3 (authors' historical observation)",
+      "close categories settle at about 5:3 or 2:1"
+    ],
+    "asks": [
+      "How much does being first in a category really matter?",
+      "We are neck and neck with a competitor, should we spend more now?",
+      "Can a bigger company beat the category leader by copying them?",
+      "Is it worth creating a new category instead of competing in an existing one?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S0036",
+    "evidence": {
+      "where": "Chapter 6, Positioning of a leader, sections 'Establishing leadership' and 'The instability of equality'"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "BRD-0014",
+    "modules": [
+      "BRD"
+    ],
+    "topics": [
+      "verbal identity",
+      "positioning"
+    ],
+    "claim": "When a product is seen as an imitation, name its origin openly (soy butter, corn sugar) rather than hiding it behind a neutral name.",
+    "body": "The authors argue that names hiding where a product comes from make buyers suspect something is wrong. Margarine is their example: decades on market and still seen as imitation butter, because nobody knows what it is made of. A better name would have been 'soy butter', which states the origin and claims the category word. Corn Products did this when it renamed corn syrup sweeteners 'corn sugars' and advertised 'cane, beet and corn', putting corn on equal footing with the accepted options instead of sounding like a lab substitute. The rule: do not let competitors take the category word you need to describe your product, and use your origin as a point of pride rather than a secret. When fighting an established concept, do not rename it, which just confuses people; turn its own words around instead. For a challenger product (plant-based, lab-grown, refurbished, dupes), this means naming the material or method plainly and pairing it with the category word buyers already trust. Check category naming rules first, since regulators control some product terms.",
+    "conditions": "New-material or alternative products competing with an established 'real' version.",
+    "fails_when": "Regulators restrict the category word (food standards of identity, for example), or the origin genuinely puts off the target buyer.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "Our product is an alternative to a well-known product, how should we name it?",
+      "Should we hide what our product is made of in the name?",
+      "Customers think our product is a cheap imitation, how do we fix that?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0036",
+    "evidence": {
+      "where": "Chapter 9, The power of the name, sections 'Negative names can be positive' and 'Bringing the product out of the closet'"
+    },
+    "strength": "anecdote",
+    "public": false
+  },
+  {
+    "id": "BRD-0015",
+    "modules": [
+      "BRD",
+      "PRD"
+    ],
+    "topics": [
+      "visual identity",
+      "positioning",
+      "category entry points"
+    ],
+    "claim": "A minimal DTC-style can failed on shelf; redesigning for shelf (coloured rim, plain benefit callouts) tripled sales of the same liquid in the first two retailers.",
+    "body": "Cadence's first can was a minimal, sleek DTC-style design that looked good on Instagram. When it launched in its first two retailers, Vitamin Shoppe and GNC, velocity was below target. The team redesigned for shelf: a half-inch coloured rim so the flavour reads instantly, and explicit unique selling points such as no sugar and no caffeine on the front. With the same liquid, sales were three times higher. McKay's explanation: a shopper has milliseconds to identify what the product is and what it is not, so shelf packaging behaves like direct-response creative, while DTC packaging can stay top-of-funnel and aesthetic because the ad and product page do the explaining. He adds a constraint DTC founders underestimate: on a regulated food or drink pack, roughly 35% of the surface (barcode, UPC, mandatory callouts, size statement, origin) cannot be designed around freely. He had three rebrands in about 300 days. How to apply: design the pack for the place it is bought; for retail, test whether flavour or variant and the top two claims are legible at arm's length in under a second, and draft the regulated panel first.",
+    "conditions": "Physical products moving from DTC into physical retail, especially crowded consumables shelves; food and beverage with regulated labelling.",
+    "fails_when": "DTC-only brands where the box is seen after purchase and unboxing aesthetics matter more; luxury or gift categories where minimalism is the signal; the 3x is one brand's result across two retailers with no control period stated.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "same liquid, redesigned can: 3x sales",
+      "about 35% of can surface fixed by regulation and retail requirements",
+      "3 rebrands in about 300 days"
+    ],
+    "asks": [
+      "Does my packaging need to change when I go into stores?",
+      "Our product sells well online but not on shelf, what is wrong?",
+      "Should retail packaging look different from DTC packaging?",
+      "How much of the label can I actually design?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0037",
+    "evidence": {
+      "where": "Opening and rebrand discussion, Vitamin Shoppe and GNC launch",
+      "quote": "same liquid, sales were three times"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "BRD-0016",
+    "modules": [
+      "BRD"
+    ],
+    "topics": [
+      "verbal identity",
+      "distinctiveness versus differentiation"
+    ],
+    "claim": "A name that splits the team in half has energy; a name everyone agrees on usually sits in the 'invisible zone' of the comfort trap.",
+    "body": "Lexicon's 'comfort trap' maps names on energy against consensus. In the tension zone, roughly half the team dislikes the name, energy is high and the idea is distinctive. As names get more familiar and agreeable, distinctiveness drops into an invisible zone: safe, easy to approve, and unremarkable in market. Andy Grove backed Pentium over the engineers' 'ProChip' precisely because it polarized. Placek says every famous name on his wall (BlackBerry, Impossible, Sonos, Febreze, Swiffer) was rejected by the client at first. How to judge without relying on gut or a vote: first mock each shortlisted name in context before any client or team sees it, such as a newspaper headline or a sponsor line on an athlete photo, and ask one question, is it believable within a second? Most decision-makers have little practice with creative choices, so a bare spreadsheet of names favors the comfortable option. Then check processing fluency and sound, run trademark screening, and after launch run small tracking research for 90 to 120 days. Treat polarization as a signal to examine what in the word creates the reaction, not as an automatic yes.",
+    "conditions": "Choosing among shortlisted brand or product names in a team or with stakeholders; consumer brands competing in crowded categories.",
+    "fails_when": "The polarizing reaction comes from a real problem (negative meaning in a target language, legal conflict, unpronounceable); regulated categories where a clear descriptive name is required; polarizing with buyers, not only internally.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about half the team disliking it marks the tension zone",
+      "post-launch tracking research over 90 to 120 days"
+    ],
+    "asks": [
+      "half my team hates our new brand name, should we drop it",
+      "how do we choose between brand name options when nobody agrees",
+      "is it a bad sign if everyone likes a name",
+      "how do I test a brand name before committing"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0040",
+    "evidence": {
+      "where": "Comfort trap slide discussion; Pentium and Andy Grove; proof of concept presentation"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "BRD-0017",
+    "modules": [
+      "BRD",
+      "AVT"
+    ],
+    "topics": [
+      "verbal identity",
+      "positioning",
+      "category entry points"
+    ],
+    "claim": "Avoid comfortable category-descriptive names that test well; Swiffer (vs 'ProMop') became about $5B while Clorox's descriptive Ready Mop stayed around a few hundred million.",
+    "body": "Lexicon argues a name has three jobs: get attention, hold it through processing fluency (easy to say and something in it is understood), and surprise. Comfortable names fail the third job. They do well in research because people instantly say 'it's a mop', but they disappear among competitors. P&G wanted 'ProMop'; Lexicon noted the product was not a mop and that nobody likes mopping, and proposed Swiffer. Clorox launched Ready Mop at about the same time. Placek puts Swiffer at about a $5B brand and Ready Mop at a couple of hundred million, and says the name matters most in the first 90 days to 12 months, when it earns retailer and shopper attention. Method for a crowded category: map all competitor names and rule out the dominant pattern (every 'Fiber-something'); climb from product attributes to the buyer's ultimate benefit (fiber: 'you feel lighter'); search words around that benefit; then pick a familiar real word that is surprising in this category (Feather for a fiber supplement) and let a descriptor line carry the category ('the lightweight fiber you need'), as 'the quicker picker upper' did for Swiffer. Surprise is relative to the owner: Azure was surprising from Microsoft, would not be from Google.",
+    "conditions": "Crowded consumer categories where competitor names describe the product; brands with a tagline or descriptor slot on pack and PDP.",
+    "fails_when": "Marketplace-first or search-dependent brands that rely on a descriptive keyword in the name; very new categories where buyers need the name to explain what the product is; the Swiffer vs Ready Mop gap also reflects distribution and spend, not only the name.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Swiffer ~$5B brand vs Clorox Ready Mop ~a few hundred million (Placek's estimates)",
+      "name effect concentrated in the first 90 days to 12 months",
+      "3 jobs: attention, processing fluency, surprise"
+    ],
+    "asks": [
+      "should my brand name say what the product is",
+      "every brand in my category has the product word in its name, should we too",
+      "how do I name a supplement brand so it stands out",
+      "why do safe descriptive brand names fail"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0040",
+    "evidence": {
+      "where": "ProMop to Swiffer story; fiber naming game",
+      "quote": "has to be surprising, not comfortable, not popular"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "BRD-0018",
+    "modules": [
+      "BRD"
+    ],
+    "topics": [
+      "verbal identity",
+      "distinctiveness versus differentiation"
+    ],
+    "claim": "Lexicon generates about 2,000 name candidates per project in two-person teams working three different briefs; most founders stall after 50 to 100 names.",
+    "body": "Lexicon Branding (Swiffer, BlackBerry, Pentium, Sonos, Impossible, Windsurf) treats naming as a search problem where quantity produces quality. Clients who come in stuck usually generated 50 to 100 names and stopped; Lexicon expects around 2,000, most of them throwaway material it calls 'trash' that is still necessary. The firm dropped group brainstorming and freelancers after an 18-month internal review of where its winning names came from: they came from individuals and two-person teams, not group sessions, where peer pressure and early judgment cut ideas short. Each project runs about three teams on different briefs. Team one knows the product fully. Team two gets the product with an invented twist (fiber plus energy, for example). Team three works an adjacent world (athletic performance) without being told the real product. That spread produces three very different lists. Sources include Greek and Latin roots, mythology and enriched databases (the periodic table yielded Pentium). After about two cycles, roughly two to two and a half weeks, the team checks results against a creative framework, cuts to 10 to 15 names and sends them to trademark review and linguists in each target market. How to apply: budget for volume, split the brief three ways, keep judgment out of the generation phase, and screen trademark only on the shortlist.",
+    "conditions": "Naming a new brand, product line or company before launch; works for a founder team as well as an agency if they hold to the volume and split briefs.",
+    "fails_when": "The name must be descriptive for search or marketplace reasons (Amazon-first listings, local service SEO); budget or time does not allow a multi-week process and an available descriptive name is good enough.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "~2,000 candidate names per project",
+      "founders typically stop at 50 to 100",
+      "18-month internal review of name sources",
+      "3 parallel teams on different briefs",
+      "2 cycles over about 2 to 2.5 weeks before narrowing",
+      "shortlist of 10 to 15 names to trademark review"
+    ],
+    "asks": [
+      "how many name ideas should I come up with before picking one",
+      "we brainstormed 60 brand names and none feel right, what now",
+      "is a brainstorm session a good way to name a brand",
+      "how do professional naming agencies actually come up with names"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0040",
+    "evidence": {
+      "where": "Fiber brand naming game; 'quantity leads to quality' and brainstorming discussion",
+      "quote": "quantity leads to quality"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "BRD-0019",
+    "modules": [
+      "BRD"
+    ],
+    "topics": [
+      "verbal identity"
+    ],
+    "claim": "Lexicon's sound-symbolism research across six languages found B the most reliable English sound; P, K, B read reliable and fast, D, P, Z read fast, X signals innovation.",
+    "body": "Lexicon tests names for sound symbolism, the meaning people infer from sounds alone, and now scores candidates with in-house AI-assisted software. Its early research, run in about six languages and six countries, found B to be one of the most reliable sounds in English, a point that helped sell BlackBerry: B was strong, 'black' was understood across languages, and big competitors would not dare use it. Plosive sounds (P, K, B) signal reliability and speed; for a 'must feel fast' brief, the software ranks names by fast letters such as D, P and Z, ignoring meaning. X reads as innovation in cars and tech, which Placek credits for SpaceX and Lexus. The consonant-vowel-consonant-vowel pattern (as in Sonos, 'mama') is the earliest structure children learn and among the easiest to process and remember. How to apply: once the shortlist exists, decide which quality the brand must signal (speed, reliability, softness), check each name's opening and stressed consonants against it, prefer CVCV or similarly simple shapes for memorability, and use alliteration (HubSpot) as a memory aid. Use sound only as a tiebreaker after meaning, surprise and trademark.",
+    "conditions": "Coined or short brand names, especially tech, product and consumer brands; English-first markets with checks in other target languages.",
+    "fails_when": "Categories where softness or calm is the point (sleep, baby, skincare), so hard plosives clash; X and Z names are now common in tech and may no longer stand out; sound symbolism varies across languages and should be tested per market.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "sound research run in ~6 languages / 6 countries",
+      "fast letters cited: D, P, Z; reliable plosives: P, K, B",
+      "CVCV structure, e.g. Sonos"
+    ],
+    "asks": [
+      "what letters make a brand name sound strong",
+      "does the sound of a brand name actually matter",
+      "we want our product name to feel fast and techy, what letters should it have",
+      "what makes a name easy to remember"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0040",
+    "evidence": {
+      "where": "Power letters and sound symbolism; BlackBerry story; rapid-fire name scoring"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "BRD-0020",
+    "modules": [
+      "BRD"
+    ],
+    "topics": [
+      "verbal identity",
+      "positioning"
+    ],
+    "claim": "Placek reports no case of a rename losing equity or momentum when launched with a clear why-and-what-you-gain story; budget 6 to 9 months of effort.",
+    "body": "The usual reason founders keep a weak name is fear of losing recognition and momentum. Lexicon's founder says that across his projects he has never seen evidence of that loss, provided the new name launches with enthusiasm and a story: where the company was, where it is going, and what customers gain, with reassurance that the product they use is not going away. Bad names create ongoing friction (hard to spell, hard to search, poor SEO), and that friction compounds just as a good name's familiarity does. The worked case: Codeium was hard to spell and search; over a six-week naming project it became Windsurf and, by his account, took off. How to apply: list the name's friction costs (misspellings, search confusion, trademark risk); plan a dedicated launch story across site, email and packaging; expect to spend extra resources for six to nine months; and track awareness for 90 to 120 days afterwards. Young brands (around Series A or B, or the DTC equivalent) can do this without trauma; a heritage brand needs a compelling reason. A lawsuit makes the decision simple. This is one expert's claim from his client base, not a measured study, and he sells naming services.",
+    "conditions": "Early-stage brands with modest awareness whose current name causes measurable friction (spelling, search, trademark).",
+    "fails_when": "Established brands with large earned search volume, reviews and marketplace listings tied to the name (redirects and listing merges can lose rank); renames done quietly without a launch story; heritage brands where the name is the main asset.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Codeium to Windsurf naming project took ~6 weeks",
+      "extra launch resources over ~6 to 9 months",
+      "tracking research 90 to 120 days after launch"
+    ],
+    "asks": [
+      "should we rebrand and change our company name",
+      "will changing our brand name kill our sales momentum",
+      "our name is hard to spell and nobody can find us online, is a rename worth it",
+      "how long does a rebrand to a new name take to settle in"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0040",
+    "evidence": {
+      "where": "Question on when to change a name; Windsurf example near the start",
+      "quote": "We have never seen that as evidence in the marketplace."
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "BRD-0021",
+    "modules": [
+      "BRD",
+      "MCR"
+    ],
+    "topics": [
+      "distinctiveness versus differentiation",
+      "positioning"
+    ],
+    "claim": "Rahal's test for a marketing idea: if it is obvious it is not good; good ideas are non-obvious but true, like a campaign pitting David bars against boiled cod.",
+    "body": "Rahal judges creative and brand ideas with one filter: an obvious idea (the first thing anyone, including an AI tool, would suggest, such as a David versus Goliath theme for a brand called David) is not good; the ideas worth running are non-obvious and true. His example: the brand's website already had a comparison chart showing David bars second only to cod in protein per calorie, so the team built a full campaign and photo shoot setting boiled cod against the gold David bar. Nobody would have proposed it in a survey, it confused people enough to stop them, and it was literally true, which made it credible. The same logic produced RXBAR's packaging: shrink the logo until the brand is barely visible and lead with a short ingredient list (egg whites, dates, nuts), which conventional brand design would reject. For David, gold was chosen as the hero colour to read premium and appealing beyond a purely masculine name. How to apply: list ideas, discard any that the first ten people or an AI would suggest, and keep only those you can back with a provable fact about your product, then check that the fact is visible on your site or pack.",
+    "conditions": "Consumer brands in crowded categories where competitors make the same claims; needs a provable, distinctive product fact.",
+    "fails_when": "Categories with strict claims rules where a comparative claim needs substantiation; ideas that are non-obvious but not clearly true, which read as gimmicks.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "David bar ranked second only to cod on protein-to-calorie ratio (brand's comparison chart)"
+    ],
+    "asks": [
+      "How do I know if a marketing idea is any good?",
+      "How can a protein bar brand stand out?",
+      "Should our logo be big on the packaging?",
+      "How do we come up with campaign ideas competitors won't copy?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0250",
+    "evidence": {
+      "where": "Marketing framework segment (about 20:43 to 28:04)",
+      "quote": "If they're obvious, they're not good."
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "BRD-6484",
+    "modules": [
+      "BRD"
+    ],
+    "topics": [
+      "naming",
+      "trademark"
+    ],
+    "claim": "The USPTO refuses a mark that is confusingly similar to an existing one on related goods; marks need not be identical, and similar sound, look, meaning or overall impression counts, including different spellings said the same way.",
+    "body": "The USPTO's likelihood of confusion page says confusion exists when marks are confusingly similar and the goods or services are related, so consumers would wrongly believe they come from the same source. Marks do not have to be identical: they can be similar in sound, appearance or meaning or create a similar commercial impression, and marks pronounced the same way but spelled differently can conflict. Goods can be related if they are identical, similar or competitive. The USPTO says the best way to avoid a refusal is a comprehensive clearance search. How to apply to naming: knock out any candidate whose sound-alike, look-alike or same-meaning twin is registered for related goods, not only exact matches, and check translations where the store sells in more than one language.",
+    "conditions": "Brands or product names that will be sold or registered in the US.",
+    "fails_when": "Other countries apply their own law (India's Trade Marks Act 1999); the final call on registrability belongs to an examiner or a trademark attorney.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I use a brand name that is spelled differently from an existing trademark?",
+      "Do trademarks have to be identical to conflict?",
+      "How do I check if a brand name is safe to use in the US?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6484",
+    "evidence": {
+      "where": "Similarity of marks; relatedness of goods",
+      "quote": "Trademarks don't have to be identical to be confusingly similar"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "BRD-6485",
+    "modules": [
+      "BRD"
+    ],
+    "topics": [
+      "naming",
+      "trademark"
+    ],
+    "claim": "A US trademark clearance search covers the free USPTO database of registered and pending marks, state trademark and business registers, and unregistered common-law use found by searching the internet.",
+    "body": "The USPTO's clearance search page lists the federal search system of registered and pending marks (with its free resources), the Trademark Official Gazette, the 50 state registers plus D.C. and Puerto Rico, and common-law rights that come from using a mark in commerce without registering it. It says earlier common-law use by others may affect a federal registration and advises searching several search engines for goods and services that may conflict. At a minimum, it says to check the federal database and the Gazette and also search the internet for common-law use. How to apply: a name screen is not done after one database lookup; also search marketplaces, social handles and the web for the same or similar name on related goods, and hand the survivors to a trademark attorney before buying stock or packaging.",
+    "conditions": "Brands or product names that will be sold in the US.",
+    "fails_when": "Non-US markets have their own registers (India: IP India public search); a search lowers risk but does not guarantee registration.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Is searching the USPTO database enough before choosing a brand name?",
+      "What is a common-law trademark?",
+      "How do I do a trademark clearance search?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6485",
+    "evidence": {
+      "where": "Clearance search resources list",
+      "quote": "search for common-law use of the trademark by others"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  }
+]

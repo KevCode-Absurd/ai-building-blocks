@@ -1,0 +1,1659 @@
+[
+  {
+    "id": "FIN-0001",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "exit and valuation basics"
+    ],
+    "claim": "Practitioner exit bands: dropshipping stores sell for about 1 to 2x EBITDA, ordinary ecom brands about 3 to 6x, and rare brands with retail and a product flywheel far more.",
+    "body": "The founder gives rough exit multiples, explaining that ecom valuations fell after many listed ecom brands dropped, because low barriers to entry make the model easy to disrupt. His bands: a dropshipping store about 1 to 2 times EBITDA; a branded ecom business about 3 to 6 times EBITDA, with category type (he names beauty and supplements, linked to replenishment) affecting where it lands; outliers with retail distribution, a clear product flywheel and a strong following can reach about 3 to 5 times revenue or 30 times EBITDA. He warns owners not to assume they are the outlier. The host adds that market timing moves multiples a lot, citing an agency sold in 2021 at 11 times profit against a more usual six or so. How to use it: value on EBITDA by default, and treat a revenue multiple as earned only by distribution, repeat purchase and brand pull. He also mentions a $130M offer for Oodie that collapsed. These are spoken ranges, not a transaction dataset, and the category condition is loosely worded in the transcript.",
+    "conditions": "Private sale of an ecom brand; multiples quoted around 2025 in an Australian and UK context; EBITDA-based valuation.",
+    "fails_when": "Buyer market is hot (multiples rise sharply, as in 2021) or frozen; the business has unusual recurring revenue or strategic value to a specific acquirer; a revenue-based deal for a high-growth brand.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "dropshipping store about 1 to 2x EBITDA",
+      "branded ecom about 3 to 6x EBITDA",
+      "outliers about 3 to 5x revenue or about 30x EBITDA",
+      "agency sold in 2021 at 11x profit versus about 6x usual"
+    ],
+    "asks": [
+      "What multiple will my ecom brand sell for?",
+      "How much is a dropshipping store worth compared to a real brand?",
+      "Do ecommerce brands sell on revenue or EBITDA multiples?",
+      "What makes a DTC brand get a higher exit valuation?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0003",
+    "evidence": {
+      "where": "Late interview, 'exit valuation' question"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0002",
+    "modules": [
+      "FIN",
+      "PRD",
+      "MEA"
+    ],
+    "topics": [
+      "chart of accounts and P&L structure",
+      "margin structure by market",
+      "unit economics"
+    ],
+    "claim": "In US grocery retail, retailers take 45 to 50% of shelf price, distributors 15 to 25%, trade spend 20 to 30%, so build on 50%+ gross margin.",
+    "body": "Ross McKay, founder of electrolyte drink brand Cadence (about $10M revenue in roughly 600 days, entering Target and Walmart), lays out the waterfall a DTC founder rarely sees until the first retail meeting. Start from the recommended shelf price (his can is $2.79 at Target; Walmart usually lowest). Retailers generally want 45 to 50% margin, so your sell-in price is roughly shelf price minus 50%. From that you subtract distribution and freight. If you use a distributor, their margin runs 15 to 25%. Then the line he says nobody talks about: trade spend, typically 20 to 30% of revenue, covering promotions, end caps, demos and price cuts. On a two-for-$4 promotion against a $2.50 everyday price, the brand usually funds 50 to 100% of the dollar off, often for 60 to 120 days, or around 12 weeks, a year. His rule: in CPG you want to be building from a 50%+ gross margin at sell-in price before trade spend, or retail will eat you. How to apply: before pitching a retailer, build the full waterfall per unit (shelf price, retailer cut, distributor cut, freight, trade spend at 25%) and check contribution margin is still positive at your current COGS.",
+    "conditions": "US mass and grocery retail (Target, Walmart, grocery, specialty like GNC), consumable CPG with a low shelf price; figures as stated by one founder in beverage.",
+    "fails_when": "Direct-to-store distribution without a distributor (removes the 15 to 25% layer); specialty or boutique retail with different margin norms; categories where retailers buy on consignment or marketplace terms; non-US markets.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "retailer margin 45 to 50% of shelf price",
+      "distributor margin 15 to 25%",
+      "trade spend 20 to 30% of revenue",
+      "target 50%+ gross margin",
+      "$2.79 shelf price at Target",
+      "brand funds 50 to 100% of a $1 promo discount, 60 to 120 days or about 12 weeks a year"
+    ],
+    "asks": [
+      "What margins do retailers like Target expect from a brand?",
+      "We are pitching Target, how do I work out my wholesale price?",
+      "What is trade spend and how big is it?",
+      "Is 40% gross margin enough to go into retail?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0037",
+    "evidence": {
+      "where": "Retail economics discussion, after the Target pitch section",
+      "quote": "Everyone's looking for 45 to 50%."
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "FIN-0003",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "funding options and cost of capital",
+      "exit and valuation basics"
+    ],
+    "claim": "A dividend recap needs roughly $2M+ EBITDA for three years with the last audited; lenders lend about 3x EBITDA at 12 to 14% effective, with interest cover of 2x.",
+    "body": "Khan describes the dividend recapitalisation private equity uses, applied to a profitable DTC brand. The company (not the founder) borrows against its earnings and pays the cash out to owners. Thresholds he gives for today's market: at least about $2M EBITDA, sustained for three years, with the most recent year audited. Typical size is about 3x EBITDA (so $6M on $2M). Cost: a term sheet might say 10%, but break fees, admin costs, a quality-of-earnings review and maintenance push the effective rate to 12 to 14%; at about $10M EBITDA it can fall to 9 to 11%, without warrants or equity. Interest is deductible, so the after-tax cost is lower (he estimates 6 to 8% at roughly 30% tax). The main covenant is interest cover: lenders want earnings of about twice the annual interest; for a $10M loan at 10% ($1M interest), profits must stay above about $2M or the loan is in breach and the lender can take control. Large borrowers get down to 1.5x. Lenders often prefer a recap alongside new equity, and some may require partial recourse or personal guarantees. A brand bought with no debt can be recapped immediately.",
+    "conditions": "Profitable DTC companies with $2M+ EBITDA and audited accounts; US-style corporate lending market (he references a C corp); stable or growing earnings.",
+    "fails_when": "Volatile earnings that can breach interest-cover covenants (ad cost spikes, tariff shocks); brands needing the cash for growth; founders without audited history; lenders demanding personal guarantees; confirm structure and tax with an accountant.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Minimum ~$2M EBITDA for 3 years, last year audited",
+      "Borrow ~3x EBITDA",
+      "Effective cost 12 to 14% (10% headline); 9 to 11% at ~$10M EBITDA",
+      "After-tax cost ~6 to 8% at ~30% tax",
+      "Interest cover covenant ~2x (as low as 1.5x for very large borrowers)"
+    ],
+    "asks": [
+      "Can I take cash out of my ecommerce business without selling it?",
+      "What is a dividend recap and how big do I need to be?",
+      "How much can I borrow against my brand's EBITDA?",
+      "What happens if profits drop after a business loan?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0194",
+    "evidence": {
+      "where": "Dividend recap section (free cash flow vs enterprise value quadrant)",
+      "quote": "you have to have at least $2 million of IBIDA"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0004",
+    "modules": [
+      "FIN",
+      "COG"
+    ],
+    "topics": [
+      "working capital and inventory financing",
+      "funding options and cost of capital"
+    ],
+    "claim": "Chinese factories can fund net 90+ terms by factoring your invoices under export credit insurance at about 6% APR; offer to share that cost on the BOM.",
+    "body": "Mechanism as Khan describes it for a large Chinese jewellery factory (about $300M a year across 100+ brands): the factory pays a credit insurer (he names Sinosure and Allianz) an annual premium; the insurer sends each buyer a light audit request (management accounts, P&L, past payment disputes or bankruptcies) and grades the buyer A, B or C. The factory then sells your invoice to a bank (Bank of China, HSBC and others) at about 99 cents on the dollar for 90 to 180 days, which he puts at roughly 6% a year in China (higher in Thailand, where he later moved production because of tariffs). Put that financing cost on the BOM as its own line: on $12M of purchases that was about $600k, roughly $6 a unit on 100,000 units, falling as volume rises. Then negotiate the split: he paid 80% and the factory 20% while the brand was cash-constrained, and the relationship later moved to consignment. A poor grade blocks this: his brand was rated C over a supplier dispute about eight years earlier and had to clean up its books first. His comparison: revenue-based financing quoted around 10% can become 30 to 40% effective when you grow fast, so supplier finance is cheap at low single digits of revenue.",
+    "conditions": "Brands buying meaningful volume ($ millions a year) from Chinese or Southeast Asian exporters; clean payment history; open-book BOM relationship.",
+    "fails_when": "Small buyers below insurers' and banks' thresholds; buyers with disputes or late payments on record (C grade); factories outside export-credit schemes; rates differ by country and change with interest rates.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Invoice factoring ~1% per 90 days, ~6% APR in China",
+      "$12M purchases -> ~$600k financing cost (~$6/unit on 100k units)",
+      "Financing cost split 80/20 brand/factory in his case",
+      "Revenue-based loans: ~10% nominal can reach 30 to 40% effective with fast growth"
+    ],
+    "asks": [
+      "How can my overseas supplier afford to give me net 90 terms?",
+      "Is it worth paying part of my factory's financing cost to get longer terms?",
+      "Why is a credit insurance company asking for my financials?",
+      "Are revenue-based financing loans cheaper than supplier terms?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0194",
+    "evidence": {
+      "where": "Last BOM line items: insurance and financing cost; Sinosure explanation",
+      "quote": "So in short, the supplier becomes the bank."
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0005",
+    "modules": [
+      "FIN",
+      "COG"
+    ],
+    "topics": [
+      "cash conversion cycle",
+      "working capital and inventory financing",
+      "purchase order planning"
+    ],
+    "claim": "Supplier float equals payment terms minus production-to-warehouse lead time; net 90 with a 30-day lead time gives 60 days, and consignment, paying only when units sell, is the ideal.",
+    "body": "Khan's framing: overhead is predictable and marketing can be switched off with a click, but a purchase order cannot be cancelled, so COGS timing is the main free-cash-flow risk. Float is payment terms minus the time to make the goods and get them into your warehouse. Net 90 with 30 days to warehouse gives 60 days of float; many brands sit at net 30 to 45 with 45 to 90 days to land stock, which is negative float. Real float is lower still because buying mistakes (too many size 7 rings, not enough 9s) leave stock on the balance sheet. Two ways to buy: outright, where you own inventory once the PO is invoiced, and consignment, where the factory places goods in your warehouse and you pay only as they sell, giving the cash profile of drop shipping on a custom product. He has true consignment for jewellery (gold has high remelt value and inventory sits in Hong Kong where recourse is easy). At Raycon the invoice says net 90 for the factory's financing, but in practice the brand pays weekly every Friday against sell-through, so excess inventory is never fully on the brand. With wide float he says a business growing 80% needs close to zero extra working capital, and he distributes 65 to 75% of monthly free cash flow after closing management accounts by the 15th of each month.",
+    "conditions": "DTC brands buying manufactured inventory from overseas factories; brands with enough volume and clean payment history to negotiate terms; global mechanics, but tax and legal set-up varies.",
+    "fails_when": "New or small brands without credit history (factories ask for deposits up front); products with low resale or recourse value, making consignment unacceptable to the supplier; long-tail SKU complexity that eats the float through overstock.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Float = payment terms - lead time to warehouse (net 90 - 30 days = 60 days)",
+      "Typical brand: net 30 to 45 terms vs 45 to 90 day lead times",
+      "Raycon: weekly Friday payments against a net 90 invoice",
+      "Distributes 65 to 75% of monthly free cash flow; books closed by the 15th"
+    ],
+    "asks": [
+      "How do payment terms with my supplier affect cash flow?",
+      "We pay our factory net 30 but shipping takes 60 days. Is that a problem?",
+      "What is consignment inventory and can a DTC brand get it?",
+      "How much cash do I need to fund growth if my supplier gives me terms?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0194",
+    "evidence": {
+      "where": "Payment terms section and management accounts discussion",
+      "quote": "your payment terms minus your production lead times is literally the float"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0006",
+    "modules": [
+      "FIN",
+      "COG"
+    ],
+    "topics": [
+      "working capital and inventory financing",
+      "MOQ and price breaks"
+    ],
+    "claim": "A sourcing agent can fund a year's supply at volume pricing on top of your usual order, then sell it to you as used, removing lead time and MOQ.",
+    "body": "A US sourcing agent and contract manufacturer describes a structure for brands that cannot afford volume discounts. Baseline terms: the brand pays 30% deposit to start production and 70% before shipment, reordering several times a year at a landed cost of, say, 10.00 per unit. When the next order is due, the agent adds his own money to lift the order to a full year's supply. The brand's units still cost 10.00; the agent's extra units cost him less because the larger order unlocked a volume price (and often cheaper consolidated freight). The whole year's supply ships to the brand's warehouse. Once the brand sells through the units it paid for, it buys from the agent's stock already on site at the same 10.00, paying only as it uses inventory, with no lead time and no MOQ. The agent's margin is the volume discount. How to apply: 1) List discounts you leave unused because of cash flow (volume tiers, consolidated freight). 2) Approach your agent, a distributor or an inventory investor with this split. 3) Agree storage, insurance, ownership of goods in your warehouse and what happens to unsold stock. The commenter says the cash-flow benefit can be worth more than the discount itself.",
+    "conditions": "Brands reordering a stable SKU several times a year with predictable demand and warehouse space; agents or investors willing to hold stock.",
+    "fails_when": "Demand is uncertain or the product may change, leaving a year of stock unsold and the agreement in dispute; unclear title to goods in your warehouse creates legal and accounting risk (confirm with an accountant); jurisdiction-specific rules on consignment stock apply.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "typical terms 30% deposit, 70% before shipment",
+      "example landed cost 10.00 per unit",
+      "agent tops order up to a 1-year supply"
+    ],
+    "asks": [
+      "How can I get volume pricing without the cash for a big order?",
+      "What payment terms do Chinese factories usually want?",
+      "Can a sourcing agent help with inventory financing?",
+      "How do I remove lead times and MOQs on reorders?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0197",
+    "evidence": {
+      "where": "comment by a US sourcing agent"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0007",
+    "modules": [
+      "FIN",
+      "MEA"
+    ],
+    "topics": [
+      "inventory accounting and COGS recognition",
+      "landed cost",
+      "profit and contribution formulas"
+    ],
+    "claim": "COGS is 'all in until it's in': purchase price, inbound freight, container and import duty allocated per unit; outbound shipping, platform fees, ads and 3PL storage sit below gross profit.",
+    "body": "Phil Oakley of Outserve, an accounting integrator for Amazon and Shopify brands, gives the working rule: every cost to get the product from the supplier's door onto your shelf ready to sell is cost of goods sold; every cost after that point is an operating expense. A second test: would you have incurred this cost if you had not bought this shipment? Container freight and import duty, no, so COGS; warehouse rent, yes, so overhead. In COGS: purchase price (net of supplier discounts), inbound freight, container cost, import duties and tariffs. Not in COGS: outbound shipping to customers, Amazon and Shopify fees, PPC and other advertising, 3PL storage and pick-pack. Two exceptions he names: drop-ship suppliers who bill a bundled outbound freight charge, and products sold with free shipping built into the price, where outbound shipping can be treated as COGS. The most common failure he sees is lump-sum freight and duty invoices never allocated to the products they belonged to. Best practice: capture freight and duty against the purchase order when it is raised and weight it across the lines (by value, weight or volume) to get a landed cost per unit; spreadsheets work early, inventory software as you scale.",
+    "conditions": "Brands that buy finished goods in (not manufacturers, which add a further cost layer); statutory accounts; confirm treatment with your accountant.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "What counts as cost of goods sold for an online store?",
+      "Should shipping to customers be in COGS?",
+      "Are Shopify and Amazon fees part of COGS?",
+      "How do I split a freight invoice across products?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0201",
+    "evidence": {
+      "where": "Definition of COGS and quick-fire classification round",
+      "quote": "all in until it's in"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0008",
+    "modules": [
+      "FIN",
+      "MEA"
+    ],
+    "topics": [
+      "inventory accounting and COGS recognition",
+      "chart of accounts and P&L structure"
+    ],
+    "claim": "Packaging splits two ways: the branded retail box is COGS, the plain shipping carton it travels in is a shipping expense, even when both appear on one supplier invoice.",
+    "body": "Oakley's packaging test: is it part of the product as it would sit on a retail shelf, or is it there to ship it? The product box with the picture on it, inner packaging and inserts that form the product people buy are part of cost of goods sold, like the white box an iPhone comes in. The brown carton, mailer, void fill and tape it goes into when it leaves the warehouse are costs incurred after the sale and belong in shipping or fulfilment expense, below gross profit. In practice a packaging supplier often bills both on the same invoice, so the bookkeeper has to split the lines rather than post the whole invoice to one account. Why it matters: posting mailers to COGS depresses gross margin and makes products look less profitable than they are, while posting retail boxes to shipping inflates gross margin and understates landed unit cost, which then feeds wrong break-even ROAS and pricing. How to apply: set up separate accounts or SKUs for product packaging and shipping packaging, map each packaging line on supplier invoices, and include product packaging in the landed cost per unit.",
+    "conditions": "Ecommerce brands with branded product packaging plus separate shipping materials; confirm with your accountant.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "Is packaging part of COGS?",
+      "Where do I put shipping boxes in my accounts?",
+      "Our packaging supplier invoices both product boxes and mailers, how do I book it?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0201",
+    "evidence": {
+      "where": "Common pitfalls and packaging materials answer"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0009",
+    "modules": [
+      "FIN",
+      "MEA",
+      "CXP"
+    ],
+    "topics": [
+      "inventory accounting and COGS recognition",
+      "return rate"
+    ],
+    "claim": "Return shipping is an overhead, but labour and materials to repackage or refurbish a returned item for resale go into COGS; coupons reduce revenue, not COGS.",
+    "body": "Oakley separates the two halves of a return. Bringing the item back, the return label and carrier cost, is an expense after the sale and sits in overheads. Making the item sellable again (new product box, repackaging, refurbishing) is a cost of getting stock back onto the shelf and can be classified as cost of goods sold. Related lines: a supplier discount on purchased goods reduces COGS; a supplier credit for returned stock moves with the stock; a customer coupon reduces the sale price and therefore revenue, not COGS, while advertising and Amazon PPC are operating expenses. He notes that for management reporting, apparel brands with heavy returns often track additional margin views (contribution margin after returns, cost of returns per order) alongside statutory gross margin, and that return-to-exchange offers (vouchers, trade-ups, prepaid return labels at a reduced rate) save sales but complicate the accounting of what was sold and at what margin. How to apply: create separate accounts for return shipping and for return reprocessing, post coupons as revenue reductions, and in your contribution-margin model add return shipping and reprocessing per order using your actual return rate.",
+    "conditions": "Brands with meaningful return rates (apparel, footwear); statutory accounts; confirm with your accountant.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "How do I account for customer returns?",
+      "Is the cost of reprocessing returns part of COGS?",
+      "Do discount codes go in COGS or revenue?",
+      "Where do supplier discounts go in the accounts?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0201",
+    "evidence": {
+      "where": "Quick-fire round: customer returns, supplier discounts, advertising and coupons"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0010",
+    "modules": [
+      "FIN",
+      "MEA"
+    ],
+    "topics": [
+      "bookkeeping practice and reconciliation",
+      "chart of accounts and P&L structure"
+    ],
+    "claim": "Accounting software usually receives only Shopify net revenue; report gross-to-net (refunds, discounts, shipping collected) monthly, or a revenue change cannot be explained.",
+    "body": "Shopify splits gross sales into discounts, returns and shipping charges to reach net sales, but that breakdown typically does not flow into Xero or QuickBooks, which record only net or cash. Looking only at net in the accounts, a move from $100k to $110k could be anything. The speaker's example: gross revenue was $120k both months, refunds fell from $20k to $10k, and that alone explained the rise; in another case the difference was a discount code that ran one month and not the next. Gross-to-net lines are direct profit levers: lower refunds, fewer discounts, and collecting a little more shipping at checkout, which he says most stores under-collect. How to apply: add a monthly gross-to-net bridge (gross sales, discounts, refunds and chargebacks, shipping collected, net) to the management P&L from Shopify reports, alongside the accounting P&L, and set targets for refund and discount rates. Related P&L hygiene from the same source: interest on inventory loans goes below EBITDA, not in operating expenses; percentages for every P&L line should be tracked month to month.",
+    "conditions": "Shopify brands whose bookkeeping imports summarised payouts or net sales into Xero, QuickBooks or similar.",
+    "fails_when": "Setups whose connector already imports gross sales, discounts and refunds as separate lines; very small stores where the monthly bridge adds little.",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [
+      "example: gross $120k both months; refunds $20k -> $10k explained net $100k -> $110k"
+    ],
+    "asks": [
+      "Why don't my Shopify sales match my accounting software?",
+      "How do I find out why revenue changed month to month?",
+      "Should I track gross sales or net sales?",
+      "Where should loan interest go on my P&L?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0202",
+    "evidence": {
+      "where": "P&L section, gross vs net revenue"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0011",
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "cash conversion cycle",
+      "working capital and inventory financing",
+      "funding options and cost of capital"
+    ],
+    "claim": "Inventory-funded growth is capped by the cash conversion cycle: agency-led tripling ($2M to $7M) financed by inventory loans repeatedly drove net profit to near zero.",
+    "body": "When each purchase order must be paid from the gross profit of the last one, growth compounds slowly: sell 10 units, earn $50, buy 11; earn $55, buy 12. A 90-day lead time with full payment up front adds stockouts, because the next order cannot be placed until the last stock sells. The speaker has seen roughly five seven-figure brands whose agency scaled ad spend from about $20,000 to $200,000 a month and revenue from $2 million to $7 million a year while the founder quietly took millions in inventory financing; interest grew, marketing efficiency fell at higher spend, and net profit went to near zero, so founders who had been paid were no longer. His view: you cannot triple an inventory business in a year without large self-funding, outside capital or expensive debt, and growing slightly slower at better marketing efficiency with less interest often makes more money. Levers that relax the constraint: negotiate supplier terms (for example 20% deposit, balance on shipment, so a reorder can be placed after selling about two units), cut lead times (90 days to 30 with a different manufacturer), or use inventory financing knowingly, often with a personal guarantee. Put interest below EBITDA, not in operating expenses, so profit reads cleanly for buyers.",
+    "conditions": "Inventory-holding DTC brands growing fast with paid media, especially sub-$10M revenue and dependent on lenders.",
+    "fails_when": "Pre-order, print-on-demand or dropship models with little inventory float; brands with cheap equity capital; high-margin products whose gross profit funds reorders quickly.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "ad spend $20k -> $200k/month; revenue $2M -> $7M/year; net profit -> near zero (about 5 cases seen)",
+      "supplier terms example: 20% deposit; lead time 90 -> 30 days"
+    ],
+    "asks": [
+      "Why are we growing revenue but have no cash?",
+      "How fast can an ecommerce brand realistically grow?",
+      "Is inventory financing a good idea for scaling?",
+      "What supplier payment terms should I ask for?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0202",
+    "evidence": {
+      "where": "Cash conversion cycle section"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "FIN-0012",
+    "modules": [
+      "FIN",
+      "OFF",
+      "PRD"
+    ],
+    "topics": [
+      "pricing",
+      "unit economics",
+      "chart of accounts and P&L structure"
+    ],
+    "claim": "Price new products bottom-up: profit target plus opex sets a contribution target; add expected CAC, allowances, shipping and COGS; drop products the market will not pay for.",
+    "body": "Keystone pricing (double the unit cost) and fixed markups (3x to 5x) ignore every variable cost of ecommerce and the market's price expectations; the speaker estimates about 40% of new brands use keystone and end up too thin to scale. Waterfall pricing works up from the profit you need. Example: a 10% net profit target plus 10% operating expenses means a 20% contribution margin target per order. Add expected CAC (say $30, from current account data), allowances for returns and discounts (say 3% each), shipping and fulfilment quoted by your carrier (say $11), and landed COGS (say $6), then solve for the price at which contribution is 20%; in his example about $70, not the $12 keystone would suggest. Then check competitors: if similar products sell at $30 to $40, either position this one as clearly premium in an uncontested space or do not launch it. Use the same P&L logic for diagnosis: set percentage targets for gross margin, MER, contribution and EBITDA, and when a line misses, look only at the lines above it for the cause.",
+    "conditions": "DTC brands launching or repricing products sold mainly through paid acquisition.",
+    "fails_when": "Marketplaces or retail-led brands with low CAC; loss-leader products deliberately priced to acquire customers for a high-LTV range; categories with strict price anchors where any premium fails.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "keystone = 2x unit cost; about 40% of new brands price this way (estimate)",
+      "example: 10% net + 10% opex -> 20% contribution target; CAC $30, allowances 3% + 3%, shipping $11, COGS $6 -> about $70 price"
+    ],
+    "asks": [
+      "How should I price a new product?",
+      "Is doubling my product cost a good price?",
+      "How do I know if a product is worth launching at the price people will pay?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S0202",
+    "evidence": {
+      "where": "Unit economics section, pricing strategy"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0013",
+    "modules": [
+      "FIN",
+      "ADC"
+    ],
+    "topics": [
+      "working capital and inventory financing",
+      "inventory accounting and COGS recognition"
+    ],
+    "claim": "Push slow grade C/D inventory through paid media at break-even or a small loss, in isolated funnels or a new market, rather than cutting ad spend when cash is tight.",
+    "body": "Profit is not cash: a brand reporting $2 million profit that bought $3 million of inventory that did not sell is $1 million cash negative. Inventory is graded A (fast), B (medium), C (slow) and D (not moving); Shopify can rank it. New product launches often sell 30 to 40% to the existing list, then stall, leaving cash trapped (one example had 400 days of stock on hand). Paid media teams KPI'd only on profit will never spend behind C and D stock because its ROAS is poor, so the stock sits. The speaker's alternative: deliberately fund C and D sell-through at break-even or a slight loss, in an isolated ad funnel, via whitelisted creator pages, or in a new country where heavy discounting will not erode brand equity in the main market. He also warns against the reflex CFO response in a slow month: when February revenue drops and MER rises from 25% to 30%, cutting media 40% can shrink revenue further; it may be right to raise MER temporarily (say from 30% to 35%) with the extra 5% dedicated to clearing C and D stock back into cash. Reduce SKU count as new products are added. Share the inventory position with the paid media team every month.",
+    "conditions": "Inventory-holding DTC brands, especially fashion and multi-SKU catalogues, with stock aged beyond normal sell-through.",
+    "fails_when": "Perishable or low-value stock where liquidation or bundling is cheaper than paid media; when marketing is not actually driving revenue, raising spend just deepens the loss; heavy discounting in the main market can train customers to wait.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "example: $2M profit, $3M unsold inventory -> -$1M cash",
+      "launches often sell 30-40% then stall; 400 days of inventory on hand example",
+      "MER 25% -> 30% in a slow month; temporary raise to 35% to clear C/D stock"
+    ],
+    "asks": [
+      "How do I clear slow-moving inventory without hurting the brand?",
+      "Cash is tight, should we cut ad spend?",
+      "Should we spend ads on products that aren't selling?",
+      "What do I do with stock that's been sitting for a year?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0202",
+    "evidence": {
+      "where": "Cash flow vs profit section, inventory grades and CFO vs CMO example"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0014",
+    "modules": [
+      "FIN",
+      "MEA"
+    ],
+    "topics": [
+      "runway and burn",
+      "forecasting and budgeting"
+    ],
+    "claim": "Calculate subscription CAC payback by cohort, not one customer: a 3.2-month naive payback became about 8 months once 25% churn by order two was included.",
+    "body": "The common shortcut divides CAC by monthly gross profit per customer: $90 CAC over $28 monthly gross profit ($50 revenue minus $22 COGS) suggests payback in 3.2 months. It assumes nobody cancels. The correct method follows one monthly cohort: total CAC spent on everyone in the cohort goes out up front, and gross profit comes back only from those still active each month. In the worked example a July cohort of 3,500 customers cost $315,000 to acquire; retention was 100% at order one, 75% at order two and 50% at order three, falling to almost nothing by order 18. Cumulative gross profit only passed $315,000 in month 8, roughly two and a half times the naive figure, and the cohort barely made a profit after that. The same maths for a low-churn software business with $199 CAC moved payback from 7.1 to about 9 months (27% longer). Andrews says the payback figures founders quote are typically 20 to 100%, sometimes 200%, shorter than reality. For physical subscriptions with skips or every-other-month deliveries, measure payback in orders rather than months. Rerun with different CACs: in the low-churn case, $125 CAC broke even around month 5 and $225 around month 11.",
+    "conditions": "Subscription or repeat-purchase businesses deciding how much to spend on acquisition; especially high-churn physical product subscriptions.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "naive payback 3.2 months ($90 CAC / $28 monthly gross profit)",
+      "cohort payback about 8 months",
+      "retention 75% at order 2, 50% at order 3 (high-churn example)",
+      "low-churn example 7.1 vs about 9 months (27% longer)",
+      "founder estimates typically 20 to 100% (sometimes 200%) too short"
+    ],
+    "asks": [
+      "How do I calculate CAC payback for a subscription business?",
+      "We think we earn back our ad cost in 3 months, could that be wrong?",
+      "Why does our cash keep running out even though each subscriber looks profitable?",
+      "Should payback be measured in months or orders?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0203",
+    "evidence": {
+      "where": "CAC payback period for subscription businesses video"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "FIN-0015",
+    "modules": [
+      "FIN",
+      "MEA",
+      "OFF"
+    ],
+    "topics": [
+      "forecasting and budgeting",
+      "discount depth and margin"
+    ],
+    "claim": "Treat discounts and ad spend as one acquisition pool: a $60 discount that lifts conversion from 1.5% to 3.8% leaves profit per customer unchanged but can raise total profit 2.5x.",
+    "body": "Eric Andrews' model: profit per first-time customer equals net order value minus COGS minus CAC, and the discount is just another acquisition cost, so add discount and CAC together. Worked example with identical inputs: $100,000 ad spend at $1.50 a click gives about 66,700 sessions; list price $200; COGS $75 ($50 product to warehouse, $25 fulfilment). No discount: 1.5% conversion, 1,000 buyers, CAC $100, $25 profit per customer after marketing. $30 off: assumed 2.2% conversion, 1,433 buyers, CAC $70, still $25 each. $60 off: assumed 3.8% conversion, 2,500 buyers, CAC $40, still $25 each, because discount plus CAC is $100 in every case. Total post-marketing contribution was $25,000, $36,000 and $63,000, so the deepest discount won in this scenario only because volume rose. The conversion lifts are assumptions; measure your own before copying. His rules: budget discounts and media from one annual pool and test the split; give the deepest discounts as the entry to a subscription or loyalty programme rather than a flash sale, since flash-sale buyers often never pay full price; and accept that sometimes fewer customers at better margins makes more money.",
+    "conditions": "First-order economics for DTC brands with paid acquisition; requires measured conversion lift per discount level.",
+    "fails_when": "The discount does not raise conversion enough to cut CAC by the same amount, or repeated deep discounts train customers to wait for sales and erode brand pricing.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "$100,000 ad spend at $1.50 CPC = about 66,700 sessions (model)",
+      "$200 price, $75 COGS",
+      "conversion 1.5% / 2.2% / 3.8% at $0 / $30 / $60 off (assumed)",
+      "CAC $100 / $70 / $40",
+      "post-marketing contribution $25,000 / $36,000 / $63,000"
+    ],
+    "asks": [
+      "Is it better to spend on ads or give customers a bigger discount?",
+      "How do I know if a discount is profitable?",
+      "We are scared a 30% discount will kill our margins, how do we check?",
+      "Should discounts and ad spend come out of the same budget?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0203",
+    "evidence": {
+      "where": "Discounts to lower CAC video (Ordergroove case study), scenarios A to C"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "FIN-0016",
+    "modules": [
+      "FIN",
+      "MEA"
+    ],
+    "topics": [
+      "chart of accounts and P&L structure",
+      "profit and contribution formulas"
+    ],
+    "claim": "Read the P&L in four buckets: cost of delivery 30-40% of revenue, variable media 40-50% for low-LTV goods, opex 10-12% for a strong brand, leaving 15-20% profit.",
+    "body": "Holiday's 'four-quarter accounting' asks the accountant for one monthly view with four lines: cost of delivery (product cost plus variable costs per order such as pick and pack, shipping and payment fees), CAC (pure variable media spend; agency retainers and fixed creative staff go in opex, but creative bought per asset counts as variable), opex (rent, salaries, software and other fixed costs) and profit. His benchmarks: cost of delivery at 30 to 40% is rarely the main problem. Marketing as a share of revenue depends on LTV: a hard good with little repeat buying must buy most revenue new every month and runs 40 to 50% (Ridge runs about 50%); his portfolio's median first-purchase return on Meta for new customers is about 1.7, which implies acquisition cost of 55 to 60% of first-order revenue. High-LTV brands see this fall over time as returning customers fill revenue, and can afford more opex for service and retention. Opex for a great ecommerce brand has fallen from about 25% to 10 to 12%; above 20% he doubts a brand can compete. A 15 to 20% profit business is doing very well. Use the four lines to see which bucket is eating profit versus peers.",
+    "conditions": "DTC ecommerce brands, roughly seven and eight figures; percentages are of net revenue; benchmarks from Common Thread Collective's client portfolio.",
+    "fails_when": "Subscription or high-repeat businesses, where marketing share should fall well below 40% and opex can run higher; brands in heavy investment years that deliberately run above these marketing ratios; marketplace-led brands with different fee structures.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "cost of delivery 30% to 40% of revenue",
+      "marketing 40% to 50% of revenue for low-LTV hard goods; Ridge about 50%",
+      "median new-customer Meta first-purchase ROAS about 1.7, i.e. CAC 55% to 60% of first order",
+      "opex benchmark 10% to 12% (down from about 25%); above 20% hard to compete",
+      "15% to 20% profit is strong"
+    ],
+    "asks": [
+      "What percentage of revenue should go to marketing for an online store?",
+      "Our opex is 22% of revenue, is that too high?",
+      "What's a good profit margin for an ecommerce brand?",
+      "How should I lay out my P&L so I can see where profit goes?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0204",
+    "evidence": {
+      "where": "four quarter accounting segment, then benchmarks for cost of delivery, CAC and opex"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0017",
+    "modules": [
+      "FIN",
+      "MEA"
+    ],
+    "topics": [
+      "inventory accounting and COGS recognition",
+      "chart of accounts and P&L structure"
+    ],
+    "claim": "Put inbound freight, duties and packaging in COGS; the source books outbound shipping to customers as a selling expense, so state which choice your P&L uses.",
+    "body": "For a physical product business the source defines COGS as raw materials, direct labour, factory overhead (rent, depreciation, utilities, maintenance), inbound freight to bring materials or finished goods in, and the product's packaging. These costs sit on the balance sheet as inventory and move to the P&L as COGS only when the unit is sold. The misclassification the source sees most often is shipping: freight-in belongs in COGS, while freight-out (shipping orders to customers) is a selling cost and should sit in operating expenses. Other COGS distortions: expired or obsolete stock (sell nearest-expiry first, and clear stock at a markdown before it expires) and theft, which needs logged inventory in and out plus periodic counts. Why it matters for an ecommerce brand: gross margin feeds valuation and every unit-economics decision, and moving outbound shipping between COGS and operating expenses changes the gross margin percentage without changing profit. Whatever your accountant chooses, write the definition down, apply it every month, and when you calculate contribution margin per order still subtract outbound shipping, pick and pack and payment fees, wherever they sit on the P&L. Confirm the treatment with your accountant.",
+    "conditions": "Physical product brands preparing a P&L, investor reporting or a gross margin benchmark comparison.",
+    "fails_when": "Brands whose accountant includes outbound shipping and fulfilment in cost of sales, a disclosed policy choice many retailers make; comparisons across brands then need the same definition.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "Does shipping to customers count as cost of goods sold?",
+      "What should be included in COGS for my ecommerce store?",
+      "Our gross margin looks different from competitors, could it be how we book shipping?",
+      "Is inbound freight part of product cost?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0206",
+    "evidence": {
+      "where": "CPG COGS breakdown and 'common mistakes' section (freight misclassification)",
+      "quote": "freight out when you're shipping the product out to customers isn't part of COGS"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0018",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "exit and valuation basics"
+    ],
+    "claim": "Founders wanting a full exit should stay out of buyer meetings: if buyers see the founder as the brand's magic, they will insist the founder keeps a large stake.",
+    "body": "The Salt & Stone founder's advice from two private equity processes. If you want to stay involved, attend the meetings and talk about your passion, because buyers want that energy. If you want to sell most or all of your equity, do the opposite: let the management team present. The moment a buyer concludes that the business depends on the founder, it will structure the deal so you retain a large share and stay on, which limits how much you can sell. The practical implication is to build a team that can run the business visibly before a sale: a CFO or president who has been through an acquisition, and leaders who own product, marketing and operations. In his own case he chose to stay and keep a large stake. This is a single founder's observation, not a rule about deal terms, and buyers will still do diligence on founder dependence through interviews and data.",
+    "conditions": "Founder-led brands preparing for a majority sale to private equity or a strategic buyer.",
+    "fails_when": "Brands where the founder genuinely is the product (founder-face brands), where hiding them is not credible; buyers who require founder rollover regardless.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "How do I sell my brand without having to stay on?",
+      "Will buyers make me roll equity if I'm the face of the brand?",
+      "Should the founder attend private equity meetings?",
+      "How do I make my business less dependent on me before a sale?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0232",
+    "evidence": {
+      "where": "about 57:06 lesson from the processes"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "FIN-0019",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "funding options and cost of capital",
+      "exit and valuation basics"
+    ],
+    "claim": "Salt & Stone's sole owner took tens of millions off the table through a secondary PE sale while keeping control, choosing a firm that was not the top bidder.",
+    "body": "Salt & Stone was profitable from launch (wholesale orders paid on shipment) and the founder owned 100%. His first liquidity event was a secondary transaction with a private equity firm: shares sold for cash to him personally, none to the company balance sheet, while he kept control. A second transaction with a larger firm followed within about 18 to 24 months. Selection criteria he used: a firm started by former founders (Humble Growth, led by Orgain's founder) who would let him keep running the brand; integrity and a shared long-term vision; spending personal time with the partners (dinners, a game, meeting his family). About 15 firms bid and he picked one that was not the highest offer, because some bidders seemed likely to push discounting or overrule brand decisions. Process notes: a good investment bank (Raymond James ran both deals); hire a CFO or president who has been through an acquisition, to prepare what a buyer will ask for; expect closing to stretch, his took the full 45-day window after being told two weeks. Revenue grew from about $16M to $29M to a $96-100M run rate under the first partner.",
+    "conditions": "Profitable, founder-controlled brands with strong growth that want personal liquidity without selling control; US private equity market.",
+    "fails_when": "Unprofitable or slow-growing brands that will not attract minority secondary interest; founders who need primary capital for the business rather than personal liquidity.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about 15 PE bidders",
+      "closing took the full 45-day window",
+      "revenue about $16M to $29M to $96-100M run rate",
+      "$165M+ revenue last year",
+      "two transactions within about 18-24 months"
+    ],
+    "asks": [
+      "Can I take money off the table without selling my company?",
+      "How do I choose between private equity offers?",
+      "What should we prepare before a PE deal?",
+      "How long does it take a private equity deal to close?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0232",
+    "evidence": {
+      "where": "about 45:45-59:28 private equity, secondary buyouts"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0020",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "working capital and inventory financing",
+      "funding options and cost of capital"
+    ],
+    "claim": "Keep a revolving credit line open for PO timing, use PO factoring for big retail orders (cheapest with blue-chip retailers like Costco or Walmart), and consider a debt recap.",
+    "body": "Ridge never sold equity (it started on about $200,000 of Kickstarter pre-orders), but Frank says every business should have a debt revolver open. Uses: when a large purchase order drains cash, draw on the revolver to keep operations running, then repay when cash returns, and park excess cash in treasuries at other times. Factoring: when a retailer such as Target places a big PO with 90 to 120-day payment terms and you lack cash to produce it, a factoring lender advances money against that PO and is repaid when the retailer pays. Interest depends on the retailer's credit: a Costco or Walmart PO costs almost nothing, while a weak retailer's PO may not be financeable at all. A debt recapitalisation lets a profitable owner who has reinvested everything take money off the table, secured on the business rather than personally. How to apply: open the revolver while profitable (before you need it), map cash needs around each PO, and price factoring per retailer.",
+    "conditions": "Profitable brands with inventory cycles and wholesale or retail customers; US lending market.",
+    "fails_when": "Unprofitable or early brands that cannot secure a revolver; DTC-only brands with no POs to factor; debt recap that leaves the business over-levered for a downturn.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "retail payment terms 90 to 120 days",
+      "Ridge raised about $200,000 on Kickstarter; no equity sold"
+    ],
+    "asks": [
+      "How do I finance a big retail purchase order?",
+      "Should my store have a line of credit?",
+      "What is PO factoring and when is it cheap?",
+      "Can I take money out of my profitable business without selling it?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0235",
+    "evidence": {
+      "where": "Debt section",
+      "quote": "every business should have a revolver of debt"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0021",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "exit and valuation basics",
+      "funding options and cost of capital"
+    ],
+    "claim": "PE buyers want about 20% EBITDA growing about 20% a year plus a moat; conservative buyout debt is 2 to 3x EBITDA, and missing staff gets deducted from EBITDA.",
+    "body": "Frank explains how most brand exits work: privately held brands usually sell to private equity first, and only later to a strategic acquirer (Dr. Squatch went through a PE owner before Unilever). PE wants a sustainable business matching its playbook: around 20% EBITDA margin growing about 20% a year for years, a moat (IP, retail relationships), strong cash flow, and visible upside ('meat on the bone') such as untapped retail, Amazon or a new customer segment, which the seller should point out. PE often finances deals as leveraged buyouts: in his example, a $100M purchase of a business with $20M EBITDA (5x) funded half by the fund and half by bank debt secured on the company. Two to three turns of EBITDA in debt is conservative; ZIRP-era deals used six or seven, which is how brands blow up after a sale. Buyers adjust EBITDA: a brand claiming 40% EBITDA with no team will be re-cut to something like 30% because the buyer must hire. Also understand deal terms such as participation and the 'second bite', which he says rarely pays off.",
+    "conditions": "Profitable DTC brands considering a sale; US PE market; figures are one founder's rules of thumb.",
+    "fails_when": "Strategic acquirers paying for a specific asset; venture-backed high-growth brands valued on revenue; very hot or very cold M&A markets.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about 20% EBITDA growing about 20% a year",
+      "example: $20M EBITDA, 5x, $100M price, $50M fund equity + $50M debt",
+      "2 to 3x EBITDA debt is conservative; 6 to 7x seen in ZIRP era",
+      "example re-cut: 40% EBITDA to about 30% for missing team"
+    ],
+    "asks": [
+      "What do private equity buyers look for in an ecommerce brand?",
+      "How much debt is too much in a leveraged buyout?",
+      "How will buyers adjust my EBITDA if we have a tiny team?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0235",
+    "evidence": {
+      "where": "Exit strategy and leveraged buyout section",
+      "quote": "two to three is is is a conservative number"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0022",
+    "modules": [
+      "FIN",
+      "MEA"
+    ],
+    "topics": [
+      "funding options and cost of capital",
+      "working capital and inventory financing"
+    ],
+    "claim": "IM8's $1B non-dilutive facility funds 70% of each month's marketing per cohort across 43 markets, repaid from that cohort's income, letting it tolerate 6-8 month CAC paybacks.",
+    "body": "In July 2026 IM8 announced a $1 billion facility from the same lender model Lemonade (an insurer) used. Mechanics described by the speaker: each month IM8 can draw 70% of that month's marketing spend for the new cohort, across any channel in 43 markets; the loan is repaid from that cohort's subsequent income, paying less if the cohort pays back quickly and more if slowly. It is non-dilutive (no shares, warrants or convertibles), but the risk is not ring-fenced: if a cohort underperforms, IM8 still owes the money. Effect: cash needed to acquire a cohort falls by about 70% up front, which let IM8 report free cash flow positive and run first-order GP:CAC near 0.5 with 6 to 8 month payback, while unit profitability is unchanged. The speaker's caution: almost no brand can push payback to 6 to 8 months without such capital, and comparisons with Lemonade flatter IM8 because insurance retention over 2 to 4 years is far stickier than consumables. How to apply: if offered revenue-based or cohort-based marketing financing, model repayment under slower-than-expected cohort decay, confirm whether recourse extends beyond the cohort, and keep reporting profitability separately from cash.",
+    "conditions": "Scaled DTC brands with proven, predictable cohort repeat curves considering cohort or revenue-based marketing finance.",
+    "fails_when": "Brands with short histories or volatile retention, where cohort repayments can exceed cohort income; when repayment terms accelerate on underperformance; small brands for which such facilities are not available.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "$1B facility (July 2026)",
+      "70% of monthly marketing spend per cohort",
+      "43 markets",
+      "CAC payback 6-8 months"
+    ],
+    "asks": [
+      "How does cohort-based marketing financing work?",
+      "Should I borrow to fund ad spend?",
+      "How long a CAC payback period can a DTC brand afford?",
+      "What are the risks of revenue-based financing for ads?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0240",
+    "evidence": {
+      "where": "Billion dollar facility section"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "FIN-0023",
+    "modules": [
+      "FIN",
+      "COG"
+    ],
+    "topics": [
+      "working capital and inventory financing",
+      "negotiation levers"
+    ],
+    "claim": "True Classic financed growth with manufacturer net terms (up to net 90) and credit lines instead of equity; pitch suppliers your growth plan and honour the terms.",
+    "body": "Bartlett says the first financing lever for a growing apparel brand is its production partner, where you have the most leverage. True Classic stayed bootstrapped by extending payment terms (net 30, then 60, then 90) and getting suppliers to extend credit, at one point betting on about $40M of inventory. The pitch to a supplier is concrete: 'we're doing $15M this year and will do $90M next year; do you want that business?' Suppliers can check the claim, since tools linked to Shopify and accounts show quickly whether the business is real. During a rough patch, moving to net 90 kept the company alive without another lever; one production partner later became an investor. His rules: you must be a credible storyteller, then actually deliver the revenue; if you run over agreed terms, compensate the supplier with interest or future volume. Bargaining power shifts once you are large: suppliers want you, rather than you chasing them. How to apply: model the cash conversion cycle, ask for longer terms in exchange for volume commitments, and keep supplier reporting honest.",
+    "conditions": "Fast-growing, profitable or near-profitable brands with a concentrated supplier who benefits from their growth.",
+    "fails_when": "New brands without a sales record; suppliers with tight cash themselves; missing the growth plan leaves you with stock and debt; terms extended without paying on time destroy the relationship.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "net 30 to net 60 to net 90",
+      "about $40M inventory bet",
+      "example pitch: $15M this year to $90M next year"
+    ],
+    "asks": [
+      "How do I fund inventory without raising money?",
+      "How do I ask my manufacturer for net 90 terms?",
+      "We're short on cash before peak season, what can our supplier do?",
+      "What happens if we pay our supplier late?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0243",
+    "evidence": {
+      "where": "about 17:58-23:56 inventory bet; about 01:10:04-01:15:13 raising debt via vendor terms"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0024",
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "forecasting and budgeting"
+    ],
+    "claim": "True Classic found standalone stores lost money; high-traffic mall stores cost $20,000 to $40,000 a month in rent and are judged on near break-even plus online halo.",
+    "body": "Bartlett's retail lessons from nine owned stores plus a Target rollout: standalone locations chosen for customer density rather than foot traffic lost a lot of money; malls with heavy foot traffic work, but leases there can run $20,000, $30,000 or even $40,000 a month. A store's own profit and loss may not look good, so his target is to get each store's four-wall result close to break even and count the visibility it creates (people walking past signs, touching the product) as upper-funnel advertising, which should show up in post-purchase surveys. Some stores were profitable straight away, especially where they already had many online customers (Florida, which also predicted strong Target results). He started with a partner that stands up stores and staff for brands (Leap), which he suggests for testing one or two stores, and notes that one successful store gives you a case study to take to wholesale buyers. Plan: test, get near break-even, then scale to 50 to 100 stores over two years.",
+    "conditions": "Established DTC brands with dense regional online customer bases considering physical retail; US malls.",
+    "fails_when": "Brands without online density data; standalone locations; brands unable to fund losses during ramp-up.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "9 owned stores",
+      "mall leases $20k-40k/month",
+      "target near break-even four-wall",
+      "plan 50-100 stores in 2 years"
+    ],
+    "asks": [
+      "Should our DTC brand open a physical store?",
+      "How do we judge if a retail store is working?",
+      "Mall or standalone store for our first location?",
+      "Can one store help us get into wholesale?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0243",
+    "evidence": {
+      "where": "about 01:15:13-01:21:40 retail strategy, Leap, Target"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0025",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "exit and valuation basics"
+    ],
+    "claim": "PE buyers underwrite IRR (often about 2x in roughly 2 years), strategic buyers underwrite earnings-per-share growth and synergy; model the business from each buyer's view.",
+    "body": "Rahal, who sold RXBAR to Kellogg, describes the two buyer types differently. A private equity buyer paying, say, $300 million is focused on internal rate of return and will want at least about a 2x return within around two years, so it underwrites how many stores, how much revenue and what margin it can reach in that window; leveraged buyouts add debt to that maths. A strategic buyer such as a large food company thinks longer term and is judged by earnings per share, so it values synergies: putting your product into its distribution, international reach and topline growth that lifts EPS. His advice is to put yourself in each buyer's shoes and build the case they need to underwrite, rather than inflating projections ('don't perfume the pig'), because diligence uncovers everything. In the RXBAR process the team invited all interested strategics to the office and was fully transparent, which he credits with building trust. Investment bankers run the process; management sells the company. For an ecommerce brand planning an exit, keep clean financials and per-channel unit economics that let a buyer see both the near-term return and the synergy story.",
+    "conditions": "Consumer brands with meaningful revenue considering a sale or recapitalisation; US M&A context.",
+    "fails_when": "Small brands below the size PE or strategics buy, where exits are to individuals or aggregators with different maths; the 2x in 2 years figure is an illustration, not a market standard.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "PE example: $300 million purchase, about 2x return within about 2 years"
+    ],
+    "asks": [
+      "What do private equity buyers look for in a brand?",
+      "How is selling to a big company different from selling to PE?",
+      "How do we prepare our brand for an acquisition?",
+      "Should we be fully transparent with buyers in diligence?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0250",
+    "evidence": {
+      "where": "Fundraising and M&A segment (about 01:04:00 to 01:31:00)"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0026",
+    "modules": [
+      "FIN",
+      "ADC",
+      "OFF"
+    ],
+    "topics": [
+      "working capital and inventory financing",
+      "purchase order planning"
+    ],
+    "claim": "Push slow grade C and D stock through its own paid funnel at break-even or a small loss to turn it into cash, rather than letting profit-ranked campaigns starve it.",
+    "body": "Blue Sense Digital grades stock A (fast-moving), B (medium), C (slow) and D (not moving); Shopify can rank this for you. Product launches are a key growth lever but many fail, leaving stock that sold its first 30 to 40% through existing customers and then stalled. Example: a launch did $100,000 in sales against $1M of stock at sell value, leaving about 400 days of inventory on hand. A business can be profitable on paper and still lose cash: $2M profit with $3M of unsold inventory is $1M down in cash. Because agencies are judged on ROAS or profit, paid media never prioritises B to D stock, since it scores poorly. Their fix: put that stock into its own funnel and campaigns (in Meta, a separate funnel or whitelisted page; in Google, a dedicated campaign so a consolidated PMax does not give it zero spend) and run it at break-even or a slight loss. Once they moved a client's D stock into a new country where heavy discounting would not harm the main market's brand. Tell the media team the inventory position each month.",
+    "conditions": "Brands carrying slow stock after launches or seasons; cash is the constraint rather than profit; media team able to run separate funnels.",
+    "fails_when": "Stock is genuinely unsellable at any price (liquidate or write off instead); discounting in the main market would damage brand pricing; the brand is profit-constrained with ample cash.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "example: $100k sold of $1M stock, about 400 days of inventory",
+      "$2M profit with $3M unsold stock = $1M cash down",
+      "first 30 to 40% of a failed launch often sells to existing customers"
+    ],
+    "asks": [
+      "How do I get rid of slow-moving stock without hurting my brand?",
+      "Should I run ads for products that aren't selling?",
+      "We have 400 days of inventory on a failed launch, what now?",
+      "Why does my agency never spend on my slow products?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0252",
+    "evidence": {
+      "where": "Finance section, inventory death spiral and SKU rationalisation",
+      "quote": "We need to push grade BCD inventory in paid"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0027",
+    "modules": [
+      "FIN",
+      "ADC"
+    ],
+    "topics": [
+      "cash conversion cycle",
+      "working capital and inventory financing"
+    ],
+    "claim": "When unsold stock squeezes cash, cutting media often deepens the drop; temporarily raising marketing to revenue (example 30% to 35%) to clear C and D stock can restore cash.",
+    "body": "Blue Sense Digital's CFO-versus-CMO example: in February, November stock is still unsold and cash is tight. The P&L shows cost of delivery about 30%, marketing about 25%, opex about 15% and profit about 30%. Revenue drops, marketing rises to about 30% of revenue, profit falls to about 25%, and the CFO cuts marketing by 40%. If marketing is what drives revenue, revenue then falls further, profit falls again, and the cycle repeats. Their counter-intuitive fix: lift marketing to about 35% of revenue for a short period, with the extra 5% aimed only at clearing grade C and D stock, accepting it is unprofitable, to convert stock back to cash and recover. They also see the reverse problem: about five times, a seven-figure brand's agency ramped spend from about $20,000 to $200,000 a month while the owner quietly took on millions in inventory financing, so interest costs ate the gains. The real limit was the cash conversion cycle (days inventory + days sales outstanding - days payables), not ad efficiency. Forecast new and returning revenue separately.",
+    "conditions": "Brands where paid media drives most new revenue and cash is tied in inventory; seven to nine figure DTC; requires shared data between finance and marketing.",
+    "fails_when": "Marketing is not actually driving revenue (cutting it would not reduce sales); no slow stock to clear; financing costs or covenants make any extra spend unaffordable.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "example P&L: delivery 30%, marketing 25%, opex 15%, profit 30%",
+      "marketing rises to 30% of revenue; CFO cuts 40%",
+      "temporary lift to about 35% to clear C and D stock",
+      "agency ramp $20k to $200k a month funded by inventory finance (seen about 5 times)",
+      "CCC = DIO + DSO - DPO"
+    ],
+    "asks": [
+      "Cash is tight because of unsold stock, should I cut ad spend?",
+      "Our CFO wants to cut marketing 40%, is that right?",
+      "Why can't we grow faster even though ads are profitable?",
+      "What is the cash conversion cycle and why does it limit growth?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0252",
+    "evidence": {
+      "where": "Finance section, cash conversion cycle and CFO versus CMO example",
+      "quote": "We need to increase marketing spend even further"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0028",
+    "modules": [
+      "FIN",
+      "MEA"
+    ],
+    "topics": [
+      "cash conversion cycle",
+      "working capital and inventory financing",
+      "purchase order planning"
+    ],
+    "claim": "In a modelled ~$92k/month DTC brand, raising 30-day sell-through from 30% to 40% lifted cash from $50k to $70k with no change in net income.",
+    "body": "The presenter models a bootstrapped DTC brand with about $92.5k monthly revenue, $30k monthly marketing, a $50k starting inventory and $50k cash. Even with positive net income the bank balance falls, because each month's inventory purchase leaves the account before the profit arrives; the cash conversion cycle, not profit, limits how fast the brand can grow. Three levers change cash without touching marketing. Sell-through: lifting 30-day sell-through from 30% to 40% (fewer slow SKUs, better purchasing) cuts reorders and moved ending cash from about $50k to $70k while net income stayed the same. Maintained markup: moving MMU from 4.0 to 4.5 through modest supplier negotiation and small price rises roughly doubled net income and cut inventory needed from about $55k to under $50k, moving cash to about $62k. Operating expenses: fixed costs flow one-for-one into net income, unlike variable marketing; cutting OpEx from $25k to $19k added about $6k a month. Applied together (OpEx $25k to $19k, MMU 4 to 4.5, sell-through 30% to 40%), monthly net income went from about $3.5k to $12.2k and cash from $50k to about $91k within the 60-day model. How to apply: model your own cash month by month and work two or three levers at once.",
+    "conditions": "Inventory-holding DTC brands, bootstrapped or cash-constrained, ordering stock monthly against sell-through.",
+    "fails_when": "Made-to-order or dropship models with little inventory; brands with long supplier lead times or MOQs that prevent smaller reorders; price rises that cut conversion more than markup gains; model outputs taken as forecasts without your own numbers.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "model brand: ~$92.5k revenue/month, $30k marketing, $50k inventory, $50k cash",
+      "sell-through 30% to 40%: cash $50k to ~$70k, net income unchanged",
+      "MMU 4.0 to 4.5: inventory ~$55k to under $50k, cash to ~$62k",
+      "OpEx $25k to $19k: +~$6k net income/month",
+      "combined: net income ~$3.5k to $12.2k/month; cash $50k to ~$91k"
+    ],
+    "asks": [
+      "how do I free up cash tied up in inventory",
+      "why is our bank balance low when we're profitable",
+      "which levers improve cash flow without more ad spend",
+      "what is sell-through rate and why does it matter for cash"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0256",
+    "evidence": {
+      "where": "Levers three, five and six; combined example at the end"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-0029",
+    "modules": [
+      "FIN",
+      "MEA",
+      "CXP"
+    ],
+    "topics": [
+      "cash conversion cycle",
+      "forecasting and budgeting",
+      "repeat rate levers"
+    ],
+    "claim": "Judge CAC, AOV or repeat-rate improvements on 60 to 180-day cash, not 30 days; modelled, lifting repeat-revenue share from 25% to 35% added about $10k monthly net income.",
+    "body": "The model's second lesson is timing. Improvements to customer acquisition cost, AOV or repeat rate compound through the inventory and reinvestment cycle, so a 30-day view understates them; the presenter says the effect shows over 60, 90 and 180 days. In the same modelled brand (about $92.5k monthly revenue), raising AOV from $150 to $180 with the same customers acquired and no extra fixed cost lifted monthly net income from about $2.6k to $16.3k, because gross profit grew while marketing and OpEx stayed flat. Raising the share of revenue from returning customers from 25% to 35% (more retention email, a better post-purchase experience) took revenue from about $98k to $113k and gross profit from about $60k to $69k, adding roughly $10k of net income, about five times the prior net cash flow. The presenter's reasoning: repeat purchases carry almost no acquisition cost, so returning customers drive 80 to 90% of profit in brands like this. How to apply: build a monthly cash model with inventory purchases, rank the six levers by the cash change each produces over 60 to 180 days, and attack the largest bottleneck first, rather than defaulting to more ad spend.",
+    "conditions": "Bootstrapped DTC brands with repeat-purchase products and monthly inventory buying; teams able to model cash monthly.",
+    "fails_when": "One-time-purchase categories with little repeat; brands where retention requires paid staff or agencies whose cost offsets the gain; numbers taken from the presenter's model rather than your own cohorts.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "AOV $150 to $180: net income ~$2.6k to ~$16.3k/month (modelled)",
+      "returning revenue share 25% to 35%: revenue ~$98k to ~$113k, gross profit ~$60k to ~$69k, +~$10k net income",
+      "returning customers drive 80 to 90% of profit (presenter's claim)",
+      "evaluate over 60 to 180 days, not 30"
+    ],
+    "asks": [
+      "we lowered our CAC but cash hasn't improved, why",
+      "how long until a pricing or AOV change shows up in cash",
+      "how much does improving repeat purchases help profit",
+      "which growth lever should I fix first"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0256",
+    "evidence": {
+      "where": "Levers one, two and four; note on 60-day impact"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "FIN-6205",
+    "modules": [
+      "FIN",
+      "SET"
+    ],
+    "topics": [
+      "GST",
+      "tax settings"
+    ],
+    "claim": "Shopify sets only starting GST rates for India, cannot split CGST and SGST into two lines, does not create GST-compliant invoices and does not file; interstate goods sales generally need registration.",
+    "body": "Shopify's India GST FAQ says registration is generally mandatory when turnover in a financial year passes Rs 20 lakh (Rs 10 lakh in North Eastern and hill states), or when the business supplies goods between states or sells on online marketplaces, among other conditions. Sales inside the business's own state carry CGST plus SGST; sales to other states carry a single IGST. Shopify cannot show multiple tax lines, so CGST and SGST are combined into one charge for in-state sales. Default settings (9% CGST country tax, 18% IGST for other states, 9% SGST for the home state in the example) are only a starting point; rates depend on the product, so different rates need collections with tax overrides. HSN codes go in the HS tariff code field, which needs at least 6 digits. Shopify does not create a GST-compliant bill, so a GST invoice app or service is needed, and Shopify does not remit or file. How to use it: confirm registration status and product rates with a chartered accountant before launch, then set overrides and an invoice app.",
+    "conditions": "Shopify stores registered or selling in India.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Rs 20 lakh turnover threshold (Rs 10 lakh North Eastern and hill states)",
+      "HS tariff code field needs at least 6 digits"
+    ],
+    "asks": [
+      "How do I set up GST on Shopify?",
+      "Does Shopify make GST invoices?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6205",
+    "evidence": {
+      "where": "GST in India FAQ: registration, CGST/SGST/IGST, HSN codes, invoices"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6206",
+    "modules": [
+      "FIN",
+      "SET"
+    ],
+    "topics": [
+      "US sales tax",
+      "nexus"
+    ],
+    "claim": "US sales tax applies where a store has physical nexus or passes a state's economic threshold, measured on net sales; Shopify flags states at 80% of a threshold, but you register with each state yourself.",
+    "body": "Shopify's help centre says a business location in a state gives physical nexus automatically, and some states count inventory or fulfilment locations too. Economic nexus starts when sales into a state reach that state's threshold, which differs by state; then the store must register and collect sales tax there. Shopify's tax liability insights page lists states under 'Action required' and moves a state to 'Monitoring' once sales reach at least 80% of its economic nexus threshold. Liability is calculated on net sales (sales minus refunds, shipping and tax), and sales made outside Shopify may also count toward a threshold. Before collecting, the store must register with the state tax authority to get a permit, then enter the sales tax ID in Shopify. Shopify does not remit sales tax unless the store uses its managed filing. How to use it: check the insights page monthly and register before the threshold is crossed, with an accountant confirming each state.",
+    "conditions": "Shopify stores selling to US customers.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Monitoring at 80% of a state's economic nexus threshold"
+    ],
+    "asks": [
+      "When do I need to collect sales tax in another US state?",
+      "What is economic nexus?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6206",
+    "evidence": {
+      "where": "Physical nexus, economic nexus and liability insights sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6240",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "payout timing",
+      "cash forecasting"
+    ],
+    "claim": "US Shopify Payments settles in at least 3 business days; Friday to Sunday captures go out as one payout, nothing pays on weekends or holidays, and banks can add 1 to 3 days.",
+    "body": "Shopify counts settlement in business days only, so a Friday charge with a 3-business-day settlement pays out on the following Wednesday. Charges captured Friday, Saturday and Sunday are grouped and sent as one payout. Payouts are not processed on weekends or public holidays; a payout that falls on one moves to the next business day. Capture dates are recorded in UTC. After a payout shows as deposited, the bank may take another 1 to 3 days to show the money. For a weekly cash forecast this means receipts arrive in lumps, Monday-heavy weekend sales land mid-week, and holiday weeks shift cash into the next week. Settlement times differ by country; check the store's own payout history for the real lag.",
+    "conditions": "Shopify Payments in the United States, as stated in the help article on the date fetched; other countries and gateways have their own timing.",
+    "fails_when": "The store uses a third-party gateway, a different country's Shopify Payments, or Shopify Balance, which has its own timing for new merchants.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "minimum 3 business days settlement in the US",
+      "Friday to Sunday captures grouped into one payout",
+      "bank may add 1 to 3 business days"
+    ],
+    "asks": [
+      "When will my Shopify payout arrive?",
+      "Why do weekend sales arrive in one payout?",
+      "How do I time Shopify payouts in a cash forecast?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6240",
+    "evidence": {
+      "where": "Payout timing article, US settlement and pay period sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6241",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "payout reconciliation",
+      "payment fees"
+    ],
+    "claim": "A Shopify Payments payout is net: processing fees, refunds, disputed amounts with dispute fees, reserves, holds, adjustments and currency conversion all come out before it is sent.",
+    "body": "Shopify lists the reasons a payout can be lower than expected: processing fees are deducted before the payout is sent, and in some regions tax on those fees too; refunded amounts are deducted from the next available payout; disputed amounts and dispute fees are deducted; a reserve may hold part of the funds; a negative balance from past fees or refunds reduces the next payout; adjustments can move it up or down; currency conversion can add fees; and a payout hold can keep back part of the money. Payouts can be missing because of an unsupported currency, a bank account under review, wrong bank details, or a bank change while a payout is in transit. To reconcile, match each payout to its transactions in the payouts activity report rather than to the day's orders.",
+    "conditions": "Shopify Payments, per the help article on the date fetched; other gateways net similar items but report them in their own settlement files.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Why is my Shopify payout lower than my sales?",
+      "What gets deducted from a Shopify payout?",
+      "Why is my payout missing?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6241",
+    "evidence": {
+      "where": "Lower payouts and missing payouts sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6242",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "reserves",
+      "cash forecasting"
+    ],
+    "claim": "Shopify Payments can hold a fixed amount or a percentage of sales in a reserve for a set period, often after high refund or chargeback rates, long delivery times or volume surges.",
+    "body": "A reserve is a temporary hold on part, or sometimes all, of the money from transactions. A fixed reserve sets aside a set sum for a set time; a percentage reserve withholds a share of each transaction for a set number of days while the rest pays out normally. Money not needed for refunds or disputes is returned when the reserve period ends and appears in upcoming payouts, which can take several business days. Shopify applies reserves so funds exist to cover disputes and refunds, and flags accounts for risks such as long billing cycles, high chargeback or refund rates, long delivery timelines and sudden volume surges. In a cash forecast, reserved money is not available cash; pre-orders, slow shipping and a sudden sale spike all raise the chance of a reserve.",
+    "conditions": "Shopify Payments, per the help article on the date fetched.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "What is a Shopify Payments reserve?",
+      "Why is Shopify holding my money?",
+      "When are reserved funds released?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6242",
+    "evidence": {
+      "where": "Reserve types, release and reasons sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6243",
+    "modules": [
+      "FIN",
+      "MEA"
+    ],
+    "topics": [
+      "payment fees",
+      "refunds"
+    ],
+    "claim": "On Shopify Payments, card fees are not returned when an order is refunded, so every refund costs the store the original processing fee.",
+    "body": "Shopify states that if an order was processed through Shopify Payments, no credit card fees are refunded. With a third-party gateway in a country where Shopify Payments is available, Shopify's transaction fees are not refunded either. Only where Shopify Payments is not available are transaction fees refunded in proportion to the refunded amount, and only for refunds issued from the Shopify admin. For return and refund costing, add the lost processing fee to the cost of each refunded order; for payout matching, expect the fee on a refunded order to stay in the fees column.",
+    "conditions": "Shopify, per the help article on the date fetched; the gateway's own fee rules apply on top for third-party gateways.",
+    "fails_when": "The store is in a country without Shopify Payments and refunds from the admin, where transaction fees are refunded pro rata.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Do I get my card fees back when I refund an order on Shopify?",
+      "What does a refund really cost?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6243",
+    "evidence": {
+      "where": "Refunding orders, fees section"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6244",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "revenue-based financing",
+      "funding"
+    ],
+    "claim": "Shopify Capital collects a set percentage of daily sales (the remittance rate) until the amount received plus a fixed borrowing cost is repaid, so faster sales mean a shorter term.",
+    "body": "Shopify Capital offers merchant cash advances and loans. Its glossary defines the remittance rate as the percentage of daily sales revenue remitted to Shopify Capital until the total to remit has been paid, the fixed borrowing cost as the fee for obtaining the loan, and the total payment amount as the loan amount plus that fixed cost. Because the fee is fixed and repayment follows sales, strong sales repay the money sooner, which makes the same fee a higher annual cost; slow sales stretch the term. Compare any sales-linked offer on its effective annual cost at the store's own forecast, and read the country-specific terms for minimum payment rules.",
+    "conditions": "Shopify Capital terms as defined in the glossary on the date fetched; available only in the countries Shopify lists; other sales-linked lenders use similar structures with their own terms.",
+    "fails_when": "The offer is a term loan with fixed instalments or interest that accrues by time, not a fixed fee repaid from sales.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "How does Shopify Capital repayment work?",
+      "What is a remittance rate?",
+      "Is revenue-based financing cheaper if I repay fast?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6244",
+    "evidence": {
+      "where": "Glossary: remittance rate, fixed borrowing cost, total payment amount"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6380",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "GST invoice",
+      "bulk orders",
+      "advance payment"
+    ],
+    "claim": "A GST tax invoice for goods must be issued before or at removal of the goods, in triplicate (recipient, transporter, supplier), with rule 46 fields such as both GSTINs, HSN, taxable value, tax split and place of supply.",
+    "body": "CBIC's taxpayer flyer on section 31 and rule 46 says no invoice format is prescribed, but a registered supplier's tax invoice must carry: supplier name, address and GSTIN; a consecutive serial number unique for the financial year; date; recipient name, address and GSTIN if registered (and delivery address with state and code for an unregistered recipient where the taxable value is Rs 50,000 or more); HSN code; description; quantity and unit; total and taxable value after discount; tax rate and amount by central, state, integrated or UT tax and cess; place of supply with state name for inter-State supplies; delivery address if different; whether reverse charge applies; and a signature, which is not needed on an electronic invoice under the IT Act. For goods the invoice is issued before or at the time of removal or delivery, in three copies marked ORIGINAL FOR RECIPIENT, DUPLICATE FOR TRANSPORTER and TRIPLICATE FOR SUPPLIER. A registered buyer cannot claim input tax credit without a tax invoice or debit note. When an advance is received the supplier issues a receipt voucher; the flyer notes GST is payable on advances for services only. Goods returned after invoicing are handled with a credit note that refers to the original invoice. A proforma invoice is named only as a commercial document type, not a tax invoice. How to use it: send a proforma or quote to agree terms, then raise the tax invoice at dispatch; confirm rates and fields with a chartered accountant.",
+    "conditions": "GST-registered suppliers in India selling goods; summary as published by CBIC on the date fetched; rule 46 has been amended over time.",
+    "fails_when": "The seller is unregistered or on the composition scheme (bill of supply instead), the supply is services, or later amendments change the fields; check the current rule text.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "invoice in triplicate for goods",
+      "delivery address and state needed for unregistered recipients at Rs 50,000 or more",
+      "no invoice needed under Rs 200 subject to conditions"
+    ],
+    "asks": [
+      "What must a GST invoice show for a bulk order?",
+      "Is a proforma invoice a tax invoice?",
+      "When do I issue the invoice for goods?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6380",
+    "evidence": {
+      "where": "Contents of Invoice; Goods; Receipt Voucher; Credit and Debit Notes; Manner of Issuing Invoice"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6381",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "e-invoicing",
+      "GST",
+      "B2B"
+    ],
+    "claim": "Indian GST e-invoicing applies to businesses with aggregate turnover above Rs 5 crore from 1 August 2023 for B2B, export and similar documents, not B2C.",
+    "body": "From 1 April 2025 those at Rs 10 crore and above must report within 30 days. The IRIS IRP page lists Notification 10/2023 extending the e-invoice mandate to businesses with aggregate annual turnover above Rs 5 crore from 1 August 2023. Covered: B2B and B2G supplies, SEZ supplies, exports, deemed exports, and the credit and debit notes on them; B2C, import and job-work transactions are not covered, and bills of supply and delivery challans need not be reported. A release note dated 31 March 2025 says taxpayers with aggregate turnover of Rs 10 crore and above must report invoices, credit notes and debit notes to the Invoice Registration Portal within 30 days of the invoice date from 1 April 2025, after which IRN generation is blocked. The same page also refers to the earlier Rs 10 crore threshold as latest in one place, so check the current notification. How to use it: if the store's turnover is above Rs 5 crore, every bulk invoice to a GST-registered buyer needs an IRN and QR code before it is valid, so build e-invoice generation into the bulk-order process and never let a B2B invoice sit unreported.",
+    "conditions": "India GST, as published by an authorised IRP on the date fetched; thresholds change by notification.",
+    "fails_when": "Turnover is below the threshold, the buyer is an unregistered consumer (B2C), or a newer notification changes the threshold or time limit.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "Rs 5 crore aggregate turnover from 1 August 2023",
+      "30-day reporting limit for Rs 10 crore and above from 1 April 2025"
+    ],
+    "asks": [
+      "Do I need e-invoices for wholesale orders in India?",
+      "Is there a time limit to report e-invoices?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6381",
+    "evidence": {
+      "where": "Threshold table, transactions covered section and 31 March 2025 release note"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6382",
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "payment terms",
+      "receivables",
+      "MSME"
+    ],
+    "claim": "Under India's MSMED Act a buyer must pay a Udyam-registered micro or small supplier within 45 days of accepting the goods, or owe compound interest at three times the RBI bank rate; claims go to the MSME ODR portal.",
+    "body": "The Ministry of MSME's delayed payment page says section 16 of the MSMED Act makes a buyer that pays late liable for compound interest with monthly rests at three times the bank rate notified by the RBI, with the payment due within 45 days of acceptance of the goods or service. Any micro or small enterprise with a valid Udyam Registration can apply, and new delayed payment applications are filed on the MSME ODR portal (odr.msme.gov.in). How to use it: a brand registered as a micro or small enterprise can put its Udyam number on quotes and invoices and set wholesale credit terms no longer than 45 days to Indian business buyers, knowing it has a statutory remedy if a stockist or distributor pays late. It does not help a brand that is not registered, and it does not apply to consumers.",
+    "conditions": "Indian suppliers with Udyam Registration as micro or small enterprises selling to business buyers; as stated on the ministry page on the date fetched.",
+    "fails_when": "The supplier is a medium enterprise or unregistered, the buyer is a consumer, or the goods were never accepted.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "payment within 45 days of acceptance",
+      "interest at three times the RBI bank rate, compounded monthly"
+    ],
+    "asks": [
+      "How long can an Indian retailer take to pay my wholesale invoice?",
+      "What can I do if a distributor pays late?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6382",
+    "evidence": {
+      "where": "MSEFC welcome page, section 16 summary and ODR notice"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6387",
+    "modules": [
+      "FIN",
+      "OFF"
+    ],
+    "topics": [
+      "corporate gifting",
+      "US tax"
+    ],
+    "claim": "US businesses can deduct no more than 25 dollars per recipient per year for business gifts; engraving, packaging, insuring and mailing are generally excluded, and branded items of 4 dollars or less are not counted as gifts.",
+    "body": "IRS Publication 463 says a business can deduct no more than 25 dollars for business gifts it gives directly or indirectly to each person during its tax year. Incidental costs such as engraving, packaging, insuring and mailing are generally not counted in the gift's cost if they do not add substantial value. Items costing 4 dollars or less with the giver's name permanently imprinted and given out widely, such as pens, are not treated as gifts, nor are signs or display racks for use on the recipient's premises. How to use it: when pitching US corporate gifting, expect client gift budgets to be set with this limit in mind, show packaging and shipping as separate lines on the quote, and never give tax advice; the client's accountant decides how it is treated. Gifts to employees follow different rules.",
+    "conditions": "US federal income tax, Publication 463 as published on the date fetched.",
+    "fails_when": "The gift goes to an employee, counts as entertainment, or the buyer is outside the US.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "25 dollars per recipient per year",
+      "branded items of 4 dollars or less not counted as gifts"
+    ],
+    "asks": [
+      "How much can a US company deduct for client gifts?",
+      "Should packaging be priced separately on a corporate gift quote?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6387",
+    "evidence": {
+      "where": "Chapter 3 Gifts: 25 dollar limit, incidental costs, exceptions"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6423",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "influencer gifting",
+      "TDS",
+      "India tax"
+    ],
+    "claim": "In India, from 1 July 2022 a business giving a benefit to a resident must deduct 10% tax at source under Section 194R.",
+    "body": "In India, from 1 July 2022 a business giving a benefit to a resident must deduct 10% tax at source under Section 194R, and a product given to a social media influencer to make content is covered if the influencer keeps it. A law-firm summary of CBDT Circular 12 of 2022 says Section 194R requires the person providing a benefit or perquisite to a resident to deduct tax at source at 10% of the value (or the total value) of the benefit, effective 1 July 2022; benefits given on or before 30 June 2022 are outside it. The circular says tax is to be deducted when a product given to a social media influencer to use and then make audio or video content is retained by the influencer, which implies a product sent back after use is treated differently. TDS is deducted in the name of the recipient. The section also has an annual value threshold and exemptions for some small deductors; this source does not state them, so confirm them with a chartered accountant. How to apply: log the value of every product an Indian brand gifts to each creator per financial year, decide with the accountant whether TDS applies, and say in the gifting note whether the product is to be kept or returned.",
+    "conditions": "Indian businesses gifting products, trips or other perks to resident Indian creators and influencers.",
+    "fails_when": "Gifts below the section's annual threshold or from deductors outside its scope; products returned after use; non-resident creators (other rules). Tax rules change with each Finance Act, so recheck before relying on it.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "10% TDS on value of benefit",
+      "effective 1 July 2022"
+    ],
+    "asks": [
+      "Do we owe TDS on products we send influencers in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6423",
+    "evidence": {
+      "where": "Summary of key clarifications in Circular 12 of 2022"
+    },
+    "strength": "platform_rule",
+    "public": true
+  }
+]

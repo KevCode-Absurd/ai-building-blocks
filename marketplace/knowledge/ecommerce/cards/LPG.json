@@ -1,0 +1,2814 @@
+[
+  {
+    "id": "LPG-0001",
+    "modules": [
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "friction removal",
+      "bundles and AOV"
+    ],
+    "claim": "A side cart can lift AOV with a multi-step progress bar (free shipping, then a free gift), one-click low-price cross-sells and an in-cart switch to subscribe-and-save.",
+    "body": "In the teardown the side cart, not the product page, carries several AOV levers. Mechanism: the shopper has already decided, so small adds priced well below the main item feel trivial, and a visible next threshold turns spending more into progress toward a reward. Elements to copy: 1) A progress bar with more than one unlock: first free shipping, then a free gift, so the shopper who already qualified for shipping still has a reason to add. 2) A one-click 'add to your order' row of cross-sells priced around 9 to 24 against a main bundle, with no product page visit needed. 3) When a one-time item is added, offer an in-cart upgrade to subscribe and save (the source cites a Shopify app for this). 4) A sticky checkout button that stays visible while scrolling, with the savings and correct total shown. 5) On Shopify Plus, repeat reviews and perks (easy returns, customer count) in checkout with the same button colour and styling. The source also shows a 'reserving your order for X minutes due to high demand' timer. No conversion or AOV lift figures are given, so measure the cross-sell attach rate and AOV change yourself before and after.",
+    "conditions": "Shopify stores with a side (drawer) cart, a catalogue of low-priced add-ons and a free-shipping threshold; checkout customisation only on Shopify Plus.",
+    "fails_when": "There are no genuinely relevant low-price add-ons, so cross-sells add clutter; or the reservation timer is false, which risks consumer-protection complaints about fake urgency (for example UK CMA or EU UCPD rules) and erodes trust with repeat buyers.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "cross-sell add-ons priced about 9 to 24 in the example cart"
+    ],
+    "asks": [
+      "How do I get people to add more to their cart?",
+      "What should a Shopify side cart have in it to raise order value?",
+      "Our free shipping bar is already hit by most orders, what next?",
+      "Do cart countdown timers work or are they risky?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0029",
+    "evidence": {
+      "where": "final section on the cart",
+      "quote": "you could have multiple steps and multiple unlocks"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0002",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "page types and section order",
+      "proof placement",
+      "test design"
+    ],
+    "claim": "Advertorial benchmarks: 30-40% click through to the next page, 70-80% from a second pre-sell page onward, and about 15% conversion on the final checkout page.",
+    "body": "The practitioner's funnel targets: from the first advertorial page, about 30% of visitors should click through, ideally 40%; from a second pre-sell page, 70 to 80% should continue; the final checkout page (he uses a funnel-builder checkout) should convert around 15%. In the first 48 hours, judge only engagement: CPM, ad CTR, scroll depth and page-to-page click-through. Then work down the funnel step by step. Page structure that the benchmarks assume: hook or shocking discovery; who this is for; cost of doing nothing; why the problem happens; why each alternative fails; three kinds of proof (mechanism that makes logical sense, reviews ideally from repeat buyers, and a visual demonstration); offer reveal, often with price held back until the second page; objections on risk, price, time and safety; guarantee; then a soft, medium or hard CTA. Place CTAs about four times: after the hook, after the mechanism, after proof, and after objections and guarantee (or use a sticky button). Assets to gather first: 10 to 20 review quotes, five objections, a three-sentence mechanism. Test order: format first, then headline, then position of the first proof block. CTA style rarely matters and needs thousands of daily visitors to read.",
+    "conditions": "Multi-step advertorial funnels on paid social traffic; benchmarks are one practitioner's, from health and beauty style offers.",
+    "fails_when": "Traffic is too low to read page-to-page rates (CTA style tests need thousands of visitors a day); the funnel is a single page to a standard Shopify PDP, where checkout conversion of 15% is not comparable; benchmarks have no stated sample.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "30% to 40% click-through from advertorial to next page",
+      "70% to 80% click-through from second pre-sell page",
+      "about 15% checkout-page conversion",
+      "first 48 hours: judge CPM, CTR and page click-through only",
+      "4 CTA placements",
+      "10 to 20 review quotes, 5 objections, 3-sentence mechanism"
+    ],
+    "asks": [
+      "What's a good click-through rate from an advertorial to the product page?",
+      "Our advertorial gets 15% click-through, is that bad?",
+      "What should I test first on a pre-sell page?",
+      "How many CTA buttons should an advertorial have and where?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0060",
+    "evidence": {
+      "where": "KPI and optimisation section near the end; single structure section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0003",
+    "modules": [
+      "LPG",
+      "AVT"
+    ],
+    "topics": [
+      "objection handling",
+      "comparison and quiz structures",
+      "proof placement"
+    ],
+    "claim": "Choose the advertorial format by the buying obstacle: low trust, story; needs permission, expert; scepticism or too many options, buyer's guide; 'will it work for me', case study.",
+    "body": "The source lists six advertorial formats and says to choose by the obstacle that stops the sale, not by taste. Story format (a person's failed attempts, the discovery, the change) suits cold traffic with emotional or identity problems and low trust; put proof early. Authority or expert format (dermatologist, vet, doctor describing 'what I see in patients') suits buyers who need permission to act, common in health, beauty, pain and pets; use real, verifiable experts. Buyer's guide or 'top 5' comparison suits sceptical, seen-it-all buyers or buyers overwhelmed by options; it names the alternatives they are weighing and explains why each falls short, so the click arrives pre-sold, and it also works on retargeting. Industry-exposé format (small lab versus a huge industry) taps distrust of big brands. Case study format walks through one problem, each standard solution that failed, then the product, and answers 'will this work for someone like me' (age, skin type, ethnicity). Listicle 'reasons why' handles several objections at once. To find the obstacle, read ad comments, support emails and forums for repeated doubts. Then test formats against each other (story versus guide) before testing anything smaller.",
+    "conditions": "Pre-sell pages for cold paid traffic in categories with trust or claim barriers.",
+    "fails_when": "Comparison pages make false or unverifiable claims about named competitors (legal risk), experts are fabricated, or the format does not match the real objection found in research; on low-trust categories, an obviously fake 'news' look can lower trust.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "6 advertorial formats: story, expert, buyer's guide, industry exposé, case study, listicle"
+    ],
+    "asks": [
+      "What kind of advertorial should I write for my product?",
+      "People say they don't trust our product, which pre-sell page format fixes that?",
+      "Is a 'top 5 best' comparison page worth building?",
+      "How do I choose between a story advertorial and a doctor-led one?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0060",
+    "evidence": {
+      "where": "'pick the right type of advertorial in 60 seconds' section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0004",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "page types and section order",
+      "objection handling"
+    ],
+    "claim": "Send cold traffic to an advertorial instead of the product page when the product needs about three minutes of explanation; simple, understood products go straight to the PDP.",
+    "body": "A product page assumes the visitor already wants the item and only needs the price. For many cold visitors that is false: they see '$50' before they understand why the product is worth it, and leave. An advertorial (a native, article-style pre-sell page) builds the desire first. The practitioner's rule of thumb: if the product's value takes roughly three minutes to explain, it needs an advertorial; a bottle of water, a mouse pad or a plain t-shirt does not. Signals that you need one: the market is sceptical, the claims need explaining, the product works through a new or unfamiliar mechanism, or the category is crowded with look-alike offers (common in health, beauty, pain relief, pets, gadgets and weight loss). Match the page to awareness: product-aware and most-aware visitors (retargeting, branded search, existing customers) can go straight to the PDP with an offer; unaware and problem-aware visitors need the story, the cause of the problem and the mechanism before they see a price. The practitioner claims the advertorial route is what lets unaware and problem-aware campaigns scale to very high daily spend. Practical step: before building, write down the awareness level of the traffic source and the one objection that most often stops purchase, then choose the page type.",
+    "conditions": "Cold prospecting traffic for products with a mechanism, claim or category that needs explaining; DTC brands on paid social.",
+    "fails_when": "The product is simple, impulse-priced or already understood, or the traffic is warm/product-aware, where an extra page adds friction; health and weight-loss claims in advertorials can breach ad platform and consumer-protection rules if not substantiated.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about 3 minutes of explanation as the threshold for needing an advertorial",
+      "claimed scale of $50,000 to $100,000 per day ad spend on unaware/problem-aware funnels"
+    ],
+    "asks": [
+      "Should I send Facebook traffic to my product page or an advertorial?",
+      "Our cold traffic bounces off the product page at the price, what should we do?",
+      "Which products actually need an advertorial?",
+      "When is a pre-sell page a waste of time?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0060",
+    "evidence": {
+      "where": "opening section: why advertorials beat product pages; awareness levels"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0005",
+    "modules": [
+      "LPG",
+      "AVT"
+    ],
+    "topics": [
+      "proof placement",
+      "objection handling"
+    ],
+    "claim": "Ask buyers what almost stopped them, then place 3 to 4 hand-picked reviews answering those exact objections beside the bundle selector and add-to-cart button.",
+    "body": "Generic proof (press logos, a wall of stars) is everywhere, so it does little. The agency's method: 1) survey recent buyers and run user tests asking 'what almost stopped you buying today?' and 'what made you buy?'; 2) list the top objections; 3) pick 3 to 4 reviews that answer those objections in the customer's words; 4) place them at the point of action, next to the bundle choice and add-to-cart button, or above the fold. Example: for a respirator brand, research showed the main fears were 'will this actually protect me' and 'will it fog up', so the chosen review mentioned protection for eyes and lungs, sparks, dust and no fogging. If price is the main objection, choose reviews about value for money. If you have only about 30 reviews, showing a review count can hurt, so feature a few strong, relevant quotes instead. A beauty brand cited does the same with press quotes about specific results rather than outlet logos. No lift numbers are given for this tactic.",
+    "conditions": "Product pages where buyers have known, nameable objections (efficacy, fit, comfort, price); works with small review counts.",
+    "fails_when": "No customer research to identify objections, so the reviews are guesses; categories where shoppers expect to see full review counts and distributions (marketplaces).",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "3-4 hand-picked testimonials",
+      "about 30 reviews or fewer: feature quotes rather than counts"
+    ],
+    "asks": [
+      "Which reviews should I show on my product page?",
+      "We only have 30 reviews, should we display them?",
+      "Where should testimonials go on a product page?",
+      "How do I use reviews to handle objections?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0061",
+    "evidence": {
+      "where": "Trick 1, targeted social proof, Parcel Safety respirator example"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0006",
+    "modules": [
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "friction removal",
+      "bundles and AOV"
+    ],
+    "claim": "Cutting bundle choices from five (1, 2, 3, 5, 10-pack) to three (1, 3, 5) lifted conversion 53% and average order value 13.5% for a drinks brand.",
+    "body": "An agency's test for Wildman Drinking. Session recordings showed shoppers at the bundle selector either picking the 1 or 2-pack or leaving the site. The hypothesis was choice overload: too many close options make comparison hard, so people default to the cheapest or defer. Reducing to three options (1, 3 and 5-pack) raised conversion rate 53% and average order value 13.5% at the same time, because the remaining tiers were spaced far enough apart to make the step up obvious. How to apply: 1) watch recordings and click maps of your bundle or variant selector; 2) list each option's share of orders; 3) drop tiers with negligible take or that sit too close to a neighbour; 4) keep a single unit, a typical-use multiple and a stock-up option; 5) A/B test, reading conversion and AOV separately. Caveat: the source gives no sample size, test length or traffic level, so treat the size of the lift as a hypothesis to test, not a benchmark.",
+    "conditions": "Consumables or multi-pack products sold through a quantity selector on the product page; enough traffic to A/B test.",
+    "fails_when": "Products where buyers genuinely need many quantity or size options (B2B, varied usage); single high-ticket items; very low-traffic stores that cannot validate the change.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "5 options to 3: conversion +53%, AOV +13.5% (no sample size given)"
+    ],
+    "asks": [
+      "How many bundle options should my product page have?",
+      "Customers keep picking the single pack, should I remove options?",
+      "Does offering fewer choices really increase sales?",
+      "What pack sizes should a drinks brand offer?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0061",
+    "evidence": {
+      "where": "Trick 6, the paradox of choice, Wildman Drinking bundle example"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0007",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "friction removal",
+      "page types and section order"
+    ],
+    "claim": "Keep main navigation under 7 items and remove product-page elements that get under 1% of clicks; one brand saw monthly orders rise 60% after this and other changes.",
+    "body": "The agency treats clutter as a conversion cost. Navigation: they see diminishing returns above seven top-level items, so they cut menu items that click maps show nobody uses. Product pages: in one audit (Sumach), most side elements on the product page drew under 1% of clicks, several at 0 to 0.21%. Removing that clutter, combined with other changes, coincided with a 60% increase in monthly online orders. Because several changes shipped together, the 60% cannot be credited to removal alone. How to apply: 1) install a click-map tool and collect at least a few thousand sessions per template; 2) rank every link and module on the page by share of clicks; 3) remove or collapse anything below about 1% that is not legally required or a trust element people read without clicking (shipping and returns notes); 4) cut navigation to the categories that carry most clicks and revenue; 5) ship one change at a time if you want to know what worked. Beware that low clicks does not mean low value for reassurance content.",
+    "conditions": "Stores with cluttered menus or product pages and enough traffic for reliable click maps.",
+    "fails_when": "Large catalogues where shoppers navigate deep category trees; reassurance content (returns, sizing) that matters without being clicked; changes bundled so the cause is unknown.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "navigation under 7 items",
+      "elements with under 1% of clicks (0-0.92% observed)",
+      "monthly orders +60% after several combined changes"
+    ],
+    "asks": [
+      "How many menu items should my store have?",
+      "Our product page is cluttered, what should we remove?",
+      "How do I decide which page elements to cut?",
+      "Does simplifying the navigation increase sales?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0061",
+    "evidence": {
+      "where": "Trick 6, reducing items on the page, Sumach audit"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0008",
+    "modules": [
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "copy principles",
+      "bundles and AOV"
+    ],
+    "claim": "Putting bundle savings as dollars in the option title ('3 pack, save $10') instead of a percentage in small text raised conversion 25% and revenue per visitor 28.6%.",
+    "body": "Same agency, same drinks brand. The original bundle selector showed '10% savings' and '20% savings' in body text under each option. The variant moved the saving into the option headline and stated it in dollars: '3 pack, save $10' and '5 pack, save $20'. Reported result: conversion rate up 25% and revenue per user up 28.57%. The principle is 'do not make the shopper do maths': a dollar figure next to the choice is read at a glance, while a percentage in small print requires calculation and is often skipped. How to apply: 1) state the saving in currency when the dollar amount is meaningful (percentages can read bigger on cheap items, so test both); 2) put it in the line people actually read, the option title; 3) keep the arithmetic honest against the single-unit price; 4) A/B test and read conversion and revenue per visitor, not conversion alone. No sample size or duration was reported, so the size of the lift is unverified.",
+    "conditions": "Multi-pack or bundle selectors where the saving per tier is a few dollars or more.",
+    "fails_when": "Very low-priced items where a percentage looks larger than the dollar figure; savings computed against an inflated reference price, which can be misleading.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "conversion +25%",
+      "revenue per user +28.57%",
+      "no sample size reported"
+    ],
+    "asks": [
+      "Should I show bundle savings in dollars or percent?",
+      "Our bundle discounts aren't getting picked, how should we display them?",
+      "Where on the product page should the savings go?",
+      "Does 'save $10' convert better than '10% off'?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0061",
+    "evidence": {
+      "where": "Trick 7, strategic bundling, Wildman Drinking A/B test on savings display"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0009",
+    "modules": [
+      "LPG",
+      "EML"
+    ],
+    "topics": [
+      "friction removal",
+      "list health"
+    ],
+    "claim": "Replace pop-ups that fire in the first 3 to 5 seconds with exit-intent, post-add-to-cart or scroll-depth triggers; the agency reports conversion gains up to 125% from timing alone.",
+    "body": "The argument: a pop-up in the first seconds interrupts visitors who do not yet know what the brand sells, adding friction and exits. Fewer people see a well-timed pop-up, but those who do are engaged, so conversions rise; the agency says it has seen up to 125% increases just by changing timing (no sample given). Three triggers they use: 1) exit intent, for first-time visitors about to leave, offering a first-order discount for an email address so they can be re-marketed; 2) right after add to cart, aimed at hesitant, price-sensitive shoppers, offering a small incentive to finish; 3) scroll depth, set at the point where recordings or scroll maps show interest drops (for example if half of readers abandon midway through the product description), offering help or a discount there. How to apply: check scroll and exit data first, set the trigger at the measured drop-off point, and compare email capture rate and store conversion before and after. Note the discount-on-add-to-cart trigger can train shoppers to wait for it.",
+    "conditions": "Stores using email-capture or discount pop-ups with enough traffic to measure drop-off points; mostly first-time visitors.",
+    "fails_when": "Mobile layouts where exit intent cannot fire reliably; returning customers who learn to trigger discounts; brands avoiding discounting altogether.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "avoid pop-ups at 3-5 seconds",
+      "up to 125% conversion increase from timing changes (no sample)",
+      "example scroll trigger at the point where 50% drop off"
+    ],
+    "asks": [
+      "When should my email pop-up appear?",
+      "Our pop-up shows instantly and bounce rate is high, what should we change?",
+      "Does exit-intent work better than a timed pop-up?",
+      "Should I offer a discount after someone adds to cart?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0061",
+    "evidence": {
+      "where": "Trick 5, smart pop-up timing"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0010",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "above the fold",
+      "mobile specifics"
+    ],
+    "claim": "Set headlines 3 to 4 times the body text size: with 16px desktop body copy, a 48 to 57px headline.",
+    "body": "The agency's most common audit finding on visual hierarchy is a headline barely larger than the body text, so the value proposition, which many visitors read alone, carries no visual weight. Their rule of thumb: make the headline 3 to 4 times the body size; with the usual 16px desktop body text that means roughly 48 to 57px. Hierarchy also comes from colour and placement: a contrasting colour reserved for the add-to-cart button and announcement bar, a different tone for headline versus body, and nothing else competing for that accent colour. A quick test: blur a screenshot of the page; the primary call to action should still be the obvious thing to click. In their before-and-after example the 'before' mobile page had an oversized logo and announcement bar and a button that did not stand out; the 'after' used a large headline, lighter body, and an orange button, so the eye moved top to bottom. How to apply: audit font sizes in the theme settings for desktop and mobile separately, since mobile scales differ, and keep one accent colour for actions.",
+    "conditions": "Hero and product page sections on desktop; scale proportionally on mobile, where 3-4x can be too large for long headlines.",
+    "fails_when": "Long headlines on narrow mobile screens, where 48px wraps into many lines and pushes the CTA below the fold; brands with editorial typography where size contrast is carried another way.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "headline 3-4x body size",
+      "16px body on desktop gives 48-57px headline"
+    ],
+    "asks": [
+      "How big should my homepage headline be?",
+      "Our headline and body text look the same size, does it matter?",
+      "What font sizes should a Shopify product page use?",
+      "How do I make the add to cart button stand out?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0061",
+    "evidence": {
+      "where": "Trick 4, visual hierarchy"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0011",
+    "modules": [
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "copy principles",
+      "friction removal"
+    ],
+    "claim": "Advertorial CTAs convert better as soft steps: 'Check availability' with no price, a line above the button telling readers to click, and a second CTA after an author note.",
+    "body": "The copywriter's view is that an advertorial must not switch into a hard sell at the end, because the reader came for a story. So the product is handed over softly. A character in the story asks where to get it (his example: the doctor was so impressed he asked where to buy it). The button says 'Check availability' rather than 'Buy now, $50 off', and the price is not named on the advertorial; price and offer live on the product page. Directly above the button, one line tells the reader to click the button below to check availability, which removes doubt about the next step. Below the first CTA, add a short, personal note about the author (for example, that they love tennis), then a second CTA, because people buy from people. On Taboola or other native traffic, use more CTAs and a shorter article. How to apply: audit your current advertorial's last screen against these four points. No conversion data is given; these are rules from his own practice.",
+    "conditions": "Story advertorials sending cold traffic to a separate product or offer page; health, wellness and problem-solution products.",
+    "fails_when": "The advertorial is the only page before checkout so price must be shown; offer-led promotions (sales events) where the discount is the hook; ad platforms or categories whose policies restrict implied scarcity or testimonial-style claims.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "2 CTAs minimum, one before and one after the author note",
+      "more CTAs and shorter copy on native (Taboola) traffic"
+    ],
+    "asks": [
+      "What should the button on my advertorial say?",
+      "Should I show the price on an advertorial or only on the product page?",
+      "How many CTAs should an advertorial have?",
+      "Our advertorial gets clicks to the button but feels salesy at the end, how do I soften it?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0062",
+    "evidence": {
+      "where": "Structure walkthrough and closing tips",
+      "quote": "click the button below to check the availability"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0012",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "copy principles",
+      "objection handling"
+    ],
+    "claim": "Edit an advertorial by marking every sentence where the story stops and the pitch starts; each marked sentence is a likely exit point, so rewrite it inside the narrative.",
+    "body": "The most common failure this copywriter sees is an advertorial that opens with 100 to 200 words of story and then turns into ordinary sales copy once the product appears. Readers accept a story but resist being sold to, so the switch is where they close the tab. His editing method: read the draft back and highlight every sentence where narration ends and selling begins, then rewrite each one so the product arrives through the plot. Ways to do that: tell it from a third person such as a doctor seeing a patient; have the main character try the product despite advice against it; let the result be shown by the character's life (playing tennis again) rather than claimed. Write the after state first, then work backwards and spend most of the words on the before state so the contrast is strong. Give the product's mechanism a short name the reader could repeat at a party. Single-practitioner advice with no test numbers; mainly drawn from knee-pain and supplement offers.",
+    "conditions": "Long-form advertorials for problem-solution products sold to cold traffic, especially health and wellness.",
+    "fails_when": "Readers want specs and comparison (technical or high-consideration products) rather than a story; regulated health claims where a dramatised doctor narrative or invented patient would breach ad or consumer-protection rules; brands whose voice cannot carry a fictional first-person story.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "typical failing draft: 100 to 200 words of story before the pitch takes over"
+    ],
+    "asks": [
+      "People drop off halfway through my advertorial, why?",
+      "How do I bring the product into an advertorial without sounding like an ad?",
+      "How do I edit an advertorial that turns into a sales pitch?",
+      "How long should the story part of an advertorial be before the product?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0062",
+    "evidence": {
+      "where": "Second rule, storytelling",
+      "quote": "Every one of those is where someone closed a tab"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0013",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "friction removal",
+      "copy principles",
+      "mobile specifics"
+    ],
+    "claim": "On an advertorial, show a sticky buy button only after the reader scrolls past the paragraph that introduces the product, never during the problem section.",
+    "body": "Advertorials (pre-landers) work by keeping the reader inside a story about a problem they recognise, then introducing the product as the thing that resolved it. A health and wellness copywriter who says he has written hundreds of them argues that a sticky 'Check availability' or buy button that appears early, or at a fixed 50% scroll depth, breaks this. It tells a reader who is still problem-aware that this is a sales page before the product has been introduced, which is the point where people leave. How to apply: set the sticky bar to trigger on an element, not a percentage. Place an invisible anchor just after the product-introduction paragraph and only show the sticky CTA once that anchor has scrolled out of view. Keep in-line CTAs below that point too. Check on mobile, where sticky bars take a larger share of the screen. This is a practitioner rule with no test data in the source; confirm it with your own split test of trigger position if traffic allows.",
+    "conditions": "Story-format advertorials or listicles sent cold traffic from Meta or native ads, where readers arrive problem-aware but not product-aware.",
+    "fails_when": "The page is a product page or a short pre-lander for warm or retargeted traffic that already knows the product; very short native advertorials where the product appears in the first screen.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "fixed 50% scroll trigger named as the common mistake"
+    ],
+    "asks": [
+      "When should the sticky add to cart button show up on my advertorial?",
+      "Our advertorial has a sticky buy bar from the top, is that hurting us?",
+      "Should a sticky CTA trigger at 50% scroll or somewhere else?",
+      "Where do I put the buy button on a pre-lander?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0062",
+    "evidence": {
+      "where": "Closing section, third quick tip"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0014",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "friction removal",
+      "page types and section order"
+    ],
+    "claim": "On a lead-gen page, a top button scrolling to a form on the same page beat sending visitors to a separate opt-in page, +220% in one test.",
+    "body": "The presenter's agency ran an A/B test on a B2B lead-generation page where the original flow sent visitors from the landing page to a separate opt-in page. The variant placed a 'learn more' button at the top of the page that scrolled the visitor down to the contact form embedded on the same page. Conversions rose 220% in the test. Session recordings explained why: visitors read the value proposition, image and stats, clicked within about 6 to 7 seconds, landed on the form with the page's arguments still in view, and filled it straight away, instead of facing a new page that made them re-decide. Supporting rules from the same source: repeat the call to action down the page so a visitor can convert at whichever section persuades them; keep forms to four fields or fewer, combine first and last name into one field; and put a short line beside the form saying what happens next. How to apply: if your conversion step lives on another URL, test an in-page anchor to an embedded form or a sticky button that scrolls there. Treat the 220% as one agency-reported test with no sample size, not an expected lift.",
+    "conditions": "Lead-gen, consultation, quote or wholesale-enquiry pages where the conversion is a form; mobile and desktop; cold or warm paid traffic.",
+    "fails_when": "Long or multi-step applications that genuinely need a separate step; ecommerce product pages where the conversion is add to cart rather than a form; no sample size was given, so the lift may not replicate.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "+220% conversions from in-page scroll-to-form button (single A/B test, no sample size)",
+      "visitors clicked within about 6 to 7 seconds",
+      "4 form fields or fewer"
+    ],
+    "asks": [
+      "Should my form be on the same page or a separate page?",
+      "Our landing page sends people to another page to sign up, is that hurting us?",
+      "Where should the call to action button take people?",
+      "How many form fields should a lead form have?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0063",
+    "evidence": {
+      "where": "Step on conversion events and contact forms, near the end of the video"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0015",
+    "modules": [
+      "LPG",
+      "ADC",
+      "EML"
+    ],
+    "topics": [
+      "copy principles",
+      "page types and section order"
+    ],
+    "claim": "Write sponsored editorial and advertorial-style emails as roughly 70 percent genuinely useful or entertaining content and at most 30 percent pitch.",
+    "body": "Readers skim past anything that looks like an ad but read, finish and share content that helps or entertains them, and they lend that content the trust they give the host publication or sender. The practitioner's working ratio is about 70 percent real value (a story, a how-to, product use tips, a funny listicle) and no more than 30 percent promotion. At AppSumo, daily deal emails to around 750,000 subscribers were written this way: most of the email explained the product's benefits and how to use it, and the deal itself took under 30 percent of the space, which he reports drove more engagement, full reads and purchases and fewer unsubscribes than straight 'buy this' sends. The older benchmark he cites is Ogilvy's reference-guide ads (a stain-removal guide, a beer and oyster pairing guide) that readers tore out and kept. How to apply: draft the useful piece first so it would stand alone, then weave in the product as the natural tool and close with the offer. No controlled test or sample is given; treat the ratio as a starting heuristic.",
+    "conditions": "Sponsored placements on publishers, native ads and frequent promotional email sends to an engaged list where unsubscribes are the main cost of over-pitching.",
+    "fails_when": "Direct-response pre-sell advertorials for cold paid traffic, where the page is built to move a reader to a product page and a longer, more explicit pitch is normal; bottom-of-funnel traffic already searching for the product, where value padding delays the sale.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "70% value content to 30% or less promotion",
+      "about 750,000 daily AppSumo email recipients"
+    ],
+    "asks": [
+      "How much of an advertorial should be selling versus useful content?",
+      "Our promo emails get lots of unsubscribes, how much should we pitch?",
+      "What's the 70/30 rule for sponsored content?",
+      "How do I write a sponsored article people actually share?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0064",
+    "evidence": {
+      "where": "Mindset section and AppSumo example"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0016",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "above the fold",
+      "copy principles"
+    ],
+    "claim": "Test the headline first and the hero image second; the agency attributes its largest lifts, up to 130 percent, to above-the-fold changes because many visitors never scroll.",
+    "body": "The top of the page is the only part every visitor sees, and the agency cites a figure (unsourced) that about 60 percent never scroll past it, so changes there touch the most traffic. Their testing order is: first make sure the headline says who you are, what you do and what the buyer gets, readable in five seconds; then test variations of that benefit; then test the image under the headline so it shows the value proposition rather than decorating it. Reported results across B2B and ecommerce clients: headline tests up to 60 to 80 percent conversion lift, above-the-fold tests overall up to 130 percent, and one image swap from a generic picture to a collage of real customer-content output up to 78 percent (a B2B agency client). To find the real benefit for the headline, chain 'so that' statements until you reach the outcome the buyer cares about. These are best-case client anecdotes without sample sizes; use them to prioritise what to test, not to forecast a lift.",
+    "conditions": "Landing and product pages receiving cold or paid traffic where the first screen decides whether the visitor stays.",
+    "fails_when": "Pages where the first screen already states a clear benefit and most loss happens later (cart, shipping cost, checkout); returning or high-intent traffic that scrolls straight to price and reviews.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 60% of visitors never scroll past the first screen (unsourced)",
+      "60 to 80% lift from headline tests",
+      "up to 130% lift from above-the-fold tests",
+      "78% lift from one hero image change (B2B client)",
+      "headline understood in 5 seconds or less"
+    ],
+    "asks": [
+      "What should I test first on my landing page?",
+      "Our landing page converts badly, where do I start?",
+      "Does changing the hero image actually make a difference?",
+      "How many people scroll past the top of a page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0065",
+    "evidence": {
+      "where": "Above the fold section and Influence Hunter image test"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0017",
+    "modules": [
+      "LPG",
+      "CRO",
+      "OFF"
+    ],
+    "topics": [
+      "proof placement",
+      "objection handling",
+      "friction removal"
+    ],
+    "claim": "When buyers object to price versus competitors, moving trust elements above the price and risk badges under add-to-cart lifted conversion 30 to 88 percent in agency tests.",
+    "body": "A price objection is often a risk objection: the buyer is unsure the higher price is worth it, so the page should answer that before the number appears and at the moment of commitment. In one ecommerce client test, the agency moved the price lower on the product page and placed trust-building elements above it; conversion rose 32 percent, and adding more trust elements ahead of the price took the cumulative lift to 88 percent. For another client (Parcel Safety) they added a row of badges directly under the add-to-cart button, covering free 30-day returns, a 100 percent money-back guarantee, a one-year warranty and free US shipping; the A/B test showed about a 30 percent conversion lift versus no badges. How to apply: list the doubts that stop a purchase (will it work, can I return it, how long to arrive, extra costs), put proof such as reviews and guarantees before the price, and put the specific risk-reversal terms in a compact row under the buy button. Sample sizes and test durations were not given, so treat the figures as directional.",
+    "conditions": "Product pages where the product is priced above visible competitors and the store can actually honour the guarantee, return and warranty terms shown.",
+    "fails_when": "Lowest-price products where cost is not the hesitation; when badges promise terms the business cannot afford or does not offer; cluttered pages where more badges push the buy button below the fold on mobile.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "+32% conversion from trust elements above a lowered price position",
+      "+88% cumulative conversion after adding more trust elements",
+      "+30% conversion from risk badges under add-to-cart (Parcel Safety A/B test)",
+      "badges: free 30-day return, 100% money-back, 1-year warranty, free US shipping"
+    ],
+    "asks": [
+      "People say our product is too expensive, what do I change on the page?",
+      "Where should guarantees and trust badges go on a product page?",
+      "Do badges under the add to cart button increase sales?",
+      "Should the price come before or after reviews on a product page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0065",
+    "evidence": {
+      "where": "Compounding test example and perceived-likelihood section (Parcel Safety)"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0018",
+    "modules": [
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "comparison and quiz structures",
+      "proof placement"
+    ],
+    "claim": "End a personalisation quiz with a summary that plots the visitor's own numbers to a goal on a specific calendar date, before showing the buy box.",
+    "body": "The strongest commitment device in the teardown is a results page built from the visitor's inputs. Mechanism: seeing their own current weight, target weight and a dated finish line makes the outcome feel real and close, so by the time the offer appears the visitor has argued themselves into it; the offer itself becomes secondary after a long quiz. How to apply: 1) Early in the quiz, ask for the goal picture (choose the body type you want) and current and target numbers. 2) Ask whether an important event is coming up (holiday, wedding) and its date; this ties the goal to a deadline. 3) Mid-quiz, show a chart from current to target with a projected date, for example 90 kg to 80 kg by a named date about three months out. 4) After the email capture, show a loading screen ('building your plan'), then a commitment pop-up ('will you start today?'). 5) On the summary, show 'now versus you in X months' with the image they picked; the practitioner prefers real dates over 'in 6 months' because far-off periods feel abstract. 6) Then reviews and the buy box with a visible discount timer and money-back guarantee, and remove any links that let people leave at that step. For a physical product, swap the app plan for a product carousel and UGC.",
+    "conditions": "Outcome-driven categories where progress can be expressed as a number over time (weight, skin clarity, sleep, strength); cold traffic sent to a quiz rather than a product page.",
+    "fails_when": "Projected outcomes would be health or efficacy claims the brand cannot substantiate (regulated supplements, medical devices, ad-policy limits on weight-loss claims); or the product has no measurable personal outcome to project.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "example projection: 90 kg to 80 kg in a little over 3 months",
+      "example discount timer about 6.5 minutes"
+    ],
+    "asks": [
+      "What should the results page of a product quiz show before the offer?",
+      "People finish our quiz but don't buy, what now?",
+      "How do I make the quiz result feel personal?",
+      "Should I show a goal date or timeline on the quiz results page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0066",
+    "evidence": {
+      "where": "important-event question and the summary page section",
+      "quote": "It makes it feel more real. It makes it feel achievable."
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0019",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "comparison and quiz structures",
+      "friction removal"
+    ],
+    "claim": "In long quiz funnels, insert an informational 'micro-commitment' screen every 3 to 5 questions and vary input types to prevent answer fatigue.",
+    "body": "The practitioner's rule, from quizzes his agency has run, is that a quiz which asks 20 or more button-click questions in a row loses people to answer fatigue. The fix is pacing. Mechanism: each info screen gives something back (a fact, a validation, an 'you are not alone' message), so the visitor feels they are getting value and keeps trusting the process, and a change of input type forces fresh attention. How to apply: 1) After every 3 to 5 questions, place a screen that reflects the last answers back, such as 'you drink more water than 50% of users' or 'nutrition drives most of your result', worded to match the goal they chose. 2) Swap copy on these screens by branch: a lose-weight answer and a gain-muscle answer should see different text. 3) Mix input types: numeric fields for height and weight, like or dislike or neutral ratings for activities, image choices for the body they want, multi-select for foods, not only single-choice buttons. 4) Include one setback question and answer it with a reassurance screen. 5) Use calming colours on reassurance screens. The funnel shown ran to roughly 30 to 40 steps on cold traffic from Meta, Instagram and YouTube. No completion-rate data is shown, so measure step-by-step drop-off yourself.",
+    "conditions": "Cold paid-social traffic into a long (20+ step) personalisation quiz for products with a personal outcome (fitness, weight, skincare, supplements); the example is a fitness app subscription.",
+    "fails_when": "Short quizzes of 5 to 8 questions, where extra screens only add steps; or products with no personal outcome to reflect back (commodity goods), where info screens feel like padding and raise drop-off.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "one info screen every 3 to 5 questions",
+      "example funnel about 30 to 40 steps",
+      "example reflection: 'more water than 50% of users', 'worked out more than 62% of users'"
+    ],
+    "asks": [
+      "People keep dropping off halfway through our quiz, how do I fix it?",
+      "How many questions can a quiz have before people quit?",
+      "Should I put info screens between quiz questions?",
+      "Is it bad if every quiz question is just tap-a-button?"
+    ],
+    "platforms": [
+      "meta",
+      "instagram",
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0066",
+    "evidence": {
+      "where": "micro-commitment steps, after the problem-areas question",
+      "quote": "around every three to four questions or five questions"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0020",
+    "modules": [
+      "LPG",
+      "OFF",
+      "CRO"
+    ],
+    "topics": [
+      "friction removal",
+      "bundles and AOV"
+    ],
+    "claim": "Cutting a bundle picker from five pack options to three lifted conversion 53% and AOV 13.5% in one agency test on a drinks brand.",
+    "body": "The agency tested a product page for Wildman Drinking (drinking accessories) that offered five bundle sizes. Session recordings showed visitors hovering between options and then leaving, a sign of choice overload at the most important decision on the page. The variant offered three options only: one pack, three pack and five pack. The reported result was a 53% increase in conversion rate and a 13.5% increase in average order value, meaning buyers both bought more often and picked larger packs. The mechanism is that every extra option adds a comparison the buyer has to make; with three clearly spaced options the choice becomes 'just one, a few, or a lot', and the middle option reads as the default. How to apply: look at your pack-size sales mix, keep the single unit, the pack you want most people to buy and one larger pack, and drop sizes that sell little and sit close to a neighbour. Then re-check AOV, not just conversion, because a lost in-between size can push some buyers down. The figures are agency-reported with no sample size or duration given.",
+    "conditions": "Ecommerce product pages selling multi-packs or quantity bundles of one consumable or giftable product; mostly mobile paid traffic.",
+    "fails_when": "Products bought in exact quantities for a known need (replacement parts, set-of-4 tyres, refills sized to a device); B2B or wholesale buyers who want fine quantity control; when the dropped size was a large share of revenue.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "5 bundle options to 3: +53% conversion rate, +13.5% AOV (agency-reported, Wildman Drinking, no sample size)"
+    ],
+    "asks": [
+      "How many bundle options should I show on my product page?",
+      "We offer 1, 2, 3, 4 and 5 packs, is that too many?",
+      "Will fewer pack sizes lower my average order value?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0067",
+    "evidence": {
+      "where": "Trick on reducing options in the bundle selector"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0021",
+    "modules": [
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "bundles and AOV",
+      "copy principles"
+    ],
+    "claim": "Putting the dollar saving in each bundle's headline ('3 pack, save $10') instead of a small percentage underneath lifted conversion 25% and revenue per visitor 28.5%.",
+    "body": "In the agency's test for Wildman Drinking, the original bundle selector listed a one pack, three pack and five pack with the saving shown as a percentage in small body text (save 10%, save 20%). Buyers had to notice it and do the arithmetic. The variant moved the saving into each option's headline as a dollar amount: 'three pack, save $10', 'five pack, save $20'. Reported results were a 25% higher conversion rate and 28.5% higher revenue per visitor; the presenter repeats the same test for a coffee brand in a companion video. The principle is 'don't make them do maths': the saving is the reason to choose a larger bundle, so it belongs where the eye lands first, written as money. This matches older direct-mail evidence that a dollar-off statement beats the equivalent percentage when the dollar figure is the larger number. How to apply: in the bundle or quantity-break selector, lead each option with the money saved versus buying singles, keep it consistent with the cart line and the ad, and verify the reference price is a price you really charge for singles.",
+    "conditions": "Quantity bundles where the dollar saving is a meaningful number (roughly $5 or more); Shopify-style bundle pickers on product pages.",
+    "fails_when": "Low-priced items where the dollar saving is tiny (save $0.80) and a percentage reads bigger; reference price is not the real single-unit price, which breaks consumer pricing rules; agency-reported lift without sample size.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "savings moved to bundle headline in dollars: +25% conversion rate, +28.5% revenue per visitor (agency-reported)"
+    ],
+    "asks": [
+      "How should I show the savings on my bundles?",
+      "Customers are not picking our bigger packs, how do I make the deal obvious?",
+      "Should bundle savings be shown as a percent or dollar amount?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0067",
+    "evidence": {
+      "where": "Strategic bundling and price anchoring section, Wildman Drinking A/B test"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0022",
+    "modules": [
+      "LPG",
+      "EML"
+    ],
+    "topics": [
+      "friction removal",
+      "mobile specifics"
+    ],
+    "claim": "Skip discount pop-ups in the first 3 to 5 seconds; trigger on exit intent, right after add to cart, or at the scroll depth where heatmaps show drop-off.",
+    "body": "The presenter argues that a pop-up in the first 3 to 5 seconds hits visitors before they know who you are or what you sell, adds friction and often causes exits or ignored offers. Fewer people see a well-timed pop-up, but those who do are engaged, and he reports conversion increases of up to 125% from changing pop-up timing alone. Three triggers he uses: exit intent, for first-time browsers whose cursor heads for the close button, offering a discount for joining the email list so they can be remarketed; post add-to-cart, for shoppers who hesitate at price, offering a small discount to finish the order; and scroll depth, using a heatmap tool (Microsoft Clarity) to find where most visitors stop reading, such as halfway down the product description, and triggering a help or discount message at exactly that point. How to apply: pull session or scroll data first, pick one trigger per page type, measure the pop-up on orders and revenue per visitor rather than sign-up rate, and watch discount cost because a post-add-to-cart discount can go to people who would have bought anyway.",
+    "conditions": "DTC stores using pop-ups for list capture or discounts; desktop exit intent (mobile needs a different signal such as back-button or inactivity).",
+    "fails_when": "Brands that do not discount (a pop-up discount trains buyers to wait); mobile, where exit intent does not exist in the same form; Google's intrusive interstitial guidance for mobile search landings; the 125% is an upper-bound agency claim without sample size.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "avoid pop-ups in the first 3 to 5 seconds",
+      "up to +125% conversion from pop-up timing changes (agency claim, no sample)",
+      "example: trigger where about 50% of visitors drop off in the product description"
+    ],
+    "asks": [
+      "When should my email pop-up appear?",
+      "Our pop-up shows immediately and people bounce, what should we change?",
+      "What pop-up triggers convert best?",
+      "Should I show a discount pop-up after someone adds to cart?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0067",
+    "evidence": {
+      "where": "Trick on pop-up timing"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0023",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "proof placement",
+      "above the fold"
+    ],
+    "claim": "A founder video of about 45 seconds that sells the person, not the service, lifted one lead-gen landing page from 10% to 15% form conversion (no sample size given).",
+    "body": "The practitioner ran a DJ-services business that spent about $171,000 on ads and says adding a short founder video to the landing page immediately moved form conversion from 10% to 15%, which he frames as a one-third increase in leads. The mechanism he gives: buyers distrust faceless businesses because of scams online, and want to see, like and trust the person they are dealing with. So the video does not pitch the service or list features; the founder talks about how they take care of the customer. Guidance from the source: aim for about 45 seconds; quality matters, since an awkward or unconvincing video lowers conversion (he says it may take dozens of takes); place it where it is seen early on the page; pair it with short phone-recorded customer video testimonials. Treat the result as one anecdote: no visitor counts, test duration or control method were given, and the business sold a high-trust local service where the buyer meets the founder's team. For a product brand, test it as a variant against the current page rather than assuming the lift.",
+    "conditions": "Lead-generation or high-trust purchases where the buyer is choosing a provider or founder-led brand; cold paid or search traffic.",
+    "fails_when": "Low-consideration impulse products where buyers do not care who makes them; poorly produced videos; pages where the video pushes the offer and call to action below the fold on mobile.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "form conversion 10% to 15% after adding a founder video (about 33% relative lift, no sample size)",
+      "about 45 seconds video length",
+      "about $171,000 ad spend on the business"
+    ],
+    "asks": [
+      "Should I put a founder video on my landing page?",
+      "How long should a founder video on a landing page be?",
+      "Our landing page converts at 10%, what single change could lift it?",
+      "Does showing my face on the website increase conversions?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0068",
+    "evidence": {
+      "where": "Section on the most important trust markers, first item: founder video"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0024",
+    "modules": [
+      "LPG",
+      "ADC"
+    ],
+    "topics": [
+      "page types and section order",
+      "copy principles",
+      "objection handling"
+    ],
+    "claim": "A pre-lander advertorial that converts follows: call-out headline, credible narrator, symptom list, common enemy (why past fixes failed), mechanism and USPs, cost-of-inaction price anchor, offer, guarantee, two-option close.",
+    "body": "The structure is built for mobile (the operator says nearly all readers are on phones) and for visitors who already saw a long-copy ad, so the page confirms rather than introduces. Sequence: 1) Thin urgency bar at the top naming the offer. 2) Headline that names the reader's exact situation and says read this before trying anything else, plus an attention-grabbing GIF of the problem. 3) A narrator the reader trusts: a real expert or a real customer (for example a parent). 4) A bullet list of the reader's daily symptoms in their words. 5) A common enemy: explain why the usual fixes (more brushing, electric brush, flossing) fail because of the method, not the person. 6) Introduce the product as the new mechanism with concrete USPs (bristle count, battery life, modes). 7) Reviews and proof. 8) Why buy here, not on a marketplace. 9) Cost-of-inaction anchor: a 40 product (about 3 a month) against a 6,000 problem. 10) Offer (buy one get one, free shipping), 60-day guarantee and warranty. 11) Close with two options: act now or keep the problem. Add a visible 'advertisement' label: the operator says Meta now enforces this on article-style pre-landers and suspects unlabelled pages cause bans.",
+    "conditions": "Cold Meta traffic for problem-solving products bought by readers about 35 and older; used after an angle is proven, as the step between ad and product page.",
+    "fails_when": "The page uses a made-up expert, fabricated reviews, false stock scarcity or unsupported health claims; these breach FTC and UK CMA rules and Meta advertising standards and are a common cause of account bans. Also weak for impulse or fashion products with little problem to explain.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "cost-of-inaction anchor: 40 product versus about 6,000 orthodontic cost",
+      "60-day money-back guarantee",
+      "offer: buy one get one free, normally 70 now 40"
+    ],
+    "asks": [
+      "What sections should an advertorial landing page have?",
+      "Our ads get clicks but the product page doesn't convert, should I add a pre-lander?",
+      "How do I write an advertorial for my product?",
+      "Do I need to label an advertorial as an ad on Facebook?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0069",
+    "evidence": {
+      "where": "advertorial page walkthrough, headline to closing options",
+      "quote": "read the short article before you try anything else"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0025",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "page types and section order",
+      "copy principles"
+    ],
+    "claim": "A cold-traffic advertorial runs ten sections in a fixed order: hook, lived pain, failed alternatives, root cause, mechanism, proof story, objections, price and scarcity, guarantee, comments.",
+    "body": "The teardown lays out the order used by a large shoulder-massager brand. 1 Hook: looks like an article, the headline attacks the reader's current belief about the cause, then a small humiliating personal moment is tied to identity. 2 Current situation: the pain spreads step by step from a hobby to daily objects to sleep and marriage, with exact details (a time of night, a side of the bed, a number of months) so the reader feels understood. 3 Why nothing worked: every alternative is named and dismissed with its cost, plus the cost of doing nothing. 4 Root cause: a cause competitors do not mention. 5 Mechanism: the product, named and specified, as the fix for that cause. 6 Proof story: day-by-day results (day 1, 3, 7, 14) that future-pace the reader. 7 Objections: testimonials and FAQ. 8 Price reveal with anchors and scarcity. 9 Guarantee (90 days in the example). 10 Comment section. Before writing, list the three to five biggest pains and desires from customer research and hit them repeatedly in different forms; the presenter treats repetition as the mechanism that tips a reader into buying. The CTA sells the outcome ('get your life back'), not the product.",
+    "conditions": "Long-form advertorial for cold traffic in problem-aware categories; requires real customer research to supply the specific pain details.",
+    "fails_when": "Low-involvement or impulse products where long copy adds friction; audiences already solution-aware; when sections 7 and 10 are filled with invented testimonials or staged comments, which breaches fake-review rules such as the US FTC rule in force since 2024.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "10 sections",
+      "3 to 5 core pains and 3 to 5 desires repeated through the page",
+      "90-day guarantee in the example"
+    ],
+    "asks": [
+      "What sections go in an advertorial and in what order?",
+      "How do I structure a long-form sales page for a pain relief product?",
+      "My advertorial is long but people drop off, which part matters most?",
+      "How long should the pain section be before I show the product?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0070",
+    "evidence": {
+      "where": "sections 1 to 10 of the teardown"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0026",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "page types and section order",
+      "offer congruence"
+    ],
+    "claim": "Advertorials convert cold traffic at 3 to 4% versus 1 to 2% for product pages, but only when the ad starts the story and never shows the product.",
+    "body": "The presenter, who runs advertorial funnels for brands, claims an article-style page converts cold traffic at roughly 3 to 4% where brands sending the same traffic to a product page see 1 to 2%, which lets them outbid competitors and hold ROAS at higher daily spend. No sample was given, so treat the gap as a practitioner estimate. The mechanism is that the page can only continue a story; it cannot start one. The ad's two jobs are to win the click and set the frame: it should look like a person sharing a discovery, not an ad, break an expectation (for example cancelling a planned surgery), open a loop (something a therapist said 'off the record'), qualify the reader in one line (age, condition), and tease the new cause without naming the product. Illustrated, comic-style or textbook-diagram images with no product shot worked best in his examples. The reader then lands mid-story on a page that looks like an article. How to apply: write the ad and the page's first screen together, reuse the ad's exact promise in the headline, and test the hook section hardest because nothing below it matters if it fails.",
+    "conditions": "Cold traffic on paid social; problem-aware products with an explainable cause, typically health, pain relief, supplements or beauty; price low enough for a single-page decision.",
+    "fails_when": "Warm or retargeting traffic and brand searchers who already know the product; categories without a hidden 'root cause' story; when the article look relies on fake editorial bylines, which risks ad-policy rejection and consumer-protection action.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "3 to 4% cold traffic conversion claimed for advertorials",
+      "1 to 2% typical product page conversion on the same traffic (presenter claim, no sample)"
+    ],
+    "asks": [
+      "Should I send cold Facebook traffic to an advertorial or my product page?",
+      "What conversion rate should an advertorial get on cold traffic?",
+      "Our ads get clicks but the landing page doesn't convert, what's wrong?",
+      "What should the ad say if it points to an advertorial?",
+      "Why does my ROAS break when I try to scale spend?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0070",
+    "evidence": {
+      "where": "opening claim and the ad-congruence segment before section 1"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0027",
+    "modules": [
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "objection handling",
+      "proof placement",
+      "price anchoring and decoys"
+    ],
+    "claim": "List the five biggest buying objections, answer each with a testimonial from a different customer type, then reveal price against what the reader already spent on failed fixes.",
+    "body": "Two late-page moves from the teardown. First, objection handling: instead of a generic review wall, pick the five objections that most often stop a purchase (will it work for my case, can I still do my hobby, is it safe, why did my doctor not mention it, how long is shipping) and place one testimonial against each, from a visibly different customer type so more readers find 'someone like me'. FAQ entries then close the remaining objections one by one. Use real reviews selected for this purpose; the presenter's advice to write testimonials and seed a comment section with scripted buyer chatter is fabrication and illegal in many markets. Second, price: the reader has no fixed sense of value, so the page sets the reference points before the number appears. The narrator has already spent over $5,000 on failed treatments, physical therapy cost $200 a session, and surgery would be $35,000 with a coin-flip success rate; against that, $59 feels trivial. Anchor against real alternative costs the buyer recognises rather than an invented 'suggested retail' price, which runs into reference-pricing rules.",
+    "conditions": "Pages for products that replace a costlier or repeated alternative; a store with enough reviews to cover each major objection.",
+    "fails_when": "Too few genuine reviews to map to objections; products with no costly alternative to anchor against; any use of invented testimonials, comments or fake list prices.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "top 5 objections, one testimonial each",
+      "$59 product anchored against $5,000 spent, $200 per therapy session and $35,000 surgery"
+    ],
+    "asks": [
+      "How should I use testimonials on a landing page?",
+      "Customers say our product is too expensive, how do I show the price?",
+      "Which reviews should I put on the page?",
+      "How do I anchor a $59 price so it feels cheap?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0070",
+    "evidence": {
+      "where": "sections 7 and 8, objection handling and price reveal"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0028",
+    "modules": [
+      "LPG",
+      "AVT"
+    ],
+    "topics": [
+      "copy principles",
+      "objection handling"
+    ],
+    "claim": "Name a root cause competitors ignore before revealing the product, and make every product component map one-to-one to that cause, or the page reads as a scam.",
+    "body": "In the teardown, the page explains a cause before naming any solution: blood flow to the shoulder falls with age, so the joint is 'starving', not broken. The presenter's reasoning is that the brand that explains the problem best is believed to have the best solution before the solution appears, and if the reader accepts a new cause, every competitor is now solving the wrong problem. Only then is the mechanism revealed, and it must fit the cause exactly: heat opens vessels, compression pushes blood through tissue, vibration triggers repair, and the claim is that only the combination works, which shuts out cheaper partial substitutes like a heating pad alone. He says the page collapses if the mechanism does not map one-to-one to the stated cause. Credibility comes from specificity: each component gets a spec and a number. How to apply: write the root-cause paragraph first, check that each product feature answers part of it, and add a line on why partial solutions fail. Any physiological claim and any figure such as a percentage increase in blood flow must be substantiated; health and supplement claims are regulated, and an unsupported mechanism is a legal and ad-policy risk, not just a copy risk.",
+    "conditions": "Products with a plausible, supportable explanation of why the problem happens; problem-aware readers who have tried other fixes.",
+    "fails_when": "The root cause cannot be substantiated (regulated health, supplement or medical-device claims need evidence); commodity products where the cause is obvious and a 'secret' cause reads as hype.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "How do I make my product feel different when competitors sell the same thing?",
+      "What is a unique mechanism and how do I write one?",
+      "Readers don't believe our claims, how do I make the explanation land?",
+      "Why do I need to explain the cause before showing the product?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0070",
+    "evidence": {
+      "where": "sections 4 and 5, root cause and unique mechanism"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0029",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "page types and section order",
+      "copy principles"
+    ],
+    "claim": "An ad that barely sells needs a long advertorial lead (product hidden for 50 to 60% of the page); a long-copy ad needs a short lead.",
+    "body": "Treat the ad and the landing page as two forces moving the same buyer from first contact to purchase. If the ad is a clickbait-style image built only to win cheap clicks, it has done no selling, so a product page will underperform; send that traffic to a long advertorial whose lead restates the problem, agitates it and intensifies desire before the product appears. In the speaker's example, the reader scrolls about 50 to 60% of the page before learning a product is being sold. If the ad already did the selling, such as a 1,000 to 3,000 word story ad, a 1 to 2 minute UGC video or a 4 to 5 minute video sales letter, a 3,000 word advertorial repeats what the visitor has just consumed. Use a short lead that shows the product in the first image or first few lines and gets to the offer fast. Style also depends on product type: improvement products (a better version of something known, such as antibacterial sheets) suit personal stories of failed alternatives; true novelty gadgets suit a 'breaking news' or revelation format that reaches the product quickly. How to apply: label each ad by how much selling it does, and pair it with a lander whose lead length is the inverse.",
+    "conditions": "Paid social traffic to advertorials or long-form landers; cold traffic, problem-solution products.",
+    "fails_when": "Warm or retargeting traffic, or brand-search visitors, who already know the product; a long lead slows them down. Also weaker for impulse, low-consideration products where a product page converts fine.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "clickbait ad: lead runs about 50 to 60% of the page before the product",
+      "long ads: 1,000 to 3,000 word copy, 1 to 2 minute UGC, 4 to 5 minute VSL pair with short leads"
+    ],
+    "asks": [
+      "How long should my advertorial be?",
+      "Our ad gets cheap clicks but the landing page doesn't convert, why?",
+      "Should I send traffic to a product page or an advertorial?",
+      "When should the product appear on an advertorial?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0071",
+    "evidence": {
+      "where": "Second mistake: advertorial congruency, clickbait ad versus long-form ad examples",
+      "quote": "less selling on the ad, you need more selling on the lander"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0030",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "page types and section order"
+    ],
+    "claim": "Build an advertorial only after an ad to a plain product page proves the avatar, desire, angle and mechanism, roughly break-even on about $1,000 spend.",
+    "body": "The speaker's rule is that landing pages, advertorials, listicles and long sales pages amplify messaging that already wins; they rarely rescue messaging that has not been proven. Building an advertorial first, before any ad test, usually fails. Run ads to a product page first and look for an ad that is at least break-even after about $1,000 of spend. From that ad, write down four variables: the avatar (who, in what situation), the desire or problem, the angle, and the unique mechanism (the specific reason the product works). His example ad named older retired men with sciatica, the problem, and a mechanism of gentle spinal decompression. Then build the advertorial around exactly those variables so the page is congruent with the winning ad. When swiping structures, look outside your niche too, for example on affiliate advertorial hubs, because competitors inside a niche tend to copy each other. How to apply: keep a record of the four variables per winning ad, hold them constant in the page brief, and vary only the page structure in tests. The speaker allows exceptions but says most first-launch advertorials do not convert.",
+    "conditions": "New products or new angles on paid social with enough budget to test ads to a product page first.",
+    "fails_when": "Categories where the product page cannot convert cold traffic at all (complex or high-ticket products), so the ad test never reaches break-even without the long page; or when the brand already has proven messaging from other channels.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about $1,000 ad spend at break-even as the validation bar",
+      "4 variables: avatar, desire or problem, angle, unique mechanism"
+    ],
+    "asks": [
+      "Should I build an advertorial before testing my ads?",
+      "How do I know my messaging is ready for a landing page?",
+      "What should an advertorial be based on?",
+      "Our new advertorial isn't converting, what did we do wrong?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0071",
+    "evidence": {
+      "where": "First mistake: building advertorials before knowing the winning messaging"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0031",
+    "modules": [
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "comparison and quiz structures",
+      "proof placement",
+      "friction removal"
+    ],
+    "claim": "High-volume DTC quiz funnels run 15 to 25 questions (about 5 minutes) with education, authority and a personalised results timeline between questions, ending on a short offer page.",
+    "body": "The speaker walks through two 8 to 9 figure quiz funnels (a face-yoga app and a hair-loss brand) as models. Length: roughly 15 to 25 questions, about 20 on average, taking up to five minutes; finishers are high-intent. Structure: diagnostic questions (age, goal, problem area, satisfaction, what have you tried) interleaved with nurture screens that work like sections of a landing page: a short explanation of how the method works, an authority line (created with certified experts or doctors), social proof counts (for example 400,000 women in their 30s), a realistic before-and-after story, and a personalised chart showing current state and the expected timeline to results, with a likelihood-of-success statement. An optional email gate before results enables segmented follow-up by answer but costs some completions; he suggests keeping it when front-end ROAS can flex, such as subscription brands. The result page is a short direct-response page heavy in social proof, with 1, 3 or 6 unit options and subscription pre-selected. Routing each pain point to its own result page or offer adds congruence. One client's conversion rate went from about 2.3% to over 3% after moving to a quiz (no sample given). How to apply: map your page's proof and objection sections into nurture screens between questions.",
+    "conditions": "Problem-solution consumables with several sub-problems or personas (skincare, hair loss, wellness); paid social traffic.",
+    "fails_when": "Simple impulse or low-price products where 20 questions add friction; brands whose quiz recommends the same product to everyone risk feeling fake once customers notice; tiny traffic makes the long funnel hard to optimise.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "15 to 25 questions, about 20 average, up to 5 minutes",
+      "conversion rate about 2.3% to over 3%, one client, no sample stated",
+      "bundle options 1, 3, 6 units with subscription pre-selected"
+    ],
+    "asks": [
+      "How long should a product quiz be?",
+      "What should a quiz funnel show between questions?",
+      "Should I ask for an email before showing quiz results?",
+      "Do quiz funnels convert better than a normal product page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0072",
+    "evidence": {
+      "where": "Examples section, face-yoga and hair-loss quiz walkthroughs"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0032",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "comparison and quiz structures",
+      "test design"
+    ],
+    "claim": "Treat a quiz funnel's first three questions as its hook and A/B test them first; one variant moved pass-through from about 70% to 85%.",
+    "body": "In a quiz funnel, drop-off concentrates at the start, the same way a video loses most viewers in its first seconds. The speaker's agency found across several clients that changing the first three questions mattered more than anything later: if version A lets 70% of starters past question three and version B lets 85% through, every later stage, purchase, email capture and data point grows by the same proportion. So the first three questions should be easy, identity- or goal-based, and feel personal (age, main goal, have you heard of this method), while heavier diagnostic questions come later once the visitor has invested. How to apply: instrument step-by-step completion in the quiz tool, run the first-three-questions variants as the first test, judge on the share reaching question four and on downstream purchase rate, then move to later steps. Keep traffic source constant during the test since cold and warm visitors drop at different rates. The 70% and 85% figures are illustrative from the agency's work, not a benchmark with a stated sample, so use your own baseline.",
+    "conditions": "Paid-traffic quiz funnels of 15 or more questions; enough daily quiz starts to read a completion difference within a week or two.",
+    "fails_when": "Very short quizzes (3 to 5 questions) where the hook is the whole quiz; low traffic where a 15-point completion gap cannot be separated from noise; a change that raises completion but attracts lower-intent finishers can lower purchase rate.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "pass-through after first 3 questions: about 70% (A) vs 85% (B), illustrative"
+    ],
+    "asks": [
+      "Which part of my quiz funnel should I test first?",
+      "People drop off early in our quiz, what do we change?",
+      "How do I get more people to finish my product quiz?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0072",
+    "evidence": {
+      "where": "Recommendations section, A/B testing the first three questions"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0033",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "page types and section order",
+      "friction removal"
+    ],
+    "claim": "Judge an ecommerce homepage by its view-product rate; adding category images to the menu lifted conversion 15 percent, and more than 7 visible menu items shows diminishing returns.",
+    "body": "The homepage's job is to move visitors onto product pages, and in the agency's audits the most common ecommerce weakness is that too few visitors ever view a product. Two navigation fixes target that. First, put an image or icon beside each menu item (for a pet accessories client, the opened mobile menu showed a dog wearing each product type, such as the bow tie collar and best sellers); run as an A/B test against the text-only menu, it lifted conversions about 15 percent. Second, cap the items shown at once: across high-traffic stores they see diminishing returns above about seven, as visitors get overwhelmed and leave. How to apply: track the share of homepage sessions that reach a product page as the homepage KPI; rebuild the mobile menu with visual category tiles; group or trim top-level items to seven or fewer; make the hero headline state the benefit and use imagery showing the happy end state, not a neutral product shot. The 15 percent figure is one client test without a stated sample.",
+    "conditions": "Ecommerce stores with multiple categories where meaningful traffic lands on the homepage and navigates from there.",
+    "fails_when": "Single-product stores or funnels where paid traffic lands directly on a product page and the homepage barely matters; very large catalogues where shoppers rely on search rather than the menu.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "+15% conversion from adding images to navigation items (one A/B test, pet client)",
+      "diminishing returns above 7 menu items shown at once"
+    ],
+    "asks": [
+      "How many items should my store's menu have?",
+      "Visitors land on our homepage but don't click into products, what do I fix?",
+      "Do pictures in the navigation menu help conversion?",
+      "What metric should I use to judge my homepage?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0073",
+    "evidence": {
+      "where": "E-commerce section, homepage and navigation menu"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0034",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "above the fold",
+      "mobile specifics",
+      "proof placement"
+    ],
+    "claim": "On mobile product pages, show image thumbnails, put the review rating above the product title, and keep price, add-to-cart and risk reducers within the first screen.",
+    "body": "Most paid traffic is mobile, and the agency's audits keep finding the same ordering errors on product pages. Product images hidden behind small carousel dots (or a '1 of 5' counter with no thumbnails) mean shoppers never see most of the photos. Reviews placed under the product title come too late: the rating and review count should be the first thing read, above the title, the same as on their landing pages. Everything needed to decide, meaning rating, title with benefit, price and saving, add-to-cart, and the doubt reducers (money-back guarantee, warranty, free shipping) directly under the button, should fit above the fold without scrolling. Long product description paragraphs should become short icon-led benefit points, because the agency's working assumption is that people read about 20 percent of a page and scan the rest. How to apply: audit the product page at a typical phone viewport, mark the fold line, and move anything required for the decision above it. These are audit observations; no test figures were given for this layout.",
+    "conditions": "Ecommerce product pages receiving mostly mobile traffic.",
+    "fails_when": "Complex or high-consideration products where buyers need detailed specs before reviews; desktop-dominant B2B catalogues.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about 20% of page content read, 80% scanned (unsourced)"
+    ],
+    "asks": [
+      "What order should things go in on a mobile product page?",
+      "Should reviews go above or below the product title?",
+      "Our product photos are in a slider with dots, is that a problem?",
+      "What needs to be above the fold on a product page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0073",
+    "evidence": {
+      "where": "E-commerce section, product page comparison to the Figma framework"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0035",
+    "modules": [
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "friction removal",
+      "copy principles"
+    ],
+    "claim": "Put the exact money saved in each bundle option's title (for example '2-pack, save 22 euros') rather than making shoppers work out the discount from prices.",
+    "body": "Shoppers comparing bundle tiers on a product page rarely calculate the per-unit difference, so a saving that is only implied by two prices, or shown in small type, does little to pull them up a tier. The agency reports A/B testing this many times: stating the saving amount inside each bundle option's headline (one-pack save 10, two-pack save 22, three-pack save more) outperforms leaving the saving in small print. The same applies to a single-item discount: if the reduced price and compare-at price are not prominent on mobile, the discount is invisible. How to apply: label each bundle tier with the absolute amount saved in currency, make the saving larger than the price detail, keep it visible on the mobile first screen, and pair the add-to-cart with risk reducers such as a money-back guarantee, warranty or free shipping. No lift figure or sample was given, so measure the effect on both conversion rate and average order value separately; a bundle change can raise AOV while lowering conversion.",
+    "conditions": "Product pages offering multi-unit bundles or quantity breaks, especially consumables and accessories; low-to-mid price points.",
+    "fails_when": "Premium or luxury brands where prominent saving labels cheapen positioning; when the absolute saving is trivially small, a percentage or free-item framing may read stronger.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "example labels: 1-pack save 10 euros, 2-pack save 22 euros"
+    ],
+    "asks": [
+      "How should I show bundle discounts on my product page?",
+      "Customers aren't picking our 3-pack, how do I make the bundle more appealing?",
+      "Should bundle savings be shown in dollars or percent?",
+      "Why isn't anyone noticing our discount on mobile?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0073",
+    "evidence": {
+      "where": "E-commerce product page section, bundles",
+      "quote": "we don't want people to do math"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0036",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "proof placement",
+      "above the fold"
+    ],
+    "claim": "Use two different forms of social proof in the first screen, for example a star rating with review count at the top and a testimonial or quote by the button.",
+    "body": "The agency says it has A/B tested this repeatedly and always ships two separate pieces of social proof above the fold, because the first screen is where most visitors are lost and a single proof element rarely carries enough trust. A row of 'as seen on' publication logos on its own is now so common that it barely registers; if you use logos, add the actual quote the outlet or expert said underneath. A typical pairing in their redesigns: a rating line such as 5 out of 5 from 800-plus reviews at the very top, then a short testimonial or a results line (customers helped, years in business) next to the call to action, along with a guarantee to reduce doubt. How to apply: check the first mobile screen of each landing or product page and count the distinct proof types; if there is only one, add a second of a different kind (rating plus testimonial, or press quote plus customer count). Use real figures only; the agency's redesign used placeholder numbers. No lift figure was disclosed.",
+    "conditions": "Landing pages and product pages serving cold paid traffic that does not yet know the brand.",
+    "fails_when": "New brands with no genuine reviews yet, where invented or thin proof damages trust; returning-customer traffic where proof matters less than speed to purchase.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "2 forms of social proof above the fold",
+      "example: 5 out of 5 from 800+ reviews"
+    ],
+    "asks": [
+      "How much social proof should be at the top of a landing page?",
+      "Are 'as seen on' logos still worth using?",
+      "We only have a review badge at the top, is that enough?",
+      "Where should testimonials go on a landing page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0073",
+    "evidence": {
+      "where": "Lead-gen weight loss retreat audit and hair loss redesign"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0037",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "proof placement",
+      "mobile specifics",
+      "objection handling"
+    ],
+    "claim": "Bare press logos and anonymous reviews now read as fake; add the outlet's actual quote under each logo and show reviewer name, photo and review source, never hidden in carousels.",
+    "body": "The speaker's argument is that proof has become so common that shoppers discount it. A row of press logos, especially a carousel that repeats the same three logos, signals padding and can lower trust. The fix: under each logo, add a one-line quote of what that outlet or podcast actually said about the product. He reports a 38% conversion lift from that single change for one client (no sample size given). Reviews get the same treatment: an unattributed text review could be invented, which matters most for cold traffic from paid social that has no prior relationship with the brand. Show the reviewer's name, a photo of them or of the product in use, and where the review was left (Google, Trustpilot, a verified-buyer badge) so a sceptic could check it. Placement on mobile: do not tuck reviews into a horizontal carousel or a collapsed accordion, because hidden content gets very low engagement; expose several reviews in the page flow so scrolling forces people past them. The same logic applies to other proof: anything behind a tap is effectively not seen by most visitors. How to apply: audit every proof element and ask whether a sceptical cold visitor could verify it; if not, add the verifying detail or remove it.",
+    "conditions": "Cold paid traffic; brands with real press coverage and reviews that include names or photos; mobile-heavy traffic.",
+    "fails_when": "Brands with genuinely famous outlets where a logo alone is persuasive; categories where reviewers will not share photos (intimate health products), so anonymised verified-buyer badges are the realistic ceiling; very long review walls that bury the CTA.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Claimed 38% conversion lift from adding outlet quotes under press logos (no sample given)"
+    ],
+    "asks": [
+      "Do 'as seen on' logos still work on a product page?",
+      "Our reviews don't seem to convince people from Facebook ads. What's wrong?",
+      "Should I put reviews in a slider on mobile?",
+      "How do I make reviews on my site look trustworthy?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0074",
+    "evidence": {
+      "where": "Lesson 5, social proof that is actually proof; lesson 3 on carousels and drop-downs",
+      "quote": "what is hidden will not get seen"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0038",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "above the fold",
+      "friction removal",
+      "proof placement"
+    ],
+    "claim": "Put risk reducers (free returns, guarantee, trial) in the line directly under the hero call-to-action button, and show at least two kinds of proof above the fold.",
+    "body": "The agency's hero template for cold paid traffic: a benefit headline tied to the buyer's end result, a sub-headline that states what the product is and its unique angle, at least two different forms of proof (for example star rating with review count plus press mentions or a customer count), a single prominent CTA, and an image or video of the product in use. The part most pages miss is placement of risk reducers. The speaker calls them FUD reducers (fear, uncertainty, doubt): free trial, money-back guarantee, easy returns, warranty, shipping promise. They go in a short line immediately beneath the CTA button, at the moment of decision, instead of in the footer or FAQ. The reasoning is that the hero is the only section every visitor sees, and he cites a claim that about 60% never scroll past it, so the first screen must both persuade and settle the main purchase anxiety. He reports 40 to 60% conversion lifts from testing the under-CTA line alone and says two proof types beat one in their tests, but gives no sample sizes, traffic levels or test durations, so treat the numbers as directional and test on your own traffic. How to apply: write the three biggest worries a first-time buyer has, pick the policy that answers the largest, and set it in small text with an icon under the button on mobile and desktop.",
+    "conditions": "Cold traffic from paid social or search landing on a product or landing page; stores that actually offer a guarantee, free returns or trial worth stating.",
+    "fails_when": "Risk-reducer claims the business cannot honour or that trigger high return rates on low-margin items; warm returning buyers who already trust the brand; crowding the hero so the CTA loses visual priority.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Claimed 40 to 60% conversion lift from adding FUD reducers under the CTA (no sample given)",
+      "Claim: ~60% of visitors never scroll past the hero",
+      "At least 2 forms of social proof above the fold"
+    ],
+    "asks": [
+      "What should go right under my Add to Cart or Buy button?",
+      "Where should I put my money-back guarantee on the page?",
+      "People land on my page and leave without scrolling. What should the top section have?",
+      "How many reviews or trust badges should be at the top of my landing page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0074",
+    "evidence": {
+      "where": "Lesson 1, the 5-second rule and above-the-fold formula",
+      "quote": "Right underneath the call to action, you need to reduce what I call FUDs"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0039",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "friction removal",
+      "image sequence and slot jobs"
+    ],
+    "claim": "Replacing a text-only menu with image or icon category navigation lifted conversion 60.7% and revenue per visitor 92% in one agency test; cap the nav at 7 items.",
+    "body": "The agency treats navigation as a cognitive-friction problem: every text link is something the shopper has to read and interpret before they find a product. For Parcel Safety (welding and safety gear), they replaced a generic text menu with nested menus showing product images and icons; the reported A/B result was a 60.7% higher conversion rate and 92% higher revenue per visitor. For a pet brand they put category icons in a row of circles near the top of the page, like social media stories, so all categories were visible without opening a menu; reported results were 72% higher conversion and 82% higher revenue per visitor. Alongside this, prune: use a click-map tool (Microsoft Clarity) to find menu items getting close to 0% of clicks, typically two or three, and remove them. 'Home' is redundant because the logo links home; About, Contact, Blog and FAQ can move to a secondary menu or the footer. His rule of thumb is never more than seven top-level items. How to apply: check click data first, cut dead links, then test visual category navigation on mobile first, where most traffic and the most friction are. Figures are agency-reported without sample sizes.",
+    "conditions": "Stores with several product categories or collections; mobile-heavy traffic; catalogue big enough that shoppers must choose a category.",
+    "fails_when": "Single-product or hero-product stores, where navigation should lead straight to the product page; very large catalogues that need search and filters more than icons; image menus that slow mobile load (check LCP after adding them).",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "image and icon nav: +60.7% conversion rate, +92% revenue per visitor (Parcel Safety, agency-reported)",
+      "story-style category icons: +72% conversion rate, +82% revenue per visitor (pet brand)",
+      "no more than 7 top-level nav items",
+      "2 to 3 nav items typically near 0% of clicks"
+    ],
+    "asks": [
+      "Should my menu use pictures instead of text?",
+      "How many items should be in my store's navigation bar?",
+      "Shoppers can't find products on our site, what should the menu look like?",
+      "Should I remove Home, About and Blog from the main menu?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0075",
+    "evidence": {
+      "where": "Step 1 simplify navigation and step 2 images and icons"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0040",
+    "modules": [
+      "LPG",
+      "MEA",
+      "CRO"
+    ],
+    "topics": [
+      "friction removal",
+      "page types and section order"
+    ],
+    "claim": "Benchmark GA4 purchase-journey steps: view product 50-70%, add to cart 12-20%, begin checkout 40-60%, purchase 45-60%; view-product rate is usually the weakest step.",
+    "body": "Before changing any page, find which funnel step is underperforming, because each step points to a different fix. Use GA4's Purchase journey report (Reports, Monetization) over 6 to 12 months and compare each step-to-step rate with these agency benchmarks: sessions to product view 50 to 70 percent, product view to add to cart 12 to 20 percent, add to cart to begin checkout 40 to 60 percent, checkout to purchase 45 to 60 percent. In the presenter's audits, the product-view rate was the most underperforming step in 90 to 95 percent of brands; in the worked example it was 28.6 percent, which signals a discoverability problem (navigation, collection layout, homepage routing) rather than a product page problem. A low purchase rate on Shopify's standard checkout usually traces to unexpected costs such as shipping revealed late, not checkout design. Next, use Path exploration from the homepage to spot loops (homepage to collection and back, 15 percent in the example), which confirm navigation friction, and run the path backward from add_to_cart to see which page routes produce carts; heavy collection-to-product-to-cart traffic suggests testing quick add-to-cart on collection pages.",
+    "conditions": "DTC stores with GA4 ecommerce events correctly configured (view_item, add_to_cart, begin_checkout, purchase) and at least several months of data; multi-product catalogs with collection navigation.",
+    "fails_when": "Single-product stores where traffic lands directly on the product page (view rate is near 100 percent by design), stores with broken or duplicated GA4 events, or categories with naturally low add-to-cart rates (high-ticket furniture, considered purchases) where these ranges understate normal.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "view product rate benchmark 50 to 70 percent",
+      "add to cart rate 12 to 20 percent",
+      "begin checkout rate 40 to 60 percent",
+      "purchase rate 45 to 60 percent",
+      "view product rate the weakest step in 90 to 95 percent of audited brands (agency claim, 150+ brands)",
+      "example: 28.6 percent view rate, 9.9 percent add to cart, 15 percent collection-to-home loop"
+    ],
+    "asks": [
+      "what is a normal add to cart rate",
+      "where are people dropping off in my store",
+      "our add to cart rate is 9 percent, is that bad",
+      "which funnel step should i fix first",
+      "what are good benchmarks for the ga4 purchase journey"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0077",
+    "evidence": {
+      "where": "Purchase journey report section, opening of the tutorial",
+      "quote": "the view product rate is by far 90 to 95% of the times"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0041",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "above the fold",
+      "page types and section order",
+      "friction removal"
+    ],
+    "claim": "Expect about 60% of visitors to drop after the hero and about 10% more per row on collection grids; order by demand and insert risk reducers where scroll drops.",
+    "body": "Scroll maps tell you how much of the page each visitor actually sees, which decides what earns a high position. Benchmarks from the presenter's audits: roughly 60 percent of visitors never scroll past the hero section, and on a collection grid about 10 percent more drop with each row of two products (88, 75, 66, 57 percent reach in the example). Steps: (1) in Microsoft Clarity or Hotjar, open the scroll map for the top pages and note reach at 75, 50 and 25 percent depth; (2) compare with the click map; any element getting a large share of clicks while only 25 to 32 percent of visitors reach it is misplaced, so surface it higher (the example moved category tiles reached by 25 percent of visitors into thumbnails at the top); (3) move social proof and press logos above the fold if under a third of visitors reach them; (4) cut copy and dead elements above the fold so products or the add-to-cart button appear sooner (only 36 percent reached add to cart on the example product page); (5) put best sellers in the first rows and insert free shipping, returns or guarantee tiles inside the grid at the depths where drop-off spikes. The reported lifts (+18 percent conversion from surfacing categories) came without a stated sample size.",
+    "conditions": "Mobile-heavy stores (about 80 percent mobile in the example) with multi-product collections; heatmap tool installed with enough sessions per page to read a scroll curve.",
+    "fails_when": "Long-form single-product or advertorial pages where buyers who scroll deep are the intended converters and the hero is not meant to sell; low-traffic pages where a few hundred sessions make click shares noisy.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about 60 percent drop-off after the hero section (typical across audits)",
+      "about 10 percent additional drop per row of two products on collection pages",
+      "example: only 36 percent of product page visitors reached add to cart",
+      "reported +18 percent conversion rate from surfacing category tiles (no sample size given)"
+    ],
+    "asks": [
+      "how far do people scroll on my homepage",
+      "where should i put trust badges on my collection page",
+      "most visitors never see my best section, what should i do",
+      "what order should products appear in on a collection page",
+      "is my product description too long"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0077",
+    "evidence": {
+      "where": "Scroll map sections for homepage, collection page and product page",
+      "quote": "about a 60% drop off after the hero section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0042",
+    "modules": [
+      "LPG",
+      "AVT",
+      "CRO"
+    ],
+    "topics": [
+      "objection handling",
+      "friction removal"
+    ],
+    "claim": "Run two surveys: a post-purchase 'what almost stopped you buying' (85-90% completion, no incentive) and an on-page friction survey timed at 60% of average session duration.",
+    "body": "Click and scroll data show where people stall, not why. Two short surveys supply the why at almost no cost. The post-purchase survey fires on the thank-you page and asks, open-ended, what motivated the purchase and whether any concerns or doubts almost stopped it; buyers are in a positive state, so the presenter sees 85 to 90 percent completion without an incentive, and answers surface concerns in the customer's own vocabulary (fit and sizing doubts in the example). The product friction survey runs on product pages and asks whether anything is holding the visitor back right now, yes or no, then why, with preset options plus an open 'something else'. Timing matters: trigger it at about 60 percent of the average session duration (about 1 minute into a 2-minute average) so it catches people deep enough to have a doubt but before they leave. Feed the answers into page copy, FAQ placement and test hypotheses. The presenter treats this qualitative layer as essential below roughly 50,000 to 80,000 monthly visitors, where heatmaps and A/B tests lack data, and adds 3 to 5 moderated or remote user tests to catch most usability issues.",
+    "conditions": "Any DTC store; most valuable under about 50,000 to 80,000 monthly visitors where quantitative tests are underpowered. Survey tools such as Okendo or similar post-purchase and on-site survey apps.",
+    "fails_when": "Very low order volume (a few orders a week) gives too few post-purchase answers to see patterns, and on-site survey pop-ups can hurt mobile conversion if they fire too early or cover the add-to-cart button.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "85 to 90 percent post-purchase survey completion without incentive (presenter's clients)",
+      "friction survey trigger at about 60 percent of average session duration",
+      "qualitative research needed under about 50,000 to 80,000 monthly visitors",
+      "3 to 5 user tests per round"
+    ],
+    "asks": [
+      "what questions should i ask in a post purchase survey",
+      "how do i find out why people aren't buying",
+      "when should an exit or friction survey pop up",
+      "we don't have enough traffic to a/b test, how else do i learn",
+      "do people actually fill out post purchase surveys"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0077",
+    "evidence": {
+      "where": "Qualitative analysis section, surveys and user testing",
+      "quote": "what almost stopped you from buying"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0043",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "friction removal",
+      "mobile specifics"
+    ],
+    "claim": "Use area click-maps to prune: remove elements under about 1% of clicks (wishlist 0.09%, call-an-expert 0.36%) and enlarge or move up the elements buyers already click most.",
+    "body": "An area map in Clarity or Hotjar shows each element's share of clicks on a page, which turns layout arguments into a ranking. Apply three rules. Remove: elements with negligible click share are clutter that pushes useful content down; in the example the add-to-wishlist button drew 0.09 percent and a call-an-expert phone block 0.36 percent, so both were removed or tested out. Promote: heavily clicked elements deserve size and position; image thumbnails shown as tiny dots still drew 7.35 percent of clicks, so they were made visible thumbnails, and the color selector drew 16.68 percent, so it was moved near the main image. Fix false signals: elements styled like buttons (grey-bordered press logos) collect clicks while going nowhere, and a product title outdrawing its own image and button signals weak visual hierarchy, so enlarge the title. Also reorder category tiles by their click share (a tile getting 9 percent placed below one getting 1 percent). Back each change with a second data point (session recordings showing users scrolling between color selector and image, or user tests) before testing, and treat each as a test, not a permanent truth.",
+    "conditions": "Pages with enough sessions for stable click shares (several thousand sessions per page); stores with cluttered product or collection templates, common on Shopify themes with many apps.",
+    "fails_when": "Low-click elements that do a non-click job (trust copy, reviews summary, shipping notes read without clicking) should not be removed on click share alone; and on low-traffic pages click shares under a few hundred clicks are noise.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "add to wishlist 0.09 percent of clicks, removed",
+      "call an expert 0.36 percent of clicks, removed",
+      "image dots 7.35 percent of clicks",
+      "color selector 16.68 percent of clicks",
+      "category tile 9 percent vs 1.06 percent, reorder by clicks"
+    ],
+    "asks": [
+      "what should i remove from my product page",
+      "how do i use heatmaps to improve my store",
+      "is the wishlist button worth keeping",
+      "customers keep clicking things that aren't links, what does that mean",
+      "how do i decide what goes higher on the page"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0077",
+    "evidence": {
+      "where": "Microsoft Clarity area map sections, homepage and product page"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "LPG-0044",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "page types and section order",
+      "copy principles"
+    ],
+    "claim": "An advertorial must commit to one editorial identity for the whole piece (warning, discovery, whistleblower, comparison, local story); a sales letter with a news headline converts as neither.",
+    "body": "The reviewer's top criticism of most advertorials is that they have no identity. An advertorial borrows its persuasive power from editorial content, so it must read as a recognisable kind of news piece from headline to close. A page that says warning in the headline but then runs a generic you have this problem, here is the cause, here is the fix structure is really a video sales letter in text, and loses the editorial credibility that makes cold readers keep going. He lists ten core types to choose from: breaking news or discovery; authority expert breaks down an issue; David versus Goliath; warning or fear; scandal or whistleblower; social proof (why everyone is talking about this); origin discovery story; comparison (I tested this against that); local or relatable person (an Ohio mom discovers); and scarcity or exclusivity (why this is about to sell out). If the angle is a hidden danger, the whole piece must be a warning promo; if it explains a new solution, the whole piece is a discovery promo. How to apply: before drafting, pick the type that fits the big idea and the target awareness level, then check that the headline, subheads and story all serve that type. Sub-headlines should read as a coherent story on their own when stacked.",
+    "conditions": "Cold-traffic advertorials (pre-sell pages between a paid social ad and the product page), mainly problem-solution consumables.",
+    "fails_when": "Warm or product-aware traffic that converts better straight to the product page; platforms and regulators require advertorials to be labelled as advertising, and a fake-news look that hides that can breach FTC rules and Meta policy.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "10 advertorial types listed"
+    ],
+    "asks": [
+      "What makes an advertorial different from a sales page?",
+      "Which advertorial format should I use for my product?",
+      "Our advertorial isn't converting, what's usually wrong?",
+      "What are the main types of advertorial?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0078",
+    "evidence": {
+      "where": "Overall feedback section, 'no identity' critique and 10 types list",
+      "quote": "the problem with this advertorial is that it has no identity"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0045",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "copy principles",
+      "above the fold"
+    ],
+    "claim": "Open advertorials and ads with curiosity, proof and promise, not pain; everyone in a category shares the same pains, and AI copy defaults to leading with them.",
+    "body": "The reviewer says leading with a list of pains (you cut out salt, you check labels, your face still swells) is the commonest weak opening, partly because AI copy tools default to it and readers now tune it out. Pains are shared by every product in a category, so they cannot make a reader stay; what is unique to your offer is your curiosity element (a new cause or mechanism), your proof and your specific promise. The strongest openings weave several copy blocks together in the first lines: if you have this pain, here is a simple curious thing that delivers this promise, backed by this proof, without these constraints. Pain still belongs in the copy, but only after permission is earned; going straight into someone's pain reads as presumptuous. Use softeners: maybe you tried dieting every day and it got harder, a first-person story (I don't know if you can relate, but I was...), or a third-person one (the patients I talk to feel...). Headlines should carry one main curiosity element, at most two, and stay universal rather than narrowing to details such as after your shift. How to apply: rewrite the first 50 words so curiosity and proof appear before any pain statement, and add maybe or a story frame to every direct pain line.",
+    "conditions": "Cold-traffic advertorials, long-form ads and landing page leads for problem-solution products.",
+    "fails_when": "Highly problem-aware searchers who already know the product category may respond to a direct pain headline; very short ad formats may only fit one block.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "one curiosity element per headline, two at most"
+    ],
+    "asks": [
+      "How should I start an advertorial?",
+      "Should my ad open with the customer's pain point?",
+      "Why does our AI-written copy feel generic?",
+      "How do I talk about customers' problems without sounding pushy?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0078",
+    "evidence": {
+      "where": "Feedback on headline and opening; copy blocks explanation",
+      "quote": "pain points are for the street"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0046",
+    "modules": [
+      "LPG",
+      "MCR",
+      "AVT"
+    ],
+    "topics": [
+      "copy principles",
+      "awareness levels",
+      "angle versus format"
+    ],
+    "claim": "Rank pain points for direct response by urgency, market size and direct product relevance; then use a familiar intermediary (e.g. detox) to reach bigger, more urgent pains.",
+    "body": "Direct response asks for a purchase now, so it needs pains with high energy behind them: embarrassing, feared, or tied to big desires. The reviewer ranks a chlorophyll drop's pains by balancing three things: urgency, the scale of the market reachable, and how directly the product connects. Bloating and weight came first (huge market, direct link), then gut and digestion, then energy (a nice-to-have, harder to sell), then internal odour (urgent but small, so a secondary benefit or a niche funnel). Next he identifies an intermediary: a familiar concept on the way to the product's own mechanism, here detox. Asking which urgent problems people already associate with the intermediary opens new entry points (liver, blood sugar, inflammation, hormones) that can lead back to the product. He would spread testing like a portfolio, roughly 30% unaware angles from the broad pains, 30% problem-aware angles on the core pains, the rest on solution and product-aware. How to apply: score each pain 1 to 5 on urgency, scale and relevance, pick the top two as core angles, then list pains linked to your intermediary for unaware tests. Any health benefit you lead with must be backed by evidence for your product.",
+    "conditions": "Direct-response funnels for problem-solution products (supplements, wellness, beauty) on cold paid traffic.",
+    "fails_when": "Leading with diseases (fatty liver, blood sugar, heart) that the product is not proven to affect creates disease-claim and substantiation risk with the FTC, FDA and ad platforms; brand-led or slow-cycle products do not need peak urgency.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "testing split about 30% unaware, 30% problem aware, rest solution/product aware"
+    ],
+    "asks": [
+      "Which customer problem should my ads lead with?",
+      "How do I find new angles for a product that's already saturated?",
+      "How should I split ad testing across awareness levels?",
+      "Our product helps with several things, which one do we push?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0078",
+    "evidence": {
+      "where": "Pain point ranking and intermediaries sections; notes on awareness portfolio"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0047",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "copy principles",
+      "mobile specifics"
+    ],
+    "claim": "Write advertorial copy at about a grade 5 reading level in full flowing sentences, with metaphors one step from the reader's mental picture (clogged filter, not factory).",
+    "body": "Readers skim ads while doing something else and think concretely, so every extra mental step costs attention. The reviewer measured the submitted advertorial at grade 7 to 8 and wants grade 5 at most; an advertorial may sit slightly higher because it imitates editorial writing, but not much. Simplify by using short, earthy Germanic-rooted words instead of Latinate ones and plainer sentence structure, without making it shorter or less intense. Watch for two AI habits: staccato fragments (under your skin, around your belly, in your face) that break rhythm, and stiff academic phrasing. Prompt AI to use full grammatical sentences with natural conversational flow, then to lower the reading level to grade 3 to 5. Metaphors must match the rough sketch people already hold: most people picture the liver as a filter, so clogged or backed-up works instantly, while a factory adds a layer of abstraction and a mop does not match unclogging a filter. Avoid asking readers to do maths or imagine abstract timelines. Each fuzzy metaphor is a small paper cut that adds cognitive load. How to apply: run copy through a readability checker, list every metaphor and ask whether a distracted reader would picture it correctly in one second.",
+    "conditions": "Mass-market direct-response pages and ads read on mobile by cold audiences.",
+    "fails_when": "Premium, technical or professional audiences (B2B, expert hobbyists) may read very simple copy as patronising; regulated categories need precise terms even when longer.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "target reading level grade 5 or below; submitted copy measured grade 7 to 8"
+    ],
+    "asks": [
+      "What reading level should my landing page copy be?",
+      "How do I make AI-written copy sound natural?",
+      "How do I pick a good metaphor to explain how my product works?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0078",
+    "evidence": {
+      "where": "Feedback section on reading level, staccato AI copy and metaphor specificity"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0048",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "page types and section order",
+      "above the fold"
+    ],
+    "claim": "Agency landing-page blueprint: outcome headline, 2+ proof elements above the fold, risk reducers under the button, a pain section, 2-4 proof and 6-8 value sections.",
+    "body": "The agency builds the offer and copy first and designs around it. Hero: a headline of end result plus time period plus emotional payoff (their horse-supplement example: calm your horse in two weeks and enjoy safer, happier rides), never who you are or what you do; a subheadline naming the pain, then the solution and its key features; at least two forms of proof above the fold (reviews, stats, press); fear and doubt reducers directly under the button (guarantee, cancel anytime, shipping); and an image that shows the promised outcome. Pain section: if the offer is a visible transformation (fitness, skin, home), show it as a before-and-after or old-way versus new-way graphic; if it needs explaining, use a short problem, agitate, solve sales letter with one or two sentences per paragraph. Then 2 to 4 proof sections and 6 to 8 value sections. Each value section headline must state the benefit, since they assume visitors read only headlines; they cite about 80% of visitors scanning rather than reading. Test changes for at least a week and check significance.",
+    "conditions": "Single-offer or hero-product landing pages for paid traffic; complex offers lean toward the sales-letter pain section.",
+    "fails_when": "Catalogue or category browsing pages; brands whose positioning avoids pain framing (aspirational fashion); the section counts are an agency template, not a tested rule.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "2+ proof elements above the fold",
+      "2-4 social proof sections",
+      "6-8 value proposition sections",
+      "about 80% of visitors scan",
+      "run tests at least 1 week"
+    ],
+    "asks": [
+      "What sections should a product landing page have?",
+      "How should I write the headline on my landing page?",
+      "Our landing page is just a hero and reviews, what's missing?",
+      "How many benefit sections does a landing page need?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0079",
+    "evidence": {
+      "where": "Pillar 2, high-converting design and copy; hero, pain point and value prop sections"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0049",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "proof placement"
+    ],
+    "claim": "Replace 'Our reviews' headings with 'Helping [number] customers [get outcome]', show reviewer name and source, and give each video review a text headline for sound-off viewers.",
+    "body": "The agency treats the proof section's headline as wasted if it only says 'reviews' or 'what our customers say', because visitors already know they are looking at reviews. Their formula is a benefit headline with a count: helping X customers achieve the main outcome (one cited supplement brand leads with over 110,000 members achieving its main benefit). Execution details: 1) for offers whose result is visible (lawn care, fitness, skin), put customer photos of the result inside the review cards; 2) show full names and where the review came from (Google, Trustpilot) so it reads as real; 3) for video testimonials, add a one-line headline summarising what the person says, because many viewers will not turn the sound on; 4) a dense 'wall of love' grid mixing video, photos and text can build trust quickly when you have plenty of material. Avoid making visitors drag a slider to see a before-and-after; show both states up front. These are practitioner recommendations without test data.",
+    "conditions": "Stores with enough reviews, photos or video testimonials to fill proof sections; visible-result categories gain most from photos.",
+    "fails_when": "Brands with very few reviews, where a 'wall' looks thin; regulated health claims, where results-led review headlines may need substantiation.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "example count: 110,000+ members"
+    ],
+    "asks": [
+      "What should the heading above my reviews say?",
+      "How do I make customer reviews look more credible?",
+      "Should video testimonials have captions or headlines?",
+      "Is a review wall worth adding to my landing page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0079",
+    "evidence": {
+      "where": "Pillar 2, social proof sections and wall of love"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0050",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "page types and section order",
+      "proof placement"
+    ],
+    "claim": "Order sections by traffic source: interruption traffic (Meta) gets the pain/education block right under the fold; high-intent search traffic gets social proof there instead.",
+    "body": "The same landing page should not serve every traffic source. Visitors from paid social were interrupted while scrolling; most are unaware or only problem-aware, so the block directly under the hero should name the problem, agitate it and introduce the solution before asking for trust. Visitors from Google Ads or organic search typed a query; they are solution-aware or ready to buy, so the education block wastes their attention and the slot under the hero should go to social proof (and, for lead-gen, the form). The practitioner's default page for cold traffic runs: hero (benefit headline, pain-to-solution subhead, stacked proof, risk reducers, reinforcing image), pain point section, value props (3 to 4 at minimum, up to 8 to 10 for complex offers), proof, closer. For search traffic, swap the pain block and the proof block. Proof works best laid out in the open ('wall of love' mixing video and text reviews with the review platform shown), not hidden in a carousel, because carousel slides beyond the first are rarely seen. To apply: build one template, then clone a search variant with the two middle sections swapped, and send each traffic source to its matching variant rather than one shared URL.",
+    "conditions": "Brands running both paid social and paid or organic search to dedicated landing pages; examples come mainly from service and B2B lead-gen clients.",
+    "fails_when": "Social traffic is retargeting or otherwise already product-aware, in which case proof-first fits it too; or search queries are informational (top of funnel), where education-first can still be right.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "3 to 4 value props minimum, up to 8 to 10 for complex offers"
+    ],
+    "asks": [
+      "Should my Google Ads landing page be different from my Facebook one?",
+      "What section goes right under the hero?",
+      "Our search traffic converts worse on the same page as social, why?",
+      "Are review carousels a bad idea?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0080",
+    "evidence": {
+      "where": "section on framing by traffic source and awareness; pain point and wall-of-love sections"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0051",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "above the fold",
+      "friction removal",
+      "mobile specifics"
+    ],
+    "claim": "Read the scroll map at the 75%, 50% and 25% lines: in audited pages half of visitors left right after the hero and under a third reached the case studies.",
+    "body": "A scroll heatmap shows, for each depth, what share of visitors got there. The practitioner checks the average fold, then marks where 75%, 50% and 25% of visitors are still on the page, separately for mobile and desktop. In one audited page, 75% reached just below the fold and 50% did not scroll past the social proof under it; only 40% reached the next section and 33% reached the case studies, the content buyers care most about. His working rule is that about 60% of visitors never scroll past the hero, so put 80 to 90% of early effort into the above-the-fold area (he cites lifts up to 130% from testing that area alone) and move the most persuasive section above the 50% line. Other fixes he found from the same maps: on mobile, large white gaps pushed reviews below the fold; a navigation menu took 33.2% of all clicks on a paid landing page, so remove it and put a single CTA in its place; review links to outside sites drew 3.28% of clicks away. A primary CTA should draw about 3 to 5% of clicks (the companion Clarity video says 5 to 7% is good); a text-only 'button' drew 0%.",
+    "conditions": "Dedicated paid-traffic landing pages with enough sessions for a stable scroll map; mobile and desktop read separately.",
+    "fails_when": "The page is a store homepage or collection page where navigation is the job, or a long-form sales page where readers who scroll are the buyers and short scroll depth among non-buyers is expected; percentages come from a few client pages, not a benchmark sample.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about 60% never scroll past the hero (practitioner's rule)",
+      "audited page: 75% reached below fold, 50% left after first proof block, 33% reached case studies",
+      "nav menu took 33.2% of clicks",
+      "external review links took 3.28% of clicks",
+      "primary CTA click share 3% to 5% (5% to 7% in companion video)",
+      "up to 130% lift from above-the-fold tests"
+    ],
+    "asks": [
+      "How far down do people actually scroll on a landing page?",
+      "Half our visitors leave right after the top section, what do we change?",
+      "Should a landing page have a navigation menu?",
+      "What percentage of clicks should the main button get?",
+      "Where should our reviews go on the page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0080",
+    "evidence": {
+      "where": "Microsoft Clarity heat map and area map walkthrough; above-the-fold section"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "LPG-0052",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "page types and section order",
+      "copy principles"
+    ],
+    "claim": "A pre-sell advertorial runs: hook and trust, a five-reason listicle, origin story and named mechanism, first-person proof story, guarantee, a pain section, objection-led testimonials, then a close.",
+    "body": "The advertorial sits between a prospecting ad and the offer page (ad to advertorial to offer page to cart or checkout), so its job is to educate and build desire before any price appears. The Performance Golf Square Set page, a golf brand the speaker says did over $100 million the prior year, follows this order: an above-the-fold hook that names the old frustration and the new answer, with a trust cue such as a TV feature; a skimmable 'five reasons' listicle; an origin story that introduces a named mechanism (here 'fear-based feedback') explaining why this works when past products failed; a first-person story from a sceptical buyer, including modest specifics (saved 4 to 5 shots) that make it believable; a risk reversal (one-year money-back guarantee) followed by the first call to action; a section that pushes the pain harder; a testimonial stack; and a closing section with a final call to action. Throughout, the same 3 to 5 pains and desires are repeated in different formats rather than introducing new points. How to apply: list your 3 to 5 core pains and desires and your named mechanism first, then write each section to restate them. This describes one page; no conversion data was shown.",
+    "conditions": "DTC products with a clear problem to solve sold to cold paid social traffic, typically mid-ticket items where buyers have tried other solutions.",
+    "fails_when": "Impulse or low-consideration products where a pre-sell step adds friction and the product page converts directly; warm or branded traffic that already knows the product; categories where strong pain-agitation or claim-making copy breaches ad platform or health-claim rules.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "5-reason listicle near the top",
+      "3 to 5 core pains and desires repeated throughout",
+      "1-year money-back guarantee in the example",
+      "funnel: ad to advertorial to offer page to checkout"
+    ],
+    "asks": [
+      "What sections should an advertorial have and in what order?",
+      "We send Facebook traffic straight to the product page and it doesn't convert, should we use an advertorial?",
+      "How do I structure a pre-sell page for a golf or fitness product?",
+      "What is a unique mechanism in an advertorial?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0081",
+    "evidence": {
+      "where": "High-level overview and section walkthrough of the Square Set advertorial"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0053",
+    "modules": [
+      "LPG",
+      "AVT"
+    ],
+    "topics": [
+      "proof placement",
+      "objection handling"
+    ],
+    "claim": "Choose each testimonial on a pre-sell or product page to answer one specific buying objection, so a five-objection product carries at least five targeted testimonials.",
+    "body": "A wall of general praise ('love it, five stars') builds a little trust but leaves the actual reasons for not buying untouched. The teardown's method is to list the main objections first (for a swing trainer: will it fix my arm and hand position, is it awkward or heavy, will it take weeks to work, is it just another gadget) and then pick or request testimonials that each speak to one of them. In the Performance Golf example, one review covers getting the correct feel at the top of the swing, while the long first-person story addresses speed of results, comfort and size. How to apply: pull objections from support tickets, pre-purchase questions, reviews of competitors and post-purchase surveys; rank the top five; for each, find a real customer quote that resolves it and label or order the testimonials so the objection is visible in the first line. Place the stack after the offer or guarantee and before the final call to action. Keep every quote genuine and permissioned.",
+    "conditions": "Advertorials, landing pages and product pages for products with several distinct purchase hesitations and enough real reviews to choose from.",
+    "fails_when": "Brands with too few genuine reviews to cover the objections; simple commodity products where the only objection is price.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "one testimonial per main objection, e.g. 5 objections means 5 targeted testimonials"
+    ],
+    "asks": [
+      "Which reviews should I show on my landing page?",
+      "Our testimonials are all generic praise, how do I make them work harder?",
+      "How do I use reviews to handle objections?",
+      "How many testimonials should an advertorial have?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0081",
+    "evidence": {
+      "where": "Social proof stack, bonus tip",
+      "quote": "every testimonial should hit one of those objections"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0054",
+    "modules": [
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "copy principles",
+      "objection handling"
+    ],
+    "claim": "End an advertorial with a two-options close (keep the old methods or try this risk-free) and a 'check availability' button rather than a hard 'buy now'.",
+    "body": "After the guarantee and proof, the page closes by explicitly giving the reader a way out instead of cornering them. Option one is to leave and keep using the methods that have not worked, including expensive brand-name alternatives or cheap copies with the same flaws; option two is to do what thousands of other customers did and try the product with no risk. Framing it as a choice between two paths reduces the pushy feel while making the product the obvious answer. The call-to-action buttons use softer, scarcity-framed text such as 'apply discount, check availability' instead of 'buy now', and the close states that the promotional price (up to 50 percent off with free shipping, backed by a one-year money-back guarantee) is tied to this page. How to apply: write the two options using the reader's own failed alternatives from the earlier pain section, restate the guarantee in the close, and test a check-availability button label against a direct buy label. Scarcity statements must be true; a 'this page only' discount that is always available is a deceptive claim risk.",
+    "conditions": "Advertorial and long-form sales pages for cold traffic with a genuine promotion and guarantee.",
+    "fails_when": "When the discount or scarcity is not real, which creates consumer-protection and ad-policy risk; premium brands that never discount; short product pages where a long close is out of place.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "up to 50% off plus free shipping in the example offer",
+      "1-year money-back guarantee"
+    ],
+    "asks": [
+      "How do I end an advertorial so people actually click through?",
+      "What should the button say on a pre-sell page?",
+      "Is 'check availability' better than 'buy now'?",
+      "How do I write a close that isn't too pushy?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0081",
+    "evidence": {
+      "where": "Risk reversal, call to action and close sections"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0055",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "copy principles",
+      "page types and section order"
+    ],
+    "claim": "Extract a fixed input sheet from the sales page once, then multiply advertorials by avatar archetype times swiped structure; one hour yields 10 to 20 test variants.",
+    "body": "An advertorial is the pre-sell page between an ad or email and a short ecommerce product page that cannot sell cold traffic on its own. The workflow: save the product page, FAQs and testimonials as a PDF without images and give it to the model. Pull a fixed set of inputs in sequence: target market, pain points, primary promises, credible and social proof, common solutions and why they fail, the real culprit, product description, offer and price, ingredients, and testimonials. Then ask for 5 to 10 avatar archetypes within the market (for a keto drink: busy working mum, post-pregnancy, perimenopausal, yo-yo dieter, post-retirement), stating any known skew, such as mostly female. Save everything in one document so later sessions skip this roughly 17-minute prep. For each draft, upload a proven advertorial from an unrelated product, ask the model to analyse its structure first, then write the new one in that structure for one archetype, section by section, without condensing, and ask for extra headlines. Each archetype and template pair is a separate test. Before publishing, check every study, expert name, price and testimonial: in the demo the model made up testimonials and used a doctor tied to another brand.",
+    "conditions": "Ecommerce or info products sold to cold traffic, especially health and supplement categories with distinct life-stage segments; the operator owns the product facts to correct the draft.",
+    "fails_when": "Regulated claims categories where unverified studies or invented experts create legal risk; markets too narrow to split into several archetypes; teams without traffic to test many variants.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "5 to 10 advertorials per hour after setup",
+      "about 17 minutes of one-time input extraction",
+      "10 to 20 advertorial variants from archetypes times templates"
+    ],
+    "asks": [
+      "How can I write a lot of advertorials quickly with AI?",
+      "Our product page does not convert cold traffic, do we need an advertorial?",
+      "How many advertorial versions should I test?",
+      "What should I double check when AI writes an advertorial?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0082",
+    "evidence": {
+      "where": "Walkthrough of the input prompts, the archetype prompt and the three advertorial drafts for the keto product"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0056",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "comparison and quiz structures",
+      "objection handling",
+      "friction removal"
+    ],
+    "claim": "In a pre-sale quiz, every question must win a micro-commitment, seed a buying belief, or pre-handle an objection; aim for about 8 to 12 questions, easiest first.",
+    "body": "The speaker argues quizzes convert cold traffic not because of personalisation but because a run of small taps puts the buyer in a primed, agreeable state before the offer appears, and the ad CTA can be 'take the quiz' instead of 'shop now'. Design rules: each question needs one of three jobs. Micro-commitment: any tap or slider moves the visitor closer to a sale. Seeding: the question plants a belief the purchase depends on, for example a 1 to 10 slider on how much gut symptoms affect daily life reframes a nuisance as a quality-of-life problem. Pre-handling: 'how quickly do you expect results?' sets expectations before 'it takes too long' becomes an objection; 'what have you tried before?' meets 'nothing works'. Use in-quiz cards between questions to state the belief or proof. Order by gradualisation (Eugene Schwartz): open with a non-invasive goal question and leave personal items such as age, weight or symptoms for later. Vary format, never more than two or three of the same type in a row (multi-select, single choice, yes/no, slider), and make selections visibly respond. Avoid typed-answer questions: they feel like far more effort and cause heavy drop-off. Length: 3 to 20 works, 8 to 12 is his sweet spot. He says even a 3-question quiz in front of a sales page has almost always raised conversion for him, though he gives no test data.",
+    "conditions": "Cold paid traffic; considered or problem-solving purchases, especially health, wellness, supplements and skincare; brands with research on buyer beliefs and objections.",
+    "fails_when": "Simple impulse products where any step before the product page is friction; returning or warm traffic that already knows what it wants; health quizzes whose framing creates prohibited medical claims; long quizzes with no reason for each question.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Quiz length 3 to 20 questions; sweet spot 8 to 12",
+      "No more than 2 to 3 same-format questions in a row"
+    ],
+    "asks": [
+      "What questions should I put in my product quiz?",
+      "How long should a quiz funnel be?",
+      "Our quiz feels like a survey and people quit. How do we fix it?",
+      "Should I ask customers to type answers in my quiz?",
+      "Does a quiz convert better than sending ads straight to the product page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0083",
+    "evidence": {
+      "where": "Three things every quiz does; gut-health quiz walkthrough; 'how many questions' section",
+      "quote": "It should act as a micro commitment"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0057",
+    "modules": [
+      "LPG",
+      "AVT"
+    ],
+    "topics": [
+      "copy principles",
+      "objection handling"
+    ],
+    "claim": "Ground AI advertorials in four documents (research, avatar sheet, offer brief, and at most six necessary beliefs), then audit the draft against each belief before testing.",
+    "body": "The practitioner's diagnosis: pasting a competitor's advertorial into a chatbot and asking for a rewrite gives weak copy because the model knows nothing about the product, buyer or offer. His fix is to build four foundational documents once and attach them to every copy task. 1. Research: have the model write its own prompt for a deep-research run on the market (8 to 20 minutes; about 11 in the demo), answering its clarifying questions on country and price range, and save the result. 2. Avatar sheet from a template: pains, desires and verbatim-style quotes. 3. Offer brief: funnel structure, awareness stage, sophistication stage and unique mechanism. 4. Necessary beliefs: no more than six statements a prospect must believe to buy, for example that their current method is inefficient and costly. Then upload a running advertorial as the structural swipe and draft in halves, because asking for a full 2,000-word piece tends to return about half the length at lower quality. Chief the draft twice: first ask the model to check it against every belief, the mechanism and objection handling; then read it yourself and fix any spot where the flow catches.",
+    "conditions": "Long-form pre-sell pages (advertorials, VSL scripts) for cold traffic; brands with enough market discussion online for deep research to find real quotes.",
+    "fails_when": "Brand-new categories with little online conversation, where research returns generic material; or when the beliefs list grows past six and the page tries to argue everything.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "at most 6 necessary beliefs",
+      "8 to 20 minutes for an AI deep-research run (about 11 in the demo)",
+      "a 2,000-word request tends to return about 1,000 words, so draft in halves"
+    ],
+    "asks": [
+      "Why does AI write such bad advertorials for my product?",
+      "What should I give ChatGPT before asking it to write landing page copy?",
+      "What are necessary beliefs in copywriting and how many should I have?",
+      "How do I review an AI-written advertorial before I run traffic to it?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0085",
+    "evidence": {
+      "where": "Steps 2 (foundational docs) and 4 to 5 (writing in halves, chiefing) of the walkthrough"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0058",
+    "modules": [
+      "LPG",
+      "CRO",
+      "OFF"
+    ],
+    "topics": [
+      "friction removal",
+      "proof placement"
+    ],
+    "claim": "If no promotion is running, remove the cart's discount-code box and show a trust bar (easy returns, support, guarantee); Boom gained about $40,000 a month.",
+    "body": "An empty coupon field tells shoppers a discount exists somewhere. Many leave to search for codes, hit coupon sites full of pop-ups and expired codes, and never come back; the agency says older shoppers are especially likely to get lost this way. In the test for Boom by Cindy Joseph, a pro-age makeup brand, the cart's discount box was removed and replaced with a trust policy bar inside the cart highlighting easy returns, customer support, a satisfaction guarantee and the money-back promise, reassuring shoppers at the last step. The agency reports about $40,000 in extra monthly revenue from this change; no sample size was given. How to apply: if you have no live public promotion, hide the discount field in the cart (on Shopify, codes can still be applied through links or at checkout depending on setup), and add a compact row of your real policies near the checkout button. If you run frequent promotions or influencer codes, keep the field so code holders are not frustrated, but still add the trust bar.",
+    "conditions": "Ecommerce carts where no public discount is active; strongest for older or less online-confident audiences.",
+    "fails_when": "Brands that rely on influencer, affiliate or email codes customers expect to enter; checkouts where the platform shows a code field anyway, making cart removal cosmetic.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about $40,000 extra monthly revenue (Boom cart test, no sample given)"
+    ],
+    "asks": [
+      "Should I remove the discount code box from my cart?",
+      "Customers leave the cart to look for coupon codes, what can I do?",
+      "What should go in the cart drawer to reduce abandonment?",
+      "Does a trust bar in the cart help conversion?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0098",
+    "evidence": {
+      "where": "Winning test number three, cart optimisation"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0059",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "mobile specifics",
+      "friction removal"
+    ],
+    "claim": "Mobile collection pages should show four products (two by two) on the first screen, label a few as bestseller or new, and show prices; Boom gained about $30,000 monthly.",
+    "body": "A collection page has two jobs: show products and let people filter. Large hero banners and text blocks that push products below the fold on mobile defeat both. The agency's rule is a two-by-two grid with four products visible on the first mobile screen. They then reduce choice paralysis by labelling a few items (bestseller, new, low stock, trending), never every product, so the herd signal stands out. For Boom, a consumable makeup brand with heavy repeat buying, they also added the price to each product's button on the collection page so returning customers could add to cart without opening the product page. The two changes together were credited with about $30,000 more monthly revenue. How to apply: load each collection on a phone and count products visible before scrolling; shrink or remove the banner until four show; add a small number of labels; and for repeat-purchase consumables, test quick add-to-cart with price on the card.",
+    "conditions": "Collection pages with mobile traffic; quick add with price suits consumables and repeat purchases.",
+    "fails_when": "Products that need variant choice, sizing or explanation before purchase, where quick add raises returns or errors; luxury catalogues where editorial banners are part of the sell.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "4 products (2 by 2) visible above the fold on mobile",
+      "about $30,000 extra monthly revenue (Boom collection test)"
+    ],
+    "asks": [
+      "How many products should show on a mobile collection page?",
+      "Our collection page banner is huge, is that hurting sales?",
+      "Should I add bestseller labels to products?",
+      "Should customers be able to add to cart from the collection page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0098",
+    "evidence": {
+      "where": "Test number four, collection and label pricing"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0060",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "image sequence and slot jobs",
+      "proof placement",
+      "above the fold"
+    ],
+    "claim": "More shoppers swipe through the whole product image gallery than scroll the whole page, so use the gallery as a mini landing page with benefits, testimonials and guarantee images.",
+    "body": "The agency's observation from recordings is that the image carousel gets more complete engagement than the page below it, so it is the best place to put the sales argument, not just product angles. Fill the gallery with benefit images, customer testimonials, UGC, a short video and guarantee or award seals, and show real thumbnails rather than dots so shoppers see there is more to swipe. On Boom's product pages the agency also moved star ratings higher, made savings visible, added a sticky add-to-cart and, because the older audience worried about buying online, expanded the previously collapsed money-back guarantee next to the call to action. Reported result: nearly $40,000 more monthly revenue and about 50 cents more revenue for every paid visitor sent to the page. How to apply: audit your gallery order, slot one image each for the main benefit, proof, how to use, what is included and the guarantee, and keep the reassurance your audience cares about visible, not collapsed, beside the button.",
+    "conditions": "Product pages for paid traffic, especially mobile; the uncollapsed guarantee mattered most for an older demographic.",
+    "fails_when": "Fashion or design-led products where shoppers expect clean product imagery and text overlays read as cheap; very technical products where specs must come first.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "nearly $40,000 extra monthly revenue (Boom PDP test)",
+      "about $0.50 more revenue per paid visitor"
+    ],
+    "asks": [
+      "What images should go in my product gallery?",
+      "Should I put testimonials in the product image carousel?",
+      "Our money-back guarantee is in a collapsed tab, should it be visible?",
+      "Do people actually swipe through product images?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0098",
+    "evidence": {
+      "where": "Winning test number two, PDP above the fold"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0061",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "page types and section order",
+      "friction removal"
+    ],
+    "claim": "New visitors usually open the menu first, so put a bestsellers carousel at its top and move contact, FAQ and review links down; Boom gained nearly $50,000 monthly.",
+    "body": "Session recordings showed that most first-time visitors landing on a homepage or collection open the menu to see what the store sells. A default text-link menu gives them nothing to act on. For Boom by Cindy Joseph the agency redesigned the mega menu: a bestsellers carousel across the top so new visitors are nudged toward what others buy, icons beside categories to draw the eye, a touch of social proof, and the 'non-money' links (contact, reviews, FAQs) moved down below the products. The reported result was nearly $50,000 in extra monthly revenue; no sample or duration was stated. How to apply: check recordings or click maps to confirm how often new visitors open the menu; if often, treat the menu as a product page entry point, show three to six bestsellers with image and price at the top, keep category labels short with icons, and demote service links. This matches separate agency evidence that image-led menus outperform text-only ones.",
+    "conditions": "Stores with multiple products or categories and meaningful homepage or collection traffic from new visitors.",
+    "fails_when": "Single-product stores; very large catalogues where a carousel crowds out category navigation that shoppers rely on.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "nearly $50,000 extra monthly revenue (Boom mega menu test)"
+    ],
+    "asks": [
+      "What should I put in my store's mega menu?",
+      "New visitors open our menu and then leave, how do I fix it?",
+      "Should bestsellers be in the navigation menu?",
+      "Where should contact and FAQ links go in the menu?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0098",
+    "evidence": {
+      "where": "Winning test number one, mega menu"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0062",
+    "modules": [
+      "LPG",
+      "CXP"
+    ],
+    "topics": [
+      "proof placement"
+    ],
+    "claim": "Going from 0 to about 80 reviews roughly doubled conversion in the presenter's stores; beyond that, count barely matters, but claim-matching photo reviews do.",
+    "body": "From his own stores in 2019 and 2020, the presenter found the fastest conversion jump came from going from no reviews to having reviews, roughly doubling conversion rate, with most of the effect between 0 and about 80 reviews. Moving from 80 to 150 to 400 made no visible difference. After that threshold, relevance beats volume: he would rather show five reviews that prove the specific claim in the ad (for example before-and-after photos for 'firmer skin in 4 weeks') than 400 generic 'great product' reviews. How to apply: for a new product, prioritise collecting the first 80 reviews with photos or video, using a post-purchase incentive such as a $10 credit or partial refund for a photo review where local law allows it (paying for positive reviews is illegal in many markets, and incentives must not depend on a positive rating). Set the review widget to sort photo and video reviews first. On angle-specific landing pages, filter reviews to those that mention that angle's claim. Drop footer security badges; he calls them dropshipping-era signals that do nothing. Keep a guarantee visible, but treat it as table stakes that reverses risk rather than as proof.",
+    "conditions": "New or newly launched products with few reviews; DTC stores with a review app that supports sorting and filtering.",
+    "fails_when": "Markets or platforms where review incentives are restricted (for example Amazon, or rules on incentivised reviews), or categories where buyers rely on expert or clinical proof more than peer reviews.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "0 to about 80 reviews: conversion roughly doubled (presenter's own stores)",
+      "80 to 400 reviews: no visible further gain",
+      "5 claim-relevant reviews preferred over 400 generic ones",
+      "$10 credit or refund for a photo review"
+    ],
+    "asks": [
+      "How many reviews do I need before ads will work?",
+      "Do more reviews keep increasing conversions?",
+      "Which reviews should I show at the top of my product page?",
+      "Are trust badges worth having?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0101",
+    "evidence": {
+      "where": "Proof section, reviews and claim-matching proof"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0063",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "friction removal"
+    ],
+    "claim": "Keep shipping, tax and fees added at checkout under 10% of AOV; below that, the presenter's tests found no material conversion impact from charging shipping.",
+    "body": "Unexpected extra costs are the top reason for checkout abandonment in Baymard's research (39% of abandoners cite them). The presenter's working rule, from his own store tests in 2019 and 2020 and his agency's data, is that charging shipping and other add-on costs does not hurt conversion rate as long as the total extra stays under about 10% of the order value: under $10 on a $100 order. Shipping collected below that line is close to pure profit, and free shipping is worth more as a threshold reward than as a blanket policy; most brands set that threshold too low. Other Baymard abandonment reasons he relays, with fixes: slow delivery (21%; offer an express option or test hiding delivery dates), not trusting the site with card details (19%), forced account creation (19%; make guest checkout the default), long checkout (18%; cut fields, put Shop Pay, Apple Pay and Google Pay at the top), returns policy (15%; do not rush into free returns, especially in fashion, where it can raise returns sharply), and total cost not shown up front (14%; for example a monthly price that becomes a quarterly charge in cart). About 70% of carts are abandoned and 43% of those were only browsing. Treat the 10% figure as a starting hypothesis to test for your store.",
+    "conditions": "DTC stores deciding whether to charge shipping or fees; mid to high AOV where 10% of AOV covers shipping cost.",
+    "fails_when": "Low-AOV items where real shipping cost exceeds 10% of AOV (the brand must bundle or raise AOV instead), or categories where competitors all ship free and price comparison is easy.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "extra costs under 10% of AOV: no material conversion impact (presenter tests 2019-2020)",
+      "Baymard: 70% cart abandonment, 43% of abandoners just browsing",
+      "Baymard reasons: extra costs 39%, slow delivery 21%, card trust 19%, forced account 19%, long checkout 18%, returns policy 15%, total cost not shown 14%"
+    ],
+    "asks": [
+      "Should I offer free shipping or charge for it?",
+      "How much can I charge for shipping before people abandon?",
+      "Why are people abandoning at checkout?",
+      "Should returns be free?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0101",
+    "evidence": {
+      "where": "Offer section on shipping; checkout section relaying Baymard abandonment reasons"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0064",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "above the fold",
+      "copy principles",
+      "page types and section order"
+    ],
+    "claim": "When ads test different personas or angles, send each to its own product page leading with that one benefit; a page listing every benefit converts worse.",
+    "body": "A concept change in the ad account (new persona, new angle or new offer) needs a matching landing page. The presenter's example: a collagen brand tests ads for joint pain, skin and different age groups, then sends all of them to one page listing ten benefits. A viewer who just watched an ad about arthritis lands, finds arthritis as the ninth bullet among unrelated claims, and trusts a single-purpose competitor more. Same with creatine for women in menopause versus young men building muscle: one page cannot speak to both above the fold. How to apply: for each angle that is scaling, build a dedicated product page or landing page whose title, subtitle, hero image, proof and FAQ all reinforce that angle. Above the fold on mobile, answer four things: what it is, why this one (the unique mechanism), why now, and why trust you. Lead with the outcome and then the feature that delivers it ('firmer skin in 4 weeks using a triple peptide complex'), shrink table-stakes items (vegan, size, free shipping) to small text, and use the FAQ for the top real purchase objections from customer research, not brand-story questions. Watch returns and 12-month LTV per angle: an angle that sells but does not deliver hurts lifetime value.",
+    "conditions": "Brands running several ad angles or personas for one product, especially supplements and skincare; enough spend per angle to justify a page.",
+    "fails_when": "Single-angle brands, or accounts so small that splitting traffic across pages leaves too little data per page; branded or returning traffic that wants the full product view.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "4 above-the-fold questions: what, why this one, why now, why trust",
+      "60 to 95% of traffic on mobile depending on brand"
+    ],
+    "asks": [
+      "Should every ad go to the same product page?",
+      "Our product helps with lots of things, should the page list them all?",
+      "What needs to be above the fold on a product page?",
+      "Why do people click our ad but not buy?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0101",
+    "evidence": {
+      "where": "Continuity section after the above-the-fold mockup; copywriting section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0065",
+    "modules": [
+      "LPG",
+      "AVT"
+    ],
+    "topics": [
+      "copy principles",
+      "segmentation"
+    ],
+    "claim": "Write page copy for the 20 to 35% of visitors who are your best-fit segment; converting half of a 20% segment alone yields a 10% conversion rate.",
+    "body": "Wiebe's argument against neutral, please-everyone copy: like a house painted beige for sale, it offends no one and moves no one. Large organisations' sites converting around 2% are, in her view, a symptom of writing for 100% of visitors. Her arithmetic: if only 20% of your visitors belong to your ideal segment and copy speaks directly to them, converting half of them gives a 10% site conversion rate, and even a quarter gives 5%, both well above typical averages. Qualified visitors also tend to stay longer and buy more. How to apply: 1) use research and surveys to find the segment with the strongest fit; 2) if unsure between segments, buy small search ad tests per segment and see which clicks through; 3) rewrite headlines and key sections in that segment's language and specifics, accepting that others will feel less addressed; 4) check that the page no longer reads bland or generic. The figures are illustrative arithmetic from a 2011 copywriting guide, not tested results.",
+    "conditions": "Brands with a clearly identifiable best-fit segment and landing pages that receive mixed traffic.",
+    "fails_when": "Mass-market commodity products where most visitors share one need; pages that serve several distinct paid campaigns, which should get their own segment-specific pages instead.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "target 20-35% of visitors",
+      "50% of a 20% segment = 10% conversion",
+      "25% of a 20% segment = 5%",
+      "typical large-organisation site about 2%"
+    ],
+    "asks": [
+      "Should my website copy speak to everyone or one type of customer?",
+      "Our homepage copy feels generic, how do we fix it?",
+      "How narrow should our target audience be on the landing page?",
+      "Is it bad if some visitors don't relate to our copy?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0122",
+    "evidence": {
+      "where": "Chapter 3 'Write copy for 20 to 35% of your visitors'"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "LPG-0066",
+    "modules": [
+      "LPG",
+      "EML",
+      "MCR"
+    ],
+    "topics": [
+      "copy principles",
+      "mobile specifics"
+    ],
+    "claim": "Print studies found reversed (light-on-dark) body text up to 16% less legible and all-caps headlines about 12% slower to read than initial caps.",
+    "body": "Whitman collects classic readability research to argue that design choices cost readers. Reversed type: in a replication of a Starch experiment, a passage in white on black was 4% less legible when readers had just seen the normal version, and 16% less legible when shown on its own. All capitals: Paterson and Tinker (1956) found all-uppercase text slowed reading by 11.8%; a later challenge found an 18.9% gap in favour of initial-cap headlines. Typeface: Wheildon (1986) reported 67% comprehension for a serif passage against 12% for sans serif in print, and Paterson and Tinker (1932) found most faces read at similar speed except blackletter (16.5% slower) and typewriter-style (5.1% slower). Rules of thumb: set body copy dark on light, use sentence or initial case for headlines longer than a couple of words, keep about 70 to 80% one-syllable words and sentences near 11 words. How to apply: on product pages, emails and text-heavy statics, keep long body copy out of reversed blocks, avoid all-caps for anything longer than a short label, and save decorative fonts for logos. Treat the serif finding as print-only and contested.",
+    "conditions": "Text-heavy surfaces: long product descriptions, advertorial pages, email bodies, static ads with several lines of copy.",
+    "fails_when": "Screen reading, where sans-serif faces are standard and the Wheildon study's method has been criticised; short labels and buttons where all-caps or reversed text is a deliberate accent; dark-mode interfaces where users chose light-on-dark.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "reversed text 4% to 16% less legible",
+      "all caps 11.8% slower (Paterson and Tinker 1956); 18.9% gap favouring initial caps",
+      "Wheildon 1986: 67% serif vs 12% sans serif comprehension (print)",
+      "70 to 80% one-syllable words, ~11 words per sentence"
+    ],
+    "asks": [
+      "is white text on a dark background bad for readability",
+      "should headlines be in all caps",
+      "what font is easiest to read in ads and emails",
+      "do design choices like reversed text hurt conversions"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0123",
+    "evidence": {
+      "where": "Ad-Agency Secrets #1, #8 and #11: simplicity, reverse-type pitfall, psychology of typefaces"
+    },
+    "strength": "research",
+    "public": false
+  },
+  {
+    "id": "LPG-0067",
+    "modules": [
+      "LPG",
+      "ADC",
+      "CRO"
+    ],
+    "topics": [
+      "above the fold",
+      "copy principles"
+    ],
+    "claim": "Test 20 to 40 headlines per Meta ad, then copy the winner into the landing page headline, subheadline and opening lines; reported lift: at least 15 to 20%.",
+    "body": "An ad headline is seen by many times more people than ever reach the landing page, often around a thousand times as many, so Meta returns a readable answer on which message works far sooner than a page split test can. Use that cheaper test to choose the page's message, and keep the page in line with what people clicked. The speaker runs 20, 30 or 40 headlines per ad variant, picks the best on results, and puts the same words in the landing page headline, the subheadline and the first lines of copy. He reports this raises page conversion by at least 15 to 20%, and links many cases of cheap clicks but poor CPA to a mismatch between the ad and the page. He also keeps at least three split tests running at all times. How to apply: line up your top three ads' headlines next to their landing page headlines; fix any mismatch within a day; then test page variants built from the winning ad language, judged on conversion rate. The lift figure comes without a sample size, so treat it as a likely direction, not a promise.",
+    "conditions": "Paid social traffic going to a dedicated landing or product page the brand can edit; ad sets with enough impressions to separate headlines.",
+    "fails_when": "The winning ad headline is a curiosity hook that works in feed but not as a page promise; one page serves many different ads, so it cannot match all of them; the lift claim is taken as a forecast.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "20 to 40 headlines per ad variant",
+      "ad headlines reach about 1,000x the people who see the page",
+      "reported lift: at least 15 to 20% in page conversion rate (no sample size)",
+      "at least 3 split tests running at any time"
+    ],
+    "asks": [
+      "how do I choose the headline for my landing page",
+      "our ads get cheap clicks but nobody buys, what's wrong?",
+      "can I use Facebook ad tests to improve my product page",
+      "how many headlines should I test in an ad"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0227",
+    "evidence": {
+      "where": "Hack 6, match your ad to your landing page"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0068",
+    "modules": [
+      "LPG",
+      "ORG"
+    ],
+    "topics": [
+      "page types and section order",
+      "creator and influencer collaboration"
+    ],
+    "claim": "Send ads featuring a big ambassador to a dedicated landing page built from that person's shoot, so the page matches the ad; add a product carousel and the collab story.",
+    "body": "Alo Yoga routes ads featuring one celebrity ambassador to a custom collab page filled with that shoot's images. The agency, which works with 15 to 20 nine-figure fashion brands, says this format performs strongly because the landing page continues the exact message and person from the ad, and it deepens the sense that the celebrity is part of the brand rather than appearing in one random post. It also notes other fashion brands doing well with it. Their critique of Alo's version: it was just a stack of photos; they would add a product carousel of the pieces worn and a short story of how the collab came about. They guess Alo has not built pages for other recent ambassadors because contracts limit how a celebrity's image can be used on site. How to apply: 1) check usage rights in the talent contract cover a landing page; 2) build one page per major ambassador or creator with their imagery, shoppable products and story; 3) point only that person's ads to it; 4) compare its conversion against your default collection page. No test numbers were given.",
+    "conditions": "Brands with named ambassadors or large creators whose ads perform; contracts that allow on-site use of their image.",
+    "fails_when": "Usage rights exclude website use; small creators whose ads do not carry enough traffic to justify a page; pages that are mood boards with no products.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "Should influencer ads go to a special landing page?",
+      "How do I build a landing page for a celebrity collab?",
+      "Our influencer ads get clicks but no sales, should we change the landing page?",
+      "What should a creator collab page include?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0233",
+    "evidence": {
+      "where": "Landing page strategy: celebrity collab page"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0069",
+    "modules": [
+      "LPG"
+    ],
+    "topics": [
+      "page types and section order",
+      "friction removal"
+    ],
+    "claim": "When paid traffic lands on a fashion collection grid, conversion depends on the top six products and their size stock; someone must check that grid daily.",
+    "body": "About three quarters of Alo Yoga's paid traffic goes to category pages, mostly New Arrivals and Best Sellers. The agency's point for any fashion brand doing the same: a collection page converts or fails on what sits in the first six slots. If those are weak or unpopular items, the page underperforms; if they are winners, it converts. The hidden trap is size curves: the winning product may sell mostly in, say, black and blue in medium and large. When those variants sell out, the agency estimates a large share of traffic (perhaps 30%) hits out-of-stock options and conversion drops, even though the product still looks available. How to apply: 1) assign an owner (e-commerce manager or head of digital) to the paid-landing grids; 2) review the top rows daily against sell-through and variant stock; 3) push products with broken size runs down or out of the top six; 4) monitor conversion rate per landing page daily so a drop is caught within a day; 5) tighten white space so products appear above the fold. Outside fashion, a custom landing page is usually safer than a grid.",
+    "conditions": "Apparel and footwear brands sending paid traffic to collection or category pages with fast-moving size runs.",
+    "fails_when": "Non-fashion stores with few variants, where a custom landing page usually beats a grid; small catalogues with stable stock.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about 75% of Alo paid traffic lands on category pages",
+      "top 6 products drive grid performance",
+      "estimate: about 30% of traffic aims at the best-selling sizes and colours"
+    ],
+    "asks": [
+      "Should our Meta ads go to a collection page or a product page?",
+      "Our collection page conversion dropped suddenly, what should we check?",
+      "How should we order products on a collection page?",
+      "How do sold-out sizes affect conversion?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0233",
+    "evidence": {
+      "where": "Landing page strategy section: New Arrivals page"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0070",
+    "modules": [
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "page types and section order",
+      "comparison and quiz structures",
+      "offer congruence"
+    ],
+    "claim": "Route traffic by awareness: unaware ads to third-party advertorials or quizzes, persona ads to matching persona pages, retargeting to product pages; IM8 sent ~150 of 700 ads to persona pages.",
+    "body": "IM8 splits landing pages by persona and stage of awareness in three tiers. Top: advertorials and quiz funnels on separate domains, sometimes run from doctor or third-party pages, which educate unaware and problem-aware people before redirecting them to the store; IM8 retired its main quiz funnel in July 2026 after pointing a large share of ads at it, so this tier is not guaranteed to work. Middle: persona pages for each winning angle; roughly 150 of about 700 ads pointed to pages such as a GLP-1 page (seven reasons GLP-1 users use IM8) or a bloating page (six reasons the bloating comes back at 2 p.m.), so the page continues the exact message of the ad. Bottom: product pages for retargeted, educated traffic. Strong trust layers on these pages (an ambassador wall, a science stack) are hard for competitors to copy, unlike generic trust badges. The speaker's critique: 88 ads pointed to the homepage, which tries to serve every persona at once; its conversion rate looks good only because organic traffic inflates it. How to apply: tag every ad by awareness stage and persona, check where each points, build a persona page whenever a new angle wins, and avoid sending cold paid traffic to the homepage.",
+    "conditions": "Brands running several personas or angles on paid social with enough spend per persona to justify a dedicated page.",
+    "fails_when": "Small catalogues or budgets where maintaining many pages dilutes testing; advertorials on third-party pages must still be clearly labelled as ads and comply with platform rules.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "~150 of ~700 ads to persona pages",
+      "88 ads to homepage",
+      "quiz funnel retired July 2026"
+    ],
+    "asks": [
+      "Where should my ads send people?",
+      "Should I make a separate landing page for each ad angle?",
+      "Is it bad to send Facebook ads to my homepage?",
+      "Do advertorials still work for supplements?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0240",
+    "evidence": {
+      "where": "Landing page strategy section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "LPG-0071",
+    "modules": [
+      "LPG",
+      "CRO"
+    ],
+    "topics": [
+      "friction removal",
+      "test design"
+    ],
+    "claim": "True Classic lost revenue when it added category breadcrumbs to product pages; links away from the product gave shoppers more ways to wander off and forget to buy.",
+    "body": "Bartlett's example of a test he expected to win: adding breadcrumb links at the top of the product page so shoppers could jump to other categories quickly. It lost revenue. His explanation is that every exit route from the product page invites browsing, distraction and abandonment. He admits he would accept a small revenue loss for easier navigation if it improved the product mix in the cart, a judgement call rather than a rule. Related views from the interview: heat maps show almost nobody scrolls past the fold on the home page, so treat the home page like a concise landing page that hits the core value propositions (they lead with side-by-side fit comparisons rather than lifestyle images); and the most common testing mistake is changing too many things at once, so you cannot tell what caused the result. How to apply: test removing or demoting links that leave the product page (breadcrumbs, cross-category banners) while keeping links that add to the same purchase (pack builder, complementary items); change one thing per test. No numbers given for the loss.",
+    "conditions": "Product pages for focused catalogues where the goal is adding the product to cart, with enough traffic to A/B test.",
+    "fails_when": "Large catalogues where shoppers need to compare across categories; SEO needs for breadcrumb navigation and markup (keep breadcrumb schema even if visually demoted).",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "Should product pages have breadcrumbs?",
+      "Do navigation links on the product page hurt conversion?",
+      "We changed a lot on the product page and sales dropped, how do we find out why?",
+      "Does anyone scroll past the fold on our home page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0243",
+    "evidence": {
+      "where": "about 46:12-54:02 split-testing mistakes and product page breadcrumbs"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "LPG-0072",
+    "modules": [
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "bundles and AOV",
+      "friction removal"
+    ],
+    "claim": "True Classic's cart gift ladder: free shipping at $100, a free shirt at $150, free joggers at $200; with multi-packs, its AOV rose from $36 to $112.",
+    "body": "Co-founder Ryan Bartlett says the cart is where the most impactful conversion and order-value work happens. The structure is a tiered gift with purchase: reach $100 and shipping is free, $150 adds a free shirt, $200 adds free joggers. Two effects: shoppers add items to unlock the next gift, raising order value; and the gifts come from categories the buyer was not shopping (a t-shirt buyer receives an activewear shirt), so they try a new line and come back for it. Together with selling almost everything in packs rather than singles, with a pack builder on the site, he credits this approach with taking average order value from $36 to $112. How to apply: 1) set the first threshold a little above current AOV and later tiers at realistic stretch points; 2) choose gifts with low landed cost but high perceived value, from categories you want to seed; 3) show a progress bar in the cart; 4) check contribution margin per order at each tier, including gift cost and shipping. The $36 to $112 change spans years and several levers, so it is not the effect of the ladder alone.",
+    "conditions": "Apparel or multi-category brands with repeatable basics and gifts that cost little to add to a shipment.",
+    "fails_when": "Single-product stores with nothing to gift; thin margins where the gift cost erases the AOV gain; thresholds set so high almost nobody reaches them.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "$100 free shipping, $150 free shirt, $200 free joggers",
+      "AOV $36 to $112 over time (with packs and other CRO)"
+    ],
+    "asks": [
+      "How do I set up a gift with purchase in the cart?",
+      "What spend thresholds should we use for free gifts?",
+      "Our average order is stuck around $40, how do we raise it?",
+      "Does a free shipping threshold actually increase order value?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0243",
+    "evidence": {
+      "where": "about 46:12-54:02 cart optimisation and gift with purchase"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  }
+]

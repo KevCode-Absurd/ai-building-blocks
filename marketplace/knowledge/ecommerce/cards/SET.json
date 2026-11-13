@@ -1,0 +1,465 @@
+[
+  {
+    "id": "SET-0001",
+    "modules": [
+      "SET",
+      "OFF"
+    ],
+    "topics": [
+      "store configuration",
+      "discount depth and margin"
+    ],
+    "claim": "Shopify's native percentage discounts cannot cap the amount saved (for example 30% off up to $100), so high-order-value stores need fixed-amount tiers or an app.",
+    "body": "The course flags a gap in Shopify's built-in discount editor: you can set a percentage or fixed amount, a minimum purchase, which products or collections it applies to, a usage limit per customer, combination rules with other discounts and an end date, but not a maximum saving on a percentage code. At a $1,000 average order a 30% sitewide code gives away $300 per order, which can wipe out contribution on large baskets. Options: 1) use fixed-amount tiers by spend instead of a percentage (for example $50 off $300, $120 off $600); 2) install a discount app or Functions-based tool that adds a cap; 3) restrict percentage codes to lower-priced collections; 4) set 'once per customer' and decide deliberately whether the code stacks with free shipping, because stacking is a toggle that is easy to leave on. Before a big promotion, model the discount cost at your 90th-percentile order size, not just the average. Practitioner description of platform behaviour; check current Shopify capability, since apps and Functions can change what is possible.",
+    "conditions": "Shopify stores with high or widely varying order values running percentage promotions.",
+    "fails_when": "Low-AOV stores where a percentage cap rarely binds; if Shopify adds native caps, the workaround is unnecessary.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "30% code on a $1,000 order = $300 given away",
+      "no native maximum-savings field on percentage codes"
+    ],
+    "asks": [
+      "Can I cap a percentage discount in Shopify?",
+      "Our average order is $1,000, is 30% off too risky?",
+      "How do I stop discount codes stacking with free shipping?",
+      "What's the safest way to run Black Friday codes on high-ticket items?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0049",
+    "evidence": {
+      "where": "Discounts chapter: amount off order, minimum purchase, combinations"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SET-0002",
+    "modules": [
+      "SET"
+    ],
+    "topics": [
+      "payments and tax",
+      "store configuration"
+    ],
+    "claim": "Without Shopify Payments, currency-converter apps show local prices only up to the cart; checkout still charges the store's base currency, so pick USD or EUR as base.",
+    "body": "The course explains a limit that catches stores registered in countries where Shopify Payments is not offered (the example is a UAE business). With Shopify Payments, Shopify detects the visitor's location and shows prices and checkout in local currency. Without it, a third-party currency app can convert prices on the home, collection, product and cart pages, but no app is allowed to change prices at checkout, so a European shopper browses in euros and then pays in the store's base currency. That jump causes surprise, abandoned checkouts and card foreign-exchange fees. How to handle it: 1) check whether Shopify Payments supports your business country before setting up Markets; 2) if it does not, set the base currency to one most buyers recognise, such as USD or EUR, rather than a local currency like AED; 3) say plainly on the cart page which currency the order will be charged in; 4) re-check eligibility periodically, because supported countries change. This is a practitioner's description of platform behaviour; confirm the current rule in Shopify's own help pages before acting.",
+    "conditions": "Shopify stores whose business country is not supported by Shopify Payments and that sell across borders.",
+    "fails_when": "Stores eligible for Shopify Payments, which get local-currency checkout natively; rules may change, so verify against current Shopify documentation.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Why does my checkout charge dollars when the store shows euros?",
+      "Shopify Payments isn't available in my country, how do I sell in other currencies?",
+      "What base currency should a UAE Shopify store use?",
+      "Do currency converter apps work at checkout?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0049",
+    "evidence": {
+      "where": "Markets and currencies chapter, near the end of the course",
+      "quote": "no app has the right to manage or change prices at the checkout"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SET-0003",
+    "modules": [
+      "SET"
+    ],
+    "topics": [
+      "verification steps"
+    ],
+    "claim": "Before removing the Shopify store password, run test-mode orders to several addresses and on a phone, checking tax, shipping rates, fulfilment flow and policy links at checkout.",
+    "body": "Shopify's sequence for going live: in Settings, Payments, click Manage next to Shopify Payments and switch on test mode. View the store as a customer and place orders using Shopify's official test card numbers, never a real card. Use several shipping addresses (domestic, another state, an international market) so you see each tax rule and shipping rate actually applied. Repeat the whole flow on a phone, since most shoppers buy on mobile. Then work through the back office as if the order were real: receive it, print the packing slip and label, mark fulfilled, and confirm the shipping notification goes out. At checkout confirm links to the return, shipping and privacy policies are visible. Only after that, turn test mode off and go live by removing password protection (Sales channels, Online store, Preferences, untick password protection). The point of the order is that each setting looks saved in the admin but only an order proves it works together; a wrong zone, missing tax region or broken policy link shows up here rather than on a real customer's order.",
+    "conditions": "Any new Shopify store, or after major changes to tax, shipping or payments.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "How do I test my Shopify checkout before launch?",
+      "What should I check before taking my Shopify store live?",
+      "How do I place a test order on Shopify without being charged?",
+      "How do I remove the password from my Shopify store?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0050",
+    "evidence": {
+      "where": "Part two 'Test and verify' and part three pre-launch checklist and launching your store"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SET-0004",
+    "modules": [
+      "SET",
+      "FIN"
+    ],
+    "topics": [
+      "payments and tax"
+    ],
+    "claim": "Set Shopify tax collection where you have physical presence, then decide shipping taxability per US state, tax-inclusive pricing for markets that expect it, and duties at checkout.",
+    "body": "The tutorial's rule: tax settings should reflect where the business has a physical presence, meaning where you are located, where inventory sits and where employees work. Setup path: Settings, Taxes and duties, pick the home country, click Collect in a new region under sales tax, choose the state or province, enter the tax ID and confirm. Three settings people miss. First, tax on shipping varies by jurisdiction; for US states use the advanced options inside each state to set whether shipping is taxable. Second, tax-inclusive pricing is required in some markets (Japan is the example) and common in the EU; switch on Include sales tax in product price and shipping rate under global settings, or use dynamic tax-inclusive pricing per market so one $100 product shows $100 tax-included in the UK but $90.91 plus tax in the US. Third, under Duties and import taxes click Set up and select markets so duties are charged at checkout, then say so in the shipping policy, since otherwise customers pay at delivery. Keep records of every registration and confirm obligations with a local tax professional, as rules change.",
+    "conditions": "Shopify stores selling domestically and cross-border; physical-presence rule as stated by Shopify, and economic thresholds also apply in many places.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "$100 tax-included in the UK shown as $90.91 plus tax in the US (example)"
+    ],
+    "asks": [
+      "Where should I collect sales tax on Shopify?",
+      "Should I charge tax on shipping in Shopify?",
+      "How do I show prices with tax included for UK customers?",
+      "How do I stop international customers getting hit with duties on delivery?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0050",
+    "evidence": {
+      "where": "Part two, taxes fundamentals"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SET-0005",
+    "modules": [
+      "SET"
+    ],
+    "topics": [
+      "payments and tax",
+      "verification steps"
+    ],
+    "claim": "Shopify Payments verification stalls most often on name mismatches: enter legal names exactly as on government ID (Robert, not Rob); turn on two-step authentication first, since Payments requires it.",
+    "body": "Shopify's own tutorial names mismatched personal details as the number one reason merchants get held in Shopify Payments verification. Every field (legal name, date of birth, tax number, address) must match the government document exactly, so a licence reading Robert means entering Robert even if the owner goes by Rob. Order of steps: first enable two-step authentication on the Shopify account (profile, then security, then turn on two-step; authenticator app, SMS, security key or Shopify mobile prompt), because Payments will not activate without it, and save the recovery codes somewhere secure. Then go to Settings, Payments and finish setup. Business type: with no business registration number, choose Individual even if you are technically a sole proprietor (there is no separate option); with a registration number, register as a business and add an account representative with signing authority. Upload a passport or driver's licence. Verification usually takes a few hours and sometimes a few days, so keep building shipping and tax in the meantime. Also confirm the bank account accepts the right transfer type for payouts (ACH in the US, EFT in Canada, SWIFT in Europe, Asia and Africa, BECS in Australia).",
+    "conditions": "New Shopify store activating Shopify Payments, in countries where it is available.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "verification typically a few hours, sometimes a few days"
+    ],
+    "asks": [
+      "Why is my Shopify Payments verification stuck?",
+      "Should I sign up for Shopify Payments as an individual or a business?",
+      "I am a sole proprietor, which business type do I pick on Shopify?",
+      "Do I need two-factor authentication to use Shopify Payments?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0050",
+    "evidence": {
+      "where": "Part two, payments and checkout fundamentals"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SET-0006",
+    "modules": [
+      "SET",
+      "FIN"
+    ],
+    "topics": [
+      "shipping profiles",
+      "payments and tax"
+    ],
+    "claim": "Shopify bills shipping labels to the card on file at a billing threshold, not from payouts; Grow and higher plans on Shopify Payments include up to $200 insurance per label.",
+    "body": "Labels bought in the Shopify admin use Shopify's negotiated carrier rates, and the discount passes to the merchant. The cost is not deducted from the customer's payment or from payouts. Instead each label charge accrues on the Shopify account balance; when it reaches the store's billing threshold (set by activity and history), Shopify immediately invoices the card on file. If the threshold is not reached during the cycle, label charges roll into the monthly subscription bill. Check the threshold and pending charges in Settings, Billing, Bills. For cash planning this means label spend hits a credit card, separately from payout timing, so reconcile shipping costs against card statements, not payout reports. Insurance: stores on Shopify Payments with the Grow, Advanced or Plus plan get up to $200 of insurance on each eligible label at no extra cost, subject to exclusions (fragile or high-value goods often excluded). On the Basic plan, insurance is not automatic but can be bought for up to $5,000 per shipment. Canadian and European merchants are pointed to carrier insurance, third-party apps or self-insuring. Where labels are not offered in-admin, use a shipping app.",
+    "conditions": "Shopify stores buying labels in the admin, US plans as described in the tutorial; insurance terms vary by plan and country.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "up to $200 included insurance per eligible label on Grow, Advanced or Plus with Shopify Payments",
+      "up to $5,000 purchasable insurance on Basic"
+    ],
+    "asks": [
+      "How does Shopify charge me for shipping labels?",
+      "Why are shipping label costs on my credit card and not taken from my Shopify payouts?",
+      "Does Shopify include shipping insurance on labels?",
+      "What plan do I need for free shipping insurance on Shopify?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0050",
+    "evidence": {
+      "where": "Part two, labels and printing; shipping insurance"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SET-0007",
+    "modules": [
+      "SET"
+    ],
+    "topics": [
+      "shipping profiles"
+    ],
+    "claim": "With calculated shipping on Shopify, add each box's empty weight and dimensions as a saved package and assign it per product, or every order quietly undercharges shipping.",
+    "body": "Calculated carrier rates use the product weight plus the package weight and size. Product weight alone ignores the box, filler and bubble wrap, so the rate shown at checkout is lower than what the carrier charges and the store absorbs the gap on every order. Fix: in Settings, Shipping and delivery, scroll to Packages, click Add package, choose the package type, enter the outside dimensions and the weight of the empty packaging, and name it (for example small box or standard mailer). If everything ships in one package, tick Set as default. If products use different packaging, open each product or variant, go to its shipping section and pick the right package from the dropdown, and check the product weight at the same time. Two related zone rules from the same tutorial: Shopify pre-creates domestic and international zones with weight-based rates, and a country can sit in only one shipping zone, so to give a country its own rates you first remove it from the International zone (three dots, Edit zone, untick), then create a market for it and add flat, calculated or free rates. Verify with a test-mode order to that country.",
+    "conditions": "Shopify stores using calculated carrier rates or weight-based rates; shipping to more than one country.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Why am I losing money on shipping on Shopify?",
+      "Shopify is charging customers less shipping than the label costs, how do I fix it?",
+      "How do I set up shipping for one specific country on Shopify?",
+      "Where do I add box weight in Shopify?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0050",
+    "evidence": {
+      "where": "Part two, shipping fundamentals: adding a zone and getting your package weights right"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SET-0008",
+    "modules": [
+      "SET",
+      "SPD",
+      "LPG"
+    ],
+    "topics": [
+      "payments and tax",
+      "mobile specifics",
+      "friction removal"
+    ],
+    "claim": "Shopify reports merchants using Shop Pay have a 1.91x higher mobile checkout-to-order rate than regular checkout; enable it before other mobile checkout tweaks.",
+    "body": "Shopify's speed article points out that checkout is the page most often left out of mobile speed work, even though it is where impulse shoppers drop when they must type a full address and card on a phone. Its fix is Shop Pay, the accelerated checkout that pre-fills saved details for shoppers who have used it at any Shopify store. Shopify states that merchants using Shop Pay checkouts have a 1.91 times higher mobile checkout-to-order rate than regular checkout. Treat the multiple with care: it is Shopify's own figure, and shoppers who choose Shop Pay are already returning, committed buyers, so part of the gap is selection rather than pure lift. Still, enabling it costs nothing on Shopify Payments and removes form-filling for a large pool of existing users. How to apply: confirm Shop Pay and other wallets (Apple Pay, Google Pay) show as express buttons at the top of checkout and, where the theme supports it, on the product page; then measure mobile checkout completion before and after, split by new and returning visitors.",
+    "conditions": "Shopify stores using Shopify Payments in markets where Shop Pay is available; mobile-heavy traffic.",
+    "fails_when": "Stores outside Shop Pay markets or on third-party gateways; audiences with low Shop Pay adoption (new markets, B2B buyers paying by invoice); the 1.91x includes self-selection of returning users, so expect a smaller real lift.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Shop Pay: 1.91x higher mobile checkout-to-order rate than regular checkout (Shopify's figure)"
+    ],
+    "asks": [
+      "Should I turn on Shop Pay?",
+      "Our mobile checkout abandonment is high, what is the quickest fix?",
+      "Does Shop Pay actually increase conversion?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0093",
+    "evidence": {
+      "where": "Optimize the mobile checkout section"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SET-0009",
+    "modules": [
+      "SET",
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "payments and tax",
+      "international fulfilment"
+    ],
+    "claim": "For small, light products, separate local Shopify stores with local warehouses can beat one cross-border store: Frank cites UK processing near 0.5% versus 5 to 7% on Markets Pro.",
+    "body": "Since about 2019 to 2020 Ridge has run seven warehouses (US, Canada, UK, Australia, EU, Hong Kong and others) and separate Shopify stores per market, such as a UK store priced in pounds that only shows stock available for next-day local delivery. Two reasons: payment processing is much cheaper locally (he cites about 0.5% in the UK versus about 2.5% in the US), and domestic shipping is cheap (next-day anywhere in the UK for about $4, against at least $5 for the cheapest US parcel). Shopify's premium cross-border option (Markets Pro, possibly renamed) charges at least 5% and possibly 7% in processing, so above some revenue level per market a localised store is cheaper. The condition: this works because Ridge's products are small; it does not sell luggage in the UK because shipping it there is too hard. How to apply: per market, compare total processing plus duties plus shipping cost under a cross-border setup with a local store and warehouse, and check current Shopify rates, which are tier 1 and change, before deciding. Running seven stores adds real operational burden.",
+    "conditions": "Small, light, high-value products; meaningful revenue per international market; brands able to manage several Shopify stores and 3PLs.",
+    "fails_when": "Low revenue per market (cross-border tools cheaper than local overhead); bulky items; teams without capacity to run separate stores; Shopify pricing has changed since the interview.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "7 warehouses, separate Shopify stores per market",
+      "UK processing about 0.5% vs US about 2.5% (as stated)",
+      "Markets Pro processing at least 5%, possibly 7% (as stated)",
+      "UK next-day shipping about $4; cheapest US parcel about $5"
+    ],
+    "asks": [
+      "Should I run separate Shopify stores for each country?",
+      "Is Shopify Markets Pro worth the fees?",
+      "How do I sell in the UK without high cross-border costs?",
+      "When is a local warehouse cheaper than shipping internationally?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0235",
+    "evidence": {
+      "where": "International localisation section",
+      "quote": "the payment processing rate on that is at least 5%. It could be 7%."
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SET-6186",
+    "modules": [
+      "SET",
+      "CRO",
+      "FIN"
+    ],
+    "topics": [
+      "payments",
+      "cash on delivery"
+    ],
+    "claim": "On Shopify, cash on delivery is a manual payment method: those orders show as unpaid or pending until the merchant marks them paid after collecting the money.",
+    "body": "Shopify's manual payments page lists cash on delivery (COD), money orders and bank transfers as common manual payments. Orders paid this way are marked unpaid (pending) on the Orders page; after the store receives the money it marks the order as paid on the order page and fulfils it as usual. Shopify does not charge its third-party transaction fee on manual payments. The page describes no native COD fee and no native rule to limit COD by order value or region; those need a payment customization app or a checkout partner. How to apply: in reports, keep COD orders that were never paid (refused or returned to origin) out of revenue and gross profit until cash is collected, and reconcile courier COD remittances against orders marked paid.",
+    "conditions": "Shopify stores offering cash on delivery, mainly in India, the Middle East and Southeast Asia.",
+    "fails_when": "The store uses a third-party checkout or COD app that records payment status differently.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "How does cash on delivery work on Shopify?",
+      "When should I mark a COD order paid?",
+      "Can I add a COD fee in Shopify?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6186",
+    "evidence": {
+      "where": "Manual payment methods page: types, order status and marking orders as paid"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SET-6187",
+    "modules": [
+      "SET",
+      "CRO"
+    ],
+    "topics": [
+      "payments",
+      "checkout customization"
+    ],
+    "claim": "Shopify lets Basic and higher plans sort, reorder, hide and rename payment methods at checkout through payment customization apps; custom apps built with Shopify Functions are Plus only.",
+    "body": "Shopify's checkout customization page says payment customization can sort, reorder, hide and rename payment methods (and, on Plus, set payment terms) by installing a payment customization app from the Shopify App Store, and that a store can run more than one such app. Public apps built with Shopify Functions work on Basic and higher plans; custom apps built with Functions need Shopify Plus. In the US and Canada, custom settings on credit card fields do not apply at checkout. How to apply: this is the native route to rules such as hiding cash on delivery above an order value or for certain pincodes, or listing UPI and prepaid options first; check the chosen app's conditions before promising a rule, because the help page does not list them.",
+    "conditions": "Shopify stores on Basic or higher using Shopify's own checkout.",
+    "fails_when": "The store sends buyers to a third-party checkout, where that provider's rules apply instead.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I hide cash on delivery for big orders on Shopify?",
+      "How do I reorder payment methods at checkout?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6187",
+    "evidence": {
+      "where": "Payment customization section and eligibility table"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SET-6204",
+    "modules": [
+      "SET"
+    ],
+    "topics": [
+      "international selling",
+      "duties and import taxes"
+    ],
+    "claim": "Charging duties at Shopify checkout is set per market and needs HS codes, a DDP-capable label carrier and no Shopify Fulfillment Network; wrong product data can still leave buyers a bill on delivery.",
+    "body": "Shopify's help centre lists what a store needs to collect duties and import taxes at checkout: HS codes on products, a carrier that supports Delivered Duty Paid labels if the store buys labels through Shopify, and not using Shopify Fulfillment Network. It is turned on per market with the 'Collect duties and import tax' setting. Amounts are estimates set from each product's classification, its country of origin and the destination's rules; without an HS code, Shopify falls back to description and category, and without those the result is likely to be inaccurate. Inaccurate data might lead to more duties being charged to the customer on delivery. A transaction fee applies to these orders (0.85% with Shopify Payments, 1.5% with other gateways, per the page at the time read), even when the calculated amount is zero. Stores that do not meet the requirements can use a third-party app. How to use it: add HS codes and country of origin to every product before opening a market, then test a checkout to that country.",
+    "conditions": "Shopify stores selling across borders; fee levels as shown on the help page when read, recheck before quoting.",
+    "fails_when": "The store ships through Shopify Fulfillment Network or a carrier without DDP labels.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "0.85% fee with Shopify Payments, 1.5% with other gateways (recheck)"
+    ],
+    "asks": [
+      "How do I charge duties at checkout on Shopify?",
+      "Why did my international customer get a customs bill?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6204",
+    "evidence": {
+      "where": "Requirements, transaction fees and accuracy sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  }
+]

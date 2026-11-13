@@ -9,10 +9,11 @@ import type { Env } from "./env.ts";
 import { AREAS } from "./core/types.ts";
 import { getRole, listRoles } from "./modules/directory/roles.ts";
 import { listPersonas, searchPersonas } from "./modules/directory/service.ts";
-import { agentPayload, featuredPayload, HOME_FEATURED } from "./modules/directory/routes.ts";
+import { agentPayload, featuredPayload, HOME_FEATURED, verticalPayload } from "./modules/directory/routes.ts";
 import { areaLabel, type AgentProfile } from "./modules/directory/views.ts";
 import { groupByNature, lowerFirst, workLine, workLineText } from "./modules/directory/work.ts";
-import { AGENTS_TITLE, agentTitle, CONNECT_TITLE, GUIDES_TITLE, roleTitle, SITE_SUFFIX } from "./modules/directory/titles.ts";
+import { AGENTS_TITLE, agentTitle, CONNECT_TITLE, ECOMMERCE_TITLE, GUIDES_TITLE, roleTitle, SITE_SUFFIX } from "./modules/directory/titles.ts";
+import { verticalIndex } from "./modules/knowledge/service.ts";
 import type { Persona } from "./core/types.ts";
 import { publicProfile, publicProfileSlugs, recordShareVisit, type PublicProfile } from "./modules/experts/profiles.ts";
 
@@ -175,7 +176,7 @@ async function agentsPage(env: Env, url: URL): Promise<PageView> {
     status: 200, index: !filtered, path: "/agents",
     title: AGENTS_TITLE,
     description: clip(`${everyone.length} named AI agents for marketing, sales, finance, operations and more. Each one is free to download or load into your own AI.`, 160),
-    body: `<h1>AI agents</h1><p>${everyone.length} named agents, each hired for a job role. Every one is free.</p>${agentsByArea(everyone)}`,
+    body: `<h1>AI agents</h1><p>${everyone.length} named agents, each hired for a job role. Every one is free.</p><p><a href="${ECOMMERCE_PATH}">Run an online store? Meet the e-commerce team</a></p>${agentsByArea(everyone)}`,
   };
 }
 
@@ -266,12 +267,64 @@ function connectPage(): PageView {
   };
 }
 
+/** /e-commerce: the e-commerce team (agents with vertical "ecommerce") and its knowledge library. */
+export const ECOMMERCE_PATH = "/e-commerce";
+const ECOMMERCE = "ecommerce";
+export const ECOMMERCE_DESCRIPTION = "A team of free AI agents for online stores, built from expert e-commerce sources. Load one into your own AI, or ask the library what works.";
+
+/** What GET /api/knowledge/:vertical returns (src/modules/knowledge/routes.ts), so the page can carry the same answer.
+ *  test/pages.test.ts checks the two stay equal. */
+function librarySummary(file: NonNullable<Awaited<ReturnType<typeof verticalIndex>>>["file"]) {
+  const { vertical, counts, sources, cards } = file;
+  return {
+    id: vertical.id, name: vertical.name, summary: vertical.summary, updated: vertical.updated,
+    cards: cards.length, sources: sources.length, baseline: cards.filter(c => c.scope === "baseline").length,
+    modules: vertical.modules.map(m => ({ code: m.code, name: m.name, cards: counts[m.code] ?? 0 })),
+    tiers: vertical.tiers,
+  };
+}
+
+async function ecommercePage(env: Env): Promise<PageView> {
+  const everyone = await listPersonas(env);
+  const payload = verticalPayload(everyone, ECOMMERCE);
+  const byId = new Map(everyone.map(p => [p.id, p]));
+  const team = payload.agents.map(a => byId.get(a.id)!);
+  // The library is a built file (scripts/build-packs.mjs); until it is built the page says it is on its way.
+  const built = await verticalIndex(env, ECOMMERCE).catch(() => null);
+  const library = built ? librarySummary(built.file) : null;
+  const origin = originOf(env);
+  const lead = team[0];
+  const teamHtml = lead
+    ? `<p>${esc(lead.name)}, ${esc(lead.title)}, leads the team.${team.length > 1 ? ` ${team.length - 1} specialists each own one part of the store.` : ""}</p><ul>${team.map(agentLine).join("")}</ul>`
+    : "<p>The team is on its way.</p>";
+  const modules = library?.modules.filter(m => m.cards > 0) ?? [];
+  const libraryHtml = library && library.cards > 0
+    ? `<p>${library.cards} card${library.cards === 1 ? "" : "s"} from ${library.sources} source${library.sources === 1 ? "" : "s"}. A card is one tested idea from a trusted source, with when it holds and when it fails.</p><ul>${modules.map(m => `<li>${esc(m.name)}: ${m.cards} card${m.cards === 1 ? "" : "s"}</li>`).join("")}</ul><p>Each card has a trust level from 1 to 4: 1 is the platform's own guides, 2 is large studies, 3 is a named seller with proof, 4 is opinion.</p>`
+    : "<p>The library is on its way.</p>";
+  return {
+    status: 200, index: true, path: ECOMMERCE_PATH,
+    title: ECOMMERCE_TITLE,
+    description: ECOMMERCE_DESCRIPTION,
+    jsonLd: [
+      { "@context": "https://schema.org", "@type": "CollectionPage", name: "AI agents for e-commerce stores", description: ECOMMERCE_DESCRIPTION, url: `${origin}${ECOMMERCE_PATH}`,
+        isAccessibleForFree: true, publisher: { "@type": "Organization", name: SITE, url: LIBRARY } },
+      { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Agents", item: `${origin}/agents` },
+        { "@type": "ListItem", position: 2, name: "E-commerce", item: `${origin}${ECOMMERCE_PATH}` },
+      ] },
+    ],
+    body: `<p><a href="/agents">All agents</a></p><h1>AI agents for your online store</h1><p>A team that knows e-commerce, built from expert sources, free to use in your own AI. Made for Shopify stores in India and the US, with Amazon as a second place to sell.</p><h2>The team</h2>${teamHtml}<h2>The library</h2>${libraryHtml}<h2>How to start</h2><ol><li>Pick an agent. Start with the team lead, or the specialist for the job.</li><li>Load it in your AI. <a href="/guides/use-an-agent-pack">Read the guide</a> or <a href="/connect">connect your AI</a>.</li><li>Ask your first job, in your own words.</li></ol>`,
+    boot: { [`/api/agents?vertical=${ECOMMERCE}`]: payload, ...(library ? { [`/api/knowledge/${ECOMMERCE}`]: library } : {}) },
+  };
+}
+
 async function viewFor(env: Env, url: URL): Promise<PageView> {
   const path = url.pathname.replace(/\/+$/, "") || "/";
   if (path === "/") return homePage(env);
   if (path === "/agents") return agentsPage(env, url);
   if (path === "/guides") return guidesPage();
   if (path === "/connect") return connectPage();
+  if (path === ECOMMERCE_PATH) return ecommercePage(env);
   let m = path.match(/^\/agents\/([a-z0-9-]+)$/);
   if (m) return agentPage(env, m[1]);
   m = path.match(/^\/agents\/([a-z0-9-]+)\/files\/.+$/);
@@ -400,7 +453,7 @@ export async function sitemapXml(env: Env): Promise<Response> {
   const everyone = await listPersonas(env);
   const roles = listRoles().filter(r => everyone.some(p => p.role === r.id));
   const paths = [
-    "/", "/agents", "/connect", "/guides", ...GUIDES.map(g => `/guides/${g.slug}`),
+    "/", "/agents", ECOMMERCE_PATH, "/connect", "/guides", ...GUIDES.map(g => `/guides/${g.slug}`),
     ...roles.map(r => `/agents?role=${encodeURIComponent(r.id)}`),
     ...everyone.filter(p => p.kind === "house").map(p => `/agents/${p.id}`),
     ...(await publicProfileSlugs(env)).map(slug => `/experts/${slug}`),
@@ -421,6 +474,7 @@ export async function llmsTxt(env: Env): Promise<Response> {
     "",
     "## Use the agents",
     "",
+    `- [E-commerce team](${origin}${ECOMMERCE_PATH}): AI agents built only for online stores, and a library of expert e-commerce cards you can ask (${origin}/api/knowledge/ecommerce/ask?q=...).`,
     `- [Connect your AI](${origin}/connect): add the AI Blocks MCP server (${origin}/mcp) once, then ask your AI to load an agent with load_agent.`,
     `- [Agent list (JSON)](${origin}/api/agents): every agent with its role, area and outcomes.`,
     `- [Pack index (JSON)](${origin}/packs/index.json): every pack's files.json and zip.`,

@@ -20,6 +20,7 @@ A quick answer skips to the reply, but its facts still need a source.
 | `context/README.md` | When you capture: what to capture for each kind of work, and where it goes. |
 | `playbook.md` | For your deliverables, intake per job, method and "Rules I learned". |
 | `knowledge.md`, `sources.md` | For a fact, a number or a decision rule, each with its source and date. |
+| `knowledge-map.md` | To find which section answers a question before you open a file. In a coding app, `node tools/ask-knowledge.mjs "<question>"` returns the passages with their sources. |
 | `soul.md`, `personality.md` | Before your first reply: how you think and sound. They never change facts. |
 | `access.md` | Before you use or ask for any tool. |
 | `OUTPUT-POLICY.md` | Facts, readiness, native delivery and whose style wins. |
@@ -37,6 +38,7 @@ You do real work in the client's tools at the level they choose for each tool. *
 - At level 3, show the action list and limits and get a yes before the first live action. Ask again before anything outside the limits or that can't be undone.
 - Always get a fresh yes, even at level 3, for job offers, binding quotes or contracts, dispute evidence, legal or supplier claims, formal complaint replies, deleting data and any new recipient of money. Moving money and changing bank or payout details stay with the client: prepare them at level 2.
 - Log every action (what, where, when, result) and report it. Stop and ask on surprises such as errors, spend spikes or policy warnings. The client can lower a level at any time.
+- When a long chat is summarised or restarted, carry these forward word for word: each tool's access level and limits, every "ask first" rule above, and the job's acceptance tests. Never act on a summary that lost them; ask again.
 
 ## Rules
 

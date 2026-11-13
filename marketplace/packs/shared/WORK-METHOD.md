@@ -27,6 +27,8 @@ Unless the slice is none, run `node tools/brand-file.mjs status --for <kind>` an
 
 Save the slice as `context/facts.md`; read only that. Use no fact without a source and date, or from a RECHECK line.
 
+**Look in your own pack first:** `node tools/ask-knowledge.mjs "<question>"`, `ask_agent_knowledge` or `knowledge-map.md`. Use only what it returns, with sources; recheck a STALE one. A weak match means ask or research, never guess.
+
 **Can the buyer act today?** Confirm the thing sold is live, in stock, at the stated price and link. If not, build for the option that works and say so in your first line.
 
 ## 2. Taste and tools
@@ -41,7 +43,7 @@ First check the proven levers in the job skill against the live asset.
 
 At full depth, make about 3 candidates of the part that decides the outcome, as real work, not descriptions. Light and standard use an expert draft and the plain yardstick; full adds a creative draft; team uses specialist parts and a lead. One is the expert's standard playbook done excellently; clever ones must beat it. They differ on at least two of: promise, proof, structure, buyer moment, offer, visual world. Also write a plain one-pass answer from the brief alone: the yardstick.
 
-Give the brief, spec and unlabelled drafts to a fresh reviewer who has not seen your reasoning (else label the pass SAME-CONTEXT). They check each acceptance test, pick a base and name what to graft. If none passes, make one more round only.
+Give the brief, spec and unlabelled drafts to a fresh reviewer who has not seen your reasoning (else label the pass SAME-CONTEXT). They check each acceptance test, pick a base and name what to graft. If none passes, make one more round only. `node tools/blind-review.mjs` shows the drafts in both orders; a pick counts only when both agree.
 
 ## 4. Build: the craft floor
 
@@ -63,7 +65,7 @@ A fresh reviewer (as in step 3) gets only the client's brief, the finished deliv
 4. What the client must ask before using it.
 5. What can be cut.
 
-Remove each unsourced claim, or rewrite it to what the source says. Never flag or footnote it. Fix 1, 3 and 4, cut 5. Run `node tools/check-handover.mjs <deliverable> <plain answer> --profile <family>` and fix every hit. Run the v3 reading and proof checks; render visual work at phone and desktop sizes, inspect it, then repair. Last, a fresh reader chooses between anonymous final and plain. Lower clarity vetoes the final; choose the clearer usable draft.
+Remove each unsourced claim, or rewrite it to what the source says. Never flag or footnote it. A cited source must say what the line claims, or the citation goes. Fix 1, 3 and 4, cut 5. Check with outside evidence (a tool run, an opened source, facts.md), never by rereading alone. Two repair rounds at most; a step that fails twice the same way needs a new approach or a question. Run `node tools/check-handover.mjs <deliverable> <plain answer> --profile <family>` and fix every hit. Run the v3 reading and proof checks; render visual work at phone and desktop sizes, inspect it, then repair. Last, a fresh reader chooses between anonymous final and plain. Lower clarity vetoes the final; choose the clearer usable draft.
 
 **Gates.** Answers 1 and 2, the buyer-can-act check, access, the finished format, the hand-over check and the job skill's own gates are pass or fail. No craft score makes up for a failure.
 
@@ -75,4 +77,4 @@ Remove each unsourced claim, or rewrite it to what the source says. Never flag o
 - Nothing internal reaches the client. Supporting detail goes in an appendix inside the deliverable; open questions in one short "To confirm" list.
 - Headings state the point; sentences are short; tables only compare.
 
-Keep working notes in `DECISIONS.md`. Record client feedback with `node tools/brand-file.mjs learn`. Add shared lessons to "Rules I learned" in playbook.md: scoped, naming what won and failed. Opted-in outcome signals propose changes; blind evaluation decides.
+Keep working notes in `DECISIONS.md`. Record client feedback with `node tools/brand-file.mjs learn`. Add shared lessons to "Rules I learned" in playbook.md: scoped, naming what won and failed, and checked against the rules already there first (add, sharpen, replace or skip). Opted-in outcome signals propose changes; blind evaluation decides.

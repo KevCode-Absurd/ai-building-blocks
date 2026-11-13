@@ -1,0 +1,589 @@
+[
+  {
+    "id": "SEC-0001",
+    "modules": [
+      "SEC",
+      "AEO"
+    ],
+    "topics": [
+      "crawler and agent allowlists",
+      "telling wanted agents from unwanted ones"
+    ],
+    "claim": "Keep Common Crawl's CCBot unblocked: its monthly open web snapshot feeds the training data of major AI models, so blocking it removes the store from that pipeline.",
+    "body": "Many stores and bot-protection settings block crawlers broadly, and some brands deliberately block AI bots. The speaker's argument is that Common Crawl's crawler, CCBot, builds a monthly open snapshot of the web that AI labs download and filter for model training, so being crawlable by it is how a brand's facts can end up inside future models, while retrieval-time agents determine whether the brand is cited in live answers. Both need access. How to apply: check robots.txt, firewall and bot-management rules for CCBot and the main AI search and assistant agents, and allow the ones you want; make key product, comparison and policy pages fast and readable without heavy client-side rendering, since he says slow pages fare badly with AI fetchers; keep content fresh. Decide deliberately rather than by default: a brand that does not want its content used for training may still allow retrieval agents. Verify agent user agents and IP ranges against each operator's published documentation, because spoofed user agents are common. His figure that about 60 percent of searches are now agent-driven is unsourced.",
+    "conditions": "Any ecommerce site using bot management, a WAF or robots.txt rules, especially those that block unknown crawlers by default.",
+    "fails_when": "Brands with legal or licensing reasons to keep content out of training data; sites under scraping attack where a spoofed CCBot user agent must be verified before allowing.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Common Crawl snapshot built monthly"
+    ],
+    "asks": [
+      "Should I block AI crawlers from my store?",
+      "What is CCBot and should I allow it?",
+      "Our bot protection blocks unknown crawlers, could that hurt AI visibility?",
+      "How do I get my brand into future AI model training?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0168",
+    "evidence": {
+      "where": "Agentic website optimisation section (Common Crawl, CCBot)"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SEC-0002",
+    "modules": [
+      "SEC",
+      "AEO"
+    ],
+    "topics": [
+      "crawler and agent allowlists",
+      "robots and agent directives"
+    ],
+    "claim": "About 5.9% of 140 million sites block GPTBot, often by accident; Cloudflare's robots.txt AI-bot setting is on by default, so check robots.txt for AI crawler disallows.",
+    "body": "Ahrefs found roughly 5.9% of 140 million websites blocking OpenAI's GPTBot in robots.txt. Many did not mean to: rules are inherited from old templates, and Cloudflare has a feature that manages AI bot traffic through robots.txt which is now enabled by default, adding disallow rules without the owner editing anything. A blocked assistant crawler cannot read your pages, which caps how often you are cited or recommended, however good the content. The 30-second check: open yourdomain.com/robots.txt and look for disallow lines next to GPTBot, OAI-SearchBot, ClaudeBot and Google-Extended. Decide deliberately per bot: search and citation crawlers (OAI-SearchBot and similar) send discovery and referral traffic; training crawlers (GPTBot, Google-Extended) feed future models. Some brands allow search bots and block training bots. If you sit behind Cloudflare, review its AI crawler controls as well as the file itself. Recheck after any theme change, platform migration or CDN setting change, since these can rewrite the file.",
+    "conditions": "Any store wanting assistant citations, especially sites behind Cloudflare or migrated from older templates.",
+    "fails_when": "The brand has decided to block training crawlers for content-licensing or copying reasons; then block training bots specifically while leaving search and citation bots open, rather than allowing everything.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about 5.9% of 140 million sites block GPTBot"
+    ],
+    "asks": [
+      "Is my store accidentally blocking ChatGPT?",
+      "Should I block AI bots in robots.txt?",
+      "We use Cloudflare, could that be stopping AI from reading our site?",
+      "Which AI crawlers should I allow?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0181",
+    "evidence": {
+      "where": "technical section on not blocking AI crawlers"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "SEC-0003",
+    "modules": [
+      "SEC",
+      "SET"
+    ],
+    "topics": [
+      "velocity and fraud rules",
+      "checkout and login protection"
+    ],
+    "claim": "AVS is off by default in Shopify Payments because fraud analysis already screens risk; turning it on can raise false declines, so review order risk reports first.",
+    "body": "In Shopify Payments the fraud prevention settings are at Settings, Payments, Shopify Payments, Manage, Fraud prevention. There you can require address verification (AVS) and CVV and choose how checkout handles a billing address that does not match. Shopify's guide notes AVS is switched off by default because the built-in fraud analysis already handles high-risk transactions separately, and that enabling AVS on top of it can increase false declines of legitimate orders (for example customers whose bank holds an old address). So the order of work is: first look at the order risk reports to see how many fraudulent orders actually get through and at what risk level; then decide whether stricter AVS rules are worth losing some good customers. Handle the gap with automation instead of blanket rules: in Shopify Flow, use the order risk triggers to auto-capture low-risk orders, send internal alerts for medium risk, put high-risk orders in a manual review queue, and cancel orders matching known fraud patterns. Flow includes pre-built fraud workflow templates.",
+    "conditions": "Shopify stores using Shopify Payments and its fraud analysis.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [],
+    "asks": [
+      "Should I turn on address verification in Shopify Payments?",
+      "Good customers are getting declined at checkout, could AVS be the cause?",
+      "How do I automatically hold high-risk orders on Shopify?",
+      "Where are the fraud settings in Shopify Payments?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0219",
+    "evidence": {
+      "where": "'Configure fraud prevention rules in Shopify Payments' and 'Use Shopify Flow to automate high-risk order handling'"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEC-0004",
+    "modules": [
+      "SEC",
+      "FIN"
+    ],
+    "topics": [
+      "chargeback spike patterns",
+      "velocity and fraud rules"
+    ],
+    "claim": "Most card processors flag merchants whose chargeback rate passes 0.9%, and above 1% can stop accepting their cards; each chargeback costs about $128 in fees and internal costs.",
+    "body": "Shopify's security guide gives the thresholds processors use: a chargeback rate above about 0.9% of transactions gets a store flagged, and above 1% processors can stop accepting cards altogether, which for an online store means it cannot take payment. Each chargeback costs on average $128 in third-party fees and internal handling, on top of the lost product and revenue. Card-not-present fraud usually starts with card testing, where fraudsters run small orders to check stolen numbers before larger fraud, so a sudden run of small, unusual orders is an early warning before chargebacks arrive weeks later. The worked customer example: Maine Lobster Now had fraud chargebacks at 0.25% of transactions and after moving to Shopify Payments with integrated fraud tools fell to 0.025%, a 93% reduction. How to use it: track chargeback rate weekly as a share of transactions, set an internal alert well below 0.9% (for example 0.5%), investigate card-testing patterns immediately, and when the rate rises tighten verification (3D Secure, CVV, risk-based order review) before the processor acts. Confirm the exact thresholds with your own processor, since card network programmes and processor rules differ.",
+    "conditions": "Card-accepting online stores; thresholds as stated by Shopify for most processors.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "processor flag above about 0.9% chargeback rate",
+      "above 1% processors can stop accepting cards",
+      "about $128 average cost per chargeback",
+      "Maine Lobster Now fraud chargebacks 0.25% to 0.025% (93% reduction)"
+    ],
+    "asks": [
+      "What chargeback rate gets my store in trouble with the payment processor?",
+      "How much does a chargeback actually cost us?",
+      "Our chargebacks are climbing, at what point do we risk losing card payments?",
+      "What is card testing and how do I spot it?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0219",
+    "evidence": {
+      "where": "'The real cost of ecommerce security failures', Chargebacks section"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEC-0005",
+    "modules": [
+      "SEC",
+      "SET"
+    ],
+    "topics": [
+      "checkout and login protection",
+      "velocity and fraud rules"
+    ],
+    "claim": "Shopify Payments applies 3D Secure only to higher-risk transactions; an authenticated payment shifts fraud chargeback liability to the card issuer. Only 32.4% of stores use 3DS.",
+    "body": "3D Secure adds a one-time code or biometric check at payment. Shopify Payments applies it dynamically: only higher-risk transactions see the extra step, so most legitimate customers check out without friction. When a cardholder completes 3DS, liability for a fraudulent chargeback on that transaction moves from the store to the card issuer, so Visa and Mastercard fraud disputes on authenticated payments are no longer the merchant's loss. Shopify cites that only 32.4% of store owners use 3DS at all. Alongside it, Shopify's machine-learning fraud analysis scores every order low, medium or high risk using AVS, CVV, IP address, proxy detection and unusual patterns, and eligible US stores on Shopify Payments can use Shopify Protect, which guarantees payment on protected orders and covers the chargeback and dispute fee. When choosing any other gateway, Shopify's checklist is PCI DSS certification at the processor level, tokenisation of card data and support for 3DS 2.0. For a store paying off fraud chargebacks, check whether risk-based 3DS is active before adding blanket friction such as CAPTCHAs or manual review of every order.",
+    "conditions": "Stores on Shopify Payments (dynamic 3DS); liability shift applies to authenticated card transactions; Shopify Protect only for eligible US merchants.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "32.4% of store owners implement 3DS (as cited by Shopify)"
+    ],
+    "asks": [
+      "How do I make the bank responsible for fraudulent chargebacks?",
+      "Does 3D Secure hurt conversion on Shopify?",
+      "We keep losing fraud disputes, what should we turn on in Shopify Payments?",
+      "What is Shopify Protect and who can use it?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0219",
+    "evidence": {
+      "where": "'Dynamic 3D Secure checkout', 'Fraud analysis' and 'Shopify Protect' sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEC-0006",
+    "modules": [
+      "SEC",
+      "SET",
+      "FIN"
+    ],
+    "topics": [
+      "app and plugin permission risk",
+      "checkout and login protection"
+    ],
+    "claim": "Stores processing under 20,000 card transactions a year are PCI Level 4 (annual self-assessment); on Shopify the merchant's job is never storing card numbers outside checkout.",
+    "body": "PCI DSS has 12 core requirements and applies to every business that accepts cards, whatever its size. Most small online stores fall into Level 4, defined in the guide as fewer than 20,000 transactions a year, which requires an annual self-assessment questionnaire rather than a formal third-party audit. Shopify says self-hosted stores also face quarterly vulnerability scans and sometimes a qualified assessor, costing small businesses roughly $1,000 to $10,000 a year. On Shopify, compliance is handled at platform level, and the merchant's responsibility is not to introduce card data anywhere else: never ask customers for card details outside checkout, and never store card numbers in order notes, emails or spreadsheets. The other merchant-side duties under Shopify's shared responsibility model: two-step authentication on every admin account, not just the owner (required for Shopify Payments; passkeys supported); audit installed apps in Settings, Apps and sales channels, removing unused ones and checking each app's data permissions; prefer apps with Built for Shopify status and review scores above 3.75; and train staff on phishing, which IBM's 2025 report names as the most common breach entry point at 16%.",
+    "conditions": "Shopify-hosted stores; Level 4 threshold as described in the guide (card brand rules govern the exact levels).",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "PCI Level 4: fewer than 20,000 transactions a year, annual self-assessment",
+      "self-managed PCI compliance about $1,000 to $10,000 a year for small businesses",
+      "prefer apps with review scores above 3.75",
+      "phishing 16% of breaches (IBM 2025, as cited)"
+    ],
+    "asks": [
+      "Do I need PCI compliance if I use Shopify?",
+      "What PCI level is a small online store?",
+      "Is it okay to save customer card numbers in an order note or spreadsheet?",
+      "How do I check which Shopify apps can access my customer data?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0219",
+    "evidence": {
+      "where": "'What PCI DSS actually means for your store', 'Enable two-step authentication' and 'Keep apps and third-party integrations audited'"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEC-0007",
+    "modules": [
+      "SEC"
+    ],
+    "topics": [
+      "telling wanted agents from unwanted ones",
+      "checkout and login protection",
+      "CAPTCHA tradeoffs and conversion cost"
+    ],
+    "claim": "Gate AI agents by action, not identity: let them browse freely, and apply verification only at checkout, account changes, loyalty redemption and gift-card balance checks.",
+    "body": "Blanket bot blocking now costs sales: legitimate shopping agents (ChatGPT, Perplexity and in-browser agents) browse headlessly, fail honeypots and invisible CAPTCHAs, and get falsely declined, while sophisticated malicious automation mimics human behaviour well enough to pass. Akamai reported AI bots at nearly 48 percent of commerce traffic on its network as of December 2025, and vendors report most AI bot traffic passing unrestricted because sites cannot tell agents apart. The practical model is a four-step ladder tied to what the visitor is trying to do: permit low-risk actions (catalogue, search, product pages, reviews); verify when behaviour shifts (a sudden burst of add-to-carts or price page sweeps); challenge with step-up authentication or an AI-resistant challenge for risky actions (checkout, address or email change, loyalty points, gift card balance checks); prevent known-malicious patterns (card testing, credential stuffing, inventory hoarding on drops). Start by listing which agents visit which pages, write a short policy of allowed, rate-limited and blocked actions, then enforce it at the CDN or bot-management layer rather than in theme code.",
+    "conditions": "Stores receiving AI agent traffic and using a CDN or bot-management product (Cloudflare, Shopify's built-in bot protection, Akamai, DataDome or similar); most urgent for brands with product drops, gift cards or loyalty balances.",
+    "fails_when": "Sites under an active credential-stuffing or card-testing attack, where temporarily tightening everything is correct until the attack subsides; and very small stores whose platform gives no per-action control, where platform defaults are the practical limit.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "AI bots about 47.9 percent of commerce traffic on Akamai's network (Dec 2025, vendor-reported)",
+      "85 percent of commerce firms had an API incident in a year; 22 percent know which APIs expose sensitive data (vendor survey)",
+      "about $5.13 total cost per $1 of direct fraud loss for US retailers (cited)"
+    ],
+    "asks": [
+      "should i block ai bots from my store",
+      "chatgpt shopping agents are getting blocked at checkout, what do i do",
+      "how do i stop bots without hurting real customers",
+      "where should i put captchas on my store",
+      "how do i protect gift cards and loyalty points from bots"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0222",
+    "evidence": {
+      "where": "Sections 1.2, 4.3 (Darwinium permit/verify/challenge/prevent) and part 2 'Frictionless Browsing, Guarded Checkouts'",
+      "quote": "allow agents to research freely and apply stringent verification"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "SEC-0008",
+    "modules": [
+      "SEC",
+      "CXP"
+    ],
+    "topics": [
+      "app and plugin permission risk",
+      "layer 7 flooding"
+    ],
+    "claim": "Lock down your own AI shopping assistant: no authority to override prices or policies, rate limits, and alerts for token freeloading, where bots route workloads through your endpoint.",
+    "body": "A store's public AI chatbot is a new attack surface. Two patterns from the report: first, 'leaky faucet' probing, where automated agents systematically vary inputs to talk a chatbot into breaking business rules (issuing discounts, approving refunds, revealing other customers' order data); second, token freeloading, where bot networks send their own processing or model queries through a retailer's public AI endpoint, running up the retailer's model bill and degrading service for real shoppers. Prompt injection hidden in content the assistant reads (reviews, forum posts, product Q&A) can also redirect it. Controls: (1) the assistant should read policy and catalogue data but have no write authority over prices, discounts, refunds or addresses; route those to deterministic systems or a human; (2) require authentication and step-up before it touches any order or account; (3) rate-limit per session and per IP, cap response length and spend, and block off-topic requests; (4) sanitise user and third-party text before it reaches the model; (5) monitor cost per conversation and alert on spikes, which flag freeloading early.",
+    "conditions": "Stores running an LLM-powered chatbot, support agent or shopping assistant on their site or in support channels.",
+    "fails_when": "Stores using a hosted support bot whose vendor already enforces scoping and rate limits; controls still need checking but not building. Over-restricting can make the assistant useless, so scope by action rather than disabling it.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "is my ai chatbot a security risk",
+      "can someone trick our chatbot into giving discounts",
+      "our chatbot costs spiked, could it be bots",
+      "what permissions should a store's ai assistant have"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0222",
+    "evidence": {
+      "where": "Part 2, section 2 'Anatomy of the Attack' (leaky faucet, token freeloading) and section 4 hardening",
+      "quote": "trick the chatbots into overriding established business rules"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "SEC-0009",
+    "modules": [
+      "SEC"
+    ],
+    "topics": [
+      "verified agent traffic",
+      "agentic checkout handling"
+    ],
+    "claim": "Treat cryptographic agent identity (Web Bot Auth, Visa Trusted Agent Protocol, Mastercard Agent Pay) as a passport, not a pass: keep monitoring and stop verified agents whose intent drifts.",
+    "body": "Agent identity standards let a well-behaved agent prove who it is and whom it acts for: Web Bot Auth uses HTTP message signatures, Visa's Trusted Agent Protocol (built with Cloudflare and supported by processors and Shopify) signs the agent's identity and stated intent, Mastercard Agent Pay and Know-Your-Agent token schemes do similar for payments. Verification answers who; it does not answer what the agent is doing now. The model the report describes is passport plus immigration officer: the protocol is the passport, and edge behavioural monitoring checks origin and in-session behaviour. A verified agent arriving from a compromised server, or one that declared browsing intent and then starts scraping prices or testing card numbers, is challenged or removed. How to apply: (1) turn on your CDN's verified-bot and signed-agent recognition so known shopping agents are not falsely declined; (2) give verified agents a dedicated, rate-limited path (an agent rail) with only the permissions each action needs; (3) keep velocity and fraud rules active for them at checkout and account endpoints; (4) review agent traffic monthly as the standards are still settling.",
+    "conditions": "Stores expecting agentic checkout traffic in 2026 and later; CDN or payment stack that supports signed agent recognition (Cloudflare, Akamai, Stripe, Adyen, Shopify).",
+    "fails_when": "Standards and vendor support are still changing quickly, so specific protocol names may be superseded; small stores relying on platform-managed checkout cannot configure agent rails themselves and should use platform settings.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "how do i know if an ai agent visiting my store is legitimate",
+      "what is web bot auth",
+      "should verified ai agents be allowed to check out",
+      "what is visa trusted agent protocol"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0222",
+    "evidence": {
+      "where": "Sections 4.2 (passport/immigration officer model), 4.4 and 7.3",
+      "quote": "A good agent verified by Visa that comes from a bad location"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "SEC-0010",
+    "modules": [
+      "SEC"
+    ],
+    "topics": [
+      "CAPTCHA tradeoffs and conversion cost",
+      "WAF and bot management"
+    ],
+    "claim": "A CAPTCHA alone will not stop a determined bot: human solving services have sold about 1,000 solves for $0.50, while each one costs a real shopper about 10 seconds.",
+    "body": "A CAPTCHA tries to prove a human is present, but attackers rent humans. Solving services take the challenge image from the target site, have low-paid workers or lured users answer it in real time, and return the answer through an API, priced at around 50 cents per 1,000 solves in the lecture's example. Older text CAPTCHAs were also beaten by software: a 2003 paper broke two common open-source versions 92% and 33% of the time, and researchers treat even 1% as broken because attackers get several tries. Meanwhile each challenge costs a genuine visitor about 10 seconds and is hard for people with visual impairments. Invisible, score-based checks (such as reCAPTCHA's background mode) avoid the friction by building a reputation from behaviour and IP history, but they penalise privacy-focused visitors on shared or anonymising IPs. How to apply: do not put a CAPTCHA on every login or checkout; show one only as a step-up after a rate limit or risk score trips, prefer score-based checks for routine traffic, and rely on rate limits, breached-password checks and 2FA as the main controls.",
+    "conditions": "Storefront login, account creation, checkout or form endpoints facing automated abuse; figures date from the lecture series (likely around 2019) and solve prices change.",
+    "fails_when": "Low-value, low-volume attacks where any challenge deters the attacker; score-based checks flag legitimate shoppers on VPNs or privacy browsers and cost conversions.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "about $0.50 per 1,000 human CAPTCHA solves",
+      "about 10 seconds of user time per CAPTCHA",
+      "2003 paper: 92% and 33% break rates on two text CAPTCHAs",
+      "1% break rate counts as broken"
+    ],
+    "asks": [
+      "will adding a CAPTCHA stop bots on my store",
+      "should we put a CAPTCHA on checkout",
+      "bots keep getting past our CAPTCHA, why?",
+      "does a CAPTCHA hurt conversion rate"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0223",
+    "evidence": {
+      "where": "Authentication lecture: CAPTCHA section"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "SEC-0011",
+    "modules": [
+      "SEC"
+    ],
+    "topics": [
+      "rate limiting",
+      "credential stuffing and account takeover"
+    ],
+    "claim": "Set login rate limits per username and per IP at about 10x what the most extreme real user would do, because one office or carrier IP can carry 100 people.",
+    "body": "Brute force (many passwords on one account), credential stuffing (username and password pairs from another site's breach) and password spraying (one weak password across many accounts) all depend on making many login attempts quickly, so capping attempts is the first defence. Count attempts both per username and per IP address: per username stops brute force on one account, per IP stops one machine trying many accounts. The risk is blocking real customers, since a corporate network or mobile carrier can put around a hundred people behind one IP. The lecturer's rule of thumb is to set the limit about an order of magnitude above the most extreme legitimate behaviour you can imagine, then raise it if you see real users blocked. When the limit trips, either delay the response or return a 'too many requests' error, and offer a human check so a real user can continue. The same limit lets you show friendlier 'no account with this email' messages without letting attackers check thousands of emails. Add breached-password checks and a second factor for unrecognised devices on top.",
+    "conditions": "Self-hosted or custom storefronts and customer-account logins (for example WooCommerce or headless builds) where the merchant controls login handling; hosted platforms handle much of this themselves.",
+    "fails_when": "Attacks spread across many residential IPs (low per-IP rates), so per-IP limits miss them; limits set too low lock out shared-network customers; the platform already rate-limits and a second layer just adds friction.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "limit about 10x the most extreme legitimate user",
+      "about 100 users can share one corporate IP"
+    ],
+    "asks": [
+      "how many login attempts should we allow before blocking",
+      "we're getting lots of failed logins on customer accounts, what do we do?",
+      "will rate limiting block real customers on the same wifi",
+      "how do I stop credential stuffing on my store"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0223",
+    "evidence": {
+      "where": "Authentication lecture: brute force, credential stuffing, password spraying, defences"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SEC-6084",
+    "modules": [
+      "SEC",
+      "ADC"
+    ],
+    "topics": [
+      "account access",
+      "two-factor authentication"
+    ],
+    "claim": "A Meta business portfolio can require two-factor login for admins only or for everyone, has a verification status, and must always keep at least one admin.",
+    "body": "Meta's Marketing API reference for the Business object lists a two-factor setting with three values: none, admin_required and all_required. It also lists a verification status (verified, not verified, pending, rejected, expired and others), and an error that says at least one admin is required in a business. In practice a portfolio with one admin who loses their login, or whose personal profile is disabled, leaves nobody able to manage the ad accounts, Pages and datasets inside it. How to apply: add a second trusted admin, set two-factor to all_required, give agencies and freelancers access through partner sharing or employee roles rather than admin, and record who holds each role.",
+    "conditions": "Stores managing ad accounts, Pages, Instagram accounts and datasets through a Meta business portfolio.",
+    "fails_when": "Very small stores where the owner is the only trusted person; a second admin then needs to be a family member or a lawyer-held account the owner trusts, not a freelancer.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Two-factor values: none, admin_required, all_required"
+    ],
+    "asks": [
+      "How do I stop losing my Meta ad account if one login is hacked?",
+      "Should my Meta business portfolio have two admins?",
+      "How do I make two-factor login required for my whole team on Meta?",
+      "What access should my agency have in Meta Business?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6084",
+    "evidence": {
+      "where": "Business reference: two_factor_type updating parameter, verification_status field, error 3914",
+      "quote": "At least one admin is required in Business Manager."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEC-6200",
+    "modules": [
+      "SEC"
+    ],
+    "topics": [
+      "card testing",
+      "velocity and fraud rules"
+    ],
+    "claim": "Card testing now spreads low-volume attempts across thousands of stores through residential proxies; Shopify says its Payments-only model blocks about 90% of attacks on guest card checkouts.",
+    "body": "Shopify describes card testing as fraudsters using a store's checkout to check whether stolen card numbers work. Attackers no longer send fast bursts from one IP address; they spread small numbers of attempts across thousands of merchants and route them through residential proxies, so each attempt looks like a plausible shopper. That makes per-IP blocking and simple rate rules weaker than they were. Shopify says its own machine learning model scores payment attempts before they reach the processor, is available only to merchants using Shopify Payments, blocks about 90% of card testing attacks on guest credit card checkouts and helped merchants get 13% more legitimate sales approved. How to use it: on Shopify Payments, rely on the built-in screening first and add rules for what gets through (small orders, many failed payments, mismatched names and addresses); on a third-party gateway, ask the provider what card testing screening it runs and add your own checkout bot protection.",
+    "conditions": "Shopify stores; the 90% figure applies to guest credit card checkouts on Shopify Payments as reported by Shopify.",
+    "fails_when": "The store uses a third-party gateway, where this model does not run.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "about 90% of card testing attacks on guest card checkouts blocked",
+      "13% more legitimate sales approved"
+    ],
+    "asks": [
+      "What is card testing and does Shopify stop it?",
+      "Why did per-IP blocking stop working against card testers?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6200",
+    "evidence": {
+      "where": "Article body: how attacks have changed, and the Shopify Payments model results"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEC-6201",
+    "modules": [
+      "SEC",
+      "FIN"
+    ],
+    "topics": [
+      "chargeback disputes",
+      "evidence"
+    ],
+    "claim": "Shopify Payments disputes give usually 7 to 21 days for evidence, submit automatically on the due date, can take up to 75 days to decide, and have no appeal; the fee (US $15) returns only if you win.",
+    "body": "Shopify's help page says the store usually has 7 to 21 days to build a chargeback response; the exact due date shows on the dispute in the admin. On Shopify Payments the response is sent to the card company on the due date even if the merchant adds nothing, with basic order information included, and some low-chance disputes are accepted automatically. The disputed amount and the chargeback fee are withdrawn at once; the fee is returned if the merchant wins. Example fees: US $15, Canada $15, UK 10 GBP, Australia 25 AUD. The bank can take up to 75 days after submission to decide (65 to 75 days for inquiries) and the decision is final, with no appeal. Shopify lists evidence by reason: for fraud, AVS and CVV results, IP and device data, 3D Secure records, order history and delivery to the billing address; for item not received, tracking and delivery confirmation; for not as described, the listing at time of purchase, pre-shipment photos, messages and the return policy; for credit not processed, the refund record and policy; for subscription cancelled, the agreement, cancellation policy and records.",
+    "conditions": "Shopify Payments; other gateways set their own windows and fees.",
+    "fails_when": "The store is enrolled in network dispute resolution, where some disputes resolve before becoming chargebacks and have no evidence window.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "usually 7 to 21 days to respond",
+      "up to 75 days for the bank to decide",
+      "US $15 chargeback fee, returned on a win"
+    ],
+    "asks": [
+      "How long do I have to respond to a chargeback?",
+      "What evidence do I send for a fraud chargeback?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6201",
+    "evidence": {
+      "where": "Sections on response time, fees, outcomes and evidence by dispute type"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEC-6202",
+    "modules": [
+      "SEC",
+      "OPS"
+    ],
+    "topics": [
+      "admin access",
+      "app and plugin permission risk"
+    ],
+    "claim": "Shopify collaborators need the store's 4-digit request code and their own two-step login; grant only the permissions the job needs, since removal is permanent and they must re-request.",
+    "body": "Shopify lets outside partners (agencies, developers, freelancers) work in a store through collaborator accounts. The store has a 4-digit collaborator request code under Users, Security; generating a new code invalidates the old one. Partners must turn on two-step authentication or they cannot log in. Collaborators do not count toward the plan's user limit, which tempts owners to add many and forget them. Shopify's advice is to grant only the permissions the partner needs, give only what the owner is comfortable giving, and ask the partner why before granting anything unclear. A collaborator can be removed from Settings, Users; the removal cannot be undone and the partner must send a new request to regain access. How to use it: keep the request code required, rotate it after each project, review collaborators monthly and remove any whose work has ended.",
+    "conditions": "Shopify stores; exact menu labels vary between organisation and single-store admins.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "4-digit collaborator request code",
+      "collaborators do not count toward the user limit"
+    ],
+    "asks": [
+      "How do I give an agency access to my Shopify store safely?",
+      "How do I remove a freelancer from my store?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6202",
+    "evidence": {
+      "where": "Sections on the collaborator request code, permissions and removing a collaborator"
+    },
+    "strength": "platform_rule",
+    "public": true
+  }
+]

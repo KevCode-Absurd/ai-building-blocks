@@ -165,7 +165,7 @@ test("GET /api/agents returns public cards with three outcomes, a turnaround and
   assert.equal(res.body.total, 3);
   assert.deepEqual(res.body.areas, [{ id: "marketing", label: "Marketing", count: 2 }, { id: "content", label: "Content", count: 1 }]);
   const nova = res.body.agents.find((a: any) => a.id === "nova-seo");
-  assert.deepEqual(Object.keys(nova).sort(), ["accent", "area", "area_label", "does", "id", "kind", "mega", "name", "outcomes", "portrait", "ready_in_hours", "role", "tagline", "title"]);
+  assert.deepEqual(Object.keys(nova).sort(), ["accent", "area", "area_label", "does", "id", "kind", "mega", "name", "outcomes", "portrait", "ready_in_hours", "role", "tagline", "title", "vertical"]);
   assert.deepEqual(nova.outcomes, ["An article that ranks for one search", "A landing page that converts search visitors"]);
   assert.equal(nova.ready_in_hours, 24); // the quickest job type behind an outcome
   // Hiring is free: no price, in any form, in the list.

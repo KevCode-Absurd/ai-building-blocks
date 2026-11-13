@@ -1,0 +1,691 @@
+[
+  {
+    "id": "SPD-0001",
+    "modules": [
+      "SPD",
+      "SET"
+    ],
+    "topics": [
+      "app script weight",
+      "measurement method"
+    ],
+    "claim": "Across 1,533 Shopify stores, stores with 0 to 5 third-party services scored a median 74 on mobile; stores with 21 to 30 services scored 44.",
+    "body": "Ecomhint audited 1,533 Shopify stores and found the count of third-party services loaded on a page was the strongest single predictor of performance, with a correlation of r = -0.66 against the performance score. Stores loading 0 to 5 services had a median mobile score of 74; stores loading 21 to 30 had a median of 44. Category matters because some categories carry heavier app stacks: beauty stores loaded a median of 31 third-party services per page and ranked last of 9 Shopify industries for mobile speed, while automotive parts stores loaded a median of 15 and ranked first. Fashion sits between, with sizing charts and shipping-insurance tools adding weight. The mechanism is that Shopify's hosting and caching do not cover app scripts, which load on every page and compete for the main thread, hurting INP as well as load time. Product pages suffer most because they load reviews, variant pickers and buy-now-pay-later widgets. How to apply: count third-party origins per template, remove unused apps and their leftover theme code, defer non-render-critical scripts, and set a performance budget with a maximum script count. The scores are lab scores from the vendor's own tool; confirm wins with field Core Web Vitals at p75.",
+    "conditions": "Shopify stores; vendor dataset of 1,533 stores, lab mobile scores; most useful for app-heavy categories such as beauty and fashion.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [
+      "1,533 Shopify stores in sample",
+      "r = -0.66 between third-party service count and performance score",
+      "median mobile score 74 at 0-5 services",
+      "median mobile score 44 at 21-30 services",
+      "beauty median 31 services, ranked 9th of 9 industries",
+      "automotive parts median 15 services, ranked 1st"
+    ],
+    "asks": [
+      "How many apps is too many on a Shopify store?",
+      "Our Shopify store got slow after installing apps, how much do they matter?",
+      "What actually slows down a Shopify site the most?",
+      "Is my beauty store slower than normal because of all our apps?",
+      "Which apps should I remove first to speed up my store?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0087",
+    "evidence": {
+      "where": "What Slows Down Ecommerce Websites; Third-Party Script Management"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "SPD-0002",
+    "modules": [
+      "SPD"
+    ],
+    "topics": [
+      "image and font strategy",
+      "LCP"
+    ],
+    "claim": "Fix speed in this order: images first (WebP, under 100KB product and 200KB hero), then third-party scripts, then hosting and CDN; never lazy-load above-the-fold images.",
+    "body": "The guide's priority ladder ranks fixes by effort against gain. First, images: compress and convert to WebP, which it says often cuts page weight by 40 to 60% on a typical store; WebP alone is about 25 to 35% smaller than JPEG at equal quality. Size targets are under 100KB per product image and under 200KB for hero banners, with roughly 80% JPEG quality as a starting point and no repeated compression passes. A camera original at 4000x3000 can exceed 5MB. Second, third-party scripts: remove apps not in active use, then defer or async the rest. Third, hosting and CDN. The LCP element on a product page is usually the main product image and on a homepage the hero, so these must load immediately: lazy-loading anything above the fold delays the LCP element and worsens the score, while lazy-loading below-the-fold product grid images is correct. On product pages, render the main image and buy button first and load reviews, related products and widgets after. How to apply: identify the LCP element per template in PageSpeed Insights, check it is not lazy-loaded and is correctly sized, then work down the ladder and confirm with field LCP at p75 below 2.5 seconds.",
+    "conditions": "Any ecommerce platform; the order assumes a typical store where images and apps dominate page weight.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [
+      "40 to 60% page weight cut from image compression and WebP",
+      "WebP 25 to 35% smaller than JPEG",
+      "under 100KB per product image",
+      "under 200KB per hero banner",
+      "about 80% JPEG quality",
+      "LCP under 2.5 seconds, poor above 4 seconds"
+    ],
+    "asks": [
+      "Where do I start if my store is slow?",
+      "What size should product images be for a fast site?",
+      "Should I lazy load all images on my store?",
+      "Our LCP is bad on product pages, what should I fix first?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify",
+      "woocommerce"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0087",
+    "evidence": {
+      "where": "Where to Start: The Speed Fix Priority Ladder; Image Optimization; Lazy Loading Implementation"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SPD-0003",
+    "modules": [
+      "SPD"
+    ],
+    "topics": [
+      "render blocking",
+      "measurement method"
+    ],
+    "claim": "Never cache cart, checkout or account pages; defer session cookies until first add-to-cart or login, and keep tracking parameters out of CDN cache keys to hold 80%+ hit rates.",
+    "body": "Ecommerce caching fails in two directions: too aggressive serves wrong prices, stock or someone else's cart; too timid wastes the CDN. The rules in the guide: cart, checkout and account pages carry visitor-specific data and must never be cached. Session cookies make otherwise identical pages uncacheable, so, following Salesforce Commerce guidance, create the session only when it is needed, at first add-to-cart or login, which keeps anonymous browsing cacheable. Product pages can be cached if price and stock are refreshed by script or given short time-to-live values with purge on change. Static assets with fingerprinted filenames can be cached for a year. At the CDN, include query parameters that change content (page number, variant) in the cache key but exclude marketing tracking parameters such as UTM and click IDs, which otherwise split every ad click into its own cache entry. A well-configured CDN should serve 80% or more of requests from cache; lower hit rates point to config problems or too much dynamic content. Edge caching cuts latency by about 200 to 800 ms for distant visitors, per Cloudflare. How to apply: audit headers per template, check the hit rate in the CDN dashboard, and purge by API on product or code updates.",
+    "conditions": "Self-hosted or headless stores (WooCommerce, custom, headless Shopify) where the brand controls caching and CDN rules; hosted Shopify manages server caching itself with limited control.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [
+      "80%+ CDN cache hit rate target",
+      "200 to 800 ms latency reduction for distant visitors (Cloudflare)",
+      "1-year cache on fingerprinted static assets"
+    ],
+    "asks": [
+      "What pages should I not cache on my WooCommerce store?",
+      "Our CDN cache hit rate is low, why?",
+      "Can I cache product pages if prices and stock change?",
+      "Customers see the wrong cart contents after we added caching, what went wrong?"
+    ],
+    "platforms": [],
+    "platform": [
+      "woocommerce"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0087",
+    "evidence": {
+      "where": "Caching Strategies; What Not to Cache; CDN Configuration Best Practices"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SPD-0004",
+    "modules": [
+      "SPD",
+      "CRO"
+    ],
+    "topics": [
+      "field versus lab metrics",
+      "measurement method"
+    ],
+    "claim": "Size the payoff of a speed fix from field data: published case studies show a 31% LCP gain lifting sales 8% (Vodafone) and CWV work lifting conversion 33% (Rakuten 24).",
+    "body": "The guide collects the speed-to-revenue figures most often cited, with their origins. Vodafone ran an A/B test where a 31% better Largest Contentful Paint produced 8% more sales and a 15% better lead-to-visit rate. Rakuten 24 reported 33% higher conversion rate and 53% more revenue per visitor after Core Web Vitals work (both on web.dev). Google and NitroPack research is cited for up to 8.4% more retail conversions from a 0.1-second improvement, and Google for about 53% of mobile visitors abandoning pages slower than three seconds. HTTP Archive data has roughly 50% of mobile sites passing the Core Web Vitals assessment. These are single-company cases or aggregated studies, not a forecast for any one store. How to apply: judge the site on field data, the Chrome UX Report shown in PageSpeed Insights over a 28-day window at the 75th percentile, against LCP under 2.5 s, INP under 200 ms and CLS under 0.1, not on the 0 to 100 Lighthouse lab score. Prioritise by traffic: a 0.5-second gain on a page with 10,000 monthly visits matters more than 2 seconds on a page with 100. Then measure conversion before and after on that page rather than assuming the case-study lift.",
+    "conditions": "Stores deciding whether to invest in speed work; pages with enough traffic to have CrUX field data.",
+    "fails_when": "Low-traffic pages with no field data, where only lab scores exist; sites already passing all three Core Web Vitals at p75, where further gains show diminishing returns.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Vodafone: 31% better LCP gave 8% more sales and 15% better lead-to-visit",
+      "Rakuten 24: 33% higher conversion rate, 53% more revenue per visitor",
+      "up to 8.4% more retail conversions per 0.1 s (Google and NitroPack, as cited)",
+      "53% of mobile visitors abandon after 3 s (Google)",
+      "about 50% of mobile sites pass CWV (HTTP Archive 2025)",
+      "LCP under 2.5 s, INP under 200 ms, CLS under 0.1 at p75"
+    ],
+    "asks": [
+      "Is it worth paying a developer to speed up my site?",
+      "How much more will I sell if my site gets faster?",
+      "Our PageSpeed score is 60, does that matter for sales?",
+      "Should I trust Lighthouse or PageSpeed Insights?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify",
+      "woocommerce"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0087",
+    "evidence": {
+      "where": "Real-World Results; Research Summary; Lighthouse vs PageSpeed Insights"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "SPD-0005",
+    "modules": [
+      "SPD",
+      "MEA"
+    ],
+    "topics": [
+      "field versus lab metrics",
+      "measurement method"
+    ],
+    "claim": "PageSpeed Insights field data is a rolling 28-day sample of real Chrome users, so a speed fix shows in lab data at once but in field data only weeks later.",
+    "body": "PageSpeed Insights reports two different things. The top section is field data from the Chrome UX Report: real Chrome visitors to the page over the past 28 days, aggregated. The lower section is lab data from Lighthouse: one simulated visit on a mid-tier phone over a mobile connection. They routinely disagree, which is why a page can pass Lighthouse and still fail the Core Web Vitals assessment. Two consequences for measurement. First, a fix shows at once in the lab score, but the field numbers only move as new visits replace old ones across the 28-day window, so judge success by the field figures a few weeks after release, not the next day. Second, when a single URL lacks enough Chrome traffic, PageSpeed Insights shows origin-level data (the site-wide average) instead, and a site with too little traffic overall shows no field data at all. How to apply: use lab runs as a quick check that a change works and broke nothing, log the release date, and gate the decision on mobile field data (the assessed percentile) about four weeks later. When re-testing after edits, confirm the lab snapshot reflects the new version and not a cached one.",
+    "conditions": "Any store using PageSpeed Insights or CrUX to judge speed work; mobile view.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [
+      "28-day rolling field data window",
+      "lab test simulates a mid-tier mobile device on a mobile network"
+    ],
+    "asks": [
+      "Why does my site pass Lighthouse but fail Core Web Vitals?",
+      "I fixed my page speed, why hasn't PageSpeed Insights field data changed?",
+      "How long until speed improvements show up in Google's data?",
+      "What does origin mean in PageSpeed Insights?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify",
+      "woocommerce"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0088",
+    "evidence": {
+      "where": "Field data versus lab data explanation; URL versus origin toggle"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SPD-0006",
+    "modules": [
+      "SPD",
+      "LPG"
+    ],
+    "topics": [
+      "LCP",
+      "image and font strategy"
+    ],
+    "claim": "On Shopify the most common cause of slow LCP is a lazy-loaded or faded-in hero image; load the first hero or slider image eagerly with high fetch priority.",
+    "body": "Largest Contentful Paint on most store pages is the hero banner or the first slide. Many themes and apps apply lazy loading (loading=lazy or a lazysizes class) or a fade-in or slide-in animation to every image, including that first one, which tells the browser the image is unimportant and delays it. In this practitioner's audits that attribute is the usual reason LCP fails; heavy JavaScript blocking time is the next cause. How to apply: inspect the hero image; if it carries a lazy attribute, a lazy class or an entrance animation, change the theme logic so the first slide only uses loading=eager and fetchpriority=high, with no animation, and keep lazy loading for everything below the fold. Compress that image hard, since it is on the critical path, and serve it through Shopify's responsive image sizes rather than a single huge file. Then confirm in field data (Core Web Vitals report or PageSpeed field section) a few weeks later, not only in a Lighthouse run.",
+    "conditions": "Shopify themes with a hero banner or slideshow at the top of home, collection or landing pages.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Why is my Shopify LCP so slow?",
+      "Should I lazy load my hero banner image?",
+      "Our homepage slider loads slowly on mobile, what's the fix?",
+      "What does loading eager do on a Shopify theme?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0091",
+    "evidence": {
+      "where": "Video on fixing CLS and LCP, LCP section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SPD-0007",
+    "modules": [
+      "SPD",
+      "SET"
+    ],
+    "topics": [
+      "CLS",
+      "app script weight"
+    ],
+    "claim": "On Shopify, large layout shift usually comes from an app injecting an element after load, such as a free-shipping bar; use theme-native sections and check desktop CLS separately.",
+    "body": "Cumulative Layout Shift measures content moving after it appears. In this practitioner's audits, the big CLS readings on Shopify stores almost always trace to an app that inserts a snippet once the page has rendered, pushing everything below it down. The worked example was a free-shipping announcement bar added by an app, which every modern theme can already do natively. How to find the culprit: run a speed test, step through the filmstrip screenshots to see which element pushes the page, inspect that element's ID or class, and search the theme and the App Store for the matching app name. Fix by replacing the app feature with the theme's own section, or by reserving fixed space for the element so it cannot push content. Check both mobile and desktop results, because an element can shift on one and not the other, and desktop shifts count too. Rule of thumb from the source: apps are for complex jobs; simple bars, badges and banners belong in the theme.",
+    "conditions": "Shopify stores with failing visual stability or CLS in the Core Web Vitals report.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "What causes layout shift on my Shopify store?",
+      "Our page jumps when it loads, how do I find what's moving?",
+      "Do Shopify apps cause CLS?",
+      "Should I use an app for my announcement bar?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0091",
+    "evidence": {
+      "where": "Video on fixing CLS and LCP, CLS section (free shipping bar app)"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SPD-0008",
+    "modules": [
+      "SPD",
+      "SET"
+    ],
+    "topics": [
+      "image and font strategy"
+    ],
+    "claim": "Shopify only lightly compresses uploads (a 9.8 MB file was served at about 6 MB); upload around 2,000 px wide and compress below 500 KB, ideally 100 to 200 KB.",
+    "body": "A common belief is that Shopify optimises images automatically. It does serve images from its CDN and can generate multiple widths from one upload for responsive srcset markup, but its own compression is conservative: in the practitioner's test a 9.8 MB, 5,700-pixel upload was still delivered at about 6.1 MB. Oversized files then reach phones whenever the theme does not request a smaller width. His working rules: upload images about 2,000 pixels on the long side (3,000 only for full-width banners on large screens), compress before upload to under 500 to 600 KB and preferably 100 to 200 KB, use JPEG unless transparency is needed, replace animated GIFs with compressed MP4 in a video tag, and make each image 100 to 300 pixels larger than the box it displays in so it stays sharp. A whole page should weigh roughly 2 to 3 MB in total, so a single 8 MB hero breaks the budget. He showed a 2.7 MB and a 136 KB version of the same photo that were hard to tell apart on screen. Check that the theme outputs srcset widths so mobile gets a small file.",
+    "conditions": "Shopify stores uploading product, collection and banner images directly from cameras or designers.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "9.8 MB upload served at about 6.1 MB by Shopify",
+      "upload about 2,000 px, up to 3,000 px for full-width banners",
+      "under 500 to 600 KB per image, ideally 100 to 200 KB",
+      "total page weight about 2 to 3 MB",
+      "image 100 to 300 px larger than its display box"
+    ],
+    "asks": [
+      "Does Shopify compress my images automatically?",
+      "What size should product images be on Shopify?",
+      "How many KB should a Shopify image be?",
+      "Our hero image is 8 MB, is that a problem?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0091",
+    "evidence": {
+      "where": "Image optimisation video, misconceptions section"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "SPD-0009",
+    "modules": [
+      "SPD",
+      "MEA",
+      "SET"
+    ],
+    "topics": [
+      "app script weight",
+      "render blocking"
+    ],
+    "claim": "Uninstalled Shopify apps can leave script tags in theme files; search the theme for each removed app's name, and defer non-essential app scripts but never tracking pixels.",
+    "body": "Removing an app from the admin does not always remove the code it added to theme.liquid or other layout files, so the store keeps requesting files from a service you no longer use. After every uninstall, search the theme code editor for the app's name (the example was a reviews app) and delete leftover script tags. For apps you keep, scripts that load in the head and block rendering can often take a defer attribute (or async if defer breaks them); test the app's feature after each change and revert if it stops working. In the practitioner's demo a basic set of common apps (reviews, loyalty, upsell, side cart, Instagram feed) cost about 20 points of lab speed score, and stores drift from 60 to 80 down to 40 or lower as apps accumulate. The exception is analytics and ad pixels: they must load on page load to record visits, so do not delay them, and check they are not installed twice (theme code plus app), which doubles the load and the events. Tools that delay all of Shopify's injected app scripts until user interaction raise scores but can also delay pixels, so verify tracking after any such change.",
+    "conditions": "Shopify stores that have installed and removed apps over time, or run several front-end apps.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "about 20 points of lab speed score lost to a common app set in the demo",
+      "store scores drifting from 60 to 80 down to 40 or below as apps accumulate"
+    ],
+    "asks": [
+      "Does uninstalling a Shopify app remove its code?",
+      "Our store got slower after adding apps, what do I do?",
+      "Can I defer app scripts without breaking tracking?",
+      "Why is my Facebook pixel loading twice?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0091",
+    "evidence": {
+      "where": "App residue section; code widget video; speed audit video (duplicate Facebook script)"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SPD-0010",
+    "modules": [
+      "SPD"
+    ],
+    "topics": [
+      "image and font strategy",
+      "LCP"
+    ],
+    "claim": "A lite video embed loads only a roughly 15 KB thumbnail until clicked, cutting close to 1 MB of page weight versus a standard YouTube embed; disable autoplay on mobile.",
+    "body": "A standard YouTube embed downloads player code and files before the shopper ever presses play, and uses a fixed-size frame that does not adapt well across devices. A lite embed renders only the video's thumbnail image, about 15 KB, and loads the player and its JavaScript when the shopper clicks the thumbnail. Shopify's article says this can reduce a page's size by almost a megabyte per embedded video. On mobile, autoplaying video forces a large file download over what may be a weak cellular connection; replacing autoplay with a static thumbnail and a play button means the shopper sees a usable page first and only downloads the video if they want it. How to apply: audit product, collection and home templates for embedded or autoplay videos; replace third-party embeds with a lite-embed component or a facade; set mobile video to click-to-play; and make sure the thumbnail is not the page's LCP element unless it is sized and preloaded properly. Confirm the change in field LCP and INP for mobile at p75 rather than a one-off lab test.",
+    "conditions": "Pages with embedded YouTube or Vimeo players or autoplay hero videos, particularly on mobile traffic.",
+    "fails_when": "Video is the main selling element and must play above the fold (then optimise format and poster image rather than hide it); self-hosted short muted loops already compressed to a small size.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "YouTube thumbnail about 15 KB",
+      "lite embed saves almost 1 MB of page weight per video (Shopify's figure)"
+    ],
+    "asks": [
+      "Do product videos slow down my page?",
+      "How do I add YouTube videos without hurting load time?",
+      "Should videos autoplay on mobile product pages?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0093",
+    "evidence": {
+      "where": "Use lite embeds for video; Disable mobile video autoplay"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SPD-0011",
+    "modules": [
+      "SPD",
+      "SET"
+    ],
+    "topics": [
+      "app script weight",
+      "render blocking"
+    ],
+    "claim": "On Shopify, most app scripts enter the theme head through content_for_header; Script Tag API scripts load async, but code an app pastes straight into the head blocks rendering.",
+    "body": "Shopify explains where app weight actually lands. Most script and CSS files that apps add are injected into the head of theme.liquid through the content_for_header object. Scripts registered through Shopify's Script Tag API are loaded asynchronously, so they do not halt the page; but code added directly into the head (by an app's install routine or a developer following its instructions) usually runs before the page can render and has an immediate cost. Shopify also notes that a store with more than 20 apps installed is probably not using all of them, and trial apps that were never removed may still be loading code. How to apply: list installed apps and mark each as earning its keep or not; uninstall the rest; then search theme.liquid and snippets for script tags and includes left behind by removed apps, since uninstalling does not always remove code an app wrote into the theme. For any script you must keep, add async or defer so it stops blocking the HTML parser, and verify the page still works. Judge the result on field data (Core Web Vitals at p75 in Search Console or CrUX), not a single lab score, and re-check after each new app install.",
+    "conditions": "Shopify stores, especially those with many installed or previously installed apps and older themes.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [
+      "more than 20 installed apps: likely some unused (Shopify's rule of thumb)"
+    ],
+    "asks": [
+      "Do Shopify apps slow down my store?",
+      "We uninstalled apps but the site is still slow, why?",
+      "Which apps are hurting my page speed?",
+      "How do I find leftover app code in my Shopify theme?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0093",
+    "evidence": {
+      "where": "Excessive third-party apps section, quote from a Shopify Plus solutions engineering lead"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SPD-0012",
+    "modules": [
+      "SPD",
+      "LPG"
+    ],
+    "topics": [
+      "app script weight",
+      "friction removal"
+    ],
+    "claim": "Quick view on Shopify collection pages can preload full product data for every one of 20 to 30 thumbnails; remove it, or fetch data by AJAX only on click.",
+    "body": "Quick view pop-ups let shoppers see product details from a collection page without opening the product page. Shopify's article argues they often cost more than they give. Many theme or app implementations preload the information for an entire product page for every product on the grid, in case the shopper clicks quick view; on a collection with 20 or 30 thumbnails that is a large amount of data and images downloaded on every visit. They also add a step, get clicked by accident and can be mistaken for the product page. How to apply: first use a click-map tool to see whether shoppers use quick view at all. If usage is low, switch it off in the theme customiser; if it comes from an app, remove the app; if it is baked into the theme, have a developer remove it. If you must keep it, load the product data with an AJAX request only when the button is clicked, or store a small set of fields as data attributes on each grid item and build the pop-up with JavaScript. Then compare collection page field LCP and collection-to-product click-through before and after.",
+    "conditions": "Shopify collection pages with quick view enabled through the theme or an app; larger grids of 20 or more products.",
+    "fails_when": "Implementations that already lazy-load quick view data on click; catalogues where click maps show quick view is heavily used and drives add-to-cart (then optimise loading rather than remove).",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "collection pages with 20 to 30 thumbnails preloading full product data"
+    ],
+    "asks": [
+      "Is the quick view button slowing down my collection pages?",
+      "Should I turn off quick view on my Shopify store?",
+      "Our collection pages load slowly, what should I check first?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0093",
+    "evidence": {
+      "where": "Enable quick view on category pages section"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SPD-0013",
+    "modules": [
+      "SPD"
+    ],
+    "topics": [
+      "image and font strategy"
+    ],
+    "claim": "Resize images to twice their rendered size and export AVIF at about 50 percent quality; in the demo a 161 KB image fell to about 11 KB.",
+    "body": "Images are often uploaded far larger than the box they appear in: in the demo, a photo displayed at 398 by 597 pixels was being served at about 1,700 by 2,560 pixels and 161 KB. The fix has two parts. First, bring the intrinsic size down to twice the rendered size (here 796 by 1,194 pixels), which keeps it sharp on high-density retina screens without shipping the full original. Second, export in a modern format: AVIF compresses better than WebP, JPEG or PNG while supporting transparency, and at a 50 percent quality setting the presenter found the difference imperceptible. The result was about 11 KB, a reduction of over 90 percent for that image. How to apply: inspect each image to compare rendered and intrinsic size, resize to 2x rendered, export AVIF around 50 percent quality (or let an image plugin do it), and add explicit width and height attributes matching the rendered size so the space is reserved and layout does not shift. Background images that must span wide screens need larger sizes. Check AVIF output visually for product photos where colour accuracy matters.",
+    "conditions": "WordPress or WooCommerce sites where images are uploaded manually; applies to any platform that does not resize and convert images automatically.",
+    "fails_when": "Product zoom or high-detail images where shoppers inspect texture and 50% quality shows artefacts; platforms or CDNs that already serve resized AVIF or WebP automatically.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "161 KB to about 11 KB after resize plus AVIF",
+      "intrinsic size set to 2x rendered size (796 by 1,194 px for a 398 by 597 px slot)",
+      "AVIF quality about 50%"
+    ],
+    "asks": [
+      "What size should my website images be for retina screens?",
+      "Is AVIF better than WebP for my store images?",
+      "Our images are 150 KB each, how small can I get them?",
+      "What quality setting should I use when compressing images?"
+    ],
+    "platforms": [],
+    "platform": [
+      "woocommerce"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0094",
+    "evidence": {
+      "where": "Image resizing and AVIF conversion section (Photopea)"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "SPD-0014",
+    "modules": [
+      "SPD",
+      "SET"
+    ],
+    "topics": [
+      "app script weight",
+      "render blocking"
+    ],
+    "claim": "WooCommerce enqueues its CSS and JavaScript (13 files in the demo) on every page, including landing pages with no cart; unload them per page where no shop feature appears.",
+    "body": "With WooCommerce active, a landing page that shows no products or cart still loaded 13 WooCommerce files in the demo, including block styles, add-to-cart scripts, a source-tracking script and jQuery-dependent UI, plus jQuery itself for logged-out visitors. Each file is a request, and render-blocking styles and scripts delay first paint on slow mobile connections. How to apply: open a waterfall (GTmetrix or the browser network tab) for a content or landing page and list everything loading from WooCommerce, jQuery and default WordPress extras such as emoji and block-library styles. Use a per-page asset manager (the video used the free Asset CleanUp plugin) to unload WooCommerce assets only on pages without shop elements, and a conditional snippet to dequeue jQuery only on the front end for logged-out users if the theme does not need it. Keep a note of what was unloaded, because adding a mini cart or product block to that page later will break silently. Test the page on throttled Slow 4G with cache disabled, which shows real perceived speed better than a score.",
+    "conditions": "WordPress plus WooCommerce sites with content, blog or paid-traffic landing pages that do not use shop features.",
+    "fails_when": "Pages that include a mini cart, add-to-cart blocks or cart fragments, where unloading WooCommerce scripts breaks the cart; themes or page builders that rely on jQuery on the front end.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "13 WooCommerce files loading on a non-shop landing page in the demo"
+    ],
+    "asks": [
+      "Why is WooCommerce slowing down pages that aren't shop pages?",
+      "Can I stop WooCommerce scripts loading on my landing page?",
+      "Our WordPress landing page loads lots of WooCommerce files, is that normal?",
+      "How do I test real page speed on a slow phone connection?"
+    ],
+    "platforms": [],
+    "platform": [
+      "woocommerce"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0094",
+    "evidence": {
+      "where": "Unloading bloat section, GTmetrix waterfall and Asset CleanUp"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "SPD-6183",
+    "modules": [
+      "SPD"
+    ],
+    "topics": [
+      "LCP",
+      "INP",
+      "CLS",
+      "field versus lab metrics"
+    ],
+    "claim": "Core Web Vitals pass when LCP is 2.5 seconds or less, INP 200 ms or less and CLS 0.1 or less, measured at the 75th percentile of real page loads, split by mobile and desktop.",
+    "body": "Google's web.dev defines the three Core Web Vitals and their good thresholds: Largest Contentful Paint within 2.5 seconds of the page starting to load, Interaction to Next Paint of 200 milliseconds or less, and Cumulative Layout Shift of 0.1 or less. A page meets the target when the 75th percentile of page loads, segmented across mobile and desktop, is within all three. INP replaced First Input Delay as the responsiveness metric and became a stable Core Web Vital in 2024, so checklists that still quote FID under 100 ms are out of date. How to apply: judge speed work on field data (the Chrome UX Report shown in PageSpeed Insights or Search Console) for mobile first, at the 75th percentile, and use lab scores only to find causes.",
+    "conditions": "Any website with enough Chrome traffic to have field data; pages without field data fall back to origin-level data or lab tests.",
+    "fails_when": "A lab score (the 0 to 100 Lighthouse number) is treated as the target instead of the field metrics.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "LCP 2.5 seconds or less",
+      "INP 200 ms or less",
+      "CLS 0.1 or less",
+      "75th percentile",
+      "INP stable Core Web Vital in 2024"
+    ],
+    "asks": [
+      "What speed numbers should my store hit?",
+      "Is FID still a Core Web Vital?",
+      "What does passing Core Web Vitals mean?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6183",
+    "evidence": {
+      "where": "Core Web Vitals section: metric thresholds and the 75th percentile rule"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SPD-6184",
+    "modules": [
+      "SPD",
+      "SET"
+    ],
+    "topics": [
+      "image and font strategy"
+    ],
+    "claim": "Shopify caps uploaded images at 20 MB or 20 megapixels, does not compress on upload, and serves WebP or AVIF automatically to browsers that support them.",
+    "body": "Shopify's help page on theme images sets the upload limits at 20 MB or 20 megapixels (width x height / 1,000,000). Accepted formats are JPEG, progressive JPEG, PNG, GIF, HEIC and WebP; SVG is accepted but cannot be resized or cropped unless converted; TIFF and BMP are converted on upload. Images are not compressed on upload but may be compressed when served through the theme, and Shopify's CDN delivers WebP or AVIF where the browser supports it; GIFs are converted to animated WebP. How to apply: there is no need to convert product photos to WebP by hand on Shopify; the gains come from uploading at a sensible size (not camera originals), compressing before upload, and making sure the theme requests the right size for each slot. Note that the same help centre gives other limits for product media (see the product media page).",
+    "conditions": "Shopify online stores using theme images and the Shopify CDN.",
+    "fails_when": "Images are hosted outside Shopify (an app or external CDN) or hard-coded in theme files at a fixed large size.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "20 MB upload limit",
+      "20 megapixel limit",
+      "WebP or AVIF served where supported"
+    ],
+    "asks": [
+      "Do I need to convert my Shopify images to WebP?",
+      "What is the maximum image size on Shopify?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6184",
+    "evidence": {
+      "where": "Image requirements, supported formats and image optimization sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SPD-6185",
+    "modules": [
+      "SPD",
+      "SET"
+    ],
+    "topics": [
+      "image and font strategy",
+      "video"
+    ],
+    "claim": "Shopify says square product images at 2048 x 2048 px usually display best; product videos may be up to 10 minutes, 1 GB and 4K, and are converted to MP4 or HLS for serving.",
+    "body": "Shopify's product media page allows product and collection images up to 5000 x 5000 px (25 megapixels) and under 20 MB, and says square images at 2048 x 2048 px usually display best. Uploaded product videos can be up to 10 minutes long, 1 GB and 4K (4096 x 2160), in MP4, MOV or WebM; Shopify converts them to MP4 or HLS for serving. YouTube and Vimeo links can be added instead and do not have to meet these limits. 3D models take GLB or USDZ up to 500 MB. How to apply: upload product images near 2048 px on the long side, not at the 5000 px ceiling, and keep product videos short and well below the limits; the limit is what Shopify accepts, not what a phone on a slow network should download. Prefer Shopify-hosted video (served as adaptive HLS) over a standard YouTube iframe for product galleries, or use a click-to-load thumbnail.",
+    "conditions": "Shopify stores adding images, videos or 3D models to products.",
+    "fails_when": "A theme or app replaces Shopify's media player or loads full-size originals.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "2048 x 2048 px recommended square",
+      "5000 x 5000 px or 25 MP max",
+      "under 20 MB image",
+      "video up to 10 minutes",
+      "video up to 1 GB",
+      "video up to 4K",
+      "3D up to 500 MB"
+    ],
+    "asks": [
+      "What size should Shopify product photos be?",
+      "How big can a Shopify product video be?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6185",
+    "evidence": {
+      "where": "Images, videos and 3D models sections of the product media types page"
+    },
+    "strength": "platform_rule",
+    "public": true
+  }
+]

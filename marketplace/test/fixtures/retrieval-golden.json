@@ -1,0 +1,532 @@
+{
+  "schema": "ai-blocks-retrieval-golden/1",
+  "author": "independent",
+  "created": "2026-11-13",
+  "questions": [
+    {
+      "role": "seo-specialist",
+      "q": "Roughly what share of websites actually pass Google's page experience metrics on phones?",
+      "file": "knowledge.md",
+      "quote": "48% of mobile origins and 56% of desktop origins had good Core Web Vitals",
+      "type": "number"
+    },
+    {
+      "role": "seo-specialist",
+      "q": "Our site has about 3,000 pages. Should I be worried about how much of it Google bothers to crawl?",
+      "file": "knowledge.md",
+      "quote": "If the site has fewer than about 10,000 pages, ignore crawl budget",
+      "type": "rule"
+    },
+    {
+      "role": "seo-specialist",
+      "q": "I blocked some old pages in robots.txt to get them out of Google, but they still show up. Why?",
+      "file": "knowledge.md",
+      "quote": "They can stay indexed as bare URLs.",
+      "type": "mistake"
+    },
+    {
+      "role": "seo-specialist",
+      "q": "Once I have the list of technical problems, how do I decide which ones to fix first?",
+      "file": "skills/technical-seo-audit/SKILL.md",
+      "quote": "Score each issue on four things, 1 to 3 each",
+      "type": "howto"
+    },
+    {
+      "role": "seo-specialist",
+      "q": "What does it mean when Search Console calls a page a soft 404?",
+      "file": "knowledge.md",
+      "quote": "is empty but returns a success code",
+      "type": "definition"
+    },
+    {
+      "role": "email-marketing-specialist",
+      "q": "What click rate do Klaviyo stores usually get on automated emails compared with one-off sends?",
+      "file": "knowledge.md",
+      "quote": "campaign click rate 1.69% (top 10%: 3.38%); flow click rate 5.58%",
+      "type": "number"
+    },
+    {
+      "role": "email-marketing-specialist",
+      "q": "Our open rate shot up this month but clicks stayed flat. Did the new subject lines work?",
+      "file": "knowledge.md",
+      "quote": "If opens jump but clicks do not, assume privacy features, not interest",
+      "type": "rule"
+    },
+    {
+      "role": "email-marketing-specialist",
+      "q": "Can we pack our order confirmation emails with promos and still treat them as non-marketing mail?",
+      "file": "knowledge.md",
+      "quote": "a receipt that is mostly promotion; under US law, mixed messages can count as commercial",
+      "type": "mistake"
+    },
+    {
+      "role": "email-marketing-specialist",
+      "q": "How many emails should a new-subscriber welcome series have, and spread over how many days?",
+      "file": "skills/lifecycle-flow-builder/SKILL.md",
+      "quote": "Welcome (4 to 5 emails over about 10 to 14 days)",
+      "type": "howto"
+    },
+    {
+      "role": "email-marketing-specialist",
+      "q": "When people talk about DMARC alignment, what actually has to line up?",
+      "file": "knowledge.md",
+      "quote": "the SPF or DKIM domain matches the domain in the visible From address",
+      "type": "definition"
+    },
+    {
+      "role": "meta-media-buyer",
+      "q": "What's a normal cost per lead for Facebook lead ads across all industries?",
+      "file": "knowledge.md",
+      "quote": "8.54% conversion rate and 27.39 USD cost per lead",
+      "type": "number"
+    },
+    {
+      "role": "meta-media-buyer",
+      "q": "One ad set is doing really well. Can I double its budget tonight and tweak the audience while I am at it?",
+      "file": "knowledge.md",
+      "quote": "make moderate steps and batch other edits together",
+      "type": "rule"
+    },
+    {
+      "role": "meta-media-buyer",
+      "q": "Retargeting looks like our best performer, yet pausing it didn't dent overall sales. What's going on?",
+      "file": "knowledge.md",
+      "quote": "Warm ad sets show high ROAS but total sales do not move when they pause",
+      "type": "mistake"
+    },
+    {
+      "role": "meta-media-buyer",
+      "q": "How long should a new ad concept test run before I look at the results?",
+      "file": "skills/meta-creative-test-plan/SKILL.md",
+      "quote": "Minimum length: 7 days, to cover weekday patterns",
+      "type": "howto"
+    },
+    {
+      "role": "meta-media-buyer",
+      "q": "Is the 'cost per result goal' setting just the old cost cap under a new name?",
+      "file": "knowledge.md",
+      "quote": "Meta's current name for a cost cap",
+      "type": "definition"
+    },
+    {
+      "role": "bookkeeper",
+      "q": "How many years does a UK limited company need to hang on to its books and VAT paperwork?",
+      "file": "knowledge.md",
+      "quote": "UK company records; UK VAT records",
+      "type": "number"
+    },
+    {
+      "role": "bookkeeper",
+      "q": "A supplier emailed saying they've switched banks. Can I just update their details and pay the next bill?",
+      "file": "knowledge.md",
+      "quote": "confirm by phone on a known number before the next payment",
+      "type": "rule"
+    },
+    {
+      "role": "bookkeeper",
+      "q": "How can I tell if a client's list of accounts has become too cluttered?",
+      "file": "knowledge.md",
+      "quote": "several accounts for the same thing, or accounts with one line all year",
+      "type": "mistake"
+    },
+    {
+      "role": "bookkeeper",
+      "q": "How do I check whether a payment platform has quietly started charging us more?",
+      "file": "skills/payout-reconciliation/SKILL.md",
+      "quote": "total fees divided by gross sales, this period and last",
+      "type": "howto"
+    },
+    {
+      "role": "bookkeeper",
+      "q": "What does HMRC mean by a 'digital link'?",
+      "file": "knowledge.md",
+      "quote": "a digital transfer of data between software, required for Making Tax Digital",
+      "type": "definition"
+    },
+    {
+      "role": "fpa-analyst",
+      "q": "What's a typical net revenue retention figure for a private B2B software company?",
+      "file": "knowledge.md",
+      "quote": "Median net / gross revenue retention, private B2B SaaS, 2025",
+      "type": "number"
+    },
+    {
+      "role": "fpa-analyst",
+      "q": "We report under FRS 102 and our new year started in 2026. What do I adjust before comparing this year's EBITDA with last year's budget?",
+      "file": "knowledge.md",
+      "quote": "restate last year's budget lines that hold rent before comparing EBITDA",
+      "type": "rule"
+    },
+    {
+      "role": "fpa-analyst",
+      "q": "Is it bad practice to type growth rates straight into the formulas in a model?",
+      "file": "knowledge.md",
+      "quote": "move 1.07 to the inputs sheet with a label",
+      "type": "mistake"
+    },
+    {
+      "role": "fpa-analyst",
+      "q": "When I put unpaid invoices into the weekly cash forecast, which week should each one land in?",
+      "file": "skills/thirteen-week-cash-forecast/SKILL.md",
+      "quote": "placed in the week each customer usually pays, not the due date",
+      "type": "howto"
+    },
+    {
+      "role": "fpa-analyst",
+      "q": "What's the difference between bookings, billings and revenue?",
+      "file": "knowledge.md",
+      "quote": "what customers signed, what was invoiced and what the accounts recognise",
+      "type": "definition"
+    },
+    {
+      "role": "sdr",
+      "q": "How big a fine could we face in the US for each cold email that breaks the rules?",
+      "file": "knowledge.md",
+      "quote": "Maximum US penalty per violating email, and per call after a do-not-call request",
+      "type": "number"
+    },
+    {
+      "role": "sdr",
+      "q": "Someone unsubscribed from our emails. Can we still call them or message them on LinkedIn?",
+      "file": "knowledge.md",
+      "quote": "suppress them everywhere the same day",
+      "type": "rule"
+    },
+    {
+      "role": "sdr",
+      "q": "Is it fine to send our cold outreach from the same domain we use for billing and support?",
+      "file": "knowledge.md",
+      "quote": "Cold email sent from the domain that carries invoices and customer support",
+      "type": "mistake"
+    },
+    {
+      "role": "sdr",
+      "q": "I just booked a meeting. How long should my note to the closer be, and what goes in it?",
+      "file": "prompts/meeting-handoff-note.md",
+      "quote": "Write a hand-off note of under 250 words",
+      "type": "howto"
+    },
+    {
+      "role": "sdr",
+      "q": "Under PECR, what is a corporate subscriber?",
+      "file": "knowledge.md",
+      "quote": "a company or similar body; email to it needs no prior consent",
+      "type": "definition"
+    },
+    {
+      "role": "customer-support-specialist",
+      "q": "How long do we get to send evidence when a Stripe customer disputes a charge?",
+      "file": "knowledge.md",
+      "quote": "7 to 21 days | Stripe dispute response window",
+      "type": "number"
+    },
+    {
+      "role": "customer-support-specialist",
+      "q": "We just learned an order will ship a week late. Should we wait until the customer asks about it?",
+      "file": "knowledge.md",
+      "quote": "tell the customer before they ask and offer the choice to cancel",
+      "type": "rule"
+    },
+    {
+      "role": "customer-support-specialist",
+      "q": "A customer asked for a copy of their personal data weeks ago and it's still sitting with the other tickets. Is that a problem?",
+      "file": "knowledge.md",
+      "quote": "Data requests left in the general queue",
+      "type": "mistake"
+    },
+    {
+      "role": "customer-support-specialist",
+      "q": "When shouldn't an agent use the standard 'where is my order' reply?",
+      "file": "skills/reply-template-library/SKILL.md",
+      "quote": "do not use if the order is more than 10 days late",
+      "type": "howto"
+    },
+    {
+      "role": "customer-support-specialist",
+      "q": "What does KCS stand for in support work?",
+      "file": "knowledge.md",
+      "quote": "Knowledge-Centered Service, capturing and improving knowledge as part of solving tickets",
+      "type": "definition"
+    },
+    {
+      "role": "recruiter",
+      "q": "How well does someone's years of experience actually predict how they'll perform?",
+      "file": "knowledge.md",
+      "quote": "Validity of years of job experience",
+      "type": "number"
+    },
+    {
+      "role": "recruiter",
+      "q": "A candidate says someone from 'our company' asked them to pay for equipment before starting. What do we do?",
+      "file": "knowledge.md",
+      "quote": "treat it as a scam and warn the candidate",
+      "type": "rule"
+    },
+    {
+      "role": "recruiter",
+      "q": "How do I know our job ad has turned into a wish list?",
+      "file": "knowledge.md",
+      "quote": "ten bullet points of requirements, three of them years",
+      "type": "mistake"
+    },
+    {
+      "role": "recruiter",
+      "q": "In the hiring debrief, which parts of the scorecards should we actually spend time discussing?",
+      "file": "skills/evidence-based-screening/SKILL.md",
+      "quote": "Discuss only the rows where scores differ by two or more points",
+      "type": "howto"
+    },
+    {
+      "role": "recruiter",
+      "q": "What's a correspondence or audit study in hiring research?",
+      "file": "knowledge.md",
+      "quote": "an experiment sending matched fictitious applications to measure discrimination",
+      "type": "definition"
+    },
+    {
+      "role": "hr-specialist",
+      "q": "What's the minimum weekly salary for a US role to count as exempt from overtime?",
+      "file": "knowledge.md",
+      "quote": "US federal exempt salary level from 15 May 2026",
+      "type": "number"
+    },
+    {
+      "role": "hr-specialist",
+      "q": "Only three people on the warehouse team answered the staff survey. Can I show their results on their own?",
+      "file": "knowledge.md",
+      "quote": "merge it with another group or do not report it",
+      "type": "rule"
+    },
+    {
+      "role": "hr-specialist",
+      "q": "Two people in the same job at the same level earn very different amounts. Is that a red flag?",
+      "file": "knowledge.md",
+      "quote": "far apart in pay with no written reason",
+      "type": "mistake"
+    },
+    {
+      "role": "hr-specialist",
+      "q": "Someone is leaving. How many exit conversation questions should I prepare, and what should they cover?",
+      "file": "prompts/offboarding-checklist.md",
+      "quote": "Draft 6 exit conversation questions that ask about the work",
+      "type": "howto"
+    },
+    {
+      "role": "hr-specialist",
+      "q": "What does calibration mean for an interview panel?",
+      "file": "knowledge.md",
+      "quote": "interviewers comparing scores on the same answer to align their standards",
+      "type": "definition"
+    },
+    {
+      "role": "backend-developer",
+      "q": "If my endpoint keeps failing, how many times will Shopify retry a webhook before giving up on it?",
+      "file": "knowledge.md",
+      "quote": "Shopify webhook retries before the subscription is removed",
+      "type": "number"
+    },
+    {
+      "role": "backend-developer",
+      "q": "The API sent back a 400 because one field was wrong. Should my client retry it?",
+      "file": "knowledge.md",
+      "quote": "do not retry it, because it will fail the same way; fix the request",
+      "type": "rule"
+    },
+    {
+      "role": "backend-developer",
+      "q": "We mark orders as paid when the customer lands on the thank-you page. Anything wrong with that?",
+      "file": "knowledge.md",
+      "quote": "the order is marked paid on the success page, not by the webhook",
+      "type": "mistake"
+    },
+    {
+      "role": "backend-developer",
+      "q": "When I review code that charges a card, what should I check about calls to outside services that time out?",
+      "file": "prompts/what-happens-twice-review.md",
+      "quote": "The outside call times out but actually succeeded",
+      "type": "howto"
+    },
+    {
+      "role": "backend-developer",
+      "q": "What is BOLA?",
+      "file": "knowledge.md",
+      "quote": "broken object level authorisation, OWASP API1",
+      "type": "definition"
+    },
+    {
+      "role": "qa-engineer",
+      "q": "What share of accessibility problems does an automated axe scan catch?",
+      "file": "knowledge.md",
+      "quote": "Share of WCAG issues axe finds automatically on average",
+      "type": "number"
+    },
+    {
+      "role": "qa-engineer",
+      "q": "We are dropping some planned testing to hit the release date. What do I need to do about that?",
+      "file": "knowledge.md",
+      "quote": "write down what was cut, the risk, and who accepted it",
+      "type": "rule"
+    },
+    {
+      "role": "qa-engineer",
+      "q": "What kind of element selectors make browser tests break every time the styling changes?",
+      "file": "knowledge.md",
+      "quote": "long CSS class chains or nth-child selectors",
+      "type": "mistake"
+    },
+    {
+      "role": "qa-engineer",
+      "q": "How do I decide which test cases are worth automating?",
+      "file": "skills/risk-based-test-plan/SKILL.md",
+      "quote": "stable, repeated every release, and costly to run by hand",
+      "type": "howto"
+    },
+    {
+      "role": "qa-engineer",
+      "q": "What's an equivalence class in test design?",
+      "file": "knowledge.md",
+      "quote": "a group of inputs the system should treat the same",
+      "type": "definition"
+    },
+    {
+      "role": "ux-designer",
+      "q": "How many hour-long moderated test sessions can I realistically fit into one day?",
+      "file": "knowledge.md",
+      "quote": "Most one-hour moderated sessions to run in a day",
+      "type": "number"
+    },
+    {
+      "role": "ux-designer",
+      "q": "The client's contract says the site must meet WCAG AA. Can I sign off that our design complies?",
+      "file": "knowledge.md",
+      "quote": "send the conformance question to the client's lawyer; do not certify compliance",
+      "type": "rule"
+    },
+    {
+      "role": "ux-designer",
+      "q": "Is it OK if my test task tells people to go and find the page by its menu name?",
+      "file": "knowledge.md",
+      "quote": "the task text contains the menu label",
+      "type": "mistake"
+    },
+    {
+      "role": "ux-designer",
+      "q": "What should a form error message say?",
+      "file": "skills/interface-microcopy/SKILL.md",
+      "quote": "what happened, why it matters (only if not obvious), and what to do next",
+      "type": "howto"
+    },
+    {
+      "role": "ux-designer",
+      "q": "In tree test results, what does directness measure?",
+      "file": "knowledge.md",
+      "quote": "whether people went straight to the answer without backtracking",
+      "type": "definition"
+    },
+    {
+      "role": "shopify-specialist",
+      "q": "What speed and accessibility scores does a theme need to get into Shopify's Theme Store?",
+      "file": "knowledge.md",
+      "quote": "average Lighthouse performance score of at least 60 and accessibility score of at least 90",
+      "type": "number"
+    },
+    {
+      "role": "shopify-specialist",
+      "q": "The shop team edits the homepage every day. What happens to their changes while I build on a copy of the theme?",
+      "file": "workflows/safe-theme-change.md",
+      "quote": "agree a time to copy any content changes made on the live theme",
+      "type": "rule"
+    },
+    {
+      "role": "shopify-specialist",
+      "q": "We've got two review widgets and a few pop-up apps installed. Is that a problem?",
+      "file": "knowledge.md",
+      "quote": "several apps doing overlapping jobs (two review widgets, three pop-ups)",
+      "type": "mistake"
+    },
+    {
+      "role": "shopify-specialist",
+      "q": "How do I estimate whether a particular speed fix is worth the effort?",
+      "file": "skills/speed-fix-list/SKILL.md",
+      "quote": "Payback is sales at risk divided by effort",
+      "type": "howto"
+    },
+    {
+      "role": "shopify-specialist",
+      "q": "What's drip pricing?",
+      "file": "knowledge.md",
+      "quote": "adding unavoidable charges later in the purchase",
+      "type": "definition"
+    },
+    {
+      "role": "operations-manager",
+      "q": "At what headcount does a UK business have to write its risk assessment down?",
+      "file": "knowledge.md",
+      "quote": "UK employees at which risk assessment findings must be recorded",
+      "type": "number"
+    },
+    {
+      "role": "operations-manager",
+      "q": "One step in my procedure says 'check the order and print the label'. Is that fine as a single step?",
+      "file": "skills/sop-writing/SKILL.md",
+      "quote": "Split any step with \"and\" in it into two.",
+      "type": "rule"
+    },
+    {
+      "role": "operations-manager",
+      "q": "The same customer complaint has come up in our weekly meeting three weeks running. What are we doing wrong?",
+      "file": "knowledge.md",
+      "quote": "the same complaint in three weekly reviews",
+      "type": "mistake"
+    },
+    {
+      "role": "operations-manager",
+      "q": "When should staff follow a checklist line by line, and when can they work from memory and tick it off after?",
+      "file": "skills/sop-writing/SKILL.md",
+      "quote": "read-do (follow line by line, for rare or risky tasks)",
+      "type": "howto"
+    },
+    {
+      "role": "operations-manager",
+      "q": "What is takt time?",
+      "file": "knowledge.md",
+      "quote": "the pace of output needed to meet customer demand",
+      "type": "definition"
+    },
+    {
+      "role": "compliance-specialist",
+      "q": "How long does a business have to answer a California resident who asks us to delete their data?",
+      "file": "knowledge.md",
+      "quote": "CCPA deadline to know, delete or correct",
+      "type": "number"
+    },
+    {
+      "role": "compliance-specialist",
+      "q": "We think someone got into our customer database last night. What should happen first?",
+      "file": "knowledge.md",
+      "quote": "start the incident log at once and alert the controller's decision makers",
+      "type": "rule"
+    },
+    {
+      "role": "compliance-specialist",
+      "q": "We're grabbing screenshots of all our controls the week before the audit. Is that a problem?",
+      "file": "knowledge.md",
+      "quote": "screenshots all dated the same week for controls meant to run all year",
+      "type": "mistake"
+    },
+    {
+      "role": "compliance-specialist",
+      "q": "What goes in the one-page write-up at the end of reviewing a new software vendor?",
+      "file": "workflows/new-vendor-or-tool-intake.md",
+      "quote": "what the tool does, data and risks found, contract flags",
+      "type": "howto"
+    },
+    {
+      "role": "compliance-specialist",
+      "q": "What's a statement of applicability?",
+      "file": "knowledge.md",
+      "quote": "the ISO/IEC 27001 document listing which controls apply and why",
+      "type": "definition"
+    }
+  ]
+}

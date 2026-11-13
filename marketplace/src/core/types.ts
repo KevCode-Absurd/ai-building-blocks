@@ -186,6 +186,10 @@ export interface Persona {
   mega?: PersonaMega;
   /** Discovery facets only: a job assigns its own task lead and working groups. */
   team?: PersonaTeam;
+  /** A vertical agent (knowledge/<vertical>/, e.g. "ecommerce"): it serves only that kind of business and carries the
+   *  vertical's knowledge cards for its modules (primary first; a lead lists every module). */
+  vertical?: string;
+  modules?: string[];
   profile: PersonaProfile;
   status: "live" | "hidden";
   sort: number;

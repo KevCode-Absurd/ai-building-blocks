@@ -17,10 +17,12 @@ import g13 from "./data/personas-added-8.json" with { type: "json" };
 import g14 from "./data/personas-added-9.json" with { type: "json" };
 import g15 from "./data/personas-added-10.json" with { type: "json" };
 import g16 from "./data/personas-added-11.json" with { type: "json" };
+// The e-commerce team (knowledge/ecommerce/): a lead and one specialist per knowledge module.
+import gEcom from "./data/personas-ecommerce.json" with { type: "json" };
 // The five Traction growth leads (mega agents), outside the main roster count.
 import gMega from "./data/personas-mega.json" with { type: "json" };
 
-let HOUSE: Persona[] = ([g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, gMega] as unknown[][]).flat() as Persona[];
+let HOUSE: Persona[] = ([g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, gEcom, gMega] as unknown[][]).flat() as Persona[];
 
 export function housePersonas(): Persona[] { return HOUSE; }
 

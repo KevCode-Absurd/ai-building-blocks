@@ -1,0 +1,516 @@
+[
+  {
+    "id": "SEO-0001",
+    "modules": [
+      "SEO"
+    ],
+    "topics": [
+      "information architecture and cannibalisation",
+      "on page"
+    ],
+    "claim": "For ecommerce SEO revenue, build collection pages for transactional keywords before blog posts; about 40 new collections lifted one store from under $2k to over $10k monthly organic revenue.",
+    "body": "The agency owner's case: a puzzle brand paid two SEO agencies about $5,000 a month each for two years, mostly for blog content, and organic search revenue never cleared about $2,000 a month. In the first three to four months his team built roughly 40 new collection pages targeting transactional searches and organic revenue passed $10,000 a month. His reasoning: informational posts such as 'why use natural face wash' are easier to rank but convert near zero, so traffic grows while revenue does not; category and product pages match buyers who are ready to purchase, and on transactional keywords anything outside the top three positions gets little. Make organic search revenue the primary SEO KPI, not sessions. Technical work should stop at the essentials: key pages crawlable and indexed, no broken links, usable mobile and desktop experience, and a clear page hierarchy. For a free read on commercial competition, Google Ads Keyword Planner's top-of-page bid range acts as a difficulty proxy: high bids mean many advertisers, and likely many SEO competitors. How to apply: map transactional keyword clusters (product type, material, use, audience) to collections, give each unique copy, link them from navigation, and track organic revenue per collection.",
+    "conditions": "Shopify and other ecommerce stores with a catalogue broad enough to support many distinct collections; transactional search demand in the category.",
+    "fails_when": "Single-product or very narrow catalogues, where thin near-duplicate collections cannibalise each other; considered or educational categories where buyers research first and content earns links and assisted conversions.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "2 agencies at about $5,000/month each for 2 years, under $2,000/month organic revenue",
+      "about 40 new collection pages in 3 to 4 months",
+      "organic revenue from under $2,000 to over $10,000 per month"
+    ],
+    "asks": [
+      "Should my Shopify store be blogging for SEO?",
+      "Our SEO agency writes blogs but organic sales aren't growing, why?",
+      "Which pages should I build to rank on Google and actually sell?",
+      "How do I measure if our SEO is working?",
+      "How do I check keyword competition without paying for a tool?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0162",
+    "evidence": {
+      "where": "money pages and blog myth section, puzzle brand example"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "SEO-0002",
+    "modules": [
+      "SEO"
+    ],
+    "topics": [
+      "off page"
+    ],
+    "claim": "Practitioners buy link insertions on pages with existing traffic at $100 to $400, about 20 to 30% below guest posts; Google treats paid links passing ranking credit as spam.",
+    "body": "The agency owner's link plan for Shopify clients: prefer link insertions (adding a link to an existing article) over new guest posts. He pays about $100 to $400 per insertion, roughly 20 to 30% less than a guest post on the same site, because the owner edits a few words instead of publishing a new piece, and the host page already has traffic, whereas a new guest post may never get any. Buying through link marketplaces costs about 20 to 60% more than direct outreach, so cash-constrained brands should do outreach themselves using an email-finder tool. He argues many keywords need only 10 to 20 relevant, authoritative links, not hundreds, and that cheap bulk links hurt. Digital PR that earns links costs about $5,000 a month; earning links purely through content is unrealistic for most stores below very high domain authority. The conflict to weigh: Google Search Central's spam policies classify buying or selling links that pass ranking credit as link spam unless marked rel=sponsored or nofollow, and Google can discount links or apply manual actions. Treat paid insertions as a risk decision, not a neutral tactic, and prefer PR and relationship-earned links where possible.",
+    "conditions": "Ecommerce stores competing on transactional keywords where competitors hold more referring domains.",
+    "fails_when": "Google detects a paid-link pattern and discounts the links or issues a manual action; brands that cannot accept search-policy risk; links on irrelevant or low-quality sites.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "$100 to $400 per link insertion",
+      "20 to 30% cheaper than guest posts",
+      "marketplaces 20 to 60% more than direct outreach",
+      "10 to 20 relevant links often enough",
+      "about $5,000/month for digital PR"
+    ],
+    "asks": [
+      "How much should I pay for backlinks?",
+      "Are link insertions better than guest posts?",
+      "How many backlinks does my store need to rank?",
+      "Is buying backlinks against Google's rules?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0162",
+    "evidence": {
+      "where": "link building section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SEO-0003",
+    "modules": [
+      "SEO"
+    ],
+    "topics": [
+      "information architecture and cannibalisation",
+      "on page"
+    ],
+    "claim": "On Shopify stores with over 50 products, collection pages drive about 80% or more of organic revenue, so optimise collections before product pages or blog posts.",
+    "body": "The agency's observation across client stores: once a catalogue passes roughly 50 products, collection (category) pages bring in about 80% or more of revenue from organic search. Collections target broader queries with more volume ('vegan protein powder') while product pages target narrow ones, and a collection lets the searcher compare options, which matches commercial intent. Blog content still matters, but its job is to support collection rankings through topical authority and internal links rather than to earn revenue directly; the example given is a supplement brand whose blog drives under 7% of its traffic while its shopping pages rank for the money terms. The agency also reports that organic visitors convert at about 5 to 15% on product pages and about 2 to 5% on collection pages in its client data. How to apply it: map one primary keyword to each collection, create sub-collections for any modifier with real search volume (dairy-free protein, clear protein) and link them from the parent collection, put high-volume collections in the main menu and on the homepage, and point blog posts at their related collection with contextual links.",
+    "conditions": "Shopify stores with roughly 50 or more products across several categories; commercial queries in competitive niches.",
+    "fails_when": "Single-product or very small catalogues, where the product page is the main ranking page; or brands whose demand is mostly branded searches.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "over 50 products: collections drive about 80%+ of organic revenue (agency observation)",
+      "organic product page conversion about 5 to 15%; collection pages about 2 to 5% (agency client data)",
+      "blog under 7% of traffic in a supplement brand example"
+    ],
+    "asks": [
+      "Which pages on my Shopify store matter most for SEO?",
+      "Should I focus SEO on product pages, collection pages or the blog?",
+      "Our blog gets traffic but no sales, is it worth keeping?",
+      "Should I create more sub-collections for SEO?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0163",
+    "evidence": {
+      "where": "Collection page optimisation module and the supporting blog content module"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SEO-0004",
+    "modules": [
+      "SEO"
+    ],
+    "topics": [
+      "technical checklist"
+    ],
+    "claim": "Remove 'within: collection' from the Shopify product grid code so links point to /products/ URLs, then rebuild breadcrumbs from a metafield, because the fix breaks default breadcrumbs.",
+    "body": "By default many Shopify themes link products from collection grids with a URL that includes the collection path (/collections/name/products/item). The same product therefore exists at many URLs, which splits internal link signals even though a canonical tag points to /products/item. The fix in the course: in the theme code, open the product grid snippet (its file name usually contains 'grid'), find the 'within: collection' filter on the product link and remove it in every instance, so grids link straight to /products/item. Some newer themes already do this. The catch: Shopify builds breadcrumbs from the URL the visitor came through, so after the fix breadcrumbs lose the collection step. Rebuild them by creating a product metafield (a URL type rather than the collection type, which the course says can cause issues) that stores the primary collection, then edit the breadcrumb section to read it; this also lets you choose each product's breadcrumb path. Related clean-up from the same module: noindex or block with a custom robots.txt template the auto-generated vendor, product type and product and blog tag pages, 301 redirect deleted products, and check Search Console page indexing for crawled-not-indexed pages.",
+    "conditions": "Shopify themes that still use collection-aware product URLs in grids.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Why do my Shopify product URLs include the collection name?",
+      "How do I fix duplicate product URLs on Shopify?",
+      "My breadcrumbs broke after changing product URLs, how do I fix them?",
+      "Should I block Shopify tag pages from Google?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0163",
+    "evidence": {
+      "where": "Technical SEO module: product URL structure fix, breadcrumbs, tag pages and custom robots.txt"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SEO-0005",
+    "modules": [
+      "SEO"
+    ],
+    "topics": [
+      "on page"
+    ],
+    "claim": "Shopify collection pages: keyword first in a 60-character title, H1 of just the keyword, 36 to 48 products per page, 500 to 1,000 words mostly below the grid.",
+    "body": "The course's collection page template. Title tag: put the target keyword at the very start and use up to about 60 characters, filling the rest with modifiers or long-tail variants (buy online, for women). H1: just the target keyword. URL: the keyword as the handle. Product grid: show at least 36 to 48 products per page, as long as speed holds, so a collection is not split into many thin paginated pages (the example shows a collection broken into 21 pages). Content: keep a short intro of a sentence or two above the grid so products stay visible, and put the longer description of about 500 to 1,000 words below it, covering what makes the products different, features and benefits, certifications and how to use them, then an FAQ accordion. This is not a blog post, so keep it focused. Filters from faceted navigation use URL parameters that are not indexed, so any filter with real search demand (a colour, material or use) should become its own collection page with unique content instead of relying on the filter. Add breadcrumbs with schema for navigation and the search result display.",
+    "conditions": "Shopify collection pages targeting commercial category queries.",
+    "fails_when": "Very slow themes where 48 products per page hurts load time; tiny collections with too few products for long copy to stay relevant.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "title tag up to about 60 characters, keyword first",
+      "36 to 48 products per collection page",
+      "collection description about 500 to 1,000 words, mostly below the grid"
+    ],
+    "asks": [
+      "How should I write the title and description of a Shopify collection page?",
+      "How many products should show per page on a collection?",
+      "Our filter pages do not rank on Google, what should we do?",
+      "How long should a collection page description be for SEO?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0163",
+    "evidence": {
+      "where": "Collection page on-page optimisation and navigation (faceted navigation) sections"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SEO-0006",
+    "modules": [
+      "SEO"
+    ],
+    "topics": [
+      "off page"
+    ],
+    "claim": "Size link building from the referring-domain gap to the competitor average; send 50 to 75% of early links to the homepage and the rest to collections ranking 4 to 10.",
+    "body": "The course turns link building into a target. Pull the number of referring domains for the competitors that rank for your main terms and take the average. In the worked example the store had 105 referring domains against a competitor average of 203, a gap of 98. Spread the gap over 24 months, about 4 new referring domains a month, then aim higher (6 to 8 a month in the example) to keep pace as competitors keep earning links. Targets: for the first 3 months send about 50 to 75% of links to the homepage and 25 to 50% to low-hanging collection pages, meaning pages already ranking in positions 4 to 10 (found with an organic research tool filtered to those positions); pick 3 to 5 such pages depending on budget. Do not overbuild to one page: if competitors' ranking pages have around 10 links and you point 30 at yours, it stands out and risks a penalty. For guest posts, prospect sites with over 1,000 monthly visits that link to competitors, personalise the outreach rather than using templates, write 600 to 1,200 word posts, and place the anchor naturally near the top.",
+    "conditions": "Shopify stores in competitive niches where competitors have built links; ongoing monthly budget for outreach.",
+    "fails_when": "Niches where competitors have few links (on-page work wins first) or brands that earn links naturally through PR; aggressive anchor targeting can trigger penalties.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "example gap 98 referring domains (105 vs competitor average 203) over 24 months, about 4 per month, aim 6 to 8",
+      "first 3 months: 50 to 75% of links to homepage, 25 to 50% to collections ranking 4 to 10",
+      "3 to 5 target pages per month",
+      "10 links vs 30 links to a page flagged as risky",
+      "guest post sites over 1,000 monthly visits; posts 600 to 1,200 words"
+    ],
+    "asks": [
+      "How many backlinks do I need for my store?",
+      "Which pages should my backlinks point to?",
+      "We are on page one but not top three, how do we move up?",
+      "Can I build too many backlinks to one page?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0163",
+    "evidence": {
+      "where": "Off-page SEO module: link gap planning and guest post targeting"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SEO-0007",
+    "modules": [
+      "SEO",
+      "LPG"
+    ],
+    "topics": [
+      "on page",
+      "schema markup"
+    ],
+    "claim": "Use a product page template: 50 to 150 word summary up top, features and benefits, specifications in a table, a 500 to 1,000 word detailed description, FAQs, then reviews.",
+    "body": "The agency structures every product page in the same order so both shoppers and search engines can read it quickly. 1. H1 with the product's target keyword. 2. A short description of 50 to 150 words near the top that says what the product is and why to buy it; shoppers want a quick answer, so keep it short. 3. Features and benefits. 4. Specifications in a real table rather than a paragraph, which the course says makes the attributes easier for search engines to parse and can feed rich results. 5. A detailed description of about 500 to 1,000 words covering use cases, materials and differences from alternatives. 6. Frequently asked questions in an accordion. 7. Customer reviews at the bottom, with review and product schema so ratings can show in search results; the course contrasts retailers that show rich snippets with ones that do not. Pair it with the technical fixes: merge colour and size variants into one product unless a variant has its own search volume, and if separate variant pages are kept, set canonical tags to the main product.",
+    "conditions": "Shopify product pages for products with specifications and buyer questions; organic search as a meaningful channel.",
+    "fails_when": "Simple impulse products with nothing to specify, where long text adds no value; brands selling mostly through paid social where page length can slow mobile buyers.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "summary 50 to 150 words",
+      "detailed description 500 to 1,000 words"
+    ],
+    "asks": [
+      "What should a product page include for SEO?",
+      "How long should my product description be?",
+      "Should product specifications be in a table?",
+      "Should each colour of my product be a separate product page?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0163",
+    "evidence": {
+      "where": "Product page optimisation module, page template slide"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SEO-0008",
+    "modules": [
+      "SEO"
+    ],
+    "topics": [
+      "content briefs",
+      "on page"
+    ],
+    "claim": "For a small store's first SEO targets, screen keywords for commercial intent, over 1,000 monthly searches, difficulty under 40, and CPC over $1 as proof the term makes money.",
+    "body": "The presenter's screen for a store without much authority: keep only keywords with commercial or transactional intent; monthly search volume above about 1,000; keyword difficulty below 40 in Semrush's scale, to avoid terms every competitor is fighting for; and a cost per click above $1, because advertisers only pay that for terms that convert. Group survivors into clusters: one hero keyword per collection or product page plus related cluster keywords. On the page, the hero keyword goes in the title (H1); a description block of roughly 400 words or more covers the hero keyword and gives a paragraph to each cluster keyword; the search listing title and meta description use the keyword plus a click reason such as fast delivery, since the listing's job is to earn the click. Track positions monthly and repeat the cycle: research, update pages, add products, reviews and posts, earn links. Expect a long lag: one wine client saw little movement until 12 to 13 months after implementing. How to apply: export candidate keywords, filter on the four thresholds, assign one hero keyword per page, and avoid giving two pages the same hero term.",
+    "conditions": "New or low-authority Shopify stores choosing first SEO targets; thresholds are one practitioner's rules of thumb using Semrush metrics.",
+    "fails_when": "Niche categories where the best buying terms have 100 to 500 searches and still convert; established stores with authority that can win higher-difficulty terms; markets where CPC is low because few advertisers compete, not because the term does not sell.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "over 1,000 monthly searches",
+      "keyword difficulty under 40",
+      "CPC over $1",
+      "about 400+ words of collection copy",
+      "12 to 13 months before one client saw results"
+    ],
+    "asks": [
+      "How do I pick keywords for my Shopify store?",
+      "What keyword difficulty can a new store rank for?",
+      "Which keywords are worth targeting for sales, not just traffic?",
+      "How long does SEO take to work for a small store?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0167",
+    "evidence": {
+      "where": "keyword validation and on-page sections of the webinar"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SEO-0009",
+    "modules": [
+      "SEO",
+      "AEO"
+    ],
+    "topics": [
+      "information architecture and cannibalisation",
+      "content briefs"
+    ],
+    "claim": "Pick one product cluster and give it all SEO effort for a 90-day quarter, starting with most-aware queries (X vs Y, alternatives, best X for a use case).",
+    "body": "Trying to improve rankings across a whole store at once spreads effort so thin that nothing reaches the top. The speaker's plan for a supplement brand (cluster: creatine) is to commit one quarter to a single product category. Steps: audit only the URLs in that cluster, using Search Console, Bing Webmaster Tools and analytics to set baseline impressions, clicks and positions; build the topic list starting from the bottom of the funnel, meaning queries from people already choosing (best creatine for vegans, brand A versus brand B, brand alternatives, brand reviews), because they convert first; generate further use-case variants with an AI prompt grounded in five competitor pages, expecting roughly 20 percent of ideas to be poor; then plan the same topics across the website, YouTube and LinkedIn. Comparison and alternatives pages that state your differences honestly can capture competitors' branded demand. How to apply: choose the cluster with the best mix of margin, existing authority and demand, write the 90-day list before publishing anything, and measure only that cluster's visibility in search and in AI answers at the end of the quarter.",
+    "conditions": "Ecommerce stores with several product categories and limited content capacity; most useful for stores with some existing domain authority.",
+    "fails_when": "Single-category stores, where the whole site is the cluster; seasonal catalogues where the chosen cluster's demand peaks outside the quarter; brands with large content teams that can run several clusters in parallel.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "90 days (one quarter) on one cluster",
+      "about 20% of AI-generated topic ideas expected to be poor",
+      "5 competitor URLs used to ground idea generation"
+    ],
+    "asks": [
+      "How should a small ecommerce store prioritise SEO?",
+      "We have 10 product categories, which should we do SEO for first?",
+      "What SEO content should I write first for my store?",
+      "Is it worth making comparison pages against competitors?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0168",
+    "evidence": {
+      "where": "Opening plan and customer awareness section (creatine example)"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SEO-0010",
+    "modules": [
+      "SEO",
+      "AEO",
+      "ORG"
+    ],
+    "topics": [
+      "off page",
+      "distribution planning"
+    ],
+    "claim": "Publish each priority comparison topic on your site, YouTube and LinkedIn to hold several page-one spots; the speaker took 5 of the top 30 results, about 17 percent.",
+    "body": "A single page can rank once per results page, but the same topic published on several owned surfaces can occupy several positions and give AI systems more sources that mention you. The speaker publishes each priority topic as a website article, a YouTube video and an article on LinkedIn (company page or founder profile), then has the team and founder share and comment so it gets indexed and engages. LinkedIn's domain strength lets such posts rank well: in his example a LinkedIn article ranked fourth on one engine and sixth on Google for a 'best creatine for vegans' style query, and for a software comparison query his small team held five of the top 30 results across engines (about 17 percent) and appeared in AI answers next to far better-funded rivals. For one product cluster this produced a plan of about 163 owned assets across site, YouTube and LinkedIn. How to apply: for each bottom-funnel topic, write the site page first, then adapt it natively to video and a LinkedIn article rather than pasting duplicates, and post from the profile with the most followers in the niche.",
+    "conditions": "Brands with a founder or team willing to publish on LinkedIn and YouTube; comparison and best-of queries.",
+    "fails_when": "Consumer categories where LinkedIn content looks out of place and does not rank; search engines tightening treatment of third-party platform content; thin duplicate posts that add no value.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "5 of the top 30 positions, about 17% of results, in the speaker's example",
+      "LinkedIn article ranked about 4th to 6th for a creatine query",
+      "about 163 owned assets planned for one cluster"
+    ],
+    "asks": [
+      "Can LinkedIn articles help my product pages rank?",
+      "How do I take up more of the first page of Google for one keyword?",
+      "Should we post the same content on YouTube and LinkedIn as our blog?",
+      "What's parasite SEO and is it worth it for a store?"
+    ],
+    "platforms": [
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0168",
+    "evidence": {
+      "where": "HubSpot AEO proof example and owned off-site LinkedIn section"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "SEO-0011",
+    "modules": [
+      "SEO",
+      "AEO"
+    ],
+    "topics": [
+      "content briefs",
+      "internal linking"
+    ],
+    "claim": "Ecommerce blogs only pay as four formats: you vs competitor, alternatives to competitor, best X for use case, and buying guides; 10-15 posts, each linking a money page early.",
+    "body": "Fogarty calls generic ecommerce blogging dead: seasonal and lifestyle posts get a few clicks, rank briefly and sell nothing. The formats that capture buyers target middle and bottom-funnel queries. First, you versus competitor (brand A vs brand B): mentioning the competitor can rank you on their branded searches; one client using two competitor formats ranked third for its main competitor's brand name within a week. Second, alternatives to a competitor (best alternatives to Hydro Flask), listing options with your product first. Third, best product type for a use case (best eye serum for women over 50), opening long-tail, lower-competition terms. Fourth, evergreen buying guides (how to choose a sauna), which also attract backlinks. Before writing, check the search results: if collection pages rank rather than blogs, build a collection instead. A system of 10 to 15 well-targeted posts is enough. Internal linking makes them pay: link to the target collection or product page within the first 100 to 200 words, add 3 to 5 links to related posts, use 2 to 4 word descriptive anchor text, and link collections down into sub-collections. Make comparison claims truthful; false competitor claims create legal risk.",
+    "conditions": "Brands in categories with established competitors that people search by name; Shopify blog or similar.",
+    "fails_when": "Categories with no searched competitors; comparison content that makes unsubstantiated or false claims about rivals (comparative advertising and trademark risk); search results dominated by collection pages or marketplaces.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "10-15 posts",
+      "money-page link in first 100-200 words; 3-5 related links; 2-4 word anchors",
+      "client ranked #3 for competitor brand within a week (anecdote)"
+    ],
+    "asks": [
+      "What blog posts actually drive sales for an online store?",
+      "Should I write comparison posts against my competitors?",
+      "Is blogging still worth it for ecommerce?",
+      "How should my blog posts link to product pages?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0177",
+    "evidence": {
+      "where": "Hack two: blog formats; hack three: internal linking"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SEO-0012",
+    "modules": [
+      "SEO"
+    ],
+    "topics": [
+      "information architecture and cannibalisation",
+      "on page"
+    ],
+    "claim": "Instead of one broad collection, build sub-collections for each searched variant (oversized hoodies, hoodies under $50) at keyword difficulty under 35 with commercial intent, one keyword per page.",
+    "body": "Most Shopify stores have one collection per product type, betting on a single broad, highly competitive term. Dave Fogarty's approach is to create several collection pages that target the different ways people search for the same products: men's hoodies, oversized hoodies, zip hoodies, running hoodies, hoodies under $50; or for skincare, anti-aging face serum, vegan face serum, face creams under $30. The pages can contain largely the same products; what changes is the title, heading, copy and filters, matched to each query's intent. That swaps one hard fight for dozens of winnable ones. Selection: in Ahrefs or Semrush, filter keywords to difficulty below 35 with commercial intent, then Google each term; if other stores' collection pages rank, you can too, and if Nike-scale brands dominate, skip it. Rules: one target keyword per page, and never aim a product page and a collection page at the same keyword, which causes cannibalisation. Link from the broad collection down into its sub-collections. The same specific pages also suit AI answer engines, which cite pages that answer a narrow need. How to apply: start with the best-selling category and list 5 to 10 variants.",
+    "conditions": "Shopify stores in categories with existing search demand and many modifiers (apparel, skincare, home); sub-collections need unique copy, not duplicates.",
+    "fails_when": "Invented categories with no search demand; thin near-duplicate collections with no unique content can be treated as low quality; very small catalogues where every sub-collection shows the same two products.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "keyword difficulty filter below 35",
+      "5 to 10 sub-collections per main category"
+    ],
+    "asks": [
+      "How do I rank my Shopify collections for more keywords?",
+      "Should I make separate collection pages for each product variation?",
+      "What keyword difficulty should a small store target?",
+      "How do I avoid keyword cannibalization on Shopify?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0177",
+    "evidence": {
+      "where": "Hack one: advanced keyword optimisation"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "SEO-0013",
+    "modules": [
+      "SEO"
+    ],
+    "topics": [
+      "content briefs",
+      "information architecture and cannibalisation"
+    ],
+    "claim": "Graphite's analysis: about 1 in 20 landing pages drives roughly 85% of organic traffic, so fund a few expert pages heavily rather than many cheap rewrites.",
+    "body": "Smith explains why so much search content is non-experts rewriting each other: since about 19 of every 20 landing pages drive little or no traffic and one in 20 drives roughly 85%, teams spread small budgets over many pages, buy cheap writing and use content-scoring tools that push every page toward the average of what already ranks. That makes pages typical, not useful. His alternative is to concentrate spend on the pages most likely to win and make them better than the rest. How to apply: 1) Rank candidate pages by commercial value of the topic (money terms, including those competitors bid on in paid search) and by the size of the question set the page can answer. 2) Fund a small number of them with real expertise: original research or testing, named experts, information other pages lack ('information gain'). 3) Avoid making pages more typical with content-scoring tools. 4) After launch, check which pages actually earn traffic and citations and move budget toward the winners. Graphite's blog is named 'the 5%' after this pattern. The 85% figure is from Graphite's client analysis; its sample is not described in the episode.",
+    "conditions": "Stores investing in content SEO or AEO with limited budget, especially blogs and buying guides.",
+    "fails_when": "Programmatic pages built from unique structured data (product, location or compatibility pages) can still work at scale; very early sites may not yet know which topics will win and need some breadth to find out.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 1 in 20 landing pages drives about 85% of traffic",
+      "19 in 20 pages drive little or none"
+    ],
+    "asks": [
+      "Should I publish lots of blog posts or a few really good ones?",
+      "Most of our blog posts get no traffic, is that normal?",
+      "How should I split my content budget across pages?",
+      "Do content scoring tools like Surfer actually help?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0185",
+    "evidence": {
+      "where": "discussion of why SEO content is rewritten",
+      "quote": "one out of 20 landing pages drive roughly 85% of all your traffic"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  }
+]

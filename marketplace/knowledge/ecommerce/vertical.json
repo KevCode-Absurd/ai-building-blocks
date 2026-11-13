@@ -1,0 +1,46 @@
+{
+  "schema": "ai-blocks-vertical/1",
+  "id": "ecommerce",
+  "name": "E-commerce",
+  "summary": "Online stores selling physical products, mostly on Shopify, in India and the US first, with Amazon as a second surface.",
+  "updated": "2026-11-13",
+  "spec": "Kevin's ecomOS ingestion spec (ecomos-sources/_INGESTION-SPEC.yaml, version 1, 20 Sep 2026) and generator contract.",
+  "constraints": {
+    "trust_gate": "MEA",
+    "cash": "FIN",
+    "capacity": "OPS",
+    "rule": "No play is ranked until gross profit per purchase can be computed (MEA). FIN (cash) and OPS (capacity) are preconditions on every play: a plan the brand cannot pay for or staff is not a plan."
+  },
+  "tiers": {
+    "1": "Platform primary source only: Shopify, Meta, Google, Amazon Seller Central or Klaviyo documentation.",
+    "2": "Large-sample research or benchmarks: Baymard, academic work, platform benchmark reports, research-grounded books.",
+    "3": "A named practitioner showing account-level receipts. Most operator videos.",
+    "4": "Opinion with no name or no receipts, or a source with no resolvable date. Hypothesis fuel only."
+  },
+  "modules": [
+    { "code": "PRD", "name": "Product research", "review_due_days": 540, "required": ["mode"] },
+    { "code": "AVT", "name": "Customer research and avatars", "review_due_days": 1080 },
+    { "code": "OFF", "name": "Offers", "review_due_days": 1800 },
+    { "code": "BRD", "name": "Brand", "review_due_days": 1800 },
+    { "code": "SET", "name": "Store setup", "review_due_days": 365, "required": ["platform"] },
+    { "code": "MEA", "name": "Measurement and unit economics", "review_due_days": 1080, "gate": true },
+    { "code": "LPG", "name": "Landing pages", "review_due_days": 1080 },
+    { "code": "SPD", "name": "Page speed", "review_due_days": 540, "required": ["platform"] },
+    { "code": "CRO", "name": "Testing and experiments", "review_due_days": 1080 },
+    { "code": "MCR", "name": "Paid social creative", "review_due_days": 180 },
+    { "code": "ADC", "name": "Ad copy and account deployment", "review_due_days": 360 },
+    { "code": "GAD", "name": "Google Ads", "review_due_days": 360 },
+    { "code": "ORG", "name": "Organic content and creators", "review_due_days": 360 },
+    { "code": "EML", "name": "Email, SMS and lifecycle", "review_due_days": 1080 },
+    { "code": "SEO", "name": "Search", "review_due_days": 360 },
+    { "code": "AEO", "name": "Answer and generative engines", "review_due_days": 180 },
+    { "code": "CXP", "name": "Post-purchase experience", "review_due_days": 1080 },
+    { "code": "COG", "name": "Sourcing and cost of goods", "review_due_days": 1080 },
+    { "code": "WLD", "name": "Wild bets", "review_due_days": 1800, "never_outranks_baseline": true },
+    { "code": "FIN", "name": "Finance and accounting", "review_due_days": 1080, "required": ["jurisdiction"] },
+    { "code": "OPS", "name": "Team, fulfilment and support", "review_due_days": 1080 },
+    { "code": "AMZ", "name": "Amazon marketplace", "review_due_days": 360, "required": ["marketplace", "mode"] },
+    { "code": "SEC", "name": "Bot and agent security", "review_due_days": 360 }
+  ],
+  "aliases": { "DEP": "ADC", "MULTI": null }
+}

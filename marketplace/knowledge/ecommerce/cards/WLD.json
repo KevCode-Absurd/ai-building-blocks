@@ -1,0 +1,466 @@
+[
+  {
+    "id": "WLD-0001",
+    "modules": [
+      "WLD",
+      "BRD"
+    ],
+    "topics": [
+      "PR stunts and activations",
+      "how wild bets backfire"
+    ],
+    "claim": "Anti-Black-Friday stunts can earn attention for irreverent brands: Cards Against Humanity sold 30,000 boxes of bull feces at $6 ($180,000) in two hours; 11,248 people paid $5 for nothing.",
+    "body": "When a small brand cannot outspend or outdiscount big retailers on Black Friday, doing the opposite of a sale can win the news cycle. Cards Against Humanity's sequence: in 2013 it raised its price by $5 and still topped Amazon's best-seller chart; in 2014 it pulled its products and sold 30,000 boxes of sterilised bull feces at $6 each, selling out in about two hours ($180,000); in 2015 it asked people to pay $5 for nothing, and 11,248 did ($71,145, paid out as staff bonuses); in 2016 it raised over $100,000 to livestream digging a pointless hole; in 2018 it sold real high-value items at 99 percent off and drew 50,000 simultaneous page views. The mechanism is an inside joke that filters for people who share the brand's attitude and turns them into distributors; the stunt itself is the ad. Related plays include Liquid Death's metal-band styling of water and dbrand's roasting of its own customers. Cap the downside before launch: fixed production run, no discount on core margin, and a plan for the press angle if the joke lands badly.",
+    "conditions": "Brands whose existing identity is irreverent or satirical, with an audience that shares the joke (often Millennial or Gen Z); peak-noise retail moments. Cost ceiling: the stunt's production and fulfilment cost (CAH's were small runs) plus a lost promotional day.",
+    "fails_when": "Brands built on trust, care or premium calm (health, baby, luxury) where mockery reads as contempt; copycat stunts without the underlying brand voice, which look forced; and stunts that insult customers in ways that go viral for the wrong reason.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "2014: 30,000 boxes at $6, about $180,000, sold out in about 2 hours",
+      "2015: 11,248 people paid $5 for nothing, $71,145",
+      "2016: over $100,000 raised for the Holiday Hole",
+      "2018: 50,000 simultaneous page views on a 99 percent off sale"
+    ],
+    "asks": [
+      "what's an alternative to a black friday discount",
+      "how do small brands get press on black friday",
+      "do anti marketing stunts work",
+      "we don't want to discount for black friday, what else can we do"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0198",
+    "evidence": {
+      "where": "'The Cards Against Humanity Black Friday Masterclass' table"
+    },
+    "strength": "shown_with_numbers",
+    "public": false
+  },
+  {
+    "id": "WLD-0002",
+    "modules": [
+      "WLD",
+      "CXP"
+    ],
+    "topics": [
+      "surprise and delight one-offs",
+      "personalised outreach to high-value customers"
+    ],
+    "claim": "Copy Chewy's bereavement protocol: when a long-running subscription cancels suddenly, ask gently; if the pet or person has died, refund without return, suggest donating product, send flowers and a note.",
+    "body": "Sudden cancellation of a long-running auto-ship is a signal, not just churn. Chewy trains agents to ask why; when a customer says their pet has died, it refunds recent orders without asking for the heavy bags of food back, suggests donating them to a shelter, and sends condolence flowers with a handwritten note, occasionally even a custom likeness of the pet. Chewy also sends around 1,000 free commissioned pet portraits a week to selected customers, which recipients post widely. For a smaller store the bounded version is: (1) flag cancellations from subscribers with, say, six or more consecutive orders; (2) have a person, not an automated survey, send the follow-up; (3) where the reason is a death, illness or similar life event, refund the last unshipped or unopened order with no return, cancel future charges immediately, and send a small physical condolence; (4) give agents a fixed discretionary budget so they need no approval. Do not market this or ask for reviews afterwards; the payoff is unmeasurable advocacy, and that is the point of a wild bet.",
+    "conditions": "Subscription or replenishment brands where the product is tied to a life (pet food, baby products, care supplies, medication-adjacent goods). Cost ceiling: roughly the value of one refunded order plus about $50 to $100 for flowers or a gift per case, and a few minutes of agent time.",
+    "fails_when": "Low-margin, high-volume subscriptions where life-event cancellations are frequent enough that refunds become a material cost line; and any version that feels scripted or is used as marketing content, which reverses the goodwill.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 1,000 free pet portraits sent per week by Chewy (as reported)",
+      "cost ceiling per case: one refunded order plus about $50 to $100 (estimate)"
+    ],
+    "asks": [
+      "a subscriber's pet died, what should we do",
+      "how should we handle subscription cancellations",
+      "what are examples of brands going above and beyond for customers",
+      "should we refund without asking for a return"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0198",
+    "evidence": {
+      "where": "'Empirical Application: The Chewy Case Study'"
+    },
+    "strength": "anecdote",
+    "public": false
+  },
+  {
+    "id": "WLD-0003",
+    "modules": [
+      "WLD",
+      "CXP"
+    ],
+    "topics": [
+      "personalised outreach to high-value customers",
+      "surprise and delight one-offs"
+    ],
+    "claim": "For top-1% customers, send an unbranded, high-quality 'artifact' on a random date, not a holiday or anniversary, and include no discount code.",
+    "body": "Branded swag serves the sender, and gifts timed to Christmas, birthdays or purchase anniversaries arrive alongside many others and read as obligation. John Ruhlin's Giftology approach inverts both: give a practical luxury item the recipient would be proud to own, with no logo, at a moment nothing calls for it, such as an ordinary Tuesday in April. In high-ticket or B2B ecommerce, extend it to the buyer's inner circle (spouse, assistant), who become advocates inside the household or office. Ecommerce version: (1) list the top 1 percent of customers by lifetime value or the B2B accounts that matter most; (2) learn something specific from order history or support conversations; (3) send one well-made, unbranded item tied to that detail (the source's examples: engraved kitchen knife, quality leather goods; a trail map for someone who mentioned a hike) with a handwritten note from a founder or named staff member; (4) do not include an offer or ask for a review; (5) log who received what so it is never repeated by accident. The return is unmeasurable by design; budget it as a fixed annual allocation.",
+    "conditions": "High-AOV or B2B ecommerce with a small, identifiable top cohort. Cost ceiling: item plus shipping per recipient (often $50 to $150) times a capped list, with founder or staff time for notes; set as a fixed yearly budget.",
+    "fails_when": "Low-AOV brands where the top 1 percent is not meaningfully valuable; B2B buyers bound by gift policies (public sector, regulated industries) where gifts are refused or create compliance issues; and generic gifts that show no personal knowledge.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "top 1 percent of customers by value",
+      "cost ceiling estimate about $50 to $150 per recipient"
+    ],
+    "asks": [
+      "what gift should we send our best customers",
+      "should vip gifts have our logo on them",
+      "when is the best time to send a customer gift",
+      "how do i thank my top customers without a discount"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0198",
+    "evidence": {
+      "where": "'The Architecture of Radical Generosity' (artifacts vs swag, unexpected timing, inner circle)"
+    },
+    "strength": "anecdote",
+    "public": false
+  },
+  {
+    "id": "WLD-0004",
+    "modules": [
+      "WLD",
+      "PRD"
+    ],
+    "topics": [
+      "collaborations and unexpected partnerships",
+      "guerrilla and physical world tactics"
+    ],
+    "claim": "List small, impulse-need accessories on a quick-commerce app where the moment of need happens (Mokobara put neck pillows and pouches on 10-minute delivery Blinkit before flights).",
+    "body": "Most brands fight for space in crowded marketplace search. Mokobara, an Indian premium luggage brand, instead placed travel accessories such as neck pillows and pouches on Blinkit, a 10-minute grocery delivery app, where a traveller orders them hours before a flight. Being the only premium travel brand in that channel gave it near-total share of voice there, without bidding against Samsonite or cheap alternatives on Amazon or Flipkart; it paired this with an airline tie-up offering extra baggage allowance for its suitcases. The transferable pattern: (1) identify an accessory in your range bought in a last-minute moment (a charger before a trip, a gift wrap before a party, a pet treat, a phone case on day one); (2) find the channel that serves that moment, such as quick commerce in Indian cities, convenience delivery, or venue retail; (3) list a narrow, low-price assortment with your brand front and centre; (4) treat it as awareness for the core product as much as a sales line. Keep the trial bounded: limited SKUs, limited cities, a fixed time window.",
+    "conditions": "Markets with dense quick-commerce networks (Indian metros, some EU and Middle East cities); brands with low-ticket, compact accessories next to a higher-ticket core product. Cost ceiling: listing and margin terms on a small assortment, inventory placed in dark stores, for a fixed trial period.",
+    "fails_when": "Bulky or high-ticket items, categories without a last-minute need, and platform terms (margins, returns, dark-store inventory) that make the channel loss-making; the visibility advantage fades once competitors list too.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "10-minute delivery window",
+      "cost ceiling: small assortment and fixed trial period (estimate)"
+    ],
+    "asks": [
+      "should my brand sell on blinkit or zepto",
+      "how can a d2c brand get seen outside amazon",
+      "what are unusual sales channels for accessories",
+      "is quick commerce worth it for a premium brand"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0198",
+    "evidence": {
+      "where": "'Product as Retention: Micro-Innovations and Unorthodox Distribution' (Mokobara)"
+    },
+    "strength": "anecdote",
+    "public": false
+  },
+  {
+    "id": "WLD-0005",
+    "modules": [
+      "WLD",
+      "ORG"
+    ],
+    "topics": [
+      "PR stunts and activations",
+      "founder moments"
+    ],
+    "claim": "A paid-to-use-it stunt that dramatises the benefit can earn earned media at small cost: Wakefit's Sleep Internship drew 170,000 applications with zero ad spend, paying about 1 lakh per intern.",
+    "body": "Indian mattress brand Wakefit paid people to sleep nine hours a night on its mattresses. The first run drew 170,000 applications from 30 countries with no paid ad spend, and interns were paid about 1 lakh rupees each. Across three seasons it drew over 1 million registrations and paid 51 interns about 63 lakh in total; the 2023 winner received 9 lakh. Why it works: the stunt acts out the product's benefit (sleep) and reframes the brand mission, so the press covers it for free. How to run a small version: pay a handful of customers to use and document your product publicly for a set period, with a hook tied to the product's core benefit. Budget it as a marketing cost and judge it on earned coverage and shares relative to spend, not direct sales. The compilation advises at most one or two such swings a year. It looks gimmicky if the hook is not tied to what the product does.",
+    "conditions": "Products with a benefit that can be shown over time by a person using it (sleep, fitness, comfort); brand voice that allows playfulness. Cost ceiling: fees to the participants plus campaign admin, e.g. about 1 lakh per participant at Wakefit's scale.",
+    "fails_when": "The hook is not tied to the product's benefit; serious or regulated categories where a stunt undermines trust; no PR reach to carry the story.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "170,000 applications from 30 countries, zero ad spend (first run)",
+      "about 1 lakh paid per intern",
+      "over 1 million registrations, 51 interns, about 63 lakh paid across three seasons"
+    ],
+    "asks": [
+      "What's a cheap PR stunt that actually gets press for a product brand?",
+      "How did Wakefit get so much attention for its sleep internship?",
+      "Is paying people to use our product a good publicity idea?",
+      "How do I measure if a marketing stunt was worth the money?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0199",
+    "evidence": {
+      "where": "Category 10, Wakefit Sleep Internship"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "WLD-0006",
+    "modules": [
+      "WLD",
+      "LPG"
+    ],
+    "topics": [
+      "guerrilla and physical world tactics",
+      "proof placement"
+    ],
+    "claim": "Put a way to test your quality against rivals inside the first box (Country Delight ships a milk-adulteration kit); it only works if your product actually wins.",
+    "body": "India's Country Delight ships a milk-adulteration test kit with the first order and invites customers to test rival milk against theirs. The compilation credits the play, as part of a wider strategy, to a brand that reached roughly 1,380 crore in revenue in FY24. The mechanism: proof beats claims, and the customer becomes the judge, which also gives them a story to tell others. It turns a hidden quality difference (purity, freshness, strength, fabric weight) into something the buyer sees in their own kitchen. How to apply: find a quality attribute where you measurably beat common alternatives; find a cheap, safe home test that shows it; include it in the first order with a short instruction card; invite customers to share results. Cost ceiling is the kit's unit cost on first orders only. The condition is strict: if your product does not win the test reliably, skip this play, because it publicly proves the opposite. No conversion or retention figure is attributed to the kit itself.",
+    "conditions": "Categories with a testable quality gap (food purity, water, supplements, textiles); first orders; product that reliably wins. Cost ceiling: kit unit cost per first order.",
+    "fails_when": "Your product does not reliably beat rivals; the test could harm or mislead customers or invite comparative-advertising claims; no simple home test exists.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Country Delight about 1,380 crore revenue in FY24 (reported)"
+    ],
+    "asks": [
+      "How do I prove our product is better than cheaper competitors?",
+      "Can I put a quality test kit in the first order box?",
+      "Our product is purer than rivals but nobody believes us, what can we do?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0199",
+    "evidence": {
+      "where": "Category 8, Milk-testing kit as proof",
+      "quote": "proof beats claims"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "WLD-0007",
+    "modules": [
+      "WLD",
+      "CXP"
+    ],
+    "topics": [
+      "personalised outreach to high-value customers",
+      "surprise and delight one-offs"
+    ],
+    "claim": "Stage wild retention bets against a control group: notes or founder videos to the top 50 customers first, expanding to the top 200 only if 90-day reorders beat control.",
+    "body": "The compilation turns unscalable gestures into a staged test so they are not run on faith. Stage one, this month: rank customers by lifetime spend, take the top 50, and send each a genuine handwritten note (about $1 to $3 plus time) or a 60-second founder video (time only). Keep a matched group of top customers who get nothing. If repeat-purchase rate or 90-day reorder rate in the treated group beats the control, extend to the top 200. Stage two, next 90 days: an invite-only, named VIP tier for the top 1% with early access to drops, a direct founder channel and a surprise insert in each order; formalise it only if VIP retention and average order value beat non-VIPs. Stage three, next 6 months: a referral waitlist with product rewards and a limited drop to an SMS list; make drops regular only if referral sign-ups exceed 30% of total and drops sell through at full price. Ongoing: at most one or two stunts a year, budgeted as marketing and judged on earned media against spend. No expected effect is claimed; the benchmarks decide.",
+    "conditions": "Brands with enough repeat customers to form a top-50 group and a comparable control; founder or team time available. Cost ceiling: about $50 to $150 plus a few hours for stage one.",
+    "fails_when": "Too few repeat buyers for a control group to mean anything; printed notes posing as handwritten (feels fake); gestures become routine and expected, losing the surprise; a baseline retention blocker (broken post-purchase flows, slow shipping) is still open.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "top 50 customers by lifetime spend, then top 200",
+      "handwritten note about $1 to $3 each; direct mail $1 to $5",
+      "VIP tier for the top 1% of customers",
+      "make drops regular if referral sign-ups exceed 30% of total",
+      "1 to 2 stunts a year at most"
+    ],
+    "asks": [
+      "How do I test whether handwritten notes actually bring customers back?",
+      "Is it worth sending founder videos to our best customers?",
+      "We want to try a VIP club, how do I know if it's working before rolling it out?",
+      "How many customers should I start with for a surprise and delight test?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0199",
+    "evidence": {
+      "where": "Recommendations section",
+      "quote": "expand to the top 200"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "WLD-0008",
+    "modules": [
+      "WLD",
+      "OFF"
+    ],
+    "topics": [
+      "giveaways and contests",
+      "viral loop mechanics"
+    ],
+    "claim": "Hedge a 'free if the team wins' promotion on a prediction market: one NYC bar staked $5,000 on Kalshi to receive $13,514 if the Knicks won, covering every tab.",
+    "body": "The mechanism: a promotion whose payout depends on a binary public event (a team winning, a result happening) has a known worst case, so the brand can buy the opposite side of that risk. The compiled sources describe The Jeffrey, a New York bar, offering free drinks if the Knicks won and taking a $5,000 position on Kalshi that would pay $13,514 on a Knicks win, enough to cover the tabs; and activewear brand Forme running a World Cup refund promotion with Kalshi and promotions platform PlayAbly, staking money to cover potential refunds. If the event does not happen, the brand loses the stake but keeps full-price sales; if it does, the hedge pays the refunds. How to design one: pick an event your customers care about, cap the promotion (date window, order cap, maximum refund per order), estimate the worst-case refund total, size the hedge so the payout covers it, and make the rules public. Cost ceiling: the hedge stake plus campaign effort; in the bar example $5,000. No source gives a sales effect, so do not forecast one.",
+    "conditions": "Cost ceiling: hedge stake (example $5,000) plus terms drafting and campaign time. US, where Kalshi operates, and events with listed contracts; brands with an engaged audience around the event.",
+    "fails_when": "Jurisdictions where this counts as an illegal lottery, sweepstakes or gambling, or where prediction markets are unavailable; refund exposure larger than the hedge (uncapped orders); no matching contract to hedge; regulated categories where tying sales to betting attracts scrutiny.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "$5,000 Kalshi position paying $13,514 on a Knicks win (The Jeffrey, per Fortune)"
+    ],
+    "asks": [
+      "Can I run a 'your order is free if X wins' promotion without risking a fortune?",
+      "How do brands hedge big promotional giveaways?",
+      "Is a sports-outcome refund promotion a good idea for my store?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0200",
+    "evidence": {
+      "where": "Part 1, case 1.5 Prediction Market Hedging: Forme"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "WLD-0009",
+    "modules": [
+      "WLD",
+      "OFF",
+      "BRD"
+    ],
+    "topics": [
+      "founder moments",
+      "community rituals and events"
+    ],
+    "claim": "Last Crumb sold a $120 dozen-cookie box through weekly fixed-inventory drops with no paid ads, after a year of brand building and 20 box designs before the first sale.",
+    "body": "Last Crumb priced a dozen cookies at $120 and sold them like streetwear: weekly releases, fixed inventory, and no paid advertising. Founder Derek Jaeger spent a full year on the brand before selling a box, tested 20 box designs and obsessed over details such as the angle of the cookies as the lid opens, studying how Supreme and Kith build clout. According to Shopify's profile, the brand went from unknown to selling out in seconds and drew celebrity attention. Jaeger's framing: most ecommerce brands are faucets that vanish when ads are switched off, while a drop brand gets talked about on its own because owning one feels like getting a hard reservation. The mechanism only works with genuine scarcity: a fixed, visible quantity released at a known time, not a perpetual countdown timer. How to apply: choose a limited edition or bundle, set the quantity and release time in advance, build a waitlist before the drop, sell out rather than restock immediately, and capture every buyer and waitlister for the next drop. Cost ceiling: the inventory of one drop plus packaging and content; Last Crumb's bigger cost was a year of founder time.",
+    "conditions": "Cost ceiling: one limited batch of inventory plus packaging and launch content. Giftable, premium or collectible products with strong visual identity; founders able to invest heavily in brand before revenue.",
+    "fails_when": "Commodity or replenishment products customers need on demand; brands that cannot actually sell out (unsold drops damage the scarcity story); fake scarcity claims, which can breach consumer protection rules.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "$120 per dozen cookies",
+      "1 year of brand building before first sale",
+      "20 box designs tested",
+      "no paid ads"
+    ],
+    "asks": [
+      "Can a food brand use limited drops like streetwear?",
+      "How do I create real scarcity without fake countdown timers?",
+      "Can I launch without paid ads?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0200",
+    "evidence": {
+      "where": "Part 1, case 1.1 Scarcity Drops: Last Crumb"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "WLD-0010",
+    "modules": [
+      "WLD",
+      "CXP"
+    ],
+    "topics": [
+      "personalised outreach to high-value customers",
+      "surprise and delight one-offs"
+    ],
+    "claim": "The unscalable gift test: send your top 10 customers from last quarter a handwritten note and a small unexpected gift, then track their reorders and referrals.",
+    "body": "The compilation turns the 'do things that don't scale' idea into four bounded experiments. The unscalable gift: pick the top 10 customers from the last quarter by revenue, send each a handwritten note and a small unexpected gift, and track whether they reorder and whether they refer anyone. The founder's inbox: for one month, forward every customer service email to the founder and answer personally. The no-ads week: pause paid acquisition for a week and spend the time reaching out to 20 lapsed customers, 10 potential partners and 5 micro-influencers, then measure organic traffic and orders. The 20 customers exercise: if you could have only 20 customers, list every touchpoint from discovery to post-purchase and decide where a manual, human touch would make each feel like the only customer. Examples cited: Heaven Mayhem launched with 20 one-off necklaces, messaged every person who liked a post, and later hosted monthly calls and events for 150 community members. No source attaches a measured effect to these experiments, so treat them as cheap probes with tracking built in, not as forecasts. Cost ceiling: 10 gifts plus notes and a few founder hours.",
+    "conditions": "Cost ceiling: about 10 small gifts plus postage and a few founder hours (or one week of paused ad spend for the no-ads test). Early-stage or founder-led brands with identifiable top customers.",
+    "fails_when": "Brands whose top customers are resellers or businesses with gift policies; a no-ads week during peak season or a learning-phase-sensitive ad account; results judged on 10 customers without patience for reorder cycles.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "top 10 customers from last quarter",
+      "20 lapsed customers, 10 partners, 5 micro-influencers in the no-ads week",
+      "Heaven Mayhem: 20 one-off necklaces at launch, events for 150 community members"
+    ],
+    "asks": [
+      "Are handwritten notes worth it for top customers?",
+      "How do I test surprise and delight without a big budget?",
+      "What can I do for my best customers that big brands cannot?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0200",
+    "evidence": {
+      "where": "Part 3.2 How to Apply This to E-commerce; case 1.12 Heaven Mayhem"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "WLD-0011",
+    "modules": [
+      "WLD",
+      "BRD"
+    ],
+    "topics": [
+      "collaborations and unexpected partnerships"
+    ],
+    "claim": "Salt & Stone gives every brand collaboration its own custom scent, treating collabs as awareness and scent-testing rather than profit; collabs with larger partners sell out quickly.",
+    "body": "The founder runs collaborations with partners such as Aritzia, Stussy, Outdoor Voices, Kendall Jenner's 818 Tequila, Erewhon smoothies and Alaska Airlines amenities. The stated goal is noise and fun for the marketing team, reaching a partner's larger audience, not profit, though they do make money. The repeatable mechanism is a custom fragrance for each partner, designed as that brand's expression (the Aritzia collaboration scent was lily and yuzu). This lets the company launch scents it loves without growing a permanent core range beyond five or six fragrances, and test which new scents resonate. He rates Aritzia and Outdoor Voices (at its cultural peak) as the most impactful for awareness; the 818 collaboration sold out fast, helped by the celebrity's own posts. The Alaska Airlines placement puts product in front of travellers in aircraft bathrooms. Cost ceiling: a limited production run of a new scent plus co-marketing time; no revenue or ROI figures were given, so do not assume an effect.",
+    "conditions": "Brands with a sensory or design element that can be customised per partner; partners larger than you with a culturally aligned audience.",
+    "fails_when": "Minimum order quantities make a one-off variant unaffordable; partner audience does not fit the price point; collab dilutes a tight core range if made permanent.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "core range of 5-6 scents",
+      "custom scent per collaboration"
+    ],
+    "asks": [
+      "Are brand collaborations worth it for a small brand?",
+      "How do we make a collab product feel special?",
+      "What should we get out of a collaboration if not sales?",
+      "How can we test new scents without expanding our range?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0232",
+    "evidence": {
+      "where": "about 29:36-33:23 brand collaborations"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "WLD-0012",
+    "modules": [
+      "WLD",
+      "ORG",
+      "EML"
+    ],
+    "topics": [
+      "founder moments",
+      "viral loop mechanics"
+    ],
+    "claim": "'Restock' works as proof: Bloom's greens powder, sold out about 6 weeks, did $1.36 million in 12 hours on restock day after one email, SMS and Instagram push.",
+    "body": "Early Bloom was a two-founder brand in Brooklyn whose hero greens powder had been sold out for about six weeks. On restock day they sent one email blast, one SMS blast and posted on Instagram (the co-founder's account was the brand's origin), and the store did $1.36 million in 12 hours. The founder calls 'restock' the most powerful word in marketing because it is a statement of validity: a small Instagram brand cannot borrow the trust of big brands, but 'restocked three times' tells a shopper that many people bought it. He cites a hat brand messaging 'restocked 11 times' doing about $2 million a year. More broadly he credits building in public (sharing wins, sell-outs and milestones) for retailers and investors calling them. Cost is low: it uses owned channels and real scarcity. Contrast within this batch: Peter Rahal argues sell-outs longer than about two weeks cause demand destruction, while Bloom's six-week gap ended in a record day, which likely depended on an engaged list and a founder audience. How to apply: when stock returns, announce the restock and the number of sell-outs on every owned channel at once; never fake scarcity, which damages trust.",
+    "conditions": "Brands with an engaged email, SMS and social audience and a product that genuinely sold out; consumables with repeat demand.",
+    "fails_when": "Long stockouts without an engaged audience, where buyers switch for good; fabricated restock or sell-out claims (misleading-advertising risk); frequent stockouts that signal poor operations to retailers.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "greens powder sold out about 6 weeks",
+      "$1.36 million in 12 hours on restock day",
+      "hat brand 'restocked 11 times', about $2 million a year"
+    ],
+    "asks": [
+      "How do I announce a restock?",
+      "We sold out, how do we turn it into a marketing moment?",
+      "Does saying 'sold out' or 'restocked' help sales?",
+      "How long can we be out of stock before customers leave?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0254",
+    "evidence": {
+      "where": "Validity marketing and building in public segment (about 34:07 to 41:20)",
+      "quote": "Restock is the most powerful word in marketing."
+    },
+    "strength": "anecdote",
+    "public": true
+  }
+]

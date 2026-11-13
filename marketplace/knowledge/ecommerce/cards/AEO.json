@@ -1,0 +1,1399 @@
+[
+  {
+    "id": "AEO-0001",
+    "modules": [
+      "AEO",
+      "SEO",
+      "ORG"
+    ],
+    "topics": [
+      "citation panel method",
+      "source corroboration and third party mentions"
+    ],
+    "claim": "Map which domains AI answers cite for 5 core queries (about 250 citations plus about 30 search results each), then target the most-cited sites, such as Healthline, for inclusion.",
+    "body": "Being recommended in ChatGPT, Perplexity, Gemini or Google's AI answers depends heavily on the pages those systems retrieve and cite, so the speaker treats the citation list as the work plan. Method: choose five core buying queries for the cluster; for each, record the traditional results across search engines (about 30 per query) and the sources cited in AI answers (about 50 per query in his example, around 250 total); export, deduplicate and count how often each domain and page appears. For creatine, Healthline was the most cited domain on almost every query, followed by Reddit, Amazon, Forbes and specialist review sites. Then work the list from the top: ask to be included in the most-visible listicles, offer product for review, pay for sponsored placements where allowed, and sell on Amazon if the category's answers cite Amazon listings. He estimates that winning coverage on even 20 percent of the top ten cited domains moves visibility noticeably while competition is still thin. How to apply: repeat the same query set monthly and track your share of citations as the AEO metric.",
+    "conditions": "Product categories where AI assistants answer buying questions with cited sources; brands able to fund outreach, samples or sponsorships.",
+    "fails_when": "Categories where AI answers cite few third-party pages; health and finance niches where sponsored inclusion must be disclosed and some publishers refuse; citation sets change often, so a one-off map goes stale.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "5 core queries",
+      "about 50 AI citations per query, about 250 total",
+      "about 30 traditional results per query",
+      "20% coverage of the top 10 cited domains suggested as a meaningful target"
+    ],
+    "asks": [
+      "How do I get my brand recommended by ChatGPT?",
+      "Which websites should we pitch to show up in AI answers?",
+      "How do I measure whether AI search tools mention my brand?",
+      "Should we pay to get into review listicles like Healthline?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0168",
+    "evidence": {
+      "where": "AI citations export section and earned off-site section (Healthline example)"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0002",
+    "modules": [
+      "AEO",
+      "SPD"
+    ],
+    "topics": [
+      "entity clarity",
+      "question and answer coverage"
+    ],
+    "claim": "Review and FAQ widgets that load by JavaScript after page load are invisible to most AI crawlers; disable JavaScript and reload to see what they read.",
+    "body": "Most AI crawlers read only the HTML present when the page is first served; they do not run scripts. Many Shopify apps for reviews and FAQs insert their content with JavaScript after load, leaving only an empty placeholder in the HTML, so the reviews and answers that would help an assistant recommend your product never reach it. The source names Google's Gemini as the main exception. Checks: 1) open the product page with JavaScript disabled in the browser and reload; whatever disappears is invisible to those crawlers; 2) run a request with an AI crawler's user agent (for example curl with -A ClaudeBot) to confirm the page is reachable and not blocked; 3) read robots.txt to confirm common AI agents are allowed (Shopify generates it automatically unless edited); 4) validate product schema with a schema validator. Fixes: pick review and FAQ apps that render server-side or inject into the HTML, or put key FAQs in the theme template. Practitioner guidance; crawler behaviour changes, so recheck periodically.",
+    "conditions": "Stores relying on app widgets for reviews, FAQs or specifications and wanting to be cited by AI assistants.",
+    "fails_when": "Crawlers that render JavaScript (the source names Gemini); apps that already server-render content; robots.txt deliberately blocking AI agents by choice.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Can ChatGPT see the reviews on my product pages?",
+      "How do I check what AI crawlers see on my store?",
+      "Our reviews app loads with JavaScript, is that a problem?",
+      "Is my Shopify robots.txt blocking AI bots?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0169",
+    "evidence": {
+      "where": "Getting found section: readability, review and FAQ widgets"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0003",
+    "modules": [
+      "AEO",
+      "SET"
+    ],
+    "topics": [
+      "generative answer surfaces",
+      "structured data completeness"
+    ],
+    "claim": "Shopify's global product catalog feeds AI shopping tools from back-end data only; eligibility needs the agentic storefront on and products with a title, an image and a non-zero price.",
+    "body": "Besides crawling your public pages, AI assistants and third-party shopping apps can read Shopify's global product catalog, compiled from every eligible store. Developers are already building niche AI search tools on it (the source shows apps for finding specific LEGO bricks and Tesla parts across Shopify stores). To be included, the store needs the agentic storefront setting enabled, and products must meet basic requirements such as a title, at least one image and a price above zero, plus Shopify's terms. You can ask Sidekick whether the store is eligible. Because the catalog is built only from back-end data, it sees the title, description, variants and metafields, not your theme. So: 1) write descriptions with concrete attributes (material, size, colour, use case); 2) clean up metafields, since the source saw stale metafields from uninstalled apps such as old review apps flowing into the catalog; 3) keep prices and stock accurate. Practitioner summary of a new and changing feature; confirm current requirements in Shopify's documentation.",
+    "conditions": "Shopify stores wanting visibility in AI shopping assistants and catalog-based apps.",
+    "fails_when": "Non-Shopify stores; requirements and setting names may change quickly as Shopify's agentic commerce features evolve.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "minimum: title, 1+ image, price above zero"
+    ],
+    "asks": [
+      "How do I get my Shopify products into ChatGPT shopping results?",
+      "What is Shopify's global product catalog and am I in it?",
+      "Do old app metafields affect how AI sees my products?",
+      "What product data do AI shopping tools read from Shopify?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0169",
+    "evidence": {
+      "where": "Getting found section: Shopify global product catalog"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0004",
+    "modules": [
+      "AEO",
+      "SEO"
+    ],
+    "topics": [
+      "generative answer surfaces",
+      "entity clarity"
+    ],
+    "claim": "Google now offers a site-level toggle to keep content out of AI Overviews and AI Mode without affecting normal rankings; check per-page AI impressions before using it.",
+    "body": "According to this 2026 tutorial, Google added a control that removes a site's content from AI Overviews and AI Mode while leaving its standard search rankings unchanged. It started with site owners in the UK and was described as rolling out globally. The speaker advises against using it for most businesses: being the source an AI answer quotes is usually better than being invisible in it, and a lost click may not matter if the brand still wins the sale. The decision method: open the generative AI performance report first, see how many AI impressions each page earns, and weigh that against any clicks you believe the AI features are taking. Opting out mainly makes sense for content whose value depends on the visit itself, such as ad-supported or gated content, which is rarely the case for a store. Treat the existence and exact behaviour of the toggle as a practitioner report and confirm the current rules in Google Search Central documentation, which is tier 1 and wins on mechanics, before switching anything.",
+    "conditions": "Stores and publishers deciding whether to allow Google's AI features to use their content; 2026, UK first then wider rollout per the source.",
+    "fails_when": "The site earns revenue from page views rather than sales, so AI answers that remove the visit cost money; the toggle is not available in the site's country yet; Google documentation describes a different scope or ranking effect.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "rollout began with UK site owners, then global (2026)"
+    ],
+    "asks": [
+      "Can I stop Google from using my content in AI Overviews?",
+      "Will opting out of AI Mode hurt my Google rankings?",
+      "Should my store block Google's AI answers from using our pages?",
+      "Is the AI Overview opt out available outside the UK yet?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0170",
+    "evidence": {
+      "where": "Same scenario, after the AI report description",
+      "quote": "without touching your normal rankings"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0005",
+    "modules": [
+      "AEO",
+      "SEO",
+      "MEA"
+    ],
+    "topics": [
+      "generative answer surfaces",
+      "citation rate measurement"
+    ],
+    "claim": "When a page holds its Google position but loses clicks, check CTR against position, then Search Console's 2026 generative AI report for heavy AI Overview impressions on that page.",
+    "body": "A common pattern since about 2024 is steady rankings with falling clicks. The tutorial's diagnosis: first compare click-through rate against position over time. If a page sits at position three but its CTR has shrunk for months, either the title and description went stale against a better competitor snippet (rewrite the snippet), or Google put something above the result that answers the query, most often an AI Overview. Per the speaker, Google released a generative AI performance report in Search Console in June 2026, in beta and not yet on every property. It shows impressions, meaning how often a link to your site appeared inside AI Overviews or AI Mode, split by page, country and device. It has no click or position data yet. If the pages losing clicks show heavy AI impressions, the content is being read inside the answer rather than lost in ranking. Next step: sort the report by impressions to find pages the AI already uses, note their structure (direct, clearly structured answers to buyer questions), and produce more pages in that form. The report covers only Google's own AI features, not ChatGPT, Gemini app, Perplexity or Claude. Practitioner description of a beta feature; confirm in your own property.",
+    "conditions": "Sites with informational or comparison content that ranks on page one; Search Console property where the beta report has rolled out; 2026 onwards.",
+    "fails_when": "The report is not yet on the property; the click loss coincides with a ranking or demand drop (seasonality, algorithm update), which needs the comparison-by-page method instead; queries where Google shows no AI feature.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "generative AI performance report released June 2026, beta",
+      "report gives impressions by page, country and device; no clicks or position yet",
+      "example: page held at position 3 while CTR fell"
+    ],
+    "asks": [
+      "My Google rankings are the same but clicks keep dropping, why?",
+      "Is Google's AI Overview stealing clicks from my pages?",
+      "Where in Search Console can I see AI Overview impressions?",
+      "Our blog page sits at position 3 but CTR fell all year, what should we check?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0170",
+    "evidence": {
+      "where": "Scenario 'rankings holding steady but clicks falling'",
+      "quote": "there's no click data"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0006",
+    "modules": [
+      "AEO",
+      "SEO"
+    ],
+    "topics": [
+      "assistant citation patterns",
+      "generative answer surfaces"
+    ],
+    "claim": "In a study of about 768,000 AI citations cited by Fogarty, over half came from product pages, comparison content and buying guides, not general blogs, news or homepages.",
+    "body": "Fogarty cites a study of more than 768,000 citations in AI-generated answers (ChatGPT, Perplexity, Google AI Overviews) and says more than half pointed to product pages, comparison-style content and buying guides; general blog posts, news articles and homepages were cited far less. He does not name the study, so treat the share as unverified until you can trace it. The practical reading: AI answers favour pages that answer a specific question directly. So split broad collections into use-case pages (mineral sunscreen for sensitive skin, for dry skin) with the same core products but language matching the specific query, and write comparison and best-for-use-case pages that can be quoted. How to measure: Google your main product type phrased as a question (what hoodie is best for me), and if an AI Overview appears, record which pages it cites; repeat in ChatGPT and Perplexity; then check whether your pages appear and what the cited pages have in common (structure, specificity, tables). Keep pages skimmable and product-focused. Track these citation checks monthly for a fixed list of 10 to 20 buyer questions, since tactics in this field change quickly.",
+    "conditions": "Brands with product categories people ask assistants about; measured by manual citation checks for buyer questions.",
+    "fails_when": "The study is unnamed and unverified; AI citation patterns change quickly and differ by assistant; categories where assistants mainly cite marketplaces or major publishers.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 768,000 AI citations studied; over half from product pages, comparisons, buying guides (unverified)",
+      "10-20 buyer questions as a tracking set"
+    ],
+    "asks": [
+      "How do I get my products mentioned in ChatGPT answers?",
+      "What kind of pages do AI search tools cite?",
+      "How can I check if my brand shows up in Google AI Overviews?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0177",
+    "evidence": {
+      "where": "Hack four: generative engine optimisation"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0007",
+    "modules": [
+      "AEO",
+      "ORG"
+    ],
+    "topics": [
+      "source corroboration and third party mentions",
+      "assistant citation patterns"
+    ],
+    "claim": "Branded web mentions correlate most with AI Overview visibility (0.664 across 75,000 brands), YouTube mentions with ChatGPT (0.737), and listicles are 43.8% of cited pages: earn third-party lists.",
+    "body": "AI engines recommend brands that many independent sources agree on, so the work shifts from ranking one page to being named in many places. In Ahrefs' study of 75,000 brands, the number of branded web mentions had the strongest correlation with appearing in Google AI Overviews (0.664), stronger than backlinks, referring domains or domain rating. YouTube mentions correlated 0.737 with ChatGPT visibility, and YouTube is about 5.6 percent of all AI Overview citations. Across AI Overviews and ChatGPT, 43.8 percent of cited pages were listicles or comparison pages. How to apply for a store: (1) find 'best', 'top', 'versus' and 'alternative' prompts where competitors are named and you are not; (2) list the editorial roundups and comparison pages those answers cite and pitch them with samples, data or affiliate terms; (3) seed honest discussion where buyers talk (Reddit, niche forums) without astroturfing; (4) publish YouTube videos targeting search queries in your category rather than chasing viral views, since transcripts are indexed and cited; (5) keep your own comparison and FAQ pages current as a third tier. These are correlations, not proof that adding mentions causes visibility.",
+    "conditions": "Brands in categories with active 'best of' coverage and buyer discussion; Ahrefs datasets as of late 2025.",
+    "fails_when": "Very new or tiny categories with no editorial lists to get into; paid or fake mentions and Reddit astroturfing can backfire on reputation and platform bans; correlation may reflect that already-popular brands get both mentions and citations.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "0.664 correlation of branded web mentions with AI Overview visibility (75,000 brands)",
+      "0.737 correlation of YouTube mentions with ChatGPT visibility",
+      "YouTube about 5.6 percent of AI Overview citations",
+      "43.8 percent of cited pages are listicles"
+    ],
+    "asks": [
+      "how do i get chatgpt to recommend my brand",
+      "do backlinks matter for ai search",
+      "should i try to get into best of lists",
+      "does youtube help my brand show up in ai answers",
+      "competitors show up in ai answers and we don't, what do we do"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0179",
+    "evidence": {
+      "where": "Module 2 on earning mentions and YouTube AEO; listicle analysis",
+      "quote": "branded web mentions had the strongest correlation with AI visibility"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "AEO-0008",
+    "modules": [
+      "AEO",
+      "SEC",
+      "SEO"
+    ],
+    "topics": [
+      "crawler and agent allowlists",
+      "structured data completeness"
+    ],
+    "claim": "Check default CDN bot settings are not blocking AI crawlers (5.9% of 140M sites block GPTBot) and redirect AI-referred 404s; assistants send 2.87x more 404 visits.",
+    "body": "Two technical leaks quietly cut AI visibility and waste AI-referred visitors. First, access: Ahrefs found about 5.9 percent of 140 million websites block OpenAI's GPTBot, often by accident, for example through a CDN or bot-management setting that blocks AI crawlers by default (the course names Cloudflare's AI bot setting). Check robots.txt and your CDN or WAF rules, and decide deliberately which agents to allow: AI search and citation crawlers are distribution, while scrapers and training-only bots may be blocked. Also make sure key content is in server-rendered HTML, since many AI crawlers do not execute JavaScript. Second, broken landings: AI assistants send visitors to 404 pages 2.87 times more often than Google Search, and about 1 percent of URLs clicked from ChatGPT return 404, because models guess or misremember URLs. Steps: in analytics, filter sessions from AI referrers that hit 404 status; group the requested URLs; 301-redirect each to the closest real product, collection or guide; and make the 404 page itself useful with search and best sellers.",
+    "conditions": "Stores on CDNs or bot-management products (Cloudflare, Shopify's edge, WAFs) and any site receiving AI referral traffic; data from Ahrefs as of 2025.",
+    "fails_when": "Brands that deliberately opt out of AI training or have licensing reasons to block some crawlers; blocking training bots while allowing search and user-triggered agents is a valid split, so allowlisting everything is not the goal.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 5.9 percent of 140 million sites block GPTBot",
+      "AI assistants send visitors to 404 pages 2.87x more often than Google Search",
+      "about 1 percent of ChatGPT-clicked URLs return 404"
+    ],
+    "asks": [
+      "is my site blocking chatgpt",
+      "should i block ai bots on my store",
+      "people from chatgpt are landing on broken links, what do i do",
+      "does cloudflare block ai crawlers by default",
+      "can ai crawlers read my javascript product pages"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0179",
+    "evidence": {
+      "where": "Module on technical AEO (robots.txt, rendering, hallucinated URLs)",
+      "quote": "AI assistants send visitors to 404 pages 2.87 times more often"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "AEO-0009",
+    "modules": [
+      "AEO",
+      "SEO"
+    ],
+    "topics": [
+      "question and answer coverage",
+      "entity clarity"
+    ],
+    "claim": "For AI citations length barely matters (0.04 correlation; 53.4% of cited pages under 1,000 words) but freshness does: cited content is about 25.7% fresher than organic results.",
+    "body": "Ahrefs analysed over 174,000 pages cited in AI Overviews and found almost no relationship between word count and being cited (correlation 0.04); 53.4 percent of cited pages were under 1,000 words. Recency mattered more: AI-cited content was on average 25.7 percent fresher than pages ranking in classic results, 89.7 percent of ChatGPT's top-cited pages had been updated in 2025, and 76 percent had been refreshed within the previous 30 days. The practical implication for a store's guides, comparison pages and FAQs: stop padding pages for length, and instead (1) put the direct answer first in each section (bottom line up front), since retrieval pulls chunks rather than whole pages; (2) make every H2 section understandable on its own, with the product or brand named rather than referred to as 'it'; (3) keep a refresh calendar for the 5 to 10 pages that matter most, making substantive updates (new prices, specs, current-year comparisons) rather than date changes; (4) refresh older pages that still rank or used to get traffic before writing new ones. A page untouched for six months is at a disadvantage for AI citation.",
+    "conditions": "Informational, comparison and FAQ content intended to be cited by AI Overviews and ChatGPT; Ahrefs data from 2025.",
+    "fails_when": "Freshness signals faked by changing dates without content changes are unlikely to help; and topics that are genuinely static (care instructions, sizing basics) gain less from refreshes than fast-moving comparisons.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "0.04 correlation between word count and AI Overview citation (174,000 pages)",
+      "53.4 percent of cited pages under 1,000 words",
+      "cited content 25.7 percent fresher than organic results",
+      "89.7 percent of ChatGPT top-cited pages updated in 2025; 76 percent refreshed in last 30 days"
+    ],
+    "asks": [
+      "how long should blog posts be for ai search",
+      "how often should i update my content for chatgpt",
+      "does content freshness matter for ai overviews",
+      "our old guides used to get cited and now don't, why",
+      "how should i format pages so ai can quote them"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0179",
+    "evidence": {
+      "where": "Module 2, content creation for AI parsers (length and freshness)",
+      "quote": "the correlation between word count and getting cited is just 0.04"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "AEO-0010",
+    "modules": [
+      "AEO",
+      "MEA"
+    ],
+    "topics": [
+      "citation rate measurement",
+      "generative answer surfaces"
+    ],
+    "claim": "Only about 28% of AI brand mentions carry a link (AI Overviews 10.7%), so add 'AI assistant / ChatGPT' to a how-did-you-hear survey; referral traffic alone undercounts.",
+    "body": "Most AI influence never shows up as a referral. Across platforms only about 28 percent of AI mentions include a link: roughly 51.6 percent on Perplexity, 36.8 percent in AI Mode, 26.9 percent in ChatGPT and 10.7 percent in AI Overviews. A shopper who sees your brand named, then types your URL or searches your name, lands as direct or branded organic traffic. Ahrefs therefore measures with three inputs used together: (1) AI referral traffic, via a custom GA4 channel grouping that matches AI referrer domains with a regex (chatgpt.com, perplexity.ai, gemini, copilot and similar); on average this is only about 0.25 percent of a site's traffic, and Google still sends about 210 times more than the top AI platforms combined; (2) AI crawler and citation-bot hits in server logs, showing which pages AI systems fetch; (3) self-reported attribution, adding options such as 'AI assistant (ChatGPT, Perplexity)' and 'Google AI Overview' to a post-purchase or checkout 'how did you hear about us' question. Ahrefs reports AI was 0.5 percent of its traffic but 12.1 percent of sign-ups, and about 3 percent of conversions by self-report, a single-company figure. Do a quick monthly check and a deeper quarterly audit.",
+    "conditions": "Any store wanting to size AI search as a channel; GA4 or similar analytics with editable channel groups, and a post-purchase survey tool.",
+    "fails_when": "Low order volume makes survey shares noisy; and the high AI conversion rates reported by software companies (Ahrefs 23x, Vercel 10 percent) may not carry over to physical product stores.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 28 percent of AI mentions include a link",
+      "links in mentions: Perplexity 51.6 percent, AI Mode 36.8 percent, ChatGPT 26.9 percent, AI Overviews 10.7 percent",
+      "AI referrals about 0.25 percent of site traffic on average",
+      "Google sends about 210x more traffic than top AI platforms combined",
+      "Ahrefs: AI 0.5 percent of traffic, 12.1 percent of sign-ups; about 3 percent of conversions self-reported"
+    ],
+    "asks": [
+      "how do i track traffic from chatgpt",
+      "is ai search sending us any sales",
+      "why don't ai mentions show up in google analytics",
+      "what should i add to my post purchase survey for ai",
+      "how big is ai traffic compared to google"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0179",
+    "evidence": {
+      "where": "Module on measuring AEO (referral traffic, bot analytics, self-attribution)",
+      "quote": "add that question to an entry survey"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "AEO-0011",
+    "modules": [
+      "AEO",
+      "BRD"
+    ],
+    "topics": [
+      "entity clarity",
+      "source corroboration and third party mentions"
+    ],
+    "claim": "Publish an official brand-facts FAQ: in an Ahrefs test Gemini and Perplexity repeated planted fake sources in 37-39% of answers; ChatGPT cited the official FAQ 84%.",
+    "body": "AI engines fill gaps in what they know about a brand with whatever sources they find, accurate or not. Ahrefs created a fictional luxury brand, planted three contradictory sources about it on a blog, Reddit and Medium, then asked eight AI platforms about it. Gemini and Perplexity repeated the invented details (fake founders, cities, pricing stories) in 37 to 39 percent of answers, presented as fact. ChatGPT stayed under 7 percent and cited the brand's official FAQ in 84 percent of its answers. The lesson for a store is to leave no factual gap for others to fill: publish one crawlable official page answering who founded the brand, where it is based and ships from, how products are made and sourced, price ranges, materials, warranty, returns and what the brand does not sell, with each answer stated plainly and kept current. Then run your brand-name prompts monthly on each platform, note any wrong claims and their cited sources, and correct those sources where you can (reviews of outdated info, old press, marketplace listings). Treat sentiment and accuracy as a tracked metric alongside mention count.",
+    "conditions": "Any brand, especially newer or smaller ones with thin third-party coverage, or brands that have changed pricing, ownership or product lines.",
+    "fails_when": "Large established brands with abundant consistent coverage are less exposed; and a single experiment on one fictional brand does not give stable per-platform rates, so treat the percentages as illustrative.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "3 planted contradictory sources, 8 AI platforms tested",
+      "Gemini and Perplexity repeated misinformation in 37 to 39 percent of answers",
+      "ChatGPT under 7 percent; cited official FAQ in 84 percent of answers"
+    ],
+    "asks": [
+      "chatgpt says wrong things about my brand, how do i fix it",
+      "do i need an faq page for ai search",
+      "how do i stop ai from making up facts about my company",
+      "how can i check what ai says about my brand"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0179",
+    "evidence": {
+      "where": "Measurement module, mention sentiment and misinformation test",
+      "quote": "fill every information gap about your brand"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "AEO-0012",
+    "modules": [
+      "AEO"
+    ],
+    "topics": [
+      "citation panel method",
+      "assistant citation patterns"
+    ],
+    "claim": "Track AI visibility per platform: only 7 of the top 50 cited domains overlap across AI Overviews, ChatGPT and Perplexity, and over 45% of citations churn every two days.",
+    "body": "AI answer engines retrieve from different sources, so one visibility number hides most of the picture. Ahrefs found only 7 of the 50 most-cited domains appeared on all three of Google AI Overviews, ChatGPT and Perplexity (14 percent overlap). Perplexity tracks Google rankings most closely, with about 28.6 percent of its citations from Google top-10 pages; ChatGPT overlaps only 8 to 10 percent and leans on high-authority publishers (median domain rating of its top-cited pages about 90). AI Overviews once drew 76 percent of citations from the top 10, but a later study puts it nearer 38 percent as YouTube and Reddit grow; AI Overviews and AI Mode give 86 percent semantically similar answers yet share only 13.7 percent of citations. AI Overviews appear on about 21 percent of keywords overall, 58 percent of question queries and 46 percent of queries of seven or more words. Over 45 percent of AI Overview citations change at each refresh, roughly every two days. How to apply: build a fixed panel of buyer prompts (best, top, versus, review, alternative), run it on each platform on a schedule, record mentions and citations per platform, and judge trends over weeks, not single checks.",
+    "conditions": "Brands measuring or working on AI search visibility, particularly categories where buyers ask comparison and 'best X' questions; figures from Ahrefs datasets as of late 2025.",
+    "fails_when": "Platform behaviour shifts quickly; these shares will move with model and product changes, so re-measure rather than reuse the numbers after about six months.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "7 of top 50 cited domains shared across three platforms (14 percent overlap)",
+      "Perplexity about 28.6 percent of citations from Google top 10; ChatGPT 8 to 10 percent",
+      "AI Overview citations from top 10: 76 percent earlier, about 38 percent later",
+      "AI Overviews vs AI Mode: 13.7 percent citation overlap, 86 percent semantic similarity",
+      "AI Overviews on about 21 percent of keywords, 58 percent of questions, 46 percent of 7+ word queries",
+      "over 45 percent of AI Overview citations change per refresh, about every 2 days"
+    ],
+    "asks": [
+      "does ranking on google get me into chatgpt answers",
+      "how do i check if ai mentions my brand",
+      "why does my brand show up in perplexity but not chatgpt",
+      "how often should i check ai search visibility",
+      "do ai overviews cite the same sites as google rankings"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0179",
+    "evidence": {
+      "where": "Module 1, platform differences; brand gap analysis step on query shortlists",
+      "quote": "only seven appeared on all three platforms"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "AEO-0013",
+    "modules": [
+      "AEO",
+      "ORG"
+    ],
+    "topics": [
+      "source corroboration and third party mentions",
+      "generative answer surfaces"
+    ],
+    "claim": "A single wire press release (about $80, about $6 each in bulk) can be syndicated widely enough to be cited in Google AI Overviews and ChatGPT for its headline phrase.",
+    "body": "Low-cost newswire services syndicate releases to many news and finance sites, which assistants and AI Overviews treat as sources. Examples from the episode: an SEO author bought a single release (about $80; bulk plans bring the price to about $6 per release) with the phrase 'best-selling SEO book' in the title, subheading and first sentence, and the release then ranked first on Google and was cited by AI Overviews and ChatGPT for that phrase. The guest separately ran a test with a fictitious company and a claimed near-five-star rating, and assistants repeated it confidently, which shows both the power and the misinformation risk. Legitimate uses for a store: product launches, sponsorships and community activity, awards, and correcting an outdated narrative; repeat the exact phrase you want associated with the brand in the headline and opening line. Only publish true, substantiated claims: invented ratings or 'best-selling' claims without evidence create consumer-protection exposure and can be reversed when platforms adjust. Expect the tactic to keep working as long as real companies use releases as primary news sources.",
+    "conditions": "Brands with genuine news to announce, or reputation narratives to correct, in categories where AI answers cite news-wire content.",
+    "fails_when": "Claims that are unsubstantiated or false; heavily regulated claims (health, finance) needing approval; if search engines and AI providers down-weight syndicated release pages.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about $80 for a single release",
+      "about $6 per release on a bulk annual plan (about $500 for about 83)"
+    ],
+    "asks": [
+      "Do press releases help a brand show up in ChatGPT?",
+      "How much does a press release cost to get picked up by AI tools?",
+      "Can a cheap press release get us cited in Google AI Overviews?",
+      "Is it risky to use press releases for AI visibility?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0180",
+    "evidence": {
+      "where": "Press release strategy discussion (AB Newswire example)"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "AEO-0014",
+    "modules": [
+      "AEO",
+      "CXP",
+      "ORG"
+    ],
+    "topics": [
+      "source corroboration and third party mentions",
+      "assistant citation patterns"
+    ],
+    "claim": "Find which third-party pages an assistant cites for your brand and category, then fix those specific sources (review profiles, affiliate listicles, cited Reddit threads) before paying for generic placements.",
+    "body": "Assistants repeat what the pages they retrieve say. The guests' approach is to check, for 'brand plus reviews' and key category prompts, which sources are cited, then act on those. Examples: Trustpilot is heavily cited for review questions, so reply to negative reviews and ask happy customers to review there; for a law firm, Glassdoor was the cited review source until encouraging employee reviews lifted the rating above four stars, after which ChatGPT cited something else. For best-of prompts, pursue the large affiliate and review publishers that keep appearing (Healthline and WebMD in supplements, mattress review sites) through their affiliate programmes rather than asking competitors; small niche blogs whose listicles are widely cited may include a brand for a few hundred dollars. Before paying a Reddit marketing vendor, check which threads are actually cited: in one case the only cited thread was eight years old and locked, so new posts would change nothing. Spread effort across platforms, since a source can drop out of results suddenly (they cite Reddit falling out of OpenAI results for a period).",
+    "conditions": "Brands with reviews and third-party coverage that assistants cite; consumer categories with strong affiliate publishers.",
+    "fails_when": "Regulated categories where paid inclusion needs disclosures or is barred; review solicitation must follow each platform's rules (no incentives for positive reviews).",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Glassdoor rating raised above 4 stars changed the cited source",
+      "niche listicle inclusion quoted around $200 to $300",
+      "cited Reddit thread 8 years old and locked in one example"
+    ],
+    "asks": [
+      "Which review sites does ChatGPT use when people ask about my brand?",
+      "Should we pay a company to post about us on Reddit for AI visibility?",
+      "How do I get into the listicles that AI tools cite?",
+      "Do Trustpilot reviews affect what ChatGPT says about us?"
+    ],
+    "platforms": [
+      "reddit"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0180",
+    "evidence": {
+      "where": "Review platforms, affiliate listicles and Reddit discussion"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "AEO-0015",
+    "modules": [
+      "AEO",
+      "MEA"
+    ],
+    "topics": [
+      "citation rate measurement",
+      "citation panel method"
+    ],
+    "claim": "Prompt trackers on free ChatGPT often record answers given without any web search, so no citations appear; compare logged-in and logged-out runs, repeat prompts, and discount answers lacking search.",
+    "body": "AI visibility tools usually run your prompts and screenshot the answer. The guest found much of his tracked data useless because the free version of ChatGPT frequently answered from model memory without searching the web, so no sources were cited and the answer reflected old training data (it named a former prime minister as current a year after he left office). Answers also vary between runs, between logged-in paid accounts and logged-out sessions, and with small changes in wording. How to measure more reliably: for each important prompt, run it several times, in a logged-out session and a logged-in or paid account, and with a few phrasings; record whether a web search happened, which sources were cited and whether the brand was mentioned; only compare citation share across runs that searched. Treat no-search answers as a separate signal about what the model already believes, which changes only with training updates. Report AI visibility as a range over repeated runs, not a single screenshot.",
+    "conditions": "Brands tracking mentions or citations in ChatGPT and similar assistants with automated tools.",
+    "fails_when": "Assistants or modes that always search the web, where the no-search problem does not arise; behaviour changes as providers update models and defaults.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Are AI visibility tracking tools accurate?",
+      "Why does ChatGPT give different answers about my brand each time?",
+      "Our prompt tracker shows no citations, what does that mean?",
+      "How should I measure whether ChatGPT recommends us?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0180",
+    "evidence": {
+      "where": "Discussion of prompt tracking tools and the incognito comparison experiment"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0016",
+    "modules": [
+      "AEO",
+      "SEO"
+    ],
+    "topics": [
+      "generative answer surfaces",
+      "question and answer coverage"
+    ],
+    "claim": "Read the sub-searches (fan-out queries) ChatGPT runs for your prompts and use that wording in page titles, URLs, H1s and first sentences, including best-X-for-Y category pages.",
+    "body": "When an assistant searches, it rewrites the prompt into one or more web queries, often adding qualifiers such as the year, use cases or review sites. Perplexity shows these openly. For ChatGPT, the host's method: run a prompt that triggers a search, open the browser developer tools network tab, filter by the conversation ID from the URL, refresh, open the matching response and search it for 'queries' to see the exact searches. Repeat across prompts to learn the phrasing the model uses, then target that language on pages that can rank: page title, URL slug, H1 and the opening sentence. They observed ChatGPT adding a review site (G2) and well-known brand names into fan-out queries, so being present on the review and affiliate sites it searches matters too. For ecommerce, they note Google increasingly ranks category and product pages for best-of queries, so a category page titled like 'best fragrances for men' with the product grid can win bottom-funnel searches without a separate listicle. Prefer specific, high-intent use-case pages over top-of-funnel explainers that AI answers itself.",
+    "conditions": "Stores and brands targeting commercial queries that assistants answer with web search.",
+    "fails_when": "Fan-out wording shifts as models update, so findings need re-checking; the developer-tools method may stop working if the interface changes.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "How can I see what ChatGPT searches for when answering a question?",
+      "What is query fan-out and how do I optimise for it?",
+      "Should my category pages be titled 'best X for Y'?",
+      "Do I need listicles to show up for best-of searches?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0180",
+    "evidence": {
+      "where": "Query fan-out language section and ecommerce category page discussion"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0017",
+    "modules": [
+      "AEO",
+      "BRD"
+    ],
+    "topics": [
+      "entity clarity",
+      "source corroboration and third party mentions"
+    ],
+    "claim": "Repeating one corrected fact across your site, founder videos, social posts and third-party articles shifted what ChatGPT said without search, from 9+ months to about 6, over two years.",
+    "body": "Models answer some questions from training data without searching, so outdated or negative claims (often from old reviews) persist. The guest's case: a software company's model-stated implementation time was 9 to 12 months or more, traced to five-year-old G2 review wording. The fix was distribution of one consistent statement: the website stated implementation can take as little as three weeks; the founder posted myth-busting videos on Instagram and YouTube; third-party articles carried the same point. About two years later, the latest model without web search said about six months: not the target, but a measurable shift. The ecommerce equivalent is any fact the brand wants models to state correctly, such as delivery times, return policy, ingredients, sizing or price range; stating it plainly on your own site also beats letting the model fill the gap from Reddit, as with hidden pricing. They also note a large brand repeating one line everywhere (Toyota and 'most reliable car') is how a claim becomes the default answer. Expect slow change tied to model training cycles; test with search disabled.",
+    "conditions": "Brands with a specific inaccurate or outdated claim appearing in AI answers given without web search.",
+    "fails_when": "Claims that are not true, which become a deception risk; brands without the multi-channel reach to outweigh existing sources; when the answer comes from live search, fix the cited pages instead.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "model-stated implementation time moved from 9+ months to about 6 months",
+      "about 2 years of distribution",
+      "target stated on site: as little as 3 weeks"
+    ],
+    "asks": [
+      "ChatGPT says something outdated about our brand, how do we fix it?",
+      "Can a brand influence what AI models say without web search?",
+      "How long does it take to change what ChatGPT believes about us?",
+      "Should we publish our price range so AI doesn't guess?"
+    ],
+    "platforms": [
+      "instagram",
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0180",
+    "evidence": {
+      "where": "Training data case study (implementation time)"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "AEO-0018",
+    "modules": [
+      "AEO",
+      "SEO"
+    ],
+    "topics": [
+      "generative answer surfaces",
+      "citation rate measurement"
+    ],
+    "claim": "Scaling a blog from about 100 to 1,000+ AI-written pages in weeks usually spikes then crashes within a few months; recovery from such hits can take 2 to 3 years.",
+    "body": "Many GEO tools and agencies sell content scaling: generate pages for every fan-out variant, how-to and 'what is' query, plus mass listicles and comparison pages. The guests report a consistent pattern they call 'rank and tank' or 'Mount AI': traffic and AI citations rise quickly, vendors publish case studies claiming 300 to 500 percent visibility gains, then rankings fall, often within about three months, as Google's systems catch the pattern. Google's spam policies name this 'scaled content abuse'. Because AI assistants retrieve through search indexes, losing search visibility also removes the pages from AI answers, and an algorithm hit can take two to three years to recover from. Even where total traffic still looks higher, they found harder keywords (difficulty above 30 in Ahrefs) already declining. Most of that traffic is top-of-funnel and rarely sells. How to vet a GEO vendor: treat a built-in content generator and scaled-content case studies as red flags; ask how named clients perform today; be wary of llms.txt files, special 'AI info' pages and 'chunking' as headline tactics; ask about their video, social and off-site plans.",
+    "conditions": "Established ecommerce or brand sites considering AI-generated content at volume or hiring a GEO/AEO vendor.",
+    "fails_when": "Disposable affiliate or churn-and-burn sites that accept the crash; carefully edited, genuinely useful content added at a measured pace is not what this describes.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 100 to 1,000+ blog pages within weeks",
+      "decline typically after about 3 months",
+      "2 to 3 years to recover from an algorithm hit",
+      "vendor claims of 300 to 500% AI visibility gains",
+      "keyword difficulty above 30 declining first"
+    ],
+    "asks": [
+      "Is it safe to publish hundreds of AI blog posts to show up in ChatGPT?",
+      "A GEO agency promised 500% more AI visibility, should I trust it?",
+      "What questions should I ask before hiring an AEO agency?",
+      "Do I need an llms.txt file?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0180",
+    "evidence": {
+      "where": "Opening discussion of scaled content and vendor evaluation questions"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0019",
+    "modules": [
+      "AEO",
+      "SEO"
+    ],
+    "topics": [
+      "generative answer surfaces",
+      "question and answer coverage"
+    ],
+    "claim": "AI Overviews show on about 21% of keywords but about 58% of question queries, and 99.9% of triggering keywords are informational; target brand mentions there, not clicks.",
+    "body": "Before choosing a keyword, run what the source calls the AI filter: search it and ask whether an AI Overview fully answers it. Ahrefs data: AI Overviews appear on about 21% of all keywords, roughly 58% of question-style queries, and 99.9% of keywords that trigger them are informational. On those queries the click is often eaten by the answer, so a page built only to rank and earn a click may get traffic far below its search volume. Do not abandon them; change the goal to being named inside the answer. In practice: keep transactional and commercial queries (product, collection, 'buy', brand terms) as click targets; for informational and question queries, aim for inclusion in the cited sources and for your brand to be mentioned on the third-party pages the answer draws from. Assistants also fan a single prompt out into many sub-searches (a reported 420 searches in deep research for one red phone case query), so coverage across a whole topic beats ranking for one head term. Track progress by AI mentions and citations, not only rankings and clicks.",
+    "conditions": "Content planning for stores that publish guides and answer content; figures from Ahrefs keyword samples.",
+    "fails_when": "The query is commercial or transactional, where AI Overviews appear far less and clicks remain the goal; or the brand cannot realistically be cited for the topic, so effort is better spent on pages that convert.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "AI Overviews on about 21% of keywords",
+      "about 58% of question queries trigger AI Overviews",
+      "99.9% of triggering keywords are informational",
+      "420 searches reported for one deep-research prompt"
+    ],
+    "asks": [
+      "Is it still worth writing blog posts if Google's AI answers the question?",
+      "Which keywords should I stop chasing because of AI Overviews?",
+      "How do I get traffic when AI answers everything?",
+      "What is query fan-out?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0181",
+    "evidence": {
+      "where": "keyword and prompt research section, 'the AI filter'"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "AEO-0020",
+    "modules": [
+      "AEO",
+      "MEA"
+    ],
+    "topics": [
+      "citation rate measurement"
+    ],
+    "claim": "AI referral traffic is undercounted; at Ahrefs it was 0.5% of visits but 12.1% of sign-ups, found only through a 'how did you hear about us' question.",
+    "body": "Analytics misses much of the effect of AI recommendations. Some assistants pass referral data (ChatGPT's source links do), but in-content links on some paid accounts do not, and a buyer who sees a brand in an answer and then searches for it shows up as organic or direct. Ahrefs tracks three signals together. First, AI referral sessions, via a custom channel in GA4 that matches AI domains with a regex, read as a direction and trend, never an exact count. Second, AI bot crawl activity from server or CDN logs; a page repeatedly fetched by citation bots is probably being used as a source. Third, self-reported attribution: a 'How did you hear about us?' question at sign-up, checkout or post-purchase with AI assistants as an option. Their own result: AI search referrals were 0.5% of site visits but 12.1% of sign-ups, a conversion rate 23 times higher than organic search, which they would not have seen without the survey. They also report AI traffic grew 9.7 times in a year. For a store, add the survey answer option now so the channel's value is visible before deciding budget.",
+    "conditions": "Stores measuring AI search impact; Ahrefs' numbers are for a SaaS sign-up, not an ecommerce purchase.",
+    "fails_when": "Survey response rates are low or the option list is poorly designed, so self-reports skew; a store's AI traffic may convert differently from a software tool's sign-ups.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "AI referrals 0.5% of Ahrefs visits but 12.1% of sign-ups",
+      "23x higher conversion rate than organic search",
+      "AI traffic grew 9.7x in a year"
+    ],
+    "asks": [
+      "How do I track traffic from ChatGPT?",
+      "Our analytics shows almost no AI traffic, is AI search not working for us?",
+      "Should we add a 'how did you hear about us' question at checkout?",
+      "Does AI search traffic convert better than Google?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0181",
+    "evidence": {
+      "where": "measurement section: AI referral, bot activity, self-reported attribution"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "AEO-0021",
+    "modules": [
+      "AEO",
+      "SEO"
+    ],
+    "topics": [
+      "assistant citation patterns",
+      "extractable tables",
+      "question and answer coverage"
+    ],
+    "claim": "AI-cited pages skew fresh and list-shaped, not long: 76% of ChatGPT's top-cited pages were refreshed within 30 days, 43.8% are lists or comparisons, and length showed no correlation.",
+    "body": "From Ahrefs' analysis of pages cited by AI: across 174,000 pages cited in AI Overviews, word count had essentially zero correlation with being cited, and over half of cited pages were under 1,000 words. Freshness mattered a lot: 89.7% of ChatGPT's top-cited pages had been updated in 2025 and 76% within the previous 30 days, and AI-cited content was on average 25.7% fresher than pages ranking in classic Google results. Format mattered: 43.8% of pages cited by ChatGPT were lists, best-of, top-X, comparison or review pages. Authority still counts: 76% of AI Overview citations came from pages already in Google's top 10, so classic SEO is the base. How to write for retrieval: put the answer first in each section (both models and people weight the start and end of a passage); make each H2 section understandable on its own, because models chunk pages at points you do not control; name specific entities (product, brand, model, material) instead of 'this tool'; keep one idea per sentence. For a store, the fastest win is refreshing pages that once ranked and decayed, and building comparison and buying-guide pages for the category.",
+    "conditions": "Content and collection or guide pages competing for informational and comparison prompts; figures are Ahrefs' 2025-era samples.",
+    "fails_when": "Freshness is faked (date bumped without real changes), which may not help and can mislead readers; for transactional queries, product data and reviews matter more than article format; these figures will shift as engines change.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "174,000 AI-Overview-cited pages: word count correlation about zero; over half under 1,000 words",
+      "89.7% of ChatGPT top-cited pages updated in 2025; 76% within 30 days",
+      "AI-cited content 25.7% fresher than Google top results",
+      "43.8% of ChatGPT-cited pages are lists, comparisons or reviews",
+      "76% of AI Overview citations from Google top-10 pages"
+    ],
+    "asks": [
+      "Do longer blog posts get cited more by AI?",
+      "How often should we update content for ChatGPT?",
+      "What kind of page does ChatGPT cite most?",
+      "Our old guides stopped getting traffic, should we refresh or write new ones?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0181",
+    "evidence": {
+      "where": "content section: macro (length, freshness, format) and micro (BLUF, atomic, entity-rich) principles"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "AEO-0022",
+    "modules": [
+      "AEO"
+    ],
+    "topics": [
+      "source corroboration and third party mentions",
+      "assistant citation patterns"
+    ],
+    "claim": "Branded web mentions correlated more strongly with AI Overview visibility than backlinks or domain rating across 75,000 brands; YouTube mentions correlated 0.737 with ChatGPT visibility.",
+    "body": "Ahrefs studied 75,000 brands and found that the number of pages mentioning a brand by name had the strongest correlation with visibility in Google's AI Overviews, ahead of backlinks, domain rating and referring domains. Assistants also lean on consensus: the more independent places say the same thing about a brand, the more likely the model repeats it. YouTube is the most cited domain in AI Overviews, and YouTube mentions showed a 0.737 correlation with ChatGPT visibility, the strongest factor in their data, which they link to large-scale training on YouTube transcripts. Where to earn mentions, in order of value: tier 1, third-party editorial pages (category 'best of' lists, review sites, comparison posts on authoritative blogs); tier 2, user-generated communities such as Reddit and niche forums, answering real questions rather than spamming; tier 3, the brand's own YouTube, podcast and social profiles. For YouTube, aim for evergreen search topics rather than viral spikes: keyword in the title and first lines of the description, chapters, and say the keyword aloud because audio is indexed. To find targets, list prompts where competitors are named and you are not, filtered for best, top, versus, review and alternative.",
+    "conditions": "Brands seeking recommendation in ChatGPT and Google AI Overviews; correlations from Ahrefs' brand sample, not controlled experiments.",
+    "fails_when": "Mentions are bought or seeded inauthentically (Reddit and publishers remove them, and they can damage trust); correlation may reflect that big brands get both mentions and citations, so small brands may see slower effects.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "75,000 brands studied: branded mentions the strongest correlate of AI Overview visibility",
+      "YouTube mentions 0.737 correlation with ChatGPT visibility",
+      "GPT-4 reportedly trained on over 1 million hours of YouTube transcripts"
+    ],
+    "asks": [
+      "How do I get ChatGPT to recommend my brand?",
+      "Do backlinks still matter for AI search?",
+      "Competitors show up in AI answers and we don't, what do we do?",
+      "Is YouTube worth it for AI visibility?"
+    ],
+    "platforms": [
+      "youtube",
+      "reddit"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0181",
+    "evidence": {
+      "where": "'earning mentions' and YouTube sections"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "AEO-0023",
+    "modules": [
+      "AEO",
+      "SEO"
+    ],
+    "topics": [
+      "question and answer coverage",
+      "extractable tables"
+    ],
+    "claim": "Write 60-70% of a guide as content capsules: a question as the H2, then a self-contained 20-25 word direct answer, with any number linked to its source.",
+    "body": "Answer engines retrieve passages, not pages, and cite the passage that answers a sub-question cleanly. A content capsule is a heading phrased as the buyer's question followed immediately by a short answer that makes sense on its own, so it can be lifted without the surrounding text. Rules from the presenter: (1) phrase H2s as the questions buyers and AI fan-out queries ask (how much does X cost, do I need Y, which size for Z); (2) answer in the first 20 to 25 words with the specific fact or range, never a warm-up line ('in the ever-evolving world of...'); going to 50 words is fine if still direct; (3) apply this to roughly 60 to 70 percent of the article and use the rest for process, examples and first-hand experience, which AI cannot copy from elsewhere; (4) keep links out of the capsule sentence itself but link every statistic or price claim to its source elsewhere in the section; (5) make each section readable out of context by naming the product rather than writing 'it'. For a store, the natural homes are buying guides, size and fit guides, care pages and product FAQs, where questions like 'which size for a 12 kg dog' have one clear answer.",
+    "conditions": "Informational and buying-guide content intended for AI Overviews, ChatGPT and Perplexity citation, and for featured snippets; question-led categories with factual answers.",
+    "fails_when": "Narrative brand content, lookbooks and opinion pieces where a Q&A skeleton reads as robotic and lowers human engagement; and answers that need nuance or regulated wording (health, safety claims) where a 25-word answer can mislead.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "capsule answer 20 to 25 words (up to 50 acceptable)",
+      "60 to 70 percent of article in capsule format"
+    ],
+    "asks": [
+      "how should i format blog posts so ai cites them",
+      "how long should answers under headings be",
+      "what's the best structure for an faq page for ai search",
+      "our guides rank but never get cited by chatgpt, what do we change"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0182",
+    "evidence": {
+      "where": "Module 4, content pages, 'content capsule technique'",
+      "quote": "a short self-contained answer sitting directly under a question"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0024",
+    "modules": [
+      "AEO"
+    ],
+    "topics": [
+      "assistant citation patterns",
+      "source corroboration and third party mentions"
+    ],
+    "claim": "Answer engines need separate playbooks: Reddit mainly moves ChatGPT, Google AI Overviews follow SEO rules, Perplexity favours third-party sources; only about 30 to 40% of tactics overlap.",
+    "body": "The guest's working model from Gamma's citation tracking, stated as heuristic rather than measured: roughly 30 to 40% of what earns citations is shared across ChatGPT, Claude, Perplexity and Gemini or Google AI Overviews, and the rest differs. Ranking of what influences ChatGPT for Gamma: Reddit first; then the brand's own site and other people's sites (blogs, PR, reviews), which trade places; then YouTube; then LinkedIn, which is thin and unpredictable. X content was not seen in citations; Quora and Medium still are; Substack less so because much is gated. Google AI Overviews reward standard SEO practice. Claude cites far less (he recalls about 5x fewer citations than ChatGPT) and behaves more like an app store, where an MCP connector is the way in, useful for retention rather than new-customer acquisition. For prosumer brands he ranks priority as ChatGPT, then Google AI Overviews, then Perplexity, then Claude; for enterprise buyers he would put Claude and Copilot first. How to apply: decide which engine your buyers use, then pick the matching channel mix rather than one generic AEO checklist.",
+    "conditions": "Consumer and prosumer brands planning AEO work in 2026; channel influence observed for a horizontal SaaS product.",
+    "fails_when": "Engine sourcing changes quickly (data deals, model updates), so the ranking may be stale within months; categories with little Reddit discussion will see less effect from Reddit work; enterprise or B2B buyers follow different engines.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 30 to 40% playbook overlap across engines",
+      "Claude cites about 5x less than ChatGPT (guest's recollection of studies)"
+    ],
+    "asks": [
+      "Does posting on Reddit help my brand show up in ChatGPT?",
+      "Which AI search engine should I optimise for first?",
+      "Is optimising for Google AI Overviews different from ChatGPT?",
+      "Where does ChatGPT get its product recommendations from?"
+    ],
+    "platforms": [
+      "reddit",
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0183",
+    "evidence": {
+      "where": "platform ranking discussion",
+      "quote": "Reddit only works for Chat GPT"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0025",
+    "modules": [
+      "AEO",
+      "MEA"
+    ],
+    "topics": [
+      "citation rate measurement",
+      "generative answer surfaces"
+    ],
+    "claim": "Measure answer-engine acquisition with a post-signup 'how did you hear about us' question listing ChatGPT explicitly; click referrals undercount it badly.",
+    "body": "Gamma's head of growth found ChatGPT click-through referrals in analytics rose about 8x, then fell, while still under 1% of traffic. When the team moved 'ChatGPT' from an 'other' free-text answer to a visible option in the how-did-you-hear-about-us survey, self-reported discovery kept climbing even as click referrals declined, and AEO became one of the company's fastest-growing acquisition channels. His framing: run AEO like Google search (content written to match the prompts people use) but measure it like Facebook view-through, because most answer-engine influence produces no click. How to apply for a store: 1) Add a one-question post-purchase survey with named options: ChatGPT, Google AI Overview or AI Mode, Perplexity, Claude, Gemini, plus search, social, friend. 2) Track the share of new customers choosing an AI option month by month, alongside referral sessions from chatgpt.com and perplexity.ai. 3) Expect self-report to exceed click attribution; use it for budget decisions on AEO work. 4) Keep a manual sheet of target prompts and whether you are cited, since off-the-shelf tracking runs logged-out prompts while real users are logged in with memory.",
+    "conditions": "Brands investing in AEO content, PR or community work that need a way to judge it; consumer and prosumer audiences where ChatGPT dominates assistant usage.",
+    "fails_when": "Low order volume makes survey shares noisy; survey option order biases answers (rotate options); and respondents may not remember which AI tool they used, so treat it as directional.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "ChatGPT-referred click traffic grew about 8x but stayed under 1% of traffic",
+      "guest estimates over 90% of Gamma's AEO acquisition comes from ChatGPT"
+    ],
+    "asks": [
+      "How do I know if ChatGPT is sending me customers?",
+      "Our analytics show almost no ChatGPT traffic, does AEO matter for us?",
+      "How should I measure AI search visibility?",
+      "What options should my 'how did you hear about us' survey include now?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0183",
+    "evidence": {
+      "where": "early discussion of how Gamma noticed AEO",
+      "quote": "as a channel it behaves like Google but as measurement it behaves like Facebook"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0026",
+    "modules": [
+      "AEO"
+    ],
+    "topics": [
+      "citation rate measurement",
+      "assistant citation patterns"
+    ],
+    "claim": "New content took about 30 to 45 days to be cited by ChatGPT but as little as a day in Perplexity; treat citations as decaying and re-check share regularly.",
+    "body": "Timing observations from Gamma's growth team: fresh content (for example a Reddit post or page targeting a specific phrase) generally took 30 to 45 days before ChatGPT cited it, while Perplexity could cite it the next day when the exact phrase was searched, and the host had seen Google AI Overviews cite a Reddit thread within a day on a niche query. The guest also suspects citations have a half-life: a mention that earns a citation now may lose it after some months, so AEO is an always-on engine, not a one-off project. Retrieval answers favour fresh pages, while Reddit work feeds training data and the memory of logged-in users, which may give early movers a lasting edge. How to apply: 1) Wait at least 6 weeks before judging ChatGPT impact of a new piece. 2) Use Perplexity as an early signal that content is retrievable. 3) Keep a sheet of target prompts with the date each citation first appeared and when it disappeared, and compute citation share monthly. 4) Plan to refresh or replace content on a roughly quarterly cycle until your own decay data says otherwise.",
+    "conditions": "Brands publishing content aimed at answer-engine citation, tracking a defined prompt set.",
+    "fails_when": "Lags shift with engine updates and crawl behaviour; very competitive prompts may never cite a new source regardless of time; the half-life idea is the guest's untested theory.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "ChatGPT pickup about 30 to 45 days",
+      "Perplexity pickup as fast as next day",
+      "citation half-life guessed at about 3 months"
+    ],
+    "asks": [
+      "How long does it take for ChatGPT to pick up new content?",
+      "We published AEO content a month ago and see nothing, should we give up?",
+      "Do AI citations go away over time?",
+      "How often should I re-check if AI tools cite my brand?"
+    ],
+    "platforms": [
+      "reddit"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0183",
+    "evidence": {
+      "where": "Reddit timing and half-life of citations discussion",
+      "quote": "anywhere between 30 to 45 days for a new content to get picked up"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0027",
+    "modules": [
+      "AEO"
+    ],
+    "topics": [
+      "source corroboration and third party mentions",
+      "question and answer coverage"
+    ],
+    "claim": "To earn Reddit-driven AI citations, post in problem and buyer subreddits framed as comparisons with named competitors, and target narrow 'best X for Y' queries first.",
+    "body": "Gamma's Reddit playbook, as described: 1) Pick subreddits from two angles: where the buyer hangs out (founders, marketers) and where the problem is discussed (PowerPoint, Canva). 2) Do not post 'our product is great'; content that gets picked up compares you with alternatives ('how X is better than PowerPoint for this'), and the guest's only consistent citation pattern is being talked about by others and in comparison with something else. 3) Choose which competitors to compare against deliberately, so the content does not help a rival. 4) Use an 'open ecosystem' wedge: show how your product works with what people already use (import from, export to). 5) Go narrow before broad: 'best CRM for health tech' before 'best CRM', then widen as topical authority builds; when competitors copy, move to the next niche. 6) Comments mostly shape sentiment rather than discovery, but one negative comment can stay in answers for months, so monitor and address negative threads early. 7) Starting out, post in others' subreddits; build your own subreddit for the long term. Reddit's rules on self-promotion apply; undisclosed promotion risks bans.",
+    "conditions": "Brands with real category discussion on Reddit; aimed at ChatGPT visibility; consumer or prosumer products.",
+    "fails_when": "Categories with no active subreddits, or communities hostile to brand participation; undisclosed or astroturfed posting breaks Reddit rules and FTC endorsement guidance and can backfire into the very negative threads that persist in AI answers.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "How do I use Reddit to get recommended by ChatGPT?",
+      "What should I post on Reddit about my product without getting banned?",
+      "A negative Reddit comment shows up when people ask AI about us, what do I do?",
+      "Should I target broad or niche questions for AI search?"
+    ],
+    "platforms": [
+      "reddit"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0183",
+    "evidence": {
+      "where": "Reddit tactics section",
+      "quote": "don't talk about hey gamma is great"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0028",
+    "modules": [
+      "AEO",
+      "SEO"
+    ],
+    "topics": [
+      "entity clarity",
+      "structured data completeness"
+    ],
+    "claim": "Before any AEO content work, confirm AI crawlers are allowed in robots.txt, key text renders without JavaScript, and the sitemap is submitted to both Google and Bing.",
+    "body": "Answer engines can only recommend what their crawlers can read and what their search backends have indexed, so these checks come first. Mechanism: ChatGPT's live answers draw heavily on Bing's index (the source notes Microsoft's large stake in OpenAI), Google AI Overviews draw on Google's index, and many AI crawlers do not execute JavaScript, so product facts injected client-side may be invisible to them. Steps: 1) Test robots.txt against the AI user agents (GPTBot, OAI-SearchBot and ChatGPT-User, PerplexityBot, Google's crawlers) with a free robots checker; unblock the search and user-fetch agents you want, even if you choose to block training crawlers. 2) Fetch key pages (home, top collections, top product pages, about) with JavaScript off and confirm title, meta description, headings, price, specs and body copy are present in the HTML. 3) Submit sitemap.xml in Google Search Console and Bing Webmaster Tools and spot-check indexing with a site: search. 4) Publish an about or facts page stating what you sell, who for, since when and what makes you different. 5) Add Organization schema on the home page linking social profiles and other trusted listings. Also check that bot-protection or WAF rules are not blocking verified AI agents.",
+    "conditions": "Any online store that wants to be recommended by ChatGPT, Perplexity, Gemini or Google AI Overviews; especially headless or app-heavy themes that render content in JavaScript.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Is my store blocking ChatGPT from reading it?",
+      "Do I need to submit my sitemap to Bing for AI search?",
+      "Why doesn't ChatGPT know anything about my products?",
+      "What technical things should I check first for AI visibility?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0184",
+    "evidence": {
+      "where": "section 1, technical foundations",
+      "quote": "if those bots can't access your website, you're going to be invisible"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0029",
+    "modules": [
+      "AEO"
+    ],
+    "topics": [
+      "source corroboration and third party mentions",
+      "citation panel method"
+    ],
+    "claim": "Find the 'best X' listicles and pages an answer engine cites for your category prompt, then pitch to be added; these third-party roundups drive many recommendations.",
+    "body": "The presenter's main off-site tactic. Mechanism: answer engines have no experience of their own and look for consensus across sources; for 'best X' prompts the cited sources are often listicles, review sites and YouTube videos, so being on those pages is how a smaller brand enters the answer. Method: 1) Run your category prompts ('best running shoes for flat feet') in ChatGPT, Google AI Mode or Overviews, Perplexity and Gemini, and record the cited sources in a sheet. 2) For each listicle or roundup, find the editor's contact and make a factual case for inclusion; the presenter notes some placements are paid, so treat those as advertising and check disclosure. 3) Ask each assistant what it looks for when recommending your product type, turn the answer into a checklist, and make sure your site, marketplace listings and directory profiles state those facts plainly. 4) Ask each assistant to search and summarise what it knows about your brand, then correct or enrich the sources it uses. 5) Seek mentions in industry publications, podcasts and creator YouTube videos, whose transcripts are cited. 6) Keep name and details consistent across listings. The presenter says brands consistent on Reddit saw 4 to 5x visibility gains, and that cited Reddit posts average over a year old; both are unsourced.",
+    "conditions": "Categories where shoppers ask assistants for recommendations and answers cite third-party roundups; brands able to do outreach or PR.",
+    "fails_when": "Paying for undisclosed placements or publishing self-serving fake 'independent' rankings breaches FTC endorsement rules and search spam policies, and engines may discount such sources; categories where answers cite mainly marketplaces need marketplace work instead.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "unverified: consistent Reddit engagement gave 4 to 5x visibility",
+      "unverified: average cited Reddit post over 1 year old"
+    ],
+    "asks": [
+      "How do I get my brand into ChatGPT's 'best of' recommendations?",
+      "Which websites does AI use to recommend products in my category?",
+      "Should I pay to be listed in best-of articles?",
+      "How do I find out what ChatGPT knows about my brand?"
+    ],
+    "platforms": [
+      "reddit",
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0184",
+    "evidence": {
+      "where": "section 4, authority and brand signals",
+      "quote": "one of the main sources that are used are listicles"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0030",
+    "modules": [
+      "AEO",
+      "SEO"
+    ],
+    "topics": [
+      "question and answer coverage",
+      "extractable tables",
+      "specification table design"
+    ],
+    "claim": "Open key pages with a 2 to 4 sentence direct answer and TL;DR, use comparison tables, and add original data to make pages citable.",
+    "body": "The checklist's content rules for being cited by answer engines. Mechanism: engines extract short, self-contained passages; a direct answer near the top, numbers instead of vague claims, and a comparison table are easy to lift into an answer and to attribute. The presenter claims that over 44% of AI citations come from the first third of a page, but gives no source, so treat that as unverified. How to apply on a store: 1) On buying guides, comparison pages and key collection pages, put a 2 to 4 sentence answer to the main question first, then a TL;DR. 2) Replace phrases like 'many customers prefer' with real figures (repeat rate, review averages, test results). 3) Include at least one piece of original data (your own survey, lab test, return-rate by size). 4) Add an FAQ block built from Google's People Also Ask questions for the topic, written in natural language. 5) Build 'you versus competitor' pages for 3 to 4 larger competitors with a comparison table at the top and honest pros and cons; engines already know big brands and use these to place smaller ones. 6) Add expert quotes from named team members. 7) Revisit key articles every couple of months with new stats and show a visible last-updated date, changing it only when the content truly changes.",
+    "conditions": "Stores with buying guides, comparison content or considered purchases where shoppers ask assistants which product to choose.",
+    "fails_when": "Impulse or low-consideration products where few shoppers ask assistants; comparison pages with misleading claims about competitors invite legal risk and erode trust if cited.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "direct answer of 2 to 4 sentences at top",
+      "comparison pages against 3 to 4 bigger competitors",
+      "unverified claim: over 44% of AI citations come from the first third of a page",
+      "refresh key content every couple of months"
+    ],
+    "asks": [
+      "How should I write content so ChatGPT quotes it?",
+      "Do comparison pages against competitors help with AI search?",
+      "What should go at the top of a blog post for AI search?",
+      "Our buying guides never get cited by AI, what should we change?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0184",
+    "evidence": {
+      "where": "section 3, content strategy",
+      "quote": "start with a direct two to four sentence answer followed by a TLDDR"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0031",
+    "modules": [
+      "AEO",
+      "SEO",
+      "CXP"
+    ],
+    "topics": [
+      "question and answer coverage",
+      "entity clarity"
+    ],
+    "claim": "Chat prompts are longer and more specific than searches, so answer obscure follow-up questions (fit, compatibility, use cases) in a help centre on a subdirectory, not a subdomain.",
+    "body": "Smith argues the long tail is bigger in chat than in search: prompts average around 25 words against about 6 for Google, and users ask follow-ups such as 'does it do X', 'does it work with Y', 'which one suits Z'. Many of these have never been searched and have no page answering them, so the first brand to publish a clear answer can be the only citation. He sees help centres as the natural home for these answers. How to apply on a store: 1) Collect real questions from support tickets, live chat, sales or concierge conversations, reviews and Reddit. 2) Write one short page per specific question: compatibility (fits model X), sizing edge cases, ingredient conflicts, use cases, shipping to unusual places, care instructions. 3) Host the help centre or FAQ on a subdirectory (yourstore.com/help) rather than a subdomain (help.yourstore.com); he finds subdomains perform worse. 4) Cross-link help pages to each other and to the relevant product pages. 5) Consider letting customers ask and answer questions publicly to fill more of the tail. 6) Group questions into topics so each product or guide page answers the related follow-ups in full; pages that answer more of the subtopic questions are more likely to be cited.",
+    "conditions": "Stores with technical, compatibility-sensitive or considered products (electronics accessories, parts, skincare, supplements, outdoor gear) that get many specific pre-sale questions.",
+    "fails_when": "Simple products with few pre-sale questions; help platforms that cannot be moved to a subdirectory need a reverse proxy, which may not be worth it for a small store.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "chat prompts about 25 words versus about 6 for Google searches (figure attributed to Perplexity or similar)"
+    ],
+    "asks": [
+      "Should my help centre be on a subdomain or a subfolder?",
+      "How do I show up when people ask ChatGPT very specific product questions?",
+      "What should go in my store's FAQ for AI search?",
+      "Customers keep asking if our product works with X, should that be a page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0185",
+    "evidence": {
+      "where": "help center optimisation section near the end",
+      "quote": "move it to a subdirectory"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AEO-0032",
+    "modules": [
+      "AEO",
+      "SEO"
+    ],
+    "topics": [
+      "assistant citation patterns",
+      "citation panel method"
+    ],
+    "claim": "Graphite found ChatGPT citations overlap Google's results only about 35%, Perplexity about 70%, so ranking in Google does not ensure ChatGPT citation.",
+    "body": "Graphite ran thousands of questions through the engines and compared the cited URLs with Google's search results for the equivalent queries. ChatGPT's citations overlapped Google's results by roughly 35%; Perplexity's by roughly 70%. The guest also found Google and Bing less similar to each other than people assume. All engines share the same basic method (run a search, then summarise with an LLM), but their retrieval sources differ, so their answers differ. Implications: 1) Strong Google rankings carry over well to Perplexity and to Google's own AI surfaces, much less to ChatGPT. 2) Track share of voice per engine separately, choosing the two or three engines with the most traffic for your audience rather than all of them. 3) For ChatGPT, invest more in off-site citations (Reddit, YouTube, publisher mentions) and check Bing visibility. 4) Because an answer varies from run to run and by phrasing, measure each prompt several times and across several phrasings, and report the share of runs in which you appear and your average position. The guest expects about three engines to matter long term but says it is too early to know which.",
+    "conditions": "Brands deciding how much of an existing SEO programme transfers to AI answers; measurements from Graphite's 2025 study.",
+    "fails_when": "Overlap figures shift as engines change their retrieval partners and models; your category's overlap may differ from the cross-category average, so measure on your own prompt set.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "ChatGPT citation overlap with Google results about 35%",
+      "Perplexity overlap about 70%",
+      "study across thousands of questions"
+    ],
+    "asks": [
+      "If I rank well on Google, will ChatGPT cite me too?",
+      "Which AI engines rely most on Google results?",
+      "Do I need a separate strategy for Perplexity and ChatGPT?",
+      "How many times should I run a prompt to measure AI visibility?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0185",
+    "evidence": {
+      "where": "answer tracking and surfaces discussion",
+      "quote": "the citation overlap with Google search results was around 35%"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "AEO-0033",
+    "modules": [
+      "AEO",
+      "SEO"
+    ],
+    "topics": [
+      "citation rate measurement",
+      "assistant citation patterns"
+    ],
+    "claim": "Graphite's study found only about 10 to 12% of pages ranking in Google or cited by ChatGPT were fully AI-generated; use AI-assisted, human-edited content.",
+    "body": "Graphite tested whether purely AI-generated content (no human in the loop) wins in search and answers. Method: put thousands of searches into Google and questions into ChatGPT, collected the ranking URLs and citations, and scored them with an AI-content detector. They validated the detector on thousands of articles they generated and on a random 100,000-URL Common Crawl sample from before ChatGPT launched, where the false positive rate was about 8%. Result: around 10 to 12% of content in Google results and ChatGPT citations was AI-generated and about 90% was not, while their Common Crawl trend showed AI-generated pages now outnumber human-written ones on the web, so AI pages are heavily under-represented in what ranks. The guest's reasoning: if mass AI content worked, everyone would publish it and engines would end up summarising their own output, so they will act against it as Google did against scraped comparison pages around 2007. A second test feeding AI derivatives back into retrieval collapsed diverse opinions into one. How to apply: use AI for drafts and research, but have people add original data, expertise and editing, and spend budget on the few pages that matter.",
+    "conditions": "Stores producing blog, guide or collection content at scale for search and answer engines.",
+    "fails_when": "Detector-based studies carry error (about 8% false positives); engines' tolerance could change; heavily edited AI-assisted content is not what the study measured.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 10 to 12% of ranking or cited content AI-generated, about 90% human",
+      "detector false positive rate about 8%",
+      "100,000-URL Common Crawl sample"
+    ],
+    "asks": [
+      "Can I use AI to write my blog posts for SEO?",
+      "Does AI-generated content rank in Google or ChatGPT?",
+      "Should we mass-produce product guides with AI?",
+      "Will Google penalise AI content?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0185",
+    "evidence": {
+      "where": "AI content study section",
+      "quote": "purely 100% AI generated does not work"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "AEO-0034",
+    "modules": [
+      "AEO"
+    ],
+    "topics": [
+      "source corroboration and third party mentions",
+      "generative answer surfaces"
+    ],
+    "claim": "In answer engines the 'head' is won by being mentioned in as many cited sources as possible, not by ranking one URL first, so new brands can win quickly.",
+    "body": "Ethan Smith's distinction: on Google, the first blue link for 'best website builder' wins most clicks; in an LLM answer the model summarises many citations, and the brand mentioned most often across them tends to be named first. Because a citation can appear the day after a Reddit thread, YouTube video or blog mention, early-stage brands without domain authority can show up in answers quickly, whereas classic SEO usually pays off only later. He reports Webflow saw LLM visitors convert about 6x better than Google search visitors, and LLMs supplying about 8% of Webflow sign-ups. How to apply: 1) For each target prompt, list the cited sources by type: your site, YouTube or Vimeo, Reddit and Quora, tier-one affiliate publishers (Dotdash Meredith titles such as Good Housekeeping), smaller blogs. 2) Run a separate plan per type: standard SEO pages for your site; videos for specific, unglamorous high-value questions few creators cover; honest Reddit answers from named employees; paid or earned affiliate placements. 3) For commerce, answers now include shoppable product cards showing several sellers, so product schema and review counts matter and last-click referral traffic is a usable measure.",
+    "conditions": "Brands in categories where shoppers ask assistants 'what is the best X'; especially newer brands without search authority.",
+    "fails_when": "Categories where answers cite mostly marketplaces or one dominant publisher; paid affiliate mentions without disclosure breach FTC rules; the 6x conversion figure is one B2B SaaS client and may not hold for impulse products.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Webflow: LLM traffic converts about 6x Google search traffic",
+      "LLMs about 8% of Webflow sign-ups",
+      "average chat prompt about 25 words versus about 6 for a Google search (as cited by the guest)"
+    ],
+    "asks": [
+      "How do I get ChatGPT to recommend my brand first?",
+      "We're a new brand with no SEO authority, can we still show up in AI answers?",
+      "Is AI search traffic worth more than Google traffic?",
+      "Does ranking first on Google mean ChatGPT will recommend us?"
+    ],
+    "platforms": [
+      "youtube",
+      "reddit"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0185",
+    "evidence": {
+      "where": "head versus tail discussion and Webflow example",
+      "quote": "you need to get mentioned as many times as possible"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "AEO-0035",
+    "modules": [
+      "AEO",
+      "MEA",
+      "CRO"
+    ],
+    "topics": [
+      "citation rate measurement",
+      "citation panel method"
+    ],
+    "claim": "Test AEO tactics with a control group: about 200 tracked questions, 100 left untouched and 100 given the intervention, compared over a few weeks before and after.",
+    "body": "Smith's point is that answer visibility drifts on its own (answers vary per run and overall LLM usage is rising), so a before-and-after chart without a control misleads, and most published AEO best practices have never been tested. Method: 1) Build a question set from your search and paid-search terms and competitors' paid terms, converted into natural questions, plus questions from sales calls, support tickets and Reddit. 2) Load them into an answer tracker (he says around 60 exist and are largely interchangeable, so pick the cheapest that does what you need). 3) Track for a couple of weeks to get a baseline share of voice: how often you appear across repeated runs and phrasings, and your average position. 4) Split about 200 questions into 100 control (no action) and 100 test; optionally break the test group into buckets by tactic (Reddit comments, a YouTube video, a paid affiliate mention). 5) Act on the test group only, track a couple of weeks more, and keep tactics that rose while the control did not. 6) Repeat the test before treating a tactic as proven, since one-off results in search often turn out to be coincidence.",
+    "conditions": "Brands with enough relevant prompts (around 200) to split into groups and an answer-tracking tool; any category.",
+    "fails_when": "Very narrow categories without enough distinct prompts to form comparable groups; tactics that spill over (a brand-wide PR mention lifts control prompts too) blur the comparison.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 200 questions: 100 control, 100 test",
+      "a couple of weeks baseline and a couple of weeks after",
+      "about 60 answer-tracking tools on the market"
+    ],
+    "asks": [
+      "How do I know if my AEO work is actually working?",
+      "How do I run an experiment for AI search visibility?",
+      "Our AI visibility went up, was it our Reddit posts or just noise?",
+      "Which AEO tracking tool should I buy?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0185",
+    "evidence": {
+      "where": "experiment design section",
+      "quote": "100 of the questions I'm not going to do anything"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  }
+]

@@ -1,0 +1,291 @@
+[
+  {
+    "id": "AMZ-0001",
+    "modules": [
+      "AMZ",
+      "PRD"
+    ],
+    "topics": [
+      "price ladder analysis",
+      "candidate screening"
+    ],
+    "claim": "Check the Amazon page-one price spread: a tight band like $7 to $13 signals a price war; a $20 to $100 spread means buyers judge on more than price.",
+    "body": "Search the product's main keyword on Amazon and note every price on page one. When near-identical items cluster in a narrow band, buyers see them as interchangeable and choose on price and review count; any new entrant has to undercut, and margins fall. The example given is tongue scrapers, where page one ran from about $7 to $13, a spread of about $6 that the seller calls a reason to walk away. When the same kind of product sells at $20, $30, $50 and $100 on one page, buyers are paying for differences in design, quality, bundle or brand, which leaves room for a better product at a higher price. How to apply: for each shortlisted candidate, record the lowest and highest price on page one for its main keyword and two or three variant keywords; drop candidates where the top price is less than about double the bottom price, then look at what the top-priced listings do differently and whether you can match it. Use this alongside the price floor and margin floor checks, not in place of them.",
+    "conditions": "Private-label product selection on Amazon US; comparing listings that serve the same need.",
+    "fails_when": "The wide spread comes from different products sharing one keyword (pack sizes, unrelated items), not from differentiation; the high-priced listings are established brands you cannot match.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "tight band example: $7 to $13 on page one (about $6 spread) means discard",
+      "healthy spread example: $20 to $100 for near-identical products"
+    ],
+    "asks": [
+      "how do I tell if an Amazon niche is a race to the bottom",
+      "all the listings for our product are priced within a few dollars, should we still launch?",
+      "what price range on page one is a good sign",
+      "how do I check pricing competition on Amazon before launching"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "US"
+    ],
+    "mode": "amazon_first",
+    "source": "S0215",
+    "evidence": {
+      "where": "What to sell: price disparity (tongue scraper example)"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AMZ-0002",
+    "modules": [
+      "AMZ",
+      "PRD",
+      "AVT"
+    ],
+    "topics": [
+      "complaint mining",
+      "spec and differentiation"
+    ],
+    "claim": "Look for Amazon products rated 4.1 to 4.3 stars that still make over $5,000 a month, and turn their 1-star complaints into the improvement spec for your supplier.",
+    "body": "A product with middling ratings that still sells well proves the demand is there and that buyers are not fully satisfied. That gap is the cheapest kind of differentiation: fix what the reviews complain about. In the demo, sorting the shortlist from lowest to highest rating surfaced a patio sun shade at about $5,000 a month with roughly 300 reviews, weak photo-edited images, and 12% of reviews at one star. The seller's next step is to read those 1-star reviews, list the failures (size, colour range, durability, missing parts), and take that list to manufacturers before ordering, so the first batch already solves them. The improvement then goes into the title, bullets and images so shoppers see it. How to apply: sort research results by rating, keep products between 4.1 and 4.3 stars with at least $5,000 in monthly revenue, read every 1- and 2-star review for the top listings, group the complaints, and only proceed if a manufacturer can fix the top two or three at a cost your margin allows.",
+    "conditions": "Private-label sourcing where the product can be modified at the factory; Amazon US listings with enough reviews to show patterns.",
+    "fails_when": "The complaints come from shipping damage or wrong expectations rather than the product; the fix costs more than the margin allows; the low rating reflects one bad seller rather than the product type.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "rating band 4.1 to 4.3 stars",
+      "at least $5,000 monthly revenue",
+      "example: 12% of reviews at one star on a roughly $5,000 a month listing with about 300 reviews"
+    ],
+    "asks": [
+      "how do I find a product I can improve on Amazon",
+      "what star rating means there is room to beat a competitor",
+      "how do I use bad reviews to design a better product",
+      "a product has lots of 1-star reviews but sells well, is it a good opportunity?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "US"
+    ],
+    "mode": "amazon_first",
+    "source": "S0215",
+    "evidence": {
+      "where": "Black Box walkthrough: sorting by review rating, sun shade example"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AMZ-0003",
+    "modules": [
+      "AMZ",
+      "PRD"
+    ],
+    "topics": [
+      "keyword research and indexing",
+      "launch and velocity"
+    ],
+    "claim": "Prefer Amazon products shoppers describe in dozens of ways (slim, waterproof, wallet, for men); one- or two-keyword products leave no cheap long-tail terms to launch on.",
+    "body": "Amazon search works like a search engine: shoppers type many different descriptions for the same item. A phone case can be searched as slim, waterproof, wallet, green, for men, for women and so on, each a separate search with its own competition. A new listing cannot win the main term early, but it can rank on page one for many smaller descriptive terms, and those cheaper, less contested keywords are what the launch ad campaigns target first. Their combined sales build the velocity that later lifts rank on the main term. Products that are only ever searched with one or two words offer no such side doors: every sale has to come from the most competitive term, at the highest click cost. How to apply: for each candidate, pull the keyword list from a research tool and count distinct descriptive variants with meaningful search volume; favour products with dozens of them; build the launch Sponsored Products campaigns around the long-tail set and track organic rank on each.",
+    "conditions": "New private-label listings on Amazon US that rely on PPC plus organic rank to build sales.",
+    "fails_when": "The long-tail terms have negligible volume; the product is bought mainly through brand search or outside traffic; variants require different products (sizes, models) you do not carry.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "target products with 10 to 100 descriptive keyword variants (dozens)",
+      "avoid products described by only 1 or 2 search terms"
+    ],
+    "asks": [
+      "how many keywords should my Amazon product have",
+      "our product only has one main search term, is that a problem?",
+      "which keywords should I target when launching on Amazon",
+      "why does keyword variety matter for picking a product"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "US"
+    ],
+    "mode": "amazon_first",
+    "source": "S0215",
+    "evidence": {
+      "where": "What to sell: keywords (iPhone case example)"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AMZ-0004",
+    "modules": [
+      "AMZ",
+      "PRD"
+    ],
+    "topics": [
+      "fee structure and profitability per ASIN",
+      "candidate screening"
+    ],
+    "claim": "Screen out Amazon private-label products under about $25: at an $8 price and $1 per click, two or three clicks per sale erase the profit.",
+    "body": "On Amazon a new private-label listing pays for most early sales through Sponsored Products clicks, and click cost does not shrink with the product's price. If a click costs about $1 and an $8 item needs two or three clicks to sell once, advertising alone eats the margin before fees and product cost. Cheap products carry two more problems: a low barrier to entry (200 units at $0.75 to $2 each costs a few hundred dollars), which invites price wars, and flimsy quality, which brings bad reviews that sink the listing. The seller in this source, running two US accounts with about $102,000 in sales over 30 days, says his most profitable items all sell above $30, and screens candidates at $25 to $60. He pairs the price floor with a margin floor: at least 30% net margin after landed cost (product, freight, duties, taxes and fees to get stock into Amazon) and FBA fees. How to apply: set the research tool's price filter to $25 to $60; for each candidate estimate clicks per sale (1 divided by conversion rate) times expected cost per click, and check what is left after landed cost and FBA fees; drop anything below 30%.",
+    "conditions": "US Amazon private-label launches that depend on Sponsored Products to get first sales; 2023-era click costs around $1.",
+    "fails_when": "The product sells mostly through organic rank or an outside audience, so little paid traffic is needed; consumables with high repeat purchase that recover acquisition cost later; categories where click costs are far below $1.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "price floor about $25, screen at $25 to $60",
+      "most profitable items above $30",
+      "$8 price at $1 per click: 2 to 3 clicks erase profit",
+      "net margin at least 30% after landed cost and FBA fees"
+    ],
+    "asks": [
+      "what is the minimum price for an Amazon FBA product",
+      "is it a bad idea to sell a $10 product on Amazon",
+      "how does PPC cost affect which products I should sell",
+      "what profit margin should an Amazon product have"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "US"
+    ],
+    "mode": "amazon_first",
+    "source": "S0215",
+    "evidence": {
+      "where": "What not to sell: cheap products; what to sell: profit margins and premium products"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AMZ-0005",
+    "modules": [
+      "AMZ",
+      "PRD",
+      "FIN"
+    ],
+    "topics": [
+      "launch and velocity",
+      "market sizing"
+    ],
+    "claim": "Target Amazon products whose current sellers make $5,000 to $20,000 a month; a $30,000-a-month product needs about three months of stock plus heavy launch ad spend.",
+    "body": "Monthly revenue of the products you would compete with is both a demand signal and a capital requirement. Below about $5,000 a month the demand may not be worth the effort, although the seller notes products at $1,500 to $3,000 can still work. Above about $20,000, matching the leaders means funding roughly three months of inventory up front plus the advertising needed to reach that sales rate, which new sellers usually cannot afford. So the revenue filter is a budget decision, not just a demand one. How to apply: estimate the units a month you aim to sell at the target revenue, multiply by landed cost per unit and by three months of cover, then add the launch ad budget; if that total is beyond your cash, lower the revenue band until it fits. In the research tool set monthly revenue to $5,000 minimum and $20,000 maximum as a starting point, and raise the ceiling only as your inventory budget grows.",
+    "conditions": "First or early private-label products on Amazon US with limited cash for inventory; FBA, where stock must be sent in ahead of sales.",
+    "fails_when": "The seller has substantial capital or financing, so larger markets are reachable; fast-turning products where restock lead time is short and less cover is needed.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "monthly revenue band $5,000 to $20,000",
+      "about 3 months of inventory needed to match a $30,000 a month product",
+      "$1,500 to $3,000 a month products can still be opportunities"
+    ],
+    "asks": [
+      "how much monthly revenue should an Amazon product have before I sell it",
+      "we have a small budget, how big a product should we go after?",
+      "how much inventory do I need to launch on Amazon",
+      "is it a mistake to chase a product doing $30k a month"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [
+      "US"
+    ],
+    "mode": "amazon_first",
+    "source": "S0215",
+    "evidence": {
+      "where": "Helium 10 Black Box walkthrough: monthly revenue filter"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AMZ-0006",
+    "modules": [
+      "AMZ",
+      "PRD"
+    ],
+    "topics": [
+      "competitive density",
+      "candidate screening"
+    ],
+    "claim": "To find beatable Amazon competitors, filter for at most 300 reviews, listings at least 8 months old, at most 4 images and ungated categories.",
+    "body": "Each filter removes one kind of bad candidate. A cap of 300 reviews removes listings that already have thousands of reviews, which a new listing cannot catch up with. A minimum listing age of 8 months removes fads and seasonal spikes, because the product has history across several months of demand. A cap of 4 images flags sellers who are not trying hard on the listing, which is an easy gap for a better-presented competitor. Ungated, low-risk categories (home and kitchen, patio and garden, office, pet supplies, sports and outdoors, tools) avoid products Amazon restricts or that carry patent problems; the seller lists baby, music media and battery electronics as categories that cause trouble. In one demo run these filters with a $25 to $60 price and $5,000 to $20,000 monthly revenue returned over 500 products to review. How to apply: set these filters in a product research database, vary the category so you do not end up with the same shortlist as everyone else using the same video, then apply the price-spread and review-gap checks to each result.",
+    "conditions": "Private-label product research on Amazon US with a product database tool such as Helium 10 Black Box; 2023 filter set.",
+    "fails_when": "Everyone copies the same filters and categories, so the shortlist is crowded; the few-images signal is out of date once most sellers use full image sets; ungated lists change by account and over time.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "review count maximum 300",
+      "listing age minimum 8 months",
+      "image count maximum 4",
+      "over 500 matches in the demo run"
+    ],
+    "asks": [
+      "what filters should I use to find products on Amazon",
+      "how many reviews is too many to compete with on Amazon",
+      "how do I avoid picking a fad product on Amazon",
+      "which Amazon categories are safe for a first product"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "US"
+    ],
+    "mode": "amazon_first",
+    "source": "S0215",
+    "evidence": {
+      "where": "Helium 10 Black Box walkthrough: review count, listing age and image filters"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AMZ-0007",
+    "modules": [
+      "AMZ"
+    ],
+    "topics": [
+      "launch and velocity",
+      "marketplace versus owned tradeoffs"
+    ],
+    "claim": "Salt & Stone earned Amazon's #1 best seller badge in deodorant before advertising there, because shoppers discovered it elsewhere and bought on Amazon for fast delivery.",
+    "body": "The founder says the brand had the number one best seller badge in deodorant on Amazon before spending anything on Amazon ads, with a reported 6.3% share of the category. His explanation is cross-channel demand: people find the brand through Sephora, Erewhon, social ads or word of mouth, then check whether Amazon can deliver tomorrow or the same day, and buy there. Only later did the company actively advertise on Amazon, after which it became a major channel. He keeps the same price on Amazon as at Sephora and positions the product as an 'everybody brand' rather than a Sephora brand, which also reaches male buyers who rarely shop at Sephora. Lessons for a DTC-first brand: 1) assume off-Amazon marketing creates on-Amazon branded searches, so list and control your own listing early rather than leaving it to resellers; 2) hold price parity with key retailers to protect those relationships; 3) watch branded search volume on Amazon as a signal before investing in ads. One brand's account; the badge depends on category velocity.",
+    "conditions": "DTC-first consumer brands with retail or social demand in replenishable categories where Amazon delivery speed matters.",
+    "fails_when": "Brands with little off-Amazon awareness; categories dominated by private label on price; brands that cannot hold price parity across retailers.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "6.3% share of Amazon deodorant category (as stated)",
+      "#1 best seller badge before any Amazon ads"
+    ],
+    "asks": [
+      "Should a DTC brand sell on Amazon before advertising there?",
+      "People search for us on Amazon but we're not listed, what should we do?",
+      "Does our social advertising drive Amazon sales?",
+      "Should our Amazon price match our retailer price?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "US"
+    ],
+    "mode": "dtc_first",
+    "source": "S0232",
+    "evidence": {
+      "where": "about 21:05-29:36 Sephora and Amazon strategy"
+    },
+    "strength": "anecdote",
+    "public": true
+  }
+]

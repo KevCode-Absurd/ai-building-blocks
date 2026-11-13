@@ -11,8 +11,9 @@ import * as studio from "./studio/routes.ts";
 import * as experts from "./experts/routes.ts";
 import * as mcp from "./mcp/routes.ts";
 import * as directory from "./directory/routes.ts";
+import * as knowledge from "./knowledge/routes.ts";
 
-const modules: { routes: Route[]; scheduled?: ((env: Env) => Promise<void>)[] }[] = [catalogue, intake, runner, evaluation, delivery, ops, studio, experts, mcp, directory];
+const modules: { routes: Route[]; scheduled?: ((env: Env) => Promise<void>)[] }[] = [catalogue, intake, runner, evaluation, delivery, ops, studio, experts, mcp, directory, knowledge];
 
 export const moduleRoutes: Route[] = modules.flatMap(m => m.routes);
 export const scheduledTasks: ((env: Env) => Promise<void>)[] = modules.flatMap(m => m.scheduled ?? []);

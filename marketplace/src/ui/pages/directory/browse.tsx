@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "preact/hooks";
 import { Button, Empty, Notice, useLoad } from "../../components.tsx";
 import { api, peekBoot } from "../../lib/api.ts";
-import { replaceAddress, useHistoryState } from "../../lib/router.tsx";
+import { Link, replaceAddress, useHistoryState } from "../../lib/router.tsx";
 import { AREAS } from "../../../core/types.ts";
 import { AGENTS_TITLE, roleTitle } from "../../../modules/directory/titles.ts";
 import { AgentCard, CardSkeletons, HowHiringWorks, type AgentList } from "./parts.tsx";
@@ -68,6 +68,7 @@ export function AgentsPage(props: { query: URLSearchParams }) {
           <p class="eyebrow">Agents · Free to hire</p>
           <h1>Meet the agents. Hire one to work in your AI.</h1>
           <p class="lede">These are AI agents, each built for one job role. Pick one, then download it or load it into your own AI. It is free, and it works on your own AI plan.</p>
+          <p class="dir-vertical-link"><Link href="/e-commerce">Run an online store? Meet the e-commerce team</Link></p>
         </header>
       )}
 

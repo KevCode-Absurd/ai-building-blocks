@@ -321,3 +321,60 @@
 .dir-home-search-input:focus { border-color: var(--text); box-shadow: var(--hard); outline: none; }
 .dir-home-search-row .btn { flex: none; height: auto; }
 @media (max-width: 520px) { .dir-home-search-row { flex-direction: column; } .dir-home-search-row .btn { height: 46px; } }
+
+/* ---------- /e-commerce: the team lead, the library and "Ask the library" ---------- */
+/* The one-line link from /agents to /e-commerce, under the browse page's lede. */
+.dir-vertical-link { margin: -12px 0 24px; font-size: 15px; }
+.dir-vertical-link a { color: var(--text); font-weight: 600; text-underline-offset: 3px; }
+
+.dir-ecom-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.dir-ecom-lede { max-width: 44em; margin: 0 0 18px; color: var(--text-2); }
+.dir-ecom-subhead { margin: 40px 0 16px; font-size: 20px; }
+.dir-ecom-note { max-width: 44em; padding: 18px 20px; background: var(--panel); border: 1px dashed var(--line-2); border-radius: var(--radius); }
+.dir-ecom-note strong { display: block; margin-bottom: 4px; }
+.dir-ecom-note p { margin: 0; color: var(--text-2); }
+
+.dir-ecom-lead { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: clamp(20px, 4vw, 40px); align-items: start; padding: clamp(18px, 3vw, 28px); background: var(--panel); border: 1px solid var(--text); border-radius: var(--radius); box-shadow: var(--hard); }
+.dir-ecom-lead .eyebrow { margin-bottom: 6px; }
+.dir-ecom-lead-name { margin: 0; font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.025em; }
+.dir-ecom-lead-name a { text-decoration: none; }
+.dir-ecom-lead-name a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.dir-ecom-lead-tagline { max-width: 36em; margin: 14px 0 0; font-size: clamp(17px, 1.8vw, 19px); color: var(--text); }
+.dir-ecom-lead-team { margin: 6px 0 0; font-size: 15px; color: var(--muted); }
+.dir-card-outcomes.dir-ecom-lead-outcomes { max-width: 40em; margin: 16px 0 20px; }
+@media (max-width: 640px) {
+  .dir-ecom-lead { grid-template-columns: minmax(0, 1fr); }
+  .dir-ecom-lead .dir-portrait-large { max-width: 180px; }
+}
+
+.dir-ecom-modules { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 0 32px; }
+.dir-ecom-modules li { min-width: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); }
+.dir-ecom-module-name { font-weight: 600; overflow-wrap: anywhere; }
+.dir-ecom-module-n { flex: none; font: 400 13px var(--mono); color: var(--muted); }
+.dir-ecom-tiers { max-width: 52em; margin: 18px 0 0; font-size: 14px; color: var(--muted); }
+
+.dir-ecom-ask { display: grid; gap: 12px; max-width: 760px; }
+.dir-ecom-ask-box .dir-search-input { padding-right: 14px; }
+.dir-ecom-ask-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; }
+.dir-ecom-ask-row .field { min-width: 200px; margin: 0; }
+.dir-ecom-hint { margin: 10px 0 0; }
+.dir-ecom-results { margin-top: 20px; }
+.dir-ecom-results .notice { max-width: 860px; }
+.dir-ecom-answers { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; max-width: 860px; }
+.dir-ecom-answer { min-width: 0; padding: 20px 22px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow-wrap: anywhere; }
+.dir-ecom-answer-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.dir-ecom-answer h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.3; }
+.dir-ecom-answer-body { margin: 0; font-size: 15px; line-height: 1.6; color: var(--text-2); }
+.dir-ecom-answer-numbers { margin: 10px 0 0; font-size: 14px; color: var(--text-2); }
+.dir-ecom-answer-numbers b { font-weight: 600; color: var(--text); }
+.dir-ecom-when { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; margin: 14px 0 0; padding-top: 12px; border-top: 1px dashed var(--line-2); }
+.dir-ecom-when dt { margin-bottom: 3px; font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.dir-ecom-when dd { margin: 0; font-size: 15px; }
+.dir-ecom-stale { margin: 12px 0 0; font-size: 14px; color: var(--warn); }
+.dir-ecom-source { margin: 12px 0 0; font-size: 14px; color: var(--muted); }
+.dir-ecom-source a { color: var(--text); text-underline-offset: 3px; }
+@media (max-width: 520px) {
+  .dir-ecom-actions .btn, .dir-ecom-ask-row .btn, .dir-ecom-ask-row .field { width: 100%; }
+  .dir-ecom-when { grid-template-columns: minmax(0, 1fr); }
+  .dir-ecom-answer { padding: 16px; }
+}

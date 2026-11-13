@@ -1,0 +1,865 @@
+[
+  {
+    "id": "CXP-0001",
+    "modules": [
+      "CXP",
+      "OFF"
+    ],
+    "topics": [
+      "recovery playbooks",
+      "subscription structure"
+    ],
+    "claim": "A subscription cancel flow save rate of about 15% is good, 20% is strong, and under 10% needs work; route each cancel reason to a matching save action.",
+    "body": "The cancel flow is the sequence a subscriber sees in the portal after clicking cancel. One example flow saved 14.6% of attempted cancels; the speaker sets 15% as a good benchmark, 20% as strong, and below 10% as needing work. Structure: open with a splash screen, ideally a short founder video restating the mission, that steers towards delaying rather than cancelling; if there is a loyalty programme, show the points they would lose. Then ask why, and branch: too much product goes to skip or change next order date (the most common reason); want a different product goes to swap; do not like the taste goes to swap flavour or product; taking a break goes to skip; too expensive goes to a discount, optionally segmented further; plus an edit-frequency option. After a completed cancel, send one or two plain-text emails keyed to the stated reason with a reactivate link; expect little from these, because the customer has just refused every offer. How to apply: build the branches in your subscription app (Skio, Recharge, Loop), report save rate monthly by reason, and fix the weakest branch first.",
+    "conditions": "Subscription apps that support cancel-reason branching and in-flow offers.",
+    "fails_when": "Flows that make cancelling hard or hidden risk breaching click-to-cancel and auto-renewal rules; high save rates driven by skips can just defer churn, so check revenue per saved subscriber.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "14.6% save rate example",
+      "15% good, 20% strong, under 10% needs work"
+    ],
+    "asks": [
+      "What is a good save rate for a subscription cancel flow?",
+      "How should I set up the cancellation flow in Skio or Recharge?",
+      "What offer should I show when someone says it's too expensive?",
+      "Our cancel flow saves under 10%, what should we change?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0027",
+    "evidence": {
+      "where": "Section four: cancellation flow example"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "CXP-0002",
+    "modules": [
+      "CXP"
+    ],
+    "topics": [
+      "recovery playbooks",
+      "loyalty and VIP"
+    ],
+    "claim": "Adding a one-minute founder video splash screen to the subscription cancel page took struggling brands from a 5-6% save rate to about 15%.",
+    "body": "Holman's first fix for every brand that arrives with a weak cancel flow is a splash screen on the cancel page showing a short video from the founder, or a brand spokesperson if there is no founder persona. Brands arriving at a 5 to 6% save rate typically jump about 10 points, to around 15%, from this step alone. The video is about one minute: thanks for trying the product, a reminder of the mission, empathy, and a plain statement that the customer can adjust, delay or swap, and is welcome back whenever they leave. Splash screens are now supported by the main portals (Skio pioneered it, Recharge and Stay followed). What follows the video was tested: a skip button raised save rate but deferred revenue, so delay actions are preferred; if the common reason is price, a discount can sit there. He offers a script template on his site and suggests drafting it with AI from the brand's website. How to apply: record the video, add it as the first cancel-flow step, and compare save rate and revenue per attempted cancel for 30 days before and after.",
+    "conditions": "Subscription brands on portals supporting cancel-flow splash media (Skio, Recharge, Stay, Loop); founder or face of brand available.",
+    "fails_when": "Brands already saving 15-20% will not see a 10-point jump; a video that delays or obstructs cancellation can conflict with click-to-cancel rules, so the cancel path must stay clear.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "save rate 5-6% to about 15% after founder video",
+      "video length about 1 minute"
+    ],
+    "asks": [
+      "What is the quickest way to improve my subscription save rate?",
+      "Does a founder video on the cancel page work?",
+      "What should a cancel page video say?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0028",
+    "evidence": {
+      "where": "Cancellations section, splash screen discussion"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CXP-0003",
+    "modules": [
+      "CXP",
+      "EML"
+    ],
+    "topics": [
+      "packaging and inserts",
+      "repeat rate levers"
+    ],
+    "claim": "For products without an immediate effect, frame a 90-day trial at onboarding: a prove-it challenge, a day-0 before photo, or a reward for logging daily use.",
+    "body": "Holman's core onboarding rule is product adoption: the billing reminder and portal matter little if customers never use the product properly. His examples. X Endurance, a CrossFit supplement, tells buyers not to start immediately: do the week's big workout without it, take it for seven days, then repeat the same workout, inviting the customer to prove the claim; he still buys from them three years later. Skincare and hormone or menopause supplements, which take weeks to show results, ask for a before photo on day 0 and another at day 30, or offer a gift for sending before and after photos at day 14 and day 90, which sets the expectation that judgement waits about three months. A matcha brand's fold-out insert on brewing the perfect first cup created a memorable first use; a sleep supplement with no timing instructions forced him to search. Space Goods learned from customers how to make the best mushroom coffee and put it in onboarding, and retention improved. Also: include extra flavour samples in the first box (people who dislike their flavour never return, while flavour switchers are higher LTV). Avoid sales and cross-sell emails in onboarding; put cross-sells as samples in the next order instead.",
+    "conditions": "Consumables whose benefit appears over weeks (supplements, skincare, hormone support) or that need a technique to use well.",
+    "fails_when": "Products with an immediate, obvious effect where a challenge adds friction; inserts and samples add per-order cost that must be checked against the retention gained.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "7-day prove-it challenge (X Endurance)",
+      "before photos at day 0 and day 30, or day 14 and day 90"
+    ],
+    "asks": [
+      "How do I stop customers quitting before the product has time to work?",
+      "What should go in the box for a first subscription order?",
+      "Should I send cross-sell emails during onboarding?",
+      "How do I get customers to stick with a supplement for 90 days?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0028",
+    "evidence": {
+      "where": "Onboarding section, product adoption anecdotes"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "CXP-0004",
+    "modules": [
+      "CXP",
+      "OFF"
+    ],
+    "topics": [
+      "recovery playbooks",
+      "discount depth and margin"
+    ],
+    "claim": "In subscription cancel flows, a bigger discount on the next order saves more cancels than gifts; keep 6 to 7 cancel reasons and split vague ones by intent.",
+    "body": "Although Holman dislikes discounting at acquisition, he calls discounts in the cancel flow the most effective save lever: in his tests gifts can work but save fewer than larger discounts, and a discount on this order beats a discount spread over time. Brands that say margins are too thin should compare a move from a 20% to a 30% save offer, an extra 10% of one order, with losing the subscriber entirely. Keep the reason list to six or seven options; each month move the one or two least-chosen into Other, then add more specific reasons. Split vague reasons by intent so copy fits: too expensive can mean not enough value seen (answer with education on why it is worth it and that cheaper alternatives cost more over time) or budget really changed (answer with empathy and a 40-50% off next order). Too much product can mean never started or wrong schedule (answer with a frequency change). At larger scale, segment offers by month of subscription, product or basket size, using flat-dollar offers such as $20 off only on baskets over $100. Feed reasons back into onboarding. ProsperStack is named for more control than in-app flows.",
+    "conditions": "Subscription apps with branching cancel flows; brands with enough monthly cancels to read reason-level save rates.",
+    "fails_when": "Margins so thin that a 30-50% next-order discount loses money even if the subscriber stays one more cycle; customers trained to threaten cancellation for a discount, visible as repeat cancel attempts.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "save offer 20% vs 30%",
+      "6 to 7 cancel reasons",
+      "40-50% off next order for budget-changed segment",
+      "$20 flat offer only for baskets over $100"
+    ],
+    "asks": [
+      "What is the best offer to stop someone cancelling a subscription?",
+      "How many cancellation reasons should my cancel survey have?",
+      "Should I offer a discount or a gift when people try to cancel?",
+      "Customers say it's too expensive when cancelling, what do I show them?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0028",
+    "evidence": {
+      "where": "Cancellations section, discounts and reason methodology"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CXP-0005",
+    "modules": [
+      "CXP",
+      "OFF"
+    ],
+    "topics": [
+      "repeat rate levers",
+      "subscription structure"
+    ],
+    "claim": "Remove indefinite pauses (about 10% ever reactivate) and keep skip or delay up to 30 days; subscribers who adjusted frequency three times had 200% higher LTV.",
+    "body": "The host and Holman agree on portal controls. Open-ended pauses are bad: the subscriber sits in limbo, often opted out of marketing, producing no revenue, and only around 10% ever reactivate. A pause that auto-resumes is really a delay and should be named that. Allow a single skip and delays of two or four weeks (about 30 days at most, longer for very large packs such as a big protein bag), and if a subscriber keeps skipping, let them cancel so they enter win-back and re-engagement marketing instead of limbo. By contrast, frequency changes should be easy and intuitive: a study Holman ran at the subscription app Autoship Cloud found subscribers who adjusted frequency three times had about 200% higher LTV than other subscribers, because they found a cadence that fits (his own seven-week razor cadence at Dollar Shave Club is the example). He also tested paying subscribers to pull orders forward during a sale (a bonus for clicking get now), since a skip only defers revenue. How to apply: disable or rename pause in the portal, cap delay length, surface edit frequency with common intervals, and track reactivation from any paused cohort.",
+    "conditions": "Subscription consumables on portals that allow configuring pause, skip, delay and frequency options.",
+    "fails_when": "Seasonal or travel-driven products where a long pause genuinely precedes return; the 200% LTV link is correlational (engaged subscribers adjust more), so forcing adjustments will not create it.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 10% reactivation from indefinite pauses",
+      "delay cap about 30 days",
+      "3 frequency adjustments = about 200% higher LTV (Autoship Cloud study)"
+    ],
+    "asks": [
+      "Should I let subscribers pause indefinitely?",
+      "How long should customers be allowed to delay an order?",
+      "Do subscribers who change frequency stay longer?",
+      "Lots of our subscribers are paused, what do we do?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0028",
+    "evidence": {
+      "where": "Portal discussion, skip pause delay question"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CXP-0006",
+    "modules": [
+      "CXP",
+      "OFF",
+      "EML"
+    ],
+    "topics": [
+      "loyalty and VIP",
+      "repeat rate levers",
+      "subscription structure"
+    ],
+    "claim": "Unannounced second-order gifts rarely pay: 900 renewing subscribers times a $2-5 gift costs about $2,000 for perhaps 45 extra orders; announce gifts at acquisition or target at-risk cohorts.",
+    "body": "Holman is contrarian on post-purchase gift roadmaps pushed by subscription apps. In his tests, a 1,000-person cohort where 90% reach month two means 900 gifts at $2 to $5 each, roughly $2,000 or more. Even a 5% retention lift adds about 45 orders, which often does not repay the gift cost, and most recipients would have renewed anyway. Gifts earn their cost in two cases. First, when they are part of the acquisition offer and communicated throughout: Everyday Dose and Elevate show the gift ladder on the product page, then onboarding emails carry a banner such as free gift in your next order, and the billing reminder is framed around it. Second, when targeted at a cohort with higher VIP potential or at subscribers identified as at risk. A newer tactic: a click-to-redeem gift in the billing reminder, tagging clickers, since few people claim a gift and then cancel before it ships; or a portal pop-up shown only in the window between reminder and charge. How to apply: before launching a gift roadmap, estimate gift cost per cohort against the orders it must add, and only run it if it is visible at purchase and in every pre-charge message. The WellCopy host recommends gifts at months 2, 4 and 6, so test both.",
+    "conditions": "Subscription brands considering surprise or milestone gifts after purchase.",
+    "fails_when": "Gifts that are cheap cross-sell samples double as product expansion and can pay through later add-on revenue; brands with very high month-2 churn may see a larger lift than 5%.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "1,000 cohort, 900 reach month 2, $2-5 gift = about $2,000",
+      "5% lift = about 45 extra orders"
+    ],
+    "asks": [
+      "Are free gifts for subscribers worth the cost?",
+      "Should I add a surprise gift to the second subscription order?",
+      "How do I calculate if a retention gift pays for itself?",
+      "Our subscription app suggests gifting, does it actually reduce churn?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0028",
+    "evidence": {
+      "where": "Retention section, free gift roadmap question"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CXP-0007",
+    "modules": [
+      "CXP",
+      "OPS"
+    ],
+    "topics": [
+      "returns process",
+      "repeat rate levers"
+    ],
+    "claim": "71% of consumers say a poor return makes them less likely to buy again (NRF and Happy Returns 2025, n=2,006); fast refunds and exchange-first portals protect repeat rate.",
+    "body": "The playbook treats returns as a retention fork rather than a cost line. Data: the NRF and Happy Returns 2025 Retail Returns Landscape (2,006 consumers) found about 71% are less likely to shop again after a poor return, up from 67% in 2024, and 80% tell friends and family; 76% are more likely to choose a retailer offering instant refund or exchange (NRF); a vendor (Narvar) reports 77% of shoppers with a good return would shop again. US returns were forecast at 849.9 billion USD in 2025, a 15.8% rate. Plays: 1) Self-service returns portal. 2) Measure return-to-refund time from the customer's request, not the warehouse scan, and shorten it. 3) Default to exchange or store credit to keep revenue, with refund still easy. 4) 'Keep it' refunds for low-value items when reverse logistics costs more than the item, capped by value and watched for serial abusers. 5) Check in a few days after delivery ('did it fit, did it work') to catch problems before they become returns. 6) Success test: repeat rate among customers who returned something matches or beats that of non-returners.",
+    "conditions": "DTC brands with meaningful return volume (apparel, footwear, beauty, home); US data, likely similar in UK and EU.",
+    "fails_when": "Categories with high return abuse or very thin margins, where instant refunds before inspection create losses; marketplaces or regions with mandated return terms that limit policy choices.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "71% less likely to buy again after a poor return (2025, n=2,006), up from 67% in 2024",
+      "80% share a bad return experience",
+      "76% prefer retailers with instant refund or exchange",
+      "US returns forecast 849.9 billion USD in 2025, 15.8% rate"
+    ],
+    "asks": [
+      "Do returns really affect whether customers buy again?",
+      "Should we offer instant refunds or exchanges first?",
+      "When should we let customers keep the item instead of returning it?",
+      "How do I measure if our returns process is hurting retention?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0189",
+    "evidence": {
+      "where": "Key findings and Stage 8 post-purchase support"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CXP-0008",
+    "modules": [
+      "CXP"
+    ],
+    "topics": [
+      "packaging and inserts"
+    ],
+    "claim": "A branded unboxing moment costs under 0.50 USD per order, mid-tier 1.50 to 3, premium 2.80 to 4.50; budget about 2 to 5% of product cost.",
+    "body": "Cost benchmarks compiled in the playbook for designing the delivery peak: sticker 0.04 to 0.05 USD, tissue 0.05 to 0.15 USD per sheet, thank-you card about 0.10 USD; a basic branded moment (tissue, sticker, card) under 0.50 USD per order; a mid-tier experience (printed box, tissue, card, sticker) about 1.50 to 3.00 USD; a full custom premium experience 2.80 to 4.50 USD. Rule of thumb: spend 2 to 5% of product cost on packaging. Packaging inserts are reported to have about a 95% open rate against about 20% for email, so an insert with a QR code to a 60-second setup video or first-use guide is a cheap way to get customers to first value and cut support. Watch the per-order arithmetic: inserts scale with every order, so a 0.60 to 0.80 USD insert stack becomes material at around 2,000 orders a month. What works: a relevant sample matched to the purchase, a hand-signed note that names the item. What feels cheap: irrelevant samples, form letters pretending to be personal, a 'gift' that is a coupon. A widely repeated '26% more repeat purchases from memorable unboxing' figure is a vendor claim; measure repeat rate and UGC yourself.",
+    "conditions": "DTC brands shipping their own orders with control over packaging; product prices where 2 to 5% covers at least the basic tier.",
+    "fails_when": "Very low-price items where even 0.50 USD erodes margin, sustainability-led brands where extra layers draw criticism, or 3PL setups that charge extra per insert and pick step.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "basic branded moment under 0.50 USD per order",
+      "mid-tier 1.50 to 3.00 USD",
+      "premium 2.80 to 4.50 USD",
+      "packaging 2 to 5% of product cost",
+      "insert open rate about 95% versus about 20% for email",
+      "0.60 to 0.80 USD insert stack material at about 2,000 orders a month"
+    ],
+    "asks": [
+      "How much should I spend on packaging per order?",
+      "Is a nice unboxing experience worth the cost?",
+      "What should I put inside the box with orders?",
+      "Do packaging inserts actually get read?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0189",
+    "evidence": {
+      "where": "Stage 6 delivery and unboxing; gifts and samples summary"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CXP-0009",
+    "modules": [
+      "CXP"
+    ],
+    "topics": [
+      "journey mapping",
+      "recovery playbooks"
+    ],
+    "claim": "Fix effort before adding delight: in a 75,000-customer study, 96% of high-effort service interactions produced disloyalty versus 9% of low-effort ones.",
+    "body": "The 2010 HBR study 'Stop Trying to Delight Your Customers' (Dixon, Freeman, Toman; over 75,000 people in contact-centre and self-service interactions) found that reducing customer effort builds loyalty more than exceeding expectations: 96% of customers with high-effort interactions became more disloyal against 9% with low-effort ones, while 89 of 100 service heads said their strategy was to exceed expectations. Kahneman's peak-end research (people remember the most intense moment and the ending, not the average) supports designing a few peaks. The playbook reconciles them by journey stage: in problem moments (where is my order, returns, complaints, breakages) cut effort to one touch and never try to 'delight' a customer mid-problem; in discretionary moments (unboxing, first use, milestones) add a small planned peak. Build order: accurate delivery dates and proactive tracking, then fast kind returns, then an unboxing peak and first-use insert, then replenishment and second-purchase nudges, then quiz personalisation, and only then loyalty tiers and big surprise programmes. Delight layered on a broken base makes the failure more memorable. Track effort metrics (contact rate per order, refund cycle time) before delight metrics.",
+    "conditions": "DTC brands deciding where to spend post-purchase budget; applies to all categories, strongest where service contacts are frequent.",
+    "fails_when": "Brands whose operations are already low-effort and reliable, where the marginal gain shifts to peaks and community; the service research is from contact centres, not ecommerce specifically.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "over 75,000 customers studied (Dixon et al., HBR 2010)",
+      "96% of high-effort versus 9% of low-effort interactions led to disloyalty",
+      "89 of 100 service heads aimed to exceed expectations"
+    ],
+    "asks": [
+      "Should I spend on surprise gifts or fix customer service first?",
+      "What order should I build my post-purchase experience in?",
+      "Does going above and beyond actually make customers more loyal?",
+      "Our support is slow but we want to do customer delight, where do we start?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0189",
+    "evidence": {
+      "where": "'The stop trying to delight argument' and 'How to reconcile the debate'"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CXP-0010",
+    "modules": [
+      "CXP",
+      "LPG"
+    ],
+    "topics": [
+      "shipping communication"
+    ],
+    "claim": "Showing a specific delivery date instead of a vague range lifts conversion about 13 to 25%; pad the estimate so you usually beat it and keep accuracy above 90%.",
+    "body": "The playbook cites Forrester (via Narvar) for a 13 to 25% conversion lift from specific delivery dates over vague ranges, and survey data that 75% of shoppers say a clear date influences purchase; one Narvar case lifted product-page conversion 19% and checkout 10%. These are mostly vendor case studies, so the direction is more reliable than the size. Precision now matters more than speed: delivery speed reportedly fell from shoppers' top delivery priority in 2022 to fifth by 2024, behind cost, transparency and reliability, and Narvar's 2025 survey of 3,461 US consumers found 74% received a package later than estimated in the past year. Method: 1) Build the estimate from your real lane and carrier transit data plus handling time, not the carrier's ideal service level. 2) Pad it slightly so most orders arrive early, which turns delivery into a small peak. 3) Show it on the product page and in checkout. 4) Track delivery estimate accuracy: orders delivered within the promised window divided by orders shipped; aim above 90% (vendor case work holds above 95%). 5) Pair with proactive delay messages.",
+    "conditions": "DTC brands shipping from their own warehouse or a 3PL with trackable lanes; US, UK and similar markets.",
+    "fails_when": "Fulfilment times are erratic (made-to-order, cross-border, pre-orders), so a precise date will often be missed and harm trust more than a range; over-padding can lose buyers who need speed.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "13 to 25% conversion lift for specific dates (Forrester via Narvar)",
+      "Narvar case: +19% product-page, +10% checkout conversion",
+      "74% of 3,461 US consumers got a late package in the past year (Narvar 2025)",
+      "delivery estimate accuracy target above 90%"
+    ],
+    "asks": [
+      "Should I show an exact delivery date on product pages?",
+      "Does a delivery estimate actually increase conversion?",
+      "How accurate do our delivery promises need to be?",
+      "Customers keep complaining packages arrive late, how should we set expectations?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0189",
+    "evidence": {
+      "where": "Delivery accuracy benchmarks and the shipping expectation summary"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CXP-0011",
+    "modules": [
+      "CXP"
+    ],
+    "topics": [
+      "recovery playbooks"
+    ],
+    "claim": "The service recovery paradox is rare: in an 11,000-plus interview banking study, only 5.4% of customers with a problem rated the recovery much better than expected.",
+    "body": "The idea that a brilliantly fixed problem makes a customer more loyal than one who never had a problem is real but rare and conditional. Michel and Meuter ('The service recovery paradox: true but overrated?', Journal of Service Management, more than 11,000 banking interviews) found only 63 of 1,189 customers who had a problem perceived the recovery as much better than expected, 5.4%, and concluded that error-free service still beats recovery on overall satisfaction. The paradox appears mainly when the failure is not severe, it is the customer's first failure, and the recovery clearly exceeds expectations; organisational-learning research suggests it is strongest when the customer sees the firm took action to stop it recurring. Operating rule for a store: 1) Never plan around failures. 2) When something does go wrong (late, damaged, wrong item), reach out before the customer complains. 3) Empower support to resolve in one contact (refund, replacement, 'keep it, we'll send another'), and add a small gesture only after the fix. 4) Log the cause and tell the customer what changed. The downside of a poor recovery is much larger than the upside of a great one.",
+    "conditions": "Any brand handling order failures; most relevant to support policy and refund authority.",
+    "fails_when": "Severe or repeated failures, where no recovery restores loyalty; evidence is from banking, so effect sizes in ecommerce may differ.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "63 of 1,189 customers with a problem (5.4%) rated recovery much better than expected",
+      "study of more than 11,000 banking interviews"
+    ],
+    "asks": [
+      "Can fixing a mistake well make customers more loyal?",
+      "How should we handle a damaged or late order?",
+      "Is it worth over-compensating when something goes wrong?",
+      "What should support be allowed to do without approval?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0189",
+    "evidence": {
+      "where": "Service recovery paradox section"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CXP-0012",
+    "modules": [
+      "CXP",
+      "OPS"
+    ],
+    "topics": [
+      "shipping communication"
+    ],
+    "claim": "WISMO contacts under 3% of orders is healthy, 3 to 8% normal but costly, above 8% structural; WISMO is often 30 to 50% of support tickets.",
+    "body": "'Where is my order' contacts are the largest avoidable support load in ecommerce. Vendor benchmarks compiled in the playbook (Clickpost, Gorgias, Pango, all flagged as vendor sources, consistent with each other) put WISMO at 30 to 50% of tickets in normal periods and 50 to 80% at peak; one helpdesk platform average is 18%. A per-order health scale (Pango): under 3% of orders generating a WISMO contact is healthy, 3 to 8% normal but expensive, above 8% a structural problem. Cost: agents spend 3 to 5 minutes per ticket, so 100 tickets a day consumes 5 to 8 agent-hours on lookups. Fix: 1) Show an accurate delivery date before purchase. 2) Push shipped, out-for-delivery, delivered and delayed messages by email and SMS. 3) Host tracking on a branded page rather than the carrier's. 4) Contact customers first when a parcel stalls. Vendors claim proactive updates cut WISMO by 50 to 72%; branded tracking tools start around 99 USD a month for 2,500 shipments. Move on to other retention work once WISMO is under about 5% of orders.",
+    "conditions": "Shipping DTC brands with a support inbox; thresholds are per order, not per ticket.",
+    "fails_when": "Brands with unreliable carriers or 3PLs, where better messaging exposes delays without fixing them; the fix there is fulfilment, not notifications. Benchmarks are vendor-sourced; measure your own.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "WISMO under 3% of orders healthy; 3 to 8% normal; above 8% structural",
+      "30 to 50% of tickets normally, 50 to 80% at peak (vendor)",
+      "3 to 5 minutes per ticket; 100 tickets a day = 5 to 8 agent-hours",
+      "vendor claims of 50 to 72% WISMO reduction from proactive updates",
+      "branded tracking from about 99 USD a month up to 2,500 shipments"
+    ],
+    "asks": [
+      "What percentage of our orders should generate 'where is my order' emails?",
+      "Our support team is buried in order status questions, what's normal?",
+      "Is a branded tracking page worth paying for?",
+      "How much support time does WISMO cost?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0189",
+    "evidence": {
+      "where": "Data and benchmarks: WISMO; Stage 5 delivery gap"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CXP-0013",
+    "modules": [
+      "CXP",
+      "MEA"
+    ],
+    "topics": [
+      "packaging and inserts",
+      "repeat rate levers",
+      "loyalty and VIP"
+    ],
+    "claim": "Before adding handwritten notes or free in-box gifts, compute the repeat-rate lift needed to break even (extra cost per order divided by repeat-order contribution) and run a holdout.",
+    "body": "Delight inserts are sold with large numbers: handwritten-note vendors cite a 99 percent open rate, up to 37 percent higher retention and roughly double future spend. Those figures come from the vendors themselves and do not tell you whether your customers will reorder more. Treat the insert as a cost per order with a required effect. Steps: (1) cost it fully: a robot-written note through a service such as Handwrytten plus a small unannounced sample or gift typically lands in the low single dollars per order (the report's illustration uses about $3 for premium packaging and a note); include packing labour; (2) compute the break-even lift: cost per order divided by contribution per repeat order equals the extra repeat orders needed per customer (for example, $3 divided by $25 contribution means each recipient must place 0.12 more orders over the window); (3) target triggers rather than every order, such as a first order above a value threshold, a VIP tier, or a subscription anniversary, sent from Klaviyo or the helpdesk; (4) hold out a random 20 to 50 percent of eligible orders and compare 90- and 180-day repeat rate and spend; (5) keep it only if the measured lift clears break-even. Gifts work better unconditional and complementary (a sample of a related product) than as a discount code for the next order, which trains buyers to wait for deals.",
+    "conditions": "DTC brands with repeatable products and enough eligible orders to compare cohorts (several hundred per arm); post-purchase inserts and notes.",
+    "fails_when": "One-time-purchase categories with little repeat potential (mattresses, appliances), very low AOV where a $3 insert erases margin, and small order volumes where a holdout cannot show a difference; delighters also decay into expectations once customers come to rely on them.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "illustrative cost about $3 per order for premium packaging plus robotic handwritten note",
+      "vendor-cited: 99 percent open rate, 80 percent read rate, up to 37 percent higher retention, about 100.5 percent more future spend (unverified)",
+      "worked break-even: $3 cost / $25 repeat contribution = 0.12 extra orders per customer"
+    ],
+    "asks": [
+      "are handwritten thank you notes worth it for my store",
+      "should i put a free gift in every order",
+      "how do i know if packaging inserts increase repeat purchases",
+      "how much can i spend on a thank you note per order",
+      "free sample or discount code in the box, which is better"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0190",
+    "evidence": {
+      "where": "Sections 'The Human Touch: Handwritten Notes at Scale' and 'The Unit Economics of Delight'"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "CXP-0014",
+    "modules": [
+      "CXP",
+      "EML"
+    ],
+    "topics": [
+      "shipping communication"
+    ],
+    "claim": "Shoppers check tracking about 4.6 times per order; three proactive updates plus a branded tracking page are reported to cut 'where is my order' tickets 40 to 60%.",
+    "body": "Most order-status anxiety sits between checkout and delivery. The source's baseline is three automatic messages: order confirmation with a clear delivery estimate, shipping confirmation with a tracking link, and an out-for-delivery notice with a delivery window. Operations literature it cites claims this alone can remove up to 80% of 'where is my order' (WISMO) contacts. The next step is replacing the carrier's tracking link with a branded tracking page on your own site. Customers look at tracking about 4.6 times per order, so the page gets repeat visits from people who just paid. Vendor-reported results: 40 to 60% fewer WISMO contacts and a 23 to 31% higher repeat purchase rate; Crystal Classics (Narvar, SMS updates for older buyers of luxury items) cut WISMO calls by up to 60% within weeks; IWA Wine Accessories cut WISMO by 47%; Bokksu's shipping emails reach 90%+ opens and 45.7% click-through. Put on the page: status, delivery window, carrier, a complementary product, loyalty sign-up, how-to content and an easy route to returns. Cost per order is the tracking app fee; measure WISMO tickets per 100 orders before and after, and repeat rate for the cohort.",
+    "conditions": "Any DTC brand shipping parcels, especially with multi-day delivery or older or anxious buyers; tracking apps such as AfterShip, parcelLab, Malomo or Narvar.",
+    "fails_when": "Same-day or next-day delivery where tracking is rarely checked; repeat-rate claims are vendor-reported and not controlled, so do not budget on them without a before-and-after test.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "tracking checked about 4.6 times per order",
+      "3-step notification flow: up to 80% fewer WISMO tickets (cited claim)",
+      "branded tracking: 40 to 60% fewer WISMO contacts, 23 to 31% higher repeat rate (vendor)",
+      "Crystal Classics: WISMO calls down up to 60%; IWA: down 47%",
+      "Bokksu shipping emails: 90%+ open rate, 45.7% click-through"
+    ],
+    "asks": [
+      "How do I cut 'where is my order' emails?",
+      "Is a branded tracking page worth it?",
+      "What shipping notifications should we send customers?",
+      "Can I sell more on the order tracking page?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0191",
+    "evidence": {
+      "where": "Stage 2 three-step flow; Stage 3 branded tracking page"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "CXP-0015",
+    "modules": [
+      "CXP",
+      "OFF"
+    ],
+    "topics": [
+      "returns process",
+      "repeat rate levers"
+    ],
+    "claim": "Vendor case data: customers who took instant refunds repurchased 11x more often and 63% faster at Reebok; refunds that take 10 to 14 days lose the buyer's intent.",
+    "body": "Standard refunds wait for the parcel to reach the warehouse and be inspected, often 10 to 14 days. Instant refund tools pay out (to card or store wallet) as soon as the return is booked or scanned, so the customer still has the money and the intent to rebuy while they are still shopping. Vendor-reported results compiled in the source: Reebok, using Reshop, saw 11 times higher repurchase and 63% faster repeat purchase among customers who chose instant refunds; Origin, using Loop, saw 61% fewer refund-related support tickets; Razorpay reports up to 85% retention for wallet refunds against 40 to 50% for bank refunds, and 65% faster reorders. Treat these as upper bounds: customers who choose instant refunds or store credit are already more loyal. How to apply: measure three things today: hours from return request to refund, share of refunds taken as store credit, and the share of returners who buy again within 60 days. Then pilot instant refunds or instant store credit (optionally with a small bonus) for low-risk customers, and compare 60-day repurchase against a holdout. Cost per order is the tool fee plus fraud exposure on items that never come back.",
+    "conditions": "Brands with meaningful return volume (apparel, footwear, beauty) and repeat-purchase potential; Shopify-compatible returns apps.",
+    "fails_when": "High return-fraud or 'wardrobing' categories, or thin-margin brands that cannot carry refunds for items not yet received; self-selection inflates the vendor numbers, so a holdout is needed before trusting the lift.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "traditional refund timeline 10 to 14 days",
+      "Reebok via Reshop: 11x higher repurchase, 63% faster repeat purchase (vendor)",
+      "Origin via Loop: 61% fewer refund-related tickets (vendor)",
+      "Razorpay wallet refunds: up to 85% retention versus 40 to 50% for bank refunds, 65% faster reorders (vendor)",
+      "measure repurchase within 60 days of a return"
+    ],
+    "asks": [
+      "Should we give instant refunds before returns arrive?",
+      "Do faster refunds make customers buy again?",
+      "Should refunds go to store credit or the card?",
+      "How do I measure if our returns process is hurting repeat sales?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0191",
+    "evidence": {
+      "where": "Stage 6: Returns and Recovery, instant refunds as a retention lever"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "CXP-0016",
+    "modules": [
+      "CXP",
+      "MEA",
+      "MCR"
+    ],
+    "topics": [
+      "repeat rate levers"
+    ],
+    "claim": "At about 60% of the presenter's brands, customers acquired on deep discounts had markedly worse LTV; check cohorts by discount code and by ad angle before scaling either.",
+    "body": "Discount events lower prices for people who were not buying at full price; when prices return, many do not come back. In the presenter's portfolio, roughly 60% of brands see substantially worse lifetime value from customers acquired on a high discount, though some nine-figure retailers show no difference, so check your own data. His co-host adds that $20 AOV TikTok Shop buyers and 40 to 50% off Black Friday buyers return far less than full-price customers who spent $200, and ranks retention levers in this order: product quality, product range with natural repeat or cross-sell, acquisition quality, customer experience, and only then owned media. Ad angles create the same effect: an angle that sells the product for a job it does not do well (a skin supplement advertised for energy) can show a strong ROAS on day one, then return, refund and never repurchase. How to apply: tag every first order with its discount code, offer and ad angle or persona; compare 90 and 365-day LTGP by tag; use post-purchase surveys to capture the job the buyer hired the product for; shift ad spend toward the personas, angles and offers that produce your top 20% customers, even if front-end ROAS is a little lower.",
+    "conditions": "Brands with enough cohort history to compare discount and non-discount buyers; paid social accounts testing many angles.",
+    "fails_when": "Brands where discount cohorts retain as well as full-price ones (some large retailers), or where the discount is the brand's permanent positioning.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 60% of the presenter's brands see worse LTV from discount-acquired customers",
+      "$20 AOV TikTok Shop buyers versus $200 first orders (illustration)",
+      "Black Friday 40 to 50% off buyers return less",
+      "top 20% of customers drive about 80% of revenue"
+    ],
+    "asks": [
+      "Are Black Friday customers worth acquiring?",
+      "Do customers who buy on discount come back?",
+      "Which ad angles bring our best customers?",
+      "Why do some ads with great ROAS bring customers who never return?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0192",
+    "evidence": {
+      "where": "Final paid-media section on discount acquisition and zero-party data; Angus Cowan retention hierarchy"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CXP-0017",
+    "modules": [
+      "CXP",
+      "OPS",
+      "WLD"
+    ],
+    "topics": [
+      "recovery playbooks",
+      "repeat rate levers"
+    ],
+    "claim": "Do not spend delight on service failures: in Dixon's 97,000-interaction research, high-effort resolution is about 4x likelier to create disloyalty than low effort creates loyalty; remove effort first.",
+    "body": "Surprise gifts and apology discounts feel like good recovery, but the research summarised in The Effortless Experience (data from over 97,000 service interactions) found that exceeding expectations during a problem adds almost no loyalty beyond simply fixing it quickly; loyalty plateaus once expectations are met. What moves loyalty is effort: a high-effort experience is roughly four times more likely to create active disloyalty than a low-effort one is to create loyalty, and perceived effort (repeating the story, being transferred, switching channels) matters as much as time taken. So split the two jobs. For broken items, late parcels, billing errors and returns, measure Customer Effort Score and first-contact resolution, let agents resolve without escalation, and anticipate the next question in the same reply. Save gifts, notes and wild bets for neutral or positive moments with high-value customers. A wild bet sent to someone who spent hours chasing a refund the week before does not repair the relationship; fix the baseline before funding delight.",
+    "conditions": "Any store with a support function; most relevant when support tickets are growing or refunds and returns are slow; research base is cross-industry service data, not ecommerce-specific.",
+    "fails_when": "Severe failures with real harm (allergic reaction, ruined event, lost heirloom) where a fast fix alone reads as cold and a personal gesture is expected; and luxury brands whose positioning depends on lavish recovery.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "over 97,000 service interactions in the underlying study",
+      "high effort about 4x likelier to cause disloyalty than low effort to cause loyalty"
+    ],
+    "asks": [
+      "should we send a free gift when an order goes wrong",
+      "what actually keeps customers loyal after a complaint",
+      "our support is slow, should we add surprise and delight",
+      "what support metric matters most for retention"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0198",
+    "evidence": {
+      "where": "Section 'The Paradox of Retention: Effortless Execution vs. Deliberate Delight'",
+      "quote": "loyalty plateaus once expectations are met"
+    },
+    "strength": "research",
+    "public": false
+  },
+  {
+    "id": "CXP-0018",
+    "modules": [
+      "CXP",
+      "WLD"
+    ],
+    "topics": [
+      "returns process",
+      "recovery playbooks"
+    ],
+    "claim": "Refund-without-return works for low-value items, usually under $20: a return can cost 20 to 65% of the item's cost to process, but about 9% of returns are fraudulent.",
+    "body": "A keep-it (returnless) refund pays the customer back and lets them keep the item. The compilation cites goTRG's 2023 returns report: 59% of surveyed retailers offered keep-it refunds, up from 26% the year before, mostly for items priced up to $20. Amazon began in 2017; Chewy, Walmart, Target and Glossier use them; supplement brand O Positiv runs a 30-day money-back guarantee with no return needed. The economics: per UPS, processing a return can cost 20% to 65% of the cost of goods, sometimes up to 100%, so for cheap, perishable, damaged or hard-to-resell items, shipping it back destroys more value than it saves. The risk is abuse: NRF and Happy Returns put fraudulent returns at about 9%. How to run it: set a price threshold (refund without return under about $20), apply it case by case through support rather than advertising it as policy, and watch refund rate per customer for repeat claimers. Measure repeat-purchase rate of customers who received one against similar customers who did not. Figures are second-hand via trade press, not audited.",
+    "conditions": "Low-price items (about $20 or less) where return shipping plus handling exceeds resale value; perishable, consumable or damaged goods; brands with a support team able to apply it case by case. Cost ceiling: the item's landed cost per approved claim.",
+    "fails_when": "High-value or easily resold items; the policy is advertised so abuse rises beyond about 9%; no tracking of repeat claimers; marketplaces where fraud rings target keep-it policies.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "59% of surveyed retailers offered keep-it refunds in 2023, up from 26% (goTRG)",
+      "threshold usually items up to $20",
+      "return processing 20 to 65% of COGS, up to 100% (UPS)",
+      "about 9% of returns fraudulent (NRF/Happy Returns)"
+    ],
+    "asks": [
+      "Should I let customers keep the item instead of sending it back?",
+      "Returns on our $15 items cost more than the product, what do I do?",
+      "What price limit makes sense for refunds without return?",
+      "How much fraud should I expect if I offer returnless refunds?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0199",
+    "evidence": {
+      "where": "Category 3, Keep-it / returnless refunds",
+      "quote": "do not advertise it as a default"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CXP-0019",
+    "modules": [
+      "CXP",
+      "OFF",
+      "EML"
+    ],
+    "topics": [
+      "loyalty and VIP",
+      "repeat rate levers"
+    ],
+    "claim": "Loyalty coins that expire 60 days after purchase, with expiry reminders by email and SMS, turned loss aversion into a return trigger for Indian D2C brand Haus & Kinder.",
+    "body": "Most D2C loyalty schemes award points that sit untouched. Haus & Kinder, an Indian home and kids brand, awarded coins on every purchase that expired 60 days later, and sent expiry reminders by email and SMS. The reminder itself became the reason to come back: customers returned not for a new product need but to avoid losing value they felt they had earned. D2CX reports a 70x ROI on the retention tooling, and that 12.4% of all customer sign-ups came through the loyalty system, so the programme also helped acquisition. How to apply: set an expiry window that fits your natural repurchase cycle (shorter than the typical gap you want to close, but long enough to be usable), send reminders at fixed points before expiry across email and SMS, show the balance in money terms, and measure repeat rate and margin for members versus non-members. Cost per order: the value of redeemed coins plus messaging cost; set coin value so a redemption still leaves contribution margin. Treat the 70x as a newsletter-reported figure without method.",
+    "conditions": "Consumables or categories with a natural repurchase within about 2 to 4 months; brands with email and SMS consent; India-reported case.",
+    "fails_when": "Long repurchase cycles (furniture, electronics), where a 60-day expiry just angers customers; jurisdictions or programmes where points expiry rules are regulated or must be disclosed prominently; coin values that cut below contribution margin.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "coins expire after 60 days",
+      "70x ROI on retention tooling (D2CX-reported)",
+      "12.4% of customer sign-ups via the loyalty system"
+    ],
+    "asks": [
+      "Should my loyalty points expire?",
+      "Our loyalty programme does not drive repeat orders, what can we change?",
+      "How long should loyalty points last before expiring?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0200",
+    "evidence": {
+      "where": "Part 1, case 1.3 FOMO-Driven Loyalty: Haus & Kinder"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "CXP-0020",
+    "modules": [
+      "CXP",
+      "EML"
+    ],
+    "topics": [
+      "repeat rate levers",
+      "recovery playbooks"
+    ],
+    "claim": "Personalised second-purchase letters to 15,000 first-time buyers doubled conversion versus a control group and returned 6x for German pet retailer Fressnapf.",
+    "body": "The second purchase is the hardest one in most stores, and emails to one-time buyers compete with a crowded inbox. Fressnapf, a German pet supplies retailer, mailed personalised physical letters through optilyz to 15,000 customers who had bought once but not twice. Against a control group that did not receive the letter, the campaign doubled the conversion rate and produced an ROI of 6. Related cases in the same compilation: outdoor retailer Bergzeit's automated birthday letters, connected to its Emarsys email platform, reached a redemption rate of about 7.5%; GOLDNER's welcome letter to new club members across seven European countries converted at 3.4% to 13.6% depending on the market; thredUP raised direct-mail ROI 128% through A/B testing creative with Lob. How to apply: pick the moment a second order is most likely (the compilation suggests 30 to 60 days after the first), send a letter personalised to the first purchase with one specific offer, run it from your email or CDP triggers, track with a unique code, and always keep a holdout. Cost per order: print and postage per letter divided by incremental orders.",
+    "conditions": "Retailers with postal addresses from orders and a product with natural repeat purchase (pet, food, apparel, outdoor); EU, UK and US.",
+    "fails_when": "Low-margin, low-AOV single-purchase products; customers who opted out of marketing mail; figures are vendor and award-entry results without reported sample method beyond Fressnapf's control group.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Fressnapf: 15,000 letters, 2x conversion vs control, ROI 6 (optilyz)",
+      "Bergzeit birthday letter: about 7.5% redemption",
+      "GOLDNER welcome letter: 3.4% to 13.6% conversion across 7 countries",
+      "thredUP: +128% direct mail ROI after A/B testing (Lob)",
+      "suggested timing 30 to 60 days after first purchase"
+    ],
+    "asks": [
+      "How do I get first-time buyers to order again?",
+      "Should I send a letter to customers who only bought once?",
+      "What is a good win-back tactic besides email?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0200",
+    "evidence": {
+      "where": "Part 1, cases 1.14, 1.15, 1.16, 1.41, 1.53"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "CXP-0021",
+    "modules": [
+      "CXP",
+      "EML",
+      "OFF"
+    ],
+    "topics": [
+      "repeat rate levers",
+      "recovery playbooks",
+      "subscription structure"
+    ],
+    "claim": "Subscription churn spikes on day 1 (discount hunters), around day 28 (billing reminder) and days 31 to 45; Breez cut quarterly churn from 24% to 17% with giveaways and education.",
+    "body": "The guest describes three churn peaks in a healthy subscription: day 1, from buyers who took the subscribe discount and cancel immediately (the largest spike); around day 28, when the billing reminder arrives; and a window from about day 31 to 45 after they have used the product. Day-1 cancellers are hard to keep, but telling them a real gift arrives in month two gives a reason to stay. The first seven days need heavy communication: what to expect, how and when to use the product, how others feel, reviews. A no-cost tactic that worked: anyone still subscribed past the 27th is entered to win five free cases. Breez reduced churn from 24% in Q4 to 17% in Q1 and aims for under 5% aggregate, which he says requires more products, flexible frequency and a lower effective price rather than tricks. Cancellation reasons cluster into four: cannot afford it, have too much, did not like the effect, found another brand. Answers include downsizing the pack or can size, showing other uses or gifting, and switching formats. Make cancelling as easy as subscribing; he notes forced minimum terms are no longer permitted, so retention has to be earned.",
+    "conditions": "DTC subscription brands for consumables; churn measured monthly by cohort.",
+    "fails_when": "Non-subscription products; brands that hide cancellation, which breaches consumer-protection rules in several markets and erodes trust; giveaways where prize rules or sweepstakes law are not followed.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "churn peaks at day 1, about day 28, and days 31 to 45",
+      "first 7 days of heavy onboarding communication",
+      "churn 24% (Q4) to 17% (Q1)",
+      "target under 5% aggregate churn",
+      "subscribers past day 27 entered to win 5 cases"
+    ],
+    "asks": [
+      "When do subscribers usually cancel?",
+      "How do I reduce subscription churn?",
+      "What should I say when a subscriber says they have too much product?",
+      "Our subscribers cancel right after the first order, what can we do?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0242",
+    "evidence": {
+      "where": "[00:55:34-01:04:35] retention KPIs and churn reduction"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CXP-0022",
+    "modules": [
+      "CXP"
+    ],
+    "topics": [
+      "recovery playbooks",
+      "loyalty and VIP"
+    ],
+    "claim": "True Classic set a fixed weekly 'wow budget' to win back angry customers and surprise high-LTV ones, tracking the effect through word-of-mouth share in post-purchase surveys.",
+    "body": "Starting one January, True Classic gave its customer team a fixed amount of money per week to spend on two things: going overboard for customers who were upset (a gift, sometimes not even a True Classic product, chosen after learning what the person likes) and sending random surprises to top lifetime-value customers found in the CRM. The thinking, shared by the interviewer from his own brand, is that customers who receive these gestures retell the story, turning a complaint into word of mouth and making them some of the most valuable customers. Bartlett measures the payoff indirectly: the share of post-purchase survey responses naming friends or family should rise over time as these and other unscalable gestures add up. The founder also personally answers escalations that reach him. How to apply: 1) set a fixed weekly budget so spend is capped; 2) give the team simple rules on who qualifies (serious complaints, top LTV); 3) log every gesture and the customer; 4) compare repeat rate and referrals of recipients against similar customers, and watch word-of-mouth survey share. No budget size, cost per order or repeat-rate effect was given.",
+    "conditions": "Brands with a CRM showing customer value and a support team able to personalise gestures.",
+    "fails_when": "Without logging and comparison, the spend cannot be evaluated; gestures that customers learn to game by complaining.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "How do we turn angry customers into fans?",
+      "Should we have a budget for surprise gifts to customers?",
+      "How do we reward our best customers without discounts?",
+      "How do we measure word of mouth?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0243",
+    "evidence": {
+      "where": "about 36:34-46:12 customer service, wow budget"
+    },
+    "strength": "anecdote",
+    "public": true
+  }
+]

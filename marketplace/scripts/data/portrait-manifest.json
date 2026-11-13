@@ -9,7 +9,7 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:10:13.786Z"
   },
-  "spent_usd": 7.20148,
+  "spent_usd": 7.53708,
   "achieng-content-strategy": {
     "sha256": "cdbf62328530e34274fd6540619171144daa5628682630d5ebec8bc0360954fa",
     "model": "gpt-image-2.5-flare",
@@ -2534,5 +2534,125 @@
     "sha256": "056150c9bbebefa5af2ad956ef76c98ffabd710ea69153a3d77850e8f92a5d5d",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T15:31:52.755Z"
+  },
+  "malcolm-ecommerce-growth": {
+    "sha256": "8942919119a3d9a8fb750fb6539f2a394fdef02cd7a7a5f7be8d3f75fa941034",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:13.071Z"
+  },
+  "brendan-offers": {
+    "sha256": "09d2b4232ffc1b4fc963dfe4dedb15b0d60b68b8d4033b79d6416e6935dc3df1",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:14.838Z"
+  },
+  "funmilayo-customer-research": {
+    "sha256": "48ef6890eb881faedf33875bc8028a097502772ddea9769451a598b345676b34",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:14.962Z"
+  },
+  "revathi-product-research": {
+    "sha256": "7a5e7218191c9838801f0263afd5ae2aaf52963e19f6ef4a975d402ff852379d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:15.695Z"
+  },
+  "philippa-brand": {
+    "sha256": "0ba7b9d06d529ce485cbeecec9ac0e5928891b427313b6d2112973463d47d976",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:25.997Z"
+  },
+  "radek-unit-economics": {
+    "sha256": "33af1e8877f8785f4ea613b7aa026d426626ad92c04d4407aefe96aae0d5d032",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:27.783Z"
+  },
+  "facundo-store-setup": {
+    "sha256": "ab6a8aad093a0c1f0ea7cf30a7da192a0420e6bf9d8a4999b6f61781a4fe24be",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:28.064Z"
+  },
+  "annabel-landing-pages": {
+    "sha256": "3d2a361e4eed855fa4af78e09be6b42428d1134406c30b70c214baa86bea76b4",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:28.141Z"
+  },
+  "arjun-page-speed": {
+    "sha256": "2ac64395cb614ddef59d69c707b12d5b6bb07de929ced5cad294811566eb8905",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:38.141Z"
+  },
+  "dustin-ad-deployment": {
+    "sha256": "db3140551217b339ba9168bfcf2deb2969416db419169ce53af6a200c26a9426",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:40.997Z"
+  },
+  "tendai-ad-creative": {
+    "sha256": "fb38522a1408015eaa9b70b4d2fc6d5898ac583e506a3af691db4060f6f12a35",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:41.241Z"
+  },
+  "gretchen-store-testing": {
+    "sha256": "bffaa8ab4e752f20123a75258cc9315f77ed9603fdb6b362e882c16b5842ec24",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:42.761Z"
+  },
+  "raymond-google-ads": {
+    "sha256": "b75181c076b0c26df60f4b15d16955714a23f636b1d3acd9ce6f210a33a267a9",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:50.741Z"
+  },
+  "stuart-store-seo": {
+    "sha256": "d36948f3f24265ee0cae2cab67218e0b17106d29f024ff7ffb9616df416c8578",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:54.300Z"
+  },
+  "morag-email-sms": {
+    "sha256": "373e7446ef8fe668b01503de0e65f2c4144aa127de82e4e97253fd139d03cc82",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:54.391Z"
+  },
+  "pilar-creators": {
+    "sha256": "1986702524982882b9613249dfb5761cbaaa460c3823b84d6c338efafdb164c0",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:02:55.844Z"
+  },
+  "rustam-ai-answers": {
+    "sha256": "612c0a7cb7c9bd59aa43b41e3988f84e2474b422a469f78544c39fbf5cae84a5",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:03:04.302Z"
+  },
+  "latoya-post-purchase": {
+    "sha256": "41f24e6e24d997dc1ebdb4278a6af3f2500ec4a74589d6217319d8d05231e044",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:03:05.451Z"
+  },
+  "zhenyu-sourcing": {
+    "sha256": "a51ab098f019de539a593150ff93b60d3e37099a670b40deac1dca4256b768b2",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:03:06.020Z"
+  },
+  "barnaby-wild-bets": {
+    "sha256": "6fc2b174a5ae26699494ff70a32ff36c0751e795d830ab63f8732535c434995e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:03:08.517Z"
+  },
+  "hemant-store-finance": {
+    "sha256": "6642a9773ef5a1cde740d1298e80a58c4e300d8a79b57bdf11447ee7d8053592",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:03:16.367Z"
+  },
+  "marivic-fulfilment": {
+    "sha256": "54dc502eca9a721d627f24f57bb614cde10aacb00b482c97492bef6be03b579c",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:03:17.424Z"
+  },
+  "garrett-amazon": {
+    "sha256": "985ada25d1ffd418647ce39bd8c4c181bbb84f32d67b76671b778eaf8e098646",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:03:18.457Z"
+  },
+  "ilona-bot-security": {
+    "sha256": "2a23073d2e6d431549d49b6f3c1c18f0c502477cafe49c7a326df34f7cd0856e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T06:03:21.606Z"
   }
 }

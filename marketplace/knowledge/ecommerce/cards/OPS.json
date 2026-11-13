@@ -1,0 +1,874 @@
+[
+  {
+    "id": "OPS-0001",
+    "modules": [
+      "OPS",
+      "FIN"
+    ],
+    "topics": [
+      "international fulfilment",
+      "3PL selection and negotiation"
+    ],
+    "claim": "A single missing 4PL customs document got Oodie's stock seized over Black Friday, the window producing about 80% of its annual profit, and sank a $130M sale.",
+    "body": "The founder describes a failure that a lean ops team can easily miss. Oodie used a 4PL that failed to file one piece of paperwork in one region, and the brand's goods were seized going into Black Friday. For this brand, Black Friday and the surrounding two months produce about 80% of annual profit, so losing that window cost the year. It also ended due diligence on a roughly $130M acquisition offer. The next year a similar problem left them unable to ship during the same peak. Elsewhere he mentions about $20M of stock being seized. How to apply: for any brand whose profit is concentrated in a seasonal peak, audit every import and fulfilment document with each 3PL or 4PL per region well before the peak, name an owner for customs compliance on your side rather than trusting the partner, and avoid moving to a new logistics partner just before the peak. One founder's account; the exact document and region are not named.",
+    "conditions": "Brands with heavy seasonal concentration (gifting, Q4 peaks) importing stock into several regions through outsourced 3PL or 4PL partners.",
+    "fails_when": "Profit is spread evenly through the year, or fulfilment is domestic and in-house so customs paperwork is not a single point of failure.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 80% of annual profit made across the Black Friday period (about 2 months)",
+      "acquisition offer about $130M lost",
+      "about $20M of stock seized (separate mention)"
+    ],
+    "asks": [
+      "What can go wrong with my 3PL before Black Friday?",
+      "Our 4PL handles customs, do I need to check their paperwork myself?",
+      "How much of a year's profit can depend on Black Friday?",
+      "How do I protect stock from being held at customs during peak season?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0003",
+    "evidence": {
+      "where": "Middle of interview, after the CEO replacement discussion",
+      "quote": "Black Friday is where we make 80% of our profits"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "OPS-0002",
+    "modules": [
+      "OPS",
+      "ORG"
+    ],
+    "topics": [
+      "in-house versus agency versus freelancer",
+      "when to fire an agency"
+    ],
+    "claim": "Open each new content channel with an agency to enforce posting cadence, then build an in-house team, paying both until the in-house numbers beat the agency.",
+    "body": "The operator starts every new platform with an agency, not for skill but for accountability. His first YouTube agency cost about $5,000 a month and, by his account, added little beyond forcing him to make three videos a week, which they then posted. Once the channel mattered, he brought in a lead who managed the agencies and then hired in-house staff to replace them. During the handover the business pays twice, agency and team in parallel, and the in-house team is told openly that the goal is to beat the agency's results; when it does, the agency is let go. To pick an agency or creative lead he talks to about ten, and says the weak ones show themselves quickly; he favours referrals, noting the best agencies rarely need to advertise. How to apply: set the cadence target first, buy it from an agency with a fixed fee, define the metric the in-house team must beat, and budget for an overlap period of double cost.",
+    "conditions": "A brand with cash to pay an agency and later a team in parallel; launching a channel the founder has not run before.",
+    "fails_when": "Cash-constrained brands that cannot fund an overlap period; founders who already post consistently, where the agency buys nothing.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about $5,000 per month for the first agency",
+      "3 videos per week cadence",
+      "interview about 10 candidates"
+    ],
+    "asks": [
+      "Should I hire an agency or build an in-house content team?",
+      "When should we replace our social media agency with staff?",
+      "How much does a YouTube content agency cost?",
+      "How do I pick a good content agency?"
+    ],
+    "platforms": [
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0032",
+    "evidence": {
+      "where": "scaling organic perspective and agency or in-house question near the end"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "OPS-0003",
+    "modules": [
+      "OPS"
+    ],
+    "topics": [
+      "first hires by stage",
+      "hiring process for a small brand"
+    ],
+    "claim": "Hire generalists from roughly $1M to $10M, then 'spikes' (best-in-class specialists) from $10M to $50M; ask candidates what revenue stage they joined previous companies at.",
+    "body": "McKay describes hiring by revenue stage. From the start to around $1M and on to about $10M, hire for pace and range: one generalist marketer who can run social, run paid and shoot content, because the business is too small for specialists. From roughly $10M through $20M to $50M, switch to hiring spikes, meaning people who are world-class at one discipline: a content lead, a paid media lead, a creative director, and in operations a demand planner rather than an all-round ops person. His interview filter for senior hires from big brands: ask when they joined their previous company. Someone who joined before $50M to $100M has built with few resources; someone who joined at $200M may be used to several people doing the work for them, such as filling in a retailer's onboarding forms. He pairs this with speed as the operating standard: if a supplier must be paid by Wednesday, the people who deliver in two days are the ones to keep. How to apply: map each open role to the current revenue band, and in interviews probe the size of team and budget the candidate actually had.",
+    "conditions": "Venture-paced consumer brands growing fast; revenue bands as stated by one founder.",
+    "fails_when": "Bootstrapped brands growing slowly, which may stay generalist far past $10M; highly technical early needs (regulated formulation, compliance) that require a specialist from day one.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "generalists from about $1M to $10M",
+      "specialist 'spikes' from about $10M to $50M",
+      "stage-joined filter: before $50M to $100M versus after $200M"
+    ],
+    "asks": [
+      "When should I stop hiring generalists?",
+      "What kind of people should I hire at $5 million revenue?",
+      "How do I tell if a big-company hire can work at a small brand?",
+      "What interview question shows if someone can work lean?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0037",
+    "evidence": {
+      "where": "Hiring discussion, Ramp founder reference and interview question"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "OPS-0004",
+    "modules": [
+      "OPS",
+      "MCR"
+    ],
+    "topics": [
+      "compensation and incentives",
+      "first hires by stage"
+    ],
+    "claim": "Mid-size brands often pay creative strategists a base plus about 3 percent of the ad spend their briefed creatives receive; the model breaks at large scale.",
+    "body": "A creative strategist turns research into concepts and briefs for creators, designers and editors. To align pay with results, some brands add a variable component equal to roughly 3 percent of the ad spend that the strategist's creatives attract, on top of a base salary. Because Meta only spends on ads that perform, the strategist is paid for hit rate rather than volume. The agency has seen this work well at mid-size brands; at large spend levels the variable pay balloons (they cite strategists earning around $80,000 a month), and companies move away from it. Hiring routes: poach an experienced strategist, or promote a designer or video editor who can both generate ideas and execute, which shortens feedback loops. How to apply: if you adopt the model, cap the variable component or step the percentage down as spend rises, define which ads count as the strategist's, and pair it with a quality bar so the incentive does not reward volume of weak ads.",
+    "conditions": "Brands spending enough on Meta to have a dedicated creative strategist, roughly $30k to several hundred thousand a month.",
+    "fails_when": "Very large accounts where 3% of spend becomes excessive; small brands where the founder still does creative strategy.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about 3% of ad spend as variable pay",
+      "around $80,000 a month cited at large scale"
+    ],
+    "asks": [
+      "How should I pay a creative strategist?",
+      "Should a creative strategist get a percentage of ad spend?",
+      "Who should I hire to come up with our ad concepts?",
+      "What does a creative strategist do in an ecommerce brand?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0115",
+    "evidence": {
+      "where": "Creative production teams and briefing section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "OPS-0005",
+    "modules": [
+      "OPS",
+      "ORG"
+    ],
+    "topics": [
+      "first hires by stage",
+      "in-house versus agency versus freelancer"
+    ],
+    "claim": "When sales track the founder's posting, hire someone who already gets views, centralise all footage, and pay overseas editors per view with viral bonuses.",
+    "body": "The founder describes a common pattern: a founder films a few videos, one goes viral, sales follow, and from then on sales are capped by how often the founder can post. When operations get busy and posting drops, sales drop, and competitors entering make each post less effective. First confirm the link: compare weekly sales in weeks with several strong posts against quiet weeks, use a discount code mentioned only in organic content, and run the organic winners as Facebook ads. Then remove the constraint. Hire for proven views, not corporate social media experience: the Oodie's social lead started in customer service with a TikTok of about 10,000 followers and grew the brand account to about half a million; he warns traditional social media managers often have never earned views. Build a shared drive with every clip of the founder, staff and product history so editors have archive footage at scale. Use overseas editors, given the drive and reference content, paid per thousand views if you like, with large bonuses when a video goes viral and sells. Favour repeatable formats such as interviews over one-off founder stories that cannot be re-told daily.",
+    "conditions": "Founder-led brands whose sales visibly follow organic posting; enough cash for at least one content hire.",
+    "fails_when": "Brands where the founder's face is the product and audiences reject a substitute; when per-view pay rewards reach that does not convert into sales.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "hire grew from about 10,000 personal TikTok followers to about 500,000 brand followers"
+    ],
+    "asks": [
+      "Our sales drop when I stop posting, what should I do?",
+      "Who should I hire to make our social content?",
+      "Should I hire a social media manager or a creator?",
+      "How do I scale content production without filming everything myself?"
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0148",
+    "evidence": {
+      "where": "removing the founder constraint, final section"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "OPS-0006",
+    "modules": [
+      "OPS",
+      "CXP"
+    ],
+    "topics": [
+      "support desk staffing by ticket volume"
+    ],
+    "claim": "Phone support load scales with order value: about 12 to 18% of orders generate a call at a 250 USD AOV versus about 3% at 40 USD.",
+    "body": "A capacity input for planning support staffing, cited in the playbook's pre-purchase section: higher-AOV brands carry a much heavier phone load, with roughly 12 to 18% of orders generating a phone call at about 250 USD average order value against about 3% at about 40 USD. Mechanism: bigger-ticket, higher-consideration purchases bring more pre-sale questions and more anxiety after purchase, and buyers want a human. How to use it: 1) Estimate monthly calls as orders multiplied by the contact rate for your AOV band, then add written tickets (WISMO alone is often 30 to 50% of tickets). 2) Convert to hours using handle time (written WISMO lookups take 3 to 5 minutes each; calls are usually longer) and staff to that load before scaling paid spend. 3) For high-AOV brands, show a phone number or fast chat because it reassures buyers, but cut avoidable contacts with accurate delivery dates and proactive tracking. 4) Re-measure contact rate per order monthly. The figures are from vendor sources compiled in the playbook, so treat them as planning ranges.",
+    "conditions": "DTC brands planning support headcount or deciding whether to offer phone support; US price levels.",
+    "fails_when": "Brands with strong self-service and proactive notifications can run well below these rates; categories with technical setup (electronics, furniture assembly) may run higher at any AOV.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 12 to 18% of orders generate a call at 250 USD AOV",
+      "about 3% at 40 USD AOV"
+    ],
+    "asks": [
+      "How many support calls should I expect per order?",
+      "Do I need phone support for a high-ticket product?",
+      "How do I plan support staffing as orders grow?",
+      "Why does our support load feel so high compared to cheaper brands?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0189",
+    "evidence": {
+      "where": "Stage 3, easy access to a human"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "OPS-0007",
+    "modules": [
+      "OPS"
+    ],
+    "topics": [
+      "first hires by stage",
+      "in-house versus agency versus freelancer",
+      "team tooling stack"
+    ],
+    "claim": "Hire specialist roles (procurement, analytics, PPC) offshore at roughly a fifth of US cost; keep multi-function generalists onshore and staff slightly below capacity.",
+    "body": "Khan runs a front office of about 110 people across brands and staffs specialised functions from lower-cost hubs. His cost comparison: a role costing about $100,000 in New York runs about $20,000 to $30,000 in Shenzhen, and the Philippines is lower again (about $10,000 in the host's comparison). His routing rule: specialised roles with narrow context, such as procurement, BI and analytics, and PPC, transfer well, and he rates Shenzhen talent highly for these; roles that need broad, multi-function context are where an onshore generalist earns their cost. He prefers running slightly understaffed with high utilisation and hiring only when the team is at the seams. Accountability system: an automated daily Slack report of each KPI against target with a red, green or blue status (blue meaning well ahead, which also requires explaining why the forecast was off); any owner whose metric is red must reply in the thread with the reason and the fix, and three days in a row escalates. About 70 staff also post three daily goals at clock-in and a time breakdown at clock-out in a personal channel with him. Treat the salary figures as his estimates.",
+    "conditions": "Brands past founder-only stage with repeatable specialist work; teams able to manage across time zones; ecommerce functions with clear daily metrics.",
+    "fails_when": "Roles needing deep local market, brand or customer context; very small teams where one generalist covers many jobs; data, privacy or IP rules restricting offshore access; daily task reporting can feel like micromanagement and raise attrition.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "~$100k New York role ~ $20k to $30k in Shenzhen; Philippines ~ $10k",
+      "~110-person front office; ~70 on daily task channels",
+      "Daily KPI status: red / green / blue against target"
+    ],
+    "asks": [
+      "Should I hire my team overseas?",
+      "Which ecommerce roles work well offshore?",
+      "How much does an analyst in China or the Philippines cost compared to the US?",
+      "How do I keep track of what a remote team does each day?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0194",
+    "evidence": {
+      "where": "Late sections: town hall Slack reporting and why overseas instead of the US"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "OPS-0008",
+    "modules": [
+      "OPS"
+    ],
+    "topics": [
+      "3PL selection and negotiation",
+      "shipping SLAs"
+    ],
+    "claim": "Vet a 3PL on error rate, peak throughput, a named escalation contact and past Q4 surges; one 3PL collapse cost The Oodie tens of millions in a Q4.",
+    "body": "Going into one Q4, The Oodie forecast $45 to $50 million in sales; one of its 3PLs collapsed under the volume, the brand lost tens of millions in potential revenue, and customers publicly accused it of being a scam because orders did not arrive. Fogarty's lesson is that product, marketing and sourcing can all be right and logistics can still sink the business. Do not choose on price per pick. Ask: what is your order error rate; how fast do you process at peak volume, and how; who is my direct contact when something breaks; how did you handle previous Q4 surges for other brands; how do you handle returns, damages and restocks, and do you flag problems before I notice them. Visit the warehouse in person, and compare two or three, which quickly shows who is real. After onboarding, track inventory turnover weekly, share a live dashboard with the warehouse, and hold a monthly review with the 3PL. Before a peak season, give the 3PL your forecast early so they can staff for it, and consider whether volume should be split across more than one provider.",
+    "conditions": "Brands outsourcing fulfilment and expecting strong seasonal peaks; most acute when Q4 is a large share of annual revenue.",
+    "fails_when": "Volume is small and flat enough that a single small 3PL or in-house packing is safer and cheaper; splitting across 3PLs adds inventory fragmentation cost for low-volume brands.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Q4 forecast of $45 to $50 million when the 3PL collapsed",
+      "lost tens of millions in potential revenue",
+      "visit 2 to 3 warehouses before choosing"
+    ],
+    "asks": [
+      "How do I choose a 3PL?",
+      "What questions should I ask a fulfilment warehouse before signing?",
+      "Our 3PL fell behind during Black Friday, how do we prevent that?",
+      "Should we use more than one 3PL for peak season?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0196",
+    "evidence": {
+      "where": "chapter 4, fulfilment and 3PLs"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "OPS-0009",
+    "modules": [
+      "OPS",
+      "CXP",
+      "WLD"
+    ],
+    "topics": [
+      "escalation paths",
+      "recovery playbooks"
+    ],
+    "claim": "Give support reps a small no-approval budget, about $50 to $200 per incident, to fix problems and add a surprise; this scales Ritz-Carlton's $2,000-per-incident rule to a store.",
+    "body": "Ritz-Carlton's rule, set in 1983 by founding president Horst Schulze, lets any employee spend up to $2,000 per incident, not per year, to rescue a guest experience, justified against an estimated guest lifetime value near $250,000. The famous result is Joshie the giraffe, a lost toy returned with a photo album of its 'holiday'. The compilation's point is that the one-off story fades; the lasting value is the standing policy that lets staff act without asking. For an online store it suggests a much smaller ceiling, about $50 to $200 per incident, used when a customer has a problem or shares a personal moment in a ticket: reship free, upgrade shipping, add a gift, send a note. How to apply: set the cap relative to your own customer lifetime value, log every use with the reason, and review monthly for cost and for repeat purchase or review outcomes among recipients. Zappos is the other cited model: calls are never timed and service spend is booked as marketing. No measured effect for stores is given.",
+    "conditions": "Brands with a support team (not just the founder) and a known customer lifetime value; mid to high AOV or strong repeat categories. Cost ceiling: the per-incident cap times incidents per month.",
+    "fails_when": "Low-margin, low-repeat products where LTV cannot carry the spend; no logging, so the budget leaks or is abused; reps are not trained to spot moments, so it is never used.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Ritz-Carlton $2,000 per incident against about $250,000 guest LTV (since 1983)",
+      "suggested store cap $50 to $200 per incident"
+    ],
+    "asks": [
+      "How much can my support team spend to fix a customer problem without asking me?",
+      "Should our customer service reps have a budget for gifts or refunds?",
+      "What's a sensible per-ticket goodwill budget for a small store?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0199",
+    "evidence": {
+      "where": "Category 1, Joshie the giraffe",
+      "quote": "per incident (not per year)"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "OPS-0010",
+    "modules": [
+      "OPS",
+      "FIN"
+    ],
+    "topics": [
+      "first hires by stage",
+      "compensation and incentives"
+    ],
+    "claim": "Size full-time payroll to about 12% of revenue in your lowest month of the year; staff everything above that with flexible labour (freelancers, agencies, seasonal hires).",
+    "body": "Ecommerce revenue is highly seasonal, but full-time salaries cost the same in the slowest month as in Q4. Many brands accept losing money in low months and making it back in high ones. Holiday's rule: find the lowest revenue month of the year and set the full-time labour base at about 12% of that month's revenue. A brand whose months range from $500,000 to $1,000,000 should have a full-time payroll near $60,000 a month; capacity needed above that comes from flexible labour: freelancers, agencies, people hired for a season, offshore contractors, and increasingly AI tools. He argues the pool of flexible labour has never been larger, and that roles once split across four people (growth lead, media buyer, creative strategist, retention strategist) are converging into one generalist because media buying or creative strategy for a single brand is no longer a full-time job with current tools. Before each hire, ask whether the role adds value above its cost in the weakest month. He cut 100 people in 60 days in 2022 and later ran 50% larger with half the headcount.",
+    "conditions": "Seasonal DTC brands planning headcount; consistent with an overall opex target of about 10 to 12% of revenue.",
+    "fails_when": "Roles that need deep, continuous knowledge (finance, operations lead, core product) are pushed into flex labour and quality or control suffers; or the business is non-seasonal, where the lowest month is close to average and the rule adds nothing.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "full-time payroll about 12% of the lowest month's revenue",
+      "months from $500,000 to $1,000,000 imply about $60,000/month full-time payroll",
+      "100 layoffs in 60 days; later 50% larger with half the people"
+    ],
+    "asks": [
+      "How many full-time staff can my store afford?",
+      "Our payroll kills us in slow months, what's the fix?",
+      "Should I hire a full-time media buyer or use freelancers?",
+      "What should payroll be as a percentage of revenue?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0204",
+    "evidence": {
+      "where": "labour and flex staffing discussion; 'profit engineer' role section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "OPS-0011",
+    "modules": [
+      "OPS",
+      "FIN"
+    ],
+    "topics": [
+      "team tooling stack",
+      "purchase order planning"
+    ],
+    "claim": "An ERP becomes necessary around $30 to $50M in revenue; NetSuite-class systems cost over $200,000 to implement, so smaller brands run POs in accounting or inventory-planning software.",
+    "body": "Fogarty puts the ERP threshold at roughly $30M to $50M in annual revenue: at that size, purchase orders, inventory, fulfilment and finance need one system, and an ERP handles most of the coordination he describes. The cost is large: he says such systems can run over $200,000 and his own implementation cost upwards of half a million dollars; he names NetSuite (expensive) and Fulfil (praised by other operators such as Ridge). Below that threshold, keep purchase orders in your accounting software or in an inventory planning tool, but solve the visibility problem: customer service, marketing and the 3PL all need to see open POs, expected arrival dates and changes, or customers get promised stock that has not arrived and refunds follow. He also recommends a master shipping sheet that suppliers cannot edit, logging estimated departure, ETA, vessel number and bill of lading for each PO, and comparing quotes from two or three freight forwarders on every shipment. How to apply: until you reach the threshold, pick one shared PO record and give every team read access; budget the ERP project a year ahead of crossing about $30M.",
+    "conditions": "Inventory-holding DTC brands planning systems by revenue stage.",
+    "fails_when": "Simple catalogues (few SKUs, one warehouse) that can run well past $50M on Shopify plus an inventory planner; brands with complex B2B or multi-entity needs that need an ERP earlier.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "ERP threshold about $30M to $50M revenue",
+      "ERP implementation over $200,000; his own about $500,000",
+      "compare 2 to 3 freight forwarders per shipment"
+    ],
+    "asks": [
+      "When does my brand need an ERP?",
+      "How much does NetSuite cost to set up?",
+      "How should a small brand track purchase orders?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0208",
+    "evidence": {
+      "where": "Purchase order management section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "OPS-0012",
+    "modules": [
+      "OPS",
+      "FIN",
+      "MEA"
+    ],
+    "topics": [
+      "3PL selection and negotiation",
+      "carrier selection and rates"
+    ],
+    "claim": "Audit 3PL and courier invoices monthly against Shopify order data; this operator estimates 30 to 40% of the brands he mentors are being overcharged.",
+    "body": "Fogarty's warning is that 3PLs and couriers often blend charges into totals that are hard to check, and that brands take the invoice on trust. From his mentoring clients he estimates 30 to 40% are being overcharged somewhere. His method: when choosing a 3PL, run a request for pricing with several warehouses, giving each your product dimensions, historical order data and forecasts, so the quotes are comparable and competitive; ask for pricing broken into pick and pack, inbound (container unloading), outbound courier rates (which depend heavily on the 3PL's total volume and courier deals) and storage. Then build a spreadsheet that estimates each of those charges from your Shopify orders for the month, and compare it with the invoice every month rather than discovering the gap in the P&L. Storage is usually small unless products are bulky. His illustration of why it matters: two brands selling the same product, one negotiating freight, product cost, courier and warehousing, land it at $21 against $28, freeing $7 a unit, about 14% more profit at a $50 CAC. Do not squeeze the 3PL to a loss; a warehouse that makes money is more flexible at peak.",
+    "conditions": "Brands outsourcing fulfilment with monthly invoices from a 3PL and couriers.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "30 to 40% of mentored brands overcharged (practitioner estimate)",
+      "landed-to-customer cost $21 vs $28 after negotiation, $7 a unit, about 14% more profit at $50 CAC (illustration)"
+    ],
+    "asks": [
+      "How do I check if my 3PL is overcharging me?",
+      "How do I compare 3PL quotes?",
+      "What costs should a 3PL invoice break down?",
+      "How do I get better 3PL pricing?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0208",
+    "evidence": {
+      "where": "3PL pricing and audit section; unit economics illustration"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "OPS-0013",
+    "modules": [
+      "OPS"
+    ],
+    "topics": [
+      "support desk staffing by ticket volume",
+      "quality monitoring"
+    ],
+    "claim": "Blend support teams: route simple tickets to offshore agents and nuanced ones to local staff, who can be about twice as efficient; plan peak hires using cost per ticket.",
+    "body": "Fogarty does not accept that offshore support (his teams used the Philippines and Fiji) is automatically cheaper: in his experience local agents can be about twice as efficient, because they are closer to the internal team and the sources of truth, so the real cost per resolved ticket may be similar. His model for larger brands is a blend: filter simple, repetitive tickets (order status, address changes) to the international team and send complex or sensitive ones to local agents; smaller brands can choose either. Offshore teams also cover different public holidays, which helps when local staff are off. Measure support operationally with three numbers: resolution time (long times point to missing self-serve information, slow agents or weak macros), touchpoints per ticket (how many replies it takes to resolve), and cost per service, meaning total customer service cost divided by ticket volume, which lets you forecast how many agents a peak sale will need from the expected ticket count. Reviews are the downstream output: bad product specs, slow freight and slow picking all show up as tickets and reviews. He moved from Zendesk to Gorgias for speed and cost and expects AI to reshape the function.",
+    "conditions": "Brands with enough ticket volume to split tiers (roughly a multi-agent team); seasonal peaks.",
+    "fails_when": "Very small brands where one person handles everything; categories needing regulated or technical support (medical devices, financial products) that must stay local or specialised.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "local agents up to about 2x as efficient as offshore (practitioner estimate)",
+      "cost per service = total CS cost / ticket volume"
+    ],
+    "asks": [
+      "Should I outsource customer service overseas?",
+      "How do I know how many support agents to hire for Black Friday?",
+      "What customer service metrics should I track?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0208",
+    "evidence": {
+      "where": "Customer service section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "OPS-0014",
+    "modules": [
+      "OPS",
+      "FIN"
+    ],
+    "topics": [
+      "purchase order planning",
+      "forecasting and budgeting"
+    ],
+    "claim": "Forecast from in-stock days only; months with stockout days understate demand. Hold 4, 8 or 12 weeks of stock by volatility, plus 5 to 10 days safety stock.",
+    "body": "Fogarty sees two forecasting errors repeatedly. First, using a period with stockouts as the demand base: if a product was out of stock for half of a 30-day month and you project the next 90 days from that month, you forecast half the real demand. Use only the in-stock days and extrapolate from their sales velocity. Second, applying a flat growth rate to a seasonal business: a product doing 100, 120, 145, 175 units a month looks like 20% monthly growth, but most ecommerce brands then see October and November jump to ten or twenty times the base (his example: about 200 a month, then 2,000 in October and 4,000 in November) before dropping at the Christmas shipping cut-off, and those weeks can carry about 80% of a year's profit. Inputs for a reorder plan: supplier lead time (with buffer), daily sales velocity, target days of stock (typically 4, 8 or 12 weeks depending on volatility and cash available) and safety stock of about 5 to 10 days. Expect error: he says mature retailers miss by about 5% while fast-growing DTC brands can miss by 50%, and both stockouts and overstock can be fatal, so update the forecast monthly.",
+    "conditions": "Inventory-holding DTC brands with long supplier lead times and seasonal peaks.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "exclude stockout days: e.g. 15 of 30 days out of stock",
+      "days of stock target 4, 8 or 12 weeks",
+      "safety stock about 5 to 10 days",
+      "peak months about 10 to 20x base (200 to 2,000 to 4,000 units)",
+      "peak can carry about 80% of annual profit",
+      "forecast error about 5% mature vs up to 50% fast-growth"
+    ],
+    "asks": [
+      "How do I forecast inventory when we keep selling out?",
+      "How much safety stock should I hold?",
+      "How many weeks of inventory should we keep?",
+      "How do I forecast Black Friday stock?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0208",
+    "evidence": {
+      "where": "Forecasting and inventory planning section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "OPS-0015",
+    "modules": [
+      "OPS",
+      "CXP"
+    ],
+    "topics": [
+      "3PL selection and negotiation",
+      "shipping SLAs"
+    ],
+    "claim": "Put a 'picked on time' standard with financial penalties into the 3PL SLA; at Black Friday a 24 to 48 hour pick promise can slip to 7 days.",
+    "body": "Fogarty, who scaled The Oodie to about $650M in sales, says operations nearly sank the business: a logistics provider that could not ship during a forecast $45M to $50M October and November cost more than $20M in lost revenue and a wave of bad press. His 3PL rules: get a written service level agreement that states when orders will be picked and shipped, and attach consequences for misses, such as a discount or a free pick on late orders. The failure mode is peak season: a 3PL that promises picking within 24 to 48 hours can, if it under-staffs or prioritises a bigger client, drift to seven days before picking starts, and couriers are backed up at the same time, which is why so many brands collect bad reviews around Christmas. Track delivered-on-time yourself and investigate whenever it falls below 95%, splitting delays into pick time and courier time. Require cycle counts of fast-moving SKUs at least twice a year in the SLA, and send an advance shipping notice before every container so unloading is not delayed or charged extra. Give the 3PL realistic forecasts so they can staff for peaks.",
+    "conditions": "Brands using a third-party warehouse, especially with heavy Q4 or promotional peaks.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "pick promise 24 to 48 hours can slip to 7 days at peak",
+      "investigate when delivered-on-time is under 95%",
+      "cycle counts at least twice a year",
+      "over $20M revenue lost when a logistics provider failed in an October to November peak"
+    ],
+    "asks": [
+      "What should be in my 3PL contract?",
+      "Our warehouse falls behind every Black Friday, how do I protect myself?",
+      "How do I measure if my 3PL is performing?",
+      "How often should my 3PL count inventory?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0208",
+    "evidence": {
+      "where": "3PL management section and opening story"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "OPS-0016",
+    "modules": [
+      "OPS",
+      "FIN"
+    ],
+    "topics": [
+      "first hires by stage",
+      "compensation and incentives"
+    ],
+    "claim": "At about $3M revenue and 13% net margin, a founder who cannot buy media should hire a senior media buyer next, paid partly in equity.",
+    "body": "Ecommerce owners tend to be either product people or media buyers. A product-led founder (here, a UK sports memorabilia seller good at buying items for $200 and selling for $2,000) who also runs the ads tends to stall, in this case at $3M for two years with about a 1 percent conversion rate. The diagnosis: the missing skill is buying traffic, and the conversion problem is often traffic quality rather than the site, so the first fix is better-targeted visitors, not more CRO. The constraint is cash: $400,000 profit on $3M (about 13 percent) cannot fund a top media buyer whose market pay runs to several hundred thousand dollars a year without consuming most of the margin. Options: learn media buying yourself, or hire a strong buyer on a lower base plus a few points of equity or a profit share, using equity and inventory value as levers rather than cash alone. Once paid acquisition is working, the next gap becomes brand building and, as revenue grows, cash flow for inventory. Write the role around owning acquisition targets (spend, CAC, contribution) rather than tasks.",
+    "conditions": "Founder-led stores around $2M to $5M revenue with net margins near 10 to 15 percent, a proven product supply edge, and growth stalled for a year or more; paid social or search as the main channel.",
+    "fails_when": "Founders who are already strong media buyers (their gap is brand, product or operations instead), brands growing mainly through marketplaces or wholesale, and cases where giving equity to a hire is not possible; a fractional or agency buyer on a performance fee is the cash-light alternative.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "$3M annual revenue, stuck for about 2 years",
+      "$400,000 profit on $3M, about 12 to 13 percent margin",
+      "site conversion rate about 1 percent",
+      "strong media buyers paid several hundred thousand dollars a year (stated)"
+    ],
+    "asks": [
+      "what should my first senior hire be at 3 million revenue",
+      "should i hire a media buyer or an agency",
+      "how do i pay a great media buyer when margins are thin",
+      "we've been stuck at the same revenue for two years, who do we hire",
+      "should i give equity to a key hire"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0210",
+    "evidence": {
+      "where": "Q&A with a UK sports memorabilia founder",
+      "quote": "the easiest way to improve your conversion is just get better people"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "OPS-0017",
+    "modules": [
+      "OPS",
+      "FIN"
+    ],
+    "topics": [
+      "first hires by stage",
+      "roles and ownership maps"
+    ],
+    "claim": "Ridge keeps payroll near 7% of revenue (about 45 US staff) while spending up to half of revenue on marketing; Frank says winners keep people cost at 10% or less.",
+    "body": "Ridge sometimes spends about half of its revenue on marketing, a marketing efficiency ratio near 2, which its gross margins can support. That only works because the team is lean: about 45 full-time US employees and payroll around 7% of revenue. The host says many consumer brands run 25 to 30% and that he once ballooned to 25%; Frank's view is that you need to be at 10% or less to win in the current market, citing a hydration brand with four employees heading for $100M in revenue. The trade-off: every point of revenue not spent on overhead can go to growth media. How to apply: track people cost (salaries, contractors, benefits) as a share of revenue every month alongside MER; before each hire, test whether the role could be an agency, contractor or tool; and treat a rising people-cost share as a constraint on how much you can spend on acquisition. He also warns that buyers adjust EBITDA for an understaffed business, so lean is not the same as missing roles.",
+    "conditions": "Performance-marketing-led DTC brands with high gross margins; Ridge at roughly $100M+ revenue, US-based.",
+    "fails_when": "Retail, wholesale or manufacturing-heavy businesses that need larger operations teams; early brands where a few hires are a large share of small revenue; content-heavy or service-heavy models.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "payroll about 7% of revenue, about 45 full-time US staff",
+      "marketing up to about 50% of revenue (MER about 2)",
+      "many consumer brands at 25 to 30% people cost",
+      "target 10% or less"
+    ],
+    "asks": [
+      "How big should my team be relative to revenue?",
+      "What percentage of revenue should payroll be for a DTC brand?",
+      "We spend half our revenue on ads, how lean does the team need to be?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0235",
+    "evidence": {
+      "where": "Section on spending half of revenue on marketing",
+      "quote": "human payroll is 7% of revenue or something"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "OPS-0018",
+    "modules": [
+      "OPS",
+      "ORG"
+    ],
+    "topics": [
+      "release and approval processes",
+      "creator and influencer collaboration"
+    ],
+    "claim": "To join trends before they die (about 72 hours in cosmetics), pre-approve a fixed budget (e.g. $1,200) and a 36-hour turnaround with a standby creator, skipping leadership sign-off.",
+    "body": "Trend windows are shorter than most brand approval cycles. In cosmetics, the guest puts a trend's useful life at about 72 hours, while internal approvals and limited bandwidth meant one brand he works with kept missing them. The fix is to approve the decision in advance rather than each piece: agree a standing per-trend budget (the example: about $1,200), a quick-turn creator who knows they will be paid more than their usual rate for fast work, and a 36-hour brief-to-delivery deadline. Anyone on the marketing team who spots a relevant trend can trigger it without a meeting. Two guardrails from the conversation: only do this once the brand already has its own proven content formats and audience, because trends amplify a working strategy but cannot create one; and keep reviews small and tied to measurable outcomes, since large cross-team creative reviews (what he calls the $50,000 meeting, counting attendees' pay) slow everything and get decided by politics.",
+    "conditions": "Brands in fast-trend categories (beauty, fashion, food, lifestyle) with an established organic presence and at least one reliable creator relationship.",
+    "fails_when": "Brands without proven formats or audience (trends will not fix that), regulated categories where every asset needs compliance review (health claims, alcohol, finance), and trends whose tone conflicts with the brand.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "trend life about 72 hours in cosmetics",
+      "36-hour creator turnaround",
+      "pre-approved budget about $1,200 per trend (example)"
+    ],
+    "asks": [
+      "how do we jump on tiktok trends faster",
+      "our approvals are too slow for social media, what can we do",
+      "how much should we budget for trend content",
+      "should my brand do trends at all"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0236",
+    "evidence": {
+      "where": "Discussion of trends and approvals at larger budget levels",
+      "quote": "the trends and cosmetics are done in 72 hours"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "OPS-0019",
+    "modules": [
+      "OPS",
+      "ADC"
+    ],
+    "topics": [
+      "support desk staffing by ticket volume",
+      "restock planning"
+    ],
+    "claim": "At peak demand Comfrt hid in-stock items and skipped Black Friday email and SMS, because selling out into December would gut ad accounts and force a return to learning phase.",
+    "body": "Comfrt says it did $100 million in November and December alone and sold out of nearly everything. Rather than maximise Black Friday, it deliberately marked products out of stock on the site that still had inventory and did not send its Black Friday email or SMS, so it would not reach December with zero stock. The founder's reasoning: an empty catalogue means cutting ad spend to nothing, and restarting means rebuilding campaigns and going back through Meta's learning phase, which could cost four to five months of performance; short-term revenue would hurt the business long term. Earlier, a flash sale produced its first $1M, $1.5M and $1.8M days in early October, stressing operations. Customer support also broke under growth: they brought in outside agencies and hired about 40 support reps within a month. The capacity lesson: before a sales peak, check weeks of cover per SKU against forecast demand, and if cover is short, throttle demand (hold back promotions, hide variants) instead of selling out; scale support staffing ahead of order spikes, not after.",
+    "conditions": "Fast-growing brands heading into peak season with limited inventory and reliance on always-on paid social.",
+    "fails_when": "Brands with fast replenishment or deep stock; seasonal or clearance-driven businesses where selling out is the goal.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "$100M in November-December",
+      "about 40 support reps hired within a month",
+      "first $1M, $1.5M, $1.8M days in early October",
+      "recovery risk: 4-5 months"
+    ],
+    "asks": [
+      "Should we run Black Friday if we're low on stock?",
+      "What happens to our ads if we sell out before Christmas?",
+      "How do we stop selling out during peak season?",
+      "How fast should we hire customer support when orders spike?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0237",
+    "evidence": {
+      "where": "Main takeaway section: support system and Black Friday stock decision"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "OPS-0020",
+    "modules": [
+      "OPS",
+      "ADC"
+    ],
+    "topics": [
+      "in-house versus agency versus freelancer",
+      "first hires by stage"
+    ],
+    "claim": "Founders should run their own ads until about $10,000 to $30,000 monthly spend; above that, an in-house buyer who is also the creative strategist can replace a $10k-40k/month agency.",
+    "body": "The guest's view is that a first-time founder should be inside the ad account early: it teaches them to ask better questions later, and at $3,000 to $10,000 of monthly spend, management fees eat money that should fund tests. He suggests a founder or someone on the leadership team runs ads until roughly $10,000 to $30,000 a month, buying an occasional outside consult to check their work. With targeting largely automated, he argues the separate pod of strategist, account manager, media buyer and designer is obsolete: the media buyer should be the creative strategist, supported by a designer, editors and creators, and should co-own the P&L forecast with finance. The interviewer, a brand founder, says brands at $5 million to $20 million revenue paying an agency a percentage of spend may pay $10,000 to $40,000 a month; he gave his head of ecommerce, who had never run an ad, four weeks to learn, paid an experienced outside buyer for a weekly check-in during the handover, and made him the in-house buyer. How to apply: set the spend threshold for hiring, define the role as creative strategy plus buying, and fund a part-time expert reviewer during the transition.",
+    "conditions": "DTC brands spending up to about $30,000 a month (founder-run) or $5M to $20M revenue (in-house versus agency decision); Meta-heavy acquisition.",
+    "fails_when": "Founders with no time or numeracy for daily account review; brands needing multi-channel expertise an agency already holds; when the in-house hire has no creative production support.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "founder runs ads up to about $10,000 to $30,000 monthly spend",
+      "agency fees about $10,000 to $40,000 per month for $5M to $20M brands",
+      "4 weeks to self-train an in-house buyer"
+    ],
+    "asks": [
+      "Should I run my own Facebook ads or hire an agency?",
+      "At what ad spend should I hire a media buyer?",
+      "How much do ad agencies cost for a $10M brand?",
+      "What should my in-house ads team look like?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0242",
+    "evidence": {
+      "where": "[00:10:00-00:16:00] death of the traditional media buyer; founder-in-account question"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "OPS-0021",
+    "modules": [
+      "OPS"
+    ],
+    "topics": [
+      "roles and ownership maps",
+      "team tooling stack"
+    ],
+    "claim": "An offshore AI developer at about $3,500 a month can build team-requested automations; collect requests by form, prioritise every other week, and track in a project board.",
+    "body": "The agency founder hires a full-time offshore AI developer for about $3,500 a month, whom he rates as equivalent to a $15,000-a-month US developer (he owns the staffing firm he hires from, so treat the comparison as biased). The workflow is a simple intake funnel. Each manager asks their team which repetitive work they want automated or which new capability would help. Managers, not individual staff, submit requests through one Google Form. Leadership reviews the queue every other week and ranks requests by company impact; only approved items move to the ClickUp board, where the developer builds them in priority order. This replaced a phase where about half of the roughly 200 staff were building their own AI tools independently, which got distracting and quickly went out of date with each model update. An example build: a bot that finds top competitor ads, extracts their angles, generates UGC-style variations in AI video software, drops them into Google Drive and alerts the media buyer. He reports headcount fell from about 190 to 165, and expects AI to raise each person's output rather than replace most staff.",
+    "conditions": "Brands or agencies with enough repetitive marketing work to keep a developer busy, typically dozens of staff.",
+    "fails_when": "Very small teams where off-the-shelf tools cover the need; teams without managers to filter requests, where the developer gets a scattered queue.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about $3,500 a month for an offshore AI developer (vs about $15,000 US equivalent, speaker's estimate)",
+      "requests reviewed every 2 weeks",
+      "headcount about 190 to 165",
+      "about 100 of 200 staff were building their own AI workflows"
+    ],
+    "asks": [
+      "Should we hire someone just to build AI automations?",
+      "How much does an offshore AI developer cost?",
+      "Everyone on our team is building their own AI tools, how do we organise that?",
+      "How do we decide which tasks to automate first?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0249",
+    "evidence": {
+      "where": "AI roles inside the agency segment"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "OPS-0022",
+    "modules": [
+      "OPS",
+      "AMZ"
+    ],
+    "topics": [
+      "fulfilment"
+    ],
+    "claim": "Over-produce rather than miss a retailer PO: an unfilled order leaves an empty shelf the retailer cannot quickly refill and can end the relationship.",
+    "body": "Bloom's founder separates two kinds of stockout. Running out on your own site or Amazon hurts only you. Failing to fill a purchase order from Target or Walmart, or being unable to supply reorders after a strong first order, leaves an empty shelf space in a large retailer that cannot easily slot something else in, and the buyer remembers. Bloom now deliberately over-produces so it never misses a retail PO, accepting the cash tied up in inventory. He also warns that third-party resellers of consumables on marketplaces are high risk (Bloom dealt with an organised reseller operation abusing its Amazon listings) and says the brand now sells its energy drink directly to Amazon so it controls that relationship. Retail entry for Bloom went through Target first to prove the concept, growing to around 50,000 doors. How to apply: before accepting a retail order, model reorder scenarios at strong sell-through and hold safety stock or production capacity to cover them; price the cost of carrying that inventory into the deal; and decide marketplace channel ownership (direct-to-Amazon or Brand Registry controls) before resellers fill the gap.",
+    "conditions": "Consumer brands entering or growing in mass retail; consumables sold on marketplaces.",
+    "fails_when": "Cash-constrained brands where over-producing risks running out of money; short shelf-life products where excess stock spoils; the trade-off needs FIN working-capital planning.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 50,000 retail doors"
+    ],
+    "asks": [
+      "What happens if we can't fill a Target or Walmart order?",
+      "How much inventory should we hold before launching in retail?",
+      "Should we sell to Amazon directly or as a third-party seller?",
+      "Resellers are messing up our Amazon listing, what can we do?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "US"
+    ],
+    "mode": "both",
+    "source": "S0254",
+    "evidence": {
+      "where": "Retail strategy segment (about 01:03:48 to 01:20:05) and Amazon reseller story"
+    },
+    "strength": "anecdote",
+    "public": true
+  }
+]

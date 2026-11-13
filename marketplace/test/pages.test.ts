@@ -4,8 +4,11 @@ import { test, beforeEach } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { testEnv } from "./helpers.ts";
-import { clearShellCache, clip, esc, GUIDES } from "../src/pages.ts";
+import { clearShellCache, clip, ECOMMERCE_DESCRIPTION, ECOMMERCE_PATH, esc, GUIDES } from "../src/pages.ts";
 import { housePersonas } from "../src/modules/directory/index.ts";
+import { verticalBundle } from "../src/modules/knowledge/bundle.ts";
+import { forgetVerticals } from "../src/modules/knowledge/service.ts";
+import type { Card, Source, Vertical } from "../src/modules/knowledge/cards.ts";
 
 const SHELL = `<!doctype html>
 <html lang="en">
@@ -216,4 +219,70 @@ test("public pages are kept at the edge for a few minutes, and share links and m
     await t.settle();
     assert.equal(store.size, 1, "a 404 and a share link are never stored");
   } finally { delete (globalThis as any).caches; }
+});
+
+test("/e-commerce has its own head tags, plain content for crawlers and the team, and is in the sitemap", async () => {
+  forgetVerticals();
+  const t = await testEnv(PROD);
+  const res = await t.api("GET", ECOMMERCE_PATH);
+  assert.equal(res.status, 200);
+  assert.equal(res.res.headers.get("x-robots-tag"), null);
+  const html = String(res.body);
+  assert.match(html, /<title>AI agents for e-commerce stores \| AI Blocks<\/title>/);
+  assert.ok(html.includes(`<meta name="description" content="${esc(ECOMMERCE_DESCRIPTION)}" />`));
+  assert.ok(ECOMMERCE_DESCRIPTION.length <= 160);
+  assert.match(html, /<link rel="canonical" href="https:\/\/agents\.test\/e-commerce" \/>/);
+  assert.match(html, /<meta name="robots" content="index, follow/);
+  assert.match(html, /<meta property="og:title" content="AI agents for e-commerce stores \| AI Blocks" \/>/);
+  assert.match(html, /<meta property="og:url" content="https:\/\/agents\.test\/e-commerce" \/>/);
+  assert.match(html, /"@type":"CollectionPage"/);
+  assert.match(html, /"@type":"BreadcrumbList"/);
+  assert.match(html, /<h1>AI agents for your online store<\/h1>/);
+  assert.ok(html.includes('<a href="/guides/use-an-agent-pack">') && html.includes('<a href="/connect">'), "how to start links to the guide and the connect page");
+  // The team: the same agents, in the same order, the app asks for; the page carries that answer.
+  const boot = JSON.parse(html.match(/<script type="application\/json" id="boot">([\s\S]*?)<\/script>/)![1]);
+  const api = (await t.api("GET", "/api/agents?vertical=ecommerce")).body;
+  assert.deepEqual(boot["/api/agents?vertical=ecommerce"], api);
+  const page = html.slice(html.indexOf('<div id="app">'), html.indexOf('id="boot"'));
+  const listed = [...page.matchAll(/<li><a href="\/agents\/([a-z0-9-]+)">/g)].map(m => m[1]);
+  assert.deepEqual(listed, api.agents.map((a: { id: string }) => a.id), "every team agent, lead first");
+  if (api.agents.length) assert.ok(page.includes(`${esc(api.agents[0].name)}, ${esc(api.agents[0].title)}, leads the team.`));
+  // No library built here: a calm note, and nothing in boot for the app to mistake for one.
+  assert.ok(page.includes("The library is on its way."));
+  assert.equal(boot["/api/knowledge/ecommerce"], undefined);
+  assert.doesNotMatch(page, /\$\d|price|beta|—/i);
+  // Found from /agents and the sitemap, and named in llms.txt.
+  assert.ok(String((await t.api("GET", "/agents")).body).includes('<a href="/e-commerce">Run an online store? Meet the e-commerce team</a>'));
+  const locs = [...String((await t.api("GET", "/sitemap.xml")).body).matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+  assert.ok(locs.includes("https://agents.test/e-commerce"));
+  assert.match((await t.api("GET", "/llms.txt")).body, /\[E-commerce team\]\(https:\/\/agents\.test\/e-commerce\)/);
+});
+
+test("/e-commerce carries the library's totals once it is built: the same answer as the API, modules with cards only", async () => {
+  forgetVerticals();
+  const vertical = JSON.parse(readFileSync(new URL("../knowledge/ecommerce/vertical.json", import.meta.url), "utf8")) as Vertical;
+  const source: Source = { id: "S0001", title: "Source one", author: "A practitioner", url: "https://example.org/s1", date: "2026-06-01", rights: "public_reference", tier: 3, modules: ["MCR"], why: "Numbers.", cards: 1, public: true };
+  const card: Card = {
+    id: "MCR-0001", modules: ["MCR"], topics: [], claim: "Test 3 to 5 new hooks per concept each week at under 10k a month in ad spend.",
+    body: `Creative fatigue sets in fast at low spend. ${Array.from({ length: 70 }, (_, i) => `spend${i % 7}`).join(" ")}`, conditions: "Under 10k a month in Meta spend.", fails_when: "Above 50k a month.",
+    scope: "growth", tier: 3, numbers: ["3 to 5 hooks per concept"], asks: ["how many new ads should we test each week"], platforms: [], platform: [], jurisdiction: [], marketplace: [], mode: "",
+    source: "S0001", evidence: { where: "minute 12" }, strength: "stated_by_practitioner", public: true,
+  };
+  const index = verticalBundle(vertical, [card], [source]).index;
+  const assets = { fetch: async (req: Request) => new URL(req.url).pathname === "/packs/knowledge/ecommerce/index.json"
+    ? new Response(JSON.stringify(index), { headers: { "content-type": "application/json" } })
+    : ASSETS.fetch(req) };
+  try {
+    const t = await testEnv({ ...PROD, ASSETS: assets as unknown as Fetcher });
+    const html = String((await t.api("GET", ECOMMERCE_PATH)).body);
+    const boot = JSON.parse(html.match(/<script type="application\/json" id="boot">([\s\S]*?)<\/script>/)![1]);
+    const api = await t.api("GET", "/api/knowledge/ecommerce");
+    assert.equal(api.status, 200);
+    assert.deepEqual(boot["/api/knowledge/ecommerce"], api.body, "the page carries what /api/knowledge/ecommerce returns");
+    const page = html.slice(html.indexOf('<div id="app">'), html.indexOf('id="boot"'));
+    assert.ok(page.includes("<p>1 card from 1 source. "), "the totals");
+    assert.ok(page.includes("<li>Paid social creative: 1 card</li>"), "a module with cards, in plain words");
+    assert.ok(!page.includes("Landing pages:"), "modules with no cards are left out");
+    assert.match(page, /trust level from 1 to 4/);
+  } finally { forgetVerticals(); clearShellCache(); }
 });

@@ -62,6 +62,8 @@ export const personaSchema = z.object({
     provenance: z.literal("deterministic-existing-profile"),
   }).strict().optional(),
   mega: z.object({ kit: z.literal("traction"), variant: z.enum(MEGA_VARIANTS) }).strict().optional(),
+  vertical: z.string().regex(/^[a-z][a-z0-9-]{1,39}$/).optional(),
+  modules: z.array(z.string().regex(/^[A-Z]{3}$/)).min(1).max(30).optional(),
 }).strict();
 
 export function validatePersona(value: unknown): { ok: true; persona: Persona } | { ok: false; errors: string[] } {

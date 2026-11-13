@@ -1,0 +1,2011 @@
+[
+  {
+    "id": "GAD-0001",
+    "modules": [
+      "GAD",
+      "PRD"
+    ],
+    "topics": [
+      "shopping structure",
+      "catalog mapping"
+    ],
+    "claim": "Below about 30 SKUs, Shopping and PMax lack catalogue surface area to find profitable demand pockets at scale; segment by custom labels once the catalogue is wider.",
+    "body": "Shopping and Performance Max both bid against the product feed and rely on breadth to find pockets of profitable queries across products, variants and markets. The compilation states that under roughly 30 SKUs there is not enough surface area for the algorithm to scale; with few products, growth has to come from bids, feed quality and new queries for the same items rather than from the catalogue. Once the catalogue is wider, structure campaigns around commercial reality using Merchant Center custom labels: margin tier (bid harder on high-margin, cap low-margin), bestseller status, seasonality and inventory priority, and match PMax asset groups to segments (kids versus adults, top categories) instead of one campaign for everything. It pairs this with a long-tail view: clusters of specific, lower-CPC queries across many products compound horizontally, while head terms carry high CPC and auction pressure. How to apply: count active, approved SKUs including variants that have distinct searchable attributes; under about 30, focus on title quality and search term mining from PMax into exact Search campaigns; above it, add margin and bestseller labels and segment campaigns by them. The 30 figure is a heuristic from a compiled source, not a Google threshold.",
+    "conditions": "Retail Google Ads programmes deciding how to structure or when to expand PMax and Shopping.",
+    "fails_when": "Single-hero-product brands with strong search demand can scale Shopping on one SKU through bids and titles; variants with identical titles do not add surface area.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "about 30 SKUs as the surface-area floor (heuristic)"
+    ],
+    "asks": [
+      "Is my catalogue big enough for Performance Max?",
+      "We only sell 10 products, how do we scale Google Shopping?",
+      "How should I use custom labels in Merchant Center?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "expansion",
+    "source": "S0130",
+    "evidence": {
+      "where": "Section 4.3, surface-area catalog scaling"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0002",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "bidding strategy"
+    ],
+    "claim": "Bid caps and floors on Smart Bidding exist only through portfolio bid strategies; one retailer seeing $25 CPC spikes under tROAS capped max CPC at $9.",
+    "body": "Standard campaign-level Target ROAS gives no control over individual bids, so on thin-demand days the algorithm can pay very high CPCs. Portfolio bid strategies, which group one or more campaigns under one automated strategy with a shared goal, are where Google exposes a maximum CPC cap and a minimum bid floor, and the compilation notes this applies even to a portfolio containing a single campaign. Its example: an ecommerce advertiser on tROAS saw CPC spikes up to $25 on low-demand days; moving into a portfolio with a $9 max CPC put a guardrail on budget blowouts while leaving Smart Bidding room to pursue the ROAS goal. Portfolios also pool conversion data across campaigns with the same target (for example 700% ROAS across all non-brand campaigns), which speeds learning and lets budget shift to better performers. Do not put campaigns with different goals (clearance versus new arrivals) in one portfolio, or campaigns too low in volume to benefit. How to apply: check the CPC distribution by day for tROAS campaigns; if spikes appear, create a portfolio with a cap set somewhat above your normal profitable CPC and watch impression share for loss.",
+    "conditions": "Google Ads Smart Bidding (tROAS, Maximize Conversion Value) with volatile CPCs. Confirm portfolio cap availability in the current interface.",
+    "fails_when": "A cap set too low starves the campaign of competitive auctions; campaigns with different goals pooled together dilute both.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "CPC spikes to $25 capped at $9 max CPC, one advertiser",
+      "example shared goal 700% ROAS across non-brand"
+    ],
+    "asks": [
+      "How do I stop Google Ads paying crazy CPCs on Target ROAS?",
+      "Can I set a maximum CPC with Smart Bidding?",
+      "When should I use a portfolio bid strategy?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0130",
+    "evidence": {
+      "where": "Section 4.5, portfolio bid strategies"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0003",
+    "modules": [
+      "GAD",
+      "MEA"
+    ],
+    "topics": [
+      "brand versus non brand",
+      "PMax asset groups"
+    ],
+    "claim": "Exclude brand from PMax and run brand in its own exact-match campaigns; brand often takes about 11% of search spend but 34% of conversions, inflating blended ROAS.",
+    "body": "Performance Max will happily serve on branded queries because they convert cheaply, which makes PMax look efficient while it takes credit for demand that already existed and starves the dedicated brand campaign of data. The compilation cites a pattern where brand terms take roughly 11% of search spend but carry 34% of conversions, so any blended account ROAS hides whether non-brand prospecting pays for itself. The separation has three parts: apply brand exclusions (and branded negative keywords) to PMax; add branded negatives to new-customer Search and Shopping campaigns; and run dedicated Brand Search (exact match) and Brand Shopping campaigns, budgeted so they do not lose impression share to competitors bidding on your name. Brand exclusions cover Search, Shopping and YouTube search inventory in PMax, with an option to still let Shopping ads appear on excluded brand searches. Then report brand and non-brand ROAS separately and set targets for each. One cited outdoor retailer that had 80% of budget on brand moved 30% of that to non-brand and gained 22% more new customers. How to apply: check PMax search term insights for your brand name, add exclusions, and compare non-brand ROAS against break-even before scaling.",
+    "conditions": "Ecommerce accounts with meaningful branded search volume running PMax alongside other campaign types; verify exclusion behaviour in current Google Ads Help.",
+    "fails_when": "Brands with negligible branded search, or brands where competitors do not bid on the name, gain little; excluding brand from PMax can lower total conversions reported even when true new-customer performance improves.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "brand about 11% of search spend, 34% of conversions (typical pattern cited)",
+      "outdoor retailer: 30% of brand budget moved to non-brand, +22% new customers"
+    ],
+    "asks": [
+      "Should Performance Max be allowed to bid on my brand name?",
+      "Why does PMax look so profitable?",
+      "How do I separate brand and non-brand in Google Ads?",
+      "Our Google Ads ROAS looks great but new customers are flat, what's happening?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0130",
+    "evidence": {
+      "where": "Sections 1.6 and 4.2, brand cannibalisation and ROAS distortion"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0004",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "bidding strategy"
+    ],
+    "claim": "From 17 August 2026, budget-limited Target ROAS and CPA campaigns bid towards the stated target; a loose legacy target (500% while delivering 800%) may now drift down to it.",
+    "body": "According to the compilation, Google changed how target-based bidding behaves on campaigns marked Limited by budget, effective 17 August 2026. Before the change, some budget-capped campaigns ran more efficiently than their target, for example delivering 800% ROAS against a 500% Target ROAS, because the budget cap rather than the target was really controlling spend. After the change those campaigns work more consistently towards the target entered, including when budgets are adjusted, so the same campaign may slide towards 500% unless the target is updated. Many retail accounts deliberately left targets loose and used the budget as the brake; those accounts can see efficiency fall with no other change. How to apply: list every campaign using Target ROAS or Target CPA that shows Limited by budget; compare the stated target with the last 30 to 60 days of actual results; where actual is well above target, raise the target to what the business needs given margin, stock position, product mix and promotions; then watch volume for two to three weeks. This is a dated platform change from an unattributed compilation, so confirm it in Google Ads Help or the Google Ads announcements before acting.",
+    "conditions": "Google Ads accounts using Target ROAS or Target CPA on budget-limited campaigns, from 17 August 2026.",
+    "fails_when": "Campaigns not limited by budget, or whose targets already match actual performance; if Google revised or reversed the change, the advice lapses.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "effective 17 August 2026",
+      "example: 500% target delivering 800% may drift towards 500%"
+    ],
+    "asks": [
+      "Our Google Ads ROAS dropped in August 2026, did something change?",
+      "Do I need to update my target ROAS if my campaign is limited by budget?",
+      "Why is my campaign now hitting its target instead of beating it?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0130",
+    "evidence": {
+      "where": "Section 4.4, 'The August 2026 Target ROAS Change'; appendix table"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "GAD-0005",
+    "modules": [
+      "GAD",
+      "SET"
+    ],
+    "topics": [
+      "feed optimisation"
+    ],
+    "claim": "Price mismatch between feed and product page is a top Merchant Center disapproval cause; with dynamic pricing, update the feed at least every 6 hours and enable automatic item updates.",
+    "body": "Disapproved products are ineligible for all Shopping ads and free listings, so each is lost revenue. The compilation lists five common causes: missing or incorrect GTINs; price mismatch between feed and landing page; missing shipping information; policy issues such as restricted products or misrepresentation; and formatting errors or missing required attributes. If the feed says $49.99, the product page must show $49.99 at the moment Google checks. Stores that change prices often (sales, dynamic pricing, currency conversion) should push feed updates at least every six hours and switch on automatic item updates in Merchant Center, which lets Google use crawled prices and availability when the feed lags. Workflow: Merchant Center, Products, Diagnostics; fix Disapproved first, then Warnings and Limited performance items, which are approved but suppressed. Low-risk formatting issues can be auto-fixed using the fix type filter; policy, price and required-attribute issues need manual fixes. Google's 2026 data specification update reportedly tightened image and availability requirements. How to apply: schedule a weekly diagnostics check, and before any sitewide sale confirm the feed refresh will run before prices change on the site.",
+    "conditions": "Google Merchant Center feeds for Shopping, PMax and free listings; stores with frequent price changes.",
+    "fails_when": "Stores with static prices and a native Shopify Google channel that already syncs in near real time need less; check current Merchant Center settings names.",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [
+      "feed update at least every 6 hours with dynamic pricing"
+    ],
+    "asks": [
+      "Why are my products disapproved in Google Merchant Center?",
+      "How often should my Google Shopping feed update?",
+      "Our sale prices keep getting products disapproved, what do we do?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0130",
+    "evidence": {
+      "where": "Section 3.4, feed health diagnostics"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0006",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "PMax asset groups",
+      "shopping structure"
+    ],
+    "claim": "Run feed-only PMax (no uploaded assets, auto-generated assets switched off, 15+ products) when you want Shopping placements only, lack good video, or standard PMax leaks spend to Display and YouTube.",
+    "body": "A feed-only Performance Max campaign has no headlines, descriptions, images or videos added, so the product feed is the algorithm's only signal and spend concentrates on Shopping-style placements. You must also turn off Google's automatic asset generation, otherwise it scrapes your site and creates assets anyway. The compilation lists four cases where it fits: you want budget on high-intent Shopping placements rather than awareness; the brand lacks strong video or lifestyle imagery; you need strict separation between Shopping spend and YouTube or Display spend; or an existing standard PMax is spending heavily in low-value networks and missing ROAS goals. Prerequisites: Merchant Center properly linked, verified purchase conversion tracking, at least 15 products, and a high-quality feed (optimised titles, competitive prices, complete attributes). It also warns that in 2026 accounts with little conversion volume see budget drift into YouTube, Display and Gmail even without uploaded assets, so watch placement reports. Full-asset PMax suits brands with strong lifestyle and UGC video; for those, aim for 15 or more images and 5 videos per asset group refreshed every 4 to 6 weeks, with one theme per group and 2 to 5 groups for small to mid accounts.",
+    "conditions": "Retail PMax campaigns; brands with weak creative or poor PMax channel mix. Re-check auto-asset settings in the current interface.",
+    "fails_when": "Brands with strong video and lifestyle creative that want upper-funnel reach; catalogues under 15 products; poor feeds, since feed-only PMax amplifies feed weaknesses.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "minimum 15 products for feed-only PMax",
+      "15+ images and 5 videos per asset group, refresh every 4-6 weeks (full-asset)",
+      "2 to 5 asset groups for small to mid accounts; up to 100 allowed"
+    ],
+    "asks": [
+      "What is a feed-only Performance Max campaign?",
+      "Our PMax spends a lot on YouTube and Display, how do we stop it?",
+      "Do I need videos for Performance Max?",
+      "How many asset groups should a PMax campaign have?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0130",
+    "evidence": {
+      "where": "Section 1.3, feed-only vs full-asset PMax"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0007",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "bidding strategy"
+    ],
+    "claim": "Set a new Target ROAS 10-15% below current actual ROAS, then raise it 15-20% at a time with 2-3 weeks between changes, after about 50 conversions a month.",
+    "body": "A Target ROAS set too high on a campaign without data throttles delivery, so the algorithm never collects the conversions it needs. The compilation's guardrail: move from Maximize Conversions (or Maximize Conversion Value) to Target ROAS only once the campaign records about 50 conversions a month, more in competitive auctions. Start the target 10 to 15% below the ROAS the campaign is actually achieving, let it stabilise, then step it up in 15 to 20% increments, waiting two to three weeks between changes while watching impression share and conversion volume. Feed real order revenue as conversion value, ideally margin-adjusted, because tROAS can only hit what it is told; a fixed value per purchase degrades bidding. Set the final target from margin, not industry averages: a 60% gross margin brand can scale profitably at a lower ROAS than a 25% margin brand. Maximize Conversion Value without a target suits growth phases where lower marginal ROAS is acceptable, and is now available in Standard Shopping without a tROAS requirement. How to apply: calculate break-even ROAS as 1 divided by contribution margin percentage, keep the long-run target above it, and log every target change with its date.",
+    "conditions": "Google Ads ecommerce campaigns with variable order values and accurate revenue-based conversion values.",
+    "fails_when": "Low-volume campaigns below about 50 conversions a month, where tROAS is unstable at any setting; seasonal peaks when conversion rates shift faster than a 2-3 week cadence allows.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "start 10-15% below actual ROAS",
+      "raise 15-20% per step, 2-3 weeks apart",
+      "about 50 conversions per month before tROAS"
+    ],
+    "asks": [
+      "What Target ROAS should I start with?",
+      "How often can I change my target ROAS?",
+      "When should I switch to Target ROAS bidding?",
+      "Our tROAS campaign stopped spending, why?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0130",
+    "evidence": {
+      "where": "Sections 4.4 and 4.6 gate 5"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0008",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "shopping structure",
+      "PMax asset groups",
+      "feed optimisation"
+    ],
+    "claim": "Since late 2024 the higher ad rank wins between PMax and Standard Shopping, so give each a role: Shopping for hero, high-intent SKUs; PMax for discovery, ideally via duplicated feeds.",
+    "body": "Performance Max used to take automatic priority over Standard Shopping for the same product; the compilation reports that from late 2024 Google switched to ad rank, so whichever campaign has the higher ad rank wins. Running both on the same feed with no role split means they compete for your own best traffic and blur reporting. Role split: Standard Shopping for top-revenue SKUs and high-intent categories, where product-group bids let you defend hero products, push high-margin items, clear stock or gather data on new arrivals, and where query-level reporting is clear; PMax for new-customer acquisition and multi-surface discovery with audience signals. Suggested budget ranges: PMax 50-70%, Standard Shopping 30-50%, Demand Gen 10-20% once core conversions are stable. Feed duplication with different title and label rules per campaign role (high-intent and branded terms for Shopping, discovery terms for PMax) raised Shopping coverage from 49% to 57% in one month in a cited case. An Optmyzr study of 24,702 PMax campaigns found 82% ran PMax alongside other types, and PMax underperformed when competing for the same traffic. Use custom labels (margin tier, bestseller, seasonality) to segment. Verify current prioritisation rules in Google Ads Help.",
+    "conditions": "Retail accounts with enough SKUs and conversion volume to run both campaign types; Merchant Center feed management (supplemental feeds or a feed tool).",
+    "fails_when": "Small accounts (low conversions, under about 30 SKUs) where splitting budget starves both campaigns of data; a single well-run PMax may be simpler there.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Optmyzr 2024: 24,702 PMax campaigns, 82% ran alongside other types",
+      "Shopping coverage 49% to 57% in one month after feed duplication, one case",
+      "budget split PMax 50-70%, Shopping 30-50%, Demand Gen 10-20%"
+    ],
+    "asks": [
+      "Should I run Standard Shopping and Performance Max together?",
+      "How should I split budget between PMax and Shopping?",
+      "PMax and Shopping are bidding on the same products, is that a problem?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0130",
+    "evidence": {
+      "where": "Sections 1.1, 1.2, 3.3, 4.3"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0009",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "feed optimisation"
+    ],
+    "claim": "Write Shopping feed titles as product type, material, colour, fit or size, key feature, then brand last, putting searched attributes in the first ~70 characters; about 120 characters total.",
+    "body": "Shopping and PMax have no keywords: Google reads the feed, mainly the title, to decide which queries a product matches, so the title works as both targeting and ad copy. Most Shopify stores send manufacturer-style titles (brand plus product name); the compilation says over 80% of audited brands in 2026 still did, which buries the attributes people actually type. Recommended order for most catalogues: product type, material, colour, fit or size, key feature, brand last. Example: Aurora Lamp becomes Brass Bedside Table Lamp, Dimmable, Touch Control - Aurora. Length: 60 to 150 characters, around 120 when optimised, with the first 25 to 30 characters most important and roughly the first 70 doing the matching; avoid stuffing. Vertical variants: fashion often leads with brand then product type, key feature, model, colour or size; electronics with brand and model number, because shoppers search those. Keep one attribute order across the catalogue so the algorithm learns a consistent pattern. How to apply: rewrite titles in a supplemental feed in Merchant Center (no site change needed), test variants on a product subset, and compare impressions and CTR before rolling out.",
+    "conditions": "Google Shopping and PMax retail campaigns fed from Merchant Center; generic or unbranded product categories benefit most.",
+    "fails_when": "Strong brands or model-driven categories (electronics, branded fashion) where shoppers search the brand or model first; there brand-first titles match better. Character-weighting figures are compiled guidance, not a published Google rule.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "title length 60 to 150 characters, about 120 optimised",
+      "first 25-30 characters most important; first ~70 do most matching",
+      "over 80% of audited brands used manufacturer titles (2026)"
+    ],
+    "asks": [
+      "How should I write product titles for Google Shopping?",
+      "Should my brand name go first in Shopping titles?",
+      "Our Shopping ads get few impressions, could the titles be the problem?",
+      "How long should Google Shopping product titles be?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0130",
+    "evidence": {
+      "where": "Section 3.2, product title architecture"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0010",
+    "modules": [
+      "GAD",
+      "MEA"
+    ],
+    "topics": [
+      "brand versus non brand",
+      "shopping structure"
+    ],
+    "claim": "Keep brand out of PMax (brand exclusions plus dedicated brand campaigns); blended, brand can take ~11% of search spend yet carry ~34% of conversions and hide unprofitable non-brand.",
+    "body": "PMax and Standard Shopping bid from the same feed and both happily harvest branded searches, which are cheap and convert well. Left blended, brand inflates reported ROAS for the whole account: the document cites a common pattern where brand terms take about 11 percent of search spend but about 34 percent of conversions, so non-brand prospecting can look profitable while losing money. Separation takes three moves: (1) apply brand exclusions and branded negative keywords to PMax so it cannot buy your own name; (2) add branded negatives to new-customer Search and Shopping campaigns; (3) run dedicated brand Search and Shopping campaigns with budgets not capped below search volume, judged on efficiency and impression share. Then judge non-brand on its own ROAS against your breakeven. A suggested split for the rest is PMax for catalog-wide acquisition at roughly 70 to 80 percent of budget and Standard Shopping for top SKUs and high-intent categories at 20 to 30 percent, with separate feeds (via supplemental feed rules) so each has a defined role. Do not scale anything until this split exists, since scaling decisions made on blended ROAS are made on distorted data.",
+    "conditions": "Ecommerce accounts with meaningful branded search volume running PMax alongside Search or Shopping; most relevant once spend passes a few thousand a month.",
+    "fails_when": "Brand-new brands with almost no branded search, where separation adds structure with no data; and very small budgets where splitting campaigns starves Smart Bidding of conversions.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "brand about 11 percent of search spend carrying about 34 percent of conversions (unsourced pattern)",
+      "PMax 70 to 80 percent and Standard Shopping 20 to 30 percent of budget (suggested)"
+    ],
+    "asks": [
+      "should brand searches be in performance max",
+      "our google ads roas looks great but profit doesn't, why",
+      "how do i separate brand and non brand in google ads",
+      "is pmax stealing my brand traffic",
+      "how should i split budget between pmax and shopping"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0131",
+    "evidence": {
+      "where": "Sections 1.7, 4.2 and 4.3",
+      "quote": "Brand traffic captures demand. Non-brand traffic creates it."
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "GAD-0011",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "PMax asset groups",
+      "shopping structure"
+    ],
+    "claim": "Run a feed-only Performance Max (no headlines, images or videos, auto-generated assets off) to force PMax to behave like Shopping when it overspends on Display and video.",
+    "body": "Performance Max spends across Search, Shopping, YouTube, Display, Discover, Gmail and Maps, and the share it gives to low-intent visual inventory grows with the creative you supply. If you upload no text, image or video assets and switch off automatically created assets (otherwise Google scrapes your site to build them), the product feed is the only thing the campaign can show, so delivery concentrates on Shopping placements. Use it when: (1) the goal is Shopping placement concentration; (2) you lack strong video or lifestyle imagery; (3) you need Shopping spend kept separate from YouTube and Display spend; or (4) an existing PMax campaign is spending on low-value networks and missing its ROAS target. Steps: create a new PMax campaign linked to the Merchant Center feed, skip every asset field, disable automatically created assets and final URL expansion, keep audience signals, and compare its placement and channel reporting against the old campaign over a few weeks. Keep a separate asset-rich PMax or Demand Gen campaign if you also want prospecting on YouTube.",
+    "conditions": "Ecommerce accounts with a clean Merchant Center feed where Shopping is the main profitable surface; PMax campaigns showing heavy Display or video spend with weak return.",
+    "fails_when": "Brands that rely on video or visual storytelling for cold demand, or accounts already profitable on asset-rich PMax; also Google can change how asset-less PMax serves, so confirm in channel performance reporting rather than assuming Shopping-only delivery.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "why is my performance max spending on display and youtube",
+      "can i run pmax with only my product feed",
+      "how do i make pmax act like shopping",
+      "our pmax roas is bad and we have no videos, what should we do"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0131",
+    "evidence": {
+      "where": "Section 1.4, 'The Feed-Only PMax Configuration'",
+      "quote": "intentionally starving the asset engine"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "GAD-0012",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "bidding strategy"
+    ],
+    "claim": "Set a new Target ROAS 10-15% below current actual ROAS, move to targets only after about 50 conversions a month, and raise bids 5-10% (never over 15%) every 5-7 days.",
+    "body": "Smart Bidding needs conversion volume and room to explore; an aggressive target on a thin campaign throttles delivery and stops it learning. The sequence: (1) start on Maximize conversions or Maximize conversion value while the campaign collects data, with accurate conversion values passed for every order; (2) switch to Target ROAS or Target CPA only once the campaign has around 50 conversions in a month; (3) set the first Target ROAS 10 to 15 percent below the ROAS it is actually achieving, then step it up gradually while watching impression share and conversion volume; (4) on always-on campaigns, change bids or targets by 5 to 10 percent, never more than 15 percent, and wait 5 to 7 days between changes so each reads cleanly; (5) use seasonality adjustments only for short, unusual conversion-rate jumps of 1 to 7 days such as a flash sale, not for holidays or back-to-school, which Smart Bidding already models. Where CPCs spike on thin days, a portfolio strategy allows a max CPC cap (example: $9 cap under a $30 CPA goal after spikes to $25).",
+    "conditions": "Google Ads Search, Shopping, PMax and Demand Gen campaigns on Smart Bidding with reliable purchase value tracking.",
+    "fails_when": "Low-volume accounts that never reach about 50 conversions a month per campaign (pool them in a portfolio or stay on Maximize strategies), and periods with broken tracking, where any target trains the algorithm on wrong data.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "first tROAS 10 to 15 percent below actual ROAS",
+      "about 50 conversions per month before moving to targets",
+      "bid or target changes of 5 to 10 percent, max 15 percent, every 5 to 7 days",
+      "seasonality adjustments only for 1 to 7 day events",
+      "example: $9 max CPC cap under a $30 CPA goal"
+    ],
+    "asks": [
+      "what target roas should i start with",
+      "when should i switch from maximize conversion value to target roas",
+      "how fast can i raise my google ads bids",
+      "should i use seasonality adjustments for black friday",
+      "my campaign stopped spending after i set a roas target, why"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0131",
+    "evidence": {
+      "where": "Sections 1.5, 2.6, 4.4 and 4.5"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "GAD-0013",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "feed optimisation"
+    ],
+    "claim": "Write Shopping titles as product type, material, colour, size, key feature, brand last, keeping searched attributes inside the first ~70 characters; test variants via supplemental feeds.",
+    "body": "In Shopping and PMax there are no keywords: Google reads the feed, mostly the title, to decide which queries a product matches. Manufacturer-style titles that open with brand and model name push the attributes people actually search for past the part Google weights most. The document's recommended order for most apparel and home categories is product type, material, colour, fit or size, key feature, then brand, with total length 60 to 150 characters and the matching attributes inside the first roughly 70. Brand-led orders suit categories where shoppers search by brand and model (electronics, auto parts). Keep the same attribute order across the whole catalog so performance can be compared. Steps: (1) export top SKUs and rewrite titles to the chosen pattern; (2) push them through a Merchant Center supplemental feed instead of editing the store, which also lets you A/B test title variants by product set; (3) clear Diagnostics in order: disapproved first (GTIN, price mismatch with the landing page, missing shipping), then warnings and limited performance; (4) for stores with frequent price changes, update the feed at least every 6 hours and enable automatic item updates so price mismatches do not disapprove products.",
+    "conditions": "Google Shopping and PMax on Merchant Center feeds; generic-search categories where buyers search by attribute rather than brand.",
+    "fails_when": "Brand- or model-led categories where shoppers type the brand first; keyword-stuffed titles that read unnaturally can be flagged, so front-loading must stay descriptive.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "titles 60 to 150 characters",
+      "matching attributes within the first about 70 characters",
+      "feed updates at least every 6 hours for dynamic pricing"
+    ],
+    "asks": [
+      "how should i write google shopping product titles",
+      "should the brand name go first in my shopping titles",
+      "our products get impressions on the wrong searches, what do i change in the feed",
+      "how do i test product titles without changing my website",
+      "why are my products disapproved in merchant center"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0131",
+    "evidence": {
+      "where": "Sections 3.2 and 3.3",
+      "quote": "The title is the most important line of advertising copy"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "GAD-0014",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "PMax asset groups",
+      "shopping structure"
+    ],
+    "claim": "For ecommerce PMax, run a feed-only asset group (no text, images or video, enhancements off) so spend concentrates on Shopping and Search; ignore the poor ad strength rating.",
+    "body": "The operator's default ecommerce campaign is one Performance Max campaign built so it behaves like a smart Shopping campaign. Setup: create a campaign without guidance, choose Performance Max, goal purchases, link the Merchant Center feed, leave the target ROAS blank. Set locations to presence only, not presence or interest, and remove TV screens from devices. On the asset page leave every headline, image and video field empty so only products are selected, and turn off text, image and video enhancements. Without assets, Google has little to serve on YouTube, Gmail, Display, Maps and Discover, which he sees as placements that burn money, and spend goes to Shopping and Search, where he says nearly all ecommerce revenue comes from, most of it Shopping. If the interface throws an error, build a full asset group, duplicate it, blank the copy and pause the original. Ad strength will read Poor; he ignores it. He runs this single campaign up to about $5,000 to $10,000 a day before adding asset groups or a target, plus a small branded search campaign that he rarely sees cannibalise it. This is one operator's contested method, not Google guidance.",
+    "conditions": "Ecommerce stores with a clean Merchant Center feed, from launch up to about $5k to $10k a day in spend.",
+    "fails_when": "Brands that get real sales from YouTube or Discover creative, or when Google changes how assetless PMax serves; also when the feed is weak, since everything rests on product data.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "one PMax campaign up to about $5,000 to $10,000 a day",
+      "search and shopping claimed as about 99% of his ecommerce revenue"
+    ],
+    "asks": [
+      "How should I set up Performance Max for my Shopify store?",
+      "Our PMax is spending on YouTube and Display with no sales, how do we stop that?",
+      "Does a poor ad strength rating in PMax matter?",
+      "Should I add images and videos to my PMax asset group?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0132",
+    "evidence": {
+      "where": "Section on running Google Ads profitably: consolidation, PMax setup walkthrough"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0015",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "feed optimisation",
+      "shopping structure"
+    ],
+    "claim": "Instead of only raising budget on a winning product, list it 5 to 6 times with different price tiers, avatar-specific images and titles so it fills several Shopping slots.",
+    "body": "The operator calls this surface area scaling. A single listing gets one chance per search; several relevant listings for the same need can occupy slots one to six, collecting the clicks that go to lower positions as well as the top. When a product works he duplicates it five or six times and changes four things on each copy: price tier (budget, discount, standard, premium, luxury, so it qualifies for searches like shirts under $30 or under $100), images showing different customer types or uses (leisure, active, corporate), the title keywords, and the angle in the description. He reports some searches where six of seven Shopping results led to his stores. His receipts for the first store built this way: about $3,500 revenue in the first month at about 40% margin, about $50,000 with $20,000 profit three months later, and $270,000 with $56,000 profit in a fourth-quarter month, above 3x ROAS throughout. Check Merchant Center policy before copying the method: near-identical listings can be treated as duplicates or misrepresentation, so each variant must be a genuinely different offer (bundle, size, quality tier) with honest pricing.",
+    "conditions": "Google Shopping for ecommerce products with real variant or tier options; operators able to produce distinct images and offers per listing.",
+    "fails_when": "Variants are cosmetic copies of one item at invented price points, which risks Merchant Center disapproval or suspension; single-SKU brands whose buyers search by brand name.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "5 to 6 duplicate listings per winning product",
+      "about $3,500 then $50,000 then $270,000 monthly revenue on his first store",
+      "about 40% margin early; $56,000 profit in the $270,000 month",
+      "above 3x ROAS throughout"
+    ],
+    "asks": [
+      "How do I scale a winning product on Google Shopping beyond raising budget?",
+      "Can I list the same product more than once on Google Shopping?",
+      "Our best product only shows once in Shopping results, how do we get more slots?",
+      "Should I offer different price tiers of the same product on Google Shopping?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0132",
+    "evidence": {
+      "where": "Surface area scaling section, pricing tiers and images, and the closing store results"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "GAD-0016",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "bidding strategy",
+      "shopping structure"
+    ],
+    "claim": "Leave target ROAS off a new PMax campaign for about 3 months; add one only when growth plateaus, and layer standard Shopping past about $20k daily spend.",
+    "body": "The operator's bidding sequence. Launch without a target ROAS and let the campaign gather conversions; setting a target early is what he sees kill most new campaigns, because it restricts delivery before Google has data. He usually waits about three months, and adds a target only when efficiency plateaus or drops. One campaign he scaled to around $500,000 in total spend never got a target because it stayed profitable. As budget grows to roughly $20,000 to $30,000 a day, each budget increase returns less; past about $20,000 to $25,000 daily he layers a standard Shopping campaign under PMax rather than pushing the PMax budget further, because the new campaign's early results beat more PMax spend. Weekly routine: once a week (he uses Sunday) he only adjusts the target, raises budget, or removes poor keywords and products, using click and product data that appears after as little as $100 of spend. His experience of launch: a few shaky days, a first order around day two or three, then orders compounding as the system learns over about a week when feed, prices and images are relevant.",
+    "conditions": "New PMax campaigns for ecommerce; budgets scaling into five figures a day for the layering step.",
+    "fails_when": "Accounts with tight cash or margin limits that cannot absorb unconstrained early spend; low-margin products where an uncapped campaign can run below break-even for weeks.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "no target ROAS for about the first 3 months",
+      "layer standard Shopping at about $20,000 to $25,000 daily spend",
+      "one campaign scaled to about $500,000 spend with no target",
+      "first order typically around day 2 to 3",
+      "optimise once a week; first signals after about $100 spend"
+    ],
+    "asks": [
+      "When should I set a target ROAS in Google Ads?",
+      "Our PMax stopped growing when we raised the budget, what now?",
+      "Should a new Google Shopping campaign have a ROAS target from day one?",
+      "How often should I change my Google Ads campaigns?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0132",
+    "evidence": {
+      "where": "Learning phase and tROAS section near the end"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0017",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "feed optimisation"
+    ],
+    "claim": "Write Shopping titles for matching, not people: adjective, product, who it is for, selling points, use cases, specifics, built from Keyword Planner terms.",
+    "body": "Shopping has no keywords to bid on; the title and description decide which searches a product enters. The operator's complaint is that most titles are written as short display names for shoppers, so a listing titled only 'heated jacket' competes for very few queries. His title order: main adjective, product type, who it is for, unique selling points and features, use cases, then specifics such as colour. Example structure: heated jacket for men, USB rechargeable, temperature control, for hiking, skiing and outdoor work, water resistant, black. Each phrase opens another pool of searches. To find the terms, enter the product in Google Ads Keyword Planner for the target country, download the related searches (electric jacket, self-heating jacket, heated coat), then have an AI model write titles in the fixed order. Descriptions get about two paragraphs covering every relevant use and problem (winter, hunting, construction work, poor circulation). Keep titles accurate and readable at the front, since the first words are what shoppers see, and stay within feed limits and policy against stuffing unrelated terms.",
+    "conditions": "Google Shopping and PMax feeds for ecommerce products with several use cases or buyer types.",
+    "fails_when": "Brand-led products bought by brand searches; titles stuffed with terms the product does not match, which hurts click-through and can trigger feed policy issues.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 2 paragraphs of keyword-rich description per product"
+    ],
+    "asks": [
+      "How should I write product titles for Google Shopping?",
+      "Our Shopping ads get almost no impressions, could the titles be the problem?",
+      "Which keywords should go in my Google Merchant Center titles?",
+      "How long should product descriptions be for Google Shopping?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0132",
+    "evidence": {
+      "where": "Titles and descriptions section of the surface area scaling discussion"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0018",
+    "modules": [
+      "GAD",
+      "CXP"
+    ],
+    "topics": [
+      "feed optimisation",
+      "returns process"
+    ],
+    "claim": "Google's Top Quality Store badge rests on shipping speed and cost, a 30-day-plus returns window, return cost and store rating; one agency sees 20%+ Shopping lift.",
+    "body": "In Merchant Center, Google scores a store's overall experience and can award a Top Quality Store badge shown on Shopping listings and usable on the site; Google says badge holders can rank higher in Shopping. Devine lists the levers his agency works on from client onboarding: transparent costs and multiple payment options, fast and cheap shipping, a fair returns window (he recommends at least 30 days, longer if possible), low or free returns, and a store rating built from post-purchase reviews collected at store level as well as product level. Store ratings also show as an extension on Search text ads, lifting CTR. He reports that achieving the badge lifts Shopping performance by at least 20% for their clients. He also notes Judge.me, used by about 70 to 80% of the brands they work with, lacks a direct Merchant Center product-ratings integration, so check that your review platform can feed Google. How to apply: configure shipping speed and returns accurately in Merchant Center, extend the returns window to 30 days or more where margins allow, and set up an approved review source for store and product ratings.",
+    "conditions": "Ecommerce stores running Google Shopping or PMax with Merchant Center, in markets where store quality badges show.",
+    "fails_when": "Products where long return windows invite abuse or carry high reverse-logistics cost (heavy, perishable, made-to-order); the 20% lift is an agency observation without a sample.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "returns window at least 30 days",
+      "badge lift: at least 20% Shopping performance (agency observation)",
+      "Judge.me used by about 70 to 80% of the agency's brands"
+    ],
+    "asks": [
+      "How do I get the Top Quality Store badge on Google?",
+      "Does my return policy affect Google Shopping performance?",
+      "Why do store ratings matter for Google Ads?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0133",
+    "evidence": {
+      "where": "Google Merchant Center module, store quality and ratings"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0019",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "feed optimisation",
+      "shopping structure"
+    ],
+    "claim": "Price, product title and main image drive about 95% of Google Shopping performance; lifestyle or soft-background images beat plain white on CTR in about 90% of this agency's tests.",
+    "body": "Because Shopping campaigns have no keywords, the feed decides which searches you appear for and whether shoppers click. Devine tells brand owners to spend about 95% of their feed effort on three attributes: price (in many categories the cheapest visible offer wins, and sale prices shown with a strikethrough through Merchant Center promotions help), title (front-load the words people actually search, plus key attributes such as size, material and colour) and the main image. On images, his number one test is lifestyle versus plain white: in roughly 90% of the tests his agency runs, a lifestyle image, which can be as simple as the product on a sleek or AI-generated background rather than a full in-use shot, beats the white-background image on click-through rate. In a grid of near-identical white products, a different background is what stands out. Apparel benefits most from modelled shots. How to apply: identify top-spend products with low CTR, create a soft-background or in-use variant, supply it as the main image in a supplemental feed or as an additional image test, and compare CTR over two to four weeks. Keep images free of promotional text or watermarks, which Merchant Center can disapprove.",
+    "conditions": "Google Shopping and PMax feed-driven placements in competitive, visually similar categories (apparel, supplements, home goods).",
+    "fails_when": "Categories or marketplaces whose image rules require a plain background; images with overlays, badges or text (disapproval risk); niche products with no visual competition, where white images already stand out.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "price, title and image drive about 95% of Shopping performance (practitioner estimate)",
+      "lifestyle beats white background on CTR in about 90% of tests"
+    ],
+    "asks": [
+      "What matters most in my Google Shopping feed?",
+      "Should I use white background or lifestyle images on Google Shopping?",
+      "Our Shopping ads get impressions but few clicks, what should I change?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0133",
+    "evidence": {
+      "where": "Product feed optimisation module, product images"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0020",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "search term analysis",
+      "shopping structure"
+    ],
+    "claim": "Rough CTR norms from one agency: non-brand Search ads should reach at least 7 to 8% CTR, Shopping about 1%; brand Search runs far higher.",
+    "body": "Devine says there is no universal CTR benchmark, but gives the ranges his agency works to across DTC accounts: non-branded Search campaigns should see at least a 7 to 8% click-through rate, Shopping campaigns around 1%, Display lower still, and branded Search far higher (his example account showed 25%). A separate agency course in this library reports an 8.32% CTR on cold, non-brand Search for a UK supplement brand, with ad copy written to the searcher's problem, which supports the range. Use the norms to triage: a non-brand Search ad group well below 7% usually has a relevance gap between query, ad and landing page, which also hurts Quality Score and raises CPC (he shows the same keyword falling from $5.84 to $2.38 after ad and landing page fixes). A Shopping campaign far below 1% points to title, image or price problems in the feed. Do not judge CTR alone: a high CTR with a low conversion rate means the ad promises something the page does not deliver.",
+    "conditions": "Ecommerce Google Ads in competitive consumer categories; non-brand Search with tightly themed ad groups.",
+    "fails_when": "Broad, high-volume generic keywords and new accounts with low Quality Scores, where lower CTR can still be profitable; B2B or very high-ticket categories with different norms; CTR as a target in itself when conversion rate or ROAS falls.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "non-brand Search: 7 to 8%+ CTR",
+      "Shopping: about 1% CTR",
+      "example brand Search: about 25% CTR",
+      "same keyword CPC $5.84 to $2.38 after ad and landing page fixes"
+    ],
+    "asks": [
+      "What is a good click-through rate on Google Ads?",
+      "Our non-brand search CTR is 3%, is that bad?",
+      "What CTR should Google Shopping get?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0133",
+    "evidence": {
+      "where": "Google Ads metrics module (CTR) and Quality Score module"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0021",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "bidding strategy"
+    ],
+    "claim": "Start new Google Ads campaigns on manual CPC or Max Conversion Value; at 30 to 50 monthly conversions switch to Target ROAS at or just below trailing 30-day ROAS.",
+    "body": "Devine's ladder for ecommerce: a brand-new account starts on manual CPC (his choice about 70 to 80% of the time) or Maximize Clicks with a CPC cap, purely to buy data. Once purchases are flowing, move to Maximize Conversion Value rather than Maximize Conversions, because the latter treats a $60 and a $220 order the same; Target CPA suits only fixed-price products. When a campaign reaches 30 to 50 conversions a month, look at its actual ROAS over the last 30 days (or the first 4 to 6 weeks) and switch to Target ROAS at that level or slightly below: if it has been running at 250%, set 220 to 250%, and hold that target for at least two to three weeks before changing it. The mechanism: the target is a constraint, not a wish. Setting 400% on a campaign that delivers 250% does not raise efficiency; the algorithm stops entering auctions it cannot win at that return and spend collapses. Setting it far below need lets it spend through your margin. To scale a tROAS campaign, lower the target in small steps (400% to 350% to 300%) to give it room.",
+    "conditions": "Ecommerce Search, Shopping and PMax campaigns optimising for purchase value with variable order values.",
+    "fails_when": "Fixed-price single-product stores, where Target CPA is the cleaner choice; accounts with fewer than about 20 purchases a month, where smart bidding lacks data; heavy seasonality, where the trailing 30 days misleads.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "manual CPC used about 70 to 80% of the time at launch",
+      "switch to tROAS at 30 to 50 conversions per month",
+      "target at or just below actual, e.g. 220 to 250% when actual is 250%",
+      "hold a new target for 2 to 3 weeks"
+    ],
+    "asks": [
+      "When should I switch to target ROAS?",
+      "What target ROAS should I set in Google Ads?",
+      "Our campaign stopped spending after I set a target ROAS, why?",
+      "Which bid strategy should a new Google Shopping campaign use?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0133",
+    "evidence": {
+      "where": "Bidding strategies module and Shopping setup module"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0022",
+    "modules": [
+      "GAD",
+      "MEA"
+    ],
+    "topics": [
+      "brand versus non brand",
+      "bidding strategy"
+    ],
+    "claim": "At scale, Google Ads should drive about 20 to 30% of a DTC brand's revenue, with Shopping making up 60 to 80% of ecommerce Google Ads; below 20% signals headroom.",
+    "body": "Jordan offers a channel-mix yardstick for DTC brands that grew up on Meta. If your Shopify, Triple Whale or Northbeam reporting does not show Google contributing at least 20 to 30% of total revenue, there is room to grow it; if Google drives much more than 30%, he reads that less as Google overperforming and more as other channels underperforming. Within Google, Shopping is the core for ecommerce, at roughly 60 to 80% of ecommerce Google Ads, because it is the highest-converting inventory, while Display matters only for large accounts; for about 90% of brands he would focus on Search, Shopping and YouTube. His build timeline: phase one, 30 to 60 days of brand Search, brand Shopping and a prospecting Shopping campaign with tracking; then expansion, with a full account covering most inventory taking about one to four months. He also frames spend through lifetime value: if back-end retention raises a customer's value threefold, you can afford two to three times more to acquire them. How to apply: measure Google's share of revenue on a consistent attribution basis and use the gap to 20% as the size of the opportunity, not as a spend target.",
+    "conditions": "DTC ecommerce brands with search demand for their category; mixed paid channel portfolio.",
+    "fails_when": "Categories with little search demand (novel products people do not know to search for), where Meta or TikTok will rightly dominate; marketplace-heavy brands where Amazon captures search intent; attribution tools disagree heavily on Google's share.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Google Ads at 20 to 30% of total revenue at scale",
+      "Shopping 60 to 80% of ecommerce Google Ads",
+      "foundation phase 30 to 60 days; full build 1 to 4 months"
+    ],
+    "asks": [
+      "What share of revenue should come from Google Ads?",
+      "Is it bad if almost all our sales come from Meta?",
+      "How much of our Google budget should be on Shopping?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0134",
+    "evidence": {
+      "where": "Course introduction and account philosophy section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0023",
+    "modules": [
+      "GAD",
+      "ADC"
+    ],
+    "topics": [
+      "bidding strategy",
+      "budget and scaling rules"
+    ],
+    "claim": "Google Ads scaling: at 100% budget spend and on KPI, raise budget 10 to 15%; under 80% spend and missing KPI, loosen tROAS or tCPA instead.",
+    "body": "Jordan's weekly scaling routine separates a budget problem from a bid problem. If a campaign is consistently spending 100% of its daily budget and meeting or beating its KPI (break-even ROAS or CPA from your margins), budget is the constraint: raise it 10 to 15% at a time, or 10 to 20% for clear winners. If a campaign is spending less than 80% of its budget and underperforming, more budget does nothing; the target is choking delivery, so lower the Target ROAS or raise the Target CPA to widen the auctions it can enter. He summarises it as cut fast, scale slow: pause losers quickly, scale winners in controlled steps because smart bidding destabilises after large or frequent changes. His supporting cadence: daily search-term review and negatives, and an impression-share target of roughly 50 to 60% on prospecting campaigns; weekly KPI review, landing page and ad copy tests and Merchant Center fixes. His break-even inputs: break-even ROAS is 1 divided by gross margin (40% margin gives 2.5), and break-even CPA is AOV times gross margin (a $100 AOV at 40% gives $40).",
+    "conditions": "Smart-bid Google Ads campaigns (Max Conversion Value, tROAS, tCPA) with stable tracking.",
+    "fails_when": "Seasonal peaks or launches where faster budget jumps are justified; manual CPC campaigns, where bids not targets control delivery; break-even maths that ignores shipping, fees and returns.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "+10 to 15% budget when spending 100% at KPI (10 to 20% for winners)",
+      "under 80% budget spend and missing KPI: loosen tROAS or tCPA",
+      "prospecting impression share target about 50 to 60%",
+      "break-even ROAS = 1 / gross margin; 40% margin = 2.5",
+      "break-even CPA = AOV x gross margin; $100 x 40% = $40"
+    ],
+    "asks": [
+      "How fast can I increase my Google Ads budget?",
+      "My campaign is not spending its full budget, what should I do?",
+      "Should I raise the budget or lower target ROAS?",
+      "How often should I change Google Ads budgets?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0134",
+    "evidence": {
+      "where": "Scaling and optimisation module, daily, weekly and monthly actions",
+      "quote": "cut fast, scale slow"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0024",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "brand versus non brand",
+      "bidding strategy"
+    ],
+    "claim": "Keep branded Google Ads spend at 3 to 8% of monthly spend, never above 10%; run brand Search on absolute-top impression share 95% with a max CPC cap around $3.",
+    "body": "Jordan of Demand Capture argues most brands overspend on brand terms. His rule: branded campaigns should take no more than 10% of monthly Google spend, ideally 3 to 8%, with the other 80 to 90% going to cold, non-brand traffic. Brand campaigns still matter: they stop competitors and resellers from taking your name's top slot, show your sitelinks, prices and offers, and cost cents per click (his example: $64 spend returning about $1,500, and conversions at $1 to $2 each). Setup: a Search campaign on Target Impression Share, location absolute top of page, 95%, with a maximum CPC limit around $3 and a daily budget of about $25 that it will rarely spend; you are buying presence at the top of the page, not optimising for conversion value, which can otherwise withhold ads from some brand searches. Ad copy should include 'official site' and your current offer code. How to apply: total last month's brand-term spend across all campaign types (including brand queries leaking into PMax and Shopping), compare with the 3 to 8% band, and move brand traffic into this low-cost structure if it is higher.",
+    "conditions": "DTC ecommerce brands with meaningful brand search volume that also run non-brand Google campaigns.",
+    "fails_when": "New brands with little brand search (the share will naturally be tiny); brands under heavy competitor or reseller conquesting on their name, where brand CPCs and spend share rise legitimately; markets where trademark rules let competitors bid freely.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "brand spend 3 to 8% of monthly Google spend, maximum 10%",
+      "80 to 90% of budget on cold traffic",
+      "tIS absolute top 95%, max CPC about $3, budget about $25 a day",
+      "example: $64 spend, about $1,500 revenue; $1 to $2 per brand conversion"
+    ],
+    "asks": [
+      "How much should I spend on branded search?",
+      "Should I bid on my own brand name in Google Ads?",
+      "Our branded campaign takes 25% of budget, is that too much?",
+      "What bid strategy should a brand search campaign use?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0134",
+    "evidence": {
+      "where": "Account philosophy section and branded search campaign module"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0025",
+    "modules": [
+      "GAD",
+      "LPG"
+    ],
+    "topics": [
+      "match types and negatives",
+      "search term analysis"
+    ],
+    "claim": "Non-brand Search on problem queries ('how to lower blood pressure') with ad copy written to the problem reached about 8% CTR and 3.8% conversion on cold UK supplement traffic.",
+    "body": "Jordan shows a UK supplement client three weeks into Google Ads: £3,500 spent, about £7,600 in Google-reported revenue (2.18 ROAS, which he says understates what their other attribution showed and is above break-even), an 8.32% click-through rate and 3.82% conversion rate on cold, non-brand terms. Most conversions came from problem queries rather than product queries: the exact-match term 'how to lower blood pressure' ran at 7.5% CTR and 38p CPC with 3.65 ROAS, and 'how to reduce blood pressure' at 9.1% CTR and 32p CPC. Even with broad match he holds high CTR because every headline and description speaks to the searcher's problem rather than to the product. His logic: CTR doubling roughly doubles conversions at the same impressions, and problem queries keep their volume year after year, so a page or advertorial built for each recurring problem query (one had about 4,000 searches in three weeks) becomes a durable acquisition asset. How to apply: mine search terms for problem phrasings, group them, write ads that restate the problem and promise the answer, and send them to an educational lander rather than straight to the product page.",
+    "conditions": "Problem-solving products (supplements, wellness, home remedies, tools) where shoppers search the problem before the product; UK and similar markets.",
+    "fails_when": "Health claims that breach Google's healthcare policies or ASA/CAP rules (claims to treat or lower a medical condition need authorisation and evidence); products bought by name or spec, where problem queries do not exist; Google-reported ROAS used without checking against store data.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "£3,500 spend over 3 weeks, 2.18 Google-reported ROAS",
+      "8.32% CTR and 3.82% conversion rate on cold non-brand",
+      "'how to lower blood pressure': 7.5% CTR, 38p CPC, 3.65 ROAS",
+      "about 4,000 searches in 3 weeks for one problem query"
+    ],
+    "asks": [
+      "Can I advertise a supplement on 'how to' searches?",
+      "How do I get a high click-through rate on non-brand search ads?",
+      "Should I bid on problem searches or product searches?",
+      "Where should problem-search ads send people?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0134",
+    "evidence": {
+      "where": "Search campaign build module, UK supplement client walkthrough"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "GAD-0026",
+    "modules": [
+      "GAD",
+      "ADC"
+    ],
+    "topics": [
+      "PMax asset groups",
+      "bidding strategy"
+    ],
+    "claim": "Run PMax only with a clean feed, working purchase tracking, $50 to $100 daily and 30 to 50 monthly conversions; cap it near 20 to 30% of Google budget.",
+    "body": "Jordan treats Performance Max as a middle-of-funnel catch-all that picks up Search, Shopping and other inventory your other campaigns miss, not as the whole account. His fit test: a clean product feed, correct purchase tracking, at least $50 to $100 a day of spend, and enough volume to produce 30 to 50 conversions a month for its bidding to work. Below that, stay on manual Standard Shopping and Search. More broadly, he says to add middle-of-funnel campaigns (Shopping, PMax) only once smart bidding has data, around one conversion a day for 30 days, after starting with brand Search and brand Shopping. Inside a mature account, give PMax a healthy but bounded share, about 20 to 30% of budget; the worst audits he sees put 90 to 100% of spend into many PMax campaigns split across product groups, with brand conversions bought at $5 to $10 a click. Start PMax on the products that drive most revenue (top 20%, or even top 4%), exclude brand terms, and review its search-term and auction insights weekly. One client's PMax scaled to $20,000 a day, so the cap is about structure, not ambition.",
+    "conditions": "Ecommerce Google Ads accounts past the foundation phase, with Merchant Center feeds and purchase-value tracking.",
+    "fails_when": "Feed-only or very small catalogues where PMax effectively is the Shopping campaign; very small budgets; brands whose only Google inventory is Shopping, where the 20 to 30% cap is arbitrary.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "PMax fit: $50 to $100+ a day, 30 to 50 conversions a month",
+      "add mid-funnel campaigns after about 1 conversion a day for 30 days",
+      "PMax at about 20 to 30% of budget",
+      "example PMax scaled to $20,000 a day"
+    ],
+    "asks": [
+      "Is Performance Max right for my store?",
+      "How much budget does PMax need?",
+      "Should I put all my Google Ads budget into Performance Max?",
+      "When should I start Shopping or PMax after brand campaigns?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0134",
+    "evidence": {
+      "where": "Campaign structure overview and PMax module"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0027",
+    "modules": [
+      "GAD",
+      "MEA"
+    ],
+    "topics": [
+      "brand versus non brand",
+      "shopping structure"
+    ],
+    "claim": "Split branded Shopping from prospecting: a manual-CPC brand Shopping campaign around $1, with brand terms excluded from prospecting and PMax so smart bidding cannot overpay.",
+    "body": "When brand queries sit inside prospecting Shopping or PMax on smart bidding, the algorithm happily bids high on them because they convert, so you can end up paying around $4 for a click your organic listing would have won, and the campaign's ROAS looks great while adding few new customers. Jordan's fix is a split. Branded Shopping: a Standard Shopping campaign (not PMax) named for the brand, manual CPC with a bid around $1, about $50 a day, Search Network off, location set to presence only. In Standard Shopping, campaign priority decides which campaign serves when several hold the same product, so pair priorities with brand negatives to route brand queries to this campaign. Prospecting Shopping and PMax: exclude brand terms (negative keyword lists for Shopping; brand exclusions for PMax) and exclude customer lists from cold campaigns. Benefits: cheap brand conversions still feed data to the account, prospecting is judged on genuinely new demand, and you can see whether an agency is growing new customers or harvesting brand. Check PMax search term insights regularly for branded terms that slip through.",
+    "conditions": "Ecommerce accounts running Shopping or PMax with existing brand search demand.",
+    "fails_when": "Brands with negligible brand volume; very small accounts where splitting starves each campaign of data.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "brand click cost inside smart-bid prospecting: about $4 vs cents in a capped brand campaign",
+      "branded Standard Shopping: manual CPC about $1 bid, about $50 a day"
+    ],
+    "asks": [
+      "How do I stop Performance Max from spending on my brand name?",
+      "How do I set up a branded shopping campaign?",
+      "How can I tell how many new customers Google Ads brings?",
+      "Why are my PMax results so good, is it just brand traffic?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0134",
+    "evidence": {
+      "where": "Branded shopping campaign module"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0028",
+    "modules": [
+      "GAD",
+      "MEA"
+    ],
+    "topics": [
+      "brand versus non brand",
+      "match types and negatives"
+    ],
+    "claim": "Keep brand and non-brand apart: exact-match brand negatives on every non-brand Search, Shopping and PMax campaign, with branded search budgets usually $10 to $20 a day.",
+    "body": "Branded searches convert cheaply because the buyer already intends to buy from you, so when they mix into non-brand campaigns the ROAS looks far better than true new-customer acquisition and the budget drifts. The speaker isolates them. Every non-brand Search and Shopping campaign gets a negative keyword list of the brand name and its variants and misspellings in exact match. Branded Search gets its own small campaign: about $10 to $20 a day for smaller brands, rarely above $50 a day even for larger ones, and Google will underspend if there is little branded demand. Brands with lots of branded demand from Meta, TikTok or organic can add a separate branded Shopping campaign at around $20 a day, built with a script (credited to PPC Masterminds) that restricts it to brand queries. The PMax remarketing campaign also gets the brand negative list so it does not claim brand sales. How to apply: report brand and non-brand ROAS separately and judge acquisition only on non-brand; increase the brand budget only if search terms are clean and the campaign is spending its full budget.",
+    "conditions": "Ecommerce Google Ads accounts with any meaningful branded search volume.",
+    "fails_when": "Brands with negligible brand search, where a separate brand campaign adds little; competitive niches where rivals bid on your brand, which may need higher brand budgets than the $10 to $20 guide.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "branded search about $10 to $20 a day for smaller brands, rarely above $50",
+      "branded Shopping about $20 a day"
+    ],
+    "asks": [
+      "Should I separate branded and non-branded Google Ads campaigns?",
+      "How much should I spend on brand search?",
+      "Our Shopping ROAS looks great, could brand searches be inflating it?",
+      "How do I stop PMax taking credit for brand searches?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0135",
+    "evidence": {
+      "where": "Search campaigns module (branded and non-branded) and branded Shopping section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0029",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "PMax asset groups",
+      "shopping structure"
+    ],
+    "claim": "Run PMax as a feed-only remarketing layer (no assets, no signals) behind a high-priority standard Shopping campaign that excludes brand and past visitors for new-customer acquisition.",
+    "body": "A full Performance Max campaign with headlines, images and videos serves everywhere and, in the speaker's experience, can swallow traffic and blur attribution, so he avoids it for beginners and data-poor accounts. His structure: standard Shopping, set to high campaign priority, excluding branded queries and past website visitors, so it only buys new customers. Next to it, a feed-only PMax: create the campaign with every asset field left blank (no final URL, headlines, descriptions, logos, images or video) so it can only serve Shopping listings across Google surfaces, and leave audience signals empty because he finds signals steer it away from high-intent buyers. PMax then picks up returning visitors and anything Shopping does not take, acting as remarketing with the feed. Add the brand negative list to it. He says a recent Google change makes a high-priority Shopping campaign win the auction over PMax for the same product search; verify current prioritisation rules in Google's documentation before relying on this, since this is a fast-changing mechanic.",
+    "conditions": "Ecommerce accounts with a working Merchant Center feed and at least several weeks of Shopping conversion data.",
+    "fails_when": "If Google's rules for Shopping versus PMax priority differ from the speaker's description, the separation breaks; accounts with strong creative that benefit from full-asset PMax on YouTube and Display; brand-new accounts with no data.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "What is a feed-only Performance Max campaign?",
+      "Should I run PMax and standard Shopping at the same time?",
+      "PMax is eating all our Shopping traffic, how do we structure it?",
+      "Should I add audience signals to Performance Max?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0135",
+    "evidence": {
+      "where": "PMax module, feed-only remarketing setup and campaign priority"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0030",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "bidding strategy",
+      "shopping structure"
+    ],
+    "claim": "Start Google Shopping on 5 to 10 bestsellers with Maximize Clicks; switch to Maximize Conversion Value at 15 to 20 conversions, adding target ROAS past 30 monthly.",
+    "body": "Smart bidding needs conversion data; started on an empty account it tends to overspend for little return. The speaker's sequence for a new ecommerce account: launch a standard Shopping campaign limited to five to ten proven bestsellers (known from Meta, organic or sales history), because a low budget spread over a 200-product catalogue lets Google latch onto a few weak products at a mediocre ROAS. Bid with Maximize Clicks to gather data. Once the campaign has about 15 to 20 conversions, switch to Maximize Conversion Value. When it reaches 30 or more conversions a month at a steady, profitable ROAS (his example: about 2.5), add a target ROAS near that level so Google holds it. Only after bestsellers convert consistently, open an all-products campaign to find new winners. Remarketing (display, video or PMax) follows after about four to six weeks of data, at small budgets (around $10 to $15 a day for display, roughly 10 to 15 percent of account budget for video) since large display budgets drift to low-quality placements; Demand Gen comes last. Higher AOV needs proportionally more budget and time to learn.",
+    "conditions": "New or data-poor Google Ads accounts for ecommerce stores with a product feed; modest budgets.",
+    "fails_when": "Accounts with large budgets or strong historical conversion data, which can start on conversion-based bidding; single-product stores; very high-AOV catalogues where 30 conversions a month is out of reach and value-based bidding needs a different threshold.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "5 to 10 bestseller products in the first Shopping campaign",
+      "switch to Maximize Conversion Value at about 15 to 20 conversions",
+      "add target ROAS at 30+ conversions per month",
+      "remarketing after about 4 to 6 weeks",
+      "display remarketing about $10 to $15 a day; video about 10 to 15% of account budget"
+    ],
+    "asks": [
+      "What bidding strategy should a new Google Shopping campaign use?",
+      "When should I switch to target ROAS in Google Ads?",
+      "Should I put all my products in my first Shopping campaign?",
+      "How many conversions do I need before using smart bidding?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0135",
+    "evidence": {
+      "where": "Account structure overview and standard Shopping campaign module"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0031",
+    "modules": [
+      "GAD",
+      "ADC"
+    ],
+    "topics": [
+      "shopping structure",
+      "bidding strategy",
+      "brand versus non brand"
+    ],
+    "claim": "For cold Google traffic, concentrate budget on the one to few products with the lowest cost per purchase; show the full catalogue only in remarketing.",
+    "body": "Heath's early win when taking over ecommerce accounts is narrowing prospecting spend. Many brands spread a thin budget over every SKU because different products suit different people, which leaves each product with too little data and spend. In their accounts, one product or a small product range nearly always acquires new customers far more cheaply than the rest: in hobby categories the beginner version of the item, in apparel one hero line. Move cold-traffic budget onto those products, measured by cost per purchase and ROAS per product. Then sell the rest of the range to people already in the ecosystem: dynamic remarketing with the product catalogue (showing the exact item viewed or carted), email and SMS. The hero product also feeds the algorithm cleaner conversion data. Side effects to plan for: concentrating demand on one SKU can strain supply and require reordering patterns to change. How to apply: pull 60 to 90 days of product-level cost per purchase, split prospecting campaigns so the top one to five products get their own budget, and keep long-tail SKUs in a low-budget or remarketing-only campaign.",
+    "conditions": "Ecommerce catalogues with many SKUs on limited budgets; cold prospecting on Shopping, Search or PMax; enough product-level conversion data to rank SKUs.",
+    "fails_when": "Catalogue businesses where shoppers search for specific long-tail items (parts, replacement items) and each SKU is its own demand; very large budgets where hero SKUs saturate; heroes with poor margin or stock constraints.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Prospecting focused on 1 to a handful of hero products"
+    ],
+    "asks": [
+      "Should I advertise my whole catalogue on Google Shopping?",
+      "Our budget is spread across 200 products and ROAS is bad. What should we change?",
+      "Which products should I put my Google Ads budget behind?",
+      "How should remarketing differ from prospecting on Google Ads?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0136",
+    "evidence": {
+      "where": "Key 2, don't try to sell too many things at once",
+      "quote": "one, maybe a handful of products, perform way better"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0032",
+    "modules": [
+      "GAD",
+      "MEA"
+    ],
+    "topics": [
+      "bidding strategy",
+      "profit and contribution formulas"
+    ],
+    "claim": "ROAS falls as spend rises, so fix an unprofitable campaign at its current budget before scaling; higher LTV justifies scaling into a lower ROAS target.",
+    "body": "Heath's point: the auction shows ads to the most likely buyers first, so each extra dollar reaches slightly less interested people and ROAS declines as budget rises. Raising the budget to fix an unprofitable campaign nearly always makes ROAS worse; the fix is the offer, creative, copy, product focus or targeting at the current budget. Once profitable, scale knowing ROAS will drop, and judge by total profit: 4x ROAS on $100,000 a month beats 6x on $10,000 a month because it buys ten times the customers. The acceptable ROAS floor depends on lifetime value. His worked example: $100 AOV with a $30 maximum cost per purchase; if lifetime revenue per customer rises to $400, the same logic allows about $120 per purchase. Likewise a brand that doubles LTV might move its floor from 1.5 to 1.2 ROAS. He also suggests an AOV of $100 or more makes paid search far easier, and warns that a $120 AOV at 10% gross margin leaves only $12 to spend per order. How to apply: define the floor from gross margin per order (after COGS, shipping and fees) and proven repeat revenue, not first-order revenue alone, then raise budgets in steps while watching marginal cost per purchase.",
+    "conditions": "Ecommerce brands with measured repeat purchase data and stable margins; Google Ads campaigns already profitable at current spend.",
+    "fails_when": "LTV is assumed rather than measured, or cash flow cannot wait for repeat purchases to pay back acquisition; small, niche demand where scaling just raises CPCs; ROAS reported by the platform overstates incrementality.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "4x ROAS at $100k/month preferred over 6x at $10k/month",
+      "LTV 4x first order ($100 to $400) lifts max cost per purchase from $30 to $120",
+      "ROAS floor moved 1.5 to 1.2 after LTV doubled (example)",
+      "AOV $100+ makes profitable advertising easier; $120 AOV at 10% margin = $12 gross profit"
+    ],
+    "asks": [
+      "Will increasing my Google Ads budget improve ROAS?",
+      "My campaign isn't profitable. Should I spend more so the algorithm learns?",
+      "Is it OK to scale if ROAS drops?",
+      "How does customer lifetime value change what I can pay per customer?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0136",
+    "evidence": {
+      "where": "Keys 3, 4 and 8: know your numbers, improve your numbers, scale from a position of strength",
+      "quote": "return on ad spend decreases the more you spend"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0033",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "PMax asset groups",
+      "shopping structure",
+      "bidding strategy"
+    ],
+    "claim": "Start a new ecommerce Google Ads account on Search and Shopping; add Performance Max only once the account has roughly 100 or more purchases recorded.",
+    "body": "Heath Media, which says it has spent tens of millions on ecommerce Google Ads, starts new advertisers on Search (text ads) and Shopping (product listing ads with image and price) because they map directly to what a shopper typed, are easier to read and control, and teach the owner how the account behaves. Performance Max spreads spend across Search, Shopping, YouTube, Display, Discover and Gmail and relies on Google's automatic targeting, bidding and placement, so it needs conversion history to steer. Their working threshold is about 100 purchases in the account before adding PMax, and more is better. How to apply: launch Shopping on the hero products plus Search on high-intent product and brand terms; make sure purchase conversions are tracked and deduplicated; once the account passes about 100 purchases and has stable cost per purchase, add one PMax campaign as an addition rather than a replacement, and compare blended cost per purchase before and after, since PMax can also pick up branded search you were already winning. The 100-purchase line is an agency rule of thumb, not a Google requirement.",
+    "conditions": "New or low-history ecommerce Google Ads accounts; brands with a clean product feed and working purchase tracking.",
+    "fails_when": "Large catalogues with strong feeds and existing conversion history elsewhere (migrated accounts) may run PMax or Standard Shopping well from day one; accounts where PMax cannibalises branded search and inflates reported results; Google changes PMax controls.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Add Performance Max after ~100+ purchases in the account"
+    ],
+    "asks": [
+      "Should I start Google Ads with Performance Max or Shopping?",
+      "When should I add a Performance Max campaign?",
+      "We launched Performance Max on a new account and it spent money with no sales. Why?",
+      "How many conversions do I need before using Google's automated campaigns?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0136",
+    "evidence": {
+      "where": "Key 1, start with search or shopping campaigns",
+      "quote": "100 is about the point we start to think about it"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0034",
+    "modules": [
+      "GAD",
+      "OFF"
+    ],
+    "topics": [
+      "shopping structure",
+      "feed optimisation"
+    ],
+    "claim": "Falling Google Shopping CTR on a product often means a competitor discounted it; one wholesaler pulls products automatically when a rival cuts price 20 to 30%.",
+    "body": "Shopping ads show price beside competitors' listings for the same or similar items, so a rival's sale pulls clicks away immediately. The agency says that for one client, a large sunglasses wholesaler, every product-level performance dip traced to its biggest competitor putting that product on sale in Google Shopping. Matching the discount would have cut gross margin to almost nothing, and continuing to push spend meant ROAS collapsing. Their fix: a real-time script watching competitor prices that removes or deprioritizes the product in the campaign as soon as the competitor discounts it to an unprofitable level, and restores it when the price normalizes. Other CTR causes are rarer: ad fatigue is unusual in Shopping, more possible in Search; stale seasonal copy ('summer sale' after summer) hurts Search CTR; audience or search-term changes can move CTR alongside conversion rate. Google also reports search impression share lost to rank, which helps separate auction losses from click-appeal losses. How to apply: when a product's CTR falls, check competitor prices for that SKU first; decide in advance the price gap at which you withdraw spend rather than discount; automate it if the catalog is large.",
+    "conditions": "Retailers and wholesalers selling identical or easily compared products (branded goods, resale) on Google Shopping.",
+    "fails_when": "Unique own-brand products with no direct price comparison; brands that win on reviews, shipping or bundles rather than price; when withdrawing hands the category to competitors long term.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "competitor price cuts of 20 to 30% made products unprofitable to run"
+    ],
+    "asks": [
+      "why did clicks on my Google Shopping ads drop",
+      "should I match competitor discounts on Google Shopping",
+      "how do I protect margin when competitors run sales",
+      "what causes CTR to fall on shopping ads"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0137",
+    "evidence": {
+      "where": "CTR decreasing section, sunglasses wholesaler example"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "GAD-0035",
+    "modules": [
+      "GAD",
+      "MEA"
+    ],
+    "topics": [
+      "bidding strategy",
+      "attribution windows and restatement"
+    ],
+    "claim": "Google Ads credits conversions to the click date, so the last 3 to 4 days always look weak; judge recent days with 'conversions (by conversion time)' columns.",
+    "body": "By default, Google Ads attributes a conversion to the date of the ad click, not the date of the purchase. If someone clicks on the 1st and the 3rd and buys on the 7th, the sale is written back to the click dates. Most other platforms log it on the purchase date. The consequence: when you open the account, the trailing three to four days (often the trailing week) show low conversions and ROAS in every account, because clicks from those days have not yet had time to convert and be written back. Operators who do not know this react to a dip that is not real, change bids or budgets, and can start a genuine decline. The agency's fix is to add the 'by conversion time' versions of conversions, conversion value and ROAS as custom columns, which count conversions on the day they happened and give a usable read on the last few days. How to apply: before any diagnosis, switch to conversion-time columns or exclude the most recent days; check the account's typical conversion lag in the path or time-lag reports; and widen the date range to a period that holds enough conversions for the account's volume, rather than reacting to one day.",
+    "conditions": "Google Ads accounts reporting on default conversion columns; especially products with multi-day consideration.",
+    "fails_when": "Very short purchase cycles where nearly all conversions happen same day; reporting tools that already restate on conversion date; low-volume accounts where even conversion-time data is noise over a few days.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "last 3 to 4 days always under-reported on default columns"
+    ],
+    "asks": [
+      "why do the last few days in Google Ads always look terrible",
+      "our Google ROAS dropped this week, should we change something",
+      "what is conversions by conversion time in Google Ads",
+      "how long should I wait before judging Google Ads performance"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0137",
+    "evidence": {
+      "where": "Three rules before you touch anything: rule three, conversion latency"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0036",
+    "modules": [
+      "GAD",
+      "CRO"
+    ],
+    "topics": [
+      "bidding strategy",
+      "repair versus test"
+    ],
+    "claim": "In a Google Ads decline, apply targeted fixes before any rebuild; restructuring resets learning and can start a spiral of falling performance and bigger changes.",
+    "body": "Every rebuild or major restructure in Google Ads triggers a learning reset, which lowers conversion rate while the system re-enters auctions. The agency describes a common spiral: performance drops, the buyer makes a big change, learning resets and performance drops further, prompting another big change. Its rule is to default to a fix, not a rebuild, and to move to a rebuild only when the available fixes cannot plausibly close the gap to historical performance. Within fixes, avoid the 'kitchen sink': if conversion rate fell and you change the offer, page design and ad copy at once, you may recover but never learn which change worked, and the next time you must throw everything at it again. Decide by severity: in a dire situation, apply many fixes together and accept that you will not know why; in a moderate dip, apply one or two high-impact fixes, give them time to read, then add more. Be honest about expected impact: a headline tweak will not rescue a business-level decline unless the headline change caused it. Final gate: do not touch the account until you can finish the sentence 'this campaign is underperforming because this metric dropped, driven by this sub-metric, caused by this trigger'.",
+    "conditions": "Established Google Ads accounts with history to protect; declines that are moderate rather than total.",
+    "fails_when": "Accounts with structural faults (broken tracking, wrong conversion goal, no brand exclusion) where repair means restructuring; new accounts with no learned history; dire situations where speed beats learning.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "should we rebuild our Google Ads account from scratch",
+      "performance dropped, should I restructure the campaigns",
+      "how many fixes should I make at once",
+      "when is it time to rebuild an ad account"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0137",
+    "evidence": {
+      "where": "Level eight, root cause and fix vs rebuild; closing takeaways"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0037",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "PMax asset groups",
+      "feed optimisation",
+      "bidding strategy"
+    ],
+    "claim": "PMax declines usually trace to warm drift, feed disapprovals or stock-outs, or a raised target ROAS that narrows delivery to warm buyers and worsens new-customer ROAS.",
+    "body": "The agency lists four PMax failure modes for e-commerce. Warm drift: PMax can shift toward retargeting and existing customers on its own, so a 'prospecting' campaign ends up harvesting warm demand; check the search terms report for brand terms and the audience report for a skew to existing customers, which signal a broken brand exclusion or a target ROAS set too high. Feed problems: in e-commerce, roughly 80 to 90% of PMax performance comes from Shopping inventory, so check whether top-spending products went out of stock, were turned off or were disapproved, in the campaign and in Merchant Center. Target ROAS: raising tROAS does not make the same audience convert better; Google enters fewer auctions with buyers already likely to convert, so spend falls and new-customer ROAS (in third-party tools or Google's new-customer reporting) usually gets worse. Product bloat and stock churn: flooding many new SKUs into one campaign dilutes learning, and a product holding about 15% of spend going out of stock for four days resets learning for that product and hurts the campaign. How to apply: check search terms, audience report, feed status and tROAS history at the inflection date, and isolate frequently out-of-stock products in their own campaign.",
+    "conditions": "Ecommerce Performance Max campaigns running on a Merchant Center feed; brands with brand exclusions and new-customer reporting available.",
+    "fails_when": "Lead-gen or non-feed PMax campaigns; accounts where tROAS was raised deliberately to harvest returning buyers profitably; very small catalogs where product bloat does not apply.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "80 to 90% of ecommerce PMax performance from Shopping inventory",
+      "example: product with ~15% of PMax spend out of stock for 4 days resets learning"
+    ],
+    "asks": [
+      "why did our Performance Max campaign suddenly drop",
+      "does raising target ROAS make PMax more efficient",
+      "why is PMax retargeting existing customers",
+      "do out of stock products hurt Performance Max"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0137",
+    "evidence": {
+      "where": "Failure modes of a PMax campaign"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0038",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "match types and negatives",
+      "bidding strategy",
+      "search term analysis"
+    ],
+    "claim": "Treat CPC as near-vanity: CPA = CPC / conversion rate, so higher CPCs only matter when conversion rate does not rise with them.",
+    "body": "When efficiency drops in Google Ads, the agency splits it with two formulas: CPA = CPC / conversion rate, and clicks = impressions x CTR. Rising CPC paired with rising conversion rate leaves CPA unchanged and may simply mean the account is entering premium auctions with better buyers. CPC is a problem only when it rises and conversion rate does not. Causes of a bad CPC rise: quality score changes (add expected CTR, ad relevance and landing page experience as keyword columns and compare before and after the inflection date); a new competitor (compare auction insights before and after); or more aggressive bidding pushing into costlier auctions that do not pay back. Landing page experience is the slowest to fix: the agency has waited weeks to months for Google to re-crawl and re-score after site fixes. If clicks fall instead, check impression share lost to budget versus lost to rank: hitting the daily budget means budget is the limit; falling clicks and impressions without hitting budget point to bid and rank (quality score, competition, bidding). Conversion-rate drops: check tracking, then landing page changes (URL, price, redirects, merchandising, upsells), search-term mix, a learning reset, or an ended promotion or free-shipping change.",
+    "conditions": "Google Search and Shopping campaigns with enough volume to compare periods before and after a clear inflection date.",
+    "fails_when": "Accounts with no stable conversion tracking, where CPA math is meaningless; very low-volume keywords where quality score columns barely move; brand campaigns where CPC rises reflect competitor conquesting that must be answered regardless.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "CPA = CPC / conversion rate",
+      "clicks = impressions x CTR",
+      "landing page experience re-score can take weeks to months"
+    ],
+    "asks": [
+      "our Google CPCs went up, is that a problem",
+      "why are my Google Ads costs per click rising",
+      "how do I fix low impression share in Google Ads",
+      "what does landing page experience in Google quality score mean"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0137",
+    "evidence": {
+      "where": "Levels four and five: metric and sub-metric drill-down"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0040",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "shopping structure",
+      "bidding strategy"
+    ],
+    "claim": "Segment Standard Shopping by ROAS tier when product margins sit within about 10 points of each other, and by margin tier when they spread (e.g. 30% to 70%).",
+    "body": "Big Flare picks the shopping structure by how much margins differ. If product-level margins are all within about 10 percentage points, use a performance structure with four tiers: high-ROAS winners get more budget; low-ROAS products that spend but convert poorly get lower bids; low-spend products without enough data get more room; and 'zombie' products with zero spend go into their own campaign with a dedicated budget so they get tested at all. If margins vary widely, for example from 30% on some products to 70% on others, group products into three to five margin tiers, each in its own campaign with its own target ROAS. High-margin products get a lower ROAS target so they bid harder and win volume while staying profitable; low-margin products get a higher target to protect profit. PMax alone does not know your margins and treats a 30% and a 70% product the same. How to apply: tag products with margin bands or ROAS tiers using custom labels in the feed, build campaigns on those labels, set break-even ROAS per tier from 1 divided by margin, then set targets above it. Also put the main search terms into product titles and use strong images, since both drive shopping click-through rate. Give Shopping the largest share of the Google budget.",
+    "conditions": "Ecommerce catalogues with enough products and conversions per tier; Google Merchant Center feed with custom labels.",
+    "fails_when": "Very small catalogues or low conversion volume where splitting into 3 to 5 campaigns leaves too little data per campaign for target-ROAS bidding.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "use ROAS tiers when margins are within about 10 percentage points",
+      "margin structure example: 30% to 70% margin range",
+      "3 to 5 margin tiers",
+      "4 ROAS tiers: high ROAS, low ROAS, low spend, zero-spend zombies"
+    ],
+    "asks": [
+      "How should I structure my Google Shopping campaigns?",
+      "Some products have 70% margin and some 30%, should they share a campaign?",
+      "What do I do with products that never get impressions in Shopping?",
+      "How do I set different ROAS targets by product?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0138",
+    "evidence": {
+      "where": "Shopping campaigns section, structure A (ROAS performance) and structure B (gross profit margin)"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0042",
+    "modules": [
+      "GAD",
+      "MEA"
+    ],
+    "topics": [
+      "bidding strategy",
+      "match types and negatives"
+    ],
+    "claim": "Common Google Ads leaks: GA4 events as the primary conversion (missing about 10 to 15% of conversions), broad match on Maximize Clicks, Display enabled in Search, auto-apply left on.",
+    "body": "The agency's quick audit list for e-commerce Google accounts. First, using GA4 events as the primary conversion action: it reports an attribution gap of about 10 to 15%, sometimes more, against the Google Ads tag installed directly, with enhanced conversions and auto-tagging on, so smart bidding learns from fewer conversions than really happened. Second, a single asset group in PMax. Third, broad match paired with Maximize Clicks or another non-smart strategy; broad match needs smart bidding to work. Fourth, the Display Network left on inside Search campaigns, which spends on what the host calls one of the worst networks, especially for cold traffic. Fifth, no negative keywords, including no brand negatives in cold campaigns. Sixth, auto-apply recommendations left on, letting Google change the account in ways that rarely help the advertiser. Also: Search exact match now matches same-meaning queries and phrase match has broadened, so single-keyword ad groups no longer give the control they once did; group keywords by theme instead. Budget changes on Google should stay near 20% steps, unlike Meta and TikTok. How to apply: run these checks first in any audit, then fix tracking before judging anything else.",
+    "conditions": "Ecommerce Google Ads accounts, especially those set up by non-specialists or older agency structures.",
+    "fails_when": "Accounts where GA4 is the only feasible conversion source; deliberate tests of broad match with manual bids for arbitrage; Display used intentionally in a separate, measured campaign.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "GA4 primary conversion misses ~10 to 15% of conversions vs Google Ads tag",
+      "budget changes in ~20% steps on Google"
+    ],
+    "asks": [
+      "should I import GA4 conversions into Google Ads",
+      "what are the most common Google Ads setup mistakes",
+      "why is my search campaign spending on display",
+      "should I turn on auto-apply recommendations"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0139",
+    "evidence": {
+      "where": "Rapid-fire common mistakes; match type changes; budget scaling note"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0043",
+    "modules": [
+      "GAD",
+      "MEA"
+    ],
+    "topics": [
+      "shopping structure",
+      "bidding strategy"
+    ],
+    "claim": "Default to one consolidated campaign; split only for brand vs non-brand, geography, materially different margins (e.g. 70% vs 35% gross margin), or distinct product categories.",
+    "body": "Smart bidding learns per campaign, so splitting the same products into three campaigns with 50, 20 and 10 conversions a month leaves the smallest one modelling bids on ten buyers and performing worst. The agency's first rule is that consolidation beats segmentation: start from one campaign and require a commercial reason for each additional one. Valid reasons: brand versus non-brand (different intent and efficiency); geography (different currencies, prices, demand); margin (a 70% gross margin collection and a 35% one cannot share a 300% target ROAS, because Google optimizes revenue without seeing margin, so the low-margin line gets spend that is barely profitable); and distinct product categories that need their own creative and budget. A special case: a 'grade C inventory' campaign for stock you would otherwise clear at deep discounts, so it gets some spend instead of none inside a consolidated campaign. For large non-fashion catalogs, a structure that keeps about 80% of spend on the top 20% of products while reserving test budget for the tail is also used. In e-commerce, put about 80 to 90% of Google spend into Shopping rather than Search, because the listing's image, price and competitor context pre-qualify the click. Exception: e-commerce brands with a B2B arm, where Search matters more.",
+    "conditions": "Ecommerce Google Ads accounts using smart bidding; catalogs with mixed margins or multiple regions.",
+    "fails_when": "Accounts already at very high conversion volume where splitting does not starve learning; fashion catalogs where the 80/20 product split is not recommended; B2B-heavy stores where Search should take more share.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "example: 50 / 20 / 10 conversions per 30 days across split campaigns",
+      "70% vs 35% gross margin collections at one 300% tROAS",
+      "80 to 90% of ecommerce Google spend in Shopping",
+      "80% of spend on top 20% of products (large non-fashion catalogs)"
+    ],
+    "asks": [
+      "how many Google Ads campaigns should we have",
+      "should we split campaigns by product",
+      "why do products with different margins need separate campaigns",
+      "what percentage of Google spend should be shopping vs search for ecommerce"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0139",
+    "evidence": {
+      "where": "Account structure: consolidation vs segmentation and the four reasons to split"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0044",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "feed optimisation"
+    ],
+    "claim": "Rewrite Merchant Center titles to lead with search terms proven in your search-term reports, brand name last (or dropped if unknown), and roll changes out gradually.",
+    "body": "Default store titles (brand, product name, colour, size) waste the field Google relies on to match searches. The agency rebuilds titles from conversion data: pull search-term reports, find terms that convert, and put them first ('formal dress' before the product name; 'dissolvable creatine powder' then 'clear', 'flavored', 'portable'). Move the brand to the end, or drop it if shoppers do not know it; large retailers keep it at the end. Add attributes such as colour while within the length limit so the item can match searches like 'blue dress'. Variants that the feed lists separately (50 g, 100 g, 500 g) can carry different titles, photos and descriptions aimed at different keyword pools while landing on the same page. Images take up about 70% of a Shopping listing, so supply 4:5 images through a supplementary feed instead of letting 9:16 fashion shots auto-crop, and make them contrast with competitors (a coloured background when rivals use white) while still targeting the right buyer. Run a separate feed per currency so listings show local prices, not conversion notices. Roll title changes out slowly; changing every title at once resets learning across campaigns.",
+    "conditions": "Ecommerce stores feeding Google Merchant Center, especially from Shopify default titles; new or lesser-known brands.",
+    "fails_when": "Well-known brands whose name is itself the main search term; title stuffing beyond Google's policies or length limits; catalogs too small to have reliable search-term data.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "image occupies ~70% of a Shopping listing",
+      "4:5 image ratio via supplementary feed",
+      "one feed per currency"
+    ],
+    "asks": [
+      "how should I write product titles for Google Shopping",
+      "should my brand name be first in Google Shopping titles",
+      "what image size should Google Shopping images be",
+      "why is my Google Shopping click-through rate low"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0139",
+    "evidence": {
+      "where": "Feed optimisation section near the end; 90-day rollout checklist"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0045",
+    "modules": [
+      "GAD",
+      "MEA"
+    ],
+    "topics": [
+      "PMax asset groups",
+      "shopping structure",
+      "incrementality and holdouts"
+    ],
+    "claim": "Scaling PMax 2x held in-platform ROAS near 5 but grew back-end revenue less than scaling Standard Shopping, whose reported ROAS fell to 3 to 4.",
+    "body": "Blue Sense Digital ran the same test repeatedly: with PMax and Standard Shopping both reporting about 5x ROAS, it doubled one or the other over 30 days. Scaling PMax kept platform ROAS at about 5, but back-end store revenue barely moved. Scaling Standard Shopping dropped its reported ROAS to roughly 3 to 4, yet back-end revenue grew more. The explanation: PMax retargets heavily, so as spend rises it takes credit for purchases other channels would have produced, while Standard Shopping reaches colder searchers whose later purchases are often credited to PMax's last touch. The host says agency owners he talks to agree that 50% or more of PMax conversions are repeat or warm customers. His guidance: PMax is fine for smaller accounts (around $15k to $20k a month or less) to get moving, but it hits a ceiling, seen at $100k to $300k a month on large accounts; raising budget or target ROAS past that point turns it into a retargeting campaign. For mid to upper market e-commerce, frame it as allocation: perhaps 20 to 40% to PMax and the rest through Standard Shopping. Judge by back-end revenue, MER or new-customer revenue, not PMax's in-platform ROAS.",
+    "conditions": "Ecommerce Google accounts spending enough to run PMax and Standard Shopping side by side; brands that can read back-end revenue and new-customer revenue.",
+    "fails_when": "Small accounts under about $15k to $20k a month where PMax alone is simpler and adequate; brands without back-end revenue tracking; lead-gen accounts (read Search in place of Shopping).",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "2x budget ramp over 30 days on each campaign type",
+      "PMax platform ROAS held ~5x; Standard Shopping fell to ~3x to 4x with better back-end revenue",
+      "50%+ of PMax conversions warm or repeat (host's report)",
+      "PMax fine under ~$15k to $20k/month; ceiling seen at $100k to $300k/month",
+      "suggested PMax share 20% to 40%"
+    ],
+    "asks": [
+      "should I put all my Google budget into Performance Max",
+      "why doesn't our revenue grow when we scale PMax",
+      "is standard shopping still worth running",
+      "how much of our Google budget should go to PMax"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0139",
+    "evidence": {
+      "where": "PMax section: incrementality tests and PMax ceiling"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0046",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "PMax asset groups",
+      "feed optimisation"
+    ],
+    "claim": "Split PMax asset groups by product type with matching listing groups; audience signals and search themes stop mattering after about 30 days of conversion data.",
+    "body": "The most common PMax mistake is running the single asset group Google creates by default; the next is creating several asset groups but leaving every product in each listing group, so the split does nothing. Segment asset groups by product type (jeans, dresses) and customize each listing group so only those products serve with those assets. This makes headlines and creative contextually relevant, lets signals be specific ('in market for jeans' rather than 'fashion'), and exposes performance per group. Audience signals and search themes are not targeting, unlike old Meta interests; they are starting hints for a campaign with no data. The agency says that across PMax on over 250 accounts and consulting on about 400 more, signals and themes made no material difference in mature campaigns spending $30k to $100k a month, and after about 30 days of conversion data they can be removed without effect. They matter for new launches: a new business, product, asset group or category. The agency's order of importance in e-commerce PMax: the Merchant Center feed (titles, descriptions, images), then brand exclusions, then asset group structure and creative, then the bidding strategy, then signals and themes. Exclude brand terms via the campaign brand exclusion list as well as any other method.",
+    "conditions": "Ecommerce PMax campaigns serving mainly on Shopping inventory; catalogs with clear product types.",
+    "fails_when": "Very small catalogs where one asset group is enough; brand-new campaigns, where signals do help in the first weeks; PMax for lead generation without a feed.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "PMax run on 250+ accounts and ~400 consulted",
+      "signals irrelevant in mature campaigns at $30k to $100k/month",
+      "signals removable after ~30 days of conversion data"
+    ],
+    "asks": [
+      "how should I set up asset groups in Performance Max",
+      "do audience signals in PMax actually target people",
+      "should I spend time optimizing PMax audience signals",
+      "what matters most in a PMax campaign"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0139",
+    "evidence": {
+      "where": "PMax section: asset groups, audience signals, search themes, order of importance"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0047",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "bidding strategy",
+      "shopping structure"
+    ],
+    "claim": "Use a feeder structure: a Standard Shopping campaign at a very low target ROAS (around 50%) for cold reach plus a high-tROAS PMax (around 600%) converting warm traffic.",
+    "body": "The agency describes a target-ROAS trap. A campaign trailing about 4.2x gets a 400% tROAS; it stabilizes; the buyer nudges the target up in steps until spend starts to pull back near 500% to 600%. ROAS on the same $1,000 a day now reads 5x or 6x and looks like great buying, but the higher target has narrowed the campaign to people already likely to buy, mostly warm and returning visitors, and new-customer acquisition has shrunk. The earlier, lower-ROAS state was probably better for the business. The feeder structure separates the two jobs. One campaign, usually Standard Shopping, runs a very low target ROAS (as low as 50%, or 0.5x) and is allowed to reach everyone searching the relevant terms, including cold audiences. A second campaign, usually PMax, runs a high target (around 600%) and only enters auctions for warm, in-market people who have likely visited already. Judge the pair together on back-end revenue and new-customer numbers, not each campaign's ROAS. Related: Maximize Conversion Value spends part of budget exploring (the host's estimate is about 30%), while a tROAS above actual ROAS leaves almost nothing for exploration; tROAS stabilizes results rather than raising their average.",
+    "conditions": "Ecommerce Google accounts with enough searches in the category to feed a cold campaign; brands measuring blended or new-customer efficiency.",
+    "fails_when": "Tight cash or margin where a 0.5x campaign cannot be funded; accounts lacking back-end measurement, where the feeder looks like pure waste; small categories with little cold search demand.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "tROAS raised from ~400% to ~500% to 600% at $1,000/day",
+      "feeder campaign tROAS ~50% (0.5x); converter campaign ~600%",
+      "Maximize Conversion Value explores with ~30% of budget (host's estimate)"
+    ],
+    "asks": [
+      "our target ROAS keeps going up but spend is shrinking, why",
+      "what is a feeder campaign in Google Ads",
+      "how do I get more new customers from Google Shopping",
+      "should I raise my target ROAS to improve efficiency"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0139",
+    "evidence": {
+      "where": "Bidding strategies section: tROAS creep and feeder strategies"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0048",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "PMax asset groups",
+      "shopping structure"
+    ],
+    "claim": "When PMax drifts into YouTube and Gmail, switch it to feed-only (delete asset groups, turn off URL expansion and auto-created assets) to force spend onto Shopping.",
+    "body": "A feed-only PMax keeps only the listing group from the Merchant Center feed and deletes the asset groups. With no headlines, descriptions or videos, the campaign can serve only on Shopping and on display remarketing using product tiles, which is effectively the old Smart Shopping. Two settings break it if left on: URL expansion, which lets Google scrape pages and build assets itself, and automatically created assets. Both must be off. The agency's case: a client spending a couple of hundred thousand a month on PMax saw clicks jump while ROAS fell about 20%. PMax had moved from about 2% to about 10% of spend on YouTube and about 10% on cold Gmail. Gmail placements count opening the ad 'email' in the inbox as a click, so these looked like cheap clicks but sent no one to the site, and some customers complained about receiving emails after unsubscribing, not realising they were ads. Switching the category to feed-only stopped the leakage and the account resumed scaling. How to apply: when PMax clicks rise and site sessions or ROAS do not follow, check placement and channel reports; move affected categories to feed-only, possibly keeping full PMax for others.",
+    "conditions": "Ecommerce PMax campaigns where Shopping is the intended main placement; accounts seeing click spikes without matching sessions.",
+    "fails_when": "Brands that want YouTube or Demand-style reach from PMax; accounts without strong product imagery and titles, where feed-only has little to work with; when channel reporting shows other placements are profitable.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "ROAS fell ~20% when YouTube share rose from ~2% to ~10% and Gmail took ~10%",
+      "account spending a couple of hundred thousand per month on PMax"
+    ],
+    "asks": [
+      "why did PMax clicks spike while sales dropped",
+      "how do I stop Performance Max spending on YouTube and Gmail",
+      "what is a feed only PMax campaign",
+      "are Gmail ad clicks real website visits"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0139",
+    "evidence": {
+      "where": "Feed-only PMax section and client example"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "GAD-0049",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "feed optimisation",
+      "shopping structure"
+    ],
+    "claim": "Brands selling in several countries need a Merchant Center feed per currency; a single-currency feed gets auto-converted with tax added in Shopping and underperforms.",
+    "body": "In the Google part of the audit, after consolidating campaigns and checking that branded search terms are not leaking into cold campaigns (open the cold campaign's search terms report), the agency checks the Google Merchant Center feed: titles optimised, all relevant attributes filled, and warnings and errors cleared. A frequent mistake for brands that sell in several countries is sending everything through one currency. Google then converts the price automatically and adds tax when it shows the product in Shopping, so the displayed price looks wrong or uncompetitive in that market and the product performs poorly. The fix is a feed per currency (multi-currency setup) so each country sees its own local price as set by the store. This also supports the baseline rule that feed price and availability must agree with the store. Then judge Google's non-brand campaigns against acquisition MER and consider an incrementality test if Google looks like it is taking credit for demand created elsewhere (the halo or bottom-of-funnel effect).",
+    "conditions": "Ecommerce brands running Google Shopping or Performance Max in more than one country or currency.",
+    "fails_when": "Single-country, single-currency stores; setups where Shopify Markets or a feed tool already produces separate local-currency feeds correctly.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "We sell in several countries, do we need separate Google Shopping feeds?",
+      "Why do my Shopping ads show the wrong price in other countries?",
+      "What should I check in Google Merchant Center during an audit?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0226",
+    "evidence": {
+      "where": "Technical account structure, Google side",
+      "quote": "you want to make sure that you have a multi- currency feed"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0050",
+    "modules": [
+      "GAD",
+      "MEA"
+    ],
+    "topics": [
+      "brand versus non brand",
+      "feed optimisation"
+    ],
+    "claim": "Over Black Friday, Google gets less efficient while Meta gets more efficient (Triple Whale 2025), so prepare Google feeds and promotions instead of scaling its budget on inflated ROAS.",
+    "body": "Per Triple Whale's 2025 Black Friday report as cited by Blue Sense Digital, period-on-period over the Black Friday weekend Meta CPMs rose about 50% but Meta CPA fell and ROAS improved, offsetting margin compression; Google CPMs rose only about 10%, but Google CPA and ROAS both got worse and impression-to-purchase rate fell. Google's ROAS in an agency account still looks excellent on Black Friday, because demand created by Meta and brand searches converting at sale prices flows through Google, a demand-capture channel. The agency warns against cranking Google budgets for that reason. Instead, Google work is preparation: rewrite titles, descriptions and assets for the sale, roll over and optimise Merchant Center, add promotion feeds and sale-price lines, and update promotional assets in Search and Performance Max ahead of time, which lifts CTR and conversion rate against competitors who do not. Ramp Google spend carefully from early November and judge non-brand campaigns against new-customer revenue, not platform ROAS.",
+    "conditions": "Brands running both Meta and Google through a Black Friday sale.",
+    "fails_when": "Google is the primary acquisition channel with proven incrementality (holdout-tested); categories with strong non-brand search demand during the sale.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Black Friday weekend period-on-period: Meta CPM about +50% with better CPA and ROAS; Google CPM about +10% with worse CPA and ROAS (Triple Whale 2025)"
+    ],
+    "asks": [
+      "Should I raise Google Ads budgets for Black Friday?",
+      "Why does Google ROAS look so good during Black Friday?",
+      "How do I prepare Google Shopping for a Black Friday sale?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0234",
+    "evidence": {
+      "where": "'Google Ads needs preparation'",
+      "quote": "Google actually doesn't get more efficient, it gets less efficient"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "GAD-0051",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "PMax asset groups",
+      "bidding strategy",
+      "shopping structure"
+    ],
+    "claim": "Keep PMax as a catch-all with a far higher tROAS (600 to 700%) than manual Shopping, Search and Demand Gen (300 to 400%) so those win most auctions.",
+    "body": "Big Flare's observation from many accounts: a typical ecommerce Performance Max campaign spends about 60 to 70% on Shopping, 20 to 30% on search text ads and 5 to 10% on image and video, and that image and video share is almost all retargeting. PMax also leans on branded and returning traffic, which makes ROAS look strong while adding fewer new customers. Their advanced setup rebuilds each piece as its own campaign: Standard Shopping, Search split into brand and non-brand, and a Demand Gen retargeting campaign with images and videos together and audiences split by product viewers, cart and checkout abandoners, category viewers, all visitors and past buyers. PMax stays on, but with a target ROAS far above the manual campaigns: if they run at 300 to 400%, set PMax at 600 or 700%. The lower targets mean higher bids, so the manual campaigns take most impressions, and PMax only picks up queries and users they miss. How to apply: pull winning queries from the PMax search terms report into Search first, move proven creative into Demand Gen, then raise the PMax target and watch total conversions and new-customer share for two to four weeks. Check how Google currently resolves overlap between PMax and Standard Shopping before relying on bid-based priority.",
+    "conditions": "Established ecommerce accounts with enough conversion volume to feed several campaigns and someone with time to manage them; agency describes it as an advanced, not beginner, setup.",
+    "fails_when": "Small accounts or low conversion volume, where splitting data starves each campaign's bidding; teams without time to manage manual campaigns, where PMax alone is the efficient choice. Depends on Google's current auction priority rules between PMax and other campaign types.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "PMax typical spend: 60 to 70% Shopping, 20 to 30% search, 5 to 10% image and video",
+      "manual campaigns tROAS 300 to 400%, PMax set to 600 to 700%"
+    ],
+    "asks": [
+      "Should I turn off Performance Max?",
+      "PMax ROAS looks great but sales aren't growing, why?",
+      "How do I stop PMax from taking over my Shopping campaigns?",
+      "What target ROAS should PMax have next to my other campaigns?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0138",
+    "evidence": {
+      "where": "Opening breakdown of PMax spend; final section on keeping PMax as a de-prioritised safety net"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0052",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "brand versus non brand",
+      "search term analysis"
+    ],
+    "claim": "Split brand from non-brand Search with a higher ROAS target on brand; write RSAs with 8 headlines and 2 descriptions, not 15 and 4, so combinations get tested.",
+    "body": "Branded searches come from people who already know you, usually because another channel reached them first, so those sales are less incremental. When brand and non-brand sit together, or inside PMax, branded traffic inflates ROAS and hides how little new demand you are buying. Big Flare separates them into different campaigns so each shows its own ROAS, gives brand a much higher target, gives non-brand a lower target because its sales are more incremental, and shifts budget toward non-brand if the account is over-weighted on brand. Inside Search they build single-theme ad groups from Keyword Planner research plus the best queries in the PMax search terms report, so ad copy matches each theme and quality score improves. For responsive search ads they use about 8 headlines and 2 descriptions rather than the maximum 15 and 4: fewer assets means fewer possible combinations, so each combination gets enough impressions to compare. Run several ads per ad group and feed winning combinations back into copy. Separate Search campaigns also show keyword quality score and allow ad copy experiments, which PMax hides.",
+    "conditions": "Ecommerce brands with meaningful branded search volume and a non-brand keyword set; manual Search campaigns alongside or instead of PMax.",
+    "fails_when": "Brands with competitors bidding aggressively on their name, where brand campaigns are defensive and a high ROAS target can lose the brand slot; very small accounts where 8 headlines still never get enough impressions.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "8 headlines and 2 descriptions instead of the maximum 15 and 4"
+    ],
+    "asks": [
+      "Should brand keywords be in a separate campaign?",
+      "How many headlines should a responsive search ad have?",
+      "Our Google ROAS is high but is it real growth?",
+      "How do I find keywords that already work from PMax?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0138",
+    "evidence": {
+      "where": "Search campaigns section: brand versus non-brand, ad copy, single-theme ad groups"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0053",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "bidding strategy"
+    ],
+    "claim": "A target ROAS set above what a campaign achieves shrinks its exploration to near zero and starts a death spiral; when spend falls, cut the target aggressively, not gradually.",
+    "body": "Blue Sense Digital explains Google bidding as expansive versus restrictive. Maximise conversion value spends some budget, which they estimate at about 30%, on testing: new keywords, audiences, placements and regions that look adjacent but unproven, which is how it finds scale. A restrictive target ROAS set above the campaign's real ROAS (for example a 4.5 target on a campaign doing 4.0) leaves roughly 0% for testing, since every dollar must hit the target. The spiral: performance dips, the campaign misses the target, it narrows its audience and spends less, conversions fall (say from 100 to 80 in 30 days), the bidding model has less data from its 30 to 90-day lookback, targeting worsens, conversions fall further, and the campaign slowly dies. Leaving the target unchanged lets it die; nudging it down slowly does not stop it. Cut the target hard to restore volume. They also warn that maximise conversions (lowest CPA) pushes budget to cheap products: a $40 t-shirt at a $20 CPA wins over a $200 jumper at $60 CPA even when the jumper returns 3.5x versus 2x.",
+    "conditions": "Google Shopping, PMax and Search campaigns on smart bidding with modest conversion volume; ecommerce catalogues with mixed price points.",
+    "fails_when": "High-volume campaigns where the model has ample data; temporary dips from stockouts or seasonality that will recover without changing targets; brands that need hard efficiency floors for cash reasons.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "max conversion value about 30% exploration (estimate); tROAS above actual about 0%",
+      "example: target 4.5 vs actual 4.0",
+      "bidding lookback about 30 to 90 days; conversions falling 100 to 80",
+      "$40 t-shirt at $20 CPA vs $200 jumper at $60 CPA (2x vs 3.5x ROAS)"
+    ],
+    "asks": [
+      "My Google campaign's spend keeps shrinking, what's wrong?",
+      "How much should I lower target ROAS when a campaign is dying?",
+      "Why does Google push all my budget to my cheapest product?",
+      "Should I use max conversions or target ROAS?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0252",
+    "evidence": {
+      "where": "Google section, bidding strategies and target ROAS spiral",
+      "quote": "If you start pulling target rorowaz back, you need to pull it back aggressively"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0054",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "shopping structure",
+      "brand versus non brand"
+    ],
+    "claim": "For ecommerce, keep about 80 to 90% of Google spend in Shopping rather than Search, because the image, price and title shown before the click filter for higher-intent visitors.",
+    "body": "Blue Sense Digital's view is that search campaigns suit service businesses, while stores should put about 80 to 90% of Google spend into Shopping (standard Shopping or Performance Max). The reason is what the shopper sees before paying for the click. A search ad shows a headline, a description few read, and some extensions; for a query like 'red dress size medium for wedding' it can match the words but not show the style or price, so many clickers arrive, see the product and leave, at $1 to $2 a click. A Shopping ad shows the product image, price, title, brand, any promotion and reviews, so people who click have already accepted how it looks and what it costs. This matters most in visual categories such as fashion. Remaining search spend goes to brand defence where proven and to high-intent non-brand terms. Related structures they use: top sellers in one standard Shopping campaign and everything else in another, to keep about 80% of spend on the top 20% of products while still testing the rest (not for fashion).",
+    "conditions": "Ecommerce brands with a healthy Merchant Center feed; visual or price-sensitive categories.",
+    "fails_when": "Products that need explanation before purchase (complex or new-category items); service or lead-gen businesses; feeds with disapprovals or poor images that make Shopping ads weak.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "80 to 90% of Google spend in Shopping for ecommerce",
+      "search clicks about $1 to $2 in the example"
+    ],
+    "asks": [
+      "Should my store spend more on Google Shopping or Search ads?",
+      "Are Google search ads worth it for a fashion brand?",
+      "How should I split Google Shopping campaigns by product?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0252",
+    "evidence": {
+      "where": "Google section, shopping versus search",
+      "quote": "you really want 80 to 90% of your spend to be in shopping"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "GAD-0055",
+    "modules": [
+      "GAD",
+      "SEC"
+    ],
+    "topics": [
+      "PMax asset groups",
+      "feed optimisation"
+    ],
+    "claim": "If Performance Max clicks jump while ROAS falls, check placements: one PMax shifted from 2% to 10% YouTube plus about 10% Gmail, where opening the ad counts as a click.",
+    "body": "Blue Sense Digital describes a client spending a few hundred thousand dollars a month on Performance Max when clicks suddenly soared and ROAS fell about 20%. It looked like bot traffic, but the campaign had shifted spend: YouTube went from about 2% to about 10% of spend, and about 10% went to Gmail. In Gmail, PMax builds an email-style ad from your assets and feed; opening that 'email' counts as a click, so you get many cheap clicks (around 10 cents) that never reach the site. Customers who had unsubscribed also complained about 'emails' that were actually ads. The fix was to switch that campaign to a feed-only PMax (no image, video or text assets), which cannot serve on Gmail or YouTube, after which the account scaled again. How to apply: when click volume rises without sessions or sales, check PMax placement or channel reporting before assuming fraud; consider feed-only PMax for categories where you want Shopping-style placement only, and keep separate PMax campaigns by category if needed.",
+    "conditions": "Google Performance Max campaigns with image and video assets; ecommerce brands mainly wanting Shopping placements.",
+    "fails_when": "Brands that deliberately want YouTube and Gmail reach for awareness; Google changes PMax channel controls or click definitions; the traffic really is bots (check sessions and server logs).",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "ROAS down about 20%",
+      "YouTube share 2% to about 10%; Gmail about 10%",
+      "Gmail opens counted as clicks at about 10 cents"
+    ],
+    "asks": [
+      "My Performance Max clicks spiked but sales didn't, is it bots?",
+      "Does PMax run ads in Gmail and YouTube?",
+      "What is a feed-only Performance Max campaign?",
+      "Customers say they get emails after unsubscribing but they are Google ads, why?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0252",
+    "evidence": {
+      "where": "Google section, PMax feed-only example",
+      "quote": "the click onto the email, me just opening the email up"
+    },
+    "strength": "anecdote",
+    "public": true
+  }
+]

@@ -204,7 +204,7 @@ test("tools/list returns every tool with input schemas and annotations", async (
   const { rpc } = await setup();
   const res = await rpc("tools/list", {});
   const tools: any[] = res.body.result.tools;
-  assert.deepEqual(tools.map(t => t.name), ["get_execution_plan", "check_execution_delivery", "list_agents", "get_agent", "load_agent", "load_team", "get_agent_file", "ask_agent_knowledge", "list_job_types", "start_request", "answer_questions", "get_plan", "start_job", "decline_plan", "get_job", "get_delivery", "accept_delivery", "request_revision"]);
+  assert.deepEqual(tools.map(t => t.name), ["get_execution_plan", "check_execution_delivery", "list_agents", "get_agent", "load_agent", "load_team", "get_agent_file", "ask_agent_knowledge", "ask_vertical_knowledge", "list_job_types", "start_request", "answer_questions", "get_plan", "start_job", "decline_plan", "get_job", "get_delivery", "accept_delivery", "request_revision"]);
   // Hiring is free: no tool name, title, description or input says money, quote or beta.
   for (const tool of tools) assert.doesNotMatch(JSON.stringify(tool), MONEY_WORDS, tool.name);
   for (const tool of tools) {
@@ -219,7 +219,7 @@ test("tools/list returns every tool with input schemas and annotations", async (
     assert.equal(tool.run, undefined);
   }
   const by = Object.fromEntries(tools.map(t => [t.name, t]));
-  for (const name of ["get_execution_plan", "check_execution_delivery", "list_agents", "get_agent", "load_agent", "load_team", "get_agent_file", "ask_agent_knowledge", "list_job_types", "get_job", "get_delivery"]) assert.equal(by[name].annotations.readOnlyHint, true, name);
+  for (const name of ["get_execution_plan", "check_execution_delivery", "list_agents", "get_agent", "load_agent", "load_team", "get_agent_file", "ask_agent_knowledge", "ask_vertical_knowledge", "list_job_types", "get_job", "get_delivery"]) assert.equal(by[name].annotations.readOnlyHint, true, name);
   for (const name of ["start_request", "answer_questions", "get_plan", "start_job", "decline_plan", "accept_delivery", "request_revision"]) assert.equal(by[name].annotations.readOnlyHint, false, name);
   assert.equal(by.accept_delivery.annotations.destructiveHint, true);
   assert.equal(by.decline_plan.annotations.destructiveHint, true);
@@ -985,7 +985,7 @@ test("with hosted jobs off, the connector finds and loads agents only, and never
   assert.doesNotMatch(instructions, MONEY_WORDS);
 
   const list = await rpc("tools/list", {});
-  assert.deepEqual(list.body.result.tools.map((x: { name: string }) => x.name), ["get_execution_plan", "check_execution_delivery", "list_agents", "get_agent", "load_agent", "load_team", "get_agent_file", "ask_agent_knowledge"]);
+  assert.deepEqual(list.body.result.tools.map((x: { name: string }) => x.name), ["get_execution_plan", "check_execution_delivery", "list_agents", "get_agent", "load_agent", "load_team", "get_agent_file", "ask_agent_knowledge", "ask_vertical_knowledge"]);
 
   const agents = await call("list_agents", {});
   assert.match(textOf(agents), /To use one, call load_agent with its agent_id/);

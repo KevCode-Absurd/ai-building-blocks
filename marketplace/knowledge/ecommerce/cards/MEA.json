@@ -1,0 +1,2190 @@
+[
+  {
+    "id": "MEA-0001",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "event contracts",
+      "consent and tracking loss",
+      "deduplication"
+    ],
+    "claim": "Meta's Conversions API Gateway only sends a server event after the browser pixel fires, so blocked pixels stay lost; expect about 1 to 2% recovery, not Meta's quoted 13%.",
+    "body": "How the Gateway works: the pixel stays in the browser and, once connected, also copies each event to a server on your own subdomain (a CNAME record such as capig.yourdomain.com), which forwards it to Meta. The pixel and server copies share an event_id, added automatically, so Meta deduplicates them. The weakness, shown live with the Ghostery extension: when an extension blocks the pixel script, the pixel never loads, so the copy to the Gateway is never made either. Blocking the browser side blocks both. Meta's own materials cite up to 13% lower cost per result and 7% more reported conversions; the practitioner estimates the real gain against blockers at 1 to 2% at best, because popular blockers are aggressive. The Gateway also does not extend cookie lifetime. Cost: hosted through Events Manager on AWS from roughly $30 a month; through Stape about $10 a month per pixel with a 7-day trial. How to decide: the Gateway suits a site with a hard-coded pixel, no developer and no platform plugin that already sends CAPI events. If the goal is recovering events lost to blockers and browser limits, use full server-side tagging (for example server GTM with a custom loader that disguises the request path, plus first-party cookie extension) or a native platform CAPI integration that sends purchases from the server.",
+    "conditions": "Sites without a native CAPI integration (custom builds, hard-coded pixels); audiences with meaningful ad-blocker use; prices as quoted in the video, date unknown.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "Meta claim: up to 13% lower cost per result, 7% more conversions with CAPI Gateway",
+      "Practitioner estimate: 1 to 2% recovery against browser blockers",
+      "Meta-hosted Gateway from ~$30/month; Stape ~$10/month per pixel, 7-day trial",
+      "DNS propagation for custom subdomain: 5 to 10 minutes in his test"
+    ],
+    "asks": [
+      "Is the Meta CAPI Gateway worth setting up?",
+      "We turned on the Conversions API Gateway and conversions barely went up. Why?",
+      "Does the CAPI Gateway get around ad blockers?",
+      "Should I use the CAPI Gateway or server-side tagging?",
+      "How much more conversion data will Conversions API actually recover?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0053",
+    "evidence": {
+      "where": "Second half: Ghostery test after the DNS setup walkthrough",
+      "quote": "you can expect the improvement at best of 1 or 2%"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "MEA-0002",
+    "modules": [
+      "MEA",
+      "CRO"
+    ],
+    "topics": [
+      "event contracts",
+      "UTM integrity"
+    ],
+    "claim": "In GA4, session key event rate counts any key event, so conversion rate by channel or landing page is wrong until the metric is filtered to purchase.",
+    "body": "GA4 has no single built-in 'conversion rate' column in its standard acquisition and landing page reports. The closest metric is session key event rate: the share of sessions that fired at least one key event. Because a store can mark add to cart, sign-up, begin checkout and other actions as key events, the unfiltered rate overstates purchase conversion, sometimes by a wide margin. How to apply: in Reports, open Life cycle, Acquisition, Traffic acquisition; choose Customize report, add Session key event rate under Metrics, then switch the metric's event selector from all key events to purchase. Add the session medium as a secondary dimension to split CPC, paid social, organic and email. Repeat in Engagement, Landing page to get purchase conversion rate per product page, which Shopify analytics does not show per page. Compare pages on similar traffic: a product page converting far below its siblings points to wrong traffic, a weak page or a weak product. In the source store the filtered overall rate was 1.7% over 28 days. Shopify and GA4 totals will still differ because of consent, attribution and session rules; use GA4 for relative comparison between channels and pages, not for the order count.",
+    "conditions": "Shopify or other stores sending ecommerce events to GA4 with purchase marked as a key event; applies to the standard Traffic acquisition and Landing page reports.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "1.7% purchase conversion rate over 28 days in the presenter's store"
+    ],
+    "asks": [
+      "How do I see conversion rate per product page in Google Analytics 4?",
+      "Our GA4 conversion rate looks way higher than Shopify's, why?",
+      "What does session key event rate actually measure?",
+      "How do I get conversion rate by traffic source in GA4?",
+      "Which GA4 report shows which landing pages actually sell?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0054",
+    "evidence": {
+      "where": "traffic acquisition customisation and landing pages report sections"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0003",
+    "modules": [
+      "MEA",
+      "SET"
+    ],
+    "topics": [
+      "event contracts",
+      "UTM integrity"
+    ],
+    "claim": "On every new GA4 property, change event data retention from 2 to 14 months on day one and activate the internal-traffic filter; neither fix applies to data already collected.",
+    "body": "GA4 ships with defaults that quietly cost data. Data retention: the default event retention is 2 months, which limits explorations (free-form tables, path and funnel explorations) to the last 2 months; standard reports are not affected. Switch it to 14 months, the maximum on free GA4, immediately, because the change is not retroactive. Internal traffic: defining an internal traffic rule (for example, IP address equals the office's static IP) is not enough. The matching data filter is created in a testing state; you must go to data filters and activate it, otherwise staff visits still land in reports. This only works where staff IPs are static. Cross-domain journeys: if visitors move between domains in one journey (main site to a separate checkout or booking domain), use one property and list every domain in the tag settings' configure-your-domains field so the session and source carry across; separate properties per domain only when journeys are independent. Patience after changes: new events and custom dimensions take 24 to 48 hours to be fully processed, and acquisition reports stay inaccurate until then, so do not judge a new setup on same-day numbers. Custom dimensions must be registered in admin before they appear in reports, and event names should use lowercase and underscores.",
+    "conditions": "Any store using GA4 (free tier); internal filter only where staff have static IPs; cross-domain only when the journey spans more than one domain.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "Default event data retention 2 months; free GA4 max 14 months",
+      "Processing lag 24 to 48 hours for new events and dimensions"
+    ],
+    "asks": [
+      "What GA4 settings should I change right after setup?",
+      "My GA4 explorations only show the last two months. How do I get more?",
+      "How do I stop my team's visits from counting in GA4?",
+      "Our store checkout is on a different domain. Do we need two GA4 properties?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0055",
+    "evidence": {
+      "where": "Final section 'five things you should configure'; event-tracking section on processing delay",
+      "quote": "change event data retention from 2 months to 14 months"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0004",
+    "modules": [
+      "MEA"
+    ],
+    "topics": [
+      "event contracts",
+      "attribution windows and restatement"
+    ],
+    "claim": "Raising GA4's session timeout from 30 minutes to 4 hours or the 7h55m maximum cuts '(not set)' landing pages but merges visits, lowering session counts and conversion-rate comparability.",
+    "body": "GA4's default session timeout is 30 minutes. This practitioner extends it to at least 4 hours, often the maximum of 7 hours 55 minutes, in the web data stream's tag settings (adjust session timeout). The benefit he claims: fewer sessions that restart mid-visit, so fewer '(not set)' landing pages. The cost he names: a shopper who visits twice in an afternoon is counted as one long session, so total sessions fall and session-based conversion rate rises. He flags it as personal preference that some analysts reject. He also raises the engaged-session timer from the default 10 seconds to 30 seconds or more, since 10 seconds on a site is not real engagement; this lowers the engagement rate and changes any benchmark built on it. How to apply: decide before the store accumulates history; if you change it on a live property, annotate the date and do not compare sessions, conversion rate or engagement rate across the change. Keep the same setting across all properties you compare, and tell anyone reading the reports, including ad-platform comparisons that count sessions differently. A related myth he tested and rejects: a custom event firing before the page_view does not cause '(not set)' landing pages, even though GA4's own AI advisor repeated that claim.",
+    "conditions": "GA4 web properties; stores where visitors return several times a day or browse long sessions (considered purchases).",
+    "fails_when": "When session-level benchmarks or historical comparisons matter more than landing-page completeness; when stakeholders compare GA4 sessions with other tools on default settings; mid-history changes without annotation.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Default session timeout 30 minutes; recommended 4 hours to max 7 hours 55 minutes",
+      "Engaged session threshold default 10 seconds; recommended 30 seconds or more"
+    ],
+    "asks": [
+      "Should I change the session timeout in GA4?",
+      "Why do I have so many (not set) landing pages in GA4?",
+      "Our session count dropped after an analytics change. What happened?",
+      "What should the engaged session time be in GA4?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0055",
+    "evidence": {
+      "where": "Final settings section; earlier Analytics Advisor demo on '(not set)' landing pages",
+      "quote": "I usually do at least 4 hours"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0005",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "event contracts",
+      "deduplication"
+    ],
+    "claim": "A Meta CAPI test event code left in a published tag sends real conversions to the Test Events screen instead of reporting; set it via a Debug Mode lookup.",
+    "body": "When you test a Conversions API setup, Meta's Events Manager gives you a test event code. Any server event carrying that code is shown in the Test Events screen and is not counted as a real event. The presenter says he has repeatedly forgotten to remove the code before publishing the server container, and each time live conversions and page views silently stopped counting, losing data until someone noticed. His fix in server-side Google Tag Manager: never paste the test code as a fixed value. Create a variable that is a lookup table keyed on the built-in Debug Mode variable, outputting the test code only when Debug Mode is true (preview mode) and an empty value otherwise. Reference that variable in the test ID field of every Meta CAPI tag. Published traffic then never carries the code, while preview sessions still appear in Test Events. Note that the test code can change between sessions, so update the lookup value when you return to test on another day. How to apply in an audit: after any tracking change, open the live server container and check every Meta tag's test ID field is empty or bound to Debug Mode, and compare Events Manager server event counts to orders for the following 24 hours.",
+    "conditions": "Meta Conversions API sent through server-side GTM or any setup with a manual test event code field.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Why are my Meta conversions showing up as test events?",
+      "Our CAPI events stopped counting after we published GTM, what happened?",
+      "How do I test the Conversions API without breaking live tracking?",
+      "Do I need to remove the test event code before publishing?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0057",
+    "evidence": {
+      "where": "Testing section, test event code and lookup table on Debug Mode"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0006",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "deduplication",
+      "event contracts"
+    ],
+    "claim": "In server-side GTM, Meta dedup works only if one event_id goes on the browser pixel tag and also rides the GA4 event as a parameter to the server tag.",
+    "body": "Meta recommends a redundant setup: send each event from the browser pixel and again from the Conversions API, and Meta merges the pair when both carry the same event name and event ID. In server-side GTM the server container usually does not see the browser tag directly; it receives the GA4 event stream and fires the Meta CAPI tag from it. So the ID has to travel two routes. The presenter's method: in the web container, create one event ID variable (he uses a community template; Stape's also works), set it in the Meta pixel tag's event ID field, and add it as an event parameter named event_id on the matching GA4 event tag. The Stape CAPI tag in the server container picks up that parameter and forwards it to Meta automatically. Without the GA4 parameter, the server event arrives with no or a different ID, and every conversion is counted twice. How to verify: in Events Manager Test Events, trigger a conversion, copy the browser event's ID and search for it in the server event; the IDs must match and the server event should show as deduplicated. Repeat for every event, not just page view.",
+    "conditions": "Meta pixel plus CAPI through server-side GTM fed by GA4 events (Stape or similar hosting).",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "How does Meta know my browser and server events are the same?",
+      "We send pixel and CAPI events and conversions doubled, why?",
+      "Where do I put the event ID in server-side GTM?",
+      "How do I check that deduplication is working?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0057",
+    "evidence": {
+      "where": "Step 3, deduplication with event ID"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0007",
+    "modules": [
+      "MEA",
+      "SET"
+    ],
+    "topics": [
+      "consent and tracking loss",
+      "event contracts"
+    ],
+    "claim": "With consent mode, a Meta pixel on the 'Initialization - All Pages' trigger misses the landing page view after a visitor accepts cookies; fire it on the consent update event.",
+    "body": "In client-side GTM with a cookie banner, the presenter set the Meta pixel page view tag to require ad_storage consent and fire on the Initialization - All Pages trigger. Testing showed the gap: on the landing page, initialization fires before the visitor has answered the banner, the tag is blocked by consent, and when the visitor clicks accept nothing re-fires it. The pixel then loads only from the second page onward, so single-page visits and the true landing page are never recorded, which shrinks audiences and distorts landing-page and ad-level reporting. The fix is to trigger the tag on the consent management platform's consent update data layer event, so it fires on the same page the moment consent is granted. On the server side, the matching CAPI tags should fire only when the consent variable shows ad_storage granted, so no data reaches Meta without consent. How to verify: clear your consent cookie, open preview, confirm the Meta tag is blocked before acceptance, accept, and confirm it fires on that same first page, then confirm the server tag fires for the same event.",
+    "conditions": "Sites using a consent banner with Google consent mode and a Meta pixel managed in GTM (EU, UK and other consent-required markets, or any site gating marketing tags on consent).",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Why is the first page view missing from Meta after someone accepts cookies?",
+      "Our pixel only fires from the second page, how do I fix it?",
+      "Which GTM trigger should the Meta pixel use with a cookie banner?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0057",
+    "evidence": {
+      "where": "Step 1, client-side pixel setup and consent test"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0008",
+    "modules": [
+      "MEA",
+      "CRO",
+      "LPG"
+    ],
+    "topics": [
+      "event contracts"
+    ],
+    "claim": "A typical funnel runs about 4 add-to-carts to 2 reached checkouts to 1 purchase; well-run low-ticket and FMCG stores reach about 2:1:1.",
+    "body": "Shopify's conversion funnel tile (sessions, added to cart, reached checkout, purchased) is the fastest place to spot a broken step. The practitioner's rough benchmark is a 4:2:1 ratio: for every four add-to-carts, two reach checkout and one buys. With clients they push toward 2:1:1, meaning half of carts reach checkout and almost everyone who reaches checkout buys; drop-off between checkout and purchase should be small. They report that fixing an obvious break found here (a step pushed below the fold, a non-intuitive next button) lifted conversion rate 40 to 50 percent overnight for some clients, an anecdote without a stated sample. How to apply: compute your cart-to-checkout and checkout-to-purchase ratios weekly. If cart-to-checkout is worse than 2:1, inspect the cart page and drawer on mobile; if checkout-to-purchase is far worse than 1:1, look at shipping cost reveal, payment options and checkout errors. Treat the ratios as a triage benchmark, not a target for every category.",
+    "conditions": "Shopify DTC stores, strongest for FMCG and low-ticket brands where buying decisions are quick.",
+    "fails_when": "High-ticket or considered purchases where carts are used as wish lists and more cart abandonment is normal; stores with heavy bot traffic inflating add-to-cart counts.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "4:2:1 add to cart : reached checkout : purchase as a general benchmark",
+      "2:1:1 target achieved by good clients",
+      "40 to 50% conversion rate lift from fixing a funnel break (anecdote, no sample)"
+    ],
+    "asks": [
+      "What's a normal add to cart to checkout to purchase ratio?",
+      "Lots of people add to cart but few check out, is that normal?",
+      "What funnel drop-off should I expect on Shopify?",
+      "How do I find where my checkout funnel is broken?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0058",
+    "evidence": {
+      "where": "Conversion funnel breakdown section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0009",
+    "modules": [
+      "MEA"
+    ],
+    "topics": [
+      "profit and contribution formulas"
+    ],
+    "claim": "Diagnose a revenue dip as sessions times conversion rate times AOV; a 5% AOV dip plus a 4% conversion dip compounding to about 10% is usually normal noise.",
+    "body": "Revenue (net sales plus shipping) equals sessions multiplied by conversion rate multiplied by average order value, so any drop must show in at least one of those three; the only exception is a wave of returns. When revenue falls, check each lever and ask why it moved. Sessions down usually traces to paid media: lower spend, higher CPMs or CPCs, or a shopping campaign that spent less that day. AOV down usually means the product mix shifted toward cheaper items. Conversion rate down needs a check for a real cause versus ordinary variance. The practitioner's threshold for concern: single-digit moves in two levers compound, so a roughly 5 percent AOV dip and a 4 percent conversion dip produce close to a 10 percent topline drop and are most likely natural fluctuation, not a problem to act on. Escalate when one lever moves sharply on its own or the move persists. Note the arithmetic: 0.95 times 0.96 is about 0.91.",
+    "conditions": "Day-to-day or week-to-week revenue monitoring for an ecommerce store.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "5% AOV dip plus 4% conversion dip gives about 9 to 10% topline drop, treated as noise"
+    ],
+    "asks": [
+      "Sales went down this week, how do I figure out why?",
+      "How much of a revenue dip is just normal noise?",
+      "Is a 10% revenue drop something to worry about?",
+      "What three numbers explain any change in revenue?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0058",
+    "evidence": {
+      "where": "Closing section, three metrics that matter"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0010",
+    "modules": [
+      "MEA",
+      "FIN"
+    ],
+    "topics": [
+      "profit and contribution formulas"
+    ],
+    "claim": "In Shopify, measure cash collected as Net sales plus Shipping charges; Total sales includes tax and Gross sales ignores discounts and returns.",
+    "body": "Shopify shows three sales figures and none of them is the revenue line a P&L or a profit calculation should start from. Gross sales is before checkout discounts and returns, so it counts money that was never collected. Total sales adds tax, which is a flow-through liability owed to the government, so including it overstates income and inflates any ROAS or margin built on it. Net sales removes discounts and returns, but leaves out shipping fees the customer paid at checkout, which is real cash. The practitioner's rule is therefore Net sales plus Shipping charges (formerly labelled shipping collected) as the cash-collected figure. How to apply: build any blended ROAS, MER or contribution calculation on Net sales plus Shipping charges, with tax excluded and discounts deducted; then decide separately whether to also strip returns (see the returns timing issue). Filter reports to the Online Store sales channel when judging paid media, so POS, Shop app and draft orders do not get credited to ads. Report names follow Shopify's analytics labels at the time of the video; confirm the current field names before automating.",
+    "conditions": "Shopify stores using the native Analytics sales reports for profitability or ad efficiency calculations.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "cash collected = Net sales + Shipping charges",
+      "tax excluded, discounts deducted"
+    ],
+    "asks": [
+      "Which Shopify sales number should I use as my real revenue?",
+      "Does Shopify total sales include tax?",
+      "Should I calculate ROAS on gross sales, net sales or total sales in Shopify?",
+      "What counts as cash collected in Shopify?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0058",
+    "evidence": {
+      "where": "Opening section on gross, total and net sales"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0011",
+    "modules": [
+      "MEA",
+      "CXP"
+    ],
+    "topics": [
+      "return rate",
+      "attribution windows and restatement"
+    ],
+    "claim": "Shopify books returns on the refund date, not the order date, so a strong scaling month is followed by a false revenue dip when its returns land.",
+    "body": "Refunds appear in Shopify sales-over-time on the day they are processed. If a brand ramps ad spend and has a big month, a share of those orders comes back the following month, which then shows lower net sales, a higher blended CAC and an apparent ad decline that is really delayed returns from the previous month. The source's example is fashion, where around 20 percent of a big month's orders were returned for sizing or expectation reasons. Marketing decisions made off that dip (cutting spend, blaming creative) are made on bad data. How to apply: for high-return categories, report marketing efficiency on sales with returns separated out, and attribute returns back to the order month (a cohort view) when judging whether a month's acquisition was profitable. Keep a separate return-rate line so the return cost is still counted in profit, just not mistimed. For low-return categories, the distortion is small and net sales is fine.",
+    "conditions": "Categories with high return rates (apparel and footwear especially) and periods with sharp month-to-month spend changes.",
+    "fails_when": "Low-return categories such as consumables, where the refund-date timing barely moves the monthly numbers.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 20% of a big month's fashion orders returned the following month in the example"
+    ],
+    "asks": [
+      "Revenue dropped the month after our best month, is it the ads?",
+      "How does Shopify record refunds and returns in sales reports?",
+      "Our fashion brand had a huge month then a dip, could it be returns?",
+      "Should I take returns out when I judge ad performance?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0058",
+    "evidence": {
+      "where": "Sales section, discussion of returns"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "MEA-0012",
+    "modules": [
+      "MEA",
+      "SEC"
+    ],
+    "topics": [
+      "UTM integrity"
+    ],
+    "claim": "Shopify session counts include bot traffic that GA4 filters, so Shopify sessions run higher and Shopify conversion rate lower; cross-check sessions in GA4 before reading a drop.",
+    "body": "Shopify's sessions-over-time does not filter bot traffic the way Google Analytics does, so its session count is usually higher than GA4's and its conversion rate correspondingly lower. A sudden conversion-rate dip on one day may simply be a bot spike inflating sessions, not a site or traffic-quality problem. How to apply: compute conversion rate from both sources and compare the trend, not just the level. When Shopify sessions jump but GA4 does not, open the sessions-by-location report and sort by city; a spike from one city often points to a server repeatedly hitting the site, which can be excluded. Only treat a conversion-rate change as real when it shows in the bot-filtered source too. Also ignore Shopify's marketing attribution and social-referral sales tiles for decisions; the practitioner considers them too inaccurate to steer spend.",
+    "conditions": "Shopify stores diagnosing conversion-rate or traffic changes from native analytics.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Why does Shopify show more sessions than Google Analytics?",
+      "Our conversion rate tanked for one day, could it be bots?",
+      "How do I find bot traffic in Shopify analytics?",
+      "Should I trust Shopify's sales attributed to marketing report?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0058",
+    "evidence": {
+      "where": "Sessions over time and sessions by location sections"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0013",
+    "modules": [
+      "MEA"
+    ],
+    "topics": [
+      "profit and contribution formulas"
+    ],
+    "claim": "Shopify's dashboard AOV is gross sales minus discounts divided by orders and excludes shipping charges, so it understates order value when shipping is charged.",
+    "body": "Shopify's average order value tile divides gross sales minus discounts by order count. Shipping fees collected at checkout are not in it. For a brand that charges for shipping, that hides real cash per order: in the source's client example shipping was about 7 to 8 percent of revenue, so the true AOV was roughly 7 percent higher than displayed. It also means switching to free shipping, or adding a shipping charge, does not move the AOV figure even though cash per order changes. The tile is also a mean, not a median, so a few large orders can move it without the typical basket changing. How to apply: when comparing AOV across periods or testing shipping thresholds, compute your own AOV as (net sales plus shipping charges) divided by orders, and look at the distribution, new versus returning AOV and the product paths behind order value bands before acting. Do not make decisions from the single tile.",
+    "conditions": "Shopify stores that charge shipping at checkout or are testing free-shipping thresholds.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "shipping about 7 to 8% of revenue in the client example",
+      "true AOV about 7% higher than the Shopify tile in that example"
+    ],
+    "asks": [
+      "Why is Shopify's AOV lower than what I calculate?",
+      "Does Shopify average order value include shipping?",
+      "We switched to free shipping and AOV didn't change, why?",
+      "How should I calculate AOV properly for my store?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0058",
+    "evidence": {
+      "where": "Average order value section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0014",
+    "modules": [
+      "MEA",
+      "CXP"
+    ],
+    "topics": [
+      "return rate"
+    ],
+    "claim": "Shopify's returning customer rate measures returning orders relative to new ones in the window, so it rises when acquisition slows and falls when scaling; use cohort analysis instead.",
+    "body": "The dashboard tile shows the share of orders in the selected period that came from customers who had bought before. It does not measure how many customers come back. Because new-customer orders are the denominator's other half, the figure swings with acquisition: cut ad spend and fewer new orders arrive, so the rate looks better; scale acquisition quickly and the rate drops even if loyalty is unchanged. It says nothing about lifetime revenue or profit per customer. How to apply: never read this tile as a loyalty or retention signal and never set a target on it. Open the Shopify cohort analysis report (the dashboard snapshot is not useful, the full report is) and track, per acquisition month, the share of customers who reorder and the revenue per customer at 30, 60, 90 days and beyond. Compare cohorts acquired at different spend levels before concluding retention changed.",
+    "conditions": "Any Shopify store interpreting retention or loyalty from the native dashboard.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Is Shopify's returning customer rate a good measure of loyalty?",
+      "Our returning customer rate jumped when we cut ad spend, why?",
+      "How do I actually measure repeat purchase on Shopify?",
+      "Why does returning customer rate drop when we scale?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0058",
+    "evidence": {
+      "where": "Returning customer rate section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0015",
+    "modules": [
+      "MEA",
+      "CRO"
+    ],
+    "topics": [
+      "UTM integrity",
+      "common invalidations"
+    ],
+    "claim": "Blended conversion rate falls as cold spend scales (cold 1%, warm 4%, blended 2.8% in the example), so track revenue or contribution per visitor with corrected Shopify inputs.",
+    "body": "Conversion rate is a mix of traffic types. In the presenter's example, cold Meta traffic converts at 1%, warm high-intent traffic at 4%, and the blended store rate is 2.8%. Turn Meta off and the rate jumps toward 4% while revenue collapses; scale cold spend and the rate slides toward 1% even if the page has not changed. That is why big brands often have low conversion rates, and why one store's 9% rate on $45 to $55 orders can be worse business than another's 1% at $200 million revenue and 50% contribution margin. Use revenue per visitor (conversion rate times AOV) or, better, contribution per visitor (times gross margin %), and trend it over long periods; he tracks 2.5 years. Fix the Shopify inputs first: total sales includes tax, so use net sales plus shipping collected; Shopify's AOV excludes shipping collected, which is real revenue, so add it back; Shopify sessions include more bot traffic than GA4, so use GA4 sessions for the denominator. Also watch returning-customer share, which lifts both conversion rate and AOV. Segment conversion rate by new versus returning and by channel before reading any change as a page effect.",
+    "conditions": "Shopify stores using paid social for acquisition; any brand comparing conversion rate across periods with changing spend mix.",
+    "fails_when": "Stores with a stable traffic mix and little paid cold traffic, where blended conversion rate is a fair proxy; GA4 may undercount sessions under consent-mode loss, so check both sources.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "cold Meta 1%, warm 4%, blended 2.8% (example)",
+      "store A 9% conversion at $45 to $55 AOV versus store B 1% at $200 million revenue, 50% contribution margin",
+      "RPV trended over 2.5 years",
+      "RPV = conversion rate x AOV; contribution per visitor = RPV x gross margin %"
+    ],
+    "asks": [
+      "Why does our conversion rate drop when we spend more on Facebook?",
+      "Is conversion rate the right number to track?",
+      "How do I calculate revenue per visitor in Shopify?",
+      "Shopify sessions look too high, which number should I trust?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0101",
+    "evidence": {
+      "where": "Opening section on whether conversion rate matters; Shopify metric corrections"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0016",
+    "modules": [
+      "MEA",
+      "GAD"
+    ],
+    "topics": [
+      "event contracts",
+      "match quality"
+    ],
+    "claim": "Send Google Ads the real order revenue per purchase (ideally margin-adjusted), not a fixed value, with enhanced conversions on; server-side tagging becomes standard above about $50k/month spend.",
+    "body": "Target ROAS and Maximize Conversion Value can only optimise towards the values they receive. Reporting the same fixed value for every purchase tells the algorithm a $20 order equals a $200 order, which actively degrades bidding. The compilation's tracking requirements before scaling: purchase conversions carrying actual order revenue (state clearly whether discounts, tax and shipping are included; it suggests margin-adjusted values where possible), dynamic remarketing parameters (product ID, category, value) on the tags, and enhanced conversions sending hashed email, phone and address from checkout to improve match rates, which matters most for ecommerce accounts with modest purchase volume. It reports that from June 2026 enhanced conversions for web and leads became one on or off setting and that from April 2026 Google accepts user-provided data from tags, Data Manager and API at the same time. Server-side Google Tag Manager (hosted on Google Cloud, Stape or similar) improves page speed and tracking durability and lets you enrich values with back-end data; it is described as the default above roughly $50,000 a month in spend. How to apply: place a test order, check the value received in Google Ads matches your chosen revenue definition, and confirm enhanced conversions show as active.",
+    "conditions": "Ecommerce Google Ads accounts using value-based Smart Bidding; settings dates should be re-checked in Google Ads Help.",
+    "fails_when": "Margin-adjusted values need reliable per-SKU COGS; sending wrong margins misleads bidding worse than revenue. Server-side tagging costs and maintenance may not pay below roughly $50k a month.",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [
+      "server-side GTM default above about $50k/month spend",
+      "enhanced conversions unified switch June 2026; multi-source user data April 2026"
+    ],
+    "asks": [
+      "What conversion value should I send to Google Ads?",
+      "Do I need server-side tracking for Google Ads?",
+      "Should I turn on enhanced conversions for my store?",
+      "Our Google Ads purchases all show the same value, is that a problem?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0130",
+    "evidence": {
+      "where": "Sections 3.5 to 3.7, tracking"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0017",
+    "modules": [
+      "MEA",
+      "GAD"
+    ],
+    "topics": [
+      "event contracts",
+      "deduplication"
+    ],
+    "claim": "Use one primary purchase conversion action in Google Ads; GA4-imported purchases as the primary undercount by about 20% versus the Shopify or GTM tag, and two primaries double-count.",
+    "body": "Devine ranks the conversion-setup errors he finds in audits. Worst: two primary purchase actions (for example the Shopify app's purchase plus a GTM or GA4 purchase), which counts each order twice and teaches smart bidding that results are better than they are. Second: using the GA4 import as the primary purchase action; in his experience GA4 records roughly 20% fewer Google Ads conversions than the native Google Ads tag fired from the Shopify Google channel or GTM, so the algorithm has less data and bids worse. Third: add to cart, begin checkout or other micro-conversions set as primary. For ecommerce the only primary goal should be purchase; keep the rest as secondary for reporting. His one exception is very high-ticket products ($10,000 to $15,000) that only get 8 to 20 purchases a month, where optimising toward add to cart and remarketing hard can make sense. How to apply: in Goals, list every action marked primary, keep exactly one purchase action with transaction value, set everything else to secondary, and compare Google Ads purchases with platform orders over a week to check you are near, not double, the true number.",
+    "conditions": "Ecommerce Google Ads accounts, especially Shopify stores that installed both the Google channel app and GA4 or GTM tags.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "GA4 import undercounts by about 20% vs native tag (practitioner estimate)",
+      "micro-conversion exception: $10,000 to $15,000 products with 8 to 20 purchases a month"
+    ],
+    "asks": [
+      "Should I import GA4 purchases into Google Ads?",
+      "Why does Google Ads show double the purchases Shopify does?",
+      "Which conversion actions should be primary in Google Ads?",
+      "Should I optimise Google Ads for add to cart?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0133",
+    "evidence": {
+      "where": "Conversion tracking module, common conversion setup mistakes"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0018",
+    "modules": [
+      "MEA",
+      "GAD",
+      "ADC"
+    ],
+    "topics": [
+      "incrementality and holdouts",
+      "profit and contribution formulas"
+    ],
+    "claim": "Diagnose a revenue drop top-down: change history, cross-channel check weighted by spend share, revenue = conversion rate x AOV x sessions, then the top 5 campaigns by spend.",
+    "body": "Blue Sense Digital's order of investigation stops teams from tweaking the wrong platform. First, read change history so you are not diagnosing your own recent edits or a client's. Second, cross-channel check: weight suspicion by spend share. If 90% of spend is on Meta, a revenue dip is almost certainly not Google; the agency says 80 to 90% of brands it sees are Meta-heavy and that Google at 20 to 30% of spend is rarely the cause, being the steadier platform. Ask what changed elsewhere: a sale ended, a Meta creative refresh, an offer change, a broken site. Third, split revenue into conversion rate x AOV x sessions and find which moved: conversion rate points to the site or offer, sessions to traffic sources, AOV to product mix or upsell changes. Fourth, confirm the dip shows in real business KPIs (revenue, contribution, MER) and not only in attributed numbers, and compare against the seasonal forecast. Only then open the platform: 90 to 180 days, weekly view, cycle through cost, conversions, value, CPA, ROAS and CTR, and find the inflection date. Look only at the top five campaigns by spend; a campaign holding 10% of budget could double and move the account about 5%. Act only when you can state metric, sub-metric, trigger and root cause.",
+    "conditions": "Multi-channel DTC brands with Meta and Google spend; diagnosing a material drop in business-level revenue or efficiency.",
+    "fails_when": "Single-channel accounts where the cross-channel step adds nothing; a small campaign that is the brand's only new-customer source; when attributed and business numbers are both broken (tracking outage) and must be fixed first.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "80 to 90% of audited brands skew spend to Meta",
+      "Google at 20 to 30% of spend rarely the cause",
+      "look back 90 to 180 days, weekly view",
+      "only top 5 campaigns by spend; a 10%-budget campaign doubling moves the account ~5%"
+    ],
+    "asks": [
+      "our revenue dropped, where do I start looking",
+      "how do I figure out if Google or Meta caused a sales drop",
+      "what is the right order to troubleshoot an ad account",
+      "is it worth fixing a small campaign that dropped"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0137",
+    "evidence": {
+      "where": "Level one business signal; levels two and three account drill-down"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0019",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "profit and contribution formulas"
+    ],
+    "claim": "CAC equals CPC divided by conversion rate, which sets a hard floor: $0.70 CPC at a best-case 3% gives $23; a realistic $1 at 2% gives $50.",
+    "body": "Before promising a lower CAC, bound it. CAC equals cost per click divided by site conversion rate for paid visitors. Take the lowest CPC you would accept before traffic quality collapses and the highest conversion rate the brand could realistically reach; the presenter's example is $0.70 and 3%, giving a $23 floor. Then take what the brand actually achieves on a good day, here $1 CPC and 2% conversion, giving $50. That band ($23 best case, about $50 realistic) is where forecasting and planning should sit. The presenter notes that inexperienced operators usually overestimate how far they can push CAC down through better ads or media buying, and underestimate how far they can push lifetime gross profit up through front-end offers, bundles, subscriptions and retention. So when the LTGP:CAC ratio is off target, size both levers with real bounds before choosing which to work on. CPC on its own is a weak signal except at the extremes: very high is bad, very low usually means poor traffic. Use new-customer conversion rate where you can separate it, since returning visitors inflate blended rates.",
+    "conditions": "Paid acquisition through click-based channels (Meta, Google); brands planning budgets or judging agency CAC promises.",
+    "fails_when": "Channels where purchases happen without a site click (marketplaces, TikTok Shop in-app checkout, view-through conversions), or where blended conversion rate includes returning customers.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "floor example: $0.70 CPC / 3% conversion = about $23 CAC",
+      "realistic example: $1 CPC / 2% conversion = $50 CAC"
+    ],
+    "asks": [
+      "How low can our customer acquisition cost realistically go?",
+      "Our agency promises half the CAC, is that possible?",
+      "How do CPC and conversion rate set CAC?",
+      "Should we work on lowering CAC or raising customer value?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0192",
+    "evidence": {
+      "where": "Measurement section: LTGP:CAC levers and CAC floor equation"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "MEA-0020",
+    "modules": [
+      "MEA",
+      "FIN"
+    ],
+    "topics": [
+      "profit and contribution formulas",
+      "return rate"
+    ],
+    "claim": "Set CAC targets from time-bound lifetime gross profit: 30-day LTGP (90-day for high-repeat categories) divided by a target LTGP:CAC of 2 to 3, with refunds deducted in LTGP.",
+    "body": "Define LTGP on a fixed horizon, never 'lifetime'. Day-0 LTGP equals new-customer AOV minus COGS, minus cost of delivery (shipping, fulfilment, 3PL pick and pack), minus transaction fees, minus refunds. Put refunds on the LTGP side, not in CAC: refund rate reflects product quality, and if it inflates CAC the media team will start changing ads to fix a product problem. Build 30, 90, 180 and 365-day LTGP from real order-level cohort data, not AOV times an assumed margin, because the starting base shifts with AOV and discounting. Then choose a ratio band: below 1 loses money within the horizon; 1 to 2 is inefficient and needs very lean operations; 2 to 3 is where the presenter scales clients; above 3 leaves growth unclaimed. CAC target equals LTGP divided by the ratio. Example: 30-day LTGP $80 divided by 2 gives a $40 CAC target; using 90-day LTGP of $100 gives $50, 25% more room. Only use the longer horizon if the extra spend actually buys many more new customers and you have the cash; for most brands under $15 to $20 million a year he recommends 30-day LTGP, or 90-day for supplements, CPG and high-repeat fashion.",
+    "conditions": "DTC brands buying customers with paid media and able to pull cohort gross profit by order; currency and tax rules local to the brand.",
+    "fails_when": "Brands with heavy debt or investor-funded growth modelled on long paybacks (needs full financial modelling of interest); products with almost no repeat, where 30 and 90-day LTGP equal first-order profit.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "LTGP:CAC bands: below 1, 1 to 2, 2 to 3 (scaling target), above 3",
+      "example 30-day LTGP $80 / 2 = $40 CAC; 90-day LTGP $100 / 2 = $50 CAC (+25%)",
+      "30-day horizon recommended for most brands under $15 to $20 million a year; 90-day for CPG, supplements, high-repeat fashion",
+      "cohort horizons 30, 60, 90, 180, 365 days"
+    ],
+    "asks": [
+      "How do I set a target CAC for Facebook ads?",
+      "Should refunds count in CAC or in customer value?",
+      "What LTV to CAC ratio should we aim for?",
+      "Should I use 30-day or 90-day LTV to set ad targets?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0192",
+    "evidence": {
+      "where": "Measurement section: CAC definition, LTGP components, ratio bands and back-propagating CAC"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0021",
+    "modules": [
+      "MEA",
+      "CXP"
+    ],
+    "topics": [
+      "profit and contribution formulas"
+    ],
+    "claim": "Shopify's 'returning customer rate' is returning orders divided by all orders, not repeat rate; it rises as the brand ages and when new-customer acquisition weakens.",
+    "body": "The metric at the top of Shopify analytics shows the share of orders in a period that came from returning customers. Many owners read it as repeat rate, but it is driven by two things unrelated to retention quality. First, business age: an older brand has a larger past customer base, so a bigger share of today's orders naturally comes from returning buyers. Second, acquisition strength: if you acquire fewer first-time customers this period, the returning share goes up even though nothing improved. Using it as a retention KPI therefore rewards acquiring fewer customers. Use cohort metrics instead: first-to-second order conversion (the share of first-time buyers who place a second order within a set window), and time-bound lifetime gross profit per cohort at 30, 90, 180 and 365 days. The presenter only uses the returning-customer share to split sale-period results between new and existing customers. Pair this with the fact quoted in the source that most brands see more than 80% of customers never buy a second time, which the share metric hides.",
+    "conditions": "Shopify stores, or any platform reporting returning-customer share of orders.",
+    "fails_when": "Not a retention measure in any setting; it only describes order mix in the period.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "more than 80% of customers never buy twice at most brands (presenter claim)",
+      "cohort horizons 30, 90, 180, 365 days"
+    ],
+    "asks": [
+      "Is Shopify's returning customer rate my repeat purchase rate?",
+      "Our returning customer percentage went up, is retention improving?",
+      "How should I measure customer retention?",
+      "What metric shows whether first-time buyers come back?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0192",
+    "evidence": {
+      "where": "Measurement section opening: percentage of returning customers"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0022",
+    "modules": [
+      "MEA",
+      "FIN"
+    ],
+    "topics": [
+      "forecasting and budgeting",
+      "profit and contribution formulas"
+    ],
+    "claim": "Forecast returning-customer revenue from cohort decay (each cohort's size x repeat rate at its age x returning AOV), about 10% accurate, near 1-2% with seasonality and events added.",
+    "body": "New and returning customer revenue must be forecast separately because different inputs drive them: new-customer revenue mainly by marketing spend; returning revenue by product launches, promotions, email and SMS and the natural decay of past cohorts. Returning revenue: take every monthly acquisition cohort back to launch; from cohort analysis, find the repeat rate at each age (for example 7% in month one, 6%, 4%, 2%, 1%, flattening to around 0.1% by month 32); multiply each cohort's size by the repeat rate for the age it reaches next month and by returning-customer AOV; sum across cohorts. That alone is typically within about 10%; applying a three-year average seasonality factor and adding expected revenue from planned events not present last year brings it to around 1 to 2%. New-customer revenue: plot a year of daily acquisition MER against daily spend, remove sale periods, Black Friday and November, and days below your minimum realistic spend, then fit a linear or logarithmic curve; read off the efficiency expected at each spend level. Work backwards from the target: if hitting the board's number requires efficiency the curve says is impossible, the gap must be filled by a named new input (launch, channel, event, much more creative), not optimism.",
+    "conditions": "DTC brands with at least 12 months of cohort and daily spend data; Shopify or BI cohort reports.",
+    "fails_when": "Young brands with few cohorts or volatile acquisition, where decay curves are unreliable; major changes in pricing, product mix or channel that break the historical spend-efficiency curve.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "example repeat decay 7%, 6%, 4%, 2%, 1% ... ~0.1% by month 32",
+      "accuracy about 10% from cohorts alone; 1-2% with seasonality and events"
+    ],
+    "asks": [
+      "How do I forecast revenue for my ecommerce store?",
+      "How can I predict returning customer revenue next month?",
+      "How much new customer revenue can I expect if I raise ad spend?",
+      "Why should new and returning revenue be forecast separately?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0202",
+    "evidence": {
+      "where": "Putting it all together: forecasting section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0023",
+    "modules": [
+      "MEA",
+      "FIN"
+    ],
+    "topics": [
+      "profit and contribution formulas",
+      "landed cost",
+      "return rate"
+    ],
+    "claim": "Product margin is not gross margin: a $100 tee with a $30 unit cost reads 70%, but after tax, freight-in, shipping, pick-pack, fees and allowances true gross margin was 24%.",
+    "body": "Brands often quote gross margin as price minus the factory unit cost, which is product margin (sometimes called CM1). True gross margin (CM2) subtracts every variable cost of delivering the order. The speaker's worked example on a $100 t-shirt with a $30 purchase-order cost: remove $9 of sales tax included in the price (a pass-through, not revenue); add about $4 per unit of inbound freight and duties spread across the PO; $11 average shipping to the customer; $4 pick-and-pack; $3 payment transaction fees (3%); and a $15 allowance for refunds and discounts (about 10% refunds, standard in fashion where returns range from 10% to as high as 80%, plus about $5 of average discount). Total cost of delivery reaches $76, so gross margin is 24%, not 70%. The difference matters because marketing budgets are set from gross margin: at 70% a brand might spend 20-25% of revenue on ads; at 24% that spend loses money. Two classification rules: payment fees belong in cost of delivery, not operating expenses, because they vary with revenue; and warehouse staff who pick and pack should be converted to a per-order cost (for example $400 a day divided by 100 orders = $4 an order) and moved into cost of delivery.",
+    "conditions": "DTC brands with outbound shipping, returns and payment fees; especially fashion and other high-return categories.",
+    "fails_when": "Not a conditional claim in substance, but the size of the gap varies: high-ticket, low-return products with buyer-paid shipping see much smaller differences; tax treatment (inclusive vs exclusive pricing) depends on market.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "$100 tee: $30 unit cost (70% product margin) -> $76 cost of delivery -> 24% gross margin",
+      "shipping $11, pick-pack $4, fees $3 (3%), freight-in $4, tax $9, refund/discount allowance $15",
+      "fashion return rates 10% to 80%",
+      "warehouse labour example $400/day / 100 orders = $4 per order"
+    ],
+    "asks": [
+      "How do I calculate my real gross margin?",
+      "Our margin is 70% on paper but we're not making money, why?",
+      "Should payment processing fees go in COGS or operating expenses?",
+      "What costs should be included in cost of goods for an online store?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0202",
+    "evidence": {
+      "where": "P&L section, product margin vs gross margin worked example"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "MEA-0024",
+    "modules": [
+      "MEA",
+      "FIN",
+      "ADC"
+    ],
+    "topics": [
+      "profit and contribution formulas",
+      "incrementality and holdouts"
+    ],
+    "claim": "Read acquisition on 30- and 90-day gross profit per customer over CAC: under 1 loses money, 1-2 needs proven retention, 2-3 is the zone to scale, above 3 means underspending.",
+    "body": "CAC (total ad spend divided by new customers in the period, not platform CPA) means nothing without its pair: gross profit from the customer. The speaker's preferred metric is lifetime gross profit to CAC, but time-boxed, because unrestricted LTV keeps rising for years and justifies overspending cash you will not recover for a long time. Measure it on 30-day and 90-day gross profit (365 days only for very aggressive acquisition), using gross profit not revenue, and new-customer order values, which are usually lower than blended AOV because returning customers buy more and new-customer offers carry discounts. Bands: below 1, you lose money on acquisition; most brands claiming LTV justifies it lack the retention to back it, so treat it as an efficiency problem. 1 to 2: viable only with genuinely strong retention (often CPG) or funded aggressive growth. 2 to 3: the optimal zone; scale budgets. Above 3: you are leaving growth on the table and should spend more. Quick target: divide first-order gross profit by 2 to get the CAC ceiling for the bottom of the optimal band ($100 gross profit -> $50 CAC). A first-order gross profit below about $70 makes scaled paid acquisition hard.",
+    "conditions": "Paid-acquisition DTC brands with clean new-customer data (Shopify new vs returning) and true gross margin.",
+    "fails_when": "Subscription or high-repeat CPG brands with proven cohort retention can scale profitably at 1-2 on 30 days; very high-ticket single-purchase products may sit above 3 on first order and still be capacity-limited, not underspending.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "bands: <1 losing, 1-2 conditional, 2-3 optimal, >3 underspending (30- and 90-day)",
+      "CAC ceiling = first-order gross profit / 2 ($100 -> $50)",
+      "first-order gross profit under about $70 limits paid scale"
+    ],
+    "asks": [
+      "What is a good LTV to CAC ratio for ecommerce?",
+      "How much can I afford to pay to acquire a customer?",
+      "Should I measure LTV over 30, 90 or 365 days?",
+      "Our CAC is higher than first-order profit, is that okay?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0202",
+    "evidence": {
+      "where": "Metrics section, LTGP to CAC benchmarks"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0025",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "attribution windows and restatement",
+      "incrementality and holdouts"
+    ],
+    "claim": "Track acquisition MER (new-customer revenue / ad spend), not blended MER; Meta 7-day-click ROAS without view-through usually tracks aMER closely, so use it for in-platform reads.",
+    "body": "Blended MER (total revenue divided by ad spend) lets paid media take credit for returning customers who would have bought anyway; in one example a blended MER of 2 became 1.4 once only new-customer revenue counted, which may be unprofitable. The speaker calls acquisition MER (aMER), alongside CAC and new-customer profit contribution, finance-grade: slower to read than platform ROAS but not dependent on attribution. Platform ROAS stays useful for comparing campaigns inside one platform, never across platforms, because bottom-of-funnel channels (branded search, retargeting) always look best and top-of-funnel channels look worst; he cites large retail accounts where TikTok spend raised Meta and Google ROAS while TikTok's own ROAS looked poor, so cutting TikTok on its ROAS would remove the demand the others harvest. For Meta, report and optimise on 7-day click without view-through: view-through credits people who saw an ad, did not click and bought within a day, many of them existing customers, and in most accounts he audits 7-day-click ROAS correlates closely with aMER. Verify any reallocation with controlled geo tests, which need proper data-science design; simple state-doubling spreadsheets usually give misleading answers.",
+    "conditions": "DTC brands running paid social and search with Shopify new vs returning customer data; Meta attribution settings as of recording.",
+    "fails_when": "Brands with long consideration cycles where view-through and longer windows capture real influence; very small accounts where daily aMER is too noisy, so read it weekly or monthly.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "example blended MER 2.0 vs aMER 1.4",
+      "Meta reporting: 7-day click, no view-through (1-day view excluded)"
+    ],
+    "asks": [
+      "What is acquisition MER and how is it different from MER?",
+      "Should I use 7-day click or 1-day view on Meta?",
+      "Why does Google look so much better than TikTok in our reports?",
+      "Which metric should I use to judge if our ads are working?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0202",
+    "evidence": {
+      "where": "Metrics pyramid section and attribution notes"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0026",
+    "modules": [
+      "MEA",
+      "FIN"
+    ],
+    "topics": [
+      "profit and contribution formulas",
+      "forecasting and budgeting"
+    ],
+    "claim": "Aim for first-order contribution margin at or above CAC; if CM:CAC and LTV:CAC are both below 1 while scaling, stop scaling and fix unit economics.",
+    "body": "Definitions in this model: contribution margin per order is net revenue minus product cost (manufacture, inbound freight, duties) minus fulfilment cost (pick, pack, packaging, 3PL fees, shipping); LTV is contribution margin per order times lifetime orders. Benchmarks from his worked apparel example in the healthy path: launch with a CM to CAC ratio around 1 (break even on the first order); early stage CAC $68, order value $134, CM to CAC about 1 and LTV to CAC 1.6; growth stage CM to CAC 1.4 and LTV to CAC near 4; late stage CAC $48, order value $162, 65% contribution margin, 3.1 lifetime orders, CM to CAC 2.1 and LTV to CAC 6.7. In the unhealthy path CAC climbs ($79 to $123 to $149), lifetime orders stay around 1.2 to 1.8, and the ratios sit at 0.58 to 0.6 on the first order and 0.87 to 1.0 over the lifetime, yet the company keeps raising money to scale. An LTV to CAC of 1 is not break-even for the business, because nothing is left for operating costs. Brands with many repeat orders can accept a first-order ratio below 1; mostly one-time-purchase categories such as apparel cannot.",
+    "conditions": "DTC ecommerce from launch through scale; ratios assume CAC is blended first-order acquisition cost.",
+    "fails_when": "High-repeat consumables or subscriptions with proven retention, which can rationally lose money on the first order; very early launch data skewed by friends and organic buyers.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "target first-order CM:CAC of 1 or more",
+      "healthy path: LTV:CAC 1.6 early, about 4 growth, 6.7 late",
+      "late stage example: CAC $48, AOV $162, 65% CM, 3.1 lifetime orders",
+      "unhealthy path: CM:CAC 0.58 to 0.6, LTV:CAC 0.87 to 1.0"
+    ],
+    "asks": [
+      "What LTV to CAC ratio should my store have?",
+      "Should I be profitable on the first order?",
+      "Our CAC keeps rising as we scale, when should we stop spending?",
+      "What is a good contribution margin to CAC ratio for an ecommerce brand?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0203",
+    "evidence": {
+      "where": "How ecommerce unit economics should evolve over the life cycle video, optimal and sub-optimal scenarios"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "MEA-0027",
+    "modules": [
+      "MEA",
+      "FIN"
+    ],
+    "topics": [
+      "profit and contribution formulas"
+    ],
+    "claim": "Churn rate divides cancellations by subscribers at the start of the prior period, not the current total; average lifetime equals 1 divided by churn (25% monthly churn is 4 months).",
+    "body": "Andrews flags the most common churn error: dividing this month's cancellations by this month's total subscribers, which includes people who just joined and cannot cancel until renewal. In his example, 9 cancellations divided by the current month total gave 6%, but divided by the prior month's subscriber count it is 9%, the correct monthly churn. Always state the period (monthly versus annual churn rates are not comparable) and calculate churn by renewal cycle, since some products bill every 30, 60 or 90 days. Lifetime then follows a simple formula: average customer lifetime equals 1 divided by churn for the period. At 25% monthly churn the average subscriber stays 4 months; 20% gives 5 months, 10% gives 10 months and 5% gives 20 months. A 40% annual churn gives 2.5 years. Use the lifetime to cap what you can pay to acquire a subscriber: in his coffee example, $25 a month at 60% gross margin and 22% monthly churn (about 4.5 months average life) justified spending about $50 to acquire a customer. Cross-check with a cohort retention table, because churn often falls after the first few renewals and the simple formula then understates lifetime.",
+    "conditions": "Subscription businesses with recurring billing; any period length if stated.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "9 cancellations: 6% if divided by current total, 9% if divided by prior-period subscribers",
+      "lifetime = 1 / churn: 25% gives 4 months, 20% gives 5, 10% gives 10, 5% gives 20",
+      "40% annual churn gives 2.5 years",
+      "coffee example: $25/month, 60% margin, 22% churn, about 4.5 months, about $50 affordable CAC"
+    ],
+    "asks": [
+      "How do I calculate churn rate correctly?",
+      "How long will my average subscriber stay?",
+      "Our churn number looks low, are we calculating it wrong?",
+      "How much can I spend to acquire a subscriber?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0203",
+    "evidence": {
+      "where": "How to calculate churn rate video; subscription box model segment"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "MEA-0028",
+    "modules": [
+      "MEA"
+    ],
+    "topics": [
+      "return rate",
+      "profit and contribution formulas"
+    ],
+    "claim": "Accrue returns daily at your expected return rate on today's revenue, then reconcile monthly; Shopify books returns when processed, so January can show a false 20% return rate.",
+    "body": "Shopify and most dashboards record a return on the day it is processed, not the day the original order was placed, and teams often batch-process returns. After a big month this pushes the previous month's returns into the next one. Holiday's example: a brand with a true 10% return rate does $1,000,000 in December, so $100,000 of returns are coming. If they are processed in January, a $500,000 January appears to have a 20% return rate, and net sales and contribution margin look much worse than reality, which can trigger cuts to spend in a month that is actually healthy. The fix is a returns accrual: each day, subtract an estimate equal to your return rate times that day's gross revenue (in the December example, about $3,333 a day), then reconcile to actual processed returns at month end and update the rate. Use the accrued figure in contribution margin and marketing efficiency reporting. Keep the rate by category or SKU if return rates differ widely, and re-estimate after peak seasons, when gift buying can change behaviour.",
+    "conditions": "Brands with meaningful return rates and seasonal peaks, reporting from Shopify or similar processing-date data.",
+    "fails_when": "Return rates swing sharply with promotions or product mix, so a single blended rate misstates the accrual; very low return categories where the timing gap is immaterial.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "10% return rate on $1,000,000 December = $100,000 returns, about $3,333/day accrual",
+      "January at $500,000 shows a false 20% return rate if December returns land then"
+    ],
+    "asks": [
+      "Why does our return rate spike every January?",
+      "How should we account for returns in daily reporting?",
+      "Shopify shows returns on the wrong month, how do we fix our numbers?",
+      "What is a returns accrual?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0204",
+    "evidence": {
+      "where": "January reporting discussion, returns accrual estimation"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0029",
+    "modules": [
+      "MEA",
+      "ADC",
+      "AMZ"
+    ],
+    "topics": [
+      "incrementality and holdouts",
+      "attribution windows and restatement"
+    ],
+    "claim": "Brands also on Amazon should measure ads across site and Amazon: about 20% of Meta value lands on Amazon, and YouTube splits roughly 1:1.",
+    "body": "As brands add Amazon, Walmart and retail, the same media now produces sales in places the site's attribution cannot see. Holiday's example is Fellow, the coffee-maker brand: measured only on its own site, Meta looked worse each month as the Amazon business grew, and a brand in that position tends to cut Meta and stall the whole engine. His portfolio estimates: about 20% of Meta's created value is realised on Amazon and 80% on the website; for YouTube, especially ads watched on TV with no click, value lands roughly one to one on Amazon and the site, because viewers who remember the brand search Amazon first. The further up the funnel the channel, the closer the split moves to the category's overall Amazon share (he cites 40 to 50% of US ecommerce on Amazon, about 40% in apparel, up to 97% in commodity categories). So run incrementality tests that read lift on both the site and Amazon before judging upper-funnel channels. He also treats Amazon ads like branded search: mostly a defensive tax with low incrementality until competitors bid on your terms; Neuro gum turned off Amazon ads and its Amazon sales velocity did not drop.",
+    "conditions": "DTC brands with a meaningful Amazon or retail presence running Meta, YouTube, CTV or TikTok; US market figures.",
+    "fails_when": "The brand does not sell on Amazon or retail; or competitors are actively conquesting its brand terms on Amazon, making ads there more incremental; split estimates are portfolio averages, not a rule for every category.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 20% of Meta-created value realised on Amazon, 80% on site",
+      "YouTube value about 1:1 Amazon versus site",
+      "Amazon 40% to 50% of US ecommerce; about 40% of apparel; up to 97% in commodities such as batteries"
+    ],
+    "asks": [
+      "Our Meta ROAS is falling since we launched on Amazon, should we cut it?",
+      "How do I measure YouTube ads if people buy on Amazon?",
+      "Are Amazon ads actually incremental?",
+      "Does running Facebook ads increase our Amazon sales?"
+    ],
+    "platforms": [
+      "meta",
+      "youtube",
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "US"
+    ],
+    "mode": "dtc_first",
+    "source": "S0204",
+    "evidence": {
+      "where": "channel expansion segment (Fellow example; 'pyramid of 2026'); Neuro gum Amazon ads anecdote"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0030",
+    "modules": [
+      "MEA",
+      "FIN"
+    ],
+    "topics": [
+      "profit and contribution formulas"
+    ],
+    "claim": "Track contribution margin daily (net sales minus product, variable and ad costs) but keep fixed costs out; daily-allocated fixed costs signal cuts when spend should rise.",
+    "body": "Cash flow is the end goal, and the CEO should keep a 13-week cash flow forecast, but cash is a poor daily signal because fixed bills land on dates you choose. The closest daily proxy is contribution margin: net sales minus product cost, minus variable order costs, minus ad spend. Holiday warns against spreading fixed costs into the daily number. Example: rent of $30,000 a month becomes $1,000 a day; a day that produced $900 of contribution margin now reads as a $100 loss, and the team cuts spend. But fixed costs shrink as a share of revenue as volume grows, so if media is producing positive incremental contribution margin, the right move is often to spend more and grow away from the fixed base. Set the monthly contribution margin goal with reference to fixed costs (contribution margin minus opex equals profit), then judge each day only on whether contribution margin is on pace. Pair this with a returns accrual so daily net sales are not overstated.",
+    "conditions": "Brands running paid acquisition daily; contribution margin measured on net sales after an estimated returns accrual.",
+    "fails_when": "Incremental contribution margin from extra spend is actually negative (measured by attribution that over-credits media), in which case spending more deepens losses; or cash is so tight that fixed bills due this week must override the daily margin view.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "$30,000 monthly rent spread as $1,000/day turns a $900 contribution day into an apparent loss",
+      "13-week cash flow forecast at CEO level"
+    ],
+    "asks": [
+      "Should we track profit daily?",
+      "Our daily dashboard shows a loss so we cut ad spend, was that right?",
+      "What's the difference between contribution margin and profit?",
+      "How do I handle fixed costs in a daily profit report?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0204",
+    "evidence": {
+      "where": "discussion of daily contribution margin versus blended daily burn, and 13-week cash flow"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0031",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "attribution windows and restatement",
+      "incrementality and holdouts"
+    ],
+    "claim": "Compare acquisition MER (new-customer revenue divided by ad spend, from a first-order-only P&L) with platform ROAS; large retailers often see 3 to 7x versus 17x reported in Meta.",
+    "body": "Build a normalised P&L for the same 2 to 2.5 years: gross revenue minus refunds, returns and discounts, plus shipping collected, gives net revenue; minus COGS, shipping and fulfilment, and transaction fees gives gross margin; minus all marketing gives contribution margin (CM3). Then build the same P&L for first-time orders only by filtering out returning customers, because repeat revenue can make a weak acquisition engine look healthy, especially for large retailers. From it, acquisition MER = new-customer revenue divided by ad spend. The agency's typical finding at large retailers: aMER of about 3 to 7 (spend $100k a month, get $300k to $700k new-customer revenue) while Meta's account-wide ROAS shows about 17. The gap usually comes from spend on existing customers or one-day view attribution crediting people who would have bought anyway. Fix: in Meta, use the attribution-setting breakdown to view 7-day click, 7-day click plus 1-day engaged view, and incremental attribution; in about 95% of accounts these track aMER much more closely. Then either switch settings or always judge on those columns. On Google, compare non-brand campaigns only; on Pinterest and TikTok use 7-day click.",
+    "conditions": "Brands running Meta, Google, TikTok or Pinterest with a store backend that separates new and returning customers; most acute at large retailers with big repeat bases.",
+    "fails_when": "New-versus-returning tagging in the store is unreliable; heavy offline or wholesale sales sit outside the store data; a brand with little repeat revenue (gap is then small).",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "aMER about 3 to 7x versus Meta account ROAS about 17x at large retailers",
+      "about 95% of accounts: 7-day click or click plus engaged view tracks aMER closely",
+      "example: $100k monthly spend, $300k to $700k new-customer revenue"
+    ],
+    "asks": [
+      "Facebook says 17x ROAS but my bank account disagrees, why?",
+      "How do I check if Meta's reported ROAS is real?",
+      "What is acquisition MER and how do I calculate it?",
+      "Our Meta ROAS looks amazing but new customer revenue is flat, what's going on?"
+    ],
+    "platforms": [
+      "meta",
+      "tiktok",
+      "pinterest"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0226",
+    "evidence": {
+      "where": "Data integrity pillar, normalised P&L and platform correlation",
+      "quote": "you will see something like 17 massive discrepancy here"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0032",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "profit and contribution formulas"
+    ],
+    "claim": "Track first-purchase gross profit divided by CAC monthly: under 1 loses money, 1 to 2 is hold, 2 to 3 means scale, over 3 means you are underspending.",
+    "body": "The agency starts every audit from backend data, not ad platforms, and refuses to audit without it. Build a monthly table going back about two to two and a half years. CAC = total advertising spend divided by new customers that month (all paid channels, blended). Gross profit on first purchase = first-order average order value times gross margin percent, taken from an accrual-basis P&L, or pulled directly from Shopify if cost of goods has been recorded per product historically; do not use a flat margin assumption, because AOV and margin move over time (a $100 AOV at 60% margin two years ago is not today's $200 at 80%). Divide first-order gross profit by CAC. Their bands: below 1, you lose money on the first order and only brands with strong retention or heavy funding survive it; 1 to 2, acceptable but usually not a scaling position; 2 to 3, where you want to be, so scale; above 3, you are leaving growth on the table. Plot it with new-customer volume: rising CAC is fine if new-customer volume rises with it, a problem if volume is flat.",
+    "conditions": "DTC brands with clean new-customer counts and per-SKU COGS; bands are first-order only and assume average retention; agency works mostly with 8 and 9 figure brands.",
+    "fails_when": "Strong-retention or subscription brands can accept ratios below 1 to 2 if 90/180/365-day gross profit growth covers it; brands with weak repeat must sit higher; non-paid channels driving most new customers distort blended CAC.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "ratio under 1: losing money on first order",
+      "1 to 2: hold, scale only with strong retention",
+      "2 to 3: scale",
+      "over 3: underspending",
+      "look back 2 to 2.5 years monthly"
+    ],
+    "asks": [
+      "How do I know if I can afford to scale my ad spend?",
+      "What's a good ratio of first order profit to customer acquisition cost?",
+      "Our CAC went up but so did new customers, is that bad?",
+      "How do I calculate gross profit per first order for my store?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0226",
+    "evidence": {
+      "where": "Data integrity pillar, cohort model",
+      "quote": "two to three is really where you want to be"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0033",
+    "modules": [
+      "MEA",
+      "GAD",
+      "ADC"
+    ],
+    "topics": [
+      "incrementality and holdouts"
+    ],
+    "claim": "When platform ROAS and acquisition MER disagree, large brands run a geo-lift test of about 25 days, and test brand search inversely by switching it off in clustered states.",
+    "body": "If attribution settings are switched and platform numbers still do not line up with new-customer revenue per ad dollar, the agency proposes a test rather than arguing. For 8 and 9 figure brands this is a causal geo-lift experiment, typically about 25 days long, to check whether a platform (Meta, Google or TikTok) is driving the revenue it claims. For large retailers that believe branded search is incremental, they run the inverse: switch branded search off in a set of states chosen by a clustering algorithm so they match the remaining states, then compare, and use the result to decide whether to keep paying for brand terms. Google is the most common candidate because it often sits at the bottom of the funnel and takes credit for demand that Meta or other channels created. How to apply: run the test only after fixing data integrity and attribution settings, choose matched regions, keep everything else stable for the test window, and read the result on backend new-customer revenue, not platform-reported conversions. Duration and method are the agency's; no lift results are given.",
+    "conditions": "Brands large enough for regional splits to have statistical power (the agency applies it to 8 and 9 figure brands), selling across many regions such as US states or Australian states.",
+    "fails_when": "Small brands without enough regional volume for a 25-day read; single-region sellers; heavy promotions or seasonality during the test window.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "geo-lift test about 25 days",
+      "brand-search holdout by clustered states"
+    ],
+    "asks": [
+      "How do I test if Google or Meta ads actually drive sales?",
+      "How long should a geo lift test run?",
+      "Should we keep paying for branded search ads?",
+      "Platform ROAS and our backend numbers don't match even after changing attribution, what next?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0226",
+    "evidence": {
+      "where": "End of data integrity pillar, 'Then at the end, we have a test'",
+      "quote": "typically about a 25day duration"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0034",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "incrementality and holdouts"
+    ],
+    "claim": "Geo holdouts ending 3+ weeks before Black Friday showed about 105% post-treatment lift (Haus), fashion 93% versus CPG 30%, so measure preseason spend with a post-treatment window.",
+    "body": "A post-treatment lift is extra incremental revenue that shows up after a geo holdout ends: spend is raised in test regions, then returned to normal, and the regions keep outperforming for a while. Blue Sense Digital cites data from incrementality platform Haus: experiments that ended three or more weeks before Black Friday showed about 105% post-treatment lift; those ending closer showed about 75%; about 41% of incremental value appeared after the treatment window; delayed effects around Black Friday were nearly three times those in evergreen periods. By category, fashion and apparel showed about 93% post-treatment lift and health, wellness, food and beverage about 30%. Implication: holding budget back before the sale does not save dry powder, it shrinks the funnel the sale will harvest, and the effect is much stronger in fashion than consumables. How to apply: when you run a geo test in September to November, keep measuring for a post-treatment window of several weeks rather than reading the result the day the test ends, and weight preseason budget more heavily in fashion than CPG.",
+    "conditions": "Brands large enough to run geo holdouts; sale-driven Q4 calendar; US-style regional splits.",
+    "fails_when": "Categories with little delay between ad exposure and purchase; brands that do not run a Q4 sale; tests too small to read a post-treatment window.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 105% post-treatment lift for tests ending 3+ weeks before Black Friday",
+      "about 75% for tests ending closer",
+      "about 41% of incremental value appeared after the treatment window",
+      "delayed effects about 3x evergreen periods",
+      "fashion and apparel about 93%, health/wellness/food and beverage about 30%"
+    ],
+    "asks": [
+      "Does spending before Black Friday actually help the sale?",
+      "How long after a geo test should I keep measuring?",
+      "Is preseason ad spend more important for fashion or for consumables?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0234",
+    "evidence": {
+      "where": "Section after the attribution gap, 'Incrementality data agrees'",
+      "quote": "you aren't saving dry powder, you're actually digging a deeper hole"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "MEA-0035",
+    "modules": [
+      "MEA",
+      "FIN",
+      "ADC"
+    ],
+    "topics": [
+      "profit and contribution formulas",
+      "forecasting and budgeting"
+    ],
+    "claim": "Set a separate November CAC allowance: in a 10-brand sample, November customers showed 38.5% six-month repeat lift versus 63% for February cohorts, though 2 brands saw no gap.",
+    "body": "Customers acquired during Black Friday are often worth less over time. Blue Sense Digital averaged cohort data from 10 client brands: a November cohort delivered about 38.5% six-month repeat lift (repeat revenue growth over six months), while a February cohort delivered about 63%, nearly double. Two of the 10 brands showed no difference, so this must be checked per brand. If November cohorts are weaker, the usual CAC allowance is wrong twice: first, gross profit per order is lower because of the discount, which most brands forget to include in their CAC tolerance; second, those customers are worth less over the following year. How to apply: pull the last two years of cohort data, compare six-month repeat behaviour of November cohorts with a normal month, and if November is weaker, set a lower November CAC allowance based on discounted gross margin and the November cohort's repeat curve. If there is no gap, keep the normal tolerance. Small sample from one agency.",
+    "conditions": "DTC brands acquiring many new customers on discount in November; at least two years of cohort data.",
+    "fails_when": "Brands whose November cohorts repeat as well as others (2 of 10 in the sample); gifting-led categories where November buyers are recipients' proxies with separate behaviour; subscription offers that lock in retention.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "10-brand sample: November cohort 38.5% six-month repeat lift versus 63% for February",
+      "2 of 10 brands showed no difference"
+    ],
+    "asks": [
+      "Are Black Friday customers worth less than normal customers?",
+      "Should my CAC target be lower in November?",
+      "How do I compare November customer retention to other months?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0234",
+    "evidence": {
+      "where": "'The metric that is missing from the entire conversation is LTV to CAC'",
+      "quote": "November customers repeat ... 50% worse"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "MEA-0036",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "incrementality and holdouts"
+    ],
+    "claim": "Budget about 1% of ad spend for measurement tools (attribution, media mix modelling, incrementality tests); if they make spend 5% better they pay for themselves.",
+    "body": "Frank's rule for measurement spend: put about 1% of the ad budget into tools that tell you where the other 99% should go, such as multi-touch attribution, media mix modelling (MMM) or incrementality testing. His logic: a tool that improves allocation by even 5% returns several times its cost. Ridge uses Northbeam for creative-level attribution and runs incrementality holdouts (state-level) to test channels such as branded search and Shopping. He describes MMM as an older but still standard method for deciding allocation across channels, offered by Northbeam, Measured and others, and notes it is falling somewhat out of favour. How to apply: compute 1% of annual paid media, compare it with what you spend on attribution and testing now, and use the gap to fund one incrementality test on your most questioned channel before buying more dashboards. At small budgets the percentage gives too little to buy a real tool, so run manual geo or on-off tests instead.",
+    "conditions": "Brands spending enough on paid media that 1% funds a useful tool or test (Ridge example uses a $100M budget for illustration).",
+    "fails_when": "Small budgets where 1% buys nothing meaningful; brands that buy tools but never act on them; single-channel brands where platform lift tests suffice.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 1% of ad budget on measurement tools",
+      "break-even if tools improve spend by about 1%; 5% improvement pays several times over"
+    ],
+    "asks": [
+      "How much should I spend on attribution and measurement tools?",
+      "Is it worth paying for media mix modelling?",
+      "What percent of ad spend should go to incrementality testing?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0235",
+    "evidence": {
+      "where": "Measurement section, after the high-AOV testing question",
+      "quote": "you should spend 1% of your budget on tools"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0037",
+    "modules": [
+      "MEA",
+      "FIN"
+    ],
+    "topics": [
+      "profit and contribution formulas",
+      "landed cost"
+    ],
+    "claim": "Gross margin must be the delivered cost to the customer's door, including outbound shipping, payment processing, marketplace fees and 3PL pick-pack, not product cost against price.",
+    "body": "Frank's most common margin mistake: founders quote product margin (cost of goods $20, price $100, so '80% margin') as if it were gross margin. In public-company accounts, gross margin includes everything it costs to get the sale to the customer's door: landed product cost, outbound shipping, 3PL pick, pack and ship, small extras such as a 15-cent branded insert, payment processing and marketplace fees such as Amazon's. Yeti, with wholesale and shipping costs, reports gross margin around 51%. The host's target in the discussion was gross margin of at least 75%, which only makes sense on this delivered basis. How to apply: rebuild your margin per order with every cost from factory to doorstep, use that figure for break-even ROAS and CAC limits, and compare it with peers only after checking what they include. Also review shipping pricing: free shipping was the default for a decade, but since COVID many brands charge for shipping or rush delivery and earn margin on it.",
+    "conditions": "Any DTC or omnichannel brand computing gross margin for pricing, CAC tolerance or comparison with public companies.",
+    "fails_when": "Internal reports that deliberately separate product margin and fulfilment for operational analysis (fine if labelled); wholesale-only businesses where the retailer pays outbound shipping.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "example: $20 COGS on $100 price is 80% product margin, not gross margin",
+      "Yeti gross margin about 51%",
+      "host target gross margin at least 75% (delivered basis)",
+      "branded insert about 15 cents per order"
+    ],
+    "asks": [
+      "Should shipping be included in gross margin?",
+      "My product margin is 80%, why am I not making money?",
+      "What costs belong in true gross margin for ecommerce?",
+      "Should I charge for shipping or offer it free?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0235",
+    "evidence": {
+      "where": "Profit margin killers section",
+      "quote": "it always comes down to shipping"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0038",
+    "modules": [
+      "MEA",
+      "FIN"
+    ],
+    "topics": [
+      "profit and contribution formulas",
+      "financial reporting for lenders and investors"
+    ],
+    "claim": "When a brand cites ARR, LTV:CAC or 'cash-flow positive', ask the time window and whether it is observed or modelled; IM8's 3:1 used 36-month LTV from 20-month-old cohorts.",
+    "body": "The speaker reads IM8's shareholder letter as a case study in headline metrics that need questioning, useful whenever a brand, agency or investor presents numbers. Four checks. First, ARR is usually one month annualised: a record July times 12 flatters the next year; use a rolling window. Second, LTV:CAC needs a time horizon and an observed-versus-modelled split: IM8 states 3:1 lifetime gross profit to CAC on a 36-month basis, but its oldest cohort was 20 months old, and cohorts acquired at much higher volume from colder audiences usually retain worse than early adopters. A third-party card panel showing IM8 with the best month-20 retention against AG1 and others rests on a single early cohort. Third, cash-flow positive can come from financing: IM8's turned positive after a facility began funding 70% of new-cohort marketing, which changes cash timing, not profitability. Fourth, definitions and margins: IM8 defines contribution profit as gross margin minus operating costs (most define it as gross margin minus marketing) and reports 65% gross margin while the financing contract uses 58%. How to apply: for every quoted ratio, write down the window, the cohort ages behind it, the margin used, and any financing effect before comparing it with your own numbers.",
+    "conditions": "Evaluating benchmark claims from listed brands, agencies, lenders or acquisition targets; building your own investor reporting.",
+    "fails_when": "Mature brands with cohorts older than the stated horizon, where modelled LTV is close to observed; not a judgement on IM8's actual quality, which the speaker calls strong.",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [
+      "IM8: 3:1 LTGP:CAC claimed on 36 months; oldest cohort 20 months",
+      "gross margin 65% reported vs 58% contractual",
+      "facility funds 70% of new-cohort marketing"
+    ],
+    "asks": [
+      "How do I tell if a brand's LTV to CAC claim is real?",
+      "What does ARR mean for an ecommerce brand and can I trust it?",
+      "Our lender wants LTV numbers, how should we present them honestly?",
+      "Is cash flow positive the same as profitable?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0240",
+    "evidence": {
+      "where": "Finances section, 'four reporting choices'"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "MEA-0039",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "profit and contribution formulas",
+      "incrementality and holdouts"
+    ],
+    "claim": "KPI paid media on acquisition MER (new-customer revenue / ad spend), not blended MER: blended MER can rise from 4x to 5x while new-customer efficiency falls from 2.0 to 1.6.",
+    "body": "Blended MER (total net revenue divided by ad spend, or its inverse as a percentage, which CFOs prefer) is useful for controlling marketing's share of the P&L, but it is a poor gauge of paid media because returning-customer revenue flows into it regardless of ads. If acquisition stopped, revenue would decay along the cohort repeat curve (for example 8% of a cohort returning after month one, then 6%, 4%, 3% and so on). The agency's example: January blended MER 4x, February 5x, so the team raises March spend. But acquisition MER (new-customer net revenue divided by ad spend) went 2.0, then 1.8, then 1.6: February's jump was returning customers, new-customer efficiency was falling, and extra spend made it worse. Their recommended daily dashboard: acquisition MER, profit contribution (net revenue minus cost of delivery minus marketing), new-customer profit contribution (new-customer revenue minus its cost of delivery minus marketing), new-customer revenue, new-customer orders, and blended CAC, all on net revenue after returns. Record cost of goods per product in Shopify rather than a blended margin assumption: a $100 product with $50 cost sold at 20% off has a 37.5% margin, not 50%. There is no universal acquisition MER target; it depends on gross margin and repeat rate.",
+    "conditions": "Brands with meaningful returning-customer revenue; metrics on net revenue (after returns, excluding tax and shipping) from Shopify.",
+    "fails_when": "Single-purchase categories with almost no repeat revenue, where blended and acquisition MER nearly coincide; or brands deliberately spending on reactivation, which acquisition MER ignores.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "blended MER 4x to 5x while acquisition MER fell 2.0 to 1.8 to 1.6",
+      "cohort repeat example: 8%, 6%, 4%, 3%, 2%, 1% by month",
+      "$100 price, $50 cost, 20% discount: margin 50% to 37.5%"
+    ],
+    "asks": [
+      "What's the difference between MER and acquisition MER?",
+      "Our MER went up so we increased spend and profit fell, what happened?",
+      "Which numbers should be on our daily dashboard?",
+      "Why does our margin collapse during sales?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0241",
+    "evidence": {
+      "where": "'better metrics' section: MER, acquisition MER, profit contribution; Shopify COGS section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0040",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "incrementality and holdouts",
+      "budget and scaling rules"
+    ],
+    "claim": "Low-budget channels and upper-funnel campaigns mislead in-platform: small tertiary channels show high ROAS from warm visitors, and a new channel's lift often shows up in another platform's numbers.",
+    "body": "When a channel gets only a sliver of budget, its delivery drifts to the cheapest conversions: warm visitors the pixel already knows. The agency sees tertiary channels (Snapchat, Pinterest, Reddit) with tiny spend and very high reported ROAS that add no new customers. The opposite error hits real prospecting tests. Their example: a brand tests TikTok at about 25% of its Meta budget, TikTok reports 1 to 2x and looks like a failure, while at the same time a Meta mid-funnel campaign jumps from about 4x to 12x because it is retargeting the people TikTok introduced. Cutting TikTok would then quietly shrink Meta. Likewise, Meta traffic or reach campaigns are often justified by 'revenue went up after we launched them', for example a traffic campaign at 3% of budget during Black Friday, with no test design; at that spend it cannot have a measurable effect and only wastes budget. Rules: give any new channel enough budget and time to matter; judge it on blended new-customer revenue and acquisition MER across all channels, or a geo or lift test, not its own dashboard; and do not run upper-funnel objectives without a measurement plan written before launch. Most brands also over-allocate to middle and bottom of funnel; growth usually needs more cold spend.",
+    "conditions": "Brands adding or running secondary paid channels and upper-funnel objectives alongside Meta.",
+    "fails_when": "The tertiary channel reaches a distinct audience the brand cannot get elsewhere and has passed a holdout test; or spend on the new channel is large enough that its own attribution is informative.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "TikTok test at about 25% of Meta budget reporting 1x to 2x while Meta mid-funnel rose about 4x to 12x",
+      "traffic campaign at 3% of budget during Black Friday with no measurable effect"
+    ],
+    "asks": [
+      "Our TikTok test only got 1.5x ROAS, should we kill it?",
+      "Pinterest shows a 10x ROAS on tiny spend, should we scale it?",
+      "Do traffic campaigns on Meta actually help sales?",
+      "How do I test a new ad channel properly?"
+    ],
+    "platforms": [
+      "tiktok",
+      "pinterest",
+      "reddit",
+      "snap"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0241",
+    "evidence": {
+      "where": "halo-effect example with TikTok; nine audit mistakes numbers five, seven and nine"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "MEA-0041",
+    "modules": [
+      "MEA"
+    ],
+    "topics": [
+      "incrementality and holdouts"
+    ],
+    "claim": "Match measurement to size: $1-5M use 7-day click and a new-customer dashboard; $5-20M add in-platform lift studies; $20M+ run geo-lift tests and apply incrementality factors.",
+    "body": "The agency's measurement ladder by annual revenue. At $1M to $5M: 7-day click reporting on Meta, cost of goods tagged on every Shopify product, a daily dashboard of acquisition MER, profit contribution, new-customer profit contribution, new-customer revenue and orders and blended CAC, existing customers excluded from top-of-funnel campaigns, and brand search spend minimised. At $5M to $20M: add in-platform conversion lift studies, measure any top-of-funnel experiment against them, and use Meta's incremental attribution as a second check beyond 7-day click. Above $20M: run geo-lift experiments outside the platforms. Method: use history of ad spend, new-customer revenue and orders to find regions that move together (in the US, for example, a pair of states that predicts another pair very closely), increase spend only in treatment regions (for example double Meta budget), and compare actual revenue with the control-based prediction. Example: $40,000 extra spend producing $100,000 above the counterfactual is a 2.5 incremental ROAS. The same design can read retail or Amazon revenue and measure TV or out-of-home. Run tests often to build incrementality factors per channel and campaign type, and multiply platform-reported ROAS by them. In Australia, states are too few; use commuting zones.",
+    "conditions": "DTC brands by annual revenue band; geo-lift needs enough spend and regional sales volume to detect lift.",
+    "fails_when": "Spend in the test is too small to move regional revenue (results are noise), or tests run back to back in the same regions, contaminating the clustering; small markets need finer regions than states.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "$1M to $5M, $5M to $20M, $20M+ revenue bands",
+      "geo-lift example: $40,000 extra spend, $100,000 lift = 2.5 incremental ROAS",
+      "treatment intervention example: 2x Meta budget"
+    ],
+    "asks": [
+      "When should we start doing incrementality tests?",
+      "How does a geo-lift test work?",
+      "We're a $3M brand, what should we measure?",
+      "How do I know the real ROAS of my Meta ads?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0241",
+    "evidence": {
+      "where": "incrementality and causal inference section; action items by revenue level"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0042",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "attribution windows and restatement",
+      "incrementality and holdouts"
+    ],
+    "claim": "Report Meta on 7-day click (or 7-day click plus 1-day engaged), not the 1-day-view default; in audits 30-50% of reported ROAS came from view-through credit.",
+    "body": "Meta's default attribution credits purchases within 7 days of a click and 1 day of a view (plus 1-day engaged-view for video). View-through credit is the biggest inflator: in this agency's audits, 30 to 50% of reported ROAS came from one-day views, often counted across all campaigns. Switch campaign attribution, or at least reporting columns via 'compare attribution settings', to 7-day click and 1-day engaged view, which in their experience tracks new-customer efficiency in the business far better. Next layer: Meta's incremental attribution column, which reports only conversions the model judges incremental. The logic of a lift test: Meta holds out a share of the audience (they cite 10%) from seeing ads; if 2% of exposed users buy and 1% of held-out users buy anyway, ads caused 1 point, half the reported effect, so a reported 5x ROAS is really about 2.5x. Unknown brands see near-zero baseline buying; well-known retailers see a large one, so their ROAS is more inflated. Other common inflators in audits: Google Performance Max with brand traffic absorbing credit (a 20x ROAS rarely survives adding $1,000 and watching topline), brand search spend kept on to prop up ROAS, and existing-customer and catalog retargeting spend.",
+    "conditions": "Meta-led paid media programs; more inflated the better known the brand and the larger its returning-customer base.",
+    "fails_when": "Very long consideration categories where many genuine purchases happen after 7 days, so 7-day click undercounts; or video-heavy upper-funnel campaigns where engaged-view credit is a real effect; measurement needs lift tests to settle either way.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "30% to 50% of reported ROAS from 1-day view-through in audits",
+      "lift example: 2% exposed vs 1% holdout purchase rate halves a 5x ROAS to 2.5x",
+      "Meta holdout of about 10% of users in conversion lift"
+    ],
+    "asks": [
+      "Which attribution setting should I use on Meta?",
+      "Our Meta ROAS looks great but revenue isn't growing, why?",
+      "Should I turn off 1-day view attribution?",
+      "How does Meta's incremental attribution work?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0241",
+    "evidence": {
+      "where": "attribution windows section; incremental attribution; nine audit mistakes (number one and two)"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0043",
+    "modules": [
+      "MEA",
+      "ADC",
+      "EML"
+    ],
+    "topics": [
+      "attribution windows and restatement",
+      "incrementality and holdouts"
+    ],
+    "claim": "Judge channels on blended CAC plus email or cart capture: an ad or channel that misses CAC can stay on if it captures cheap emails that strong flows convert.",
+    "body": "The guest's KPI order is CAC first, then cost to capture an email or cart, then CPM as a reach signal for larger brands. Breez sometimes keeps ads running past dashboard break-even because they produce cheap carts and email sign-ups, and the brand's email flows and roughly 20% subscription take rate convert non-buyers well; he says one channel may lose on CAC but win on email capture. Decisions then roll up to blended company CAC across all channels against goal. Media buying and finance meet daily, with spend and return posted to a shared channel every hour, and run a bull, bear and daily pace forecast. Spend flexes with owned-channel activity: if three emails or a product drop are going out, paid spend is pulled back because those customers would buy anyway; days without ads free budget for promotions. The interviewer adds two daily metrics: orders over $1,000, and discounts as a percent of sales, since revenue can grow while discounting outpaces it. How to apply: add email-capture cost by channel to reporting, review blended CAC daily, and plan paid spend around the email calendar.",
+    "conditions": "Brands with working email and SMS flows and enough channels that blended CAC is meaningful; spending at a level where daily forecasting is worth the time.",
+    "fails_when": "Brands without proven flows that convert captured emails, where 'email winner' ads are just unprofitable spend; early brands that cannot afford spend that does not convert directly.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 20% subscription take rate",
+      "spend and return reviewed hourly",
+      "orders over $1,000 per day and discount as % of sales tracked daily"
+    ],
+    "asks": [
+      "Should I turn off ads that don't hit ROAS in the dashboard?",
+      "What KPI besides ROAS should I track for my ads?",
+      "How do I decide ad spend when we have a big email campaign going out?",
+      "Is AppLovin worth it if it doesn't get the cheapest customers?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0242",
+    "evidence": {
+      "where": "[00:27:00-00:33:38] KPI hierarchy CAC, email capture, CPM"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0044",
+    "modules": [
+      "MEA",
+      "ADC",
+      "FIN"
+    ],
+    "topics": [
+      "profit and contribution formulas",
+      "budget and scaling rules"
+    ],
+    "claim": "Set target CAC from repeat behaviour, not first-order margin: Breez aims for $85 to $90, accepts $120 to $130 in bad months, and launched at break-even or loss.",
+    "body": "The guest sets Breez's goal CAC at about $85 to $90 per new customer, which he calls best in class for the brand, and tolerates $120 to $130 in a bad month because he knows how long customers stay; the product is consumable and sold on subscription. He contrasts this with one-off purchases such as a rug or a T-shirt, where a brand must usually be first-order profitable to survive. At launch the brand spent about $25,000 to $50,000 in month one and doubled spend in each of the next two months, budgeting $75,000 to $100,000 for the first quarter as a deliberate bet, accepting break-even or loss on the first order while it educated the market. He frames early spend as tranches of learning: decide what each tranche, $10,000 for him or $500 to $1,000 for a smaller brand, must answer (channel, product, price, message). A smaller budget learns the same things, only more slowly. How to apply: estimate repeat rate and contribution over a defined window before setting a CAC above first-order margin; set a goal and a ceiling; and size the launch fund so the brand survives the learning period.",
+    "conditions": "Consumable or subscription products with proven or strongly expected repeat purchase; brands with cash to fund a loss-making acquisition period.",
+    "fails_when": "One-off or rarely repeated products; brands without enough cash runway to wait for repeat revenue; new brands whose repeat rate is assumed rather than measured.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "goal CAC $85 to $90",
+      "ceiling CAC $120 to $130 in a bad month",
+      "month 1 spend about $25,000 to $50,000, doubling monthly for 2 months",
+      "first-quarter budget $75,000 to $100,000",
+      "learning tranches of $10,000, or $500 to $1,000 for small brands"
+    ],
+    "asks": [
+      "What should my target customer acquisition cost be?",
+      "Is it OK to lose money on the first order?",
+      "How much should I budget to test ads for a new product launch?",
+      "We can't get first-order profitable on Meta, should we keep spending?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0242",
+    "evidence": {
+      "where": "[00:01:00-00:05:27] CAC vs LTV"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0045",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "attribution windows and restatement",
+      "incrementality and holdouts"
+    ],
+    "claim": "Check channels with a post-purchase survey: if Meta takes about 50% of spend, about 50% of 'where did you hear about us' answers should name it.",
+    "body": "True Classic spends over $80 million a year on ads, roughly half on Meta and 15 to 25% on Google and YouTube. Bartlett says in-platform ROAS over-attributes: Meta can look excellent while company profit does not add up. His check is a post-purchase survey asking where the customer heard about the brand. The share of responses naming each channel should roughly match that channel's share of spend; if Meta gets about half the budget but far less than half the answers, money is going into a 'black hole' and the mix should shift. He leans on the survey over platform data because it is what customers report at scale. The same survey also tracks word of mouth, which he watches grow as a sign that organic demand is building, and should reveal new channels such as retail stores and live events. How to apply: 1) add a one-question survey on the order confirmation page with channel options plus 'friend or family'; 2) each month compare answer share with spend share by channel; 3) investigate big gaps before cutting. Surveys have recall bias toward memorable channels, so pair with holdout tests where possible.",
+    "conditions": "Brands spending across several channels with enough orders for stable survey shares (hundreds of responses per month).",
+    "fails_when": "Low order volumes; channels people rarely remember (display, retargeting) that surveys under-credit; surveys with too many options or leading wording.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "$80M+ annual ad spend",
+      "Meta about 50% of spend",
+      "Google and YouTube about 15-25%"
+    ],
+    "asks": [
+      "How do I know if Meta's ROAS is real?",
+      "Our ad dashboards look great but profit doesn't, what should we check?",
+      "Are post-purchase surveys reliable for attribution?",
+      "How do we decide budget split across channels?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0243",
+    "evidence": {
+      "where": "about 54:02-59:58 post-purchase surveys versus in-platform attribution"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0046",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "match quality",
+      "event contracts"
+    ],
+    "claim": "Lost conversion signal lowers Meta's estimated action rate (100 real sales seen as 70 means 3% looks like 2%), yet server-side tracking gains are usually too small to measure.",
+    "body": "Meta's auction ranks ads on bid times estimated action rate plus ad quality, and estimated action rate is built from historical click-through and conversion rates. If your ads drive 100 purchases but the pixel and Conversions API only report 70, Meta sees about a 2% conversion rate when the true rate is 3%, so it underrates your ads and you lose auctions you should win. That is the case for good Event Match Quality. The presenter's caution: server-side tracking tools are sold hard, cost in the region of a couple of thousand dollars a month, and in his repeated attempts their effect on efficiency could not be separated from normal week-to-week noise, even with causal-impact modelling. His advice is to treat it as a cost you add only if you can afford it, expecting some unmeasurable benefit, and to fix basics first: deduplicated pixel plus CAPI events and a healthy EMQ. He also observes that a higher on-page action rate seems to lower CPMs: lead-magnet funnels converting 30 to 70% ran around $25 CPM against about $100 for book-a-call funnels converting 3 to 6%, though value inference may also play a part.",
+    "conditions": "Meta advertisers deciding on CAPI gateways or paid server-side tracking; ecommerce and lead-gen funnels.",
+    "fails_when": "Accounts with severe tracking loss (broken pixel, heavy consent loss, no CAPI), where fixing signal is clearly worth it and shows up in reported conversions.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "example: 100 real conversions, 70 tracked: 2% seen versus 3% actual",
+      "server-side tools about $2,000 a month (presenter estimate)",
+      "lead magnet funnels 30 to 70% conversion, about $25 CPM; book-a-call 3 to 6%, about $100 CPM"
+    ],
+    "asks": [
+      "Is server-side tracking worth paying for?",
+      "Does better tracking lower our Meta costs?",
+      "Why are our CPMs so high compared to other funnels?",
+      "What happens if Meta misses some of our conversions?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0245",
+    "evidence": {
+      "where": "Auction section: estimated action rate and CPMs; signal quality and server-side tracking"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0047",
+    "modules": [
+      "MEA",
+      "OFF",
+      "ADC"
+    ],
+    "topics": [
+      "profit and contribution formulas",
+      "offer mechanics"
+    ],
+    "claim": "Before scaling paid traffic, check conversion rate (%) times AOV ($) is at least 300, meaning $300 revenue per 100 visitors; below that, ads rarely scale at about $3 CPC.",
+    "body": "The agency founder's first audit number is conversion rate as a percentage times average order value, which equals revenue per 100 visitors: 3% times $100 is 300, so 100 visitors bring in $300. He compares that with what 100 clicks cost. At a $3 cost per click, 100 visitors cost $300, so 300 only breaks even on revenue, which is a loss after product costs; at $1.50 a click it returns 2x on revenue, at $1 3x, at $2 1.5x. Because he cannot reliably buy clicks below about $3 at scale, he treats anything under 300 as unscalable and will not take a brand on for ads if the number is around 100. Any mix reaches the bar: 5% and $60, 10% and $30, 1% and $300. Work on the two inputs every day: conversion rate through stronger angles and pages, AOV through complementary products, cart and post-purchase upsells and threshold gifts. It is a quick screen, not a profit model: margins, returns and repeat purchases still decide whether the revenue is profitable.",
+    "conditions": "Paid social and search acquisition for DTC brands; assumes blended CPCs around $1 to $3.",
+    "fails_when": "High-margin, high-repeat brands that can profitably lose on the first order; channels with much cheaper clicks; low-margin products where even 300 is not enough after COGS.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "conversion rate x AOV of at least 300 = $300 revenue per 100 visitors",
+      "3% x $100, 5% x $60, 10% x $30, 1% x $300 all equal 300",
+      "at $3 CPC, 300 only breaks even on revenue; $1.50 CPC gives 2x; $1 gives 3x",
+      "a score around 100 is a decline for ads"
+    ],
+    "asks": [
+      "Is my store ready to scale paid ads?",
+      "Our conversion rate is 1.5% and AOV is $50, can we scale Facebook ads?",
+      "What conversion rate and AOV do I need to be profitable with ads?",
+      "How do I calculate revenue per visitor?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0249",
+    "evidence": {
+      "where": "Audit levers discussion: CTR first, then conversion rate times AOV"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0048",
+    "modules": [
+      "MEA",
+      "CXP"
+    ],
+    "topics": [
+      "profit and contribution formulas",
+      "repeat rate levers"
+    ],
+    "claim": "Rank acquisition by 12-month gross profit per customer, not first-order profit, measured only on customers acquired at least 12 months ago.",
+    "body": "The founder's example: brand A makes $40 gross profit on the first order and $400 more over the next 12 months; brand B makes $100 up front and $100 more. B looks easier to acquire for, but A can afford a much higher CAC and wins. With a $60 CAC, A loses $20 on day one and still ends the year about $380 ahead. He says many brands doing $6 to $7 million a month have never calculated lifetime gross profit. Method: take customers whose first order is at least 12 months old, sum their gross profit over those 12 months, and average it; recent customers cannot be included because their history is incomplete. Then set CAC targets against that figure, not just first-order margin. He warns about inflating first orders with large multi-unit bundles: a supplement buyer who takes six bottles often uses one or two, stops, and never reorders, so a high AOV hides a weak repeat rate. His fix for consumables is a 90-day email and SMS plan with daily or near-daily messages to build the usage habit, since after 60 to 90 days of use the product becomes routine.",
+    "conditions": "Repeat-purchase categories (supplements, consumables) with enough history for 12-month cohorts.",
+    "fails_when": "Young brands with no 12-month-old cohort, single-purchase products, or cash-constrained brands that cannot fund a first-order loss while waiting for repeat profit.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "brand A: $40 first-order gross profit + $400 over 12 months; brand B: $100 + $100",
+      "about $380 12-month gross profit after a $20 first-order loss",
+      "brands at $6 to $7 million a month often have not calculated it",
+      "90-day habit messaging; habit forms by about 60 to 90 days"
+    ],
+    "asks": [
+      "How much can I afford to pay to acquire a customer?",
+      "Our first order barely breaks even, should we keep spending on ads?",
+      "How do I calculate customer lifetime gross profit properly?",
+      "Do big supplement bundles hurt repeat purchases?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0249",
+    "evidence": {
+      "where": "Opening arbitrage question: lifetime gross profit versus CAC; supplement bundle discussion"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0049",
+    "modules": [
+      "MEA",
+      "FIN"
+    ],
+    "topics": [
+      "profit and contribution formulas",
+      "incrementality and holdouts"
+    ],
+    "claim": "IM8 scales Meta at about $150k/day on a 3 to 3.5x CAC:LTV over 24 months and a blended CAC payback under 4 months; 6 to 12 months is more typical.",
+    "body": "IM8, a supplement subscription brand that reached a $100M annual run rate within about a year, manages growth on two numbers checked daily. First, CAC to LTV measured on a 24-month horizon, targeted at roughly 3 to 3.5. Second, CAC payback period, the time to recover acquisition cost from gross profit: under four months on a blended basis across its three SKUs. The founder and host frame it as a grading scale: three to four months is excellent, six months good, twelve months a 'C', and they cite brands such as Gruns as more in the six to twelve month range. A short payback is what lets the company push spend hard; the host argues IM8 could even accept six months and stay highly profitable. The binding constraint at this level is not cash but creative: spend is about $150k a day (around $100k on Meta) and the goal of $200k to $300k a day waits on more good content. How to apply: compute payback from first-order and early repeat gross profit, not revenue; set the LTV horizon explicitly (IM8 uses 24 months); and decide in advance the payback ceiling at which you will keep raising spend, using it as the scaling rule.",
+    "conditions": "Subscription or high-repeat consumables with reliable cohort data; brands with enough cash to fund months of CAC before payback.",
+    "fails_when": "One-time-purchase products where 24-month LTV is speculative; young brands extrapolating LTV from a few months of cohorts; cash-constrained brands where even a 4-month payback strains working capital; payback computed on revenue instead of gross profit.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "CAC:LTV 3 to 3.5 on a 24-month horizon",
+      "blended payback under 4 months across 3 SKUs",
+      "grading: 3 to 4 months excellent, 6 good, 12 a 'C'; peers 6 to 12 months",
+      "spend ~$150k/day total, ~$100k/day Meta; goal $200k to $300k/day"
+    ],
+    "asks": [
+      "what is a good LTV to CAC ratio for a subscription brand",
+      "how fast should we earn back our customer acquisition cost",
+      "how do I know if we can spend more on ads",
+      "what payback period do supplement brands aim for"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0251",
+    "evidence": {
+      "where": "[00:04:13-00:08:39] CAC to LTV and payback discussion"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "MEA-0050",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "incrementality and holdouts"
+    ],
+    "claim": "Design geo-lift tests by clustering regions on three histories (ad spend, new-customer revenue, new-customer orders) and combining states; incremental ROAS = revenue lift / extra spend.",
+    "body": "Blue Sense Digital's geo-lift method, run on your own store data rather than the platform's: split the country into regions (US states). Find regions that historically move together on three variables: daily ad spend, new-customer revenue and new-customer orders (orders matter because revenue can diverge from orders when AOV shifts). Single states rarely match, so combine them, for example Arizona plus Texas tracking New York plus California, until the control group predicts the test group closely. Then intervene in the test regions (for example double Meta prospecting budget or launch TikTok), use the control to predict what the test regions would have done (the counterfactual), and measure the gap. Example: $100,000 extra revenue from $40,000 extra spend is an incremental ROAS of 2.5. The same design measures retail sales, TV or out-of-home. In Australia, states are too few and need huge spend; use smaller commuting zones. In-platform lift tests split by user instead, but you cannot verify their maths, and TikTok and Google require minimum spend (TikTok about $200,000).",
+    "conditions": "Brands selling across many regions with enough new-customer volume per region; data on spend and new customers by region; US or similar market.",
+    "fails_when": "Few regions (Australia by state); low volume per region; running tests back to back, which muddies the clustering data; channels that cannot be geo-targeted.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "3 clustering variables: ad spend, new-customer revenue, new-customer orders",
+      "example: $40k extra spend, $100k lift = 2.5 incremental ROAS",
+      "TikTok in-platform lift test minimum about $200k spend"
+    ],
+    "asks": [
+      "How do I run a geo lift test for Meta ads?",
+      "How do I pick control and test regions for an incrementality test?",
+      "Can I run a geo test in Australia by state?",
+      "Are Meta's own lift studies trustworthy?"
+    ],
+    "platforms": [
+      "meta",
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0252",
+    "evidence": {
+      "where": "Measurement section, geo lift experiment",
+      "quote": "this $40,000 in ad spend drove this $100,000 lift"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0051",
+    "modules": [
+      "MEA",
+      "GAD"
+    ],
+    "topics": [
+      "attribution windows and restatement"
+    ],
+    "claim": "Google credits conversions to the click date, so the latest 3 to 4 days always look weak; diagnose with a conversions-by-conversion-time column after checking change history.",
+    "body": "In Google Ads, a purchase is credited to the day of the ad click, not the day of purchase. Someone who clicks on the 1st and 3rd and buys on the 7th adds a conversion to the 1st or 3rd, so the most recent days always look worse than they will end up. Blue Sense Digital sees teams start long diagnostics over this every week. Use a custom column for conversions by conversion time to read the last three to four days in real time. Their top-down troubleshooting order: check change history before touching anything; widen the time window so you are not reacting to small samples; check conversion latency; do a cross-channel check, starting with the platform holding most spend (if Meta has 90% of spend, a revenue drop is probably Meta); break revenue into sessions x conversion rate x AOV to see which moved (conversion rate points to the site, sessions to a traffic source, AOV to product mix or upsells); compare attributed numbers with business KPIs; and rule out seasonality with a forecast. Then drill campaign by campaign, looking only at the top five by spend.",
+    "conditions": "Google Ads accounts with multi-day purchase journeys; any brand diagnosing a performance drop.",
+    "fails_when": "Impulse products bought within hours of clicking (latency small); accounts already reporting by conversion time; drops caused by tracking failures, which need a tag check first.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "last 3 to 4 days most affected by latency",
+      "revenue = sessions x conversion rate x AOV",
+      "review only the top 5 campaigns by spend; a campaign with 10% of budget doubling moves the account about 5%"
+    ],
+    "asks": [
+      "Why do the last few days in Google Ads always look bad?",
+      "Our revenue dropped, how do I find out which channel caused it?",
+      "What is conversion lag in Google Ads?",
+      "How do I troubleshoot a sudden drop in ecommerce revenue?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0252",
+    "evidence": {
+      "where": "Root cause analysis section",
+      "quote": "pull out a custom column called conversions by conversion time"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0052",
+    "modules": [
+      "MEA",
+      "CXP"
+    ],
+    "topics": [
+      "profit and contribution formulas",
+      "repeat rate levers"
+    ],
+    "claim": "Benchmark 365-day gross profit lift over first order by vertical: about 55% for fashion, about 110% for CPG and supplements, near zero for furniture and homewares.",
+    "body": "The agency uses cohort lift, meaning how much a cohort's cumulative gross profit grows from the first order to day 365, to set what retention can realistically contribute. Its benchmarks for good performers: fashion about 55% lift by day 365; CPG and supplements about 110%; furniture and homewares close to nothing, because people buy furniture when they move and may not return for three to five years. It estimates about 80% of brands have no meaningful lift, perhaps 20 to 40% by day 365. The practical consequence: for low-repeat categories, ignore the lifetime side and manage CAC against first-purchase gross profit, keeping CAC flat; for consumables and subscriptions, manage both sides. The source argues the achievable band is set mostly by the category, so retention tactics move the number only within it (a $50 creatine product cannot support a huge lifetime ratio); set CAC targets from where category leaders sit. Measure with a cohort table built on gross profit (Shopify's cohort view shows revenue, so apply real product costs), not with email-attributed revenue, daily returning-customer revenue or the new-customer percentage in Shopify.",
+    "conditions": "DTC brands with at least a year of cohort history; benchmarks are the agency's observations for strong performers.",
+    "fails_when": "Brands with unusual repeat models (refills, subscriptions, consumable add-ons in an otherwise durable category), where the vertical benchmark understates achievable lift.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "day-365 gross profit lift: fashion about 55%, CPG/supplements about 110%, furniture/homewares near 0",
+      "about 80% of brands at 20 to 40% lift or less"
+    ],
+    "asks": [
+      "How much repeat purchase should I expect in my category?",
+      "We sell furniture, should we care about lifetime value?",
+      "What is a good 12-month retention lift for a fashion brand?",
+      "How should I measure retention properly in Shopify?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0255",
+    "evidence": {
+      "where": "LTGP section (furniture example) and closing action steps with vertical benchmarks"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0053",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "incrementality and holdouts",
+      "attribution windows and restatement"
+    ],
+    "claim": "Platform ROAS can hide a decline: one retailer's 20 ROAS fell to 7 without view-through and near 1 on incremental attribution. Track blended CAC monthly instead.",
+    "body": "The agency often audits large brands whose CAC crept up for months and then roughly doubled in three or four months, without anyone noticing, because the team watched in-platform ROAS. In one case, a large Australian retailer saw Meta report a ROAS of about 20 that had not moved for a year. Removing view-through conversions dropped it to about 7, and an incremental attribution view took it to about 1, a number that had been falling the whole time. The source ranks measurement methods from furthest to closest to reality: expert opinion and anecdotes; simple correlation such as platform-attributed ROAS; multi-variable models such as marketing mix modelling; quasi-experiments such as difference-in-differences or regression discontinuity; and true experiments such as geographic holdouts. Above all of them sits the business-level ratio of gross profit to CAC. Practical steps: calculate CAC monthly from total spend and new customers in Shopify, use incremental or holdout tests to judge each channel, and treat any platform ROAS that never moves as a sign the attribution setting is over-crediting.",
+    "conditions": "Brands spending across Meta, Google and other platforms with default attribution settings that include view-through.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "platform ROAS about 20, about 7 without view-through, about 1 incremental (one audit)",
+      "CAC roughly doubled within 3 to 4 months before detection"
+    ],
+    "asks": [
+      "Why does Meta show great ROAS while our business is declining?",
+      "Should I trust the ROAS in Facebook Ads Manager?",
+      "How do I measure if my ads are actually driving sales?",
+      "What is the most reliable way to measure ad performance?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0255",
+    "evidence": {
+      "where": "Section on renting demand and the ROAS 20 example; ladder of measurement methods"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "MEA-0054",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "profit and contribution formulas"
+    ],
+    "claim": "Read time-bound LTGP to CAC as bands: under 1 loses money, 1 to 2 is thin, 2 to 3 is where to scale, above 3 means under-spending on acquisition.",
+    "body": "Definitions in the source: CAC is total ad spend divided by new customers acquired in the period. LTGP is gross profit after product cost and delivery cost generated by those customers over a fixed window. The window must be stated because lifetime value keeps growing: use 30 days (essentially first-order gross profit) for low-repeat products, and extend to 90 or 180 days for consumables and subscriptions, pulling the figure from a cohort table rather than from platform or email attribution. The agency's bands: below 1, gross profit is less than acquisition cost and every new customer loses money unless retention is exceptional, which it rarely is; 1 to 2 leaves little for operating costs, so only very lean or very large operators make it work (he has seen about 20% net at this level, rarely); 2 to 3 is where they recommend raising budgets; above 3, the brand is leaving growth on the table and should spend harder. The death spiral starts when CAC creeps up (say $50 to $60), fewer customers arrive on a fixed budget, revenue falls with no repeat buyers to hold it up, the brand raises spend to compensate, and CAC rises further. Track both numbers monthly.",
+    "conditions": "DTC brands buying most new customers through paid media; window chosen by repeat purchase cycle.",
+    "fails_when": "Brands with genuinely strong retention or subscription lock-in that can run below 1 on first order; brands where a large share of new customers come from unpaid channels, which distorts spend-based CAC.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "LTGP:CAC below 1 loses money; 1 to 2 thin; 2 to 3 scale; above 3 under-investing",
+      "window: 30 days for low repeat, 90 to 180 days for consumables",
+      "about 20% net possible but rare at 1 to 2",
+      "CAC creep example $50 to $60"
+    ],
+    "asks": [
+      "What is a good LTV to CAC ratio for an ecommerce brand?",
+      "Our CAC keeps creeping up and revenue is falling, what is happening?",
+      "When should I increase my ad budget?",
+      "What time window should I use for customer lifetime value?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0255",
+    "evidence": {
+      "where": "Opening section on the LTGP to CAC equation and the death spiral flywheel"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "MEA-0055",
+    "modules": [
+      "MEA",
+      "FIN"
+    ],
+    "topics": [
+      "profit and contribution formulas"
+    ],
+    "claim": "Split the P&L into first-time and returning customer P&Ls using Shopify's order type; returning profit can hide a monthly loss on acquiring new customers.",
+    "body": "The agency's audit method: take the full P&L and filter every line (revenue, discounts, product cost, fulfilment, ad spend and other costs) by Shopify's order type, first-time versus returning, to produce two P&Ls. A brand can show a healthy total profit while the first-time customer P&L loses money, because returning customers subsidise acquisition. Audit examples from the source: a brand losing about $50,000 a month on first-time customers while making about $300,000 on returning customers; another whose first-time customer P&L swung from about $20,000 profit to about $70,000 loss per month while total profit still looked fine ($80,000 to $100,000). Losses on first purchase can only be funded three ways: returning-customer profit, investor capital or debt. The source warns that debt or investor funding of first-order losses needs an experienced operator, and that small brands ($50,000 to $300,000 a month) more often fail from operating costs and inventory debt squeezing cash. Also timestamp every structural change (new product, new agency, new channel) and check its effect on CAC and first-order gross profit afterwards.",
+    "conditions": "Shopify brands with meaningful repeat revenue; most useful from mid seven figures upward.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "example: -$50,000/month first-time vs +$300,000/month returning",
+      "example: first-time P&L from +$20,000 to -$70,000 a month while total profit $80,000 to $100,000",
+      "3 ways to fund first-order losses: returning profit, investors, debt"
+    ],
+    "asks": [
+      "How do I know if we are losing money on new customers?",
+      "Our P&L shows profit but cash is tight, could acquisition be the problem?",
+      "How do I split my P&L by new and returning customers in Shopify?",
+      "Is it okay to lose money on a customer's first order?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0255",
+    "evidence": {
+      "where": "Section on funding losses on first purchase and the closing P&L example"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  }
+]

@@ -5,6 +5,7 @@ import { AgentsPage } from "./browse.tsx";
 import { AgentProfilePage } from "./profile.tsx";
 import { AgentFilePage } from "./file.tsx";
 import { GuidePage, GuidesPage } from "./guides.tsx";
+import { EcommercePage } from "./ecommerce.tsx";
 
 export const pages: PageDef[] = [
   { path: "/agents", access: "public", component: AgentsPage },
@@ -12,6 +13,7 @@ export const pages: PageDef[] = [
   { path: "/agents/:id/files/*path", access: "public", component: AgentFilePage },
   { path: "/guides", access: "public", component: GuidesPage },
   { path: "/guides/:slug", access: "public", component: GuidePage },
+  { path: "/e-commerce", access: "public", component: EcommercePage },
 ];
 
 export const nav: NavItem[] = [

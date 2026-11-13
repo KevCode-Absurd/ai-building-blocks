@@ -198,6 +198,7 @@ class Bm25 {
     this.avg = this.docs.reduce((a, d) => a + d.len, 0) / Math.max(1, this.docs.length) || 1;
   }
   idf(w: string): number { const n = this.docs.length, df = this.df.get(w) ?? 0; return Math.log(1 + (n - df + 0.5) / (df + 0.5)); }
+  has(w: string): boolean { return this.df.has(w); }
   scores(query: string[], weights?: Map<string, number>): number[] {
     const q = [...new Set(query)];
     return this.docs.map(d => {
@@ -299,8 +300,10 @@ export class KnowledgeIndex {
   /**
    * The passages that answer a question, best first. `questions` may hold several phrasings of one need (the
    * agent's own rewrites); their rankings fuse like the rankers do. `today` (YYYY-MM-DD) marks stale sources.
+   * `adjust` lets a caller with metadata (knowledge cards: tier, freshness, market) rescale a passage's fused score
+   * or drop it (null) before the top k are picked.
    */
-  ask(questions: string | string[], opts: { k?: number; today?: string; paths?: string[] } = {}): Answer {
+  ask(questions: string | string[], opts: { k?: number; today?: string; paths?: string[]; adjust?: (chunk: Chunk, score: number) => number | null } = {}): Answer {
     const qs = (Array.isArray(questions) ? questions : [questions]).map(s => s.trim()).filter(Boolean);
     const k = Math.max(1, Math.min(MAX_PASSAGES, opts.k ?? 6));
     const allowed = opts.paths?.length ? new Set(opts.paths) : null;
@@ -321,7 +324,8 @@ export class KnowledgeIndex {
         order.forEach(([, i], rank) => fused.set(i, (fused.get(i) ?? 0) + 1 / (RRF_K + rank + 1)));
       }
     }
-    const ranked = [...fused].sort((a, b) => b[1] - a[1] || a[0] - b[0]);
+    const adjusted = opts.adjust ? [...fused].flatMap(([i, s]) => { const v = opts.adjust!(this.chunks[i], s); return v === null ? [] : [[i, v] as [number, number]]; }) : [...fused];
+    const ranked = adjusted.sort((a, b) => b[1] - a[1] || a[0] - b[0]);
     const perSection = new Map<string, number>();
     const picked: [number, number][] = [];
     for (const [i, s] of ranked) {
@@ -342,7 +346,10 @@ export class KnowledgeIndex {
       const words = has(i);
       return { ...c, score: Math.round(score * 10000) / 10000, matched: qWords.filter(w => words.has(w)), cites: this.citeFiles.has(c.path) ? c.cites.map(n => this.cite(n, opts.today)).filter((x): x is SourceRef => !!x) : [] };
     });
-    return { question: qs.join(" | "), passages, coverage: Math.round(coverage * 100) / 100, enough: coverage >= MIN_COVERAGE, missing: informative.filter(w => !anywhere.has(w)) };
+    // A name the question depends on (an acronym, a law, a brand, a tool) that appears nowhere in the pack means the
+    // pack does not know, however many other words match: "GST on shipping" must not be answered from an Amazon card.
+    const unknown = [...new Set(qs.flatMap(namesIn))].filter(w => !this.body.has(w));
+    return { question: qs.join(" | "), passages, coverage: Math.round(coverage * 100) / 100, enough: coverage >= MIN_COVERAGE && !unknown.length, missing: [...new Set([...unknown, ...informative.filter(w => !anywhere.has(w))])] };
   }
 
   private cite(n: number, today?: string): SourceRef | null {
@@ -351,6 +358,25 @@ export class KnowledgeIndex {
     const stale = !!(today && this.reviewDays && s.checked && daysBetween(s.checked, today) > this.reviewDays * 2);
     return { n, title: s.title, url: s.url, checked: s.checked, stale };
   }
+}
+
+/**
+ * The names in a question, as tokens: all-capital words of 2 to 6 letters (GST, FSSAI, DPDP), words with a capital
+ * after the first letter (iPhone, TikTok), and capitalised words that do not start a sentence (Shiprocket, Delhivery).
+ */
+export function namesIn(question: string): string[] {
+  const out: string[] = [];
+  const words = question.split(/\s+/);
+  words.forEach((raw, i) => {
+    const w = raw.replace(/^[^A-Za-z0-9]+|[^A-Za-z0-9]+$/g, "");
+    if (w.length < 2) return;
+    const sentenceStart = i === 0 || /[.?!:]["')]?$/.test(words[i - 1] ?? "");
+    const acronym = /^[A-Z]{2,6}s?$/.test(w);
+    const inner = /^[A-Za-z][a-z]+[A-Z]/.test(w);
+    const proper = /^[A-Z][a-z]{2,}$/.test(w) && !sentenceStart;
+    if (acronym || inner || proper) out.push(...tokens(w));
+  });
+  return out;
 }
 
 function daysBetween(a: string, b: string): number {

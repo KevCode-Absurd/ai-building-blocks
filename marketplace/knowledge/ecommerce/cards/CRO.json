@@ -1,0 +1,942 @@
+[
+  {
+    "id": "CRO-0001",
+    "modules": [
+      "CRO",
+      "LPG"
+    ],
+    "topics": [
+      "low traffic methods",
+      "sample size and power"
+    ],
+    "claim": "One A/B test per week needs high traffic; below about 1,000 visitors a week, weekly split tests cannot reach significance, so make evidence-based changes and track before and after.",
+    "body": "A weekly testing rhythm (one test, chosen as the highest-expected-impact idea) works for brands with tens or hundreds of thousands of monthly visitors, because each test can collect enough conversions in seven days. Below roughly 1,000 visitors a week, a 50/50 split cannot reach statistical significance in that time, so the result is noise dressed up as a decision. How to apply: before planning a test calendar, put current weekly visitors and conversion rate into an A/B test duration calculator to see how long one test must run and how many tests per year are realistic. For lower-traffic sites (the agency cites clients at 10,000 to 20,000 visitors a month), skip formal split tests; instead use session recordings and heatmaps to find where people stall, make the change, and compare the period before and after while watching for seasonality and spend changes. Keep the one-change-at-a-time discipline either way, so each result can be attributed and the learnings compound.",
+    "conditions": "Ecommerce or lead-gen landing pages deciding testing cadence; thresholds are the agency's rule of thumb, not a calculated power analysis.",
+    "fails_when": "Very high conversion-rate pages or very large expected effects can reach significance on less traffic; before-and-after comparisons break down when ad spend, promotions or seasonality change in the same window.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 1,000 visitors per week minimum for one A/B test per week",
+      "10,000 to 20,000 monthly visitors: use data-led changes instead of split tests"
+    ],
+    "asks": [
+      "How much traffic do I need to run A/B tests?",
+      "We get 800 visitors a week, can we split test our product page?",
+      "How often should a small store run tests?",
+      "What do I do instead of A/B testing with low traffic?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0065",
+    "evidence": {
+      "where": "Section on one split test per week"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-0002",
+    "modules": [
+      "CRO",
+      "LPG"
+    ],
+    "topics": [
+      "test design",
+      "low traffic methods"
+    ],
+    "claim": "A 20% lead-form conversion rate came after testing roughly 40 to 60 landing page variants with randomised equal traffic splits and constant rotation of losers.",
+    "body": "The practitioner says no person or tool can tell you in advance which page will convert at 20%; his page reached that level only after he built and tested roughly 40 to 60 landing pages. His process: randomly assign every visitor to one of several page variants with an equal split (three pages at a third each, or two at half each), count conversions as form submissions divided by page views, keep the best page and replace losers with new variants, then rerun. He illustrates how widely variants can differ, for example 7.1%, 11.4% and 19.6% on three versions of the same offer. Tracking detail: route every successful submission to a dedicated thank-you page and count views of that page as the conversion, which is simpler and more reliable than tracking button clicks; in his PostHog setup, data took about 30 minutes to refresh. Benchmark context: he compares his 20% to a typical 2 to 4% form conversion rate, but that is a lead-form rate for a service, not an ecommerce purchase rate, so do not compare it with store checkout rates. No sample sizes were reported, so apply a proper stopping rule before declaring winners.",
+    "conditions": "Pages with enough traffic to split (he was spending heavily on paid and getting large SEO traffic); lead-generation forms or single-offer pages.",
+    "fails_when": "Low-traffic stores where each variant gets too few conversions to separate noise from signal; comparing lead-form rates with ecommerce purchase rates.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 40 to 60 landing page variants tested to reach 20% form conversion",
+      "typical lead-form conversion 2 to 4% (practitioner's figure)",
+      "example variant rates 7.1%, 11.4%, 19.6% (illustrative)",
+      "about 30 minutes for PostHog data to refresh"
+    ],
+    "asks": [
+      "How many landing page versions should I test?",
+      "Our landing page is stuck at 3%, how do people get to 20%?",
+      "How do I track landing page conversions properly?",
+      "Is a 20% conversion rate realistic for my store?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0068",
+    "evidence": {
+      "where": "Split-testing section: routing visitors to pages A, B and C and the PostHog setup"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-0003",
+    "modules": [
+      "CRO"
+    ],
+    "topics": [
+      "low traffic methods",
+      "sample size and power"
+    ],
+    "claim": "Below roughly 25,000 to 30,000 monthly visitors, skip A/B tests on a landing page; combine session recordings and heatmaps with moderated or recorded user tests instead.",
+    "body": "A/B tests split traffic, so a page with modest traffic takes months to reach a reliable answer, and small differences never do. The practitioner sets the floor for split testing at about 25,000 to 30,000 visitors a month to the page. Below that, use two cheaper sources of evidence together. Quantitative behaviour from a free tool such as Microsoft Clarity: scroll maps, click maps and frustration signals show where people stop and what they try to click. Qualitative feedback from recruited user tests (he uses Userbrain): people matching the target buyer are given a task, such as finding a product or judging the offer, and think aloud on video, which explains the why behind the drop-offs. Ship the obvious fixes these reveal (missing proof above the fold, broken or misleading clickable elements, distracting links) as repairs rather than tests. Once traffic passes the threshold, test large changes first, such as a different above-the-fold or a split-URL test of two whole layouts at 50/50, before small ones like button colour.",
+    "conditions": "Landing pages and small stores with under about 25,000 to 30,000 monthly visitors to the tested page.",
+    "fails_when": "The page has a high conversion rate and the change is large, so fewer visitors can still show a clear result; or the test metric is an early step (click-through) with far more events than purchases; the threshold is a rule of thumb, not a power calculation.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 25,000 to 30,000 monthly visitors as the floor for A/B testing",
+      "50/50 traffic split for split-URL tests"
+    ],
+    "asks": [
+      "How much traffic do I need before A/B testing?",
+      "We only get 5,000 visitors a month, how do we improve conversion?",
+      "Is A/B testing worth it for a small store?",
+      "What should I do instead of split testing with low traffic?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0080",
+    "evidence": {
+      "where": "Userbrain section and FigPii A/B testing section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-0004",
+    "modules": [
+      "CRO",
+      "LPG",
+      "EML"
+    ],
+    "topics": [
+      "common invalidations",
+      "comparison and quiz structures",
+      "flow structures"
+    ],
+    "claim": "Target about 30% of quiz starters reaching the result page (25% is acceptable); find the question whose drop-off spikes above the usual 1 to 2% and soften or cut it.",
+    "body": "The KPI is starts-to-completion: about 30% of people who start the quiz should reach the result or sales page; 25% is still good at scale. Diagnose with per-question drop-off. Every question loses some people, typically 1 to 2% each, so the pattern looks like 1, 2, 1, 1, 2 percent. Look for the outlier spike (for example a 4% step among 1s and 2s). That question is too invasive, too effortful (typed input) or badly worded: ask it more gently, change its format or remove it. Sequence: launch with minimal friction to prove the quiz works, then deliberately add qualifying friction later if you want fewer, better buyers. Capture first name and email at the end, framed as sending the personalised result; people who answered 10 or so questions are invested enough to type it. Follow with a 5 to 7 email sequence aimed at the purchase, and branch it on answers: a respondent who said natural ingredients matter most gets emails about the formula; one who cares only about speed of results gets a different flow. Even non-buyers then become a segmented remarketing list. The speaker notes funnel formats have a window (advertorials, then video sales letters, now quizzes) and the edge fades as everyone copies them.",
+    "conditions": "Quiz funnels on cold paid traffic with enough starts per question to read drop-off (hundreds per variant); stores with email/SMS flows that can branch on quiz answers.",
+    "fails_when": "Low traffic where a 1 to 2 point drop-off difference is noise; quizzes built to qualify high-ticket buyers, where lower completion is intended; markets where gating results behind email reduces trust.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Quiz completion target ~30% of starters; 25% acceptable",
+      "Normal per-question drop-off 1 to 2%; a spike (e.g., 4%) flags a problem question",
+      "5 to 7 email follow-up sequence after quiz email capture"
+    ],
+    "asks": [
+      "What is a good completion rate for a quiz funnel?",
+      "Our quiz completion rate is 15%. Where are people dropping off?",
+      "How do I find which quiz question is losing people?",
+      "What should I do with the emails I collect from a quiz?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0083",
+    "evidence": {
+      "where": "Second half: data review, completion KPI, end-of-quiz email capture",
+      "quote": "The target completion rate that you should be aiming for approximately 30%"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-0005",
+    "modules": [
+      "CRO"
+    ],
+    "topics": [
+      "sample size and power"
+    ],
+    "claim": "At 95% confidence and 80% power you need about 1,000 conversions per variant to detect a 10% relative lift, 260 for 20%, 120 for 30%, 3,830 for 5%.",
+    "body": "Required sample is driven by the minimum detectable effect (MDE), not by a magic conversion count. Evan Miller's rule is n = 16 x p(1-p) / delta squared visitors per variant, where delta is the absolute effect and the 16 builds in 95% two-sided significance and 80% power; halving the MDE quadruples the sample. At a 2% baseline, typical for DTC, detecting a 10% relative lift (2.0% to 2.2%) needs about 80,700 visitors per variant, a 20% lift about 21,100, a 5% lift about 315,200. At 1% baseline a 10% lift needs about 163,100; at 5% baseline about 31,200. Expressed as conversions per variant, the number barely depends on baseline: roughly 3,830 for 5%, 1,000 for 10%, 260 for 20%, 120 for 30%. So the common rule that a test needs 400 conversions a month is misleading: 400 per variant only powers lifts of about 25% or more. How to apply: before any test, set the MDE to the smallest lift worth shipping, compute the sample with a calculator, convert it to weeks of traffic, and do not run the test if it would take more than a few weeks. Be clear whether the calculator wants relative or absolute MDE; confusing them is a common error.",
+    "conditions": "Two-variant tests on a binary conversion metric, 95% two-sided significance, 80% power; tables from Evan Miller's calculator and statsunlock reference.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "2% baseline, 10% relative lift: about 80,682 visitors per variant",
+      "2% baseline, 20% lift: about 21,109 per variant",
+      "2% baseline, 5% lift: about 315,206 per variant",
+      "about 3,830 / 1,000 / 260 / 120 conversions per variant for 5 / 10 / 20 / 30% lifts",
+      "400 conversions per variant powers only about 25%+ lifts"
+    ],
+    "asks": [
+      "How many visitors do I need to run an A/B test?",
+      "We get 400 orders a month, can we A/B test?",
+      "How long should my A/B test run to be valid?",
+      "What lift can I actually detect with my traffic?",
+      "Is 100 conversions per variant enough?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0096",
+    "evidence": {
+      "where": "Part A section 1 and section 2 claim 1 (Evan Miller 2010; CXL)"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-0006",
+    "modules": [
+      "CRO"
+    ],
+    "topics": [
+      "sample size and power",
+      "low traffic methods"
+    ],
+    "claim": "CUPED variance reduction is sold as cutting sample 30 to 50%, but on volatile revenue metrics LinkedIn measured only 15.91%; it needs returning, identified users.",
+    "body": "CUPED (Microsoft, 2013) uses each user's pre-experiment value of the metric as a covariate, removing variance the treatment did not cause, so tests reach significance sooner without bias. Vendors such as Optimizely describe sample reductions of 30 to 50% for metrics that correlate strongly with past behaviour, and it is on by default in several tools. The catch for DTC: it needs pre-period data tied to the same user, meaning logged-in customers or stable device IDs. Most checkout traffic at a DTC brand is new or anonymous, so the covariate is missing or weakly correlated. LinkedIn's study on 400,000 members found CUPED reduced variance by 15.91% on revenue, limited because revenue's correlation across periods is weak. How to apply: turn CUPED on if your platform offers it and a meaningful share of test traffic is returning identified customers (subscription brands, high repeat categories); do not count on it to rescue an underpowered test. Simpler moves often help ecommerce more: use a proportion metric instead of raw revenue, and cap outlier orders.",
+    "conditions": "Brands with a large share of returning, logged-in or stably identified users, typically 3,000+ orders a month.",
+    "fails_when": "Mostly new, anonymous traffic, where the pre-period covariate is missing; revenue metrics with weak autocorrelation.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "30 to 50% sample reduction claimed by vendors (Optimizely)",
+      "15.91% variance reduction on revenue, n = 400,000 (LinkedIn, arXiv 2110.13406)"
+    ],
+    "asks": [
+      "Will CUPED make my A/B tests faster?",
+      "Our testing tool offers CUPED, should we turn it on?",
+      "How can I get A/B test results with less traffic?",
+      "Does variance reduction work for a new DTC brand?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0096",
+    "evidence": {
+      "where": "Part A section 7, CUPED"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-0007",
+    "modules": [
+      "CRO",
+      "MEA"
+    ],
+    "topics": [
+      "common invalidations"
+    ],
+    "claim": "Check every test for sample ratio mismatch with a chi-square test on users; about 6% of Microsoft experiments showed SRM, and an SRM result should not be trusted.",
+    "body": "Sample ratio mismatch (SRM) is when the observed split between variants differs from the designed split by more than chance allows, for example a planned 50/50 that arrives as a clearly lopsided 50.3/49.7 on a large sample. It signals that something other than the treatment is deciding who lands where: a redirect that drops some users, a variant that crashes on one browser, bots, tracking that fires differently per arm. Any lift measured on top of SRM is biased. Kohavi reports about 6% of Microsoft experiments showed SRM. How to apply: run a chi-square goodness-of-fit test on the count of randomised units (users, not page views) per arm, early and again at the end; Kameleoon flags SRM at p < 0.001, which avoids false alarms. If SRM appears, stop reading the result and find the cause before any decision. Filter bot traffic, which creates both skew and SRM. Treat mid-test tracking breakage as invalidating the test. Apply Twyman's law to results: a figure that looks surprising, like a 364% lift, is far more likely an instrumentation bug, SRM or contamination than a discovery. The chi-square check runs in a spreadsheet.",
+    "conditions": "Any randomised split test; most important on client-side tools, redirect tests and sites with bot traffic.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "about 6% of Microsoft experiments show SRM (Kohavi)",
+      "SRM flag at p < 0.001 (Kameleoon)"
+    ],
+    "asks": [
+      "Our 50/50 test split came back uneven, does that matter?",
+      "How do I know if my A/B test result is broken?",
+      "What is sample ratio mismatch?",
+      "Could bots be messing up our A/B test?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0096",
+    "evidence": {
+      "where": "Part A section 6, sample ratio mismatch and Twyman's law"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-0008",
+    "modules": [
+      "CRO",
+      "SPD"
+    ],
+    "topics": [
+      "common invalidations",
+      "test design"
+    ],
+    "claim": "Client-side tests flicker the original page before the variant, which can inflate the variant's lift; anti-flicker snippets hide the page for up to 3 to 4 seconds instead.",
+    "body": "Client-side tools load the original page and then use JavaScript to swap in the variant. Visitors briefly see the original (flash of original content), which hurts experience and, per GrowthBook's documentation, can bias results upward because the flash draws attention to the changed element. The usual fix, an anti-flicker snippet, hides the whole page until the variant is ready, by default for up to 3 to 4 seconds (DebugBear analysis), which slows first render for everyone in the test. AB Tasty states plainly there is no complete fix within client-side testing. Server-side or edge testing chooses the variant before the page is sent, so there is no flicker and no speed cost, and it can test backend logic such as pricing, search and recommendations, at the cost of engineering time and a deploy cycle. On Shopify, native Rollouts runs server-side theme tests with no flicker but reports numbers without a significance verdict, so the statistics are yours. Rule for DTC: client-side is acceptable for visual tests on home, product and cart pages; use server-side or Rollouts for checkout, pricing logic and speed-sensitive paths.",
+    "conditions": "Stores running A/B tests through client-side visual editors (VWO, AB Tasty, Convert, Optimizely Web) or deciding between client- and server-side tooling.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "anti-flicker snippets hide the page up to 3 to 4 seconds by default"
+    ],
+    "asks": [
+      "Should I use a client-side or server-side A/B testing tool?",
+      "Our A/B test tool makes the page flash, does that matter?",
+      "Does an A/B testing tool slow down my store?",
+      "How should I test changes on my Shopify theme without flicker?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0096",
+    "evidence": {
+      "where": "Part A section 6 flicker and section 12 server-side vs client-side"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-0009",
+    "modules": [
+      "CRO",
+      "OFF"
+    ],
+    "topics": [
+      "test design"
+    ],
+    "claim": "Do not A/B test different prices for the same SKU; Amazon's 2000 DVD test ended in refunds to 6,896 customers. Test framing, tiers and bundles instead.",
+    "body": "Showing two prices for the identical product to different visitors at the same time is legal in most places when the difference is not based on protected characteristics such as nationality, gender or race, which is illegal discrimination. It is still an ethics and brand landmine, because customers compare notes. The cautionary case: in September 2000 Amazon tested discounts of 20 to 40% on 68 DVD titles over five days; after backlash it refunded 6,896 customers an average of $3.10 each, about $21,377 in total, and its founder said even the random test was a mistake because it created uncertainty for customers. The EU requires disclosure when a price is personalised. How to apply: test how the price is presented rather than the number for one SKU: framing, anchors, payment terms, tier structures, bundle sizes, or a different offering at a different price (adding or removing a feature or quantity). If you must test the number, change it for everyone and compare periods with care, accepting the weaker evidence. Dedicated Shopify price-test apps exist; check their method against these rules before use.",
+    "conditions": "Stores considering price tests, especially in the EU and US.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "68 DVD titles, 20 to 40% discounts, 5 days (Amazon, Sept 2000)",
+      "6,896 customers refunded about $3.10 each, about $21,377 total"
+    ],
+    "asks": [
+      "Can I A/B test my product price?",
+      "Is it legal to show different customers different prices?",
+      "How do I test whether I should raise my price?",
+      "What's the safe way to run a price test on Shopify?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0096",
+    "evidence": {
+      "where": "Part A section 12, price testing (ABC News 29 Sept 2000 via kirro.io and gempages)"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-0010",
+    "modules": [
+      "CRO"
+    ],
+    "topics": [
+      "common invalidations",
+      "test design"
+    ],
+    "claim": "Each extra decision metric inflates false positives: one metric 5%, two about 10%, three about 14%; pre-register segments and device splits instead of slicing afterwards.",
+    "body": "Every metric or segment you check after the fact is another chance for random noise to look like a win. Kohavi and Sonnet give the arithmetic: with one decision metric the false positive rate is 5%, with two it is about 10%, with three about 14%. Slicing results by country, device, source or customer type until something 'wins' is p-hacking. How to apply: choose one primary metric before launch and name the guardrails that must not worsen (average order value, return and refund rate, page load, add-to-cart, margin). Pre-register the segments you will read, typically mobile versus desktop, paid versus organic and new versus returning, because these really do move differently: a blended win can hide a mobile loss. If you must read several metrics or segments as decision criteria, correct with Bonferroni or false discovery rate control. Write the hypothesis in a fixed shape: because we observed this evidence, we believe this change will cause this effect for this segment, measured by this metric, and it worked if the metric moves by the MDE. Record all of it, plus the SRM check and the decision, in an experiment log so the same losing idea is not re-run.",
+    "conditions": "Any A/B test programme that reports more than one metric or segment.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "false positive rate about 5% / 10% / 14% with 1 / 2 / 3 decision metrics (Kohavi and Sonnet)"
+    ],
+    "asks": [
+      "We found our test won on mobile only, can we trust that?",
+      "How many metrics should an A/B test have?",
+      "Is it OK to look at segments after the test ends?",
+      "Our test won overall but lost on mobile, what do we do?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0096",
+    "evidence": {
+      "where": "Part A section 6 multiple comparisons and section 11 test design"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-0011",
+    "modules": [
+      "CRO"
+    ],
+    "topics": [
+      "low traffic methods",
+      "prioritisation frameworks",
+      "repair versus test"
+    ],
+    "claim": "Gate testing by monthly orders: under 30 research only, 30 to 300 one big-swing test for 20%+ lifts, 300 to 3,000 regular 10-20% tests, A/B/n and bandits from 3,000.",
+    "body": "Assuming 2 to 3% site conversion and mostly new visitors, orders per month set what can be learned statistically. Under 30 orders: no test is valid, since even a 30% lift needs about 120 conversions per variant; repair what is broken, apply known best practices without testing, and run session replays, surveys and customer interviews. 30 to 300: one bold A/B test at a time on the highest-traffic page (home, hero product, cart), sized for a 20%+ relative lift, run 2 to 4 weeks with a fixed sample; add-to-cart or begin-checkout can be primary with purchase as guardrail; no button-colour tweaks, no revenue-per-visitor primary, no same-SKU price tests. 300 to 3,000: regular tests aimed at 10 to 20% lifts, conversion rate primary, guardrails on order value, margin and returns, two-week minimum, SRM checks, sequential engines for monitoring. 3,000 to 20,000: A/B/n, bandits for short promotions and headlines, revenue per visitor with capping, CUPED, pre-registered segments, server-side for checkout and pricing. 20,000+: 2 to 5% MDE tests, profit-per-visitor primaries, many concurrent tests with FDR control. Throughout, broken things are repaired, never tested.",
+    "conditions": "DTC ecommerce at roughly 2 to 3% conversion with mostly new or anonymous traffic; orders per month as the binding constraint.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "under 30 orders/month: research only",
+      "30 to 300 orders/month: one test, 20%+ MDE, 2 to 4 weeks",
+      "300 to 3,000 orders/month: 10 to 20% MDE",
+      "3,000 to 20,000 orders/month: A/B/n, bandits, CUPED",
+      "20,000+ orders/month: 2 to 5% MDE"
+    ],
+    "asks": [
+      "We only get 100 orders a month, should we be A/B testing?",
+      "What kind of testing makes sense for a small Shopify store?",
+      "When should we start using multi-armed bandits?",
+      "How do I improve conversion without enough traffic to test?",
+      "At what size does a CRO testing programme make sense?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0096",
+    "evidence": {
+      "where": "Part B, stage-gated decision guide by monthly order volume"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-0012",
+    "modules": [
+      "CRO"
+    ],
+    "topics": [
+      "prioritisation frameworks",
+      "common invalidations"
+    ],
+    "claim": "Only about 10 to 20% of well-run A/B tests produce a significant winner; mature pages realistically gain 1 to 5%, and claims above 50% should be re-tested.",
+    "body": "Win-rate figures range from 8% to 36% because sources measure different things, so carry the definition and sample with any number. Thomke and Ghosh's meta-analysis of about 20,000 Optimizely experiments across 1,000+ customers found 10% had a significant uplift on the primary metric. Optimizely's own review of 127,000 experiments at 1,100 companies found 12%, and about 10% for revenue-tied tests. Kohavi reports about a third at Microsoft, 15% at Bing, about 10% at Google Ads, Booking and Netflix, 8% at Airbnb search. ConversionTeam's 2,288 audited tests showed 19.1% significant winners. DRIP's ecommerce database shows 36.3% wins, 41.6% inconclusive, median winning revenue-per-visitor lift +2.77%, higher because every hypothesis is pre-qualified with analytics, recordings and heatmaps. Even significant wins are not 95% certain: if 10% of ideas truly work and tests run at 80% power, about 1 in 5 significant wins is false. Realistic lifts: 1 to 5% on mature pages, 10 to 20%+ on unoptimised ones; treat 50%+ claims as suspect under Twyman's law. How to apply: plan for most tests to lose or tie, pre-qualify ideas with research, and audit any agency lift claim for sample, duration and baseline.",
+    "conditions": "Ecommerce and digital A/B test programmes; benchmarks from the named samples above.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "10% significant uplift across about 20,000 Optimizely experiments (Thomke and Ghosh)",
+      "12% of 127,000 experiments across 1,100 companies (Optimizely)",
+      "19.1% of 2,288 audited tests (ConversionTeam)",
+      "36.3% win, 41.6% inconclusive, median +2.77% RPV (DRIP)",
+      "about 1 in 5 significant wins false at 10% true-win rate and 80% power",
+      "1 to 5% realistic lift on mature pages"
+    ],
+    "asks": [
+      "What win rate should we expect from A/B tests?",
+      "Our agency says 70% of their tests win, is that believable?",
+      "How big a lift is realistic from a CRO test?",
+      "Most of our tests come back flat, are we doing something wrong?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0096",
+    "evidence": {
+      "where": "Part A sections 13 and 14, benchmarks with their samples"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-0013",
+    "modules": [
+      "CRO",
+      "MEA"
+    ],
+    "topics": [
+      "prioritisation frameworks"
+    ],
+    "claim": "Rank test ideas by expected gross profit: P(win) x lift x profit per conversion x traffic exposed, minus build cost, and admit no idea without two pieces of evidence.",
+    "body": "Subjective scoring frameworks fail in a predictable way. With ICE (impact, confidence, ease), the person pitching an idea also scores it, so everything rates highly and nothing is dropped. PIE adds page traffic and value; PXL (CXL) replaces opinion with about 10 to 14 mostly yes-or-no criteria tied to evidence, such as above the fold, noticeable within 5 seconds, on a high-traffic page, supported by heatmaps, user tests, surveys or analytics. The brief argues for going one step further and ranking by expected value: probability of winning times expected lift times value per conversion times traffic exposed, minus build cost. Weight value by gross profit per conversion, not revenue, because a lift that shifts the mix toward low-margin SKUs can raise revenue and cut profit. A 20% lift on a low-traffic, low-margin page can be worth less than a 5% lift on the checkout path of the hero product. How to apply: require at least two independent points of evidence before an idea enters the backlog, estimate exposed traffic from analytics, use realistic win probabilities (10 to 20% for unresearched ideas), and sort by expected profit.",
+    "conditions": "Teams with more test ideas than testing capacity and per-SKU gross margin available.",
+    "fails_when": "Stores without reliable per-SKU margin data, where profit weighting adds false precision; very small backlogs where ranking overhead exceeds its value.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "at least 2 points of evidence per backlog idea",
+      "PXL uses about 10 to 14 criteria"
+    ],
+    "asks": [
+      "How should we decide which A/B test to run first?",
+      "Is ICE scoring good enough for prioritising tests?",
+      "Which page should I test first on my store?",
+      "How do I estimate what a test is worth before building it?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0096",
+    "evidence": {
+      "where": "Part A section 9, prioritisation frameworks"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-0014",
+    "modules": [
+      "CRO",
+      "MEA"
+    ],
+    "topics": [
+      "sample size and power",
+      "test design"
+    ],
+    "claim": "Revenue per visitor needs roughly 6 times the traffic of a conversion-rate test: about 175,000 versus 28,000 visitors per variant at a 3% baseline.",
+    "body": "Revenue metrics are statistically expensive because order values are extremely skewed. In a typical ecommerce case about 97% of visitors spend nothing and a few spend a lot, giving a coefficient of variation near 750% (a standard deviation of $18 on a mean of $2.40 per visitor). The variance of order value adds to the variance of the yes-or-no conversion, so for the same relative MDE a revenue-per-visitor test needed about 175,000 visitors per variant against about 28,000 for a conversion-rate test at a 3% baseline. Yet conversion rate alone is blind to order value: a variant can lift conversion while shifting buyers to cheaper or lower-margin items. Gross profit per visitor is the honest objective for a DTC brand, but carries the same variance problem plus margin data. How to apply: below a few thousand orders a month, use conversion rate as the primary metric with average order value, margin and return rate as guardrails; when you do use revenue, winsorize (cap) outlier orders or use a threshold metric such as the share of visitors spending over a set amount, so one large order cannot decide the test.",
+    "conditions": "Ecommerce A/B tests where order values vary widely; figures from Atticus Li's Optimizely metrics guide (March 2026).",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "about 97% of visitors spend $0",
+      "coefficient of variation about 750% ($18 sd on $2.40 mean)",
+      "about 175,000 vs 28,000 visitors per variant at 3% baseline",
+      "about 6x traffic for RPV vs conversion rate"
+    ],
+    "asks": [
+      "Should I use revenue per visitor or conversion rate as my test metric?",
+      "Our test raised conversion rate but revenue went down, how?",
+      "How do I stop one big order from skewing my A/B test?",
+      "What metric should a DTC brand optimise A/B tests for?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0096",
+    "evidence": {
+      "where": "Part A section 11, primary metric choice"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-0015",
+    "modules": [
+      "CRO"
+    ],
+    "topics": [
+      "stopping rules",
+      "test design"
+    ],
+    "claim": "Run every test at least one full week, in practice two, to cover the weekly cycle; a fully powered inconclusive result means the effect is below your MDE, so stop.",
+    "body": "Buyers differ by weekday and weekend, and returning visitors cycle weekly, so a test that runs four days samples a skewed population. Kohavi's guidance is a minimum of one full week and, in practice, two, plus whatever time the pre-computed sample size needs; do not stop early because significance appeared. When a properly powered test ends inconclusive, that is evidence the true effect is smaller than the MDE you designed for, not a failure. Extending it hoping for significance is just peeking under another name, and Kohavi notes there is little value in extending a test that is significantly negative after two weeks. Ship neither version, or ship the cheaper or simpler one, log the learning and move on. Novelty effects (a temporary bump because something is new) and primacy effects (returning users initially resisting a change) can distort early reads; check by plotting the daily effect and comparing first-exposure with repeat-exposure visitors, though Kohavi found most apparent novelty trends were noise in early cumulative numbers. Re-test any surprisingly large winner with a holdout before banking the revenue, because tests on small samples inflate effect sizes (the winner's curse).",
+    "conditions": "Randomised A/B tests on ecommerce sites with weekly traffic patterns.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "minimum 1 full week, practically 2 weeks"
+    ],
+    "asks": [
+      "How long should an A/B test run?",
+      "Our test is inconclusive after two weeks, should we keep it running?",
+      "Why did my winning test stop working after launch?",
+      "Is a test that showed no difference a waste?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0096",
+    "evidence": {
+      "where": "Part A sections 3 and 13 (Kohavi, Five Puzzling Outcomes; Trustworthy Online Controlled Experiments)"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-0016",
+    "modules": [
+      "CRO",
+      "SET"
+    ],
+    "topics": [
+      "test design",
+      "low traffic methods"
+    ],
+    "claim": "Since Shopify's checkout extensibility rollout (August 2024), client-side tools cannot A/B test the checkout; non-Plus stores test everything before checkout, Plus stores via Checkout Blocks.",
+    "body": "Shopify deprecated checkout.liquid and moved all merchants to checkout extensibility, with general rollout in August 2024. Direct JavaScript injection into checkout is gone, so third-party client-side tools can no longer split-test the checkout UI, and Shopify's developer community has confirmed there is no built-in extensibility rule to show a customisation to one group and hide it from another. What remains: on Basic, Shopify and Advanced plans, everything before checkout can be tested, including product, collection, cart and home pages, add-to-cart, trust badges and price display, typically via a head snippet. On Plus, Checkout Blocks, UI extensions, Shopify Functions and the Branding API are available, and a few apps run limited checkout-element tests through Checkout Blocks. Shopify Rollouts tests themes server-side. The research brief estimates about 80% of high-impact ecommerce tests sit before checkout anyway. How to apply: route checkout hypotheses to pre-checkout surfaces such as cart, shipping-threshold messaging and product page trust, or run them as Plus server-side work. The brief flags this as moving: Shopify keeps adding extensibility, so re-verify yearly.",
+    "conditions": "Shopify stores; position as of late 2025.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "checkout extensibility general rollout August 2024",
+      "about 80% of high-impact ecommerce tests happen before checkout (brief's estimate)"
+    ],
+    "asks": [
+      "Can I A/B test my Shopify checkout?",
+      "Which A/B testing tool works on Shopify checkout now?",
+      "We're not on Shopify Plus, what can we test?",
+      "Why did our checkout test stop working on Shopify?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0096",
+    "evidence": {
+      "where": "Part A section 12, checkout (Shopify developer community, Varify, Convert)"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-0017",
+    "modules": [
+      "CRO"
+    ],
+    "topics": [
+      "stopping rules"
+    ],
+    "claim": "Stopping an A/B test the first time it hits p < 0.05 lifts false positives from 5% to 26.1%; Bayesian tools peeked the same way reach about 80%.",
+    "body": "Fixed-horizon tests only give a valid p-value if you look once, at the pre-planned sample. Evan Miller showed that checking after every observation and stopping at the first p < 0.05 turns a nominal 5% false positive rate into 26.1%. His table: to keep a true 5% you need a reported significance of 2.9% with 1 interim look, 2.2% with 2, 1.8% with 3, 1.4% with 5 and 1.0% with 10. Kohavi and Sonnet put a practical number on it: running two weeks and then checking daily for two more weeks pushes a 5% error rate to about 17%. Etsy's simulation exceeded a 50% false positive chance after 500 continuously checked observations at alpha 0.10. Bayesian tools are not immune: Alex Molas's 2025 simulation, peeking every 100 observations and stopping at 95% probability to beat control, produced about an 80% false positive rate. How to apply: either fix the sample in advance and look once, or use an engine built for monitoring, such as mSPRT always-valid p-values (Optimizely), group sequential designs (Spotify, which found them more powerful when sample size can be estimated), GAVI (Eppo) or corrected alpha (Statsig). Sequential methods cost some power in exchange for the right to look.",
+    "conditions": "Any A/B test read by a person or tool repeatedly before the planned sample is reached.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "26.1% false positive rate with continuous peeking (Evan Miller)",
+      "required reported significance 2.9 / 2.2 / 1.8 / 1.4 / 1.0% for 1 / 2 / 3 / 5 / 10 peeks",
+      "about 17% error after 2 weeks plus 2 weeks of daily checks (Kohavi and Sonnet)",
+      "about 80% false positives with Bayesian peeking every 100 observations (Molas, Oct 2025)"
+    ],
+    "asks": [
+      "Can I stop my A/B test as soon as it shows a winner?",
+      "Our test hit 95% significance on day 3, should we ship it?",
+      "Is it OK to check A/B test results every day?",
+      "Does Bayesian testing let me stop early?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0096",
+    "evidence": {
+      "where": "Part A section 3 and section 5"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-0018",
+    "modules": [
+      "CRO",
+      "AVT",
+      "LPG"
+    ],
+    "topics": [
+      "test design",
+      "objection discovery"
+    ],
+    "claim": "Add a two-question post-purchase survey (what made you buy today, what almost stopped you) and turn the top near-miss reason into page copy.",
+    "body": "Analytics, heatmaps and recordings show what visitors do; they cannot say why. The agency calls a post-purchase survey the single most effective optimisation input, with two required questions: what made you purchase today, and what almost made you not purchase today. The second produces the objections that cost sales from people who nearly left. Examples from the talk: supplement buyers said they did not know how long results would take, so the page added a line promising noticeable results in the first six weeks; buyers of a handcrafted sandal brand said they doubted the leather quality, so the homepage hero was rewritten around craftsmanship and leather sourcing, which the agency credits with about $77,000 a month in extra revenue. Pair the survey with heatmaps to see where key proof sits: in one audit a brand's main selling points sat above the footer, where about 6 percent of visitors scrolled. How to apply: add the survey to the thank-you page, or email past buyers a one-off survey with a draw for a $250 gift card; review answers monthly, rank near-miss reasons by frequency and address the top one above the fold.",
+    "conditions": "Any store with enough orders to collect dozens of responses a month; the gift-card draw suits stores with an existing customer list.",
+    "fails_when": "Very low order volumes where a handful of answers can mislead; surveys only reach buyers, so objections from people who never bought need interviews, review mining or exit surveys.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "2 survey questions",
+      "about $77,000 monthly revenue lift attributed to a sandal brand's hero rewrite",
+      "about 6% of visitors reached a footer-level selling point",
+      "$250 gift card draw for a one-off survey"
+    ],
+    "asks": [
+      "What questions should my post-purchase survey ask?",
+      "How do I find out why people almost didn't buy?",
+      "We don't know what objections stop customers, where do we start?",
+      "Is a post-purchase survey worth setting up?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0098",
+    "evidence": {
+      "where": "Qualitative data section and sandal brand case study",
+      "quote": "what made you almost not purchase today?"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "CRO-0019",
+    "modules": [
+      "CRO",
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "low traffic methods",
+      "prioritisation frameworks",
+      "repair versus test"
+    ],
+    "claim": "Below about 300,000 sessions a month, skip small isolated A/B tests and take big swings: new landing pages, PDP redesigns, offer and price tests, cart thresholds.",
+    "body": "Small changes such as a button colour or one line of copy produce effects too small to detect without very large samples, so lower-traffic stores spend months testing noise. Conversion Wise now sorts clients by monthly sessions. Under roughly 300,000 sessions (assuming a typical ecommerce conversion rate), they run big swings: pre-sell landing pages such as listicles and advertorials between the ad and the product page, product page redesigns grounded in research, monthly offer and price tests (bundles, buy-one-get-one, build-a-bundle), free-shipping and free-gift thresholds in the cart, post-purchase upsells and surveys, and matching landing-page messaging to the ad creative. Above roughly 300,000 sessions, they add comprehensive research audits and isolated A/B tests at a pace of 4 to 8 a month, avoiding overlapping tests on the same page. Even at high volume, about 80 percent of their tests are bigger swings or above-the-fold changes. How to apply: check monthly sessions and orders first, then choose the programme; a low-traffic store should change one large thing, measure revenue per visitor over several weeks and keep or roll back.",
+    "conditions": "Ecommerce stores deciding how to run optimisation, with typical conversion rates; threshold is the agency's 2025 internal rule.",
+    "fails_when": "Stores with very high order volume per session (high conversion rate) can test smaller changes below 300,000 sessions; big redesigns bundle many changes, so you learn less about which part worked and a losing redesign can hide a winning element.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "300,000 sessions per month threshold",
+      "4 to 8 A/B tests per month above the threshold",
+      "about 80% of tests are big swings or above the fold"
+    ],
+    "asks": [
+      "Should a small store be A/B testing button colours?",
+      "We get 80,000 sessions a month, what kind of CRO should we do?",
+      "How much traffic do I need before running lots of A/B tests?",
+      "What are big swing tests in ecommerce?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0098",
+    "evidence": {
+      "where": "Approach section, under and over 300,000 sessions"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-0020",
+    "modules": [
+      "CRO"
+    ],
+    "topics": [
+      "common invalidations",
+      "test design"
+    ],
+    "claim": "Expect most tests to lose: a 30 to 35 percent win rate is very good, and the agency's programme for Boom produced 13 winners from 135 tests.",
+    "body": "Founders often expect every test to win and abandon testing after a run of losses. The agency's figures say otherwise: across its client base, winning 30 to 35 percent of tests counts as doing very well, and the documented programme for Boom by Cindy Joseph, an eight-figure pro-age makeup brand, had 13 winners out of 135 tests, about 10 percent. The case for testing anyway is that implemented winners keep paying: each lifts revenue per visitor permanently, and the gains compound over months, while losers cost only the test period. Two operating lessons follow. First, analyse why each loss happened and feed it into the next hypothesis rather than discarding it. Second, keep a written register of winning changes, because Ezra Firestone reported that after a leadership change at one brand several proven winners were overwritten by new designs and had to be reinstated. How to apply: set expectations and budget for roughly one win in three to ten tests, log every result with its hypothesis, and require a check against the winners register before any redesign ships.",
+    "conditions": "Brands running an ongoing testing programme with an agency or in-house team.",
+    "fails_when": "Programmes that only test obvious repairs (broken elements, missing information) will see higher win rates, and those repairs should simply be fixed rather than tested.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "30 to 35% win rate counts as very good",
+      "13 winners out of 135 tests for Boom (about 10%)"
+    ],
+    "asks": [
+      "What percentage of A/B tests should win?",
+      "Most of our tests are losing, are we doing something wrong?",
+      "How do I stop a redesign from undoing past test wins?",
+      "Is CRO worth it if most tests fail?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0098",
+    "evidence": {
+      "where": "Case study introduction and test count slide",
+      "quote": "13 tests out of 135 won"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "CRO-0021",
+    "modules": [
+      "CRO",
+      "MEA"
+    ],
+    "topics": [
+      "sample size and power",
+      "stopping rules",
+      "test design"
+    ],
+    "claim": "Run each test on 50,000 to 100,000 sessions over 2 to 4 weeks covering full weekly cycles, and judge winners on revenue per visitor rather than conversion rate.",
+    "body": "A testing tool can declare significance early, like calling a coin biased after three flips, so the agency also requires power: enough sessions that the result would hold if repeated. Their working rules: put 50,000 to 100,000 sessions through a test depending on its location in the funnel; run at least two weeks and up to four so every weekday appears at least twice, which stops a competitor's one-day sale or a weekend dip from deciding the outcome; randomise traffic; and QA every variant two or three times on all devices before launch, because a bug will read as a losing test. The success metric should be revenue per visitor (or per session), which combines conversion rate and order value; conversion rate alone can be raised in minutes by halving prices while making less per visitor. Avoid running conflicting tests on the same page at once; tests far apart in the funnel, such as homepage and cart, can run together. Multivariate tests only make sense at high volume.",
+    "conditions": "Stores running controlled A/B tests, mainly above about 300,000 monthly sessions.",
+    "fails_when": "Low-traffic stores cannot reach 50,000 sessions per variant in four weeks and should use big-swing before-and-after changes instead; tests on high-AOV, low-volume products may need longer windows than four weeks.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "50,000 to 100,000 sessions per test",
+      "2 to 4 weeks duration, minimum 2 full weeks",
+      "QA each variant 2 to 3 times before launch"
+    ],
+    "asks": [
+      "How long should I run an A/B test?",
+      "How many visitors does an A/B test need?",
+      "Our test hit significance after 3 days, can we stop it?",
+      "Should I measure tests on conversion rate or revenue per visitor?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0098",
+    "evidence": {
+      "where": "Testing foundational principles section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-0022",
+    "modules": [
+      "CRO",
+      "LPG"
+    ],
+    "topics": [
+      "prioritisation frameworks",
+      "test design"
+    ],
+    "claim": "A page element that takes a high share of clicks but is reached by few visitors is a strong test candidate; moving one such section up reportedly lifted conversions 18%.",
+    "body": "Click maps that show each element's share of all clicks, read next to scroll maps that show what share of sessions reach each depth, expose demand held back by position. If a section collects a large share of clicks even though most visitors never scroll to it, the people who do see it want it, and more would use it if it sat higher. In the reported case, a 'shop by industry' row of icons low on a homepage took 10.41% of all clicks on the page while only 30 to 35% of visitors reached it. The agency tested putting the same icons at the top of the homepage to route visitors into collection pages, and reported an 18% rise in conversions from that one A/B test. How to apply: export element click share for the homepage and key templates; export scroll reach for the same sections; divide click share by reach and rank the results; take the top navigation-type elements (category tiles, filters, shop-by rows) and test moving them above the fold. Plan the sample size before running. The 18% figure came with no traffic, duration or significance data, although the agency's clients run 300,000 to 400,000 visitors a month, so treat it as a reason to test, not an expected effect.",
+    "conditions": "Stores with enough homepage traffic to run an A/B test; navigation elements (category tiles, shop-by rows) placed below the fold; a click-map tool that reports element click share plus scroll reach.",
+    "fails_when": "The element is clicked because it sits low (footer support links used by existing customers); moving it pushes the main value proposition out of view; traffic is too low to reach significance; the lift is assumed rather than tested.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "10.41% of homepage clicks on a section reached by 30 to 35% of visitors",
+      "18% reported conversion lift from moving it to the top (no sample size given)",
+      "agency clients at 300,000 to 400,000 visitors per month"
+    ],
+    "asks": [
+      "what should I A/B test first on my homepage",
+      "our heatmap shows lots of clicks on a section near the bottom, should we move it up?",
+      "how do I use click maps and scroll maps together",
+      "is moving category icons to the top of the homepage worth testing",
+      "what click share versus scroll depth means an element is in the wrong place"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0099",
+    "evidence": {
+      "where": "Area maps section, client homepage example"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "CRO-0023",
+    "modules": [
+      "CRO",
+      "LPG"
+    ],
+    "topics": [
+      "test design",
+      "repair versus test",
+      "friction removal"
+    ],
+    "claim": "Treat rage clicks under 1-2% of sessions as normal; investigate dead clicks on price or navigation elements and quick backs from product pages, which signal missing information.",
+    "body": "Session-recording tools flag four frustration signals. Rage clicks (repeated clicks on one spot, often trying to close a popup or open something that does not respond): the practitioner treats anything under about 1 to 2% of sessions as healthy, but still watches those recordings for cheap fixes. Dead clicks (clicks on things that are not links): harmless on 'as seen on' logos you deliberately do not link out from, but a leak when the element would help the buyer, such as a header logo that does not return to the home page from the product or checkout page, or price and plan areas people click to see pricing. Excessive scrolling: visitors racing past a long text block or hunting for a missing CTA. Quick backs: landing on a page and immediately returning, which on a product page usually means expected information (size, shipping, ingredients, price) is not visible. Method: set a 90-day to 6-month window, open recordings for each signal, sort by most clicks and pages, then by fewest, to compare engaged and unengaged visitors, and stop once the same friction pattern keeps repeating, whether after 100 or 400 recordings. Broken elements found this way are repaired, not A/B tested.",
+    "conditions": "Stores and landing pages with a session recording tool installed; most useful when traffic is too low for A/B testing.",
+    "fails_when": "Sessions are too few to separate a pattern from one-off behaviour, or bot traffic inflates the signals; the 1-2% threshold is one agency's rule of thumb.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "rage clicks under about 1% to 2% of sessions considered healthy",
+      "review window of 90 days to 6 months",
+      "stop after the pattern repeats, typically 100 to 400 recordings"
+    ],
+    "asks": [
+      "What is a normal rage click rate?",
+      "People keep clicking our logo on the product page and nothing happens, does that matter?",
+      "What does a quick back mean on a product page?",
+      "How many session recordings should I watch?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0100",
+    "evidence": {
+      "where": "dashboard insights block (rage clicks, dead clicks, excessive scrolling, quick backs); recordings section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-0024",
+    "modules": [
+      "CRO"
+    ],
+    "topics": [
+      "sample size and power",
+      "stopping rules",
+      "common invalidations"
+    ],
+    "claim": "Trusting a 10 to 20% conversion lift needs about 1,000 conversions per variant: at 2.5% conversion, roughly 40,000 sessions per variant, 80,000 for a simple A/B test.",
+    "body": "The presenter's rule of thumb for landing-page tests: to believe a 10 to 20% relative lift, you need roughly 1,000 conversions in each arm. At a 2.5% conversion rate that is about 40,000 sessions per variant, so 80,000 for a two-arm test. Most seven-figure brands cannot send that much traffic to one product page in a month, so a 'winning' test after two weeks and about 100 conversions is noise. Three common invalidations he names. Peeking: checking daily and stopping when the result looks significant inflates false positives. Email contamination: a Klaviyo campaign spikes conversion and revenue, and if on-page testing software splits all traffic, email visitors pollute both arms. Multi-click journeys: across his large clients it takes about 1.5 Meta clicks on average to convert, so a visitor may see both variants. How to apply: compute the sample size before starting and fix the duration in advance; run page tests on dedicated landing pages fed only by cold paid traffic; exclude email and SMS traffic; and below roughly $40 million a year online, prefer fixing clear problems (clarity, offer, proof, friction) over testing small design tweaks. Judge the program by revenue per visitor trend over months, not by a list of green tests.",
+    "conditions": "Stores running on-page A/B tests or hiring a CRO agency; most relevant to brands under 8 figures with limited traffic per page.",
+    "fails_when": "Very high-traffic brands or tests expecting very large effects (a headline or offer change), where fewer conversions can detect the difference; sequential testing methods designed for peeking change the stopping math.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 1,000 conversions per variant to trust a 10 to 20% lift",
+      "about 40,000 sessions per variant at 2.5% conversion, 80,000 total",
+      "two weeks and about 100 conversions is noise",
+      "average about 1.5 Meta clicks before purchase (presenter's large clients)",
+      "A/B micro-testing worth it from about $40 million a year online"
+    ],
+    "asks": [
+      "How much traffic do I need to run an A/B test?",
+      "Our agency says a test won after two weeks, can I trust it?",
+      "Is A/B testing worth it for a small store?",
+      "Why do our test wins never show up in revenue?",
+      "Can I stop a test early if it looks like it's winning?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0101",
+    "evidence": {
+      "where": "Section on the math CRO sellers never run through, after the checkout teardown"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  }
+]

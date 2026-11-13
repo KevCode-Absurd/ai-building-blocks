@@ -1,0 +1,479 @@
+[
+  {
+    "id": "PRD-0001",
+    "modules": [
+      "PRD",
+      "BRD"
+    ],
+    "topics": [
+      "candidate screening",
+      "saturation assessment",
+      "demand and trend reading",
+      "positioning"
+    ],
+    "claim": "Pick big, already-understood categories where every incumbent looks the same, then import a cultural shift the category has missed; the business sits in the gap between.",
+    "body": "Ryan's screening model has three signals, all observable by walking the aisle. First, size and familiarity: an existing large category means no consumer education, so a 'saturated' shelf is a plus, not a minus. Second, a sea of sameness: every pack looks alike (all dish soaps green and toxic-looking, all vitamins round, pseudo-scientific or folksy). Two extra clues that a category is ripe: it takes itself too seriously, or it is needlessly complicated (vitamins sold by ingredient so shoppers ask strangers what magnesium is for). Third, a cultural shift already visible in a different category that has not reached this one: for Method it was home lifestyling plus health and sustainability, for Olly it was the way SoulCycle turned fitness into a lifestyle pursuit. The product is the intersection of familiar and novel. Olly's execution shows the moves: since every competitor was round, the jar became square; the cap became the logo; SKUs were named by benefit (Sleep, Beauty) instead of ingredient (melatonin, biotin); the jar was designed to be left on the counter, which also helps people remember to take it. How to apply: photograph the shelf, list the shared cues, list shifts happening in adjacent lifestyle categories, and only proceed if one shift clearly has not reached this aisle.",
+    "conditions": "Mass consumer categories sold at retail or DTC where packaging and shelf presence drive choice; founder can design and brand; physical products bought repeatedly.",
+    "fails_when": "The category is small or the sameness exists because of regulation or cost (commodity price buyers who ignore design); the 'shift' is a niche trend that has not reached mainstream buyers; B2B or spec-driven purchases where design is not a purchase driver.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "Method and Olly each described as near $0.5B to $1B brands"
+    ],
+    "asks": [
+      "How do I find a product category worth disrupting?",
+      "Is a crowded, saturated category a bad place to launch a new brand?",
+      "Every brand in my aisle looks the same. Is that an opportunity?",
+      "What signs tell me a boring category is ripe for a new brand?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S0002",
+    "evidence": {
+      "where": "Opening playbook section; Olly vitamin aisle story",
+      "quote": "they're all round so we had no choice but to be square"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "PRD-0002",
+    "modules": [
+      "PRD",
+      "BRD"
+    ],
+    "topics": [
+      "spec and differentiation",
+      "launch risk",
+      "candidate screening"
+    ],
+    "claim": "When reinventing a commodity product, change exactly one major variable from what shoppers expect; changing two or three at once usually makes it too novel to adopt.",
+    "body": "Eric Ryan (Method, Olly, Welly) calls this his golden rule, borrowed from apparel and fashion: one iteration off the category core has a high hit rate, while two or three simultaneous changes usually fail. The mechanism is adoption cost. A shopper can absorb one surprise (a dish soap that looks like a vase, a vitamin that is a gummy, a bandage with a pattern) while every other cue still says the product works as expected. Stack several changes and the shopper must re-learn the category, which needs education budget most launches do not have. His own counter-example: a 10x concentrated laundry detergent in a shampoo-sized bottle that did 50 loads with a pre-measured pump. It was technically better but failed because buyers had been trained that a big jug is what cleans clothes. He says he has failed far more often by being too novel than too familiar. How to apply: list every attribute buyers expect (format, size, dose, colour, price band, channel, claim) and pick the one to change; hold the rest at category norm; if the concept needs two changes, launch one now and keep the second for a later SKU. The same rule applies to messaging: lead with one difference, not four.",
+    "conditions": "Entering an established, large consumer category where buyers already understand the product; retail or DTC CPG; brand without a large consumer-education budget.",
+    "fails_when": "The category is genuinely new and buyers must be educated anyway, or the single change is cosmetic and gives no reason to switch; well-funded launches that can pay for education (or regulated innovation like a new active ingredient) can carry more novelty.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "1 variable changed from category core vs 2 to 3 (likely failure), practitioner rule",
+      "10x concentrated detergent, shampoo-size bottle for 50 loads: failed launch"
+    ],
+    "asks": [
+      "How different should my product be from what's already on the shelf?",
+      "I want to change the format, size and dose of a household product all at once. Is that too much?",
+      "Why do really innovative consumer products flop?",
+      "How many things should I change versus the category leader when I launch?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S0002",
+    "evidence": {
+      "where": "Mid-interview, after the 'if it's hard, it's probably wrong' exchange; laundry detergent failure story",
+      "quote": "if you throw a consumer an egg, they're going to catch it"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "PRD-0003",
+    "modules": [
+      "PRD",
+      "FIN"
+    ],
+    "topics": [
+      "next purchase behaviour",
+      "adjacent categories",
+      "kill conditions"
+    ],
+    "claim": "A single viral hero product decays: Oodie peaked near $200M a year with only about $5M from other products, then declined faster than its 20%-a-year secondary range grew.",
+    "body": "Oodie reached roughly $200M in annual revenue in its third year, but almost all of it came from one product, the wearable blanket, with only about $5M from anything else. After the peak, revenue slid to about $190M and then $180M as competitors arrived, the trend fatigued and the pandemic lift reverted. The founder's later fix was to define the brand by the function the hero serves (comfort), then add more evergreen secondary products: nightwear, dressing gowns, bath hoodies, forecast at about $50M for the year and growing near 20% a year for three to four years. Even so, the hero was declining faster than the range was growing. The lesson for expansion planning: start the secondary range while the hero is still rising, not after it peaks, because a 20% growth rate on a small base cannot cover a fast-falling hero. He also says stockouts cost Oodie an estimated 30 to 50% more revenue at the peak. Founder recall, approximate numbers, one brand.",
+    "conditions": "Brand whose revenue is concentrated in one trend-driven or viral hero SKU; the hero is still growing or near peak.",
+    "fails_when": "The hero is a staple with steady replenishment demand rather than a trend; the brand already has a broad catalogue; adding SKUs would spread scarce cash and inventory too thin before the hero is stable.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about $200M annual revenue in year 3, about $5M of it from non-hero products",
+      "revenue then about $190M and $180M in following years",
+      "secondary range forecast about $50M, growing about 20% a year for 3 to 4 years",
+      "stockouts estimated to cost 30 to 50% extra revenue at the peak"
+    ],
+    "asks": [
+      "Our one bestseller is slowing down, what should we do?",
+      "When should I add more products if one viral product is carrying the brand?",
+      "How do brands survive after their hero product trend dies?",
+      "Is 20% growth on new products enough to replace a declining bestseller?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "expansion",
+    "source": "S0003",
+    "evidence": {
+      "where": "Middle of interview, 'what happened after you hit the 200 million' and the brand-building answer",
+      "quote": "The pace of that is faster declining than the growth of the other products"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "PRD-0006",
+    "modules": [
+      "PRD",
+      "OFF"
+    ],
+    "topics": [
+      "pricing",
+      "unit economics",
+      "candidate screening"
+    ],
+    "claim": "Screen new products for a $50 to $150 retail price; a candidate that can only sell at $9 to $20 struggles to fund paid acquisition at launch.",
+    "body": "The reason for the band is unit economics on paid traffic. Below roughly $50, the profit per order is too thin to absorb a customer acquisition cost from paid ads, especially before bulk pricing lowers unit cost. Above roughly $150, buyers hesitate to purchase from an unknown online store and start expecting premium service such as phone support, which raises operating cost. In the source's worked example, a coconut hair mask passed demand checks (about 73,000 monthly Google searches, about 150 daily tweets, rising Google Trends interest, scarce in physical stores) but comparable products sold for only $9 to $20 per 120 ml, which the presenter flagged as the first red flag because paid channels would be hard to make work at launch. How to apply: price two dozen comparable products first, take the realistic selling range, and check whether the margin at the low end can cover a plausible first-purchase CAC. If not, the product needs a bundle, a larger format, repeat purchase or an organic channel to work. The band is a heuristic attributed to experienced ecommerce operators, not measured data.",
+    "conditions": "New single-brand DTC store relying on paid ads for first purchases; product candidate screening before inventory commitment.",
+    "fails_when": "Low-priced consumables with strong repeat purchase, bundles or subscriptions that lift first-order value, or brands with organic or marketplace demand that does not pay a per-order CAC; luxury or high-consideration categories where buyers expect to pay well above $150.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "$50 to $150 retail price band for paid-acquisition products",
+      "$9 to $20 per 120 ml comparable price range in the worked example",
+      "about 73,000 monthly searches and 150 tweets per day in the worked example"
+    ],
+    "asks": [
+      "What price should my first product sell for if I'm running Facebook ads?",
+      "Our product only sells for $15, can we still make paid ads work?",
+      "Is $50 to $150 really the sweet spot for a new online product?",
+      "How do I know if a product is too cheap to sell online with ads?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S0008",
+    "evidence": {
+      "where": "Question 6, what is your potential selling price"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "PRD-0007",
+    "modules": [
+      "PRD",
+      "BRD"
+    ],
+    "topics": [
+      "cannibalisation",
+      "adjacent categories"
+    ],
+    "claim": "Line extensions survive only while a category has no strong rival; run the shopping-list test: if your name on a list could mean several products, the brand is diluting.",
+    "body": "The authors' test for line extension: write the brand name alone on a shopping list and send someone to buy it. If they come back with the intended product without asking, the brand still owns a position (Kleenex, Bayer, Dial at the time). If the name could mean several products (Heinz pickles or ketchup, Scott tissue or towels), the brand is losing meaning. A spoken version is the bartender test: order by brand and see if you get what you meant. The damage is slow, often taking years. Kraft is the worked example: the brand was on many categories but led almost none, while the company's category leaders carried other names (Philadelphia, Sealtest, Parkay). Kraft still won in cheese only because the category had weak competition, and the authors warn an extension holds only until a strong specialist arrives. Cost examples: Sara Lee lost about $8 million on frozen entrees; Saturday Review lost $17 million splitting into four editions. Before extending, ask whether a focused specialist could enter that category; if so, use a separate name or skip it.",
+    "conditions": "A brand with a clear core product considering adding products in other categories.",
+    "fails_when": "Categories bought without brand preference, or with no strong specialists, where a known name beats unknown ones.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Sara Lee frozen entree loss about $8 million",
+      "Saturday Review four-edition loss $17 million"
+    ],
+    "asks": [
+      "How do I know if adding products is diluting my brand?",
+      "We put our brand on lots of products and none of them lead, why?",
+      "Is it safe to extend our brand into a new category?",
+      "What is a quick test for brand dilution?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "expansion",
+    "source": "S0036",
+    "evidence": {
+      "where": "Chapter 12, The line-extension trap, sections 'The shopping-list test' and 'The bartender test'"
+    },
+    "strength": "anecdote",
+    "public": false
+  },
+  {
+    "id": "PRD-0008",
+    "modules": [
+      "PRD",
+      "BRD"
+    ],
+    "topics": [
+      "catalog mapping",
+      "adjacent categories",
+      "cannibalisation"
+    ],
+    "claim": "Put a new product under the house brand only if it is low-volume, in a crowded field, lightly advertised, a commodity, or rep-sold; otherwise give it its own name.",
+    "body": "Ries and Trout give five rules for deciding when a new product should carry the existing brand name and when it needs a new one. 1. Expected volume: a potential big winner should get its own name; small-volume items can ride the house name. 2. Competition: entering an empty category, use a new name so it can own the category; entering a crowded field, the familiar house name helps. 3. Advertising support: big-budget launches should carry a new name; small-budget products benefit from borrowed recognition. 4. Significance: a breakthrough deserves its own name; commodity items do not. 5. Distribution: products picked off a shelf by the shopper need their own name; products sold through sales reps can carry the house name. The logic is that one name standing for two different things blurs the position of both, but many products are bought without any prior brand preference, and there a known name beats an unknown one. Apply it before naming a new SKU line: score the launch on the five rules. Mostly-new-name answers mean a separate brand; mostly-house-name answers mean a line extension is acceptable.",
+    "conditions": "Deciding brand architecture for a new product or category entry; strongest for a brand moving into a category different from its core.",
+    "fails_when": "Variants within the same category (new size, flavour, colour) where the shopper already expects one brand; and very small brands that cannot afford to build a second name at all.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "5 rules: expected volume, competition, advertising support, significance, distribution"
+    ],
+    "asks": [
+      "Should my new product use our brand name or get its own name?",
+      "We are launching into a new category, do we keep our brand name on it?",
+      "When is a line extension a bad idea?",
+      "How do I decide between a sub-brand and a new brand?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "expansion",
+    "source": "S0036",
+    "evidence": {
+      "where": "Chapter 13, When line extension can work, section 'Rules of the road'"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "PRD-0009",
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "topics": [
+      "sourcing and MOQ",
+      "launch risk"
+    ],
+    "claim": "First-run beverage brands can cut packaging minimums about tenfold by using sleeve-wrapped cans instead of printed cans; treat printed packaging as a nice-to-have.",
+    "body": "McKay separates must-haves from nice-to-haves when de-risking a product launch. Cadence chose printed cans, which carry much higher minimum order quantities, because the brand is built on a premium positioning. For founders without that capital or certainty, he says a sleeve can (a blank can with a shrink sleeve label) carries roughly a tenth of the MOQ of a printed can, and most startup beverages begin there. The same logic applies beyond drinks: decoration methods that can be applied late (labels, sleeves, stickers, inserts) let you run small batches, change claims after regulators or retailers push back, and avoid writing off thousands of printed units when a rebrand happens (Cadence rebranded three times in about 300 days). He also notes most founders start with a manufacturer's stock formula and add their label, which is fine for speed, while Cadence used a formulator for a custom product. How to apply: list every packaging and formulation choice, mark which ones the customer would actually notice at launch, and choose the low-MOQ version for the rest until velocity is proven.",
+    "conditions": "New consumable products, pre-product-market-fit, cash-constrained first production runs.",
+    "fails_when": "Premium positioning depends on the finish (Cadence's own choice), or a retailer requires printed packaging; at scale, where sleeve unit cost exceeds printed unit cost.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "sleeve can MOQ about one tenth of a printed can MOQ"
+    ],
+    "asks": [
+      "How do I lower minimum order quantities for my first production run?",
+      "Do I need printed cans to launch a drink brand?",
+      "What is the cheapest way to test a new beverage?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S0037",
+    "evidence": {
+      "where": "Advice to founders launching a product, packaging and MOQ discussion"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "PRD-0010",
+    "modules": [
+      "PRD",
+      "FIN"
+    ],
+    "topics": [
+      "expansion",
+      "cost to enter",
+      "demand and trend reading"
+    ],
+    "claim": "Judge retail launches by units per store per week, not door count; retailers review every 30 days, and beverage can turn 10 to 20 units versus 1 in slow categories.",
+    "body": "McKay argues that door count is a vanity metric: being in 10,000 stores means nothing if each store sells one unit a week. Retail buyers track velocity, measured as units per store per week and dollars per store per week, and in his experience a brand effectively wins or loses its shelf in 30-day cycles: after each 30 days the data comes back and the brand adjusts price, adds a promotion such as two-for-$4, or loses space. Fast categories carry higher expectations because the space next to you turns quickly. His modelling method is bottom-up: units per store per week times stores times 52 times price. At 10 to 20 units a week per store across 3,000 stores of one account, a single flavour is roughly a $20M line, which is how beverage brands reach very large numbers; his previous category turned about one unit a week, which made the same door count a small business. How to apply: before taking a retail deal, find the category's typical velocity, model revenue from velocity rather than doors, and budget trial-driving promotion for the first 30 to 90 days, since the first review decides the next order.",
+    "conditions": "Brick-and-mortar retail expansion, especially grocery and convenience consumables with high purchase frequency; US mass retail.",
+    "fails_when": "Slow-turn categories (home goods, durable goods) where low weekly velocity is normal and buyers judge on margin per square foot instead; online-only marketplaces where store counts do not apply.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "10 to 20 units per store per week x 3,000 stores = about $20M for one flavour in one account",
+      "slow category: about 1 unit per store per week",
+      "retail data and decisions roughly every 30 days",
+      "86% of US adults roughly buy a cold beverage (as stated, unsourced)"
+    ],
+    "asks": [
+      "We got into 1,000 stores, is that good?",
+      "What numbers do retail buyers actually look at?",
+      "How do I forecast revenue from a retail launch?",
+      "How fast do I need to sell on shelf before a retailer drops us?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "expansion",
+    "source": "S0037",
+    "evidence": {
+      "where": "Retail velocity discussion and the Walmart order remark",
+      "quote": "units per store per week is how you measure success"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "PRD-0011",
+    "modules": [
+      "PRD",
+      "OPS"
+    ],
+    "topics": [
+      "complexity cost per SKU",
+      "catalog mapping"
+    ],
+    "claim": "McKay's rule for retail CPG: put all capital behind one hero SKU until it reaches about $10M before launching the next, while still showing retailers 2 to 3 flavours.",
+    "body": "McKay warns that each new SKU spreads a small team thin: new manufacturers, terms, volumes, forecasting and retailer conversations. His rule is that until the hero SKU is doing around $10M, there is no point launching the next flavour, because capital and attention behind the winner compound while a second product dilutes both. Two nuances keep this from being absolute. First, retailers want to see two or three options, so Cadence launched with a few flavours of the same product rather than one. Second, Cadence did launch 13 SKUs in about 18 months, but 90% of focus stays on the canned drink, and the rest are high-margin, subscription-heavy DTC items (sachets around 65% subscription) that keep the brand grounded with its core athletes. He also advises keeping new products with the same production facility where possible, because each extra manufacturer is another relationship to manage. How to apply: name one hero SKU, set a revenue milestone before the next launch, allow flavour or size variants only where the channel demands choice, and treat side products as audience-serving, not growth bets.",
+    "conditions": "Consumer packaged goods brands entering retail with limited team and capital; hero-product categories.",
+    "fails_when": "Fashion, beauty colour or other assortment-driven categories where breadth is the product; DTC brands whose growth comes from cross-sell and repeat on a range; the $10M figure is one founder's threshold, not a benchmark.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about $10M on the hero SKU before the next",
+      "retailers want 2 to 3 options at launch",
+      "13 SKUs in about 18 months, 90% focus on the core drink",
+      "sachets about 65% subscription on the website"
+    ],
+    "asks": [
+      "When should I launch my second product?",
+      "Should we add more flavours or variants now?",
+      "How many SKUs should I launch into retail with?",
+      "We keep launching new products and nothing scales, what should we do?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "expansion",
+    "source": "S0037",
+    "evidence": {
+      "where": "SKU expansion discussion, 'until that's doing 10 million'",
+      "quote": "until this skew has reached $10 million, don't worry about the next skew"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "PRD-0012",
+    "modules": [
+      "PRD"
+    ],
+    "topics": [
+      "candidate screening",
+      "adjacent categories",
+      "catalog mapping"
+    ],
+    "claim": "Ridge screens products in order: can it win new customers (over $50, big market, not an add-on)? Does it lift repeat purchase? Does it sell on Amazon or wholesale?",
+    "body": "Ridge's wallet business is about $100M a year, but wallet buyers rarely need a second wallet, so repeat revenue was weak; over half the business now comes from other products, and the goal is returning-customer revenue at 50%. Frank's three-step screen: First, is it a CAC product or an LTV product? A CAC product can win new customers through paid ads: priced above about $50, a large market, and not a complement to something already sold (a key case that pairs with the wallet cannot be advertised to strangers, so it is LTV only and sold to the base). Second, what does it do for LTV across the range? Luggage buyers turned out likely to buy wallets. Third, is there a distribution play beyond DTC, such as Amazon or wholesale? Phone cases ($40 to $75) passed all three: competitive in the ad auction, strong cross-sell with wallets, and good on Amazon and at Best Buy. Treat launches as lottery tickets: watches, mini knives and apparel failed, and he advises dropping flops rather than forcing them with more marketing. Yeti's cooler is now under 20% of revenue, with drinkware about 70%.",
+    "conditions": "Brand expanding beyond a low-repeat hero product; performance-marketing-led acquisition; Ridge, US, about $100M+ revenue.",
+    "fails_when": "Consumables or replenishment brands where repeat is already high; brands without cash to absorb failed launches; products under about $50 that cannot carry paid CAC.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "CAC product price above about $50",
+      "phone cases $40 to $75",
+      "wallet business about $100M a year; over half of revenue now from other products",
+      "target 50% of revenue from returning customers",
+      "Yeti: cooler under 20% of revenue, drinkware about 70%"
+    ],
+    "asks": [
+      "How do I decide which new product to launch next?",
+      "Our customers only buy once, how do we get repeat purchases?",
+      "What makes a product good for paid acquisition versus selling to existing customers?",
+      "Should I keep pushing a product launch that flopped?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "expansion",
+    "source": "S0235",
+    "evidence": {
+      "where": "Product framework section",
+      "quote": "is it a CAC or an LTV product?"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "PRD-0013",
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "topics": [
+      "candidate screening",
+      "unit economics",
+      "launch risk"
+    ],
+    "claim": "Screen new products for repeat purchase, parcel-friendly packaging and 'for me or for you' gifting demand; cans and large frames are hard to ship profitably.",
+    "body": "The guest's product criteria after selling hoverboards, fidget spinners and now a cannabis-infused drink: the product should change how the buyer feels or behaves in a way they notice each use, which drives repeat purchase (his examples: electrolyte packets and unbranded colognes); it should ship small, ideally in a parcel or sleeve that can be fulfilled at volume, since cans and large framed items are expensive and fragile to ship; and it should be a 'for me or for you' product that people buy for themselves and others buy for them, like baby products or cookware that lands on gift lists. Packaging is a margin lever: his team expected a per-unit saving from moving to a four-pack, and redesigned cans because too many arrived crushed, spending more per unit to cut breakage. For expansion into retail, study how the category is merchandised on the shelf; he notes shelf lines often run in threes (original, sugar-free, a flavour). How to apply: score candidates on repeat cycle, shipping dimensions and weight, breakage risk, and gifting potential before sampling.",
+    "conditions": "New product selection or line extension for DTC brands shipping by parcel.",
+    "fails_when": "Durable one-off products sold on high margin, where repeat purchase is not the model; categories where bulk or fragile formats are the point and freight is priced in.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "retail shelf lines often in threes"
+    ],
+    "asks": [
+      "What makes a good product to launch for DTC?",
+      "Does packaging size really matter for profit?",
+      "How do I pick a product that customers rebuy?",
+      "What are good product categories for ecommerce in 2025?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S0242",
+    "evidence": {
+      "where": "[01:08:00-01:14:26] product ideation, for me/for you, packaging constraints"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "PRD-0017",
+    "modules": [
+      "PRD"
+    ],
+    "topics": [
+      "international"
+    ],
+    "claim": "IM8 sells 100% DTC to 31 countries (98% own site, 2% Amazon), only 40% from the US, and is declining retail for about 3 more years.",
+    "body": "Rather than pairing US DTC with US retail, IM8 went international DTC from day one. It ships to 31 countries; the US is only about 40% of revenue, followed by Canada, the UK, Australia and Hong Kong. Sales are 100% direct to consumer, 98% on its own site and 2% on Amazon. Every major retailer has approached the brand and been declined; the founder expects at least three more years before serious retail talks. His reasons: growth headroom in DTC markets is still large, adding retail now would cost focus, and the team cannot do everything well at this stage. The host adds that repeatedly declining retailers improves the eventual terms. International DTC suits a subscription model with prepaid multi-month plans and premium global partners, and spreads concentration away from one market. How to apply: before entering retail, test whether new DTC countries can add revenue at your target payback (shipping, duties and local pricing included); keep Amazon minimal if site subscription economics are better; set an explicit date or revenue threshold for revisiting retail rather than reacting to inbound offers.",
+    "conditions": "High-margin, light, shippable consumables with strong site subscription economics; brands with global awareness from partnerships.",
+    "fails_when": "Heavy or low-margin products where cross-border shipping and duties kill payback; categories where retail presence drives trust and trial; brands whose buyers prefer Amazon, making a minimal Amazon presence a lost channel.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "31 countries shipped",
+      "98% own site, 2% Amazon",
+      "US ~40% of revenue",
+      "retail deferred ~3 years"
+    ],
+    "asks": [
+      "should we expand internationally before going into retail",
+      "should we say yes to retailers who approach us",
+      "how much of our sales should come from Amazon",
+      "when should a DTC brand go into retail"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "expansion",
+    "source": "S0251",
+    "evidence": {
+      "where": "[01:07:05-01:16:15] global DTC focus over retail"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  }
+]

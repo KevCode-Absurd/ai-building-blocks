@@ -1,0 +1,129 @@
+[
+  {
+    "card": {
+      "id": "PRD-0018",
+      "modules": [
+        "PRD"
+      ],
+      "topics": [
+        "international",
+        "competitive density"
+      ],
+      "claim": "Launching a trending product in smaller English-speaking markets first (Australia, then UK, Europe, Canada, US last) can win first-mover position before facing crowded US auctions.",
+      "body": "The founder of Oodie (wearable blanket) reports reversing the usual expansion order. Most brands launch in the US, then Canada, then the UK or Europe, then Australia. He went Australia, UK, Europe, Canada, and only then the US. Because he arrived in each market before any rival, he faced buyers who already wanted the product type but had no brand to buy from, so ads converted without much warming. In his telling the UK became Oodie's biggest market and the US its smallest, which he did not see as a problem. How to apply: find a product proven in one market, check whether a second market has demand but no established seller, enter there first, and move to the next market only after you own the first. Treat the US as the most contested auction rather than the default first stop. This is one founder's account of one viral product during a demand spike, with no cost or margin data per market, so treat it as a hypothesis to size, not a proven sequence. Pair it with a check of ad-library competition in each target market before entry, and with the logistics, tax and returns cost of each country, which the source does not cover.",
+      "conditions": "A trend or category product proven in one market and not yet sold by a recognised brand in the target markets; founder able to run Meta ads per country; English-language creative reusable across markets.",
+      "fails_when": "A strong local brand already owns the category in the target market; the product depends on US-only demand or US-scale volume to hit unit economics; per-country logistics, VAT or duties wipe out the margin; the trend has already peaked globally.",
+      "scope": "growth",
+      "tier": 4,
+      "numbers": [
+        "launch order Australia, UK, Europe, Canada, US (reverse of the common US-first order)",
+        "UK became the largest market and the US the smallest for the brand"
+      ],
+      "asks": [
+        "Should I launch my brand in the US first or somewhere smaller?",
+        "Which country should we expand to next if the US ads are too expensive?",
+        "Is it smart to start in Australia or the UK before going to America?",
+        "Our product sells well at home but nobody sells it in the UK yet, should we go there?"
+      ],
+      "platforms": [],
+      "platform": [],
+      "jurisdiction": [],
+      "marketplace": [],
+      "mode": "",
+      "source": "S0003",
+      "evidence": {
+        "where": "Mid-interview, answer to 'number one hack' for a fast-growing ecom business",
+        "quote": "I went Australia then UK then Europe then Canada then US"
+      },
+      "strength": "anecdote",
+      "public": true
+    },
+    "problems": [
+      "PRD cards need mode"
+    ]
+  },
+  {
+    "card": {
+      "id": "PRD-0019",
+      "modules": [
+        "PRD"
+      ],
+      "topics": [
+        "competitive density",
+        "kill conditions"
+      ],
+      "claim": "On Meta, a second or third advertiser selling the exact same product sharply raises CPMs, so an underserved product only stays cheap until rivals appear.",
+      "body": "Meta ads are an auction, and the founder argues operators underrate how fast competition changes it. His view: once a second or third brand bids for the same buyers with the same product, CPMs rise enough to change the business model, and the easy early results end. His prescription is to look for a product that already sells well in one market, bring it to a market that does not have it, and run it hard only while that market is not crowded. How to use this when screening a product or market: check the ad library for active advertisers selling the same item to the same country; treat zero or one competitor as the window, and plan for margins to compress once two or three appear. While the window is open, put the cash into building a brand and secondary products rather than assuming the early CPM will last. The source gives no CPM figures, so the size of the jump is unquantified; treat it as a practitioner rule of thumb and measure your own CPM trend as competitors enter.",
+      "conditions": "Meta-led acquisition for a single hero product sold to cold traffic; product with few close substitutes; early-stage brand relying on low CPMs for its unit economics.",
+      "fails_when": "Demand is broad and growing fast enough to absorb new entrants; the brand wins on product, brand or retention so it can pay higher CPMs; acquisition is mostly search, retail or organic rather than Meta auctions.",
+      "scope": "growth",
+      "tier": 4,
+      "numbers": [
+        "2 to 3 direct competitors on the same product is the point where CPMs rise sharply (no CPM figures given)"
+      ],
+      "asks": [
+        "Why did my Facebook ad costs jump when a competitor started selling the same product?",
+        "How many competitors on the same product before CPMs get too expensive?",
+        "Is a product still worth launching if two other stores already run ads for it?",
+        "How long does the cheap ad window last for a new trending product?"
+      ],
+      "platforms": [
+        "meta"
+      ],
+      "platform": [],
+      "jurisdiction": [],
+      "marketplace": [],
+      "mode": "",
+      "source": "S0003",
+      "evidence": {
+        "where": "Mid-interview, after the expansion-order answer",
+        "quote": "as soon as there's a second or third competitor for that exact product"
+      },
+      "strength": "stated_by_practitioner",
+      "public": true
+    },
+    "problems": [
+      "PRD cards need mode"
+    ]
+  },
+  {
+    "card": {
+      "id": "PRD-0020",
+      "modules": [
+        "PRD",
+        "OPS"
+      ],
+      "topics": [
+        "cost to enter",
+        "launch risk"
+      ],
+      "claim": "Enter retail in small, serviceable blocks (specialty or regional grocers like Wegmans and Publix) before mass retailers; failing to sell through at Walmart early can close that door.",
+      "body": "Rahal's rule for physical retail: the goal is to succeed in each account, so take on only the distribution you can support with supply, marketing and service. Build in blocks: specialty stores or a regional grocer such as Wegmans or Publix, which are geographically confined so you can concentrate demand-building, and make sure each distributor you onboard reaches critical mass. Only then layer on a mass retailer such as Target or Walmart. He calls an early Walmart listing an attractive trap: if the product does not sell through, the retailer may never take it back. RXBAR said no to Walmart early, which he counts among its key decisions, because the brand could not have serviced it and, being expensive and in a 'protein no man's land', the product did not suit that shopper yet. How to apply for a DTC brand moving into retail: pick one region or channel where your online customers cluster, budget trade spend and in-store marketing to drive velocity, measure sell-through per store per week, and expand doors only when velocity holds. Treat a large chain's offer as a capacity and price-fit question, not just a revenue opportunity.",
+      "conditions": "DTC or emerging CPG brands considering physical retail in the US; premium-priced products.",
+      "fails_when": "Value-priced products that fit mass retail from day one and have the supply and trade budget to support it; categories where a national retailer is the main discovery channel.",
+      "scope": "growth",
+      "tier": 4,
+      "numbers": [],
+      "asks": [
+        "Should we take a Walmart deal early?",
+        "How should a DTC brand start in retail stores?",
+        "Which retailers should we pitch first?",
+        "What happens if our product doesn't sell through in a big chain?"
+      ],
+      "platforms": [],
+      "platform": [],
+      "jurisdiction": [],
+      "marketplace": [],
+      "mode": "",
+      "source": "S0250",
+      "evidence": {
+        "where": "Retail strategy segment (about 54:55 to 01:04:00); 'decision not to go to Walmart early'"
+      },
+      "strength": "anecdote",
+      "public": true
+    },
+    "problems": [
+      "PRD cards need mode"
+    ]
+  }
+]

@@ -60,6 +60,13 @@ export function featuredPayload(everyone: Awaited<ReturnType<typeof listPersonas
   return { total: everyone.length, agents: pickFeatured(everyone, n).map(agentCard) };
 }
 
+/** What /api/agents?vertical=<id> returns: the agents built for one kind of business, in team order (lead first). The
+ *  /e-commerce page (src/pages.ts) sends it inside the HTML, so the team paints with real cards. */
+export function verticalPayload(everyone: Awaited<ReturnType<typeof listPersonas>>, verticalId: string) {
+  const team = everyone.filter(p => p.vertical === verticalId).sort((a, b) => a.sort - b.sort || (a.id < b.id ? -1 : 1));
+  return { total: team.length, vertical: verticalId, agents: team.map(agentCard) };
+}
+
 export const routes: Route[] = [
   {
     method:'POST',path:'/api/execution-plan',handler:async ctx=>{
@@ -95,6 +102,12 @@ export const routes: Route[] = [
       const area = ctx.url.searchParams.get("area")?.trim() || "";
       const q = (ctx.url.searchParams.get("q") ?? "").trim();
       const roleId = ctx.url.searchParams.get("role")?.trim() || "";
+      // ?vertical=ecommerce: only the agents built for that kind of business, in their team order (lead first).
+      const verticalId = ctx.url.searchParams.get("vertical")?.trim() || "";
+      if (verticalId) {
+        if (!/^[a-z][a-z0-9-]{1,39}$/.test(verticalId)) return fail(400, "unknown_vertical", "We do not have agents for that kind of business yet. Try vertical=ecommerce.");
+        return json(verticalPayload(everyone, verticalId), 200, PUBLIC_CACHE);
+      }
       if (area && !(AREAS as readonly string[]).includes(area)) return fail(400, "unknown_area", "We do not have that area. Pick one from the list, or clear the filter.");
       if (q.length > 120) return fail(400, "search_too_long", "That search is too long. Try a few words, like \"SEO plan\".");
       const role = roleId ? getRole(roleId) : null;

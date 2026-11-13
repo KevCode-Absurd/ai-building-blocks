@@ -2869,6 +2869,16 @@
     "version": "2026.11.12",
     "updated": "2026-11-12"
   },
+  "malcolm-ecommerce-growth": {
+    "hash": "a242f22bc3d24772ba75326da468f4b97cff5497511722e1e2e0397c079236b8",
+    "version": "2026.11.13",
+    "updated": "2026-11-13"
+  },
+  "malcolm-ecommerce-growth-train": {
+    "hash": "0822b9076bdc56ebfe99d3b5329267b464b7de7300f561fc62cc037fd3a15a61",
+    "version": "2026.11.13",
+    "updated": "2026-11-13"
+  },
   "malik-audio-ads": {
     "hash": "7ccf22653b26f21bc0e107bd055987a801b27271711e32854dbb62e52d575345",
     "version": "2026.11.12",
@@ -4388,6 +4398,16 @@
     "hash": "fe73890c2dd2fafedb78f1f286a5172761a9ef0e31e26ef3d5b8386823f2041d",
     "version": "2026.11.12",
     "updated": "2026-11-12"
+  },
+  "tendai-ad-creative": {
+    "hash": "6b9b4f40c3ec0a8ee6c508f9f24a9fc0115bb9b75514a74e4353f578d1110e84",
+    "version": "2026.11.13",
+    "updated": "2026-11-13"
+  },
+  "tendai-ad-creative-train": {
+    "hash": "c0081fe6a32df3c43dadcdc42fd27c459ac271cc05ff9e733046e867b262d229",
+    "version": "2026.11.13",
+    "updated": "2026-11-13"
   },
   "teodor-tutoring": {
     "hash": "ef0fea653a1c074cab70972847c0627b7c1c3054a2d9d4a002cbd1baa15c6937",

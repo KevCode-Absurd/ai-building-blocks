@@ -21,6 +21,7 @@ import { CAPTURE, FAMILY_LABELS, contextNeed, contextRequirements, craftWeightsL
 import { brandFileLine } from "./brand-file.ts";
 import { bestRoute, type RouteCandidate } from "./route.ts";
 import { KnowledgeIndex, indexedPath, knowledgeMap } from "./retrieve.ts";
+import { personaVerticalFiles, verticalKnowledgeSection, type VerticalBundle } from "../knowledge/bundle.ts";
 import { agentFrontmatter, megaSources, teamListMarkdown, type MegaKit } from "./mega.ts";
 import {
   ONE_FILE_ITEMS, TYPE_LABELS, buildToolbox, checkToolbox, fallbackToolbox, toolboxItemPath,
@@ -53,7 +54,7 @@ export type FileGroup = "start" | "identity" | "work" | "knowledge" | "skill" | 
  * agent's own, "tools" = a capture or check tool, the same file in every pack (served at /packs/tools/ and /tools/),
  * "toolbox" = a library item's text, the same in every pack that carries it (served once at /packs/toolbox/).
  */
-export type FileSource = "agent" | "role" | "job" | "mega" | "tools" | "toolbox";
+export type FileSource = "agent" | "role" | "job" | "mega" | "tools" | "toolbox" | "vertical";
 export interface PackFile { path: string; content: string; purpose: string; group: FileGroup; bytes: number; sha256: string; source: FileSource; sharedPath?: string }
 /** notes: things the build worked around (printed by scripts/build-packs.mjs), such as a renamed job skill. */
 export interface BuiltPack {
@@ -90,6 +91,11 @@ export interface PackInput {
   library?: Record<string, LibraryItem>;
   /** The roles a toolbox may bring in as helpers (role id -> name and lead agent). One that is not here is left out. */
   helpers?: Record<string, HelperRole>;
+  /**
+   * The persona's vertical knowledge (knowledge/<vertical>/, built by scripts/build-packs.mjs): a vertical agent
+   * carries the baseline cards, its modules' cards and the sources, each one shared file under /packs/knowledge/.
+   */
+  vertical?: VerticalBundle;
   options: PackOptions;
 }
 
@@ -1288,6 +1294,10 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
   // because packs/shared/train/AGENTS.md names it.
   const withLibraryMd = !builtToolbox || !agent;
 
+  // A vertical agent (persona.vertical) carries its library's cards; knowledge.md says what it carries and how to use it.
+  const verticalFiles = personaVerticalFiles(persona, input.vertical);
+  const verticalNote = verticalFiles.length ? `\n\n${verticalKnowledgeSection(persona, input.vertical!, verticalFiles.map(f => f.path), `${origin}/mcp`)}\n` : "";
+
   // The examples guide may be a template, as train/examples/README.md or train/examples-README.md.
   const examplesTemplate = ["train/examples/README.md", "train/examples-README.md"].find(t => templates[t]?.trim()) ?? null;
   const drafts: Draft[] = [
@@ -1312,8 +1322,9 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
       purpose: agent ? "How I work: what I deliver and need, my method, how it is checked, and the rules I learned." : "The base method, intake and checks, to make your own, and the rules you learn." },
     ...tractionPlaybook,
     ...(agent ? [{ path: "TEAM.md", group: "work" as const, content: teamMarkdown(persona), purpose: "How I critique, what I defend, when I defer and what I never do in a team." }] : []),
-    { path: "knowledge.md", group: "knowledge", content: knowledgeMarkdown(persona, kit, kind, roleName, megaKit),
+    { path: "knowledge.md", group: "knowledge", content: `${knowledgeMarkdown(persona, kit, kind, roleName, megaKit).trimEnd()}${verticalNote}`,
       purpose: knowledgeReady ? "What I know about the role, with sources, then my specialty." : megaKit ? "My specialty, and where my channel knowledge is." : "My specialty. The role's researched knowledge is coming." },
+    ...verticalFiles.map(f => ({ path: f.path, group: "knowledge" as const, content: f.content, purpose: f.purpose, ...(f.shared ? { source: "vertical" as const } : {}) })),
     { path: "knowledge-map.md", group: "knowledge", content: "",
       purpose: "Every section I can look up, file by file, so only the part a question needs is read." },
     { path: "access.md", group: "work", content: kitFiles["access.md"]?.trim() ? kitFiles["access.md"] : fallbackAccess(), purpose: "Tools I work with, what to share with me and what I never ask for." },
@@ -1521,12 +1532,12 @@ export function fileUrl(pack: BuiltPack, file: PackFile): string {
   if (file.source === "job") return `/packs/jobs/${file.path.slice("skills/".length)}`;
   if (file.source === "mega" && pack.manifest.mega) return `/packs/mega/${pack.manifest.mega.kit}/${file.sharedPath ?? file.path}`;
   // A tool or a library item is one file for every pack that carries it: /packs/tools/<file>, /packs/toolbox/<type>/<slug>.md.
-  if (file.source === "tools" || file.source === "toolbox") return `/packs/${file.path}`;
+  if (file.source === "tools" || file.source === "toolbox" || file.source === "vertical") return `/packs/${file.path}`;
   return `/packs/${pack.manifest.agent_id}/${file.path}`;
 }
 
 /** Folder names under /packs that are not agents, so no agent id may use them. */
-export const RESERVED_PACK_PATHS = new Set(["roles", "jobs", "mega", "tools", "toolbox", "toolbox-index.json", "toolbox-index", "index.json", "index"]);
+export const RESERVED_PACK_PATHS = new Set(["roles", "jobs", "mega", "tools", "toolbox", "knowledge", "toolbox-index.json", "toolbox-index", "index.json", "index"]);
 
 /**
  * The pack as a zip: every file under its folder, then a copy of skills/ in each of SKILL_MIRRORS (.agents/skills

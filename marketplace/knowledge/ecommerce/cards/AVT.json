@@ -1,0 +1,960 @@
+[
+  {
+    "id": "AVT-0001",
+    "modules": [
+      "AVT",
+      "OFF"
+    ],
+    "topics": [
+      "objection discovery",
+      "jobs and trigger moments"
+    ],
+    "claim": "Cutting a 30-page option menu to 3 finished variants dropped contract cancellations from 5-6 a month to 1, and the seller raised price $3,500 profitably.",
+    "body": "In a condo development studied by Bob Moesta, buyers kept walking away even though the units matched what they said they wanted. Timeline interviews with people who had already bought showed the blocker was not a missing feature but anxiety about the move: what to do with the family dining table, sorting decades of belongings, and the strain of choosing every detail of a custom unit. The fix was to remove anxieties rather than add features. The architect shrank the second bedroom by 20 percent to fit a full dining table, the company bundled moving services, two years of storage and an on-site sorting room, and it replaced thirty pages of custom choices with three finished variants. Cold-feet cancellations fell from five or six a month to one, and the price went up by $3,500 including the cost of moving and storage. In 2007, with industry sales down 49 percent, the developer grew 25 percent. How to apply in a store: interview recent buyers and people who abandoned about what nearly stopped them, list the anxieties and habits that hold people back, and change the offer, defaults and number of choices to remove them before you touch features or price. Treat a big configurator or many variants as a possible conversion blocker for anxious, high-stakes purchases.",
+    "conditions": "High-stakes, emotionally loaded or infrequent purchases where buyers fear choosing wrong (furniture, mattresses, big-ticket items, gifts with meaning).",
+    "fails_when": "Low-stakes or hobbyist categories where buyers enjoy configuring and choice is part of the value; cutting options there can lose enthusiasts. Single case from one developer, not a controlled test.",
+    "scope": "growth",
+    "tier": 2,
+    "numbers": [
+      "30 pages of custom choices cut to 3 finished variants",
+      "cancellations fell from 5-6 per month to 1",
+      "price raised $3,500 including moving and storage",
+      "second bedroom reduced 20 percent",
+      "grew 25 percent in 2007 while industry sales fell 49 percent"
+    ],
+    "asks": [
+      "Why do people back out after deciding to buy from us?",
+      "We offer lots of customization options and buyers stall, should we cut them?",
+      "Can removing buyer anxiety let me charge more?",
+      "What stops someone from switching to my product even when they want it?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0011",
+    "evidence": {
+      "where": "Chapter on what a job is; Moesta condominium case, before 'Where Are the Jobs?'",
+      "quote": "we were instead in the business of moving lives"
+    },
+    "strength": "shown_with_numbers",
+    "public": false
+  },
+  {
+    "id": "AVT-0002",
+    "modules": [
+      "AVT",
+      "PRD"
+    ],
+    "topics": [
+      "research method",
+      "jobs and trigger moments"
+    ],
+    "claim": "In embarrassing categories most sufferers buy nothing; incontinence sufferers waited about two years before buying, so the market is the non-buyers, not competitors' share.",
+    "body": "Kimberly-Clark already led adult incontinence with Depend, yet its research showed roughly 40 percent of adults over fifty and one in three women over eighteen have some incontinence, while only a small share used any product. People suffered for up to two years before buying, used stop-gap workarounds such as feminine pads, or withdrew socially. The competitor was doing nothing, and the barrier was stigma, not product performance. The company built a product that looked and felt like normal underwear and packaged it like ordinary underwear with a clear window showing the garment. Depend Silhouette sold $60 million in year one and grew 30 percent in year two without hurting the existing line. How to apply: in any category with shame, stigma or social risk (incontinence, hair loss, sexual wellness, body odour, sweating), size the market by sufferers who buy nothing, and look for the workarounds people use instead. Design the product, packaging, delivery and site so buying and using it do not signal the condition: plain packaging, a discreet billing name, product images that look normal. Interview people who delayed buying for a long time; the reasons for the delay are your conversion blockers.",
+    "conditions": "Stigmatised or embarrassing problem categories where many sufferers use nothing or improvise; consumer health, personal care, intimate products.",
+    "fails_when": "Categories where nonconsumption is caused by price or access rather than stigma; discreet design does not fix a cost barrier. Figures are Kimberly-Clark's own research and sales.",
+    "scope": "growth",
+    "tier": 2,
+    "numbers": [
+      "nearly 40 percent of adults over 50 have incontinence (Kimberly-Clark research)",
+      "1 in 3 women over 18 affected, only a small share use any product",
+      "sufferers wait up to 2 years before buying a product",
+      "Depend Silhouette: $60 million first-year sales, 30 percent growth in year two"
+    ],
+    "asks": [
+      "How do I sell a product people are embarrassed to buy?",
+      "Lots of people have this problem but few buy anything, where's the opportunity?",
+      "Should my packaging be discreet for a sensitive product?",
+      "How big is my market if most people with the problem buy nothing?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0011",
+    "evidence": {
+      "where": "Chapter on hunting for jobs, section '2. Competing with Nothing'"
+    },
+    "strength": "shown_with_numbers",
+    "public": false
+  },
+  {
+    "id": "AVT-0003",
+    "modules": [
+      "AVT"
+    ],
+    "topics": [
+      "interview technique",
+      "research method"
+    ],
+    "claim": "Interview recent buyers as a timeline from their very first thought of buying, gathering many details from few people, then cluster whole stories rather than coding answers.",
+    "body": "The Jobs to Be Done interview, as run by Bob Moesta's Re-Wired Group, rebuilds a purchase like a documentary. Pick someone who bought recently (the book's example bought a mattress about 45 days earlier) and start at the purchase: what day, which store, who was there, what else was bought. Then walk back to the first moment the idea of buying appeared and forward to first use. Do not ask about product attributes such as firmness or how much price mattered. Listen for the push of the current struggle, the pull of the new option, the anxiety of choosing wrong and the habits of the present. In the mattress case, the buyer bought at a warehouse club without lying on the bed because his wife was there to approve it and the no-fuss return removed his last fear; his workarounds for bad sleep included painkillers and energy drinks, which were the real competitors. The book's rule: most marketers gather a few data points from a huge sample, when insight needs a huge number of data points from a small sample. Do not cut interviews into demographic bins; group whole stories and look for repeating circumstances. Each repeated circumstance is a candidate trigger moment and job statement for an avatar record.",
+    "conditions": "Any brand building avatars or diagnosing why people buy or stall; works best with buyers from the last one to three months who still remember the details.",
+    "fails_when": "Interviewing people about a hypothetical future purchase, or asking which features they want; that gives stated preferences, not causes.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "example interviewee bought about 45 days before the interview"
+    ],
+    "asks": [
+      "How do I interview customers to find out why they really bought?",
+      "What questions should I ask in a customer interview?",
+      "How many customers do I need to talk to for useful research?",
+      "Our survey says people want features, why doesn't that help us sell more?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0011",
+    "evidence": {
+      "where": "Chapter on the job spec, 'The Mattress Agenda' interview and 'Advil, Red Bull, or a New Mattress?'"
+    },
+    "strength": "research",
+    "public": false
+  },
+  {
+    "id": "AVT-0004",
+    "modules": [
+      "AVT",
+      "OFF"
+    ],
+    "topics": [
+      "objection discovery",
+      "jobs and trigger moments"
+    ],
+    "claim": "SNHU replaced a generic email sent 24 hours later with a counselor call within 10 minutes of an inquiry; the first provider to talk to a prospect usually wins.",
+    "body": "Southern New Hampshire University rebuilt its online program around the job of adult learners fitting study around work and family. Its finding was that in a crowded online market, the first institution to actually speak with a prospect is most likely to enrol them. So the generic email that used to go out a day after an inquiry became a phone call within ten minutes from a trained counselor who had financial aid and credit-transfer information at hand. Calls ran an hour to an hour and a half and were used to surface and resolve anxieties, not to pitch. Decisions on aid and transfer credit moved from weeks or months to days. Ads were rewritten around the emotional and social side of the job (who the degree was for). Advisers then watched for early signs a student was slipping, such as not opening the week's assignment by midweek. The program grew past 75,000 students. How a store can use it: for high-consideration purchases that start with a question, quote request or consultation form, measure time to first human reply in minutes, staff it so the first contact answers the buyer's fears, and remove waiting steps between inquiry and decision.",
+    "conditions": "Considered, high-ticket or service-like purchases where buyers submit an inquiry, book a consult or ask a question before buying.",
+    "fails_when": "Impulse or low-price ecommerce with no inquiry step; an unprompted call would be intrusive. Single institution case, not a controlled test.",
+    "scope": "growth",
+    "tier": 2,
+    "numbers": [
+      "first contact moved from a generic email about 24 hours later to a phone call within 10 minutes",
+      "counselor calls ran 60 to 90 minutes",
+      "aid and transfer decisions cut from weeks or months to days",
+      "over 75,000 online students"
+    ],
+    "asks": [
+      "How fast should we reply to a lead or quote request?",
+      "People ask questions before buying and then go quiet, what should we do?",
+      "Does calling a prospect quickly really increase sales?",
+      "What should the first sales call with a customer focus on?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0011",
+    "evidence": {
+      "where": "Chapter on SNHU, 'What are the experiences customers seek'"
+    },
+    "strength": "shown_with_numbers",
+    "public": false
+  },
+  {
+    "id": "AVT-0005",
+    "modules": [
+      "AVT",
+      "PRD"
+    ],
+    "topics": [
+      "off label use",
+      "research method"
+    ],
+    "claim": "Unusual uses of your existing product are separate jobs that can become new SKUs; baking soda fell below 7 percent of Arm & Hammer's consumer revenue this way.",
+    "body": "Church & Dwight noticed in the late 1960s that people bought its baking soda for jobs other than baking: deodorising the fridge, cleaning carpets, laundry, brushing teeth. Each of those uses became a product line built for that job (laundry detergent, cat litter, carpet cleaner, air freshener, deodorant), and the original orange box became less than 7 percent of the brand's consumer revenue. In the same way, people were taking a cold remedy just to sleep, which led to a sleep-only product without the cold ingredients. The mechanism: customers already proved demand for the new job by working around your product, so the new SKU starts with a known circumstance and a known buyer. How to apply in a store: mine reviews, support tickets, social comments and post-purchase surveys for phrases like 'I also use it for' or uses you never marketed. Count how often each off-label use appears. For uses that recur, test a landing page or ad angle aimed at that circumstance first; if it converts, build a product, size or bundle designed for that job and name it after the job, not the ingredient. Check claims rules before marketing a new use, especially for health and cosmetic products.",
+    "conditions": "Brands with an existing product and enough reviews or customer messages to see repeated patterns; versatile consumer goods.",
+    "fails_when": "The off-label use carries regulatory or safety risk (unapproved health claims, misuse), or it appears only a handful of times, which is noise rather than a job.",
+    "scope": "growth",
+    "tier": 2,
+    "numbers": [
+      "original baking soda business now less than 7 percent of Arm & Hammer consumer revenue"
+    ],
+    "asks": [
+      "Customers use my product for something I didn't design it for, should I build on that?",
+      "How do I find my next product idea from reviews?",
+      "What's a cheap way to find new product ideas from existing customers?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0011",
+    "evidence": {
+      "where": "Chapter on hunting for jobs, section '5. Unusual Uses'"
+    },
+    "strength": "shown_with_numbers",
+    "public": false
+  },
+  {
+    "id": "AVT-0006",
+    "modules": [
+      "AVT"
+    ],
+    "topics": [
+      "research method",
+      "objection discovery"
+    ],
+    "claim": "For emotional barriers and buyer vocabulary, mine Reddit threads (niche plus fear or barrier); skip Quora at this stage because its answers skew to long how-to tutorials.",
+    "body": "Different forums produce different kinds of text. Reddit threads asking why people avoid something (why don't you go to the gym) or what changed after doing it return short first-person stories full of fears, embarrassment and unexpected benefits, which is exactly the language you need for hooks and objection handling. Quora threads on the same topic are dominated by long expert answers telling the asker what to do, which describes solutions rather than the problem. At the research stage you want the problem in the buyer's words, so: (1) Google 'reddit [niche] [barrier]' and 'reddit why don't you [desired action]'; (2) read the answers for repeated feelings (feel watched, feel judged, too far, too expensive) and repeated words (focus, motivation); (3) log each repeated phrase with a count, since patterns across hundreds of comments matter more than any single answer; (4) discount answers that sound performative, since people answer what they think others want to hear even anonymously. Unexpected benefits found here (fitness leading to focus or dating confidence) are candidate angles competitors are not using.",
+    "conditions": "Consumer categories where buyers discuss the underlying problem publicly; early research stage before positioning is set.",
+    "fails_when": "B2B or highly technical purchases where Quora or niche professional forums hold the real buyer discussion, or categories with little Reddit presence; the Quora skew may also have shifted since 2018.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [],
+    "asks": [
+      "where should i do customer research for a new product",
+      "is reddit or quora better for finding customer pain points",
+      "i need the words customers use for my ads, where do i look",
+      "how do i find out what stops people from buying"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0012",
+    "evidence": {
+      "where": "Reddit and Quora section, 'why don't you go to the gym' and 'no time to work out' threads"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0007",
+    "modules": [
+      "AVT"
+    ],
+    "topics": [
+      "research method"
+    ],
+    "claim": "Read reviews and threads manually and paste exact quotes; automated parsing at the research stage strips the emotional vocabulary you later need for copy.",
+    "body": "The output of avatar research is not a summary of themes but a bank of the buyer's own phrases, because those phrases become headlines, hooks and objection answers. Scripts that parse thousands of reviews into sentiment buckets or keyword counts are efficient but lose the exact wording, the context of why someone was embarrassed, and the oddly specific details that make copy land. The practitioner spends 60 to 80 percent of product development time on this research stage and treats slowness as the point. Apply it this way: (1) keep one research doc per product idea; (2) paste quotes verbatim with the source and star rating; (3) only after reading in bulk, tag recurring phrases and segments; (4) follow up with real conversations, asking indirect questions (who else do you know who has done this, why did they do it) to check what forum posts cannot confirm. In 2026, a reasonable compromise is to let AI cluster and count themes across a large corpus, but still read and pull quotes by hand for the segment you choose.",
+    "conditions": "Early product and positioning research where copy will be written from the findings; any category.",
+    "fails_when": "Very large review corpora (thousands of reviews across many SKUs) where manual reading cannot cover the volume; there, automated clustering to find themes, followed by manual quote pulling, is faster and still keeps the wording.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "60 to 80 percent of product development time spent on market research"
+    ],
+    "asks": [
+      "should i use ai to analyze customer reviews",
+      "how much time should i spend on market research",
+      "is it ok to scrape reviews instead of reading them",
+      "how do i keep the customer's exact words for my copy"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0012",
+    "evidence": {
+      "where": "Closing section, 'no shortcuts at this stage'",
+      "quote": "the point is not to do this efficiently it's to do it effectively"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0008",
+    "modules": [
+      "AVT",
+      "PRD"
+    ],
+    "topics": [
+      "review mining",
+      "segmentation"
+    ],
+    "claim": "When 3-star reviews contradict each other (too simple vs too technical), do not chase either; keep the core simple and move depth to an appendix or advanced tier.",
+    "body": "Mid-star reviews are where buyers explain what almost worked, so they reveal structural gaps better than 1-star rage or 5-star praise. But they often pull in opposite directions: one reviewer wants more scientific backing, the next says the material is over their head. Reacting to each critique pulls the product in every direction and blurs who it is for. The method: (1) read the 3-star reviews of the top competitors and write every criticism down; (2) group them; a repeated theme such as 'good for beginners but oversimplified' tells you which segment the product actually serves; (3) when two groups contradict, decide which segment you are serving, then satisfy the other cheaply, for example plain-language core content with references or advanced material in an appendix, a second tier, or a follow-on product; (4) discount 'nothing new here' comments from heavy researchers who consume content without acting, since they are rarely the beginner buyer. A competitor's 'oversimplified' complaint is a gap only if you are targeting the more advanced segment.",
+    "conditions": "Categories with enough competitor reviews to see repeated mid-star themes; positioning decisions before product build.",
+    "fails_when": "When one criticism dominates the mid-star reviews and points at a genuine defect (quality, fit, durability); that is a fix, not a segment choice.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "focus on 2 to 4 star reviews, especially 3-star"
+    ],
+    "asks": [
+      "competitor reviews say opposite things, which do i listen to",
+      "how do i use 3 star reviews",
+      "customers say our product is too basic but others say too complicated, what now",
+      "should i change my product for every piece of feedback"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0012",
+    "evidence": {
+      "where": "Amazon section, 4-Hour Body 3-star reviews",
+      "quote": "good for beginners but oversimplified"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "AVT-0009",
+    "modules": [
+      "AVT"
+    ],
+    "topics": [
+      "review mining",
+      "research method",
+      "segmentation"
+    ],
+    "claim": "Your highest-intent buyers are people who already spent money on failed solutions; search 1-star and 5-star reviews for 'spent thousands and it didn't work' phrasing.",
+    "body": "A buyer who has already paid for a trainer, course or competing product has done two things for you: admitted the problem exists, and shown willingness to pay to fix it. Because the earlier fix failed, they are still actively hunting, so you skip the awareness work entirely. The practical move is to mine competitor reviews for that specific pattern rather than for general praise or complaints. Steps: (1) pick the top 5 to 10 competing products in the category; (2) read the 1-star and 5-star reviews looking for sentences where the reviewer lists past spend or past attempts (hired two trainers, tried three serums, spent hundreds on supplements); (3) copy those quotes verbatim into the research doc, noting what the earlier solution failed to do; (4) treat that failure point as the first thing your page and ads must answer, and the spend figure as your price anchor. In customer calls, the same signal is someone saying they already tried X; that is the moment to ask for more detail, because that person is likely your best customer segment.",
+    "conditions": "Categories with an established paid solution market (courses, coaching, supplements, skincare, fitness gear) and visible review volume on Amazon or competitor sites.",
+    "fails_when": "Brand-new categories with no prior paid solutions, or impulse products under roughly $20 where buyers do not accumulate a history of failed attempts; also when the reviewer's past spend reflects a premium segment you cannot serve at your price.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "top 5 to 10 competing products per category reviewed",
+      "example reviewer quote: spent thousands of dollars on personal trainers"
+    ],
+    "asks": [
+      "who are my best customers to target first",
+      "where do i find buyers who are ready to pay",
+      "our ads get clicks but no buyers, how do i find people actually hunting for a fix",
+      "what should i look for in competitor reviews to find high intent buyers"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0012",
+    "evidence": {
+      "where": "Amazon review section, Bigger Leaner Stronger 5-star review discussion",
+      "quote": "your best customers are going to be people who have already spent"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0010",
+    "modules": [
+      "AVT",
+      "MCR"
+    ],
+    "topics": [
+      "objection discovery",
+      "jobs and trigger moments"
+    ],
+    "claim": "Name the avatar's failed past solutions by their real names (minoxidil, NeoGraft) and write in the avatar's dominant emotion (fear, frustration or embarrassment); generic curiosity hooks fall flat.",
+    "body": "Research should produce two inputs that change the copy itself. First, the specific things the buyer already tried. 'Have you tried hair supplements or drugs' reads as a stranger guessing; 'tried minoxidil' or 'spent $11k on NeoGraft' reads as someone who has been there, and the named prices also anchor your offer. Second, the dominant emotional state, because the register differs: a pet owner who has lost two cats to kidney disease writes from fear and anxiety, a beginner seller from frustration, a balding man from embarrassment, often tied to a specific scene such as being called out in a room. Apply it: (1) list every named product, procedure and price from the research; (2) tag each quote with the emotion it carries and pick the most frequent; (3) build the hook as current situation plus curiosity plus deepest fear in their words, for example a hook about cats that don't drink water costing you 'your last companion'. A hook that only drives curiosity ('the easiest way is not what you think') gets eye-rolls from a sophisticated audience that has heard the claim before.",
+    "conditions": "Problem-aware or solution-aware buyers in sophisticated markets where many competitors make the same claim; long-form or native-style Meta copy.",
+    "fails_when": "Unaware audiences who have tried nothing yet, or categories where naming a competitor product or medical procedure triggers ad policy (Meta health and personal-attribute rules; avoid 'you' statements about a condition).",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "example failed-solution spend: $6,500 plus $5,000 on NeoGraft"
+    ],
+    "asks": [
+      "how do i write ad copy that makes customers feel understood",
+      "should i mention products my customers already tried",
+      "my curiosity hooks are not converting, why",
+      "what emotion should my ad copy speak to"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0013",
+    "evidence": {
+      "where": "Hair-loss Reddit walkthrough and CKD cat supplement hook example",
+      "quote": "people buy when they feel understood"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "AVT-0011",
+    "modules": [
+      "AVT"
+    ],
+    "topics": [
+      "research method",
+      "avatar record structure"
+    ],
+    "claim": "Run avatar research as a timed 60-minute session: 30 minutes searching forums in the avatar's own problem phrasing, 30 minutes on Amazon reviews, pasting and bolding verbatim text.",
+    "body": "The protocol forces you to see the problem from inside the buyer's situation rather than through a demographic. Steps: (1) seed the demographic from your largest competitor's top audience (a traffic tool such as Similarweb, or an LLM asked for that competitor's buyer profile), for example men 30 to 50; (2) set a 30-minute timer and type problem statements into Google the way the buyer would at 2 a.m., adding 'reddit': 'hair loss making me less attractive reddit', 'my cat won't drink water please help reddit'; (3) favour confession-style subreddits such as r/offmychest, where people describe the worst moment of the problem in detail; (4) paste whole posts and comments into one doc, then bold phrases, named past attempts and situational details; (5) repeat for 30 minutes on Amazon reviews of competing products; (6) finally, read your existing AI-written ads against the doc and mark every line that uses words, emotions or situations the buyers never used. The output should let you describe the avatar's situation, fears, failed attempts and wished-for outcome in under 30 seconds.",
+    "conditions": "Consumer products solving an emotional or embarrassing problem (hair loss, pet health, weight, skin) sold through long-form Meta copy or advertorials; one hour total, can be split across days.",
+    "fails_when": "Low-involvement or purely functional products (cables, storage boxes) where forum discussion is thin and buying is driven by spec and price; or categories with no public forum footprint.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "60 minutes total research time",
+      "30 minutes forums plus 30 minutes Amazon reviews",
+      "avatar describable in under 30 seconds",
+      "stated time split of about 80 percent forums, 20 percent Amazon"
+    ],
+    "asks": [
+      "how do i build a customer avatar",
+      "what is a quick way to research my customer",
+      "our ads feel generic, how do i find what customers really say",
+      "how long should avatar research take",
+      "what should i search on reddit to understand my buyer"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0013",
+    "evidence": {
+      "where": "'How to find real avatars manually' section, iRestore hair-loss walkthrough"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0012",
+    "modules": [
+      "AVT",
+      "MCR"
+    ],
+    "topics": [
+      "segmentation",
+      "jobs and trigger moments",
+      "avatar record structure"
+    ],
+    "claim": "Without a clearly superior product, start ads on the narrowest situational avatar (e.g. post-op patellar tendon graft patients), then broaden once it converts.",
+    "body": "The practitioner's claim is that there are only two ways to win a crowded category: a better product, or a sharper avatar. Most small brands do not have the better product, so a broad demographic avatar such as a 30-plus woman with knee pain puts them head to head with large brands using the same message. The fix is to begin at the most specific situation research can support and widen only after it works. How to apply: 1) Mine 1-star competitor reviews, condition-specific Reddit threads, social comments and post-purchase surveys, and phone or DM existing buyers. 2) Record for each candidate avatar the past fix that failed (for example physical therapy), a lost identity activity (cannot ice skate with friends), and the exact procedural or subculture term buyers use (patellar tendon graft, post-op knee). 3) Treat two buyers with the same condition but different age cohorts as separate avatars, because their activities and phrasing differ. 4) Put the term in the hook so the viewer self-identifies, and repeat the same term and failed-fix story on the pre-lander and product page; a page that says 'arthritis' after a 'tendon graft' ad breaks the journey. 5) Broaden to adjacent situations only after the narrow avatar produces a scaling ad. No numbers are given; the claim is opinion from an unnamed channel.",
+    "conditions": "Early-stage or sub-scale DTC brand selling a parity product in a crowded problem-solution category (pain relief, recovery, wellness) on paid social.",
+    "fails_when": "The brand has a demonstrably superior product or dominant offer, where a broad avatar can win on product alone; or the narrow segment is too small to exit the learning phase at the planned spend.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Should I target a broad audience or a really narrow one with my ads?",
+      "Our product is basically the same as everyone else's and ads won't scale, what now?",
+      "How specific should my customer avatar be when I'm just starting out?",
+      "Is 'women over 30 with knee pain' a good enough target customer?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0014",
+    "evidence": {
+      "where": "middle section on broad versus specific avatars and starting as specific as possible",
+      "quote": "you should try to go as specific as possible. Then you go broader out"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0013",
+    "modules": [
+      "AVT"
+    ],
+    "topics": [
+      "review mining",
+      "research method",
+      "avatar record structure"
+    ],
+    "claim": "Find alternative avatars in long Amazon reviews (filter to image and video reviews), then confirm size by searching '<problem> Reddit' for many separate threads before deep research.",
+    "body": "A four-step pipeline for finding a buyer group competitors are not targeting. Step 1, competitive exclusion: search the product in Meta Ad Library, play the active video ads of the brands that are clearly scaling, and write down the age, gender and desires the ads speak to; that profile is the one to avoid. Step 2, review mining: open the top-reviewed similar product on Amazon (it need not be your exact item) and filter to reviews with images or video. Those reviewers tend to write long life stories ('lost 35 pounds but the C-section layer will not move'), which reveal who else buys and why. Short star-only reviews are useless here. Aim to leave with three or four candidate avatars. Step 3, validation: search Google for the problem phrase plus 'Reddit' (for example, post C-section weight gain Reddit). Many separate threads mean many people share the problem; one story is not a market. Collect their exact words ('C-section pooch'), failed fixes and limiting beliefs ('only surgery works'). Step 4, deep research: hand the short profile to an AI deep-research tool, then read the roughly 30 to 40 page result and click through to its sources yourself. The output record should hold demographics, daily struggles, feelings about the problem, verbatim language, failed solutions, limiting beliefs and existing beliefs about other solutions.",
+    "conditions": "Products with a large Amazon review base in the category; consumer problems discussed openly on forums.",
+    "fails_when": "The category has few or short Amazon reviews, or the problem is private and rarely discussed in public forums; AI deep-research output is used without checking its cited sources, which can invent quotes.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "3 to 4 candidate avatars from review mining",
+      "deep-research report of about 39 pages took 22 minutes to generate"
+    ],
+    "asks": [
+      "How do I find new customer types for my product?",
+      "Where can I research who else buys a product like mine?",
+      "How do I know if a niche audience is big enough to target?",
+      "What should a customer avatar document include?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0016",
+    "evidence": {
+      "where": "review mining and Reddit validation sections; final recap"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "AVT-0014",
+    "modules": [
+      "AVT",
+      "PRD"
+    ],
+    "topics": [
+      "segmentation",
+      "research method"
+    ],
+    "claim": "When your product is functionally identical to a scaled competitor's, win with an unserved avatar, not a new mechanism; a mechanism claim needs a real product difference to be believed.",
+    "body": "A brand selling the same product as a competitor spending heavily on the same buyer will lose on cost per acquisition: the incumbent has more budget, more creative, richer offers (free gifts, free shipping, celebrity endorsers) and can pay a higher CPA. There are two ways out. The first is a new mechanism: a new stated cause of the problem and a new way the product solves it. That only lands when something about the product is visibly, mechanically or functionally different; a generic product cannot carry it credibly. The second is a new avatar: sell the same product to a group that has the problem, actively wants a solution, and is not being marketed to by anyone on the ad platforms. Worked example from the source: an electrical ab stimulator whose leading sellers all target men aged roughly early 40s to mid 60s who want defined abs hands-free. Two unserved groups surfaced from reviews: women with a post C-section stomach who believe only surgery fixes it, and people 65 and over who cannot go to a gym. To apply: (1) list the avatars that successful competitors' ads show and speak to; (2) treat those as excluded unless your product is genuinely different; (3) choose the avatar with the strongest evidence of an unmet, desperate want and no current advertisers.",
+    "conditions": "Saturated or commodity products sold against well-funded incumbents on paid social; small or new brands that cannot match incumbent CPA.",
+    "fails_when": "Your product genuinely differs in function or form, in which case a new-mechanism angle to the existing avatar can work; or the alternative avatar is too small, does not actually feel the problem acutely, or the claim to it (e.g. postpartum body claims) runs into ad policy limits.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "competitor avatar example: men aged early 40s to mid 60s; Similar Web estimate of 500,000 monthly visits and $149 AOV for one competitor"
+    ],
+    "asks": [
+      "How do I compete when bigger brands sell the same product?",
+      "Our product is the same as everyone else's on Facebook, how do we stand out?",
+      "Should I find a new audience or a new angle for a saturated product?",
+      "How do I pick a customer group that competitors aren't targeting?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0016",
+    "evidence": {
+      "where": "opening section on new avatar versus new mechanism, and the ab stimulator walkthrough"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0015",
+    "modules": [
+      "AVT",
+      "LPG",
+      "MCR"
+    ],
+    "topics": [
+      "segmentation",
+      "market sophistication",
+      "copy principles"
+    ],
+    "claim": "A niche avatar works only when creative, copy, photos, proof and page all speak to it; adding its's name to the hook alone fails; targeting can stay broad.",
+    "body": "The speaker's model: as a market gets sophisticated, buyers who have tried generic options start asking 'have you done this for someone like me?', which opens room for a brand built for one sub-group. Gymshark splitting off gym-goers from general athletic apparel, then brands for women only, alternative lifters or entrepreneur-minded lifters, is his example of segments nesting inside each other. The common failure he sees is cosmetic niching: same ad and page, with the segment's name stuck in the hook. What works instead is changing every touchpoint: the creative shows that person in their setting, the primary text speaks to their situation, product photos and page copy explain how the product helps them, and only their testimonials and results appear. The test is that anyone outside the segment who lands in the funnel should feel they are in the wrong place. Audience targeting can stay broad; the tailored creative does the targeting and the platform finds matching people. One way to start is to take messages already working for mass-market competitors and rebuild each element for the segment. Size matters: pick a segment inside a large parent market, since a tiny sub-niche will cap spend.",
+    "conditions": "Sophisticated, crowded markets where generic claims are worn out; paid social with broad targeting; segment large enough to support spend.",
+    "fails_when": "Early, unsophisticated markets where a general promise still converts; segments too small to fund creative production and spend; brands whose product genuinely serves all buyers the same way and lose volume by excluding them.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Should I target a niche audience or go broad on Facebook?",
+      "I added 'for nurses' to my ad hook and nothing changed. Why?",
+      "How much of my store should I change for one customer type?",
+      "When does it make sense to niche down instead of selling to everyone?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0018",
+    "evidence": {
+      "where": "Middle section on agencies niching to roofers, then the gym apparel sub-avatar examples"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0016",
+    "modules": [
+      "AVT"
+    ],
+    "topics": [
+      "review mining",
+      "segmentation",
+      "research method"
+    ],
+    "claim": "Mine your own, competitor and marketplace reviews for self-identifying phrases ('as a nurse', 'I am a teacher'); a phrase that keeps repeating marks a buyer segment worth its own funnel.",
+    "body": "The tactic is narrower than general review reading. Search review text for phrases where the buyer names who they are: 'as a', 'I am a', 'I'm a', followed by a job, life stage or role. Example from running shoes: 'As a nurse on my feet all day...', 'As a registered dietitian for 20 years...', 'As a teacher...'. Each such review gives you the segment, the situation (on my feet all day) and the job the product does, in the buyer's own words, which is the evidence an avatar record needs. Where to look, in order: your own reviews; reviews of the category leaders selling the same product type; generic marketplace listings for the same item. If you have few reviews, the competitor and marketplace pools carry the work. Then ask existing buyers directly with a free survey sent to your list: how would you describe yourself, what is your job or role, what is your specific situation, how does the product help. Treat a segment as real when the same identity keeps recurring across many reviews or survey answers and is growing, not when it appears once. Before committing, check the segment is big enough to advertise to; a sub-niche of a few hundred or thousand people is hard to scale on paid social.",
+    "conditions": "Products with public reviews in the category (footwear, apparel, supplements, tools); brands choosing which segment to build creative and pages for.",
+    "fails_when": "Categories where reviewers rarely self-identify (commodity consumables), or very new categories with too few reviews; a recurring identity that is too small a population to reach profitably.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Sub-niche of ~100 to 1,000 people: too small to promote, per speaker"
+    ],
+    "asks": [
+      "How do I figure out who is actually buying my product?",
+      "Our reviews are all over the place. How do I find a niche in them?",
+      "What should I search for in competitor reviews?",
+      "How many reviews mentioning the same job before it counts as a real customer group?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0018",
+    "evidence": {
+      "where": "'How do you find avatars' section: reviews, talk to customers, content online",
+      "quote": "I am a nurse. I'm on my feet all day"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0017",
+    "modules": [
+      "AVT"
+    ],
+    "topics": [
+      "interview technique",
+      "research method"
+    ],
+    "claim": "About 20 customer interviews of 30 minutes each surface the large majority of audience sentiment; more interviews add little, so verify at scale with a survey instead.",
+    "body": "The practitioner runs 20 conversations per persona project, each 30 minutes, and cites research (via Michele Hansen's book Deploy Empathy, attributing the figure to large research firms such as Nielsen) that 20 conversations capture roughly 97% of the sentiment of the whole customer base. The mechanism is saturation: after around 20 people, themes, triggers and pain points start repeating, so extra calls cost time without new insight. How to apply it: recruit about 20 recent buyers, ideally mixing people who love and people who dislike the product; run 30-minute exploratory calls about how they found the product, why they bought, what they were using before and how they feel about it; then take the themes into a survey to check how common each one is across hundreds of customers. Use the survey for countable facts (role, company size, years as customer) and keep the why-questions in the interviews. Treat the 97% figure as a secondhand citation, not a measured result from this source; the actionable part is the number of calls and the split of jobs between interviews and survey.",
+    "conditions": "Persona or buyer-insight research for a single product or segment; works for B2B SaaS and DTC alike; assumes interviewees are actual buyers, not prospects.",
+    "fails_when": "The customer base spans several very different segments; 20 calls per segment are then needed, not 20 in total. Also weak when only happy customers are recruited.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "20 interviews per persona project",
+      "30 minutes per interview",
+      "97% of audience sentiment claimed for 20 conversations (secondhand citation via Deploy Empathy)"
+    ],
+    "asks": [
+      "How many customer interviews do I actually need to do?",
+      "Is 20 customer calls enough to build a buyer persona?",
+      "We have thousands of customers, how many should I talk to before I trust what I hear?",
+      "Should I run interviews or a survey first for customer research?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0019",
+    "evidence": {
+      "where": "Four-pronged research segment, discussion of customer conversations and the Deploy Empathy citation"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0018",
+    "modules": [
+      "AVT"
+    ],
+    "topics": [
+      "interview technique",
+      "research method"
+    ],
+    "claim": "Interview recruiting fills fast when the invite promises no demo or upsell; a $30 charity donation per 30-minute call recruits busy, high-value buyers who ignore cash.",
+    "body": "Customers who love or hate a product want to talk about it; what stops them from booking is the fear that a research call will turn into a sales pitch. The practitioner states in the invitation email exactly what the call is: she is not a product expert, cannot fix their issues, will not show a demo, and only wants to hear about their experience, with the time needed stated up front. With that framing her calendar fills quickly. Incentives she has used: a free branded t-shirt, three months of beta access to a new tool, and for hard-to-reach senior people a donation to a charity of their choice, for example $30 for 30 minutes. Cash is a poor fit for high earners because it forces them to price their time; a donation lets them give time without that comparison. She also reports that across what she estimates as thousands of calls, interviews almost never triggered cancellation, so fear of bothering customers is not a reason to skip them. A useful signal: if customers will not book at all, they probably lack strong feelings about the product, which is itself a finding.",
+    "conditions": "Recruiting existing customers for qualitative research; the charity incentive is aimed at senior or high-income buyers; t-shirt or early access suits consumer and product-engaged audiences.",
+    "fails_when": "Low-income or deal-seeking audiences, where a cash or discount incentive works better; or when the call drifts into selling, which breaks the trust that made people book.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "$30 charity donation for a 30-minute call",
+      "3 months free beta access as an incentive",
+      "near-zero cancellations caused by research calls across an estimated thousands of calls"
+    ],
+    "asks": [
+      "How do I get customers to agree to a research call?",
+      "What should I offer people to do a customer interview?",
+      "Our customers never reply to interview requests, what are we doing wrong?",
+      "Will asking customers for an interview make them cancel?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0019",
+    "evidence": {
+      "where": "Answer to the question on incentivising interview scheduling; earlier remarks on fear of talking to customers"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "AVT-0019",
+    "modules": [
+      "AVT"
+    ],
+    "topics": [
+      "research method",
+      "segmentation",
+      "avatar record structure"
+    ],
+    "claim": "Use behaviour tools to learn how buyers act and interviews to learn why; point social listening at pain-point topics, not brand mentions, then segment personas by job.",
+    "body": "The four-pronged method splits the work by what each source can and cannot tell you. Audience-intelligence tools (the practitioner names SparkToro and Audiense, which draws on IBM Watson personality data) show where the audience spends time, which influencers sway them, and buying mindset, such as whether they decide quickly alone or want help. Those tools describe behaviour but can never explain it. Interviews supply the why: the trigger that made someone buy and the progress they wanted. Surveys check how widespread each interview theme is. Social listening (Brand24 in her case) is used differently from a social media manager: search for conversations about the problem, frustrations and pain points, not for mentions of the brand. After compiling all four, group buyers by the job they hire the product for, not by age, gender or job title. Supporting data point: in a survey she ran with Audiense, about 90% of marketers said they create personas but 77% said they never use them for a launch, campaign or copy, which is the failure the job-based structure is meant to fix. Note the source is mainly B2B SaaS.",
+    "conditions": "Building or rebuilding an avatar record; most useful when existing personas are demographic and unused.",
+    "fails_when": "Tiny audiences with little online footprint, where audience-intelligence tools return thin or noisy data; then rely on interviews and reviews.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 90% of marketers create buyer personas (practitioner survey with Audiense)",
+      "77% never use them for a campaign, launch or copy"
+    ],
+    "asks": [
+      "What is the best way to build a customer avatar that we will actually use?",
+      "Our personas are just age and gender and nobody uses them, how do we fix that?",
+      "What should I search for when doing social listening for customer research?",
+      "Should I segment customers by demographics or by why they buy?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0019",
+    "evidence": {
+      "where": "Four-pronged research explanation and the closing segment on hurdles to adopting job-based personas"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0020",
+    "modules": [
+      "AVT",
+      "ADC",
+      "OFF"
+    ],
+    "topics": [
+      "segmentation",
+      "research method"
+    ],
+    "claim": "Ask a one-question identity quiz in the pop-up (athlete or coach), tag answers, and compare conversion by cohort; one brand's 25% coach segment converted about 40% better.",
+    "body": "Personas worth spending on can be found with a single self-select question at the point of capture. A fitness device brand asked in its pop-up whether the visitor was an athlete or a coach and stored the answer as a profile property. Traffic was about 75% athletes and 25% coaches, matching where ad spend went, but after one week of cohort data the coaches converted roughly 40% higher on the first purchase. The brand flipped its creative mix so about 75% of spend went to coach-facing ads, and onboarding written only for athletes could be split by persona. Holman adds that the same tag reveals which use case retains best: a protein brand might learn that 10% of subscribers are training for a Hyrox race and target them with event-specific offers. Tools named: Alia for pop-up questions, KnoCommerce for post-purchase surveys, plus cancel-flow answers and founder calls with customers when small. How to apply: pick the one question that splits buyers by goal or role, tag it, wait for a week or two of orders, then compare conversion rate, AOV and later retention per tag before moving budget.",
+    "conditions": "Products bought by two or more distinct roles or goals; enough pop-up volume to get a week of comparable cohorts.",
+    "fails_when": "Low traffic (a week's sample too small to separate 40% from noise); answers that do not map to different creative or offers; front-end conversion gains that do not hold in LTV.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "traffic 75% athletes / 25% coaches",
+      "coaches converted about 40% higher on first purchase after one week",
+      "spend flipped to about 75% coach creative"
+    ],
+    "asks": [
+      "How do I find out which type of customer converts best?",
+      "What question should I add to my email pop-up?",
+      "We sell to two kinds of buyers, how do I know which to target with ads?",
+      "How can I segment customers by why they buy?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0028",
+    "evidence": {
+      "where": "Acquisition section, athlete vs coach pop-up example"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "AVT-0021",
+    "modules": [
+      "AVT",
+      "MEA"
+    ],
+    "topics": [
+      "research method",
+      "objection discovery"
+    ],
+    "claim": "For qualitative feedback, weight the top 3% most loyal and the bottom 3% most unhappy customers over the 94% middle, and ask site visitors 'what is this page missing?'",
+    "body": "Derric Haynie passes on a rule he attributes to the founder of a subscription analytics company: the customers worth listening to most are the 3% most loyal and the 3% most dissatisfied. The loyal end tells you what you do exceptionally well and should protect and amplify in copy; the unhappy end tells you what to stop doing or fix. The middle 94% give mild, averaged answers that rarely change a decision. He pairs this with stage-specific questions rather than one generic survey: an on-page open question for prospects (he uses a heatmap and survey tool) worded as 'What is this page missing?', which surfaces gaps such as missing price, missing colour, unclear message or doubt that the product will work for them; a one-question post-purchase 'where did you hear about us' survey for attribution, expecting it to conflict with click attribution (an ad click may be self-reported as a friend's recommendation); quiz answers fed straight into the CRM rather than a separate silo; and outreach to lapsed customers, for example a year after their last purchase. How to apply: segment customers by repeat count and by refund or complaint history, interview or survey each extreme separately, and route open-text page answers into a weekly list of page fixes.",
+    "conditions": "Brands with enough customers to have meaningful extremes (a few hundred or more) and an on-site survey or post-purchase survey tool.",
+    "fails_when": "Very small customer bases where 3% is a handful of people; or when the decision is about the mainstream buyer's price sensitivity, where the middle matters most.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "top 3% most loyal and bottom 3% most dissatisfied, versus the 94% middle",
+      "lapsed-customer outreach example: no purchase for 1 year"
+    ],
+    "asks": [
+      "Which customers should I actually listen to for feedback?",
+      "How do I find out what's missing from my product page?",
+      "Our survey answers are all bland, who should we ask instead?",
+      "Should I survey people who stopped buying from us?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0059",
+    "evidence": {
+      "where": "Tools for first-party versus zero-party data answer, rule credited to the ProfitWell founder"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0022",
+    "modules": [
+      "AVT",
+      "LPG",
+      "MEA"
+    ],
+    "topics": [
+      "research method",
+      "segmentation"
+    ],
+    "claim": "Add quiz questions that do not change the recommendation (diet, sports liked, past setbacks) purely to collect first-party avatar data for new hooks and segments.",
+    "body": "The practitioner frames a quiz as having two jobs: personalisation on the front end and customer research on the back end. Several questions in the teardown (which diet do you follow, sugary drinks, water intake, which sports you like, what went wrong in past attempts) do not alter the product sold at the end. Mechanism: cold visitors answer these willingly because they believe the answers shape their plan, so the brand gets a large, structured survey of prospects, not just buyers, at no extra cost. How to apply: 1) Add three to six research questions spread through the quiz, framed as plan inputs. 2) Store every answer against the email or session so it can be exported. 3) Review the answer distribution regularly: an unexpectedly large share choosing keto, vegetarian, jogging or martial arts is a candidate angle for new ads and headlines, or a sign the real avatar differs from the assumed one. 4) Reuse answers later in the same funnel (info screens and summary) and in email segmentation. 5) Keep research questions low effort (single tap) so they do not add fatigue. No numbers are given for how many hooks this produced.",
+    "conditions": "Brands already running a quiz or considering one for cold traffic, with enough quiz completions to read answer shares; works for prospects who have not bought.",
+    "fails_when": "Low traffic gives too few completions for answer shares to mean anything; or added questions push the quiz past the point where drop-off rises, so test the research questions' effect on completion.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [],
+    "asks": [
+      "Can I use my quiz to learn about my customers?",
+      "We're out of ad angle ideas, can quiz answers help?",
+      "What questions should I add to a quiz just for research?",
+      "How do I find out who is actually visiting my store from ads?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0066",
+    "evidence": {
+      "where": "diet question and previous-fitness-attempts question",
+      "quote": "quizzes have a double function"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0023",
+    "modules": [
+      "AVT",
+      "MCR"
+    ],
+    "topics": [
+      "research method",
+      "awareness levels",
+      "angle versus format"
+    ],
+    "claim": "Export quiz answers about every 100 submissions; the share naming failed past solutions shows awareness stage, and the top pain point (e.g. 70% chin) becomes the next ad angle.",
+    "body": "The speaker's main argument is that a quiz is paid customer research: buyers answer honestly about themselves, and the answers arrive with every ad dollar. Cadence: once the quiz has about 100 submissions (not purchases), export all answers and have an AI model summarise them; at moderate spend that is roughly weekly; repeat a few times a month because distributions drift with the ads you run. What to read: the age distribution of who your ads attract; the most common pain point or focus area, which becomes the next angle (if 70% choose a specific sub-problem such as chin and jaw sagging rather than general tightening, test ads about that); and the what have you tried before question, which reads awareness stage, since mostly nothing tried means the ads pull problem-aware, top-of-funnel people and many tried serums or other products means solution-aware, mid to bottom of funnel buyers who need a mechanism and comparison message. The data also sets frame, meaning whether to lead with a doctor, mass proof or plain logic. He prefers this over copying competitor ads, whose economics you cannot see; he puts competitor inspiration at about 20% of creative strategy. Draft quiz questions with AI to avoid baking in your own assumptions.",
+    "conditions": "Brands running a quiz funnel with paid traffic; at least about 100 completed submissions per analysis window.",
+    "fails_when": "Quizzes whose options are written from the founder's assumptions (answers then just mirror the options offered); traffic so low that 100 submissions take months; answer shares shift with whichever ads ran, so a distribution reflects your targeting, not the whole market.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 100 submissions per report",
+      "example 70% choosing one pain point",
+      "competitor inspiration about 20% of creative strategy, customer data 80%"
+    ],
+    "asks": [
+      "How do I use quiz answers to come up with new ad angles?",
+      "How many quiz responses do I need before the data means anything?",
+      "How can I tell if my ads attract beginners or people who already tried other products?",
+      "Is copying competitor ads a good creative strategy?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0072",
+    "evidence": {
+      "where": "Framework section, data and learnings; recommendations section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AVT-0024",
+    "modules": [
+      "AVT"
+    ],
+    "topics": [
+      "interview technique",
+      "research method"
+    ],
+    "claim": "12 to 15 one-on-one customer interviews surface about 80% of a segment's pain points, as many as 7 focus groups of up to 12 people.",
+    "body": "Joanna Wiebe cites Stiehl and DeVries ('Pain Killer Marketing', 2008): 12 to 15 one-on-one interviews generate about 80% of all the pain points a segment has, the same yield as seven focus groups of up to twelve participants each, at a fraction of the cost. Her practical advice for small brands: skip agencies and focus groups; talk to real people yourself, even paying for their time with modest gift cards; or run a short survey of at least 12 people, then document everything and look for the surprising and the repeated answers rather than confirming what you already believed. The output feeds a positioning document: each feature, whether it is unique to you, the customer pain it solves, the benefit, and a priority. How to apply: 1) recruit 12 to 15 recent buyers or close prospects from one segment; 2) ask about the situation before buying, what they tried, what nearly stopped them, and the words they use; 3) stop adding interviews when new ones repeat earlier pains; 4) quote their exact phrases in copy. The 80% figure is a secondary citation; treat it as a stopping guide, not a law.",
+    "conditions": "One clearly defined segment at a time; interviews with recent buyers or serious prospects.",
+    "fails_when": "Mixing several segments in one interview set (saturation comes much later); very new categories with no buyers yet; using leading questions.",
+    "scope": "baseline",
+    "tier": 4,
+    "numbers": [
+      "12-15 interviews yield about 80% of pain points",
+      "equal to 7 focus groups of up to 12 people",
+      "survey at least 12 people"
+    ],
+    "asks": [
+      "How many customer interviews do I need?",
+      "Is a focus group worth it for a small brand?",
+      "When can I stop doing customer interviews?",
+      "How do I find out my customers' real pain points?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0122",
+    "evidence": {
+      "where": "Chapter 2 'Get to know your customer', research: interview to find pain points"
+    },
+    "strength": "research",
+    "public": false
+  },
+  {
+    "id": "AVT-0025",
+    "modules": [
+      "AVT",
+      "EML"
+    ],
+    "topics": [
+      "research method",
+      "objection discovery"
+    ],
+    "claim": "Get detailed survey answers, even from non-buyers, with an everyone-wins incentive: a $1,000 gift card draw plus a guaranteed $30 store credit for every completed response.",
+    "body": "The founder's approach to customer research: ask four or five in-depth, open-ended questions that require written answers, not checkboxes, and pay everyone something. His incentive is entry into a $1,000 Amazon gift card draw, and anyone who does not win still gets a guaranteed reward such as $30 store credit (or $30 off a $100 order). Because every respondent gets something, completion rises and people write real answers. He also emails people who visited or engaged but never bought, since their reasons for not buying are the most useful input for new angles and offers. Questions to ask include what would make them buy, which offers they would actually want, and in supplements, which product they wish existed, which can steer what the brand formulates next. The credit doubles as a reason to come back and buy. Use answers in customers' own words to write ad angles, page headlines and new offers, and group responses by theme before acting on any single reply.",
+    "conditions": "Brands with an email list of customers and non-buyers; consumer products where store credit has real value.",
+    "fails_when": "Low-margin products where a $30 credit costs more than the research is worth; regions with strict rules on prize draws and sweepstakes, which need compliant terms.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "4 to 5 open-ended questions",
+      "$1,000 gift card draw",
+      "$30 guaranteed store credit (or $30 off $100)"
+    ],
+    "asks": [
+      "How do I get customers to fill out a survey?",
+      "What incentive should I offer for a customer survey?",
+      "How do I find out why people did not buy from us?",
+      "Should I survey people who never purchased?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0249",
+    "evidence": {
+      "where": "Surveys segment within the email and offers discussion"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  }
+]

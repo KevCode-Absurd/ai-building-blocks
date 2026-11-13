@@ -1,0 +1,1699 @@
+[
+  {
+    "id": "ORG-0001",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "distribution planning",
+      "content marketing and long form"
+    ],
+    "claim": "For long-form video, publish 3 to 4 tightly niche pieces for the exact buyer for every 1 broader piece meant only for top-of-funnel reach.",
+    "body": "Niche content that serves the exact avatar gets fewer views but produces the buyers; broad content reaches more people but converts poorly. The operator reports that his specific case-study videos drew roughly a third of the views of his broader 'lessons' videos, yet a room of actual customers said they consumed the specific ones. His answer is a ratio, not a choice: for every three or four on-topic long videos, make one that goes wider. The broad piece acts as top of funnel; new viewers then find the deeper niche library, and the platform serves the next broad piece to the people who only came for that. How to apply: plan the long-form calendar in blocks of four or five; keep three or four aimed at the buyer's specific problem and one at a wider adjacent interest; judge the niche videos on downstream sales and leads, not views. He also notes that improving presentation and structure of existing niche content can multiply views without changing the topic.",
+    "conditions": "Brands making long-form video (YouTube or similar) for a defined buyer; the ratio is the operator's rule of thumb from his own channel.",
+    "fails_when": "Mass-market products where the broad audience is the buyer, so a niche-heavy mix only shrinks reach; channels whose niche topics are exhausted.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "3:1 to 4:1 niche to broad long-form videos",
+      "niche videos drew about one third the views of broad ones but more of the buyers"
+    ],
+    "asks": [
+      "Should our YouTube videos be niche or broad?",
+      "Our niche videos get few views, should we go broader?",
+      "What ratio of niche to broad content should a brand post?",
+      "Which videos actually bring in buyers versus views?"
+    ],
+    "platforms": [
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0032",
+    "evidence": {
+      "where": "niche versus wide answer to Evelyn"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "ORG-0002",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "format-native structure",
+      "content marketing and long form"
+    ],
+    "claim": "In the first 30 seconds of an educational video, state the promise, give proof of why to listen, and lay out the path the video will follow.",
+    "body": "The operator watched the first three minutes of his top 35 YouTube videos and compared them with videos of similar average view duration that carried fewer viewers through. The common element was three beats: the promise (what the viewer will be able to do), the proof (why this speaker is worth listening to, stated as a hard result), and the path (the structure of what comes next, which sets an expectation the video then meets). He argues educators differ from entertainers here: for entertainment, the hook is matching the thumbnail visually; for education, the 'spectacle' is the proof. His example opener: he sold a company for $46.2 million, a strong guarantee was part of why, and there are four things that made it stronger. Promise and proof decide whether the viewer stays; the path mainly protects watch time. How to apply: script the opening so all three beats land within 30 seconds, lead with a specific, checkable result for proof, and number the steps when announcing the path. For a product brand, proof can be customer results, sales volume or a founder credential.",
+    "conditions": "Educational or how-to video, organic or long-form; the brand or founder has a credible, specific result to cite as proof.",
+    "fails_when": "Entertainment or pure product-demo content, where matching the thumbnail promise visually matters more; brands with no credible proof to state.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "first 30 seconds",
+      "pattern drawn from the top 35 videos of one channel"
+    ],
+    "asks": [
+      "How should I start an educational YouTube video?",
+      "People leave my how-to videos in the first minute, what's wrong?",
+      "What should a video intro include to keep viewers watching?",
+      "How do I hook viewers in a tutorial video for my brand?"
+    ],
+    "platforms": [
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0032",
+    "evidence": {
+      "where": "the three Ps segment after the niche discussion"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0003",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "organic to paid crossover",
+      "distribution planning"
+    ],
+    "claim": "Keep organic content 100% give with no calls to action, and let paid ads carry every ask; prospects who see both convert and show up at higher rates.",
+    "body": "The operator's model removes the give-to-ask ratio problem by splitting it across channels. Organic posts teach or entertain and never pitch, so reach and goodwill are not taxed by CTAs, which he says suppress distribution and feel off to viewers. The ask lives in paid ads, the profile link and video descriptions. In a feed the pattern looks like three free organic pieces and then one paid ad from the same brand, so the 3-to-1 give-to-ask rhythm still exists, but the viewer never feels sold to inside the content. His claim is that starting organic immediately makes existing paid ads more profitable: people see an ad, check the brand's organic profile, and then take the next step; for booked-call businesses they also show up and close at higher rates. How to apply: strip spoken and on-screen CTAs from organic videos; put the offer link only in bio and descriptions; judge early organic as lead nurture for paid traffic rather than by views, and expect it to become acquisition only as the audience grows. No numbers were shown for the lift; treat it as a practitioner model, not a measured result.",
+    "conditions": "Brands already running paid ads and starting or rebuilding an organic presence; content-led categories where prospects research the brand before buying.",
+    "fails_when": "Brands with no paid budget, where organic is the only acquisition channel and a soft CTA may be the only path to sale; impulse products where nobody checks the profile before buying.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "roughly 3 organic pieces to 1 paid ad in a prospect's feed"
+    ],
+    "asks": [
+      "Should I put a call to action in my organic social posts?",
+      "Our organic posts with 'shop now' get no reach, why?",
+      "How do organic content and paid ads work together?",
+      "Does posting organic content make my Facebook ads cheaper?"
+    ],
+    "platforms": [
+      "youtube",
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0032",
+    "evidence": {
+      "where": "early segment on the give vs ask ratio and the Leads book"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0004",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "creator and influencer collaboration",
+      "founder-led and face-of-brand content"
+    ],
+    "claim": "Tier influencers by job: a few elite athletes for authority, and volume tier-2/3 creators with discount codes, which drove about 99% of Cadence's DTC revenue.",
+    "body": "Cadence runs a two-tier influencer model. Tier one is a small set of elite athletes competing at the top level (Olympics, Ironman, Tour de France, tennis championships); their job is authenticity and brand authority, not direct sales. Tiers two and three are a volume programme of creators with discount codes, whose content is also reused in ads; McKay says this tier drives about 99% of DTC revenue. He describes the tension honestly: a creator with 400,000 followers who runs a four-hour marathon feels off-brand for a performance drink, yet one such creator did about $20,000 from a single swipe-up, which made the case for twenty more of him. The team hired a head of influencer and a head of social to run the volume tier so the founder's brand anxiety did not cap revenue. How to apply: give each tier a separate KPI (authority tier judged on content quality and credibility, volume tier on code revenue and reusable ad content), keep the authority tier small, and scale the volume tier on measured code revenue rather than on follower count or on how well the creator fits your ideal image.",
+    "conditions": "DTC consumables with an aspirational or performance positioning; Instagram-led creator programmes; brand past early stage with someone to manage creators.",
+    "fails_when": "Very early brands without staff to manage dozens of creators; luxury brands where off-brand creators damage price positioning; categories where codes cannibalise full-price buyers (check new versus returning customers on code orders).",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "tier 2 and 3 code creators: about 99% of DTC revenue",
+      "one 400,000-follower creator: about $20,000 from one swipe-up"
+    ],
+    "asks": [
+      "Should I pay for big-name athletes or lots of small creators?",
+      "Our influencer spend is all on a few famous names, is that wrong?",
+      "Do discount-code influencers actually drive sales?",
+      "How do I balance brand credibility with creators who sell?"
+    ],
+    "platforms": [
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0037",
+    "evidence": {
+      "where": "Influencer and distribution discussion, after the Universal Ads sponsor read",
+      "quote": "let's have 20 of him"
+    },
+    "strength": "stated_by_practitioner",
+    "public": false
+  },
+  {
+    "id": "ORG-0005",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "community building",
+      "distribution planning",
+      "short-form organic mechanics"
+    ],
+    "claim": "To start live selling on Whatnot with no followers, run many short same-day shows over long planned ones; buyers expect deep discounts, so price for resellers first.",
+    "body": "The reseller's advice comes from watching first-time sellers fail in a Whatnot seller group: they promote one show for weeks, list 100 items with several photos each, sell 5 to 10 and quit. His alternative: schedule a show the same day, go live for about 15 minutes, list one item with one photo. Four 15-minute shows on four days beat one 1-hour show. In his on-camera test with an account of 11 followers, he set up a show, listed a broken Game Boy Advance SP for parts at $30 (eBay parts comps $60 to $65) and sold it in about 15 minutes to a reseller. Pricing reality: buyers come for deals near 90% off retail (big sellers move $200 to $300 dresses for $15, sourced at $3 to $5), so source cheaply enough to sell at $2 to $5 profitably, or accept reseller prices while the audience grows. Start auctions at the lowest price you will genuinely accept. Wide-appeal impulse items (snacks, mugs, character merchandise) fetch better prices than niche items. Keep the stream entertaining; longer watch time means more buying. Once 20 to 40 regulars attend, add a buyer appreciation giveaway: anyone who buys enters a draw for a better item (a $250 putter during $1-start hat auctions), funded by bulk sales.",
+    "conditions": "Live auction marketplaces (Whatnot) in the US; resellers, collectibles, apparel overstock or brands clearing excess inventory; sellers able to host on camera regularly.",
+    "fails_when": "Full-price DTC brands whose margins or pricing cannot survive auction-level discounts; brands protecting price integrity across channels; sellers who cannot commit to frequent shows; platform incentives and approval times change.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "Four 15-minute shows beat one 1-hour show (practitioner view)",
+      "Test: 11-follower account sold first item in ~15 minutes at $30 vs $60 to $65 eBay comp",
+      "Buyers expect deals near 90% off retail",
+      "Add buyer appreciation giveaways once 20 to 40 people attend regularly",
+      "Top Funko seller example: 5-second auctions starting at $5"
+    ],
+    "asks": [
+      "How do I start selling on Whatnot with zero followers?",
+      "My first Whatnot show sold almost nothing. Is the platform bad for us?",
+      "What price should I start auctions at on Whatnot?",
+      "Should our brand try live shopping apps like Whatnot?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0106",
+    "evidence": {
+      "where": "Tips 1 to 5 and the live 'mystery flips' test at the end",
+      "quote": "you're first show is probably going to be bad"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "ORG-0006",
+    "modules": [
+      "ORG",
+      "OFF"
+    ],
+    "topics": [
+      "community building",
+      "offer mechanics"
+    ],
+    "claim": "A live auction buyers-only giveaway breaks even when it lifts the average bid by prize cost divided by lots: a $250 prize over 250 lots needs $1 per lot.",
+    "body": "A buyers-only giveaway on Whatnot can only be entered by people who buy something during that show, so the prize works as an incentive on every lot rather than as a reach stunt. That makes the break-even easy to compute: divide the prize cost by the number of lots, and that is the bid lift per lot you need. The resellers in this source ran a 252-lot show with a $250 iPad as the buyers-only prize, drawn at the end of the show so viewers stayed. Their usual average selling price was about $9.85 across normal 30 to 50 item shows; this show averaged a little over $22 per item, with 153 buyers, 49 of them buying from the sellers for the first time. That lift is not the giveaway alone: the same show also carried better inventory and much heavier promotion, so the effect is not isolated. How to apply: count your lots, pick a prize where cost divided by lots is a small share of your normal selling price (here about 10%), name the prize in the pre-show posts and the show thumbnail, restrict entry to buyers, and draw at the end. Compare average selling price against your own recent shows.",
+    "conditions": "Live auction or live shopping shows with many lots (here 250) and low per-item prices (about $10 normal average); platform supports buyer-only giveaways (Whatnot).",
+    "fails_when": "Few lots, so the per-lot lift needed becomes large; high-ticket items where a $1 lift is noise; platform or local rules restrict giveaways; the audience comes for the prize and buys only the cheapest lot to qualify.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "$250 prize over 250 lots = $1 per-lot bid lift to break even",
+      "average selling price about $9.85 normally versus about $22 on this show",
+      "153 buyers, 49 first-time"
+    ],
+    "asks": [
+      "is a giveaway worth it on a live selling show",
+      "how much should I spend on a prize for my Whatnot show",
+      "we sell cheap items on live streams, how do we get people to bid more",
+      "how do I work out if a buyers-only giveaway pays for itself"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0110",
+    "evidence": {
+      "where": "Planning section (iPad buyer giveaway) and numbers section"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "ORG-0007",
+    "modules": [
+      "ORG",
+      "OFF"
+    ],
+    "topics": [
+      "distribution planning",
+      "offer mechanics"
+    ],
+    "claim": "Anchor a big live auction with about 20% high-value lots starting at $1, and only do $1 starts when you expect 300 to 500 or more viewers at once.",
+    "body": "Low starting bids on recognisable, valuable items are what get people to bookmark and show up; the margin comes from everything else they buy once they are in the room. In this 250-lot show about 50 lots were items worth $50 to $150 elsewhere (branded sneakers, motocross boots, designer purses and wallets), all started at $1 and named in the promotion. The sellers expected to lose money or sell below market on those. The other 200 lots were cheap inventory: collectible figures bought in a lot at under $4 each, plus thrift-bin finds bought for $0.25 to $5, which sell for $8 to $15. Total inventory cost was about $1,000 against gross sales stated near $5,600 over a four-hour show. As predicted, some anchors went below value and others above. The sellers' condition is the useful part: they normally advise against $1 starts, and say it only works when 300 to 500 people are in the room at once; this show peaked at 530 concurrent and reached 6,158 viewers in total. Pace was 15-second auctions extending to 45 to 60 seconds per lot on average, so 250 lots took about four hours. Profit figures in the transcript do not reconcile, so rely on the structure, not the profit.",
+    "conditions": "Live auction shows with a promoted event and an existing or in-app following; a mix of a few well-known high-value items and many low-cost items.",
+    "fails_when": "Concurrent viewers stay well under 300, so $1 anchors sell far below value; the anchors are not promoted beforehand; inventory has no low-cost majority to carry the margin.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 50 of 250 lots (20%) were $50 to $150 items started at $1",
+      "$1 starts only with 300 to 500+ concurrent viewers",
+      "peak 530 concurrent, 6,158 total viewers",
+      "about $1,000 inventory cost, gross about $5,600",
+      "45 to 60 seconds per lot, 250 lots in about 4 hours"
+    ],
+    "asks": [
+      "should I start auction items at $1",
+      "how many big-ticket items do I need to pull people into a live sale",
+      "our live shows get few viewers, can we still do $1 starts?",
+      "how long does it take to sell 250 items in a live auction"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0110",
+    "evidence": {
+      "where": "Planning section (high-value items) and closing numbers section"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "ORG-0008",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "distribution planning",
+      "posting cadence and volume"
+    ],
+    "claim": "Schedule a live shopping show 1 to 3 weeks ahead and promote it three times (a week before, 2 to 3 days before, hours before) to grow bookmarks.",
+    "body": "On Whatnot a bookmark is a reminder that notifies the viewer when the show starts. Over three years the sellers in this source found that shows scheduled at least a week out, ideally two to three, and promoted outside the app collect more bookmarks, and that more bookmarks lead to more viewers at go-live, more buyers and higher average selling prices. For this show they mentioned it in two YouTube videos and posted Instagram stories three times: about a week before, two or three days before, and a few hours before. The promotion named specific brands being sold, said every auction started at $1, and named the prize; the show thumbnail, made free in a design tool, carried the same three hooks. Result: 530 peak concurrent viewers, in their top 10 shows ever, and 6,158 unique viewers over about four hours on a Monday night, with 153 buyers. Their normal rhythm is two to three unpromoted shows a week of 30 to 50 items. How to apply: book the big show 2 to 3 weeks out, put brand names, starting price and any prize in every post and in the thumbnail, and run the three-touch reminder sequence on every channel you have.",
+    "conditions": "Live shopping platforms with a bookmark or reminder feature (Whatnot); sellers with at least one outside channel (YouTube, Instagram, Facebook groups) to promote on.",
+    "fails_when": "No outside audience to reach, in which case growth must come from in-app discovery; the promoted items are not exciting enough to bookmark; the show is announced only on the day.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "schedule at least 1 week, ideally 2 to 3 weeks ahead",
+      "3 promotion touches: about 1 week, 2 to 3 days and a few hours before",
+      "530 peak concurrent viewers, 6,158 total, 153 buyers"
+    ],
+    "asks": [
+      "how far ahead should I schedule a live selling show",
+      "nobody shows up to our live shopping streams, what do we do?",
+      "how many times should I promote a live sale before it starts",
+      "how do I get more bookmarks on Whatnot"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0110",
+    "evidence": {
+      "where": "Planning section (scheduling and advertising the show)"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "ORG-0009",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "UGC sourcing without paying",
+      "creator and influencer collaboration",
+      "whitelisting and usage rights"
+    ],
+    "claim": "A product-seeding 'creator army' sent 100,000 invites in 60 days, onboarded 6,000 creators and got about 5,800 videos to run on TikTok and Meta.",
+    "body": "Instead of paying a few UGC creators, the agency seeds product to TikTok creators at scale and reuses their posts as ads. Mechanics: automated mass invites through a creator outreach tool, sample requests, approval, the creator posts, then the video runs in TikTok GMV Max campaigns and is moved to Meta as ads. For one client, 100,000 invites over 60 days onboarded about 6,000 creators and returned roughly 5,800 videos, around 6% of invites becoming creators and nearly one video per creator. The target is two to three videos per sample sent. Creators are kept in a community (a paid tool or a free Discord) and given two kinds of brief: wide briefs that let them interpret the product and tell their own story, and specific briefs that show the brand's top ads with their numbers ('7x ROAS, $10k spend, make ads like these'). Another brand cited ran over 800 paid collab ads this way. The army is reusable: for each new product or offer, the same creators can deliver thousands of new videos within weeks. How to apply: budget samples as creative cost, track videos returned per sample, secure usage rights before moving posts to paid, and share winning examples with the community monthly.",
+    "conditions": "Products cheap enough to seed in volume; brands selling on TikTok Shop or able to run TikTok and Meta ads; categories creators want to post about.",
+    "fails_when": "High-COGS or bulky products where seeding thousands of units is uneconomic; categories with claim restrictions (supplements, skincare) where creator scripts must be controlled; missing usage rights or disclosure on reposted content.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "100,000 invites in 60 days",
+      "~6,000 creators onboarded",
+      "~5,800 videos returned",
+      "target 2 to 3 videos per sample",
+      "one brand ran 800+ paid collab ads"
+    ],
+    "asks": [
+      "how do I get lots of UGC videos without paying creators",
+      "how many creators accept free product for a video",
+      "can I use TikTok creator videos as Meta ads",
+      "how do I brief creators so their videos actually work as ads"
+    ],
+    "platforms": [
+      "tiktok",
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0114",
+    "evidence": {
+      "where": "UGC army section and client example"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "ORG-0010",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "short-form organic mechanics",
+      "teardown method",
+      "hook types"
+    ],
+    "claim": "When mining competitors' hooks, drop high-view videos under about 2% engagement as likely paid boosts, and split each creator's top 10 at the natural view break point.",
+    "body": "Kallaway, a short-form creator and co-founder of the Sandcastles analysis tool, describes a hook teardown that avoids the two usual failures: generic AI hooks and hooks copied from another niche whose psychology, format and grammar do not transfer. Steps: pull the top 10 videos from your own channel and from each close competitor, excluding off-topic personal videos. Screen out any high-view video with engagement below roughly 2%, because it probably had paid spend behind it and would teach the wrong lesson. Within each creator, find the natural break point in views (in his example, between video four and five) and treat those above as winners and the rest as losers; content is 80/20, so a few breakouts carry most growth. Compare winners against losers on psychology, trigger words, grammar and non-obvious patterns, separately per creator, then keep only patterns that appear in two or more channels. Patterns found in his run: specific outcomes beat abstraction; a stat followed by a second-sentence amplifier beats the bare stat; declaratives beat hedged questions; front-loaded payoff beats throat-clearing openers. Do not merge many creators into one analysis; mixed styles dilute into an average. Run it on your own backlog first, ideally 50 to 100 videos.",
+    "conditions": "Organic short-form (TikTok, Reels, Shorts) for brands or founders with a backlog of posts and identifiable competitors in the same niche.",
+    "fails_when": "Small backlogs (under about 10 videos per creator) where no break point exists; brand accounts whose views are mostly paid; applying a competitor's hook format to a topic type it does not fit (a stat-led format on a conceptual topic).",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "engagement below ~2% on a high-view video flags likely paid boost",
+      "top 10 videos per creator; break point found between #4 and #5 in the example",
+      "ideal backlog 50 to 100 videos"
+    ],
+    "asks": [
+      "how do I figure out which competitor videos actually went viral organically",
+      "how do I study competitor hooks without copying them",
+      "why do copied viral hooks not work for my brand",
+      "how do I find what my best performing videos have in common"
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram",
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0124",
+    "evidence": {
+      "where": "Live demo: brand-deal screening, winner and loser break points, cross-channel synthesis"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0011",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "format-native structure",
+      "posting cadence and volume",
+      "distribution planning"
+    ],
+    "claim": "Test content formats on the main account; when one repeatedly wins, brand it as a named series, then give it its own focused account instead of mixing formats.",
+    "body": "The argument: on interest-graph platforms each post is first shown to a small test audience and judged on its own, so a feed mixing product launches, tips, testimonials and founder content sends mixed signals about who should see it, and a drop in engagement cannot be traced to the cause. Process: start with one idea and publish several variants (different hooks, lengths, angles) close together so timing does not skew the comparison; judge on completion rate, saves, comments and replays, not views. When one format wins, refine it (tighter hook, shorter cut, clearer CTA), give it a name, visual style and promise, and run it on a fixed cadence. The speaker's B2B software example: of five short-form ideas, a rapid-fire 'common mistake' series doubled engagement; run twice a week, it produced more than half of inbound leads within two months. Keep several formats in rotation to avoid fatigue. Only after a format proves itself, spin it into a dedicated account; the speaker's supplement-brand illustration is a main product account plus separate tips, testimonials and founder accounts. Start with one account; do not launch several at once. Each step still needs a mid-funnel next step (newsletter, waitlist, trial) so attention becomes revenue.",
+    "conditions": "Brands posting short-form organic video on TikTok, Instagram, YouTube Shorts; teams able to produce several variants per idea; at least one format with repeat wins.",
+    "fails_when": "Small teams who cannot keep several accounts active (abandoned satellite accounts look worse than none); platforms or audiences where a single brand account is expected; splitting before any format has proven itself, which spreads effort thin.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "B2B example: 1 of 5 formats doubled engagement; run 2x/week it drove >50% of inbound leads within 2 months"
+    ],
+    "asks": [
+      "Should my brand have more than one Instagram or TikTok account?",
+      "We post tips, product launches and behind-the-scenes on one feed and engagement is flat. What should we change?",
+      "How do I turn one viral post into a repeatable content plan?",
+      "How often should we post a content series that works?"
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram",
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0140",
+    "evidence": {
+      "where": "Repeatable formats section and multi-channel strategy section"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "ORG-0012",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "format-native structure",
+      "short-form organic mechanics",
+      "distribution planning"
+    ],
+    "claim": "For a low-interest product, a one-off spend on a recurring visual 'viral vehicle' (e.g. a hydraulic press in a toy store) can beat paying for complex shoots every month.",
+    "body": "The creator's argument is that routine product content fails because nothing in the frame is new, and that one distinctive, satisfying element added to every video fixes this repeatedly. Mechanism: viewers already know the format (press videos, speed runs, ladder shots), so the brand borrows proven retention and becomes 'the toy store with the hydraulic press', a recognisable series rather than one-off posts. How to apply: 1) List props or settings tied to what you sell that are visually satisfying or unusual: a press, a slow-motion rig, an unusual lens, a vintage car, a striking location, a speed format (show a product in 10 seconds). 2) Budget it as a one-time cost (the source mentions thousands of dollars for a working press) instead of a monthly shoot budget. 3) Run normal content through it: unboxings, product tests, comparisons. 4) Keep it on every post in the series so the account becomes known for it. 5) Judge it on repeat-view and follower growth across 10 or more posts, not one video. Related low-cost variant: change one thing about the shot (film roofing tips from the ladder). No performance numbers are given.",
+    "conditions": "Brands with low-involvement or 'boring' products doing organic short-form (TikTok, Reels, Shorts) with a small team that cannot afford complex monthly shoots.",
+    "fails_when": "The prop has no link to the product, so views do not turn into buyers; destructive formats in categories where they look wasteful or unsafe; or the novelty wears off once copied in the niche, so plan the next vehicle.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "one-off prop budget of a few thousand dollars (hydraulic press example)",
+      "speed format example: an apartment tour in 10 seconds"
+    ],
+    "asks": [
+      "How do I make social content when my product is boring?",
+      "Our TikToks get no views because it's just product shots, what should we change?",
+      "Is it worth buying a prop or gadget just for content?",
+      "What's a cheap way to make every video more watchable?"
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram",
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0141",
+    "evidence": {
+      "where": "opening ideas: format shakeup, speed, viral vehicles",
+      "quote": "invest in that one thing that I know every time is going to help"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0013",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "short-form organic mechanics",
+      "distribution planning"
+    ],
+    "claim": "For organic reach use creator accounts, not brand accounts, set the account up in the target country, and post natively; the speaker's programme found schedulers, including native ones, cut reach.",
+    "body": "Three setup choices quietly limit organic reach, per this practitioner. First, account type: use a creator account on TikTok and Instagram; he says brand or business accounts are deweighted, and the only reason for a TikTok business account is a TikTok Shop, which many sellers pair with a separate creator account for videos. Instagram ads can still run from a creator account. Second, country: start the account and post mostly from the market you sell to, because content is first shown to local users; an account created while travelling or run from a different country can reach the wrong audience. US and Canada overlap enough not to matter much, as do English-speaking European markets, but elsewhere it matters; if you cannot be there, hire someone in-country with a local phone number and keep admin access. Third, scheduling: in their programme they tested this over hundreds of videos and concluded every scheduling tool, including platform-native schedulers, hurt performance; upload manually, which takes about 2 to 3 minutes per platform. These are practitioner observations about opaque algorithms and may change; no test figures were shown.",
+    "conditions": "Brands posting organic short-form video and carousels on TikTok and Instagram.",
+    "fails_when": "Brands that need TikTok Shop features on the main account; platform algorithm changes that remove these effects; teams large enough that scheduling saves more than any reach loss costs.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "2 to 3 minutes to post natively per platform",
+      "scheduler test across hundreds of videos (no figures shown)"
+    ],
+    "asks": [
+      "Should my brand use a business or creator account on TikTok?",
+      "Does using a scheduler hurt reach on Instagram?",
+      "Our TikTok is set up from another country, is that why we get no views?",
+      "Can I run Instagram ads from a creator account?"
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0142",
+    "evidence": {
+      "where": "60-second blitz on networks, account types, country and schedulers"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0014",
+    "modules": [
+      "ORG",
+      "EML"
+    ],
+    "topics": [
+      "newsletter and owned audience",
+      "organic to paid crossover"
+    ],
+    "claim": "Leave calls to action out of organic posts until they consistently reach about 5,000 views (around 2,000 in narrow niches), then add lead magnets and personally DM engaged commenters.",
+    "body": "Asking for the sale or the email too early, in this practitioner's experience, holds back a young account's growth. The rule: no 'buy', 'join my list' or 'link in bio' prompts until posts reliably reach about 5,000 views, or about 2,000 in narrow niches such as construction or SEO services. Then add soft calls to action: a lead magnet (checklist, plan, report, quote) offered through the bio link or a comment-to-DM automation on Instagram, feeding email and SMS where nurture happens; most buyers do not go from one post to a purchase. The largest missed lever is selling in comments and DMs: reply personally to every comment and message, and when someone asks detailed questions or looks like a real buyer, message them directly with more information, a discount code or a call booking. The speaker reports landing senior clients this way. Repurpose every piece of content across the funnel (landing pages, pre-call emails, post-purchase emails), so even posts with modest views earn their cost.",
+    "conditions": "Brands and service businesses growing organic accounts with an email list or sales team to receive leads.",
+    "fails_when": "Established accounts with existing audiences, where CTAs from day one are fine; high-volume consumer brands where personal DM selling does not scale and automation is needed instead.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 5,000 views per post before adding CTAs",
+      "about 2,000 views threshold in narrow B2B-style niches"
+    ],
+    "asks": [
+      "When should I start putting calls to action in my TikToks?",
+      "How do I turn organic social views into email subscribers?",
+      "People comment on our posts but don't buy, what should we do?",
+      "Should we DM people who comment on our content?"
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0142",
+    "evidence": {
+      "where": "Level two section on CTAs, lead magnets and DMs"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0015",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "posting cadence and volume",
+      "founder-led and face-of-brand content"
+    ],
+    "claim": "Start brand social with 2 to 3 expert formats (story, ranking, breakdown, scenario) as video or carousel, 4 to 6 posts a week, run a month before judging.",
+    "body": "The speaker's view, from running a social programme with about 2,000 participants across services and product brands, is that what currently drives sales and leads is expertise delivered by a person or a clear point of view. Four formats do this: storytelling (your build journey, or the history of notable products in your category), ratings and rankings (a dentist in the chair rating whitening toothpastes reached close to a million views), breakdowns (why something works, including topical news in the niche), and scenarios (advice for a specific person in a specific situation). Each works as a talking video or as a designed carousel, so no one has to be on camera. Credentialed experts should look the part (scrubs, kitchen, a product wall behind them); non-experts can take a learning-in-public angle. Plan: pick two or three format and medium combinations, post two of each per week (four to six posts), and keep going for a full month before reviewing data; then turn recurring comment questions into new posts. Prioritise TikTok and Instagram; he expects little business value from YouTube Shorts. He believes this expert window will last about nine months.",
+    "conditions": "Brands and service businesses starting or resetting organic social on TikTok and Instagram, late 2025 onward.",
+    "fails_when": "Purely aesthetic or impulse products where entertainment or visual content outperforms expertise; teams that cannot produce 4 to 6 posts a week for a month; after the format window the speaker predicts closes.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "2 to 3 format choices",
+      "4 to 6 posts per week",
+      "1 month before evaluating",
+      "about 2,000 programme participants informing the advice"
+    ],
+    "asks": [
+      "What kind of content should a new brand post on TikTok and Instagram?",
+      "How often should our brand post on social media?",
+      "We don't want to be on camera, can carousels work?",
+      "How long should I post before deciding if it's working?"
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0142",
+    "evidence": {
+      "where": "Content types section and 'what are you actually going to do' plan"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0016",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "short-form organic mechanics",
+      "format-native structure"
+    ],
+    "claim": "Keep on-screen hook text to 5-8 words (viral Reels averaged 7.7), at or below fifth-grade reading level; performance falls off past 12 words.",
+    "body": "The first line of text or speech in a Reel works like a newspaper headline that has well under a second to land. In the presenter's set of 1,300 viral Instagram Reels, the average hook was 7.7 words, most top performers sat between 5 and 8, some reached 12, and hooks of 13 or more words were rarely among the best. Very few were under 4 words, because a complete idea is hard to state that briefly ('stop scrolling' and 'unpopular opinion' were exceptions). The hooks also averaged below a fifth-grade reading level: no jargon, acronyms or insider terms, because a distracted viewer who has to decode a word scrolls on. Negative framing (stop, don't, avoid, never, cancel) beat positive equivalents (try, start, always) in the set. How to apply: draft hooks, count words and cut to 8 or fewer; replace any term a newcomer to your category would not know; write a negative version of each hook and test both across posts; when citing a result, prefer a believable, specific number over an extreme one. Treat these as starting constraints, since the sample contains only viral posts with no comparison group.",
+    "conditions": "Instagram Reels and similar short-form video (TikTok, Shorts), organic or paid, where text overlay or the first spoken line carries the hook; consumer audiences.",
+    "fails_when": "Expert or B2B niches where precise technical terms signal relevance to the right viewer; and brands whose voice cannot carry negative framing (luxury, wellness positioning built on calm); the length band is descriptive of viral posts, not a controlled result.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "1,300 viral Instagram Reels analysed (hand-picked, no control group)",
+      "average hook length 7.7 words",
+      "best hooks mostly 5 to 8 words; diminishing returns past 12 words",
+      "average hook below fifth-grade reading level (ChatGPT-assessed)"
+    ],
+    "asks": [
+      "how long should my reel hook be",
+      "what words should i use at the start of a reel",
+      "our reels get no views past the first second, what's wrong with the hook",
+      "are negative hooks better than positive ones",
+      "what reading level should social captions be"
+    ],
+    "platforms": [
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0143",
+    "evidence": {
+      "where": "Opening analysis of text on screen, before the 15 hook templates",
+      "quote": "the average length of the most viral hooks was 7.7 words long"
+    },
+    "strength": "shown_with_numbers",
+    "public": true
+  },
+  {
+    "id": "ORG-0017",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "short-form organic mechanics",
+      "format-native structure"
+    ],
+    "claim": "The first frame must visibly show the topic being done (lifting in the gym, eating the food, touring the home); unrelated B-roll loses viewers before they read the hook.",
+    "body": "Viewers take in the image before they read any text, so a strong written hook placed over an unrelated clip (typing at a laptop, writing in a notebook, sitting in a car) is judged by the clip and skipped. The presenter's rule from analysing viral Reels: the opening visual must relate directly to the subject, ideally with the action itself happening. A fitness coach talks while lifting, a food creator eats the dish, a real estate agent walks through the house; for a product brand, that means the product in use, the problem visibly happening, or the before state. To strengthen it further: show something dynamic or about to happen (start at the climax, then rewind), keep the frame uncluttered, bright, saturated and high contrast, and direct the eye with a pointing hand or arrow. Problem or negative visuals stop more scrolls than pleasant ones. Do not rely on a sound effect as the hook, since many viewers watch muted and a loud pop can annoy. Quick test: screenshot the video half a second in and show it to someone with no context; if they cannot say what it is about, reshoot the opening.",
+    "conditions": "Short-form vertical video on Instagram, TikTok and Shorts, organic and paid; especially B-roll-with-text formats common for small brands.",
+    "fails_when": "Deliberate pattern-interrupt openers (an unexpected or absurd visual) can work precisely because they do not show the topic; those need the text or the next second to connect quickly or retention collapses.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "half-second screenshot test"
+    ],
+    "asks": [
+      "what should the first second of my product video show",
+      "does b-roll with text overlay work for reels",
+      "our videos have good captions but people scroll past, why",
+      "how do i make the opening of a reel stop the scroll"
+    ],
+    "platforms": [
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0143",
+    "evidence": {
+      "where": "Visual section after text-length findings, 'stop using bad B-roll'",
+      "quote": "the visual has to match what the reel is about"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0018",
+    "modules": [
+      "ORG",
+      "BRD"
+    ],
+    "topics": [
+      "format-native structure",
+      "founder-led and face-of-brand content"
+    ],
+    "claim": "Build a numbered series or challenge that shows the product in every episode, like 'day X of working out in a new location' for a portable fitness device.",
+    "body": "The guest predicts repeatable series and challenges will be the strongest organic format for 2026, because a recurring premise makes content easy to produce and easy for viewers to recognise. His examples range from extreme (a creator running a mile for every new follower, now past a million followers) to modest (a person on day 200 of speaking 60 seconds without filler words). The point is that the challenge must be a real stretch the creator would not do anyway; a 30-day salad series loses against bigger spectacles, while 'one new salad ingredient every day until 10,000 followers' adds escalation and a payoff. For product brands, his coaching example: an inventor of a portable home-workout device already exercised on it daily, so the series became 'day X of exercising in a new location with my device', from a Target car park to a mountain top. Every episode demonstrates portability and range of use without a pitch. How to apply: pick the product's key claim (portable, durable, versatile), design a daily or weekly escalating premise that proves it on camera, number the episodes, and tie the end point to a follower or sales milestone.",
+    "conditions": "Product brands with a demonstrable visual claim and the capacity to post the series consistently; Instagram and TikTok short video.",
+    "fails_when": "Products with nothing visual to demonstrate; series that require dangerous stunts or unsafe use; teams that cannot sustain the cadence, since an abandoned series is visible.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "day 200 example of a daily challenge series"
+    ],
+    "asks": [
+      "What kind of recurring content should my brand post?",
+      "How do I show my product on Instagram without it feeling like an ad?",
+      "Give me a content series idea for a product brand",
+      "Do challenge videos work for selling products?"
+    ],
+    "platforms": [
+      "instagram",
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0144",
+    "evidence": {
+      "where": "repeatable formats and 2026 predictions segment"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "ORG-0019",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "format-native structure",
+      "organic measurement without per-asset cost"
+    ],
+    "claim": "Judge Instagram posts by goal: double down on shares when chasing growth and on comments and story views when selling; retention past 3 seconds governs both.",
+    "body": "The guest tracks different signals depending on the season. For growth he favours shares, since shared posts reach non-followers, and makes more of whatever gets shared. For sales he watches comments and actions that drive story views, because followers who see Stories are the ones who click. For both, Instagram's retention data, especially the share still watching after the first 3 seconds, shows whether the hook works; he says about 80% of planning effort should go into the opening seconds, including the visual, not only the words. His shareability checklist, SHARE: simple (understandable by anyone), hook (visually arresting: a face, a prop, movement, filming outdoors), authentic (short gap between idea and posting), relatable (specific detail, like three hours editing for seven likes, beats vague lines), and entertaining. He reports that the head of Instagram for business told him off the record brands lean far too much on educational tips and should make entertainment the main test of each script, a second-hand remark. Also cut every redundant phrase, since repetition triggers the scroll. How to apply: set the goal per month, sort posts by shares or comments accordingly, and iterate on the top decile.",
+    "conditions": "Instagram Reels for brands; metrics available in Instagram professional insights.",
+    "fails_when": "Accounts whose sales come from search or saves rather than shares; regulated categories where entertainment framing risks implied claims.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "first 3 seconds retention",
+      "80% of planning effort on the hook"
+    ],
+    "asks": [
+      "Which Instagram metric matters most for growth?",
+      "What makes a Reel get shared?",
+      "Should my brand's Instagram be educational or entertaining?",
+      "Our Reels get likes but no new followers, what should we track?"
+    ],
+    "platforms": [
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0144",
+    "evidence": {
+      "where": "data and SHARE acronym section, middle of the interview"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0020",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "posting cadence and volume",
+      "short-form organic mechanics"
+    ],
+    "claim": "On Instagram, posting volume drives growth: one creator going from 2.5 to 4 posts a day tripled half-year follower gains; small brands average about 8% monthly growth.",
+    "body": "The guest's rule is that the more you post, the more you grow, because Instagram now ranks each post on its own predicted interest, TikTok-style, rather than the follower graph. Followers do not see every post, so posting often does not spam them; weak posts are simply not distributed and only the best ones travel. His own test: in the first half of 2025 he posted about 2.5 times a day and gained about 20,000 followers despite high-profile collaborations; in the second half he posted about 4 times a day and gained about 60,000 without those boosts. It is one account, so treat it as directional. Format split for a new account: about 80% of effort on Reels, which reach non-followers; keep posting carousels and photos; deprioritise Stories, which are seen almost only by existing followers, until there is a follower base. Expectations: he cites about 8% monthly follower growth as typical for a small brand or business and advises committing for at least a year before judging the channel, not 30 or 90 days. Count uploads, not views. How to apply: set a daily Reel target the team can sustain, raise it stepwise, and review growth quarterly.",
+    "conditions": "Instagram accounts building reach from a small base; teams able to produce several short videos a day without dropping quality to unwatchable.",
+    "fails_when": "Teams without production capacity, where volume targets lead to abandoned accounts; premium brands where repetitive low-effort posts erode positioning; accounts already large, where growth depends more on hit rate than volume.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "2.5 posts/day: about 20,000 followers in 6 months",
+      "4 posts/day: about 60,000 followers in the next 6 months",
+      "about 8% average monthly growth for small brands",
+      "80% of effort on Reels",
+      "commit at least 1 year"
+    ],
+    "asks": [
+      "How often should my brand post on Instagram?",
+      "Does posting too much on Instagram hurt reach?",
+      "How fast should our Instagram grow?",
+      "Should we focus on Reels or Stories for a new account?",
+      "We've posted for two months with no growth, should we quit?"
+    ],
+    "platforms": [
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0144",
+    "evidence": {
+      "where": "posting frequency and format questions in the first third"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "ORG-0021",
+    "modules": [
+      "ORG",
+      "EML"
+    ],
+    "topics": [
+      "organic to paid crossover",
+      "newsletter and owned audience"
+    ],
+    "claim": "Replace 'link in bio' with 'comment a keyword' DM automation: it raises engagement and shows who opened, clicked and bought, so non-buyers can be followed up by name.",
+    "body": "Telling viewers to go to the link in bio asks interested people to leave the post and navigate a multi-step menu, and tells you nothing about who clicked. The alternative: ask viewers to comment a word, and an automation tool (ManyChat, which the guest describes as an official Meta partner) instantly sends the link or offer by direct message. Comments lift the post's engagement, which earns more distribution, and the DM sits in the inbox as a reminder. The tool reports open and click rates per message; in his example about 98% opened and 37% clicked. It also names the individuals, so if 10 clicked and 3 bought, the other 7 can get a manual or automated follow-up, such as a note that the sale ends tomorrow. He also sends an automatic thank-you DM to every new follower with no pitch, because an existing DM thread makes the person more likely to see later posts and keeps future keyword DMs out of message requests. He finds Instagram best for free lead magnets and low-ticket offers; high-ticket sales need a call. How to apply: pair each selling post with one keyword, route the DM to a product or discount link, and set a follow-up for clickers who did not buy.",
+    "conditions": "Instagram accounts selling low-ticket products or capturing leads; Meta messaging and automation rules allow comment-triggered DMs.",
+    "fails_when": "High-ticket purchases that need a conversation; brands whose audience finds comment-bait spammy; any automation that breaks Meta's messaging policy or the 24-hour messaging window.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 98% DM open rate and 37% click rate in the guest's example",
+      "10 clickers, 3 buyers, 7 followed up"
+    ],
+    "asks": [
+      "Is link in bio still the best way to sell on Instagram?",
+      "How do I get Instagram followers to actually buy?",
+      "What is ManyChat and should my store use it?",
+      "How do I follow up with people who clicked my Instagram link but didn't buy?"
+    ],
+    "platforms": [
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0144",
+    "evidence": {
+      "where": "converting followers into dollars, near the end"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "ORG-0022",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "distribution planning",
+      "newsletter and owned audience"
+    ],
+    "claim": "Pick one hero platform where buyers are densest, plus email, for 6 months; treat platforms as separate islands and only funnel followers to owned channels, never platform to platform.",
+    "body": "Spreading a small team across six platforms produces thin, non-native content everywhere. The presenter's alternative: choose the single platform where your customers spend the most time (ask a random sample of existing customers; if unclear, look where you yourself learn about the category), make video natively for it, reply to every comment, use its secondary formats such as Stories, comment on others' posts in your niche, and commit for 6 months while also building an email list. Do not try to push followers from one social platform to another (Instagram Stories promoting YouTube, tweets promoting TikTok). Platforms suppress posts with outbound links because they earn from time on their own app, and users who prefer one app's pace tend to churn when forced to switch. The only cross-channel move worth its cost is from a rented audience to an owned one: social to email, SMS or a private community. If you are on several platforms, keep visual and story consistency so people who find you elsewhere recognise you, but let them discover each one naturally rather than routing them.",
+    "conditions": "Small brands and solo founders without a content team, building organic presence from scratch; platforms that down-rank outbound links (X, LinkedIn, Instagram).",
+    "fails_when": "Brands with a content team and proven formats that can repurpose across platforms cheaply, and launches or drops where pointing every audience to one destination for a short window is worth the reach penalty; link treatment also changes by platform over time.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "one hero platform plus email for 6 months"
+    ],
+    "asks": [
+      "do i need to be on every social platform",
+      "which social media platform should my brand focus on",
+      "should i promote my youtube on instagram",
+      "we post everywhere and nothing grows, what should we change",
+      "how do i move followers to my email list"
+    ],
+    "platforms": [
+      "instagram",
+      "tiktok",
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0145",
+    "evidence": {
+      "where": "Third and fourth 'uncommon learnings' (fish where the fish are; islands versus ecosystems)",
+      "quote": "the only ramp you do want to build is from rented to owned"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0023",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "posting cadence and volume",
+      "short-form organic mechanics"
+    ],
+    "claim": "Post 30-50 consecutive videos on one topic for one buyer avatar so the algorithm learns who to show you to; broad viral hits muddy that match.",
+    "body": "Short-form feeds now rank by interest matching rather than by who follows whom: the platform shows any creator's video to whichever viewers it predicts will watch. To do that it classifies each video's topic, largely from the spoken transcript and the caption, then finds lookalikes of the viewers who engaged. An account that switches topics, or chases a broadly relatable video that pulls in unrelated groups, gives the system mixed signals about whom to target next. The presenter's rule: pick one topic and one avatar per account and post 30 to 50 videos on it, built from that avatar's pain points, before judging reach. Say the topic words out loud and in the caption so classification is accurate. Gate every idea with one question: would the core buyer find this useful, interesting or entertaining? If not, skip it even if it might go viral. Aim for on-target virality, meaning high penetration inside your niche, which builds the trust that converts, rather than ten million views from people who will never buy. Diagnostic: scroll your last 20 posts; if topics and target viewer vary, fix focus first; if they are consistent and views are still low, the problem is video quality.",
+    "conditions": "Brand or founder accounts on TikTok, Instagram Reels, YouTube Shorts and LinkedIn whose goal is sales from a defined buyer, during the first months of building an account.",
+    "fails_when": "Broad-appeal mass products (snacks, basic apparel) whose buyer is nearly everyone, where wider virality is on-target; and established accounts with a strong, already-classified audience that can test adjacent topics safely.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "30 to 50 consecutive single-topic videos to train the algorithm",
+      "check the last 20 posts for topic and avatar consistency"
+    ],
+    "asks": [
+      "why aren't my videos reaching the right people",
+      "should my brand account post about different topics",
+      "we went viral once but sales didn't move, why",
+      "how many videos before the algorithm figures out my account",
+      "is going viral good for my brand"
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram",
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0145",
+    "evidence": {
+      "where": "First and second 'uncommon learnings' (media matching, virality is a trap)",
+      "quote": "precision of topic is everything"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0024",
+    "modules": [
+      "ORG",
+      "LPG"
+    ],
+    "topics": [
+      "newsletter and owned audience",
+      "copy principles"
+    ],
+    "claim": "Write newsletter and marketing copy at a grade 5 to 8 reading level; Buffett letters fell from 17 to 13 words per sentence and grade 10 to 4.",
+    "body": "The hosts, who built and sold newsletter businesses and report selling around $20 million of product through email, argue that online readers reward simpler writing and that shorter sentences work even for complicated subjects. Their benchmark is a grade 5 to 8 reading level, checked with a readability tool such as the Hemingway app, which reports the grade of pasted text; lower is better on the internet. Their supporting example is an analysis they cite of Warren Buffett's shareholder letters: from 1974 to 2013 average sentence length fell from about 17 to 13 words and the reading level from about grade 10 to grade 4, while the businesses he explained got more complex. They cite it secondhand and are unsure who ran it. How to apply it: run each email, product page or newsletter draft through a readability checker, cut sentences above about 20 words, replace jargon with plain words, and then vary sentence length so the text keeps a rhythm rather than reading as a string of short fragments. They also pair this with first-person, specific stories over general advice.",
+    "conditions": "Consumer-facing newsletters, emails, landing pages and social posts read on screens.",
+    "fails_when": "Technical or professional audiences (clinicians, engineers) who expect precise terms; very low grade levels can read as childish for premium brands if rhythm is not varied.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "target reading level grade 5 to 8",
+      "Buffett letters 1974 to 2013: words per sentence 17 to 13, reading level grade 10 to 4 (secondhand analysis)",
+      "hosts report about $20 million of product sold through email"
+    ],
+    "asks": [
+      "What reading level should my emails and product pages be written at?",
+      "Our newsletter feels hard to read, how do I measure that?",
+      "Do short sentences actually work better in marketing copy?",
+      "How do I check the reading level of my copy?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0146",
+    "evidence": {
+      "where": "Tactical tips section, short sentences and the Buffett example; earlier mention of Hemingway app"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0025",
+    "modules": [
+      "ORG",
+      "BRD"
+    ],
+    "topics": [
+      "content marketing and long form",
+      "founder-led and face-of-brand content",
+      "distribution planning"
+    ],
+    "claim": "Have people write the original first-person ideas into a central library of approved language; use AI only to repeat, remix and reformat that library across channels.",
+    "body": "Nicolas Cole's argument: every brand now has the same language models trained on the same internet, so asking AI for net-new ideas produces commodity content that sounds like everyone else. What a model cannot invent is the brand's own material: founder stories, failures, tested opinions and specific customer experiences. He sorts content into three tiers: commodity (widely agreed facts), personality (anchored in specific personal details and experience) and original (a distinct point of view built over years on a narrow topic). Shifting from prescriptive 'you should' writing to first-person 'I tested, I think' writing moves a piece from commodity toward personality. Operating model: humans do the thinking and write long-form, first-person pieces; each approved piece goes into a central library (his 'company brain'); AI tools then cut it into short posts, emails, scripts and platform variants, which is the work social media managers and VAs used to do. Keep library pieces timeless: a dated hook ('this just happened in 2026') gets a burst of about 24 hours of reach but cannot be reposted in 2030, while an undated essay can be re-sliced for years. Give the AI explicit voice rules (word choice, sentence length, rhythm) so remixes do not sound generic.",
+    "conditions": "Brands with a founder or team member willing to write regularly on a few topics; organic social, newsletters and blogs.",
+    "fails_when": "Brands with no one able to produce original first-person material, or categories where buyers want product facts and offers rather than a point of view (commodity replenishment items).",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "hyper-timely posts capitalise for about 24 hours, then value falls off"
+    ],
+    "asks": [
+      "How should we use AI for social media content without it sounding generic?",
+      "Our AI-written posts all sound like everyone else's, what do we change?",
+      "Should our founder write the content or should AI?",
+      "Is it worth writing posts about trending news for my brand?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0147",
+    "evidence": {
+      "where": "Segments on the three tiers of content, 'robots repeat', timely versus timeless, and the company brain"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0026",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "posting cadence and volume",
+      "distribution planning"
+    ],
+    "claim": "Re-post each viral story at least four times in new formats (new hook, AI voiceover, text carousel), and run the same formats on a second brand or fan account.",
+    "body": "A story that worked once has proven demand, so the founder treats it as an asset to extend rather than a one-off. His own founder story was told as a long YouTube video, then as a photo carousel built from one iconic picture per year of his business life with a text overlay (about 45,000 likes), then on Twitter, and it worked each time. His rule is to re-cut each viral story at least four times: swap the hook after a month, rebuild it with an AI voiceover, convert a video script into a text carousel, and so on. He also argues there is no reason to stop at one account: alongside the brand page, run a creator or fan-style page and post variations of proven formats on each; different followers see each, and over time both pages hit. A quick way to make a first story post: list one defining moment from each year of the business, include the failures, arrange them as a hero's journey, and publish as a carousel. How to apply: keep a library of posts that beat the account median, schedule format remakes, and log which remake type performs best.",
+    "conditions": "Brands with at least one organic post that clearly outperformed; Instagram, TikTok and YouTube.",
+    "fails_when": "Remakes too similar to the original, which platforms may treat as duplicate content; second accounts that look like impersonation or undisclosed brand-run fan pages, which can breach platform rules.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "at least 4 re-posts per viral story",
+      "carousel of founder story about 45,000 likes"
+    ],
+    "asks": [
+      "Can I repost a video that already went viral?",
+      "How do I get more out of one viral post?",
+      "Should my brand run more than one TikTok or Instagram account?",
+      "We had one viral video, how do we follow it up?"
+    ],
+    "platforms": [
+      "instagram",
+      "tiktok",
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0148",
+    "evidence": {
+      "where": "life extenders and multiple accounts, final section; carousel example early on"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "ORG-0027",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "founder-led and face-of-brand content",
+      "organic to paid crossover"
+    ],
+    "claim": "Turn a misconception, a frustration or a counterfeit problem into a story ad; the Oodie's counterfeit-callout ad drove over $1M in sales, and a $250k ad returned about $1M.",
+    "body": "The founder argues stories outsell feature lists because viewers remember journeys, failures and emotion, not specs. His Oodie examples: an ad complaining about thin, bad-smelling counterfeit copies of the product, which also invited controversy from people saying the brand did not invent the category, drove over $1 million in sales; he says brands should accept some negative comments as the price of reach. A relatable product-extension ad aimed at people who already owned the product spent about $250,000 over two months and produced almost $1 million in sales, roughly 4x. Questions he uses to find stories: what does everyone believe about the product that is not true (too expensive becomes a story about travelling to the factory to find the softest fabric; too short becomes the longer alternative); the most moving customer success story; what about the product or industry frustrates people; a story proving how it differs from competitors; the strangest visual the product allows; and a story from the last three days of news in the category. How to apply: write the answers, film each as a short narrative with the struggle before the result, and run the best organic performers as paid ads.",
+    "conditions": "Consumer products with an origin story, a visible counterfeit or copycat problem, or a common misconception; Meta and TikTok, organic and paid.",
+    "fails_when": "Brands that cannot tolerate public controversy; categories where calling out competitors invites legal risk unless claims are provable; products with no credible story behind price or design.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "counterfeit-callout ad: over $1M in sales",
+      "about $250,000 spend over 2 months returned almost $1M in sales"
+    ],
+    "asks": [
+      "What kind of story should my brand tell in ads?",
+      "Our product gets copied by cheap knockoffs, can we use that in marketing?",
+      "People say our product is too expensive, how do we address it in content?",
+      "How do I find a viral story for my brand?"
+    ],
+    "platforms": [
+      "meta",
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0148",
+    "evidence": {
+      "where": "emotions and techniques segment, Oodie counterfeit and onesie ads"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "ORG-0028",
+    "modules": [
+      "ORG",
+      "EML"
+    ],
+    "topics": [
+      "newsletter and owned audience",
+      "distribution planning"
+    ],
+    "claim": "Attach a free resource to one or two Reels a week via a comment-keyword DM automation; well-matched lead-magnet Reels keep collecting emails 6 to 8 months after posting.",
+    "body": "The coach's monetisation rule is to stop relying on reach or sponsorships and use Reels to move viewers onto an owned email list where sales happen. Mechanism: a 'comment the word X' call to action asks for a low-effort action, the comment signals engagement to the algorithm, and a DM automation (ManyChat is the tool named) delivers the freebie and captures the email. Because the comments keep the post active and the resource keeps being wanted, some of these Reels behave as slow burners rather than spiking once. How to apply for a store: 1) Build a freebie matched to buying intent (a size or shade guide, a routine plan, a recipe pack, a discount plus guide). 2) Attach it to one or two Reels a week, not every post, so normal content still builds reach. 3) Set the keyword automation to ask for email (and SMS consent where allowed) before delivering. 4) Send the new subscriber into a welcome flow with the offer. 5) Track sign-ups and revenue per Reel over months. Reported results: Reels still collecting leads 6 to 8 months later; one client's single Reel brought 400 in recurring membership sales in a day. These are self-reported by a coach selling a mentorship.",
+    "conditions": "Brands posting Reels with at least modest reach and a working email welcome flow; Instagram accounts eligible for DM automation tools.",
+    "fails_when": "The freebie attracts freebie-seekers with no buying intent, inflating the list with low-value subscribers; automation messages break Meta messaging policy or spam rules; or there is no welcome flow to convert sign-ups.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "lead magnet on 1 to 2 Reels per week",
+      "lead-magnet Reels still collecting leads 6 to 8 months after posting",
+      "one client Reel: 400 in recurring membership sales in a single day"
+    ],
+    "asks": [
+      "How do I turn Instagram views into email subscribers?",
+      "We get views on Reels but no sales, what now?",
+      "How often should I use comment-to-get-it lead magnets?",
+      "Do ManyChat keyword Reels actually work for a store?"
+    ],
+    "platforms": [
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0149",
+    "evidence": {
+      "where": "final section on owning the audience",
+      "quote": "Once or twice a week should be enough to attach these"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0029",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "short-form organic mechanics",
+      "organic measurement without per-asset cost"
+    ],
+    "claim": "If 70 to 80% of a Reel's views come from existing followers, it is failing Instagram's non-follower test; rewrite hooks for strangers rather than posting more.",
+    "body": "The coach's explanation, consistent with how Instagram describes Reels distribution, is that a new Reel is shown to a small group of non-followers and their behaviour (swipe away, watch time, likes) decides whether it is shown to more. Content written for people who already know the brand (inside jokes, 'new drop' announcements, assumed context) passes with followers and dies with strangers, so reach stalls. Diagnostic: open Insights for each Reel and read the split of views from followers versus non-followers; if followers make up roughly 70 to 80% of views across recent posts, the account is not breaking out. How to fix: 1) Write every hook for someone who has never heard of the brand: state the topic plainly in the first line. 2) Prefer conversational openers ('did you know if you add...') over obvious bait ('3 mistakes you're making'), which strangers recognise as marketing and skip. 3) Make the first frame look intentional (one soft key light, background practical lights) since strangers judge in a second. 4) Judge formats over weeks, separately for views, follows and comment depth, not single-post flops. The 70 to 80% figure is the coach's rule of thumb from about 300 clients, not a published threshold.",
+    "conditions": "Brands or founders using Instagram Reels for organic reach and new-customer discovery; accounts with stalled growth.",
+    "fails_when": "The account's goal is retention of existing customers (launch alerts, community content) where a high follower share is fine; or very new accounts with too few posts to read a pattern.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "70 to 80% of views from followers signals a stalled account",
+      "coach reports about 300 creators put through the system"
+    ],
+    "asks": [
+      "Why are my Instagram Reels only getting views from my followers?",
+      "Our Instagram growth has stalled, what should we change?",
+      "What share of Reel views should come from non-followers?",
+      "How do I write hooks for people who don't know my brand?"
+    ],
+    "platforms": [
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0149",
+    "evidence": {
+      "where": "opening section on the stranger-first test",
+      "quote": "seeing 70, 80% of your views coming from your followers"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0030",
+    "modules": [
+      "ORG",
+      "OFF",
+      "WLD"
+    ],
+    "topics": [
+      "viral loop mechanics",
+      "referral mechanics"
+    ],
+    "claim": "A pre-launch referral waitlist with escalating product rewards, not cash, can make referrals most of the list: Harry's got 100,000 emails in a week, 77% via referral.",
+    "body": "Before launch, Harry's ran a milestone referral waitlist: refer 5 friends and get shave cream, 10 and get a razor, with higher tiers above. Per the compilation's sources, it gathered over 100,000 emails in one week, of which over 85,000 were legitimate, 77% of sign-ups came through referrals, and more than 200 people made 50 or more referrals each. The mechanism: rewards that are reachable and escalate, a unique link per person, and a live progress bar turn sharing into a game; product or access rewards attract fans, while cash rewards attract fraud. How to run it: gate a launch or limited drop behind the waitlist, set the first tier low enough that many people reach it, cost each tier at landed product cost, and de-duplicate sign-ups before counting (Harry's lost about 15% as invalid). The compilation's benchmark: if referral sign-ups exceed 30% of the total, keep using the mechanism for future drops. Famous case, figures from referral-marketing blogs, not audited.",
+    "conditions": "A launch, new product or drop with real anticipation; product rewards cheap to fulfil relative to their perceived value. Cost ceiling: reward cost per tier times expected tier completions.",
+    "fails_when": "No launch moment to gate; rewards paid in cash or discount codes (fraud and low-quality emails); a weak product so sign-ups never convert; no de-duplication so counts are inflated.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "over 100,000 emails in 1 week, over 85,000 legitimate",
+      "77% of sign-ups from referrals",
+      "200+ people made 50+ referrals",
+      "tiers: 5 referrals shave cream, 10 a razor",
+      "benchmark: keep if referral sign-ups exceed 30% of total"
+    ],
+    "asks": [
+      "How do I get people to refer friends before we launch?",
+      "Should referral rewards be cash or free product?",
+      "How did Harry's get 100,000 emails before launch?",
+      "What share of signups should come from referrals for a waitlist to be worth it?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0199",
+    "evidence": {
+      "where": "Category 9, Tiered referral waitlist",
+      "quote": "cash rewards attract fraud"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "ORG-0031",
+    "modules": [
+      "ORG",
+      "EML",
+      "CXP"
+    ],
+    "topics": [
+      "newsletter and owned audience",
+      "content marketing and long form"
+    ],
+    "claim": "Huckberry's newsletter links off-site to non-product stories; customers who engage with its content show 3.5x the lifetime value of customers from ads or affiliates.",
+    "body": "When outdoor retailer Huckberry launched its newsletter about 15 years ago, it broke what it calls the cardinal ecommerce rule, never link off your own site, by including stories and links its staff thought the outdoors-minded audience would enjoy, alongside products. Its brand chief describes it as making deposits with customers who are not always in the mood to buy. Fast Company reports that customers who engage with Huckberry's content have a lifetime value 3.5 times that of customers who arrive through an ad or affiliate link. Read this carefully: engaged readers are self-selected, more loyal people, so part of the 3.5x is who they are rather than what the content did. The defensible lesson is about measurement and patience: content builds slowly, so judge it on the LTV and repeat rate of engaged versus non-engaged customers, not on newsletter click-through or last-click revenue. How to apply: tag customers by content engagement (opens and clicks on non-product sends, blog visits), compare 12-month LTV by group, and keep a share of sends purely editorial while watching unsubscribe rate and revenue per recipient.",
+    "conditions": "Brands with a lifestyle or interest-led audience (outdoors, food, design) and a team able to curate content weekly.",
+    "fails_when": "Utility or one-off purchase categories with no interest community; small lists where editorial sends crowd out revenue sends; treating the 3.5x as causal when it is largely selection.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "content-engaged customers: 3.5x LTV vs ad or affiliate customers (Fast Company)",
+      "newsletter running about 15 years"
+    ],
+    "asks": [
+      "Should my newsletter only promote products?",
+      "Is it worth sending content emails that do not sell anything?",
+      "How do I measure if content marketing makes money?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0200",
+    "evidence": {
+      "where": "Part 1, case 1.2 Community-Led Storytelling: Huckberry"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "ORG-0032",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "creator and influencer collaboration",
+      "distribution planning"
+    ],
+    "claim": "Ridge bought YouTube mid-roll reads across thousands of non-endemic channels at about $5 to $10 CPM plus a free product, aiming to be each rising creator's first sponsor.",
+    "body": "From 2016, when Ridge was doing about $10M a year, it sponsored YouTubers directly: about 50 channels the first year, about 500 the next, about 5,000 in total. The offer was a 30-second integrated mid-roll read, not a dedicated video (opt-in for dedicated videos is low), paid as a flat fee plus a free wallet, at about $5 to $10 per thousand views. They were brand-agnostic about channel topic and timing, which kept prices low: fishing, music, comedy, cars, tech. Non-endemic matters: a tech reviewer can only take so many tech sponsors without hurting credibility, but a wallet is no conflict, so it is easier and cheaper to buy. They tried to be each rising creator's first sponsor, for example $50 to a 10,000-subscriber channel, and stayed with channels for years (one for seven years, up to 50 videos a year). Tracking was coupon codes and branded URLs. Two people plus contractors ran outreach from scraped lists, because creator databases go stale. Crypto sponsors in 2021 pushed rates to absurd levels; prices normalised by 2023 to 2024, and Ridge now does fewer, higher-touch deals.",
+    "conditions": "Products with broad appeal that fit any audience (Ridge: men's wallets, YouTube's male-skewed audience); US market; 2016 to 2024 pricing.",
+    "fails_when": "Niche products that only sell to one interest group; brand-safety-sensitive categories; sponsor markets inflated by a hot category (as with crypto in 2021); trying to buy only top-tier creators.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "$5 to $10 CPM for 30-second mid-roll reads",
+      "about 5,000 YouTube creators sponsored since 2016",
+      "$50 to a 10,000-subscriber channel as first sponsor",
+      "Ridge at about $10M a year in 2016"
+    ],
+    "asks": [
+      "How much should I pay YouTubers for a sponsored mention?",
+      "Are mid-roll YouTube sponsorships worth it for a product brand?",
+      "How do I find YouTube creators to sponsor cheaply?",
+      "What is a non-endemic sponsorship?"
+    ],
+    "platforms": [
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0235",
+    "evidence": {
+      "where": "YouTube creator sponsorship section",
+      "quote": "we wanted to be everybody's first sponsor"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0033",
+    "modules": [
+      "ORG",
+      "MCR",
+      "ADC"
+    ],
+    "topics": [
+      "whitelisting and usage rights",
+      "UGC sourcing without paying"
+    ],
+    "claim": "Ridge pays creators a flat fee for partner ads, never a share of spend, expects about half of Q4 spend on partner ads, and recruits creators by gifting product.",
+    "body": "Partner ads (whitelisting) run a brand's ad through a creator's or founder's handle so two accounts appear on it. Frank says they work better for everyone he talks to, and Meta has signalled it prioritises them because two handles give better signal and targeting. He expected about half of Ridge's Q4 money might go to partner ads. Deal terms: always a flat fee, never a percentage of ad spend or revenue, because tracking spend per creator and being audited is not worth the admin. Often Ridge supplies the content itself and only uses the creator's account to run it; the creator may not even appear. In their tests the identity of the account mattered less than expected, even with celebrities. Sourcing: gift free product through a gifting platform; of about 100 free wallets, maybe two recipients make good content unprompted, and those people enter a paid UGC pipeline. How to apply: set a flat-fee rate card for whitelisting access, build a gifting funnel to find creators, and test partner versus standard placement for the same creative.",
+    "conditions": "Meta advertisers with a steady creative supply; products cheap enough to gift at volume; 2025 to 2026 Meta partner-ads setup.",
+    "fails_when": "Expensive products where gifting 100 units is costly; creators who require a revenue share; categories where the creator's personal credibility is the selling point (account identity then matters).",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "possibly 50% of Q4 Meta spend on partner ads",
+      "about 2 good creators per 100 gifted products"
+    ],
+    "asks": [
+      "Should I pay creators a percentage of ad spend for whitelisting?",
+      "Are partner ads better than normal ads on Meta?",
+      "How do I find creators for whitelisted ads?",
+      "How many gifted products turn into good UGC?"
+    ],
+    "platforms": [
+      "meta",
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0235",
+    "evidence": {
+      "where": "Partner ads and whitelisting section",
+      "quote": "it's always just a flat a flat fee"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0034",
+    "modules": [
+      "ORG",
+      "FIN"
+    ],
+    "topics": [
+      "creator and influencer collaboration",
+      "whitelisting and usage rights"
+    ],
+    "claim": "To give a key creator equity without handing over existing value, use profits interest units, which only participate in growth above today's valuation (Ridge did this with MKBHD).",
+    "body": "Ridge brought Marques Brownlee (MKBHD) onto its cap table; he helps plan and co-create product launches and appears in many of his videos for the brand, alongside paid deliverables. The mechanism discussed: rather than granting plain shares (which in the US would be taxable to the recipient on current value), grant profits interest units (PIUs) or similar instruments struck at today's valuation. If the brand is worth $50M now, the creator participates only in value created above $50M, so the founders keep what they have built, and the creator is rewarded for early help when the valuation is low. PIUs are taxed on a change of control rather than at grant, per the speakers. Options and warrants are alternatives. How to apply: use it only for a long-term partner whose involvement plausibly changes the brand's trajectory, pair equity with defined deliverables, and get a lawyer and accountant to structure it (US entity type and tax rules matter). Not advice for every influencer deal.",
+    "conditions": "US-based LLC-style brands with a valuation baseline; long-term creator or advisor partnerships; jurisdiction-specific tax treatment.",
+    "fails_when": "Non-US entities where PIUs do not exist or are taxed differently; short campaigns where cash is simpler; creators whose audience does not match future product lines.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "example: participation only above a $50M valuation"
+    ],
+    "asks": [
+      "How can I give an influencer equity without giving away what I've built?",
+      "What are profits interest units?",
+      "Should we offer a big creator a stake in our brand?"
+    ],
+    "platforms": [
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0235",
+    "evidence": {
+      "where": "MKBHD equity discussion and strike price explanation",
+      "quote": "PIU units, which are not taxed. They're only taxed on a change of control."
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0035",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "organic to paid crossover",
+      "whitelisting and usage rights"
+    ],
+    "claim": "An organic post with about 5x your usual views (4,000 vs 800) belongs in ads: run it as-is via ad code, or reuse its hook with a product back half.",
+    "body": "Organic posting is a free pre-test for paid creative. Track your baseline views per post; when one is a clear outlier (the example: usual 800, this one 4,000), it has earned a place in the ad account. Two ways to use it. If the post already shows or relates to the product, run it as-is using its ad code or whitelisting from a team member's or creator's account, keeping the organic comments and engagement as social proof. If the topic is only adjacent (a gym owner's viral video about 1980s Kentucky strength training did nothing for gym sign-ups), keep the hook and the first seconds, then reshoot the second half as a promotion that ties the concept to your product or service. Views plus general engagement are a good enough signal for straightforward content; check sentiment only when the post is provocative, since a large negative response is a different signal. Feed these into the test campaign one to three at a time rather than all at once.",
+    "conditions": "Brands posting organic short-form video regularly with a stable baseline; Meta, TikTok or Instagram ad accounts that accept partnership or Spark-style ads.",
+    "fails_when": "Accounts too new to have a reliable baseline, posts that went viral with an audience unrelated to buyers, and creator content without documented usage rights or partnership permissions.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "baseline about 800 views vs outlier about 4,000 views (about 5x)"
+    ],
+    "asks": [
+      "which organic posts should i turn into ads",
+      "one of our videos went viral, should we run it as an ad",
+      "how do i use a viral hook in an ad when the video isn't about my product",
+      "can i run a team member's post as an ad"
+    ],
+    "platforms": [
+      "meta",
+      "tiktok",
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0236",
+    "evidence": {
+      "where": "Level one discussion, organic outlier to ad (Kentucky strength training example)",
+      "quote": "my average content gets 800 views. Okay, this one got 4,000"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0036",
+    "modules": [
+      "ORG",
+      "OFF"
+    ],
+    "topics": [
+      "creator and influencer collaboration",
+      "UGC sourcing without paying"
+    ],
+    "claim": "Comfrt's TikTok Shop creator starter deal: $1,000 a month minimum or 15 to 20% commission, whichever is higher, for 30 videos (one a day); once commission exceeds it, go commission-only.",
+    "body": "Comfrt's founder describes how a new brand can start a TikTok Shop affiliate base. Recruit micro-creators, often under 10,000 followers and sometimes only 2,000 to 3,000, or enthusiastic customers, rather than big influencers who promote many brands and drive little revenue. Offer a guarantee: $1,000 a month or 15 to 20% commission, whichever earns them more, in exchange for one video a day for 30 days on your hero product. Because TikTok Shop pays commission directly, the first viral video that earns the creator $4,000 to $6,000 hooks them; at that point commission exceeds the floor and the brand only pays on sales. Top performers are then paid a small salary to recruit other creators, and the brand repurposes the content to Meta, Pinterest and Snapchat, paying commission on those channels too. Comfrt reports 500 creators posting daily and 250,000+ ambassadors, over half of them customers. How to apply: 1) pick the proven hero product; 2) recruit 10 to 20 aligned micro-creators by phone, selling the vision; 3) give hook, middle and call-to-action guidance; 4) track commission per creator weekly. Interview claims, no audited data.",
+    "conditions": "Brands on TikTok Shop with a proven hero product and margin that can fund 15-20% commission plus a $1,000 floor per creator during the start-up phase.",
+    "fails_when": "Products that don't demo well on video; margins that cannot carry 15-20% commission; categories with claim restrictions on TikTok Shop; creators who post without guidance.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "$1,000/month floor or 15-20% commission, whichever higher",
+      "30 videos in 30 days",
+      "creators under 10k (even 2-3k) followers",
+      "viral video earning creator $4-6k",
+      "500 daily-posting creators, 250,000+ ambassadors"
+    ],
+    "asks": [
+      "How do I get creators to post about my product on TikTok Shop?",
+      "How much should I pay TikTok affiliates when starting out?",
+      "Are micro-influencers better than big influencers?",
+      "How do I turn customers into content creators?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0237",
+    "evidence": {
+      "where": "Tik Tok Shops section: the either-or creator offer"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0037",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "creator and influencer collaboration",
+      "distribution planning"
+    ],
+    "claim": "Clipping marketplaces pay creators per view against a capped budget (example: $5,000 at about $0.85 to $1 CPM), paid only for approved posts, even if they go viral.",
+    "body": "The guest describes a 2025 shift he expected to be big: marketplaces of 'clippers', often young creators worldwide, who post short clips about a brand on their own pages. The brand sets a total budget and a target CPM, gives a creative brief and assets, and pays only for posts it approves, until the budget is spent. In his example the budget is $5,000 at a target of about $0.85 to $1 per thousand views; if a clip goes viral and would be worth $20,000 at that CPM, the brand still pays only the capped $5,000. Musicians and large creators were already using it. Follower count does not matter, because the brand buys impressions across many small pages that send traffic back to the site. The brand's job becomes feeding the network with briefs and footage, so a well-organised archive of brand video becomes an asset. He warns it may drive up costs for attention as wealthy players buy views at scale. How to apply: start with a small capped budget, a clear brief with do-and-don't examples, and track site traffic and code use from clips against paid social CPMs.",
+    "conditions": "Consumer brands with broad appeal and a library of footage; 2025-era clipping marketplaces on TikTok, Instagram and YouTube Shorts.",
+    "fails_when": "Regulated categories where uncontrolled third-party claims create compliance risk; when clips lack sponsorship disclosure, which platforms and ad regulators require; products needing precise education that clippers will not convey.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "$5,000 capped budget example",
+      "target CPM about $0.85 to $1",
+      "viral clip worth about $20,000 at that CPM still capped at $5,000"
+    ],
+    "asks": [
+      "What is clipping marketing and does it work for brands?",
+      "How can I get lots of creators posting about my product cheaply?",
+      "Is paying per view better than paying influencers a flat fee?",
+      "How do I get organic reach without growing my own followers?"
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram",
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0242",
+    "evidence": {
+      "where": "[00:16:00-00:27:00] WOP clipping culture"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0038",
+    "modules": [
+      "ORG",
+      "EML",
+      "OPS"
+    ],
+    "topics": [
+      "distribution planning",
+      "community building"
+    ],
+    "claim": "David Protein's launch: months of founder posting, a 5,000-bar first-come TikTok giveaway and a 40,000-person waitlist; selling out is fine only if restock takes two weeks or less.",
+    "body": "Peter Rahal built anticipation for about six months before David Protein launched: posting on LinkedIn and X, earned industry coverage, and a public launch date. Before launch the brand ran an aggressive sampling push, including a TikTok giveaway where the first 5,000 sign-ups got a free bar, which he notes was not much money relative to the attention it bought and fit a category that does well on TikTok. By launch day the email waitlist held about 40,000 people, so the first send went to buyers who had been waiting, while TikTok virality carried the first week. His ongoing mix is mostly paid ads plus very liberal sampling (influencers, retail trial, affiliates), on the view that an individually wrapped, inexpensive item is easy to sample and the product does the convincing; he contrasts this with frozen or heavy products where sampling is hard. On selling out: it helps if the replenishment window is about two weeks or less, but a longer gap causes demand destruction as people forget or switch. How to apply: set a launch date, build a waitlist with a target size, budget a sampling run sized to awareness goals, and plan inventory so any sell-out can be refilled within two weeks.",
+    "conditions": "New consumer product launches with sample-friendly units (snacks, supplements, small consumables) and a founder or brand with some audience.",
+    "fails_when": "Heavy, frozen, fragile or expensive products where sampling cost is high; founders without existing credibility (Rahal's RXBAR exit drove much of the attention); long manufacturing lead times that make a sell-out a multi-week stockout.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "about 6 months of pre-launch anticipation",
+      "5,000 free bars to first TikTok sign-ups",
+      "about 40,000-person email list at launch",
+      "sell-out acceptable if restock is 2 weeks or less"
+    ],
+    "asks": [
+      "How do I launch a new food or supplement brand?",
+      "Is a big free sample giveaway worth it before launch?",
+      "How big should our waitlist be before launch?",
+      "Is selling out at launch good or bad?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0250",
+    "evidence": {
+      "where": "Launch mechanics segment (about 13:28 to 20:43)"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0039",
+    "modules": [
+      "ORG",
+      "BRD"
+    ],
+    "topics": [
+      "creator and influencer collaboration",
+      "founder-led and face-of-brand content"
+    ],
+    "claim": "IM8 signs only athletes already using the product daily, on minimum 3-year deals with a significant equity component, closed one-to-one by the founder.",
+    "body": "IM8's partnerships (David Beckham as co-founding partner with equity in the listed parent; Aryna Sabalenka; F1 driver Ollie Bearman; Giannis Antetokounmpo) follow a pattern. The athlete or their staff already use the product: Sabalenka's nutrition coach tried it for a month, put her on it for three months while her team tracked mood, energy and recovery daily, then her team approached the brand. Every deal runs at least three years, because shorter terms help neither side, and a significant part is equity, which top athletes accept selectively only when they believe in the product. The founder negotiates personally, one-on-one. Partners are used for more than likeness: Beckham's team holds weekly calls and has final say on taste. Partners are chosen to be premium and international, matching a brand that ships to 31 countries. Content multiplies the deals: a disclosed AI video featuring Sabalenka cost about $25,000, was made in three to four weeks, launched before the US Open and drew about 200 million views. How to apply: shortlist people who already buy or use your product, propose multi-year terms with equity rather than per-post fees, and plan content around their competitive calendar.",
+    "conditions": "Brands with credible product proof and equity to offer; categories where athlete or expert endorsement fits (supplements, performance, wellness).",
+    "fails_when": "Early brands whose equity is too valuable to dilute or whose product lacks proof; partners who are not real users (audiences see through it); regulated health claims made via the partner; key-person risk if the partner falls out of favour.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "minimum 3-year partnership terms",
+      "AI partner video ~$25,000, 3 to 4 weeks to make, ~200M views"
+    ],
+    "asks": [
+      "how should I structure a celebrity or athlete partnership",
+      "should I give an influencer equity instead of cash",
+      "how long should an ambassador deal be",
+      "how do I make celebrity partnerships feel authentic"
+    ],
+    "platforms": [
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0251",
+    "evidence": {
+      "where": "[00:14:50-00:29:19] partnerships: Beckham, Sabalenka, deal structure, AI video",
+      "quote": "these are minimum three-year deals"
+    },
+    "strength": "anecdote",
+    "public": true
+  },
+  {
+    "id": "ORG-0040",
+    "modules": [
+      "ORG",
+      "OPS"
+    ],
+    "topics": [
+      "creator and influencer collaboration",
+      "UGC sourcing without paying"
+    ],
+    "claim": "Bloom runs a 15 to 25 person in-house creator team with no agency: scouts who match the avatar, VPNs to vary their feeds, and creative freedom instead of scripts.",
+    "body": "Bloom's creator program is entirely in-house and has never used an agency. Structure: scouts (often interns) search Instagram and TikTok all day for creators who fit, influencer relationship managers own the relationships, and a director (who started as an intern) leads; the team ranges from 15 to 25 people depending on how hard the program is scaling. Two operating details. First, the team should look like the customer: the brand's staff is overwhelmingly young women, matching the 'Bloom girl' avatar, so scouts' own taste and feeds surface the right creators. Second, scouts' algorithms converge if everyone lives in the same city and shops the same places, so the team uses VPNs and devices set to different locations (for example Kansas or North Carolina) and resets suggested content to find creators outside the usual bubble. Relationships are personal: birthdays, Mother's Day gifts, knowing when a creator is having a hard week. Briefs are minimal: send product and let creators show it the way they normally would to their community, because scripted 'boardroom' briefs kill views. How to apply: hire scouts who resemble your buyer, give them location-varied accounts, track creators in a CRM, and replace scripts with a short product fact sheet.",
+    "conditions": "Brands with enough creator volume to justify full-time staff; categories with a clear avatar and lots of creators.",
+    "fails_when": "Small brands that cannot staff a team, where a lean in-house manager or agency is more realistic; regulated products (supplements, alcohol) where creators need compliance guidance, not full freedom.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "in-house creator team of 15 to 25 people",
+      "team roughly 94 women to 6 men, matching the avatar"
+    ],
+    "asks": [
+      "Should I build an in-house influencer team or use an agency?",
+      "How do I find the right influencers for my brand?",
+      "What should I tell influencers to say about my product?",
+      "How many people do I need to run an influencer program?"
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0254",
+    "evidence": {
+      "where": "Influencer team structure (about 01:24 to 05:46)"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-0041",
+    "modules": [
+      "ORG",
+      "MCR",
+      "MEA"
+    ],
+    "topics": [
+      "creator and influencer collaboration",
+      "organic measurement without per-asset cost"
+    ],
+    "claim": "Price creator deals off Meta: target half your Meta CPM, set flat fees from the creator's last 10 videos' average views, and cut pay by the off-target audience share.",
+    "body": "Bloom puts over 85% of marketing spend into creators and under 5% into Meta, at a scale of 15 billion-plus views, with no affiliate links or coupon codes for this core program. Every contract is reverse-engineered from CPM. Start with your Meta CPM; if it is $20 per thousand impressions, aim for creator deals at about $10. Pre-negotiate a flat fee (sometimes six figures for large creators) by taking the average views of the creator's last 10 videos and multiplying by your target CPM. Then discount for audience you cannot sell to: if 25% of a creator's audience is male and the product is for women, cut the CPM 25%; if half the audience is outside the country where the product is sold, halve it. Bloom says it has held CPMs under $2 for months at a time. Because the brand sells in 50,000-plus retail doors plus Amazon, it accepts weak attribution: a viewer may buy at Walmart two weeks later. Its separate TikTok Shop affiliate program is treated as incremental, with more than 30% of TikTok Shop-driven demand showing up at Amazon, Target and Walmart, which justifies paying affiliates more. How to apply: compute an effective CPM for every creator deal and compare it with paid social CPM.",
+    "conditions": "Omnichannel consumer brands (retail plus online) with products creators can show naturally; most powerful in beauty, wellness and beverages aimed at a defined avatar.",
+    "fails_when": "DTC-only brands that need click attribution to manage cash, where view-based deals without tracking can hide waste; views are not equal to impressions on Meta, so CPM comparisons are approximate; creators with inflated or bought views.",
+    "scope": "growth",
+    "tier": 4,
+    "numbers": [
+      "85%+ of marketing spend on creators, under 5% on Meta",
+      "target creator CPM = half of Meta CPM (e.g. $10 versus $20)",
+      "flat fee from average views of last 10 videos",
+      "cut CPM 25% if 25% of audience is off-target; halve if 50% is outside sales country",
+      "CPMs under $2 for months",
+      "15 billion-plus views",
+      "over 30% of TikTok Shop-driven sales show up at Amazon, Target, Walmart"
+    ],
+    "asks": [
+      "How much should I pay an influencer?",
+      "How do I work out a fair flat fee for a TikTok creator?",
+      "Is influencer marketing cheaper than Facebook ads?",
+      "Should creators get affiliate codes or flat fees?"
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S0254",
+    "evidence": {
+      "where": "Influencer program economics (about 05:46 to 11:42) and TikTok Shop halo discussion"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  }
+]

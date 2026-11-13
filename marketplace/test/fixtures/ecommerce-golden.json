@@ -1,0 +1,961 @@
+{
+  "schema": "ai-blocks-ecommerce-golden/1",
+  "author": "independent",
+  "created": "2026-11-13",
+  "questions": [
+    {
+      "id": "q01",
+      "module": "LPG",
+      "q": "I'm running cold Meta traffic to an advertorial before the product page. What click-through rate from the advertorial to the PDP should I be aiming for before I decide the page is broken?",
+      "source": "07-LPG-landing-pages/$100 Million Advertorial Formula.txt",
+      "quote": "you want about 30% of people to to click through uh ideally even like 40% to the second page",
+      "answer_points": [
+        "About 30% of advertorial readers should click through to the next page (the PDP)",
+        "Ideally up to 40%"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q02",
+      "module": "LPG",
+      "q": "How do I pick which kind of advertorial to write? Some of my buyers just don't trust us, others seem to want someone to tell them it's OK to buy.",
+      "source": "07-LPG-landing-pages/$100 Million Advertorial Formula.txt",
+      "quote": "obstacle is a low trust for your product, then you need the story plus proof early in the advertorial",
+      "answer_points": [
+        "Match the format to the main obstacle: low trust -> storytelling format with proof early",
+        "Needing permission -> authority/expert format (e.g. a doctor or vet)",
+        "Skepticism or too many options -> buyer's guide / comparison listicle; \"will it work for me\" -> case study"
+      ],
+      "type": "structure"
+    },
+    {
+      "id": "q03",
+      "module": "LPG",
+      "q": "What share of people who start my product quiz should make it all the way through to the sales page?",
+      "source": "07-LPG-landing-pages/how i build quiz funnels that make $1,073,966_mo with branded dropshipping.txt",
+      "quote": "The target completion rate that you should be aiming for approximately 30%.",
+      "answer_points": [
+        "Target about 30% completion of quiz starters",
+        "Around 25% is still acceptable at scale"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q04",
+      "module": "LPG",
+      "q": "My landing page gets around 15,000 visitors a month. Is it worth setting up A/B tests on it yet?",
+      "source": "07-LPG-landing-pages/The Only Landing Page Guide You_ll Ever Need.txt",
+      "quote": "if you're under 25,000 to 30,000 visitors a month, like I said earlier in the video, you do not want",
+      "answer_points": [
+        "No: below roughly 25,000-30,000 monthly visitors A/B tests take too long and will not reach significance",
+        "Use qualitative research instead (user testing such as UserBrain plus Clarity recordings)"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q05",
+      "module": "LPG",
+      "q": "My Meta ad is already a long 2,000-word story. Should the advertorial it clicks through to be long as well?",
+      "source": "07-LPG-landing-pages/How I build $1k_day advertorials with Claude in 6 minutes and 41 seconds.txt",
+      "quote": "you might want to try a more direct advertorial where you cut to the product a lot sooner",
+      "answer_points": [
+        "If the ad does heavy selling (long copy or VSL), make the advertorial shorter and show the product sooner",
+        "If the ad does little selling (e.g. a clickbait image), the advertorial must be long and do the selling"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q06",
+      "module": "LPG",
+      "q": "I want to pop a 'what's stopping you from buying?' survey on my product page. When in the visit should it fire?",
+      "source": "07-LPG-landing-pages/The BEST Conversion Rate Optimization Tutorial for Ecommerce in 2025.txt",
+      "quote": "you basically want to time it to be roughly around 60% of your average session duration",
+      "answer_points": [
+        "Fire it at about 60% of the average session duration (e.g. around 1 minute if sessions average 2 minutes)",
+        "Ask an open-ended question about what is holding them back from buying"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q07",
+      "module": "OFF",
+      "q": "Shopify says my average order is about $70, but carts are all over the place. Should I set my free-gift threshold just above that average?",
+      "source": "03-OFF-offers/How 8 and 9 Figure Brands Build Offers Without Discounting.txt",
+      "quote": "look at the distribution curve, not look at any averages, and then build an offer around the two peaks",
+      "answer_points": [
+        "Do not set thresholds off the mean AOV when the order-value distribution has two peaks",
+        "Look at the distribution and build a separate threshold offer just above each peak"
+      ],
+      "type": "rule"
+    },
+    {
+      "id": "q08",
+      "module": "OFF",
+      "q": "For my subscription brand, should I put effort into lifting month-3 retention with gifts, or into getting more first-time buyers to choose subscribe?",
+      "source": "03-OFF-offers/The Most Valuable Subscription Video You_ll Watch in 2026 _ Ft. Matthew Holman (1).txt",
+      "quote": "I can go from a 40% subscriber opt-in rate to 45% subscriber opt-in rate",
+      "answer_points": [
+        "Prioritise the first-order subscription opt-in rate (an acquisition problem), e.g. testing offers to move opt-in from 40% to 45%",
+        "Retention tweaks are capped and take months to show results"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q09",
+      "module": "OFF",
+      "q": "On my product page, should one-time purchase or subscription be the option that is ticked when the page loads?",
+      "source": "03-OFF-offers/The $100M Subscription Brand Playbook.txt",
+      "quote": "The first big no no is that the one-time purchase is automatically selected.",
+      "answer_points": [
+        "Pre-select the subscription option, never the one-time purchase",
+        "People bias toward the default, and first orders on subscription carry higher LTV"
+      ],
+      "type": "mistake"
+    },
+    {
+      "id": "q10",
+      "module": "OFF",
+      "q": "For my welcome pop-up, should the offer be a flat amount off or a percentage off?",
+      "source": "03-OFF-offers/I Studied Every Ecommerce Offer So You Don’t Have To.txt",
+      "quote": "If AOV is >$100, use Dollar Off (e.g., $25 off).",
+      "answer_points": [
+        "If AOV is above $100, use a dollar amount off (e.g. $25 off)",
+        "If AOV is below $100, use a percentage off (e.g. 20% off)"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q11",
+      "module": "OFF",
+      "q": "Is there a way to lift pop-up sign-ups without making my welcome discount bigger?",
+      "source": "03-OFF-offers/I Studied Every Ecommerce Offer So You Don’t Have To.txt",
+      "quote": "Just by offering the exact same thing, but hiding the offer and saying it's a mystery",
+      "answer_points": [
+        "Show the same discount (e.g. 10%) as a hidden \"mystery offer\" in a full-width pop-up",
+        "Reported around 15% opt-in, roughly doubling sign-up conversion"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q12",
+      "module": "MEA",
+      "q": "Which Shopify sales figure should I treat as the actual cash collected when I work out profit?",
+      "source": "06-MEA-measurement/What Metrics Matter In The Shopify Analytics Dashboard.txt",
+      "quote": "understand cash collected within the business is to take net sales and add it to shipping charges",
+      "answer_points": [
+        "Cash collected = net sales + shipping charges",
+        "Not total sales (includes tax, a flow-through) and not gross sales (ignores discounts and returns)"
+      ],
+      "type": "rule"
+    },
+    {
+      "id": "q13",
+      "module": "MEA",
+      "q": "What's a normal drop-off between add to cart, reaching checkout and purchase in Shopify's funnel report?",
+      "source": "06-MEA-measurement/What Metrics Matter In The Shopify Analytics Dashboard.txt",
+      "quote": "for every four ad to cards you should expect two reach checkouts and one purchase",
+      "answer_points": [
+        "A 4:2:1 ratio (4 add-to-carts : 2 reached checkout : 1 purchase) is a general average",
+        "Aim to move it toward 2:1:1, with very little drop between checkout and purchase"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q14",
+      "module": "MEA",
+      "q": "Shopify shows a lot more sessions than GA4, and Shopify's conversion rate tanked one day. Which one do I trust?",
+      "source": "06-MEA-measurement/What Metrics Matter In The Shopify Analytics Dashboard.txt",
+      "quote": "Google analytics does a much better job at not counting bot traffic",
+      "answer_points": [
+        "Shopify keeps bot traffic, so its sessions run higher and its conversion rate can be wrong (a dip may just be a bot spike)",
+        "GA4 filters bots, so its session count is lower; check both before reacting"
+      ],
+      "type": "mistake"
+    },
+    {
+      "id": "q15",
+      "module": "MEA",
+      "q": "I set up Meta's CAPI Gateway expecting it to recover the conversions ad blockers hide. Will it?",
+      "source": "06-MEA-measurement/Facebook Conversions API gateway tutorial (FB CAPI Gateway a.k.a. Meta CAPI gateway).txt",
+      "quote": "if an extension blocks this part, it means that this part is also automatically blocked",
+      "answer_points": [
+        "No: the gateway request depends on the browser pixel loading first",
+        "If an extension such as Ghostery blocks the pixel, the server-side gateway call is blocked too; true independent server-side tagging is needed"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q16",
+      "module": "MEA",
+      "q": "Can I use Shopify's returning customer rate to judge how loyal my customers are?",
+      "source": "06-MEA-measurement/What Metrics Matter In The Shopify Analytics Dashboard.txt",
+      "quote": "it's really important to understand that this misleads people enormously to how loyal their customers actually are",
+      "answer_points": [
+        "No: it is the share of orders from existing customers in the selected window, so it swings with new-customer acquisition",
+        "It misrepresents cohort loyalty"
+      ],
+      "type": "mistake"
+    },
+    {
+      "id": "q17",
+      "module": "CRO",
+      "q": "Can I charge for shipping without hurting conversion, or does everything need to ship free?",
+      "source": "09-CRO-testing/eCommerce CRO Masterclass 2026_ The Full System.txt",
+      "quote": "Most people can charge shipping up to about 10% of the average order value of the cart.",
+      "answer_points": [
+        "Shipping charges up to about 10% of AOV have no material impact on conversion",
+        "If you give free shipping, put it at a threshold to push AOV up"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q18",
+      "module": "CRO",
+      "q": "We aren't running any promotions right now. Should the discount code box stay in the cart?",
+      "source": "09-CRO-testing/Conversion Rate Optimization Framework Revealed - Step By Step Breakdown.txt",
+      "quote": "if you don't have active discounts on your site, get rid of the discount box on your cart",
+      "answer_points": [
+        "Remove the discount box when there is no active promotion",
+        "Shoppers leave to search Google for codes and abandon (especially older buyers)"
+      ],
+      "type": "rule"
+    },
+    {
+      "id": "q19",
+      "module": "CRO",
+      "q": "We only get about 20 orders a month. What kind of A/B test can we realistically run?",
+      "source": "09-CRO-testing/CRO as testing and experimentation for DTC ecommerce.txt",
+      "quote": "You cannot power even a 30% lift in a reasonable window (about 120+ conversions per variant needed).",
+      "answer_points": [
+        "Under 30 orders a month, run no A/B tests at all (cannot power even a 30% lift; ~120+ conversions per variant)",
+        "Do qualitative research and apply known best-practice fixes instead"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q20",
+      "module": "CRO",
+      "q": "We're at roughly 150 orders a month. Should revenue per visitor be the main metric for our A/B tests?",
+      "source": "09-CRO-testing/CRO as testing and experimentation for DTC ecommerce.txt",
+      "quote": "revenue-per-visitor as primary metric (needs about 6x traffic)",
+      "answer_points": [
+        "No: at 30-300 orders a month RPV as the primary metric is not valid (needs about 6x the traffic)",
+        "Use micro-conversions (add to cart, begin checkout) as primary with purchase as guardrail, big-swing tests for 20%+ lifts over 2-4 weeks"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q21",
+      "module": "MCR",
+      "q": "New creative packs in my CBO campaign aren't getting any spend. How much minimum spend should I force on the new ad set, and for how long?",
+      "source": "10-MCR-paid-social-creative/The Best AI Ad Creative Strategy for 2026.txt",
+      "quote": "$50 is going to be like 30% of your budget, cap it at 20% maximum",
+      "answer_points": [
+        "Set the ad set minimum to 1x target CPA",
+        "Cap it at 20% of the daily budget if 1x CPA is too large",
+        "Remove the minimum after 7 days and let it run"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q22",
+      "module": "MCR",
+      "q": "A handful of my Meta ads are eating nearly all the budget. Is that normal or a problem?",
+      "source": "10-MCR-paid-social-creative/The Creative Strategy Behind $100M_yr of Meta Spend.txt",
+      "quote": "So 4% of ads will hold about 64% of total spend and total revenue generation",
+      "answer_points": [
+        "Normal: Pareto compounds so about 4% of ads take about 64% of spend and revenue",
+        "CBO leans into this, but watch over-reliance on a single hero ad"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q23",
+      "module": "MCR",
+      "q": "We spend about $60k a month on Meta. How much of that should go into producing creative?",
+      "source": "10-MCR-paid-social-creative/The Creative Strategy Behind $100M_yr of Meta Spend.txt",
+      "quote": "you want to be thinking of allocating 25% of media budget towards production",
+      "answer_points": [
+        "About 25% of media spend for brands at $30k-$100k a month",
+        "Scaling down toward 10% once spend is above $100k a month"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q24",
+      "module": "MCR",
+      "q": "I have one video sales letter body that converts. How many different openings should I cut for it, and is it worth it?",
+      "source": "10-MCR-paid-social-creative/The 7-Part VSL Framework for eCommerce (With Examples).txt",
+      "quote": "The hook's going to be the biggest component here because 80% of people won't watch past the hook.",
+      "answer_points": [
+        "Test about 3 to 6 hook variations on the same body",
+        "About 80% of viewers never get past the hook"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q25",
+      "module": "MCR",
+      "q": "How do I measure whether our creative team is actually producing winners and not just volume?",
+      "source": "10-MCR-paid-social-creative/The ONLY 2 Ad Creative Formats You Need to Scale Facebook Ads.txt",
+      "quote": "If the creative hit my target and spent more than 5% of the total campaign budget, it is a winner.",
+      "answer_points": [
+        "Creative hit rate = winning ads / total ads launched",
+        "A winner spent more than 5% of the campaign budget and hit target CPA",
+        "About 5 winners per 100 launched (5%) is a normal hit rate"
+      ],
+      "type": "structure"
+    },
+    {
+      "id": "q26",
+      "module": "ADC",
+      "q": "Should my product page copy try to appeal to every visitor who lands on it?",
+      "source": "11-ADC-ad-copy-deployment/COPY HACKERS.txt",
+      "quote": "Write Copy for 20 to 35% of Your Visitors – Not 100% of Them",
+      "answer_points": [
+        "Write for a specific qualified segment of about 20-35% of visitors, not 100%",
+        "Copy neutralised to suit everyone loses its pull"
+      ],
+      "type": "rule"
+    },
+    {
+      "id": "q27",
+      "module": "ADC",
+      "q": "I'm scraping competitors' short videos to learn which hooks work. Which videos should I drop before analysing them?",
+      "source": "11-ADC-ad-copy-deployment/Claude + Sandcastles = Irresistible Hooks.txt",
+      "quote": "any video with below a 2% engagement rate, that's a high performer, has paid spend behind it",
+      "answer_points": [
+        "Exclude high-view videos with engagement below about 2% (likely paid brand deals inflating views)",
+        "Also drop personal vlogs so only genuine hook data remains"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q28",
+      "module": "ADC",
+      "q": "What reading level should my ad copy be written at?",
+      "source": "11-ADC-ad-copy-deployment/8 Hour Copywriting Course For Beginners.txt",
+      "quote": "you don't want to write copy that's any more complicated than a third grade",
+      "answer_points": [
+        "No more complicated than a third-grade reading level",
+        "The simplest copy is the best copy"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q29",
+      "module": "ADC",
+      "q": "Is there a quick test I can run on each line of my ad copy to see if it is any good?",
+      "source": "11-ADC-ad-copy-deployment/Learn Copywriting in 76 Minutes – Harry Dry.txt",
+      "quote": "Can I visualize it? Can I falsify it? Can nobody else say this?",
+      "answer_points": [
+        "Three tests per line: can I visualise it, can I falsify it, could nobody else say it",
+        "Three nos means rubbish; three yeses means you are on to something"
+      ],
+      "type": "structure"
+    },
+    {
+      "id": "q30",
+      "module": "EML",
+      "q": "When should my win-back flow start for customers who have gone quiet?",
+      "source": "14-EML-email-lifecycle/Ecommerce Email Marketing 2025.txt",
+      "quote": "Winback (3 emails deployed at 2x the average order interval)",
+      "answer_points": [
+        "Trigger at twice the average time between orders",
+        "Three emails in the flow"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q31",
+      "module": "EML",
+      "q": "My campaign open rates sit around 35%. Is that a deliverability problem, and who should I be sending to?",
+      "source": "14-EML-email-lifecycle/Ecommerce Email Marketing 2025.txt",
+      "quote": "if you're getting sub 40% opens you are likely getting higher promotions Tab and spam inbox placement",
+      "answer_points": [
+        "Under 40% opens signals promotions-tab and spam placement (poor sender reputation)",
+        "Send to a tight engaged segment (e.g. 30-day) and widen to 60/90/120 days only as opens climb toward 50%"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q32",
+      "module": "EML",
+      "q": "Who should I exclude from SMS blasts? Do I need complicated segments?",
+      "source": "14-EML-email-lifecycle/How to Create a SMS Marketing Strategy For $10M Shopify Brands.txt",
+      "quote": "users who have received 15+ texts with zero clicks",
+      "answer_points": [
+        "Broadcast to the whole SMS list",
+        "Suppress only chronically unengaged subscribers: 15+ texts received with zero clicks"
+      ],
+      "type": "rule"
+    },
+    {
+      "id": "q33",
+      "module": "EML",
+      "q": "When someone gives us their phone number, how quickly should our first text go out?",
+      "source": "14-EML-email-lifecycle/If I Started SMS Marketing in 2026, I_d Do This.txt",
+      "quote": "Wait 5 minutes after they've opted into your funnel before texting them.",
+      "answer_points": [
+        "Wait about 5 minutes after opt-in so it feels like a real person",
+        "Keep messages short (under about 80 characters)"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q34",
+      "module": "EML",
+      "q": "How soon after sign-up does my welcome flow need to do most of its work?",
+      "source": "14-EML-email-lifecycle/2026 Klaviyo Email Marketing Full Course (3+ Hours).txt",
+      "quote": "The critical purchase window for welcome flows: the first 72 hours (with day zero driving the highest conversion volume)",
+      "answer_points": [
+        "The first 72 hours are the critical purchase window",
+        "Day zero converts the most, so front-load the flow (two emails on day zero)"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q35",
+      "module": "PRD",
+      "q": "When I filter TikTok Shop products in Kalodata, what monthly revenue range finds winners that aren't already saturated?",
+      "source": "01-PRD-product-research/This Product Research Method Made Me $2.3M Dropshipping (LIVE HUNTING).txt",
+      "quote": "Revenue Range = $33k to $97k (to avoid hyper-competitive $300k+ products)",
+      "answer_points": [
+        "Last 30 days, revenue $33k-$97k (avoid $300k+ products)",
+        "Count video revenue only (exclude live) and sort lowest to highest to catch early breakouts"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q36",
+      "module": "PRD",
+      "q": "In an ad spy tool, which filters show that a product is actually profitable before I copy it?",
+      "source": "01-PRD-product-research/Transcript of the product research method that made me $670k.txt",
+      "quote": "Runtime, we're going to do minimum 14 days. And for the channels, we're going to do Facebook",
+      "answer_points": [
+        "Ads running at least 14 days",
+        "Brand has more than 50 active ads",
+        "Facebook channel (older, easier-to-sell audience)"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q37",
+      "module": "AVT",
+      "q": "How do I quickly tell whether a product idea is a real market or just something I'm passionate about?",
+      "source": "02-AVT-avatars/EXACTLY how I do market research for new products.txt",
+      "quote": "we call it the labor of love you may love it but it's not a profitable business",
+      "answer_points": [
+        "Place the idea on a price vs number-of-customers matrix",
+        "Low price and few customers is a \"labor of love\" quadrant: discard it"
+      ],
+      "type": "structure"
+    },
+    {
+      "id": "q38",
+      "module": "AVT",
+      "q": "How much time should I put into manual customer research before writing ads, and where should it go?",
+      "source": "02-AVT-avatars/How I Find Avatars That Scale Facebook Ads to $10k_day.txt",
+      "quote": "Then we're going to spend one hour doing research and we're going to divide that into two phases.",
+      "answer_points": [
+        "One hour in total, split into two 30-minute phases",
+        "First forums such as Reddit (search problem statements as the avatar), then Amazon reviews; paste verbatim language"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q39",
+      "module": "BRD",
+      "q": "For our brand's YouTube channel, how many videos should stay on our core niche versus go broader?",
+      "source": "04-BRD-brand/Building a brand, but it’s on easy mode instead.txt",
+      "quote": "I would say if you do like four like 3 to one four to one in terms of your Longs",
+      "answer_points": [
+        "About 3:1 or 4:1 niche to broad for long-form videos",
+        "One wider video for every three or four on-topic ones"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q40",
+      "module": "BRD",
+      "q": "Is a made-up word that means nothing a good name for my new product?",
+      "source": "04-BRD-brand/Positioning_ The Battle for Your Mind_ The Battle for Your Mind (1).txt",
+      "quote": "Only when you are first in the mind with an absolutely new product",
+      "answer_points": [
+        "Only if you are first in the mind with an absolutely new product that millions will want",
+        "Otherwise a coined, meaningless name is dangerous; pick a name that says something"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q41",
+      "module": "SET",
+      "q": "My Shopify Payments verification is stuck. I signed up using the short version of my name — could that be it?",
+      "source": "05-SET-store-setup/The OFFICIAL Shopify 2026 Tutorial.txt",
+      "quote": "You'll need to make sure everything matches your governmentissued documents exactly.",
+      "answer_points": [
+        "Legal name, date of birth, tax ID and address must match government ID exactly (e.g. Robert, not Rob)",
+        "A mismatch causes verification holds"
+      ],
+      "type": "mistake"
+    },
+    {
+      "id": "q42",
+      "module": "SET",
+      "q": "My calculated shipping rates come out lower than what the carrier actually charges me. What did I miss in setup?",
+      "source": "05-SET-store-setup/The OFFICIAL Shopify 2026 Tutorial.txt",
+      "quote": "once you add the box, packing materials, bubble wrap, all of that, it weighs more",
+      "answer_points": [
+        "Set the default package (empty box) weight in the shipping profile",
+        "Otherwise calculated rates use product weight only and undercharge"
+      ],
+      "type": "mistake"
+    },
+    {
+      "id": "q43",
+      "module": "SPD",
+      "q": "I'm adding defer/async to all the scripts in theme.liquid to speed the store up. Is there anything I shouldn't defer?",
+      "source": "08-SPD-speed/Page speed.txt",
+      "quote": "tracking pixels those should not be defered as doing so might mess up the data",
+      "answer_points": [
+        "Defer or async non-essential app scripts",
+        "Do not defer tracking pixels, or the collected data can break"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q44",
+      "module": "SPD",
+      "q": "When I resize product images for speed, what pixel dimensions should I export them at?",
+      "source": "08-SPD-speed/WordPress Speed Optimization_ Improve Your Website Performance & Make It Faster (Step-By-Step).txt",
+      "quote": "my recommendation here is to go down to 2x the rendered size",
+      "answer_points": [
+        "Export at 2x the rendered size so retina screens stay sharp",
+        "Not the original file and not exactly the rendered size; use AVIF/WebP"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q45",
+      "module": "GAD",
+      "q": "I want Standard Shopping and Search to get priority in Google Ads but keep Performance Max running as a backup. How do I set that up?",
+      "source": "12-GAD-google-ads/The Best E-commerce Google Ads Strategy for 2026.txt",
+      "quote": "setting PMax ROAS targets much higher than manual campaigns to force budget allocation toward controlled inventory",
+      "answer_points": [
+        "Give PMax a target ROAS much higher than the manual campaigns",
+        "That de-prioritises PMax so it only acts as a catch-all safety net"
+      ],
+      "type": "rule"
+    },
+    {
+      "id": "q46",
+      "module": "GAD",
+      "q": "Google Ads shows the last three days as a disaster. Should I start changing bids and budgets?",
+      "source": "12-GAD-google-ads/How To Fix An Underperforming Google Ads Account.txt",
+      "quote": "you pull out a custom column called conversions by conversion time",
+      "answer_points": [
+        "Do not panic: conversions are credited back to the click date, so the last 3-4 days always look poor",
+        "Read recent days with the \"conversions by conversion time\" column (and check against business KPIs like MER)"
+      ],
+      "type": "mistake"
+    },
+    {
+      "id": "q47",
+      "module": "ORG",
+      "q": "When should we start putting calls to action like \"grab our free guide\" in our brand's short-form videos?",
+      "source": "13-ORG-organic-and-content/How to start brand social media from scratch in 2026.txt",
+      "quote": "Get traction first. All your videos are getting 5,000",
+      "answer_points": [
+        "No CTAs until videos consistently reach about 5,000+ views",
+        "Then use soft CTAs that trade free value (PDF, report) for emails"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q48",
+      "module": "ORG",
+      "q": "Is it fine to schedule our Reels and TikToks ahead of time with a scheduling app?",
+      "source": "13-ORG-organic-and-content/How to start brand social media from scratch in 2026.txt",
+      "quote": "every single scheduling app, including the ones native to the platforms, hurts the performance",
+      "answer_points": [
+        "No: tests across hundreds of videos showed every scheduler, including native ones, hurts reach",
+        "Upload and post manually"
+      ],
+      "type": "mistake"
+    },
+    {
+      "id": "q49",
+      "module": "SEO",
+      "q": "What filters should I use in Semrush to choose keywords worth targeting with my product and collection pages?",
+      "source": "15-SEO-search/Complete Shopify SEO Optimization Masterclass For Beginners in 2025 (full course).txt",
+      "quote": "Commercial intent (C), Volume >1,000, Keyword Difficulty (KD) <40%, and a Cost Per Click",
+      "answer_points": [
+        "Commercial intent, volume above 1,000 a month, keyword difficulty below 40%",
+        "CPC above $1 (shows the keyword makes money)"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q50",
+      "module": "SEO",
+      "q": "I have a small budget for backlinks. Should it go on guest posts or something else?",
+      "source": "15-SEO-search/$40,000,000 Worth of Ecommerce SEO Advice in 11 Minutes.txt",
+      "quote": "prioritizing \"link insertions\" (niche edits) on existing high-traffic pages over new guest posts due to lower costs ($100-$400)",
+      "answer_points": [
+        "Prefer link insertions (niche edits) on existing pages that already have traffic and authority",
+        "They cost less, about $100-$400, than new guest posts"
+      ],
+      "type": "rule"
+    },
+    {
+      "id": "q51",
+      "module": "AEO",
+      "q": "How long should the answer right under each heading on my blog posts be so AI search tools quote it?",
+      "source": "16-AEO-answer-and-generative-engines/The Complete AI SEO Course 2026.txt",
+      "quote": "you want to keep that capsule around 20 to 25 words",
+      "answer_points": [
+        "Put a 20-25 word direct answer immediately under the heading",
+        "Keep links out of that answer block"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q52",
+      "module": "AEO",
+      "q": "Our store runs behind Cloudflare. Could that be stopping ChatGPT from seeing our pages?",
+      "source": "16-AEO-answer-and-generative-engines/Learn 80_ of AEO in 19 Minutes.txt",
+      "quote": "if your site is on Cloudflare, you could be blocking AI crawlers without realizing it",
+      "answer_points": [
+        "Yes: Cloudflare's \"instruct AI bot traffic with robots.txt\" feature is on by default and can disallow GPTBot",
+        "Check yourdomain.com/robots.txt for disallow rules on AI bots"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q53",
+      "module": "CXP",
+      "q": "We're drowning in 'where is my order' tickets. What's the minimum set of automatic updates that fixes most of them?",
+      "source": "17-CXP-post-purchase/E-commerce Customer Delight.txt",
+      "quote": "three-step automated communication flow that can eliminate up to 80% of \"Where Is My Order\" (WISMO) tickets",
+      "answer_points": [
+        "Three automated messages: order confirmation with delivery estimate, shipping confirmation with tracking link, out-for-delivery notice",
+        "Can remove up to 80% of WISMO tickets"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q54",
+      "module": "CXP",
+      "q": "How do I set a CAC target from the gross profit a customer brings in?",
+      "source": "17-CXP-post-purchase/The Complete E-Commerce Retention Masterclass.txt",
+      "quote": "CAC target: target LTGP divided by the desired efficiency ratio (with 2 to 3 being the optimal scaling band)",
+      "answer_points": [
+        "CAC target = time-bound lifetime gross profit (e.g. 30/90-day LTGP) / efficiency ratio",
+        "A ratio of 2 to 3 is the scaling band; LTGP deducts COGS, delivery, fees and refunds"
+      ],
+      "type": "structure"
+    },
+    {
+      "id": "q55",
+      "module": "COG",
+      "q": "I'm placing my first bulk order from an Alibaba supplier. Should I order exactly the quantity I need?",
+      "source": "18-COG-sourcing/What I learnt from sourcing e-commerce products from China.txt",
+      "quote": "So make sure that you order at least 10% more of what you need.",
+      "answer_points": [
+        "Order at least 10% extra to cover defective units (about 300 bad in a 10k order)",
+        "Alternatively pay for a ~$200 third-party inspection"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q56",
+      "module": "COG",
+      "q": "My factory keeps printing our logo slightly off position. How should I write the spec so it stops happening?",
+      "source": "18-COG-sourcing/How He Makes Millions Sourcing Products From China.txt",
+      "quote": "just because you tell the factory this is centered doesn't mean they're going to center it properly",
+      "answer_points": [
+        "Never write \"centered\"; give exact measurements from each edge (e.g. 4 in from top, 2 in from side)",
+        "Leave the factory no decisions to make"
+      ],
+      "type": "mistake"
+    },
+    {
+      "id": "q57",
+      "module": "WLD",
+      "q": "For cheap items, is it smarter to refund and let the customer keep the product than to process the return?",
+      "source": "19-WLD-wild-bets/Wild bets folder_ unconventional offer, retention and CX plays for e-commerce owners.txt",
+      "quote": "59% of surveyed retailers offered a keep-it policy, up from 26% a year earlier, mostly for items up to $20",
+      "answer_points": [
+        "Keep-it (returnless) refunds are mostly used for items up to about $20",
+        "Processing a return can cost roughly 20-65% of the item value"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q58",
+      "module": "WLD",
+      "q": "Is there a way to use physical mail inside my abandoned cart automation?",
+      "source": "19-WLD-wild-bets/Wild bets.txt",
+      "quote": "triggering a physical letter to be mailed 48 hours after a high-value cart abandonment",
+      "answer_points": [
+        "Programmatic direct mail: a printed letter or postcard triggered by the automation",
+        "Sent about 48 hours after a high-value cart is abandoned"
+      ],
+      "type": "structure"
+    },
+    {
+      "id": "q59",
+      "module": "FIN",
+      "q": "Does the branded box my product sits in count as COGS? What about the carton we ship it in?",
+      "source": "20-FIN-finance-and-accounting/Calculating COGS_ What Ecommerce Businesses Get Wrong.txt",
+      "quote": "that box is part of the cost of goods sold. But the brown box that it goes into",
+      "answer_points": [
+        "The retail/product box is COGS",
+        "The brown outer shipping carton is a shipping (operating) expense, not COGS"
+      ],
+      "type": "rule"
+    },
+    {
+      "id": "q60",
+      "module": "FIN",
+      "q": "When a returned item comes back to us, which of those costs can I put into COGS?",
+      "source": "20-FIN-finance-and-accounting/Calculating COGS_ What Ecommerce Businesses Get Wrong.txt",
+      "quote": "the labor and materials used to repackage that returned item to make it sellable again are classified as COGS",
+      "answer_points": [
+        "Shipping the return back is an overhead/operating expense",
+        "Labour and materials to repackage or refurbish it into sellable stock are COGS"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q61",
+      "module": "OPS",
+      "q": "I'm at about $3M a year on roughly 12% margin and can't scale ads myself. How do I afford a really good media buyer?",
+      "source": "21-OPS-team-and-management/Helping a $3M_Year E-Commerce Brand Build a Team.txt",
+      "quote": "you might have to give up a few points of equity to get somebody who's really good",
+      "answer_points": [
+        "The missing capability is media buying; bring in a star rather than learning it slowly",
+        "Use equity (a few points) alongside cash so the hire does not eat the whole margin"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q62",
+      "module": "OPS",
+      "q": "Customers say our hoodies feel thinner than the last batch. How can I prove the factory cut corners?",
+      "source": "21-OPS-team-and-management/Complete E-commerce Operations Guide.txt",
+      "quote": "we cut out the designated amount of size of the fabric we weigh it",
+      "answer_points": [
+        "Specify fabric GSM in the tech pack",
+        "Cut a fixed-size swatch and weigh it to prove the supplier used lighter fabric, then get it replaced"
+      ],
+      "type": "rule"
+    },
+    {
+      "id": "q63",
+      "module": "AMZ",
+      "q": "How can I tell from Amazon's first page of results whether a niche has turned into a price war?",
+      "source": "22-AMZ-amazon-marketplace/COMPLETE Amazon FBA Product Research Masterclass.txt",
+      "quote": "If all Page 1 results are tightly clustered (e.g., $7 to $13), discard the product.",
+      "answer_points": [
+        "Look for a wide price spread on page 1 (e.g. $20, $50, $100)",
+        "If results are tightly clustered (e.g. $7-$13), discard the product"
+      ],
+      "type": "rule"
+    },
+    {
+      "id": "q64",
+      "module": "AMZ",
+      "q": "If I send my own ad traffic to my Amazon listing, do I get anything back from Amazon?",
+      "source": "22-AMZ-amazon-marketplace/FREE Amazon FBA Course _ 12 Hour FULL Step by Step Tutorial 2025.txt",
+      "quote": "when you send traffic to your Amazon listing page, they actually give you back around 10% right here",
+      "answer_points": [
+        "Yes, the Brand Referral Bonus (Brand Registry) pays back about 10% on sales from external traffic",
+        "Effectively cuts the usual 15% referral fee to about 5%"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q65",
+      "module": "SEC",
+      "q": "At what chargeback rate does my payment processor start to get nervous?",
+      "source": "23-SEC-bot-and-agent-security/Ecommerce Security_ Threats and Best Practices.txt",
+      "quote": "Most processors flag stores whose chargeback rate is higher than 0.9%. Above 1%, processors can stop accepting cards completely.",
+      "answer_points": [
+        "Above 0.9% chargebacks the store gets flagged",
+        "Above 1% processors can stop accepting cards entirely"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q66",
+      "module": "SEC",
+      "q": "We do maybe 8,000 orders a year. Do we need a formal PCI audit?",
+      "source": "23-SEC-bot-and-agent-security/Ecommerce Security_ Threats and Best Practices.txt",
+      "quote": "Most small ecommerce stores fall into Level 4, which describes stores that process fewer than 20,000 transactions per year.",
+      "answer_points": [
+        "No: under 20,000 transactions a year is PCI DSS Level 4",
+        "Complete an annual self-assessment questionnaire (SAQ) instead of a third-party audit"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q67",
+      "module": "DEP",
+      "q": "How should I split creative production between cold, problem-aware and bottom-of-funnel ads on Meta?",
+      "source": "24-DEP-ad-deployment/How To Make Your Meta Ads Scale.txt",
+      "quote": "you want 80% of volume to be up in these two stages",
+      "answer_points": [
+        "About 80% of creative volume on unaware and problem-aware stages",
+        "10% solution-aware and 10% product/most-aware"
+      ],
+      "type": "number"
+    },
+    {
+      "id": "q68",
+      "module": "DEP",
+      "q": "I exclude every past buyer from my cold Meta campaigns, even people who bought years ago. Is that right?",
+      "source": "24-DEP-ad-deployment/How To Scale Meta TOF Campaigns.txt",
+      "quote": "customers that haven't bought in 2 years? Well, we probably do want a bit of spend on them",
+      "answer_points": [
+        "Exclude existing customers from cold campaigns",
+        "But use roughly a 2-year purchase exclusion so lapsed buyers can still be reached"
+      ],
+      "type": "condition"
+    },
+    {
+      "id": "q69",
+      "module": "MULTI",
+      "q": "How can I get TikTok Shop creators to post every day for a new brand without paying a big flat fee upfront?",
+      "source": "99-multi/How Comfrt Made $500M in 3 Years.txt",
+      "quote": "We'll give you $1,000 a month let's just say or the commission rate 15 20% commission Whichever earns you more",
+      "answer_points": [
+        "Offer a $1,000/month minimum or 15-20% commission, whichever earns the creator more",
+        "In exchange for 30 videos (one a day for 30 days)"
+      ],
+      "type": "structure"
+    },
+    {
+      "id": "q70",
+      "module": "MULTI",
+      "q": "During Black Friday week, how often should I be making budget scaling decisions?",
+      "source": "99-multi/Black Friday 2026 Strategy_ Spend, Creative, Offers, Pacing.txt",
+      "quote": "we typically will scale based on three-day rolling marginal averages",
+      "answer_points": [
+        "Scale on 3-day rolling marginal averages rather than day-to-day results",
+        "Write the scaling rules down in advance (pacing sheet)"
+      ],
+      "type": "rule"
+    },
+    {
+      "id": "q71",
+      "module": "FIN",
+      "q": "We sell cotton t-shirts in India priced under Rs 1,000. Which GST slab applies, and do I also charge GST on the shipping fee?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers GST slabs or GST on shipping charges"
+      ],
+      "type": "absent"
+    },
+    {
+      "id": "q72",
+      "module": "OPS",
+      "q": "What RTO rate on cash-on-delivery orders is normal for an Indian D2C brand, and does adding a COD fee bring it down?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers COD return-to-origin rates or COD fees"
+      ],
+      "type": "absent"
+    },
+    {
+      "id": "q73",
+      "module": "SET",
+      "q": "We ship to California. Do our product pages need a Prop 65 warning, and where exactly does it have to appear?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers California Prop 65 warnings"
+      ],
+      "type": "absent"
+    },
+    {
+      "id": "q74",
+      "module": "COG",
+      "q": "We are launching wooden toys for toddlers in the US. What lab testing and children's product certificate do we need before we can sell?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers CPSIA testing or children's product certificates"
+      ],
+      "type": "absent"
+    },
+    {
+      "id": "q75",
+      "module": "PRD",
+      "q": "Do I need an FSSAI licence to sell protein bars on my own Shopify store in India, and which licence category applies?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers FSSAI licensing"
+      ],
+      "type": "absent"
+    },
+    {
+      "id": "q76",
+      "module": "CXP",
+      "q": "Which courier aggregator, Shiprocket or Delhivery, gets better delivery success to Tier-2 and Tier-3 pin codes?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source compares Indian courier aggregators"
+      ],
+      "type": "absent"
+    },
+    {
+      "id": "q77",
+      "module": "EML",
+      "q": "What do I have to register on DLT, and how do TRAI template rules work, before sending promotional SMS to Indian customers?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers DLT registration or TRAI SMS rules"
+      ],
+      "type": "absent"
+    },
+    {
+      "id": "q78",
+      "module": "BRD",
+      "q": "What does it cost a startup to file a trademark in India, and which class covers clothing?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers Indian trademark fees or classes"
+      ],
+      "type": "absent"
+    },
+    {
+      "id": "q79",
+      "module": "AMZ",
+      "q": "On Amazon.in, is Easy Ship cheaper than FBA for a 500 g product?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers Amazon India Easy Ship or Amazon.in fees"
+      ],
+      "type": "absent"
+    },
+    {
+      "id": "q80",
+      "module": "MEA",
+      "q": "Under India's DPDP Act, do I need a consent banner before firing the Meta pixel for Indian visitors?",
+      "source": "",
+      "quote": "",
+      "answer_points": [
+        "Should abstain: no source covers the DPDP Act or India-specific consent rules"
+      ],
+      "type": "absent"
+    }
+  ]
+}

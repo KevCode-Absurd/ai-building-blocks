@@ -49,6 +49,8 @@ export interface AgentCard {
   role: { id: string; name: string } | null;
   /** A mega agent: the kind of business it is tailored to and how many channel specialists it leads. null otherwise. */
   mega: { variant: string; team_size: number } | null;
+  /** A vertical agent: the kind of business it serves (knowledge/<vertical>/) and its knowledge modules. null otherwise. */
+  vertical: { id: string; modules: string[] } | null;
   portrait: string;
   accent: string;
   /** Up to three outcome titles. */
@@ -116,6 +118,7 @@ export function agentCard(p: Persona): AgentCard {
     id: p.id, kind: p.kind, name: p.name, title: p.title, tagline: p.tagline, area: p.area, area_label: areaLabel(p.area),
     role: roleRef(p),
     mega: megaCard(p),
+    vertical: p.vertical ? { id: p.vertical, modules: p.modules ?? [] } : null,
     portrait: PORTRAIT.test(p.profile.portrait ?? "") ? p.profile.portrait : `/agents/${p.id}.webp`,
     accent: HEX.test(p.profile.accent ?? "") ? p.profile.accent : "#0A0A0A",
     outcomes: (p.profile.outcomes ?? []).slice(0, 3).map(o => o.title),

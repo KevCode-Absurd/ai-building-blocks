@@ -43,6 +43,8 @@ import {
   RESERVED_PACK_PATHS, validateRoleKit,
 } from "../src/modules/packs/build.ts";
 import { validateMegaKit } from "../src/modules/packs/mega.ts";
+import { verticalBundle } from "../src/modules/knowledge/bundle.ts";
+import { cardProblems } from "../src/modules/knowledge/cards.ts";
 import { lintNotes, lintPack, MADE_UP_BUSINESSES } from "../src/modules/packs/lint.ts";
 import { checkToolbox, leadAgentOfRole, renderLibraryItem, renderToolGuide, toolboxIndex, toolboxLibraryRefs, yamlLite } from "../src/modules/packs/toolbox.ts";
 import { TOOL_FILES } from "../src/modules/packs/build.ts";
@@ -264,6 +266,26 @@ for (const [roleId, toolbox] of toolboxes) {
 for (const slug of Object.keys(library)) if (!library[slug]) delete library[slug];
 warnings.push(...libraryNotes, ...typeNotes);
 
+// ---------- Vertical knowledge (knowledge/<vertical>/, see knowledge/README.md) ----------
+// Each vertical's public cards become one file per module, a baseline file, a sources list and a JSON index, served
+// once under /packs/knowledge/<vertical>/ and carried by that vertical's agents. A card that fails validation stops
+// the build; licensed and study-only cards are never published.
+const verticals = new Map();
+const KNOWLEDGE = path.join(ROOT, "knowledge");
+if (existsSync(KNOWLEDGE)) {
+  for (const id of readdirSync(KNOWLEDGE).filter(d => existsSync(path.join(KNOWLEDGE, d, "vertical.json"))).sort()) {
+    const dir = path.join(KNOWLEDGE, id);
+    const vertical = JSON.parse(readFileSync(path.join(dir, "vertical.json"), "utf8"));
+    const sources = existsSync(path.join(dir, "sources.json")) ? JSON.parse(readFileSync(path.join(dir, "sources.json"), "utf8")) : [];
+    const cards = existsSync(path.join(dir, "cards")) ? readdirSync(path.join(dir, "cards")).filter(f => f.endsWith(".json")).sort().flatMap(f => JSON.parse(readFileSync(path.join(dir, "cards", f), "utf8"))) : [];
+    const byId = new Map(sources.map(s => [s.id, s]));
+    const bad = cards.flatMap(c => cardProblems(c, vertical, byId).map(p => `${c.id}: ${p}`));
+    if (bad.length) fatal(`knowledge/${id}: ${bad.length} card problem(s):\n  ${bad.slice(0, 20).join("\n  ")}`);
+    if (new Set(cards.map(c => c.id)).size !== cards.length) fatal(`knowledge/${id}: duplicate card ids`);
+    verticals.set(id, verticalBundle(vertical, cards, sources));
+  }
+}
+
 // ---------- Personas ----------
 
 const jobTypes = listJobTypes();
@@ -279,7 +301,7 @@ for (const u of personasWithUnknownRole(personas)) warnings.push(`persona ${u.id
 const inputFor = (persona, kind, version) => {
   const role = getRole(persona.role);
   const mega = persona.mega ? megaKits.get(persona.mega.kit) ?? null : null;
-  return { persona, role, kit: role ? kits.get(role.id) ?? null : null, mega, jobTypes, templates, tools, library, helpers, options: { kind, ...version } };
+  return { persona, role, kit: role ? kits.get(role.id) ?? null : null, mega, jobTypes, templates, tools, library, helpers, vertical: persona.vertical ? verticals.get(persona.vertical) : undefined, options: { kind, ...version } };
 };
 const started = Date.now();
 
@@ -351,6 +373,12 @@ function writeShared(url, content) {
 }
 
 writeAt("/packs/coordinator/TEAM.md", readFileSync(path.join(PACKS, "coordinator/TEAM.md"), "utf8"));
+
+// Each vertical's library once: the files its agents carry, and the index the connector and the page search.
+for (const [id, b] of verticals) {
+  for (const [p, f] of Object.entries(b.files)) writeShared(`/packs/${p}`, normalizeText(f.content));
+  writeAt(`/packs/knowledge/${id}/index.json`, `${JSON.stringify(b.index)}\n`);
+}
 
 // Each ready role kit once, as it stands (text files with LF endings and a final newline, as packs carry them).
 for (const [roleId, files] of kitFilesAsTheyStand) {
@@ -461,6 +489,7 @@ if (withoutToolbox.length) console.warn(`build-packs: note: ${withoutToolbox.len
 const sharedCount = prefix => [...shared.keys()].filter(u => u.startsWith(prefix)).length;
 console.log(`build-packs: ${index.length} agents: ${index.length * 2} zips (${mb(zipBytes)} MB), browsable copies ${mb(browseBytes)} MB (shared: ${sharedCount("/packs/roles/")} role files, ${sharedCount("/packs/jobs/")} job skills, ${sharedCount("/packs/mega/")} mega kit files); ${fileCount} files in ${path.relative(ROOT, OUT) || "."}`);
 console.log(`build-packs: mega kits ready: ${megaKits.size}; mega agents: ${index.filter(p => p.mega).length}`);
+for (const [id, b] of verticals) console.log(`build-packs: vertical ${id}: ${b.cards.length} public cards from ${b.sources.length} public sources in ${Object.values(b.index.counts).filter(Boolean).length} modules; ${personas.filter(p => p.vertical === id).length} agents carry it`);
 console.log(`build-packs: toolboxes: ${toolboxes.size} of ${kits.size} role kits; ${toolboxPacks} agents carry one (${toolboxItemFiles} item files inside their zips); ${sharedCount("/packs/toolbox/")} library items stored once under toolbox/; ${libraryNotes.length} left out`);
 console.log(`build-packs: tools: ${TOOL_FILES.map(t => `${t.name} ${toolFrom[t.name] ? `from ${toolFrom[t.name]}` : "not available"}`).join("; ")}`);
 console.log(`build-packs: role kits ready: ${kits.size} of ${listRoles().length} roles; knowledge pending for ${pending} of ${index.length} agents; ${((Date.now() - started) / 1000).toFixed(1)}s`);

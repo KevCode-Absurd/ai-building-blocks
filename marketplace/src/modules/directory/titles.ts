@@ -5,6 +5,7 @@ export const SITE_SUFFIX = " | AI Blocks";
 export const AGENTS_TITLE = `Free AI agents by job role${SITE_SUFFIX}`;
 export const GUIDES_TITLE = `Guides to free AI agent packs${SITE_SUFFIX}`;
 export const CONNECT_TITLE = `Connect your AI to free AI agents${SITE_SUFFIX}`;
+export const ECOMMERCE_TITLE = `AI agents for e-commerce stores${SITE_SUFFIX}`;
 
 /** "Danielle, SEO strategist | Free AI agent | AI Blocks", or without "Free AI agent" when that runs long. */
 export function agentTitle(name: string, title: string): string {

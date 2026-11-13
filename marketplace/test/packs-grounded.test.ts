@@ -24,7 +24,7 @@ test("AGENTS.md is a short entry point that starts every job by grounding it", a
   const agents = file(await build(), "AGENTS.md")!;
   assert.ok(agents.split("\n").length <= 75, `AGENTS.md has ${agents.split("\n").length} lines`);
   assert.match(agents, /## How to start every job\n\n1\. \*\*Ground first\.\*\*/);
-  assert.match(agents, /three questions at most/);
+  assert.match(agents, /five questions at most/);
   // The method lives in WORK-METHOD.md and the choice of tools in toolbox.md; AGENTS.md only points at both.
   assert.match(agents, /run the job the way `WORK-METHOD\.md` says/);
   assert.match(agents, /Find the task in `toolbox\.md` and pick what fits it, at your own discretion/);
@@ -66,14 +66,14 @@ test("the pack linter fails missing files, conflicting limits, repeated paragrap
   const pack = await build();
   const long = "This paragraph is long enough to count as boilerplate when it shows up twice in the same pack, which is exactly what the linter stops.";
   const broken: BuiltPack = { ...pack, files: [...pack.files,
-    { ...pack.files[0], path: "notes-a.md", source: "agent", content: `See \`workflows/nowhere.md\` and JOB-CARD.json.\n\nAsk five questions at most.\n\n${long}\n\nOur example is Tidewell Bookkeeping.\n` },
+    { ...pack.files[0], path: "notes-a.md", source: "agent", content: `See \`workflows/nowhere.md\` and JOB-CARD.json.\n\nAsk three questions at most.\n\n${long}\n\nOur example is Tidewell Bookkeeping.\n` },
     { ...pack.files[0], path: "notes-b.md", source: "agent", content: `${long}\n\n## Optional: hosts\n\nEXECUTION-PLAN.json comes from the tool.\n` },
   ] };
   const rules = lintPack(broken).map(i => `${i.rule}:${i.message.slice(0, 40)}`);
   assert.ok(rules.some(r => r.startsWith("missing_file:refers to workflows/nowhere.md")), rules.join("\n"));
   assert.ok(rules.some(r => r.startsWith("missing_file:refers to JOB-CARD.json")));
   assert.ok(!rules.some(r => r.includes("EXECUTION-PLAN")), "a section headed Optional may name host files");
-  assert.ok(rules.some(r => r.startsWith("limit_conflict:sets the limit on questions to 3 and 5")), rules.join("\n"));
+  assert.ok(rules.some(r => /^limit_conflict:sets the limit on questions to (3 and 5|5 and 3)/.test(r)), rules.join("\n"));
   assert.ok(rules.some(r => r.startsWith("repeated_paragraph")));
   assert.ok(rules.some(r => r.startsWith("made_up_business")));
   assert.equal(lintPack({ ...pack, files: [...pack.files, { ...pack.files[0], path: "x.md", content: "We compared it with Sprout Social.\n" }] }).length, 0, "a real company is fine");
@@ -141,7 +141,7 @@ const quality = (p: string) => shared(`tools/quality/${p}`);
 test("the built-in method outline matches WORK-METHOD.md: owner first, signal pass, no homework", async () => {
   const outline = FALLBACK_TEMPLATES["WORK-METHOD.md"];
   assert.match(outline, /follow the owner and say why in one line/);
-  assert.match(outline, /In a one-shot job \(the owner cannot answer\), decide every open point, deliver every piece asked for, state at most three assumptions and finish/);
+  assert.match(outline, /In a one-shot job \(nobody can reply\), decide every open point, deliver every piece asked for, state at most three assumptions and finish/);
   assert.match(outline, /0\. Frame:[^\n]*a signal pass \(the three strongest signals in the owner's data, each with its number, what it means and where the work acts on it\)/);
   assert.match(outline, /1\. Ground: capture only what the signals and the decision depend on/);
   assert.match(outline, /4\. Build:[^\n]*one recommendation, which may combine complementary moves[^\n]*act fully on each signal/);
@@ -157,7 +157,7 @@ test("the built-in method outline matches WORK-METHOD.md: owner first, signal pa
 test("approval rules govern live actions, never the content of a plan; the method files ask for no confirmation lists", async () => {
   const agents = file(await build(), "AGENTS.md")!;
   assert.match(agents, /These approval rules govern live actions in the client's tools\. Ask for them in your own message, outside the work\. They never appear as approval requests inside a plan, a recommendation or copy/);
-  assert.match(agents, /In a one-shot job \(the brief holds everything and the owner cannot reply\), ask nothing: decide, state at most three assumptions and finish/);
+  assert.match(agents, /When nobody can reply \(a test or an API call\), never ask: decide, state at most three assumptions and finish/);
   assert.match(agents, /get a yes before the first live action/, "live-action approvals stay");
   assert.match(shared("train/AGENTS.md"), /Decide: one recommendation, which may combine complementary moves that serve the same goal; name a runner-up only when the options truly exclude each other\./);
   const engine = quality("QUALITY-ENGINE-v3.md");

@@ -25,7 +25,9 @@ test("WORK-METHOD.md is under 1,200 words and still covers every part of the met
   // owner rules (13 Nov) fit inside the same cap: their detail lives in the quality engine, and the whole one-shot
   // reading list is held under 6,000 words in packs-grounded.test.ts. The round 2 rollback (13 Nov) added the doubt
   // rule, the owner's named priority and the copy check, about 75 words.
-  assert.ok(words < 1200, `WORK-METHOD.md has ${words} words`);
+  // Ask or start (14 Nov) added the readiness check and the rubric. Owner, 14 Nov: no cap that costs quality, so this
+  // is a bloat guard, not a target: raise it when the method needs the words, never cut useful lines to fit.
+  assert.ok(words < 1350, `WORK-METHOD.md has ${words} words`);
   const parts: [string, RegExp][] = [
     ["spec sheet", /## 0\. Frame: the spec sheet[\s\S]*who must do what after seeing this[\s\S]*\*\*Deliverables:\*\* exact count and format/],
     ["signal pass", /\*\*Signal pass:\*\* the three strongest signals in the owner's data[^\n]*For each: its number, what it means for the decision, and where the deliverable acts on it\./],

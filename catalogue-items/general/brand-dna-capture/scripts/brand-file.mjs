@@ -17,6 +17,8 @@
 //   node brand-file.mjs slice <none|facts|voice|look|full> [--for <kind>] [--out <file>]
 //   node brand-file.mjs learn --job <name> --kept "<...>" --killed "<...>" --more "<...>"
 //   node brand-file.mjs migrate [--from <old brand folder>]
+//   node brand-file.mjs ask [--for <kind>]        the brand brain question for the intake message, or none
+//   node brand-file.mjs import <file or folder>   keep a brand file, guide or folder the client already has
 // Options:
 //   --dir <folder>     the context folder (default: ./context)
 //   --for <kind>       web_page, ad_creative, copy, email, audit, analysis, strategy, plan, code, ops_doc or other
@@ -587,6 +589,47 @@ export function sliceText(ctx, level, { now = new Date(), kind = null } = {}) {
   return { ok: true, text: out.join('\n'), words: words(out.join(' ')) };
 }
 
+// ---------- ask and import: the brand brain question at intake ----------
+/** What to put in the intake message about the brand brain: nothing, a note that the saved one is used, or the question. */
+export function askText(ctx, { now = new Date(), kind = null } = {}) {
+  const s = statusOf(ctx, { now, kind }), imports = importsOf(ctx);
+  if (s.level === 'none') return { ask: false, text: `No brand brain is needed for ${kind ? aJob(kind) : 'this job'}. Leave it out of your questions.` };
+  if (s.exists || imports.length) {
+    const name = s.business || s.site || (imports.length ? imports[0] : 'this business');
+    const stale = s.stale_parts.length ? ` Its ${s.stale_parts.join(' and ')} ${s.stale_parts.length === 1 ? 'is' : 'are'} out of date: ask "Your ${s.stale_parts.join(' and ')} were last checked a while ago. Still right, or should I check the site again?"` : '';
+    return { ask: !!stale, text: `A brand brain is saved for ${name}${s.exists ? ` (newest line ${newest(s.parts.map((p) => p.newest)) || 'undated'})` : ''}. Do not ask whether they have one. Say in one line that you will use it.${stale}${imports.length && !s.exists ? ` Imported and not yet sorted: ${imports.join(', ')}. Read it and move each fact into facts.json and voice.md, with "imported" as the source and the date it was given.` : ''}` };
+  }
+  return { ask: true, text: ['Put this question in your intake message, as written:', '', 'Do you have a brand brain (a brand file, guide or folder) I should use?', '  a) Yes: attach the file or folder, or paste a link', '  b) No: send your store URL and I will build one now and keep it for every later job', '', `If (a): save what they give you and run node ${toolPath('brand-file.mjs')} import <file or folder>. A link: open it, save the page as a file, then import it.`, `If (b): node ${toolPath('capture-brand-dna.mjs')} <store url>, then node ${toolPath('brand-file.mjs')} migrate.`].join('\n') };
+}
+function importsOf(ctx) { const d = path.join(ctx, FOLDER, 'imported'); return fs.existsSync(d) ? fs.readdirSync(d).filter((f) => !f.startsWith('.')).sort() : []; }
+/** Keeps what the client already has. A brand-file folder (facts.json, voice.md...) is taken in whole; any other file is kept under imported/. */
+export function importBrand(ctx, src, { now = new Date() } = {}) {
+  if (!src) throw new Error('Say what to import: node brand-file.mjs import <file or folder>.');
+  if (/^https?:\/\//i.test(src)) throw new Error('This tool opens no network connection. Open the link, save the page or file, then import that. If the link is the store itself, run capture-brand-dna.mjs on it instead.');
+  const from = path.resolve(src);
+  if (!fs.existsSync(from)) throw new Error(`Nothing at ${src}.`);
+  const dir = path.join(ctx, FOLDER), stamp = day(now), done = [];
+  fs.mkdirSync(dir, { recursive: true });
+  const known = PARTS.map((p) => p.file);
+  if (fs.statSync(from).isDirectory()) {
+    const inner = fs.existsSync(path.join(from, FOLDER)) ? path.join(from, FOLDER) : from;
+    const parts = fs.readdirSync(inner).filter((f) => known.includes(f));
+    if (parts.length) {
+      for (const f of parts) { const to = path.join(dir, f); if (fs.existsSync(to)) { fs.mkdirSync(path.join(dir, 'history'), { recursive: true }); fs.copyFileSync(to, path.join(dir, 'history', `${stamp}-before-import-${f}`)); } fs.copyFileSync(path.join(inner, f), to); done.push(f); }
+    } else {
+      fs.mkdirSync(path.join(dir, 'imported'), { recursive: true });
+      for (const f of fs.readdirSync(from).filter((x) => fs.statSync(path.join(from, x)).isFile())) { fs.copyFileSync(path.join(from, f), path.join(dir, 'imported', f)); done.push(`imported/${f}`); }
+    }
+  } else {
+    fs.mkdirSync(path.join(dir, 'imported'), { recursive: true });
+    const name = path.basename(from); fs.copyFileSync(from, path.join(dir, 'imported', name)); done.push(`imported/${name}`);
+  }
+  fs.mkdirSync(path.join(dir, 'history'), { recursive: true });
+  fs.appendFileSync(path.join(dir, 'history', 'changes.md'), `\n## ${stamp}: imported from the client\n${done.map((f) => `- ${f} (from ${path.basename(from)})`).join('\n')}\n`);
+  const whole = done.some((f) => known.includes(f));
+  return { dir: slash(path.relative(process.cwd(), dir) || dir), done, next: whole ? `Run node ${toolPath('brand-file.mjs')} status to see what is fresh.` : `Read ${done.join(', ')} and move each fact into facts.json and each real brand line into voice.md, with "imported: <file>" as the source and today's date. Then run status.` };
+}
+
 // ---------- command line ----------
 function parseArgs(argv) {
   const o = { _: [], dir: 'context' };
@@ -599,7 +642,7 @@ function parseArgs(argv) {
   }
   return o;
 }
-const HELP = fs.readFileSync(fileURLToPath(import.meta.url), 'utf8').split('\n').filter((l) => l.startsWith('//')).slice(0, 26).map((l) => l.replace(/^\/\/ ?/, '')).join('\n');
+const HELP = fs.readFileSync(fileURLToPath(import.meta.url), 'utf8').split('\n').filter((l) => l.startsWith('//')).slice(0, 28).map((l) => l.replace(/^\/\/ ?/, '')).join('\n');
 export function main(argv = process.argv.slice(2), print = console.log) {
   let o; try { o = parseArgs(argv); } catch (e) { console.error(e.message); return 2; }
   const cmd = o._[0];
@@ -629,7 +672,9 @@ export function main(argv = process.argv.slice(2), print = console.log) {
       if (!r.mapping.length) { print(`Nothing to build from in ${slash(path.relative(process.cwd(), ctx) || ctx)}: no brand-dna.json, facts.md, voice.md, references.md, taste-brief.md or old brand folder.`); return 1; }
       print([`Brand file at ${r.dir} (${r.written.length ? `wrote ${r.written.join(', ')}` : 'already up to date'}). What went where:`, ...r.mapping.map((m) => `- ${m}`), ...(r.changes.length ? ['Changed since last time:', ...r.changes.slice(0, 12).map((c) => `- ${c.text}`)] : []), `Now run: node ${toolPath('brand-file.mjs')} status`].join('\n')); return 0;
     }
-    console.error(`Unknown command "${cmd}". Use status, slice, learn or migrate.`); return 2;
+    if (cmd === 'ask') { const r = askText(ctx, { now, kind: o.for || null }); print(o.json ? JSON.stringify(r, null, 1) : r.text); return 0; }
+    if (cmd === 'import') { const r = importBrand(ctx, o._[1], { now }); print([`Kept in ${r.dir}: ${r.done.join(', ') || 'nothing'}.`, r.next].join('\n')); return r.done.length ? 0 : 1; }
+    console.error(`Unknown command "${cmd}". Use status, slice, learn, migrate, ask or import.`); return 2;
   } catch (e) { console.error(e.message); return 2; }
 }
 

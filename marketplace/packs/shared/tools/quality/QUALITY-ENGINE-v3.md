@@ -14,7 +14,7 @@ Goal: finished work the owner would choose over one plain attempt. The task, req
 
 Write context/spec.md: reader, use, channel, hard constraints, the owner's goal metric and time window, and what done means. Name the actual deliverable, counts and fields. Run the signal pass (WORK-METHOD.md step 0): the three strongest signals in the owner's data, each with its number, what it means and where the work acts on it. Inspect existing work before replacing it; patch by default unless new work is requested.
 
-Interactive use asks at most three costly unknowns, together, with defaults (INTAKE.md). One-shot use decides and proceeds (rule 1). Choose light, standard, full or team with ROUTING.md, naming the deciding signal. Stakes add a claims check, not drafts or length.
+Run the readiness check in INTAKE.md: a specific brief starts; a gap that would change the work gets at most five questions, together, with defaults. One-shot use (nobody can reply) decides and proceeds (rule 1). Choose light, standard, full or team with ROUTING.md, naming the deciding signal. Stakes add a claims check, not drafts or length.
 
 Match cards/INDEX.md and read the card; use cards/_any.md if none fits. Apply the must-haves that fit the asked scope: one reply is not a macro set, one first-touch email is not a sequence (annex.quality_engine.scope_note says which apply). Read its profile and one job skill. Above light depth, and outside the one-shot fast path, also read the lead's soul.md, playbook.md and relevant scoped lessons. Write the expert's standard approach in three lines. Choose consumer, business or specialist reading level.
 

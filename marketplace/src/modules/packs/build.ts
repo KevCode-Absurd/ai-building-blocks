@@ -112,10 +112,11 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "brand-dna-snippet.js", purpose: "The same capture, pasted into any browser console." },
   { name: "check-brand-fidelity.mjs", purpose: "Checks a built page against context/brand-dna.json." },
   { name: "ai-default-patterns.md", purpose: "The named AI defaults to avoid unless chosen on purpose." },
-  { name: "brand-file.mjs", purpose: "Keeps the client's living brand file in context/brand-file/: status says what is stale, slice takes only what a job needs, learn records what the client kept or killed." },
+  { name: "brand-file.mjs", purpose: "Keeps the client's living brand file in context/brand-file/: status says what is stale, slice takes only what a job needs, learn records what the client kept or killed, ask gives the brand brain question for the intake message, import keeps a brand file or guide the client already has." },
   { name: "compare-candidates.mjs", purpose: "Puts 2 to 4 candidates side by side at desktop and phone width, labelled A to D, for an outside pick (Node; Playwright for the PNG sheets)." },
   { name: "check-handover.mjs", purpose: "Checks a finished deliverable before hand-over: nothing internal or unfinished a reader would see, and its length against a plain answer (plain Node)." },
   // Knowledge and review tools (agent-rag): every agent pack carries them, brand-facing or not.
+  { name: "make-rubric.mjs", purpose: "Turns the owner's intake answers (context/intake.md) into context/rubric.md, what good looks like to them weighted first plus the pass-or-fail gates, and checks the hand-over scorecard against it (plain Node)." },
   { name: "ask-knowledge.mjs", purpose: "Finds what this agent knows about a question in its own pack: the best passages with file, lines and dated sources, or a plain 'not in the pack' (plain Node, no network)." },
   { name: "prepare-job.mjs", purpose: "Reads the brief once and puts the library cards the job needs in front of you: each request and data signal searched, cards for another market or platform dropped, ranked, near-duplicates removed, gaps listed (plain Node, no network)." },
   { name: "blind-review.mjs", purpose: "Runs a fair blind pick between drafts: writes the review sheet in both orders, then counts a winner only when both orders agree, and flags a length gap (plain Node)." },
@@ -396,7 +397,7 @@ For each task, find what to use in toolbox.md, choose at your own discretion and
 
 ## How you work
 
-- Ask once, in one short numbered message, three questions at most, for what capture cannot tell you.
+- Run the readiness check in tools/quality/INTAKE.md: start on a specific brief; when a gap would change the work, ask first in one short numbered message, five questions at most, for what capture cannot tell you.
 - Never ask for passwords, API keys or card numbers. Ask which access level the client grants for each tool, and use level 1 (read: exports, screenshots or a viewer seat) until they answer. Level 2 drafts inside the tool; level 3 makes live changes only within the client's limits, after they confirm the action list. Log every action.
 - Say plainly when a question needs a qualified professional, such as a lawyer, accountant or doctor.
 
@@ -409,7 +410,7 @@ Pack version {{version}}, updated {{updated}}. Profile: {{profile_url}}
   // Only the outline: the full method is packs/shared/WORK-METHOD.md, which always wins when it exists.
   "WORK-METHOD.md": `# Work method
 
-If a rule here would make the work worse for this owner's stated goal and data, follow the owner and say why in one line. In a one-shot job (the owner cannot answer), decide every open point, deliver every piece asked for, state at most three assumptions and finish: no confirmation lists or approval asks in the work.
+If a rule here would make the work worse for this owner's stated goal and data, follow the owner and say why in one line. In a one-shot job (nobody can reply), decide every open point, deliver every piece asked for, state at most three assumptions and finish: no confirmation lists or approval asks in the work.
 
 0. Frame: write context/spec.md, one screen: the job (who must do what after seeing this), the deliverables (count and format), a signal pass (the three strongest signals in the owner's data, each with its number, what it means and where the work acts on it), mode (patch whenever something exists) and the brand context the job needs.
 1. Ground: capture only what the signals and the decision depend on into context/, each fact with its source and date. Check the buyer can act today.

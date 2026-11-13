@@ -4,11 +4,13 @@
 
 Follow `tools/quality/QUALITY-ENGINE-v3.md`; task and brand come first.
 
-**One-shot jobs** (the brief holds everything; the owner cannot answer): decide every open point with the assumption a top practitioner would pick, and finish. Deliver every piece the owner asked for; never drop or water one down to stay safe. At most three assumption lines, only where they change what to do. Never ask for confirmation, a yes, a sign-off or a choice inside the deliverable; no "To confirm" list. A sign-off that law or a platform needs is one line next to its item. **Fast path:** when the brief carries the data, skip site capture, brand DNA, the taste brief and knowledge reading; read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill.
+**Ask or start:** run the readiness check in `tools/quality/INTAKE.md`: a specific brief starts; a gap that would change the work gets questions first.
+
+**One-shot jobs** (nobody can reply: a test or an API call): decide every open point with the assumption a top practitioner would pick, and finish. Deliver every piece the owner asked for; never drop or water one down to stay safe. At most three assumption lines, only where they change what to do. Never ask for confirmation, a yes, a sign-off or a choice inside the deliverable; no "To confirm" list. A sign-off that law or a platform needs is one line next to its item. **Fast path:** when the brief carries the data, skip site capture, brand DNA, the taste brief and knowledge reading; read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill.
 
 ## 0. Frame: the spec sheet
 
-Read `context/brand-file/worked.md` first, if any. Then write `context/spec.md`, one screen:
+Read `context/brand-file/worked.md` if any, then write `context/spec.md`, one screen:
 
 - **The job:** who must do what after seeing this.
 - **Deliverables:** exact count and format, in the client's words, and each explicit ask with where it is met.
@@ -16,6 +18,7 @@ Read `context/brand-file/worked.md` first, if any. Then write `context/spec.md`,
 - **Expert and playbook:** who would own this, and their standard approach in 3 lines; the owner's data overrides it.
 - **Depth:** light, standard, full or team (`tools/quality/ROUTING.md`).
 - **Assumptions**, one line each. **Mode:** `patch` (default), `extend` or `new`. **Brand file slice:** none, facts, voice, look or full.
+- **Rubric:** `node tools/make-rubric.mjs` writes `context/rubric.md` from `context/intake.md`.
 
 ## 1. Ground: only what the job needs
 
@@ -59,7 +62,7 @@ A fresh reviewer who has not seen your reasoning (else label the pass SAME-CONTE
 
 A fresh reviewer (as in step 3) gets only the client's brief, the finished deliverable and `context/facts.md`, and answers:
 
-1. Each signal: acted on fully, partly or not at all.
+1. Each signal and each rubric line: met fully, partly or not at all.
 2. Each claim a buyer or the client will read (prices, counts, ratings, policies, names, delivery times, quotes, product properties): sourced or not.
 3. The weakest piece.
 4. What is left for the owner to do: questions, sign-offs, choices, placeholders.
@@ -69,11 +72,11 @@ Remove each unsourced claim, or rewrite it to what the source says. Never flag o
 
 **Gates.** Answers 1 and 2, the buyer-can-act check, access, the finished format, the hand-over check and the job skill's own gates are pass or fail. No craft score makes up for a failure.
 
-**Craft.** "Does the job" (for the buyer or the decision) weighs most, 30 of 100. "Own material" weighs 10: proof or ideas a generic answer would lack.
+**Craft.** "Does the job" (for the buyer or the decision) weighs most, 30 of 100. "Own material" weighs 10: proof or ideas a generic answer would lack. `context/rubric.md` scores the same craft lines after the owner's own.
 
 ## 6. Hand over, and learn
 
 - The native work comes first; its first screen holds the decision, the numbers the owner asked for by name, every piece of bad news, and the first move this week.
 - Nothing internal reaches the client: no working notes, signal maps, ledgers or monitoring lines in what the customer reads. Supporting detail goes in an appendix inside the deliverable, only if needed.
 
-Keep working notes in `DECISIONS.md`. Record client feedback with `node tools/brand-file.mjs learn`. Add shared lessons to "Rules I learned" in playbook.md: scoped, naming what won and failed.
+After the work, in your own message, give the rubric scorecard (`make-rubric.mjs check`). Keep working notes in `DECISIONS.md`. Record client feedback with `node tools/brand-file.mjs learn`. Add shared lessons to "Rules I learned" in playbook.md: scoped, naming what won and failed.

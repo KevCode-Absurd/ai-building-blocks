@@ -409,7 +409,7 @@ export const MARKETPLACE_TOOLS_BASE = 'https://agents.useaiblocks.com/tools/';
  * work that left blanks or ran 2 to 4 times longer than a plain answer lost on clarity; complete proposals and a length
  * near the plain answer won 88% of 128 blind verdicts.
  */
-export const HANDOVER_FINISH = "No unintended blanks or placeholders; preserve explicitly requested template fields with --requested-template. Put sign-offs once in To confirm outside publishable copy. Follow the matched quality family profile aim, ceiling and shape; the brief can ask for more. tools/check-handover.mjs with --profile <family> passes, along with the applicable v3 clarity, proof and visual checks.";
+export const HANDOVER_FINISH = "No unintended blanks or placeholders; preserve explicitly requested template fields with --requested-template. State at most three one-line assumptions instead of a to-do list; a legal or expert sign-off is one line next to its item, never inside publishable copy. Stay within the owner's limit and the family ceiling, and follow its shape; the brief can ask for more. tools/check-handover.mjs with --profile <family> passes, along with the applicable v3 clarity, proof and visual checks.";
 export const GJP_SKILLS = Object.freeze({ protocol: 'grounded-job-protocol', capture: 'brand-dna-capture', fidelity: 'brand-fidelity-check', defaults: 'ai-default-patterns' });
 
 /** Capture spec per family: what goes into context/ and how. */

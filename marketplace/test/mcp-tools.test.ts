@@ -425,7 +425,8 @@ test("jobs from before hiring was free never show their old price", async () => 
   const all = await call("get_job", {});
   for (const r of [one, all]) {
     assert.doesNotMatch(visible(r), MONEY_WORDS);
-    assert.ok(!visible(r).includes("129"));
+    // The old price as a price (129, 129.00, 12900), not three digits inside a random job id or timestamp.
+    assert.doesNotMatch(visible(r), /(?<![\w:.-])\$?(?:129(?:\.00)?|12,?900)(?![\w:.-])/);
   }
   assert.equal(one.structuredContent.price_cents, undefined);
 });

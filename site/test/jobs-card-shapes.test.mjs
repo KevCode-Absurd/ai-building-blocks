@@ -332,3 +332,15 @@ test('a pitch email with a length aside, a one-page exception policy and a negat
   const ad = 'We bought host-read ads on a cooking podcast and need a 60-second script. The host should sound like a person, not like they are reading our packaging.';
   assert.equal(routeJob({ request: ad }).mode, 'single');
 });
+
+// 13 Nov 2026, live check: a single pitch email was told to decide "the arc of the series".
+test('a single email decides its one ask; a series keeps the series decisions', () => {
+  const one = prepareJobContext({ request: 'Write a pitch email to a tech reporter offering an exclusive on our launch.' }).annex.spec_sheet.decisions;
+  assert.equal(one.some(d => /series|each email/.test(d)), false, one.join(' | '));
+  assert.match(one[0], /one thing the reader should do next/);
+  for (const request of ['Write a 5-email welcome series for new subscribers.', 'Write a three email nurture sequence for trial users.']) {
+    const d = specSheet({ request, kind: 'email', mode: { mode: 'new' } }).decisions;
+    assert.match(d[0], /arc of the series/, request);
+  }
+  assert.match(specSheet({ request: 'Write a reply to this customer.', kind: 'email', mode: { mode: 'new' } }).decisions[0], /one thing/);
+});

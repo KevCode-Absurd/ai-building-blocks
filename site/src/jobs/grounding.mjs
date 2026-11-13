@@ -308,7 +308,14 @@ const DECISIONS = Object.freeze({
   strategy_plan: ['the recommended option', 'how the budget or effort is split', 'the cut, keep and scale rules'],
   code_ops_other: ['the approach', 'what must not change'],
 });
-export const decisionsFor = kind => [...(DECISIONS[kind] ?? DECISIONS[familyOf(kind)])];
+/** One email (a pitch, a reply, a first touch) has no series arc or per-email product to choose. */
+const ONE_EMAIL = Object.freeze(['the one thing the reader should do next', 'what leads in the subject line and first sentence', 'what to leave out']);
+const SERIES = /\b(?:series|sequence|drip|flow|nurture|cadence|newsletters?|campaign|follow-?ups?|welcome emails|onboarding emails)\b/i;
+/** The decisions for this kind; an email request that names no series or count above one gets the single-email set. */
+export const decisionsFor = (kind, request = '') => {
+  if (kind === 'email' && !SERIES.test(String(request ?? '')) && !((requestedCount(request) ?? 1) > 1)) return [...ONE_EMAIL];
+  return [...(DECISIONS[kind] ?? DECISIONS[familyOf(kind)])];
+};
 const NUMBER_WORDS = Object.freeze({ one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, twelve: 12 });
 const COUNTED = '(?:ads?|creatives?|concepts?|emails?|pages?|posts?|headlines?|subject lines?|scripts?|carousels?|slides?|articles?|variants?|versions?|images?|videos?|documents?|templates?|reports?|plans?|lines?|notifications?|messages?|names?|options?|ideas?|hooks?|taglines?|captions?|replies|macros?)';
 /** The count the request names for its deliverable ("6 image ads", "a 5-email series"), else null. A guess the maker confirms. */
@@ -329,7 +336,7 @@ export function specSheet({ request = '', kind, mode, kindSource = 'declared', s
     deliverables: [{ kind, count, in_client_words: requestPointer ?? String(request ?? ''), prompt: count === null ? 'State the exact count and format in the client\'s words.' : 'Confirm the count and format in the client\'s words.' }],
     acceptance_tests: shape?.tests ? shape.tests.map((row, n) => ({ id: `t${n + 1}`, ...row })) : acceptanceTests(kind),
     acceptance_rule: 'Keep 5 to 7. Rewrite each for this job. At least two on the commercial job, one on readiness, one on truth and one on clarity.',
-    decisions: decisionsFor(kind),
+    decisions: shape?.decisions ? [...shape.decisions] : decisionsFor(kind, request),
     decision_rule: 'Take each decision yourself. One recommendation, with the runner-up in one line. Never hand back a menu.',
     assumptions: [`Mode: ${mode?.mode ?? 'patch'}. ${mode?.reason ?? ''}`.trim(), ...(kindSource === 'suggested' ? [`Kind of work: ${kind}, guessed from the request.`] : [])],
     context_needed: { ...need, levels: Object.keys(CONTEXT_LEVELS), rule: 'Take this slice of the brand file, or capture it, and no more. Raise the level only when an acceptance test depends on it.' },

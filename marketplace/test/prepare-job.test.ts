@@ -85,7 +85,8 @@ test("prepare ranks the request's module first, drops near-duplicates and lists 
 });
 
 test("the pack tool is generated from the source and runs in a pack folder", async () => {
-  const gen = await import("../scripts/gen-prepare-job.mjs");
+  const load = (rel: string): Promise<any> => import(rel);
+  const gen = await load("../scripts/gen-prepare-job.mjs");
   assert.equal(readFileSync(gen.TARGET, "utf8"), gen.generate(), "out of date: run node scripts/gen-prepare-job.mjs");
   const dir = mkdtempSync(path.join(tmpdir(), "prep-"));
   mkdirSync(path.join(dir, "knowledge", "ecommerce"), { recursive: true });

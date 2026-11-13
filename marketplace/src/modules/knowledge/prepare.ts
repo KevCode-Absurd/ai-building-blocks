@@ -232,7 +232,7 @@ export function fitsFacts(card: PrepCard, f: BriefFacts): boolean {
   if (miss(card.markets, f.market)) return false;
   if (card.amazon.length && !f.channels.includes("amazon")) return false;
   if (miss(card.amazon, f.amazon)) return false;
-  const stores = card.platforms.filter(p => p === "shopify" || p === "woocommerce");
+  const stores: string[] = card.platforms.filter(p => p === "shopify" || p === "woocommerce");
   if (f.platform && stores.length && !stores.includes(f.platform)) return false;
   return true;
 }

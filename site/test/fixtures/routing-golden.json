@@ -1,6 +1,6 @@
 {
   "schema": "ai-blocks-routing-golden/1",
-  "note": "Acceptable job types for every Quality Engine benchmark request (tools/bench/quality-engine). Labelled 12 Nov 2026 by reading each ask, before tuning was finished. More than one job is acceptable where two leads would both do the work well. Requests with a card list the quality card the ask names. E01-E12 are the 12 Nov 2026 Claude blind-test requests (results-claude-2026-11-12), added after that test exposed routing misses; the extra rows are new phrasings of the same fixes, written so the fix is not fitted to those 12 alone.",
+  "note": "Acceptable job types for every Quality Engine benchmark request (tools/bench/quality-engine). Labelled 12 Nov 2026 by reading each ask, before tuning was finished. More than one job is acceptable where two leads would both do the work well. Requests with a card list the quality card the ask names. E01-E12 are the 12 Nov 2026 Claude blind-test requests (results-claude-2026-11-12), added after that test exposed routing misses; the extra rows are new phrasings of the same fixes, written so the fix is not fitted to those 12 alone. The 13 Nov 2026 rows (2 per card) cover the nine cards added that day, in different phrasings and companies.",
   "floor": 0.85,
   "jobs": {
     "T01": [
@@ -493,6 +493,181 @@
       ],
       "lead": "nicole-fpa",
       "card": "analysis-memo"
+    },
+    {
+      "request": "I run PR at Liquid Death. Write a pitch email to a food reporter at Bon Appétit about our new canned iced tea, under 200 words.",
+      "jobs": [
+        "write-and-tell-stories",
+        "grow-social"
+      ],
+      "lead": "bayo-press-releases",
+      "card": "press-pitch"
+    },
+    {
+      "request": "I'm on the comms team at Canva. We have new survey data on how teachers use design tools. Draft a media pitch for education editors, with three subject line options.",
+      "jobs": [
+        "write-and-tell-stories",
+        "grow-social"
+      ],
+      "lead": "bayo-press-releases",
+      "card": "press-pitch"
+    },
+    {
+      "request": "I'm on the bids team at HubSpot. Write our answer to section 4 of a university's RFP: how we handle data migration from their old CRM, in about 400 words.",
+      "jobs": [
+        "sell-and-negotiate"
+      ],
+      "lead": "terrence-rfps",
+      "card": "rfp-response"
+    },
+    {
+      "request": "I work in public sector sales at Zendesk. A city council sent us a tender for a citizen help desk. Draft our response to their questions on support hours and service levels.",
+      "jobs": [
+        "sell-and-negotiate"
+      ],
+      "lead": "terrence-rfps",
+      "card": "rfp-response"
+    },
+    {
+      "request": "I manage store operations at Best Buy. Write the SOP for in-store phone trade-ins: checking the device, wiping the data, grading its condition and paying the customer.",
+      "jobs": [
+        "document-work",
+        "organise-work"
+      ],
+      "lead": "faisal-sops",
+      "card": "sop"
+    },
+    {
+      "request": "I'm a general manager at a Chipotle restaurant. Write a step-by-step procedure for the closing shift that a new shift lead can follow on their own.",
+      "jobs": [
+        "document-work",
+        "organise-work",
+        "teach-and-train"
+      ],
+      "lead": "faisal-sops",
+      "card": "sop"
+    },
+    {
+      "request": "I run ecommerce at Warby Parker. Write the product detail page description for our new blue-light glasses, about 120 words plus three bullet points.",
+      "jobs": [
+        "run-your-store",
+        "set-up-store",
+        "write-landing-page",
+        "write-ad-copy"
+      ],
+      "lead": "faye-product-pages",
+      "card": "product-description"
+    },
+    {
+      "request": "I'm a merchandiser at Brooklinen. Our linen duvet cover now comes in four colours. Write product descriptions for each colour for our Shopify store.",
+      "jobs": [
+        "run-your-store",
+        "set-up-store",
+        "write-landing-page",
+        "write-ad-copy"
+      ],
+      "lead": "faye-product-pages",
+      "card": "product-description"
+    },
+    {
+      "request": "I handle podcast sponsorships at Squarespace. Write a 60-second host-read ad script for a small-business podcast, with a spot for the host's promo code.",
+      "jobs": [
+        "write-ad-copy",
+        "work-with-audio",
+        "make-video-ads"
+      ],
+      "lead": "malik-audio-ads",
+      "card": "audio-ad-script"
+    },
+    {
+      "request": "I'm a brand manager at Chobani. Write two 30-second radio spots for our oat milk creamer, for morning drive time.",
+      "jobs": [
+        "write-ad-copy",
+        "work-with-audio",
+        "make-video-ads"
+      ],
+      "lead": "malik-audio-ads",
+      "card": "audio-ad-script"
+    },
+    {
+      "request": "I'm in people ops at Shopify. Write the all-hands announcement of our new travel policy: what changes on 1 January and who to ask.",
+      "jobs": [
+        "lead-people",
+        "organise-work",
+        "document-work",
+        "hire-people",
+        "write-and-tell-stories"
+      ],
+      "lead": "rebecca-internal-comms",
+      "card": "internal-announcement"
+    },
+    {
+      "request": "I lead internal comms at Spotify. Draft a company-wide note from our CTO announcing that engineering moves to a new on-call tool next month, under 250 words.",
+      "jobs": [
+        "lead-people",
+        "organise-work",
+        "document-work",
+        "write-and-tell-stories"
+      ],
+      "lead": "rebecca-internal-comms",
+      "card": "internal-announcement"
+    },
+    {
+      "request": "I'm head of IT at Monzo. Build a vendor scorecard to compare three endpoint security tools, with weighted criteria and a recommendation.",
+      "jobs": [
+        "think-and-decide",
+        "check-contracts",
+        "plan-supply-chain",
+        "analyse-data"
+      ],
+      "lead": "soren-vendors",
+      "card": "vendor-scorecard"
+    },
+    {
+      "request": "I buy packaging for Gymshark. We got four quotes for recycled mailer bags. Make a supplier comparison on price, lead time, recycled content and minimum order.",
+      "jobs": [
+        "plan-supply-chain",
+        "think-and-decide"
+      ],
+      "lead": "huong-sourcing",
+      "card": "vendor-scorecard"
+    },
+    {
+      "request": "I'm an HR partner at Etsy. Write our parental leave policy for US staff: who is eligible, how long it lasts and how to request it.",
+      "jobs": [
+        "document-work",
+        "hire-people",
+        "check-contracts"
+      ],
+      "lead": "nazmul-handbook",
+      "card": "policy-doc"
+    },
+    {
+      "request": "I manage the retail showrooms at Peloton. Draft a policy on staff using personal phones on the showroom floor, with the exceptions.",
+      "jobs": [
+        "document-work",
+        "hire-people",
+        "check-contracts",
+        "lead-people"
+      ],
+      "lead": "nazmul-handbook",
+      "card": "policy-doc"
+    },
+    {
+      "request": "I'm a content lead at Notion. Write a localisation brief for translating our onboarding templates into Japanese and Korean: tone, terms to keep in English and what to adapt.",
+      "jobs": [
+        "write-and-tell-stories"
+      ],
+      "lead": "behrouz-translation",
+      "card": "localisation-brief"
+    },
+    {
+      "request": "I run growth at Deliveroo. Prepare a brief for our translation agency on adapting the app store listing and promo emails for Arabic-speaking customers in the UAE.",
+      "jobs": [
+        "write-and-tell-stories"
+      ],
+      "lead": "behrouz-translation",
+      "card": "localisation-brief"
     }
   ]
 }

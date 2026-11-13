@@ -3,7 +3,7 @@
 // merge tags and an exit rule, and told to capture the brand's site and write a taste brief).
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { prepareJobContext, resolveDeliverableKind, resolveMode, cardGates } from '../src/jobs/grounding.mjs';
+import { prepareJobContext, resolveDeliverableKind, resolveMode, cardGates, suggestDeliverableKind } from '../src/jobs/grounding.mjs';
 import { cardShape, cardQuestions, shortWordLimit, CARD_SHAPES } from '../src/jobs/card-shapes.mjs';
 import { qualityEngineContext } from '../src/jobs/quality-engine.mjs';
 import { routeJob } from '../src/jobs/router.mjs';
@@ -116,4 +116,63 @@ test('start_job with from_context sends no second copy of the brief, questions o
   assert.ok(JSON.stringify(lean).length < JSON.stringify(full).length / 2);
   // The single-lead rubric is the card-fit one.
   assert.ok(!full.rubric.gates.some(g => g.id === 'buyer_can_act'));
+});
+
+// 13 Nov 2026: common deliverables got the wrong kind and so the wrong questions and checks.
+test('the document a request names decides its kind: an SOP is not code, a product description is not an ops doc', () => {
+  assert.equal(suggestDeliverableKind('Write the store SOP for processing phone trade-ins in the app.').kind, 'ops_doc');
+  assert.equal(suggestDeliverableKind('Write the product detail page description for our new glasses.').kind, 'copy');
+  assert.equal(suggestDeliverableKind('Write the all-hands announcement of our new travel policy.').kind, 'copy');
+  assert.equal(suggestDeliverableKind('Build a vendor scorecard to compare three endpoint security tools.').kind, 'plan');
+  assert.equal(suggestDeliverableKind('Write the hiring scorecard for a senior designer.').kind === 'plan', false);
+  assert.equal(suggestDeliverableKind('Write a 60-second host-read ad script, with a spot for the promo code.').kind, 'copy');
+  assert.equal(['ops_doc', 'copy'].includes(resolveDeliverableKind(undefined, 'Write our answer to section 4 of the RFP on data migration.').kind), true);
+  assert.equal(resolveDeliverableKind(undefined, 'Write a localisation brief for translating our templates into Japanese.').kind, 'ops_doc');
+});
+
+test('a press pitch is one short email to a reporter: pitch tests, no buyer gate or email-series checks', () => {
+  const { annex } = prepareJobContext({ request: 'I run PR at Acme Pet. Write a pitch email to a pets reporter at a national paper about our new adoption data, under 200 words.' });
+  assert.equal(annex.quality_engine.family, 'press-pitch');
+  assert.equal(annex.deliverable_kind, 'email'); assert.equal(annex.quality_engine.depth, 'light');
+  assert.match(annex.spec_sheet.acceptance_tests[0].test, /subject line state the story/);
+  assert.doesNotMatch(annex.gates.find(g => g.id === 'format_complete').gate, /merge tags|exit rule/);
+  assert.equal(annex.gates.some(g => g.id === 'buyer_can_act'), false);
+  assert.equal(annex.mode_default.mode, 'new');
+});
+
+test('a product description sells: it keeps the buyer gate and copy levers, with no look capture', () => {
+  const { annex } = prepareJobContext({ request: 'Write product descriptions for the Acme Pet linen dog bed in four colours, for our Shopify store.' });
+  assert.equal(annex.quality_engine.family, 'product-description'); assert.equal(annex.deliverable_kind, 'copy');
+  assert.ok(annex.gates.some(g => g.id === 'buyer_can_act')); assert.ok(annex.gates.some(g => g.id === 'proven_levers_checked'));
+  assert.match(annex.gates.find(g => g.id === 'format_complete').gate, /lead benefit first/);
+  assert.equal(annex.production_gate.requires.brand_dna, false); assert.equal(annex.brand_context.level, 'voice');
+});
+
+test('an internal announcement and a policy get their own questions and tests, not help-doc or code defaults', () => {
+  const note = prepareJobContext({ request: 'I am in people ops at Acme Pet. Write the all-hands announcement of our new travel policy: what changes on 1 January and who to ask.' }).annex;
+  assert.equal(note.quality_engine.family, 'internal-announcement'); assert.equal(note.deliverable_kind, 'copy');
+  assert.match(note.spec_sheet.acceptance_tests[0].test, /what changes and when/);
+  assert.ok(!note.questions.some(q => q.id === 'change'), 'the request already says what changes and when');
+  assert.equal(note.gates.some(g => g.id === 'buyer_can_act'), false);
+  const policy = prepareJobContext({ request: 'Draft a policy on staff using personal phones on the Acme Pet shop floor, with the exceptions.' }).annex;
+  assert.equal(policy.quality_engine.family, 'policy-doc'); assert.equal(policy.deliverable_kind, 'ops_doc');
+  assert.match(policy.spec_sheet.acceptance_tests[0].test, /condition and an action/);
+  assert.equal(policy.mode_default.mode, 'new');
+});
+
+test('an RFP answer keeps the question numbers and evidence; the section it names is not asked again', () => {
+  const { annex } = prepareJobContext({ request: 'Write our answer to section 4 of a university RFP: how we handle data migration from their old CRM, in about 400 words.' });
+  assert.equal(annex.quality_engine.family, 'rfp-response');
+  assert.ok(!annex.questions.some(q => q.id === 'questions'));
+  assert.match(annex.gates.find(g => g.id === 'format_complete').gate, /question's number and wording kept/);
+  assert.equal(annex.gates.some(g => g.id === 'proven_levers_checked'), false);
+});
+
+test('a status-page update is a short crisis piece; a crisis statement keeps the full shape', () => {
+  const status = cardShape('crisis-response', 'Write the status page update for this morning\'s checkout outage.');
+  assert.equal(status.light, true); assert.match(status.scope_note, /One status-page update/);
+  assert.equal(qualityEngineContext('Write the status page update for this morning\'s checkout outage. We are still investigating.').depth, 'light');
+  const statement = cardShape('crisis-response', 'Write our holding statement about the data breach.');
+  assert.equal(statement.light, undefined); assert.equal(statement.scope_note, undefined);
+  assert.equal(routeJob({ request: 'Write a vendor scorecard comparing three payroll providers, with email support and an API.' }, {}).mode, 'single');
 });

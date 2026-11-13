@@ -1638,7 +1638,19 @@
     },
     "crisis-response": {
       "job": "write-and-tell-stories",
-      "agent": "ghada-crisis-comms"
+      "agent": "ghada-crisis-comms",
+      "variants": [
+        {
+          "words": [
+            "status page",
+            "incident update",
+            "outage update",
+            "downtime",
+            "degraded"
+          ],
+          "agent": "makena-incident-reports"
+        }
+      ]
     },
     "review-replies": {
       "job": "help-customers",
@@ -1934,6 +1946,130 @@
     "seo-article": {
       "job": "get-found-in-search",
       "agent": "andile-seo-articles"
+    },
+    "press-pitch": {
+      "job": "write-and-tell-stories",
+      "agent": "bayo-press-releases",
+      "variants": [
+        {
+          "words": [
+            "podcast guest",
+            "guest on",
+            "podcasts"
+          ],
+          "agent": "curtis-podcast-guesting"
+        }
+      ]
+    },
+    "rfp-response": {
+      "job": "sell-and-negotiate",
+      "agent": "terrence-rfps",
+      "variants": [
+        {
+          "words": [
+            "bid no bid",
+            "no-bid",
+            "whether to bid",
+            "go no go"
+          ],
+          "agent": "neville-bid-no-bid"
+        }
+      ]
+    },
+    "sop": {
+      "job": "document-work",
+      "agent": "faisal-sops"
+    },
+    "product-description": {
+      "job": "run-your-store",
+      "agent": "faye-product-pages",
+      "variants": [
+        {
+          "words": [
+            "amazon"
+          ],
+          "agent": "gina-amazon-launch"
+        },
+        {
+          "words": [
+            "food",
+            "snack",
+            "snacks",
+            "chocolate",
+            "coffee",
+            "tea",
+            "sauce",
+            "gift box",
+            "gift boxes"
+          ],
+          "agent": "yasmin-foodmaker"
+        }
+      ]
+    },
+    "audio-ad-script": {
+      "job": "write-ad-copy",
+      "agent": "malik-audio-ads"
+    },
+    "internal-announcement": {
+      "job": "lead-people",
+      "agent": "rebecca-internal-comms",
+      "variants": [
+        {
+          "words": [
+            "rollout",
+            "roll out",
+            "change management"
+          ],
+          "agent": "pavel-staffcomms"
+        }
+      ]
+    },
+    "vendor-scorecard": {
+      "job": "think-and-decide",
+      "agent": "soren-vendors",
+      "variants": [
+        {
+          "words": [
+            "supplier quotes",
+            "manufacturer",
+            "manufacturers",
+            "factory",
+            "factories",
+            "packaging",
+            "sourcing",
+            "samples"
+          ],
+          "agent": "huong-sourcing"
+        }
+      ]
+    },
+    "policy-doc": {
+      "job": "document-work",
+      "agent": "nazmul-handbook",
+      "variants": [
+        {
+          "words": [
+            "privacy policy",
+            "data retention",
+            "gdpr"
+          ],
+          "agent": "farid-data-privacy"
+        },
+        {
+          "words": [
+            "returns policy",
+            "return policy",
+            "refund policy",
+            "refund decision",
+            "refund rules"
+          ],
+          "agent": "hyejin-returns"
+        }
+      ]
+    },
+    "localisation-brief": {
+      "job": "write-and-tell-stories",
+      "agent": "behrouz-translation"
     }
   }
 }

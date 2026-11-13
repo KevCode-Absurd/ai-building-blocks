@@ -41,6 +41,11 @@ test('every quality card can be chosen from the words people use', () => {
     'social-calendar': 'Plan a content calendar for November', 'seo-article': 'Write a blog post about protein',
     'paid-social-ads': 'Write 5 Meta ad concepts',
     'creative-brief': 'Write a one-page creative brief for our agency', 'analysis-memo': 'Write an analysis memo on why customers go inactive',
+    'press-pitch': 'Write a pitch email to a tech reporter offering an exclusive', 'rfp-response': 'Answer the security questionnaire section of this RFP',
+    sop: 'Write the SOP for closing the store each night', 'product-description': 'Write the product description for our new backpack',
+    'audio-ad-script': 'Write a 60-second host-read podcast ad', 'internal-announcement': 'Write the all-hands announcement about the new office policy',
+    'vendor-scorecard': 'Compare these three suppliers in a weighted scorecard', 'policy-doc': 'Write the refund decision rules for our support agents',
+    'localisation-brief': 'Write a brief for our translation agency for the German launch',
   };
   for (const card of cards) {
     assert.ok(asks[card], `add a sample ask for the new card ${card}`);
@@ -55,7 +60,7 @@ test('a named deliverable is led by the specialist who does exactly that', () =>
     assert.equal(deliverableLead(task.brief ?? task.request)?.id, lead, id);
   }
   for (const row of GOLDEN.extra) {
-    assert.equal(qualityFamily(row.request), row.card);
+    assert.equal(qualityFamily(row.request), row.card, row.request);
     assert.equal(leadAgentFor('make-video-ads', row.request).id, row.lead, 'the card specialist outranks a wrong job guess');
   }
   // Variants pick inside a card: investor letters and translation work have their own specialists.
@@ -67,6 +72,22 @@ test('a named deliverable is led by the specialist who does exactly that', () =>
   // The deliverable named first decides the card: an analysis memo that proposes experiments is still an analysis memo.
   assert.equal(qualityFamily('Write an analysis memo on why accounts go inactive. Cover three hypotheses and an experiment to test each.'), 'analysis-memo');
   assert.equal(qualityFamily('Write a decision memo on whether to ship the experiment.'), 'experiment-design');
+  // 13 Nov 2026: a pitch to a reporter is a press pitch unless the story is a crisis; a status-page update is crisis
+  // work for the incident lead; an all-hands policy announcement is an announcement, not help docs or the policy itself.
+  assert.equal(qualityFamily('Write a press pitch email to a journalist at TechCrunch about our Series B.'), 'press-pitch');
+  assert.equal(qualityFamily('Pitch our founder to a reporter as an expert on the recall.'), 'crisis-response');
+  assert.equal(deliverableLead('Write the status page update for this morning\'s checkout outage.')?.id, 'makena-incident-reports');
+  assert.equal(deliverableLead('A reporter asked about the data breach. Write our holding statement.')?.id, 'ghada-crisis-comms');
+  assert.equal(qualityFamily('Write the all-hands announcement about our new expense policy.'), 'internal-announcement');
+  assert.equal(qualityFamily('Write our remote work policy.'), 'policy-doc');
+  assert.equal(qualityFamily('Write a help-center guide to our returns policy.'), 'help-docs');
+  assert.equal(qualityFamily('Write a decision memo on whether to change our refund policy.'), 'analysis-memo');
+  assert.equal(qualityFamily('Write the FAQ section for our pricing page.'), 'help-docs');
+  assert.equal(qualityFamily('Write pricing FAQs for our annual plan.'), 'help-docs');
+  assert.equal(qualityFamily('Write a product page for our new mattress.'), 'landing-page');
+  assert.equal(qualityFamily('Write the hiring scorecard for a senior designer.'), 'job-description');
+  assert.equal(deliverableLead('Write the Amazon listing for our new protein bar.')?.id, 'gina-amazon-launch');
+  assert.equal(deliverableLead('Write a 30-second podcast host-read ad script for our meal kits.')?.id, 'malik-audio-ads');
   // A card with no specialist of its own leaves the job's lead in place.
   assert.equal(deliverableLead('Make a landing page for our subscription')?.id, null);
   assert.equal(leadAgentFor('write-landing-page', 'Make a landing page for our subscription').id, 'bao-website-copy');

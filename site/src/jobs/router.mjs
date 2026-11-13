@@ -91,7 +91,16 @@ const GENERIC_VERBS=new Set(['prepare','do','fix','update','improve','translate'
 const NAMED_DELIVERABLES=[
  [/\b(?:faqs?|help (?:articles?|pages?|docs?|centre|center)|support (?:articles?|pages?|docs?)|knowledge base)\b/,['help-customers','document-work']],
  [/\b(?:press|media|news) releases?\b|\bpress kits?\b/,['write-and-tell-stories','grow-social']],
- [/\bproduct (?:descriptions?|listings?|titles?)\b/,['run-your-store','set-up-store','write-landing-page']],
+ [/\bproduct (?:detail )?(?:page )?descriptions?\b|\bproduct (?:listings?|titles?)\b/,['run-your-store','set-up-store','write-landing-page']],
+ // 13 Nov 2026: a host-read ad went to an ad-checking job, an RFP answer to a custom-GPT builder, and an internal
+ // announcement to a meetings planner. Each plain name below goes to the job whose lead writes that thing.
+ [/\b(?:radio|podcast|audio) (?:ad |sponsor(?:ship)? )(?:scripts?|spots?|reads?)\b|\b(?:radio|audio|podcast) ads?\b|\bradio (?:spots?|scripts?)\b|\bhost[- ]read\b/,['write-ad-copy','work-with-audio']],
+ [/\brf[piq]s?\b|\brequests? for (?:proposals?|information|quotes?)\b|\btenders?\b|\bbid responses?\b|\b(?:security|vendor|due diligence|procurement) questionnaires?\b/,['sell-and-negotiate']],
+ [/\b(?:press|media|pr|story) pitch(?:es)?\b/,['write-and-tell-stories']],
+ [/\bsupplier (?:scorecards?|comparisons?|evaluations?|selection)\b/,['plan-supply-chain','think-and-decide']],
+ [/\b(?:vendor|tool|software|platform|provider) (?:scorecards?|comparisons?|evaluations?|selection)\b/,['think-and-decide']],
+ [/\ball[- ]hands (?:announcements?|e-?mails?|notes?|memos?|posts?)\b|\binternal (?:announcements?|memos?)\b|\b(?:staff|company[- ]wide|all[- ]staff) (?:announcements?|memos?|notes?|messages?)\b/,['lead-people','organise-work']],
+ [/\b(?:locali[sz]ation|translation|transcreation|translator) (?:briefs?|style guides?|guides?|kits?)\b|\btranscreation\b/,['write-and-tell-stories']],
  [/\bjob (?:descriptions?|adverts?|ads?|postings?|specs?)\b/,['hire-people']],
  [/\b(?:resumes?|cvs?|cover letters?)\b/,['find-a-job']],
  [/\b(?:linkedin|instagram|facebook|twitter|tiktok|social(?: media)?) (?:posts?|captions?|content|calendars?|threads?|carousels?)\b|\bcontent calendars?\b/,['grow-social']],
@@ -99,7 +108,7 @@ const NAMED_DELIVERABLES=[
  [/\bcase stud(?:y|ies)\b|\bcustomer stor(?:y|ies)\b|\bwhite ?papers?\b|\bebooks?\b|\bblog posts?\b|\barticles?\b/,['write-and-tell-stories','get-found-in-search']],
  [/\bbusiness plans?\b/,['plan-strategy']],
  [/\b(?:privacy|refund|returns?|shipping|cookie) polic(?:y|ies)\b|\bterms (?:of service|and conditions)\b/,['check-contracts','help-customers','document-work']],
- [/\b(?:sops?|runbooks?|handover (?:notes?|docs?)|meeting (?:minutes|notes))\b/,['document-work','organise-work']],
+ [/\b(?:sops?|procedures?|runbooks?|work instructions?|handover (?:notes?|docs?)|meeting (?:minutes|notes))\b/,['document-work','organise-work']],
  [/\bproposals?\b/,['sell-and-negotiate']],
  [/\b(?:speech(?:es)?|keynotes?|toasts?|elevator pitch(?:es)?)\b/,['speak-and-persuade']],
  [/\b(?:pitch|slide|sales|investor|board) decks?\b|\bpresentations?\b/,['work-with-files','speak-and-persuade']],

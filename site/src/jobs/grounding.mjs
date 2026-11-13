@@ -443,6 +443,14 @@ export function suggestDeliverableKind(request = '') {
   if (assess && !create) return /\b(?:analy[sz]\w*|why (?:is|are|did|has|have)|investigate|report on|benchmark)\b/i.test(words) && !/\baudit\b/i.test(words) ? kind('analysis', 'assessment words without a creation verb') : kind('audit', 'assessment words without a creation verb');
   // A job description is a document for a team, whatever "ad" or "posting" follows the word job.
   if (/\bjob (?:descriptions?|adverts?|ads?|postings?|specs?)\b/i.test(words)) return kind('ops_doc', 'document words');
+  // 13 Nov 2026: a store trade-in SOP was guessed as code ("app", "data"), a product detail page description as an ops
+  // document, and an all-hands announcement as one too. The document's own name decides before the words around it.
+  if (/\b(?:sops?|standard operating procedures?|(?:step[- ]by[- ]step |operating |written )procedures?|runbooks?|work instructions?)\b/i.test(words)) return kind('ops_doc', 'procedure words');
+  if (/\b(?:rfps?|rfis?|requests? for proposals?|tenders?|bid responses?|security questionnaires?|vendor questionnaires?|due diligence questionnaires?)\b/i.test(words)) return kind('ops_doc', 'proposal answer words');
+  if (/\bproduct (?:detail )?(?:page )?descriptions?\b|\bproduct detail pages?\b|\bpdp (?:copy|descriptions?|text)\b|\bproduct (?:titles?|bullets?)\b|\b(?:amazon|etsy|ebay|marketplace) listings?\b|\bitem descriptions?\b|\b(?:radio|podcast|audio|host[- ]read) (?:ads?|spots?|scripts?|reads?)\b|\bhost[- ]read\b/i.test(words) && !/\b(?:build|(?<!\b(?:promo|discount|offer|coupon|voucher) )code|implement|redesign|launchable|working)\b/i.test(words)) return kind('copy', 'copy words');
+  // A scorecard or comparison for choosing among vendors is a plan for a decision, new work rather than an audit of
+  // existing data; a hiring scorecard is not one.
+  if (/\b(?:scorecards?|scoring matri(?:x|ces)|decision matri(?:x|ces)|evaluation matri(?:x|ces)|(?:vendor|supplier|provider|tool|software|platform) (?:comparisons?|evaluations?|selection))\b|\bcompar(?:e|ing|ison of) (?:the |our |these |those |\d+ |two |three |four |five )?(?:[\w-]+ ){0,3}(?:vendors|suppliers|providers|quotes|bids)\b/i.test(words) && !/\b(?:hiring|interview\w*|candidates?|recruit\w*)\b/i.test(words)) return kind('plan', 'comparison words');
   // An email series or newsletter is email work even when it asks for the "body copy" of each email.
   // Mixed work (a page or ads as well) falls through to the rules below.
   if (/\b(?:emails?|newsletters?)\b/i.test(words) && /\b(?:series|sequences?|subject lines?|preview text|welcome|drip|flows?|newsletters?)\b/i.test(words)
@@ -452,6 +460,8 @@ export function suggestDeliverableKind(request = '') {
   if (/\b(?:landing[ -]?pages?|web ?pages?|websites?|home ?page|(?:product|sales|pricing|sign[ -]?up|checkout|about|contact|collection|category) pages?|site)\b/i.test(words)) return kind('web_page', 'page or site words');
   if (/\b(?:emails?|newsletters?|drip|welcome series|flows? in klaviyo)\b/i.test(words)) return kind('email', 'email words');
   if (/\b(?:ads?|creatives?|advertising|advertisements?|ugc|thumb-?stop)\b/i.test(words)) return kind('ad_creative', 'ad words with a creation verb');
+  // An announcement is words people read, even when it is about a policy, a plan or a new tool.
+  if (/\b(?:announcements?|all[- ]hands|town ?hall|internal memos?|(?:staff|company[- ]wide|all[- ]staff) (?:memos?|notes?|messages?|posts?))\b|\bannounc(?:e|es|ing)\b/i.test(words)) return kind('copy', 'announcement words');
   if (/\b(?:strategy|positioning|go[ -]to[ -]market|pricing model|brand platform)\b/i.test(words)) return kind('strategy', 'strategy words');
   if (/\b(?:plan|roadmap|calendar|schedule|forecast|budget)\b/i.test(words)) return kind('plan', 'plan words');
   if (/\b(?:code|app|script|function|api|bug|integration|plugin|theme)\b/i.test(words)) return kind('code', 'code words');
@@ -643,7 +653,8 @@ const askQuestions = (kind, family, request) => intakeQuestions({ deliverableKin
 const AVOID_RESERVE = 150;
 /** prepare_job_context: a short brief for the model plus a structured annex. The brief names the annex parts to open. */
 // Cards whose work sells nothing at a price: no stock, price or link check for them.
-const NOT_SELLING_CARDS = new Set(['analysis-memo', 'creative-brief', 'notification-copy', 'support-macros', 'crisis-response', 'help-docs', 'job-description', 'investor-update', 'review-replies', 'research-design', 'webinar-script']);
+// A product description and an audio ad sell, so they keep the stock, price and link check.
+const NOT_SELLING_CARDS = new Set(['analysis-memo', 'creative-brief', 'notification-copy', 'support-macros', 'crisis-response', 'help-docs', 'job-description', 'investor-update', 'review-replies', 'research-design', 'webinar-script', 'press-pitch', 'rfp-response', 'sop', 'internal-announcement', 'vendor-scorecard', 'policy-doc', 'localisation-brief']);
 export function prepareJobContext(input = {}, context = {}) {
   const request = String(input.request ?? '').trim();
   const resolved = resolveDeliverableKind(input.deliverable_kind, request), kind = resolved.kind, family = familyOf(kind);

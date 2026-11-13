@@ -195,5 +195,68 @@ export const QUALITY_PROFILES = {
     "shape": "Activation goal first; one table of steps (day or trigger, channel, message, goal); in-product messages at most 40 words, emails 100-150 words; metrics per step.",
     "reader_minutes": 8,
     "notes": "No dev data; follows the lifecycle-email evidence that each message has one job and operational detail lives in the table."
+  },
+  "press-pitch": {
+    "aim": 1.0,
+    "ceiling": 1.2,
+    "shape": "Subject line of about 10 words or fewer that states the story; body 100-200 words: news hook and angle in 2 sentences, why this reporter in 1 line, what is offered, embargo terms if any, one ask, contact; an optional 2-3 sentence follow-up.",
+    "reader_minutes": 1,
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. A reporter judges it in seconds, so the story leads and company backstory is cut."
+  },
+  "rfp-response": {
+    "aim": 1.0,
+    "ceiling": 1.2,
+    "shape": "One row per question in the buyer's order: number, answer (Yes, No, Partly, Planned), how it works in 1-3 sentences, evidence with date, scope or limits, owner to confirm; then a short open-items list; within any word limit the buyer sets.",
+    "reader_minutes": 8,
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Answer first and evidence per line earn length; marketing prose does not."
+  },
+  "sop": {
+    "aim": 1.0,
+    "ceiling": 1.2,
+    "shape": "Header (number, version, owner, effective and review dates); purpose and scope in 2 lines; roles table; before you start; numbered one-action steps with checks inline; exceptions table; records table.",
+    "reader_minutes": 5,
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Staff follow it on shift, so one action per step and no background prose."
+  },
+  "product-description": {
+    "aim": 1.0,
+    "ceiling": 1.2,
+    "shape": "Title; 1-2 sentence benefit lead; 3-6 benefit bullets; specs table from the source; fit or size and care; what is in the box; shipping and returns line; 120-300 words of copy plus the table.",
+    "reader_minutes": 1,
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Shoppers scan, so specs live in the table and no claim goes past the source."
+  },
+  "audio-ad-script": {
+    "aim": 1.0,
+    "ceiling": 1.2,
+    "shape": "Header with slot length, word count at about 150 words a minute (about 75 words for 30 seconds), format, offer, code and URL; the script or talking points with the code and URL said twice; must-say and must-not-say lines; read notes.",
+    "reader_minutes": 2,
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. The slot length is a hard limit; the word count must fit it."
+  },
+  "internal-announcement": {
+    "aim": 1.0,
+    "ceiling": 1.2,
+    "shape": "Subject that names the change; what changes in the first 2 sentences, when, who it affects, why, numbered actions with dates, where to ask; 150-400 words; manager notes or FAQ only if asked, labeled and separate.",
+    "reader_minutes": 2,
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Every employee reads it once, so the change and the action lead and context stays short."
+  },
+  "vendor-scorecard": {
+    "aim": 1.0,
+    "ceiling": 1.2,
+    "shape": "Recommendation box first (choice, why, top risk); the need in 2-3 lines; deal-breakers pass or fail table; criteria and weights table fixed before scoring; scoring table with evidence per score; totals and sensitivity; risks and next steps with owners.",
+    "reader_minutes": 6,
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. The tables carry the work; extra length is earned only by evidence per score."
+  },
+  "policy-doc": {
+    "aim": 1.0,
+    "ceiling": 1.2,
+    "shape": "Header (owner, version, effective and review dates); purpose and scope; key terms; numbered rules written as condition then action; limits and approvals table; examples table with edge cases; escalation table.",
+    "reader_minutes": 6,
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Rules must be testable; values statements with no rule do not earn length."
+  },
+  "localisation-brief": {
+    "aim": 1.0,
+    "ceiling": 1.2,
+    "shape": "One to two pages: project summary; audience and use per locale; tone with one example line; terms to keep and never translate; glossary table; length and format rules table; legal and cultural flags; review steps and timeline.",
+    "reader_minutes": 5,
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. The glossary and length rules are the usable parts; background on the brand stays short."
   }
 };

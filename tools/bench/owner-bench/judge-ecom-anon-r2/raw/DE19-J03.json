@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads the data like an owner: women 25-40 cheaper at ₹1,058, men at 70% of spend, quiet wheels as top review theme, and builds the three-concept pick and test plan around exactly that.",
+  "biggest_mistake": "Some primary text is a little longer than the short-line voice asks, and concept 3's 'nobody woke up' line is a touch more clever than understated.",
+  "what_would_make_it_a_10": "Tighter, shorter primary text on every concept in the exact brand voice, and the scratch objection handled honestly inside one concept rather than only as a note."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very practical: build rules, aspect ratios, headline lengths, safe zones, and review lines labelled properly make it easy to hand to a designer.",
+  "biggest_mistake": "Puts the gate-check static (concept 2) in the first three ahead of the women's lift concept, against the cheaper ₹1,058 audience the data most supports; and rules out the 41+ group too flatly.",
+  "what_would_make_it_a_10": "Pick the first three from the data properly (quiet wheels, women solo lift, work flyers) and write the primary text in shorter, calmer brand voice rather than spec lists."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads the numbers and the reviews as an owner would and gives eight genuinely different ideas with a first-three pick that matches where the money and the cheapest buyers are. Output 2 is tidy to produce but its picks and copy feel more like a spec sheet than a set of ads I would run."
+}

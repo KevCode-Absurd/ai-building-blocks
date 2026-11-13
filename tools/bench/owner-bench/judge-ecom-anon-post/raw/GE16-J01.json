@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Nailed every hidden signal in the data—reviving 'Dad's razor vs mine', isolating women 25–34, and exposing the Starter Kit COD trap—with exact, flawless unit economics and an instantly executable 14-day budget ladder.",
+  "biggest_mistake": "Could have explicitly suggested testing alternative payment hooks (like a prepaid discount) for the Starter Kit rather than just cutting it entirely.",
+  "what_would_make_it_a_10": "It is already practically a 10; adding a quick split-test proposal for a prepaid-only landing page for the Starter Kit would make it perfect."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The proposed geo-holdout test for retargeting is brilliant media-buying thinking, and the attribution split between prospecting (86%) and retargeting (72%) is nuanced.",
+  "biggest_mistake": "Locks up over 25% of the total budget (₹1,49,100) in reserve while hiking spend on the unproven UGC test to ₹56,000, which is too passive given warehouse capacity and cash health.",
+  "what_would_make_it_a_10": "Commit more capital upfront to proven setups with strict kill switches instead of parking a quarter of the ad spend in a passive reserve."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both answered the brief at an elite level and caught all three data traps, but Output 1 provides a more balanced, aggressive-yet-disciplined budget allocation and cleaner decision thresholds that my media team can run with on Monday morning."
+}

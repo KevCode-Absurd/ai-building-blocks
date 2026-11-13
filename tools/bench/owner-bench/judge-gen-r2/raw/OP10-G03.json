@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the real signal: database growth is mostly low-converting AI-builder traffic that is hurting margin, and it explains the burn increase and runway clearly.",
+  "biggest_mistake": "It is a little too dense for an investor phone read, and Customer A is not quite as prominent as the AI-builder issue despite being a major bad-news item.",
+  "what_would_make_it_a_10": "Move Customer A into the opening bad-news block, tighten the wording, and remove or internalize the assumptions before sending."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the missed ARR forecast, gross margin drop, Customer A loss, runway, and the VP Enterprise Sales ask in the first screen in a clean investor-ready way.",
+  "biggest_mistake": "It is slightly lighter on the margin math and the expected impact of the 48-hour AI-builder pause than the best version would be.",
+  "what_would_make_it_a_10": "Add one sentence quantifying why the 48-hour pause should materially reduce free-tier compute, and mention the likely NRR impact from Customer A."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 2 is easier to read on a phone and gets the bad news plus the main ask in front of investors faster. Output 1 has slightly richer analysis, but it feels more like an internal memo than the tight investor email requested."
+}

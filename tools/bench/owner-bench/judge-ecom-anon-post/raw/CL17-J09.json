@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clean, readable diagnosis. The proved-versus-to-check table has owners and dates. The $94 payback rule follows correctly from $71 first-order contribution plus a 31% repeat rate. Meta at $121 is correctly flagged as unrecoverable.",
+  "biggest_mistake": "Gross profit impact is mostly given as High or Medium labels rather than sized numbers. The contribution baseline on the scorecard is 'set in week 1', and the flow target is 'pre-January level'. That leaves the board's main metric without a target.",
+  "what_would_make_it_a_10": "Size each move in points of contribution margin and compute today's contribution-after-ads baseline. Give a hard number for the flow-revenue target and a first-week action for each move."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It derives contribution after ads, 13.6% then and 7.8% now, from the data, and the derivation checks out. Every move is sized in margin points with low, likely and high ranges and week-4 and week-8 kill lines. It also avoids double-counting move 4 with move 1. This is exactly what the board will ask for.",
+  "biggest_mistake": "Some content is invented: the specific dates, the Black Friday timing and the 'practitioner yardstick' that flows should be about half of email revenue. The new-customer target of 'down 11% or better' is weak. The dense math makes it harder to read than it should be.",
+  "what_would_make_it_a_10": "Drop or flag the invented dates and benchmark, and set a real improvement target for new-customer orders. Move the working into an appendix so the plan reads at grade 8."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get Meta, linen and the switched-off email right, and the numbers check out. Output 2 gives me a contribution-margin baseline, sized gains and kill thresholds I can take to the board. Output 1 reads better but leaves the key metric unset."
+}

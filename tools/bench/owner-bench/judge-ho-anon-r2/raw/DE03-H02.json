@@ -1,0 +1,35 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "biggest_strength": "Takes the 4.0 apart against the 2.5 break-even, fixes the feed first, rebuilds the $240k split so it adds up, and shows a profit range with assumptions on every line.",
+  "biggest_mistake": "The projected brand search range ($148k to $168k profit) is optimistic and the reserve rule adds a little complexity; the 2.26 blended non-brand figure is right but the table mixes brand Search and PMax brand in one row, which could confuse a fast reader.",
+  "what_would_make_it_a_10": "Tighter headings, a single clean non-brand vs brand profit bridge, and one line on how you will protect Claire's experience if the cut to broad terms shrinks reach."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "biggest_strength": "Very readable and on-voice, with the profit table by segment and a sensible feed diagnosis checklist (sale price, variant link, structured data).",
+  "biggest_mistake": "The forecast oversells: base case claims profit ~$205,900 and ROAS 4.6 on a PMax line assumed at 2.6 without evidence, and brand search at 25 ROAS after moving budget is a stretch; it also sets PMax target at 2.6 then 3.0 in a way that risks relearning twice.",
+  "what_would_make_it_a_10": "A defensible expected-profit range (not a single flattering base case), a consistent 2.5 break-even test on every line, and a calmer, single-change PMax plan."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would send to my CFO: every line is tested against 2.5, the split adds to exactly $240,000, the feed fix is first and specific, and the profit outlook is honest rather than flattering. Output 2 reads beautifully but its headline forecast promises too much and could set the wrong expectation."
+}

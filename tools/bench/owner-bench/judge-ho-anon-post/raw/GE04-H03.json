@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Superb mathematical reasoning, breaking the financial impact down by month, and an excellent 'bolder move' suggestion for instant exchanges.",
+  "biggest_mistake": "The copy is slightly robotic and misses the mark on providing a dedicated post-delivery message that actively helps first-time buyers check their fit.",
+  "what_would_make_it_a_10": "Warm up the tone to match our playful, confident voice, and include tangible fit instructions in the post-purchase flow rather than just linking back to the quiz."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent brand voice and brilliant practical fit advice (e.g., 'band on the loosest hook') in the post-delivery messages.",
+  "biggest_mistake": "Sending a 'Fit check' email 10 minutes after ordering is risky and could cause buyer's panic; it would be smoother to build this into the main order confirmation.",
+  "what_would_make_it_a_10": "Roll the 10-minute fit check email into the main order confirmation to reduce email volume, and it would be absolutely perfect."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both candidates flawlessly interpreted the data and delivered highly realistic, accurately costed plans. Output 2 wins for perfectly capturing the brand's voice and offering tangible bra-fitting advice in the post-delivery emails, which directly answered the brief's request."
+}

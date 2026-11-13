@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly spots the three real levers: warehouse-exit dispatch emails, bra fit finder visibility, and one-step size swaps instead of refund-first returns.",
+  "biggest_mistake": "It does not include the proactive day-3 update, even though 62% of WISMO tickets arrive on days 3 to 5.",
+  "what_would_make_it_a_10": "Add the day-3 reassurance message, tighten the rollout around that ticket spike, and be slightly more cautious about assuming fit finder users will keep the full 19-point return-rate gap."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It directly attacks the self-made day-3 to day-5 WISMO spike, the hidden fit quiz, and the refund-biased portal with copy and numbers that fit the brief.",
+  "biggest_mistake": "A few message details need light operational checking, such as whether 'we're packing your order now' and 'your parcel is with courier now' are always true at those trigger points.",
+  "what_would_make_it_a_10": "Make the trigger wording fully operationally safe and add a slightly clearer split between cost savings and sales retained from swaps."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would rather run: it includes the missing day-3 update, handles size-swap routing more precisely, and gives a more honest range for the fit-finder impact. Output 1 is strong, but it misses the key proactive message during the exact ticket spike."
+}

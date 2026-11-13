@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks one clear move that matches the real leak in the data, shows usable revenue math, and respects our transparency and grandfathering commitments.",
+  "biggest_mistake": "It dismisses yearly billing too quickly and has a few shaky numbers or assumptions around revenue estimates and feature details that would need checking before we publish.",
+  "what_would_make_it_a_10": "Tighten the math, explicitly add the low-risk yearly upsell as part of the same recommendation or rollout, and validate the plan design against likely Team cannibalization."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It focuses on the right segment, names the main cannibalization risk clearly, and gives a practical test with go/stop thresholds.",
+  "biggest_mistake": "The yearly price is inconsistent with our current pricing structure and the brief, and several numbers are off enough that I would not trust it without reworking the math.",
+  "what_would_make_it_a_10": "Use correct pricing math throughout, align the yearly price and promises with our model, and show a cleaner owner-level revenue case tied to the two-quarter window."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would actually use first. It understands the business problem better, fits our voice, and is much closer to publishable even though I would still verify the math."
+}

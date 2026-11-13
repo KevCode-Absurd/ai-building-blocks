@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clean, natural email copy that strictly adheres to the grade-7 reading level and calm brand tone.",
+  "biggest_mistake": "Email 5 recommends a universal 3-step routine using Salicylic Acid 2% wash twice daily for everyone, which directly contradicts the needs of the 19% dry and sensitive segment.",
+  "what_would_make_it_a_10": "Personalise the final routine in Email 5 by skin type rather than bundling all three products together, and introduce the quiz-matched product in Email 1 instead of holding it until Day 1."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Superb data integration: delivers the quiz-matched active in Email 1, tailors Email 5's routines and pricing by skin concern, and uses customer verbatims as high-converting subject lines.",
+  "biggest_mistake": "Email 4's explanation of percentages ('10 parts in every 100') is a bit dry compared to the rest of the flow, though true to the brand.",
+  "what_would_make_it_a_10": "Already exceptional; adding a fallback branch for subscribers whose quiz response failed to pass to Klaviyo would make the technical flow bulletproof."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 gets straight to the point by serving the quiz-matched product in Email 1, and intelligently tailors the closing routines in Email 5 instead of pushing Salicylic Acid on dry or sensitive subscribers. The copy captures Sneha and Arjun's exact words, and the Klaviyo logic and commercial projections show true mastery of retention marketing."
+}

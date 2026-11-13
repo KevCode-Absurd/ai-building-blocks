@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the real signals: APAC/00:00-08:00 UTC coverage, weekend clarity, and writing as the main predictor rather than support-tool experience.",
+  "biggest_mistake": "The salary is not as high up as it should be, and the piece likely runs a bit over the 1,100-word cap.",
+  "what_would_make_it_a_10": "Move the $82,000 salary into the first screen, trim the extra table/detail, and keep the excellent concrete exercises and blind-review process."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clean, on-brand, puts salary and the hard truths up front, and ties the application process to the data that writing predicts success.",
+  "biggest_mistake": "The application reply prompt is less objective because candidates do not have enough facts to solve the problem, and the longer exercise/interview questions are not fully specified.",
+  "what_would_make_it_a_10": "Add a concrete, scorable written exercise with known facts and standard call questions so the hiring team can run it without inventing the next step."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 1 is more ready to hand to the hiring team because it includes the actual application exercise, shortlist exercise, call questions, scoring process, and calibration steps. Output 2 is cleaner and better on salary placement, but it leaves more for me to design before we can run the hire."
+}

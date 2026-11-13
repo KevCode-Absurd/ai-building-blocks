@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It focuses hard on the pages that already prove they drive trials, gives a real first week, and stays inside the team's capacity.",
+  "biggest_mistake": "It puts /vs-google-analytics first and delays the cookie-banner rewrite, even though the owner's own cheap-win signal was to refresh the cookie-banner and no-cookies pages first.",
+  "what_would_make_it_a_10": "Lead with the two near-page-one cheap wins from week one, tighten a couple of shaky projections, and keep the same level of specificity."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 5,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly shows that comparison pages beat blog content for trials and gives a useful stop list tied to the data.",
+  "biggest_mistake": "It breaks the brief with extra pages and unsupported projections, including invented trial gains and content ideas that are not grounded in the provided data or capacity logic.",
+  "what_would_make_it_a_10": "Cut the speculative extras, stay strictly within the 12-piece capacity, and base every forecast and page choice on the provided query and conversion data."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to something I could run on Monday: it is tighter to my numbers, more capacity-aware, and more ready to hand to the writer. Output 2 has good instincts, but it adds speculative work and some numbers I would not trust enough to plan around."
+}

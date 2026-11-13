@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong operational detail: clean templates, quiet hours, after-hours bot, and most RTO/chat numbers are right.",
+  "biggest_mistake": "The prepaid nudge has no incentive and is filed as Utility, so it misses the tier-3 switch lever and risks Meta reclassification.",
+  "what_would_make_it_a_10": "Add a tier-specific prepaid incentive or advance, correct it to Marketing, resolve the tier-2/3 hold contradiction, and add a final auto-cancel rule."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tiered RTO plan with prepaid incentives and calls where refusal cost is highest, plus net-savings holdout discipline and a bold ₹99 advance test.",
+  "biggest_mistake": "T5 assumes COD is available on every abandoned cart; it needs a non-COD pincode variant, and the weekly scorecard omits after-hours response time.",
+  "what_would_make_it_a_10": "Add the cart template fallback for non-COD pincodes, add after-hours response time to the scorecard, and tighten the weekly baseline rounding."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 makes the tier-3 RTO problem actionable with differentiated prepaid incentives, calls and a cancellation rule, and its net-savings/holdout logic is what I would actually run. Output 1 is clean, but it leaves the prepaid nudge undifferentiated and mis-categorises it as Utility."
+}

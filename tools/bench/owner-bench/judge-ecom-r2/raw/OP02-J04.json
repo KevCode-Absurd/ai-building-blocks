@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the strongest signals into three distinct, ready-to-shoot ads: blind taste test, 3 pm swap, and family/game-day, while handling price and disclosure well.",
+  "biggest_mistake": "It is a little long and one family-script claim line drifts from the exact approved wording by saying “real fruit juice” without “botanical flavours.”",
+  "what_would_make_it_a_10": "Tighten it under the word limit and make every claim line match the approved claims exactly."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly leads with the winning taste-test and 3 pm swap angles, uses the real customer language, and states the price plainly.",
+  "biggest_mistake": "It is less production-ready because paid disclosure is not built into each script, CTAs are weaker, and the product claims are used inconsistently across the scripts.",
+  "what_would_make_it_a_10": "Add explicit first-frame/spoken disclosure to each ad, strengthen the shop CTA, and make the approved claims and banned-word guardrails tighter in every creator brief."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels like a producer’s shoot packet I could send tomorrow: it catches the 3 pm hook, the taste-test winner, the price objection, and the platform disclosure details. Output 2 is solid but needs more polishing before creators could film from it."
+}

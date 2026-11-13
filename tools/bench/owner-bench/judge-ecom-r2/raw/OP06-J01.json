@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the three key signals in the data: relaunch the paused ASC winner, split Women Body Razor to 25–34, and do not scale the Starter Kit COD trap.",
+  "biggest_mistake": "It overstates the paused ASC video's profit impact and uses some break-even math assumptions that are a bit too rough for a few ad sets.",
+  "what_would_make_it_a_10": "Tighten the per-ad-set economics and quantify the ASC relaunch upside with cleaner, fully traceable workings."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is decisive, owner-minded, and correctly refuses to trust Meta's purchase count at face value.",
+  "biggest_mistake": "It cuts Beard Kit despite it being marginally positive on Meta-counted contribution and introduces several shaky numbers and projections that are hard to defend.",
+  "what_would_make_it_a_10": "Keep the strong decisiveness but fix the math, avoid over-precise unsupported projections, and preserve profitable or near-profitable ad sets instead of cutting them flat."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd rather run Monday morning: it sees the real signals in my data and turns them into a usable budget and rule set without making a bad cut on Beard Kit. Output 2 is smart, but a few wrong calls and shakier calculations make it less trustworthy with my money."
+}

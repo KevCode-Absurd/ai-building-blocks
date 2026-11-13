@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The break-in note is right in the above-the-fold bullets, and the 'What to know before you buy' paragraph handles the cash and coin trade-offs honestly and in our calm voice.",
+  "biggest_mistake": "It assumes the hidden pocket adds an extra note on top of the 10. That risks overstating cash capacity, which is the exact return reason we're fighting. The SEO title also runs slightly past 60 characters.",
+  "what_would_make_it_a_10": "Treat 10 notes as the total. Put the break-in note in the line under the button. Trim the SEO title. Add inches for US buyers and a way to measure whether returns drop."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It treats 10 notes as the conservative total and adds inches for US buyers. It uses Tom's own 'brick in your back pocket' line, and it gives a measurement plan with correct return math (3.3 and 1.0 per 100 orders) plus a guardrail.",
+  "biggest_mistake": "The break-in expectation never reaches the above-the-fold bullets or the line under the button. It also invents a '10 to 11 mm' figure for 6 to 7 cards that our data doesn't state.",
+  "what_would_make_it_a_10": "Add 'snug for the first week, then it settles' to a bullet or the line under the button. Drop the interpolated thickness. Confirm the word count stays under 1,000."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are publishable. Output 2 never overstates cash, speaks to the American buyer in inches, and tells me how to check whether returns actually fall. Output 1 puts break-in higher on the page but stretches cash capacity."
+}

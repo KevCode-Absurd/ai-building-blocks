@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ruthless financial prioritization: caught the in-app browser bug immediately, sized the ₹34L margin recovery accurately, and built realistic statistical power lanes.",
+  "biggest_mistake": "Split reviews and hero image into two separate low-leverage visual tests (Tests 4 & 5) while completely omitting a dedicated test for mattress firmness/foam jargon (19% of chat volume).",
+  "what_would_make_it_a_10": "Replace Test 4 or 5 with a dedicated test tackling the mattress firmness explanation and foam jargon, which was the second largest pre-sale chat blocker."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless mapping of the 5 tests to the customer chat blockers and persona anxieties, especially turning the #2 chat barrier (firmness/foam jargon) into a dedicated test.",
+  "biggest_mistake": "Running Test 2 (mobile sizes) with orders per session rather than add-to-cart forces a 4-week run on a top-of-funnel friction point.",
+  "what_would_make_it_a_10": "Adopt proxy micro-conversion metrics like add-to-cart for Test 2 to cut test cycle time from 4 weeks to 2 weeks."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both understand the math and identify the ₹34 lakh in-app bug immediately, but Output 2 chose a superior set of five tests by directly addressing the firmness and foam jargon barrier rather than splitting hero image and reviews into two separate tests."
+}

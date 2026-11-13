@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A tight executive summary with weekly and monthly ranges that check out (762 tickets a week down to 478 to 573; bra returns 31% down to 27.3% to 28.6%). It treats fit-finder selection bias honestly by counting only half the 19-point gap and testing on half of traffic.",
+  "biggest_mistake": "It assumes calendar dates in November and December and a Christmas peak that the brief never mentions. It also has no fit-help message after delivery beyond a quiz link, and it claims that showing a delivery range will cut 'arrived too late' returns, which it does not support.",
+  "what_would_make_it_a_10": "Add bra fit tips in a post-delivery check-in, rank the three fixes by pounds saved with a total, and drop the invented calendar dates."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It covers what I asked for and its numbers reconcile: the £139,800 returns and £31,360 tickets baseline, 6,076 tickets on days 3 to 5, the 5,394 and 1,767 size returns, a summed £11.8k to £19.8k saving, and 117 tickets per 1,000 orders. It also adds a fit check before dispatch and real bra fit tips plus a check-in after delivery.",
+  "biggest_mistake": "'We're packing your order now' and the two-hour size switch both depend on operations that may not exist. The delivered email leads with 'Swap my size', which nudges people towards a return before they've tried it.",
+  "what_would_make_it_a_10": "Make the delivered email's button 'Find your fit' rather than swap, confirm the switch-before-picking window with the warehouse, and state per-week ticket targets for the hold-out read."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both plans get the three real fixes and the maths right, but Output 2 gives me the post-delivery fit help for bra buyers and a summed savings figure I can take to the team. Output 1's sharper summary and bold swap-first idea don't quite outweigh that."
+}

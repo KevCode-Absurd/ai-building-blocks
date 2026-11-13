@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the spend data well (label reads got the most money and the worst results), answers the $3 price objection on camera with the '12 afternoons' idea, writes spoken and on-screen paid disclosure into each script, and adds a creator rights and delivery section plus a budgeted test plan.",
+  "biggest_mistake": "It runs well over the 1,300-word limit and is dense. A few lines are clumsy, such as 'It's linked right there', and 'A new kind of soda' only closes one script.",
+  "what_would_make_it_a_10": "Cut it to 1,300 words by trimming the test plan and the bolder-move section. Close every ad on 'A new kind of soda', fix the awkward lines, and make the three hooks per script change exactly one thing."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 6,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clean and fits the length limit. It keeps the brand voice throughout, ends every ad on 'A new kind of soda', and uses a natural 3 pm hook ('It's 3 pm. You know what that means.') and a candid price line.",
+  "biggest_mistake": "The creator briefs are thin. They have no rights, deliverables or timing, and no spoken or on-screen disclosure beyond '#ad' and the partnership toggles. The test plan is generic, with no budget and no cut-off thresholds.",
+  "what_would_make_it_a_10": "Add deliverables, usage rights and deadlines to the briefs, plus an on-screen 'Ad' and a spoken disclosure line in each script. Add a test plan with a budget and kill thresholds based on the $26 and $32 benchmarks, and make the three scripts feel more distinct."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is closer to something I could hand to creators and run, with fuller briefs, disclosure built into the scripts and a real test plan. It runs long and is a bit dense, but Output 2's voice is just as good and its briefs are too thin to send."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the data story: sleep-led, narrator clips as core format, evening times, and a week 1 that needs no review with weeks 2-4 batched on 16 Nov.",
+  "biggest_mistake": "The draft-by-draft hooks are strong but a couple lean generic ('Brain still busy at bedtime?'), and the Sunday-only week-1 close doesn't explicitly flag which drafts are safe if a reviewer adds a condition term.",
+  "what_would_make_it_a_10": "Tighter, more distinctive hooks drawn straight from customer phrases on every draft, and an explicit per-draft review-safety note."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 10,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Six weeks of angles in one table, real customer phrasing in hooks, and honest low/high install projections with a fatigue caveat.",
+  "biggest_mistake": "Says 'no post names a condition, so none needs review,' which is riskier and less careful than o1's submit-on-16-Nov approach; also the live-stream idea adds tracking risk for an owner who wants simple measures.",
+  "what_would_make_it_a_10": "Adopt o1's review submission discipline and tighten the plan table so the 24-post grid doesn't sprawl."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and data-led; o1 is slightly more careful on review timing (submitting weeks 2-4 on 16 Nov rather than assuming no review) and reads a touch cleaner to act on, while o2 has the richer post range."
+}

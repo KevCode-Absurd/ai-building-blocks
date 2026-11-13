@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 7,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes the 4.0 apart line by line against the 2.5 break-even, shows non-brand Google lost about $20,000, and proves it with a segment table that adds exactly to $144,960.",
+  "biggest_mistake": "No concrete ad copy or feed attribute work (size, colour, material, highlights), so the customer's words only appear in one title line rather than in headlines and feed fields.",
+  "what_would_make_it_a_10": "Add ready-to-paste search headlines and descriptions in Claire's and Nina's own words, plus the missing feed fields (size, colour, material, highlights), without losing the per-line profit ranges."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp, on-brand execution: customer-language headlines and a gentle target-ROAS ramp (2.6 then 3.0) so PMax does not stall after the brand exclusion.",
+  "biggest_mistake": "The base case leans on brand search turning $18,000 into $455,000 (ROAS ~25) versus $204,000 from $12,000 last month, and the cautious case never stress-tests that single assumption that carries 40% of projected value.",
+  "what_would_make_it_a_10": "Show brand-search value as a defensible range instead of a 95%-retention leap, and pull bags out of PMax so the scaled bags campaign is not bidding against itself."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could take to the CFO: every number traces to my data, the profit ranges are conservative and per line, the feed gap and the bags-inside-PMax cannibalisation are both caught, and it tells me to judge the month on total profit and new customers rather than PMax's own ROAS. Output 2 has better ad copy and a smarter ROAS ramp, but its brand-search assumption is a leap I would have to unpick before trusting the base case."
+}

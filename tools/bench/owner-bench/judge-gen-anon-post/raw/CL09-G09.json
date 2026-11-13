@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A tight, data-led case for sleep, narrator clips and evening posting, with correct installs-per-post figures, clear success targets and a mid-point check after week 2.",
+  "biggest_mistake": "It sends weeks 2 to 4 for review without saying what those posts are, beyond one-line themes. Its own timing (live from Tuesday 24 November) also clashes with the Monday 23 November post in week 2.",
+  "what_would_make_it_a_10": "Add a post-by-post topic list for weeks 2 to 4 and fix the review-date clash. Work in the 'switch my brain off' hook, and our 'Take a breath. You've got this.' line, directly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A full 24-post calendar with an owner for each post and production deadlines. Drafts are in our real voice ('Take a breath. You've got this.'), each ends with one small action, and the targets have low and high cases tied to clear decisions.",
+  "biggest_mistake": "Some week 3 and 4 hooks, such as 'Awake at 2am', come close to naming sleep problems without a review flag. Pausing text-on-screen video entirely is asserted more than argued.",
+  "what_would_make_it_a_10": "Mark which future posts might trigger clinical review and when to submit them. Trim to the word limit, and use the 'switch my brain off' line as a hook."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both read our data correctly. The second gives me the whole month mapped out, with owners and deadlines, in our own voice, plus clear decision points, so my team could start Monday."
+}

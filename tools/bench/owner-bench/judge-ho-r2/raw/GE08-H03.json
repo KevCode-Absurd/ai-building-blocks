@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The proactive Day 3 check-in directly solves the Day 3–5 silence driving 62% of WISMO tickets, paired with superb, body-neutral bra-fitting guidance in the delivery email.",
+  "biggest_mistake": "The potential revenue saved from exchanges assumes full AOV (£58), though it sensibly notes that individual item swaps will yield a lower figure.",
+  "what_would_make_it_a_10": "It is already an exceptional, ready-to-implement plan that checks every operational and brand box."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong executive summary table right at the top and a clever nod to Amira's gifting use-case in Message 5.",
+  "biggest_mistake": "Waiting until the end of Day 5 to send a 'running late' email completely misses the proactive window needed to prevent the 62% of tickets that flood in during Days 3 to 5.",
+  "what_would_make_it_a_10": "Add a proactive Day 3 update to actually curb mid-transit tickets, and remove internal operational return metrics from customer-facing marketing copy in Message 2."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 actually solves the Day 3–5 silence with a proactive mid-transit update, whereas Output 2 waits until Day 5 after the customer has already chased support. Output 1 also includes genuinely useful bra-fit tips in the delivery email and avoids quoting internal return statistics to customers."
+}

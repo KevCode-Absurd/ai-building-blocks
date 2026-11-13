@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 10,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Complete, runnable hiring kit: the time-zone coverage, a real customer-reply exercise, a weighted scorecard with concrete 1/3/5 anchors, and a credible reviewer-hours plan all fit together.",
+  "biggest_mistake": "The $82,000 salary is buried below the hard parts and job description rather than sitting immediately under the title.",
+  "what_would_make_it_a_10": "Move the salary to the top of the post, keep the hard parts right behind it, and add a quick line showing how the Priya exercise maps to the scorecard rows."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post opens correctly with salary and a candid, human explanation of the overnight gap; the application plan and reviewer-hour math are very practical.",
+  "biggest_mistake": "It refers to a longer written exercise and a handoff note but never writes that exercise, so the hiring team still has to invent a key stage; the 100-word 'why this job' also edges back toward a cover letter.",
+  "what_would_make_it_a_10": "Add the actual shortlist exercise prompt and handoff task, remove the 'why this job' question, and tie the scorecard anchors to those concrete tasks."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I'd send Output 1 to the team after moving the salary up; it is the complete kit, including the exercise the hiring team will actually run. Output 2 has the better opening and stronger reviewer math, but I'd still have to write the longer exercise and cut the mini cover letter."
+}

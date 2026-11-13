@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tier-specific treatment of COD confirmation with the expected-loss math per pincode band, plus explicit holdouts so the owner can measure real savings.",
+  "biggest_mistake": "Some template copy is a bit mechanical and a couple of bodies carry more than one action (e.g. T8), and the ₹99 advance section, while flagged as risky, sits close to the plan without an explicit 'do not run yet' label.",
+  "what_would_make_it_a_10": "Tighten template copy to Snitch's bold, short voice with one action per message, and pull the bolder ₹99 move into a clearly marked 'test later' box with a stop rule spelled out up front."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Cleanest, most ready-to-submit templates and scripts in a genuinely Snitch voice, with crisp timing and quiet hours; also strong on after-hours staffing fix.",
+  "biggest_mistake": "Treats COD confirmation more uniformly and only applies the 48-hour hold to Tier 3 late in the flow; the RTO-by-tier money is stated but not used to shape discounts or nudges per band, and the pay_online template is filed as Utility despite containing an incentive-ish framing.",
+  "what_would_make_it_a_10": "Make the pincode-tier risk the backbone of the confirmation and prepaid flows (different nudges, call rules, hold timing per band), and re-check template categories so nothing marketing-like sits in Utility."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are usable, but Output 1 tells me where the RTO money actually comes from and builds the flow around it, with holdouts that let me prove the savings; Output 2 reads better and is closer to press send, so I'd take 1's structure and 2's copy."
+}

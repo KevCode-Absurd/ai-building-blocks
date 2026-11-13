@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting for the right reason and proves it with seat economics, then structures the page around Priya's real pains: email back and forth, fair distribution, routing, and security.",
+  "biggest_mistake": "It adds a few assumptions and placeholders that would need cleanup before publishing, and the CTA pattern shifts a bit between self-serve and demo without a single firm path for this segment.",
+  "what_would_make_it_a_10": "Tighten the page to one primary conversion path for recruiting teams, replace placeholders with real proof, and trim a little so it is closer to publish-ready without edits."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It not only picks the right segment and messaging, but also surfaces practical CRO moves an owner can act on immediately, like moving security up, simplifying the demo form, and defining a concrete test and traffic requirement.",
+  "biggest_mistake": "A couple of lines lean more into optimization commentary than finished page copy, and the qualified-start metric is slightly less tied to downstream quality than the stronger first-booking framing in the other draft.",
+  "what_would_make_it_a_10": "Keep the same strategy but simplify the decision metric to the clearest quality proxy, and remove a little of the testing commentary so the deliverable feels more like final copy than copy plus notes."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and I would use either with edits, but 2 teaches me a bit more as an owner and feels slightly more actionable as a landing-page plan I could put into production."
+}

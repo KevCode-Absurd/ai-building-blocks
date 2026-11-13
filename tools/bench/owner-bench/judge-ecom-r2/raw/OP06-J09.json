@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It cleanly separates what the numbers prove from what still needs checking, then turns that into a practical ranked plan with owners, stop rules and a usable scorecard.",
+  "biggest_mistake": "It slightly overreaches on 18-month payback by assuming repeat order value and margin, and a few targets are directional rather than tightly quantified.",
+  "what_would_make_it_a_10": "Tighten the estimated financial impact and targets with a bit more explicit math on flow recovery and contribution improvement, while keeping the same focus and clarity."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It goes beyond diagnosis to size the economics of the main moves, especially the Meta-linen problem, in a way that helps an owner decide fast.",
+  "biggest_mistake": "Some financial estimates depend on stacked assumptions and a few are shaky enough to risk false precision, especially around email revenue lift and contribution targets.",
+  "what_would_make_it_a_10": "Keep the strong prioritisation and economics, but trim the speculative modelling and anchor every projected gain more directly to the data given."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 1 is the safer thing to run: it is more disciplined about proved versus assumed, nails the owner's requested structure, and avoids a few of the false-precision leaps in Output 2."
+}

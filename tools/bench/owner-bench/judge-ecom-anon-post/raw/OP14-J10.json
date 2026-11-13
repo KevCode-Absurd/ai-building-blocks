@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It answers the full brief with three sensible bundles, real threshold math, COD/RTO logic, and a safe test plan tied to delivered profit.",
+  "biggest_mistake": "It makes a few assumptions and projections that feel more confident than the data supports, and the lead bundle choice adds lip balm where the clearest customer-built bundle is face wash plus serum.",
+  "what_would_make_it_a_10": "Tighten the math behind the monthly projections, make the face wash + serum duo the clear hero bundle, and simplify a few dense sections so the key recommendation is easier to act on fast."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is easy to read and does a good job protecting the serum reorder by avoiding a ₹699 threshold.",
+  "biggest_mistake": "The ₹599 free-shipping recommendation rests on a made-up slice of orders between ₹499 and ₹598, and it leaves out the strongest existing bundle signal by not making face wash + serum the main hero bundle.",
+  "what_would_make_it_a_10": "Use only defensible numbers from the data, center the proven face wash + serum routine, and work COD/RTO into the threshold recommendation more rigorously."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels closer to something I could use tomorrow: it is more grounded in my actual order patterns, takes COD and RTO seriously, and gives me a fuller test plan. Output 2 is cleaner to read, but too much of the threshold case depends on assumptions rather than my data."
+}

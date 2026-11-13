@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the switched-off pause as the main win, removes wasteful discounts, and gives the team a compliant one-screen flow with usable copy and working maths.",
+  "biggest_mistake": "The uplift range and the assumed performance of the annual-plan switch and reminder are a bit hand-wavy, so I would want those tightened before using the forecast externally.",
+  "what_would_make_it_a_10": "Tighten the forecast ranges and test assumptions, especially for the annual switch and reminder paths, while keeping the same flow."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a buildable one-screen flow with mostly good segmentation, strong copy, correct core counts, and a clear testing/logging plan.",
+  "biggest_mistake": "It adds a 50% discount for switchers with no evidence that price is the issue, then counts that assumed save in the upside.",
+  "what_would_make_it_a_10": "Remove or separately test the switcher discount, keep discounts out of unsupported paths, and make the revenue model reflect only proven or clearly ranged assumptions."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would hand to product: it follows the strongest signals in the data, avoids margin-wasting discounts, respects the legal constraint, and has cleaner copy. Output 2 is good, but the unsupported 50% switcher discount is exactly the kind of retention-script move I wanted to get away from."
+}

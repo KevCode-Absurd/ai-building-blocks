@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A tight, owner-ready package with a today-vs-expected summary table at the top, named owners per task, and honest, traceable numbers (e.g. swap sales kept of £75.7k-£129.7k rather than a rosy headline).",
+  "biggest_mistake": "Its ticket fix leans on expectation-setting in the confirmation and dispatch emails while the 'running late' message only fires after day 5, so attributing a 50-70% drop in day 3-5 tickets to it is optimistic without a proactive day-3 nudge.",
+  "what_would_make_it_a_10": "Add a low-cost proactive day-3 'nearly there, nothing to do' touch to catch the 62% ticket spike in its window, and note that the day-5 late email comes too late to prevent most tickets."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Best mechanism for the ticket problem: a proactive day-3 email+SMS inside the spike window, plus specific fit guidance (band on loosest hook, snug and level) and size reasons fed back to product pages.",
+  "biggest_mistake": "The 'Up to £183,800 in sales kept' line treats every swap as a full £58 order and, even caveated, is a flashy number that risks over-promising; the plan also assigns no owners, so the team has more homework.",
+  "what_would_make_it_a_10": "Replace the £183,800 headline with a realistic cost-saved and honest swap-sales range (like £58 per item, not per order) and add named owners per workstream so it can be handed straight to the team."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and on-brand, but output 1 is the one I can hand to my team tomorrow: owners are assigned, the today-vs-expected table answers my ask directly, and its swap and cost numbers are honest where output 2's £183,800 headline oversells. Output 2's day-3 message is a real edge, but its looser numbers and missing owners cost it."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Threshold maths is sharp and honest: the ₹599 case with an explicit walk-away break-even, and it explicitly protects the serum reorder that Ishita lives on.",
+  "biggest_mistake": "The serum+lip balm bundle leans on the lip balm over the actual top pair (face wash + serum), so its bundle ladder is built around a lower-value add-on rather than the proven ₹944 routine.",
+  "what_would_make_it_a_10": "Make face wash + serum the headline routine bundle at a modest saving with the margin shown, keep lip balm as the cart add-on, and bring COD/RTO cost into the threshold decision instead of treating every order alike."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Bundles map to how customers already buy (face wash+serum, shampoo+conditioner, body lotion+body wash) with break-even maths that shows the cost of discounting existing pair buyers, plus the lip balm as threshold add-on and a COD-fee test.",
+  "biggest_mistake": "Choosing to keep ₹499 as the recommendation is defensible but undersells the brief's ask to actually work the money on moving it, and the lakh-level projections carry wide ranges that read as soft.",
+  "what_would_make_it_a_10": "Recommend a clear threshold move (or a prepaid-only lower bar) with COD/RTO fully costed, tighten the projection ranges to one number per scenario, and say it in the owner's voice rather than in test-table shorthand."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 picks the bundles customers already buy and treats COD refusals as the real leak, so I'd act on it; Output 1's threshold maths is crisper but its bundle ladder is built on the wrong pair and it leaves COD out of the shipping decision."
+}

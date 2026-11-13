@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets the real story right: AI-builder growth is not quality growth, it is hurting margin, and Customer A plus the missed ARR forecast are put up front.",
+  "biggest_mistake": "It is a little over-drafted for a finished investor email: two tables plus an assumptions section make it feel like a draft, and the margin-point explanation is useful but slightly more analytical than I would want in the sent version.",
+  "what_would_make_it_a_10": "Tighten the email by cutting the assumptions section or moving it into cleaner footnotes, keep one compact metric table, and make the Customer A action more specific with an owner and date."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very close to sendable: clear first screen, correct numbers, bad news early, and the asks are specific with owners and dates.",
+  "biggest_mistake": "It is slightly less sharp on the core insight: it says AI app builders hurt margin, but does not quantify as clearly how much of the database growth is low-quality or how the $0.9M compute increase explains the margin drop.",
+  "what_would_make_it_a_10": "Add the direct-vs-AI database growth math and make the 48-hour pause sound like a committed action rather than something we 'plan' to do."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather have Output 1 because it sees around the corner a bit more and explains the bad growth/margin tradeoff better. Output 2 is cleaner and more sendable, but Output 1 is the one I would trust more as an operator checking the story behind the numbers."
+}

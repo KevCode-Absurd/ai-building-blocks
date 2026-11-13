@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The inclusion of a geographic holdout test to measure true incrementality is brilliant and highly sophisticated.",
+  "biggest_mistake": "Using a 25-purchase learning bar, whereas TikTok usually looks for 50 conversions to exit the learning phase, but this is a minor technicality.",
+  "what_would_make_it_a_10": "It is already a 10. Exceptional grasp of the math and strategy."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clear delegation of tasks in the 'Monday owners' section, making it highly actionable.",
+  "biggest_mistake": "Suggesting Smart+ for Campaign 2 in Week 2 might be premature for a brand new pixel that is just gathering data.",
+  "what_would_make_it_a_10": "A slightly more robust methodology for proving incrementality on Day 30 beyond just looking at baseline lifts, though the survey is a good check."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both candidates delivered phenomenal, Monday-ready plans that nailed the math and the brief perfectly. Output 1 takes a slight lead due to its sharper campaign structure (avoiding Smart+ early on) and the excellent geographic holdout idea for measuring true lift."
+}

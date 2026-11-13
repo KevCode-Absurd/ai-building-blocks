@@ -1,0 +1,146 @@
+{
+ "panel": [
+  "CL01:claude-opus-5-5",
+  "OP02:gpt-5.5",
+  "DE03:deepseek-chat",
+  "GE04:gemini-pro-latest",
+  "CL05:claude-sonnet-5-5",
+  "OP06:gpt-5.4",
+  "DE07:deepseek-reasoner",
+  "GE08:gemini-flash-latest",
+  "CL09:claude-opus-5-5",
+  "OP10:gpt-5.5",
+  "DE11:deepseek-chat",
+  "GE12:gemini-pro-latest",
+  "CL13:claude-sonnet-5-5",
+  "OP14:gpt-5.4",
+  "DE15:deepseek-reasoner",
+  "GE16:gemini-flash-latest",
+  "CL17:claude-opus-5-5",
+  "OP18:gpt-5.5",
+  "DE19:deepseek-chat",
+  "GE20:gemini-pro-latest"
+ ],
+ "verdicts": 175,
+ "failed": 25,
+ "tot": {
+  "agent": 114,
+  "plain": 61,
+  "tie": 0
+ },
+ "agent_share_of_decided": 0.651,
+ "perProvider": {
+  "claude": {
+   "agent": 18,
+   "plain": 9,
+   "tie": 0
+  },
+  "openai": {
+   "agent": 34,
+   "plain": 16,
+   "tie": 0
+  },
+  "deepseek": {
+   "agent": 31,
+   "plain": 17,
+   "tie": 0
+  },
+  "gemini": {
+   "agent": 31,
+   "plain": 19,
+   "tie": 0
+  }
+ },
+ "perJob": {
+  "G01": {
+   "agent": 11,
+   "plain": 7,
+   "tie": 0
+  },
+  "G02": {
+   "agent": 17,
+   "plain": 1,
+   "tie": 0
+  },
+  "G03": {
+   "agent": 14,
+   "plain": 4,
+   "tie": 0
+  },
+  "G04": {
+   "agent": 8,
+   "plain": 10,
+   "tie": 0
+  },
+  "G05": {
+   "agent": 15,
+   "plain": 3,
+   "tie": 0
+  },
+  "G06": {
+   "agent": 15,
+   "plain": 2,
+   "tie": 0
+  },
+  "G07": {
+   "agent": 18,
+   "plain": 0,
+   "tie": 0
+  },
+  "G08": {
+   "agent": 4,
+   "plain": 11,
+   "tie": 0
+  },
+  "G09": {
+   "agent": 2,
+   "plain": 16,
+   "tie": 0
+  },
+  "G10": {
+   "agent": 10,
+   "plain": 7,
+   "tie": 0
+  }
+ },
+ "dims": {
+  "agent": {
+   "fit": 8.97,
+   "insight": 8.5,
+   "priorities": 8.77,
+   "reasoning": 8.65,
+   "correct": 8.7,
+   "clear": 8.98,
+   "voice": 8.88,
+   "range": 7.9,
+   "ready": 8.78,
+   "overall": 8.51
+  },
+  "plain": {
+   "fit": 8.89,
+   "insight": 8.32,
+   "priorities": 8.42,
+   "reasoning": 8.41,
+   "correct": 8.55,
+   "clear": 8.73,
+   "voice": 8.56,
+   "range": 7.78,
+   "ready": 8.04,
+   "overall": 8.13
+  }
+ },
+ "use_as_is": {
+  "agent": {
+   "with small tweaks": 122,
+   "with major rework": 15,
+   "as is": 37,
+   "undefined": 1
+  },
+  "plain": {
+   "with small tweaks": 127,
+   "with major rework": 28,
+   "undefined": 1,
+   "as is": 19
+  }
+ }
+}

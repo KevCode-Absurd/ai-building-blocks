@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It quantifies every move in contribution-margin points, with a baseline (7.8% vs 13.6%), owners, week 4 and week 8 lines, and a scorecard that has action thresholds. It reads like a plan I could run on Monday.",
+  "biggest_mistake": "It is dense, and some of its derived numbers (the 13.6% and 7.8% baselines, the gain sizings) rest on stacked assumptions. The 'worth at least $94' payback is also shaky. The 'Stop doing' item about site speed is a little odd. Some phrasing like 'Bad news' and the long working section is heavy for a grade-8 reader.",
+  "what_would_make_it_a_10": "Trim the working and the swatch-kit side idea. Keep the assumed baselines clearly labelled as estimates. Plainer prose with fewer formulas. Rank the moves explicitly by gross profit, not by gain divided by effort."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clear and easy to read, and its checks table pairs each open question with an owner and a date. Per-channel payback is sharp (Meta loses $27 a customer, Google about breaks even, Other makes $14). It keeps to the brand: no sitewide sales, and the wash-test and swatch ideas speak to Sarah's fear.",
+  "biggest_mistake": "Impact estimates are vaguer ('High', 'Medium') with few first-week steps and no gain figures in contribution terms. The scorecard has no contribution baseline ('set in week 1') and its targets are looser. It also puts the Meta reset below the linen pause, though Meta is the main cause.",
+  "what_would_make_it_a_10": "Put numbers on each move's gross profit and give a first-week step for each. Give a contribution baseline and week-by-week checkpoints. Rank the Meta reset first."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives me numbers I can hold people to: a baseline, a gain per move, week 4 and 8 lines and action thresholds. Output 2 reads more easily and sounds more like us, but it leaves too much at 'high' and 'medium' and no contribution baseline."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ruthless prioritisation: three fixes ranked by money saved, with the working shown, honest ranges, and a Christmas warning. The messages are short, warm, and in our voice with one button each.",
+  "biggest_mistake": "The 'Still on track' message could still be sent when the courier has scanned but the parcel is delayed, risking a false reassurance; better to base it on actual tracking status, not just a scan.",
+  "what_would_make_it_a_10": "Make the day-3 message conditional on the latest tracking event (e.g., 'in transit' vs 'delayed') and include the tracking status in the copy, so we never imply on-time when the courier is behind."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 10,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Comprehensive: six messages including a post-delivery fit check and a size-switch within 2 hours, plus concrete portal steps and a weekly feedback loop. The copy is clear and body-positive.",
+  "biggest_mistake": "The 2-hour size-switch window in message 2 assumes orders can be changed before picking; if not, the line must be dropped, which weakens the message. Also, the 'swaps keep £183,800 in sales' overstates because a swap is often one item, not the full £58 order.",
+  "what_would_make_it_a_10": "Tighten the numbers: show the swap value as the margin on the swapped item, not the full AOV, and give a range for sales kept. Make the 2-hour switch a verified capability before writing it into copy."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like a plan I can act on Monday: it ranks the three fixes by money, gives honest ranges and a Christmas warning, and the messages sound like us with one clear button. Output 2 is thorough and has good extra ideas, but some claims (2-hour switch, £183k kept) feel unproven, and I'd have to rewrite parts before sending."
+}

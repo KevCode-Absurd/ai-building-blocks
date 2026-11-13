@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Superb data synthesis that clearly demonstrates agencies make up 60% of all losses to Semrush while isolating self-inflicted churn.",
+  "biggest_mistake": "Ranking a complex multi-month product build (client reporting) as move #1 ahead of instant pricing and onboarding fixes.",
+  "what_would_make_it_a_10": "Reorder the moves by leverage and speed to impact, putting the Lite limit fix and multi-site email nurture ahead of software development."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless operational prioritization that puts quick-money lifecycle and pricing fixes first, appropriately positioning the report build as the longer-term play.",
+  "biggest_mistake": "None of note; four focused moves are superior to five diluted ones.",
+  "what_would_make_it_a_10": "It already delivers exactly what a pragmatic, data-led operator needs to take immediate action."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 understands how to run a business this month: it ranks immediate, high-leverage operational fixes (email nurture and Lite limit top-ups) first, and sensibly places the custom reporting tool build last because software takes time."
+}

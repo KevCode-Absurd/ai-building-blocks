@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the right call against the 20% cut with the lifetime maths, then focuses the plan on the top creator-educator partners and the credit-window/payout fixes.",
+  "biggest_mistake": "The Day 30 payout item is a bit too neat operationally, since a 30-days-after-month-end payout schedule may not produce a real first payout within the first 30 days.",
+  "what_would_make_it_a_10": "Add a small day-90 scorecard and tighten the payout transition timing so finance and the partner manager can run it without interpretation."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly proves why the 20% cut is risky and gives a strong 90-day window, payout, rules and review plan.",
+  "biggest_mistake": "The 40% Partner tier and free accounts add cost and complexity that are not fully controlled inside the $40,000 perk budget or the one-manager constraint.",
+  "what_would_make_it_a_10": "Keep the Partner tier reward mostly in managed perks and service, or cap the 40% tier tightly with a clearer cost ceiling and eligibility limit."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the plan I would rather hand to the team tomorrow: it is sharper on the top-20 focus, keeps costs simpler, and fixes the tracking and payout problems without creating a new commission-risk layer. Output 2 is strong, but the 40% Partner tier makes the finance conversation harder than it needs to be."
+}

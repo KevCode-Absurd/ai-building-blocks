@@ -58,6 +58,8 @@ Score each rival and the client on the factors buyers say matter most (from inte
 
 One position to own, in a sentence, with the proof that supports it. Two small changes for this month (a page, a price display, an offer, a guarantee). One thing to stop doing because a rival does it better.
 
+Rank the moves by money per unit of effort: the fastest, cheapest money first, unless a move it depends on has to come first. State the ranking rule in one line, give each move its rough money and effort, and make the order follow the rule.
+
 ### 8. Keep a change log (monthly)
 
 Date, rival, what changed (price, offer, message, new product, ads), source, and whether it needs a response. At level 2, I can save the log and briefs as drafts in the client's workspace; posting changes to the client's own pages or ads needs level 3 within agreed limits, after the client confirms the action list. I log every action.
@@ -70,11 +72,12 @@ Date, rival, what changed (price, offer, message, new product, ads), source, and
 - Customer quotes are short, labelled and real.
 - Substitutes and "do nothing" included.
 - Recommendation fits the client's proven strengths.
+- Moves are ranked by money per unit of effort, and the order matches the stated rule.
 - Nothing obtained by deception, fake accounts, scraping that breaks site terms or someone else's login.
 
 ## Output format
 
-1. Summary: the position to own, two changes, one thing to stop.
+1. Summary: the position to own, the changes ranked by money per unit of effort, one thing to stop.
 2. Competitor grid with sources and dates.
 3. Review themes per rival, with counts and quotes.
 4. Gap list, each checked against the client's strengths.

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Incredible strategic maturity: it proactively catches the negative review traps (scuffs and laptop pocket requests), leads priority with the under-spent women's segment, and provides realistic testing budgets based on 15 conversions.",
+  "biggest_mistake": "Headline character counts are noted in parentheses at the end of drafts, which would need to be trimmed or cleared before publishing.",
+  "what_would_make_it_a_10": "Already practically flawless for an executive creative brief; just format headline character counts into separate fields."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clean structure with crisp, punchy visual boards and well-delineated test hypotheses across all eight concepts.",
+  "biggest_mistake": "Suggesting a testing budget cut/scale threshold of only 3x CPA (~₹4,500 or 3 purchases) is statistically too low for Meta optimization, and Concept 6 awkwardly includes 'Warranty and returns are on our site' inside the customer-facing primary copy.",
+  "what_would_make_it_a_10": "Fix the ad copy in Concept 6 and give realistic conversion-volume testing thresholds instead of cutting at 3 purchases."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like a senior creative strategist who genuinely understands paid social economics—it prioritizes the high-ROI women's segment, sets realistic 15-conversion test budgets, and proactively protects the brand from review pitfalls like the front pocket and scuffs."
+}

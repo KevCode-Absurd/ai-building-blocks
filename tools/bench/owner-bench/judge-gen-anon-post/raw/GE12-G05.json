@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nailed the brand voice perfectly and actually wrote out the 'real-feeling' customer email exercise for the application.",
+  "biggest_mistake": "Missed creating a structured list of interview questions, leaving the conversation stage slightly less defined.",
+  "what_would_make_it_a_10": "Incorporate a local timezone table and specific interview questions to make the entire funnel foolproof."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 10,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The local timezone table is a brilliant touch for the applicant, and the step-by-step breakdown of reviewer hours is incredibly sharp.",
+  "biggest_mistake": "It mentions using a 'real ticket' for the application exercise but didn't actually draft one, leaving a piece of work on my plate.",
+  "what_would_make_it_a_10": "Write the actual customer email prompt directly into the job post so the application form is ready to copy-paste."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both answers are phenomenal and completely understand how we run our business, but Output 1 drafted the actual customer email exercise in the post, making it slightly closer to being ready to publish."
+}

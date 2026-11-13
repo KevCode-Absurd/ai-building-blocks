@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent grasp of the numbers and a very realistic approach to how many tickets and returns can actually be saved.",
+  "biggest_mistake": "Missed the opportunity to give practical, actionable fit advice in the post-delivery message to help first-time bra buyers.",
+  "what_would_make_it_a_10": "Including specific bra fit guidelines in the post-delivery email and explicitly ranking the fixes by money saved at the top."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Nails the brief entirely, especially by providing tangible bra fit advice ('loosest hook', 'snug and stay level') in the post-delivery email and smartly noting that the swap AOV will likely be lower since it's usually just one item.",
+  "biggest_mistake": "None that stand out; it follows all guidelines and constraints perfectly.",
+  "what_would_make_it_a_10": "It is already a 10."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both candidates understood the data perfectly and provided the correct math, but Candidate 2 went the extra mile. They provided actual, practical bra fit advice in the post-delivery email and structured the cost breakdowns perfectly."
+}

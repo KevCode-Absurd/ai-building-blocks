@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every move is quantified in monthly contribution with the working shown (e.g. linen on Meta at $66k / $121 = 549 orders, net +$27k) and paired with a stop line and scorecard trigger.",
+  "biggest_mistake": "The sign-up move text is internally inconsistent: it says restoring the form 'adds about 4% of revenue' but then '$15k at full rate', which is 1.5% of $1M, so the number the owner would carry into the board deck is muddled.",
+  "what_would_make_it_a_10": "Fix the sign-up revenue math so the percentage and dollar figure agree and force the whole plan under 1,600 words without losing the appendix."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Clear, plain-English diagnosis with a genuinely useful checks table (owner and week per open question) and concrete, on-brand product-page fixes like the swatch offer and warmth guide.",
+  "biggest_mistake": "It never ranks the moves by gross profit dollars — impact is 'High/Medium/Low' with only one figure — and the scorecard dodges targets ('set baseline in week 1', 'pre-January level', 'up every month'), which is exactly what the owner asked to be nailed down.",
+  "what_would_make_it_a_10": "Put a monthly gross-profit figure on every move so they can be ranked, and give the scorecard hard day-90 numbers including a contribution-margin target and a Google cost-per-first-order line."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives the owner the working and a dollar figure per move with stop lines and act-when triggers, which is what the board question needs; Output 2 reads better and has nicer product-page ideas, but its vague scorecard targets and unquantified move ranking mean the owner would have to rebuild the numbers before using it."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Exceptional clarity on unit economics and after-RTO contribution, complete with a disciplined reserve release mechanism.",
+  "biggest_mistake": "Holding back over ₹1.49L in uncommitted reserve leaves too much passive budget rather than aggressively deploying behind validated fixes like the restarted creator video.",
+  "what_would_make_it_a_10": "Commit a clearer step-ladder into ASC from day one rather than parking more than a quarter of the budget in reserve."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The dual-target framework (Safe Line vs. Break-even) perfectly solves the attribution gap between Meta and Shopify while providing exact creative angles and a daily scaling ladder.",
+  "biggest_mistake": "Minor: could have specified exact pincode-blocking or prepaid gating mechanics for the Starter Kit COD issue.",
+  "what_would_make_it_a_10": "Already virtually flawless for an executive decision memo."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both caught every critical signal in the data—the paused creator video, the Starter Kit COD bleed, and the 25–34 women opportunity—but Output 2 gives a superior execution plan with its safe-line attribution model, exact ASC scaling ladder, and Monday-ready creative briefs."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Honest money with checkable working. It shows a range, applies 6% monthly churn after 90 days, and gives a blunt warning: the pause does 80% of the work, and without it the flow keeps fewer people than today. That sets a clear critical path for the sprint.",
+  "biggest_mistake": "The trip-over panel only lets people go. It gives no 'remind me before your next trip' or pause option for Greg-type learners. Also, the cancel button is inactive until a reason is picked, which comes close to the easy-cancel rule.",
+  "what_would_make_it_a_10": "Add an optional 'email me before my next trip' line for goal or trip-over learners. Keep the cancel button live at all times. Add a holdout group to prove the new rates. Trim a little to sit comfortably under 1,000 words."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It covers more cases. There is a 'remind me in 3 or 6 months' option for trip-over, a smaller-goal option for learners who already set reminders, a cancel button that is always live, and a 10% holdout to test the assumptions. The build notes are concrete.",
+  "biggest_mistake": "It keeps the 50% off for app-switchers, the same offer that 61% abandon. It also values those 67 people at full price while labelling it 'after discount'. The yearly figure of £136k assumes no churn and gives no range.",
+  "what_would_make_it_a_10": "Drop or justify the 50% off for switchers. Value discounted keeps at the discounted price. Apply realistic churn to the 12-month figure and give a low-to-high range. Flag that the whole gain depends on rebuilding the pause."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 drops the half-price offer entirely, and its numbers are honest: a range, churn applied, and a clear warning that everything hangs on the pause. Output 2 has some nice touches, like the trip reminder and the holdout, but it keeps a discount we know fails and its revenue maths is rosier."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A complete, buildable flow. It matches an offer to each reason, splits groups by plan type and reminder status, gives the exact copy, and adds an optional 'email me in 3/6 months' for trip-over learners, which fits Greg well.",
+  "biggest_mistake": "It keeps 50% off for 3 months for people switching apps, which goes against my own data on discounts. The value of that group is also loosely counted: 67 people at near full price while they are on half price.",
+  "what_would_make_it_a_10": "Drop the switcher discount. Put the headline numbers and the warning that the pause carries the result at the top. Give an honest range instead of single figures."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Leads with the decision and the money, including a range, and flags the risk clearly. The pause does 80% of the work, and without it the flow keeps fewer people than today, so the pause is the critical path for the sprint. It also has a clear measurement plan and a smart bolder idea to prompt reminders before anyone cancels.",
+  "biggest_mistake": "Trip-over learners get only a plain exit, with no 'remind me before your next trip' option. A little of the copy, such as 'It helps us help you', sounds more corporate than warm.",
+  "what_would_make_it_a_10": "Add the optional remind-me email for trip-over learners. Warm up the screen 1 subtitle. Show the full working for the 12-month revenue figure."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are flows my team could build. The second one tells me what matters most up front: bring back the pause first or the whole thing fails. It drops the discount completely and tells me how to know it's working."
+}

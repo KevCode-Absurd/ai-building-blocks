@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Opens with the decision and the bad news about Apple/Google refunds, ranks by tickets removable with working, gives a forecast as a range with a clear rationale, and adds a bolder in-app line idea with risk noted.",
+  "biggest_mistake": "Articles are short on platform coverage (no web steps for restore, thin refund path for splitwise.com payers) and the ticket total counts 2,900 for restore even though some are edits; also a small fumble ('Bold labels match the current app') in assumptions.",
+  "what_would_make_it_a_10": "Add web steps and a splitwise.com payment path, mention search-term tagging, keep the range forecast, and cut the odd assumption wording; keep the answer-first articles."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Articles are fuller and more usable: web and app steps for restore, all three payment routes for Pro, cancel-subscription steps, plus the search-term tagging idea and a lower-bound sensitivity.",
+  "biggest_mistake": "Forecast is a single point estimate with a stress test rather than a range, doesn't open with the headline decision, and the Simplify article has a redundant 'follow the steps above' sequence; merging Recording a payment is questionable.",
+  "what_would_make_it_a_10": "Lead with the decision and expected saving, give the forecast as a range up front, tighten the Simplify article steps, and keep Recording a payment as is."
+ },
+ "winner": "tie",
+ "margin": "slight",
+ "reason": "Both rank on tickets and write the right three articles in our voice. Output 1 leads better with the decision and a range; Output 2 has more complete, publish-ready articles, so I'd take either with small edits."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the ad data to force taste-first openings, answers the $3-a-can objection directly, and gives the team production, disclosure and test rules they can act on tomorrow.",
+  "biggest_mistake": "The plan says every script answers '$3 a can' on camera, but only Script 2 does; Scripts 1 and 3 show $35.99 but not the per-can price or a spoken price answer.",
+  "what_would_make_it_a_10": "Make the $3/can price answer explicit in every script, or stop claiming it is, and trim the extra rules so the team gets one tight page plus the three scripts."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The scripts are clean, natural and easy to shoot, with hooks taken from customer language and creator briefs that give the right amount of freedom.",
+  "biggest_mistake": "Script 3's alternate hook changes the whole scene, so it cannot be tested as a first-3-seconds-only hook; the test plan also has no clear budget or decision thresholds.",
+  "what_would_make_it_a_10": "Add specific test budgets and cut/scale thresholds, keep every alternate hook to a true first-3-second change, and include spoken disclosure plus delivery and rights details."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would hand to my team: it is more data-led, more complete on disclosure and production, and gives clearer test decisions. Output 2 is cleaner and has strong creator briefs, but it is less specific on testing and has a hook-test setup that does not fully hold together."
+}

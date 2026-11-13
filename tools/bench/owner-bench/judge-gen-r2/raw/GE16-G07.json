@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Directly hits every brand note and ranks the retention channels accurately based on past campaign data.",
+  "biggest_mistake": "Blasting the entire 420,000 email list on day 1 while simultaneously proposing a staged in-app rollout contradicts itself and risks overwhelming the 3-person support team.",
+  "what_would_make_it_a_10": "Align the email blast cadence with the staged in-app rollout waves and add explicit task owners to the timeline."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliant operational coherence: it staggers the 420k email list in lockstep with the in-app rollout waves, defines explicit support shifts, and pushes distraction channels (Product Hunt/HN) to week two.",
+  "biggest_mistake": "The timeline starts on Monday 16 November instead of Friday 13 November as requested in the brief.",
+  "what_would_make_it_a_10": "Include the immediate prep work for Friday 13 to Sunday 15 November so the entire date window from the brief is explicitly accounted for."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 demonstrates superior operational command of our team constraints: by pairing the phased in-app rollout with matching email waves and a specific 12-hour support rota, it guarantees our 3-person support team won't drown in migration tickets."
+}

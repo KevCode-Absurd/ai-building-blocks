@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every email pushes toward the two retention habits. It uses only the allowed triggers, branches by platform, and has a tidy at-a-glance table with a goal and a measure for each email.",
+  "biggest_mistake": "Email 5 is a second recurring-task push and Pro is cut entirely, which leaves no revenue path for engaged users.",
+  "what_would_make_it_a_10": "Make email 5 a distinct step, such as a both-habits nudge or a gated Pro offer for engaged users, rather than repeating email 2."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Habit-led series with sensible skip rules, platform branching, an unsubscribe guardrail, and Pro moved to day 14 for engaged users only, with a plan to bring team invites back in 2027.",
+  "biggest_mistake": "The Pro email names a specific Pro-only feature (timed reminders), a product claim that needs checking before it ships.",
+  "what_would_make_it_a_10": "Confirm the Pro feature claim and tie the email 5 measure to day-30 retention as well as upgrades."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nail the two habits and the platform split. Output 2 also keeps a gentle, gated Pro path and adds an unsubscribe guardrail, so it is closer to what I'd actually ship."
+}

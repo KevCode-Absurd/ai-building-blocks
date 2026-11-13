@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It cleanly separates what the data proves from what still needs checking, then turns that into a practical 90-day plan with ranked moves, owners, stop-doing calls, and a usable weekly scorecard.",
+  "biggest_mistake": "It slightly overstates confidence in the 18-month payback math by assuming repeat economics match first orders, and a couple of targets like shipping/fees/returns improving to 12.5% are not fully grounded in the evidence shown.",
+  "what_would_make_it_a_10": "Tighten a few assumptions around repeat-order economics and scorecard targets, and quantify the expected upside from restoring email flows and capture a bit more precisely."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It brings more modelling and scenario sizing than most plans, and it correctly spots the core issues: Meta, linen returns, and the broken email machine.",
+  "biggest_mistake": "It adds too many assumptions and invented calculations that are not solid enough to run the business on, and a few recommendations drift away from the brief and brand, like overengineered flow detail and the speculative swatch-kit idea.",
+  "what_would_make_it_a_10": "Cut the fragile modelling, stay closer to what the data actually proves, simplify the plan to the top moves, and make the scorecard and targets more grounded and immediately operable."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would actually use. It is more faithful to the brief, more commercially grounded, and much closer to publishable without me having to unwind extra assumptions."
+}

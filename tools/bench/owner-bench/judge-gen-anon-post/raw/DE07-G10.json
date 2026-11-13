@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built entirely around the two habits that predict retention, with skip logic per email ('skip if already made one') and a fifth email that closes the gap for the 8% who do both (67% vs 52%/48%) rather than selling Pro. Every number checks out, including the 1,800 people per point per quarter and the 6,000-person control group.",
+  "biggest_mistake": "Per-email success measures are implied by the goal lines rather than stated as a test with a baseline, and two bits of logic are loose: email 2's 'or day 2' fallback sends a recurring-task email to people who have added no task, and email 5's branch label 'No recurring task yet, or neither habit' overlaps itself.",
+  "what_would_make_it_a_10": "Add an explicit 'worked if' line with the baseline under each email, tighten email 5 to a clean two-way branch (no recurring task vs one habit done), and fix the email 2 fallback so people with zero tasks get a re-send of the first-task email instead."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Cleanest measurement discipline of the two: every email states a goal and a 'worked if' with the current baseline next to it, the copy sounds like us, and the drop list argues each cut with the right numbers (6.1%/4.8%, 0.3%, 1.4%).",
+  "biggest_mistake": "Spends the fifth slot on a Pro upsell and never nudges the people who did one habit to do the other, though both habits retain at 67% vs 52% and 48% — the biggest lever in the data is left on the table. The assumption line 'desktop-app signups get the web version' also contradicts email 3, where web and desktop signups are sent to the phone app.",
+  "what_would_make_it_a_10": "Swap email 5 for a branch that gives single-habit users their missing habit (recurring task or second device), move Pro to after day 30 for engaged users, and fix the desktop-signup assumption so it matches the email 3 branching."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 makes the call the data supports: all five emails push the two habits that predict retention, with skip logic the tool can actually run, and a fifth email that closes the both-habits gap instead of selling Pro — Output 2 is cleaner to read and measures each email better, but it leaves the 67% lever untouched."
+}

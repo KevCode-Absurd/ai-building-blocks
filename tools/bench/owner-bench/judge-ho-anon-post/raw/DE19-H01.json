@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the core signal — top-5 matte shades out ~1 Dec, fix the crushed cartons Monday, rush the heroes, ignore the draft — and adds a pro pre-book and a clean clearance path for the palette, all inside ₹1.2 crore.",
+  "biggest_mistake": "Minor arithmetic discipline slips: it says top-5 stock is 2.4 weeks even after re-cartoning (should become ~3.4 weeks), and the rush arrival date (7 Dec) is treated as tight against a 1 Dec stockout with back-orders used to bridge — workable but the timing story is slightly muddled.",
+  "what_would_make_it_a_10": "State the post-re-carton cover clearly (13,000 units, ~3.4 weeks, lasts to ~8 Dec), align the rush arrival to that date without needing back-orders, and confirm the party-pair economics (₹1,299 vs ₹1,998) are margin-positive."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Crisp, owner-ready plan with a dated Monday action table, honest sold-out messaging in our voice ('back on 9 December, tap Notify me'), pro pre-orders for Farah, and a no-fake-urgency clearance for palettes — all inside ₹1.2 crore.",
+  "biggest_mistake": "Sets the palette at ₹699 from 1 Dec and then bundles with kohl at ₹899, but doesn't check margin at the ₹310 floor or explain why ₹699 rather than full price first; also the 'out 30 Nov' then 'back 9 Dec' gap is longer than the re-cartoning buffer implies.",
+  "what_would_make_it_a_10": "Show the post-re-carton top-5 cover explicitly (13,000 units, ~3.4 weeks), tighten the stockout window to match, and prove the palette markdown and bundle still clear cost with a line of margin maths."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and actionable, but Output 2 reads more like something I'd send my ops lead Monday — cleaner dates, better customer message in our voice, and a tighter pro-artist plan — while Output 1's extra bolder move is nice but its timing story is slightly muddier."
+}

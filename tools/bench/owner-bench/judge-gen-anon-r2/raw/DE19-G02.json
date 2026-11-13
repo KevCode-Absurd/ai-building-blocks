@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks recruiting with the seat math spelled out, writes the hero in Priya's own words ('email tennis'), and moves routing forms and security up where the data says they belong.",
+  "biggest_mistake": "The page is dense with repeated 'Book a demo' buttons and proof lines; a real landing page would breathe more, and the round robin 'skips PTO' claim leans on calendar availability stated as an assumption rather than a shipped feature.",
+  "what_would_make_it_a_10": "Tighten the page to fewer, stronger sections; make the A/B test rule and metric crisper; and confirm one real customer quote plus the PTO wording before publishing."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Cleanest, easiest to read page with an honest convention: everything unverified is bracketed so the owner can't accidentally ship a made-up logo or quote.",
+  "biggest_mistake": "Lots of '[brackets]' and placeholders mean it is a skeleton, not finished copy; mixing 'Get started' and 'Book a demo' buttons within a recruiting flow muddies the single action the brief asks for.",
+  "what_would_make_it_a_10": "Resolve the placeholders into real copy or cut them, use one CTA consistently on a recruiting page, and keep the tighter section order of the competitor."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick the right segment and the right hook, but output 1 reads like finished page copy I could load and test today, while output 2 is still a well-organised draft full of brackets I'd have to fill in."
+}

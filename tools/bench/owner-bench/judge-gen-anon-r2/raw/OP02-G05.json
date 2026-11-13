@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the main signals in the data: hire for the UTC overnight gap, make the weekend rotation impossible to miss, drop experience requirements, and put a short written customer reply in the application.",
+  "biggest_mistake": "The time-zone table is a little fussy and has some daylight-time confusion; I would simplify it before publishing.",
+  "what_would_make_it_a_10": "Tighten the published post slightly, simplify the hours examples, and make sure the 4-day summer schedule is clear for this shift."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post sounds right: direct, calm, honest about salary, hours, weekend rotation, and the hard parts.",
+  "biggest_mistake": "The application writing prompt does not give the applicant enough facts to solve a real problem, so it mainly tests tone rather than the strongest signal we have: written problem-solving.",
+  "what_would_make_it_a_10": "Use a more concrete customer exercise with hidden facts to find and fix, specify the longer written exercise, and reduce the two video conversations unless there is a clear reason for both."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather use Output 1 because it turns the data into the hiring process, not just the job post. Output 2 has a cleaner ad in places, but Output 1 gives me the better application screen and scorecard for avoiding another 2,100-application slog."
+}

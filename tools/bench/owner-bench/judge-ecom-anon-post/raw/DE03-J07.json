@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Uses the data to make decisions: niacinamide as default pick, an entire email aimed at the white cast and stickiness doubts, per-quiz product branching, a cart-pause rule, and a WhatsApp placed 24 hours before the code expires.",
+  "biggest_mistake": "The WhatsApp line says 'ends tomorrow' while the code was set to expire 14 days after sign-up; if the WhatsApp goes on day 13 that is technically fine, but the email/WhatsApp timing line ('day 13, 24 hours before the code ends') needs checking against the actual code expiry, since 14 days from sign-up would end on day 14, not after the WhatsApp.",
+  "what_would_make_it_a_10": "Tighten one factual seam (exact code expiry vs. WhatsApp day) and add one plain photo or swatch guidance for the sunscreen, which the owner flagged as the bolder move."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Warm, calm, on-brand voice with a clear 3-step routine answer and a clean exit rule; Email 3 on starting slowly is the best-written fear-killer of the two.",
+  "biggest_mistake": "Priorities are slightly off: the sunscreen email comes fourth after the starter email, and Email 5 pushes all three products as a ₹1,167 routine rather than leading with the one product that fits the quiz answer, which undercuts the 'one product, not ten' promise and oversells to a nervous beginner.",
+  "what_would_make_it_a_10": "Make Email 5 a per-quiz 'one product plus sunscreen' recommendation, and lead the series with the dark-spot path, since 44% name uneven tone."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like it was built from my data: it leads with niacinamide, gives sunscreen its own doubt-busting email, sets explicit timing, exit and cart-pause rules, and answers Sneha and Arjun in their own words. Output 2 is beautifully written but its priorities and final email pull against what my customers actually told me."
+}

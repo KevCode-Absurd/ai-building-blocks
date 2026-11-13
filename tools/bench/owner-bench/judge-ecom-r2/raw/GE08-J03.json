@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, production-ready ad specs with thoughtful technical guardrails like Reels safe zones and direct review quote integrations.",
+  "biggest_mistake": "Selected two men's work-travel concepts (1 and 2) in the top three instead of prioritizing the high-converting women's solo lift angle alongside quiet wheels and the belt.",
+  "what_would_make_it_a_10": "Swap Concept 2 for Concept 5 in the top-three recommendation and add a bit more creative variety beyond quote-overlay statics."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Nailed the top three priorities exactly according to the data (belt skip for men, lift alone for women, and sound-led quiet wheels), complemented by a brilliant per-trip price reframe.",
+  "biggest_mistake": "In Concept 2, introducing an airline cabin sizer box visually is risky since Indian airport gate agents don't typically have standard sizers like US ultra-low-cost carriers.",
+  "what_would_make_it_a_10": "Refine the visual in Concept 2 from a sizer box to a plane's overhead bin to better reflect domestic Indian travel reality."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 nailed the exact three concepts that matter most to test first (men skipping the belt, solo women lifting, and quiet wheels), and brought a brilliant fresh angle in the per-trip price breakdown."
+}

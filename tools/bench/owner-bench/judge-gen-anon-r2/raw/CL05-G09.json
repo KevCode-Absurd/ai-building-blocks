@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 7,
+  "voice": 8,
+  "range": 7,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Puts sleep and narrator clips at the center, with night posting, a stop list, and a measurable success test. The warm drafts use the customer's own hook.",
+  "biggest_mistake": "Sends every sleep post to review, so week 1 has no sleep posts and is all kindness. Three of the six drafts are week 1 kindness posts. The week 1 and calendar logic is muddled: it says Tuesday 24 November but week 1 slots have drafts labeled sleep in the table. The projection also has errors, such as a 4,300 target against a 7,650 projection, and the calendar shows week 1 as kindness while the pattern table says sleep. Draft 5 has a 'put your phone across the room' instruction that edges toward 'you should' language.",
+  "what_would_make_it_a_10": "Fill week 1 with non-reviewed winding-down posts in the evening rather than all kindness. Keep the calendar consistent with the pattern table. Make the drafts match the plan, and give clear dates for submitting reviewed posts."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Week 1 is sleep-led and evening-timed, and its 6 drafts are written to avoid naming any condition, so they need no review. They use 'replaying emails' and 'busy mind' hooks, with the clear plan to submit weeks 2 to 4 on 16 November. The drafts are ready to hand to the team.",
+  "biggest_mistake": "Keeps 4 stress-at-work posts and a daytime parent slot. Its claim that week 1 needs no review is a judgment call, since busy-mind-at-night content could be argued to touch sleep conditions. It also leaves a loose end in the assumed reviewed-post timing, and the calendar for weeks 2 to 4 is not spelled out.",
+  "what_would_make_it_a_10": "Shift the mix further to sleep by dropping the stress-at-work posts and giving a week-by-week table for weeks 2 to 4. Flag clearly that the sleep drafts avoid naming conditions, and explain why they skip review."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 uses the week 1 drafts well: sleep-led, evening, in our voice, with no review needed, so the team can post on 16 November. Output 1 pushes its sleep posts to week 2 and fills week 1 with kindness, losing the best-performing theme for a week and contradicting itself in places."
+}

@@ -1,0 +1,30 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are solid and on-brand, but 1 leads with the bad news and the numbers in the first screen and explains the margin drop more directly, with cleaner asks. 2 is close, but it opens a bit warmer and buries the margin explanation under a list, so 1 is the one I'd rather send.",
+ "what_would_make_it_a_10": "Show the free-tier compute saving math behind the 48-hour pause, and state the runway assumption in the body rather than only at the end."
+}

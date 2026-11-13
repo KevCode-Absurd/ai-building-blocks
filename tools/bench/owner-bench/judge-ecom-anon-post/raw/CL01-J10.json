@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ties the threshold decision to COD refusals and keeps ₹499 because that is where refusals drop from 29% to 17%. It adds a one-click ₹199 lip balm in the cart for orders under ₹499 and offers a COD fee as a separate test. The maths checks out: 2,320 orders sit in the ₹499–598 band, about 800 refused COD orders a month cost about ₹1.04 lakh, and the Glow Routine earns ₹537 gross profit.",
+  "biggest_mistake": "It is dense and heavy on numbers, with lakh ranges everywhere, so it is hard to scan. The copy is only adequate, not very cheerful.",
+  "what_would_make_it_a_10": "A cleaner layout, warmer and more on-brand bundle copy, and a one-line summary of the margin per order for each threshold option."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 5,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Clear bundle ladder on the serum page with friendly copy that fits Kavya and Ishita. It makes a good case against a discounted ₹849 duo and judges results on profit per visitor.",
+  "biggest_mistake": "It assumes only 6% of orders fall between ₹499 and ₹598. The data implies about 13.5% (around 2,300 orders), so the ₹599 case understates the risk. It misses that shampoo plus lip balm (₹598) falls short of ₹599. It does not use COD/RTO in the threshold choice, and two of its three bundles both lean on the serum, with no second category beyond hair.",
+  "what_would_make_it_a_10": "Fix the size of the ₹499–598 band and redo the threshold maths. Build COD refusal cost into the threshold decision, perhaps with a COD-specific rule. Use the body duo instead of a second serum bundle."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gets the numbers right and actually deals with my COD refusal leak. Output 2 reads nicely, but it moves my threshold on an order-band estimate that is wrong."
+}

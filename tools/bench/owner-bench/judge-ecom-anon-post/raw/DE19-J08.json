@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds the real stories in the data (the retired Monsoon Dark blend, the courier-caused subscription leak) and builds a ranked, costed, holdout-measured programme around them, with drafts that sound like us and never guilt-trip.",
+  "biggest_mistake": "The projected gross-profit range is built on assumed extra-return rates with thin justification, and the G6 profit-each figure (₹535) is not explained against the offer logic, so a careful reader has to trust rather than verify.",
+  "what_would_make_it_a_10": "Show the arithmetic behind every assumed lift and profit-per-order figure (including G6) and give one or two sentences on how the ranges were sized, so I can defend the number to my founder without reworking it."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Strong narrative on fixing the reason before discounting, a clear delivery gate for ex-subscribers, and a sensible day-28 'running low' nudge to stop the repeat-rate slide.",
+  "biggest_mistake": "Priorities and numbers are shaky: it puts the 91-180 day group first instead of the cheaper 46-90 day at-risk group, and its valuation stacks an unexplained ₹999/₹2,113 per-customer assumption on top of assumed lifts, giving an optimistic ₹8.5 lakh I cannot verify.",
+  "what_would_make_it_a_10": "Reorder to start with the 46-90 day at-risk group, show lift assumptions against a break-even table, and break the 12-month value into first-order gross profit net of discount and messaging cost so the headline number is auditable."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like a plan I can run next week: right order of groups, the Monsoon Dark track named and drafted, the courier fix gating ex-subscribers, holdouts and break-even logic, and numbers I can mostly trace. Output 2 has the right instincts but starts with the wrong group and its headline value rests on assumptions I can't check."
+}

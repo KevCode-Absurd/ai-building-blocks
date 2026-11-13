@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The first screen gives the lead partner everything: three numbers, the missed forecast, all three pieces of bad news and the top ask with a date, plus a forwardable blurb that makes the VP intro easy.",
+  "biggest_mistake": "It says the 48-hour pause will help but never estimates the margin effect, even as a range, and the AI-builder mechanics wait until after the table.",
+  "what_would_make_it_a_10": "Add a ranged estimate of how much of the $0.9M compute increase the 48-hour pause should recover, and when margin should recover."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The sharpest analysis: direct-created databases grew only 2.6%, and the $0.9M compute rise is about 9 points of margin on monthly revenue. The burn bridge table is clean.",
+  "biggest_mistake": "The 9-point margin math implies other costs offset some of the drop and leaves that unexplained, and it promises a 'real saving in November' for a change that takes two weeks to ship.",
+  "what_would_make_it_a_10": "Put the top ask in the first screen, explain the gap between the 9-point and 7-point figures, and give a ranged estimate of the pause's margin effect."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are honest and correct. Output 1 is easier for a busy partner to act on: the bad news and the key ask are on the first screen, and the blurb is ready to forward. Output 2 has slightly sharper analysis but leaves a loose end in the margin math."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It focuses on the three real levers in this business, ranks them well, writes usable message copy, and gives measured ranges instead of pretending the uplift is certain.",
+  "biggest_mistake": "It slightly muddles the day-3 update logic versus the owner's likely fix, and its kept-sales maths is presented a bit too boldly for what is really a ceiling.",
+  "what_would_make_it_a_10": "Tighten the operational logic on the proactive shipping updates, make the financial impact on swaps more conservative and explicit, and add a little more clarity on how success will be measured by segment."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It understands the business problem well, adds a smart post-delivery bra fit flow, and keeps the refund option visible while pushing size swaps in a customer-friendly way.",
+  "biggest_mistake": "A few assumptions and numbers stretch beyond the brief, especially the aggressive swap-value calculation and operational details like the 2-hour size-change window that are not grounded in the data provided.",
+  "what_would_make_it_a_10": "Anchor every projected number more tightly to the given data, remove unsupported operational assumptions, and separate cost savings from revenue retained more carefully."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and I would use either with edits, but 1 is a bit more disciplined on measurement, prioritisation and owner-ready execution. 2 has some nicer touches, but it reaches further beyond the evidence in a few places."
+}

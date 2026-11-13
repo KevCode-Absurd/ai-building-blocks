@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Perfectly captures the brand voice, rigorously follows the 'invite, don't instruct' rule, and cleverly navigates the review rule to keep high-performing sleep content in Week 1 without triggering the medical condition flag.",
+  "biggest_mistake": "Does not map out all 24 individual post titles in a full 4-week grid, relying instead on a repeating weekly schedule with overarching weekly themes.",
+  "what_would_make_it_a_10": "Providing a literal week-by-week table for all 4 weeks with specific topics for each day, rather than a single repeating weekly template."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Provides a comprehensive and easy-to-read 4-week calendar grid that names all 24 posts, making it very easy for a team to visualize the month.",
+  "biggest_mistake": "Misses the nuanced brand voice guidelines by using instructive language ('Try writing', 'Breathe in for 4') instead of inviting, and assumes any sleep post triggers a review, forcing a suboptimal Week 1.",
+  "what_would_make_it_a_10": "Refining the copy to be less directive and more inviting, ending every post with an immediate micro-action, and recognizing that 'wind-down' posts don't necessarily trigger clinical review."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 absolutely nailed the brand voice and the subtle constraints of the brief, especially the 'invite, don't instruct' rule and the workaround for the review period. It is ready to hand to the creative team immediately."
+}

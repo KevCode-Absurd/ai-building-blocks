@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It strictly follows the 'one question and one ask' constraint and uses incredibly low-friction CTAs that perfectly suit a time-poor persona.",
+  "biggest_mistake": "The 'reply yes' format can feel slightly rigid to some readers, though it is highly effective for busy professionals.",
+  "what_would_make_it_a_10": "It is already a 10 because it nails the domain language ('fieldwork wraps') and follows every strict brand constraint."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The logic and formatting of the projection section are incredibly clear and executive-friendly.",
+  "biggest_mistake": "It misses the explicit 'one question and one ask' rule by just using questions, and asks a time-strapped Controller for a 20-minute meeting in step 2.",
+  "what_would_make_it_a_10": "Provide a distinct ask separate from the question in each email, and use lower-friction CTAs that respect the 'no time' constraint."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 follows every explicit copy constraint, includes the exact brand phrase requested, and uses domain-specific language ('fieldwork wraps'). It also completely solves the 'no time' persona pain by utilizing low-friction, one-word reply CTAs rather than asking for a 20-minute meeting."
+}

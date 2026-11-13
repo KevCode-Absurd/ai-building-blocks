@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post leads with the $82,000 salary and the reviewer-hour math is worked out cleanly (70 hours vs 160, plus 7 hours for second reads).",
+  "biggest_mistake": "The scorecard's 20% and 15% rows depend on a 'longer exercise' and a handoff note the hiring team is never given, so the core hiring artifact still has to be invented.",
+  "what_would_make_it_a_10": "Specify the shortlist exercise word for word and stop scoring 'conversation' at 15% when the post says interview impression (0.11) barely predicted performance."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every piece is finished and consistent: the time-zone table is arithmetically right for all six regions, the Priya and Sam exercises are written out in full, and the weights add up and tie back to the 0.62 against 0.11 evidence.",
+  "biggest_mistake": "The $82,000 salary is buried in a mid-post 'Pay and terms' paragraph instead of sitting on the first screen where we promised to put it.",
+  "what_would_make_it_a_10": "Move the salary and 40-hour/4-day terms to the top of the post and keep everything else as it is."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is the one I could hand to the hiring team tomorrow: the exam questions are actually written out and the time-zone table is correct and honest. Output 1 is warmer and puts the salary first, but it scores people on an exercise it never specifies, and it weights conversation at 15% while telling me interview impression barely predicted anything."
+}

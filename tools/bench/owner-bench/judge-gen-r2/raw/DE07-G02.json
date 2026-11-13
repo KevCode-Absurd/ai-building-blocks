@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It proves the recruiting call with seats-per-signup math (0.73 vs 0.17 vs 0.012, about 1,540 of 2,717 paid seats) and then builds the page on Priya's own words — email tennis, her Monday, PTO — while pulling routing forms and the security page up to where they unblock the deal.",
+  "biggest_mistake": "It calls hero A the \"control\" when a brand new page has no control, and it leaves the fairness-customer quote as a to-collect slot rather than writing around the missing proof.",
+  "what_would_make_it_a_10": "Replace the one to-collect proof slot with copy that stands on the real 88% and 48% numbers, and fix the test framing so version A is correctly described as a challenger against the current homepage."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero line \"Let candidates book the right interviewer. No email tennis.\" is the sharpest copy in either entry, and the decision metric is thought through — it refuses raw signups and 60-day paid seats because both mislead.",
+  "biggest_mistake": "Five bracketed placeholders (certifications, tool logos, a customer quote) hand the owner homework and put unverified integration claims in a section, and a whole section on open source over-weights a reason only 7% of survey answers gave.",
+  "what_would_make_it_a_10": "Fill every bracket with real material or cut the section, fold open source into the security block, and make the deciding metric a single action (demo requests per visitor) instead of two actions combined."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the one I could hand to the team tomorrow: seat math checks out, the page order follows what Priya actually stalls on, the metric comes with a sample size and a stop rule, and it has almost no blanks to fill. Output 2 has the better headline and smarter metric reasoning, but all those [brackets] are work I'd have to do myself."
+}

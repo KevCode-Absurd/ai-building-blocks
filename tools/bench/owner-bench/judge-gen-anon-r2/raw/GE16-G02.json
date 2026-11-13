@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Flawless seat-yield math and immediate adoption of customer voice ('email tennis') grounded in survey data.",
+  "biggest_mistake": "Alternating CTAs between 'Get started' and 'Book a demo' across sections dilutes the team buying path.",
+  "what_would_make_it_a_10": "Commit to a single team conversion path (Book a demo) throughout the page rather than sprinkling self-serve 'Get started' buttons."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "True CRO professionalism: strict team CTA alignment ('Book a demo') and sample size math based on our baseline conversion rate.",
+  "biggest_mistake": "Very minor, but could explicitly mention open source in the hero subhead rather than keeping it primarily in the metadata and footer.",
+  "what_would_make_it_a_10": "Virtually perfect to brief; nothing material needed."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are exceptional, but Output 2 maintains disciplined CTA consistency ('Book a demo' for a team buyer) and delivers real CRO rigor with a sample-size calculation for the test."
+}

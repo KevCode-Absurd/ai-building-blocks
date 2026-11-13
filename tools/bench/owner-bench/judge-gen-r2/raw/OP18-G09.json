@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the strongest signals: sleep-heavy mix, narrator clips as the core format, evening posting, and clear cuts to quote cards, app news and focus/productivity.",
+  "biggest_mistake": "The review timing is slightly inconsistent: it says reviewed posts cannot go live until Tuesday 24 November, but the repeated weekly plan includes a Monday 23 November sleep post.",
+  "what_would_make_it_a_10": "Add a true four-week dated calendar and fix the Monday 23 review conflict while keeping the strong week-1 no-review drafts."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly makes sleep and narrator clips the center of the plan and gives a useful calendar with clear stop decisions.",
+  "biggest_mistake": "It misreads the review rule by treating all sleep content as needing review, which wrongly removes sleep from week 1 and contradicts the owner’s need to avoid needless review rather than avoid the sleep theme.",
+  "what_would_make_it_a_10": "Keep the sleep-heavy/narrator-heavy calendar, but rewrite week 1 with no-review winding-down sleep posts and only send condition-specific wording to clinical/legal review."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to what I could run tomorrow: it uses the winning sleep/evening/narrator signals, sounds warmly on-brand, and handles week 1 without over-triggering review. Output 2 has good instincts, but the review-rule misread would materially weaken the first week and require reworking the calendar."
+}

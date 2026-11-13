@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Separates proved from to-check, quantifies every move in contribution per month with ranges and stop lines, and ranks them in the order I would actually do them.",
+  "biggest_mistake": "The appendix math drifts in places (the $54k sum and the 13.8% run-rate claim don't reconcile cleanly with revenue down 4%), and the voice is more analyst than warm brand.",
+  "what_would_make_it_a_10": "Reconcile the appendix arithmetic to one clean contribution bridge, and warm the language slightly without losing the rigor."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 9,
+  "correct": 8,
+  "correct_note": "repeat-value math ($71 + 31% x $71 = $94) is loose but directionally right",
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 7,
+  "overall": 8.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads beautifully, gives the missing 'does linen shrink because of a batch' test, and has a genuinely fresh swatch idea that speaks to Sarah's fear.",
+  "biggest_mistake": "No dollar impact on the moves table and a weak scorecard (baseline to be set later, 'up every month'), so I can't rank spend by return or hold anyone to a number.",
+  "what_would_make_it_a_10": "Put money on each move and a numeric target on every scorecard line, and rank moves by contribution not feel."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd act on Monday: every move has a dollar figure, an owner, a stop line and a scorecard target, and it nails Meta-is-the-slowdown plus the switched-off email. Output 2 is warmer and has a great swatch idea I'll steal, but without numbers on the moves I can't defend it to the board."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every message is written and on-brand, and the numbers are traced to the data with honest ranges and a hold-out plan.",
+  "biggest_mistake": "The '£183,800 in sales kept' figure overstates the swap value: it assumes every extra swap is a full £58 order saved, when many are single items and still incur the £7.50 cost.",
+  "what_would_make_it_a_10": "Tie the swap saving to the actual item value and net of the £7.50 handling cost, and show the working."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers are conservative and correctly net of costs, with a clear first move and a tight test-and-learn plan.",
+  "biggest_mistake": "The fit check message is terse and missing the reassurance and free-swap clarity that would make Jess act; copy feels more like a template than a written message.",
+  "what_would_make_it_a_10": "Flesh out messages 2 and 5 with the same warm, one-button clarity and specific fit advice as the best answer, while keeping the tight numbers."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives me finished, friendly copy for every message and a clearer order of work, which is what I asked for; Output 2 is sharp on numbers but the messages are thinner and the swap-saving is more cautious than I need. I'd pay more for Output 1 and fix the one inflated saving."
+}

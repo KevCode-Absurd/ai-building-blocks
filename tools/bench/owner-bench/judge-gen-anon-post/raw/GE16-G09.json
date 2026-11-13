@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Rock-solid understanding of the data economics and operational constraints, with a clean weekly rhythm and a clever Wednesday afternoon school-pickup test.",
+  "biggest_mistake": "Only provides topic themes for weeks 2 to 4 rather than an explicit post-by-post calendar map.",
+  "what_would_make_it_a_10": "Map out the specific concept hooks across all 24 slots and infuse the drafts with more of our signature brand lines like 'Take a breath. You've got this.'"
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "A complete 24-post roadmap, dead-on brand voice utilizing customer verbatims, and mature commercial modeling that anticipates fatigue on sleep posts.",
+  "biggest_mistake": "The Sunday TikTok photo carousel format in week 1 introduces an untested sub-format when Instagram carousels are proven.",
+  "what_would_make_it_a_10": "Keep Sunday on Instagram carousel where the baseline data is proven, rather than testing TikTok photo mode right out of the gate."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both understood the brief and the math brilliantly, but Output 2 gave me the entire 24-post topic grid for the month, incorporated our core brand catchphrases seamlessly into the copy, and realistically modeled performance fatigue."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Bundle ladder on the serum page (serum, serum+lip balm, full routine) with a per-bundle break-even the owner can check, and an honest 'why not ₹699' comparison.",
+  "biggest_mistake": "The face wash + serum pair, the signature routine, only appears as a discounted twist in the ₹999 trio; the ₹749 serum+lip balm is a small step, not the routine Kavya asked for. Also the volume assumptions (17k orders/month) and the 'shipping costs ₹11.9 lakh' framing rest on invented slices.",
+  "what_would_make_it_a_10": "Make the top pair the flagship routine at a modest saving, show its margin at ₹849 and at ₹999 side by side, tie the threshold choice to COD refusal money explicitly, and label every modelled number as a test assumption."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharpest insight in the job: keeping ₹499 because it sits on the COD refusal line, plus a clean lip balm cart lever with real money, and a ₹49 COD fee as a separate test.",
+  "biggest_mistake": "The flagship Glow Routine at ₹999 gives up ₹35 on the 1,033 pair buyers who already buy face wash + serum; it sells the existing pair cheaper instead of a step up, and the three bundles all land at ₹749/₹999 without a clear low-price entry for Ishita.",
+  "what_would_make_it_a_10": "Lead with the face wash + serum routine as the hero at a small, profitable saving, use the lip balm as the threshold lever, and add a break-even table that shows what the discount costs on current pair buyers."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are launchable and on-brand, but Output 2's call to hold ₹499 on the COD refusal line and its lip balm cart offer read like a real owner's decision; Output 1 has the better bundle ladder but builds the flagship around a small add-on, not the routine customers already make."
+}

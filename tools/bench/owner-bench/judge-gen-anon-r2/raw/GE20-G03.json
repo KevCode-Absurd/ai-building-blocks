@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 6,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Derived a great quantitative insight by calculating that the $0.9M extra cost represented about 9 points of margin on the monthly revenue.",
+  "biggest_mistake": "Wrote a dense, lengthy paragraph for the AI margin issue, violating the 'short paragraphs' rule and making it harder to read on a phone.",
+  "what_would_make_it_a_10": "Break up the text into shorter paragraphs, combine the problems with their respective solutions, and surface the main ask at the very top."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Exceptional structure and formatting for the target audience. Putting the biggest ask right under the bad news is perfect for phone-reading investors, and providing a forwardable blurb is a pro move.",
+  "biggest_mistake": "Missed the opportunity to explicitly state the math of the $0.9M compute increase against the monthly revenue to fully close the loop on the margin drop, though it still hit all required facts.",
+  "what_would_make_it_a_10": "Incorporate Output 1's insight about the $0.9M compute cost representing roughly 9 points of gross margin on monthly revenue to make the financial explanation completely airtight."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 followed all instructions perfectly, especially the formatting constraints for the phone-reading lead investor. Its short paragraphs, pairing of bad news with immediate solutions, and inclusion of a forwardable blurb make it ready to send immediately."
+}

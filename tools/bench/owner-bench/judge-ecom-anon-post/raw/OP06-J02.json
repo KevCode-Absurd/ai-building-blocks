@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is Monday-ready and anchored tightly to our actual signals: on-feet worker creative, problem-first hooks, Spark Ads from day 1, proper setup, budget phasing, and a day-30 bar tied to 90-day contribution instead of platform ROAS.",
+  "biggest_mistake": "A few rules are more confident than the data supports, especially the specific volume thresholds and the 'up by at least 70% of TikTok-claimed orders' incrementality check, which feels invented rather than derived from our data.",
+  "what_would_make_it_a_10": "Tighten the day-30 measurement method so every pass/fail threshold clearly ties back to Shopify new-customer data, and make the creative rights contingency for the March expiry even more explicit."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It brings some smart owner-minded ideas, especially the phased release logic, stronger measurement triangulation, and the optional holdout test to read incrementality more cleanly.",
+  "biggest_mistake": "It introduces too many assumptions and avoidable inaccuracies for a launch plan: delaying spend until day 4, narrowing age to 25+, relying on staff videos despite the brief pointing to creators, and a few made-up operational details like sound-clearance claims and cost thresholds that are not solidly grounded in the brief.",
+  "what_would_make_it_a_10": "Keep the measurement discipline and holdout idea, but rebuild the plan around our actual evidence: broad targeting, creator-led on-feet content from day 1, cleaner setup timing, and fewer unsupported assumptions."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the plan I could hand the team on Monday with minimal edits. It stays closer to our data, our voice, and the business math, while Output 2 has some good ideas but asks me to trust too many assumptions."
+}

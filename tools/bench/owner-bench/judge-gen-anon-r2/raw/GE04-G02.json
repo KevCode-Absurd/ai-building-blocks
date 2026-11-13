@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent breakdown of the seat math in the intro to justify the segment choice, and a very structured A/B test layout.",
+  "biggest_mistake": "Using the overall homepage-to-signup conversion rate (3.1%) to calculate the sample size for a test measuring demo requests, which are entirely different funnels.",
+  "what_would_make_it_a_10": "Recognize that recruiting teams sign up self-serve in large numbers too, and use a deciding metric that captures both demos and self-serve activations rather than limiting the test to demo requests only."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The 'Qualified team starts per visitor' metric is a brilliant CRO insight. It uses the 7-day booking data from the brief to bridge the gap between fast testing and 60-day revenue.",
+  "biggest_mistake": "Alternating between 'Get started' and 'Book a demo' across different sections without clarifying if they lead to the same dual-option gateway or separate funnels.",
+  "what_would_make_it_a_10": "A bit more rigor on the A/B test stopping rules rather than just 'at least two full weeks', but the proxy metric insight makes up for it."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 demonstrates a superior understanding of product-led growth by defining a metric that captures both self-serve signups and demo requests, whereas Output 1 artificially forces everyone into a demo funnel and misapplies the signup conversion rate to its sample size math."
+}

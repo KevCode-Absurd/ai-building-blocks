@@ -1,0 +1,225 @@
+<title>Owner Bench Round 2</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a scorecard on top (win share, ship rate, judges), then a two-column reading room for each job. */
+:root {
+  --bg: #f6f7f9; --panel: #ffffff; --ink: #172028; --muted: #5d6a76; --line: #dfe4ea; --soft: #eef1f5;
+  --agent: #0f7c6e; --agent-soft: #d7f0ea; --plain: #a85a14; --plain-soft: #f6e6d4; --tie: #6b7280;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f1418; --panel: #161d23; --ink: #e6ebef; --muted: #96a3ae; --line: #27313a; --soft: #1c252c;
+  --agent: #3cc3ad; --agent-soft: #12352f; --plain: #e39a55; --plain-soft: #3a2614; --tie: #9aa3ad; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0f1418; --panel: #161d23; --ink: #e6ebef; --muted: #96a3ae; --line: #27313a; --soft: #1c252c;
+  --agent: #3cc3ad; --agent-soft: #12352f; --plain: #e39a55; --plain-soft: #3a2614; --tie: #9aa3ad; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--body); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px }
+.wrap { max-width: 1240px; margin: 0 auto; display: grid; gap: 40px }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.15 }
+h1 { font-size: clamp(28px, 4vw, 42px); font-weight: 700 }
+h2 { font-size: 22px; font-weight: 700 }
+h3 { font-size: 17px; font-weight: 600 }
+p { margin: 0 }
+.lede { color: var(--muted); max-width: 72ch; margin-top: 10px }
+.eyebrow { font: 600 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted) }
+.key { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 14px; font-size: 13px; color: var(--muted) }
+.sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: middle }
+section { display: grid; gap: 14px }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 18px }
+.scroll { overflow-x: auto }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top }
+th { font: 600 11px/1.3 var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted) }
+td.num, th.num { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap }
+.bar { position: relative; height: 22px; background: var(--plain-soft); border-radius: 4px; overflow: hidden; min-width: 140px }
+.bar > i { position: absolute; inset: 0 auto 0 0; background: var(--agent); }
+.bar > span { position: absolute; inset: 0; display: flex; align-items: center; padding: 0 8px; font: 600 12px/1 var(--mono); color: #fff; mix-blend-mode: normal; text-shadow: 0 1px 2px rgba(0,0,0,.35) }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px }
+.tile { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 6px }
+.tile .big { font: 700 30px/1 var(--display) }
+.tile .sub { font-size: 13px; color: var(--muted) }
+.pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font: 600 11.5px/1.5 var(--mono); white-space: nowrap }
+.pill.agent { background: var(--agent-soft); color: var(--agent) }
+.pill.plain { background: var(--plain-soft); color: var(--plain) }
+.pill.tie { background: var(--soft); color: var(--tie) }
+.chips { display: flex; flex-wrap: wrap; gap: 8px }
+button { font: inherit; color: inherit; cursor: pointer }
+.chip { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 5px 12px; font-size: 13px }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink) }
+.chip:focus-visible, .job:focus-visible, .tab:focus-visible { outline: 2px solid var(--agent); outline-offset: 2px }
+.jobs { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px }
+.job { text-align: left; border: 1px solid var(--line); background: var(--panel); border-radius: 8px; padding: 10px 12px; display: grid; gap: 4px }
+.job[aria-pressed="true"] { border-color: var(--agent); box-shadow: inset 0 0 0 1px var(--agent) }
+.job b { font-weight: 600; font-size: 14px }
+.job small { color: var(--muted); font: 12px var(--mono) }
+.reader { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start }
+.col { min-width: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden }
+.col header { display: flex; justify-content: space-between; gap: 8px; align-items: center; padding: 10px 14px; border-bottom: 1px solid var(--line) }
+.col.agent header { background: var(--agent-soft) } .col.plain header { background: var(--plain-soft) }
+.col header b { font-family: var(--display); font-size: 15px }
+.doc { padding: 6px 18px 18px; max-height: 78vh; overflow: auto; font-size: 14px }
+.doc h1, .doc h2, .doc h3, .doc h4 { font-size: 16px; margin: 18px 0 6px }
+.doc p, .doc ul, .doc ol { margin: 8px 0 }
+.doc table { font-size: 12.5px; display: block; overflow-x: auto }
+.doc code { font: 12.5px var(--mono); background: var(--soft); padding: 1px 4px; border-radius: 3px }
+.doc blockquote { margin: 8px 0; padding-left: 12px; border-left: 3px solid var(--line); color: var(--muted) }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap }
+.tab { border: 1px solid var(--line); background: var(--panel); border-radius: 6px; padding: 4px 10px; font-size: 13px }
+.tab[aria-selected="true"] { background: var(--soft); border-color: var(--ink) }
+details { border-top: 1px solid var(--line); padding-top: 10px }
+summary { cursor: pointer; font-weight: 600 }
+.verdict td { font-size: 13px }
+.verdict .why { color: var(--muted); max-width: 60ch }
+.small { font-size: 13px; color: var(--muted) }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px }
+ol.fixes { margin: 0; padding-left: 20px; display: grid; gap: 6px }
+@media (max-width: 820px) { .reader, .grid2 { grid-template-columns: 1fr } .doc { max-height: none } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Blind test · 20 judges from Claude, OpenAI, DeepSeek and Gemini</p>
+    <h1>Our agents against plain Opus, judged like an owner</h1>
+    <p class="lede" id="lede">Each job went to two writers: an AI Blocks agent with its pack, and plain Claude Opus with only the brief. Twenty judges saw both outputs in a random order with no names, scored them the way the business owner would, and picked one. The anonymous runs go further: both outputs are put into one plain format and the judges get no rubric, only "which would you rather use?"</p>
+    <div class="key"><span><i class="sw" style="background:var(--agent)"></i>AI Blocks agent</span><span><i class="sw" style="background:var(--plain)"></i>Plain Opus</span><span id="gen"></span></div>
+  </header>
+  <div class="panel" id="summary" hidden></div>
+
+  <section>
+    <h2>Win share by round</h2>
+    <p class="small">Share of decided verdicts the agent won. Plain Opus outputs were written once and reused, so only the agents changed between rounds.</p>
+    <div class="panel scroll"><table id="share"></table></div>
+  </section>
+
+  <section>
+    <h2>Like for like: round 1 against round 2</h2>
+    <p class="small">Some judges could not run in round 2 because two providers ran out of API credit. This table keeps only the judge and job pairs that gave a verdict in both rounds, so a missing judge cannot move the number.</p>
+    <div class="panel scroll"><table id="matched"></table></div>
+  </section>
+
+  <section>
+    <h2>Would an owner ship it?</h2>
+    <p class="small">"As is" means the judge would use it with no changes. Strict judges are Claude, OpenAI and DeepSeek; Gemini says "as is" far more freely.</p>
+    <div class="tiles" id="ship"></div>
+    <div class="panel scroll"><table id="shiptable"></table></div>
+  </section>
+
+  <section>
+    <h2>Every judge</h2>
+    <p class="small">Each judge's record across all 28 jobs in the latest round, with and without our rubric, and its average overall score for each side. "None" means the judge could not run because its provider was out of API credit.</p>
+    <div class="panel scroll"><table id="judges"></table></div>
+  </section>
+
+  <section>
+    <h2>The owner's nine questions</h2>
+    <p class="small">Average score per dimension in the latest round, agent against plain Opus.</p>
+    <div class="panel scroll"><table id="dims"></table></div>
+  </section>
+
+  <section id="side">
+    <h2>Side by side</h2>
+    <p class="small">Pick a job to read both outputs and every judge's verdict. Brand facts in the briefs are test inputs for this exercise; these are not the brands' own figures, and the outputs are not affiliated with them.</p>
+    <div class="chips" id="cats" role="group" aria-label="Job type"></div>
+    <div class="jobs" id="jobs"></div>
+    <div class="panel" id="jobhead"></div>
+    <div class="reader">
+      <article class="col agent"><header><b id="agentTitle">AI Blocks agent</b><div class="tabs" role="tablist" id="agentTabs"></div></header><div class="doc" id="agentDoc"></div></article>
+      <article class="col plain"><header><b>Plain Opus</b><span class="small">same brief, no pack</span></header><div class="doc" id="plainDoc"></div></article>
+    </div>
+    <div class="panel">
+      <div class="tabs" role="tablist" id="vTabs"></div>
+      <div class="scroll" style="margin-top:10px"><table class="verdict" id="vtable"></table></div>
+    </div>
+    <details class="panel"><summary>The brief</summary><div class="doc" id="briefDoc" style="max-height:none"></div></details>
+  </section>
+
+  <section id="changes"></section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const pct = x => (x * 100).toFixed(1) + "%";
+const md = t => t ? marked.parse(t.replace(/<(?!\/?(table|thead|tbody|tr|th|td|br)\b)/g, "&lt;")) : '<p class="small">Not available.</p>';
+const PROV = { claude: "Claude", openai: "OpenAI", deepseek: "DeepSeek", gemini: "Gemini" };
+let D, cat = "Pages", job = null, aTab = "latest", vTab = null;
+
+fetch("data.json").then(r => r.json()).then(d => { D = d; render(); }).catch(() => { $("#lede").insertAdjacentHTML("afterend", '<p class="small">The results file did not load. Reload the page to try again.</p>'); });
+
+function render() {
+  const R = D.round, LATEST = D.sets.some(s => s.runs[R]) ? R : "post", ANON = D.sets.some(s => s.runs["anon-" + R]) ? "anon-" + R : "anon-post";
+  $("#gen").textContent = "Data from " + D.generated;
+  // Win share table
+  const runs = D.runs.filter(r => D.sets.some(s => s.runs[r.run]));
+  $("#share").innerHTML = `<thead><tr><th>Set</th>${runs.map(r => `<th>${esc(r.label)}</th>`).join("")}</tr></thead><tbody>` +
+    D.sets.map(s => `<tr><td><b>${esc(s.label)}</b></td>${runs.map(r => { const x = s.runs[r.run]; return `<td>${x ? `<div class="bar" title="${x.agent} to ${x.plain}"><i style="width:${x.share * 100}%"></i><span>${pct(x.share)} · ${x.agent}–${x.plain}</span></div>` : "<span class='small'>not run</span>"}</td>`; }).join("")}</tr>`).join("") + "</tbody>";
+  // Like for like
+  const mrow = (s, k, label) => { const m = s.matched?.[k]; if (!m || !m.pairs) return ""; const d = m.after.share - m.before.share;
+    return `<tr><td><b>${esc(s.label)}</b></td><td>${label}</td><td class="num">${m.pairs}</td><td><div class="bar"><i style="width:${m.before.share * 100}%"></i><span>${pct(m.before.share)}</span></div></td><td><div class="bar"><i style="width:${m.after.share * 100}%"></i><span>${pct(m.after.share)}</span></div></td><td class="num" style="color:${d >= 0 ? "var(--agent)" : "var(--plain)"}">${d >= 0 ? "+" : ""}${(d * 100).toFixed(1)} pts</td><td class="small">${Object.entries(m.perProvider).map(([p, x]) => `${PROV[p]} ${x.before} to ${x.after} of ${x.pairs}`).join(", ")}</td></tr>`; };
+  $("#matched").innerHTML = `<thead><tr><th>Set</th><th>Judging</th><th class="num">Pairs</th><th>Round 1</th><th>Round 2</th><th class="num">Change</th><th>Agent wins by provider</th></tr></thead><tbody>` +
+    D.sets.map(s => mrow(s, "rubric", "With rubric") + mrow(s, "anon", "Anonymous")).join("") + "</tbody>";
+  // Ship tiles
+  const tile = (label, s, arm) => { const t = s.strict[arm], all = s.ship[arm], n = all.as_is + all.small + all.major; return { label, t, all, n }; };
+  $("#ship").innerHTML = D.sets.map(s => { const x = s.runs[LATEST]; if (!x) return ""; const a = x.ship.agent, p = x.ship.plain, na = a.as_is + a.small + a.major;
+    return `<div class="tile"><span class="eyebrow">${esc(s.label)}, latest round</span><span class="big">${a.as_is} <span class="small">vs ${p.as_is}</span></span><span class="sub">outputs judged "use as is" out of ${na}. Scored 9 or more: ${a.nine} vs ${p.nine}.</span></div>`; }).join("");
+  $("#shiptable").innerHTML = `<thead><tr><th>Set</th><th>Run</th><th>Side</th><th class="num">As is</th><th class="num">Small tweaks</th><th class="num">Major rework</th><th class="num">10s</th><th class="num">9 or more</th><th class="num">Strict as is</th><th class="num">Strict 10s</th></tr></thead><tbody>` +
+    D.sets.flatMap(s => [LATEST, ANON].filter(r => s.runs[r]).flatMap(r => ["agent", "plain"].map(arm => { const x = s.runs[r]; const a = x.ship[arm], t = x.strict[arm];
+      return `<tr><td>${esc(s.label)}</td><td>${esc(D.runs.find(z => z.run === r).label)}</td><td><span class="pill ${arm}">${arm === "agent" ? "Agent" : "Plain"}</span></td><td class="num">${a.as_is}</td><td class="num">${a.small}</td><td class="num">${a.major}</td><td class="num">${a.tens}</td><td class="num">${a.nine}</td><td class="num">${t.as_is} of ${t.n}</td><td class="num">${t.tens}</td></tr>`; }))).join("") + "</tbody>";
+  // Judges
+  const jr = {};
+  for (const j of D.jobs) for (const [run, rows] of Object.entries(j.verdicts)) for (const v of rows) {
+    if (run !== LATEST && run !== ANON) continue;
+    const k = (jr[v.judge] ??= { judge: v.judge, provider: v.provider, model: v.model, lens: v.lens, [LATEST]: { agent: 0, plain: 0, tie: 0, sa: 0, sp: 0, n: 0 }, [ANON]: { agent: 0, plain: 0, tie: 0, sa: 0, sp: 0, n: 0 } });
+    const r = k[run]; r[v.winner]++; r.n++; r.sa += v.agent?.overall ?? 0; r.sp += v.plain?.overall ?? 0;
+  }
+  const rec = r => r.n ? `<span class="pill agent">${r.agent}</span> <span class="pill plain">${r.plain}</span>${r.tie ? ` <span class="pill tie">${r.tie} tie</span>` : ""}` : "<span class='small'>none</span>";
+  const av = r => r.n ? `${(r.sa / r.n).toFixed(2)} / ${(r.sp / r.n).toFixed(2)}` : "";
+  $("#judges").innerHTML = `<thead><tr><th>Judge</th><th>Model</th><th>Reads as</th><th>With rubric</th><th class="num">Avg agent / plain</th><th>Anonymous</th><th class="num">Avg agent / plain</th></tr></thead><tbody>` +
+    Object.values(jr).sort((a, b) => a.judge.localeCompare(b.judge)).map(k => `<tr><td><b>${k.judge}</b><br><span class="small">${PROV[k.provider]}</span></td><td class="small">${esc(k.model)}</td><td class="small">${esc(k.lens)}</td><td>${rec(k[LATEST])}</td><td class="num">${av(k[LATEST])}</td><td>${rec(k[ANON])}</td><td class="num">${av(k[ANON])}</td></tr>`).join("") + "</tbody>";
+  // Dimensions
+  const DN = { fit: "Fit to my case", insight: "New insight", priorities: "Most important first", reasoning: "Reasoning", correct: "Correct", clear: "Clear", voice: "Voice and audience", range: "Range of ideas", ready: "Ready to use", overall: "Overall" };
+  $("#dims").innerHTML = `<thead><tr><th>Dimension</th>${D.sets.map(s => `<th class="num">${esc(s.label)}</th>`).join("")}</tr></thead><tbody>` +
+    Object.keys(DN).map(d => `<tr><td>${DN[d]}</td>${D.sets.map(s => { const x = s.runs[LATEST]; if (!x) return "<td></td>"; const a = x.dims.agent[d], p = x.dims.plain[d]; return `<td class="num"><span style="color:${a >= p ? "var(--agent)" : "var(--plain)"}">${a.toFixed(2)}</span> / ${p.toFixed(2)}</td>`; }).join("")}</tr>`).join("") + "</tbody>";
+  // Categories and jobs
+  const cats = [...new Set(D.jobs.map(j => j.category))];
+  const order = ["Pages", "Creative and ad copy", "Emails and messages", "Media buying and growth", "Strategy and planning", "Unseen jobs"];
+  cats.sort((a, b) => order.indexOf(a) - order.indexOf(b));
+  const drawCats = () => { $("#cats").innerHTML = cats.map(c => `<button class="chip" aria-pressed="${c === cat}" data-c="${esc(c)}">${esc(c)}</button>`).join(""); };
+  const drawJobs = () => {
+    const list = D.jobs.filter(j => j.category === cat);
+    if (!job || job.category !== cat) job = list[0];
+    $("#jobs").innerHTML = list.map(j => { const r = j.perRun[LATEST] ?? j.perRun.post; return `<button class="job" aria-pressed="${j === job}" data-id="${j.id}"><b>${esc(j.title)}</b><small>${j.id} · agent ${r?.agent ?? "?"}, plain ${r?.plain ?? "?"}</small></button>`; }).join("");
+    drawJob();
+  };
+  const drawJob = () => {
+    const j = job, runsHere = D.runs.filter(r => j.perRun[r.run]);
+    const biz = /\*\*Business:\*\*\s*([^\n]+)/.exec(j.brief)?.[1] ?? "";
+    $("#jobhead").innerHTML = `<p class="eyebrow">${j.id} · ${esc(j.category)} · agent pack ${esc(j.pack ?? "")}</p><h3 style="margin:6px 0">${esc(j.title)}</h3><p class="small">${esc(biz)}</p><div class="chips" style="margin-top:10px">${runsHere.map(r => { const x = j.perRun[r.run]; return `<span class="pill ${x.agent > x.plain ? "agent" : x.plain > x.agent ? "plain" : "tie"}">${esc(r.label)}: ${x.agent}–${x.plain}${x.tie ? "–" + x.tie : ""}</span>`; }).join("")}</div>`;
+    const hasR1 = j.agentRound1 && j.agentRound1 !== j.agent;
+    $("#agentTabs").innerHTML = hasR1 ? [["latest", "Round 2"], ["r1", "Round 1"]].map(([k, l]) => `<button class="tab" role="tab" aria-selected="${aTab === k}" data-a="${k}">${l}</button>`).join("") : "";
+    $("#agentDoc").innerHTML = md(aTab === "r1" && hasR1 ? j.agentRound1 : j.agent);
+    $("#plainDoc").innerHTML = md(j.plain);
+    $("#briefDoc").innerHTML = md(j.brief);
+    const vruns = Object.keys(j.verdicts).filter(r => j.verdicts[r].length);
+    if (!vruns.includes(vTab)) vTab = vruns.includes(LATEST) ? LATEST : vruns[0];
+    $("#vTabs").innerHTML = vruns.map(r => `<button class="tab" role="tab" aria-selected="${r === vTab}" data-v="${r}">${esc(D.runs.find(z => z.run === r)?.label ?? r)} verdicts</button>`).join("");
+    const rows = j.verdicts[vTab] ?? [];
+    $("#vtable").innerHTML = `<thead><tr><th>Judge</th><th>Pick</th><th class="num">Agent</th><th class="num">Plain</th><th>Ship agent / plain</th><th>Why</th></tr></thead><tbody>` +
+      rows.map(v => `<tr><td><b>${v.judge}</b><br><span class="small">${esc(v.model)}</span></td><td><span class="pill ${v.winner}">${v.winner === "agent" ? "Agent" : v.winner === "plain" ? "Plain" : "Tie"}</span><br><span class="small">${esc(v.margin ?? "")}</span></td><td class="num">${v.agent?.overall ?? ""}</td><td class="num">${v.plain?.overall ?? ""}</td><td class="small">${esc(v.agent?.use ?? "")}<br>${esc(v.plain?.use ?? "")}</td><td class="why">${esc(v.reason)}<details style="border:0;padding:4px 0 0"><summary class="small">Strengths and mistakes</summary><p class="small"><b>Agent, best:</b> ${esc(v.agent?.strength)}</p><p class="small"><b>Agent, worst:</b> ${esc(v.agent?.mistake)}</p><p class="small"><b>Plain, best:</b> ${esc(v.plain?.strength)}</p><p class="small"><b>Plain, worst:</b> ${esc(v.plain?.mistake)}</p></details></td></tr>`).join("") + "</tbody>";
+  };
+  $("#cats").onclick = e => { const b = e.target.closest("[data-c]"); if (!b) return; cat = b.dataset.c; job = null; drawCats(); drawJobs(); };
+  $("#jobs").onclick = e => { const b = e.target.closest("[data-id]"); if (!b) return; job = D.jobs.find(j => j.id === b.dataset.id); drawJobs(); };
+  $("#agentTabs").onclick = e => { const b = e.target.closest("[data-a]"); if (!b) return; aTab = b.dataset.a; drawJob(); };
+  $("#vTabs").onclick = e => { const b = e.target.closest("[data-v]"); if (!b) return; vTab = b.dataset.v; drawJob(); };
+  drawCats(); drawJobs();
+  if (D.changes) $("#changes").innerHTML = D.changes;
+  if (D.summary) { $("#summary").innerHTML = D.summary; $("#summary").hidden = false; }
+}
+</script>

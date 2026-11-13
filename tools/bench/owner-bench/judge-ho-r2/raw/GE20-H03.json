@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Correctly flags the 'keen buyer' bias in the fit quiz data and provides excellent, accurate mathematical working for its projections.",
+  "biggest_mistake": "Waits until day 5 to send a late notice, missing the chance to intercept the bulk of 'where is my order' tickets that arrive on days 3 to 5.",
+  "what_would_make_it_a_10": "Add a proactive day-3 check-in, and include practical bra-fitting advice in the post-delivery email rather than just asking if it fits."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Directly hits the unstated needs by including a day-3 update and giving brilliant, practical bra fitting advice post-delivery to reduce 'too small' returns.",
+  "biggest_mistake": "Did not explicitly rank the three fixes by money saved at the very beginning of the response, though the table handles the math beautifully.",
+  "what_would_make_it_a_10": "Rank the three fixes by money saved right at the top, and note the added cost of the proposed SMS for the day-3 update."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 caught the specific, high-leverage details the owner was looking for: it intercepted the day-3 tracking silence with a proactive message, and it actually provided the customer with instructions on how to evaluate their bra fit at home. Both models executed the math flawlessly, but Output 2 showed much stronger operational insight."
+}

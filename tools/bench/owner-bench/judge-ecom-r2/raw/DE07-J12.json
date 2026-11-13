@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It does the RTO money by pincode group and then acts on it: tier 3 is 31% of COD orders but 49% of RTO parcels, and the ₹30 prepaid offer is limited to tier 2/3 with a clear break-even (₹30 ÷ ₹180 = 17% RTO, so metro at 15% gets nothing).",
+  "biggest_mistake": "It cancels every unconfirmed tier 3 order at 48 hours with no call, which may throw away more sellable orders than the RTOs it saves, and it spends a Marketing template on the prepaid nudge right after a Confirm tap when a free-form reply inside the 24-hour window would do.",
+  "what_would_make_it_a_10": "Swap the 48-hour auto-cancel for a cheap tier-3 call or WhatsApp nudge with a small COD advance, and send the prepaid nudge as a free-form reply inside the open 24-hour window instead of a paid Marketing template."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp platform mechanics: it flags that the checkout opt-in may not cover marketing, uses the 24-hour conversation window for the prepaid nudge so it costs nothing, and puts one agent on a 2pm–midnight shift for the 31% evening chats.",
+  "biggest_mistake": "It drops the prepaid incentive entirely, so it never does the break-even maths that would tell the owner where a discount pays for itself, and the tier 2/3 hold has no end date, leaving unconfirmed orders sitting unsent.",
+  "what_would_make_it_a_10": "Add the quantified prepaid offer by pincode group (only where RTO beats the discount's payback) and give the held orders a firm drop-dead date with a cancelled-order win-back message."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 finds the tier 3 money and shows me the break-even that tells me exactly where a prepaid discount pays for itself, with a clean this-week order of work; Output 2 is sharper on WhatsApp mechanics and consent but leaves the prepaid lever unpulled and its held orders hanging."
+}

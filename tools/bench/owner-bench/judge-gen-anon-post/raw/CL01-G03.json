@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Opens with the three numbers, admits the forecast miss in the first line, and sets out the $2.2M burn rise in a clear table.",
+  "biggest_mistake": "Customer A comes second under the AI-builder story, and the asks only appear at the very bottom. The derived claim that the $0.9M is 'roughly 9 points of margin' is shaky, and it says so itself: it adds up to more than the actual 7-point drop.",
+  "what_would_make_it_a_10": "Put Customer A first among the bad news, preview the asks in the first screen, and give the 48-hour fix a ship date. Drop the margin-attribution math that doesn't reconcile."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Everything the lead partner needs is in the first screen: three numbers, the miss, what we need and by when. Customer A leads the bad news. The fix has a ship date, and the asks come with ready-to-forward blurbs.",
+  "biggest_mistake": "It states the New York base as decided, which I still have to confirm. Asks 1 and 3 don't say whether they are for the lead partner or the angels. It also runs close to the length limit.",
+  "what_would_make_it_a_10": "Name who each ask is for. Add Customer A's likely effect on NRR. Trim slightly to stay safely under 700 words."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both are honest and accurate, but #2 gets the asks and Customer A into the first screen, dates the fix, and gives angels text they can forward. I'd send it with almost no edits."
+}

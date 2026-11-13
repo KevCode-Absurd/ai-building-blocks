@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the segment choice, shows the seat math clearly, and builds the page around the real recruiting pain: email tennis, fair round robin, routing, and security.",
+  "biggest_mistake": "A few claims and details would need checking or cutting, like text reminders, tool logos, customer quotes, and some primary 'Get started' CTAs on a team page where 'Book a demo' should lead.",
+  "what_would_make_it_a_10": "Tighten the copy slightly, remove or verify every bracketed/unsupported proof point, make demo the main CTA throughout, and keep the metric and page sections as they are."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very close to usable copy: clear, practical, on-brand, and focused on what Priya cares about first rather than open source infrastructure.",
+  "biggest_mistake": "The page has a little less range and depth than it could; the final metric is good but would be stronger if it included first booking activation, not just signup or demo.",
+  "what_would_make_it_a_10": "Add one stronger proof/demo section showing the real candidate booking flow, tighten the qualified metric to include first booking within 7 days, and make sure every integration/logo claim is verified."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both understood the business and picked recruiting for the right reason. I would rather use Output 2 because it is cleaner, safer for the brand, and closer to something I could hand to design and publish with only small edits."
+}

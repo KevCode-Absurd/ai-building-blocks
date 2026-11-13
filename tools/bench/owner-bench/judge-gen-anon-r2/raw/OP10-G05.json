@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into the right hiring design: APAC/00:00-08:00 UTC coverage, weekend rotation stated plainly, writing as the main signal, and no resume/cover letter pile.",
+  "biggest_mistake": "The application reply tests tone more than problem-solving because the candidate has no facts to work from, so it may not screen as strongly as it could before the longer exercise.",
+  "what_would_make_it_a_10": "Use a slightly more concrete customer scenario in the application, add an adjustment/accessibility note, and tighten a few lines so the post is completely publish-ready."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post is warm, direct, and very usable, and the scorecard clearly follows the data by giving written work almost all the weight.",
+  "biggest_mistake": "The salary is not high enough in the post, and the application exercise gives away the diagnosis, which weakens the signal on finding the real problem.",
+  "what_would_make_it_a_10": "Move the $82,000 salary into the opening lines, remove the small tension between five-day weeks and summer four-day weeks, and make the application exercise test both writing and diagnosis without being tricky."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather hand Output 1 to the team because it puts the business-critical facts first: salary, APAC hours, weekend rotation, and the reason we are changing the application. Output 2 is also strong, but it needs a little more cleanup before I would publish it."
+}

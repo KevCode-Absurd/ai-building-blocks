@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the real story: top-5 matte shades run out about 30 Nov, the ₹38,400 re-carton buys four days of runway, and the whole plan fits inside ₹1.19 crore with a rush order landing 7 Dec and a standard order for January.",
+  "biggest_mistake": "The 'one gap we cannot close' framing and the 1–8 Dec out-of-stock is a bit timid, and the palette clearance at 'no less than cost' on 1 February is a soft exit rather than a hard recovery deadline.",
+  "what_would_make_it_a_10": "Tighten the gap plan: state exactly how many units of pre-orders will be taken and cap them, and put a firm date and price floor for the glitter palette clearance."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It quantifies the gap in rupees (₹25.6 lakh in lost sales), gives a usable reorder-point table with weekly checks, and turns the glitter and liquid lipstick into a Night-out kit with cost, margin and a clear-through trigger.",
+  "biggest_mistake": "The pre-order wording says 'ship by 10 December' while the order table says rush lands 7 December and the table says sellout ~1 December — small inconsistency, and the 5,000-per-shade rush split average is loose when some shades sell far more.",
+  "what_would_make_it_a_10": "Fix the pre-order ship date to match the 7 Dec landing, split the rush order by actual shade sales rather than an average, and name the owner for the weekly reorder check."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are usable Monday and both get the core insight right, but Output 2 gives me a reorder-point table, a quantified gap and a kit with margin, which is easier to act on and check every week — so I'd take it, after fixing the pre-order date."
+}

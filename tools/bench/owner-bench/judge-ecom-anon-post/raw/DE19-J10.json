@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A complete, actionable plan: bundles, a threshold move with the money worked out, and a sequenced test — all written in plain language I could hand to my team.",
+  "biggest_mistake": "Its bundle ladder pushes the shampoo duo and a serum-plus-lip-balm step-up over the routine bundle customers already buy; treating the ₹499–598 slice as 'about 6%' is a guess dressed as a number, and the threshold math (₹109 profit per add-on) looks optimistic.",
+  "what_would_make_it_a_10": "Build bundle one on the face wash + serum pair customers already buy (₹944 at list, priced near ₹849), show the margin and the money, and use COD/RTO to justify a COD-specific fee rather than only the threshold move."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reasons from my own purchase data — builds the lead bundle on the top pair, keeps ₹499 because it sits exactly where COD refusals fall, and finds the real leak in under-₹499 COD orders, with a lip balm cart fix and a COD fee idea.",
+  "biggest_mistake": "The 'bolder move' COD fee is a separate big decision that gets only a short section and could complicate the test plan; the body duo is weaker than the face wash + serum routine the brief points to, and some projections are wide ranges rather than firm numbers.",
+  "what_would_make_it_a_10": "Put the face wash + serum routine (around ₹849) as bundle one with full margin maths, and fully spec the COD fee as its own step with expected RTO savings and a guardrail on new customers."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 reads like it actually looked at my numbers: it protects the serum reorder, keeps ₹499 because it is the refusal line, and puts the money on the lip balm cart offer and COD rather than guessing a threshold move. Output 1 is tidy and testable, but its bundles feel less like how my customers already buy."
+}

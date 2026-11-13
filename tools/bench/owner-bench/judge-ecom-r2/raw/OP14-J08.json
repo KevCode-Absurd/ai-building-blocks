@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the real causes of lapse, especially the discontinued Monsoon Dark and the subscription delivery failure, and turns them into specific tracks with usable drafts and measurement.",
+  "biggest_mistake": "Its reachable-count assumption of 70% is rough and a few measurement/value lines are a bit loose, including an unproven lift threshold claim and a net profit estimate built on assumptions rather than clearly separated scenarios.",
+  "what_would_make_it_a_10": "Use tighter reach maths by segment, make the break-even and significance logic explicit, and firm up the Monsoon Dark replacement with the actual closest current roast."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly identifies the two biggest signals in the data—Monsoon Dark churn and the courier-driven subscription problem—and gives a practical holdout-based measurement plan.",
+  "biggest_mistake": "It makes several decisions on shaky or inconsistent maths and assumptions, especially the contactable counts, using only email in the valuation, and the Monsoon Dark recommendation to House Blend without evidence it is the closest match.",
+  "what_would_make_it_a_10": "Ground the targeting and value model in consistent reach logic across email and WhatsApp, use a justified replacement for Monsoon Dark, and tighten the subscriber and offer economics."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team sooner: it is more tailored to my data, handles the discontinued blend and ex-subscriber problem better, and gives stronger offer logic and drafts. Output 2 is smart, but I would need to rework its maths and a few assumptions before trusting it."
+}

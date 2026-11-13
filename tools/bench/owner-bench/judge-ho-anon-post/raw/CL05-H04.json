@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Complete per-reason table, exact copy for every panel and outcome, correct numbers, and practical build notes including a 10% holdout test. It brings back the pause as the main save.",
+  "biggest_mistake": "The money case is thin: it gives a single point estimate with no range and no first-month watch list. It also gives a 50% discount to people switching apps with no evidence it works, and its 'Pick one reason to finish' message adds a little friction.",
+  "what_would_make_it_a_10": "Lead with the decision and the money, give an honest range, say plainly that the pause carries almost everything, add what to watch in month one, and drop or justify the discount for switchers."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the decision and the money, including a range. It warns that the pause delivers 80% of the result and that without it the flow keeps fewer people than today. It names the pause rebuild as the critical path, shows 'Cancel my subscription' in every panel, and gives a clear 'measure from day one' plan.",
+  "biggest_mistake": "It offers nothing to people switching apps and gives the 'Other' group a bare exit. The reminder prompt copy is a little scripted, and it is probably over the word limit.",
+  "what_would_make_it_a_10": "Trim to the word limit and add a light, low-cost alternative for the 8% switching to another app. Otherwise it is already close to ready."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 reads like something I can act on: it tells me the pause is the whole bet, gives me a range and a critical path, and says how to check it in the first month. Output 1 has good copy and maths, but it is less candid about risk and has less on measurement."
+}

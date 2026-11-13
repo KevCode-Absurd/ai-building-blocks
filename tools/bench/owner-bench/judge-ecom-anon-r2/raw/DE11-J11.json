@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the in-app checkout bug first with the money sized, then ranks five tests against real evidence, with honest sample sizes and a schedule.",
+  "biggest_mistake": "Using orders per session as the main metric for most tests makes the detectable effects coarse (about 10% relative) and the traffic maths thin; a couple of numbers like the in-app cart gap are described loosely.",
+  "what_would_make_it_a_10": "Tighten the metric choice per test, show the sample-size maths in one line, and give in-app fix numbers as a range with the assumption stated crisply."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong, transparent sample-size maths and a clean 14-day, one-test-at-a-time cadence, with the checkout fix projected as a range.",
+  "biggest_mistake": "Main metric is add to cart for nearly every test, which is an early read not the money metric, and it drops the hero-image change from the five without replacing it with something stronger.",
+  "what_would_make_it_a_10": "Use orders per session where traffic allows, keep add to cart as an early signal, and add the missing high-impact page change (trial and delivery near price) into the ranked five."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the one I would act on: bug first with the money, then five ranked tests tied to evidence, with sensible metrics and guardrails; Output 2 is close but leans too hard on add to cart as the main metric."
+}

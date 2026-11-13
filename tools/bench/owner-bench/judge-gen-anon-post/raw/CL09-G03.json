@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Honest and well organized. It has the three numbers, a correct runway range, a clean table of where the burn went, and three asks that each name a profile, an owner and a date.",
+  "biggest_mistake": "Customer A comes second, behind the AI-builder story, and the asks sit at the very bottom. A phone reader who stops early learns neither. The '9 points of margin, more than the 7-point drop' aside is clever but could confuse investors.",
+  "what_would_make_it_a_10": "Put Customer A and a one-line summary of the asks in the first screen. Give the 48-hour fix a ship date. Add short blurbs angels can forward."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built for the lead partner on a phone. It gives the three numbers and the asks with dates in the first screen, then puts Customer A first in the bad news and notes it will show in February ARR. The margin fix has a ship date, and the asks come with blurbs angels can forward.",
+  "biggest_mistake": "It states as settled that the VP role is now based in New York and that the fix ships by 27 November. Both are assumptions I would need to confirm before sending. The September runway of 52 months in the table may draw questions without context.",
+  "what_would_make_it_a_10": "Confirm the New York decision and the ship date. Give a rough estimate of the margin recovery from the 48-hour pause. Add a sentence on how Customer A's loss will affect NRR."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both are honest and get the numbers right, but the second one tells my lead investor the bad news and what we need from them in the first screen. It also makes the asks easy to forward. I'd send it with a quick check of the dates."
+}

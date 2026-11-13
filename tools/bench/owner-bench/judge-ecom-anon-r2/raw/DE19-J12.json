@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It goes straight at the money: tier 3 holds, the ₹30 offer paid-back math (only above 17% RTO), and confirming before shipping, all tied to clear numbers.",
+  "biggest_mistake": "The order confirmation is a hold-and-threaten flow; the 48-hour tier 3 auto-cancel and 'didn't get your confirm' message risks losing good orders, and the English-only, slightly stiff tone misses the young Hinglish voice.",
+  "what_would_make_it_a_10": "Warm the copy into the Snitch voice with light Hinglish in the COD confirm, soften the auto-cancel so a real customer isn't dropped for missing a tap, and cut a couple of the extra templates that dilute focus."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads like a person wrote it: easy to follow, natural Hinglish scripts, the 2pm–midnight shift idea, and one call before holding tier 2/3 orders.",
+  "biggest_mistake": "It leaves the pincode-risk targeting loose (no prepaid offer or advance for the worst band, tier 3 hold only trialled 2 weeks) and puts a prepaid pitch triggered off a Utility template, which risks category trouble and undercuts the whole RTO saving.",
+  "what_would_make_it_a_10": "Commit to a real tier 3-first RTO play with the money worked by group, fix the Utility-vs-Marketing split so the prepaid ask can't get flagged, and show the weekly scorecard with starting numbers like Output 1."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd act on: it does the RTO math by pincode group and makes the confirmation-before-ship and prepaid rules pay for themselves, while Output 2 is friendlier but softer on the tier 3 money and muddles the template categories."
+}

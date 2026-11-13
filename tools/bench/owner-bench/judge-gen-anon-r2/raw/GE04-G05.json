@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 10,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The customer reply exercise with the hidden typo is a brilliant, practical way to test problem-solving without requiring product knowledge.",
+  "biggest_mistake": "The scorecard table is slightly dense and could be formatted a bit more cleanly for the hiring team.",
+  "what_would_make_it_a_10": "A slightly cleaner layout for the scorecard, but the content and strategy are already exceptional."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clear formatting and a great mathematical breakdown of the time saved during the application review process.",
+  "biggest_mistake": "The customer reply prompt asks them to reply to a locked-out user but provides no backend context, making it impossible to actually score 'getting to the bottom of a problem'.",
+  "what_would_make_it_a_10": "Providing a scenario with hidden clues in the prompt so the applicant can actually solve a problem, rather than just writing a polite deflection."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both outputs followed the brief exceptionally well and captured our voice, but Output 1 provided a highly actionable customer support prompt with a hidden typo that perfectly tests problem-solving."
+}

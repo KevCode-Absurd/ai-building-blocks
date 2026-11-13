@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Leads with the miss, the margin drop and the burn, and puts Customer A and the missed forecast in the first screen with the fix and its date attached.",
+  "biggest_mistake": "Keeps a short 'What went well' and the full table ahead of the asks, so it runs long and the asks land late — fine on a laptop, less so on a phone.",
+  "what_would_make_it_a_10": "Pull the three asks into the top third with the three numbers, and trim the 'what went well' block to one line so the whole thing reads in under two minutes."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Three numbers, a one-line 'what we need' preview, then bad news first, each with a date and owner — and the asks each carry a forwardable sentence an angel can actually send.",
+  "biggest_mistake": "The runway row compares September's 52 months to October's 33 as a -19 month change, which reads as a collapse; a careful reader will notice that's really the burn rise plus a one-off deposit.",
+  "what_would_make_it_a_10": "Drop the misleading runway change from the table and note plainly that without the $0.8M deposit runway is ~37 months; that's the only place the maths invites a challenge."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are honest and on-brand, but Output 2 gets the bad news into the first screen faster, puts a forwardable sentence in every ask, and reads cleanly on a phone — I'd send that one after one fix to the runway line."
+}

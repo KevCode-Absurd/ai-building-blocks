@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the in-app checkout issue as the first priority, sizes the upside in money, and gives a ranked plan with practical test mechanics tied to the evidence in the brief.",
+  "biggest_mistake": "A few testing choices feel shakier than they should, especially overlapping tests and some sample-size/runtime claims that are presented with more certainty than the data really supports.",
+  "what_would_make_it_a_10": "Tighten the experimental design and sample-size logic, simplify the schedule, and make the copy/examples a little more consistent with a mobile-first Wakefit page."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is very easy to read, correctly calls out the in-app checkout bug, and keeps the plan anchored in real customer questions like delivery date, size, firmness and EMI.",
+  "biggest_mistake": "It misses some of the strongest asks from the brief by underplaying the need to quantify test sensitivity honestly and by bundling changes or adding assumptions that are less grounded in the page data.",
+  "what_would_make_it_a_10": "Separate cleaner tests, show more rigorous run-time and detectable-effect logic, and sharpen the prioritisation so the owner can act with more confidence."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels closer to something I could act on tomorrow. It understands the business problem better, ranks the work more credibly, and does a better job turning the data into a plan."
+}

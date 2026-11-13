@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data correctly and turns it into three distinct, ready-to-shoot concepts that match the business need, especially the 3 pm habit, taste-first structure, and price objection.",
+  "biggest_mistake": "It adds extra planning material beyond the ask and Script 3 leans on kids on camera, which can be more work and riskier to execute than a simpler family-angle version.",
+  "what_would_make_it_a_10": "Tighten a few lines, make every approved claim usage perfectly exact, and simplify the family script so it is easier to produce while keeping the same insight."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clean, easy to follow, and sounds close to the brand voice while giving three usable creator scripts with strong hooks.",
+  "biggest_mistake": "It slips on factual and compliance details: not all approved claims are handled carefully or fully, and the disclosure guidance is weaker and less embedded in the scripts than I would want for paid creator ads.",
+  "what_would_make_it_a_10": "Use the exact approved claims more consistently, address price and the winning data signals more sharply, and build in clearer paid partnership instructions inside each creator brief."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels more grounded in my actual data and more useful as a decision-making document. It prioritizes the right hooks and objections and is closer to something I would hand straight to creators."
+}

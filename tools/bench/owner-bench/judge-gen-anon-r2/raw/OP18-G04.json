@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the pilot correctly: Controllers/Heads of Finance at 50-300 person SaaS companies, timed to pricing-page changes, with no links in step 1 and a grounded reply-rate forecast.",
+  "biggest_mistake": "The copy leans a little too much on reply-keyword asks like “reply yes” and “reply steps,” which feels more like a sales sequence than a finance peer-to-peer note.",
+  "what_would_make_it_a_10": "Tighten the CTAs so each email has one natural finance-person ask, move the proof out of step 1 or make it less prominent, and avoid depending on a one-page summary/three-step asset that was not provided."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The email copy sounds the most like a finance person writing to another finance person: specific, plain, and tied to pricing changes, rev rec, close, audit timing and engineering ownership.",
+  "biggest_mistake": "The reply-rate forecast is a little optimistic with the 7%-10% range and the 1.25x assumption; I would rather anchor closer to 6.8%-7.9% until tested.",
+  "what_would_make_it_a_10": "Make the forecast more conservative, add slightly clearer one-ask CTAs in steps 1 and 4, and keep the meeting ask in step 2 a touch softer."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both got the strategy right, but I would rather put Output 2 in front of customers because the copy feels more natural, less gimmicky, and more on-brand. Output 1 has slightly better list math, but its reply-keyword CTAs need more editing before I would send it."
+}

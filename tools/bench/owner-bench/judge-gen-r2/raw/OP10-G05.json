@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into the right hiring system: APAC/00:00-08:00 UTC coverage, a plain weekend warning, no experience requirements, and a short written customer reply as the main screen.",
+  "biggest_mistake": "The salary is included but not as high up as it should be for this brand and brief.",
+  "what_would_make_it_a_10": "Move the $82,000 salary into the first screen of the post and trim a little so the published version is tighter."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the salary, states the overnight need and weekend rotation plainly, and correctly drops degrees, tool experience and years in support.",
+  "biggest_mistake": "The application writing prompt gives no internal facts to solve, so it tests tone more than the strongest signal: fixing the customer's actual problem in writing.",
+  "what_would_make_it_a_10": "Add a concrete application exercise with enough facts to diagnose and solve the issue, plus the exact longer exercise and call questions so the team can run it tomorrow."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both are strong and on-brand, but Output 1 is more operationally ready: it includes a real application exercise, a second-stage exercise, call questions, reviewer calibration, and a scorecard tied tightly to the predictive signals. Output 2 is cleaner in places, especially salary placement, but needs more work before the team can use it."
+}

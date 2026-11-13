@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong, publish-ready articles in the right words, especially the undo-delete piece covering app and web.",
+  "biggest_mistake": "It misses the cheap Settle up Help link for 3,600 recording-payment tickets and instead suggests merging a 71%-helpful article; the forecast is more point estimate than range.",
+  "what_would_make_it_a_10": "Add the Settle up screen link, drop or better justify the Recording a payment merge, and turn the ticket forecast into a clear range with explicit assumptions."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The most owner-ready plan: right page priorities, smart use of the engineer day including the Settle up link, and a transparent ticket range with reasoning and risk.",
+  "biggest_mistake": "The undo-delete article lacks web steps, and the Google Play refund path may need checking; the Settle up link is noted as upside but left out of the ticket range.",
+  "what_would_make_it_a_10": "Add web restore steps, verify the Apple/Google refund flows, include cancellation steps in the refund article, and either include the Settle up link in the range or show it as a separate conservative upside."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I'd hand to the team: it fixes the biggest causes, uses the engineer day on the right Help links including Settle up, and gives me a defensible ticket range. Output 1 writes slightly fuller articles, but its merge suggestion and missing Settle up link make it less ready to act on."
+}

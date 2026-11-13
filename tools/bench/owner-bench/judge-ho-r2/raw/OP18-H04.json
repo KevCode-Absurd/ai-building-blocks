@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the main signals: brings back the pause for busy learners, stops discounting trip-over users, and treats lack of progress as a reminder/product problem.",
+  "biggest_mistake": "The revenue range and the switch/reminder assumptions need a little tightening before reporting as a forecast.",
+  "what_would_make_it_a_10": "Tighten the forecast language and test plan, especially for the untested annual-plan switch and reminder offer."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is buildable, clear, and correctly makes the paused busy-user path the biggest priority.",
+  "biggest_mistake": "It reintroduces the 50% discount for app switchers without evidence, and then appears to count that discounted revenue at full value.",
+  "what_would_make_it_a_10": "Remove the unsupported discount path, fix the discounted revenue maths, and keep the save offers focused on pause, annual switch, and reminder setup."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to the brand principles and the data: it avoids wasteful discounts, respects the one-screen rule, and gives cleaner copy and maths. Output 2 is good, but the half-price app-switcher offer is exactly the kind of margin leak this redesign should stop."
+}

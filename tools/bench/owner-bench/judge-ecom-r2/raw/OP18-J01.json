@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the three big account signals: relaunch the paused winner first, stop the Starter Kit COD trap, and split Women 25 to 34 instead of killing the product.",
+  "biggest_mistake": "Some break-even lines, especially ASC, are a little too generous and the under-spend/reserve plan is more conservative than the brief likely expected.",
+  "what_would_make_it_a_10": "Tighten the ad-set break-even math to each ad set's actual AOV/COD/RTO and simplify the budget plan so the team can execute it without decoding the reserve logic."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly identifies the paused creator video, the Starter Kit COD problem, and the Women 25 to 34 opportunity, and gives a usable 14-day budget that adds to ₹5,60,000.",
+  "biggest_mistake": "It still holds or funds ad sets that fail the Shopify-adjusted safe line, especially Beard Kit and some retargeting, so it is partly making decisions on Meta-count profit rather than store profit.",
+  "what_would_make_it_a_10": "Base every budget move on Shopify-adjusted contribution, cut or cap the marginal ad sets harder, and move more of that money behind ASC only after the creator-video relaunch proves itself."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather hand to the team because it acts on the real money signals and is tougher about not scaling loss-making spend. Output 2 is good, but it compromises too much with Meta-reported profit and leaves more budget in marginal ad sets."
+}

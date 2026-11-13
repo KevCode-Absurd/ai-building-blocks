@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The clearest read of the business: it names the real problem (new-customer cost off Meta, linen returns, switched-off email capture) in plain language, uses the customer's own words, and is honest about its assumptions. I could send this Monday with light edits.",
+  "biggest_mistake": "It says the moves are 'ranked by gross profit impact and effort' but only gives High/Medium/Low, so the ranking is softer than the brief asked for. It also lists 'Meta customers do not pay back within 18 months' under what's proved, when that leans on the blended 31% repeat rate applying to Meta buyers too.",
+  "what_would_make_it_a_10": "Put a real number on each move's gross-profit impact and effort (low/likely/high), add week-4 and week-8 gates, and add action thresholds to the scorecard so I know when to stop or double down."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds a real contribution-margin baseline (13.6% to 7.8%) from the data and ranks moves by a quantified gain-divided-by-effort with low/likely/high ranges, week-4/8 gates, and per-line action thresholds. That is a model I can actually run, not just prose.",
+  "biggest_mistake": "False precision and density. The 12.9% day-90 target stacks several optimistic projections on layered assumptions, the derivation is hard to scan, and there are small internal inconsistencies (contribution works out nearer 7.6% than 7.8%; the flow-revenue sizing looks slightly generous). It also invents a start date the brief never gave.",
+  "what_would_make_it_a_10": "Lead with a plain one-page summary and one 'likely' number per move, trim the model's precision to what the data supports, fix the rounding so every figure ties out, and keep the thresholds, which are the best part."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both would go to the board, but 2 actually answers 'ranked by gross profit impact and effort' with numbers and gives me gates and thresholds I can manage against; 1 reads better and is safer, but its ranking is qualitative and a sharp operator would want the contribution model 2 provides."
+}

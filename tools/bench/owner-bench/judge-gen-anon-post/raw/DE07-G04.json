@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks the exact segment and moment the pilot points to, then turns it into a send-ready playbook: exclusion table with pilot numbers, send windows around close and audit, stop rules, reply handling, and a subject A/B test.",
+  "biggest_mistake": "The 3.4% to 4.0% positive-reply band quietly assumes half of replies stay positive at the 7.9% pricing-trigger rate, and it never flags that 7.9% is an all-segment figure; it also puts a 20-minute call ask in step 1 when the data says plain, no-link curiosity gets the replies.",
+  "what_would_make_it_a_10": "Drop or explicitly label the 4.0% positive extrapolation, say how many of the 1,900 likely carry a live pricing flag, and move the 9-day-to-4-day proof sentence to step 2 or 3 so step 1 is one clean question."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Forecast discipline: plans on about 7%, says 6.8% is the floor, refuses to multiply the segment gain by the trigger gain, and adds a check after the first 300 sends.",
+  "biggest_mistake": "Steps 1 and 2 each carry two reply prompts (one answer to the question, plus 'reply yes' for a summary and 'reply steps' for a doc), which breaks the one-ask rule and blurs the call to action; the whole piece also crowds the 900-word cap.",
+  "what_would_make_it_a_10": "One question and one reply word per email, a short timing window tied to close and audit instead of 'send within a few days', and a trim to stay comfortably under the word limit."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both read the pilot correctly and get every number right, but #1 is the version I could hand to a rep on Monday: cleaner one-ask emails, send windows around close and audit, and a reply-handling section. #2 reasons better about the forecast but muddies its CTAs and runs long."
+}

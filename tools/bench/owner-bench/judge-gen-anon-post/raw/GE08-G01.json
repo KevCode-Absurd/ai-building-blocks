@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Gives the writer the exact title, meta description, and outline order for Monday morning, with conservative, mathematically sound trial projections.",
+  "biggest_mistake": "Pushes the rewrite of the high-impression cookie/privacy pages to Month 2 rather than tackling them immediately alongside the GA rewrite.",
+  "what_would_make_it_a_10": "Address Maya's fear of losing historical GA4 data as a dedicated section or page topic."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 10,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Directly tackles Maya's fear of losing old data with a dedicated Month 2 piece, and formats the conversion rates per 1,000 clicks cleanly.",
+  "biggest_mistake": "Week 1 tells the writer what to do generally, but lacks the drafted title, meta tags, and specific outline provided by Output 1.",
+  "what_would_make_it_a_10": "Draft the exact meta copy for Monday morning and use more conservative trial projections instead of top-end ceilings."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both understand our business and capacity limits perfectly, but Output 1 gives the writer the exact title, meta description, and outline to execute on Monday morning without asking questions."
+}

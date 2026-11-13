@@ -6,7 +6,8 @@
 // asking it more times does not cancel that out, because the bias always leans the same way. Showing the drafts in
 // both orders and counting a win only when both orders agree removes position bias; the length gap is reported so a
 // longer draft cannot win on length alone. (Stanford CS329Z, lecture 15: LLM-as-judge.) The sheet asks the owner's
-// nine questions plus three checks (signals acted on, work left for the owner, rules followed against the owner),
+// nine questions plus five checks (signals acted on, asks met, whether the signals set the weights, order and asks,
+// work left for the owner, rules followed against the owner),
 // because a reviewer who reads only your own spec inherits your blind spots.
 //
 //   node tools/blind-review.mjs prepare --brief <owner-brief.md> draft-1.md draft-2.md [draft-3.md] [--out review]
@@ -40,11 +41,13 @@ export const OWNER_QUESTIONS = [
   "Ready to use: could I run it tomorrow with small tweaks, with no placeholders and no homework?",
 ];
 
-/** The three checks that catch what a reviewer of the writer's own spec misses. */
+/** The five checks that catch what a reviewer of the writer's own spec misses. */
 export const OWNER_CHECKS = [
   "Signals. Name the three strongest signals in the data the brief gives (each with its number). For each draft, mark each signal acted on fully, partly or not at all. Partly means the draft quotes the signal but still keeps what it says to cut, or plays down what it says to push.",
+  "Asks. List every explicit ask in the brief. For each draft, name any ask it drops, only describes instead of delivering, or folds out of sight.",
+  "Signal sets the call. Name any weight, order, ask or timing in a draft that cuts against a signal the draft itself quotes: the most weight on the weakest predictor, an ask heavier than the data supports, the fastest money ranked below slower moves, a ranked table that breaks its own rule, timing set by a calendar instead of the trigger.",
   "Left for the owner. List everything each draft hands back to me: questions, confirm lists, requests for my yes or sign-off, alternates I must pick between, placeholders, notes to the writer. A permission the law needs, in one line next to its item, does not count.",
-  "Rule over owner. Name any place a draft follows a stock rule or template (one test design for every test, a set metric, a runner-up, a target at the old average, the wrong test group) where my goal and data point the other way.",
+  "Rule over owner. Name any place a draft follows a stock rule or template (one test design for every test, a set metric, a runner-up, a target at the old average, the wrong test group, a bolder move or second recommendation when I asked for one, a section I did not ask for) where my goal and data point the other way.",
 ];
 
 export function sheet(brief, drafts, n) {
@@ -60,7 +63,7 @@ export function sheet(brief, drafts, n) {
     "",
     ...OWNER_QUESTIONS.map((q, i) => `${i + 1}. ${q}`),
     "",
-    "## Three checks (quote the words that prove each)",
+    "## Five checks (quote the words that prove each)",
     "",
     ...OWNER_CHECKS.map((c, i) => `${i + 1}. ${c}`),
     "",

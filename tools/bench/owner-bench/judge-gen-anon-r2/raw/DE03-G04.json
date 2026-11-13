@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the segment, the pricing-change trigger and the no-link rule, and every email reads like a finance peer writing to another finance peer.",
+  "biggest_mistake": "Step 1 still contains a soft second element (the 9-to-4 proof plus the 'reply yes' ask) that pushes it toward two asks and slightly over the 120-word discipline; also the subject options are lowercase and a touch casual for a controller.",
+  "what_would_make_it_a_10": "Tighten step 1 to one question and one ask under 120 words with a cleaner subject line, and put the 9-to-4 proof cleanly in step 2 only."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharpest structure and the honest 7-10% range with a worked projection table, plus a clean stop-on-reply and gating rule.",
+  "biggest_mistake": "The 8% point estimate and 25% uplift are an invented multiplier not supported by the pilot, and it risks over-promising; step 1 also names Chargebee and stacks proof, question and context, edging past the 'one ask' feel and grade-8 plainness.",
+  "what_would_make_it_a_10": "Anchor the expectation at 6.8-7.9% without the 1.25x uplift, and make step 1 leaner and link-free with no product name until step 2."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the one I'd send: it follows my brand voice, keeps step 1 clean and link-free, and gives an honest 6.8-7.9% expectation instead of an invented 8% target. Output 2 is close and better structured, but the made-up uplift and busier step 1 make it less safe to put in front of a controller."
+}

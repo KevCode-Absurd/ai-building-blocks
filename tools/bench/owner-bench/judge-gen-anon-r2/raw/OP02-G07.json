@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the real signal in the data: protect migration first, put creators and extension authors ahead of Product Hunt, and stage the rollout so support does not get crushed again.",
+  "biggest_mistake": "The channel table says it is ranked by week-4 share rather than retained users, which could confuse the decision even though the actual launch order is right for us.",
+  "what_would_make_it_a_10": "Tighten the retained-user ranking language, confirm the staged rollout mechanics, and move the final migration go/no-go earlier than the code freeze or split it into pre-freeze and launch gates."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the main lesson from the last launch: hotkeys and settings are the launch risk, while creators and extension authors are the highest-quality acquisition channels.",
+  "biggest_mistake": "It creates avoidable launch-day load by emailing 420,000 users and posting to Show HN on day one while also claiming a staged rollout; it also assumes engineers can join support during freeze.",
+  "what_would_make_it_a_10": "Separate existing-user waves from broad launch noise, push HN/Product Hunt later, remove placeholders, and make the support and beta-testing plan fit the small team more realistically."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather run Output 1. It is closer to an operating plan: it stages risk, uses the community asset well, keeps PH/HN in their place, and the copy is nearly publishable."
+}

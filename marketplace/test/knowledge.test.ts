@@ -77,25 +77,35 @@ test("ranking: platform docs beat a practitioner on the same point, stale cards 
   assert.match(cardAnswerText(index.ask("sourdough starter ratio for bread"), "E-commerce"), /no card on this|Weak match/);
 });
 
-test("only public cards from public sources are published, and a vertical agent carries the baseline, its modules and the sources", () => {
+test("only public cards from public sources are published, and a vertical agent carries the whole library, its map and the sources", () => {
   const sources = [src("S0001"), src("S0002", { rights: "licensed", public: false })];
   const cards = [card("MCR-0001"), card("MCR-0002", { source: "S0002", public: false }), card("MEA-0001", { modules: ["MEA"], scope: "baseline", fails_when: "" }), card("FIN-0001", { modules: ["FIN"], jurisdiction: ["US"] })];
   const b = verticalBundle(VERTICAL, cards, sources);
   assert.deepEqual(b.cards.map(c => c.id), ["FIN-0001", "MCR-0001", "MEA-0001"]);
   assert.deepEqual(b.sources.map(s => s.id), ["S0001"]);
   assert.ok(!JSON.stringify(b.index).includes("MCR-0002"));
-  assert.deepEqual(Object.keys(b.files).sort(), ["knowledge/ecommerce/FIN.md", "knowledge/ecommerce/MCR.md", "knowledge/ecommerce/MEA.md", "knowledge/ecommerce/baseline.md", "knowledge/ecommerce/sources.md"]);
+  assert.deepEqual(Object.keys(b.files).sort(), ["knowledge/ecommerce/FIN.md", "knowledge/ecommerce/MCR.md", "knowledge/ecommerce/MEA.md", "knowledge/ecommerce/baseline.md", "knowledge/ecommerce/card-index.md", "knowledge/ecommerce/sources.md", "knowledge/ecommerce/store-kit.md"]);
+  assert.ok(!Object.values(b.files).some(f => f.content.includes("MCR-0002")), "no file holds a non-public card");
   assert.match(b.files["knowledge/ecommerce/MCR.md"].content, /^# E-commerce knowledge: Paid social creative \(MCR\)/);
   const specialist: Persona = { ...NOVA, vertical: "ecommerce", modules: ["MCR", "ADC"] };
-  assert.deepEqual(personaVerticalFiles(specialist, b).map(f => f.path), ["knowledge/ecommerce/baseline.md", "knowledge/ecommerce/MCR.md", "knowledge/ecommerce/sources.md"]);
-  assert.match(personaVerticalFiles(specialist, b)[0].content, /MEA-0001/, "the baseline holds other modules' baseline cards");
-  assert.equal(personaVerticalFiles(specialist, b)[0].shared, false);
+  const files = personaVerticalFiles(specialist, b);
+  assert.deepEqual(files.map(f => f.path), ["knowledge/ecommerce/library-map.md", "knowledge/ecommerce/MCR.md", "knowledge/ecommerce/MEA.md", "knowledge/ecommerce/FIN.md", "knowledge/ecommerce/sources.md"], "its own module first, then every other module, and no baseline file: every baseline card is in a module it carries");
+  assert.equal(files[0].shared, false);
+  assert.ok(files.slice(1).every(f => f.shared), "module files and sources are shared copies, served once");
+  assert.match(files[0].content, /\| MCR \(mine\) \| Paid social creative \| 1 \|/);
+  assert.match(files.find(f => f.path.endsWith("/FIN.md"))!.purpose, /^In my library to search/);
   const lead: Persona = { ...NOVA, vertical: "ecommerce", modules: VERTICAL.modules.map(m => m.code) };
-  assert.deepEqual(personaVerticalFiles(lead, b).map(f => f.path), ["knowledge/ecommerce/MEA.md", "knowledge/ecommerce/FIN.md", "knowledge/ecommerce/sources.md"], "its only baseline card is in MEA.md, which it carries, so no baseline file");
+  assert.deepEqual(personaVerticalFiles(lead, b).map(f => f.path), ["knowledge/ecommerce/library-map.md", "knowledge/ecommerce/MEA.md", "knowledge/ecommerce/FIN.md", "knowledge/ecommerce/MCR.md", "knowledge/ecommerce/sources.md"], "a lead works in the constraint modules and searches the rest");
   assert.deepEqual(personaVerticalFiles(NOVA, b), [], "an agent outside the vertical carries none of it");
-  const note = verticalKnowledgeSection(specialist, b, personaVerticalFiles(specialist, b).map(f => f.path), "https://agents.useaiblocks.com/mcp");
+  const note = verticalKnowledgeSection(specialist, b, files.map(f => f.path), "https://agents.useaiblocks.com/mcp");
   assert.match(note, /^## E-commerce knowledge library/);
+  assert.match(note, /my own: `knowledge\/ecommerce\/MCR\.md`/);
+  assert.match(note, /node tools\/ask-knowledge\.mjs/);
+  assert.match(note, /context\/trace\.md/);
+  assert.match(note, /Never cite card ids in the deliverable/);
+  assert.match(note, /tools\/quality\/trace-check\.cjs/);
   assert.match(note, /ask_vertical_knowledge/);
+  assert.doesNotMatch(note, /name the card id when you do/);
   assert.match(cardMarkdown(b.cards[1], b.sources[0]), /\*\*Fails when:\*\*[\s\S]*\*\*Source:\*\* Source S0001, A practitioner, 2026-06-01 \(https:\/\/example\.org\/S0001\)/);
 });
 
@@ -126,7 +136,7 @@ test("own skills go to the agents they name, else to the module's agents, with a
   assert.match(ruledKit.content, /## Rules for every deliverable\n\n1\. \*\*Rank in one unit\.\*\* Size every option the same way\.\n\n## Check and diagnose/, "house rules sit above the skills");
   // The real house rules: finished work, customer words, tests scoped to the change, spend plans that add up.
   const real = personaVerticalFiles(copywriter, b).find(f => f.path.endsWith("toolkit.md"))!.content;
-  assert.match(real, /\*\*Publishable means finished\.\*\* [^\n]*no list of things to confirm[^\n]*assumption in one line/);
+  assert.match(real, /\*\*Publishable means finished\.\*\* [^\n]*only what the customer reads[^\n]*copy-check\.cjs[^\n]*no list of things to confirm/);
   assert.doesNotMatch(real, /To confirm/, "no rule asks for a confirmation list");
   assert.match(real, /\*\*Each variant earns its own words\.\*\* [^\n]*customers' own phrases[^\n]*only when the count is the claim/);
   assert.match(real, /\*\*Test where the change lands\.\*\* Scope each test to the visitors the change touches[^\n]*funnel step the change moves/);

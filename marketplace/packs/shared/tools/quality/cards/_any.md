@@ -16,7 +16,7 @@ Families: _any; also: other, general request, unknown job type, mixed request, c
 4. Padding and method talk while usable parts are missing.
 5. Legal, safety or ethical risks of public-facing work ignored.
 
-**SHAPE:** The answer or decision in the first 1 to 3 lines; the core deliverable in the field's native format; a supporting kit only with parts the reader will use; for a plan, strategy or recommendation, one labelled bolder move sized in the owner's unit, with its first step and risk; a compact, dated source list when facts were looked up.
+**SHAPE:** The answer or decision in the first 1 to 3 lines; the core deliverable in the field's native format; a supporting kit only with parts the reader will use; for a plan, strategy or recommendation, one labelled bolder move sized in the owner's unit, with its first step and risk, never inside customer copy; a compact, dated source list when facts were looked up.
 
 **RULES AND RISKS:** Truth in advertising, privacy and consent, copyright and trademarks, consumer protection and platform rules apply wherever the work is public. Health, money, legal, safety and employment content needs qualified sign-off. Never request or expose secrets or personal data. Check local rules.
 

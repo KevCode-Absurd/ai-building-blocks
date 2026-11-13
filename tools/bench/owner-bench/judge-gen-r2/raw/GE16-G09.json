@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 6,
+  "reasoning": 6,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Excellent capture of the Headspace tone and clean breakdown of the historical numbers.",
+  "biggest_mistake": "Unnecessarily assumed all sleep and 'busy mind' topics require clinical review, forcing Week 1 into an all-kindness schedule and delaying sleep posts.",
+  "what_would_make_it_a_10": "Realize that sleep/wind-down copy without clinical condition names bypasses review so Week 1 can launch with high-converting sleep content immediately."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliantly words Week 1's sleep and wind-down drafts to bypass clinical review entirely while directly tapping into every customer hook from the brief.",
+  "biggest_mistake": "Kept a token stress-at-work post each week instead of shifting those slots entirely into the far higher-converting sleep theme.",
+  "what_would_make_it_a_10": "Reallocate the weekly stress-at-work slot to sleep or a second parent-focused wind-down."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 figured out the real operational puzzle: wording sleep and winding-down posts so they don't trigger clinical review, allowing us to post sleep content in Week 1 rather than wasting a whole week on low-install kindness posts. Its 6 drafts are immediate, turnkey, and capture our audience's exact phrases."
+}

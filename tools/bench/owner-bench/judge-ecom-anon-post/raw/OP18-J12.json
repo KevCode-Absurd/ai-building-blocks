@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the data like an owner would: Tier 3 gets special treatment, order-status WhatsApps reduce chat load, and the templates mostly respect Utility vs Marketing rules.",
+  "biggest_mistake": "The prepaid discount and Tier 3 cancel rule need careful testing before full rollout, because they could either give away margin or cancel some orders that would have delivered.",
+  "what_would_make_it_a_10": "Tighten the final template copy a little more into Snitch voice, confirm exact courier/Meta rules with the provider, and make the discount or ₹99 advance a controlled test rather than a default."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is clear, practical, and covers the main flows, scripts, after-hours automation, and weekly numbers in a usable structure.",
+  "biggest_mistake": "It puts the prepaid switch nudge in Utility, assumes a 7-day exchange policy, and does not target Tier 3 risk strongly enough even though that is where half the RTO cost sits.",
+  "what_would_make_it_a_10": "Reclassify the prepaid nudge as Marketing, remove unverified exchange-policy claims, add a stronger Tier 3 COD confirmation/prepaid/hold flow, and make delivery-day messages include tracking and reattempt handling consistently."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels more like it was built for our actual problem, not just a generic WhatsApp setup. It finds the Tier 3 RTO leak, protects the brand voice, and gives me templates and flows I could almost hand to the team."
+}

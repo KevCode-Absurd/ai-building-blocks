@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting for the right reason, shows the seat math cleanly, moves round robin, routing and security up, and gives me a nearly usable page with real proof placements and no fake logos or quotes.",
+  "biggest_mistake": "A few lines assume product details a little too freely, like video links going out automatically and PTO being known from the calendar, and the hero could use the customer's phrase 'email tennis' more directly.",
+  "what_would_make_it_a_10": "Tighten any product claims against what Cal.com definitely supports, make the security CTA a real button or clean section action, and sharpen the hero around Priya's exact pain language."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The opening strategy is excellent: it chooses recruiting, proves it with paid-seat math, and the hero speaks directly to Priya with 'right interviewer' and 'No email tennis.'",
+  "biggest_mistake": "It leaves too many placeholders and includes a few unsupported specifics, like text reminders, rescheduling from the same link, and 'three or four emails' per interview.",
+  "what_would_make_it_a_10": "Remove bracketed placeholders, replace unsupported product claims with verified ones, and make the CTA strategy more consistent for a team buying flow."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather have Output 1 because it is closer to something I can hand to design and sales today. Output 2 has the slightly sharper hero voice, but Output 1 is more finished and safer on proof."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the real story: database growth is mostly low-converting AI app-builder traffic, and that is driving the margin problem. The burn bridge and runway math are useful and clear.",
+  "biggest_mistake": "The assumptions section reads like internal drafting notes, especially saying dates are proposals to confirm, so I would not send it exactly as written.",
+  "what_would_make_it_a_10": "Make it fully send-ready by removing internal caveats, tightening a few lines, and putting the Customer A loss even closer to the top alongside the margin miss."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is the most sendable investor email: the miss, margin drop, Customer A loss, and VP Sales ask are all visible early, and the asks are specific with dates and profiles.",
+  "biggest_mistake": "It is a little less analytical on the margin issue than Output 1, and repeats 'we plan' where I would rather sound more decisive.",
+  "what_would_make_it_a_10": "Add the sharper AI-builder math from Output 1, including direct-created database growth and the margin-point impact, while keeping this structure and concise style."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "I would rather send Output 2 tomorrow because it is cleaner, more mobile-readable, and more finished. Output 1 has slightly better analysis, but Output 2 is closer to a real investor update I could use with minimal editing."
+}

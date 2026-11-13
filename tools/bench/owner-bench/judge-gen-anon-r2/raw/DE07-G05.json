@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is a working system, not a document: a publishable post with the hard parts first, the UTC window translated into readers' own clocks, a real Priya ticket with a findable cause, a 03:00 UTC second-round exercise, two call questions, anchored 1/3/5 rows, blind read with calibration, and the weekend rotation repeated at offer. I could hand this to three reviewers on Monday.",
+  "biggest_mistake": "Buries the $82,000 in \"Pay and terms\" below the hard parts, when the whole point was to publish the salary in the first screen, and adds a line (\"We will never ask you for money\") that sounds like a gig-scam notice, not us.",
+  "what_would_make_it_a_10": "Lead with the salary and the hours in the first three lines, cut that odd money line, and add an explicit hiring threshold (e.g. 4.0 overall with no row under 3) so reviewers stop arguing about the edge cases."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The opening line does the job — \"$82,000 a year, the same wherever you live\" — and the reviewer-time arithmetic is the sharpest thinking in either answer: 160 hours is 4.6 minutes an application, 2 minutes a reply is 70 hours, about 23 each, plus 7 for second reads. That is the number I would actually take to the team.",
+  "biggest_mistake": "The scorecard grades a \"longer written exercise\" it never writes, gives no call questions, and asks every applicant for a 100-word \"why this job\" that nothing scores — so the hiring team still has homework before it can run, and we add reading time for no signal.",
+  "what_would_make_it_a_10": "Write the second-round exercise itself (a real overnight ticket plus the handoff note), add the two call questions and a calibration set, and either drop the \"why this job\" question or give it a scored row — then it runs as-is."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 2's post opening and its reviewer-hours math are better than mine, but Output 1 is the one I could publish and run this week: the exercises exist, the call questions exist, and every scorecard row can actually be scored. I would take Output 2's salary-first line and its cost projection and drop them into Output 1."
+}

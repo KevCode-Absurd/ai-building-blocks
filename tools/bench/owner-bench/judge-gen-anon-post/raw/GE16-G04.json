@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The operational insight to schedule sends between the 12th and 15th to respect the controller's 9-day close calendar is brilliant finance-domain awareness.",
+  "biggest_mistake": "Asking for a 20-minute call in cold Step 1 and Step 2 introduces more friction than a conversation-starting micro-ask.",
+  "what_would_make_it_a_10": "Lower the friction of the call-to-action in Steps 1 and 2 instead of going straight for a 20-minute calendar block."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Masterful cold email copywriting with low-friction reply hooks ('yes', 'steps', 'now/later') and rigorous math that explicitly avoids falsely compounding pilot conversion rates.",
+  "biggest_mistake": "Missed explicitly noting the monthly close calendar window (avoiding days 1-9) for batch launch timing.",
+  "what_would_make_it_a_10": "Include send-cadence guidance tied to the monthly close schedule as seen in Output 1."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 wrote emails that will get higher reply rates by using low-friction micro-commitments rather than immediately asking busy controllers for 20 minutes on their calendar."
+}

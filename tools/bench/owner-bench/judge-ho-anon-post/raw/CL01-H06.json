@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clear no to the 20% cut, backed by correct lifetime maths ($1,677 vs $1,130, net $1,174) and a plain break-even point of $262,500, roughly four top affiliates.",
+  "biggest_mistake": "The Partner tier's 40% first-year rate raises cost for the top 20 when the complaint was payouts and lost credit, not the rate. The cost of the 90-day window is left vague ('every 10% adds $63,000') instead of being estimated.",
+  "what_would_make_it_a_10": "Put real dates and owners on the 30-day plan. Estimate what the 90-day window will actually cost. Reward the top tier with service and speed rather than a higher rate, or show more clearly why the extra rate is worth it."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Honest, quantified decision-making. It points out that the $210k saving only exists if we cut commission on customers already earned (about $38k otherwise), projects the 90-day window cost from our own numbers, and gives a dated 30-day plan with owners.",
+  "biggest_mistake": "The window projection rests on assumed 65–75% conversion by day 90 and a margin assumption, which makes it denser than grade-7 reading. The detailed legal disclosure wording runs a little heavy for a one-page rule sheet.",
+  "what_would_make_it_a_10": "Simplify the 'why not 20%' table into plainer words, tighten the rules page, and show a quick sensitivity check on the day-90 conversion assumption."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both say no to the cut with the right maths, but the second one tells me the uncomfortable truths: the real saving is $38k, not $210k, and this plan costs more. It costs the window, keeps rates flat across tiers, and hands my partner manager a dated plan with owners."
+}

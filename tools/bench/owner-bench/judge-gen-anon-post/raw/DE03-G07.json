@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Does the retention math itself and then builds the plan around it: creators and authors first, PH/HN last with little team time, plus a hard carry-over gate before the 1 Dec freeze. The X post and email are clean, on-voice and answer 'will my hotkeys survive' in the first line.",
+  "biggest_mistake": "The calendar is dense and a few lines are cramped (tables run long for the word budget), and the X post's 'Thank you' to authors is nice but thinner crediting than the reply-thread approach implies. The bolder two-wave idea is flagged as optional, which slightly muddies 'what has to be true.'",
+  "what_would_make_it_a_10": "Tighter prose, an explicit staged-update decision proposed up front rather than as a 'bolder move,' and name-check credit baked into the main post plus the first reply."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Crisp structure and the best go/no-go gate list: 1,000 real-setup updates, one-step undo for settings, top 200 extensions tested, measured speed claim with the Mac named, engineers joining support during freeze. The X thread and email are the most polished and on-voice of the two.",
+  "biggest_mistake": "'At least 1,000 beta users update from their real setups' is a bar we cannot realistically prove with one launch manager and 9 creators in three weeks, and the plan schedules a beta email to 1,000 power users on 23 Nov with no stated capacity to support them. Also leans on brackets and measured-speed numbers that aren't in hand, so it reads slightly less ready as-is.",
+  "what_would_make_it_a_10": "Replace the 1,000-user proof with a realistic test (staff plus author Macs plus 200 heavy users), fill the bracket placeholders with real picks/numbers, and confirm the engineering support shift dates."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and I would ship either. Output 1 wins on being closer to usable as-is, with the two-wave update framed as a real decision and no unproven 1,000-user gate; Output 2 has the better go/no-go list and the nicer thread, but asks for a beta proof we can't staff and leaves more placeholders to fill.",
+ "what_would_make_it_a_10": "Combine Output 1's shippable drafts and honest gates with Output 2's 'undo + top 200 extensions + measured speed claim' checks, fill all placeholders, and decide the staged-update question with engineering by 20 Nov."
+}

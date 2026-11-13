@@ -4,7 +4,11 @@
 // what was strongest, the biggest mistake and what would make each output a 10. Then it unblinds and tallies.
 //
 //   node owner-judge.mjs --briefs <dir with ID.md and ID.owner.md> --agent <dir> --plain <dir> --out <dir>
-//        [--rubric OWNER-RUBRIC.md,ECOMMERCE-RUBRIC.md] [--judges 20] [--env <.env>] [--ids J01,J02]
+//        [--rubric OWNER-RUBRIC.md,ECOMMERCE-RUBRIC.md] [--judges 20] [--env <.env>] [--ids J01,J02] [--anon]
+//
+// --anon runs the anonymous check. Both outputs are put into one plain format (same heading level, no bold or
+// italics, same bullets), so house style cannot give either away. The judge also gets no rubric: only the brief,
+// the owner's notes and "which would you rather use, as the owner". The scores keep the same JSON shape.
 //
 // Output files are named <ID>-agent.md and <ID>-plain.md. Keys come from the environment or --env and are never
 // printed. Plain Node 18+, no packages. Re-running the same --out skips verdicts already saved.
@@ -17,7 +21,16 @@ const BRIEFS = arg("briefs"), AGENT = arg("agent"), PLAIN = arg("plain"), OUT = 
 if (!BRIEFS || !AGENT || !PLAIN || !OUT) { console.error("Usage: --briefs --agent --plain --out [--rubric] [--judges] [--env]"); process.exit(2); }
 const env = { ...process.env };
 if (arg("env")) for (const l of readFileSync(arg("env"), "utf8").split(/\r?\n/)) { const m = /^([A-Z_]+)\s*=\s*"?([^"\r\n]*)"?/.exec(l); if (m && !env[m[1]]) env[m[1]] = m[2]; }
-const RUBRIC = (arg("rubric", "OWNER-RUBRIC.md")).split(",").map(f => readFileSync(path.isAbsolute(f) ? f : path.join(HERE, "rubrics", f), "utf8")).join("\n\n---\n\n");
+const ANON = process.argv.includes("--anon");
+const RUBRIC_FILES = (arg("rubric", "OWNER-RUBRIC.md")).split(",").map(f => readFileSync(path.isAbsolute(f) ? f : path.join(HERE, "rubrics", f), "utf8")).join("\n\n---\n\n");
+const RUBRIC = ANON ? `You are the owner of this business. You wrote the brief and you know your own data. Two people did the job.
+Read both as you would read work you are about to use: would you act on it, send it or publish it, and which would you rather have?
+Score each from 1 to 10 on: fit (about my business and my case), insight (tells me something I did not know), priorities (most important first),
+reasoning, correct (facts and numbers), clear (easy to read), voice (sounds like us and suits our customers), range (enough different ideas),
+ready (how close to usable as it stands), and overall. Use your own judgment as an owner; there is no other rubric.` : RUBRIC_FILES;
+// Anonymous mode: one plain format for both outputs, so house style cannot give either away.
+const plainFormat = t => t.replace(/^#{1,6}\s+/gm, "## ").replace(/\*\*([^*\n]+)\*\*/g, "$1").replace(/__([^_\n]+)__/g, "$1")
+  .replace(/(^|[^*\w])\*([^*\n]+)\*(?!\*)/g, "$1$2").replace(/^(\s*)[*+•]\s+/gm, "$1- ").replace(/^\s*(---|\*\*\*|___)\s*$/gm, "").replace(/\n{3,}/g, "\n\n");
 mkdirSync(path.join(OUT, "raw"), { recursive: true });
 
 const IDS = (arg("ids") ?? readdirSync(BRIEFS).filter(f => /^[A-Z]+\d+\.md$/.test(f)).map(f => f.replace(".md", "")).join(",")).split(",").sort();
@@ -92,7 +105,7 @@ for (const j of panel) {
   for (const id of IDS) {
     const flip = rnd() < 0.5, [a1, a2] = flip ? ["plain", "agent"] : ["agent", "plain"];
     key[j.id][id] = { 1: a1, 2: a2 };
-    const read = arm => scrub(readFileSync(path.join(arm === "agent" ? AGENT : PLAIN, `${id}-${arm}.md`), "utf8")).trim();
+    const read = arm => { const t = scrub(readFileSync(path.join(arm === "agent" ? AGENT : PLAIN, `${id}-${arm}.md`), "utf8")).trim(); return ANON ? plainFormat(t) : t; };
     const owner = existsSync(path.join(BRIEFS, `${id}.owner.md`)) ? readFileSync(path.join(BRIEFS, `${id}.owner.md`), "utf8") : "(none)";
     const system = `${RUBRIC}\n\n---\n\nYou are a blind judge. You judge as ${j.lens}. Two specialists did the same job; you do not know who made which. Answer with only a JSON object in this shape: ${SHAPE}`;
     const user = `# The brief I wrote\n\n${readFileSync(path.join(BRIEFS, `${id}.md`), "utf8").trim()}\n\n# My private notes (what I know about my data and what I hope for)\n\n${owner.trim()}\n\n# Output 1\n\n${read(a1)}\n\n# Output 2\n\n${read(a2)}\n`;

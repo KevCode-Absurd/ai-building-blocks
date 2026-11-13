@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tight trigger and skip logic: emails fire off the allowed events, skip when the goal is already met, and a 24-hour cap prevents pile-ups. The platform-branched second-device email is strong.",
+  "biggest_mistake": "Email 5 repeats email 2's recurring-task ask, so the series has little range. It also removes Pro from onboarding altogether, leaving no upgrade path. A stray note to the team sits inside email 3B.",
+  "what_would_make_it_a_10": "Replace the repeated recurring-task email with a different tip or a gated Pro step. Put a goal and success measure under each email. Remove the internal notes from the copy."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Each email has its own trigger, skip rule, goal and a \"worked if\" measure tied to the 14%, 22%, 8% and 31% baselines. The series builds on the two habits, branches the second-device email by platform, and keeps a calm, guilt-free inactivity email.",
+  "biggest_mistake": "Email 5 is a Pro upsell, which I didn't ask for. The 0.4% unsubscribe guardrail also conflicts with beating the Pro email's 1.1% benchmark. Email 1 isn't branched by platform.",
+  "what_would_make_it_a_10": "Make the unsubscribe guardrail consistent with the Pro email, or drop the Pro email for a second habit-based tip. State the 1-to-4-task segment and a mobile-first welcome tweak. Note how a user with neither habit by day 14 is handled."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both build on the recurring-task and second-device habits, branch by platform and cut the right emails. Output 2 gives each email a goal and success measure, has more variety, keeps a considered Pro step for engaged users, and plans to bring back team invites later. Output 1's repeated recurring-task email and missing upgrade path are weaker."
+}

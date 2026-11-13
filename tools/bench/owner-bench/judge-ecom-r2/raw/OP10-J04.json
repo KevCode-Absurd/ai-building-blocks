@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the actual data signals into three distinct, shootable ads: 3 pm habit, blind taste test, and family cooler, with price and disclosure handled inside the scripts.",
+  "biggest_mistake": "It is a little long and slightly over-built for a 1,300-word cap, so the team may need to trim briefing extras before sending.",
+  "what_would_make_it_a_10": "Tighten the shared brief and scripts slightly while keeping the exact disclosures, approved claims, and price handling intact."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clean, concise, and correctly leads with the strongest formats: taste test and 3 pm swap rather than label-reading.",
+  "biggest_mistake": "Paid partnership disclosure is only in the general rules, not built into each script or creator brief, making it less ready and less safe to hand straight to creators.",
+  "what_would_make_it_a_10": "Add disclosure lines and on-screen paid-partnership text into every shot list, strengthen the CTAs, and make the family script less label-read in the middle."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather hand to a creator tomorrow because it is more complete, safer on disclosures and banned claims, and does a better job addressing the price objection without losing the soda moment. Output 2 is solid but needs more production and compliance tightening before launch."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the right straight answer on the 20% cut, shows the lifetime value math clearly, and focuses the programme around the top creator-educator partners instead of chasing more inactive affiliates.",
+  "biggest_mistake": "The 40% first-year Partner tier is plausible, but the cost model is a little rough and could overpay top partners without a tighter cap or review rule.",
+  "what_would_make_it_a_10": "Tighten the Partner tier eligibility and budget controls, model the 90-day credit-window cost more carefully, and make the day-90 review criteria a bit more operational."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The plan understands the real problem: this is a partner-retention and attribution issue, not a commission-rate issue. The 'Who sent you?' attribution test is a strong extra idea.",
+  "biggest_mistake": "Some of the cost math is shaky, especially the projected cost of the 90-day window and the year-one savings from cutting only new referrals. I would not want to take those numbers to finance without reworking them.",
+  "what_would_make_it_a_10": "Fix the financial model, narrow the Partner tier so one manager can run it well, and fold the survey-attribution idea into the main plan instead of making it feel like an add-on."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would use Output 1 sooner because it is more complete, cleaner, and more reliable on the numbers. Output 2 has one excellent attribution idea, but I would need to check and rewrite more before sending it around."
+}

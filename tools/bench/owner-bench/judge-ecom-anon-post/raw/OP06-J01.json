@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 7,
+  "voice": 6,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It makes real decisions by ad set, catches the Starter Kit COD/RTO problem, relaunches the paused winner, and isolates Women 25 to 34 instead of killing the whole category.",
+  "biggest_mistake": "The math and assumptions wobble in places, especially using an 86% reality factor for prospecting despite the brief pointing to 72%, and it underbudgets the 14-day plan before parking too much in reserve.",
+  "what_would_make_it_a_10": "Tighten the attribution and profit math to the owner’s own benchmark, make the full ₹5.6 lakh allocation cleaner and more decisive, and cut the side experiment so the plan is simpler to execute on Monday."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets the big business calls right: Starter Kit is a COD trap, Women 25 to 34 is the real audience, the paused 'Dad's razor vs mine' ad should be relaunched first, and budgets are reallocated in a practical way that adds up.",
+  "biggest_mistake": "It introduces a 'safe line' framework and one extra new creative test budget line that are useful but slightly more structure than the owner asked for, and a few profit figures could be tightened further.",
+  "what_would_make_it_a_10": "Use the same hard after-RTO/Shopify-adjusted method consistently in every line item, simplify the framing to fewer concepts, and make the Monday-first actions even sharper."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would act on first. It finds the key account truths, turns them into cleaner budget decisions, and is more usable without me having to second-guess the logic."
+}

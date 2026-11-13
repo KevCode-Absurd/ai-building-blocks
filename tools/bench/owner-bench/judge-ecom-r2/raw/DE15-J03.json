@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every concept is anchored to a number in my data (70% of spend on men, women at ₹1,058, 290 quiet-wheel mentions, 85 scuff reviews) and the launch plan tells me what to run first, on what budget (3x ₹1,515) and what to judge.",
+  "biggest_mistake": "Some concepts stay thin on production detail (no aspect-ratio/safe-zone or headline specs for the designer), and the per-trip maths quietly treats two flights a month as 24 trips, which a careful reader may query.",
+  "what_would_make_it_a_10": "Add a designer-ready shot list and on-screen copy limits per concept, plus a clear kill/scale rule, so nothing comes back to me as homework."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 7,
+  "voice": 6,
+  "range": 7,
+  "ready": 9,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The build rules make it hand-off ready: aspect ratios, safe zones, headline character counts (all counted correctly), no front pocket, lighter shells for the scuff issue.",
+  "biggest_mistake": "The primary texts repeat '₹6,999' and a spec list in almost every ad, so the copy reads like a product sheet rather than our calm voice, and two of the top three put money back into the expensive men's audience when women are the cheaper win.",
+  "what_would_make_it_a_10": "Rewrite the primary texts in our voice without price in every line, and put the women's 'No asking for help' concept in the first three with a budget and a stop rule."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both read my numbers correctly, but Output 1's copy I could paste tomorrow in our voice and its first three put the cheap women's audience where the data says it belongs, while Output 2 buys production polish at the cost of brand voice and doubles down on men."
+}

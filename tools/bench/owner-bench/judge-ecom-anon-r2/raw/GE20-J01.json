@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Caught all the hidden signals in the brief, specifically identifying the age discrepancy in the women's razor ad set and the COD trap in the starter kit.",
+  "biggest_mistake": "Misinterpreted its own math on the Beard Kit: a CPA of ₹429 is higher than the safe target line of ₹333, which means it is losing money, not making a 'small profit.'",
+  "what_would_make_it_a_10": "Correctly applying the CPA targets to cut the Beard Kit, and having the discipline to leave budget unspent rather than forcing it into ad sets that lose money on actual store metrics."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Incredible financial rigor. It seamlessly integrated the 72% attribution gap into each ad set's unique break-even line and had the owner-like courage to leave ₹1.3L unspent rather than burn it on unprofitable ads.",
+  "biggest_mistake": "None. The financial models and the subsequent rules provided for the team are flawless.",
+  "what_would_make_it_a_10": "It is already a 10. The output perfectly balances media buying strategy with hardcore unit economics."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 protects my margins by strictly using Shopify's numbers to determine profitability, whereas Output 1 made a fatal media buying error by calling a CPA that was above its target a 'profit'."
+}

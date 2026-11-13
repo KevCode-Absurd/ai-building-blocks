@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The brand voice is spot-on—restrained, grade-7 clear, and calm—and delivering the quiz recommendation immediately in Email 1 respects the customer's momentum.",
+  "biggest_mistake": "Assumed the coupon has no expiry date, missing the opportunity for an authentic deadline reminder before the 14-day window closes.",
+  "what_would_make_it_a_10": "Add dedicated subject lines for the quiz segments in Email 1 rather than one generic subject line, and incorporate a soft deadline reminder toward the end of the series."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Flawless commercial strategy: builds the timeline around the 14-day window with deadline nudges on Day 11 and Day 13 WhatsApp, complete with exact discounted pricing math.",
+  "biggest_mistake": "Withholding the quiz recommendation until Email 2 on Day 1 instead of delivering the matched product immediately upon sign-up in Email 1.",
+  "what_would_make_it_a_10": "Deliver the personalized quiz pick directly in Email 1 at the moment of sign-up, using Email 2 to dive deeper into starting slowly."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both capture our calm, factual voice remarkably well, but Output 2 builds a better commercial engine by tying the send schedule, Email 5, and the Day 13 WhatsApp message directly to a 14-day code deadline."
+}

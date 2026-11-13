@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It acts directly on the real signals in the data: Asia-Pacific hours, weekend clarity, and writing as the main predictor, then turns that into a usable post, scorecard, and lower-burden application flow.",
+  "biggest_mistake": "The post says 'live anywhere these hours work for you,' which is slightly broader than the Asia-Pacific need and could invite avoidable volume from mismatched regions.",
+  "what_would_make_it_a_10": "Tighten the location framing a touch so the ad targets Asia-Pacific coverage even more directly without opening the door wider than needed."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly moves the written reply into the application, drops experience requirements, and uses the data to justify weighting writing over background.",
+  "biggest_mistake": "It invents two video conversations and adds a 'why this job' question, both of which pull the process back toward weaker signals and more review work than the brief points to.",
+  "what_would_make_it_a_10": "Use one short real-feeling customer exercise only, cut the extra motivation question and extra interview step, and make the scorecard more concrete with 1/3/5 examples tied to the actual tasks."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 sounds more like us, uses our data more sharply, and is more ready to run tomorrow. It solves the applicant-volume problem with the right signal while being plainer and more honest about the hard parts."
+}

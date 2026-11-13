@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 6,
+  "voice": 7,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ties the threshold to the COD refusal problem and works out the money. It sizes the right slice of orders (about 2,320 between ₹499 and ₹598), proposes a lip balm cart add-on and a COD fee under ₹499, and gives a careful test plan with stop rules.",
+  "biggest_mistake": "It is dense and likely runs over the 1,300-word limit. The 'bad news' section and the long projection ranges (−₹0.72 to +₹2.35 lakh) make it hard to act on, and the lakh figures rest on many assumptions.",
+  "what_would_make_it_a_10": "Cut it to 1,300 words and lead with one plain recommendation. Show the money in a short table, and write the page copy in a warmer, simpler voice."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clear, within the length limit, and gives a clear recommendation. It uses Ishita's serum reorder to argue against ₹699, builds a simple price ladder on the serum page, and writes bundle copy in Plum's voice.",
+  "biggest_mistake": "Its key assumption is wrong. It says orders between ₹499 and ₹598 are about 6% of orders, but the data points to roughly 13%. The money case for ₹599 is therefore thin, at about +₹28k a month. It also barely uses COD and RTO in the threshold decision.",
+  "what_would_make_it_a_10": "Size the ₹499 to ₹598 slice correctly from the spread. Make COD versus prepaid part of the threshold choice, add a body or other category bundle, and add a lip balm cart add-on."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 uses the COD refusal data and sizes the affected orders correctly, so I trust its threshold maths more. It is heavier to read, but it has more useful ideas. Output 2 is cleaner, but it guesses wrong on how many orders a ₹599 line would touch and mostly skips the COD problem."
+}

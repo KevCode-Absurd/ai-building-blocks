@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses COD refusals in the decision. It adds a lip balm cart offer for orders under ₹499, proposes a ₹49 COD fee, and works out break-even for each bundle. It also gives a full test plan with stop rules and guardrails.",
+  "biggest_mistake": "It is dense and a bit over the word limit. The 'bad news' block and the many projection ranges make it hard to skim. It also keeps the ₹499 threshold with only a weak case, so the main money question ends in 'test it'.",
+  "what_would_make_it_a_10": "Trim it to the word limit and state the threshold call more firmly, with one clear recommended number and a simpler money table. Spell out the ₹500 to 699 band maths at the top. Make the lip balm cart add-on a named fourth item instead of a side note."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 5,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is clean and easy to read. The bundle ladder on the serum page is a good idea. It also commits to a clear threshold (₹599) and shows a simple outcome table.",
+  "biggest_mistake": "The threshold maths rests on an invented guess that only 6% of orders sit between ₹499 and ₹598. That gives a gain of only about ₹28k a month. It also barely uses COD and RTO for small orders, and it never considers a COD fee or a prepaid-only rule.",
+  "what_would_make_it_a_10": "Replace the 6% guess with a figure drawn from the order bands, and build COD refusal cost into the threshold decision. Make the three bundles three different jobs by dropping the overlapping Serum + Lip Balm bundle for a body or add-on bundle. Add a cart add-on to cross the threshold."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "The first one deals with the COD refusal leak, uses the lip balm as the add-on, and gives three bundles with distinct jobs and worked break-evens. The second is neater but its threshold case rests on a guessed slice of orders, it overlaps two bundles, and it mostly ignores COD."
+}

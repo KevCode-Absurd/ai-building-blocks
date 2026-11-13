@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole plan from the data: Spark Ads on the nurse and server videos from day 1, problem-first hooks in Maria's own words, and a day-30 bar of $38 tied to the 90-day break-even.",
+  "biggest_mistake": "The 90-day contribution is stated as about $38.50 when the brief's working gives about $38 (the fee estimate of $9.90 vs about $10 is slightly off), and the 'new customers up 70% of claimed orders' test is a bit convoluted for a Monday handoff.",
+  "what_would_make_it_a_10": "Give the exact 90-day contribution figure with its working ($48.40 minus about $10) and a one-line, clean day-30 stop/go rule."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It nails the money logic ($27.10 first-order, $38.46 over 90 days, $57 cut line, $114 per-ad test) and turns the data into specific moves: both licensed worker videos as Spark Ads from Day 1, problem-first openers, and a three-read day-30 verdict.",
+  "biggest_mistake": "It spends slightly less aggressively early than the opportunity merits ($800/day flat for the first two weeks vs. a tighter ramp), and the day-30 verdict leans heavily on a three-read structure that assumes the survey and blended baseline are clean.",
+  "what_would_make_it_a_10": "Add an explicit dollar lifetime-value check on the day-30 decision so the scale/stop call is bulletproof."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and use the data well, but Output 2's numbers are cleaner and its set-up, kill/scale rules and day-30 test are the most Monday-ready; Output 1 is close behind and would need only small tweaks."
+}

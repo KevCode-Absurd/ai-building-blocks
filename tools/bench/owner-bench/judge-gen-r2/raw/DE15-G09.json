@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It stacks the three winners in the same plan — sleep theme, narrator clips at the editor's full 4-a-week capacity, and 20:30-21:00 posting — and keeps week 1 review-free by wording the sleep posts around winding down and 'replaying today's emails' without naming a condition, exactly where the money is.",
+  "biggest_mistake": "The calendar puts a review-needing sleep post at 21:00 on Monday 23 November, the same day it says approvals land and posts can only go live 'from Tuesday 24', so the first day of week 2 contradicts its own review rule.",
+  "what_would_make_it_a_10": "Move the 23 November slot to a no-review winding-down post (or shift it to Tuesday 24) so the calendar and the review rule line up, and add a hedge for what happens if sleep volume dampens at 12 posts in four weeks."
+ },
+ "o2": {
+  "fit": 6,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The operational logic is airtight and honest: submission dates, the five-business-day clock, the week-4 rerun of an already-approved clip, and a projection that already discounts sleep performance at triple the old volume (4,300 installs).",
+  "biggest_mistake": "It rules that all sleep content needs clinical review and therefore fills week 1 with six kindness posts, surrendering the 450-install theme in the first and highest-leverage week when winding-down posts that name no condition could have run from 16 November.",
+  "what_would_make_it_a_10": "Build week 1 from winding-down sleep posts that name no condition (so they skip review), and keep the six kindness posts as the week 2-4 second theme instead of the opening week."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 makes the same data calls but keeps sleep in week 1 without triggering review, which is the whole point of the 16 November start; Output 2 talks itself out of that and hands me six kindness posts on day one. Output 1's drafts are also more specific and usable, though its 23 November slot needs fixing against its own review rule."
+}

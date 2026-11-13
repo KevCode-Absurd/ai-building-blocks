@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns your actual data into a Monday-ready plan, especially by centering on-feet worker Spark Ads, problem-first hooks, and a day-30 decision tied to 90-day payback.",
+  "biggest_mistake": "A few execution choices are a bit too assertive or debatable for TikTok month one, like the exact scaling framework and some hard thresholds that may need adjustment once volume is known.",
+  "what_would_make_it_a_10": "Tighten the few platform assumptions and make the success read even more explicitly depend on Shopify new-customer data plus survey lift rather than any platform-side proxy."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly spots the same two big signals you care about: workers on their feet win, and problem-first hooks should lead while giving closes.",
+  "biggest_mistake": "It introduces a serious math/logic error by claiming a 20% first-order discount would cut first-order profit from $27.10 to $14.70, which is not supported by the brief and could distort decisions.",
+  "what_would_make_it_a_10": "Fix the faulty discount math, make the budget phasing total cleaner, and sharpen the day-30 read around your own store data as the main source of truth."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team on Monday with less rework. It uses my data more completely, gets the budget phasing and decision bar more cleanly tied to my economics, and avoids the numeric mistake that makes Output 2 less trustworthy."
+}

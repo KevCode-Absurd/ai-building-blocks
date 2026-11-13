@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The segment math is right: about 1,540 of 2,717 paid seats, and 0.73 paid seats per recruiting signup against 0.17 for the next best segment. The hero uses Priya's own words, 'No email tennis.' Brackets clearly flag every fact we still need to supply.",
+  "biggest_mistake": "Security sits in section 6, three sections before the demo form, so the blocker isn't answered where Priya decides. Section 2 also says 'three or four emails' and 'your week gone' without support, which is an adjective claim, not a number. The buttons switch between Get started and Book a demo, which dilutes the team ask.",
+  "what_would_make_it_a_10": "Move security right next to the demo form. Cut the unsupported email-count claim. Keep the buttons on Book a demo. Size the test in visitors."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The order is exactly right: hero, booking, round robin, routing, reminders, tools, then security immediately before a 4-field demo form. The numbers check out: 733 against 12 seats per 1,000 signups, about 13.4k visitors per arm for a 20% lift, and 150 to 460 projected paid seats. It also includes a decision rule for the test and a smart bolder move, sending the security page with the demo confirmation.",
+  "biggest_mistake": "The hero uses our house line 'without the back and forth' instead of Priya's sharper 'email tennis.' The sample size uses the 3.1% homepage signup rate as a stand-in for the new metric without saying so. At this length it likely runs close to or over the 1,000-word limit.",
+  "what_would_make_it_a_10": "Bring 'email tennis' into the H1 or Version B. State that the 3.1% baseline is a proxy. Trim the meta and projection extras to stay safely under 1,000 words."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick recruiting with correct seat math and avoid invented proof. Output 2 puts security right where the demo decision happens and gives me a properly sized test with a clear rule for calling it. I could hand it to the team today."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads cleanly and leads with the right moves. It brings back 'Dad's razor vs mine' with 2 to 3 new cuts, cuts the Starter Kit on its after-RTO number, and narrows Women Body Razor to 25 to 34. The safe and break-even lines are tied to the 72% UTM match, and the budget adds to exactly ₹5,60,000.",
+  "biggest_mistake": "It applies the Meta-versus-Shopify gap as a single blunt line instead of setting real per-ad-set numbers. It also never says what the whole plan should earn, so I can't see the expected rupee outcome of the 14 days.",
+  "what_would_make_it_a_10": "Add a projected profit for the plan. Add a prepaid or COD-confirmation fix path for the Starter Kit. Explain why retargeting and DPA should take a heavier attribution haircut."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is rigorous on store-count profit, with a separate attribution haircut for prospecting and for retargeting. It forecasts the plan's outcome and puts most of the reserve behind release rules. It names concrete first moves for day one and adds a geo-holdout test that would show whether retargeting earns anything at all.",
+  "biggest_mistake": "It brings back the creator video but adds only one Rohan ad, with no new cuts of that hook. It labels retargeting 'cut' while only halving it. The brand guard rule drops the skin-colour and body-hair limits. The dates are invented.",
+  "what_would_make_it_a_10": "Add 2 to 3 new cuts of the 'Dad's razor' hook. Make the call labels match the actions. List the full brand avoid list. Tighten the wording so the team can read it faster."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both make the right calls on the creator video, the Starter Kit and women 25 to 34. The second one shows me what the plan should earn in rupees, guards the budget with release rules, and tests whether retargeting is real, so I'd act on it with a little more confidence."
+}

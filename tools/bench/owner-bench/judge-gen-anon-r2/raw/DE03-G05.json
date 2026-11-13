@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads exactly like us: $82,000 in the first line, the weak hours owned plainly, the weekend rotation stated with its reason, and a warm welcome to teachers and hotel people without a whiff of HR template.",
+  "biggest_mistake": "The 'why this job?' 100-word prompt edges toward a cover letter in disguise and isn't tied to any signal in our data; the post itself is tightly on-brand but the scorecard leans a bit on a second exercise the post only vaguely describes.",
+  "what_would_make_it_a_10": "Drop or replace the 'why this job' question with something scored, and add the scorecard weights' checks against the data sentence so a reviewer can see why each number exists."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 10,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hours-by-city table, the Priya application prompt with a real typo to catch, and the 03:00 UTC shortlist exercise are genuinely sharp — the prompts do real work and show what good looks like.",
+  "biggest_mistake": "Voice drifts toward HR-process polish in places ('Need an adjustment, like more time? We will never ask you for money', the numbered hiring funnel with dates) and 85% weighting is stated as a rule before the weights add up to the table, which reads slightly like a template.",
+  "what_would_make_it_a_10": "Tighten the voice to sound like a person in the post (trim the procedural lines), and make the weighting math and 'pass or fail' clear in one place rather than scattered."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and would go out with small edits, but Output 2's application prompt (a real typo to catch) and 03:00 UTC shortlist exercise give reviewers something concrete to score against the data, and the hours-by-city table answers the 'is it really remote?' question better. Output 1's voice is a touch purer, which made this close."
+}

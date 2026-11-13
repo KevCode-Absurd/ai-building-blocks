@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly takes apart the blended 4.0 ROAS, identifies PMax brand dependency and the feed disapproval as the first fix, then moves budget toward bags, washable and comfort terms.",
+  "biggest_mistake": "It is a bit overlong and the reserve/unspent-budget framing slightly conflicts with the request to split the full $240,000 for the month.",
+  "what_would_make_it_a_10": "Tighten it under the word limit and make the reserve rule a clearer reallocation plan so the full $240,000 is actively assigned unless performance fails."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very clear, numerically sound, and puts the price mismatch and PMax brand issue in the right order against the 2.5 break-even ROAS.",
+  "biggest_mistake": "It raises bags Shopping without clearly excluding bags from PMax, and its forecast depends on an optimistic brand transfer and PMax recovery.",
+  "what_would_make_it_a_10": "Add the PMax product exclusions for bags, make the forecast more conservative, and give firmer week-two-to-four cut and scale rules."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both are strong, but Output 1 is the plan I would rather hand to the team because it gives more complete operating rules, explicitly removes bags from PMax, and has a more useful profit range. Output 2 is cleaner, but it leaves a key execution risk open."
+}

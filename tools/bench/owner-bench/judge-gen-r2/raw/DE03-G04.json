@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every email opens on the pricing change and the rev rec rebuild in a real finance person's voice, with list rules and reply-rate math that match the pilot exactly.",
+  "biggest_mistake": "It quotes the internal persona line almost verbatim and claims a one-page summary and 'three steps' will be sent without confirming those assets exist.",
+  "what_would_make_it_a_10": "Name the exact asset behind each reply ask (the one-pager, the three steps) so nothing is promised that isn't written yet."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tight, scannable structure with clean metric tables and a clear per-100-contacts projection.",
+  "biggest_mistake": "The 8% target (range 7-10%) invents a 1.25x lift multiplier the pilot never tested, inflating the expected reply rate above the 7.9% trigger ceiling.",
+  "what_would_make_it_a_10": "Use the pilot's own 6.8-7.9% band as the expectation and keep the invented uplift out of the forecast."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 sounds more like a finance person talking to a finance person, keeps the proof as plain words, and gives an honest reply rate instead of a multiplied wish; Output 2's forecast math is clever but not something I'd defend to my team."
+}

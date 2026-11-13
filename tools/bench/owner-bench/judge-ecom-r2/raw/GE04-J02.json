@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliantly connects the financial constraints to the creative strategy, proving mathematically why a 20% discount hook destroys the margin, and uses the exact verbatim customer quotes for hooks.",
+  "biggest_mistake": "Does not explicitly mention whether retargeting is included or excluded, though the setup implies pure acquisition.",
+  "what_would_make_it_a_10": "It is a 10, but explicitly stating to avoid retargeting in month one would make it bulletproof."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 10,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Provides an outstanding technical setup checklist, including event ID deduplication, and sets a fantastic incrementality test for the Day 30 decision.",
+  "biggest_mistake": "Paraphrases the customer quotes for the ad hooks instead of using the highly specific, verbatim phrases provided in the brief.",
+  "what_would_make_it_a_10": "Use the exact customer quotes from the brief as the ad openers rather than writing your own versions."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both outputs are exceptional, doing the complex margin math perfectly and catching almost every signal. Output 1 wins because it caught the specific request to use the customer's exact words as hooks, and it clearly quantified why the offer-first strategy fails."
+}

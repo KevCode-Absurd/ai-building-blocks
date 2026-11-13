@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes a clear, rupee-backed decision for every ad set and a precise budget that adds up, with the relaunch of the paused creator video as the first move.",
+  "biggest_mistake": "The break-even calculation for ASC uses a blended profit per order (₹339) that does not reflect its actual COD and RTO mix, potentially misjudging its profitability.",
+  "what_would_make_it_a_10": "A clear, step-by-step implementation timeline for Monday's actions and a simple table of projected weekly profit impact from each decision."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The dual break-even lines (safe and break-even) make the attribution haircut practical and easy to apply.",
+  "biggest_mistake": "Its budget allocation for ASC is more aggressive and lacks a clear daily ramp schedule, risking overspend if performance does not improve immediately.",
+  "what_would_make_it_a_10": "A more detailed daily budget plan for ASC with clear gates and a contingency if it fails to hit targets, plus a clearer projection of profit impact."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives a more precise, rule-based plan with exact daily budgets and a reserve system, making it easier to execute and control, while Output 2's dual threshold is smart but its ASC scaling is riskier without a clear ramp plan."
+}

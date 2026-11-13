@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the seat math, builds the hero on Priya's 'email tennis,' and moves round robin, routing forms and security into their right places.",
+  "biggest_mistake": "Leaves several [bracketed] placeholders for logos, security details and a customer quote, so it isn't quite paste-ready.",
+  "what_would_make_it_a_10": "Fill every placeholder with verified real material or cut the slots cleanly, so the page could ship tomorrow."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tight, honest and shippable: correct math, an explicit stop rule with the visitor math shown, and disciplined claims about what round robin does.",
+  "biggest_mistake": "The hero drops the customer's 'email tennis' phrase from the headline and uses 'back and forth,' losing a little of Priya's voice.",
+  "what_would_make_it_a_10": "Put 'No email tennis' in the hero headline while keeping the disciplined proof and stop rule."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick the right segment and get the math right, but output 2 is closer to launch-ready and shows its test math, while output 1 leaves more bracketed homework for me to fill."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent attention to Meta ad mechanics, like safe zones and headline character counts.",
+  "biggest_mistake": "Missed putting the solo women 'lift' concept in the top 3, prioritizing the 'gate check' fear instead.",
+  "what_would_make_it_a_10": "Aligning the top 3 priorities perfectly with the highest-leverage insights from the data (belt, solo lift, quiet wheels)."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Perfectly nailed the top 3 priorities from the data and provided excellent media buying instructions for the testing phase.",
+  "biggest_mistake": "Did not explicitly provide a short 'Headline' field for the ads, putting all the copy into 'Primary text'.",
+  "what_would_make_it_a_10": "Breaking out the specific Meta Headline field (and keeping it under 27 characters) for each concept, like Output 1 did."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are incredibly strong and usable, but Output 2 perfectly identified the exact three priorities that the data pointed to. The added media buying advice at the end shows a strategist who thinks about the full funnel, not just the creative."
+}

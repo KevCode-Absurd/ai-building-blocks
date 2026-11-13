@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Diagnoses the real reasons people left: the retired blend and late deliveries. Pairs that with clean, checkable profit maths (₹557 and ₹442), a cost line for discounts given to people who would have bought anyway, and the delivery gate for ex-subscribers.",
+  "biggest_mistake": "Puts the 46 to 90 day 'slipping' group behind the 91 to 180 day group. It handles them only with a side note about a day-28 nudge, never sizes or values them, and its profit figure rests on an optimistic two orders per returner.",
+  "what_would_make_it_a_10": "Make the 9,000 at-risk buyers wave 1 and value them in the profit table. Show a break-even lift per group. Give a conservative profit range alongside the optimistic one."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Gets the order right: slipping buyers first with no discount, then Monsoon Dark, older groups after that, and ex-subscribers only once the delivery gate is met. It adds a conservative email-only profit range, real launch dates and compliance details, plus a smart Monsoon Dark pre-order idea.",
+  "biggest_mistake": "The Monsoon Dark email asks for a quiz instead of naming the closest roast we still sell. The ex-subscriber email does not prove delivery is fixed with an on-time figure and does not name the farm or roast. Offering 15% off to the coldest 365+ group is questionable.",
+  "what_would_make_it_a_10": "Name the matched roast in the Monsoon Dark email and put the on-time rate and the farm in the subscriber email. Include break-even lift per group, and explain where the ₹535 per ex-subscriber figure comes from."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both understand why customers left. The second one starts with the cheap, at-risk buyers, gives me a more honest profit range, and has more ideas I can use, though I'd borrow the first one's Monsoon Dark and subscriber emails."
+}

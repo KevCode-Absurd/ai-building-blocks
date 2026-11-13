@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks the groups the way I would. The 46 to 90 day group goes first with no code, Monsoon Dark gets its own track, and ex-subscribers wait behind a delivery gate. Group sizes are netted for overlap, and the profit table is built on the holdout-adjusted contacted counts.",
+  "biggest_mistake": "The Monsoon Dark draft promises a match but never names it or uses a farm or roast placeholder. The profit estimate also covers only first returning orders plus a loose 12-month extension, and a few details are odd, such as the ₹535 per ex-subscriber figure and a break-even lift given only for group G6.",
+  "what_would_make_it_a_10": "Name the closest dark roast in the Monsoon Dark draft and put a farm in every draft. Give a break-even lift for every group, not just G6. Show the 12-month value explicitly. Trim a little so it sits clearly inside the word limit."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clean and easy to read. The drafts use farm and match placeholders. The delivery gate is sound, with a fix for each cancel reason. The profit maths checks out (₹557, ₹442, and a net of ₹8.5 lakh with low and high cases).",
+  "biggest_mistake": "It starts with the 91 to 180 day group and gives the 9,000 customers at 46 to 90 days only an always-on nudge, not a campaign. Those are the cheapest customers to win back. It also gives group C 10% off from the first message, leading with price to a cold group.",
+  "what_would_make_it_a_10": "Make the 46 to 90 day group wave 1 with a reminder and no discount. Net the subscriber overlap out of group A. Add a break-even lift per group. Cover the Monsoon Dark buyers in the 91 to 180 band as a separate, sized track."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 puts the cheap, at-risk 46 to 90 day customers first, gives Monsoon Dark and ex-subscribers their own tracks, and nets group sizes and profit properly. Output 2 is tidy and its drafts are good, but it misses the priority order I wanted and leans on a discount for the cold group."
+}

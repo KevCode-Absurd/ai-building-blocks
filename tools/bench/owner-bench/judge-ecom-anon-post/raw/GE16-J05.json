@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9.2,
+  "use_as_is": "as is",
+  "biggest_strength": "Disciplined adherence to character limits, clean testing matrix, and great understanding of why the paused winner stopped working.",
+  "biggest_mistake": "The copy, while clean, is slightly formulaic compared to how punchy and irreverent our brand voice usually gets.",
+  "what_would_make_it_a_10": "Inject more conversational bite into the copy lines (e.g., pulling directly from customer quotes like the samosa line)."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 9.8,
+  "use_as_is": "as is",
+  "biggest_strength": "Nailed the exact brand tone ('Fair. Here’s your ₹90', 'minus the samosa') while delivering an actionable media testing framework with cut-off budgets and control cells.",
+  "biggest_mistake": "Very little to fault; could have explicitly labeled Aditya and Priya in the headline table as it did in the primary text table.",
+  "what_would_make_it_a_10": "Almost flawless as delivered for a founder ready to spend media dollars."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both understood the data signals perfectly, but Output 2 captured our authentic brand voice better ('Fair. Here's your ₹90') and gave me an operator-level testing plan with exact statistical and budget guardrails."
+}

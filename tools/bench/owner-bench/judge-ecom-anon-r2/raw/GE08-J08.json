@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless operational logic and prioritization: anchor win-back at day 68 (2x median reorder gap), perfectly accounting for the 46-90 day at-risk segment, while nailing the exact unit economics (₹557, ₹442, ₹384.50).",
+  "biggest_mistake": "House Blend medium roast is suggested as the dark roast replacement; while it offers a brew adjustment, recommending an actual darker estate roast would be closer to the brief.",
+  "what_would_make_it_a_10": "Sub-segmenting cold brew and equipment-only buyers within the lapsed pools the way Output 2 did."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 10,
+  "range": 10,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Brilliant customer-level merchandising insights, such as seasonal cold brew pivots in winter and equipment-only quiz routing.",
+  "biggest_mistake": "Demoted the 46-90 day cohort (9,000 customers) to an unmodeled side note instead of treating them as the top priority win-back group, and introduced unverified 12-month repeat assumptions into the financial lift.",
+  "what_would_make_it_a_10": "Integrate the 46-90 day group fully into the main targeting waterfall and model incremental margin directly off holdout lift rather than multi-order LTV projections."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 immediately understands that our 46-90 day customers are our highest-ROI lapsed cohort and builds an airtight, math-sound operational program around day 68. Output 2 has wonderful creative ideas for equipment and cold brew, but missed putting our freshest lapsed buyers at the top of the table."
+}

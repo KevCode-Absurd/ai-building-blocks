@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers all check: 2,210 kept, £18,650 a month, 440 without the pause, and £29,160 of discounts ended. It warns plainly that the pause does 80% of the work and must not launch without it, and it gives a range.",
+  "biggest_mistake": "The 'trip over' group gets only a plain exit. There is no 'remind me before your next trip' or pause option, so Greg's 'maybe next spring' goes unused. The 12-month revenue figure also rests on a 6% churn assumption that is only loosely explained.",
+  "what_would_make_it_a_10": "Add an opt-in 'email me before my next trip' line for goal or trip cancellers. Add a holdout group on today's flow to prove the gain. Show the 12-month revenue working in one line."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Each reason gets the right offer, including a 'remind me in 3 or 6 months' checkbox for trip-over cancellers and a smaller-goal option for people who already have a reminder. It adds a sensible 10% holdout on today's flow, and the main maths is correct (1,771 pause, 304 switch, 2,239 total).",
+  "biggest_mistake": "It keeps the 50% off for switchers based on an assumed rate, when we know 61% of discount takers leave anyway. It gives no range. The £136k a year assumes zero churn, and the £9 monthly price used for £59.40 is a guess shown as if it were fact.",
+  "what_would_make_it_a_10": "Drop the discount for switchers or test it in the holdout. Give an honest range. Add churn to the yearly figure. Set out the build steps in order, with the pause as the critical path."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the pause-first logic and the core numbers right. Output 1 is more honest about risk, gives a range, and drops discounting entirely, though I'd borrow Output 2's 'remind me before your next trip' line and its holdout test."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It cleanly separates what is proved from what needs checking, catches the Meta-linen-return problem and the switched-off email machine, and turns them into a practical 90-day operating plan.",
+  "biggest_mistake": "The move-level gross profit sizing is lighter than requested, and the scorecard misses a separate Google cost-per-first-order target.",
+  "what_would_make_it_a_10": "Add clearer dollar sizing for each move, include Google CPA in the weekly scorecard, and soften the blanket linen pause to focus on prospecting until the product issue is confirmed."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives useful per-$1M contribution sizing, clear stop lines, and strong working for the Meta economics and payback cap.",
+  "biggest_mistake": "It overstates confidence in some inferred numbers and operational calls, especially the contribution margin bridge and putting the old sign-up form back, even though the speed issue was the reason it was removed.",
+  "what_would_make_it_a_10": "Tighten the assumptions, separate proven figures from modeled estimates more visibly, add Google to the scorecard, and change the sign-up recommendation to a lighter tested form rather than the old form unchanged."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather run Output 1 because it is cleaner, safer, and more directly tied to the known signals without over-fitting the math. Output 2 has better dollar sizing, but I would recheck more of it before handing it to the team."
+}

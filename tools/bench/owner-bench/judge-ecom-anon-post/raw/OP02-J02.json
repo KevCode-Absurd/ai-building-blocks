@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is built directly from our data: on-feet workers first, problem hooks first, mission as the close, and a $38 new-customer target tied to 90-day contribution.",
+  "biggest_mistake": "The day-20 release rules mix TikTok-reported CPA, store tags, and survey reads in a slightly fuzzy way, and the holdout idea may be noisy for only 30 days.",
+  "what_would_make_it_a_10": "Tighten the measurement rules so the team knows exactly which source wins when reads disagree, and add the exact creator brief/output owners for the next 6 to 10 worker creators."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets the main strategic call right: lead with real worker comfort, use the nurse and server Spark Ads, avoid discount and mission-first hooks, and judge against a $38 target.",
+  "biggest_mistake": "It is a little more generic and less disciplined operationally: scaling/Smart+ starts early, the day-30 scorecard leans more on TikTok-claimed orders than I would like, and some rules are not as tightly tied to the economics.",
+  "what_would_make_it_a_10": "Make the budget phasing and scale rules more conservative until tracking is proven, remove Smart+ from month one, and make the final decision rule primarily Shopify new customers plus survey/lift against the $38 90-day break-even."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels more like a plan I could hand to the team Monday morning: the numbers are sharper, the budget adds up cleanly, and the creative plan follows the actual signals in our data. Output 2 is good, but it needs more tightening before I would trust it with the full $30,000."
+}

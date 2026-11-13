@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Flawless mathematical logic translating the brand's margins into exact target CPAs, kill rules, budget pacing, and day-30 success metrics.",
+  "biggest_mistake": "Missed the easy win of using the customer's exact quotes (provided in the brief) as the opening hooks, opting for variations instead.",
+  "what_would_make_it_a_10": "Incorporate the exact customer quotes from the brief into the ad hooks to ensure maximum resonance."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Deep media buying expertise shown in calculating the 25-purchase minimum for ad groups and laying out everything in highly readable tables.",
+  "biggest_mistake": "Explicitly noting that mission statements should not open ads, but then using 'I like that a pair gets donated' as an opening line in the creative table.",
+  "what_would_make_it_a_10": "Swap the mission-focused opening hook for one focused on durability, staying true to the strict rule of not opening with the donation."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both plans are exceptionally strong and well-reasoned, but Output 2 contradicts itself by opening an ad with the donation mission, which was explicitly on my 'annoy' list. Output 1 followed all negative constraints perfectly."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear ranked three-fix plan with strong money maths and a useful bolder swap-first idea.",
+  "biggest_mistake": "Hardcoded November/Christmas dates and a half-traffic fit-finder test do not line up cleanly with the 30-40% usage used in the savings.",
+  "what_would_make_it_a_10": "Use relative weeks, resolve the fit-finder test/rollout assumption, and add the pre-dispatch size-switch and a 5-day fit follow-up."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The fullest usable package: pre-dispatch size switch, post-delivery fit help, clear portal changes, and conservative caveated numbers.",
+  "biggest_mistake": "The best new idea, the 2-hour size switch, depends on an unverified order-edit window; the swap figure is sales kept, not cash saved, and could be misread.",
+  "what_would_make_it_a_10": "Add a simple target-vs-baseline scorecard and gift-order copy for Amira, and confirm the order-edit and swap mechanics before rollout."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "I would hand Output 2 to my team first: it has the more complete message set, a smarter pre-dispatch size fix, better post-delivery fit help, and more careful numbers. Output 1 is strong on the core fixes and savings, but its date and test assumptions make it less ready."
+}

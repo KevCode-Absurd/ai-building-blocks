@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranks channels with the math, sets eight pre-launch gates (migration test, undo, support, staged rollout), and gives a full dated timeline with a five-post X thread and a warm email. Product Hunt is moved to its own day, and the plan includes 'Start with five' for newcomers.",
+  "biggest_mistake": "The channel table is not actually sorted by retained users: X (3,740) and Product Hunt (3,420) sit below authors (2,470) and Hacker News (2,940). Rank 5 for Product Hunt is also not consistent with its 3,420 retained users, which exceed Hacker News and authors. The plan also launches Show HN on day one, and engineers are asked to work support shifts. The X post names an AI command builder with a made-up example as shipped, and the speed placeholder has stripped values.",
+  "what_would_make_it_a_10": "State plainly that the ranking is by retention rate, or by retained users, and stay consistent. Keep the speed claim out of the post until measured. Add owners per task, and state the wave-size math (how many users in each rollout step). Tighten to the word limit."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Opens with the decision, then makes a sharp call: stage the rollout in waves gated by migration ticket share, move Product Hunt and Hacker News to 15 December after the rollout is done, and secure a freeze exception for migration hotfixes. It sets measurable targets, a day-4 check with plan B, a no-go rule that still lets new installs go, and a support rota with owners on each row.",
+  "biggest_mistake": "Some numbers are shaky: 'YouTube and authors brought 19% of installs but 41% of users who stayed' is roughly right (17,500 of 93,500 is 19%, and 6,980 of 17,080 is 41%), but 'the share kit and creators with 9 videos' projection of 16,500 installs assumes linear scaling. The 10-second author clip in a Monday 30 Nov kit is also tight. The email says 'carried over' in the past tense before the rollout is confirmed, and the X post is thinner than the other plan's thread.",
+  "what_would_make_it_a_10": "Hedge the projection more clearly, and add a longer X thread with a different shortcut per post. Phrase the email so it matches what each user has actually received, and keep to 1,200 words."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Plan 2 turns the data into decisions: staged waves gated on migration tickets, Product Hunt and Hacker News pushed after the rollout, owners on every row, and measurable targets with a plan B. Plan 1 has a richer X thread, but its ranking is inconsistent and its tone is less decisive."
+}

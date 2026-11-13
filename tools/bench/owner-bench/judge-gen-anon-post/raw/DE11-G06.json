@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It immediately frames the fight as agencies + self-inflicted Lite churn, quantifies it (60% of Semrush losses from agencies, 32% of churn from Lite limits) and ranks the Lite top-up fix near the top where it belongs.",
+  "biggest_mistake": "One arithmetic slip early: 'Agencies cause 60% of the trials we lose to Semrush' is right, but a couple of derived projection numbers (advanced exits to Semrush as 1.9% of churn, and the 14-17% projection band) are stated with more confidence than the base data supports; I'd want the working shown or the band tightened.",
+  "what_would_make_it_a_10": "Trim the fifth 'bolder move' that partly duplicates moves 1 and 3, keep exactly five distinct moves each with a first step and a clean dated success metric, and fix the projection arithmetic so every number reconciles."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Cleanest working of the numbers (per-100-trials maths shown, margin of error applied to the keyword 'tie', Lite 12-month retention) plus five genuinely distinct moves with owners, this-month first steps and measurable tests, and an honest 'what we should not do'.",
+  "biggest_mistake": "Move 5 (content studies) is a bit generic and the weakest of the five; a sharper agency-focused move would beat it. Also a 'Data as of November 2026' date is invented since the brief gave no date.",
+  "what_would_make_it_a_10": "Replace or sharpen move 5 with a harder-to-copy agency/Advanced-retention move, and drop or flag the fabricated date so every claim has a real source."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and I'd act on either, but Output 2 shows its arithmetic, applies the margin of error honestly to call keyword a tie, and gives five clean moves with tests I can run, so I trust it slightly more. Output 1's extra fifth move overlaps moves 1 and 3 and its projections are looser."
+}

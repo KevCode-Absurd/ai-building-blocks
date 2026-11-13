@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows the data tightly: Controllers/Heads of Finance at 50-300 person SaaS companies, timed to pricing-page changes, with no links and a clear expected reply-rate model.",
+  "biggest_mistake": "It uses the 9-to-4-day proof in step 1 and repeats it often; I would rather keep step 1 more focused on the pricing-change pain and use proof later.",
+  "what_would_make_it_a_10": "Move the proof out of step 1, trim the repetition across steps, and make the Step 2 ask a little softer than a 20-minute walkthrough."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks the right segment and trigger, explains the list rules clearly, and gives a practical reply-rate expectation without overclaiming.",
+  "biggest_mistake": "The emails often have more than one ask and lean into SDR-style reply prompts like \"reply yes\" or \"reply steps,\" which feels less like finance peer-to-peer copy.",
+  "what_would_make_it_a_10": "Reduce each email to one clean question, remove the extra content offers unless those assets are ready, and make the copy sound more like a Controller talking to another finance leader."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to something I could hand to the team tomorrow: sharper targeting, better use of the pilot data, and cleaner finance-led copy. Output 2 is solid, but the reply prompts and extra asks make it feel less polished and less on-brand."
+}

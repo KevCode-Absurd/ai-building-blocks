@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data correctly: leads with dark spots and niacinamide, gives sunscreen its own objection-handling email, and builds slow-start guidance into the flow.",
+  "biggest_mistake": "It may be a little long and the Day 6 routine could push three products harder than a true beginner needs, though it does include a sensible slow-start plan.",
+  "what_would_make_it_a_10": "Trim slightly, add clearer Klaviyo block logic for each quiz concern, and make the final code reminder more explicit if an expiry is later configured."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 8,
+  "voice": 6,
+  "range": 7,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It uses the main data well, especially the sunscreen click-to-order gap and the need to segment by quiz answer.",
+  "biggest_mistake": "It invents a 14-day code expiry and builds fake urgency around it, and it uses off-brand/risky language such as “brightening” and stronger claims around salicylic acid.",
+  "what_would_make_it_a_10": "Remove the unapproved expiry, clean up off-brand and medical-adjacent wording, and make the routine safer and slower for beginners."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to launch-ready for this brand: calmer, more compliant, and better aligned to the tracking gap and beginner fear. Output 2 has useful structure, but the invented deadline and off-brand wording would make me stop before sending it."
+}

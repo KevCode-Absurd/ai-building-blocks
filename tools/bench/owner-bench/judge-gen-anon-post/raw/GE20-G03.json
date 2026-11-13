@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 10,
+  "priorities": 7,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Exceptional analytical insight, particularly calculating that the $0.9M compute increase equals roughly 9 margin points, which neatly explains the entire gross margin drop.",
+  "biggest_mistake": "Buried the asks at the very bottom of the email, completely ignoring the lead investor's explicit preference to see what is needed immediately after the headline numbers.",
+  "what_would_make_it_a_10": "Move a summary of the asks to the top, combine the 'went wrong' and 'doing about it' sections for punchiness, and add forwardable text for angel investor intros."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless adherence to the reader personas and format rules, putting asks up front and including forwardable blurbs to make helping entirely frictionless.",
+  "biggest_mistake": "Missed the opportunity to explicitly calculate how the $0.9M compute increase mathematically accounts for the 7-point drop in gross margin.",
+  "what_would_make_it_a_10": "Include the specific margin percentage point calculation that proves the free-tier compute increase entirely explains the margin drop."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 nailed the formatting and persona constraints flawlessly. Putting the asks at the top and providing forwardable blurbs shows a deep understanding of how our investors actually read and act on these updates."
+}

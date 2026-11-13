@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks recruiting with the paid-seat math and builds the page around Priya's email-tennis pain, round robin, routing forms and security proof in the right order.",
+  "biggest_mistake": "Calls Version A the 'control' even though the current hero is not that copy; it should be framed as one of two new challengers, and a few proof assets still need collecting.",
+  "what_would_make_it_a_10": "Fix the A/B control naming, supply exact proof-safe security links/language, and replace the proof-to-collect placeholders with real approved assets or a clear collection plan."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong segment math and a clean page structure, with a thoughtful final metric that connects hero testing to qualified recruiting-team starts.",
+  "biggest_mistake": "Uses 'Get started' buttons on a team recruiting page and claims text reminders without a source, which breaks the brief's CTA and claim rules.",
+  "what_would_make_it_a_10": "Change team CTAs to 'Book a demo', remove or bracket unsupported claims like text reminders, add a distinct 'how candidates book' section before features, and give the test a simple sample-size/stop rule."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I'd hand Output 1 to the team tomorrow after a light pass: it picks the right segment, puts candidate booking, round robin, routing and security in the right order, and keeps the CTAs honest. Output 2 is close but the 'Get started' buttons and unsupported text-reminder claim would force edits before I'd publish it."
+}

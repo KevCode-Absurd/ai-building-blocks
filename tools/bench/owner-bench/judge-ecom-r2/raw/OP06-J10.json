@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the key signals in the data: face wash + serum as the hero bundle, lip balm as the threshold add-on, and COD under ₹500 as the real leak, then turns them into a practical launch and test plan.",
+  "biggest_mistake": "Some of the maths is a bit shaky or simplified in places, especially around blended profit and threshold break-even assumptions, so I would want the spreadsheet checked before rollout.",
+  "what_would_make_it_a_10": "Tighten the arithmetic behind the threshold and bundle economics and show one cleaner worked example of delivered margin by prepaid vs COD."
+ },
+ "o2": {
+  "fit": 5,
+  "insight": 6,
+  "priorities": 6,
+  "reasoning": 6,
+  "correct": 4,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 6,
+  "overall": 5,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is clear and readable, and the idea of protecting the serum reorder by avoiding a ₹699 threshold shows it noticed an important constraint.",
+  "biggest_mistake": "It misses the strongest bundle already proven by customer behaviour—face wash + serum—and instead leads with a made-up serum + lip balm bundle and a speculative ₹599 threshold without the needed band data.",
+  "what_would_make_it_a_10": "Rebuild the recommendation around the actual top pair, use lip balm as the add-on it naturally is, and replace speculative threshold maths with calculations grounded in the real order bands and COD/RTO effects."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to how I would actually run this business: it uses the real buying patterns, handles COD and RTO properly, and gives me a safer testing order. Output 2 is neat, but it invents too much around ₹599 and underplays the obvious winning bundle already sitting in the data."
+}

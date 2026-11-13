@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every email is tied to one habit from the retention table, with its own goal and measure, and the drop list explains each cut with the actual numbers (1.4% unsubscribes on the team invite, 0.3% mobile clicks on shortcuts).",
+  "biggest_mistake": "No at-a-glance summary, so the team has to read the whole document to see the sequence, send logic and subject-line lengths; and keeping a (gated) Pro email risks arguing with its own 'habit before money' logic.",
+  "what_would_make_it_a_10": "Add a one-screen table at the top (email, trigger, goal, measure, skip rule), show subject-line character counts to prove the under-45 rule, and add a line on send frequency when two triggers collide."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Operationally ready: the at-a-glance table, the skip and send-conflict rules, character counts on every subject line, and 'judge on clicks and goal actions, not opens' make it easy for a small team to actually run.",
+  "biggest_mistake": "Email 5 is a second recurring-task email with the same ask as email 2, so a user who ignored email 2 gets essentially the same email again; it also compares 'both habits by day 14 (now 8% by day 7)' and claims 'one lost subscriber per click', which is a rhetorical stretch.",
+  "what_would_make_it_a_10": "Replace email 5 with a distinct fifth job (push second device for mobile signups, or a value email) and keep each of the five emails on a different habit or moment rather than repeating the recurring-task ask."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are usable and both build the series around recurring tasks and a second device, but output 1 gives me five genuinely different emails with a goal and measure on each, while output 2's fifth email repeats email 2 and would send the same ask twice to someone who already ignored it."
+}

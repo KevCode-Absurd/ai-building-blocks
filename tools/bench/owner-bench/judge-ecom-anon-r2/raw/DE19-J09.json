@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Crisp proved-vs-to-check split with the Meta vs Google distinction, payback math, and a ranked moves table with owners, stops and a weekly scorecard that I could run Monday.",
+  "biggest_mistake": "The $94 payback ceiling and $33 loss per first order are framed too absolutely; repeat value and ramp effects are assumed rather than ranged, and the payback break-even might be read by the team as a hard 'never spend more' rule without a test window.",
+  "what_would_make_it_a_10": "Add a short range for each big number (e.g. payback break-even $90-$100, linen margin recovery $6k-$13k) plus a week-1 first-step owner and a named test for the email sign-up form, so the numbers read as a plan I can defend to the board rather than a single point forecast."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Every move is sized in monthly contribution per $1M of revenue with a range, a stop line and an owner, and it names the January platform move as a likely cause of both broken flows and Meta tracking, which is the kind of sharp check I would not have thought of.",
+  "biggest_mistake": "The dense appendix and stacked assumptions (new share of orders, paid spend share of revenue, flow revenue equal to welcome) make it harder to read quickly, and some derived figures like the 7.8% to 11% contribution margin target depend on those assumptions rather than the raw data.",
+  "what_would_make_it_a_10": "Put a one-line plain-English explanation next to each dollar estimate in the moves table and move the working to a short appendix, so I can read the plan in one pass and still trust the math."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and I would use either, but Output 2 gives me money-sized moves with ranges and stop lines plus a plausible January tracking check, which is what I need to defend cuts to the board; Output 1 is cleaner to read but a little more absolute in its numbers."
+}

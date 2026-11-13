@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reason-matched offers with honest maths, working range, and a build order that leads with re-enabling the pause — exactly the plan I can hand to the product team.",
+  "biggest_mistake": "The 'too expensive' split numbers (3,379 + 1,901) are asserted without showing the 64/36 split derivation, and the reminder-then-stay assumption (39% stay) is borrowed from the discount cohort without flagging it as a guess beyond assumption 1.",
+  "what_would_make_it_a_10": "Show the derivation for the plan-type split, add the measurement plan detail (holdout size and decision thresholds), and give the five test-and-learn guardrails for the first month."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 10,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Most complete reason map and warmly worded copy that fits our voice; keeps a 50% offer only for switchers, and adds a smaller-goal option for people who already have reminders.",
+  "biggest_mistake": "It keeps a 50% discount on the 'switching apps' group where the data shows discounts don't work, and its kept-count for that group (67) quietly counts discounted people at full value and claims 12-month retention for an untested switch.",
+  "what_would_make_it_a_10": "Drop the switcher discount, reconcile kept-versus-value maths (discounted cohorts at £4.95), and add a concrete sprint build order with the pause rebuild first."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 leads with rebuilding the pause, matches offers to reasons including a clean exit for trip leavers, and shows its working with an honest range — I could build it next sprint. Output 2 is close, but keeping a 50% offer for switchers and a slightly muddled value calculation means I'd have to fix it before sending it on."
+}

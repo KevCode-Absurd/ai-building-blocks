@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data like an owner: spots that the best ad was tired not dead, finds the unused taste proof, and builds a launch plan where each ad answers one question, with character counts and honest ₹90-a-bar framing.",
+  "biggest_mistake": "The copy is clean and correct but slightly flatter than our voice; lines like 'Read it. Then eat it.' land, but several primary texts stack facts where a sharper, wittier turn was possible.",
+  "what_would_make_it_a_10": "Punch up the wording so two or three lines are quotable the way 'No added sugar. Not even a little.' is, and trim the front matter so the copy set is the first thing I see."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The lines sound like us and sit in the customers' own words; leading with the flip-the-pack comeback and a taste ad is exactly where I would put my money, and the launch table tells me what each ad beats.",
+  "biggest_mistake": "It overlaps angles: the price ad and the 4 pm ad both lean on Priya's objections, and the six primary texts are less evenly spread across the six angles I asked for than Output 1's.",
+  "what_would_make_it_a_10": "Make the six angles clearly distinct (taste, texture, transparency, sugar, protein, price) and keep the voice, then show the character counts as visibly as Output 1 does."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both would go live with small tweaks and both got the strategy right, but Output 2's copy sounds like my brand and would stop a scroll, while Output 1 is the more careful analyst with slightly flatter lines."
+}

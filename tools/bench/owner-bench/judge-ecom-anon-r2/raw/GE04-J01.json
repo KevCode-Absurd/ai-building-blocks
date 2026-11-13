@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Ruthless owner-level financial discipline. It refuses to spend the entire budget just because it is available, holding cash back until the ad sets actually prove profitable on backend metrics.",
+  "biggest_mistake": "None. It executed every constraint, caught every easter egg, and presented the data in exactly the format requested.",
+  "what_would_make_it_a_10": "It is a 10."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent calculation of the customized break-even and safe lines for each individual ad set based on their specific COD and AOV profiles.",
+  "biggest_mistake": "It redistributes the budget to hit the full ₹5,60,000 spend, forcing money into ASC even though ASC is currently operating above the 'safe' break-even line on Shopify's true numbers.",
+  "what_would_make_it_a_10": "Adopt a stricter capital allocation stance: don't allocate budget to unprofitable campaigns just to make the spreadsheet add up to the monthly budget limit."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 acts like an owner protecting their own wallet. It correctly identifies that the current setup is losing money on actual Shopify numbers and leaves budget unspent rather than burning it, which is the ultimate sign of a great media buyer."
+}

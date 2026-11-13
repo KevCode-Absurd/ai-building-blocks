@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Executes the brief flawlessly with exact seat math, strict discipline on the team CTA ('Book a demo'), and an airtight sample-size calculation for the A/B test.",
+  "biggest_mistake": "The hero headline plays it slightly safe with 'without the back and forth' rather than immediately deploying Priya's punchier 'email tennis' hook in the H1.",
+  "what_would_make_it_a_10": "Incorporate 'email tennis' directly into Hero A's headline rather than saving it for section 2."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Captures Priya's exact voice brilliantly in the hero copy ('No email tennis') and defines a nuanced success metric.",
+  "biggest_mistake": "Violates the brief's CTA rule by scattering self-serve 'Get started' buttons throughout a landing page targeting a high-seat team segment where the goal is team demo conversion.",
+  "what_would_make_it_a_10": "Standardize all section CTAs to 'Book a demo' to keep the conversion funnel unified instead of sending enterprise recruiting leads into self-serve signups."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 treats this as a cohesive B2B team landing page, maintaining a consistent 'Book a demo' CTA throughout and providing exact sample-size math for the split test. Output 2 has great hero copy with 'email tennis' but dilutes its funnel by alternating between 'Get started' and 'Book a demo'."
+}

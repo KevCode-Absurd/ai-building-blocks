@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It brilliantly navigates the clinical review rule by writing Week 1 sleep and wind-down drafts that avoid naming clinical conditions, allowing our highest-converting theme to run immediately.",
+  "biggest_mistake": "Very little to fault, though testing Wednesday afternoon at 14:30 deviates slightly from the peak evening data window.",
+  "what_would_make_it_a_10": "It is already a 10—flawlessly aligned with our numbers, operational constraints, and brand voice."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear calendar breakdown and sharp identification of top data performers (narrator audio clips and evening posting).",
+  "biggest_mistake": "Overinterpreted the review rule by unnecessarily banning all sleep content in Week 1, which forced a week of low-converting kindness posts and split the six drafts across two weeks.",
+  "what_would_make_it_a_10": "Realize that wind-down copy without clinical labels doesn't trigger the 5-day review, allowing sleep content to launch in Week 1, and remove clunky meta-copy like 'After you save this.'"
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 understood the brief and review policy perfectly: rather than sidelining our highest-converting sleep theme for a whole week, it crafted smart, compliant wind-down drafts for Week 1 and batched the rest for review. Its copy captures our brand voice effortlessly and every single draft is ready to ship."
+}

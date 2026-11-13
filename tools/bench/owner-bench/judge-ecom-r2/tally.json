@@ -1,0 +1,149 @@
+{
+ "panel": [
+  "CL01:claude-opus-5-5",
+  "OP02:gpt-5.5",
+  "DE03:deepseek-chat",
+  "GE04:gemini-pro-latest",
+  "CL05:claude-sonnet-5-5",
+  "OP06:gpt-5.4",
+  "DE07:deepseek-reasoner",
+  "GE08:gemini-flash-latest",
+  "CL09:claude-opus-5-5",
+  "OP10:gpt-5.5",
+  "DE11:deepseek-chat",
+  "GE12:gemini-pro-latest",
+  "CL13:claude-sonnet-5-5",
+  "OP14:gpt-5.4",
+  "DE15:deepseek-reasoner",
+  "GE16:gemini-flash-latest",
+  "CL17:claude-opus-5-5",
+  "OP18:gpt-5.5",
+  "DE19:deepseek-chat",
+  "GE20:gemini-pro-latest"
+ ],
+ "verdicts": 173,
+ "failed": 67,
+ "tot": {
+  "agent": 112,
+  "plain": 61,
+  "tie": 0
+ },
+ "agent_share_of_decided": 0.647,
+ "perProvider": {
+  "openai": {
+   "agent": 38,
+   "plain": 22,
+   "tie": 0
+  },
+  "deepseek": {
+   "agent": 39,
+   "plain": 14,
+   "tie": 0
+  },
+  "gemini": {
+   "agent": 35,
+   "plain": 25,
+   "tie": 0
+  }
+ },
+ "perJob": {
+  "J01": {
+   "agent": 9,
+   "plain": 4,
+   "tie": 0
+  },
+  "J02": {
+   "agent": 9,
+   "plain": 6,
+   "tie": 0
+  },
+  "J03": {
+   "agent": 5,
+   "plain": 10,
+   "tie": 0
+  },
+  "J04": {
+   "agent": 9,
+   "plain": 6,
+   "tie": 0
+  },
+  "J05": {
+   "agent": 9,
+   "plain": 6,
+   "tie": 0
+  },
+  "J06": {
+   "agent": 10,
+   "plain": 5,
+   "tie": 0
+  },
+  "J07": {
+   "agent": 8,
+   "plain": 7,
+   "tie": 0
+  },
+  "J08": {
+   "agent": 9,
+   "plain": 4,
+   "tie": 0
+  },
+  "J09": {
+   "agent": 8,
+   "plain": 6,
+   "tie": 0
+  },
+  "J10": {
+   "agent": 13,
+   "plain": 0,
+   "tie": 0
+  },
+  "J11": {
+   "agent": 9,
+   "plain": 6,
+   "tie": 0
+  },
+  "J12": {
+   "agent": 14,
+   "plain": 1,
+   "tie": 0
+  }
+ },
+ "dims": {
+  "agent": {
+   "fit": 9.16,
+   "insight": 8.82,
+   "priorities": 9.04,
+   "reasoning": 8.91,
+   "correct": 8.83,
+   "clear": 8.91,
+   "voice": 8.65,
+   "range": 8.23,
+   "ready": 8.82,
+   "overall": 8.69
+  },
+  "plain": {
+   "fit": 8.65,
+   "insight": 8.37,
+   "priorities": 8.43,
+   "reasoning": 8.31,
+   "correct": 8.38,
+   "clear": 8.91,
+   "voice": 8.61,
+   "range": 8.22,
+   "ready": 8.42,
+   "overall": 8.26
+  }
+ },
+ "use_as_is": {
+  "agent": {
+   "with small tweaks": 113,
+   "with major rework": 15,
+   "as is": 45
+  },
+  "plain": {
+   "with small tweaks": 122,
+   "with major rework": 27,
+   "as is": 24
+  }
+ }
+}

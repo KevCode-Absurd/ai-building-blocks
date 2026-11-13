@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the real story: agencies are the only place we lose to Semrush, and Lite usage limits are our biggest self-inflicted leak; ranks the Lite fix second and the PPC trap is explicitly ruled out.",
+  "biggest_mistake": "A few derived figures (e.g. 'a third of all monthly churn', 22 per 100 trials ending with Semrush) need a one-line method visible next to them, and move 1's success metric jumbles several gaps into one 'how we'll know'.",
+  "what_would_make_it_a_10": "Tighten each move to one primary metric with a baseline, target and date, and attach the arithmetic behind every headline number in a one-line footnote."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The 'do first / stop / don't spend on' summary at the top is the most usable opening of the two, and the data table with working is clean and checkable.",
+  "biggest_mistake": "Move 5 (a free report inside AWT) partly cannibalises Move 1 and adds complexity the owner didn't ask for; it's a good idea parked in the wrong slot, and Move 1's target (11% to at least 14%) is a big leap stated with no bridge.",
+  "what_would_make_it_a_10": "Replace Move 5 with a sharper second competitive move or fold it into Move 3, and give Move 1 one modest, testable target with the arithmetic shown."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and I'd act on either, but Output 1 reads more like our voice, keeps the Lite pricing fix properly central, and stops at five tight moves; Output 2 is cleaner to skim but its fifth 'bolder move' muddies the plan."
+}

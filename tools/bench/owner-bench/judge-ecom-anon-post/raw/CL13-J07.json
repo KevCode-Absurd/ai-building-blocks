@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Personalises the whole series by quiz answer, with a clear exit rule and a cart pause. It also adds a holdout test, uses the conversion numbers well, and puts the sunscreen fears into one email with the review quote as proof.",
+  "biggest_mistake": "Email 2 mixes the slow-start plan with product blocks, which slightly breaks one idea per email. Email 1 also asks for a 14-day use before adding anything, which is slow. The sunscreen email puts the review quote ahead of any real fix for stickiness. A few figures, such as the projections, are extra and not asked for.",
+  "what_would_make_it_a_10": "Lean harder into the dark-spot routine of sunscreen plus niacinamide for the 44%, so the sunscreen is a morning step beside the serum. Tighten the emails so each carries one idea, trim the data commentary, and check the finish claims against the product page."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, readable, calm in voice, with three quiz-matched versions of Email 2 that each give how to start slowly. It answers 'I don't know which serum is for me' directly and the emails are short.",
+  "biggest_mistake": "Email 5's 'full 3-step routine' puts the salicylic wash in the morning and at night, then a serum and sunscreen. That is more actives than a beginner needs, and it contradicts the one-at-a-time advice and the sensitive-skin path. It also uses 'help clear out oil' and 'help even out the look' claims that sit close to the line. The sunscreen email comes late at day 6.",
+  "what_would_make_it_a_10": "Build Email 5 as a routine matched to the quiz answer, with no double wash. Move the sunscreen answers earlier, add a cart pause and a holdout test, and tie the dark-spot path to sunscreen plus niacinamide."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 uses my data more fully: quiz-matched products, sunscreen fears answered with the review, a proper exit rule and a routine matched to each skin concern. Output 2 is cleaner to read, but its day-11 routine piles on too many actives for beginners."
+}

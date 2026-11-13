@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The margin math is tight. It works out that the $0.9M compute rise is about 9 points on roughly $10.4M of monthly revenue, which covers the 7-point drop. It also shows direct databases grew only 2.6%. The burn table and the 33–37 month runway range are both correct.",
+  "biggest_mistake": "Customer A sits as the second item under 'What went wrong', below a long margin paragraph. It is not in the subject line or the first screen. The asks only appear at the very end, so a partner reading on a phone has to scroll to find what we need.",
+  "what_would_make_it_a_10": "Put Customer A and a one-line summary of the asks right under the three numbers. Name the effect on NRR and on February ARR. Commit to the New York base instead of floating it. Add short intro text investors can forward."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built for a partner reading on a phone. The preview line flags the lost customer, the three numbers come first, and the asks with dates follow right after. Customer A leads the bad news, with the February ARR impact stated. The asks are specific and include intro text ready to forward. The runway row is correct for both months (52 to 33).",
+  "biggest_mistake": "It states two things as done that are really assumptions: the New York relocation and a 27 November ship date. It also likely runs a little over 700 words. It never says that losing Customer A will pull NRR down.",
+  "what_would_make_it_a_10": "Trim to under 700 words. Add a line on the expected NRR impact and the expected margin recovery from the 48-hour pause, given as a range. Confirm the New York decision and the ship date before sending."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are accurate and candid, but Output 2 gets the lost customer and the asks onto the first screen and includes intro text investors can forward, so I could send it almost as written. Output 1 has slightly sharper margin analysis but makes the partner scroll to find what matters."
+}

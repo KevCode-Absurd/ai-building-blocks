@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Gets the three real signals right (day-68 not-lost window first, Monsoon Dark named swap, ex-subscribers gated on the delivery fix) and prices every offer off the ₹557 gross profit with a clean holdout and per-group decision rule.",
+  "biggest_mistake": "The Monsoon Dark match copy says House Blend 'is lighter, so brew it a little stronger' - recommending a lighter roast as a dark substitute undercuts the 'closest match' claim; the dark-roast swap should be a genuinely darker coffee, and the group-5 15% discount is pushed with the founder not flagged.",
+  "what_would_make_it_a_10": "A true dark-roast substitute for Monsoon Dark (or an explicit sourcing note), the founder-approval flag on the group-5 discount, and a sharper voice pass so the drafts sound like 'tell us how you brew' rather than template mail."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 10,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Warmest, most on-brand draft copy and the widest range of ideas - equipment-only, cold-brew seasonality, a day-28 'running low' nudge, free-shipping vs discount test, and a clear delivery gate for ex-subscribers.",
+  "biggest_mistake": "Wrong priority order: it starts with the 91-180 group instead of the 46-90 at-risk customers, and the value model leans on invented multi-order assumptions and ~70% reach that don't match the 62%/40% opt-in data, so the ₹8.5 lakh headline is softer than the 'every rupee checked' claim.",
+  "what_would_make_it_a_10": "Put the 46-90 day window first, replace the assumption-heavy ₹999/₹2,113-per-buyer model with per-order gross profit like Output 1, tie reach to the actual opt-in rates, and flag any 15% use for founder approval."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd actually run: it starts where the money is cheapest (day 68), names the discontinued blend with a swap, holds back the late-delivery cancellers until delivery is fixed, and prices every offer and holdout result off the real ₹557 margin. Output 2 sounds more like us and has more good ideas, but its ranking and its softer numbers would cost me money and trust."
+}

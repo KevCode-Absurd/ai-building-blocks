@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Uses the data well, especially the quiet-wheels and women-solo signals, and builds eight genuinely different concepts with clear awareness levels and single test variables.",
+  "biggest_mistake": "The per-trip maths concept invents a '₹292 a trip' price frame from an assumed 24 trips a year, which is an unsupported claim the owner did not approve and could mislead on value.",
+  "what_would_make_it_a_10": "Tie the first-three order more tightly to the lowest cost-per-purchase audience and remove the invented per-trip maths in favour of an approved-spec proof angle."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very executable: build rules, character-counted headlines, and review lines clearly labelled, with the women 25 to 40 opportunity given three concepts and the first-three pick led by the cheapest audience.",
+  "biggest_mistake": "It treats the review-table lines as word-for-word quotes and labels them as reviews, which risks putting words in customers' mouths without pulling the actual text first.",
+  "what_would_make_it_a_10": "Confirm or clearly flag the review quotes and add a stronger fourth angle beyond the existing buyer groups so the range is as fresh as it is usable."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is the one I would hand the team tomorrow: it is built for production with real format specs, character-counted headlines and labelled review lines, and it leads with my cheapest audience. Output 1 is strong and better on some data reading, but its invented per-trip maths and slightly looser production detail cost it."
+}

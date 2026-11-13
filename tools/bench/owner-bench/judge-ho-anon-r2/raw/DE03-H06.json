@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Straight, confident answer on the 20% cut with the lifetime maths, plus a clean tier table that rewards the top 20 at 40%/12 months without raising cost across the board.",
+  "biggest_mistake": "The 90-day window cost is left as a vague 'biggest cost, review at day 90' with only a per-10% rule of thumb, so finance may feel the biggest change is unpriced.",
+  "what_would_make_it_a_10": "Price the 90-day window concretely from the 58% miss figure, and give the 40%/12-month partner rate a tighter cost cap tied to new customers only."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Says the uncomfortable part plainly (the window raises the bill, the switch month costs $52,500) and keeps one rate so nothing overpays the top 20, with a crisp day-by-day table.",
+  "biggest_mistake": "Claims the rival out-pays us in year one while arguing the rate stays competitive; the 40% first-12-months rival is a real retention risk that the plan doesn't neutralise.",
+  "what_would_make_it_a_10": "A small, cheap retention lever for the top 20 (a modest year-one uplift or bonus) so the 40% rival can't peel off the 17 creator educators, and a number for how many customers the 90-day window newly credits."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are owner-ready and say no to the 20% cut with the same correct maths, but Output 2 says the hard parts out loud (window cost, switch-month cash) and its one-rate plan is the one I'd actually send to finance and partners without renegotiating the top-tier 40%."
+}

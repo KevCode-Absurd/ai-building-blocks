@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Low-friction, peer-to-peer calls to action (reply 'yes', reply 'steps', reply with the month) that make it extraordinarily easy for a busy controller to respond without committing to a sales call upfront.",
+  "biggest_mistake": "Missed giving specific operational guidance on scheduling send windows around the monthly close week.",
+  "what_would_make_it_a_10": "Incorporate send-window rules around the month-end close cycle so emails don't hit controllers during their busiest 9 days."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Outstanding operational insight regarding send timing—deliberately anchoring the cadence between the 12th and 30th to steer clear of the 9-day close.",
+  "biggest_mistake": "Relying repeatedly on high-friction '20-minute call' asks in cold steps 1 and 2, which runs counter to the frictionless conversational tone controllers prefer.",
+  "what_would_make_it_a_10": "Replace the 20-minute meeting asks with lighter friction conversation starters and use brand-specific subjects rather than generic lines like 'Last note from me'."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 writes cold copy that actually gets replies by asking for painless micro-commitments ('yes', 'steps', the audit month) rather than demanding 20-minute calendar blocks from cold controllers."
+}

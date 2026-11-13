@@ -130,3 +130,4 @@ site/.copyable-build/
 !/tools/job-evals.mjs
 !/tools/verify-delivery-evidence.mjs
 !/docs/AGENT-QUALITY-ARCHITECTURE.md
+tools/bench/owner-bench/results-page/data.json

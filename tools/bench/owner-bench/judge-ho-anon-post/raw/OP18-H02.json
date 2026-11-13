@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly exposes the real issue: brand is hiding weak non-brand spend, and it ties the plan back to profit, feed health, bags, washable searches, and standing-all-day searches.",
+  "biggest_mistake": "The $104,000 reserve and regional test make the plan feel less directly usable for a 30-day budget plan; some budget pacing details are also confusing, especially bags per-day spend and the expected profit math.",
+  "what_would_make_it_a_10": "Make the $240,000 spend plan cleaner and easier to approve, reduce the experimental complexity, and show a tighter expected-results calculation tied directly to each budget line."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives me the exact owner-level answer I wanted: break-even ROAS, PMax without brand, what to cut, where to move spend, the feed fix first, title examples, and first-week actions in order.",
+  "biggest_mistake": "The expected brand search value and PMax recovery assumptions are a little optimistic, so I would want the forecast softened or framed more clearly as a range.",
+  "what_would_make_it_a_10": "Add a slightly more conservative forecast and a clearer rule for how much of the reserve gets released if PMax does not improve after brand exclusions and feed fixes."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would be most comfortable handing to the team. It is simpler, better prioritized, easier to act on, and it fixes the profit problem without adding unnecessary complexity."
+}

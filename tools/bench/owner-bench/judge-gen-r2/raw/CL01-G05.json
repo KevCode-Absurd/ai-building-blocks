@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The Priya typo exercise and the 03:00 UTC login-outage shortlist task test the exact skills behind the 0.62 signal and the overnight gap, and the local-hours table makes the time zone need concrete.",
+  "biggest_mistake": "The $82,000 salary sits far down the post under 'Pay and terms' instead of in the first screen, and the 70-hour projection counts only first reads, not second reads.",
+  "what_would_make_it_a_10": "Put the salary in the opening lines and give a full reviewer-hours figure that includes second reads, plus a shortlist size."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Salary is the first line and the weekend rotation gets its own heading that cites the leavers. Writing to customers carries 50%, and the application plan is fully costed: 4.6 minutes each last time, 70 hours now, plus about 7 hours for second reads and a 15-then-5 shortlist.",
+  "biggest_mistake": "It gives Singapore-only local hours and offers fewer original assessment ideas; the longer exercise and handoff task are only described, never written out.",
+  "what_would_make_it_a_10": "Include the actual text of the longer written exercise and a short local-hours list for more Asia-Pacific cities."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are publishable and built on my data. Output 2 puts the salary first, makes the weekend rotation impossible to miss, and gives me a tighter, fully costed review plan. Output 1 has the cleverer exercises."
+}

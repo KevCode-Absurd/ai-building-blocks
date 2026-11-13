@@ -18,6 +18,7 @@ const HEADER = `#!/usr/bin/env node
 //   node tools/ask-knowledge.mjs "how long to wait after a core update before judging a drop"
 //   node tools/ask-knowledge.mjs "core update drop" "traffic fell after Google update" --k 8
 //   node tools/ask-knowledge.mjs "title rewrite rules" --in knowledge.md --json
+//   node tools/ask-knowledge.mjs "free shipping threshold for bundles" --module OFF,MEA
 //
 // Several quoted phrasings of one need are searched together and their rankings merged (ask it two or three ways
 // when the first words may not be the pack's words). It prints the best passages, best first, each with its file and
@@ -36,12 +37,13 @@ async function main(argv) {
   const fs = await import("node:fs");
   const path = await import("node:path");
   const { fileURLToPath } = await import("node:url");
-  const args = { q: [], k: 6, json: false, in: [], pack: null };
+  const args = { q: [], k: 6, json: false, in: [], modules: [], pack: null };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--k") args.k = Number(argv[++i]) || 6;
     else if (a === "--json") args.json = true;
     else if (a === "--in") args.in.push(argv[++i]);
+    else if (a === "--module" || a === "--modules") args.modules.push(...String(argv[++i] ?? "").split(","));
     else if (a === "--pack") args.pack = argv[++i];
     else if (a === "-h" || a === "--help") { console.log(HELP); return 0; }
     else args.q.push(a);
@@ -66,14 +68,16 @@ async function main(argv) {
   const sources = fs.existsSync(sourcesFile) ? parseSourcesMd(fs.readFileSync(sourcesFile, "utf8")) : [];
   const index = new KnowledgeIndex(files, { sources, reviewDays });
   const today = new Date().toISOString().slice(0, 10);
-  const answer = index.ask(args.q, { k: args.k, today, paths: args.in });
+  const modules = args.modules.map(m => m.trim()).filter(Boolean);
+  if (modules.length && !modulePaths(files.map(f => f.path), modules).length) console.error("No knowledge file for module " + modules.join(", ") + " in this pack, so the whole pack is searched.");
+  const answer = index.ask(args.q, { k: args.k, today, paths: args.in, modules });
   let name = "this agent";
   try { name = JSON.parse(fs.readFileSync(path.join(pack, "pack.json"), "utf8")).name || name; } catch {}
   console.log(args.json ? JSON.stringify(answer, null, 2) : answerText(answer, name));
   return 0;
 }
 
-const HELP = 'Usage: node tools/ask-knowledge.mjs "<question>" ["<another phrasing>" ...] [--k 6] [--in <file>] [--json] [--pack <folder>]';
+const HELP = 'Usage: node tools/ask-knowledge.mjs "<question>" ["<another phrasing>" ...] [--k 6] [--in <file>] [--module CODE,CODE] [--json] [--pack <folder>]';
 
 const invoked = typeof process !== "undefined" && !!process.argv?.[1] && (await import("node:path")).resolve(process.argv[1]).toLowerCase() === (await import("node:url")).fileURLToPath(import.meta.url).toLowerCase();
 if (invoked) process.exitCode = await main(process.argv.slice(2));

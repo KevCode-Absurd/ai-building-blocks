@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless data extraction that identifies cold brew and equipment buyers for their own tailored tracks, alongside excellent logic for a day-28 churn-prevention nudge.",
+  "biggest_mistake": "The break-even lift calculation is slightly hand-wavy ('about 1.5 points or more is real') rather than a strict mathematical break-even threshold.",
+  "what_would_make_it_a_10": "Explicitly showing the math for the break-even lift (fixed costs divided by gross profit per order)."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The sharp insight to start the 'just lapsed' flow exactly at day 68 (twice the median gap) to catch customers the moment they officially lapse.",
+  "biggest_mistake": "Missing the draft message for the ex-subscriber track, which was specifically requested in the brief.",
+  "what_would_make_it_a_10": "Writing the ex-subscriber message draft and finding a better match for the dark roast than a medium House Blend."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 delivered an absolute masterclass in reading data: not only did it handle the main segments perfectly, but it also proactively carved out cold brew and equipment buyers for tailored messaging. It followed every brand rule, provided all requested drafts, and is completely ready to launch."
+}

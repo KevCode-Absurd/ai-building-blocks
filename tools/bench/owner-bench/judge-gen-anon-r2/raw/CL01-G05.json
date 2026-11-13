@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The exercises feel real. The Priya invite typo gives a findable fix and a deadline, and the 03:00 login outage tests the solo-shift judgment. The time zone table, with summer hours, removes any doubt about what the hours mean where you live.",
+  "biggest_mistake": "The salary sits halfway down the post, after the hard parts and requirements, not in the first screen. The post and scorecard are also dense, so they read more like a spec than a calm note.",
+  "what_would_make_it_a_10": "Put $82,000 right under the title. Trim the post so it breathes. Keep writing as the clearly dominant scorecard line, rather than splitting it across three rows that a reviewer has to add up."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the way we talk. The salary is the first line, and the weekend rotation gets its own section that says plainly why we're saying it up front. Writing carries 50% with clean 1/3/5 anchors. The review-hours math is shown, including second reads and shortlist sizes.",
+  "biggest_mistake": "It gives local hours only for Singapore, Manila and Perth. Australia, NZ, Japan and summer-time shifts are left for the applicant to work out. The interview stage is also a bit vague: two video calls with no stated length.",
+  "what_would_make_it_a_10": "Add a short hours-by-city line that includes Sydney and Auckland. Name the longer exercise and say how long it takes. Give the conversation stage a concrete duration and the questions we'll ask."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are usable and both clearly read our data. I'd publish the second one: the salary is up top, the weekend rotation can't be missed, writing is weighted heaviest, and it reads calmer. I'd still borrow the first one's Priya exercise and its hours table."
+}

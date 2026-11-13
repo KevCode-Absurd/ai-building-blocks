@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the review rule into an advantage: week 1 runs sleep and winding-down posts worded so no condition is named (so no review) while weeks 2-4 go in as one batch on 16 November, and every number behind the decision checks out (450/95/100/50/40 installs per post, 6,580 projected installs, 3.4% saves).",
+  "biggest_mistake": "The four-week plan is one repeating weekly template rather than four distinct weeks, so weeks 2-4 get a theme line but no post-level ideas, review flags or drafts.",
+  "what_would_make_it_a_10": "Replace the single repeating week with four distinct week-by-week rows naming each post, its review status and its submit date, so the whole month is runnable, not just week 1."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "A genuine week-by-week calendar with every post named, plus a review yes/no line and a submit date on each draft, which is exactly the operating document the owner asked for.",
+  "biggest_mistake": "It claims no sleep post can go live before 24 November because 'sleep posts need clinical and legal review', but the rule only triggers when a post names a condition, so it burns week 1 on six kindness posts (about 600 installs against roughly 1,600 available).",
+  "what_would_make_it_a_10": "Word the week-1 sleep posts so they mention no condition, keep those evening sleep slots from day one, and submit only the posts that actually need review."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gets the review rule right and keeps the highest-install sleep content live from week one, with every install and save figure checked out; output 2 is better structured but deliberately throws away its best week on the weakest theme because it over-reads the review rule."
+}

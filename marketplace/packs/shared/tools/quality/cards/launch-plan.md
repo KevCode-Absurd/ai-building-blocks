@@ -6,15 +6,17 @@ Families: launch-plan; also: go-to-market plan, GTM plan, product launch, featur
 1. A launch tier (big, medium, small) set by expected business impact, with effort and budget sized to it.
 2. One first audience and counted math for the first 100 buyers (list x open x click x convert), each rate labelled own history or assumption.
 3. One-line positioning: who, problem, the alternative used today, the provable difference, with proof beside each claim.
-4. A calendar built backward from launch day to a two-week review, each row with date, owner, channel and asset; a readiness check (support briefed, links, pricing and tracking tested, rollback).
+4. A calendar built backward from launch day to a two-week review, each row with its day (relative to launch day unless the brief gives dates), owner, channel and asset; a readiness check (support briefed, links, pricing and tracking tested, rollback).
 5. Three first-week measures with justified targets and a plan B with a trigger (such as below half of target by day 4).
+6. Standard safety gates are part of the plan by default: a staged rollout, a way to undo, a go or no-go call. They are never an option or a "bolder move". Any work the plan adds names who does it, such as extra support cover with named people and hours.
 
 **FAILURE MODES**
 1. Launching to everyone, with no volume math.
-2. Tasks without owners or dates, or beyond the team and budget.
+2. Tasks without owners or days, added work (such as more support tickets) with nobody to do it, or plans beyond the team and budget.
 3. Invented benchmarks, rates, testimonials or scarcity.
 4. Feature lists posing as positioning.
 5. Stops at launch day: no handoff, week-after plan or review.
+6. A staged rollout or undo plan offered as optional, or invented calendar dates the brief does not give.
 
 **SHAPE**
 One plan: summary (what, who, date, goal, tier); positioning; first-100 math; calendar table, T-minus weeks to T+2 weeks; draft copy for key moments; readiness and go/no-go; measures and plan B; risks. Unproven demand gets a one-week test first. One to three pages, tables over prose.

@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the pause at the centre, names it as the critical path, and is honest that without it the flow keeps fewer people than today. The per-reason matching and the margin logic on 'trip over' show real owner-level thinking.",
+  "biggest_mistake": "The reminder panel's take-up is borrowed from the discount offer (9% take, 39% stay), which is a weak stand-in; the projection leans on it. Voice is warm but a few lines ('Pick one. It helps us help you.') drift toward retention-script phrasing.",
+  "what_would_make_it_a_10": "Tighter copy in Lena's own words on the pause panel and a clearer, sourced assumption for the reminder take-up, plus a one-line sensitivity so the £98k first-year figure is not the only number the team anchors on."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 5,
+  "priorities_note": "",
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It segments 'not making progress' by reminder status and adds a smaller-goal option, which is a genuinely different idea. The 12-month plan price breakdown (£4.95 a month, £59.40 once) is concrete and useful.",
+  "biggest_mistake": "It keeps a 50% discount for 'switching apps' — the one group with no proven save — and shows the discount's 3.5% net stay as a save, which the owner explicitly flagged as counting discounted subscribers wrongly. It also adds a second 'smaller goal' offer tier without evidence, and its subscriber total (2,239) double-counts discounted people at full value.",
+  "what_would_make_it_a_10": "Drop the discount-for-switchers, fix the revenue maths to net of discount, and be honest that the 'not progressing' reminder and 'smaller goal' offers are untested guesses rather than quoting 3.5% as if it were a save rate."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the plan I would build: it brings back the pause as the main save, spends nothing on people who return anyway, and is upfront that the whole thing rests on one feature I have to switch on this sprint. Output 2 has good ideas but gives away half price to the wrong group and its money maths flatters the discount."
+}

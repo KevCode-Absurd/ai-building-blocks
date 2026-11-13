@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranks channels by retained users with the math, and turns the 2025 migration failure into hard go/no-go gates, a staged rollout and a support plan within a 3-person team.",
+  "biggest_mistake": "Creator projection is muddled: it says 9 creators at last time's rate keep about 6,750 users, but that figure doesn't reconcile with 4,510 kept from 6 videos, and the 'about 750 per video' note conflicts with the table math.",
+  "what_would_make_it_a_10": "Clean, consistent retention projections per channel, a tighter 1200-word cut, and a clearer owner-by-owner timeline with the support-load math spelled out."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Consistent retention math with percentages (19% of installs, 41% of retained users), staged 10/40/remainder waves, Product Hunt/HN deliberately moved to 15 Dec, and a no-go rule that new installs can still ship while existing users wait.",
+  "biggest_mistake": "Wave user counts (42,000, 168,000, 210,000) don't clearly derive from the 420,000 list and are stated without showing the split; also the 95% migration gate is slightly weaker than a zero-loss gate given the persona's 'don't break my hotkeys'.",
+  "what_would_make_it_a_10": "Show the list-split math behind each wave, tighten the email to one shortcut demo, and make zero lost hotkeys the block for existing users, not 95%."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both would get used; output 2 edges it because the numbers hang together (19% of installs but 41% of retained users), the staged rollout and no-go rule are safer for our hotkey users, and Product Hunt/HN are moved rather than dropped. Output 1 is close but its creator projection doesn't add up, which is exactly the kind of number I'd have to fix before sending."
+}

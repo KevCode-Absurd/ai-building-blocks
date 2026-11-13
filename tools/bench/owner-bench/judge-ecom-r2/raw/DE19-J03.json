@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Turns the data signals into concrete, bankable concepts — quiet wheels as a sound-led Reel, Meera's lift-it-alone Reel, Karan's belt-skip Reel — and picks the first three exactly as the data would.",
+  "biggest_mistake": "A few operational details are invented rather than taken from the brief (specific pixel sizes, 'cast people play travellers', 'warranty and returns on our site' placement) and the 41+ exclusion is asserted a bit too confidently, though the numbers support it.",
+  "what_would_make_it_a_10": "Keep every hook and test tied to a real review/survey line, and trim the production presets to only the rules the owner actually gave."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A genuinely varied set of angles — cabin sizer Reel, per-trip price maths, gift handover, review carousel — with a clear testing plan and smarter budget guidance on how long to let concepts run.",
+  "biggest_mistake": "Concept 5 'Where is it from?' is a colour-swatch carousel with a looks angle, which is close to the flat product-on-colour format the owner is tired of, and the quiet-wheels idea is bundled into a general 'everyone' Reel instead of being clearly owned by women 25–40.",
+  "what_would_make_it_a_10": "Make the quiet-wheels Reel explicitly for the women 25–40 segment with a hook in Meera's exact words, and replace the colour-per-card carousel with a real travel-moment format so no concept repeats the current look."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 puts the three data-backed concepts in the first three and makes every hook and test traceable to a review or buyer group; Output 2 has sharper range and a better testing plan but drifts back into the flat-colour product format the owner asked to escape and spreads the quiet-wheels insight too thin."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It does real contribution math on bundle cannibalisation and avoids a risky jump to ₹699 that would hit the serum reorder.",
+  "biggest_mistake": "It makes lip balm a discounted main bundle instead of the natural full-price cart add-on, and skips the obvious face wash + serum duo customers have already proven they want.",
+  "what_would_make_it_a_10": "Lead with a modest face wash + serum routine bundle, use lip balm mainly as a threshold add-on, and add a clearer COD-specific shipping/RTO action."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is built tightly from the buying data: the proven face wash + serum pair comes first, lip balm is used as a full-price add-on, and the ₹699 threshold risk is worked out clearly.",
+  "biggest_mistake": "It spots the COD/RTO leak but does not turn it into a stronger COD-specific fix such as a prepaid incentive, COD fee, or different free-shipping rule for COD.",
+  "what_would_make_it_a_10": "Add a safe COD/prepaid shipping test while keeping the strong bundle plan and threshold maths."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is closer to the actual signals in the data and has cleaner, more decision-useful maths. Output 1 is thoughtful, but its bundle ladder fights the strongest proven pair and discounts lip balm where I would rather use it as an add-on."
+}

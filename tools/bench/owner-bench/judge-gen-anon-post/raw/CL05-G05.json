@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Complete, usable package: post with local-time table and hard parts up front, a one-reply application with a costed reviewer-hours plan, and a scorecard with weights and 1/3/5 anchors tied to the data.",
+  "biggest_mistake": "Writing carries only 55% of the weight (and interview rows 45%), so the 0.62 signal is not weighted as heavily as it should be. It also says 'two of the three recent hires' (a slight misstatement), and the post runs long and mixes in process detail, including a 'hear back within a week of each call' promise that was never in the brief.",
+  "what_would_make_it_a_10": "Weight writing 50% or more, trim interview rows, fix the leaver wording, and drop the invented timing promises. Keep the hour table and the post's plainness."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Weights writing at 50%, with interview impression small, directly following the 0.62 vs 0.11 data. It puts a real sample customer email in the post, and its post is short, warm and candid, with salary on the first line and the weekend rotation in its own section.",
+  "biggest_mistake": "Adds an unrequested 'longer written exercise' stage and a 'why this job' essay that adds reviewer work. The hours-saved estimate (70 hours) leaves out the extra stage and the first-pass cost is optimistic; the 4-and-5 re-read is only lightly costed.",
+  "what_would_make_it_a_10": "Cost the longer-exercise stage in reviewer hours, drop the 'why this job' question, and add a local-time table for more regions."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Number 2 puts the heaviest weight on writing, where the data points, and its post reads more like us: short, calm and honest, with the salary first. Number 1 has more detail and a handy time table, but it dilutes the writing weight and invents a few promises."
+}

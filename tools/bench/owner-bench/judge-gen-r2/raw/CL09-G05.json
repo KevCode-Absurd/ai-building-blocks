@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Salary sits in the first screen, the overnight hours, weekend rotation and hard parts are all plain, and the reviewer-hour math (70 versus 160, plus 7 for second reads) checks out.",
+  "biggest_mistake": "The application reply gives no facts to work with, so it can only test tone and empathy, not whether the person can find and fix the real problem.",
+  "what_would_make_it_a_10": "Give the application exercise a solvable problem, and fix the interview questions in advance so the 15% conversation score is consistent across candidates."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The Priya exercise hides a real typo to find, so one 200-word application reply tests both writing and problem-solving, and the shortlist exercise and fixed call questions make the scorecard concrete and ready to run.",
+  "biggest_mistake": "The $82,000 salary is buried halfway down under 'Pay and terms' instead of in the first screen, which goes against our own principle of leading with the number.",
+  "what_would_make_it_a_10": "Move the salary line to the top, and trim the post (the timezone table and the extra 'A normal week' section) so it reads faster."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are honest, on-brand and built on our data. Output 2's application exercise has an actual problem to solve, and it scripts the later steps too, so I could run its hiring process tomorrow. I'd just move the salary up."
+}

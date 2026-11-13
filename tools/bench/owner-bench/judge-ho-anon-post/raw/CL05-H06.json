@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A dated first-30-days plan the one partner manager can run, with owners. It sits alongside lifetime maths, a clear no to the 20% cut, a one-page rules list with disclosure wording, and a perk budget for creator-educators.",
+  "biggest_mistake": "Some figures are unsupported or muddled: the \"$38,000 saving\" and the 1,250 / 3,365 customer estimates are invented, and the break-even range mixes revenue with an assumed margin. The first-30-days table also sits oddly with the 30 Nov payout pull-forward and the 1 Jan start dates. The extra Podia-specific legal detail is useful but adds length.",
+  "what_would_make_it_a_10": "Drop the shaky derived numbers or show them plainly. Keep the single rate and the 90-day window, and state the cost range clearly. Tighten the word count, and make sure the first-30-days dates and the payout pull-forward line up with the January start."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A straight, well-reasoned no to the 20% cut. It gives the break-even at a 12.5% revenue fall, the $1,677 vs $1,130 lifetime maths, the top-20 concentration and the rival's 40% offer, then builds a 40%-for-12-months Partner tier that rewards the top creators without raising cost across the board.",
+  "biggest_mistake": "The first-30-days plan uses day ranges rather than dates. The 90-day window cost is only given as a sensitivity (about $63,000 per 10% rise) rather than a single estimate. The $46,000 cost for the 40% Partner tier applies the uplift to all of the top-20 revenue, which is rough.",
+  "what_would_make_it_a_10": "Give calendar dates in the 30-day plan. Add one clear total for the cost of the 90-day window plus the 40% tier. Put the lower minimum and faster payouts at the very start of the plan, and say what the $40,000 does for non-top-20 affiliates."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both say no to the 20% cut and build the plan around the top 20, the 90-day window and payout fixes. Output 2 has cleaner maths, a sensible 40%-for-12-months top tier that answers the rival offer, and plain wording. Output 1 has better dates but some invented figures."
+}

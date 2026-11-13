@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds the real levers in the data, ranks them well, and gives believable ranges with the working shown.",
+  "biggest_mistake": "The day-3 message only goes to scanned parcels, so it may miss some of the silence that is creating WISMO tickets; I would tighten that trigger.",
+  "what_would_make_it_a_10": "Add a clearer day-3 no-scan customer message/escalation, remove the dated Christmas/November assumptions unless confirmed, and include one more bra-specific post-delivery fit nudge."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very practical and complete: it covers the messages, portal, fit quiz placement, rollout order, holdout, and numbers cleanly.",
+  "biggest_mistake": "It adds an assumed 2-hour size-change window and a few extra touches without proving they are feasible, and some copy is a little less on-brand than Output 1.",
+  "what_would_make_it_a_10": "Make the operational assumptions lighter, sharpen the brand language around bra fit, and rank the expected value of the three fixes more explicitly."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are usable, but Output 1 is the one I would act on first because it is more commercially decisive and more careful about not over-claiming the fit finder gain. Output 2 has a fuller flow, but it leans on an unproven size-change operation and feels a little less like our voice."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting for the right reason, shows the paid-seat math clearly, and builds the page around the real buyer pain: candidate email tennis, round robin, routing, and security.",
+  "biggest_mistake": "It slightly over-specifies testing math and makes a couple of assumptions about PTO/calendar behavior that would need checking before publishing.",
+  "what_would_make_it_a_10": "Remove the slightly awkward assumptions about the homepage staying as-is, verify the PTO/calendar wording, and make the security/demo proof exactly match what is live today."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It understands the segment and the main conversion path, and the deciding metric is smart because it rewards qualified recruiting team usage, not empty clicks.",
+  "biggest_mistake": "It adds some unproven claims or specifics, like three or four emails, text reminders, rescheduling behavior, video tools, and people being off, and it uses Get started too often on a team page.",
+  "what_would_make_it_a_10": "Tighten the claims to only what the data supports, use Book a demo consistently for the recruiting team path, and replace bracketed placeholders with verified proof."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather use Output 1 because it is closer to publishable and more disciplined with the numbers, proof, and page order. Output 2 is good, but I would have to clean up more unsupported claims before I trusted it live."
+}

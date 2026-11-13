@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It treats Tier 3 as the main problem, with the RTO money worked out by pincode group. Tier 3 gets calls and a cancel rule, Tier 2 and Tier 3 get tiered prepaid discounts, and metros get a light touch. Holdouts and a net-saving check keep the flow honest.",
+  "biggest_mistake": "The Tier 3 call load is thin for 4 agents who also handle chat. The 'bad news' bullet and the dense tables make it a little heavy to read. It also runs close to or over the word limit.",
+  "what_would_make_it_a_10": "Trim it to the word limit and say how the calls fit into agent hours. Add a plainer, more Snitch-sounding line to the reply scripts. Cut the Tier 3 discount and advance ideas down to one clear first test."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 6,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clean and cautious, with clear assumptions, quiet hours, an evening agent shift for the after-hours wave, and a sensible weekly scorecard.",
+  "biggest_mistake": "The prepaid nudge is one flow for everyone with no incentive, so Tier 3 is not targeted. The 'pay online' template is filed as Utility even though it is a promotional nudge, which risks recategorisation. Tier 3 only gets a call and a 48-hour hold.",
+  "what_would_make_it_a_10": "Make the prepaid nudge stronger and different by pincode band, with a Marketing template and a small incentive or advance for Tier 3. Show the RTO money by group. Put more Snitch bold voice into the templates and scripts."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 goes after the Tier 3 refusals with a different flow per pincode group, correct template categories and a way to test whether it works. Output 2 is tidy but treats most customers the same and files a promotional prepaid nudge as Utility."
+}

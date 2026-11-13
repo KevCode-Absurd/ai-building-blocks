@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers check out (13% total click drop, 1,316 trials, 46 trials per vs page against 0.7 per post). The forecasts are cautious ranges tied to my own CTRs and conversion rates. Week 1 is a day-by-day list with a ready title, meta and page outline in our voice.",
+  "biggest_mistake": "It tells the writer to leave the decaying blog posts alone, with no merge or redirect plan. It also runs a bit over the word limit and rates the cookie pages fourth, though they are the cheapest wins.",
+  "what_would_make_it_a_10": "Add a plan to consolidate or redirect the decaying posts into the pages that convert. Move the cookie pages higher in the ranking. Trim to 1,000 words. Back up the conversion assumption for the privacy page."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The trials-per-1,000-clicks table makes the case plainly. The stop list includes merging or redirecting dead posts. The plan covers both Maya's fear of losing GA4 history and Tomas's DPO need.",
+  "biggest_mistake": "The forecast is a best-case ceiling (+100 trials from one page, +175 in total) that assumes the page reaches the top 3. Week 1 is thinner, with no title or meta copy written. It also asks the owner to fact-check in week 1 when I am not available.",
+  "what_would_make_it_a_10": "Replace the ceiling forecast with realistic ranges by month. Write out the actual titles and meta copy. Drop the owner fact-check step. Start the month 3 audit and redirects earlier. Include a dated calendar."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like a plan I could hand the writer on Monday. Its numbers are careful and its forecasts are believable. Output 2 has good ideas, but its forecast is too rosy and its first week is less finished."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Exceptional business acumen, from recognizing that free accounts cost $0 in cash to identifying the cannibalization risk of extending the credit window.",
+  "biggest_mistake": "Proposing a mixed commission rate (40% then 30%) might require extra tech work to configure in standard affiliate tools, though it brilliantly neutralizes the rival.",
+  "what_would_make_it_a_10": "It is already a 10. The phrase 'Finance is right to protect margin. It just isn't in the rate' is brilliant."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clear, direct communication and excellent tabular formatting that makes the first 30 days plan instantly actionable.",
+  "biggest_mistake": "Deducting $12,480 for free software plans from a hard $40,000 cash budget, which misunderstands the zero marginal cost of SaaS.",
+  "what_would_make_it_a_10": "Recognizing that software accounts don't consume the cash budget, freeing up that $12,480 for real cash perks."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both did a phenomenal job and nailed the lifetime value math, but candidate 1 understood SaaS economics better (free accounts don't use up cash budget) and foresaw the risk of paying more for sales we already get."
+}

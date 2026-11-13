@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranked fixes by money with working shown, honest ranges, and the five messages written short in our voice with one button each.",
+  "biggest_mistake": "Message 3 keeps 'Tracking may show nothing for about 2 days' even though dispatch now fires at warehouse exit, which undercuts the fix and still tells the customer to expect silence.",
+  "what_would_make_it_a_10": "Tighten message 3 to drop the 'quiet tracking is normal' caveat, and pull the day-3 ticket savings and the refund-to-swap switch into the top table so the money story is obvious at a glance."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong, specific bra-fit copy and the delivered message that helps with actual fit before anyone decides to return; six messages give good coverage.",
+  "biggest_mistake": "The swap-first saving is overstated: it quotes 'up to £183,800 in sales kept' from a 65% refund share, which pulls the one number an owner would sanity-check out of line with the others.",
+  "what_would_make_it_a_10": "Bring the swap saving down to a believable range with the maths shown, and lead with the three fixes ranked by money like the brief asked, rather than starting from the cost table."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 ranks the fixes by money saved with the working, gives honest ranges, and reads most like a plan I'd actually sign off; Output 2's copy on bra fit is lovely but its swap number is too big to trust."
+}

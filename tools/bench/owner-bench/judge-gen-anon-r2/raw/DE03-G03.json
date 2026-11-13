@@ -1,0 +1,40 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Honest, specific, and structured like a builder's update: three numbers, bad news up front, burn explained, and concrete asks with dates and profiles.",
+  "biggest_mistake": "The cost math in 'What went wrong' is confusing and slightly speculative ('On about $10.4M of monthly revenue, that extra $0.9M is roughly 9 points of margin, more than the 7-point drop'), and the closing assumptions about meeting dates need to be resolved before sending.",
+  "what_would_make_it_a_10": "Tighten the cost explanation to say plainly what the $0.9M free-tier compute did to gross margin and what the 48-hour pause is expected to recover, and resolve the internal assumptions (New York base, ask dates) so no caveats are needed."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Very clean structure: headline numbers, bad news, a forwardable ask at the top, and a table with runway change; it reads like a candid, specific investor update from a builder.",
+  "biggest_mistake": "It introduces a 'runway at that month's burn' row comparing September and October (52 months to 33 months) that wasn't asked for and could confuse readers; also the forwardable line for ask 1 feels a bit like a pitch.",
+  "what_would_make_it_a_10": "Drop the extra runway comparison row or explain it, and keep the asks even sharper without the forwardable snippet, so the whole email feels less like marketing."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but output 2 is a touch cleaner and more ready to send as-is, with its bad news and asks framed more directly for a lead investor scanning on a phone.",
+ "biggest_strength": "Candid, specific, builder-like tone with numbers and asks in the right place.",
+ "biggest_mistake": "Both would benefit from resolving internal assumptions before sending.",
+ "what_would_make_it_a_10": "Keep the structure and voice, but remove any speculative math and ensure it's fully ready to send without caveats."
+}

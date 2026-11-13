@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Lays out the statistical formula clearly and runs flawless math to accurately size the minimum detectable effects.",
+  "biggest_mistake": "Relies on add-to-cart as the main metric to keep test cycles to two weeks, which carries a business risk if the order rate doesn't follow.",
+  "what_would_make_it_a_10": "Running the tests longer to measure actual orders, and noticing that the popup error volume perfectly explains the funnel drop-off."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Exceptional business acumen, from tying the error log volume exactly to the checkout drop-off count, to using real-world e-commerce guardrails like RTO on cash on delivery.",
+  "biggest_mistake": "Running overlapping tests on the same traffic pool carries a slight risk of interaction effects, though it rightly notes to check for this.",
+  "what_would_make_it_a_10": "It is a flawless submission that I could hand straight to the engineering and growth teams today."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both outputs did flawless math on the data, but Output 2 thinks exactly like a business owner. It insists on running tests long enough to measure actual orders, spots that the 4,130 errors almost exactly account for the 4,800 checkout drop-offs, and names critical Indian e-commerce realities like RTO and in-app cookie loss."
+}

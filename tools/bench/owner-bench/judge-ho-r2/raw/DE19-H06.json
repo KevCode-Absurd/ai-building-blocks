@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the straight no on the 20% cut with the lifetime value maths, then ties the tier design, 90-day window and payout fixes directly to the named data signals (58% credited to no one, 41-day median, top-20 concentration).",
+  "biggest_mistake": "The 40% partner rate for the first 12 months is a real extra spend that is only roughly estimated (~$46k) and risks inviting a 'me too' expectation from the other 120 active affiliates; the piece could say who does not get it more bluntly.",
+  "what_would_make_it_a_10": "Show the partner rate cost side-by-side with a perk-only alternative and state plainly why the extra rate buy is worth it for retention."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very honest about the downside of the 90-day window (budgeting 30% of referred revenue, the switch-month cash hit) and keeps one simple flat rate while putting the budget into perks and grants rather than a rate increase.",
+  "biggest_mistake": "The claim that each top-20 affiliate averages 'about 120 paying customers' versus 8 for others is not supported by the data and reads as an invented statistic, which weakens trust in an otherwise careful numbers section.",
+  "what_would_make_it_a_10": "Drop or source the customer-count averages and add the lifetime-value framing more explicitly in the decision section instead of only the churn comparison."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the big calls right, but Output 1 earns the edge by threading the lifetime-value maths through every recommendation and framing the 40% partner rate as an explicit, costed bet on keeping the 17 creator educators rather than glossing it. Output 2's invented '120 paying customers' average is the kind of number that makes me double-check the rest."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Builds the whole answer from our numbers (agencies = 60% of Semrush losses from 27% of trials, Lite = 70% of all churn, 21,000 multi-site accounts = 42% of free conversions) and then ranks four disciplined moves with owner, first step and metric.",
+  "biggest_mistake": "Puts the multi-site email track at #1 and the Lite usage-limit fix at #2, when the Lite limit is the fastest money we have and the emails are the cheaper, smaller lever.",
+  "what_would_make_it_a_10": "Lead with the Lite limits/top-up fix as move one, with a date on every source, and keep the agency report as the single strategic bet behind it."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 7,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Adds derived numbers nobody else did — Lite usage limits alone cause about a third of all monthly churn, only 37% of a Lite cohort survives 12 months, and Advanced defectors are ~2% of churn by count but likely more by revenue.",
+  "biggest_mistake": "A padded fifth move, 'teach with our link data' (content marketing), is exactly the generic 'do more content' filler the brief said to avoid, and it distracts from the four moves that map to real losses.",
+  "what_would_make_it_a_10": "Cut move five, drop the invented 'November 2026' data date, and tighten it to fit 1,100 words with the four loss-driven moves only."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the three signals and the arithmetic checks out, but Output 1 gives me four moves I would actually fund, each traceable to my own trial and churn numbers, while Output 2 pads to five with content marketing I did not ask for. Output 2's extra churn analysis is sharper, but the ranking and focus decide it."
+}

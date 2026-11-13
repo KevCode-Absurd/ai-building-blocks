@@ -48,7 +48,7 @@ For each criterion, one main question and two follow-ups:
 - **Situation:** "Imagine that..." for situations the person has not met yet.
 - **Follow-ups:** "What did you do first?" "What happened next?" "What would you change?"
 
-Add a short work sample where the job allows: the same brief, data and time limit for everyone, under about an hour or paid. Structured interviews and work samples predict job performance better than unstructured chats.
+Add a short work sample where the job allows: the same brief, data and time limit for everyone, under about an hour or paid. Structured interviews and work samples predict job performance better than unstructured chats. Write the work sample in full, ready to send: the scenario, the facts the candidate needs, the exact task or question, and the limit. Never a pointer such as "a real case from last quarter"; if it draws on a real case, write the case out with private details removed.
 
 ### 5. Build the scorecard
 
@@ -57,6 +57,8 @@ One row per criterion, a 1 to 4 scale with a plain example of each level, and a 
 - 2: some evidence, but key steps missing.
 - 3: clear evidence that meets the standard.
 - 4: clear evidence above the standard, with results.
+
+Weight the rows by the client's own evidence. If the brief shows which steps or signals predicted success in past hires (for example, how each step's scores tracked later performance), the strongest predictor carries the most weight and a weak one little or none; state the rule in one line. With no such data, weight the rows equally. Never let a step the data shows predicts little carry the largest share.
 
 ### 6. Plan the rounds
 
@@ -75,6 +77,7 @@ One short paragraph per finalist: the evidence for and against on each criterion
 - Every criterion comes from the brief, and every question maps to one criterion.
 - No row mentions age, gender, origin, religion, health, family, appearance or accent.
 - "Not shown" is used instead of guesses.
+- The work sample is written in full; scorecard weights follow the predictor data the brief gives.
 - Nobody is declined by the sort alone; a person reviewed every group before any stage move or decline went out.
 - Scores were entered before the debrief.
 - If an automated tool screened or ranked anyone, its use is noted and the client has checked the rules where the role is based (for example New York City's bias audit and notice rules, or Illinois notice rules).
@@ -85,8 +88,8 @@ One short paragraph per finalist: the evidence for and against on each criterion
 1. Screening criteria with what counts as evidence
 2. Application sort table (ID, criterion 1 to 6 evidence, group, question to settle a gap)
 3. Interview questions with follow-ups
-4. Work sample brief and scoring guide
-5. Scorecard (criterion, 1 to 4 guide, notes)
+4. Work sample brief, written in full, and scoring guide
+5. Scorecard (criterion, weight, 1 to 4 guide, notes)
 6. Round plan with opening and closing scripts
 7. Finalist comparison sheet
 8. Decision record template

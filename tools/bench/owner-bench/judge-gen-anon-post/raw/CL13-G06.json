@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The 'where we lose / where we don't' sections are built from checked numbers, such as 13 of 100 trials lost to Semrush from agencies and Lite producing 70% of churn. It also says plainly what not to build (PPC parity, solo price cuts).",
+  "biggest_mistake": "It invents a date ('Data as of November 2026'), which our own rule against undated sources should rule out. Move 1's first step is 40 interviews rather than shipping something, and Move 5 (link-data studies) is generic content advice with weak numbers behind it.",
+  "what_would_make_it_a_10": "Remove the made-up date. Make Move 1's first step a concrete beta rather than research. Replace the content-marketing move with something tied to the data, and put the Lite limit fix first or flag it clearly as the fastest money."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "An up-front answer with win/tie/lose, 'do first', 'stop' and 'don't spend on' lines gives me the decision in one read. Every move has an owner, a first step and a success metric, and the projections check out. The 'Here's the data' heading sounds like us.",
+  "biggest_mistake": "Move 5 (a free report inside Webmaster Tools) is a bold bet that could undercut paid reporting, and it is only partly de-risked. The Lite limit fix could rank higher as the cheapest win.",
+  "what_would_make_it_a_10": "Rank the Lite top-up first or flag it as the quickest money. Give Move 5 a clearer test and cost estimate, and add an owner-ready success threshold for Move 4."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 gives me the answer and the 'stop doing' list up front. It also keeps to the dates I supplied and makes the free multi-site accounts a real agency pipeline with a bold fifth move. Output 1 is sound but invents a date, and its last move is generic content advice."
+}

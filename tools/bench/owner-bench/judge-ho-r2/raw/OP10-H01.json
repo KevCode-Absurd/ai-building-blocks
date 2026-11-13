@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives an actionable Monday PO plan inside the ₹1.2 crore cash cap and correctly stops orders for liquid lipstick, glitter palettes and the slow matte shades.",
+  "biggest_mistake": "It misreads the held lipstick stock, so it wrongly says a top-5 shade stockout gap is unavoidable instead of showing that re-cartoning lifts top-5 stock to about 13,000 units and bridges to the rush delivery.",
+  "what_would_make_it_a_10": "Fix the held-stock assumption and rebuild the top-5 availability dates so the re-cartoning job is shown as the cheap fix that prevents the pre-sale stockout."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clear, decisive and commercially focused, with the right cash allocation to top-5 matte shades plus practical moves for artists, palettes and honest customer messaging.",
+  "biggest_mistake": "It also treats the 3,900 held top-5 units as part of the 9,100 on hand, which creates a false 1–8 December stockout gap and understates the value of re-cartoning.",
+  "what_would_make_it_a_10": "Correct the held-stock math, update the dates to show top-5 stock lasting to the rush arrival, and keep the same clear PO table and customer-facing actions."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both plans make the right broad buying decision and both have the same important stock-assumption error. Output 2 is the one I would rather hand to the team because it is cleaner, more tailored to Tanvi and Farah, and gives a sharper execution calendar."
+}

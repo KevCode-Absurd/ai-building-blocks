@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Masterful translation of rigorous unit economics into clear, brand-aligned actions. Calculating the immediate cash vs 18-month LTV impact of cutting ad spend ($23k to $41k) is brilliant.",
+  "biggest_mistake": "It left the overall blended contribution margin baseline to be calculated in week 1, rather than deducing it from the provided metrics.",
+  "what_would_make_it_a_10": "It is already a 10, but deducing the current blended contribution margin percentage directly in the plan would have been the cherry on top."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 7,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Incredible quantitative deduction. Reverse-engineering the overall contribution margin using a system of equations and sizing every move in exact margin points shows elite analytical skills.",
+  "biggest_mistake": "Recommending six abandoned cart emails over ten days is far too aggressive and violates the brand's instruction for a 'light touch' with no fake urgency.",
+  "what_would_make_it_a_10": "Present the math more narratively instead of in dense algebraic blocks, and ensure the tactical recommendations (like email frequency) strictly adhere to the brand's premium voice."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both candidates are mathematical powerhouses, but Output 1 communicated the strategy with perfect executive clarity and nailed the brand's voice, whereas Output 2 got bogged down in dense algebra and suggested off-brand CRM tactics."
+}

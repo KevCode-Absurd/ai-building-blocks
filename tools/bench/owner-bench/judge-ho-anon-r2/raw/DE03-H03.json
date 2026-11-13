@@ -1,0 +1,35 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "biggest_strength": "Three fixes ranked by money saved with the working shown, and every message written in our voice with one button each.",
+  "biggest_mistake": "Sales-kept figure (£75.7k–£129.7k) is a bit high relative to the modest refund-share move and could over-promise the owner.",
+  "what_would_make_it_a_10": "Add the SMS option on day 3 (cheap, higher open rate than email) and a small per-audience breakdown of which bra styles drive 'too small', so the fit-page work has a target."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "biggest_strength": "Six messages including a day-3 'nearly there' email+SMS and a delivered email with real bra-fit guidance, plus feeding size reasons back to product pages.",
+  "biggest_mistake": "The 'up to £183,800 sales kept' from a 82%→65% refund move on all returns is not credible for an owner and muddies an otherwise sharp plan.",
+  "what_would_make_it_a_10": "Show the swap maths conservatively (only size-related returns, £58 partial) and commit to a single refund-share target rather than a wide 'up to' figure."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are genuinely usable; output 1 wins on the numbers and how confidently it defends them, which is what I would act on, though I want output 2's day-3 SMS and delivered-fit guidance folded in."
+}

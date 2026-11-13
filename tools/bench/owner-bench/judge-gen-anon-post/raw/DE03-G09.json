@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the data: sleep-first, narrator-led, evening posts, with clear stop list and review timing that protects week 1.",
+  "biggest_mistake": "The plan is a bit rigid - same weekly rhythm with only one parent post and one stress post, missing a chance to test more sleep angles or mom-specific hooks.",
+  "what_would_make_it_a_10": "Include a simple A/B test on hooks (e.g., 'replaying emails' vs 'switch brain off') and a way to repurpose top sleep clips across channels."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong voice and range - the 'park it on paper' and 'thanks, see you tomorrow' ideas are fresh and on-brand, and the bolder move shows strategic thinking.",
+  "biggest_mistake": "The review claim is wrong: at least one draft ('Quit meditation apps by day three?') mentions a condition-like struggle that could trigger review, and the plan says none needs review - risky.",
+  "what_would_make_it_a_10": "Fix the review flagging (be conservative: submit all drafts for review or rewrite to avoid condition words), and tighten the weekly rhythm to ensure 4 narrator clips are actually feasible with the editor's 4-a-week cap."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more precise with the numbers, gets the review timing right without risky claims, and gives a cleaner plan I can hand to the team today. Output 2 has great creative sparks but the review misstep could cost us a week."
+}

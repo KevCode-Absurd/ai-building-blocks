@@ -50,7 +50,9 @@ Ten to thirty testers who match the best-fit buyer, a feedback form, a weekly ch
 
 ### 6. Build the calendar backwards
 
-From launch day: teaser, reveal, open, real last call (only if a real deadline exists), thank-you, follow-up, and the week after. Each row: date, channel, audience, message, owner, asset, status, access level needed. Add the launch-day checklist: page live, links tested, tracking firing, pricing correct for each market, support briefed, rollback plan.
+From launch day: teaser, reveal, open, real last call (only if a real deadline exists), thank-you, follow-up, and the week after. Each row: day (relative to launch day, such as "Day -7", unless the brief gives dates), channel, audience, message, owner, asset, status, access level needed. Add the launch-day checklist: page live, links tested, tracking firing, pricing correct for each market, support briefed, rollback plan.
+
+Standard safety gates are part of the plan by default, never an option or an extra: for a release to existing users, a staged rollout (a small share first, widened when error and support numbers hold), a way to undo, and a go or no-go call with its rule. Any work the plan adds names who does it: if the launch will raise support tickets, say who covers them, on which days and hours.
 
 ### 7. Write the messages
 
@@ -77,7 +79,8 @@ Plan against result for each measure; what the launch caused versus what was alr
 - Launch size matches the change.
 - Demand evidence exists, or a test is planned first.
 - One first audience, with the first-100 sum shown.
-- Every task has an owner and a date; every live step shows its access level.
+- Every task has an owner and a day; every live step shows its access level.
+- A staged rollout, an undo plan and a go or no-go rule are in the plan as defaults; added work, such as support cover, names who does it.
 - Every urgency claim is true; no invented proof.
 - Pricing and fees display correctly in each market.
 - Sales and support are briefed before launch.
@@ -87,9 +90,9 @@ Plan against result for each measure; what the launch caused versus what was alr
 
 1. One-line positioning and launch size.
 2. Demand test (if needed) with go and no-go numbers.
-3. Calendar table: date, step, channel, audience, message, owner, access level, status.
+3. Calendar table: day, step, channel, audience, message, owner, access level, status.
 4. Message pack.
-5. Launch-day checklist.
+5. Launch-day checklist, with the rollout stages, undo plan, go or no-go rule and support cover.
 6. Measures, targets and plan B.
 7. Review template for day 7 and day 14.
 

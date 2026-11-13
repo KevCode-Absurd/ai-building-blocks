@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It takes apart the blended 4.0 ROAS properly, shows brand is hiding weak non-brand performance, calculates profit after ad spend, and puts the price-mismatch feed issue first.",
+  "biggest_mistake": "The budget plan is overcomplicated and not fully comfortable to act on: a very large reserve, likely unspent budget, a regional test, and some questionable PMax setup language make it less ready than it first looks.",
+  "what_would_make_it_a_10": "A cleaner $240,000 allocation with less reserve, clearer expected results by line, and more practical PMax controls focused on washable, standing-all-day, and bags without the extra geo test."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives me the main owner answer clearly: break-even is 2.5, PMax without brand loses money, bags and washable/comfort terms deserve money, and the pointed-flat feed problem is the first fix.",
+  "biggest_mistake": "The forecast is a little optimistic, especially assuming brand search can absorb nearly all PMax brand value at a much higher ROAS and that brand search will run around 25 ROAS.",
+  "what_would_make_it_a_10": "Tighten the forecast assumptions, show a slightly more conservative PMax non-brand plan, and spell out how PMax will be constrained away from broad flats, sustainable, display, and video waste."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would hand to the team. It is cleaner, more practical, and gives me an exact budget split and first-week order without making the plan feel like a science project."
+}

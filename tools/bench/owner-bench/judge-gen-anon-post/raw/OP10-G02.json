@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting for the right reason and shows the seat math clearly, then turns the data into a sensible page order with round robin, routing, and security moved up.",
+  "biggest_mistake": "The hero is solid but a little less sharp than it could be; it says 'next free interviewer' more than 'right interviewer,' and a few extras like the projection and bolder move distract from the finished page.",
+  "what_would_make_it_a_10": "Tighten the hero around Priya’s exact pain, put security slightly closer to the main demo CTA, and remove or separate the extra testing/projection notes from the page copy."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero and voice are very strong for Priya: 'right interviewer' and 'No email tennis' are clear, practical, and customer-led.",
+  "biggest_mistake": "It includes a few unsupported or risky claims, like every interview taking three or four emails and text reminders, plus bracketed placeholders that make it less ready to hand straight to the team.",
+  "what_would_make_it_a_10": "Replace unsupported claims with the supplied data, remove placeholder quote/logo sections unless real assets exist, and make the final copy fully publishable without bracketed instructions."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both understood the assignment and picked the right segment, but I would rather hand Output 1 to the team because it is more complete, more numerically grounded, and closer to usable as-is. Output 2 has the better headline voice, but it needs more cleanup for unsupported claims and placeholders."
+}

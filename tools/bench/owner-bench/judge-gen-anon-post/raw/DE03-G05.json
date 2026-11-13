@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails our voice and principles with zero buzzwords, and turns our data into a clear, honest post and practical scorecard.",
+  "biggest_mistake": "The scorecard's 1/3/5 anchors are under the job post but the weights are on the scorecard; the post and scorecard are fine, but the application plan has the biggest leverage and should be more prominent.",
+  "what_would_make_it_a_10": "Tighten the application plan with a projected hour count and a short note on how to calibrate reviewers; make the scorecard weights visually tie to the data table."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Provides a time-zone table and a concrete application-hour projection; thinks beyond the post with a bolder move to contact strong applicants later.",
+  "biggest_mistake": "Scorecard weights split writing into two 25/30% rows, but the interview rows total 45% and are only assessed in interviews, which may reintroduce interview impression bias.",
+  "what_would_make_it_a_10": "Simplify the scorecard to keep writing dominant (e.g., 50% writing) and move interview-based rows to fewer, sharper weights; make the post's voice even more candid and less corporate."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 makes the time-zone gap tangible with a local-hours table and shows exactly how the application plan saves reviewer hours, which an owner would appreciate. Its small voice lapses and scorecard weighting quirks keep the win narrow."
+}

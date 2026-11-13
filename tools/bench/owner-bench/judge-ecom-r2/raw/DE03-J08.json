@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole programme around the two real causes in my data (discontinued Monsoon Dark and the courier failure) and puts the cheapest-to-recover 46-90 day group first at day 68 with no discount.",
+  "biggest_mistake": "Group 4's 'random half 10%, half 15%' split test is a needless complication that stirs variance into the largest segment when a flat 15% ceiling would do.",
+  "what_would_make_it_a_10": "Two or three finished press-ready WhatsApp/email variants per segment, with the WhatsApp opt-in cap and 15%-code expiry wording written out exactly as it will ship."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The sub-group thinking (equipment-only and cold-brew get their own message, the day-28 'running low' leak-stopper, and the delivery gate on ex-subscribers) shows it understood the data and my brand.",
+  "biggest_mistake": "The ₹8.5 lakh headline stacks a made-up 'won-back buyer places 2 orders worth ₹999' multiplier on top of assumed lift, so the number cannot be traced to gross profit per order the way my brief asked.",
+  "what_would_make_it_a_10": "Rework the value section to the same simple gross-profit-per-order × extra-orders × holdout logic, and drop the 2-order multiplier, so I can trust the headline figure."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gets the priorities and the money right, gives me a complete first-send library, and stakes the whole thing on the two problems I actually have; Output 2 has sharper sub-group ideas but its headline ₹8.5 lakh rests on invented order multipliers I cannot reconcile, which is the one thing that would make me distrust the plan.",
+ "overall": 8
+}

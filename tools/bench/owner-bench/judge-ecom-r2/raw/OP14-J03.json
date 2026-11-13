@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It reads the data closely and turns the strongest signals into specific concepts, especially quiet wheels, women travelling solo, and skip-the-belt for work flyers.",
+  "biggest_mistake": "A few production-style rules and platform details add clutter that the owner did not ask for and are not all necessary to make the concepts better.",
+  "what_would_make_it_a_10": "Trim the extra execution rules and make one or two concepts even more visually surprising while keeping the same tight link to the data."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It offers a good spread of distinct angles and correctly spots the under-served women audience and the need to move beyond flat product shots.",
+  "biggest_mistake": "It strays beyond the approved brief and claims in places, especially with the cabin sizer and dimensions idea, the unsupported per-trip maths concept, and targeting 41-plus despite the poor economics.",
+  "what_would_make_it_a_10": "Keep the range but tighten every concept to approved claims and the owner's strongest data signals, especially by replacing the weaker price-maths and 41-plus ideas with stronger audience-specific creative."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels built from my data, my constraints and my brand voice, and I could brief the team from it tomorrow. Output 2 has good ideas, but it wanders into weaker priorities and a few risky or less-grounded executions I would need to rework."
+}

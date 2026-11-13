@@ -1,0 +1,36 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Matches the offer to each reason, leads with rebuilding the paused-billing pause as the critical path, and gives honest risk and range around the numbers.",
+  "biggest_mistake": "The 'bolder move' about pre-cancel reminders is a good idea but sits outside the requested flow and slightly dilutes the single clear plan; the reminder-stay rate is also an assumed 39% that could be overstated.",
+  "what_would_make_it_a_10": "Add a short 'what we will learn in week 1-4' dashboard definition and a hook to reduce decision latency on the 12-month switch (e.g., show exact saving in pounds per year) so the product team can build and measure without follow-up."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_mistake": "It keeps a 50% discount for everyone switching apps, which the brief explicitly says to stop doing, and it adds a reminder goal panel for people who already have reminders without evidence; plus it double-counts plan-split percentages (14%/8%) without clearly showing total 'too expensive' as 22%.",
+  "what_would_make_it_a_10": "Remove the 'switching apps' discount, align the plan-split percentages with the 22% total, make the single critical build (re-enabling pause) the headline, and show a single monthly kept/revenue table with a range and explicit treatment of discounted revenue."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would take into sprint: it starts by fixing the paused billing, sends discounts only where they pay off, and its numbers are laid out so I can see the range; Output 2 is good but it still discounts the 'switching apps' group and spreads the build around."
+}

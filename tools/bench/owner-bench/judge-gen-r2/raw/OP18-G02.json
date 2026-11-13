@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting for the right reason, shows the paid-seat math, and builds the page around Priya's real pain: ending candidate email tennis with round robin and routing moved up front.",
+  "biggest_mistake": "It slightly undercuts the homepage ask by saying the homepage hero stays as-is, and a few proof areas are still instructions rather than finished page content.",
+  "what_would_make_it_a_10": "Make the hero explicitly usable on the homepage variant, remove the remaining placeholder-style proof notes, and keep every team CTA to 'Book a demo' unless it is clearly a secondary text link."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly identifies recruiting as the winning segment, uses the seat math, and gives a sensible page order with pain, round robin, routing, security and demo.",
+  "biggest_mistake": "It leaves bracketed placeholders and makes a few unsupported or risky claims, such as three or four emails per interview, text reminders, and several 'Get started' CTAs on a team page.",
+  "what_would_make_it_a_10": "Replace all placeholders with approved proof or cut them, remove unsupported claims, and align the CTAs and copy more tightly with the brand rules and the supplied data."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to something I could hand to the team: it is more data-grounded, more careful about unsupported claims, and sharper on the recruiting message. Output 2 has the right strategy, but the placeholders and CTA/risk issues mean I would need to clean it up before using it."
+}

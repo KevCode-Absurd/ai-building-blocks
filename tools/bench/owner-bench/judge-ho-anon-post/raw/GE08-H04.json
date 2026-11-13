@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Rock-solid financial discipline and executive realism; it correctly prices switchers at £4.95, avoids margin-eroding discounts, and flags the pause feature as the sprint's critical path.",
+  "biggest_mistake": "Missed an opportunity on the 'trip over' screen to offer an opt-in future reminder for Greg's next trip.",
+  "what_would_make_it_a_10": "Add an opt-in 'Remind me in 3/6 months' checkbox for trip completers so we can actively harvest the 40% who return at full price."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The UX detail for Greg ('Email me in 3/6 months') and the goal-adjustment branch for users who already have reminders set.",
+  "biggest_mistake": "Fell into the exact revenue trap warned against: keeping the 50% discount for app-switchers and then calculating their monthly revenue at roughly full price (£607 for 67 users is ~£9/mo, not £4.50).",
+  "what_would_make_it_a_10": "Fix the financial model for discounted users, drop the 50% discount offer entirely, and highlight the pause functionality as the critical build dependency."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 exhibits true commercial acumen: it completely retires margin-diluting discounts, handles the revenue math honestly without overcounting, and highlights that the pause is the critical path to making the numbers work. Output 2 has great product nuances (like Greg's reminder checkbox), but stumbles by reviving the 50% discount and miscounting its discounted revenue."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tight, calm, on-brand copy that puts each email on one job, answers the sunscreen doubts head-on with the real review line, and puts the beginner-safety email early (Day 1) so fear is handled before the ask.",
+  "biggest_mistake": "It front-loads the quiz branching into Email 1 itself (three product blocks before any trust is built) which risks a clunky first impression, and the WhatsApp segmentation (only non-clickers) plus a couple of conditional blocks read more like a plan than finished copy an owner could paste.",
+  "what_would_make_it_a_10": "Commit to one fully written version of Email 1 (brand/intro) and move branching to Email 2 and 5 only, write the WhatsApp as a single ready template, and tighten the timing table with IST send windows and a stated code validity so nothing reads as a placeholder."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Email 1 sells the label ('you see Niacinamide 10%, not brightening serum') which is the most on-brand, differentiated opener of the two, and Email 2's three fully written versions are genuinely ready to use.",
+  "biggest_mistake": "It invents a 14-day code expiry (assumed) and then hard-codes 'ends in 3 days' and a rupee saving into previews/body — if the assumption is wrong the owner is publishing a false deadline, which is exactly the fake urgency the notes warn against; the safety email also slips to Day 3 after the product push.",
+  "what_would_make_it_a_10": "Drop the assumed deadline or make it an explicit flagged variable throughout, move beginner-safety to Day 1, and fix the acne version's 'works inside the pores' claim to cosmetic language."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and on-voice, but Output 1 I could largely send today without risk, while Output 2 stakes the whole series on an invented code deadline and a 'works inside the pores' claim I'd have to strip out first — as the owner protecting the brand, that's the deciding difference."
+}

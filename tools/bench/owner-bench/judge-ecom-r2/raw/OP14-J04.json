@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the signals well: taste-first openings, a true 3 pm script, and a direct but credible answer to the $3 objection inside the ad.",
+  "biggest_mistake": "The family script drifts closer to a label-read moment than the strongest versions of this brief should, and the child-consent note adds a production wrinkle without solving the ad performance question.",
+  "what_would_make_it_a_10": "Make the family angle more taste- or moment-led, while keeping the disclosure and claims handling as practical as the first two scripts."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is highly usable for production: clear scripts, strong creator instructions, and practical deliverables and rights notes the owner could hand to a team tomorrow.",
+  "biggest_mistake": "It gets the platform disclosure details wrong and introduces awkward paid lines in the spoken script, which is a serious fault because the brief specifically asked for paid partnership compliance.",
+  "what_would_make_it_a_10": "Fix the disclosure rules, remove the clunky spoken sponsorship lines, and tighten the approved claims wording so the scripts stay compliant and more natural."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 fits my data and brand better. It catches the 3 pm habit, respects that taste beats label-reading, and handles the price objection more naturally, while Output 2 is more operationally complete but makes compliance mistakes I would have to fix."
+}

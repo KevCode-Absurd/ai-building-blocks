@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 4,
+  "insight": 5,
+  "priorities": 6,
+  "reasoning": 4,
+  "correct": 5,
+  "clear": 8,
+  "voice": 8,
+  "range": 5,
+  "ready": 6,
+  "overall": 5,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Provides solid unit economics and break-even calculations for its proposed bundles.",
+  "biggest_mistake": "Misses the core two-item bundle by forcing a three-item deal, and proposes a ₹599 threshold that splits an order band, requiring a blind guess on volume.",
+  "what_would_make_it_a_10": "Focus on the primary two-item face wash and serum bundle, use the lip balm as a cart add-on, and stick to threshold changes that align with known data bands."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Expertly reads the data signals to build the exact routine duo needed, positions lip balm as a margin-boosting cart add-on, and calculates blended COD math flawlessly.",
+  "biggest_mistake": "The on-page copy for the Body Duo is a bit plain compared to the perfectly tailored phrasing used for the Vitamin C Duo.",
+  "what_would_make_it_a_10": "It already earns a 10 by hitting every strategic and mathematical requirement perfectly."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 caught every hidden signal in the data. It built the exact routine bundle requested, used the lip balm smartly as an add-on, correctly mapped the COD RTO risk into its margins, and safely navigated the shipping thresholds."
+}

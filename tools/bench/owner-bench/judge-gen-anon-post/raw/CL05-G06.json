@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sound, checkable arithmetic: trials lost per 100, Lite as 70% of churned customers, and the 12-month Lite survival of 37%. It shows agencies are 27% of trials but 60% of Semrush losses, and that the Lite limit is the biggest self-inflicted leak. It also has a clear 'what we should not do' list.",
+  "biggest_mistake": "Move 5 (content from our link data) is generic, with a one-line first step and a vague metric. The 'November 2026' date is invented. The Lite fix is placed second, and the output never calls it the fastest money.",
+  "what_would_make_it_a_10": "Drop the invented date and replace move 5 with something tied to the agency or Lite problems. Say outright that the Lite fix is the quickest cash win. Give each move a sharper metric and a concrete first step."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with a one-screen verdict (lose, tie, win, not a Semrush problem) plus a do-first, stop and don't-spend list. Every move has an owner, a first step and a metric. It links the agency report to the multi-site free accounts, and its bold fifth move is a free report inside Webmaster Tools.",
+  "biggest_mistake": "The Lite top-up is ranked second rather than first, though it is probably the quickest win. It also loosely ties the top-up to the in-house price-jump complaint. Moves 4 and 5 are thinner on projected impact.",
+  "what_would_make_it_a_10": "Rank the Lite limit fix first or equal first, as the cheapest win. Give a firmer success target for move 4, and trim a few words so it sits safely under 1,100."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the core story right (agencies, the Lite limit, multi-site free accounts) with correct numbers. Output 2 is easier to act on because of its upfront verdict, its stop and don't-spend lists, and a more interesting fifth move, while Output 1's fifth move is generic and it invents a date."
+}

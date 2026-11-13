@@ -141,7 +141,7 @@ const quality = (p: string) => shared(`tools/quality/${p}`);
 test("the built-in method outline matches WORK-METHOD.md: owner first, signal pass, no homework", async () => {
   const outline = FALLBACK_TEMPLATES["WORK-METHOD.md"];
   assert.match(outline, /follow the owner and say why in one line/);
-  assert.match(outline, /In a one-shot job \(the owner cannot answer\), decide every open point, state at most three assumptions and finish/);
+  assert.match(outline, /In a one-shot job \(the owner cannot answer\), decide every open point, deliver every piece asked for, state at most three assumptions and finish/);
   assert.match(outline, /0\. Frame:[^\n]*a signal pass \(the three strongest signals in the owner's data, each with its number, what it means and where the work acts on it\)/);
   assert.match(outline, /1\. Ground: capture only what the signals and the decision depend on/);
   assert.match(outline, /4\. Build:[^\n]*one recommendation, which may combine complementary moves[^\n]*act fully on each signal/);
@@ -166,7 +166,7 @@ test("approval rules govern live actions, never the content of a plan; the metho
   assert.match(engine, /Light and standard have no third draft, but the expert draft of any plan, strategy or recommendation carries the bolder move/);
   assert.match(engine, /differs on at least two of angle, format, persona and hook source/);
   assert.match(engine, /the first screen holds the decision, the numbers the owner asked for by name, every piece of bad news, and the first move this week/);
-  assert.match(engine, /Aim at about 85% of the owner's limit, counted the way the owner counts/);
+  assert.match(engine, /Stay within the owner's limit, counted the way the owner counts/);
   assert.match(engine, /Projections from the owner's own numbers are welcome, with the working and a range, labelled as projections\./);
   assert.match(quality("ROUTING.md"), /\*\*standard\*\*[\s\S]*No creative third draft, but the expert draft of a plan, strategy or recommendation carries one labelled bolder move/);
   assert.match(quality("INTAKE.md"), /Show the reader at most three assumptions, one line each/);

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It plans all 24 posts with hooks, within capacity, and leads with sleep and narrator clips in the evening. The week 1 drafts use our customers' own words ('brain still on', 'replaying emails', 'quit by day three') in our warm voice.",
+  "biggest_mistake": "It says no post needs review but does not plan a submission for borderline later posts like 'Awake at 2am'. It also tacks on a live-stream idea, which risks scope creep and pushes the length past 1,200 words.",
+  "what_would_make_it_a_10": "Flag which week 2 to 4 hooks could trigger review and batch-submit them on 16 November. Drop the bolt-on live idea to stay within length."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It handles review timing cleanly by batch-submitting weeks 2 to 4 on 16 November. The success measures are sensible and include a caveat that the 5.9% narrator save rate comes from a small sample of 5 posts.",
+  "biggest_mistake": "Weeks 2 to 4 get only one-line weekly angles, not post-level hooks, so the plan is less usable past week 1. Batch-submitting 18 posts on day one also puts unspoken pressure on the team.",
+  "what_would_make_it_a_10": "Add a 24-post hook grid like a real calendar, and say who writes the weeks 2 to 4 posts and when so the 16 November batch is realistic."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both make the right calls on sleep, narrators, evenings and the stop list. Output 1 gives me a full 24-post calendar and sharper customer hooks, so I could run it tomorrow, though Output 2 thought the review process through more carefully."
+}

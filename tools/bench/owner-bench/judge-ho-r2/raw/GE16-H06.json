@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The strategic grasp of SaaS economics is exceptional—it properly treats free Podia accounts as zero-marginal-cost perks to preserve the $40k cash budget for content and activation, while matching the rival's 40% first-year hook on top partners with rigorous cost modeling.",
+  "biggest_mistake": "Adding both the 40% partner year-one commission bump and a 90-day window increases total payout liability, which will need very firm finance sign-off.",
+  "what_would_make_it_a_10": "It is already a 10—practically pitch-perfect for a SaaS founder."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Crystal-clear breakdown of the break-even risk on the 20% cut and the practical explanation of why dropping the payout threshold to $25 unlocks monthly payouts for small referrers.",
+  "biggest_mistake": "Allocating $12,480 of our scarce $40,000 partner perk cash budget to free Podia software subscriptions that cost the business virtually nothing to provision.",
+  "what_would_make_it_a_10": "Reallocate the $12.5k wasted on list-price software licenses into real creator incentives or co-marketing, and give a clearer reason for keeping a single commission tier despite the 40% rival threat."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both nailed the core numbers and rightly killed the 20% cut, but Output 1 understands software marketing far better: it gives away Podia accounts at zero cost rather than burning $12.5k of real marketing cash on our own software, and its activation bonus and tier design directly solve our competitive threats."
+}

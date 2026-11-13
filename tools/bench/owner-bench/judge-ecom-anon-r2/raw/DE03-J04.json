@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Opens with the two proven winning formats (taste test and swap at $26 and $32 per purchase vs. label and founder) and cites the numbers to justify dropping the losing ones; hooks come straight from real comments.",
+  "biggest_mistake": "Script 1 puts a friend guessing 'It's Olipop' — for a blind test the reveal is fine, but the 'guess the soda' framing risks implying the friend would name a competitor's brand; also some timing is tight (10-20 seconds packs taste, guess and reveal plus a disclosure line).",
+  "what_would_make_it_a_10": "Tighten Script 1's reveal so no competitor name is guessed or implied, add a clearer price-worth moment (coffee-shop comparison) rather than asking the creator to ad-lib it, and give each hook alternate a one-line rationale for what it's testing."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Cleanest and most usable: exact approved claims, price stated plainly, disclosure baked into rules, and it ends every ad on 'A new kind of soda' — genuinely sounds like the brand.",
+  "biggest_mistake": "Slightly less explicit about why label and founder openings are banned (the numbers are cited but not tied to the per-purchase cost as sharply as Output 1), and Script 1's 'one is regular cola' sets up a competitor comparison that the brand notes warn against naming.",
+  "what_would_make_it_a_10": "Make the data-to-decision link explicit in the intro, replace 'regular cola' with 'regular soda' to avoid competitor adjacency, and add a short 'what each alternate hook tests' note."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable; Output 2 reads more like our brand and is cleanest to hand to a creator as-is, while Output 1 has the sharper data justification. I'd ship Output 2 with one small fix on the 'regular cola' language."
+}

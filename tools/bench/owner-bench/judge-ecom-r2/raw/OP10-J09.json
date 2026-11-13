@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the real causes in the data, separates proved from needs-checking, and turns them into ranked actions with owners, stop rules, targets and working math.",
+  "biggest_mistake": "A few impact estimates rely on assumptions about order mix and email value that are reasonable but would need quick validation before being treated as forecasts.",
+  "what_would_make_it_a_10": "Tighten the few speculative sizing assumptions and add the pre-January flow benchmark once pulled, but the plan is already ready to run."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly identifies Meta, linen returns and the switched-off email engine as the main problems, and gives a practical 90-day sequence without discount-led growth.",
+  "biggest_mistake": "The plan is less quantified and less operational than requested: impacts are mostly qualitative, the scorecard has vague targets, and it overreaches by stopping linen promotion beyond Meta before proving that is needed.",
+  "what_would_make_it_a_10": "Rank the moves with clearer gross profit dollars, add first-week actions and stop lines for each, and use concrete weekly scorecard targets for contribution, flows and acquisition costs."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would hand to the team tomorrow: it has the diagnosis, the math, ranked moves, owners, stop rules and a usable weekly scorecard. Output 2 is directionally right, but it needs more quantification and tighter prioritisation before it can run the meeting."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds COD refusals into the money: it costs small-order refusals at about ₹1.04 lakh a month, explains why ₹499 sits on the refusal line, and adds a ₹49 COD fee under ₹499 as a third test. The bundle profits (₹537, ₹376, ₹359) and break-evens check out.",
+  "biggest_mistake": "The baseline behind 'each adds about ₹262' is never explained. The ₹849 alternative's break-even of 487 orders doesn't match the per-order logic used elsewhere. Dense lakh figures and jargon like 'delivered gross profit per session' make it harder to read than it should be.",
+  "what_would_make_it_a_10": "Show how the ₹262 and ₹849 break-even figures are worked out. Give a separate COD vs prepaid free-shipping line as an option. Write the bundle names and copy in a warmer, more Plum voice."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The serum price ladder (₹599 / ₹749 / ₹999) is clear and easy to read. The bundle profit maths is correct, and the reason for not doing an ₹849 duo (it would need about 700 step-ups a month) is sound.",
+  "biggest_mistake": "The ₹599 recommendation depends on an unexplained guess that only 6% of orders sit between ₹499 and ₹598. If the 27% band is spread evenly, it is nearer 13%, which makes the ₹28k a month gain unreliable. It also barely uses RTO in the threshold decision, offers no COD-specific lever, and puts serum plus lip balm in two of its three bundles while skipping the body category.",
+  "what_would_make_it_a_10": "Size the ₹499–598 slice from the band data. Run the threshold maths on COD refusals as well as shipping fees. Swap the overlapping serum + lip balm bundle for a body or hair routine, and make lip balm a cart add-on."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 works my COD refusal problem into the threshold decision and its numbers hold up when I check them. Output 2 changes my shipping line based on a 6% guess I can't trust."
+}

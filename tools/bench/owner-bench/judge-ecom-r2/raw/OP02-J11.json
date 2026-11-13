@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the in-app checkout bug as a ship-now fix, sizes the upside correctly at about 560 orders and ₹34 lakh gross margin a month, and builds the ranked tests from the actual chat and funnel signals.",
+  "biggest_mistake": "The schedule says two tests can run at once and each get all the traffic, which needs clarification because overlapping page tests can interact or dilute reads unless set up as a proper factorial or mutually exclusive split.",
+  "what_would_make_it_a_10": "Clarify the test allocation/schedule, tighten the placeholder copy for firmness and EMI, and state post-bug baselines should be refreshed before final reads."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly calls out the in-app checkout bug first, gives a sensible profit range, and explains the sample-size limits in plain language.",
+  "biggest_mistake": "It makes add-to-cart the main metric for almost every test and proposes shipping after two weeks even though order conversion is very low and the order guardrail would be weak.",
+  "what_would_make_it_a_10": "Use order or checkout-stage metrics where they fit, lengthen the higher-stakes tests enough to read purchase impact, and add the low-risk reviews summary to the ship-now list."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather run: it is more tied to the actual revenue leak, uses the right conversion baselines and MDEs, and gives a stronger ship-now list. Output 2 is useful, but it leans too hard on add-to-cart and two-week reads for decisions that should be judged closer to orders."
+}

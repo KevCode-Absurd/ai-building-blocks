@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the key data signals: dark spots lead demand, sunscreen has a click-to-order problem, and beginners need slow-start instructions.",
+  "biggest_mistake": "It invents a 14-day coupon expiry and uses a banned-ish customer-facing word, “brightening,” even though only as a contrast.",
+  "what_would_make_it_a_10": "Remove the unapproved urgency unless the code really expires, avoid banned words entirely, and make the final routine more clearly personalised instead of pushing all three products to everyone."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the quiz data into a practical Klaviyo flow, leads with one product per concern, and directly fixes the sunscreen objection with the white-cast review and humid-weather answer.",
+  "biggest_mistake": "It does not create a code-expiry reminder because it assumes no end date, so if the store does have an expiry the last nudge needs tightening.",
+  "what_would_make_it_a_10": "Add the real coupon expiry if it exists and make Email 5 a sharper final reminder while keeping the same calm, non-fake-urgency tone."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both are strong, but Output 2 is safer and more launch-ready: it avoids invented urgency, avoids banned language, uses the quiz property better, and places WhatsApp only where it adds value."
+}

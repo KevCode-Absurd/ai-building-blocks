@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It writes only for Controllers/Heads of Finance at 50-300 person SaaS companies and only for the pricing-change moment, and it refuses to multiply the segment gain by the trigger gain, so the 6.8%-7.9% forecast (about 7%, ~3 meetings per 100, ~55 meetings across 1,900) is honest and every number traces to the pilot.",
+  "biggest_mistake": "Step 4 asks two things in one question (is a faster close on your list this year, or should I check back next quarter) and the 'about 4,100 of the 6,000 stay out' line undercounts the real exclusions, since only triggered controllers load.",
+  "what_would_make_it_a_10": "Tighten step 4 to one ask and state the true loaded volume (1,900 in the pool, of which only flagged companies send this week) with the expected replies and meetings against that real number."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The decision-first opening and the working shown under the forecast table make it fast to operationalise: the 27% of contacts / 67% of meetings point, the two-working-day send window, and the 3.1/1.4/1.2 pilot baselines all check out.",
+  "biggest_mistake": "The 8% expected reply with a 10% ceiling rests on an invented 7.9% x 1.25 uplift the pilot never tested, which is the wish the owner asked to avoid, and the 3.4 meetings per 100 sits above the segment's own 2.9% result.",
+  "what_would_make_it_a_10": "Anchor the forecast at the 6.8%-7.9% band the pilot actually shows, with the uplift labelled as an upside case rather than the plan, and keep the emails as plain and peer-to-peer as the step 1 opener."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick the right segment and trigger, but I would pay for the first: its reply-rate forecast is one I can hold my team to, and its audit-objection email sounds like a finance person rather than a pitch."
+}

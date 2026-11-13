@@ -1,0 +1,36 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Gets all three data signals right and turns them into a clean 6-post week: sleep-led mix, narrator clips 4 a week, evening times, and a week 1 that needs no review while weeks 2-4 go in on 16 November.",
+  "biggest_mistake": "Drafts are mostly sleep and kindness; no draft for the Friday stress-at-work carousel that stays in the plan, so that slot is a plan line only. Also the 14:30 parent slot jars slightly against the evening finding.",
+  "what_would_make_it_a_10": "Add the seventh draft for the Friday stress carousel (or swap it for a parent evening idea), and show the success measure per theme versus the exact baseline save rate so the bar is provable."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_mistake": "Treats every sleep post as needing review, so week 1 is all kindness and the first sleep post is 24 November; that throws away a week of our best theme and leaves only 15 sleep posts. The review rule only bites when a post names a condition.",
+  "biggest_strength": "Sharp reading of the numbers (installs per post, format gaps, stop list) and a fuller calendar with weekly angles, plus honest assumptions and a per-week install projection."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both know the data; Output 1 is the one I would send, because week 1 runs our proven sleep hook without needless review and the drafts sound like us. Output 2 is close but loses a whole week by over-applying the review rule and overpunishes sleep."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sees the two big causes in the data—the discontinued Monsoon Dark blend and the subscription delivery failure—and turns both into separate tracks with sensible offer logic and holdouts.",
+  "biggest_mistake": "It mishandles some segment math and timing: it subtracts ex-subscribers out of the 46 to 90 and 91 to 180 pools using assumptions, ignores the full WhatsApp reach more than it should in the value model, and starts ex-subscriber recovery only after a vague gate rather than defining the operational owner and proof plan more tightly.",
+  "what_would_make_it_a_10": "Tighten the segment counts and reachable math, remove the speculative assumptions that change audience sizes, and make the profit model cleaner by showing email and WhatsApp reach separately with one base-case forecast I can trust."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It writes in a strong brand-suitable voice, handles the subscription problem the right way, and gives a good Monsoon Dark recovery message with a credible measurement plan.",
+  "biggest_mistake": "It misses the most important priority call: the 46 to 90 day group should be first and central, but it pushes 91 to 180 first and treats 46 to 90 as a side note, which is not how I would spend money given a 34-day median reorder gap.",
+  "what_would_make_it_a_10": "Re-rank the programme around 46 to 90 days as the main first wave, make the audience math consistent with the actual opt-in data instead of a rough 70% reachable assumption, and recast the value model on first-order gross profit plus measured repeat rather than broad 12-month assumptions."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to how I would actually run this business: it prioritises the near-lapsed group, gives Monsoon Dark its own proper track, and uses discounts more carefully. Output 2 is good, but it makes the wrong first priority call and relies more on broad assumptions than on the case data."
+}

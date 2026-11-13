@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the two real signals in the brief—the paused transparency winner and the unused taste proof—and turns them into a clear first-launch plan.",
+  "biggest_mistake": "It claims every headline and description fits in 27 characters, but the brief's own target was about 40 for headlines and 30 for descriptions, and one line like 'Don't trust us?' edges into a riskier tone than needed.",
+  "what_would_make_it_a_10": "Show the actual Meta-oriented limits correctly, keep the same launch order, and tighten any slightly risky wording while preserving the strong, distinct angles."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It reads the data well, especially that the front-of-pack angle is tired not broken, and gives a sensible testing logic for the first four ads.",
+  "biggest_mistake": "It uses unapproved or unsupported lines like 'No fine print,' 'Nothing hidden on the back,' and '1 in 4 of our 870 reviews say it,' which go beyond the safest facts and create avoidable correctness and claims issues.",
+  "what_would_make_it_a_10": "Keep the strategic structure but rewrite the copy to stay strictly inside the approved claims and customer words without adding implied claims or unsupported statistics."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to launch-ready copy the brand could actually run tomorrow: it is more on-brand, safer on claims, and stronger on the specific copy angles the data called for. Output 2 has good strategy, but it takes more liberties with claims and proof than I would be comfortable publishing."
+}

@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ties every message, portal change and timing back to the three cost pools (silence, fit, refunds) with a clear week-by-week order and the cheapest fix first.",
+  "biggest_mistake": "The '£183,800 in sales kept' figure for swaps is wildly overstated and contradicts the AOV logic, which undercuts trust in the numbers table.",
+  "what_would_make_it_a_10": "Replace the inflated swap saving with a realistic one-item swap value and tighten every projection to a believable, defensible range with the working shown."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers are honest and internally consistent, especially the note that a swap still costs the £7.50 and the cautious swap-sales range, plus the 'running late' message that goes beyond day-5 silence.",
+  "biggest_mistake": "Messages are left as raw merge-tag templates rather than finished copy, so the owner cannot paste them straight in.",
+  "what_would_make_it_a_10": "Finish the message copy (resolve placeholders into readable text with real example order content) so it is launch-ready rather than a template draft."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both plans are strong and hit the three money pools, but Output 2 keeps the numbers honest (it doesn't inflate swap savings and admits a swap still costs £7.50), which matters more to an owner than finished copy she can polish herself.",
+ "reasoning": "Output 1 is more ready to paste but its £183,800 swap figure is a red flag; Output 2's conservative ranges and consistent arithmetic make it the safer buy."
+}

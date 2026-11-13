@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets the data story right and builds a practical, warm plan around it: sleep at night, narrator clips, a week 1 that needs no review, and drafts that sound like us.",
+  "biggest_mistake": "It under-uses the parent audience after week 1 (only one parent-focused post a week), and it calls the Wednesday 14:30 pickup slot a test without explaining how it will be evaluated against the evening baseline.",
+  "what_would_make_it_a_10": "Give the parent audience more than one post, and use the review timing more aggressively by submitting all sleep posts on 16 November and planning week 2 sleep posts from 24 November, not just week 1."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is clear about the review constraint and correctly identifies that sleep posts need review, so it front-loads kindness in week 1 and submits sleep posts early.",
+  "biggest_mistake": "It plans no sleep posts until 24 November, which wastes the first week for the highest-install theme, and it leans too heavily on kindness in week 1, which is weaker than sleep and less aligned with the young professional's nighttime pain point.",
+  "what_would_make_it_a_10": "Fill week 1 with sleep-adjacent posts that avoid named conditions (e.g., winding down, switching off) and submit them for review on 16 November, so sleep content can start from 24 November, while still keeping a parent post and a kindness post for range."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would use: it turns the data into a plan that starts strong with sleep and narrator clips in week 1 without review, and its drafts sound like Headspace. Output 2 is thoughtful but holds back the best-performing theme for a week, which costs us reach and installs."
+}

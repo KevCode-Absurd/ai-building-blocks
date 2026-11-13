@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is a complete plan I could launch tomorrow. It brings back the paused front-of-pack winner, leads with the taste angle and tackles the ₹90 price head-on. It adds a control cell, a budget whose maths checks out (₹16,800 a cell, about 58 purchases at ₹290), an early-cut rule and a fatigue rule.",
+  "biggest_mistake": "Ad B pairs the taste text with the protein headline, so that test mixes two angles. It also slightly muddies how a win would be read.",
+  "what_would_make_it_a_10": "Make each launch combination test only one variable: pair taste with a taste or texture headline. Add one or two more witty lines in Aditya's voice, such as 'candy bars in gym clothes' without the dig at other brands."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The diagnosis of the 90-day data is sharp. The A vs C test (front-of-pack fact vs 'you check the back') is clever, and the legal backup for the review quotes is a thoughtful extra.",
+  "biggest_mistake": "Almost every primary text repeats '12 g protein. No added sugar.' This is exactly the sameness I warned against. Two of the six angles are also transparency, and the 4 pm snack angle is folded into the price line, so range suffers.",
+  "what_would_make_it_a_10": "Cut the repeated spec tail from each line and give the 4 pm snack its own text. Add a budget, a control and a stop rule so the test plan can actually run."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both found the paused winner, the taste reviews and the price objection. Output 1's copy is more varied and more in our voice, and its test plan comes with real budget numbers and rules I can run today. Output 2 reads like six versions of '12 g protein, no added sugar.'"
+}

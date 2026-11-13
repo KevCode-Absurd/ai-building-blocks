@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Uses the real numbers to drive decisions (niacinamide's 8% vs sunscreen's 2.2%, 44% dark spots, 61% new to actives) and the conditional product matching plus sunscreen-doubt email directly answers Sneha's and Arjun's fears.",
+  "biggest_mistake": "Runs slightly long (the tests/projection section and per-click revenue math push past the 1,800-word brief) and the product-match logic lumps in 'no answer' with dark spots, which could mis-aim some subscribers.",
+  "what_would_make_it_a_10": "Trim the projected-revenue and A/B math to fit the word limit, and make the 'no answer' path a gentle 'tell us your concern' nudge rather than defaulting to niacinamide."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, calm, on-brand copy with clear three-version personalisation and a well-placed sunscreen-questions email; easy to read and close to sendable.",
+  "biggest_mistake": "Email 5 pushes a fixed 3-step routine (wash + niacinamide + sunscreen together) that contradicts the brand's own 'one active at a time, start slowly' rule and ignores each person's quiz answer; the WhatsApp also lacks a concrete product pick.",
+  "what_would_make_it_a_10": "Make the closing email follow the quiz answer with a two-step routine and a starter pick, and keep the 'add one at a time' teaching consistent with it."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are good and on-brand, but Output 1 reads the data harder (why sunscreen clicks don't convert, the 8% vs 2.2% gap) and ties every email to a fixed job and product match, while Output 2's final routine breaks its own start-slow advice and slightly bends the facts (a 3-step routine with an acid wash twice a day)."
+}

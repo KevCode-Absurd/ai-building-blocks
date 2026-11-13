@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Builds the whole series around the two habits the data says predict retention, with platform-specific branching and trigger-aware skipping.",
+  "biggest_mistake": "Email 5 sends on a fixed day 10 only to people without a recurring task, but its subject and body read as a fresh feature push rather than a second chance for a dropped habit, and the 'both habits by day 14' metric is a little off from the day-7 framing in the brief.",
+  "what_would_make_it_a_10": "Tighten Email 5 so it clearly re-asks the habit-skippers in a calm, non-repetitive way, and make every success metric mirror the exact day-7 and day-30 windows in the brief."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Email copy is pitch-perfect for Todoist's calm voice, with clean guiltt-free language and a sensible guarded Pro email that respects the brief.",
+  "biggest_mistake": "Emails 2 and 3 use trigger logic slightly loosely: Email 2 fires after first task but Email 3 on a fixed day-3, which can cause ordering and overlap issues the team will have to work around.",
+  "what_would_make_it_a_10": "Make the email-trigger sequencing airtight and state one clear primary metric tied to the day-7 both-habits goal."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 2's email copy sounds most like us and treats the Pro email more carefully, which matters for how customers feel. Output 1's structure is clearer, but a couple of execution details (Email 5 and metric windows) would need fixing before launch."
+}

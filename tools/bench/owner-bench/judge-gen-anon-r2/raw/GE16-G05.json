@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The application prompt (Priya's typo) is brilliant because it tests actual problem solving and attention to detail without requiring software knowledge, perfectly matching our ethos of fixing the real problem rather than deflecting.",
+  "biggest_mistake": "The timezone table is wonderful, though listing US Pacific (16:00 to 00:00 UTC) doesn't quite match the 00:00 to 08:00 UTC shift without someone working graveyard hours locally.",
+  "what_would_make_it_a_10": "Already practically a 10; could just refine the US Pacific row to reflect the actual local night hours."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very crisp application funnel math (funneling to top 15 and top 5) and clean presentation of the salary right at the header.",
+  "biggest_mistake": "The customer scenario prompt ('locked out of HEY... we are reading how you write, not whether you know the fix') invites generic soothing empathy rather than testing whether an applicant actually digs into details and solves root causes.",
+  "what_would_make_it_a_10": "Provide an application prompt with real clues an applicant can solve, and include the exact shortlist exercise and call questions like O1 did."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 captured our company voice down to the bone and designed an application test that genuinely evaluates problem-solving instead of hollow polite talk. Its timezone table and shortlist exercise make it ready to publish today."
+}

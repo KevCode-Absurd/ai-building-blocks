@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The screening operational plan and workload math (calibration, Pass 1, Pass 2) are exceptionally thoughtful and solve the exact bottleneck from the 2025 round.",
+  "biggest_mistake": "Did not write out the actual customer ticket prompt in the job post, describing it abstractly instead.",
+  "what_would_make_it_a_10": "Include the exact customer email scenario in the job post so it can literally be published today."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Included the actual customer email prompt directly in the post, written in a pitch-perfect 37signals voice that embodies calm, candid, and transparent hiring.",
+  "biggest_mistake": "The interview stage description in the scorecard could have included the specific interview questions like Output 1 did.",
+  "what_would_make_it_a_10": "It is already virtually flawless; borrowing Output 1's structured interview questions would make the hiring team pack complete."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nailed the brief and our data completely, but Output 2 provided the actual customer email scenario right in the job post and captured Jason Fried's calm, candid voice down to the sentence rhythm."
+}

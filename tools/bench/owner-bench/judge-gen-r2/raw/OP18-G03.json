@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the missed ARR forecast, margin drop, Customer A notice, and VP Enterprise Sales ask, using the company's exact numbers and a candid builder tone.",
+  "biggest_mistake": "The Customer A response is a little thin; asking for a review is useful, but it does not say whether there is a retention or self-hosting risk plan beyond learning.",
+  "what_would_make_it_a_10": "Add one sharper action on Customer A/self-hosting risk and quantify the expected impact of the 48-hour pause as a range or state when the measured impact will be reported."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It adds useful analysis the owner would value, especially that direct-created databases grew only 2.6% and that the $0.9M compute rise is about 9 points of monthly revenue.",
+  "biggest_mistake": "The closing assumptions say the New York base and ask dates are proposals to confirm, which makes the email feel less finished even though the brief asked for a ready-to-send draft.",
+  "what_would_make_it_a_10": "Remove the confirmation caveat, make the ask dates final, and avoid promising November savings reporting unless the timing of the two-week engineering change supports it."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 1 is more ready to send and puts the exact bad news and highest-value ask in the first screen with fewer caveats. Output 2 has slightly better analytical insight, but it feels a bit less final."
+}

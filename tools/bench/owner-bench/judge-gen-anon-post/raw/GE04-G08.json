@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Beautifully clear writing that perfectly matches Buffer's transparent, friendly voice while laying out rock-solid revenue math.",
+  "biggest_mistake": "Missed the opportunity to push yearly billing across all plans, which the data showed as a massive retention lever independent of any new plan.",
+  "what_would_make_it_a_10": "Adding a site-wide push for yearly billing to capture the retention benefits for all customers, and showing the revenue impact of that change."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Incredible insight into the data, catching both the need for an Agency plan and the hidden value in un-hiding yearly billing site-wide.",
+  "biggest_mistake": "The math density and slightly cluttered formatting make it a bit harder to read quickly compared to the simpler voice requested.",
+  "what_would_make_it_a_10": "Simplifying the formatting of the math and making the tone slightly more conversational to perfectly match Buffer's plain-spoken style."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both correctly identified the nuanced 19% yearly mix math and proposed a flat-rate plan to plug the churn leak, but Output 2 also saw the massive retention opportunity in pushing yearly billing site-wide as an immediate win."
+}

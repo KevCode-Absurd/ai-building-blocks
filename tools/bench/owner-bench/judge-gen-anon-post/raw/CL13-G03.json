@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Gives the three numbers first, with runway as a 33 to 37 month range. Ties the margin drop to AI-builder traffic and states the cost per revenue dollar (about 9 points). Ask 3 goes to the lead partner for help on pricing partner traffic.",
+  "biggest_mistake": "Customer A comes second, after a long AI-traffic paragraph, and it never says Customer A will pull NRR down. It also carries two tables (burn drivers and a full glance table), which is heavier than the small table I asked for, and the asks have no forwardable text. The '9 points, more than the 7-point drop' line is confusing.",
+  "what_would_make_it_a_10": "Put Customer A and the forecast miss in the first screen. Cut to one small table. Add the effect on NRR and February ARR. Make the New York base a firm decision, and give each ask a named profile, a date and a ready-to-forward blurb."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The first screen has the three numbers, the quoted forecast miss and a one-line summary of the asks. Customer A is the first bad-news item, with the date and a note that the loss shows in February ARR. It uses my voice line, 'Here's what went wrong and what we're doing about it'. Each ask has a profile and a date, and two come with forwardable blurbs.",
+  "biggest_mistake": "States 'The role is now based in New York' as settled when it is only an assumption. The Sept 52-month runway row looks alarming without context. It does not say Customer A's exit will lower NRR.",
+  "what_would_make_it_a_10": "Flag the New York decision more clearly. Add a line on Customer A's expected effect on NRR and runway. Trim the table so it is smaller, and explain why runway fell from 52 to 33 months."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 puts the bad news and the asks on the first screen and sounds like us. Its asks come with forwardable blurbs, so it needs less work before I send it. Output 1 is solid but buries Customer A and has heavier tables."
+}

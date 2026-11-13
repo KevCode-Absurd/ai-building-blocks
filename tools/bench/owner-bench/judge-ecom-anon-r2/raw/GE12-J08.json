@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The meticulous breakdown of the math, calculating gross profit down to the rupee, and setting up a clean A/B test to see if 15% justifies the margin hit over 10%.",
+  "biggest_mistake": "Waiting until Day 68 to contact recent lapsers. If the median repurchase is 34 days and Aarav lapses because he runs out and goes to the supermarket, 68 days means he's been drinking supermarket coffee for a month.",
+  "what_would_make_it_a_10": "Shifting the focus for the 'just lapsed' group to a proactive replenishment nudge slightly before or exactly at the 34-day mark, rather than waiting for them to statistically lapse."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Phenomenal operational intuition. Catching the Day 28 replenishment window to prevent the lapse in the first place, factoring in cannibalization costs, and seamlessly incorporating the exact brand voice guidelines into the copy.",
+  "biggest_mistake": "None of significance, though the math for the 1.5 point break-even lift isn't fully expanded upon for every single segment.",
+  "what_would_make_it_a_10": "It is already a 10. The segmentation into equipment/cold brew tracks based on season and behavior shows a deep understanding of the customer base."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both handled the complex math, edge cases, and constraints beautifully, but Output 2's realization that we must intervene at Day 28 to stop the leak—before Aarav goes to the supermarket—shows true owner-level insight."
+}

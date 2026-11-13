@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly exposes that PMax is unprofitable without brand, puts the price-mismatch feed fix first, and gives a budget split that adds to $240,000 with profit math.",
+  "biggest_mistake": "The reserve/unspent-budget setup and some PMax controls like 'feed-only' and keyword negatives need small practical caveats so the team does not expect perfect control inside PMax.",
+  "what_would_make_it_a_10": "Tighten it under the word limit, make the PMax implementation language more platform-exact, and add one or two more ready-to-paste title/ad examples for bags and flats."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very clear, gets the core diagnosis right, and puts the feed fix, brand exclusion, bags budget and winning non-brand terms in the right order.",
+  "biggest_mistake": "The forecast leans optimistic, especially assuming brand search can keep about $455,000 of value on $18,000 spend and PMax can quickly rise above its current non-brand 2.03 ROAS.",
+  "what_would_make_it_a_10": "Ground the forecast in a more cautious range, remove placeholders from title patterns, and give firmer stop/move rules for weeks two to four."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather hand to the team because it is more complete on the profit math, gives stronger weekly rules, and is more conservative about what happens after stripping brand out of PMax. Output 2 is cleaner, but its upside case depends on assumptions I would challenge."
+}

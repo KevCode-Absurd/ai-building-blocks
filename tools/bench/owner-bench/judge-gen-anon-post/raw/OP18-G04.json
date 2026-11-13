@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows the data: Controllers/Heads of Finance at 50-300 person SaaS companies, triggered by pricing-page changes, with no links and a clear reply-rate expectation.",
+  "biggest_mistake": "Some CTAs are a little awkward, especially asking a days question and then asking them to reply “yes”; the proof is also used in step 1 rather than saved for later.",
+  "what_would_make_it_a_10": "Make each email feel a little more natural and finance-peer, tighten the asks to match the question, and use the 9-to-4 proof after step 1 rather than in the opener."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the right strategic call on list selection and expected performance, and it explains the logic in a way a sales team could use.",
+  "biggest_mistake": "It adds a few invented or risky moves, like the 12th-15th send window and the “bolder move” to send generic watch-list emails, which cuts against the pricing-trigger lesson.",
+  "what_would_make_it_a_10": "Remove the generic-watch-list idea, prioritize sending soon after the pricing flag, soften the 20-minute meeting asks, and make the sequence feel less sales-led and more like finance talking to finance."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I asked for and more disciplined with the data. Output 2 is good, but it adds extra tactics I would not want the team to run without changes."
+}

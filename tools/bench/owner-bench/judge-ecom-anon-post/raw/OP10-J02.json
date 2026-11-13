@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns our actual signals into a usable plan: on-feet worker Spark Ads first, problem-first hooks, clean Shopify tracking, budget phases, and dollar-based kill/scale rules tied to the $38 90-day payback bar.",
+  "biggest_mistake": "A few measurement details need tightening, especially calling store-tagged CPA a 'floor' and relying on some assumptions around new creator posts being ready quickly.",
+  "what_would_make_it_a_10": "Clarify the day-30 measurement language, add a simple creator production timeline with owners and due dates, and make the holdout optional only if volume is high enough."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clear, practical, and mostly grounded in the right data: problem-first creative, worker posts, Spark Ads, tracking setup, creator volume, and a sensible $38 target.",
+  "biggest_mistake": "The timing is less clean because it spends from Day 1 despite the pixel not being installed unless a separate Week 0 happens, and it introduces a Smart+ scale campaign early when we need cleaner first-month reads.",
+  "what_would_make_it_a_10": "Make setup part of the 30-day budget calendar, keep the first month simpler with manual broad testing, and use a stronger day-30 decision rule based on Shopify new customers, survey, and incremental lift rather than platform cost alone."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would hand Output 1 to the team first because it is more tied to our data and more operational on Monday. Output 2 is good, but Output 1 has the cleaner launch sequence, budget release rules, and measurement plan."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks the work by tickets we can actually remove and leads with the decision. It gives an honest range with clear working: 2,703 to 4,276 tickets, or $11,082 to $17,532. It also proposes a cheap in-app line for Simplify debts and sizes it.",
+  "biggest_mistake": "The refund and restore articles cover only the app. There are no splitwise.com steps and no steps to cancel the subscription, so some readers will still write in. It also never suggests adding the no-click search terms to the delete article.",
+  "what_would_make_it_a_10": "Add web steps and cancel-subscription steps to the articles. Tag the restore article with the 4,900 no-click search phrases. Give a short outline for the currency article, since that topic has 1,800 tickets and no page."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The articles are very practical. They cover iPhone, Android and web, include steps to stop the next payment, and add the no-click search phrases to the restore article. It has a clear day-by-day plan for one writer.",
+  "biggest_mistake": "The forecast is one number. It also counts savings from a currency article that hasn't been written, and it plans to merge 'Recording a payment', which already helps 71% of readers and doesn't need it. There's no summary up top telling me the decision.",
+  "what_would_make_it_a_10": "Give the forecast as a range, and leave out pages that aren't written yet or show them separately. Drop the unnecessary merge. Open with a two-line summary of what to do and what it saves."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and usable. The first one tells me the decision up front and gives an honest range I can plan around, though the second one's articles are a bit more complete."
+}

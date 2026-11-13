@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the three key signals in the data: quiet wheels, under-served women 25 to 40, and work flyers who want to skip the belt.",
+  "biggest_mistake": "A few lines like “No rattle” should be checked against actual review language or softened to avoid over-claiming.",
+  "what_would_make_it_a_10": "Add slightly tighter production details for each format and verify exact review quotes before launch."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very production-ready, with clear formats, hooks, scenes, headlines and build rules the team could shoot from.",
+  "biggest_mistake": "It does not put the women-travelling-solo lift concept in the first three, even though that audience is the cheapest to win and the brief gives strong evidence for it.",
+  "what_would_make_it_a_10": "Make the first three quiet wheels, lift-it-yourself for women, and skip-the-belt for work flyers, with less repetition in the Karan concepts."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather hand to the team because it follows the strongest data signals and gives a sharper testing plan. Output 2 is very usable, but its priorities are less aligned with the women 25 to 40 opportunity."
+}

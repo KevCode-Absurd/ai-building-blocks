@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sets an honest 7% target with a 6.8% floor and declines to multiply the two gains the pilot never tested together, and it rests the 1,300 pilot Controllers for 90 days, a list risk I hadn't flagged.",
+  "biggest_mistake": "Step 1 spends the 9-to-4 proof right away and adds a conditional 'reply yes' ask on top of the question, so the opener carries more than one job.",
+  "what_would_make_it_a_10": "Move the proof sentence to step 2 so step 1 stays purely on their pricing change and the rev rec rebuild, with only the question."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ties the plan to the pilot with a correctly worked baseline (3.1% replies, 1.4% positive, 1.2% meetings per 100) and a tight two-working-day send window off the weekly flag.",
+  "biggest_mistake": "The 8% headline and 10% ceiling rest on an invented 1.25x uplift for the role, which makes the expectation read more optimistic than the data supports.",
+  "what_would_make_it_a_10": "Drop the arbitrary uplift and anchor the forecast at 6.8 to 7.9%, replace the 'Closing the loop' subject, and say what to do with the 1,300 pilot Controllers who already got the old sequence."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both nail the segment, the pricing trigger and the no-link rule. I'd pay a bit more for Output 1 because its reply forecast is honest rather than padded with an assumed multiplier, and it protects me from re-mailing the pilot Controllers."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads my own numbers back to me: the flip-the-pack ad was tired, not dead (best CTR 2.1%, cheapest at ₹210, killed only at frequency 4.2), so it comes back with new words and leads the launch set — with the never-run taste proof (26% of reviews) as the second bet. Then it tells my team exactly how to judge it: ₹290 is the bar to beat, swap before frequency 3.5, and here are backups if legal blocks review quotes.",
+  "biggest_mistake": "There are only about four real angles hiding in six texts: P1 and P5 are both 'ingredients on the front', P2 and P3 are both review quotes, and P6 fuses the ₹90 price with the 4 pm moment — so Ad D can't tell me whether price or the office occasion moved the number. I asked for six different angles and there is no clean protein line and no clean 4 pm line.",
+  "what_would_make_it_a_10": "Make all six angles stand alone — add a pure protein-number text and a pure 4 pm text, split price out of the 4 pm ad — so every launch tests exactly one thing, and tighten D3 ('Nothing hidden on the back') to point at the front where the proof actually is."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Six genuinely different angles, one per buyer motive, written in my customers' own words ('isn't a samosa', 'I check the back of every pack', the chalk worry) — and every launch row names the number it has to beat, so the team knows what each ad is proving, not just what it says. The note that the price ad will get fewer clicks and must be judged on cost per purchase is exactly right.",
+  "biggest_mistake": "The benchmarks mix a paused, frequency-burned ad (₹210) with live ones, so Launch 1 can look like a failure at ₹250 when it would actually be the best ad running; and Launch 3 calls the 4 pm angle 'weakest' while quoting the 11% of reviews who call it their 4 pm snack — the team won't know what winning means.",
+  "what_would_make_it_a_10": "One benchmark rule throughout (beat ₹290, the best live ad; treat ₹210 as the stretch), and tighter copy in our voice — the full brand name in every text eats characters, 'so you get one spare' is a price reminder dressed as a gym joke, and the second person should carry the line instead of 'The Whole Truth protein bar is sweetened with dates'."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "1 gives me a plan I can actually run and measure — it knows the winner was tired not dead, brings taste in as the untested bet, and sets one bar to beat with a frequency tripwire; 2 has the wider spread of angles and better customer words, but its benchmarks mix a dead ad with live ones, so I'd trust its numbers less on Monday morning."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 9.8,
+  "use_as_is": "as is",
+  "biggest_strength": "Strict adherence to the 'one question and one ask' rule and authentic peer-to-peer finance voice, seamlessly weaving in the persona's verbatim objections across each step.",
+  "biggest_mistake": "Repeated the 140-person proof point in steps 1, 2, and 4; varying the reference slightly would keep step 4 fresher.",
+  "what_would_make_it_a_10": "Save the 9-to-4-day close proof for steps 1 and 2, and use step 4 purely for a clean, low-pressure close-the-loop without re-pitching the exact same case stat."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8.1,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent list segmentation strategy, including the smart operational instruction to rest pilot contacts for 90 days.",
+  "biggest_mistake": "Violated the 'one question and one ask' constraint in nearly every email by stacking open questions with SDR reply gimmicks (e.g., 'reply yes', 'reply steps', 'reply now or later').",
+  "what_would_make_it_a_10": "Remove the gamified micro-CTA replies ('reply yes', 'reply steps') so it sounds like a real finance professional speaking peer-to-peer rather than an SDR running an outbound formula."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 writes exactly like a finance person talking to a controller and respects the one-question, one-ask limit. Output 2 relies on gimmicky 'reply YES' hooks that violate the brief's copy rules and damage our brand voice."
+}

@@ -21,7 +21,7 @@ import { CAPTURE, FAMILY_LABELS, contextNeed, contextRequirements, craftWeightsL
 import { brandFileLine } from "./brand-file.ts";
 import { bestRoute, type RouteCandidate } from "./route.ts";
 import { KnowledgeIndex, indexedPath, knowledgeMap } from "./retrieve.ts";
-import { personaVerticalFiles, personaVerticalLibrary, verticalKnowledgeSection, type VerticalBundle } from "../knowledge/bundle.ts";
+import { SEARCH_ONLY, personaVerticalFiles, personaVerticalLibrary, storeKitFiles, storeKitSection, verticalHintLine, verticalKnowledgeSection, type VerticalBundle } from "../knowledge/bundle.ts";
 import { agentFrontmatter, megaSources, teamListMarkdown, type MegaKit } from "./mega.ts";
 import {
   ONE_FILE_ITEMS, TYPE_LABELS, buildToolbox, checkToolbox, fallbackToolbox, toolboxItemPath,
@@ -96,6 +96,13 @@ export interface PackInput {
    * carries the baseline cards, its modules' cards and the sources, each one shared file under /packs/knowledge/.
    */
   vertical?: VerticalBundle;
+  /**
+   * For a persona outside every vertical whose role a vertical's agents share (scripts/build-packs.mjs): that
+   * vertical's store kit, carried as the house rules and the compact card index, both shared files.
+   */
+  storeKit?: VerticalBundle;
+  /** Every vertical library the build has: a pack that carries none of one gets one AGENTS.md line on when to use it. */
+  verticals?: VerticalBundle[];
   options: PackOptions;
 }
 
@@ -128,6 +135,9 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "quality/proof.cjs", purpose: "Quality Engine v3: proof.cjs" },
   { name: "quality/render.cjs", purpose: "Quality Engine v3: render.cjs" },
   { name: "quality/leakcheck.cjs", purpose: "Quality Engine v3: leakcheck.cjs" },
+  { name: "quality/trace-check.cjs", purpose: "Checks the working trace of knowledge lookups before hand-over: one query per signal and decision, every card id in the pack, none in the deliverable." },
+  { name: "quality/copy-check.cjs", purpose: "Checks customer copy before hand-over: stated character counts match the text, fields stay within the brief's limits, and no placeholder or working note sits in a copy field." },
+  { name: "quality/numbers.cjs", purpose: "Checks the numbers ledger against the deliverable: totals match their rows, one period and one money basis per table, labels match their numbers." },
   { name: "quality/check-logo-contrast.cjs", purpose: "Checks that a logo or wordmark on an image ad reaches a 3:1 contrast with what is behind it, with a file-hash receipt." },
   { name: "quality/check-format.cjs", purpose: "Checks actual output counts, headings, links, table fields and character limits against a brief-derived contract, with file and contract hashes." },
   { name: "quality/cards/_any.md", purpose: "Quality Engine v3: cards/_any.md" },
@@ -398,7 +408,7 @@ Pack version {{version}}, updated {{updated}}. Profile: {{profile_url}}
   // Only the outline: the full method is packs/shared/WORK-METHOD.md, which always wins when it exists.
   "WORK-METHOD.md": `# Work method
 
-If a rule here would make the work worse for this owner's stated goal and data, follow the owner and say why in one line. In a one-shot job (the owner cannot answer), decide every open point, state at most three assumptions and finish: no confirmation lists or approval asks in the work.
+If a rule here would make the work worse for this owner's stated goal and data, follow the owner and say why in one line. In a one-shot job (the owner cannot answer), decide every open point, deliver every piece asked for, state at most three assumptions and finish: no confirmation lists or approval asks in the work.
 
 0. Frame: write context/spec.md, one screen: the job (who must do what after seeing this), the deliverables (count and format), a signal pass (the three strongest signals in the owner's data, each with its number, what it means and where the work acts on it), mode (patch whenever something exists) and the brand context the job needs.
 1. Ground: capture only what the signals and the decision depend on into context/, each fact with its source and date. Check the buyer can act today.
@@ -1318,8 +1328,15 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
   const withLibraryMd = !builtToolbox || !agent;
 
   // A vertical agent (persona.vertical) carries its library's cards; knowledge.md says what it carries and how to use it.
-  const verticalFiles = personaVerticalFiles(persona, input.vertical);
-  const verticalNote = verticalFiles.length ? `\n\n${verticalKnowledgeSection(persona, input.vertical!, verticalFiles.map(f => f.path), `${origin}/mcp`)}\n` : "";
+  // A role agent outside the vertical whose role its agents share carries the store kit instead (house rules and the
+  // compact card index); every pack gets one AGENTS.md line for each vertical library it carries none of.
+  const ownVertical = personaVerticalFiles(persona, input.vertical);
+  const storeFiles = ownVertical.length ? [] : storeKitFiles(input.storeKit);
+  const verticalFiles = [...ownVertical, ...storeFiles];
+  const verticalNote = ownVertical.length ? `\n\n${verticalKnowledgeSection(persona, input.vertical!, ownVertical.map(f => f.path), `${origin}/mcp`)}\n`
+    : storeFiles.length ? `\n\n${storeKitSection(input.storeKit!, storeFiles.map(f => f.path), `${origin}/mcp`)}\n` : "";
+  const carriedVerticals = new Set([ownVertical.length ? input.vertical!.vertical.id : "", storeFiles.length ? input.storeKit!.vertical.id : ""]);
+  const verticalHints = (input.verticals ?? []).filter(b => !carriedVerticals.has(b.vertical.id)).map(b => verticalHintLine(b, origin));
 
   // The examples guide may be a template, as train/examples/README.md or train/examples-README.md.
   const examplesTemplate = ["train/examples/README.md", "train/examples-README.md"].find(t => templates[t]?.trim()) ?? null;
@@ -1347,7 +1364,7 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     ...(agent ? [{ path: "TEAM.md", group: "work" as const, content: teamMarkdown(persona), purpose: "How I critique, what I defend, when I defer and what I never do in a team." }] : []),
     { path: "knowledge.md", group: "knowledge", content: `${knowledgeMarkdown(persona, kit, kind, roleName, megaKit).trimEnd()}${verticalNote}`,
       purpose: knowledgeReady ? "What I know about the role, with sources, then my specialty." : megaKit ? "My specialty, and where my channel knowledge is." : "My specialty. The role's researched knowledge is coming." },
-    ...verticalFiles.map(f => ({ path: f.path, group: "knowledge" as const, content: f.content, purpose: f.purpose, ...(f.shared ? { source: "vertical" as const } : {}) })),
+    ...verticalFiles.map(f => ({ path: f.path, group: "knowledge" as const, content: f.content, purpose: f.purpose, ...(f.shared ? { source: "vertical" as const } : { resolveTools: true }) })),
     { path: "knowledge-map.md", group: "knowledge", content: "",
       purpose: "Every section I can look up, file by file, so only the part a question needs is read." },
     { path: "access.md", group: "work", content: kitFiles["access.md"]?.trim() ? kitFiles["access.md"] : fallbackAccess(), purpose: "Tools I work with, what to share with me and what I never ask for." },
@@ -1449,7 +1466,7 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     let content = d.template ? fillTemplate(d.template, templates[d.template], values) : d.content!;
     // A pack never names a tools/ file it lacks: train packs ship no tools/, so their role kit files, playbook and knowledge point at the public copy.
     let source = sourceOf(d);
-    if (d.resolveTools || (kind === "train" && (source === "role" || d.path === "playbook.md" || d.path === "knowledge.md"))) {
+    if (d.resolveTools || (kind === "train" && (source === "role" || d.path === "playbook.md" || d.path === "knowledge.md" || d.path.startsWith("knowledge/")))) {
       const resolved = resolveToolRefs(content, toolNames, origin);
       // A job skill is one shared file for every pack that links the job. In a pack without the brand tools its text
       // points at their public copies instead, so that pack keeps its own copy and the shared one stays the same.
@@ -1458,6 +1475,12 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     }
     if (!agent && (d.path === "soul.md" || d.path === "personality.md") && !content.replace(/^\uFEFF/, "").trimStart().startsWith(TEMPLATE_MARKER)) {
       content = `${TEMPLATE_MARKER}\n${content}`;
+    }
+    // AGENTS.md: one line per vertical library the pack does not carry, before the access rules (else at the end).
+    if (d.path === "AGENTS.md" && verticalHints.length) {
+      const hint = verticalHints.join("\n\n");
+      const at = /\n## Access levels\b/.exec(content) ?? /\n## How you work\b/.exec(content);
+      content = at ? `${content.slice(0, at.index).trimEnd()}\n\n${hint}\n${content.slice(at.index)}` : `${normalizeText(content).trimEnd()}\n\n${hint}`;
     }
     // A mega agent's AGENTS.md always has its team, even while the shared template has no {{team_list}} yet.
     if (megaKit && d.path === "AGENTS.md" && !templates[d.template!].includes("{{team_list}}")) {
@@ -1608,7 +1631,8 @@ export function oneFileText(pack: BuiltPack, origin: string = ORIGIN, inlineItem
   const away = items.filter(f => !inline.has(f.path)).map(f => f.path);
   // A vertical agent's library: its own modules' cards and toolbox stay in the file; the baseline of other modules,
   // the sources list and the vendored open-source skills are named by address, so the file stays attachable.
-  const verticalAway = pack.files.filter(f => /^knowledge\/[^/]+\/(vendor\/|baseline\.md$|sources\.md$)/.test(f.path));
+  // So do the library modules the agent searches but does not work in (SEARCH_ONLY), and the compact card index.
+  const verticalAway = pack.files.filter(f => /^knowledge\/[^/]+\/(vendor\/|baseline\.md$|sources\.md$|card-index\.md$)/.test(f.path) || (f.source === "vertical" && f.purpose.startsWith(SEARCH_ONLY)));
   const verticalUrl = new Map(verticalAway.map(f => [f.path, `${site}${fileUrl(pack, f)}`]));
   const byAddress = (text: string) => {
     let out = away.length ? text.replace(/(?<![\w/.-])toolbox\/[a-z]+\/[a-z0-9-]+\.md\b/g, p => inline.has(p) || !away.includes(p) ? p : `${site}/packs/${p}`) : text;
@@ -1623,7 +1647,7 @@ export function oneFileText(pack: BuiltPack, origin: string = ORIGIN, inlineItem
     "",
     `This is ${m.name}'s agent pack from AI Blocks, version ${m.version}, in one file for chat apps such as ChatGPT, Claude and Gemini. Attach it to a chat, or add it to a project or Gem, and your AI works as ${m.name}. It runs on your own AI plan.`,
     "",
-    `For the AI reading this: each part below is one file of the pack and starts with a line such as "===== FILE: playbook.md =====". When your instructions say to open or read a file, read that part. Start with the AGENTS.md part and follow it.${bundled ? " Every skill is in the skills.md part, under its own heading, so a path such as skills/<name>/SKILL.md means that heading." : ""}${away.length ? ` The toolbox.md part names ${items.length} library items: ${inline.size} are parts of this file, and each of the other ${away.length} is one page at the address beside its name. Open that page when you choose the item; if you cannot open pages, ask the person to paste it or work from the items you have.` : ""}${verticalUrl.size ? ` The knowledge library's baseline cards, sources list and open-source skills are pages at the addresses given where they are named; open one when you need it.` : ""}`,
+    `For the AI reading this: each part below is one file of the pack and starts with a line such as "===== FILE: playbook.md =====". When your instructions say to open or read a file, read that part. Start with the AGENTS.md part and follow it.${bundled ? " Every skill is in the skills.md part, under its own heading, so a path such as skills/<name>/SKILL.md means that heading." : ""}${away.length ? ` The toolbox.md part names ${items.length} library items: ${inline.size} are parts of this file, and each of the other ${away.length} is one page at the address beside its name. Open that page when you choose the item; if you cannot open pages, ask the person to paste it or work from the items you have.` : ""}${verticalUrl.size ? ` The knowledge library's other modules, baseline cards, card index, sources list and open-source skills are pages at the addresses given where they are named; open one only when you need it.` : ""}`,
     "",
     `Free to use and change, not to sell: the LICENSE.md part has the terms. Newest version and ${m.name}'s profile: ${site}/agents/${m.agent_id}`,
   ];

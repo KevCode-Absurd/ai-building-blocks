@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 6,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clean, submittable template set with a sensible tiered confirm-or-hold flow. It also has practical ops ideas: quiet hours, a holdout, and moving one agent to a 2 pm to midnight shift to cover the evening chat wave.",
+  "biggest_mistake": "The prepaid nudge has no incentive and is not tiered, so Tier 3 gets the same soft ask as metros. Labelling a pay-online nudge as Utility risks Meta recategorising it.",
+  "what_would_make_it_a_10": "Add a tiered prepaid incentive or COD advance for Tier 3, backed by the per-tier loss math. Use bolder Snitch voice in the scripts. Add a net-savings metric to the scorecard."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ties every tier decision to money: expected RTO loss per order is ₹70, ₹41 and ₹27, the ₹40 and ₹20 discounts sit below that loss, and calls go only to Tier 3 because only 4 agents carry chat. It adds holdouts, a net-saving metric and a tested ₹99 advance option.",
+  "biggest_mistake": "T1 states an expected delivery date in the confirmation, which edges toward the date promises I want to avoid. It also misses fixing the 8 pm to midnight staffing gap with a shift change.",
+  "what_would_make_it_a_10": "Drop the date from T1. Add an evening agent shift. Give the scripts and templates a bit more Snitch punch."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both are usable, but Output 2 does the money math per pincode tier and gives Tier 3 calls, discounts and a ₹99 advance test with holdouts. That is exactly the targeted thinking I wanted. Output 1 is solid but treats the prepaid nudge the same for everyone."
+}

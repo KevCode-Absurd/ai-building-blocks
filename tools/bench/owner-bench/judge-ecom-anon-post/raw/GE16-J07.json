@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9.7,
+  "use_as_is": "as is",
+  "biggest_strength": "Directly matches the quiz outcome inside Email 1 so the welcome code is immediately actionable, and intelligently personalises the two-step routines in Email 5 instead of pushing a blanket routine.",
+  "biggest_mistake": "Email 4 is a bit abstract compared to the highly tactical product-focused emails around it.",
+  "what_would_make_it_a_10": "A slight expansion on Email 4's call to action to tie the label-reading lesson back to a personalised recommendation."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Writing separate, fully flushed-out conditional email versions for Email 2 based on the quiz answers.",
+  "biggest_mistake": "In Email 5, proposing a universal 3-step routine that puts Salicylic Acid 2% wash twice daily for everyone, which directly contradicts the brand promise of gentle, non-irritating routines for dry and sensitive skin.",
+  "what_would_make_it_a_10": "Fix Email 5 so it segments the routine recommendations by skin type, and give Email 1 an immediate quiz-matched recommendation rather than deferring it to Day 1."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 delivers immediate commercial relevance by putting the quiz match into Email 1 alongside the discount code. It also avoids Output 2's major skincare mistake of recommending twice-daily salicylic acid to dry and sensitive beginners in Email 5."
+}

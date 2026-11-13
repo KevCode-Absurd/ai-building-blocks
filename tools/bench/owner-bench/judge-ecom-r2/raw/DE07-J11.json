@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sizes the broken in-app checkout at about 1,860 extra checkouts, 560 orders and ₹34 lakh gross margin a month with the working shown, then ranks five tests on orders per session with honest four-week detection limits.",
+  "biggest_mistake": "Bundles the new hero image with moving reviews into one mobile test, so a win cannot be attributed, and assumes two tests can run side by side on the same page without interaction.",
+  "what_would_make_it_a_10": "Split the hero image out of the reviews test (or ship it) and show the exact brand-voice wording for the firmness and EMI lines with the real rating and plans filled in."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Shows its sample-size maths openly and is honest that a two-week order guardrail can only catch a 14-17% drop, with simple ship/stop rules a team can follow.",
+  "biggest_mistake": "Uses add to cart as the main metric for all five tests, including delivery date and EMI where the decision happens later in the funnel, and slips on the halfway case (957 extra checkouts at 30% is 287 orders, not 279) while leaving the review summary out of the ship list.",
+  "what_would_make_it_a_10": "Match each test's main metric to where the decision is made (checkout reach or orders for delivery date and EMI), fix the halfway projection to ₹17.5 lakh, and ship the review summary in week one."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1's numbers all check out and it ranks on the metric that pays, orders per session, with realistic four-week detection plus the review summary in the ship list; Output 2 is close and very practical but measures every test at add to cart and has a small profit-projection error."
+}

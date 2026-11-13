@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the real causes, separates proven facts from checks, and turns them into quantified actions with owners, stop lines and a useful weekly scorecard.",
+  "biggest_mistake": "It is a little overbuilt and may run over the requested length, with some impact estimates depending on assumptions that would need quick validation.",
+  "what_would_make_it_a_10": "Trim it slightly and make the assumptions/impact ranges a bit cleaner without losing the strong stop rules and scorecard."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly identifies Meta, linen returns, and the switched-off CRM engine as the main issues, while staying brand-safe and contribution-minded.",
+  "biggest_mistake": "The plan is less operationally complete: gross profit impact is mostly qualitative, the scorecard lacks action thresholds, and contribution margin starts with 'set baseline' instead of using the data provided.",
+  "what_would_make_it_a_10": "Add quantified impact by move, clearer first-week steps and stop/go thresholds, especially for paid spend, flows, sign-up recovery and linen returns."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team on Monday: it has the right diagnosis, dollar logic, owners, stop rules and weekly targets. Output 2 is strong and readable, but it leaves more work for me to turn into an operating plan."
+}

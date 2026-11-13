@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts sleep wind-down posts in week 1 and words them so they skip review, so our best install driver starts on day one, in the evening, with narrator clips.",
+  "biggest_mistake": "Weeks 2 to 4 are only a repeated weekly slot plus one-line angles, with no post-by-post calendar. It also keeps a weekly stress-at-work slot, which tilts the mix less toward sleep than the data supports.",
+  "what_would_make_it_a_10": "Add a full 24-post calendar with titles for weeks 2 to 4 and a review flag on each post. Give more of the weekly slots to sleep, and use our 'Take a breath. You've got this.' line."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a complete 24-post calendar, flags review for each draft, and sets a clear submission schedule that covers Thanksgiving. It also reuses an already-approved clip in week 4, and the projections are correct.",
+  "biggest_mistake": "It sends every sleep post to review, so week 1 has no sleep posts at all. Careful wording could have avoided review and given us a full week of our best-performing theme.",
+  "what_would_make_it_a_10": "Write wind-down posts for week 1 that name no condition and so skip review. Also tidy a few instructional lines, such as 'After you save this'."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are solid, but the first one saw that careful wording lets sleep posts run in week 1 without review, so we don't lose a week of our best theme. The second has the nicer full calendar but gives that week away."
+}

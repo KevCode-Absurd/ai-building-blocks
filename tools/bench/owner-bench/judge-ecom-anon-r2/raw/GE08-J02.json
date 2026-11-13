@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless commercial logic and pacing: it calculates the exact minimum ad group budget needed to exit learning ($136/day) and launches with a disciplined 9 ads rather than spreading budget too thin.",
+  "biggest_mistake": "Doesn't specify keeping Meta spend flat during the 30-day window to maintain a clean baseline for the blended lift read.",
+  "what_would_make_it_a_10": "Add an explicit instruction to hold Meta spend flat during the test to keep incrementality clean."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The Day-30 incrementality check—requiring overall store new customers to rise by at least 70% of TikTok-claimed orders while keeping Meta spend flat—is brilliant media buying.",
+  "biggest_mistake": "Launching 15 ads on Day 1 across a $600/day budget spreads spend at only $40 per ad, meaning most creative will starve before hitting statistical significance.",
+  "what_would_make_it_a_10": "Trim the launch creative volume from 15 ads down to 8–9 so early ad groups can properly exit the learning phase."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 writes in our exact plain-spoken voice and understands ad-spend physics better by refusing to starve creative with too many day-one variations. Output 2 had a brilliant incrementality check, but Output 1 is a plan I can literally print out and hand to the team on Monday without changing a word."
+}

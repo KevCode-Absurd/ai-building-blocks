@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranks the three fixes by money and writes every message in our voice with one clear button and honest date ranges.",
+  "biggest_mistake": "The swap-first 'sales kept' figure (up to £183,800) is inflated and could set a false expectation in the room.",
+  "what_would_make_it_a_10": "Tighten the swap savings to a defensible number and note that swap users may already differ, so gains are measured against the hold-out."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Opens with bad news and a first move this week, and its swap and ticket savings are the most defensible numbers in either answer.",
+  "biggest_mistake": "Runs the fit-finder and post-delivery messages later than needed and leans on a 'running late' email rather than the cheaper day-3 nudge.",
+  "what_would_make_it_a_10": "Bring the fit check and delivered message forward and add a specific first-time bra buyer post-delivery fit message with the same urgency as output one."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are usable; I'd pick output one because it lays out the three fixes in money order, gives me a first-time bra fit message, and is the easiest to hand to a team. Output two has the safer numbers, so I'd borrow its savings estimate."
+}

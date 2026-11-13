@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The job post captures our exact voice effortlessly, especially putting 'The hard parts, up front' and the local timezone conversion table. The Priya prompt with the hidden email typo is a stroke of genius that tests problem-solving without requiring Basecamp knowledge.",
+  "biggest_mistake": "The scorecard could slightly more explicitly define the cut-off threshold for moving applicants from stage 1 to stage 2 (though the process notes mention an average of 4 or more).",
+  "what_would_make_it_a_10": "Already a 10. It is completely ready to paste into Basecamp and publish today."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the $82,000 salary right at the very top of the job post and provides excellent, crisp throughput modeling in the hiring process (shortlist top 15, interview top 5).",
+  "biggest_mistake": "The prompt exercise ('locked out of HEY account') explicitly notes 'we are reading how you write, not whether you know the fix', missing the chance to test whether candidates actually investigate the root cause.",
+  "what_would_make_it_a_10": "Give the applicant a concrete problem with discoverable facts (like O1 did) rather than an unresolvable technical lockout, and include local time zone mappings for the Asia-Pacific shift."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both understood our business, data, and philosophy at an elite level, but Output 1 wrote a better customer application exercise (the typo puzzle) and nailed our brand voice and formatting down to the local timezone table."
+}

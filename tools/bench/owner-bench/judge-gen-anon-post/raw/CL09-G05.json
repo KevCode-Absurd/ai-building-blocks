@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post is ready to publish. Salary is in the first line, the hours and weekend rotation are stated plainly, the welcome to career changers is real, and a sample customer email is already written into the application form.",
+  "biggest_mistake": "It doesn't convert the hours into local times beyond Singapore, Manila and Perth. The interview stage gets only a brief mention, with no set questions.",
+  "what_would_make_it_a_10": "Add a local-time table for the main Asia-Pacific cities, a few standard interview questions, and a note to recheck the correlations, since 9 hires is a small sample."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into practical details: a local-hours table including Sydney's summer shift, about 8 or 9 rotation weekends a year, a projected reviewer-hours table, set interview questions, and an idea to keep a pool of strong past applicants.",
+  "biggest_mistake": "It probably runs past the 1,100-word limit. The application exercise isn't written; it only says to use a real past ticket, so the post can't go live yet.",
+  "what_would_make_it_a_10": "Include the actual customer email for the application, trim to the word limit, and tighten the post so it reads a little more like a person talking."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both found the overnight gap, the writing signal and the weekend problem. The first is tighter and I could post it tomorrow. The second has smarter extras, but I'd still have to write the exercise and cut it down."
+}

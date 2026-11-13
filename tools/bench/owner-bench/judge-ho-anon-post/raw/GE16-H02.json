@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Masterful financial clarity and strategic reallocation: separating Claire's high-performing search terms into a dedicated Non-Brand Search campaign while cutting PMax waste and fixing the feed on Day 1.",
+  "biggest_mistake": "Could be slightly more explicit on Merchant Center technical execution (e.g. specifying microdata / OpenGraph tag sync vs supplemental feeds).",
+  "what_would_make_it_a_10": "Include operational owners and completion criteria for the week one action items."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The action table with owners and completion gates, plus the sophisticated matched-market regional test to measure brand spillover from broad spend.",
+  "biggest_mistake": "Parking $104,000 (over 43% of the budget) in reserve is overly timid and starves top-line acquisition instead of actively harvesting the winning search themes.",
+  "what_would_make_it_a_10": "Reallocate the excessive reserve into active high-intent non-brand search and shopping campaigns rather than sitting on unspent cash."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both clearly understood my unit economics and diagnosed the hidden brand drag, but Output 1 gives me a much stronger commercial plan by spinning out the winning search themes into dedicated search rather than parking nearly half the budget in an unspent reserve."
+}

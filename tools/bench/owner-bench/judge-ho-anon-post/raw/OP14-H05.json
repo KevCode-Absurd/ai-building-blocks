@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It prioritises the biggest preventable causes using the business data, writes publishable articles in the right voice, and gives a cautious forecast with working.",
+  "biggest_mistake": "It says nothing needs merging even though the brief asked what to fix, merge or write first, and it adds a product-change suggestion that goes beyond the stated one-day link change.",
+  "what_would_make_it_a_10": "Tighten a few facts and assumptions in the article steps, cover merge/fix decisions a bit more explicitly, and keep the scope strictly to what the brief asked for."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It covers the right problem areas, includes useful search-term and in-app-link ideas, and the structure is easy to follow.",
+  "biggest_mistake": "Several article details overreach or are likely inaccurate from the data given, especially around undelete/history and the exact refund flows, so I would not publish it without checking product facts.",
+  "what_would_make_it_a_10": "Be more disciplined about only claiming steps and product behaviour we know, keep the plan tighter around highest-impact changes first, and make the forecast depend less on extra work not clearly in scope."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels more like something I could act on tomorrow: the priorities are sharper, the forecast is better grounded, and the copy fits our voice. Output 2 is useful, but I would need to fact-check and trim more before I trusted it."
+}

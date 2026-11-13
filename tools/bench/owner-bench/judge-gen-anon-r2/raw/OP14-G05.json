@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads like us, uses the actual hiring data to drive the design, and directly fixes the three real problems: writing as the main signal, the overnight coverage gap, and the unclear weekend rotation.",
+  "biggest_mistake": "It changes the role in the brief from recruitment marketing specialist to customer support specialist and adds some scheduling detail that may be more specific than we want to publish.",
+  "what_would_make_it_a_10": "Keep this structure and approach, but align the role title exactly to the brief and tighten any assumptions we would want to verify before publishing."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly spots the main signals in the data and turns them into a simpler application process with writing weighted highest.",
+  "biggest_mistake": "It introduces extra video interviews, weakens the scorecard by making the application reply only part of a broad 'writing' bucket, and misses the stronger move of using a realistic application exercise tied to the specific typo-and-resend scenario.",
+  "what_would_make_it_a_10": "Make the application itself the core filter, use one realistic customer-reply task and a handoff task, keep interview weight low, and make the post even more candid about the exact hours and weekend rotation."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd rather use because it feels built from our data instead of from a standard hiring template. It solves the operational problem and sounds like something we would actually publish."
+}

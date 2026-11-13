@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The executive summary table instantly isolates the exact hemorrhage: PMax ex-brand is losing $36.7k a month. The copy, title structure, and persona hooks (Claire and Nina) match our voice and product rules perfectly.",
+  "biggest_mistake": "Could explicitly remind the team to exclude bag product IDs from the PMax feed asset group to ensure standard shopping doesn't compete with PMax for bags.",
+  "what_would_make_it_a_10": "Already a 10 for an operational plan; adding a note on excluding bag SKUs from PMax would make it flawless."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent tactical discipline: explicitly details removing bags from PMax listing groups, managing PMax learning periods with single edits, and staging title rollouts across half the SKU catalog.",
+  "biggest_mistake": "The proposed product title format is cluttered with hyphens, feels mechanical, and misses the clean, brand-forward title conventions we use.",
+  "what_would_make_it_a_10": "Refine the title template to look less like keyword stuffing and match Output 1's clean, punchy profit table format."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both specialists nailed the numbers, the break-even math, and the $240k budget split down to the dollar, but Output 1 is much cleaner to read and writes product titles and ad copy that sound like Rothy's."
+}

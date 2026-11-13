@@ -35,7 +35,8 @@ const DEFAULT_PATHS = ["marketplace/packs", "marketplace/knowledge", "catalogue-
 
 const RULE_BRANDS = ["Bombay Shaving Company", "Bombas", "Mokobara", "Olipop", "The Whole Truth", "Bellroy", "Minimalist",
   "Blue Tokai", "Brooklinen", "Plum", "Wakefit", "Snitch", "Plausible", "Cal.com", "Supabase", "Chargebee", "Basecamp",
-  "37signals", "Ahrefs", "Raycast", "Buffer", "Headspace", "Todoist"];
+  "37signals", "Ahrefs", "Raycast", "Buffer", "Headspace", "Todoist",
+  "SUGAR Cosmetics", "Rothy's", "Lounge Underwear", "Babbel", "Splitwise", "Podia"];
 // Brand names that are also everyday words: match only as written (capitalised).
 const CASE_SENSITIVE_BRANDS = new Set(["Plum", "Buffer", "Minimalist", "Plausible", "Snitch", "Headspace", "Basecamp", "The Whole Truth"]);
 

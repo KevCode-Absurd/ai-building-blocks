@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ties every concept to a data signal (quiet wheels, women solo, belt-skip), keeps claims inside the approved specs, and writes primary text in the brand voice with review-language hooks.",
+  "biggest_mistake": "A few execution lines drift from the approved claims - 'Soft morning light' scenes fine, but 'Warranty and returns are on our site' is borderline and the ₹292-per-trip static is a weaker bet than the proof carousel; also the 5 am Reel needs a stronger sound-off fallback.",
+  "what_would_make_it_a_10": "Explicit per-concept test metric and budget already present; add one or two bolder format risks (UGC creator testimonial, comparison of colours) and a tighter scratch-objection concept that leads lighter colours by default across all eight."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp, disciplined structure with spec grid, exact spend maths for the test budget, and honest handling of scuffs and front-pocket gaps up front.",
+  "biggest_mistake": "Format risks are modest - several concepts (spec demo, price static, gift static) are still close to the flat product-on-colour family, and the 'four specs' reel is more comparison-proof than a distinct angle, so range feels narrower than promised.",
+  "what_would_make_it_a_10": "More genuinely different formats (sound-led Reel given its full due, a creator selfie video, a real customer testimonial) and primary text that sounds less like a spec sheet and more like the brand's calm voice."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 brings eight more genuinely distinct angles with brand-voice copy and a cleaner test variable per concept; Output 2 is tight and disciplined but feels more like a well-organised spec sheet and slightly safer in format."
+}

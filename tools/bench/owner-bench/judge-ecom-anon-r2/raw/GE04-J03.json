@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very structured format with clear build rules, constraints, and crisp, on-brand primary text.",
+  "biggest_mistake": "Left the solo women lifting concept out of the top three recommendations, missing a major opportunity to prioritise the cheapest audience.",
+  "what_would_make_it_a_10": "Swapping the gate-check concept for the solo women lifting concept in the top three to better align with the acquisition cost data."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Perfectly deduced the exact top three concepts to test, and provided excellent owner-centric reasoning on why small gains in the core audience matter.",
+  "biggest_mistake": "The price breakdown in concept six feels a bit too rational and wordy for a design-first brand, even if the strategic angle is valid.",
+  "what_would_make_it_a_10": "Slightly tightening the copy on the retargeting concepts to match the extremely punchy, understated voice of the first few."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both followed the brief brilliantly, but candidate two completely nailed the exact top three concepts I wanted to test and explained the business impact of the numbers perfectly."
+}

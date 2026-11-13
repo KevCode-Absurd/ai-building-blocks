@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks one plan, targets the 8+ churn leak, shows the downside case and the 1-in-3 Team downgrade break-even, and the customer email is genuinely in our voice with the 'here's exactly what you'd pay' line.",
+  "biggest_mistake": "Some numbers drift from my data (8+ Essentials at $249k vs my ~$257k; it folds the yearly discount into an average price per channel without showing the work), and it skips the yearly-by-default push as a lever even though it flags the 0.9% vs 4.0% churn on yearly payers.",
+  "what_would_make_it_a_10": "Tie the revenue math explicitly to my figures, show churn-reduction value month by month inside the two-quarter window, and make the cheap yearly-default test a named second action rather than a footnote."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Owner-grade structure: bad news first, named assumptions, a 1,000-customer cohort table with three churn scenarios, the Team-downgrade ratio math, a clear go/stop rule and an invite email that reads like us with the exact-price line and the 'inviting in two groups' honesty.",
+  "biggest_mistake": "The yearly payback argument ('pays back only around month 11') is a bit hand-wavy and contradicts its own note that yearly payers churn at 0.9%; the $23,900 lost-revenue figure is slightly off my ~$24,700, and the 1-user limit makes it less attractive to the freelancers it targets.",
+  "what_would_make_it_a_10": "Fix the yearly math to show the real payback (holding a yearly payer vs monthly), state the flat price more generously to freelancers (2 users), and reconcile the lost-revenue figure to my table."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both land the right recommendation and speak in our voice, but Output 2 reads like it was written by someone spending my money: scenarios, a break-even ratio on Team downgrades and a stop rule I can actually enforce."
+}

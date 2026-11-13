@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A single dated plan inside ₹1.2 crore. It rushes the top 5 shades, re-cartons on Monday, refuses to order slow lines and gives an honest restock message in our voice that Tanvi would accept.",
+  "biggest_mistake": "It counts the 3,900 held top-5 units as already inside the 9,100, so re-cartoning adds nothing to stock and a gap is assumed. The cap of 4 per shade cuts across artists like Farah, and the ₹699 palette cut is steep.",
+  "what_would_make_it_a_10": "Settle whether the held stock adds to the 9,100, which may close the 1–8 December gap. Exempt pros from the cap. Explain how the 4 foundation shades are chosen when there is no shade-level data."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The maths is tight and shown: 76% of spend on hero shades, rush sizing that includes sale week at 2.5x, reorder points per line, and a Monday check sheet with triggers the ops lead can run.",
+  "biggest_mistake": "It makes the same held-stock assumption, so it also plans a gap. Labelling the pro pre-book a 'bolder move' makes it read as an option when I asked for one plan. The back-order message is clunky ('That's a real date').",
+  "what_would_make_it_a_10": "Fold the pro pre-book into the main plan. Tighten the customer copy into our playful voice. Recheck whether re-cartoning lifts top-5 stock to cover until the rush order lands."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are sound and inside budget. Output 1 is a little easier for my ops lead to follow and sounds more like us with customers, while Output 2 has slightly sharper maths."
+}

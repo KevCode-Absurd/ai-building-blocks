@@ -10,6 +10,8 @@ Start from the plain draft's correct useful content. Keep a private coverage led
 - Follow the first-screen rule in WORK-METHOD.md: the first screen holds the decision, the numbers the owner asked for by name, every piece of bad news and the first move this week.
 - Over 1,200 words: open with a one-screen summary (5-7 bullets or a two-column table).
 - Meet the reader's actual objection head-on before adding guards.
+- Every explicit ask in the brief gets a visible answer where the reader expects it; never drop one or fold it into another section.
+- Order follows the strongest signal: the move with the most money per unit of effort comes first, unless a dependency blocks it. A ranked table follows its own stated rule.
 
 ## 2. Reading grade (prose only, `readability.cjs`)
 - Consumers: 8 or below (aim 6-8).
@@ -40,7 +42,8 @@ Start from the plain draft's correct useful content. Keep a private coverage led
 
 ## 7. Cut or move
 - Method talk: how the work was made, files, "checked live", inline sign-off stamps, review tags, notes to the writer.
-- Open items: decide each one with the assumption a top practitioner would pick. Where it changes what to do, state it in one assumption line next to the part it affects (at most three in the piece). No confirm lists, open questions or requests for the owner's yes.
+- Sections the owner did not ask for: test plans, budgets, measurement sections, fallbacks, contract terms or a bolder move in a copy job. At most one line on what to watch.
+- Open items: decide each one the way a strong expert would, and deliver every piece the owner asked for; never drop or water one down to stay safe. Where a missing fact changes what to do, state it in one assumption line next to the part it affects (at most three in the piece). No confirm lists, open questions or requests for the owner's yes.
 - Repeated blocks (the same disclaimer in every variant): say shared lines once. Where each piece runs alone and the law or platform needs a disclosure in it, keep a short one fitted to that piece.
 - Build specs, tokens, rosters and sources go after the content.
 

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds the three big money signals: relaunch the paused creator winner, cut the Starter Kit COD trap, and split Women Body Razor to 25-34 instead of killing it.",
+  "biggest_mistake": "The daily rule to pause new ads after only ₹800 with no purchase is a bit too tight for this account and could kill ads before they get a fair read.",
+  "what_would_make_it_a_10": "Tighten the action thresholds slightly, make the Shopify-adjusted view the main scorecard throughout, and add the Starter Kit comeback condition as prepaid/confirmed-COD or blocked high-RTO pincodes."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It also catches the main account truths: the paused Dad’s razor ad matters, Starter Kit is a COD/RTO problem, and Women 25-34 is the good pocket.",
+  "biggest_mistake": "It says no ad set earns a raise but then raises the unproven UGC test materially, invents dates, and uses a made-up 86% attribution assumption for prospecting without enough support.",
+  "what_would_make_it_a_10": "Remove the invented date and attribution haircut, fix the contradictory calls, reduce the UGC budget, and put more conditional money behind ASC once the winning creator ad is back."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would hand to the team on Monday: the money moves are sharper, the budget adds up, and the reasons are in rupees. Output 2 has good analysis, but it is more cautious, has internal contradictions, and would need cleanup before I trusted it."
+}

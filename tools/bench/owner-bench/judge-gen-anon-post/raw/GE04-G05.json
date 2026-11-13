@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Provides a very detailed, realistic breakdown of the reviewer hours and grading logistics to ensure we don't drown in applications.",
+  "biggest_mistake": "Assigned 45% of the scorecard weight to the interview, despite the data showing interview impression only had a 0.11 correlation with first-year success.",
+  "what_would_make_it_a_10": "Align the scorecard weights more strictly with the correlation data and actually write the mock customer email for the application instead of just describing it."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Nailed the company voice flawlessly and used the correlation data to smartly restructure the hiring process, including writing the actual mock ticket for the application.",
+  "biggest_mistake": "No significant mistakes; it perfectly followed all instructions and constraints.",
+  "what_would_make_it_a_10": "It is already a 10. The inclusion of the real-feeling HEY ticket and the clever weighting of the scorecard based on our exact data delighted me."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 perfectly captured our brand voice, wrote the actual mock ticket for the application, and correctly weighted the scorecard heavily toward writing based on our correlation data."
+}

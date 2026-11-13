@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Extracted brilliant, platform-specific insights from the raw data, such as deriving a 4-second watch time kill rule directly from the organic hits and misses.",
+  "biggest_mistake": "None.",
+  "what_would_make_it_a_10": "It is a 10. The actionable precision and inclusion of a geo-holdout test make it exceptional."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very solid structural breakdown of the 30-day timeline and accurate translation of the 90-day break-even unit economics into a campaign target.",
+  "biggest_mistake": "Relies on generic kill rules (like dropping the bottom third of 2-second view rates) instead of leveraging the specific watch time data provided in the brief.",
+  "what_would_make_it_a_10": "Tying the creative kill rules and structural choices more intimately to the specific organic data points provided, rather than defaulting to generic media buying best practices."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both candidates nailed the unit economics and the core creative angles, but Output 1 squeezed far more insight out of the organic data to create bespoke rules and testing frameworks tailored exactly to our business."
+}

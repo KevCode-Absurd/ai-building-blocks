@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets to the core issue fast: PMax is being flattered by brand, non-brand PMax is below break-even, and the feed disapproval on pointed flats is the first thing to fix.",
+  "biggest_mistake": "The reallocation and forecast lean optimistic in places, especially the very strong brand-search uplift and some assumed ROAS gains from the new mix without enough caution on how fast those gains will show up.",
+  "what_would_make_it_a_10": "Tighten the forecast assumptions, make the budget deployment rules a bit more explicit for weeks 2 to 4, and ground the expected results in a clearer base/cautious scenario tied to the exact campaigns being scaled."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 6,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It thinks like an owner on profit, not vanity ROAS, and it introduces useful control rules and a disciplined reserve approach instead of spending the full budget just because it is available.",
+  "biggest_mistake": "It overreaches operationally and technically in ways that make it less usable right now, including claims about PMax negatives/products-only behavior and a plan that effectively assumes large under-spend against a brief that asked how to split the full $240,000 next month.",
+  "what_would_make_it_a_10": "Keep the profit-first framing, but simplify it into a cleaner 30-day plan with fully reliable Google Ads mechanics, a crisper exact budget allocation, and fewer side experiments competing with the urgent feed and spend fixes."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is closer to something I would actually send to the team tomorrow. It nails the main commercial story and puts the feed fix first, while Output 2 has good owner thinking but too much of it depends on tactics and assumptions I would want cleaned up before acting."
+}

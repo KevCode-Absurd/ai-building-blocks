@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every email pushes toward the two habits that predict retention (recurring task, second device). It uses only allowed triggers, skips users who already did the action, and branches the second-device email by platform with a note on why mobile users are not told to sit at a computer.",
+  "biggest_mistake": "Email 5 repeats the recurring-task goal of email 2, and email 3's trigger logic (1 day after recurring task, else day 4) is a bit fiddly. The total length also runs past 1,200 words.",
+  "what_would_make_it_a_10": "Give email 5 a distinct angle instead of repeating the recurring-task ask, simplify the email 3 send rule, and trim to the word limit."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Each email has a trigger, goal and 'worked if' measure tied to a baseline, plus a holdout and an unsubscribe guardrail. Skip rules and platform branching are clean and use only triggers the tool supports.",
+  "biggest_mistake": "Email 5 spends a slot on a Pro upsell about reminders, which is off the two retention habits and keeps the kind of email that was already losing subscribers. Email 4 is also not tied to the habits.",
+  "what_would_make_it_a_10": "Use the fifth email to reinforce a missing habit (recurring task or second device) for users who haven't done it, rather than a Pro pitch, and cut to 1,200 words."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 puts all five emails behind the two habits that drive retention and drops Pro from onboarding. Output 2 has crisper per-email measures, but it spends a slot on a Pro upsell."
+}

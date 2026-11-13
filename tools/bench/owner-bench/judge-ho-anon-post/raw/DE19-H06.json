@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Straight answer on the 20% cut with the lifetime maths, plus concrete fixes (90-day window, faster payouts) and a bolder 'Who sent you?' idea.",
+  "biggest_mistake": "Some projections are shaky and under-justified (window cost, break-even range), and it admits the plan costs more without fully squaring that with finance.",
+  "what_would_make_it_a_10": "Tighter, better-sourced cost projections and a cleaner reconciliation with the finance lead's $210,000 goal."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Clear, well-structured plan that answers the 20% question with multiple angles (break-even, attrition, rival comparison, promise) and gives a costed, owner-ready first 30 days.",
+  "biggest_mistake": "Partner tier raises to 40% for 12 months — a real cost and complexity that could read as over-generous, though it's costed and justified against the rival.",
+  "what_would_make_it_a_10": "A touch more on how the 40% Partner bonus is risk-managed alongside the 90-day window so total commission stays controlled."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 2 is cleaner, better costed, and reads as the more finished, ready-to-send plan, with no loose projections."
+}

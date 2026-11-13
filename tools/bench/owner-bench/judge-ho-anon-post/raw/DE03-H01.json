@@ -1,0 +1,35 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "biggest_strength": "Nails the core insight — top-5 matte shades sell out during the season, rush + re-carton + honest back-order message — and delivers a dated, in-budget plan with an owner-voice customer line.",
+  "biggest_mistake": "The 6-day gap is stated vaguely ('out from about 1 to 8 December') and the back-order/waitlist mechanic isn't fully tied to the numbers; the 3,200-unit demand waiting is mentioned but not built into a single ship-date commitment.",
+  "what_would_make_it_a_10": "Tighter gap accounting: exact units on back-order, the ship-by date, and the sale-moment cover confirmed with one running stock table the ops lead can update weekly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "biggest_strength": "Sharpest arithmetic and decision structure: 76% to hero shades, exact rush/standard unit counts, back-order trigger at 300 units, and a concrete palette liquidation ladder with sell-through targets.",
+  "biggest_mistake": "The customer-facing voice is thinner — the back-order line is clunky ('That's a real date') and there's no clean restock message for Tanvi; the pro pre-book idea is flagged as risky but left half-decided.",
+  "what_would_make_it_a_10": "A polished, on-brand honest restock line for Tanvi and a firmer call on the pro pre-book (yes/no with cap), plus one consolidated dated action list on top of the check sheet."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are usable Monday and both catch the trap, but Output 2 gives me the sharper, more defensible numbers and a tighter ordering decision I can hand straight to ops; I'd only need to fix its customer wording. Output 1 is nearly as good and has the better customer message, so it's close."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the pincode table into money and action: tier 3 is 49% of RTO parcels, and the ₹30 prepaid offer is justified only where RTO beats the 17% break-even, so tier 2 and tier 3 get the nudge and metros don't.",
+  "biggest_mistake": "It assumes the checkout opt-in already covers marketing, so the ₹30 offer and both cart templates could be blocked or flagged on submission with no fallback plan.",
+  "what_would_make_it_a_10": "Add a one-line opt-in check with a fallback (send the prepaid nudge as a free reply inside the 24-hour window after Confirm) and soften the 48-hour tier 3 auto-cancel with a single automated call."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches that the checkout opt-in may not cover marketing and cleverly sends the UPI nudge as a free chat inside the 24-hour window after the customer taps Confirm, avoiding a Marketing template.",
+  "biggest_mistake": "It puts a manual confirmation call on tier 2 and tier 3 orders when four agents already take 52 minutes to first reply, and it drops the prepaid incentive the owner asked for in the highest-RTO band.",
+  "what_would_make_it_a_10": "Keep the opt-in catch but replace the agent call with an automated one and add the ₹30 tier 2/tier 3 prepaid offer with its 17% break-even shown, so the escalated band actually gets a stronger nudge."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 does what I asked with my own numbers — tier 3 targeted hardest, a prepaid offer priced against the ₹180 RTO, categories right, and a this-week first step — while Output 2 is cleaner to read but sends my agents to make calls they have no time for and skips the prepaid incentive on the worst band."
+}

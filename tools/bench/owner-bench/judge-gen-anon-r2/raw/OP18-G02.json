@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks the right segment, shows the seat math clearly, and builds the page around the real recruiting pain: ending email tennis with round robin and routing brought up early.",
+  "biggest_mistake": "It uses some self-serve 'Get started' CTAs on a team recruiting page and includes a few claims/placeholders that need checking, like text reminders, PTO handling, integrations, and customer quotes.",
+  "what_would_make_it_a_10": "Use 'Book a demo' consistently for the team path, tighten any unsupported product claims, keep security proof closer to the first demo CTA, and replace all bracketed proof with real approved assets."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very disciplined: the segment math is right, the page order matches the buyer journey, the claims are careful, and the voice feels practical and credible for recruiting teams.",
+  "biggest_mistake": "The assumption that the homepage hero stays as it is is not ideal, because the brief asked for a hero version aimed at this segment and the current generic hero is part of the problem.",
+  "what_would_make_it_a_10": "Remove or revise the homepage assumption, add a little more concrete proof near the first CTA, and make the final page feel slightly more like finished marketing copy rather than an annotated wireframe."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "I would rather use Output 2 because it is more careful with claims and more consistent with the team demo path. Output 1 has excellent thinking too, but it needs a bit more cleanup before I would put it in front of recruiting buyers."
+}

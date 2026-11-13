@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is genuinely usable: a ranked table tied to raw numbers, a real Monday-to-Friday task list for the writer, an explicit stop list, and sensible additions (the docs trial box, the DPO page, the change/rollback rules) that go beyond the obvious.",
+  "biggest_mistake": "The economics are under-supported in a few places (e.g. the 46-trials-per-page line mixes trials-per-page with conversion rates, and the '18 to 46' gain for /vs-google-analytics assumes a big CTR jump just from a rewrite) and the Month 3 agency page is a soft bet with almost no search demand that still eats a writer slot.",
+  "what_would_make_it_a_10": "Show the arithmetic for every projection step by step, and be honest that some gains are uncertain until ranked; drop or clearly mark the agency page as an experiment outside the 12 slots."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean per-group benchmarks and a tidy, well-structured plan with a solid Week 1 and a useful Month 2 GA4-migration page (Maya's real blocker) plus a pragmatic 'pick competitors by Scattershot Console impressions' rule in Month 3.",
+  "biggest_mistake": "It claims a 'full ceiling' of about 175 extra trials (67 paid) a month, which is far more than the data supports at 38% conversion and would mislead an owner's forecast; several numbers are internally unverified (+3,190 clicks, +3 trials from the cookie post).",
+  "what_would_make_it_a_10": "Replace the headline ceiling with a conservative base case and a range, show the math per row, and keep the emphasis on trials-by-page reporting that Output 1 also gets right."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and on-brief; I'd pick Output 1 because its first week is more concrete for a writer, it names the docs trial box and the fair-dated comparison rule, and it avoids the inflated 175-trials claim that makes Output 2 harder to trust as a forecast."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Disciplined and honest: the seat math is shown, the assumptions are stated up front (no PTO or hiring-tool claims beyond what is known), and the test has a single clean metric (demo requests per visitor) with a worked sample-size stop rule. Copy is ready to paste.",
+  "biggest_mistake": "Section 3 says 'If PTO is on someone's calendar, they're skipped' right after the assumptions say it claims no PTO feature beyond calendar availability. That is a small inconsistency. Hero A's 71% proof line is also a first-booking-within-7-days figure from signups, which could be read as a claim about teams, not recruiting visitors. It stays at the 1,000-word limit, though the total looks close to or slightly over it.",
+  "what_would_make_it_a_10": "Use Priya's own phrase 'email tennis' in the hero, make the security proof visible near the first demo button instead of only in section 6, and make the PTO wording consistent with the stated assumption."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero uses Priya's own words ('No email tennis') and names round robin that skips anyone who is off. The bracketed placeholders for unknown facts (security, logos, quote) avoid inventing proof, and the metric ties to real recruiting use.",
+  "biggest_mistake": "The metric 'qualified team starts' mixes demo bookings with signups plus a first booking within 7 days. That is a blended, harder-to-measure number rather than one clean metric. The stop rule is vague ('at least two full weeks', '95% confidence') with no sample size. Mixing 'Get started' and 'Book a demo' on a team page muddies the single action. Section 2 states 'three or four emails' and '60 interviews a week' as if they were facts, and 'Candidates can reschedule from the same link' and 'email or text reminders' are unsupported feature claims. It also has nine sections, which adds length.",
+  "what_would_make_it_a_10": "Use one deciding metric with a sample-size rule, keep the demo button consistent on a team page, check or flag the text-reminder and reschedule claims, and put a security cue near the hero button."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick recruiting with the right math and both move routing and security up. Version 1 is tighter and more rigorous: one clean metric, a worked sample size, and consistent demo buttons. Version 2 has the better hero voice ('No email tennis'), but its blended metric and unverified feature claims make it a bit less ready."
+}

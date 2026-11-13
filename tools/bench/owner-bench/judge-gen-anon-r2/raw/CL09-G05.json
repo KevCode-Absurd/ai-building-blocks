@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the salary first and states the hours and weekend rotation plainly. It also does the reviewer-hours maths (70 hours against 160) with a sensible second-read step, so I can trust the application plan.",
+  "biggest_mistake": "The longer written exercise and the video-call questions are only mentioned, never written. The hiring team would still have to build them before using the scorecard.",
+  "what_would_make_it_a_10": "Write out the shortlist exercise and the call questions. Make the application reply test a fixable problem as well as tone, so it can feed the problem-solving score too."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very concrete. The Priya reply hides a fixable typo, so one short task tests both writing and problem-solving. It also gives a local-hours table for each city, a fully written shortlist exercise, fixed call questions, and a scorecard tied to each exercise.",
+  "biggest_mistake": "The salary sits halfway down the post instead of in the first screen. The 'summer' brackets in the hours table could confuse people, because southern and northern summers fall at different times of year.",
+  "what_would_make_it_a_10": "Move the $82,000 to the top. Label the daylight-saving columns by month instead of 'summer'. Add a decision rule (minimum total score, no line below 3)."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both posts sound like us and are built on our data. The second one gives me more I can use tomorrow: a real application reply that tests problem-solving, the shortlist exercise and the call questions. I'd just move the salary to the top."
+}

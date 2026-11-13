@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "One Monday PO table (rush, standard, re-carton) with dates and costs that add up to ₹1.187 crore, plus a dated action list and an honest gap plan: ad pause, per-shade cap, pro pre-order, real back date, no fake timers.",
+  "biggest_mistake": "The run-out dates wobble: 30 Nov in the summary, 23 Nov without re-carton, and the 'sellable' count is muddled. The glitter plan is also thinner, with a price cut to ₹699 and a clearance to a buyer, but no trigger if sales miss.",
+  "what_would_make_it_a_10": "State plainly whether held stock is inside the 9,100 and show one clean top-5 runway. Add a sales trigger for the palette clearance, a shade-level split, and a bit more trimming to stay under 900 words."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The maths is tight and shown (back-orders plus sale week at 2.5x plus buffer = 24,000 rush). The glitter plan is pragmatic: a Party pair that spares the hero shades, a marketplace floor price and a trigger.",
+  "biggest_mistake": "The standard POs are placed on Fri 20 Nov for no stated reason, which splits the Monday action and delays arrival, though the plan still reaches 1 Jan. It also leans on 'reorder point' language and adds a 'bolder move' that reads like an extra option.",
+  "what_would_make_it_a_10": "Place every PO on Monday, or explain the delay. Add a short Tanvi-voice back-in-stock message and a rule to pause ads and cap orders on the top 5 during the gap. Cut the jargon and keep it under 900 words."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both rush the top 5, re-carton first, skip the slow lines and stay inside ₹1.2 crore. Output 1 is easier to hand to my ops lead on Monday, with all POs on one day, a dated action list and a clear plan to protect Tanvi and Farah. Output 2 has better glitter clearance logic but an unexplained Friday PO date."
+}

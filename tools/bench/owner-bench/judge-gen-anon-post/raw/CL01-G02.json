@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The page is tightly built around recruiting. It shows the seat math with a sharp comparison (733 vs 12 paid seats per 1,000 signups), moves routing up and security to sit right before a 4-field demo form, and includes a real sample-size plan for the test.",
+  "biggest_mistake": "The hero says 'back and forth' instead of Priya's own 'email tennis', and the PTO promise only shows up in variant B. The sample-size math uses the 3.1% homepage signup rate as the baseline for a different metric.",
+  "what_would_make_it_a_10": "Put Priya's 'email tennis' phrase and the PTO-aware round robin into the hero. Vary the buttons in a few middle sections so it doesn't read as eight identical 'Book a demo' asks. Base the sample size on a recruiting-page baseline."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero is built on Priya's 'email tennis' with round robin that skips people who are off. The bracket placeholders handle unverified facts honestly, and it explains clearly why the two heroes test different ideas.",
+  "biggest_mistake": "It mixes 'Get started' buttons into a team page where the brief says teams get 'Book a demo'. Security sits three sections away from the demo form. The '3-4 emails per interview' figure is invented and not from our data.",
+  "what_would_make_it_a_10": "Use 'Book a demo' throughout and move the security section next to the demo form. Cut the invented email count. Size the test duration instead of just saying 'two weeks'."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick recruiting with the right math. The first puts the security proof right before a short demo form and gives me a test plan I can actually run. The second has the better hero wording but slips on button rules and section order."
+}

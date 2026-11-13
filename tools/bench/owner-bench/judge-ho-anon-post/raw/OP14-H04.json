@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the core business truth fast: the pause is the main win, one offer for everyone wastes money, and the flow should be reason-matched with cancel always visible.",
+  "biggest_mistake": "A few revenue assumptions are a bit shaky or under-explained, especially the 12-month value math and the longer-term revenue framing.",
+  "what_would_make_it_a_10": "Tighten the financial model so every number is fully traceable by reason and plan, and add a very explicit build order checklist for the sprint."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is easy to read and gives a buildable one-screen flow with solid copy and a clear structure for the team.",
+  "biggest_mistake": "It keeps a 50% discount for people switching apps without evidence, and some numbers and assumptions are off or too loose for me to trust the business case.",
+  "what_would_make_it_a_10": "Drop unsupported discounting, align every offer tightly to the data we actually have, and make the retention and revenue math fully reliable."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like someone understood my business, my constraints, and where the real value is. Output 2 is serviceable, but it invents a discount strategy and I would not want to act on its numbers without reworking them."
+}

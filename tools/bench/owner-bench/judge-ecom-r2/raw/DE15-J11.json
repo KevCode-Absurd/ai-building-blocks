@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sizes the in-app checkout bug at about ₹34 lakh gross margin a month, puts it first as a fix not a test, and backs it with a four-item this-week ship list and an 11-week run schedule.",
+  "biggest_mistake": "Test 5 changes the hero image and the reviews position in one go, so if it wins the team cannot tell which change earned the lift.",
+  "what_would_make_it_a_10": "Split test 5 into separate changes (or ship the review summary outright) and show the sample-size working behind each detectable effect."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It shows the sample-size formula and the traffic behind every detectable lift, and is blunt that a 14-day run's order guardrail can only catch drops of about 14%.",
+  "biggest_mistake": "Its ship-now list is only two items, and the reviews summary the owner wanted shipped is pushed into a week-10 test, so three weeks of easy gains wait on experiments.",
+  "what_would_make_it_a_10": "Add the review summary and the tracking spec to the ship-now list, and lead with the bug's full ceiling value alongside the honest range."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 reads like it was written for my store: it sizes the broken in-app checkout at the ₹34 lakh I calculated, ships the trial line, the star rating and the tracking this week, and lays out a run schedule I can hand over. Output 2's maths is cleverer and better shown, but its ship list is thin and it makes me wait ten weeks for a review block I could have shipped on Monday."
+}

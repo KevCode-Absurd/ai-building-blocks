@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Deep, data-led strategic thinking: correctly spots women 25-40 as the efficient audience and quiet wheels as the unused hook, then builds a coherent test plan around them.",
+  "biggest_mistake": "One factual slip: says women 25-40 get 18% of spend but 26% of purchases (104 of 396). Check: 104/396 = 26.3%, but men have 260/420k = ₹1,615, women 104/110k = ₹1,058; total purchases 396. 104/396 = 26.3% - correct. No mistake there.",
+  "what_would_make_it_a_10": "Tighter primary text (some concepts repeat 'fits most Indian domestic airline cabin limits' too often); add a concept that explicitly handles the scratch objection or turns a scuffed shell into a story; make the first-three pick even more explicit about the test variable for each."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clear, structured and production-ready: each concept has format specs, headlines with character counts, and a single test variable. The 'build rules' section is practical.",
+  "biggest_mistake": "The first-three pick puts 'No drama at the gate' (concept 2) ahead of 'Lift it yourself' (concept 5). The data says women 25-40 are cheaper and more responsive, and the brief explicitly asks to prioritize them. Also says women get three concepts but only two (4 and 5) are clearly for women; concept 6 (couples) is mixed.",
+  "what_would_make_it_a_10": "Swap the third priority to a women-focused concept (5) to match the data, and make the women's audience share of concepts more explicit. Add a concept that directly addresses the scratch objection."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like a strategist who has internalised the data: it leads with the efficiency of women 25-40, makes quiet wheels a centerpiece, and the first-three pick is exactly what I would test first. Output 2 is also strong and more production-ready, but its first-three choice underweights the cheapest audience and it feels slightly more formulaic."
+}

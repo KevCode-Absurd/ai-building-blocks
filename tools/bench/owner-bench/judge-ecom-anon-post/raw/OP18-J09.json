@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds the real three leaks quickly: Meta, switched-off lifecycle revenue, and linen returns, then turns them into ranked actions with owners, thresholds, and a weekly operating scorecard.",
+  "biggest_mistake": "It is a little over-precise in places, with assumptions presented almost like facts, and the dated Black Friday reference could be wrong or distracting.",
+  "what_would_make_it_a_10": "Tighten the language, remove the calendar-specific references, make the linen fix feel a bit more urgent in the ranking, and label the more speculative contribution math more clearly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clean, owner-friendly, and very easy to act on. The diagnosis is right and the tone fits the brand better than a hard discount-led growth plan.",
+  "biggest_mistake": "It overcorrects on linen by saying to stop promoting it anywhere, not just pull it from Meta prospecting until the shrink issue is understood, which could unnecessarily hurt revenue.",
+  "what_would_make_it_a_10": "Add more quantified impact by move, sharper weekly thresholds, first-week steps for every owner, and a clearer split between cutting bad Meta spend and rebuilding Meta once linen and tracking are fixed."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather run the business from Output 1 because it gives me the numbers, owners, stop rules, and scorecard I asked for. Output 2 reads better, but Output 1 is closer to an operating plan I could use on Monday."
+}

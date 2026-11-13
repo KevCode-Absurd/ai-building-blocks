@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Exactly follows the pilot: Controllers only, pricing-change trigger, no links in any email, and a clean load/leave-out table with an honest per-100 projection and visible working.",
+  "biggest_mistake": "The 10% ceiling (7.9% x 1.25) is an invented multiplier, and the 8% headline sits above what the pilot supports. Step 1 also carries the proof, but it is a plain-text sentence, so that is fine. The Step 4 'nine days and three spreadsheets' echo is slightly gimmicky.",
+  "what_would_make_it_a_10": "Anchor the expectation at the pilot-backed 7% with no invented uplift. Add a short line on how the rep writes the {{change}} field. Make each ask more concrete, and keep the step 3 ask on the question about who else has a say."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Conservative, honest expectation (7%, floor 6.8%, no multiplying untested gains) and a thoughtful exclusion list that includes the pilot Controllers who already got the old sequence.",
+  "biggest_mistake": "Emails break the one-question, one-ask rule: step 1 asks how many days the close takes and then offers a 'reply yes' one-page summary. Step 2 has a question plus a 'reply steps' ask, and Step 3 and Step 4 do the same. It also promises a one-page summary and 'three steps' that do not exist. 'Controllers tell me' implies conversations that did not happen. The '4,100 stay out' figure is wrong, and the '130 replies, 65 positive, 55 meetings' arithmetic does not reconcile.",
+  "what_would_make_it_a_10": "Cut every email to one question and one ask. Remove promises of assets that do not exist. Fix the exclusion count and the rollout math, and avoid implying prior conversations."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 follows the one-question, one-ask rule and promises nothing we can't deliver. Output 2 invents a summary and 'three steps' we don't have, stacks two asks per email, and its numbers don't add up. I would send Output 1 after a small tweak to the 10% ceiling."
+}

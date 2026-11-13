@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Pincode-segmented flows with a break-even rupee rule (₹30 offer only where RTO is above 17%) and a hold-or-cancel policy that acts on the Tier 3 RTO money.",
+  "biggest_mistake": "A few utility bodies drift close to sales language (e.g. 'with {{3}}' taglines and the cancelled order 'Order again' button) that risk a Meta category reclassification.",
+  "what_would_make_it_a_10": "Keep every Utility body purely transactional, add an explicit after-hours phone/bot flow with hours stated, and tighten the voice so more Hinglish from Vikram's own phrases is used."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, well-sized template set with a sensible quiet-hours rule and a smart shift suggestion for the 8pm-midnight chat wave.",
+  "biggest_mistake": "Leaves the cheap Tier 3 RTO lever half-pulled: the 24-hour 'call then hold' adds agent load on a team already at 52 minutes first reply, and the prepaid switch is only sold as ease with no offer for high-risk pincodes.",
+  "what_would_make_it_a_10": "Tie the flows explicitly to RTO rupees by pincode group and avoid the phone-call step in Tier 3 where agents cannot absorb it."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 acts on the pincode RTO cost with a break-even rule and a no-calls policy, which is exactly the leverage the brief's data points to; Output 2 is tidy and usable but leaves the Tier 3 money on the table and adds work the team cannot do."
+}

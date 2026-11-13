@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole series around the two retention signals that matter most: recurring tasks and a second device, with smart platform-specific branching.",
+  "biggest_mistake": "It is a little overbuilt and likely over the 1,200-word limit, and the day-14 measurement for both habits is slightly less aligned to the week-one retention signal.",
+  "what_would_make_it_a_10": "Tighten the copy to fit the word limit and make the primary success metric both habits by day 7, with day-30 retention as the final readout."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The first four emails are calm, clear, data-led, and use the allowed triggers and platform split well.",
+  "biggest_mistake": "It keeps a Pro email in the onboarding series instead of using the fifth slot to reinforce the recurring-task or second-device habit.",
+  "what_would_make_it_a_10": "Replace the Pro email with another habit-building email for users missing recurring tasks or a second device, and keep monetization out of this onboarding flow."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team tomorrow: it drops the weak current emails, focuses every message on the retention habits, and gives finished copy plus measurement. Output 2 is strong, but the Pro email spends the fifth slot on the wrong goal for this brief."
+}

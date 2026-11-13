@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows the strongest business signals: much more sleep content, narrator audio as the core format, evening posting, and a clear stop list for quote cards, app news, focus/productivity and morning posts.",
+  "biggest_mistake": "It over-applies review to all sleep content, so week 1 becomes all kindness and misses the chance to post non-condition wind-down content right away. It also gets the earliest review timing a bit too conservative.",
+  "what_would_make_it_a_10": "Use week 1 for sleep/wind-down posts that avoid naming conditions, keep narrator clips central, and tighten the review plan so only posts that mention conditions go through clinical/legal review."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The drafts feel warm, simple and on-brand, and it uses customer language well, especially the email replay, pickup and day-three drop-off moments.",
+  "biggest_mistake": "The plan does not push sleep hard enough given the install data, keeps a weekly stress-at-work slot, and has a review/calendar conflict around week 2 Monday if those posts need approval.",
+  "what_would_make_it_a_10": "Shift more of the mix from stress/kindness into sleep narrator clips, give a clearer 4-week calendar with specific post angles, and make the review timing airtight."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather act on Output 1 because it is more complete as a 4-week operating plan and follows the biggest data signals more aggressively. Output 2 has lovely week-1 drafts, but it leaves more performance on the table."
+}

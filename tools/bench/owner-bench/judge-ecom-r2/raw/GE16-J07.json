@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Delivering the quiz-matched product immediately in Email 1 captures high purchase intent without making the subscriber wait a day.",
+  "biggest_mistake": "Email 4's plain routine could be slightly clearer on whether to wash with water or cleanser in the morning for oily skin types.",
+  "what_would_make_it_a_10": "Already virtually perfect, but adding an explicit expiry date to the welcome coupon test parameters would make the final nudge even crisper."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very calm, measured tone that nails the Grade 7 reading level and honest Minimalist voice.",
+  "biggest_mistake": "Delaying the quiz-matched recommendation to Email 2 wastes the immediate intent of someone who just filled out the quiz expecting an answer and a discount.",
+  "what_would_make_it_a_10": "Move the personalized recommendation into Email 1 instead of sending subscribers to a generic bestsellers page, and avoid recommending Salicylic Acid face wash twice a day for beginners."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 understands ecommerce email strategy much better: when someone takes a quiz and gets a code, you recommend their specific product immediately in Email 1 rather than sending them to a generic catalog page. Output 1 also shows superior brand care by not prescribing a 2% salicylic acid wash twice a day to beginners."
+}

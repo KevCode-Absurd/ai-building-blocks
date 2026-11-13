@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly uses the data to calculate the time savings of moving to a blind written application, explicitly gating the weekend constraint.",
+  "biggest_mistake": "It asks applicants to answer a customer's problem without giving them the underlying facts, forcing them to guess or write generic fluff.",
+  "what_would_make_it_a_10": "Provide the applicant with the background information they need to actually solve the test scenario, rather than just testing their tone."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The beautifully designed 'Priya' and 'Sam' test scenarios allow career-changers to prove their problem-solving and writing skills without needing product knowledge.",
+  "biggest_mistake": "There are no significant mistakes; it perfectly captures the brand voice and translates the data into a highly effective hiring process.",
+  "what_would_make_it_a_10": "It is already a 10; I could hand this to the team tomorrow and be thrilled."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 provides incredibly thoughtful, realistic test scenarios that perfectly target the career-changer persona while nailing the brand's unique voice down to the last detail."
+}

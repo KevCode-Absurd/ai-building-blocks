@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes the 4.0 apart into profit per line against a 2.5 break-even, then hands over paste-ready titles, feed fields and ad copy in the same document, with a day-by-day first week.",
+  "biggest_mistake": "It only adds a brand exclusion to Performance Max. Nothing actually switches off the $64,000 of broad 'women's flats' at 1.2 or the 'sustainable shoes' spend, and most of the claimed +$61,000 gain rests on brand search earning about 25x (a 40% jump on today's combined 18x) with no cautious case for it.",
+  "what_would_make_it_a_10": "Add negatives or a listing-group split that genuinely stops the broad and sustainable terms, show the numbers if brand only holds its current 18x instead of 25x, and warn me that Google-reported revenue will dip before profit rises."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Shows that everything outside brand earned 2.26 and lost $20,100, quantifies the feed hole at $61,900 a month, and is honest that cutting the loss-makers drops reported revenue about 13% while profit rises; week 1 has an owner and a done-when on every step.",
+  "biggest_mistake": "It commits only about $136,000 of the $240,000 and parks the rest, so the month deliberately shrinks rather than growing, and it gives no ready-to-paste ad copy and no expected value for brand search after the shift, which makes the profit bridge harder to check.",
+  "what_would_make_it_a_10": "Commit more of the ceiling to the proven lines with a stated expected brand-search value, add the paste-ready search ads and feed field fixes, and drop the odd unexplained '$59,948 a day' line."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "I'd hand the second one to my team tomorrow: it tells me the non-brand business lost $20,100, warns me reported revenue will fall before profit rises, and puts a name and a done-when on every day-one action. The first is close and I'd steal its titles and ad copy, but it never actually switches off the broad Performance Max spend and its upside leans on a 25x brand number I don't believe yet."
+}

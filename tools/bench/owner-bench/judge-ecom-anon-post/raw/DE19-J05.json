@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the strategy: revives the fatigued ₹210 winner with fresh words, leads with the never-run taste review, and takes on the ₹90 price objection directly, all in your blunt voice with char counts.",
+  "biggest_mistake": "Some taste/texture primary texts lean on review quotes as if they were proof rather than flagging the legal risk up front (it does offer backups, but P2/P3 could read as implied claims), and the launch plan under-specifies budget/read rules compared with what a real test needs.",
+  "what_would_make_it_a_10": "Add a clean, testable budget and stopping rule like Output 2, and tighten the review-quote handling so no ad could be mistaken for a brand claim."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Equally sharp strategy but more launch-ready: a real 5-cell test with a live-ad control, budget per cell, early-cut and 20%-win rules, fatigue trigger, and UTM tracking, plus a samosa line straight from Priya's mouth.",
+  "biggest_mistake": "The invented ₹6,000/day budget and ₹84,000 test spend are assumptions dressed as near-facts; if wrong they could mislead, though clearly labeled assumptions.",
+  "what_would_make_it_a_10": "Trim the assumed budget into an explicit 'scale to your spend' note and make the control-cell logic impossible to misread."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and on-brief; Output 2 wins because it turns the copy into a runnable test with a control, budget, cut rules and tracking, which is what I'd actually hand to my ads person."
+}

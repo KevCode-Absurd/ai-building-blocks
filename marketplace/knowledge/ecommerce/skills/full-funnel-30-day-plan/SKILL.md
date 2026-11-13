@@ -1,13 +1,13 @@
 ---
 name: full-funnel-30-day-plan
-description: "Plan one month of ads and email so new, warm and ready-to-buy shoppers each get the right message, all month, not one stage per week: a dated calendar of ad creative and emails by stage, SMS or WhatsApp sends, one offer timeline, and a budget split worked out from the store's own gross profit per purchase, cash, stock, audience sizes and past results instead of a fixed percentage. Existing-customer ad spend is set in money from audience size, cost per thousand and frequency; testing spend from target cost per purchase; email volume from revenue band and list health. Platform-neutral, with India payment and delivery notes. Use at the start of each month or before a sale."
+description: "Plan one month of ads and email so new, warm and ready-to-buy shoppers each get the right message, all month, not one stage per week, with past winners relaunched first: a Day 1 to Day 30 calendar of ad creative and emails by stage, SMS or WhatsApp sends, one offer timeline, and a budget split worked out from the store's own gross profit per purchase, cash, stock, audience sizes and past results instead of a fixed percentage. Existing-customer ad spend is set in money from audience size, cost per thousand and frequency; testing spend from target cost per purchase; email volume from revenue band and list health. Platform-neutral, with India payment and delivery notes. Use at the start of each month or before a sale."
 ---
 
 # 30-day plan across ads and email
 
-**You get:** a dated 30-day calendar of ads, emails and texts by shopper stage, a budget table built from gross profit, one offer timeline, and creative and email brief lists, ready for the month.
+**You get:** a 30-day calendar (Day 1 to Day 30) of ads, emails and texts by shopper stage, a budget table built from gross profit, one offer timeline, and creative and email brief lists, ready for the month. Each decision is two plain lines.
 
-A month plan answers three questions with the store's own numbers: how much can we spend and where, what does each kind of shopper see, and what goes out on which day. Cold, warm and ready-to-buy shoppers exist every day, so every stage runs all month; the split falls out of the store's margin, cash and audiences.
+A month plan answers three questions with the store's own numbers: how much can we spend and where, what does each kind of shopper see, and what goes out on which day. Cold, warm and ready-to-buy shoppers exist every day, so every stage runs all month; the split falls out of the store's margin, cash and audiences. Follow the house rules in the toolkit, above all "Map every signal to an asset.", "Only the brief's facts run the business." and "Spend plans add up."
 
 ## When to use
 
@@ -48,7 +48,7 @@ A month plan answers three questions with the store's own numbers: how much can 
 2. **Cash limit stated.** Fail: plan at last month's spend and mark the plan "not funded".
 3. **Stock covers the plan.** A SKU with fewer days of stock than its reorder lead time gets no prospecting push [ADC-0023]. Fail: drop or swap it.
 4. **Capacity.** Someone can make the creative and emails on the calendar. Fail: cut the calendar to what can be made.
-5. **Tracking.** Meta purchases within about 20% of Shopify paid-social orders (practitioner default, test it), read on 7-day click [MEA-0042]. Fail: judge the month on store-side new-customer revenue only.
+5. **Tracking.** Use the gap between Meta purchases and Shopify paid-social orders that the brief gives, per campaign where given, read on 7-day click [MEA-0042]. Judge every line on store numbers. If the gap is unknown or wide, judge the month on store-side new-customer revenue only.
 
 ## Steps
 
@@ -73,7 +73,9 @@ Monthly ad ceiling = the lower of the cash limit and the spend at which that rat
 
 Under about $50k a month on Meta: concept testing, one scaling campaign, minimal customer retargeting [ADC-0041]. Exclude existing customers from prospecting [ADC-0015].
 
-### 3. Choose creative by stage
+### 3. Choose creative by stage, past winners first
+
+Start from what already worked in the store's data: a paused ad that bought cheaply, an email that earned, an offer that sold. Relaunch it unchanged from Day 1 with fresh cuts beside it; changes to it are tests, not replacements. Give the best-returning segment its own ad or email.
 
 For broad prospecting, weight new creative toward people who do not yet know the problem or the product, about 80% [MCR-0057]; a small store below its warm demand can start with product, proof and offer ads.
 
@@ -98,11 +100,11 @@ One offer at a time across ads, email and site; ads name the offer the page show
 
 ### 6. Build the calendar
 
-Four weeks, every stage live every week. Each row: date, channel, stage, asset, product, offer, audience or segment, budget or send size, owner, status.
+Four weeks, every stage live every week, in relative days (Day 1 to Day 30) unless the brief gives dates. Each row: day, channel, stage, asset, product, offer, audience or segment, budget or send size, who does it, status. Put the moves that earn most for the least work (relaunching a winner, fixing a missing flow) in week 1.
 
 ### 7. India and similar markets
 
-- Gross profit per purchase uses delivered orders; subtract return-to-origin losses on cash-on-delivery orders (practitioner default: use the store's own RTO rate by pin code band).
+- Gross profit per purchase uses delivered orders; subtract return-to-origin losses on cash-on-delivery orders, at the store's own RTO rate (by pin code band where the data has it).
 - Nudge prepaid and UPI in email and WhatsApp to cut cash-on-delivery share; confirm cash-on-delivery orders by WhatsApp before dispatch.
 - Automated WhatsApp journeys report far higher click rates than broadcasts [EML-0048]; opted-in contacts only.
 - Plan around the buyer's festive dates; GST-compliant invoices with every order.
@@ -111,29 +113,37 @@ Four weeks, every stage live every week. Each row: date, channel, stage, asset, 
 
 Each Monday: new-customer revenue / spend, first-order gross profit / acquisition cost, frequency per line, email revenue per recipient and unsubscribes, stock cover. Email revenue on default open windows overstates impact [EML-0056]. Adjust: cost per purchase rising with cold frequency up means new cold creative; cart flow recovering few orders means fix flow content before adding discounts; warm frequency over its cap means cut warm spend.
 
+### 9. Reconcile the numbers
+
+Each budget line and projection rests on the store's numbers plus at most one assumed input, named in the line. Log every figure in `context/numbers.json` with its inputs, period and money basis, then run `node tools/quality/numbers.cjs context/numbers.json --final <deliverable> --brief <brief>`. Fix every FAIL: lines that do not add up to the ceiling, a daily and a monthly figure in one column, or a label that its number contradicts.
+
 ## Checks before you hand it over
 
-1. Budget lines add up to the monthly ceiling, under the cash limit.
-2. Every line shows its formula and inputs.
-3. Every stage has ads and emails in every week.
-4. No advertised SKU has stock cover below its lead time.
-5. Ads, email, SMS and site show the same offer on the same dates; urgency is real.
-6. Email volume matches the revenue band and list health; flows checked first.
-7. Nothing sends, launches or spends without a yes.
-8. A fixed-percentage, one-stage-per-week plan would not beat this one on fit.
+1. Budget lines add up to the monthly ceiling, under the cash limit; `numbers.cjs` shows no FAIL.
+2. Every line's formula and inputs sit in the ledger or the budget table, not in the prose.
+3. Past winners run from Day 1, unchanged; each calendar row names who does it.
+4. Every stage has ads and emails in every week.
+5. No advertised SKU has stock cover below its lead time.
+6. Ads, email, SMS and site show the same offer on the same days; urgency is real.
+7. Email volume matches the revenue band and list health; flows checked first.
+8. Nothing sends, launches or spends without a yes, asked for in your own message, not in the plan.
+9. A fixed-percentage, one-stage-per-week plan would not beat this one on fit.
 
 ## Output
 
-1. **One-screen summary:** ceiling, split by line, concepts to test, emails and texts planned, the offer, the Monday read.
-2. **Money frame table:** measure, last month, target band.
-3. **Budget table:** line, formula, inputs, monthly amount, daily amount.
-4. **Calendar:** date, channel, stage, asset, product, offer, audience, budget or send size, owner, status.
+Follow the house rule "Write for a busy owner."
+
+1. **One-screen summary:** the ceiling, the split by line, the past winners relaunched, the offer and the Monday read, each in two lines.
+2. **Money frame table:** Measure | Last month | Target band.
+3. **Budget table:** Line | Monthly amount | Daily amount | How it is sized (in words; the formula sits in the ledger).
+4. **Calendar:** Day | Channel and stage | Asset and offer | Audience | Who does it. Send sizes, budgets per row and status go in the calendar file.
 5. **Creative and email brief lists** by stage.
 6. **Assumptions:** one line each, at most three, only where an unknown changes what to do.
 
 ## Common mistakes
 
 - **One stage per week.** Step 6 runs all stages every week.
+- **New creative while a past winner sits paused.** Step 3 relaunches it first.
 - **A fixed 60/30/10 split.** Step 2 sizes lines from the store's numbers.
 - **Feeding retargeting because its return looks high.** Step 2 caps it.
 - **Pushing a SKU about to sell out.** Gate 3 and step 5 stop it.

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses our actual signals well: writing is weighted highest, the overnight UTC gap becomes the role design, and the weekend rotation is stated plainly near the top.",
+  "biggest_mistake": "It changes the role title to Customer Support Specialist when the brief asked for a recruitment marketing specialist, and the sample hours table includes US Pacific even though the stated shift is 00:00 to 08:00 UTC.",
+  "what_would_make_it_a_10": "Keep the same data-led structure but fix the role/title mismatch and tighten the geography-hours examples so every detail lines up perfectly."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly explains why the application should center on a short writing task and it welcomes career changers instead of filtering for support pedigree.",
+  "biggest_mistake": "It invents a different customer prompt and adds a 'why this job' question, which pulls us back toward motivational screening instead of sticking to the strongest signal in our data.",
+  "what_would_make_it_a_10": "Use the exact operational problem we have to shape the role and application more tightly: specify the overnight coverage need, keep the weekend terms highly visible, and make the assessment entirely revolve around the most predictive writing and handoff work."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels more like something I'd actually publish and hand to the team. It is more grounded in my data, better ordered by what matters most, and closer to usable without rethinking the hiring flow."
+}

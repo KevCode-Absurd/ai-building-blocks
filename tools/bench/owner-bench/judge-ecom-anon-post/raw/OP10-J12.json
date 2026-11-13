@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the actual problem in the data: Tier 3 COD is driving nearly half the RTO cost, order-status chats need proactive shipping/OFD updates, and after-hours automation is needed.",
+  "biggest_mistake": "The prepaid discount and ₹99 advance ideas need owner approval before launch, and the payment nudge economics should be tested carefully so we do not train customers to wait for offers.",
+  "what_would_make_it_a_10": "Add final legal/policy checks for the WhatsApp templates, confirm the discount/advance amounts, and make the address-change and reattempt operational steps slightly more specific."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is practical and covers the core owner request: templates, flows, scripts, after-hours automation, and a weekly scorecard.",
+  "biggest_mistake": "It marks the prepaid switch template as Utility even though it is a payment-behaviour nudge and should be Marketing; it also invents a 7-day exchange policy that may not be true.",
+  "what_would_make_it_a_10": "Fix the WhatsApp categories, remove or verify the exchange-policy assumption, make the Tier 3 COD flow more aggressive, and sharpen the brand voice so it feels more Snitch."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather hand Output 1 to the team tomorrow because it spots the real money leak, segments by pincode risk, and is closer to launch-ready. Output 2 is useful, but the template category mistake and weaker Tier 3 treatment make it less safe to act on as written."
+}

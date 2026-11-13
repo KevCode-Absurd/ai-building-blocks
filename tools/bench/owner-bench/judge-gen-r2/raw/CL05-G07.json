@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ties the data to a decision the team can act on: channels ranked by retained users with correct math, Product Hunt and Hacker News moved to 15 Dec, staged rollout gated on migration tickets, a go/no-go on 3 Dec, and a finished X post and email with no placeholders.",
+  "biggest_mistake": "Long, probably over the 1,200-word limit, and the email tells everyone their settings carried over before the staged rollout has proven it. The ranking table also lists X (3,740) below authors (2,470), which confuses ranking by rate with ranking by users kept.",
+  "what_would_make_it_a_10": "Trim to the word limit and add a line that the email only goes to each wave after that wave's update is live, and that the X post is posted alongside real author handles."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Strong launch gates, including 1,000 beta users with zero loss, an undo, top-200 extension testing, engineers joining support shifts, and a rule not to mention anything that hasn't shipped.",
+  "biggest_mistake": "The launch-day X thread and email are full of placeholders ([author], [__ ms], [support address]) and run to five posts, which breaks the one-shortcut-per-message principle. The rollout dates also conflict: day 7 in the gates versus 15 Dec in the table, with the email to all 420,000 going out on day 1.",
+  "what_would_make_it_a_10": "Fill in the copy so it is ready to post, make the rollout timing consistent, and cut the 8 Dec Show HN so the plan is not leaning on Hacker News."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 treats Product Hunt and Hacker News as reach, not the main bet, and uses staged waves tied to the migration ticket problem. Its X post and email are ready to paste. Output 2 is thoughtful but still has placeholders, a five-post thread, and inconsistent rollout dates."
+}

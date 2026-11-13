@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets the real story right: ARR growth missed the promise, margin fell because low-converting AI-builder traffic is creating compute cost, Customer A is leaving, and the VP Enterprise Sales hire is the key ask.",
+  "biggest_mistake": "Customer A is not quite prominent enough; I would want that loss in the first screen alongside the margin issue, not second in the longer 'what went wrong' section.",
+  "what_would_make_it_a_10": "Move Customer A into the opening summary, tighten a few lines, and make the asks/assumptions feel less like draft notes after the signature."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very usable for investors: three numbers first, bad news immediately, clear explanation of the margin problem, correct runway, and specific asks with dates and forwardable copy.",
+  "biggest_mistake": "It asserts a few decisions and dates, like the 27 November ship date and the role now being New York-based, that I would want to confirm before sending.",
+  "what_would_make_it_a_10": "Confirm the assumed dates and New York decision, then send. Otherwise it already has the right order, tone, math, and asks."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "I would rather send Output 2 tomorrow because it puts Customer A and the investor asks higher up, reads better on a phone, and needs less editing. Output 1 has strong analysis, but Output 2 is closer to a finished investor email."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Operationally complete: eight hard gates (undo/restore of old settings, top 200 extensions tested, staged rollout with a ticket-per-day brake), engineers pulled onto a support shift during the freeze, and the growth math for creators and authors (9 creators at ~750 retained each = ~6,750).",
+  "biggest_mistake": "The 'ranked by users who stay' table puts extension authors (2,470) above X (3,740) with no explanation in the table itself — the growth argument lives in the paragraph below, so the table looks wrong at a glance, which is exactly where I look first. The timetable also has no owner column.",
+  "what_would_make_it_a_10": "Add an owner column and a per-week capacity check for a team of six, state the growth-based ranking rationale in the table (or reorder and rank growth separately), and lock the measured speed number now so the launch-day speed post isn't a bracket on the morning."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads like a decision memo, not a checklist: the call comes first, every projection is chained to last year's numbers (11,000/6 videos = 1,833 each, 9 creators = ~16,500; 240 tickets a day falling to ~100 once migration is fixed, which is where the 12-hour reply target comes from), and there are real plan-B thresholds (50 carry-over tickets a day pauses the prompt; 5,750 installs by 11 Dec triggers the backup email).",
+  "biggest_mistake": "The email says 'Extension authors tested this version with us before today' — if only a fraction of the 1,500 actually tested by launch, that is a promise the build hasn't earned, against our own rule, and it sits in the one asset 193,000 people will read.",
+  "what_would_make_it_a_10": "Staff support for launch week explicitly (engineers on a shift, not just the launch manager in plan B), commit to a decision date on the 10% staged update instead of leaving it as a bolder move, and soften the author-testing line to what actually happened."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both would ship and both get the channel flip and the migration gate right, but #2 is the one I'd send upstairs: the decision, the targets with read dates and the plan-B triggers are all tied to my own numbers, whereas #1 is a thorough checklist that ranks authors above X in a 'users who stayed' table and forgets to name owners."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Flawless handling of the data. Deduplicated the overlapping segments perfectly and identified the exact numbers for each wave.",
+  "biggest_mistake": "Used a quiz for the Monsoon Dark group's first email instead of directly recommending the closest dark roast match as requested.",
+  "what_would_make_it_a_10": "Name the specific matched coffee right away in the G2 email draft instead of adding the friction of a survey."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 5,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Excellent copywriting and voice that followed all brand rules, plus a smart callout on the cost of giving discounts to organic returners.",
+  "biggest_mistake": "Completely missed sending a campaign to the 9,000 customers in the 46-90 day band. Mentioning a future Day-28 automation doesn't win back the people already drifting at day 60.",
+  "what_would_make_it_a_10": "Include the 46-90 day group in the actual target order as Wave 1, and ensure the segment math deduplicates ex-subscribers properly."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 handled the data perfectly, correctly prioritizing and sizing the 'at risk' 46-90 day group, whereas Output 2 completely left them out of the campaign launch."
+}

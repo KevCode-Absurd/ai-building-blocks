@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds the real problem fast: non-brand Google is below break-even, the pointed flat feed issue is urgent, and it gives a concrete reallocation with week-one actions.",
+  "biggest_mistake": "It includes a few risky or questionable platform moves and one awkward budget approach, especially 'reserve' that may stay unspent even though the brief says to split the full $240,000 next month.",
+  "what_would_make_it_a_10": "Tighten the Google Ads mechanics, make the budget fully deployable to exactly $240,000 without ambiguity, and remove the weaker assumptions around PMax controls."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It cleanly takes apart the headline 4.0 ROAS against the 2.5 break-even, puts the feed fix first, and gives a usable 30-day budget and execution plan tied to the data.",
+  "biggest_mistake": "Its forecast is a bit optimistic, especially the implied brand search efficiency and overall upside after the restructure.",
+  "what_would_make_it_a_10": "Give a more conservative forecast range with clearer working on the brand and PMax assumptions, while keeping the same practical plan."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both understand the real drivers, but Output 2 is a little cleaner, more grounded in the owner's priorities, and more ready to hand to the team without editing. Output 1 has stronger originality in places, but a few execution details make it less dependable."
+}

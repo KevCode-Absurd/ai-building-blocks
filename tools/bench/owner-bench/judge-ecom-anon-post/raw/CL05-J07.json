@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Polished, calm, on-brand emails with a clean timing table and exit rule. Email 4 answers the white cast, stickiness and makeup questions with the review line as proof. The slow-start rules in Email 3 are easy to follow.",
+  "biggest_mistake": "Email 5 gives everyone the same 3-step routine, including the salicylic wash for the dark-spot majority. This cuts against its own 'one product at a time' advice and misses the simple sunscreen-plus-niacinamide routine for uneven tone. Email 1 is generic and the series only branches once.",
+  "what_would_make_it_a_10": "Carry the quiz answer through Emails 1, 3 and 5. Make the dark-spot routine (morning sunscreen, night niacinamide) the main route. Add a way to test whether the series beats today's single email. Check that the final length stays within 1,800 words."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The quiz answer shapes the whole series, so each person sees one product that fits them. Email 5 gives dark-spot readers the niacinamide-plus-sunscreen routine I hoped for, and the maths is right (₹998 to ₹898.20, ₹698 to ₹628.20). Email 3 opens with Sneha's own words, 'Every sunscreen makes me look grey', which is a strong subject line.",
+  "biggest_mistake": "The bodies are terse and carry no first-name greeting, so they read a little less warm than they could. The 'read the label' email is more generic than the others. The tests section may push the total past the word limit.",
+  "what_would_make_it_a_10": "Add a first-name greeting and a bit more warmth to the bodies. Make Email 4 do more for the dark-spot majority. Trim the tests section so the total stays within 1,800 words."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 uses my quiz data throughout, gives dark-spot readers the routine I actually want to sell, and adds a holdout test and an exit and cart rule I could set up tomorrow. Output 1 is well written but pushes the same three-product routine at everyone."
+}

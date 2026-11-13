@@ -1,0 +1,1082 @@
+{
+ "CL01": {
+  "id": "CL01",
+  "provider": "claude",
+  "model": "claude-opus-5-5",
+  "lens": "the founder and owner who wrote this brief and spends their own money",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "OP02": {
+  "id": "OP02",
+  "provider": "openai",
+  "model": "gpt-5.5",
+  "lens": "the owner, who is a sharp operator and checks every number",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "DE03": {
+  "id": "DE03",
+  "provider": "deepseek",
+  "model": "deepseek-chat",
+  "lens": "the owner, who cares most about the brand and how customers will feel",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "GE04": {
+  "id": "GE04",
+  "provider": "gemini",
+  "model": "gemini-pro-latest",
+  "lens": "the owner, who is not an expert in this field and needs to learn what they are missing",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "CL05": {
+  "id": "CL05",
+  "provider": "claude",
+  "model": "claude-sonnet-5-5",
+  "lens": "the owner, who will hand this to their small team tomorrow and needs it usable",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "OP06": {
+  "id": "OP06",
+  "provider": "openai",
+  "model": "gpt-5.4",
+  "lens": "the founder and owner who wrote this brief and spends their own money",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "DE07": {
+  "id": "DE07",
+  "provider": "deepseek",
+  "model": "deepseek-reasoner",
+  "lens": "the owner, who is a sharp operator and checks every number",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "GE08": {
+  "id": "GE08",
+  "provider": "gemini",
+  "model": "gemini-flash-latest",
+  "lens": "the owner, who cares most about the brand and how customers will feel",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "CL09": {
+  "id": "CL09",
+  "provider": "claude",
+  "model": "claude-opus-5-5",
+  "lens": "the owner, who is not an expert in this field and needs to learn what they are missing",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "OP10": {
+  "id": "OP10",
+  "provider": "openai",
+  "model": "gpt-5.5",
+  "lens": "the owner, who will hand this to their small team tomorrow and needs it usable",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "DE11": {
+  "id": "DE11",
+  "provider": "deepseek",
+  "model": "deepseek-chat",
+  "lens": "the founder and owner who wrote this brief and spends their own money",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "GE12": {
+  "id": "GE12",
+  "provider": "gemini",
+  "model": "gemini-pro-latest",
+  "lens": "the owner, who is a sharp operator and checks every number",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "CL13": {
+  "id": "CL13",
+  "provider": "claude",
+  "model": "claude-sonnet-5-5",
+  "lens": "the owner, who cares most about the brand and how customers will feel",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "OP14": {
+  "id": "OP14",
+  "provider": "openai",
+  "model": "gpt-5.4",
+  "lens": "the owner, who is not an expert in this field and needs to learn what they are missing",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "DE15": {
+  "id": "DE15",
+  "provider": "deepseek",
+  "model": "deepseek-reasoner",
+  "lens": "the owner, who will hand this to their small team tomorrow and needs it usable",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "GE16": {
+  "id": "GE16",
+  "provider": "gemini",
+  "model": "gemini-flash-latest",
+  "lens": "the founder and owner who wrote this brief and spends their own money",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "CL17": {
+  "id": "CL17",
+  "provider": "claude",
+  "model": "claude-opus-5-5",
+  "lens": "the owner, who is a sharp operator and checks every number",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "OP18": {
+  "id": "OP18",
+  "provider": "openai",
+  "model": "gpt-5.5",
+  "lens": "the owner, who cares most about the brand and how customers will feel",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "DE19": {
+  "id": "DE19",
+  "provider": "deepseek",
+  "model": "deepseek-chat",
+  "lens": "the owner, who is not an expert in this field and needs to learn what they are missing",
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "GE20": {
+  "id": "GE20",
+  "provider": "gemini",
+  "model": "gemini-pro-latest",
+  "lens": "the owner, who will hand this to their small team tomorrow and needs it usable",
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ }
+}

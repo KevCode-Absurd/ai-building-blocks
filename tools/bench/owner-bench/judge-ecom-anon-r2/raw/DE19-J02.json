@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ties every rule to our money (first-order profit, 90-day payback, $38 target) and turns the data into a concrete Monday build: Spark Ads from the nurse/server, problem-first hooks, phased $30k, dollar-based kill/scale.",
+  "biggest_mistake": "Small slip: it quotes 90-day profit as 'about $38.50' after showing ~$9.90 fees, while its own table math lands nearer $38.5-$38.7; minor arithmetic that should be double-checked, and the 'new customers vs Meta spend flat' row could be clearer on how we measure the 70%.",
+  "what_would_make_it_a_10": "Tighten the arithmetic, add a one-line named-day-30 decision rule (Pass/Hold/Fail already close), and give one concrete example of the creator brief and Spark-code handoff so a junior can execute without asking."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very strong numbers and guardrails: it calculates the $27.10 first-order profit, the $38 90-day allowance, the $114 read per ad and the $136 group floor, and it refuses to spend until a test order passes.",
+  "biggest_mistake": "Slightly over-engineered and less complete as a handoff: one campaign with three ad groups up to Day 14 muddies the budget phasing (it only splits in the last phase), the $30k table has a reserve that is not fully reconciled to daily spend, and the 30-day scorecard blends 'store, survey, blended' in a way that is harder to run Monday morning than o1's simple pass/hold/fail.",
+  "what_would_make_it_a_10": "Simplify to one clear phased budget that adds to $30,000 without an unreconciled reserve, make the Day 30 rule a single pass/fail line on Shopify new-customer cost, and show the exact campaign/ad-group build so the team can replicate it without interpretation."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are usable and get the core math right, but I'd hand output 1 to the team Monday because it is more complete end-to-end (phasing that adds up, clear owner list, sharp pass/hold/fail) with fewer small reconciliation issues."
+}

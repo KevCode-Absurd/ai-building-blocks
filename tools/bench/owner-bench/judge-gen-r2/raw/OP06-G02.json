@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting for the right reason and turns the data into a focused page that leads with email back and forth, round robin, routing, and earlier security proof.",
+  "biggest_mistake": "It says the homepage hero stays as it is, when the brief asked for the hero for a version of the page aimed at this segment and the owner wanted the segment surfaced more directly on-page.",
+  "what_would_make_it_a_10": "Tighten the assumptions, avoid the lightly speculative PTO phrasing unless exactly supported, and make the page explicitly usable as the homepage variant the brief asked for."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It also identifies recruiting correctly and does a good job of using Priya's language and moving security higher in the page.",
+  "biggest_mistake": "It breaks the CTA rules and copy discipline by mixing 'Get started' and 'Book a demo' on a team page, and it adds unsupported claims like text reminders and tool support placeholders that make it less ready to ship.",
+  "what_would_make_it_a_10": "Use one consistent team CTA, remove unsupported feature claims, and simplify the success metric to one direct conversion metric the team can implement immediately."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to something I could publish tomorrow: it follows the brand rules better, uses the key numbers well, and gives me a cleaner test plan and page structure. Output 2 has good instincts but makes too many unsupported or off-brief choices for a CRO page I would trust as-is."
+}

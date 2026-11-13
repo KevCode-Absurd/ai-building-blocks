@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the real issue fast: the top 5 matte shades, the re-cartoning fix, and the need to stop ordering by current stock mix.",
+  "biggest_mistake": "It includes a likely impossible 8,000-unit foundation order across only 4 shades despite the 2,000-per-shade minimum and no shade-level proof that four shades need that much.",
+  "what_would_make_it_a_10": "Tighten the unit math on foundation and kohl, and make the customer message and sale timing fully consistent with the stock gap dates."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the owner’s actual constraint set well: rush and standard orders for the top 5 matte shades, no money wasted on slow stock, and a practical cash-safe action plan.",
+  "biggest_mistake": "It still leaves a little homework by using a conditional reserve rule and by assuming a 'Night-out kit' concept without proving channel and customer fit.",
+  "what_would_make_it_a_10": "Turn the reserve into a final yes-or-no order decision and tighten a couple of projected quantities so every line is fully locked for Monday execution."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is a bit closer to the owner’s ideal plan: it is more disciplined on the cash number, sharper on why the draft fails, and stronger on turning the stock gap into an honest pre-order plan. Output 1 is also good, but it has a few looser calls on timing and line-level quantities."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers table and day-30 rule come straight from the money. The 90-day break-even is $38.46 and the first-order break-even is $27.10. It reads the day-30 result three ways (store tags, survey, blended lift), which guards against inflated platform ROAS. It also adds an optional holdout.",
+  "biggest_mistake": "It is dense and a bit over-engineered, with many thresholds that a small team has to track. The $4,750 return to Meta and the $1,625 steps are fiddly. Day 1 to 3 spends nothing and the first 12 ads are partly new shoots that are not made yet. The hook table is mostly the creator's words rather than ad scripts.",
+  "what_would_make_it_a_10": "Simplify the thresholds into a one-page daily checklist. Give a firmer plan for the 8 staff videos and creator fees. Add a short script or caption for the top 3 hooks. Be explicit that the March licence end falls inside or after the 30 days."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very Monday-ready. It has a clean set-up checklist, role owners, brand don't-say rules, a price-handling note and a Scale campaign that reuses post IDs. Clear pass/hold/fail scorecard.",
+  "biggest_mistake": "Day-30 pass is partly judged on TikTok-reported cost per first order, and its new-customer lift row is weaker than the first plan's. It treats $38 as a first-order target, but that only breaks even at 90 days. It says we lose about $11 on the first order, which is a fair framing, yet it then sets Month 2 at a 50% increase with little tie to the 90-day math. The 15-ads-in-5-concepts split is thin on the mission as the closing line, and the $1,000 reserve complicates the budget.",
+  "what_would_make_it_a_10": "Tie the pass/hold/fail more tightly to the 90-day break-even using survey or holdout data. Write the hooks in Maria's and Tasha's exact words. Drop the Smart+ option in month one. Note the timing of the March rights end against the 30 days."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Plan 1 ties the day-30 decision to the real money. It uses three independent reads of the result and a holdout, and its hooks use our customers' own words. Plan 2 is a little easier to hand over, but it leans more on platform numbers and has a looser link between its decision rules and the break-even."
+}

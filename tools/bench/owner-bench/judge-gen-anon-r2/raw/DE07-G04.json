@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Dead on the brief: Controllers 50-300 on the pricing-change trigger, one question and one ask per email, no links, and the per-100 math checks out against the pilot.",
+  "biggest_mistake": "The 10% ceiling multiplies two gains the pilot never tested together (7.9% x 1.25), and step 2 re-treads the same pricing-change angle instead of hitting a fresh objection.",
+  "what_would_make_it_a_10": "Make step 2 address a different blocker (e.g., 'billing belongs to engineering'), and present the rate as roughly 7-8% with an explicit note that role and trigger were never tested together."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Better range of angles (pricing, billing ownership, audit timing, close) and a disciplined, honest refusal to multiply the two untested gains.",
+  "biggest_mistake": "Breaks the one-question/one-ask rule in several emails by bolting on 'reply yes/steps/month' CTAs, and leans on unapproved assets (one-page summary, three steps) that add friction.",
+  "what_would_make_it_a_10": "Cut each email to a single question or ask, reconcile the 'aim at/above 7.9%' language with the 7% plan into one number, and drop or credential the one-pager/three-steps offers."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is nearly send-ready and actually follows our copy rules — one question, one ask, tight, numbers check out — while Output 2 has richer angles but keeps adding second asks that break the brand and muddy the emails."
+}

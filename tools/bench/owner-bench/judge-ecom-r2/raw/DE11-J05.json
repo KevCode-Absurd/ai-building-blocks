@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Brings the paused flip-the-pack winner back in fresh words and pairs it with the untapped taste review hook, then builds the launch plan around testing exactly those two against each other.",
+  "biggest_mistake": "Quotes review shares ('1 in 4 of our 870 reviews') inside ad copy, which is a claim that needs legal sign-off and slightly undercuts the 'customer words, not brand claims' framing.",
+  "what_would_make_it_a_10": "Move the review-count verification out of the ad text and into a plain customer quote, keeping the same taste hook but with zero legal risk."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every ad is written in the target buyer's own words (Aditya checking the back, Priya's 4 pm samosa), and the launch table ties each test to the exact number it must beat.",
+  "biggest_mistake": "P6 ('6 bars, one spare') is a weak, filler angle that doesn't map to a real insight like price or taste, and the description 'Not a bit' drifts slightly from the brand's 'Not even a little' line.",
+  "what_would_make_it_a_10": "Replace the thin 'training week' spare-bar angle with a distinct sixth angle (e.g. texture/dense-chewy, the second review theme) so all six primary texts pull their weight."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are launch-ready and on-voice, but Output 1 handles the price objection head-on and gives cleaner test logic (A vs C isolates fact vs framing), while Output 2's sixth angle is filler and its review-quote handling is a touch looser. I'd pay marginally more for Output 1's sharper structure, though I'd happily run either."
+}

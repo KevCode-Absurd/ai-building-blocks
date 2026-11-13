@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built directly on the data: writing weighted at 50%, the overnight UTC gap named plainly, weekend rotation up front, and a customer-reply application that replaces the resume and cuts reviewer hours.",
+  "biggest_mistake": "The post states '00:00 to 08:00 UTC' as the fixed shift without showing candidates what that means for their local clock, which could lose career changers in Asia-Pacific who don't convert UTC in their heads.",
+  "what_would_make_it_a_10": "Add a short local-hours table so a teacher in Manila can see the shift at a glance, and keep everything else."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The local-hours table and the concrete Priya and Sam scenarios make the post and scorecard real: a candidate can see the shift on their own clock, and reviewers get an actual case to grade against.",
+  "biggest_mistake": "The scorecard's 'Owns the quiet hours' and 'Calm judgment' rows are scored from the shortlist exercise and the call, not the application, so the 85% written weight is slightly overstated for the first screen.",
+  "what_would_make_it_a_10": "Tie the scorecard weights explicitly to each stage so the application-only weight is clear on first read."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 edges it: the local-hours table answers the career changer's 'is it really remote?' worry at a glance, and the specific Priya and Sam tasks make the scorecard something a reviewer can actually use rather than interpret. Both are strong; I'd pay slightly more for 2 because a Manila teacher can picture the job immediately."
+}

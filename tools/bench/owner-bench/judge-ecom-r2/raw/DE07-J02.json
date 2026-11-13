@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every kill, scale and day-30 rule is converted into dollars from the $38 90-day payback, and the day-30 test checks TikTok's new customers against Meta held flat, so it can't take credit for Meta's orders.",
+  "biggest_mistake": "It uses 'new customers vs prior 30 days' as a pass test but never tells the team to record that baseline in week 0, and it sets an unexplained 21+ age floor that cuts 18-20 buyers for no reason in the data.",
+  "what_would_make_it_a_10": "Add a recorded pre-launch baseline (new customers a day, blended cost per new customer) and a spend-per-ad floor so the kill and scale calls are provably powered, and drop the arbitrary 21+ floor."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It does the maths a real buyer does before spending: $114 to judge an ad, $136 minimum per ad group, first-order payback only at $27.10, and store orders rather than TikTok's number decide every call.",
+  "biggest_mistake": "The handoff is thinner than the analysis: no comment moderation, no ad-review lead time, no named day-to-day owner for kill and scale calls, and month 2 spend after a pass is left vague.",
+  "what_would_make_it_a_10": "Close the operational gaps - comments owner, upload-by deadline, named kill/scale owner, and a concrete month-2 budget after a pass - while keeping the statistical floors and the verbatim customer hooks."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the money right and both would run, but Output 1 is the one I can actually hand over on Monday: named owners, a week-0 checklist that ends in proven test orders, upload deadlines, comment cover and a stated month-2 budget for pass, hold and fail. Output 2 is the sharper piece of analysis, but it leaves the everyday running of the account under-specified."
+}

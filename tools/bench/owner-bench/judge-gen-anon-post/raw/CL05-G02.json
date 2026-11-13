@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting with correct seat math and gives a complete test plan: one decisive metric, sample size, run length and a stopping rule. The page copy uses real numbers and no invented customers.",
+  "biggest_mistake": "It runs well past the 1,000-word limit with extras nobody asked for (projection, 'bolder move'). The hero lacks Priya's 'email tennis' language, and the hero offers two actions at once, which breaks the one-action rule.",
+  "what_would_make_it_a_10": "Cut to the word limit, put Priya's own phrase in the hero, keep one action per section, and move the security proof up beside the first demo button."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero uses the customer's own words ('No email tennis') and the segment case is crisp: 0.73 paid seats per signup against 0.17 for the next segment, plus 57% of new paid seats. Its 'why these two' note explains that the heroes test different ideas.",
+  "biggest_mistake": "Several team-page buttons say 'Get started' instead of 'Book a demo', against brand rules. The deciding metric needs a 7-day first booking, so it is slow to call. It also adds a few unsupported claims (text reminders, 'three or four emails').",
+  "what_would_make_it_a_10": "Use 'Book a demo' on every team section, define a metric that can be read right away, add a sample size and run length, remove the unverified claims, and put security proof near the demo button."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick recruiting and get the numbers right. I would take the second one because its hero sounds like Priya ('no email tennis'), it stays closer to the length limit, and its placeholders are honest. The first has the stronger test plan but runs long and misses the customer's phrase."
+}

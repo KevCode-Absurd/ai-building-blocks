@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "ready": 9,
+  "range": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Rock-solid arithmetic that honors the budget ceiling, nails the 2.5x sale demand spike, and provides a clear mathematical reorder point formula.",
+  "biggest_mistake": "Overlooks the specific persona dynamics from the brief, particularly Farah the bridal MUA who needs bulk shade security before December.",
+  "what_would_make_it_a_10": "Incorporate specific tactics for high-volume bridal makeup artists and ground the customer-facing tactics in our buyer personas."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "ready": 10,
+  "range": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliantly connects the stock math to customer psychology by creating a pro pre-order for bridal artists like Farah and order caps so Tanvi doesn't get shut out.",
+  "biggest_mistake": "Left only ₹1.3 lakh as a cash buffer, which leaves very little room for sudden logistics or freight variance.",
+  "what_would_make_it_a_10": "It is already virtually flawless, but adding explicit SKU-level reorder point trigger formulas like Output 1 did would make it unbeatable."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both models nailed the inventory and lead-time math, but Output 2 showed true merchant instinct by protecting bridal artists like Farah with early pro allocations and setting order caps to manage the stockout gap."
+}

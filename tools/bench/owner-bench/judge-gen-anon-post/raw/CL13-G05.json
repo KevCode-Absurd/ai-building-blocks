@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Covers every data signal: APAC hours with a local-time table, weekend rotation stated near the top, the reply exercise as the application, a transparent reviewer-hours estimate, and a bolder talent-pool idea, all in a post that sounds like us.",
+  "biggest_mistake": "The scorecard weights interview-stage items at 45% even though interview impression correlated only 0.11. The writing weight is 55%, but the process is heavy. It also says 'two of the three recent hires who left' when it was 3 of 9 hires with 2 citing the rotation. The assumptions and the post are crowded, and the word count likely goes over 1,100.",
+  "what_would_make_it_a_10": "Weight writing higher, shrink the interview share, tighten to the word limit, fix the leaver wording, and make the post's opening less dense so the hard parts read calmer."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, calm post with salary first, honest hard parts, a concrete sample customer email in the form, and a scorecard that puts 50% on writing and says plainly why, with 1/3/5 for each line.",
+  "biggest_mistake": "Adds a longer written exercise and a 'why this job' essay, which adds work for applicants and a little to reviewers. Also gives only a Singapore/Manila/Perth time conversion, and the 4-day-week dates are loosely placed.",
+  "what_would_make_it_a_10": "Add a time-zone table for Tokyo and Sydney, drop the 'why this job' question, and give the timeline of the later steps (exercise and calls) in the post."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Number 2 reads more like us: calm, short, with writing at 50% and the hard parts stated plainly. Number 1 has more ideas and a better time-zone table, but it's denser and leans on interviews more than our data supports."
+}

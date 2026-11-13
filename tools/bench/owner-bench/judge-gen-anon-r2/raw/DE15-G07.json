@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong retention math, creator/author focus, a strict zero-loss migration gate, and copy that sounds like Raycast and names extension authors.",
+  "biggest_mistake": "It emails all 420,000 existing users on launch day while the update is staged to 10% then 30%, so most recipients cannot yet 'check for updates' and the support risk is underplayed.",
+  "what_would_make_it_a_10": "Tie the existing-user email to the staged waves, add a concrete support rota and success measures, and remove placeholders so it is publish-ready."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Operational rollout: three waves tied to migration-ticket thresholds, support cover, a day-4 plan B, and correct channel-retention math.",
+  "biggest_mistake": "The migration gate allows 95% carry-over and falls back to a help article for failures, which is too loose for 'don't break my hotkeys'; the email also does not name any extension authors.",
+  "what_would_make_it_a_10": "Make zero lost hotkeys/settings the gate for existing users and add named author credits to the existing-user email."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "I'd hand Output 2 to the team after two small fixes: tighten the migration gate and name authors in the email. Output 1 has better copy and a stricter carry-over gate, but emailing all 420,000 users on day one conflicts with its staged rollout and would create exactly the support spike we are trying to avoid."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every email has a complete body that sounds like us. Each has one tip, one button, typed examples in quotes and short subjects. The second-device email branches correctly by signup platform.",
+  "biggest_mistake": "Email 5 spends a slot on Pro instead of pushing the missing habit. The second-device email goes out on a fixed day 3 instead of being chained to the recurring-task trigger, so the two-habit sequence is looser than it should be.",
+  "what_would_make_it_a_10": "Chain email 3 to the recurring-task trigger. Turn the last slot into a 'missing habit' email, or justify keeping Pro with numbers. Measure both habits by day 7 per platform."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The whole series is built on the two habits. Triggers are chained with skip rules, and email 5 targets whichever habit the user is missing. There is a contingency plan if the mobile-to-web email underperforms, and the 1,800-people-per-point math is correct.",
+  "biggest_mistake": "The control group gets no emails at all, so it tests emails against nothing rather than new against old. Pro is pushed out of the series with no revenue reasoning. The inactivity window 'days 2 to 14' doesn't match a 3-day trigger.",
+  "what_would_make_it_a_10": "Hold out a group on the old series, not on no emails. Fix the inactivity timing. Add a short line on what dropping Pro from onboarding means for upgrades."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are usable and on-brand. Output 2 sequences the triggers around the two habits more tightly and uses the last email to close the habit gap, which is where the retention is."
+}

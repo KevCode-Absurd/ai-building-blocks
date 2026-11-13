@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A sharp, decisive plan with checked numbers. It openly says only half the fit-finder gap is the quiz's own effect, and it tests the change with a holdout and a 50/50 split. It adds a warning about Christmas and a bold 'ship the swap first' idea.",
+  "biggest_mistake": "It never sets out what returns and tickets cost me today (£139,800 and £31,360), so I can't see the size of the prize. It also has no bra-specific fit help after delivery, only a link to the fit finder.",
+  "what_would_make_it_a_10": "Open with a cost baseline and rank the three fixes by money saved. Add a post-delivery fit-tips message for first-time bra buyers. Show total savings as a range."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It starts with what returns and tickets cost me, then follows the cheapest-first order. The messages are warm and in our voice, and they include practical bra fit tips after delivery plus a 'how's the fit' check. The numbers table has low and high cases and a total saving.",
+  "biggest_mistake": "The 2-hour size-switch in the fit-check email depends on order editing we may not have. The 'Swap my size' buttons after delivery could nudge people to send back items that fit. It also doesn't plainly say that quiz users may simply be different buyers, which would inflate the fit-finder gain.",
+  "what_would_make_it_a_10": "Explain the selection bias in the fit-finder numbers. Run the fit-quiz button as an A/B test with conversion as a guardrail. Soften the delivered email so its button is 'Find your fit' rather than 'Swap my size'."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are usable. The second shows me what returns and tickets cost me today, ranks the fixes by saving, and gives bra buyers real fit help after delivery. The first is tighter on testing but leaves out the cost picture."
+}

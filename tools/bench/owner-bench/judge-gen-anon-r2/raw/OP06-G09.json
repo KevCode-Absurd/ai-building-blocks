@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data the way I hoped: push hard into sleep, narrator clips, and evening posting, while staying inside team capacity and handling week 1 review constraints sensibly.",
+  "biggest_mistake": "It includes a Wednesday 14:30 test that goes against the clear evening signal, and its weighted baseline/save-rate math is a bit too neat to fully trust without checking.",
+  "what_would_make_it_a_10": "Make week 1 and the recurring schedule even tighter around evening sleep content, keep the parent insight without giving up an off-peak slot, and tighten the KPI math."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 6,
+  "correct": 5,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It strongly backs sleep and narrator clips and gives a usable structure with clear stop-doing recommendations.",
+  "biggest_mistake": "It gets a key operating fact wrong by claiming sleep posts cannot run in week 1 and over-applies review to all sleep content, which distorts the plan and would make us miss easy wins.",
+  "what_would_make_it_a_10": "Handle review timing correctly, use week 1 for non-reviewed winding-down sleep content, clean up the factual slips, and then keep the strong sleep-first format mix."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels like something I could actually run next week with minor edits. Output 2 sees some of the same opportunities, but the review-timing mistake is big enough that I would not trust it without reworking the plan."
+}

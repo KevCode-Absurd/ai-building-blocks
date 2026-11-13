@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data like an owner would: brings back the paused transparency winner, adds the missing taste angle, and tackles the ₹90 objection directly with launch-ready assets.",
+  "biggest_mistake": "A few extras drift beyond the ask, and the strict character limits used for headlines/descriptions are a bit arbitrary versus the brief's 'about' guidance.",
+  "what_would_make_it_a_10": "Tighten it slightly, keep the same strong launch order, and make the display-limit assumptions a touch more standard and less defensive."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It also spots the key story in the data: revive front-of-pack, test taste, and address price honestly, with good variety in angles.",
+  "biggest_mistake": "It invents budget, test design, and a control setup the brief never asked for, and one primary text makes an unapproved claim by saying 'our reviews say it more than anything else' when the actual top review phrase is different.",
+  "what_would_make_it_a_10": "Remove the made-up media plan details, fix the claim accuracy, and focus the copy set more tightly on the exact brief and approved facts."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to something I'd actually ship. It stays tighter to my brief, uses my data more carefully, and gives me the strongest first-launch set without making up unnecessary operating details."
+}

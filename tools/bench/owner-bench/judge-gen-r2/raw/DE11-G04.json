@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built precisely on the winning segment and pricing-change trigger, with all four emails link-free, under 120 words, one question, one ask, in a finance person's voice.",
+  "biggest_mistake": "Step 2's ask (reply 'steps') and Step 3's ask (reply with audit month) both offer to send something, which risks being read as an attachment request and adds slight friction; also the 130/65/55 extrapolation assumes all 1,900 eventually trigger, which is optimistic.",
+  "what_would_make_it_a_10": "Trim the secondary asks in steps 2 and 3 to a single clean question and state the expected reply rate as a range tied strictly to pilot data without extrapolating the full 1,900."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear decision-first framing with honest pilot math shown, and a well-structured leave-out table.",
+  "biggest_mistake": "Step 2 asks for a 20-minute meeting with a calendar-style CTA and steps 3 and 4 stray from the one-question/one-ask rule and finance-peer voice, plus the 8-10% projection invents a 25% uplift assumption not supported by the pilot.",
+  "what_would_make_it_a_10": "Keep every email to one question and one low-friction ask in the controller's own words, and drop the speculative 25% uplift to anchor expectations at 7-8%."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more disciplined: it keeps every email link-free, single-ask, and under 120 words in a genuine finance-peer voice, and it anchors expectations honestly to the 6.8-7.9% pilot range. Output 2 is solid but slips into a meeting-ask CTA and invents a 25% uplift that would over-promise to me."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the three real levers in the data—silent dispatch gap, bra fit, and a refund-biased portal—and turns them into a practical 60-day plan with usable copy and sensible ranges.",
+  "biggest_mistake": "It counts the portal impact only as 'sales kept' and leaves the total savings view slightly muddled, with one or two estimates that should be tightened before being used in a board discussion.",
+  "what_would_make_it_a_10": "Tighten the commercial math around swaps versus refunds and add a clearer expected range for the post-delivery bra messages, then it would be excellent."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clear, owner-friendly, and correctly puts the cheapest highest-impact move first: fixing the dispatch silence that creates most WISMO tickets.",
+  "biggest_mistake": "It misses the owner's hoped-for day-3 reassurance message and instead sends a day-5 late message, so it addresses the problem later than the data suggests and leaves ticket reduction on the table.",
+  "what_would_make_it_a_10": "Add the proactive day-3 update, include a more targeted first-time bra fit-support flow, and tighten the projections so the expected outcomes and savings fully reconcile."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels more built on my exact signals and gives me more of what I asked for: better message coverage, a stronger portal plan, and a sharper order of work. Output 2 is good, but it reacts too late to the delivery-ticket problem and is a bit less complete on the fit-support side."
+}

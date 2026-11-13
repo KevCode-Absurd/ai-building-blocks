@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The work is disciplined throughout. It shows the seat math cleanly, puts a real stat beside every feature section, refuses to claim reminders cut no-shows when no figure backs it, and keeps the CTA focused on teams.",
+  "biggest_mistake": "The sample-size calculation uses the 3.1% homepage-to-signup rate as the baseline for demo requests, which is a different metric, so the 13,400-visitor stop rule is shaky. Also, the security proof does not sit next to the demo form.",
+  "what_would_make_it_a_10": "Use Priya's 'email tennis' in the hero itself and put a security link or line right beside the final demo form. Base the stop rule on a realistic demo-request baseline or flag that assumption."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero uses Priya's own words ('No email tennis'). Bracketed placeholders keep it honest about unknown facts. It also gives smart side moves: a security link in the top menu, an 'interviews per week' field in the form, and a metric that filters for real recruiting teams.",
+  "biggest_mistake": "It adds unsupported claims: 'three or four emails' per interview, 'your week gone' at 60 interviews, and a 'Fewer missed interviews' headline with no data. The deciding metric is also a composite of two actions rather than the one clean metric I asked for.",
+  "what_would_make_it_a_10": "Strip the invented numbers and the no-show outcome claim, and settle on one simple deciding metric. Make the two hero variants differ more in structure, not just in angle."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick recruiting with the right math and a sensible page order. Output 1 is tighter and never claims more than our data shows, while Output 2 sounds more like Priya but slips in made-up numbers and a muddier metric."
+}

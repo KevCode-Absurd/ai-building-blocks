@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data closely, puts the cheapest/highest-leverage groups first, and gives a usable Monsoon Dark and ex-subscriber plan with holdouts and economics.",
+  "biggest_mistake": "It undervalues reachable audience by using only email consent in the sizing, and the Monsoon Dark fallback to House Blend is weaker than naming a clearly closest dark roast if one exists.",
+  "what_would_make_it_a_10": "Use combined reachable counts by channel more precisely and make the discontinued-blend replacement recommendation more specific and defensible."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 5,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly spots the discontinued blend issue and the subscription delivery problem, and the message drafts are on-brand and customer-friendly.",
+  "biggest_mistake": "It misses the key priority that 46 to 90 days is the cheapest at-risk segment, and its reach and profit math rely on shaky assumptions that do not trace cleanly to the brief.",
+  "what_would_make_it_a_10": "Re-rank targets to start with 46 to 90 days, tighten the reachable and gross-profit calculations to the given data, and add a more rigorous lift and break-even framework."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to what I asked for: it uses my numbers, catches the day-68/day-90 signal, handles Monsoon Dark and subscription churn properly, and is ready to run. Output 2 has good copy and some smart ideas, but it puts the wrong segments first and the financial model is too loose for me to trust."
+}

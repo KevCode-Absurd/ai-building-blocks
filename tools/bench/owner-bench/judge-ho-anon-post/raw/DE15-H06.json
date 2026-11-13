@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It answers the three things in my data at once and makes them doable: no to the 20% cut with the lifetime maths, an invited top-40 Partner tier funded from the $40,000, and a dated, named 30-day plan (call the top 20 by 25 Nov, switch tracking, pay a month early). The one-page rules are written to be published, including plain-word disclosure, rel=\"sponsored\", and a clause that earned commission stays earned.",
+  "biggest_mistake": "Two of the numbers that carry the argument are asserted rather than shown. The 'about $38,000' saving from cutting only new referrals, and the '$62,000 to $89,000' credit-window cost, do not reconcile with the rates in the same document (the implied capture is 55-78%, not the stated 65-75%), so my finance lead will go straight at the two figures the plan rests on.",
+  "what_would_make_it_a_10": "Show the working on the $38,000 and the window cost in two short lines each, and put the 40%-for-12-months rival option on the table with its cost so I can see the cheaper tier was chosen on purpose, not by default."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The cleanest reasoning of the two on the central question: 'we keep 70 cents, then 80 cents, so the cut breaks even at a 12.5% revenue drop' is checkable in one reading, and the churn-adjusted $158 / $106 / $211 per referred customer makes the competitive risk concrete. The 40%-first-12-months Partner tier is a real answer to the rival, costed at about $46,000.",
+  "biggest_mistake": "It leaves the $50 minimum where it is, when minimum plus speed was 64% of survey comments, and the first 30 days are written as Days 1-7, 8-14 with no calendar dates or named owners, so my partner manager has to convert the plan before she can start it. The rules page also drops the '30 days' notice, earned commission stays yours' line that matters most if we ever touch terms.",
+  "what_would_make_it_a_10": "Put real dates and owners on the first 30 days, cut the Partner minimum to $25 and the standard to $50, add the notice and earned-commission clause to the rules, and state the credit-window cost as a range rather than 'may be the biggest cost.'"
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both tell me straight not to cut to 20% and both are worth using, but only the first one I could hand to my partner manager tomorrow: real dates, named owners, tool changes, a publishable rules page, and a bolder credit-by-survey idea. The second argues better on the break-even, yet it forgets the minimum payout complaint and gives me no dates, which is the work I would have to do myself."
+}

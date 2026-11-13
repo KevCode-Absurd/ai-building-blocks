@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It names the exact reasons customers left (discontinued Monsoon Dark, late subscriptions, just-ran-out buyers) and gives each one a separate track, message and timing, with profit maths worked from the real per-order figure.",
+  "biggest_mistake": "The gross profit projection adds Group 2 (Monsoon Dark) and Groups 3/4 as separate reachable pools without clearly showing the Monsoon Dark buyers are already inside the 91-365 bands, so the 49,000 reachable base may double-count them and inflate the ₹3.85-7.15 lakh headline.",
+  "what_would_make_it_a_10": "Show group sizes as non-overlapping by subtracting Monsoon Dark and ex-subscribers from the age bands before the reachable and profit table, so the total adds up cleanly."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Strong diagnosis that most lapses were a broken promise, not price, plus a delivery gate before inviting subscribers back and extra cold-brew/equipment sub-tracks.",
+  "biggest_mistake": "Numbers do not reconcile: it assumes 70% reachability and 2 orders per won-back buyer to reach ₹8.5 lakh, yet reachable counts per group (9,170 of 13,100) and a 4% assumed lift are presented as if solid, and the 46-90 day 'at risk' group is demoted to a side note rather than a ranked target.",
+  "what_would_make_it_a_10": "Make the targets non-overlapping with explicit reachable counts from the 62%/40% opt-ins, treat the 46-90 day at-risk group as a first-class ranked segment with its own offer and profit line, and show the lift maths so the ₹8.5 lakh can be audited line by line."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 reads like a plan I could hand to my team on Monday: every group has a size, a reachable count, an offer and a profit figure, and the day-68 trigger and Monsoon Dark swap are exactly the fixes I hoped for. Output 2 has great thinking but the money and group counts don't quite add up, so I'd have to rework it before using it."
+}

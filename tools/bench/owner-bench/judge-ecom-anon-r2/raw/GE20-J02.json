@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The financial acumen. Calculating exactly how a 20% discount destroys first-order profit (dropping it from $27.10 to $14.70) is a brilliant, owner-level insight.",
+  "biggest_mistake": "None. This is a flawless, highly actionable response.",
+  "what_would_make_it_a_10": "It is already a 10. The 'plan on one screen' makes it perfectly ready for Monday morning."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 10,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "The insight to keep Meta spend flat during the 30-day test to ensure we can read the true incremental lift on Shopify.",
+  "biggest_mistake": "Very minor, but the creative hooks are slightly less punchy than O1, and it misses the deeper margin impact of the discount.",
+  "what_would_make_it_a_10": "Including an executive summary or 'one-pager' at the top to give the owner a 30-second snapshot of the capital allocation and expected return."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both plans are spectacular and Monday-ready. Output 1 wins because its financial modeling—specifically calculating the exact margin destruction of the 20% offer—proves this media buyer deeply understands the business's bottom line."
+}

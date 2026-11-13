@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the main signals correctly: Semrush is mainly an agency/reporting/PPC problem, while Lite limits are the larger self-inflicted churn leak.",
+  "biggest_mistake": "The fifth move, link-data content, is weaker and more generic than the first four, and the Lite fix could arguably be ranked first as the fastest money.",
+  "what_would_make_it_a_10": "Replace the generic content move with a sharper retention or agency monetization move, and make the ranking explicitly balance impact, speed and effort."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very clear and quantitative, especially on the per-1,000 trial math, Lite leakage, and the underused 21,000 multi-site AWT accounts.",
+  "biggest_mistake": "It ranks the agency reporting product fourth even though that is the core place Ahrefs loses to Semrush and the main competitive response requested.",
+  "what_would_make_it_a_10": "Move the agency reporting bet higher, make the ranking basis fully comparable across moves, and tighten the Lite churn projection wording."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 1 better matches the competitive brief by putting agency reporting at the center while still catching the Lite limits and AWT nurture opportunities. Output 2 is clearer in places, but it underweights the main Semrush loss point by ranking the reporting fix last."
+}

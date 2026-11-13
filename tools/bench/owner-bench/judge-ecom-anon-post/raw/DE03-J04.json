@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Uses the owner's own numbers and customer language to lead every angle (taste test, 3 pm swap, game-day cooler), names the price objection on camera, and adds a concrete test plan with cut thresholds.",
+  "biggest_mistake": "A little over-packed and production-team-flavoured at moments (test plan, bolder move, strict hook cut-offs) for UGC, and the 'Ad' on first frame is rigid; also claim lines are crammed into mouthfuls that may trip a real creator.",
+  "what_would_make_it_a_10": "Tighten each script's spoken lines to natural, grade-6 breezy speech, trim the extra test-plan/metadata, and give creators one clearer sentence of freedom plus a softer, platform-correct disclosure instruction."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, shootable scripts with natural spoken lines, real customer hooks, explicit price handling and a strong creative-brief tone that creators can act on immediately.",
+  "biggest_mistake": "Less analytical than the owner's data allowed; it doesn't use the cost-per-purchase insight or price comment share as explicitly, and its disclosure guidance is a bit generic (caption '#ad' and toggle) rather than fully platform-specific.",
+  "what_would_make_it_a_10": "Mine the comment and paid-ad data for the opening choices and test plan (taste test over label, $3 objection) and add sharper creator rules on disclosure, forbidden words and claim wording."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 feels like it was written by someone who read my data back to me, with sharper test logic and price handling; Output 2 is more elegantly written and immediately usable, but slightly less tuned to my numbers. Both are close and I'd shoot either after small edits."
+}

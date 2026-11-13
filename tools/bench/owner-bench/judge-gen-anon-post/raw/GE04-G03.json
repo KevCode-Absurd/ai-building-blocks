@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The inclusion of 'To forward' blurbs in the asks and grouping the problems with their fixes under the exact brand phrase requested.",
+  "biggest_mistake": "None. This is an exceptional, ready-to-send draft.",
+  "what_would_make_it_a_10": "It is already a 10."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Calculating that $0.9M on roughly $10.4M in MRR accounts for nearly 9 points of gross margin, framing the financial impact perfectly.",
+  "biggest_mistake": "Separating the bad news ('What went wrong') from the solutions ('What we're doing about it') disrupts the flow and goes against the builder-like 'Here is the problem and the fix' voice.",
+  "what_would_make_it_a_10": "Group the problems directly with their solutions, use forwardable snippets for the investor asks, and include the runway calculations in the data table."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both drafts successfully unpack complex math behind the scenes, but Output 1 formats the update exactly how a seasoned founder would. The forwardable email blurbs make it effortless for investors to help, and grouping the problems with the fixes reads much better."
+}

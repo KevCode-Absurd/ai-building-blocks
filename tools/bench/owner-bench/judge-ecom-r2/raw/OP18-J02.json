@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole launch around the strongest signals: on-feet worker creators, problem-first hooks, Spark Ads from day 1, and a $38 90-day break-even target checked against Shopify rather than TikTok ROAS.",
+  "biggest_mistake": "The only notable wobble is the broad targeting note of “no age floor,” which I’d want cleaned up to match platform rules and our adult buyer focus.",
+  "what_would_make_it_a_10": "Tighten the targeting language, assign exact Monday owners by role, and make the reserve release mechanics a little simpler to operate."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets the main economics right, avoids mission-first and discount-first launches, and gives a clear setup, creative, budget, and Day 30 scorecard.",
+  "biggest_mistake": "Its scale rules and Day 30 pass bar are a bit too strict and inconsistent with the stated $38 target, and “native sound” could create rights issues for paid TikTok ads.",
+  "what_would_make_it_a_10": "Align all kill, scale, and Day 30 rules to the $38/$57 economics, use commercial-safe audio language, and put the nurse/server Spark Ads more clearly at the center of day-one spend."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels more like a media buyer acting directly on our data and constraints, especially the worker-creator signal, the problem-first hooks, the Shopify-based measurement, and the 90-day break-even logic. Output 2 is solid and usable, but its scaling thresholds and scorecard would make it harder to decide fairly whether TikTok has earned more budget."
+}

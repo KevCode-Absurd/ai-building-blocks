@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the in-app checkout fix first and sizes it in rupees. It then gives sample-size maths that checks out against my traffic. Add to cart is the main metric for the page-layout tests, and orders per session is kept for the tests that need it. It also catches that add to cart can mislead on the delivery and EMI tests.",
+  "biggest_mistake": "It is well over the 1,500-word limit and dense. It adds a 'bolder move' nobody asked for and assumes calendar dates. Ranks 2 to 4 are barely justified, and firmness is only covered indirectly through the reviews tabs.",
+  "what_would_make_it_a_10": "Cut it to 1,500 words and drop the bolder-move section. Add one line on why each test sits at its rank. Show the funnel table by browser at the top. Add plain-words firmness copy."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The opening funnel table splits the data by device and browser, with correct rates. It spots the in-app checkout bug and sizes it correctly at about 560 orders and ₹34 lakh a month, flagged as a ceiling. The A/A test, the in-app cookie warning and the 11-week schedule are practical touches.",
+  "biggest_mistake": "Test 5 bundles a new hero image with a reviews move, so a result cannot be attributed. Orders per session is the main metric for the size test, which forces a 4-week run and a 12% minimum detectable lift. The firmness test depends on a placeholder rating and sits above the reviews idea, and the 11-week schedule is slow.",
+  "what_would_make_it_a_10": "Split test 5 into two tests. Use add to cart or checkout reach as the main metric where it fits. Show the rupee value of each test, and say plainly that small lifts will not be detectable at this conversion rate. Stay inside the word limit."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both lead with the in-app checkout fix and the correct numbers. Output 1 has tighter test design, with single-change tests, sensible main metrics and a rupee value for each. Output 2 is a little easier to read but bundles two changes and is slower."
+}

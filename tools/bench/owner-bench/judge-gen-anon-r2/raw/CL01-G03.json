@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Front-loads the missed forecast, the margin drop and a correct 33–37 month runway range. It also adds a sharp check that direct-created databases grew only 2.6%, so nearly all growth came from the AI-builder channel.",
+  "biggest_mistake": "The '9 points of margin, more than the 7-point drop' aside is confusing and invites questions. It never says Customer A's exit will pull NRR down. It also runs at or slightly over the word limit.",
+  "what_would_make_it_a_10": "Cut the margin-math aside and state the NRR impact of Customer A. Give an expected range for the margin recovery from the 48-hour pause. Trim to clearly under 700 words."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built for the phone-reading lead partner: three numbers, bad news, and 'what we need most' all sit on the first screen. Each problem is paired with a concrete action, and the asks are dated and include a forwardable blurb that angels can actually send.",
+  "biggest_mistake": "It is probably over 700 words. Burn and runway are split between the top and section 2, which makes them slightly repetitive. Like Output 1, it doesn't quantify the expected effect of the pause or Customer A's hit to NRR.",
+  "what_would_make_it_a_10": "Trim to under 700 words and merge the runway points. Add an expected range for margin recovery after the 48-hour pause. Note how much Customer A will pull NRR down in February."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are honest, accurate and send-ready with light edits. Output 2 puts the main ask on the first screen, gives the angels a forwardable blurb and adds a sensible partner-quality metric, so it's the one I'd rather send."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows the pilot signals closely: Controllers/Heads of Finance at 50-300 person SaaS companies, pricing-page-change timing, no links, and a conservative 6.8%-7.9% reply expectation.",
+  "biggest_mistake": "Step 1 includes the 9-to-4 proof and has both a question and a conditional reply ask, which makes it a bit heavier than the one-question, one-ask rule.",
+  "what_would_make_it_a_10": "Move the proof to step 2 or 3, simplify each email to one clean ask, and tighten the initial load count to only the currently flagged subset of the 1,900."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The copy sounds more like a finance peer and cleanly uses the pricing-change/rev-rec pain without links or fake urgency.",
+  "biggest_mistake": "The 7%-10% expected reply range is a little optimistic versus the pilot, and the 10% ceiling is based on an invented uplift assumption rather than observed data.",
+  "what_would_make_it_a_10": "Use a more honest expectation of about 7%-8%, move the proof out of step 1, and avoid the high-friction 20-minute meeting ask in step 2."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are usable and tailored, but Output 1 is more disciplined on the list rules and reply-rate forecast. Output 2 has slightly better voice, but its projection stretches beyond the data more than I would want."
+}

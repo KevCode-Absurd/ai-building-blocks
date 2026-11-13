@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Flawlessly translates the data into perfectly timed interventions, notably the day-3 tracking update and targeting the fit email strictly at first-time bra buyers.",
+  "biggest_mistake": "Sends the fit check as a separate email 10 minutes after ordering, which could slightly clutter the customer's inbox compared to consolidating it.",
+  "what_would_make_it_a_10": "Embed the fit check module dynamically into the order confirmation email for first-time buyers instead of sending a separate message."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Demonstrates excellent commercial awareness by highlighting that a size swap still incurs the £7.50 handling fee and noting the self-selection bias of quiz users.",
+  "biggest_mistake": "Misses the peak window for support tickets by scheduling the 'running late' email on day 5, after the majority of customers have already reached out.",
+  "what_would_make_it_a_10": "Include a proactive check-in email on day 3 to intercept the 62% of 'where is my order' tickets that land in that specific window."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 correctly identified the need for a day-3 update to intercept the bulk of the WISMO tickets, whereas Output 2 waited until day 5 when the damage is already done. Output 1 also smartly restricted the fit-check to first-time buyers, sparing loyal customers from repetitive advice."
+}

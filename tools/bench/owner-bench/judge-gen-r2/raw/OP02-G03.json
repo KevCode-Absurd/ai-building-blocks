@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the miss, margin drop, burn/runway, and Customer A, then ties the AI-builder growth directly to compute cost and weak conversion.",
+  "biggest_mistake": "The margin math line slightly overstates the precision of the $0.9M compute impact, and the assumptions block should be kept out of the investor email or clearly marked internal.",
+  "what_would_make_it_a_10": "Tighten the margin-impact wording and move assumptions into an internal note before sending."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very scannable on a phone, puts the bad news in the first screen, and gets the key math right, including runway and the AI-builder mix.",
+  "biggest_mistake": "The Customer A response is a little thin and the asks are slightly less sharp on the lead investor's role than they could be.",
+  "what_would_make_it_a_10": "Make the Customer A retention/learning plan more concrete and give the lead investor a sharper named ask around the New York VP Enterprise Sales search."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 2 is cleaner, shorter, and more investor-ready on a phone while preserving the key bad news and correct math. Output 1 has a bit more diagnostic depth, but it is slightly less polished for direct sending."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads like our company: candid, specific, numbers first, bad news up top, and the asks are concrete and useful.",
+  "biggest_mistake": "It overreaches a little on the margin math and includes an assumptions section that I would likely cut before sending.",
+  "what_would_make_it_a_10": "Tighten the wording, remove the assumptions note from the body, and be a bit more careful where it infers causality or expected savings beyond what the data supports."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is clean, easy to scan on a phone, and does a good job of connecting the AI-builder channel to the margin problem with a practical fix.",
+  "biggest_mistake": "The runway table is wrong for September, which makes me question the numbers, and that is fatal in an investor update.",
+  "what_would_make_it_a_10": "Fix the factual error, tighten the asks a bit, and make the most important bad news feel even more immediate by leading more clearly with Customer A and the forecast miss."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather send. Both understand the core issues, but Output 1 is more owner-minded on the asks and keeps the financial story more trustworthy."
+}

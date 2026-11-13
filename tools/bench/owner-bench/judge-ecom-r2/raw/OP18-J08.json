@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the two biggest signals in the data: Monsoon Dark buyers get their own match-led track, and ex-subscribers are held back until the delivery problem is fixed.",
+  "biggest_mistake": "The reach and value model only uses email consent and does not fully account for WhatsApp-only opt-ins, so the reachable audience is conservative and incomplete.",
+  "what_would_make_it_a_10": "Add contactable counts by email-only, WhatsApp-only and both, and show a simple break-even lift threshold per offer after message costs."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly says the subscription win-back must wait for an operational delivery fix and frames that message around customer control, not a bigger discount.",
+  "biggest_mistake": "It misses the 46-to-90-day at-risk group as the first win-back priority, even though the data says they are the cheapest people to save now.",
+  "what_would_make_it_a_10": "Rebuild the targeting order around the 46-to-90-day group, name a real Monsoon Dark replacement instead of placeholders, and make the financial model cover the full programme cleanly."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to something I could hand to the team tomorrow: it ranks the right groups, uses the right profit math, gives finished messages, and does not ignore the discontinued coffee or courier problem. Output 2 has good thinking, but the priority order and unfinished placeholders would need real rework."
+}

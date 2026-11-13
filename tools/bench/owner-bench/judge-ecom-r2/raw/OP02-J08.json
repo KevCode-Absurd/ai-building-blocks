@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the two biggest signals in the data: Monsoon Dark buyers need a match, and ex-subscribers should not be won back until the delivery problem is fixed.",
+  "biggest_mistake": "It does not put the 46 to 90 day at-risk group first in the main target order, even though that is the cheapest leak to stop.",
+  "what_would_make_it_a_10": "Make the 46 to 90 day flow the first programme with its own offer, sequence, draft and value estimate, and add a clearer break-even lift calculation by segment."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly makes the 46 to 90 day group the first move and clearly calls out the Monsoon Dark and subscription delivery problems.",
+  "biggest_mistake": "The Monsoon Dark replacement is weak and partly unfinished, and the subscriber track lacks a ready-to-send first message despite being one of the highest-risk segments.",
+  "what_would_make_it_a_10": "Use a proper closest-match Monsoon Dark track, include the subscriber win-back draft and value, and calculate reach using both email and WhatsApp opt-ins without double-counting."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is more complete and ready to run, especially on the subscription gate, message drafts and profit logic. Output 2 has the better first priority with day-68 at-risk customers, but it is less finished where the owner most needs precision."
+}

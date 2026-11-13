@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It takes apart the blended 4.0 ROAS correctly, shows that non-brand PMax is losing money, and puts the pointed-flat price mismatch first.",
+  "biggest_mistake": "The forecast leans a little optimistic on brand search absorbing nearly all brand value at much lower spend.",
+  "what_would_make_it_a_10": "Make the forecast a bit more conservative and add clearer week 2-4 budget reallocation rules by campaign and ROAS threshold."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a strong profit view, a sensible budget split, and useful stop rules for the following weeks.",
+  "biggest_mistake": "It does not isolate PMax without brand as clearly, and the title example feels more keyword-stuffed and less Rothy's than it should.",
+  "what_would_make_it_a_10": "Lead with the PMax-without-brand ROAS, make the title and ad copy warmer and more customer-led, and avoid platform-risky directions like simply removing PMax image and video assets."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather hand to the team because it catches the core issue faster: PMax is being propped up by brand, the best product is partly switched off, and budget should move to bags, washable, and standing-all-day intent. Output 2 is good, but it is a little less brand-sensitive and less precise on the main PMax diagnosis."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The flawless funnel math, blunt tone, and highly actionable product-led moves, especially the brilliant idea to put a free report inside AWT.",
+  "biggest_mistake": "Didn't explicitly place the Lite usage limit fix at number one despite the data showing it as the most immediate revenue leak.",
+  "what_would_make_it_a_10": "Making the Lite usage fix the undisputed #1 move for fast cash, and adding explicit fake dates to the data section to strictly follow the 'every claim has a date' rule."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Excellent calculation of the agency loss math and a smart inclusion of an explicit date at the very top to satisfy the brand guidelines.",
+  "biggest_mistake": "Move 5 is exactly the kind of generic 'do more content' advice with no numbers that I specifically stated would annoy me.",
+  "what_would_make_it_a_10": "Replacing Move 5 with a product-led or structural growth idea, and proposing first steps that involve shipping rather than just doing interviews."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 perfectly nailed the blunt, data-led voice and delivered five sharp, product-driven moves, while Output 2 fell into the trap of pitching generic content advice. Both did the math flawlessly, but Output 1's action steps are much closer to ship-ready."
+}

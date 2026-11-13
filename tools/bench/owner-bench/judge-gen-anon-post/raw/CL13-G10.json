@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The whole series is built on the two habits (typed recurring task, second device), with a skip-if table, platform-split email 3, a calm inactivity email, and a catch-up email 5 that targets whichever habit is missing. It also drops the team invite and shortcuts emails with the numbers.",
+  "biggest_mistake": "Success measures are grouped at the end, not given per email. The control group gets no onboarding emails at all, which is harsh. Email 5 has branching variants that are a little fiddly to read.",
+  "what_would_make_it_a_10": "Put a 'worked if' line under each email, use a softer holdout (the old series, not nothing), and simplify the email 5 variants into clear labeled versions."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Each email has a clean trigger, subject, preview, body, button, goal and 'worked if' line, which matches my brief exactly. The drop section is well argued and mentions parents and students.",
+  "biggest_mistake": "Email 5 is a Pro upsell, so only two of five emails teach the habits that drive retention. Email 3 goes out on a fixed day 3 instead of reacting to what the user did, and nothing catches people who skip a habit.",
+  "what_would_make_it_a_10": "Replace the Pro email with a habit catch-up email keyed to the missing habit, and trigger email 3 off the earlier events instead of a fixed day."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 puts the whole series behind the two habits that predict retention, uses the allowed triggers well, and ends with a catch-up for whichever habit is missing. Output 2 is tidier per email, but it spends a slot on a Pro pitch and leaves retention gains on the table."
+}

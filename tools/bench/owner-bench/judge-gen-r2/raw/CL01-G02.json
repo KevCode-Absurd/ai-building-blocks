@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting with exact, correct seat math (about 1,540 of 2,717, 0.73 seats per signup) and builds every section's proof from my own data without inventing a single claim.",
+  "biggest_mistake": "The hero says 'back and forth' and saves Priya's 'email tennis' for section 2. Security proof also sits two sections above the demo form instead of beside it.",
+  "what_would_make_it_a_10": "Put 'email tennis' in the hero and a security line right at the demo form. Base the sample size on a demo-request rate rather than the 3.1% signup rate."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero uses Priya's own words, 'No email tennis', with a round-robin subhead, and it suggests adding the security page to the top menu.",
+  "biggest_mistake": "It invents an unsupported claim ('three or four emails', 'your week gone') and leaves several bracketed placeholders. It also mixes 'Get started' buttons into a page meant to drive team demos.",
+  "what_would_make_it_a_10": "Cut the made-up email-count claim, use 'Book a demo' consistently, and give a concrete sample size and stop rule in place of a bare '95% confidence'."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick the right segment with the right math. Output 1 is tighter: no invented claims, fewer placeholders, consistent demo calls to action and a real stop rule. Output 2's hero speaks Priya's language slightly better."
+}

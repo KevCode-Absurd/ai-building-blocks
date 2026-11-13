@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Properly identifies the UTC hours issue and states the hard parts directly in the post.",
+  "biggest_mistake": "The written application exercise does not give the applicant the underlying facts of the customer's problem. This forces the applicant to guess or invent a solution, which inadvertently tests technical knowledge or roleplay rather than just their writing and empathy.",
+  "what_would_make_it_a_10": "Give the applicant the technical answer in the prompt so you are purely grading their communication, and provide a concrete second-stage exercise to evaluate how they handle the overnight quiet hours."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The 'Priya' exercise is brilliant. By giving the candidate the actual root cause (the typo), it completely removes the need for tool experience and purely tests their ability to write clearly and empathetically, which perfectly fits the data.",
+  "biggest_mistake": "The voice is slightly clinical in a few spots in the job description compared to our usual warm tone, but it's very close.",
+  "what_would_make_it_a_10": "A quick pass to warm up the tone of the job post slightly, but the structural and strategic work is completely flawless."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 translates our data into brilliant, highly practical hiring exercises. The Priya scenario and the shortlist exercise test exactly what we need to test without penalizing career changers."
+}

@@ -1,0 +1,146 @@
+{
+ "panel": [
+  "CL01:claude-opus-5-5",
+  "OP02:gpt-5.5",
+  "DE03:deepseek-chat",
+  "GE04:gemini-pro-latest",
+  "CL05:claude-sonnet-5-5",
+  "OP06:gpt-5.4",
+  "DE07:deepseek-reasoner",
+  "GE08:gemini-flash-latest",
+  "CL09:claude-opus-5-5",
+  "OP10:gpt-5.5",
+  "DE11:deepseek-chat",
+  "GE12:gemini-pro-latest",
+  "CL13:claude-sonnet-5-5",
+  "OP14:gpt-5.4",
+  "DE15:deepseek-reasoner",
+  "GE16:gemini-flash-latest",
+  "CL17:claude-opus-5-5",
+  "OP18:gpt-5.5",
+  "DE19:deepseek-chat",
+  "GE20:gemini-pro-latest"
+ ],
+ "verdicts": 108,
+ "failed": 132,
+ "tot": {
+  "agent": 66,
+  "plain": 42,
+  "tie": 0
+ },
+ "agent_share_of_decided": 0.611,
+ "perProvider": {
+  "deepseek": {
+   "agent": 32,
+   "plain": 16,
+   "tie": 0
+  },
+  "gemini": {
+   "agent": 34,
+   "plain": 26,
+   "tie": 0
+  }
+ },
+ "perJob": {
+  "J01": {
+   "agent": 7,
+   "plain": 1,
+   "tie": 0
+  },
+  "J02": {
+   "agent": 5,
+   "plain": 3,
+   "tie": 0
+  },
+  "J03": {
+   "agent": 0,
+   "plain": 10,
+   "tie": 0
+  },
+  "J04": {
+   "agent": 2,
+   "plain": 8,
+   "tie": 0
+  },
+  "J05": {
+   "agent": 5,
+   "plain": 4,
+   "tie": 0
+  },
+  "J06": {
+   "agent": 4,
+   "plain": 6,
+   "tie": 0
+  },
+  "J08": {
+   "agent": 6,
+   "plain": 2,
+   "tie": 0
+  },
+  "J09": {
+   "agent": 9,
+   "plain": 0,
+   "tie": 0
+  },
+  "J10": {
+   "agent": 9,
+   "plain": 0,
+   "tie": 0
+  },
+  "J11": {
+   "agent": 4,
+   "plain": 4,
+   "tie": 0
+  },
+  "J12": {
+   "agent": 8,
+   "plain": 1,
+   "tie": 0
+  },
+  "J07": {
+   "agent": 7,
+   "plain": 3,
+   "tie": 0
+  }
+ },
+ "dims": {
+  "agent": {
+   "fit": 9.18,
+   "insight": 8.9,
+   "priorities": 9.02,
+   "reasoning": 9.05,
+   "correct": 9.29,
+   "clear": 9.09,
+   "voice": 8.56,
+   "range": 8.57,
+   "ready": 8.75,
+   "overall": 8.85
+  },
+  "plain": {
+   "fit": 8.95,
+   "insight": 8.68,
+   "priorities": 8.74,
+   "reasoning": 8.69,
+   "correct": 8.95,
+   "clear": 9.15,
+   "voice": 8.87,
+   "range": 8.77,
+   "ready": 8.59,
+   "overall": 8.65
+  }
+ },
+ "use_as_is": {
+  "agent": {
+   "undefined": 3,
+   "with small tweaks": 71,
+   "with major rework": 4,
+   "as is": 30
+  },
+  "plain": {
+   "undefined": 3,
+   "with small tweaks": 84,
+   "as is": 17,
+   "with major rework": 4
+  }
+ }
+}

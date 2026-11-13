@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It works out a real contribution-margin baseline (13.6% a year ago, 7.8% now) and sizes every move in points of margin, with the working shown. Each move has an owner, effort, week-4 and week-8 lines, and the scorecard carries action thresholds. This is what lets me rank by gross profit and effort.",
+  "biggest_mistake": "It is dense, and probably over the 1,600-word cap. Some claims are unsupported, such as the 'practitioner yardstick' for flows. The gain sizes rest on stacked assumptions, and the 'week 2 line' shorthand is cryptic.",
+  "what_would_make_it_a_10": "Trim to the word limit and write the sizing in plainer words. Drop the unsourced benchmark. Give each move an explicit first-week step. Keep the 'proved' and 'to check' split and the baseline math."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clear and well organised. It separates proved from still-to-check, with an owner and a date on each check. The $94 payback rule per ad set and the per-channel payback math (Meta loses $27, Google breaks even, other makes $14) are sharp. The stop list is practical and fits the brand.",
+  "biggest_mistake": "It never computes the contribution-margin baseline, saying 'set baseline in week 1'. The impact of each move is mostly qualitative ('high', 'medium'), so the ranking by gross profit is weakly backed. The core-product return fixes are low value.",
+  "what_would_make_it_a_10": "Compute the contribution baseline and put a number on each move's gain. Add a first-week action per move. Give the scorecard action thresholds, and put the Meta reset and flows ahead of the minor returns fixes."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives me a real margin baseline, sized and ranked moves, owners, thresholds and a scorecard I can run Monday. Output 2 is easier to read but leaves the key numbers for me to figure out. I'd ask my team to trim Output 1 to the word limit and use it."
+}

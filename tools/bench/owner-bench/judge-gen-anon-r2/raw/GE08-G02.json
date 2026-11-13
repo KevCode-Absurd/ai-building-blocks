@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Rock-solid CRO execution: precise seat math, a unified 'Book a demo' CTA strategy for the team segment, and actual sample-size math for the A/B test.",
+  "biggest_mistake": "The proof line under the hero button (71% activation) is an internal product metric that means more to us than to a prospective recruiter.",
+  "what_would_make_it_a_10": "Replace the internal 7-day activation stat in the hero proof line with candidate/recruiter-facing proof, such as hours saved per week or interviews booked without conflict."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very sharp, punchy headlines that weave Priya's exact pain points ('No email tennis', 'Answer security before they ask') straight into the copy.",
+  "biggest_mistake": "Inconsistent call-to-action strategy: switches back and forth between 'Get started' and 'Book a demo' across sections on a page explicitly targeting a high-seat team motion.",
+  "what_would_make_it_a_10": "Standardize on a single conversion path for this team segment instead of mixing self-serve and sales CTAs, and provide rigorous sample-size math for the test stop rule."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 behaves like a senior CRO specialist who understands B2B team economics: it keeps the conversion goal consistent with 'Book a demo' across the page and calculates real sample sizes for the A/B test."
+}

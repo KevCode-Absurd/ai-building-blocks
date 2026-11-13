@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It zeroes in on the winning segment and trigger, gives a usable sequence timed to the pricing-change flag, and turns the pilot data into clear list rules and expectations.",
+  "biggest_mistake": "Step 1 includes a secondary offer to send a one-page summary and a mild threshold claim ('If it runs past five') that is not grounded in the brief.",
+  "what_would_make_it_a_10": "Tighten step 1 to a single cleaner ask and keep every line strictly anchored to the proven pain and proof without adding extra conditions."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It also chooses the right segment and trigger, and the sequence sounds like finance talking to finance with clean, plain-language emails.",
+  "biggest_mistake": "It invents and overstates expected performance with an 8% to 10% reply-rate forecast and a wrong '3.1% across the whole pilot' benchmark, which is a serious fault because the owner asked for an honest expectation from the pilot.",
+  "what_would_make_it_a_10": "Use only defensible pilot-based expectations, fix the benchmark math, and remove speculative uplift assumptions that the data did not test."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could actually load and run with minor edits. It reads the pilot more carefully, makes the right exclusions, and stays honest on expected results instead of stretching the numbers."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Builds the whole answer from our numbers: identifies agencies as the only Semrush loss, flags Lite as the real leak, and turns the 21,000 multi-site AWT accounts into a first move with a control group.",
+  "biggest_mistake": "Ranks the agency reporting bet fourth, which risks under-weighting the one product battle the data says we must fight, even though the rationale is stated.",
+  "what_would_make_it_a_10": "Tie the multi-site onboarding, the Lite top-up and the reporting spec into one sequenced 90-day plan with a single owner and a clear first-week action."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Correctly leads with the agency reporting gap as the strategic bet and states the PPC no-fight stance plainly.",
+  "biggest_mistake": "Includes a thin, number-light content-marketing move and lets Lite fall to second with loose arithmetic, diluting the finding that our biggest leak is self-inflicted.",
+  "what_would_make_it_a_10": "Cut the weak fifth move, put the Lite usage-limit fix first with a hard save-rate projection, and tighten every metric to a dated number."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gets the ranking right: it treats the Lite limit as the fastest money and the multi-site AWT accounts as the cheapest pipeline, and every projection traces to a named assumption. Output 2 has the right instinct on agency reporting but wastes a move on content and buries the cheapest win."
+}

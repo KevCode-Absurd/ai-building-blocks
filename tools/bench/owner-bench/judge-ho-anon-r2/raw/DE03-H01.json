@@ -1,0 +1,35 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "biggest_strength": "Nails the core insight (top 5 shades go short, held cartons are a cheap fix) and builds a whole dated plan inside the cash, with an honest customer message in our own voice.",
+  "biggest_mistake": "The ₹1.187 crore total leaves only ₹1.3 lakh spare against freight and 15% rush-cost variance, which is thin for an ops lead to execute; also it doesn't give a per-shade-ready reorder trigger at shade level.",
+  "what_would_make_it_a_10": "A slightly larger contingency (say 3–4%) plus a per-shade reorder/stock-trigger sheet the ops lead can run Monday to Monday without asking."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "biggest_strength": "Very tight math per line (covers, buffers, reorder points) and a clean ₹4.07 lakh reserve with a documented pre-order wording; the Night-out kit is a smart way to move palettes.",
+  "biggest_mistake": "Pre-order copy says 'ship by 10 December' while the plan says rush stock lands 7 December — a small inconsistency, and the reorder-point table (8 weeks on a 42-day lead) is a bit loose. Also the 25,000 rush figure is larger than the gap-driven need, eating cash that could buffer freight.",
+  "what_would_make_it_a_10": "Fix the ship-date wording, tighten the rush quantity to the real gap plus sale-week demand, and carry a small contingency line so the owner isn't caught by freight."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are genuinely usable, but Output 1 tells me the story in our voice, names the Monday task and the honest back-in-stock line, and gets the numbers right without the ship-date slip I found in Output 2."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Followed every brand rule perfectly, including the exact phrase requested, and provided a highly readable executive summary with clear math.",
+  "biggest_mistake": "None of consequence; the assumptions around ticket deflection are basic but stated clearly.",
+  "what_would_make_it_a_10": "It is already a 10."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent tactical additions like explaining how to cancel the subscription in the app so users don't get billed again.",
+  "biggest_mistake": "Missed the specific brand phrase requested and recommended merging an already highly effective article.",
+  "what_would_make_it_a_10": "Include the requested brand phrasing and avoid touching articles that already have high success rates."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 followed the brand guidelines perfectly, including the exact requested phrase, and accurately diagnosed that no articles needed merging. It presented the math and summary exactly how a busy owner wants to read it."
+}

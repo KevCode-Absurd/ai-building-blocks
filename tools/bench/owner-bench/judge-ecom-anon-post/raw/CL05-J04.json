@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 6,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Three distinct angles (blind test, 3 pm swap, game-day family) with clean timed shot tables, customer-language hooks, and no label-led opening. The 3 pm script answers the $3 price head-on.",
+  "biggest_mistake": "Disclosure is only a caption '#ad' plus platform toggles, with no on-screen 'Ad' or spoken disclosure in the scripts. The test plan is thin, with no budget or kill thresholds. Little use is made of the cost-per-purchase data beyond the assumptions.",
+  "what_would_make_it_a_10": "Put disclosure into the scripts as on-screen text and a spoken line. Add a test plan with budget and cut thresholds from the $26/$32/$44 numbers. Include the approved claims list inside each creator brief. Confirm it fits under 1,300 words."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Opens with a clear plan tied to the data: the label-read ads got the most spend ($24,000) at the worst $44 cost per purchase, so no ad opens on the label. Disclosure is built into every script ('Ad' on screen, spoken line, partnership toggles). A concrete test plan uses real numbers, such as $800 per ad and cutting hooks under a 19% view rate. The creator rules cover claims, banned words, deliverables and rights.",
+  "biggest_mistake": "Some spoken lines are awkward ('It's linked right there', '12 afternoons for me'). '(if true)' tags inside hooks make them less ready to shoot. The creator rules and rights section push it past the word limit and add some clutter.",
+  "what_would_make_it_a_10": "Trim to under 1,300 words. Smooth the awkward lines and the '(if true)' hooks. Make each hook alternate change exactly one element. Put the three claims inside each individual creator brief so it can be sent as is."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both give me three usable, different scripts, but the second ties the plan to my spend and cost-per-purchase numbers. It builds disclosure into every script and gives me a budgeted test plan I can act on tomorrow. The first reads a little cleaner but leaves disclosure and testing thin."
+}

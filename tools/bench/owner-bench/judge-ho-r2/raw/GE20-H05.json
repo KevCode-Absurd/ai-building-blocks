@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 6,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The action plan and ticket reduction calculations are laid out in clear, easy-to-read tables.",
+  "biggest_mistake": "It missed the mandatory brand phrase 'Here's who owes what, and why' and provided a single-point ticket forecast instead of the requested range.",
+  "what_would_make_it_a_10": "Incorporate the specific brand phrase, present the forecast as a range upfront, and avoid rewriting/merging too much at once."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It perfectly followed all nuanced constraints, including using the exact brand phrase and providing an honest forecast range.",
+  "biggest_mistake": "The article for restoring an expense misses a tiny opportunity to mention how to find the 'Activity' tab if a user is completely lost, though it is minor.",
+  "what_would_make_it_a_10": "Slightly more detail on the engineering instructions for the in-app links, but it is otherwise exceptional."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 listened to the private notes perfectly. It included the required brand phrase, gave the ticket forecast as a range, and recognized that rewriting/merging everything was the wrong move."
+}

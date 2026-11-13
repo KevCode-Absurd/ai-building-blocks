@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the missed forecast, margin drop and Customer A loss in the first screen, explains burn to the dollar, gets runway right, and closes with three dated asks each naming a profile and city.",
+  "biggest_mistake": "The third ask (self-hosting buyers for the lead investor) leans on the departing customer and is the weakest of the three; the finance-y detail in the table (extra runway row) is slightly more than the phone reader needs.",
+  "what_would_make_it_a_10": "Trim the table to the six numbers that matter, and sharpen ask 3 into a question with a decision due (e.g. New York base approval by a date)."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Adds real analysis the owner didn't ask for: the $0.9M compute is roughly 9 margin points on ~$10.4M monthly revenue, and direct-created databases only grew 2.6%, so it names the channel problem precisely.",
+  "biggest_mistake": "The revenue-derived 'roughly 9 points of margin' sentence is a stretch and buries the lead in a dense paragraph; also the trailing assumptions block after the sign-off reads like working notes, not an email.",
+  "what_would_make_it_a_10": "Kill the inferred margin math or move it to a footnote, break the long AI-builder paragraph into three short lines, and move assumptions to a line above the asks."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are good and I'd send either with a quick edit, but output 1 reads cleaner on a phone, leads with the bad news exactly as I asked, and its asks are the most concrete; output 2 has sharper analysis but hides it in a thick paragraph and ends with working notes."
+}

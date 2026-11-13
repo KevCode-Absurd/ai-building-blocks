@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very production-ready: exact scenes, headlines, safe zones, approved-claim guardrails, and test budgets the team could execute tomorrow.",
+  "biggest_mistake": "It never uses the 41+ audience, which is the most expensive segment at ₹2,188 per purchase, and its women-first prioritisation is arguable rather than decisive.",
+  "what_would_make_it_a_10": "Add a 41+ proof concept or retargeting use, sharpen the purchase-share insight for women, and trim the spec recitation in primary text for a calmer voice."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharpest strategic read: it spots the women 25-40 purchase-share gap, uses the 41+ proof opportunity, and keeps all eight concepts distinct and easy to approve.",
+  "biggest_mistake": "Less production-ready than it could be: no explicit headlines or safe-zone specs, and Concept 1 says 'Cabin size' / 'Zero belt time' where the approved cabin-limit line would be safer.",
+  "what_would_make_it_a_10": "Add exact headlines, aspect-ratio/safe-zone notes, and tighten claims so every concept uses 'fits most Indian domestic airline cabin limits' where size is implied."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "I’d take Output 2 because it reads like a strategist’s deck: the data insight is sharper, the 41+ gap is covered, and the concepts are easier to approve and run. Output 1 is more execution-ready, so the gap is small, but Output 2 is the one I’d send to the team first."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the three key signals in your data: the paused ASC winner, the women 25 to 34 pocket, and the Razor Starter Kit COD trap, then turns them into direct budget decisions.",
+  "biggest_mistake": "It trims retargeting and holds the UGC test a bit generously, and its account loss/profit framing is slightly muddied by mixing Meta-count and adjusted thresholds.",
+  "what_would_make_it_a_10": "Tighten two or three calculations explicitly to Shopify-adjusted economics only, and be even firmer on where the reserve should and should not go."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is very decisive and puts the highest-leverage move first: relaunch the paused creator video and stop funding obvious losers.",
+  "biggest_mistake": "It makes a serious factual miss by cutting Beard Kit despite it being roughly profitable on Meta-count contribution and not one of the owner's key loser buckets, and some of its projected numbers and reserve logic are too speculative.",
+  "what_would_make_it_a_10": "Keep the same decisiveness but fix the Beard Kit call, remove speculative projection math, and anchor every live/cut decision more tightly to the actual store economics in the brief."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd rather run with tomorrow because it reads my data more faithfully, especially on women 25 to 34 and the COD trap, without introducing a major wrong cut. Output 2 is sharper in tone, but the Beard Kit decision and some projection math make it less trustworthy."
+}

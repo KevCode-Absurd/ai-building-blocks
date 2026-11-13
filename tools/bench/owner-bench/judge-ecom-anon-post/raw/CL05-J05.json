@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, accurate set with all six angles distinct enough, the paused winner brought back in the first launch ad, taste tested against it, and price addressed directly, each ad testing one clear thing, plus backups.",
+  "biggest_mistake": "Primary texts lean on '12 g protein. No added sugar.' as a tag, which makes several of them feel samey. Headline H1 pairs with P1 redundantly. Ad C vs A comparison muddles what is being tested. Relies on '1 in 4' rounding for 26%. Also assumes 27-char limits with no explanation for the stricter limit.",
+  "what_would_make_it_a_10": "Make each primary text fully distinct without repeating the protein/sugar tag, add Aditya and Priya's own phrases more vividly, and give a cleaner single-variable design for the four launch ads."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Primary texts are truly different and written in the customers' own words (samosa, 'trained today', 'Fair. Here's your ₹90'), the price objection is handled head-on, and the launch plan comes with a test design, budget, kill rule and fatigue rule that make it executable tomorrow.",
+  "biggest_mistake": "Invents a budget (₹6,000/day) and an elaborate test setup the owner did not ask for, with a minor arithmetic wobble (₹1,200 x 5 cells = ₹6,000, but the stated 14-day total and 'Day 14' read go well beyond the brief). Control ad is a fifth cell, so 'four combinations' is slightly stretched. Possibly near the word limit.",
+  "what_would_make_it_a_10": "Trim the extra experiment scaffolding and unstated budget assumptions, keep the strong copy, and state clearly that the ₹ figures are placeholders the owner can change."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2's copy sounds more like us and uses Aditya's and Priya's words, with six genuinely different angles and a sharp price line. Output 1 is accurate and tidy but its texts feel more repetitive."
+}

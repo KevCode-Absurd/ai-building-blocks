@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Candid subject line and a clear 'what went wrong' block that puts the forecast miss, the AI-builder margin cause and Customer A all in the first screen, with three named-profile, dated asks.",
+  "biggest_mistake": "The line that the extra $0.9M is 'roughly 9 points of margin, more than the 7-point drop' is muddled and invites the question of what offset the rest, on exactly the issue the owner cares most about.",
+  "what_would_make_it_a_10": "Reconcile the 7-point margin drop cleanly against the $0.9M compute rise (no unexplained overshoot) and add a forwardable line for the VP hire."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp, specific analysis (about 476K of the 500K database increase came from AI builders that convert at 0.4%), front-loads the top ask, and adds a forwardable blurb that lets angels act immediately.",
+  "biggest_mistake": "Some decisions are hedged as 'we plan to' (e.g. the New York base) and the ask dates are proposals that need confirming before send.",
+  "what_would_make_it_a_10": "Quantify the expected compute/margin saving from the 48-hour pause and commit the New York base as decided rather than planned."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both are send-ready and hit every required signal, but Output 2 reconciles the margin drop cleanly, proves the AI-builder channel drove nearly all database growth, and its front-loaded ask plus forwardable blurb are exactly what these readers asked for; Output 1's '9 points vs 7-point drop' line would make me stop and re-check."
+}

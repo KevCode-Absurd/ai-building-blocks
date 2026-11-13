@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is built tightly on my data. The quiz answer drives which product people see, and the sunscreen email answers the white cast and stickiness worries. It also covers exit, cart-pause and holdout rules and works out what a lift is worth in rupees.",
+  "biggest_mistake": "Some lines don't fit every product. The WhatsApp says 'every other night' even when the matched product is sunscreen. Email 4 puts all three products back in front of people, which undoes the one-product focus. Subject lines rarely name the active and its strength.",
+  "what_would_make_it_a_10": "Name the active and strength in more subject lines. Tailor the WhatsApp usage line to each product. Keep Email 4 focused on one matched product. Add a short tingling-versus-irritation note to the start-slow email."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The copy is warm and on-brand. The branched Email 2 has subject lines that name the active and strength. The labelling explanation and the tingling-versus-burning advice are helpful.",
+  "biggest_mistake": "Email 5 pushes the full 3-product routine (₹1,297) to everyone. That includes salicylic wash twice a day for dry or sensitive people who were told not to start with acids, so it contradicts Email 2 Version C and the one-idea, start-slow rule. The sunscreen email also comes later than it should, and the whole thing likely runs past my word limit.",
+  "what_would_make_it_a_10": "Make Email 5 branch by skin concern with a 1–2 product routine. Move the sunscreen-doubts email earlier. Tighten the copy to fit 1,800 words. Add a holdout test and a cart-flow pause."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 keeps every email matched to the quiz answer and answers the sunscreen worries early, with rules and a measurement plan I can set up in Klaviyo straight away. Output 2 reads nicely but ends by pushing all three products to everyone, which goes against my own brand rules."
+}

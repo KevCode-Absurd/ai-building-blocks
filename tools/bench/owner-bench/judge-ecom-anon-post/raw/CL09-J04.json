@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is tied tightly to my numbers. It opens on taste because taste tests cost $26 a purchase, keeps the label out of every opening, puts price on screen in every script, and includes a costed test plan with cut-off rules, plus rights and deliverables for the creators.",
+  "biggest_mistake": "The script tables are cluttered. 'Olipop paid me' sits in the middle of spoken lines, and '(if true)' notes appear in the dialogue, so the scripts read stiffer and less playful than our voice. It also runs close to the word limit.",
+  "what_would_make_it_a_10": "Make the spoken lines warmer and more natural. Keep the disclosure in the brief and the label rather than in awkward dialogue. Trim to stay well under 1,300 words."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 6,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sounds like us. 'Still fizzy. Still sweet. Still my treat.' is on brand. The briefs are clean and easy for a creator to follow, and the disclosure and claim rules are clear.",
+  "biggest_mistake": "Price is only answered out loud in one script. The test plan is thin, with no budget or decision thresholds. Some alternate hooks change the whole format instead of one thing, so I can't learn much from testing them.",
+  "what_would_make_it_a_10": "Add a budget, kill and scale thresholds, and the reasoning from my data. Handle the $3-a-can objection in each angle. Make each alternate hook change only one element."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are shootable, but Output 1 uses my data to tell me what to spend and when to cut, and it handles price in every script. Output 2 sounds more like us but teaches me less."
+}

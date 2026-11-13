@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It understands the real money leak: small COD orders and RTO, not just AOV. The lip balm cart add-on and COD-under-₹499 fee are practical, on-brand ways to move shoppers up without deep discounting.",
+  "biggest_mistake": "Some bundle break-even numbers are shaky, especially the Glow Routine and Body Duo maths, and the main face wash + serum pair is turned into a three-item bundle instead of being offered as the obvious routine duo.",
+  "what_would_make_it_a_10": "Tighten the bundle economics, make the face wash + serum routine the lead offer or show why the lip balm version beats it with cleaner maths, and test prepaid/COD shipping rules separately rather than jumping mainly to a ₹699 threshold test."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The ladder on the serum page is commercially smart and easy to understand: serum, serum + lip balm, full routine. The break-even thinking on the bundles is clearer than Output 1.",
+  "biggest_mistake": "The ₹599 threshold maths uses an assumed 6% affected slice, but the provided order spread implies roughly 13.5% of orders between ₹500 and ₹599 if spread evenly. That is a big enough miss that I would rework the threshold recommendation before acting.",
+  "what_would_make_it_a_10": "Redo the free-shipping model from the actual value bands, add a stronger COD/RTO action for under-₹500 orders, and use lip balm more as a cart add-on than as one of the three headline bundles."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather use Output 1 because it sees the COD/RTO leak and gives me more usable commercial levers, especially the lip balm add-on and COD fee test. Output 2 is cleaner in places, but the free-shipping recommendation rests on a suspect slice of orders."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on every real signal: the Monsoon Dark track names the blend and a match, the ex-subscriber gate waits for delivery to be fixed, the 46-90 day at-risk group gets caught early, and the holdout math is honest.",
+  "biggest_mistake": "The ₹8.5 lakh headline leans on assumed lift rates and a 2-orders-per-buyer assumption that are not justified from the owner's data, so the projection could oversell.",
+  "what_would_make_it_a_10": "Show the break-even lift needed per segment alongside the assumed lift, so the reader can see how much optimism the headline depends on."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Starting at day 68 rather than day 90 cleverly uses the 34-day median gap and folds win-back into an always-on flow, and it names the Monsoon Dark buyers with 29% of the 181-365 group.",
+  "biggest_mistake": "It recommends House Blend, medium roast, as the Monsoon Dark match, which is a lighter coffee than a dark blend, so the swap is backwards and undercuts the whole fixed-reason track.",
+  "what_would_make_it_a_10": "Recommend a genuinely dark coffee as the Monsoon Dark match (or flag that none exists and offer a sample), and state the break-even lift per group."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gets the swap right by matching dark roast to dark roast, gives a cleaner ranked order with reachable counts and gross profit per segment, and frames the projection honestly with holdout and break-even logic; Output 2's medium-roast fix for a dark-blend buyer is the kind of error that would waste the best segment."
+}

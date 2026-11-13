@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It splits the 4.0 into brand and non-brand ($479,520 on $26,700 versus 2.26 ROAS on everything else) and gives profit after ads for every segment. Every number checks out. The budget and the $146,300 of cuts add to exactly $240,000, with clear weekly rules for scaling and cutting.",
+  "biggest_mistake": "Holding $104,000 in reserve and adding a regional geo test makes the month more complex than most teams can run. A 'products only' Performance Max with video paused is also harder to set up than the plan suggests.",
+  "what_would_make_it_a_10": "Cut the reserve to a planned, smaller amount and give an expected value per line, as Output 2 does. Add ready-to-use ad and asset copy in the brand voice, and say what to check so price mismatches don't return after a sale."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The profit table is clean, and the base and cautious forecasts add up to the dollar. The feed fix steps are concrete (sale_price, automatic item updates, check five variants). The headlines and titles use Claire's and Nina's own words in the brand voice.",
+  "biggest_mistake": "It keeps $128,000 in Performance Max with no negatives on broad 'women's flats' or 'sustainable shoes', so most of the money-losing spend survives. Its own cautious case has Performance Max at 2.2 ROAS, which is below break-even.",
+  "what_would_make_it_a_10": "Explicitly exclude or cap the broad and sustainable terms and display spend. Shrink Performance Max to the proven themes plus the restored pointed flat sizes. Add rules for weeks two to four on what to cut when a line sits below 2.5."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both get the maths right. Output 1 actually cuts the $146,300 that loses money and gives me firm rules for the month. Output 2 leaves $128,000 in Performance Max hoping it improves, even though its own cautious case loses money there."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes the 4.0 apart against the 2.5 break-even and puts the feed fix first, with the customer's own words in the titles.",
+  "biggest_mistake": "Its projection table quietly assumes brand search jumps to about 25 ROAS and PMax recovers to 2.6, which flatters the base case and undercuts the 'judge by profit' message.",
+  "what_would_make_it_a_10": "Show the expected profit range from cautious to base with the assumptions on one line each, so the owner can see the upside is not guaranteed."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Uses only the owner's own numbers, gives a profit range instead of a single promise, and adds stop rules that protect the brand if the switch goes wrong.",
+  "biggest_mistake": "The 106-character title exceeds Google's 150 limit only in theory, but its length and order bury the searched words late and read more like keyword stuffing than the warm brand voice.",
+  "what_would_make_it_a_10": "Tighten the title to the searched words first in the brand's warm, plain voice, and keep the A/B test rule."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 builds every number from the owner's data, gives a profit range with stop rules, and never over-promises; Output 1's base case quietly assumes a brand ROAS of 25 that the owner did not give it."
+}

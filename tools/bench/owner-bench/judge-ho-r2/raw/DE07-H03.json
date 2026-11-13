@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "One costed, unmistakable first move this week (dispatch email at warehouse exit, courier-scan email switched off), with every projection traced back to her numbers and given as a range.",
+  "biggest_mistake": "It skips the short day-3 'nearly there' update, so the 3,040 to 4,250 ticket saving rests only on the new dispatch email and the delivery window, and it calls 4,250 (70% of 6,076) 'two-thirds'.",
+  "what_would_make_it_a_10": "Add the morning-of-day-3 status email to carry the ticket claim, and put real fit guidance in the post-delivery bra message instead of only a swap nudge."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every signal gets its own mechanism: day-3 status email, reason-first portal that only pushes swaps on size, real fit guidance after delivery, and a weekly reason feed back to product pages.",
+  "biggest_mistake": "The refund share falling from 82% to 65% and the £183,800 'sales kept' figure have no stated basis, and there is no message for a parcel that never turns up.",
+  "what_would_make_it_a_10": "Ground the swap assumption (or widen it to 70-75% like the other ranges) and add a 'running late' email for parcels that miss the window."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are usable tomorrow, but Output 2 answers the owner's own note about the silent days with a day-3 update and actually helps first-time bra buyers with fit after delivery, where Output 1 only offers a swap. Output 2's weak point is the unexplained 82% to 65% refund shift, which is easier to fix than a missing message."
+}

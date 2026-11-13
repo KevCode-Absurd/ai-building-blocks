@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the in-app checkout bug first, sizes the money at stake, and keeps the actual tests tied tightly to the page evidence and low mobile conversion math.",
+  "biggest_mistake": "It should have included the review summary higher on the page in the ship-without-testing list rather than leaving it only as a later test.",
+  "what_would_make_it_a_10": "Add the reviews summary to the no-test fixes and be a little clearer on when a checkout-reach metric would be better than add-to-cart."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the cleanest bug sizing, including the likely 560 extra orders and ₹34 lakh gross margin upside, and includes a strong ship-now list with trial, reviews and tracking.",
+  "biggest_mistake": "The schedule runs paired tests at the same time while assuming each gets full clean traffic, which risks interaction and makes the read less trustworthy unless it is explicitly designed as a factorial test.",
+  "what_would_make_it_a_10": "Make the test schedule statistically clean, separate the hero-image change from the reviews move, and use nearer-funnel metrics where order-rate tests would be slow or noisy."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 1 is the plan I would trust more to run: it fixes the bug first, ranks clean single tests, and sizes MDEs honestly against add-to-cart and order guardrails. Output 2 has a better ship-now list, but the concurrent testing plan creates avoidable readout risk."
+}

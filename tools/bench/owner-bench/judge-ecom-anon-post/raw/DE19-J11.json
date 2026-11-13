@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the in-app checkout bug first with the money attached, then ranks five tests that each trace to a line of evidence, with honest small-effect maths and a firm ship-without-testing list.",
+  "biggest_mistake": "The two-lane schedule and 75%-ish traffic days are busy, and the 'smallest effect' figures are stated confidently without showing the calculation; also the hero image test is low-evidence filler.",
+  "what_would_make_it_a_10": "Show the sample-size arithmetic, trim to four tests plus the bug, and add exact in-voice copy strings for the delivery and trial lines."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Opens with a clean segmented funnel table that proves the bug in one glance, quantifies it to ₹34 lakh margin, and offers five distinct ideas including a firmness bar the other answer missed.",
+  "biggest_mistake": "Test 5 bundles two separate changes (hero image and reviews) into one test, so the winner is unreadable, and the schedule stretches to 11 weeks which is slower than needed.",
+  "what_would_make_it_a_10": "Split the bundled test, tighten the calendar, and put more of the brand's friendly voice into the change and hypothesis lines."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both would get used, but Output 2's funnel table and firmness idea taught me more and the bug size-up felt sharper; Output 1 is a touch more ready and better written in our voice, so it is close."
+}

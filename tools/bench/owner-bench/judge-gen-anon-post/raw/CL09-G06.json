@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers are worked and checkable: agencies are 60% of Semrush losses, Lite usage-limit exits are 32% of all churn, and multi-site accounts are 42% of free conversions. It also adds a bold, well-tied move 5 that puts a free Monday report inside Webmaster Tools as an agency hook.",
+  "biggest_mistake": "Reading it is hard work in places. The churn and Webmaster Tools paragraphs are packed with figures, and the move 1 projection uses a 14 to 17% range that doesn't match its own 14% target. There is no date on the data, even though our principles say every claim needs one.",
+  "what_would_make_it_a_10": "Add an 'as of' date. Give the data section more room so a grade-9 reader can follow it. Make move 1's target and projection agree. Say more clearly why the Lite fix is the fastest money, even if the agency report stays at #1."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The story is clear: where we lose, where we don't, and our biggest leak isn't Semrush. Every claim is dated, and there's a neat retention insight (only 37% of a Lite group is left after 12 months). It also has an explicit 'what we should not do' list covering PPC parity and creator discounts.",
+  "biggest_mistake": "Move 5, a content study, is the weakest slot and close to the generic 'do more content' advice. Move 1 also blurs the line by pulling in clients' ad data, which edges toward the PPC territory it says to avoid.",
+  "what_would_make_it_a_10": "Replace move 5 with a sharper move, such as a free report in Webmaster Tools that feeds the agency pipeline. Pin move 1's first step to a faster beta built on data we already have."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both found the same three truths with correct numbers. Output 2 reads more clearly, dates its data and says plainly what not to do, though Output 1's fifth move is the better idea."
+}

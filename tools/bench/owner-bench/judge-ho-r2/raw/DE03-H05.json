@@ -1,0 +1,30 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and useful, but Output 2's copy is calmer and more on-brand (it uses 'Here's who owes what, and why', never overstates, and its refund steps are safer) with cleaner arithmetic and a more honest ticket range, whereas Output 1's 'Undelete expense' and 'tap Edit, then Save' steps read more product-specific and a bit less certain.",
+ "what_would_make_it_a_10": "A single confirmed screen-by-screen step set (checked in the app) and a slightly tighter currency-article plan would make either one truly launch-ready."
+}

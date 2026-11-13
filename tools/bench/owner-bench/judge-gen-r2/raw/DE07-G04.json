@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It pins everything to the winning segment and trigger, and keeps the forecast honest by refusing to multiply two gains the pilot never tested together (6.8% floor, 7.9% trigger, plan on ~7%), with list rules that also rest the 1,300 pilot contacts and exclude the 4,100 wrong-fit names.",
+  "biggest_mistake": "Several emails carry a question plus a second conditional ask (\"reply 'yes'\", \"reply 'steps'\") and promise two assets that don't exist yet, so the one-question-one-ask rule and the ready-to-send claim both slip.",
+  "what_would_make_it_a_10": "Make one open question the only call to action in every email, with the one-page summary and three-step write-up already drafted, and show the forecast both per 100 and across the full 1,900."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It shows its funnel math openly (half of Controllers' replies turned positive, 86% of those booked) and delivers four clean, link-free, spec-compliant emails with the decision stated in one line.",
+  "biggest_mistake": "It forecasts ~8% with a 10% ceiling built on an invented \"role adds a quarter on top of the trigger\" multiplier, so the headline number is the wish the owner explicitly warned against even though the pilot never tested segment and trigger together.",
+  "what_would_make_it_a_10": "Replace the 1.25 uplift with the pilot-backed 6.8-7.9% band as the expectation and add list hygiene for the 1,300 Controllers who already received the old sequence."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both write the right sequence for the right people, but Output 1's forecast is the one I could defend to my board (it refuses to stack untested gains and maps cleanly to ~130 replies from 1,900), while Output 2's 8%-to-10% range rests on a made-up uplift. Output 1 also handles list overlap with the pilot, which Output 2 ignores."
+}

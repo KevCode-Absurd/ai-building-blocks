@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the Asia-Pacific hours and the weekend rotation at the very top of 'the hard parts', with an accurate local-time table that includes Sydney daylight saving and a correct 8 to 9 weekends a year. The reviewer-hours math also checks out: 94 to 129 hours against 160.",
+  "biggest_mistake": "Puts 45% of the scorecard weight on interview rows. Our own data says interview impression predicts almost nothing (0.11), so writing gets only 55% despite its 0.62. The post also never shows the actual customer email applicants will answer.",
+  "what_would_make_it_a_10": "Shift weight from interview rows to written evidence, for example a written handover note and the reply itself. Include the sample customer email in the post, and trim it to stay safely under 1,100 words."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Follows our data directly. Writing to customers carries 50%, a handoff note is scored in writing, and conversation is held to 15%. A real, HEY-flavoured customer email sits right in the post, and it says plainly 'we're reading how you write, not whether you know the fix.' That last line is exactly what the career changer needs to hear. The math is correct: 4.6 minutes each last time, 70 hours now, about 7 hours for second reads.",
+  "biggest_mistake": "The steps after the first cut (longer exercise, two calls) get no timing. The conversation row has no set questions. 'Start most days with an overnight queue' is slightly muddled for someone whose shift is the overnight window.",
+  "what_would_make_it_a_10": "Give timings for the later stages. Add two or three fixed interview questions. List more APAC cities, such as Tokyo and Sydney, with daylight-saving notes. Consider dropping the 'why this job' box, since it adds reading time for little signal."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are publishable and honest about hours and weekends. Output 2 trusts our data more: half the score goes on customer writing and the real test email is in the post. Output 1 leans too heavily on interviews, the signal we already know doesn't work."
+}

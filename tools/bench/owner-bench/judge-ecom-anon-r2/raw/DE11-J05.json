@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads the data like an owner: reframes the paused flip-the-pack ad as fatigue not failure, builds the untested taste proof in, and makes the ₹90 price objection an ad of its own.",
+  "biggest_mistake": "The review-share framing ('1 in 4 of our 870 reviews') is the kind of number-on-the-pack claim legal may push back on, and it makes the brand talk about its reviews rather than to the customer.",
+  "what_would_make_it_a_10": "Write P2/P3 in the customer's voice directly ('Doesn't taste like a protein bar. Ours doesn't either.') so the review becomes our line, not a cited stat, and tighten every line to grade-6 blunt."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Voice is closest to ours: 'Don't trust us? Read the front', 'The sweet part? Dates', and the training-week 'one spare' line sound like The Whole Truth.",
+  "biggest_mistake": "Headlines and descriptions repeat the primary text instead of adding to it ('No need to flip this pack' under P1), and the length claims are loose enough that some lines risk truncation.",
+  "what_would_make_it_a_10": "Make each headline and description earn its slot (new proof or a new number, no restating), verify every character count against Meta previews, and rewrite the launch plan so each test isolates one variable."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 thinks like the person spending the money: it explains the paused winner, tests the taste reviews, and answers the ₹90 objection with a clean 4-ad plan. Output 2 has the better ear but repeats itself across fields and is less tidy to ship."
+}

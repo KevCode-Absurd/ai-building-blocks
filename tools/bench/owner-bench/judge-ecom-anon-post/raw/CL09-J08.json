@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Fix-the-reason-first logic runs all the way through. The Monsoon Dark email names the blend and the roasters' closest match, and the subscriber email holds back until on-time delivery is proven, then leads with picking your own date.",
+  "biggest_mistake": "It ranks the 91 to 180 day group first. The 9,000 customers at 46 to 90 days, who are the cheapest to win back, appear only as a side 'day-28 nudge' and are left out of the ranked plan and the value table.",
+  "what_would_make_it_a_10": "Make 46 to 90 days wave 1 with no discount. State the minimum lift each group needs to break even, not only the lift that would be detectable. Show the value calculation per group more simply."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Right order and right discipline. The slipping 46 to 90 day group goes first with no code, discounts rise with lapse age and never pass 15%, there is a delivery gate for ex-subscribers, and the measurement plan is solid: holdout, profit read from order data, and keep/drop rules per group. It also adds a bold, testable Monsoon Dark pre-order idea.",
+  "biggest_mistake": "The Monsoon Dark email sends people to a quiz instead of naming the closest match. A few numbers are loose: the ₹535 figure for ex-subscribers is unexplained, the cold brew date jumps to 2027, and every G2 returner is valued at the 10%-off profit even though steps 1 and 2 carry no discount.",
+  "what_would_make_it_a_10": "Name the closest dark roast and its farm in the Monsoon Dark email, with the quiz as the fallback. Tidy the per-group profit figures. Add the break-even lift per group."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are usable. Output 2 starts where I'd start, with the 46 to 90 day buyers and no discount, and it gives me sharper rules for measuring and cutting groups. Output 1's Monsoon Dark email is better because it names the match."
+}

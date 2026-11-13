@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Solid grasp of the data and clear instructions for automating after-hours replies and order tracking.",
+  "biggest_mistake": "Missed the opportunity to vary the prepaid nudge incentive by tier based on the RTO risk.",
+  "what_would_make_it_a_10": "Incentivize the prepaid switch strategically based on pincode risk and correctly categorize it as a Marketing template."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The brilliant calculation of expected RTO loss per COD order by tier to justify the exact ₹20 and ₹40 prepaid discount incentives.",
+  "biggest_mistake": "None. It handled every requirement with sharp operational logic.",
+  "what_would_make_it_a_10": "It is already a 10."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 perfectly segmented the flows by pincode risk, backing up the exact prepaid discounts with a brilliant cost-per-order calculation, and nailed the brand voice."
+}

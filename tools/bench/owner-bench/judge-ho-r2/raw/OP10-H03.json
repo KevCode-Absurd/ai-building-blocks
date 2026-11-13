@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the actual return, fit finder and ticket data well, with clear projections and ready-to-send copy.",
+  "biggest_mistake": "It misses the key day-3 proactive delivery update, even though most WISMO tickets arrive between days 3 and 5.",
+  "what_would_make_it_a_10": "Add a day-3 'still on track' message and soften any delivery wording that sounds too certain."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It tackles the exact three drivers in the data: silent delivery days, low fit quiz use, and the refund-biased portal.",
+  "biggest_mistake": "Pre-selecting swap for size returns is a little aggressive; I would prefer swap first but no option pre-selected.",
+  "what_would_make_it_a_10": "Keep the same plan but make the portal choice neutral, add preview text for every email, and slightly soften fit language like 'spilling over.'"
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would hand to the team because it includes the missing day-3 WISMO message, the first-time bra fit check, the post-delivery fit help, and a cleaner staged rollout. Output 1 is strong, but it leaves a major ticket-reduction opportunity on the table."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9.5,
+  "use_as_is": "as is",
+  "biggest_strength": "Nailed the exact commercial impact of the in-app browser bug (560 orders, ₹34 lakh margin) and smartly shipped star ratings immediately instead of wasting an A/B test on basic social proof.",
+  "biggest_mistake": "Running paired tests concurrently (Test 1 and Test 2 in weeks 2-5) risks interaction effects on the same PDP.",
+  "what_would_make_it_a_10": "Address interaction risks between concurrent PDP tests or sequence them cleanly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8.8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very honest statistical framing: showing the exact sample size math and pragmatically choosing add-to-cart as primary metric to allow 2-week sequential cycles.",
+  "biggest_mistake": "Wasting Test 5 on moving review stars up—putting basic star ratings near the product title is standard e-commerce hygiene that should ship immediately.",
+  "what_would_make_it_a_10": "Ship the review stars upfront, use Test 5 on hero imagery/creative, and adopt the exact single-tab checkout recovery sizing."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 feels like it was written by an in-house lead who knows our exact numbers and customer mindset. Moving the review stars into the 'ship now' list saved an entire test cycle, and its calculations matched my exact financial sizing."
+}

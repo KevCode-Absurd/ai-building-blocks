@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Executes the tone, brand guidelines, and exact financial math flawlessly, including a dedicated breakdown of the burn increase.",
+  "biggest_mistake": "Separates 'What went wrong' from 'What we're doing about it' into two disjointed lists rather than coupling each problem directly with its immediate operational fix.",
+  "what_would_make_it_a_10": "Pair each problem with its solution directly and include a forwardable blurb for the VP Sales intro."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Directly satisfies the lead partner's phone-reading habit by putting the three numbers, bad news summary, and primary ask in the very first screen, complete with a forwardable blurb for the sales intro.",
+  "biggest_mistake": "Omits the dedicated small burn-breakdown table seen in Output 1, presenting the burn breakdown in text instead.",
+  "what_would_make_it_a_10": "Keep the burn explanation in a tiny table just like Output 1 did while retaining everything else."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are exceptional and nail every piece of data, math, and brand tone. Output 2 wins because it organizes the layout better for a partner reading on mobile: it states what is needed on screen one, pairs each problem directly with its fix, and gives angels a ready-to-send forwardable blurb for the VP Sales search."
+}

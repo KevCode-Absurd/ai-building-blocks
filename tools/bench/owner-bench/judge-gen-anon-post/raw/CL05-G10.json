@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The whole series is built around the two habits (recurring task and second device). It adds a branching email 5 that sends the missing habit, platform-specific email 3 versions, a control group and a guardrail, and it says what to do first.",
+  "biggest_mistake": "The trigger logic is loose and partly unclear. Email 3 is sent '24 hours after first recurring task, or day 4', and email 5 depends on 'Did both' branches, which blur the one-tip, one-button rule. The 'no activity' email is also sent 'days 2 to 14'. The word count looks tight. Pro is dropped to after day 30, which is unspecified. The control group is 'no onboarding emails', which is risky. 'Each extra point is 1,800 people a quarter' is correct, but email 5 sends mixed content.",
+  "what_would_make_it_a_10": "Tighten the trigger rules so each email has one clear send rule. Make email 5 a single tip and button, or split it by platform cleanly. Give each email a clear 'worked if' number and state exactly when Pro goes out. Keep the control group gentler."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Each email is clean and ready to send: trigger, subject, preview, body, button, goal and 'worked if' are all laid out. It follows one tip and one button, uses typed quoted examples, and branches email 3 by platform. The drop section is specific with numbers and ties to the parent and student customers.",
+  "biggest_mistake": "Email 5 is a Pro upsell, which spends one of five slots on selling instead of the second habit. There is no email that goes after the missing habit. Email 3 is on a fixed day 3, so some users get it just after a day-2 email. Email 2's 'Skip if already recurring' leaves those users with no nudge toward the second habit. The Pro reminder claim is a feature assumption, and a few subject lines are close to the 45-character limit ('Let's Todoist remember the repeats' is 36, so fine).",
+  "what_would_make_it_a_10": "Replace the Pro email, or add a habit-gap email that sends the missing habit by platform. Add a stronger inactivity design. Add a note on desktop signups. State the Pro data and tie the Pro email to a number."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both build on the two habits and drop the right emails, but the second one is cleaner and closer to something I could hand over tomorrow, with each email laid out in full. The first has the smarter final email, but its mixed branches break the one-tip rule."
+}

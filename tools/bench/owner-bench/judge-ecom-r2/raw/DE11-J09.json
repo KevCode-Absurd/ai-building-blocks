@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Splits proved from to-check cleanly with the Meta-only cost rise, the linen returns leak, the switched-off flows, and ranks moves by gross profit with owners, stop lines and a weekly scorecard.",
+  "biggest_mistake": "The dollar math is dense and internally inconsistent in places (e.g. the $103k and $94 break-even trails), and some per-$1M figures would need finance to re-verify before the board sees them.",
+  "what_would_make_it_a_10": "Simplify the dollar math to a few traceable lines and state the contribution-margin bridge plainly so I can defend every number in the board meeting."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong, readable diagnosis that isolates Meta, linen and free channels, with a useful to-check table and payback logic ($94 break-even) that matches my own notes.",
+  "biggest_mistake": "The top of the move list blurs 'stop linen ads' with 'fix linen' and leaves the ranking less sharply ordered than the brief asked, so the first-week action is slightly softer.",
+  "what_would_make_it_a_10": "Make the ranked moves a crisp ordered list with one clear first-week action and quantified gross-profit impact per move, not ranges."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and know my data; Output 1 wins because it ranks moves by gross profit and effort with owners and stop lines, giving me a plan I can actually run this week."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9.6,
+  "use_as_is": "as is",
+  "biggest_strength": "Directly integrates the customer personas (protecting Farah's bridal kit orders and pacing Tanvi's purchase window) into inventory policy, including an ad pause and order caps.",
+  "biggest_mistake": "Leaves very little cash buffer (only ₹1.3 lakh) compared to unexpected freight or exchange swings.",
+  "what_would_make_it_a_10": "Pairing the slow-moving liquid lipstick directly with the glitter palette into a single bundled SKU to clear both faster."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 10,
+  "ready": 10,
+  "overall": 9.8,
+  "use_as_is": "as is",
+  "biggest_strength": "The 'Night-out kit' pairing the glitter palette with excess liquid lipstick is brilliant commercial inventory clearing, backed by exact unit margin math and a weekly reorder point system.",
+  "biggest_mistake": "Doesn't explicitly address the bulk-buying freelance artist risk (Farah buying 6-10 units at once) with order caps or dedicated pro allocations.",
+  "what_would_make_it_a_10": "Adding the pro-allocation/order-cap tactic from Output 1 so bridal makeup artists don't wipe out remaining retail stock."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both plans are masterclasses in demand planning, but Output 2 wins by bundling our two slowest movers into a high-margin holiday kit and providing actionable reorder points with a safe cash buffer."
+}

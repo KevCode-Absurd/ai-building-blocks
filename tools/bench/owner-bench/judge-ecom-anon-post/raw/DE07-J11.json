@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Keeps the second-biggest buyer doubt (firmness, 19% of chats) as its own test, and every test is tied to a line of evidence plus an honest MDE.",
+  "biggest_mistake": "Test 5 bundles two separate changes (hero image and reviews placement), so even if it wins I cannot tell which change earned it.",
+  "what_would_make_it_a_10": "Split Test 5 into two changes, and use add-to-cart as the main metric on the size and EMI tests (with orders as guardrail) so the answer does not need four weeks and a 10-12% lift to show up."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Operator-ready: the broken in-app checkout is fixed first with the money on it (about 560 orders, roughly 34 lakh gross margin), and every test carries run dates, a detectable effect and a rupee projection.",
+  "biggest_mistake": "Drops firmness as its own test even though it is 19% of chats and the named objection ('What if it's too soft for us?'), and runs the hero-image test over 21 Dec-3 Jan when traffic is unrepresentative.",
+  "what_would_make_it_a_10": "Give firmness its own ranked test, keep the hero image test inside a normal trading window, and put the trial and delivery microcopy in brand words so it ships as written."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the big calls right - fix the in-app checkout bug first and put the delivery date on the page - but I can act on the second one this week: it gives me run dates, per-test money, and realistic detectable effects, and it is honest that most of these will only catch big lifts."
+}

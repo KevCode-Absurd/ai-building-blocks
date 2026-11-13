@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the in-app checkout bug and sizes it correctly (about 560 orders, ₹34 lakh margin a month). The sample-size maths fits our real traffic, and each test carries its own run dates and rupee value.",
+  "biggest_mistake": "Firmness is the second biggest chat topic, but it is only handled inside review tabs. Some lines are hard to follow, such as the note on reading tests 1 and 2 in their four combined groups.",
+  "what_would_make_it_a_10": "Add a dedicated plain-words firmness test in our voice. Explain the two-lane interaction check more clearly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The funnel table breaks out the in-app browsers. It ties the 4,130 in-app pop-up errors to the 4,800 lost in-app carts, which makes the bug case convincing. It also adds an A/A test after the fix and a proper firmness test with no medical claims.",
+  "biggest_mistake": "Test 5 bundles the hero image and the reviews move into one variant, so a win cannot be credited to either change. It also gives no rupee value for each test.",
+  "what_would_make_it_a_10": "Split the image change and the reviews move into separate tests, or ship the reviews move. Add the money each test's smallest detectable lift is worth."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the bug, the money and the sample sizes right. The second one explains the funnel more clearly, covers every chat worry including firmness, and adds an A/A check, so I'd hand it to the team first."
+}

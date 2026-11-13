@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sound/sounds like us: $82,000 first line, the UTC gap named with our own numbers, weekend rotation owned up front, career changers explicitly welcomed, and the 0.62 vs 0.04 correlations used to justify every scoring choice rather than quote them decoratively.",
+  "biggest_mistake": "The writing exercise quietly becomes both the application screen and half the scorecard, and the 200-word reply to a password/email access question invites 'I can't fix this' answers — it tests tone but not problem-solving, and offers a long problem later than it should.",
+  "what_would_make_it_a_10": "State the Asia-Pacific local hours as concretely as Output 2 does, tighten the scorecard so the application reply is scored once on a single published scale, and pick a first exercise that lets a strong candidate show both tone and a real diagnosis in 200 words."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Most operationally complete: local-hours table by city, reviewer-hour math with a calibration/staging plan and a bold 'ask high scorers to return' idea, plus interview questions and a 'does this work for your life' rotation check.",
+  "biggest_mistake": "The scorecard drops 'writing to customers' to a 25% line behind 'solves the problem' at 30%, contradicting the data we told them to follow (0.62 writing vs interview signals near zero) and half the scoring happens on interview impression we know is worthless.",
+  "what_would_make_it_a_10": "Make the written exercise the dominant weight (60%+), demote interview-sourced rows to gates not scores, and simplify the 250-word form so it reads like a job post a career changer can act on rather than a process memo."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 sounds like the job we'd actually post and its scorecard follows our data; Output 2 has sharper logistics and time-zone detail but weights the writing signal too low to bring myself to use it as written."
+}

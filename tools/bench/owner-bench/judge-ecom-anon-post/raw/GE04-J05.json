@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Very clean, modular copy that rigidly adheres to character limits, and effectively diagnoses that the top ad suffered from frequency fatigue rather than angle failure.",
+  "biggest_mistake": "Missed the opportunity to use a few of the more colorful, specific persona quotes provided in the brief (like the 'samosa' line) to give the ads a punchier flavor.",
+  "what_would_make_it_a_10": "Integrate the target audience's colloquial quotes more deeply into the primary text, and offer a more concrete methodology for how to physically run the test in Ads Manager."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Goes beyond great copywriting by providing a rigorous, professional media-buying framework, including a control cell, specific daily budget pacing, and early kill switches.",
+  "biggest_mistake": "The headline 'Your 4 pm, minus the samosa' assumes slightly higher context for the image, but it's a very minor risk given the targeted audience.",
+  "what_would_make_it_a_10": "It's a 10. The blending of persona quotes directly into the blunt brand voice is masterful."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "While both writers delivered excellent, rule-abiding copy, Output 2 provided a highly valuable testing methodology with control groups and budget rules. Furthermore, Output 2 seamlessly wove the customer quotes into the primary text, perfectly capturing the brand's witty and blunt voice."
+}

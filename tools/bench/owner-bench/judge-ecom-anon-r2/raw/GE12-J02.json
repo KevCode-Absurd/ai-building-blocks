@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The executive summary ('The plan on one screen') is outstanding, and it perfectly uses the exact customer quotes from the brief as ad hooks.",
+  "biggest_mistake": "Very hard to fault; relying strictly on $136 as a hard mathematical floor per ad group might be slightly rigid for daily fluctuations, but the logic is sound.",
+  "what_would_make_it_a_10": "It is a 10. It reads exactly like the work of a sharp operator who knows the numbers inside out."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The test-versus-scale campaign architecture is highly practical, and holding Meta spend flat at Day 30 to prove incrementality is a great media buying insight.",
+  "biggest_mistake": "It missed the opportunity to use the verbatim customer quotes provided in the brief as the actual ad hooks, opting to write its own instead.",
+  "what_would_make_it_a_10": "Lifting the actual words from Maria and Tasha to use as the ad hooks, and adding a punchy executive summary at the top."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both outputs nailed the complex unit economics perfectly, but Output 1's formatting is sharper and it paid closer attention to the brief by using the exact customer quotes as ad hooks."
+}

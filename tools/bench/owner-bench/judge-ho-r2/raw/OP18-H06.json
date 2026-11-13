@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the right strategic answer with strong maths: do not cut to 20%, protect the top 20, extend credit to 90 days, and fix payouts fast.",
+  "biggest_mistake": "The 40% first-year Partner tier adds cost just as the plan is trying to reassure finance, and the free account promise is not fully costed.",
+  "what_would_make_it_a_10": "Tighten the Partner tier economics and make clear whether the 40% uplift is a test, a cap, or only for selected top partners."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It focuses the plan exactly where the data points: keep 30%, fix attribution and payouts, and spend the $40,000 on the small group that already drives the programme.",
+  "biggest_mistake": "It could give the top Partner tier a slightly more distinctive benefit beyond support and grants, since the rival still looks better in year-one cash.",
+  "what_would_make_it_a_10": "Add one stronger non-commission Partner benefit for the top 20, such as co-marketed launches or priority feature access, with a clear owner and cap."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 2 is the plan I would rather run: it is cleaner, cheaper, more finance-safe, and still solves the partner complaints. Output 1 is very good, but the 40% top-tier commission adds complexity and cost that is not necessary."
+}

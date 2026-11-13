@@ -25,7 +25,7 @@ description: "A discount ceiling sheet for every product: the deepest discount e
 
 Required (read access, level 1):
 
-1. **Shopify order export**, last 90 days at least: Name, Created at, Lineitem sku, Lineitem quantity, Lineitem price, Discount Amount, Shipping, Payment Method, Refunded Amount. Use it for real units per order, discount history and COD share.
+1. **Shopify order export**, last 90 days at least, with line items, discounts, shipping, payment method and refunds: real units per order, discount history and COD share.
 2. **Landed cost per SKU**: purchase price, inbound freight, duty, retail box [FIN-0007]. If missing, run `calculate-landed-cost-per-unit`.
 3. **Delivery cost per order** from the courier or 3PL invoice: pick, pack, packaging and outbound shipping.
 4. **Payment fee rates** by method (cards, UPI, wallets, COD remittance fee).
@@ -74,7 +74,7 @@ Break-even ROAS = discounted price / new contribution per order. Using the examp
 
 Deepest safe discount = (net price minus delivered cost minus the minimum profit the store needs per order) / net price.
 
-Pick the minimum profit per order with the owner:
+Use the minimum profit per order the brief gives; if it gives none, use the profit-sale default and say so in one line:
 
 - **Profit sale (default):** the expected ad cost per purchase during the sale, plus a small margin. If the ads will not change, use the current cost per purchase.
 - **Acquisition push:** the owner may accept zero first-order profit if repeat data proves the customer comes back. Treat the discount and the ad cost as one acquisition budget per customer [FIN-0015]; it only pays if conversion really rises enough to cut cost per customer by the discount amount.
@@ -101,9 +101,19 @@ For stock that will not sell at full price inside its season or shelf life, the 
 - **India:** discounts raise COD share on many stores, and COD brings RTO. Rerun the RTO allowance at the COD share seen in past sales. A prepaid-only extra discount (for example 5% more on UPI) can pay if it cuts RTO losses by more than it costs; test it. Show the discount against the MRP honestly, never against an inflated MRP. GST is charged on the discounted price when the discount is on the invoice; ask the store's accountant to confirm treatment for gifts and free items.
 - **US:** sales tax sits outside the maths. A compare-at price must be a real recent price [OFF-6145]. Marketplace deal prices (Amazon, Walmart) add referral fees that rise and fall with price; include them per channel.
 
-### 8. Write the summary and hand over
+### 8. Lead with what already worked
 
-Sort products into three groups: can carry 20% or more, can carry 10 to 15%, no discount. Name the three products with the most room and the three that must stay out of any sitewide code. Nothing is switched on: the sheet goes to the client for approval.
+If the store's own results show a past sale, code or offer that raised gross profit (not just revenue), it leads unchanged: same depth, products and mechanic. A deeper cut or new mechanic is a test against it, not the plan.
+
+### 9. Make the calls and reconcile the numbers
+
+- Sort products into three groups: 20% or more, 10 to 15%, no discount. Name the three with the most room and the three that stay out of any sitewide code.
+- One call per decision (for example "sitewide 15%, these eight products excluded"), with the change in contribution as a point estimate and range in one line. One recommendation, not a menu.
+- Rank moves by contribution per hour of set-up, week-1 moves first. Each names who sets it up and who says yes.
+- A projection uses the store's own past lift, or states at most one assumed input in the line ("if units rise 30%"). No outside benchmark unless it is a card logged in your working trace.
+- Log every figure in `context/numbers.json` with its inputs, period and money basis, then run `node tools/quality/numbers.cjs context/numbers.json --final <deliverable> --brief <brief>`. Fix every FAIL.
+
+Nothing is switched on: ask for the client's yes in your own message, outside the sheet.
 
 ## Checks before you hand it over
 
@@ -114,24 +124,32 @@ Sort products into three groups: can carry 20% or more, can carry 10 to 15%, no 
 - Products with a ceiling under 10% are marked "no discount" with an alternative mechanic.
 - Cash-floor rows are only slow stock and are labelled as such.
 - No compare-at price is proposed that the store has not genuinely charged.
+- A past offer that worked leads unchanged; changes to it are tests.
+- One call per decision, each with who does it, ranked by money per hour of work.
+- `numbers.cjs` shows no FAIL; contribution, not revenue, is the basis of every saving and loss.
 - No discount was created or switched on.
 
 ## Output
 
-**One-screen summary:** how many products can carry 20%+, 10 to 15%, none; the safest sitewide depth (the lowest ceiling among products that would be included); the three best and three worst products for a sale; one recommendation and the runner-up in a line.
+Follow the house rule "Write for a busy owner."
 
-**Discount ceiling sheet** (`discount-ceilings.csv` or a Google Sheet with live formulas):
+**The calls:** the sitewide depth (the lowest ceiling among products that would be included), which products stay out, and the one recommendation, each in two lines with its point estimate and range.
 
-| SKU | Product | Net price | Landed cost | Delivery per unit | Fee % | Return allowance | RTO allowance | Delivered cost | Contribution at full price | Lift needed at 10 / 15 / 20 / 25 / 30% | Break-even ROAS at full / 10 / 15 / 20 / 25 / 30% | Min profit rule | Deepest safe discount | Better mechanic | Cash floor? | Stock cover (weeks) |
+**Summary table** (one table): Product, Deepest safe discount, Lift needed at that depth, Break-even ROAS at that depth, Better mechanic. Show the three best and three worst products for a sale, not every row.
 
-**Notes block:** data sources and dates, products with missing costs, and up to three assumption lines (for example the minimum profit per order used, or whether the sale aims at new buyers). GST treatment carries one line: "accountant check before the sale runs".
+**Discount ceiling sheet** (`discount-ceilings.csv` or a Google Sheet with live formulas, the working behind the calls):
+
+One row per SKU: net price, each cost line, delivered cost, contribution at full price, lift needed and break-even ROAS at each depth, the minimum profit rule, deepest safe discount, better mechanic, cash floor flag and stock cover.
+
+**Notes block:** data sources, products with missing costs, and up to three assumption lines (for example the minimum profit per order used). GST treatment carries one line: "accountant check before the sale runs".
 
 ## Common mistakes
 
 - **Using product margin.** Step 1 builds delivered cost, so a 70% margin product is not treated as having 70% to give away.
 - **Average RTO for every product.** Step 1 uses each product's own COD share and RTO rate.
 - **Judging the sale on revenue.** Step 2 shows the extra units needed; if past sales did not deliver that lift, the discount loses money.
-- **One sitewide number.** Step 8 finds the lowest ceiling among included products and excludes the thin ones.
+- **One sitewide number.** Step 9 finds the lowest ceiling among included products and excludes the thin ones.
+- **Dropping what worked.** Step 8 keeps the past winner.
 - **Clearance logic on good stock.** Step 6 applies the cash floor only to stock that will not sell at full price.
 - **Fake anchors.** The gates block "was" prices the store never charged.
 

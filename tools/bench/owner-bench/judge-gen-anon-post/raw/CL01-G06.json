@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every number checks out: 60% of Semrush losses are agencies, Lite is 70% of churn, and multi-site AWT is 42% of free conversions. The five moves form one agency play: the report beta, the multi-site onboarding, and a free report in AWT that builds the habit before agencies ever compare tools.",
+  "biggest_mistake": "The Lite usage-limit fix sits at #2 even though it is the cheapest and fastest money. The top summary also crowds 'do first', 'stop' and 'don't spend' together, which makes it a little dense for a grade-9 read.",
+  "what_would_make_it_a_10": "Make the Lite top-up the #1 quick win, or explicitly frame it as first money. Give the Move 3 and Move 5 tests one shared calendar. Add a dated source line for the survey claims."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The clearest structure for me as reader: where we lose, where we don't, our biggest leak, the moves, and what not to do. It also has a sharp Lite retention stat: only 37% are left after 12 months.",
+  "biggest_mistake": "Move 5, the link-data content studies, is the generic 'do more content' advice I didn't want. Move 1 also widens scope by pulling in client ad and analytics data, and its first step is 40 interviews rather than something we can ship this month.",
+  "what_would_make_it_a_10": "Replace Move 5 with something that compounds the agency bet, such as a free report in AWT. Keep the v1 report on existing Ahrefs data so it ships faster. Move the Lite fix up."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both read the data correctly and both refuse to chase PPC parity. Output 1's five moves all pull toward the agency win with concrete first steps, while Output 2 spends its last slot on generic content, even though it is the nicer read."
+}

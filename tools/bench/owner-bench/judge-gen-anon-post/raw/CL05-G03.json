@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The top of the email gives the three numbers, the missed forecast and a one-line summary of the asks. Customer A and the margin story follow right after. The asks have named profiles, dates and copy-paste forwarding blurbs, which is exactly what the angels wanted.",
+  "biggest_mistake": "It states that the VP role 'is now based in New York' as a settled decision. That is only an assumption, and it is flagged at the bottom rather than where it appears. It also never says that Customer A's exit will pull NRR down, and it gives no estimate of how much the 48-hour pause will save.",
+  "what_would_make_it_a_10": "Mark the New York decision as one to confirm. Add the expected NRR effect of Customer A's exit and a rough saving range for the 48-hour pause. Trim a few words so it sits comfortably under 700."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 6,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It explains the burn increase in a clean table: $0.9M compute, $0.8M one-off and $0.5M hires. It also shows that nearly all the database growth came from AI-builder partners (direct up only 2.6%). Its third ask, on pricing partner traffic, is aimed at the lead partner and fits the real problem.",
+  "biggest_mistake": "It says $0.9M on about $10.4M of monthly revenue is 'roughly 9 points of margin, more than the 7-point drop'. This confuses the reader, because it treats all of the compute rise as cost of goods sold without saying so. The line 'Ask 2 helps' is also awkward. The VP ask goes to 'everyone' with no named reader.",
+  "what_would_make_it_a_10": "Drop or properly explain the margin arithmetic. Put the asks summary near the top for the phone reader. Add forwardable blurbs for the intros. Give a rough saving range for the pause and say what Customer A's exit does to NRR."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the bad news up front and the runway right. Output 1 puts the asks on the first screen and gives forwardable intro text. It also avoids the confusing margin arithmetic in Output 2. I would send Output 1 with a small edit on the New York line."
+}

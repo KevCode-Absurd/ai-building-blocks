@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the right three numbers, puts Customer A, the margin problem, and the missed forecast in the first screen, and turns each problem into a concrete action or ask.",
+  "biggest_mistake": "It makes a few decisions inside the draft that may need confirmation, especially that the VP Enterprise Sales role is now based in New York and that the 48-hour pause ships by 27 November.",
+  "what_would_make_it_a_10": "Slightly tighten the copy and mark the New York role change and 27 November ship date as decisions to confirm, unless they are already approved."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly explains the hidden problem: AI app-builder database growth is low-converting, high-cost traffic that is hurting gross margin.",
+  "biggest_mistake": "Customer A is too far down after a long AI-cost section; as an investor I would want that loss visible earlier, especially because it is a $2.6M ARR account leaving.",
+  "what_would_make_it_a_10": "Move Customer A into the opening screen, make the bad news order match investor urgency, and reduce the sense that this is still a draft needing confirmation."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather send Output 1 because it has the owner’s priorities in the right order: ARR miss, margin drop, burn, Customer A, and the specific asks. Output 2 is strong, but it buries the customer loss a bit and feels slightly less ready to send."
+}

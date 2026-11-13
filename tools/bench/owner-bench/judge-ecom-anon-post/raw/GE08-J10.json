@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very sharp price laddering logic around protecting the single ₹599 serum reorder with the ₹599 threshold recommendation.",
+  "biggest_mistake": "Bundle range overlaps heavily on skincare/serum rather than expanding into body care, missing the routine opportunity for lotion buyers.",
+  "what_would_make_it_a_10": "Replace the serum + lip balm bundle with the body duo, keeping lip balm strictly as a cart bump, and directly tackle COD friction with a COD fee."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 10,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliant recognition that ₹499 sits exactly on the 29% vs 17% COD refusal cliff, paired with the idea of a ₹49 COD fee under ₹499 and a lip balm cart bump.",
+  "biggest_mistake": "Projected test ranges for ₹699 and ₹599 threshold shifts could be slightly more concise.",
+  "what_would_make_it_a_10": "A single consolidated view of expected contribution margin across all scenarios."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 understands the operational reality of Indian D2C: it recognizes the exact ₹500 COD refusal cliff, introduces a dedicated COD fee under ₹499, and covers all three core categories (skin, hair, body) instead of stacking two serum bundles."
+}

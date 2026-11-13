@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranks channels by retained users with the math shown, then rebuilds the whole plan around that: creators and authors first, PH as its own day, migration proven before the 1 Dec freeze.",
+  "biggest_mistake": "The five-post X thread is heavier than a launch-day post; it splits attention and the speed post is a near-empty placeholder that may read as filler on the day.",
+  "what_would_make_it_a_10": "Cut the thread to two or three posts with one strong screen recording, fold the speed number in or drop it entirely, and add a short rollback/kill-switch line for launch day."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 10,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Not just a plan: targets per channel, a two-wave rollout that cuts support load to a tenth, an explicit plan B with triggers, and the decision stated up front.",
+  "biggest_mistake": "One arithmetic slip: the projection mixes '6 videos' from 2025 with 9 creators and the retained-users range is muddled; also drops a dated owner table for the support dry run relative to output 1's granularity.",
+  "what_would_make_it_a_10": "Clean up the projection math (per-video installs times 9, retained at 41%), give the calendar fixed owners for every asset, and add the in-app notification text for the two-wave update."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are usable; output 2 gives me targets, a rollback plan and a two-wave update I can hand to engineering on Monday, which is what I actually need as the owner paying for this. I'd take output 2's structure and borrow output 1's tighter X post."
+}

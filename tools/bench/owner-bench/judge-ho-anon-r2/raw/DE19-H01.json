@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Names the Monday move (re-carton 6,400 units for ₹38,400) and lays out four dated POs inside the ₹1.2 crore with a reorder-point table ops can run weekly.",
+  "biggest_mistake": "The pre-order wording promises 'we ship by 10 December' while the plan elsewhere says rush stock lands 7 December and the gap runs to about 8 December; the dates don't line up, and the 3,200-unit gap is called out but not fully reconciled with the 25,000 rush order math.",
+  "what_would_make_it_a_10": "Make every date consistent (sell-out, rush landing, ship-by date), show the shade-by-shade unit split rather than an average, and write the customer message in our exact voice."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Tells the truth about the one gap it cannot close (1 to 8 December) and handles it exactly in our voice: pause ads, cap orders, open a pro pre-order for artists like Farah, and a 'back on 9 December, tap Notify me' message.",
+  "biggest_mistake": "Leaves only ₹1.3 lakh spare, so freight or FX surprises could push it over the ₹1.2 crore; a slightly larger reserve would be safer.",
+  "what_would_make_it_a_10": "A little more cash headroom and a shade-level split for the top 5 so ops doesn't average across shades."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are usable Monday and both catch the top-5 sellout and the cheap re-carton fix; Output 2 wins because its sell-out, rush-landing and back-in-stock dates agree, and its customer message ('back on 9 December, tap Notify me') sounds like us and would actually be sent."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the two big hidden issues: Monsoon Dark buyers need their own match track, and ex-subscribers should not be won back until delivery is fixed. It also puts the 46 to 90 day group first, which is commercially right.",
+  "biggest_mistake": "A few details would need cleaning before use: the Monsoon Dark draft does not actually name the replacement coffee or farm, the calendar dates feel arbitrary, and the ex-subscriber profit math looks wrong.",
+  "what_would_make_it_a_10": "Name the actual replacement roast/farm for Monsoon Dark, remove odd fixed dates, tighten the subscription profit calculation, and make the drafts fully compliant with the brand rule to name a farm or roast in every message."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The writing is very usable and on-brand, especially the first-message drafts. It clearly explains that most lapsed buyers need the reason fixed before they need a discount.",
+  "biggest_mistake": "It does not put the 46 to 90 day at-risk group into the main ranked target order, even though that is the cheapest and most urgent win-back pool.",
+  "what_would_make_it_a_10": "Make 46 to 90 days wave one, show reachable counts after holdout more explicitly, separate first-order profit from 12-month value, and make the Monsoon Dark track a more central priority."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather hand Output 1 to the team because it gets the commercial priority order right and catches the Monsoon Dark and delivery problems clearly. Output 2 is better written, but it slightly buries the easiest money: the 46 to 90 day buyers."
+}

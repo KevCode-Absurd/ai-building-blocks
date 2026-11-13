@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It sees the real levers in this programme: keep 30%, fix the 30-day window and payouts fast, and put the one manager and perk budget on the top creator-educator partners.",
+  "biggest_mistake": "It slightly overstates one comparison by saying a referred customer brings '$44 more than a customer who found us alone' without allowing for any acquisition cost on non-referred customers, so the true advantage is at least that, not exactly that.",
+  "what_would_make_it_a_10": "Tighten that one comparison and add one sentence on how to handle grandfathering if any term changes later so the 'for life' promise stays crystal clear."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 5,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It gives a clear no to the 20% cut and correctly centres the window and payout problems that partners actually complain about.",
+  "biggest_mistake": "It introduces a 40%-for-12-months partner tier with faulty cost maths and a likely conflict with the existing 'for life' promise, which makes the core recommendation risky.",
+  "what_would_make_it_a_10": "Keep the rate structure simple and defensible, fix the year-one cost calculation, and focus the spend on top-partner perks instead of changing commission in a way that adds cost and confusion."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the plan I could actually run tomorrow: it uses my data, answers the 20% question with the right logic, and puts effort where my programme really lives. Output 2 has good instincts, but the new tier and its maths would make me stop and rework the plan before I could trust it."
+}

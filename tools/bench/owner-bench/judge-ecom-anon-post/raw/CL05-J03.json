@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Production-ready detail on every concept: hook, scene timings, primary text, headline, size rules and a table of awareness and test. The first-three pick is tied to the data, and the test budget is sized as 15 purchases per concept. It also handles the dark-shell scuff and front-pocket issues.",
+  "biggest_mistake": "It is dense and likely runs to or past the word limit. Some shoots, such as a real boarding gate or a plane aisle, are hard for a small team. 'Lifts it into a cab with one hand' hints at lightness beyond the specs.",
+  "what_would_make_it_a_10": "Trim to the word limit, offer cheaper shoot alternatives for the gate and aircraft scenes, and give each concept one explicit test variable and a clear success metric."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, scannable layout with the same fields for each concept. It adds the point that women bring 26% of purchases on 18% of spend, and concept 5 directly tests real travel scenes against the current flat colour shots. It also points concepts 6 and 7 at retargeting and the 41-plus group.",
+  "biggest_mistake": "The test plan is thin. About ₹4,500 per concept is too little to judge, and one broad-targeting campaign blurs the audience-specific reads. Visuals and scene directions are lighter, so the team has more to fill in before shooting.",
+  "what_would_make_it_a_10": "Add scene-by-scene shot lists and headlines, raise the test budget to a meaningful level, and keep audiences separate so the women and men reads stay clean."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick the right three concepts and stay within the approved claims. Output 1 gives my team more they can shoot tomorrow, with timings, headlines, size rules and a more realistic test budget. Output 2 is easier to read, but its test plan is thinner."
+}

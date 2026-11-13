@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 7,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It pools all brand spend and shows that non-brand Google runs at 2.26 ROAS against a 2.5 break-even, losing about $20,100. It backs this with a profit-per-segment table, a hard cut of the loss-making spend, clear rules for weeks two to four, and a day-by-day plan with owners.",
+  "biggest_mistake": "Holding back $104,000 as reserve and expecting $40,000 or more of it to go unspent is very conservative. Some of the working is hard for me to follow, such as the '$59,948 ÷ 30' reasoning for changing everything at once, and the separate profit figure for the pointed flat fix. The titles and ads also use Claire's and Nina's own words less than they could.",
+  "what_would_make_it_a_10": "Explain the reserve logic in plainer words and use more of the customer's language in titles and ad copy. Show non-brand Performance Max on its own at 2.03, and give a short expected-profit table by line."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is the plainest to read. It isolates non-brand Performance Max at 2.03 and a $36,700 loss, and gives a budget split that adds to exactly $240,000. It sets base and cautious profit cases with numbers that check out, and its titles and ad copy use the customer's own words ('Stand All Day', 'eight hours', 'Made to Walk, Made to Wash').",
+  "biggest_mistake": "It still puts $128,000 into Performance Max, which only ran at 2.03 without brand, and the base case relies on it reaching 2.6. It never says outright to block the broad 'women's flats' and 'sustainable shoes' terms. It also gives less detail than Output 1 on the cut and boost rules for weeks two to four.",
+  "what_would_make_it_a_10": "Add explicit negatives or caps for the broad and 'sustainable' terms in Performance Max, plus written rules for weeks two to four on what gets cut and what gets more money. It should also justify why Performance Max needs that much budget, or move more of it to the proven winners."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both find the brand problem and put the feed fix first. Output 2 is easier for me to read and act on, sounds like us, and gives me a clear profit forecast. Output 1 is a bit sharper on cuts and rules but harder to follow."
+}

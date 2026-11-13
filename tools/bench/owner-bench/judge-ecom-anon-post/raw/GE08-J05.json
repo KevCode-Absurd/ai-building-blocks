@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Disciplined adherence to character constraints with tight, punchy copy and crisp testing hypotheses.",
+  "biggest_mistake": "P2 and P3 both focus heavily on review quotes for taste/texture, making the angle spread slightly narrower than O2.",
+  "what_would_make_it_a_10": "Incorporate the exact customer persona language (like the samosa comparison) more boldly into the headlines."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Uncanny capture of the brand's blunt, honest voice (e.g., P4's 'Fair. Here's your ₹90') paired with a bulletproof media-buying test setup.",
+  "biggest_mistake": "Pushed right up against the 27-character display limit on H6 (27 chars), leaving zero room for localization or minor edits.",
+  "what_would_make_it_a_10": "It is essentially a 10; keeping headline character counts slightly under the hard 27-character edge would make it untouchable."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both understood the data and fatigue issues completely, but Output 2 nailed our distinct conversational tone ('Fair. Here's your ₹90') and provided a masterclass launch plan with exact stop-loss and sample-size rules."
+}

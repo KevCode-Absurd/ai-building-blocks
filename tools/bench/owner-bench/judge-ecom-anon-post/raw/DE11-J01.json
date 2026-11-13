@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every ad set gets a rupee verdict and the three owner signals (revive the paused creator video, split out women 25-34, kill the COD-trap Starter Kit) are all caught and priced.",
+  "biggest_mistake": "The two break-even lines (₹282 safe / ₹394 break-even) are a clever device but the per-ad-set safe numbers in the table aren't shown to be derived consistently, so a finance-minded reader has to trust them.",
+  "what_would_make_it_a_10": "Show the safe/break-even math per ad set in one column each (order value × COD mix × 72% haircut) so the table is auditable, and trim the creative section slightly to keep the budget and rules the spine."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 10,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The reserve-release rules and the retargeting holdout test are genuinely owner-grade thinking, and the forecast lines (store-count vs Meta-count) frame the decision honestly.",
+  "biggest_mistake": "It cuts retargeting (frequency 6.8 is a real signal but ₹289 cost vs ₹358 profit per order is the one ad set that clearly pays) and spreads the fix across too many conditional branches, so the one-page decision is harder to act on Monday morning.",
+  "what_would_make_it_a_10": "Simplify to one committed number per ad set with a single reserve rule, and keep the retargeting holdout as a clearly optional appendix rather than mixing it into the main call."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and both catch the three real signals, but Output 1 is the one I can hand to my team Monday: every ad set has one verdict, the budget table adds to ₹5,60,000 cleanly, and the rules are numbered and short. Output 2 is smarter on the holdout test but I have to work harder to find the single decision."
+}

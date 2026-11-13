@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Exceptional derivations from the raw data (e.g., AWT multi-site users drive 42% of free-to-paid conversions) that perfectly frame the true leverage points.",
+  "biggest_mistake": "Placing the AWT onboarding move slightly ahead of the Lite usage limit fix, which the owner explicitly views as the absolute fastest money.",
+  "what_would_make_it_a_10": "Swap the first two moves to put the Lite usage fix at the very top, exactly matching the owner's hypothesis on the fastest win."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 5,
+  "reasoning": 7,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Accurately calculates the exact breakdown of Semrush losses and blended churn from the raw data to prove where the real problems are.",
+  "biggest_mistake": "Includes a generic 'do more content' recommendation as Move 5, directly triggering one of the owner's stated annoyances.",
+  "what_would_make_it_a_10": "Drop the generic content move, rank the low-effort Lite usage fix first, and push the massive reporting feature build further down the list."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 follows all instructions flawlessly, performs brilliant second-level math to uncover hidden insights, and prioritizes low-effort, high-leverage moves exactly as requested. Output 2 falls into the trap of including a generic content move and ranking a heavy engineering build first."
+}

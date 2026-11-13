@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the strongest signal: Controllers/Heads of Finance at 50-300 person SaaS companies with a recent pricing change, using the exact spreadsheet/rev rec pain and clear list rules.",
+  "biggest_mistake": "The 9-to-4 proof appears in step 1 rather than holding step 1 tightly to the pricing-change hook, and the 7-10% reply projection is a little optimistic.",
+  "what_would_make_it_a_10": "Move the anonymous proof to step 2 and keep step 1 even more focused on the pricing change and rev rec rebuild pain."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks the right segment, the right trigger, keeps step 1 link-free, and gives a sensible expected reply-rate range tied to the pilot.",
+  "biggest_mistake": "The emails introduce unprovided follow-up assets like a one-page summary and 'three steps,' plus reply-word CTAs that feel more salesy than finance peer-to-peer.",
+  "what_would_make_it_a_10": "Remove the unbuilt collateral asks, make each CTA a simple finance-person question, and use the anonymous proof as plain text in a later step."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to something I could load tomorrow: the targeting, math, and sequence are tighter, and the voice feels more like a finance person. Output 2 is good, but the invented collateral and gimmicky reply prompts add execution risk."
+}

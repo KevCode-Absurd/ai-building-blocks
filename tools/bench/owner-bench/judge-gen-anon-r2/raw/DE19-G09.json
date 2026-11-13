@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data the way an owner would: sleep + evening + narrator clips drives the whole plan, and it shows the install math (450 vs 95 vs 50 vs 40) so I trust it. Week 1 is deliberately review-free, drafts use my customers' exact words, and every draft ends in one small action.",
+  "biggest_mistake": "The weekly template spends a third of the slots on kindness and stress at work carousels, which is better than an even split but still leaves the strongest theme (sleep) at 12 of 24 rather than heavier. A couple of drafts are close to the line (the 'replaying emails' and 'brain still busy at bedtime' angles), so a reviewer could still pull them into review and break the week-1 safety margin.",
+  "what_would_make_it_a_10": "The exact submission wording (script for review, not finished video), and a written 'if a week-1 post gets flagged' replacement ready to go so week 1 can never slip."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 6,
+  "voice": 8,
+  "range": 9,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It commits hardest to sleep (15 of 24) and narrator clips, flags review timing up front, and the 12-cell calendar tells me exactly what each day's post is — I can see the whole month at a glance.",
+  "biggest_mistake": "It over-applies the review rule: it puts every sleep post through clinical/legal review and then delivers a week 1 of six kindness posts, which wastes my best theme for the most valuable week and contradicts the point that sleep is where the money is. The numbers are also shaky — 7,650 projected installs is not consistent with '15 × 450 + 9 × 100' under its own caveat, and the '4.8% vs 4.0%' success bar isn't justified. Drafts are thinner (one had no on-screen text), and it never says what to do in week 1 that actually sells the product.",
+  "what_would_make_it_a_10": "Keep sleep posts out of review where the words allow it (winding down, 'close your eyes'), so week 1 isn't a kindness filler week; fix the install projection so the arithmetic is transparent, and give each draft real on-screen text and a designer/editor note."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd actually use: it turns the data into a plan I can hand to my designer, keeps week 1 clean of review delays, and drafts sound like us. Output 2 has good bones but overloads review rules and its numbers don't add up, so I'd have to rework it before posting."
+}

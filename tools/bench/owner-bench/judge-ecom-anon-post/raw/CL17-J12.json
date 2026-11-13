@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every number checks out. That covers the RTO split by tier, ₹45k per RTO point, 63 RTOs per 1% prepaid shift and cart sizing. It also has a practical idea: move one agent to a 2 pm to midnight shift for the evening wave.",
+  "biggest_mistake": "The prepaid nudge (pay_online_option_v1) is filed as Utility. It is a sales push, and Meta will likely recategorise it or flag quality. It also offers no prepaid incentive, so Tier 3 gets only a hold, not a stronger nudge.",
+  "what_would_make_it_a_10": "File the prepaid nudge as Marketing with a tiered incentive. Show RTO money and expected loss per order by tier. Add a net-saving metric. Skip confirmation for proven repeat COD buyers."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The tiered economics are clear and they drive the actions: ₹70, ₹41 and ₹27 expected loss per COD order sets the ₹40 and ₹20 prepaid offers, and Tier 3 gets calls plus auto-cancel. Templates are categorised correctly, holdouts are built in, and there is a net-saving metric.",
+  "biggest_mistake": "There is no staffing answer for the 31% evening chats beyond a bot menu, so size and exchange questions still wait until 10 am. The auto-cancel of silent Tier 3 orders may lose real sales, though the holdout partly covers this.",
+  "what_would_make_it_a_10": "Add an evening agent shift or bot answers for size and exchange. Add an after-hours response-time metric. Give a cart recovery sizing number like Output 1's."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both get the maths right, but Output 2 ties each tier's actual loss to how hard we push. It files the prepaid nudge as Marketing and builds in holdouts and a net-saving test, so I can trust what it tells me. Output 1 is solid but risks a Utility rejection and treats Tier 3 too softly on prepaid."
+}

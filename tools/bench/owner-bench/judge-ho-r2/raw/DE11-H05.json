@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails every signal in the data — Simplify debts split out, the 4,900 no-click searches, the 2,000 Apple/Google refunds — and turns them into three publish-ready articles plus a ticket forecast with real working and a down-side range.",
+  "biggest_mistake": "It still tells people to turn Simplify debts off to see who owes whom, which changes the view for the whole group and risks new confusion; a safer article would show the per-expense view without flipping the group setting.",
+  "what_would_make_it_a_10": "Drop the group-wide Simplify toggle advice in favour of a per-expense view, and confirm the in-app button names before publishing so the steps are exactly right."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads fastest of the two — bad news in three lines, a tight priority table, articles that answer in the first sentence, and a transparent 25%–50% range with the maths shown.",
+  "biggest_mistake": "It says 'you can restore deleted expenses from Activity' as fact without telling people to check that the Restore option exists on their version, and its 'Contact us' fallbacks lean on a form the owner may not have wired up.",
+  "what_would_make_it_a_10": "Add the web version of the restore steps and a one-line check that the bold button names match the live app, so the articles are genuinely publish-ready."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and correctly ranked, but Output 2 is faster to read, states the bad news first, gives an honest range, and its articles are cleaner and more findable — the owner would pay for it."
+}

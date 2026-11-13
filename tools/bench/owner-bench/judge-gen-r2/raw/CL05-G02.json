@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The seat math checks out (1,540 of 2,717), and every section pairs copy with a real proof stat. The page is finished and uses \"Book a demo\" consistently, the security section moves up from the footer, and the demo form is cut to 4 fields. The test comes with a worked sample-size calculation and a stop rule.",
+  "biggest_mistake": "The hero headline doesn't use Priya's own phrase \"email tennis\" (it only appears in section 2), and the 13,400-visitors-per-version target may be unrealistic for a niche page. It also runs a little over the length limit.",
+  "what_would_make_it_a_10": "Put \"email tennis\" in the hero headline, and size the test for the traffic a recruiting page will actually get, perhaps with a fallback metric."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero uses Priya's words (\"No email tennis\") and names round robin that skips people who are off. The segment math is correct, and the metric (qualified team starts) is well argued.",
+  "biggest_mistake": "Several bracketed placeholders (security proof, tool logos, customer quote) leave homework. Mixing \"Get started\" and \"Book a demo\" across a team page dilutes the single action per section. Some copy states unsupported specifics, such as \"three or four emails\" per interview, text reminders, and take-your-data-with-you.",
+  "what_would_make_it_a_10": "Fill or remove the placeholders, use \"Book a demo\" consistently on the team page, and add a concrete sample size and stop rule for the test."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick recruiting and show the math correctly, but Output 1 is more finished and rigorous: no placeholders, consistent buttons, and a calculated stop rule for the test. Output 2 has the better hero line, but the bracketed gaps and mixed buttons mean more work for me tomorrow."
+}

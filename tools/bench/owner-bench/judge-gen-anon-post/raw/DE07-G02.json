@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Does the segment math out loud (733 paid seats per 1,000 signups vs 12 for coaching), then hands me a test I can actually run: real power calculation (13,400 per arm), a stopping rule and a decision rule.",
+  "biggest_mistake": "Security is the blocker Priya named first, but it lands seventh, and the section still has a note to me ('Also add Security to this page's top menu') sitting inside the page copy.",
+  "what_would_make_it_a_10": "Put the security proof right beside the demo form, keep one CTA across the whole page, pull owner instructions out of the copy, and add one named recruiting customer with written permission."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The sharpest one-line case for the segment: 0.73 paid seats per recruiting signup, over four times the next best segment, plus a real problem section built on the 41% survey answer.",
+  "biggest_mistake": "It leaves [brackets] in the body copy and puts 'Get started' buttons three times on a page aimed at teams, so it reads like a draft I have to finish and it breaks our own CTA rule.",
+  "what_would_make_it_a_10": "Fill or cut every bracket, make 'Book a demo' the only mid-page action, move security above tools and open source, and add the sample size and duration so the test result is callable."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both pick recruiting and get the numbers right, but Output 1 gives me the test math, a single disciplined CTA and security sitting right next to the demo button. Output 2 is close on the story but hands me brackets to fill and the wrong button for a team buyer."
+}

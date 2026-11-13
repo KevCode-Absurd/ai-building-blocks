@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The three articles are genuinely publishable: answer in the first two lines, numbered steps, an example using our own personas, plus web and app paths and cancellation steps that quietly kill a lot of billing tickets. The forecast is real working, with per-topic reasoning and a downside case.",
+  "biggest_mistake": "It spends spare capacity merging a 71%-helpful 'Recording a payment' article, which risks a good page for little gain, and the whole draft is pushing right up against the 1,200-word limit.",
+  "what_would_make_it_a_10": "Cut the merge, keep the length safely under limit, name the exact screens for the required UI check, and add a line for what to do if the restore button isn't there on an old app version."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharpest read of the situation: 'Bad news first', the reframe that nothing needs merging but everything hides its answer, and a tight day-by-day plan with an explicit low-to-high range and honest cost maths.",
+  "biggest_mistake": "The articles are thinner than the search data deserves: a published 'Search words: undo delete...' line sitting in customer copy, no web steps for restoring a deleted expense, and no cancellation steps in the billing article.",
+  "what_would_make_it_a_10": "Move the search words into the title and help-centre synonyms, add the splitwise.com restore path and the Apple/Google cancel steps, and keep the explicit range while varying the assumed stop-rate by topic."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I'd hand Output 1 to the team tomorrow and publish its three articles with almost no edits; Output 2 sees the problem slightly more sharply and its range is tidier, but I'd have to finish writing its articles myself. That difference in readiness is what decides it."
+}

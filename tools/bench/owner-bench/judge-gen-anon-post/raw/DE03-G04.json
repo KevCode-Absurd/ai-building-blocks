@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Exactly follows the data: targets the winning segment with the pricing-change trigger, keeps step 1 link-free, and uses the 9-to-4-day proof as a plain sentence in the right place.",
+  "biggest_mistake": "Day counts are calendar days; some recipients may read them as business days.",
+  "what_would_make_it_a_10": "Nothing material. Maybe include a note on how to handle replies like 'we're in an audit' or 'send me something'."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Also targets the right segment and trigger, with useful extra detail like send-window rules and reply handling.",
+  "biggest_mistake": "Step 1 asks for a 20-minute call—an explicit ask for a meeting in the first touch—which likely hurts reply rate and contradicts the 'no calendar link' finding. It also includes a postal address and opt-out line that read as compliance boilerplate, not peer-to-peer finance voice.",
+  "what_would_make_it_a_10": "Replace the 20-minute call ask in step 1 with a low-friction question or reply-based offer, and trim the compliance footer unless legally required."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is tighter, more faithful to the pilot data, and sounds like a finance person talking to a finance person. Output 2 is good but adds a meeting ask in step 1 and compliance boilerplate that dilutes the voice."
+}

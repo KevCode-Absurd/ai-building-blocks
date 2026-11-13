@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The reply-rate forecast is honest. It is anchored at 6.8% to 7.9% from the pilot and refuses to multiply two effects the pilot never tested together. It also spots that the 1,300 pilot Controllers who already got the old sequence need a rest period.",
+  "biggest_mistake": "Some lines are clunky. Step 4's 'the 9 to 4 day close I shared is the reason I wrote' reads awkwardly. Step 3's subject assumes they have an audit coming.",
+  "what_would_make_it_a_10": "Tighten the step 4 wording and make the step 3 subject neutral. Show the pilot-wide baseline next to the projection so I can see the lift at a glance."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The presentation is very clear. The 'who, when, how' summary and the leave-out table are easy to follow. The comparison against the pilot-wide baseline (3.1%, 1.4%, 1.2%) is calculated correctly, and step 3 usefully brings engineering into the conversation.",
+  "biggest_mistake": "The 8% forecast with a 10% ceiling rests on a made-up 1.25 multiplier, and the 7% floor sits above what this segment actually did (6.8%). It also never says to hold back the pilot Controllers who were already contacted.",
+  "what_would_make_it_a_10": "Ground the forecast in the pilot numbers alone and drop the invented multiplier. Exclude contacts from the earlier sequence. Replace the stock subject 'Closing the loop'."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both nail the segment, the trigger and the no-link rule. Output 1 gives me a forecast I can defend and catches the re-contact problem. Output 2 reads more cleanly but pads the expected reply rate with an assumed multiplier."
+}

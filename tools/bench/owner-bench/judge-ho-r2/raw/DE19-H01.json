@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It names the re-cartoning job as the Monday task, rushes only the top 5 matte shades, and keeps the whole order inside ₹1.2 crore with a dated ops calendar.",
+  "biggest_mistake": "It adds matte crayon 'rush + standard' orders that look heavy for the slow 19 shades' cash, and the pre-order wording is slightly clunky for customers.",
+  "what_would_make_it_a_10": "Turn the glitter palette cash tied up into a clearer sell-through number for the sale and tighten the customer message to Tanvi's exact words."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It explains the gap honestly, protects bridal artists like Farah with a pro pre-order, and turns the glitter palette into a party-season price and bundle plan with dates.",
+  "biggest_mistake": "The rush order of 22,000 units leaves only about a week's buffer before the 28 December standard arrival, so a sales spike could still expose a short gap in January.",
+  "what_would_make_it_a_10": "Add one clear sentence on why 22,000 rush units is enough if the sale runs at 3.5 times normal, so the owner can trust the buffer."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both plans are strong and inside the cash limit, but Output 2 feels more like something the owner would pay for because it names the customer tension directly (Tanvi waiting a week, Farah switching brands) and gives the glitter palette a real plan to turn back into cash."
+}

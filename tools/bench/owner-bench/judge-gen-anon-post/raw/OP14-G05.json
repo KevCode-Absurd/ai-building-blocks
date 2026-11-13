@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is tightly built around our actual data: it centers writing, targets the overnight UTC gap, and makes the weekend rotation impossible to miss.",
+  "biggest_mistake": "It changes the role from the brief’s recruitment marketing specialist to a customer support specialist and adds a few process assumptions that may be more detailed than we need.",
+  "what_would_make_it_a_10": "Keep this structure and tone, but correct the role/title mismatch, trim a little, and make the scorecard math simpler and fully consistent."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sounds like us, welcomes career changers, and clearly explains a smarter application flow that should cut review time.",
+  "biggest_mistake": "It adds a second written stage and a 'why this job' question without much evidence from our data, which weakens the owner’s goal of using the strongest signal early and keeping the process lean.",
+  "what_would_make_it_a_10": "Make the application even more evidence-led by relying mainly on the customer reply, tighten the scorecard with clearer 1/3/5 anchors for each stage, and remove extra steps that do not tie back to the hiring data."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 makes better use of our actual evidence and turns it into a post, application, and scorecard I could act on right away. Output 2 is strong and on-brand, but it adds extra process that feels less grounded in what our data says matters most."
+}

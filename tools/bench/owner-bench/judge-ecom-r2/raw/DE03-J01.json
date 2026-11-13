@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Judges every ad set on Shopify-adjusted, after-RTO rupees and makes the relaunch of 'Dad's razor vs mine' the explicit first move, exactly as the owner's data demands.",
+  "biggest_mistake": "Leaves ₹1,30,400 of the budget unspent, which is defensible but the owner may read as under-deploying cash they said was fine.",
+  "what_would_make_it_a_10": "Spend or clearly justify the unspent ₹1,30,400 with a concrete test plan so the full fortnight budget works."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Reads cleanly, gives a clear verdict per ad set, and correctly spots the women 25 to 34 split and the starter kit COD trap.",
+  "biggest_mistake": "Calls Beard Kit and Retargeting profitable holds on inconsistent 'break-even' lines, and includes the razor starter kit in the creative brief after cutting it — the numbers don't hold together across sections.",
+  "what_would_make_it_a_10": "Use one consistent after-RTO break-even basis per ad set and make every hold/scale trace to it, so the cuts and the budget add up without contradiction."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is built on the owner's actual store economics with rupee reasons that reconcile, and it makes the paused creator video the first move; Output 2 is cleaner to read but its hold/scale calls and break-even lines contradict each other, which is exactly what would annoy me."
+}

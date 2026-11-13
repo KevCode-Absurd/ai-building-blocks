@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 7,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Strong on the COD/RTO leak and it builds bundles on the pairs people already buy, with break-even numbers shown.",
+  "biggest_mistake": "It skips the top pair (face wash + serum at ₹944 list) as a discount bundle and instead pads it with a lip balm to ₹999, and the ₹599 threshold argument rests on a soft '6% of orders' estimate with added assumptions (45% add, 15% walk) that could easily swing the money.",
+  "what_would_make_it_a_10": "Show the face wash + serum routine priced honestly (around ₹849-899) with the margin worked out, and base the threshold move on the actual ₹499-598 slice from the order export rather than a guess."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It keeps the shipping line at ₹499 with clear maths, uses the face wash + serum pair as the headline ₹899 duo, and puts the lip balm where it belongs: a one-click cart add-on to cross the line, not a discounted bundle.",
+  "biggest_mistake": "The three all-duo bundles lean on a small ₹45-51 saving that may not move anyone, and the ₹699 'test only' arm plus break-even figure of 263 extra orders assumes buyers who already pair will switch, which needs watching.",
+  "what_would_make_it_a_10": "Pair the solids with a sharper reason to choose the bundle (a named routine plus a small add-on like the lip balm on the ₹899 duo) and set out the ₹699 test stop rules even tighter."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 makes cleaner calls: it keeps ₹499 so Ishita's serum reorder never gets a fee, uses the real top pair as the headline bundle, and treats the lip balm as the cart add-on rather than padding a discounted set. Output 1 has good RTO thinking but leads with a weaker ₹999 routine and a softer threshold move."
+}

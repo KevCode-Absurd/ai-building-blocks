@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads the data like an owner: brings the paused flip-the-pack winner back with fresh words, leads a test on the untested taste theme, and confronts the ₹90 objection head-on, all with counts and a clear bar to beat.",
+  "biggest_mistake": "P6 packs '4 pm. Desk. Craving. ₹90 a bar' into one line, mixing the price and office angles so the ad muddies rather than testing one thing; a couple of primary texts lean on review quotes that legal may not clear.",
+  "what_would_make_it_a_10": "Cleaner single-variable testing in the price ad, and sharper, wittier voice in the primaries (a few read as plain statements rather than blunt Truth lines)."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Voice is spot-on (the samosa line, 'Don't trust us? Read the front'), each launch names the exact number it must beat, and the note on P4 'expect fewer clicks, judge on cost per purchase' shows real media sense.",
+  "biggest_mistake": "P6 training-week line ('one spare') is a soft, slightly gimmicky angle that adds little and isn't grounded in the data; some counts are close to the limit and the spacing between lines/punctuation makes a couple of primaries read as 122–123 when they may truncate.",
+  "what_would_make_it_a_10": "Swap the weak P6 for texture ('dense and chewy, not chalky', 14%), tighten counts, and give a clearer frequency-swap rule like the ₹290 bar plus a defined fatigue threshold."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are launch-ready and data-literate, but Output 2 sounds more like us — the samosa line, the upfront ₹90, 'Read the front' — and its launch table ties every test to a specific number to beat. Output 1 is equally sound; Output 2's voice tips it."
+}

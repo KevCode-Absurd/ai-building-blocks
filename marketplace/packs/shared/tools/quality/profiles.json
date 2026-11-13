@@ -9,7 +9,7 @@
   "paid-social-ads": {
     "aim": 1.0,
     "ceiling": 1.1,
-    "shape": "The asked number of concepts, each: primary text 40-90 words with the hook in the first 125 characters, headline within the platform limit (about 40 characters), image brief 2-4 lines; any required disclosure short and fitted inside each ad; shared offer details and build specs said once; then a test plan of at most 5 lines.",
+    "shape": "The asked number of concepts, each: primary text 40-90 words with the hook in the first 125 characters, headline within the platform limit (about 40 characters), image brief 2-4 lines; any required disclosure short and fitted inside each ad; shared offer details and build specs said once; a test plan only if the brief asks for one.",
     "reader_minutes": 5,
     "notes": "Dev: 1.29x won only 5 of 8 because every ad repeated the same definition and disclaimer block; say shared lines once, keep each required disclosure short, keep each ad as short as a feed scroll allows."
   },
@@ -23,14 +23,14 @@
   "lifecycle-email": {
     "aim": 0.9,
     "ceiling": 1.1,
-    "shape": "Each email: subject, preview text, body 120-200 words with one job and one CTA; then a build table of at most 10 rows and a measurement plan of 3-5 lines.",
+    "shape": "Each email: subject, preview text, body 120-200 words with one job and one CTA; then a build table of at most 10 rows and one line on what to watch, unless the brief asks for a measurement plan.",
     "reader_minutes": 1,
     "notes": "Dev: 0.70x still lost 3 of 8 because the emails read like dense notices; warm customer-voice copy first, operational detail only in the build table."
   },
   "competitor-analysis": {
     "aim": 1.0,
     "ceiling": 1.1,
-    "shape": "Verdict and the single biggest weakness first; one comparison table (rows = competitors, columns = the asked dimensions); 3-5 actions with owner and date; compact source list.",
+    "shape": "Verdict and the single biggest weakness first; one comparison table (rows = competitors, columns = the asked dimensions); 3-5 actions ranked by money per unit of effort, each with an owner and a day relative to the start; compact source list.",
     "reader_minutes": 10,
     "notes": "Dev: 1.02x won 8 of 8 but was called very dense; the table and the actions earn the words, not more prose per row."
   },
@@ -44,14 +44,14 @@
   "creative-brief": {
     "aim": 1.0,
     "ceiling": 1.1,
-    "shape": "One page: objective, audience and tension, single-minded message, reasons to believe with sources or placeholders, tone with one example line, mandatories, deliverables table with specs, timeline table with owners.",
+    "shape": "One page: objective, audience and tension, single-minded message, reasons to believe with sources, tone with one example line, mandatories, deliverables table with specs, timeline table with owners.",
     "reader_minutes": 4,
     "notes": "New in v3.3 after the 12 Nov fresh set routed an agency brief to the lifecycle-email card. One page means one page; strategy belongs in a separate note only if asked."
   },
   "analysis-memo": {
     "aim": 1.0,
     "ceiling": 1.1,
-    "shape": "Recommendation box first; the numbers with inputs and one worked example; what the data does and does not show; ranked options or hypotheses; risks with mitigations; decision rule, owners and dates.",
+    "shape": "Recommendation box first; the numbers with inputs and one worked example; what the data does and does not show; ranked options or hypotheses; risks with mitigations; decision rule, owners and days relative to the start (calendar dates only when the brief gives them).",
     "reader_minutes": 6,
     "notes": "New in v3.3 after the 12 Nov fresh set routed an analysis memo to experiment design and a finance memo to the generic card. Show every calculation step; keep to the asked length."
   },
@@ -86,7 +86,7 @@
   "creator-brief": {
     "aim": 1.0,
     "ceiling": 1.1,
-    "shape": "Creator-facing part at most 700 words: the product in one line, do and don't card, 3-5 video formats, disclosure rules, deliverables and dates; deal terms and review checklist as a separate short section.",
+    "shape": "Creator-facing part at most 700 words: the product in one line, do and don't card, 3-5 video formats, disclosure rules, deliverables and due days; deal terms and review checklist as a separate short section.",
     "reader_minutes": 4,
     "notes": "Dev: 1.22x won 8 of 8 but every judge called it long for creators; keep the required compliance rules, trim everything else the creator does not act on."
   },
@@ -135,7 +135,7 @@
   "review-replies": {
     "aim": 0.9,
     "ceiling": 1.1,
-    "shape": "Public reply (praise 20-50 words, complaints 40-90) that thanks, answers one point with one fact, and invites contact; then the internal plan (owner, action, date) and platform rules on contacting reviewers.",
+    "shape": "Public reply (praise 20-50 words, complaints 40-90) that thanks, answers one point with one fact, and invites contact; then the internal plan (owner, action, day) and platform rules on contacting reviewers.",
     "reader_minutes": 4,
     "notes": "Dev: 0.93x won 8 of 8; the short public reply won and the plain answer's long feature list in the reply was marked down."
   },
@@ -149,14 +149,14 @@
   "social-calendar": {
     "aim": 1.0,
     "ceiling": 1.1,
-    "shape": "One table: date, channel, format, hook, caption, asset, CTA; captions at native length for each channel; a 3-5 line note on themes and cadence.",
+    "shape": "One table: day (the brief's dates when it gives them), channel, format, hook, caption, asset, CTA; captions at native length for each channel; a 3-5 line note on themes and cadence.",
     "reader_minutes": 6,
     "notes": "No dev data; the calendar is scanned row by row, so every post fits one row and strategy prose stays short."
   },
   "launch-plan": {
     "aim": 1.0,
     "ceiling": 1.1,
-    "shape": "Goal and launch date first; phases (before, launch day, after) as a table with owner, date and done-when; risks with triggers; success measures (3-5).",
+    "shape": "Goal and launch day first (the brief's date when it gives one); phases (before, launch day, after) as a table with owner, day relative to launch and done-when; standard safety gates (staged rollout, undo) inside the plan; risks with triggers; success measures (3-5).",
     "reader_minutes": 10,
     "notes": "No dev data; each row must be a task someone owns, and the plan stays within the owner's limit."
   },
@@ -233,7 +233,7 @@
   "internal-announcement": {
     "aim": 1.0,
     "ceiling": 1.1,
-    "shape": "Subject that names the change; what changes in the first 2 sentences, when, who it affects, why, numbered actions with dates, where to ask; 150-400 words; manager notes or FAQ only if asked, labeled and separate.",
+    "shape": "Subject that names the change; what changes in the first 2 sentences, when, who it affects, why, numbered actions with due days, where to ask; 150-400 words; manager notes or FAQ only if asked, labeled and separate.",
     "reader_minutes": 2,
     "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Every employee reads it once, so the change and the action lead and context stays short."
   },

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 7,
+  "range": 6,
+  "ready": 8,
+  "overall": 7.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers are checked and correct (450 vs 95 installs, 6,580 projection, 3.4% save rate). The plan is clear about review timing, the stop list is complete, and week 1 needs no review. The success targets include a check after week 2.",
+  "biggest_mistake": "Weeks 2 to 4 are just four one-line angles on a repeated template, so there is no real calendar. It also sends all of weeks 2 to 4 for review as a batch, though they are not drafted and the wording could avoid review. Wednesday at 14:30 and a Tuesday kindness carousel dilute the evening focus.",
+  "what_would_make_it_a_10": "Give a post-by-post calendar for all four weeks, with hooks in the customer's own words. Word later posts to avoid review. Add our 'Take a breath. You've got this.' line to the drafts. Keep the evening focus tighter."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a full 24-post calendar with owners and production deadlines. The drafts use customer phrases ('brain still on', 'replaying emails', 'quit by day three') in our warm voice, with 'Take a breath. You've got this.' and a small action at the end. Four of the six posts are narrator clips, nearly all in the evening, and the success table has high and low cases.",
+  "biggest_mistake": "It says none of the 24 posts need review, but titles like 'Awake at 2am' edge toward a condition. The 'photo carousel' conflicts with our illustrated look. The optional live-stream idea is outside the brief and adds risk.",
+  "what_would_make_it_a_10": "Flag any later post that might need review and say when to submit it. Keep the carousels illustrated, not photo. Drop or shrink the live-stream idea. Trim the length so it clearly stays within 1,200 words."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both read the data correctly and put sleep, narrator clips and evening posting first. Output 2 gives me a full four-week calendar, production deadlines and drafts that sound like us and use my customers' own words. Output 1 is tidier on review timing but leaves weeks 2 to 4 thin."
+}

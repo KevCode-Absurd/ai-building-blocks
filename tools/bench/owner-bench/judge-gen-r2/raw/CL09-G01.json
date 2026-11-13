@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The trials-per-1,000-clicks table is built correctly from my data. It shows plainly that 9 comparison pages beat 140 blog posts, and it adds a merge-and-redirect step for dead posts and a separate page for Tomas.",
+  "biggest_mistake": "The forecast of about 175 extra trials a month assumes /vs-google-analytics can reach the 9% CTR of a branded 'matomo vs plausible' query, which is optimistic. It also gives the zero-click audit to a strategist I don't have.",
+  "what_would_make_it_a_10": "Use a realistic range instead of a ceiling built on a branded-query CTR, and move the 'website analytics without cookies' rewrite into Month 1."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The projections are honest ranges (+41 to +95 trials a month), and every figure checks out against my data. It also gives ready-to-paste titles and meta in our voice, 'done when' tests for each task, and day-60 rules for deciding the next move.",
+  "biggest_mistake": "It never consolidates or redirects the decaying blog posts. It also tells me to leave the WordPress doc alone instead of using that strong page to send people to the trial.",
+  "what_would_make_it_a_10": "Add a merge-and-redirect step for dead blog posts, and add trial links from the top-ranking docs pages."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both plans focus my writer on comparison pages and fit the 12-page limit. The second gives forecasts I can believe, titles I can paste in today and clear rules for what to do at day 60, so I'd trust it more and could act on it sooner."
+}

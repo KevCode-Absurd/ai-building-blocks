@@ -1,11 +1,11 @@
 ---
 name: store-90-day-growth-plan
-description: "A 90-day growth plan for a store: the one constraint holding growth back, found in a fixed order (tracking, unit economics, conversion, traffic, retention, stock and cash), the three biggest bets against it, each sized in the owner's goal metric and money per month, with an owner, a budget by month that fits the cash plan, a low, likely and high profit range for each, and 13 weekly checkpoints with continue, change or stop lines. Gated on gross profit per order, cash runway and team capacity, so nothing is planned that the store cannot pay for or staff. Use at the start of a quarter, after an audit, when growth has stalled, or when the owner has too many ideas and needs three."
+description: "A 90-day growth plan for a store: the one constraint holding growth back, found in a fixed order (tracking, unit economics, conversion, traffic, retention, stock and cash), the proven winner relaunched first, the three biggest bets against the constraint, each sized in the owner's goal metric and money per month as a point estimate with its range, ranked by money per hour of work, with an owner, a budget by month that fits the cash plan, and 13 weekly checkpoints with continue, change or stop lines. Gated on gross profit per order, cash runway and team capacity, so nothing is planned that the store cannot pay for or staff. Use at the start of a quarter, after an audit, when growth has stalled, or when the owner has too many ideas and needs three."
 ---
 
 # Ninety-day growth plan
 
-**You get:** a one-page plan (baseline, the constraint, three bets, owners, budget, what success looks like at day 90) plus a bets table with profit ranges, a monthly budget against the cash plan, a 13-week grid with each bet's continue, change or stop line, and a weekly scorecard.
+**You get:** a one-page plan (baseline, the constraint, three bets, owners, budget, what success looks like at day 90), each decision in two plain lines, plus a bets table, a monthly budget against the cash plan, a 13-week grid with each bet's continue, change or stop line, and a weekly scorecard. Follow the house rules in the toolkit, above all "Only the brief's facts run the business." and "One basis per number."
 
 ## When to use
 
@@ -64,21 +64,24 @@ Check each and stop at the first that fails:
 5. **Retention:** good first orders, weak repeat.
 6. **Stock and cash:** demand exists but stock or cash caps it.
 
-Write the constraint in one sentence with the number that proves it. Any screen or rule of thumb that decides something goes into the plan with its sum and its source (a card, platform documentation, or "practitioner default, test it"). If you cannot show both, drop it.
+Write the constraint in one sentence with the number that proves it. Any screen or rule of thumb that decides something goes into the plan with its sum and its source: a brief line, platform documentation, or a card logged in your working trace. An outside yardstick with neither is dropped.
 
-### 3. Pick three bets
+### 3. Relaunch the proven winner, then pick three bets
 
-From the backlog, pick the three with the highest expected profit that work on the constraint (at least two of the three should). Rules:
+First, look for what already worked in the store's own data: a paused ad that bought cheaply, an offer or bundle that sold, a flow that earned, a product the best segment buys. Relaunching it unchanged is usually the most money for the least work, so it goes first, as bet one or ahead of the bets. Any change to it is a test, not the plan.
+
+Then, from the backlog, pick the bets with the highest expected profit that work on the constraint (at least two of the three should). Rules:
 
 - One bet may be a cheap test that reduces a big unknown instead of growing sales.
+- Fix the problem the data shows is largest before smaller polish, even when the polish is easier to describe.
 - Bets that touch the same result (an ad, a page and an offer for one product) are one initiative with one baseline; do not add separate guessed lifts.
 - Prefer bets that can be judged inside 90 days; some gains only show in cash after 60 to 180 days [FIN-0029], so say what the day-90 read can and cannot prove.
 
 ### 4. Size each bet in one unit
 
-Size every bet in the goal metric's unit and in money per month, using step 1's rates, sum written out. Never mix units (per 1,000 customers, per quarter, "high"). If volumes are missing, a share of revenue still works; state the volume behind the money figure. Rank by goal-metric impact divided by effort, so the order is a sort, not a judgement. Overlapping bets are marked "do not add".
+Size every bet in the goal metric's unit and in money per month, using step 1's rates, sum written out in the numbers ledger, not the body. Never mix units (per 1,000 customers, per quarter, "high"). If volumes are missing, a share of revenue still works; state the volume behind the money figure. Rank by goal-metric impact divided by hours of work, so the order is a sort, not a judgement; a move that can start in week 1 goes ahead of one that needs a build. Overlapping bets are marked "do not add".
 
-Also give: what changes, expected effect on the constraint's number, profit range per month (low, likely, high, built from the store's own gross profit per order and volumes), cost, cash needed by month, hours, owner (agent and the person who approves), and whether it is tested or shipped. Under about 300 orders a month most changes are shipped and watched rather than split tested [CRO-0011].
+Each bet gets one call in one line: what changes and its profit per month as a point estimate with its range (for example "about 40,000 a month, range 25,000 to 55,000"), built from the store's own gross profit per order and volumes. Each projection rests on at most one assumed input, named in that line; stacked assumptions fail. Also give: cost, cash needed by month, hours, who does it (agent or person) and who says yes, and whether it is tested or shipped. Under about 300 orders a month most changes are shipped and watched rather than split tested [CRO-0011].
 
 Measurement must match the store's size: smaller stores use 7-day click and a new-customer dashboard; lift tests come later [MEA-0041].
 
@@ -93,27 +96,31 @@ For each bet, write:
 - **Leading signal** (weekly): for example cost per new customer on the new offer.
 - **Week 2 line:** is it live and working as built?
 - **Week 4 and week 8 lines:** continue if the signal is at or above the line; change if below but moving; stop if below and flat.
-- **Day 90 read:** the result against the low, likely and high range.
+- **Day 90 read:** the result against the point estimate and its range.
 
-Put all bets on one 13-week grid. Then write the weekly scorecard, goal metric first: each line has its baseline (or "set in week 1"), day-90 target, owner, and the threshold that triggers action.
+Put all bets on one 13-week grid, in relative weeks (Week 1 to Week 13) unless the brief gives dates. Then write the weekly scorecard, goal metric first: each line has its baseline (or "set in week 1"), day-90 target, owner, and the threshold that triggers action.
 
 ### 7. India and US notes
 
 - **India:** count RTO in gross profit per order; cash from COD orders arrives after courier remittance, so the cash plan must use remittance dates, not order dates. If Diwali or a wedding season falls inside the 90 days, plan stock and the sale calendar first; it can outweigh any bet.
 - **US:** if Black Friday to Cyber Monday falls inside the window, its customers may repeat less; set their cost allowance separately (`plan-yearly-sale-calendar`).
 
-### 8. Approve and start
+### 8. Reconcile the numbers, then start
 
-The client approves the plan, budget caps and owners, with dates logged. Nothing spends or goes live before that.
+Log every figure in `context/numbers.json` with its inputs, period and money basis, then run `node tools/quality/numbers.cjs context/numbers.json --final <deliverable> --brief <brief>`. Fix every FAIL: a total that does not add up, a saving valued at revenue, a lift at one funnel step applied straight to orders, or two periods in one column.
+
+Nothing spends or goes live until the client says yes to the plan, budget caps and owners. Ask for that yes in your own message, not in the plan.
 
 ## Checks before you hand it over
 
 - The goal metric is named in the owner's words, baseline now and a year ago, working shown; the baseline also shows first-order gross profit over cost per new customer.
 - The constraint is named with the number that proves it, found in the fixed order.
-- Every screen or rule of thumb that decides something shows its sum and source, or is cut.
+- Every screen or rule of thumb that decides something shows its sum and source (brief or traced card), or is cut.
+- The proven winner, if the data shows one, is relaunched first and unchanged.
 - Three bets (or the number the owner asked for), at least two working on the constraint.
-- Every bet is sized in the goal metric's unit and money per month, sum shown; the rank is a sort on it. Mixed units fail.
-- Each bet has an owner, approver, hours, cost and a low, likely and high profit range.
+- Every bet is sized in the goal metric's unit and money per month, sum in the ledger; the rank is a sort on money per hour of work. Mixed units fail.
+- Each bet has who does it, who says yes, hours, cost, and a point estimate with its range in one line, on at most one named assumption.
+- `numbers.cjs` shows no FAIL.
 - Every scorecard line has a baseline, day-90 target, owner and action threshold.
 - The monthly budget fits the cash plan with the named floor every week.
 - Every bet has week 2, 4 and 8 lines and a day-90 read.
@@ -121,19 +128,25 @@ The client approves the plan, budget caps and owners, with dates logged. Nothing
 
 ## Output
 
-**One-page plan:** the goal metric (baseline, how it moved, day-90 target), baseline (five numbers), the constraint in one sentence, bets with owners, total budget, and day-90 targets as ranges.
+Follow the house rule "Write for a busy owner."
 
-**Bets table:** Rank | Bet | Constraint it works on | Goal-metric impact (sum shown) | Money per month | Owner (agent) | Approver | Hours a week | Cost | Profit per month low / likely / high | Test or ship | Leading signal | Week 4 line | Week 8 line.
+**One-page plan:** the goal metric (baseline, day-90 target), the constraint in one sentence, the first-week move, then each bet in two lines with who does it, and the total budget.
 
-**Budget by month:** Month | Bet spend | Normal bills | Cash in | Lowest weekly cash | Floor | Pass.
+**Bets table:** Rank | Bet | Profit a month (point and range) | Who does it | Week 4 line.
 
-**13-week grid:** Week | Bet | Signal value | Line | Status (on track, change, stop) | Note.
+**Budget by month:** Month | Bet spend | Cash in | Lowest weekly cash | Above the floor?
 
-**Weekly scorecard:** Line | Baseline | Day-90 target | Owner | Action threshold | Action.
+**13-week grid:** Week | Bet | Signal | Line | Status (on track, change, stop).
+
+**Weekly scorecard:** Line | Baseline | Day-90 target | Owner | Action threshold.
+
+**Appendix (short):** the goal-metric sums, the baseline numbers, approvers, hours and costs per bet.
 
 ## Common mistakes
 
 - **Ten bets.** Step 3 allows three.
+- **A new idea ahead of the winner.** Step 3 relaunches what already worked first.
+- **Stacked assumptions.** Step 4 allows one named assumption per projection.
 - **Mixed units, no link to the owner's goal.** Steps 1 and 4 size every bet in the goal metric.
 - **An unexplained screen.** Step 2 shows the sum and source, or drops it.
 - **Planning growth on broken unit economics.** Step 2 checks profit before traffic.

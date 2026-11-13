@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It brings back the pause as the main save, splits the reasons by plan and reminder status, and makes the money maths clear.",
+  "biggest_mistake": "The upside range is not fully derived and leans on untested switch/reminder assumptions.",
+  "what_would_make_it_a_10": "Show the range calculation explicitly, add a small holdout test plan, and confirm the billing pause can be rebuilt before sprint start."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a very complete one-screen flow with exact copy, segment counts and build/test notes.",
+  "biggest_mistake": "It keeps a 50% discount for switching-app leavers and adds unsupported offers like a smaller daily goal, which weakens the margin discipline.",
+  "what_would_make_it_a_10": "Remove or clearly test the unsupported 50%-off and smaller-goal offers, and make every retained group tie back to evidence and owner economics."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd hand to the team: it restores the pause, segments by plan and reminder status, does the maths transparently and keeps discounts away from people who will return anyway. Output 2 is useful, but its extra 50%-off and smaller-goal offers feel less grounded."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data correctly: brings back the paused winner, spots taste as the big missing hook, and handles the ₹90 objection honestly.",
+  "biggest_mistake": "The six angles are not quite as distinct as they could be; P1 and P5 are both front-of-pack transparency, so the office-snack angle is a little underdeveloped.",
+  "what_would_make_it_a_10": "Make one primary text a sharper 4 pm office-snack line, keep transparency to one slot, and add slightly more of our blunt wit in the headlines."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The copy feels closest to the brand and customer language, especially the price line, taste line, and samosa/4 pm angle.",
+  "biggest_mistake": "It overreaches a bit by inventing a budget, adding a fifth control cell, and giving media-testing instructions beyond the requested four launch combinations.",
+  "what_would_make_it_a_10": "Keep the strong copy, but tighten it back to the brief: exactly four launch combinations, no assumed budget unless labelled optional, and fewer extra operating rules."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "I would rather hand Output 2 to the team because the ad lines sound more like us and cover the buyer angles better. Output 1 is cleaner and safer, but Output 2 has the stronger copy with only small trimming needed."
+}

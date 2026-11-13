@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The application task with Priya's email is brilliant—it tests genuine diagnostic ability and empathy without needing product knowledge, and the accompanying scorecard and shortlist exercise are completely turnkey.",
+  "biggest_mistake": "The salary figure could have appeared right at the top headline rather than midway down under pay and terms.",
+  "what_would_make_it_a_10": "It is already a 10; it nails the brand voice, the operational data, and hiring execution flawlessly."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Puts the salary and weekend rotation honesty right at the very top of the post with exact funnel sizing (top 15, top 5) for the review process.",
+  "biggest_mistake": "The screening prompt (locked out of HEY) is an emotional deflection test rather than a diagnostic problem-solving exercise, making it slightly harder to score objectively than Output 1's prompt.",
+  "what_would_make_it_a_10": "Provide the exact text of the longer follow-up exercise and specific interview questions rather than just naming them."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both outputs are exceptional 37signals work, but Output 1 gives us a superior, ready-to-use application test (the Priya email with the subtle domain typo) and writes out the exact shortlist test and interview questions so we could literally launch the job post tomorrow morning."
+}

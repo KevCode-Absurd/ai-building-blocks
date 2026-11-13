@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It perfectly bridges operations and marketing by using the customer personas to shape the out-of-stock strategy, like creating a pro pre-order to stop MUAs from switching brands.",
+  "biggest_mistake": "Assuming a clearance buyer would pay full unit cost (₹310) for leftover dead stock.",
+  "what_would_make_it_a_10": "A slightly more realistic clearance plan for the glitter palettes, perhaps bundling them with the overstocked liquid lipsticks."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "The 'Night-out kit' is a brilliant, mathematically sound merchandising idea that clears dead stock while protecting margin.",
+  "biggest_mistake": "It completely ignores the qualitative persona data (Tanvi and Farah), missing a chance to tailor the gap strategy to their specific buying habits.",
+  "what_would_make_it_a_10": "Tying the pre-order and out-of-stock communications directly to the pain points of the bridal artists and impatient brides mentioned in the brief."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are exceptional, mathematically sound plans that nail the core operational brief and constraints. Output 1 wins because it reads like a planner who actually talks to marketing—it uses the qualitative customer signals to turn an unavoidable stock gap into a targeted pre-order strategy, saving the brand's relationship with high-value buyers."
+}

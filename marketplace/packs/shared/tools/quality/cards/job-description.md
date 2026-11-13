@@ -7,7 +7,8 @@ Families: job-description; also: job post, job ad, job listing, role description
 2. The hard parts of the job near the top, right after the opening, then three to five outcomes the person will own, duties as plain verbs, and a "normal week".
 3. At most six must-haves, each tied to the work, apart from nice-to-haves and "what we will teach you"; years or degrees only when truly needed.
 4. Pay range, place or remote rules and benefits from the brief, and working hours given in each candidate region's local time (not only UTC or head-office time); a fact the brief does not give is left out, never invented.
-5. Hiring steps with timing, how to ask for an adjustment, and a line that applicants are never asked for money.
+5. Hiring steps with timing, how to ask for an adjustment, and a line that applicants are never asked for money. Any application exercise is written in full: the scenario, the facts the candidate needs, and the exact question. Never a pointer such as "a real case from last quarter".
+6. When the brief gives data on what predicted success in past hires, the steps and the scorecard weights follow it: the strongest predictor carries the most weight, a weak one little or none. The data shapes the weights; it never appears in the post.
 
 **FAILURE MODES**
 1. Wish-list requirements: long bullet lists, years-of-experience gates, hype titles.
@@ -16,6 +17,7 @@ Families: job-description; also: job post, job ad, job listing, role description
 4. Coded or excluding words: age hints, gendered terms, "native speaker", needless physical demands.
 5. No process information, and no short version for boards with tight limits.
 6. Internal analytics in the public post: hiring data, correlations or scores from past hires. Use them to choose what to ask for, then say it in plain words.
+7. An exercise described instead of written, or a scorecard whose biggest weight sits on the step the data shows predicts least.
 
 **SHAPE:** Plain searchable title, opening, the hard parts, what you will do, a normal week, the team, what you need, what we will teach, pay and benefits, where and when, how hiring works, adjustments, scam line. 400 to 700 words; a short version under 200 words, same facts, only when asked.
 

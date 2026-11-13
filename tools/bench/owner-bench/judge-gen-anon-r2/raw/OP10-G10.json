@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole series around the two retention habits that matter most: recurring tasks and a second device, while using platform branching and the inactivity trigger well.",
+  "biggest_mistake": "The routing rules assume some filtering and send suppression that should be confirmed in the email tool, and the second-device email could perhaps come earlier for users who have not made a recurring task.",
+  "what_would_make_it_a_10": "Tighten the exact send logic by user path, confirm each skip rule is supported, and make the day-7/day-14 success metric consistent with the first-week retention signal."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly reads the data, uses the supported triggers, branches by platform, and writes calm, usable copy with one main action per email.",
+  "biggest_mistake": "It keeps a Pro email in onboarding, which pulls focus away from the two behaviors that drive retention and means many users may not actually receive a full 5-email onboarding series.",
+  "what_would_make_it_a_10": "Replace the Pro email with another habit-building email for users who still lack a recurring task or second device, and move Pro to a later engaged-user lifecycle campaign."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather hand Output 1 to the team because it stays focused on habit formation instead of monetization, and it is closer to a complete onboarding plan we can run tomorrow. Output 2 is strong, but the Pro email is the wrong priority for this brief."
+}

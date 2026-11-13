@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the three real signals in the data: quiet wheels, under-served women travellers, and work flyers who want to skip the belt.",
+  "biggest_mistake": "A few ad lines like “No rattle” and the per-trip maths should be tightened or checked so they do not feel like over-claims or assumptions.",
+  "what_would_make_it_a_10": "Add slightly more exact production notes and ensure every review-style line is either verified or clearly framed as a theme, not a quote."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very launch-ready, with clear formats, hooks, headlines, safe-area notes and strong use of review language.",
+  "biggest_mistake": "It does not put the solo-woman ‘lift it yourself’ concept in the first three, even though women are the cheapest audience and lifting alone is their clearest purchase reason.",
+  "what_would_make_it_a_10": "Move the lift-it-alone women’s concept into the first three and make the copy a little less spec-heavy and more Mokobara-understated."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather pay for because it acts on the most important hidden signals in the brief and prioritises the right three concepts. Output 2 is polished and usable, but it misses the highest-leverage women-solo priority in the launch order."
+}

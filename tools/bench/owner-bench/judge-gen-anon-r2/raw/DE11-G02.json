@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks recruiting with the seat math in two lines, uses Priya's phrase, and puts security up with the demo button. Every section has its proof named.",
+  "biggest_mistake": "The A/B variants are two sides of the same idea (pain vs feature) rather than pain vs outcome, and the reminder section claims nothing beyond the data but still reads a little thin.",
+  "what_would_make_it_a_10": "A second hero that tests a genuinely different promise (e.g. outcome: 'fill your interview slots without chasing anyone') and one named, permissioned customer quote in the round robin section instead of a placeholder."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Nine sections with richer visuals, text/SMS reminders, reschedule-from-link, and a careful 'fill or cut' approach to facts it doesn't have.",
+  "biggest_mistake": "Too many CTAs alternate between 'Get started' and 'Book a demo' on a page aimed at teams, and a standalone open source section leads a recruiter away from the pain. Metrics are muddier (qualified team starts) than a clean demo-request rate.",
+  "what_would_make_it_a_10": "Cut open source to a proof line, make every button 'Book a demo', trim to the owner's seven sections, and land on one clean deciding metric with a stop rule."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd actually ship: segment math up front, security moved out of the footer, routing forms pulled up, and a deciding metric with a stop rule I can hand to the team. Output 2 has good detail but mixes its CTAs and buries open source in a section of its own where the recruiter doesn't need it."
+}

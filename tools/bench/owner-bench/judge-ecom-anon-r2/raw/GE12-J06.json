@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 6,
+  "range": 8,
+  "ready": 5,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Calculated the exact return rate impact of the cash issue (3.3%) and clearly mapped out a copy strategy to address it.",
+  "biggest_mistake": "Leaving meta-instructions inside the customer-facing copy, such as the bullet point that literally reads 'Slim, with exact numbers.'",
+  "what_would_make_it_a_10": "Clearly separate the strategy notes from the deliverable copy, and review the text from the perspective of the end customer."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The description perfectly captures the requested 'clever, calm, precise' voice, and the 'What fits, in real life' breakdown is a brilliant, highly usable addition.",
+  "biggest_mistake": "Missed the opportunity to put the break-in warning directly under the add-to-cart button to maximize visibility for early returners.",
+  "what_would_make_it_a_10": "Swapping the 3-year warranty under the buy button for the 'snug for a week' expectation, completely bulletproofing the copy against the main return reasons."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 nailed the exact brand tone and provided exceptionally clear formatting, while Output 1 accidentally included prompt instructions directly in the live copy."
+}

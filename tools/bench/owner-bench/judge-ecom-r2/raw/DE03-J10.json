@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Builds the three bundles on real purchase pairs and takes the COD/RTO leak seriously in both the threshold and bundle logic, with break-even volumes and a clear 'why not ₹699' argument.",
+  "biggest_mistake": "The recommended serum + lip balm bundle at ₹749 gives a saving of ₹49 that only matches the shipping fee, and the ₹599 threshold case relies on a made-up 6% band share and a 45% add-on rate that are flagged as guesses rather than verified from the order export.",
+  "what_would_make_it_a_10": "Confirm the ₹499–₹598 order slice from the order export and show the margin for the face wash + serum routine as a ₹849–₹899 duo rather than a ₹999 three-item set, so the hero pair is the bundle number one."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Keeps the serum reorder safe at ₹499, names the ₹1 lakh RTO leak explicitly, and gives page lines in a genuinely friendly grade-6 voice that answers Kavya in her own words.",
+  "biggest_mistake": "The threshold test arms are ₹499 vs ₹699 rather than a smaller, less risky step, and the ₹699 upside is case as 'up to ₹2.25 lakh' before the walk-away cost is netted, which could tempt the owner toward the riskier line.",
+  "what_would_make_it_a_10": "Add a middle test arm (for example ₹599) alongside ₹499 and ₹699 so the owner can see the profit curve rather than a binary keep-or-risk choice."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would rather pay for: it protects Ishita's serum reorder, names the COD refusal cost plainly, and the bundle copy actually sounds like Plum, whereas Output 1's threshold recommendation and guessed band share make me nervous."
+}

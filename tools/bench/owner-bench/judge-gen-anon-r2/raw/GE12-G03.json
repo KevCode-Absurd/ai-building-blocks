@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent math and deduction of the margin impact, along with a perfectly clear table for the burn drivers.",
+  "biggest_mistake": "The first point under 'What went wrong' is a massive, dense paragraph of numbers that violates the 9th-grade reading level request and is hard to read on a phone.",
+  "what_would_make_it_a_10": "Break the AI database explanation into bullet points, keep sentences shorter, and summarize the bad news more succinctly at the very top."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Phenomenal structure. Putting a short 'The bad news' summary and the top ask right below the three numbers perfectly serves the busy investor reading on a phone.",
+  "biggest_mistake": "Including 'Runway at that month's burn' in the data table shows a jarring drop from 52 to 33 months before the text explains the $0.8M one-off anomaly.",
+  "what_would_make_it_a_10": "Remove the runway calculation from the raw data table to avoid unnecessary panic, letting the text handle the context of the one-off expense."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 respects the 'reading on a phone' constraint much better by providing a quick summary of the bad news right at the top, and its paragraphs are shorter and punchier."
+}

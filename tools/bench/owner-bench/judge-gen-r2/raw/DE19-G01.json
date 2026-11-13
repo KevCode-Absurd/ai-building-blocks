@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranks moves by extra trials with the arithmetic shown and a concrete Week 1 task list the writer can start on Monday.",
+  "biggest_mistake": "The /vs-google-analytics ceiling (+3,190 clicks, +100 trials) assumes a jump from 3.5% to 9% CTR at top 3, which is optimistic and could overstate the headline gain.",
+  "what_would_make_it_a_10": "Show a realistic range (not just the ceiling) for the top move so the owner can plan on a conservative number."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Gives conservative ranges, ready-to-paste titles and metas, a clear stop list, and a day-60/day-90 rule set that makes the plan runnable.",
+  "biggest_mistake": "Leaves Month 3 partly vague (two pages set by day-60 rules) and skips a per-month trial forecast table, so the trend is less trackable than the ranked moves.",
+  "what_would_make_it_a_10": "Add a month-by-month trial forecast (conservative to optimistic) tied to the ranked moves so progress can be checked against a number."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is more usable: ready-to-paste titles and metas, honest ranges, and clear decision rules, while Output 1 wins on a single clear ranking but oversells the top move's upside. Both are strong, but 2 is the one I'd hand to the writer on Monday with fewer edits."
+}

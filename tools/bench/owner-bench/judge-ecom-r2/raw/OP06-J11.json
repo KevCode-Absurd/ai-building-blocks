@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the in-app checkout bug as the top issue, quantifies the upside, and then ranks five sensible tests tied to the actual chat and funnel evidence.",
+  "biggest_mistake": "It understates the best-case value of the checkout fix in the opener and uses add-to-cart as the main metric too often where orders or checkout reach would fit better.",
+  "what_would_make_it_a_10": "Tighten the maths and metric choices, especially around the checkout-fix value and which tests should optimise for checkout or orders versus add to cart."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It cleanly identifies the broken in-app checkout, sizes it correctly to about 560 orders and ₹34 lakh gross margin, and pulls the right ship-now changes to the top.",
+  "biggest_mistake": "Its test design has serious flaws: it says each parallel test gets all the traffic, mixes impossible scheduling with overlapping page changes, and its sample-size claims are not trustworthy enough for decisions.",
+  "what_would_make_it_a_10": "Make the experiment plan operationally sound with correct traffic allocation, non-overlapping tests, and sample-size maths the team can trust."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the one I could hand to the team tomorrow with fewer fixes. Output 2 has a sharper call on the bug value, but the testing plan itself is less reliable and has execution errors I would not want in a live roadmap."
+}

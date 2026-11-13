@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows the data: Controllers/Heads of Finance at 50-300 person SaaS companies, triggered by pricing-page changes, with no links and a realistic 6.8%-7.9% reply expectation.",
+  "biggest_mistake": "The load math is a little loose: if only pricing-change accounts are loaded, more than 4,100 of the 6,000 may stay out at first. Step 1 also asks for both current close length and a 'yes' reply, which slightly muddies the ask.",
+  "what_would_make_it_a_10": "Tighten the CTA in step 1 to one clean reply path, move the proof to step 2 or 3, and separate 'eligible universe' from 'loaded this week' in the list math."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the right strategic call on segment, trigger, no-link sending, and gives useful operating rules for timing, testing, and handling replies.",
+  "biggest_mistake": "The 'bolder move' suggests sending to untriggered watch-list Controllers, which cuts against the strongest signal in the pilot. The 'leaves out about 4,100' math is also not right if no-recent-pricing-change Controllers are excluded.",
+  "what_would_make_it_a_10": "Remove the watch-list experiment, fix the load math, soften the 20-minute meeting asks, and keep the sequence more tightly focused on the pricing-change pain rather than adding invented send-window logic."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would use Output 1 first because it is more disciplined with the pilot data and closer to a ready sales playbook. Output 2 is good, but it adds a few moves I would not want the team to run without debate."
+}

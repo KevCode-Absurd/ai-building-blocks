@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the existing face-wash plus serum pair into a clear routine bundle and ties the threshold decision to COD/RTO and margin instead of just order value.",
+  "biggest_mistake": "It spots the COD leakage under ₹500 but does not turn it into a COD-specific threshold or fee, so it leaves some of that money on the table.",
+  "what_would_make_it_a_10": "Add a COD-specific rule with the RTO maths, and sharpen the bundle break-even table so new step-ups versus existing pair buyers are unambiguous."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The ₹599 threshold idea is sharp because it protects the ₹599 serum reorder while nudging small carts, and the three-step ladder is easy to understand.",
+  "biggest_mistake": "The ₹599 recommendation is built on an unverified 6% order slice and a 45% add-item assumption; the ₹699 comparison also has shaky numbers, so I would not launch it as written.",
+  "what_would_make_it_a_10": "Check the actual ₹499 to ₹598 order share and COD refusal mix, correct the ₹699 maths, and give a COD-specific threshold or fee so the RTO leak is fixed, not just described."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I can hand to my team tomorrow: it uses the pairs customers already buy, accounts for COD/RTO, and keeps free shipping at ₹499 with clear test rules. Output 2 has a smart ₹599 idea, but it leans on an unverified slice and some shaky threshold maths, so I would need to rework it before using it."
+}

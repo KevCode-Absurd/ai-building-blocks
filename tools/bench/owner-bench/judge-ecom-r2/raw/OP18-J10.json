@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the first bundle around the strongest signal in the data — face wash plus vitamin C serum — and backs the threshold choice with clear money.",
+  "biggest_mistake": "It spots the COD/RTO leak but does not go far enough with a COD-specific fix such as prepaid-only free shipping or a COD fee test.",
+  "what_would_make_it_a_10": "Add a sharper COD-specific shipping/payment test while keeping the strong bundle plan and threshold maths."
+ },
+ "o2": {
+  "fit": 6,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The ₹599 threshold idea is a useful lower-risk alternative because it protects the vitamin C serum reorder.",
+  "biggest_mistake": "It misses the obvious winning bundle — face wash plus serum — and turns lip balm into a discounted main bundle instead of the natural cart add-on.",
+  "what_would_make_it_a_10": "Make the face wash plus serum duo the hero bundle, use lip balm as the full-price threshold add-on, and replace the assumed ₹599 maths with actual order-band data or a safer test frame."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to what I would launch: it uses the real buying pairs, keeps the serum reorder protected, and shows the money cleanly. Output 2 has one interesting threshold angle, but it ignores the strongest pair in the data and depends too much on assumptions."
+}

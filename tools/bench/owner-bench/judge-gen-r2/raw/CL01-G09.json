@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A full 24-post calendar with titles, clear review flags on each draft, and correct install maths (450 vs 100 per post, 7,650 projected).",
+  "biggest_mistake": "It sends every sleep post to review, even wind-down posts that name no condition, so week 1 is six kindness posts and our best install driver waits a week.",
+  "what_would_make_it_a_10": "Write week 1 sleep and wind-down posts that name no condition so they skip review, and tidy the clunky carousel copy."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sleep posts and narrator clips start in week 1, worded so they need no review, with warm hooks from our customers (replaying emails, day three, pickup) and a small action at the end of every draft.",
+  "biggest_mistake": "It gives no post-by-post calendar for weeks 2 to 4 and no review-flagged draft, and it keeps four stress-at-work posts that could have been sleep posts.",
+  "what_would_make_it_a_10": "Add a dated title calendar for weeks 2 to 4 that marks which posts go to review, and move the stress slot toward sleep."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 puts our best performer, evening sleep narrator clips, on air from day one without tripping review, and its drafts sound more like us. Output 1 is well organised but loses a whole week to over-caution."
+}

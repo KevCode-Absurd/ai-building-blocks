@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is strict on claims and the numbers all check out. 'Quiet', 'light' and 'premium' appear only as buyers' review lines. The budget plan is checked: 15 purchases' worth per concept, about ₹63k in total, with a clear kill rule. The women's concept is ranked first, backed by the ₹1,058 vs ₹1,615 numbers.",
+  "biggest_mistake": "Some primary text runs long and reads like a spec list, so it drifts from the short-line, grade 7 voice. Concepts 2, 6 and 8 are still fairly static-on-scene, closer to what we already run.",
+  "what_would_make_it_a_10": "Cut the primary text to short, punchy lines. Make one of the statics a more distinct format, such as a UGC or creator piece. Give each concept a single named test variable."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The copy reads like our brand: short, calm lines such as 'Land. Roll. Leave.' The eight concepts are clearly spread across formats. Two touches are smart: concept 7 uses reviews to go after the costly 41+ group, and concept 5 is framed as a direct test of our current look. The math holds (26% of purchases, ₹292 a trip, +63 purchases).",
+  "biggest_mistake": "Several lines put claims in our own voice that are not approved specs: 'No rattle', 'Quiet wheels' in the brand copy, 'rolls quiet'. Concept 2 puts product dimensions on screen, which are not on the approved list. The test budget of ~₹4,500 per concept is too thin to scale or cut on.",
+  "what_would_make_it_a_10": "Keep 'quiet' strictly to review quotes and drop the on-screen dimensions. Set a realistic test budget per concept. Lead the top three with the women's concept, since that is the cheapest proven audience."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and I'd use either. Output 2 sounds more like us, but Output 1 stays inside my approved claims and gives a test budget I'd actually trust, so I'd ship it first."
+}

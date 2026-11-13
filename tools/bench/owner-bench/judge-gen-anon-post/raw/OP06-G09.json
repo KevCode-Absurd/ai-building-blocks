@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the business correctly: push sleep, narrator clips, and evening slots, while cutting low-value themes and formats. It also handles week 1 review timing sensibly and stays close to the brand voice.",
+  "biggest_mistake": "It leaves one recurring parent post in a daytime slot without much evidence that the tradeoff beats the strong evening pattern, and the fixed weekly plan could be a little more explicitly tied to the best-performing themes every week.",
+  "what_would_make_it_a_10": "Make the weekly table even tighter around sleep-led evening posting, flag review status per draft more explicitly, and trim the weaker daytime test unless there is a clearer expected payoff."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 5,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly sees the main opportunity in sleep plus narrator clips, and the hooks feel on-brand and audience-aware.",
+  "biggest_mistake": "It gets too loose with the facts and decision logic: saying sleep posts 'nearly triple' stress installs overstates the data, pausing text-on-screen video is not well supported, and introducing a TikTok live idea adds operational risk outside the brief.",
+  "what_would_make_it_a_10": "Keep the strong sleep-and-narrator strategy, but tighten every claim to the actual numbers, remove speculative extras like live streams, and make the plan more directly usable within the stated capacity and brief."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would actually use. It is more grounded in my data, more careful on review timing and numbers, and closer to publishable without me having to fix strategic leaps."
+}

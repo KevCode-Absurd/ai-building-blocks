@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It cracked the review rule perfectly by drafting high-performing sleep posts for week 1 that cleverly avoid naming medical conditions to bypass the delay.",
+  "biggest_mistake": "It missed the opportunity to use the brand's exact signature phrase, 'Take a breath. You've got this,' in any of the drafts.",
+  "what_would_make_it_a_10": "Slip the exact brand phrase 'Take a breath. You've got this.' into one or two of the drafts to perfectly nail the voice guideline."
+ },
+ "o2": {
+  "fit": 5,
+  "insight": 5,
+  "priorities": 7,
+  "reasoning": 4,
+  "correct": 8,
+  "clear": 8,
+  "voice": 5,
+  "range": 6,
+  "ready": 6,
+  "overall": 5,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The four-week calendar is highly detailed and gives a very clear view of what themes and formats post on which days.",
+  "biggest_mistake": "It misread the review rule, incorrectly assuming all sleep posts trigger it, which resulted in banning your highest-performing theme entirely for week 1.",
+  "what_would_make_it_a_10": "Draft sleep posts for week 1 that avoid naming conditions to bypass the review rule, and soften the tone to invite rather than instruct (e.g., remove commands like 'Swipe through')."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 found the exact solution to the review constraint that you were hoping for, allowing your best-performing sleep content to run in week 1. It also perfectly respected the 'invite, don't instruct' rule, whereas Output 2 sounded too commanding and fell into the trap of banning sleep posts for the first week."
+}

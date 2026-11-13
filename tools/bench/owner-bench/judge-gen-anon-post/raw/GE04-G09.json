@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Provides a very clear, repeatable weekly template and handles the legal review timeline instructions perfectly.",
+  "biggest_mistake": "Missed the opportunity to map out the ideas for all 24 posts, leaving some of the 4-week content strategy blank.",
+  "what_would_make_it_a_10": "Fleshing out the topics for weeks 2-4 and including more strategic business nuances, like anticipating performance changes as we scale a specific content type."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Anticipates content fatigue from tripling our sleep posts and builds out a full 24-post roadmap while nailing the exact brand voice and audience hooks.",
+  "biggest_mistake": "The assumption that posts don't need review is true for week 1, but they didn't explicitly outline a submission schedule for the remaining weeks like Output 1 did.",
+  "what_would_make_it_a_10": "It is already a 10, but adding a specific date to submit the remaining weeks' posts to legal would make it flawless."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both followed the brief exceptionally well, but Output 2 provided a high/low projection based on audience fatigue and mapped out all 24 post topics, showing a deeper level of strategic thinking."
+}

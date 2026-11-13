@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every number ties back to my table, every move is ranked by trials, and Week 1 is literal enough that the writer starts Monday with a title, a meta description, an outline order and a publish date.",
+  "biggest_mistake": "Tells the writer to leave the decaying blog posts live and unchanged, so it never delivers the consolidation/redirect I asked for, and does nothing about the 22,500 lost blog clicks except walk away.",
+  "what_would_make_it_a_10": "A consolidation step for the 140 blog posts (merge or redirect the zero-click ones into the comparison and cookies pages) instead of 'leave them alone', plus a narrower projection range on the cookie-banner/privacy-page move so I can plan against a single number."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Normalising every page group to trials per 1,000 clicks, then deriving each move from my own CTR benchmarks and labelling the totals as ceilings with a note that rankings take weeks to land.",
+  "biggest_mistake": "Wednesday of week 1 tells the writer to send the draft to me for a facts check, when I said I am not available for questions, so the Monday start stalls on a dependency that does not exist.",
+  "what_would_make_it_a_10": "Hand over the actual title, meta description and section order instead of describing them, drop the owner facts-check step, and write it in our voice rather than in benchmark-and-ceiling consultant shorthand."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both do the maths right and both put the writer on comparison pages, but 1 I could hand to the writer as it stands, in our voice, while 2 reads like a sharp analyst's deck that still needs the copy written and wrongly assumes I am around to sign off facts."
+}

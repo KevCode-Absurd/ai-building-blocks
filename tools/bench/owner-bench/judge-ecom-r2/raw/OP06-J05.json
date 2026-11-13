@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It reads the data exactly right, revives the paused transparency winner, adds the missing taste angle, and gives a tight first-4 test plan with each ad testing one clear thing.",
+  "biggest_mistake": "A few lines are a bit more methodical than punchy, so the brand voice is strong but not quite at its sharpest everywhere.",
+  "what_would_make_it_a_10": "Make one or two of the primary texts even more blunt and witty while keeping the same tight testing logic and accuracy."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly leads with the tired-not-broken transparency angle and introduces taste as the key untested hook, with a practical launch order.",
+  "biggest_mistake": "It says every headline and description fits in 27 characters, but several headlines are longer than that, and one ad uses an unapproved taste-style claim by implication without grounding it as carefully as Output 1.",
+  "what_would_make_it_a_10": "Fix the character-count errors and tighten the copy to the approved claims and brand voice with the same launch logic."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd pay for because it is more accurate, more complete, and more launch-ready without cleanup. Output 2 has good instincts, but the character-limit errors and slightly looser claim discipline mean I would have to check and edit it before use."
+}

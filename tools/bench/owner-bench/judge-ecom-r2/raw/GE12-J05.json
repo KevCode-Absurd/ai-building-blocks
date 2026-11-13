@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Provides excellent structural discipline, including thoughtful backup copy in case quoting review statistics gets rejected by legal.",
+  "biggest_mistake": "Leans too heavily into statistics for the copy itself, making texts like '1 in 4 of our 870 reviews' a bit dry for social media.",
+  "what_would_make_it_a_10": "Using the specific customer quotes provided in the persona descriptions to make the copy feel punchier and more relatable."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliant copywriting that effortlessly weaves the personas' exact words (like 'samosa' and the 5-day workout week) into blunt, highly compliant ads.",
+  "biggest_mistake": "Writing most primary texts right up to the 120-125 character mark leaves very little margin for Meta's dynamic rendering across smaller devices.",
+  "what_would_make_it_a_10": "It is a fantastic submission; to be completely bulletproof, slightly shorter primary texts would guarantee absolutely no truncation across any obscure placements."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 delivers punchier, more creative copy that perfectly captures the brand's witty voice while seamlessly integrating the exact customer quotes from the brief. Its test plan also explicitly maps to the exact cost-per-purchase baselines the owner needs to beat."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the broken in-app checkout first with the money attached, then ranks five tests that each trace to a real line of evidence (chat shares, size mix, browser split).",
+  "biggest_mistake": "The schedule runs two tests at once on separate splits and shares all traffic, which is muddled given its own traffic maths; and order-level main metrics at 0.56% mean multi-week runs versus modest lifts, which it acknowledges but the concurrency hand-wave weakens.",
+  "what_would_make_it_a_10": "Tighten the schedule to one test at a time or a clean factorial design, and add a one-line plain-voice delivery line (e.g. 'Delivered by Tue 18 Nov to 411001') as sample brand copy."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Cleanest owner-ready package: checkout fix with a range (halved or closed gap), honest sample-size maths, one test at a time, and explicit read/ship/stop rules.",
+  "biggest_mistake": "Choosing add-to-cart as the main metric for tests where orders is what pays, and the guardrail can only catch ~14% order drops; also drops the hero-image test without replacing it, narrowing range slightly.",
+  "what_would_make_it_a_10": "Use orders-per-session as main where sample allows, or explicitly justify add-to-cart with an order-equivalence argument, and add brand-voice delivery and trial copy lines."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are excellent and would act on either, but Output 2 is the one I'd forward as-is: the checkout fix is sized as a range with the assumed input named, the test maths is shown, and the read/ship/stop rules mean my team can run it without me. Output 1's concurrent-two-tests schedule is the thing I'd have to fix before sending."
+}

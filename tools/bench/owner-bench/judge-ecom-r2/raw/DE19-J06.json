@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 6,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "States 'about 10 notes, laid flat' above the fold, in the spec table, in 'what fits' and in the FAQ, and names the week-long break-in honestly for both cash and card-slot returns.",
+  "biggest_mistake": "The subtitle 'about 10 flat notes and a few coins' front-loads the coin-pouch trade-off, and the FAQ answers 'How much cash does it hold?' with 'this wallet is not the best fit', which reads as a discouragement near purchase.",
+  "what_would_make_it_a_10": "Add a short framing line that the 10-note section is what keeps it slim, so the cash limit reads as a design choice and not a warning."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every copy block is tied to the return and question data, the break-in note sits in the line under the add-to-cart button, and the cash limit is framed as the reason it stays slim on every block.",
+  "biggest_mistake": "The opening rationale section reads like a strategy memo, not page copy, and would need to be removed before pasting to the site.",
+  "what_would_make_it_a_10": "Keep the data-led framing exactly as written but split the rationale out into a separate handover note so the page itself is clean and publish-ready."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and on-brand, but Output 2 puts the break-in note in the line under the add-to-cart button and keeps the cash limit phrased as the reason the wallet stays slim, which is the calmer, less discouraging way to cut returns. Output 1's FAQ telling buyers 'this wallet is not the best fit' is the one line I would want off the page."
+}

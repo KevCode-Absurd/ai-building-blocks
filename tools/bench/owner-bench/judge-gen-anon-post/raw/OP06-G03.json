@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads like our business, leads with the real bad news, and ties the margin drop to AI-builder traffic with the right fix and specific asks.",
+  "biggest_mistake": "It adds a few owner-style notes that should not go to investors as written, especially the internal 'Assumptions in this draft' section and the slightly clunky line about margin points from monthly revenue.",
+  "what_would_make_it_a_10": "Remove the draft-only assumptions, tighten one or two sentences, and make the Customer A risk appear even earlier in the first problem block or headline summary."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is crisp, easy to scan on a phone, and has a strong investor-friendly structure with specific asks and clear ownership of the forecast miss.",
+  "biggest_mistake": "It includes a wrong runway row in the table: September runway is shown as 52 months when $212.0M divided by $4.1M is about 51.7, and more importantly adding a runway change row is not that useful here; the date-specific shipping claim also feels made up rather than supported by the brief.",
+  "what_would_make_it_a_10": "Fix the numerical sloppiness, avoid unsupported exact dates, and add a bit more owner-level explanation of why AI-builder growth is low quality and what direct growth really looked like."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather send after minor editing. It is more grounded in our actual problem, explains the economics better, and makes stronger use of the data without introducing avoidable errors."
+}

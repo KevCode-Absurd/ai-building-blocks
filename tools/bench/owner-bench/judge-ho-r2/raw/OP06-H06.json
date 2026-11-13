@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It makes the right call against the 20% cut with clean lifetime-value maths, then turns the real levers in this programme: the top 20, the 90-day window, and payouts.",
+  "biggest_mistake": "It slightly overstates confidence on implementation timing, especially making the first payout under the new schedule by day 30 without noting systems risk more clearly.",
+  "what_would_make_it_a_10": "Add one short line on how existing lifetime referrals are grandfathered so the promise of 'for life' is protected in practice as well as principle."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 6,
+  "correct": 5,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly says not to cut to 20% and correctly spots that the real fixes are tracking window and payout speed.",
+  "biggest_mistake": "It proposes a 40%-for-12-month top tier without solid cost logic, and its cost maths are shaky enough to change the decision on tiers and budget.",
+  "what_would_make_it_a_10": "Keep the 30% base, drop the expensive rate uplift, and rebuild the tier around perks, faster payouts, and named support with accurate costings tied to the top 20."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 is built on my data, gets the key maths right, and gives me one workable plan I could run. Output 2 has a good instinct on strategy, but the tier and cost numbers are unreliable enough that I would not trust it without rework."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 6,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Accurate profit-after-ad-spend calculations that expose the exact dollar amounts lost on broad non-brand PMax categories.",
+  "biggest_mistake": "Holding back $104,000 in reserve and only increasing budgets by 20% a week makes it mathematically impossible to spend anywhere near the full $240,000 budget in 30 days, which would severely restrict revenue.",
+  "what_would_make_it_a_10": "Commit much more of the budget upfront to winning lines rather than locking almost half of it in a reserve, and provide the specific Merchant Center fix to prevent future disapprovals."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Extracting the high-performing PMax search themes into a dedicated Standard Search campaign, and naming the exact GMC feature (automatic item updates) needed to solve the brief's problems.",
+  "biggest_mistake": "Very hard to fault; it handles the complex budget math, technical fixes, and brand constraints flawlessly.",
+  "what_would_make_it_a_10": "It is already a 10. The tactical precision and commercial understanding are exactly what an owner hopes for."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 gives a technically precise, highly actionable plan that extracts winning search terms into a dedicated campaign to guarantee them budget. It perfectly addresses every nuance of the brief, from the exact Merchant Center fix to realistic budget pacing."
+}

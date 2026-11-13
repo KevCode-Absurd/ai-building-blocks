@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting with the seat math shown, builds the hero on Priya's 'email tennis', pulls routing forms up from section 6 and lifts the security page to a section near the demo.",
+  "biggest_mistake": "Left visible [bracket] placeholders in security, integrations and customer quote, so the page cannot go live tomorrow without cleanup.",
+  "what_would_make_it_a_10": "Replace the bracketed placeholders with a clear instruction or real asset, and tighten the deciding metric to a number the team can pull from day one."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Same sharp segment call and seat math, but with cleaner, more honest copy: 'email back and forth' avoids inventing 'email tennis' as a customer phrase, and it explicitly promises reminders rather than fewer no-shows.",
+  "biggest_mistake": "The hero-proving metric is only completed demo requests, which misses team self-serve signups with a first booking, the actual source of paid seats.",
+  "what_would_make_it_a_10": "Use a combined 'qualified team starts per visitor' metric (demo request or recruiting signup with a 7-day first booking) so the test measures where paid seats actually come from."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nail the segment and the section order, but Output 2 reads more trustworthy and launch-ready: no bracket placeholders, and it stops short of claiming 'email tennis' and 'fewer no-shows' as facts. Its only weakness is a narrower test metric, which is easy to change."
+}

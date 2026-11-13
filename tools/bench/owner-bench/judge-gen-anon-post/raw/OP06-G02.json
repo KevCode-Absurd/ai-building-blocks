@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks the right segment with the right seat math and structures the page around the real recruiting jobs to be done: stop email back and forth, spread interviews fairly, route candidates, then handle security.",
+  "biggest_mistake": "It gets a little too expansive and drifts into strategy and test protocol beyond the copy brief, and the CTA pattern is less disciplined than the brand rule of one action per section.",
+  "what_would_make_it_a_10": "Tighten to the sharpest sections, keep one primary action more consistently, and make the page feel even more like Cal.com by trimming extra explanation and polishing a few lines."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is closest to something I would actually ship: right segment, strong math, good order, direct copy, security surfaced properly, and practical implementation details that help me act on it.",
+  "biggest_mistake": "The test metric is slightly weaker than it could be because it counts recruiting signups without the first-booking quality filter, which could over-reward lower-intent starts.",
+  "what_would_make_it_a_10": "Use the stronger qualified-start definition tied to first booking, and sharpen one or two hero lines so the emotional hook lands as hard as the best parts of the page."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are good and owner-grade, but 2 is a bit more precise, more publishable, and more immediately usable. 1 has the slightly better success metric, but 2 feels closer to a page I would send to the team to build."
+}

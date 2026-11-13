@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes the 4.0 apart against a 2.5 break-even, puts the feed fix first, and gives a $240,000 split that adds up with expected profit, not just ROAS.",
+  "biggest_mistake": "The brand search projection (about 25 ROAS, $455,000 value) is over-optimistic and sits badly next to the real 17.0; bolded ROAS of 2.6 for PMax also looks generous for a campaign it just called 2.03.",
+  "what_would_make_it_a_10": "Tighter, defensible forecast ranges tied to last month's actuals per line, plus a short stop/scale rule for weeks two to four."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The profit framing is honest and self-checking: non-brand is 2.26 and losing about $20,000, the ranges are anchored to real per-line ROAS, and it flags that 'women's flats' at 1.2 may be partly the feed bug rather than trimming it blindly.",
+  "biggest_mistake": "Proposes a 50/50 title A/B test over 14 days, which delays the full title rollout and adds a test the owner did not ask for; brand search doubling to $24,000 at a 90-100% retention assumption is also optimistic.",
+  "what_would_make_it_a_10": "Roll the fixed titles out fully rather than testing half, and tighten the brand Search assumption with a clearer fallback if impression share does not fill."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and would be used. I would pick 2 because its numbers hold up better under a second look: it flags that the weak 'women's flats' figure is partly the feed bug, gives honest profit ranges instead of a rosy brand projection, and its stop rules make the month safer to run."
+}

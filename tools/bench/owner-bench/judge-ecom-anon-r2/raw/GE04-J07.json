@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Perfectly captured our calm brand voice, avoided fake urgency, used accurate Klaviyo syntax, and showed brilliant local insight by mentioning India's DLT requirements for SMS.",
+  "biggest_mistake": "None of note; the plain text email is a great strategic choice but might need a tiny visual check before sending.",
+  "what_would_make_it_a_10": "It already is a 10. The copy is phenomenal and exactly what I asked for."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clean, logical layout with clear conditional splits that directly address the specific skin concerns from our quiz data.",
+  "biggest_mistake": "Inventing a 14-day expiration date for the coupon to drive sales, which directly violates my rule against unapproved fake urgency.",
+  "what_would_make_it_a_10": "Dropping the fake deadline for the coupon code and showing a bit more technical platform knowledge (like exact Klaviyo tags)."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 gave me an incredibly well-researched, ready-to-use flow that respected my rule against fake urgency and even caught Indian SMS compliance details. Output 2 added an unapproved expiration date to the discount code, which is exactly the kind of pressure I said would annoy me."
+}

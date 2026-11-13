@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It judges every ad set on store-adjusted, after-refusal profit and forecasts the result. It also adds a clever state-split test that checks whether retargeting pays at all.",
+  "biggest_mistake": "The 86% prospecting attribution is an invented midpoint, and it drives every break-even figure. Retargeting is labelled 'Cut' but is only halved. Committing only ₹4.1 lakh leaves growth on the table even though the warehouse can ship more.",
+  "what_would_make_it_a_10": "Explain the attribution split more plainly, label calls consistently, add 2 or 3 new cuts of the 'Dad's razor' hook, and include a short creative brief in our voice."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The 'safe line versus break-even line' idea is easy to act on. The budget table adds up, the ASC scale-up ladder has clear gates, and there is a creative section in our customers' own words, including new cuts of the 'Dad's razor' hook.",
+  "biggest_mistake": "The ad set table shows profit on Meta's own count, which makes ASC and retargeting look profitable when on real orders they likely are not. It also keeps retargeting at ₹40,000 despite 6.8 frequency.",
+  "what_would_make_it_a_10": "Show each ad set's result on store-matched orders as well, trim retargeting harder or test whether it adds sales at all, and give a forecast of the 14-day outcome."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both make the right big calls: bring back the creator video, cut the Starter Kit, and keep women 25 to 34. The second is easier for my team to run on Monday and includes the creative plan, though the first is more rigorous about Meta over-counting."
+}

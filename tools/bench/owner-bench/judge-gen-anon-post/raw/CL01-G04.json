@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Precise targeting with a clear leave-out table. The idea of timing the sequence around their close, so step 4 lands before month-end, is something I hadn't thought of.",
+  "biggest_mistake": "Step 1 already asks for a 20-minute call, which is a heavy ask for a first touch given what the pilot showed about calendar asks. The close-window rule can also delay sends past the fresh pricing flag.",
+  "what_would_make_it_a_10": "Use a lower-friction ask in step 1. Reconcile the close-window timing with sending soon after the flag. Make clear the 4,100 'left out' count also excludes unflagged Controllers."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tight emails with low-friction one-word reply asks. Weekly loading tied to the data tool's flags. Honest expectation logic that refuses to multiply the two gains.",
+  "biggest_mistake": "The 'all 1,900 loaded' projection of 55 meetings assumes every Controller will trigger a pricing change, which is optimistic. Step 2 slips in a product claim, and step 4 crams in an either/or question.",
+  "what_would_make_it_a_10": "Size the projection by the expected weekly flag volume, not the full 1,900. Cut the product line from step 2. Add one bolder test idea."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nailed the segment, the trigger and the no-link rule. Output 2's 'reply yes' asks feel easier for a busy Controller, and its weekly loading plan matches how our data tool actually works, so I'd ship it with fewer edits."
+}

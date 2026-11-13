@@ -59,6 +59,23 @@ test("a stock line repeated across variants is noted without failing", () => {
   assert.equal(r.status, 0, r.stdout); assert.match(r.stdout, /Worth a look/); assert.match(r.stdout, /repeats on 3 lines/);
 });
 
+test("--brief keeps the plain answer and profile arguments, and reports a blank once", () => {
+  const brief = put("brief.md", "# Brief\n\nA tea shop. Average order $32. The owner wants three welcome emails.\n");
+  const plain = put("brief-plain.md", words(100));
+  const draft = put("brief-draft.md", `# Welcome emails\n\n**Subject:** Your first cup\n\n${words(50)}\n\nIt holds up to [X] cups. Send it on 9 May.\n\n**Bolder move:** a tasting box.\n`);
+  const r = run(draft, plain, "--brief", brief, "--profile", "lifecycle-email");
+  assert.equal(r.status, 1, r.stdout);
+  assert.match(r.stdout, /times the plain answer \(100 words\)/);
+  assert.match(r.stdout, /Brief mode: checked against .*brief\.md, as a copy job/);
+  assert.match(r.stdout, /date not in the brief "9 May"/);
+  assert.match(r.stdout, /"Bolder move" in a copy job/);
+  assert.equal(r.stdout.match(/a blank to fill "\[X\]"/g)?.length, 1, r.stdout);
+  assert.doesNotMatch(r.stdout, /describes instead of writes "\[X\]"/);
+  const clean = put("brief-clean.md", `# Welcome emails\n\n**Subject:** Your first cup\n\n${words(50)}\n\nThe average order is $32. Day 3: the second email.\n`);
+  const ok = run(clean, plain, "--brief", brief, "--profile", "lifecycle-email");
+  assert.equal(ok.status, 0, ok.stdout);
+});
+
 test("homework left for the owner fails: a To confirm box, an ask for a yes, test alternates and editor notes", () => {
   const r = run(put("homework.md", "# Plan\n\n**Subject:** Start small (test: Clear your head)\n\nThe copy never mentions price.\n\n## To confirm\n\n- Your yes before anything goes live.\n"));
   assert.equal(r.status, 1);

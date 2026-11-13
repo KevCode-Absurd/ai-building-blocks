@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the data story (sleep, narrator clips, evening) and delivers six warm, on-voice drafts plus a clean week-1 review-proof schedule.",
+  "biggest_mistake": "A few small fact slips: it puts the 14:15 parent post in the 'kindness' theme, and the projection math (adding theme installs) slightly double-counts when narrator clips span themes; also the 5-day review can't land Monday 23rd if submitted Monday 16th (5 business days = 23rd, live 24th is fine, but it says 'can go live from Tuesday 24th' while the plan implies week 2 starts 23rd).",
+  "what_would_make_it_a_10": "Tighter, verifiable numbers with the per-post install math shown, no theme mislabeling, and explicit review-date reconciliation for each week-2 post."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Sharp strategic framing (low/high install cases, fatigue risk, a bolder live-stream idea) and a 24-post grid that shows range.",
+  "biggest_mistake": "Overconfident claim that 'no post names a condition, so none needs review' is risky (e.g. 'Awake at 2am' and 'Quit by day three' flirt with conditions), and it crowds a 6-post week with two carousels on TikTok plus a photo carousel that the data says is weakest—plus drafts are thinner and less ready to post.",
+  "what_would_make_it_a_10": "Safer, review-proof wording, firmer one-line-per-draft polish, and dropping the weakest formats instead of adding new ones in week 1."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to publish-ready: the drafts sound like Headspace, the schedule is honest about review timing, and it plays the sleep/narrator/evening signals without guessing new formats—I'd send it with light edits."
+}

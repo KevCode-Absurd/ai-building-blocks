@@ -4,15 +4,15 @@
 
 Follow `tools/quality/QUALITY-ENGINE-v3.md`; task and brand come first.
 
-**One-shot jobs** (the brief holds everything; the owner cannot answer): decide every open point with the assumption a top practitioner would pick, and finish. At most three assumption lines, only where they change what to do. Never ask for confirmation, a yes, a sign-off or a choice inside the deliverable; no "To confirm" list. A sign-off that law or a platform needs is one line next to its item. **Fast path:** when the brief carries the data, skip site capture, brand DNA, the taste brief and knowledge reading; read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill.
+**One-shot jobs** (the brief holds everything; the owner cannot answer): decide every open point with the assumption a top practitioner would pick, and finish. Deliver every piece the owner asked for; never drop or water one down to stay safe. At most three assumption lines, only where they change what to do. Never ask for confirmation, a yes, a sign-off or a choice inside the deliverable; no "To confirm" list. A sign-off that law or a platform needs is one line next to its item. **Fast path:** when the brief carries the data, skip site capture, brand DNA, the taste brief and knowledge reading; read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill.
 
 ## 0. Frame: the spec sheet
 
 Read `context/brand-file/worked.md` first, if any. Then write `context/spec.md`, one screen:
 
 - **The job:** who must do what after seeing this.
-- **Deliverables:** exact count and format, in the client's words.
-- **Signal pass:** the three strongest signals in the owner's data (a winner hidden in an average, an under-used asset, a timing constraint). For each: its number, what it means for the decision, and where the deliverable acts on it.
+- **Deliverables:** exact count and format, in the client's words, and each explicit ask with where it is met.
+- **Signal pass:** the three strongest signals in the owner's data (a winner hidden in an average, an under-used asset, a timing constraint). For each: its number, what it means for the decision, and where the deliverable acts on it. A priority the owner names takes a top slot unless the data clearly says otherwise; then say why in one line.
 - **Expert and playbook:** who would own this, and their standard approach in 3 lines; the owner's data overrides it.
 - **Depth:** light, standard, full or team (`tools/quality/ROUTING.md`).
 - **Assumptions**, one line each. **Mode:** `patch` (default), `extend` or `new`. **Brand file slice:** none, facts, voice, look or full.
@@ -47,13 +47,13 @@ A fresh reviewer who has not seen your reasoning (else label the pass SAME-CONTE
 
 - **New framing of true facts, never new facts.**
 - **Facts and proposals differ.** Facts carry a source. Recommendations are complete and decided. Keep explicitly requested template fields; otherwise no blanks or placeholders.
-- **Decide.** One recommendation, which may combine complementary moves; a runner-up only when the options truly exclude each other. Never a menu. Plans add one labelled bolder move (quality engine rule 4).
+- **Decide.** One recommendation, which may combine complementary moves; a runner-up only when the options truly exclude each other. Never a menu. Plans add one labelled bolder move (quality engine rule 4); customer copy never carries one.
 - **Act fully.** If the deliverable keeps anything a signal says to cut, say why in one line with the number.
-- **Be specific:** real names, prices, dates, steps. Project from the owner's own numbers, with working and a range, labelled as a projection; never in what a buyer reads, and never an invented result.
+- **Be specific:** real names, prices, steps; relative days unless the brief gives dates. Project from the owner's own numbers, with working and a range, labelled as a projection; never in what a buyer reads, and never an invented result.
 - **Fit the persona's real moment** in every time, place, unit and channel (quality engine step 4).
 - **Match the voice by ear:** 5 real brand lines beside 5 of yours.
-- **Length follows use:** aim at about 85% of the owner's limit, counted the way the owner counts; without one, the family profile in `tools/quality/profiles.json`. A ceiling is never a target. No sections about method or assumptions.
-- **Finish the format.** Ads: every platform field, character counts, safe areas, landing URL. Emails: subject, preview, one ask, links, exit rule. Plans: totals that add up, dated steps, owners. Pages: one action, proof, mobile, load.
+- **Length follows use:** stay within the owner's limit, counted the way the owner counts; without one, the family profile in `tools/quality/profiles.json`. A ceiling is never a target. No sections about method or assumptions.
+- **Finish the format.** Ads: every platform field, character counts checked with `node tools/quality/copy-check.cjs`, safe areas, landing URL. Emails: subject, preview, one ask, links, exit rule. Plans: totals that add up, steps with owners and relative days. Pages: one action, proof, mobile, load.
 
 ## 5. Check: the client's-eye review
 
@@ -74,6 +74,6 @@ Remove each unsourced claim, or rewrite it to what the source says. Never flag o
 ## 6. Hand over, and learn
 
 - The native work comes first; its first screen holds the decision, the numbers the owner asked for by name, every piece of bad news, and the first move this week.
-- Nothing internal reaches the client. Supporting detail goes in an appendix inside the deliverable, only if needed.
+- Nothing internal reaches the client: no working notes, signal maps, ledgers or monitoring lines in what the customer reads. Supporting detail goes in an appendix inside the deliverable, only if needed.
 
 Keep working notes in `DECISIONS.md`. Record client feedback with `node tools/brand-file.mjs learn`. Add shared lessons to "Rules I learned" in playbook.md: scoped, naming what won and failed.

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the in-app checkout bug first and sizes it at ₹17 to 34 lakh a month. It also gives sample-size maths that match the traffic, and it explains why add to cart would mislead for the delivery and EMI tests.",
+  "biggest_mistake": "It is dense and full of jargon. Phrases like 'server-side split so the old page never flashes' and 'read in four combined groups' are hard for me to follow, and the calendar dates are invented without being flagged as assumptions.",
+  "what_would_make_it_a_10": "Use plainer language and a simple funnel table so I can see the browser split myself. Label the dates as assumptions, and add a plain-words firmness change for the 'too soft' worry."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The funnel table by browser makes the checkout bug obvious at a glance. The fix is sized correctly at about 560 orders and ₹34 lakh margin a month, and the schedule, A/A check and assumptions section are clear.",
+  "biggest_mistake": "Test 5 bundles the hero image with moving the reviews, so if it wins I won't know which change did it. The firmness test rests on an assumed problem ('foam terms') that is not in my page notes.",
+  "what_would_make_it_a_10": "Split the bundled test 5. Give a number in each hypothesis, and add the point that add to cart can mislead when the date or EMI is shown on the page."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both catch the in-app checkout bug, size it, and give honest run times. The second one is easier for me to read and act on, with a clear funnel table, a schedule and stated assumptions, though the first has a few sharper points on metrics."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It tracks the real signals in the data well: a true 3 pm script, a taste-first winner, and a family angle that handles price and platform disclosure without drifting into banned health language.",
+  "biggest_mistake": "The family script leans into a label-read beat more than ideal, which echoes the weaker opening style even though it is placed later.",
+  "what_would_make_it_a_10": "Tighten Script 3 to make the family moment more taste-led and a little less label-focused, while keeping the same practical creator guidance."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is highly production-ready and smartly prioritises the best-performing opening styles, with a useful brief section the team could send straight to creators.",
+  "biggest_mistake": "It introduces risky or off-brief execution details, especially the scripted spoken disclosure and the incorrect/loose platform guidance around 'Instagram' instead of Meta and exact approved claim wording.",
+  "what_would_make_it_a_10": "Remove the unnecessary spoken sponsorship lines, clean up the disclosure/platform details, and make every product claim match the approved wording exactly."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels more like it was built from my actual data and brand constraints, especially the 3 pm insight and the need to avoid label-led creative. Output 2 is strong and usable, but it makes a few compliance and wording choices I'd have to fix before I ran it."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It splits proved from to-check, puts a hard $94 payback cap on every ad set, prices each move in contribution per month, and gives each move an owner and a stop line.",
+  "biggest_mistake": "Some numbers rest on assumptions that are not fully shown (linen ad-set cost, repeat order value, dollar figures per $1M), and the single-page summary is dense. The voice is a bit dry for a warm brand.",
+  "what_would_make_it_a_10": "Make the assumptions and their ranges plainer, lighten the tone a touch, and cut the summary so the first page is a 60-second read."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear and easy to act on: a sharp diagnosis, a to-check table with owners and dates, and a brand-true swatch idea that answers Sarah's fear directly.",
+  "biggest_mistake": "Impact sizes are vaguer (\"high,\" \"medium\"), payback uses a flat 31% repeat value, and the scorecard sets softer targets (\"up every month\") without the profit-per-move math.",
+  "what_would_make_it_a_10": "Put a dollar contribution figure and a stop line on each move, and sharpen the scorecard targets to hard numbers."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives me the plan I can run and defend to the board: profit per move, a hard payback cap, owners and stop lines. Output 2 reads better and has the swatch idea, but its impact sizes are too soft to act on without reworking."
+}

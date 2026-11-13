@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ruthlessly ranked by trials per 1,000 clicks, with a real Monday task list, ready-made titles/meta, a stop list, and honest per-move trial projections inside the 12-page capacity.",
+  "biggest_mistake": "A couple of arithmetic slips/inconsistencies: the '3% to 7% on top' framing versus October's 1,316 organic trials, and 'Move 5 adds the most clicks' coexisting with a trial range that undersells the cookie-banner fix versus its own ranking logic; move 5 ranked last reads odd against the owner's Maya emphasis.",
+  "what_would_make_it_a_10": "Tighten the trial math so every projection reconciles to the 1,316 baseline and the 38% rate, and show the cookie-banner rewrite earning its slot (e.g., a revised higher CTR band) rather than being kept 'anyway'."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Better strategic range: adds Maya's 'losing GA4 history' page and a Tomas agency page, a /compare hub, and a weekly trials-by-landing-page report—genuinely useful ideas the other missed.",
+  "biggest_mistake": "The numbers overshoot: a '+100 trials from /vs-google-analytics' and '175 extra trials / 67 paid a month' ceiling assumes top-3 jumps that the data doesn't support, and the cookie-banner rewrite is valued at blog rate then argued against itself—undercutting trust in the plan.",
+  "what_would_make_it_a_10": "Ground every projection in defensible CTR bands like the other plan, drop the inflated full-ceiling headline, and give the owner an immediate, unambiguous Monday task instead of a longer exploratory week."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and on-brief, but output 1 is the one I'd actually send: the numbers hold together better, the week-one task list and ready titles mean the writer can start Monday, and it doesn't promise me a 175-trial ceiling I don't believe. I'd steal output 2's GA4-history and agency-page ideas for next quarter."
+}

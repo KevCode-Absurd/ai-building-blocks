@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clean profit table against the 2.5 break-even. The budget split adds to exactly $240,000, its daily figures are worked out, and the base and cautious profit cases check out arithmetically.",
+  "biggest_mistake": "It names broad 'women's flats' and 'sustainable shoes' as money-losers but never removes them. PMax keeps $128,000 with no negatives on those terms, so the projected 2.6 ROAS depends on hope.",
+  "what_would_make_it_a_10": "Add explicit negatives or caps on the broad and sustainable terms inside PMax. Add week 2–4 cut and grow rules beyond the reserve release, and add a recheck so the price mismatch does not come back after the next site price change."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It names the $146,300 of loss-making spend and actually cuts it, with negatives and a products-only PMax. It gives clear month rules and a week-one table with an owner and a 'done when' for each step, and its 'test whether the cut spend builds brand' idea is a geo test with a stated cost.",
+  "biggest_mistake": "Some claims are overstated or unclear: 'Google makes money only on brand' contradicts its own winners, and the $59,948 figure is unexplained. Adding brand negatives to bags Shopping is questionable, and it uses the British spelling 'colour'.",
+  "what_would_make_it_a_10": "Drop the overclaim in the opening line and explain the $2,000-a-day test cost. Reconsider the brand negatives in bags Shopping, and add a guard against the price mismatch recurring after the next site price change."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both did the brand math right, but the second plan actually removes the losing broad and sustainable spend. It also gives me rules for weeks two to four, owners for each task and a sensible test, so it's closer to something I can hand the team."
+}

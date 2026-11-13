@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Grounded every rule in my own numbers: the $38 break-even, $57 cut line, $114 per-ad read, $136 ad-group floor, and it opens with workers-on-feet and problem-first hooks exactly as the data says.",
+  "biggest_mistake": "A couple of arithmetic slips to check: the 90-day figure ($38 net of fees is closer to $38.46, fine) and the 30-day total table (5,600+5,600+16,000=27,200 plus 2,800 reserve=30,000, correct) — largely sound, but the projection of ~790 new customers at $38 assumes spend efficiency that may be optimistic; also it doesn't spell out landing pages.",
+  "what_would_make_it_a_10": "Add the landing-page mapping per ad group, confirm the TikTok-claimed vs store-orders gap mechanic explicitly, and tighten the reserve logic so the $30,000 adds cleanly without a reader having to reconcile the phases."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong structure with a clean two-campaign TEST/SCALE split, a detailed Week 0 checklist including dedup event IDs and ad review lead time, and a smart 'store new customers vs prior 30 days' check to catch TikTok stealing Meta credit.",
+  "biggest_mistake": "Budget phasing math is off — 4,200+6,300+7,700+10,800+1,000 = $30,000 yes, but the daily numbers don't reconcile (e.g. Days 22-30 at $1,200/day = $10,800 for 9 days, fine) and the scale rules use $34/$50 thresholds that don't match the $38 break-even it just established; kill at $76 (2x) is more aggressive than the $114 the data supports, which risks cutting ads before they can be judged.",
+  "what_would_make_it_a_10": "Make every threshold trace back to one number ($38 target, $57 cut, $114 per-ad read) instead of mixing $34, $50, $76 and $150; fix the daily-to-total arithmetic; and add landing-page ownership to the Monday list."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 reads like it was written by someone who did the math once and reused it everywhere — same numbers in the target, rules, and budget — while Output 2 is nearly as good but has thresholds that drift from its own break-even, which I'd have to fix before handing to the team."
+}

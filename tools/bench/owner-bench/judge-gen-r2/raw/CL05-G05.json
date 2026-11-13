@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses all three data signals and checks the numbers: writing weighted heaviest, an overnight-hours post with the weekend rotation stated plainly, and reviewer-hour math (4.6 min each, 70 hours, 90 saved) that holds up.",
+  "biggest_mistake": "The application exercise is a generic angry-customer email with no hidden problem to solve, and the 1/3/5 scale for writing is generic, so reviewers will have little to separate good replies from great ones.",
+  "what_would_make_it_a_10": "Use a realistic exercise with a checkable fix, and write 1/3/5 anchors that fit that exercise."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads like a finished kit: the hard parts come first in the post, there is a time-zone table, the Priya exercise hides a typo in the email address, and it adds a shortlist exercise with a handoff note and set call questions, so the team can run it tomorrow.",
+  "biggest_mistake": "It gives no offer threshold or decision rule, and the reviewer-hours estimate is thin (first read only, no calibration or second-read time). The word count also runs long.",
+  "what_would_make_it_a_10": "Add an offer cutoff and a fuller reviewer-hours estimate, and trim the time-zone table and extras to fit the 1,100-word limit."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both build on the same signals, but Output 2 hands me a realistic, checkable exercise, specific 1/3/5 anchors tied to it, a shortlist task, call questions and an honest hard-parts-first post I could publish tomorrow. Output 1 has the better decision rule and hours math, but its exercise and scoring anchors are more generic."
+}

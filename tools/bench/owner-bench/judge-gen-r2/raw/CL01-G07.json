@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong launch gates: real-setup migration proof, one-step undo, top-200 extension testing and a 'claim only what shipped' rule. Product Hunt also gets its own day so it doesn't dilute launch day.",
+  "biggest_mistake": "The timeline names audiences but no owners. The X thread and email are left full of bracketed placeholders (authors, extensions, support address, speed numbers), so the copy isn't finished.",
+  "what_would_make_it_a_10": "Add an owner to every row and a support rota sized to 3 people. Fill in real author credits so the X post and email are ready to paste."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Splits new-user launch from a gated three-wave rollout for existing users, with exact wave sizes that add to 420,000. The no-go rule lets new installs ship even if migration isn't proven. It also names owners, a support rota, measurable targets and a day-4 plan B.",
+  "biggest_mistake": "Almost every task lands on the launch manager, including answering tickets on wave days, which strains a one-person launch role. The X post and email also credit authors only generically, without naming any.",
+  "what_would_make_it_a_10": "Name three specific authors in the X thread and email, and spread the launch-manager load to the designer and to engineering during the freeze."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both rank channels correctly and treat migration as a launch gate. Output 2 is the plan I could actually run: owners on every step, wave math that checks out, a support rota, targets and a plan B. Output 1 leaves its copy full of placeholders."
+}

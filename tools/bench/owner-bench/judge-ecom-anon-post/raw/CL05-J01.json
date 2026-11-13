@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Plain, readable verdicts with rupee reasons. Relaunches the paused creator video first, splits out women 25 to 34, and cuts the Starter Kit on its ₹271 value. The budget adds to ₹5,60,000, and there is a creative section in Rohan's and Ananya's words.",
+  "biggest_mistake": "The two-line system (safe ₹282 and break-even ₹394) makes verdicts fuzzy, and it still judges mainly on Meta's count. It scales Catalog DPA at frequency 5.2 and says Retargeting is probably over-counted, yet keeps it as a hold. Some numbers, such as the Gift Sets break-even and 'still lose ₹20,000', are not shown.",
+  "what_would_make_it_a_10": "One break-even per ad set on Shopify-adjusted, after-RTO numbers. Say what the plan does to total cost per purchase. Give a real fix for the Starter Kit, such as a prepaid-only offer, COD confirmation or pincode blocks, instead of only cutting it. Trim it to the word limit."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Judges each ad set on its own after-RTO, attribution-adjusted break-even, so there is one honest line per ad set. Shows store-count profit by ad set and projects the outcome of the plan. Revives the creator video as a first move, narrows women to 25 to 34 and cuts the Starter Kit. The reserve is released by rule and the budget adds to ₹5,60,000.",
+  "biggest_mistake": "Dense and a little cold, with less creative direction. Retargeting is labelled 'cut' but still gets ₹28,000. The UGC test gets ₹56,000 after only 5 days of data. Holding ASC flat when it is the main lever feels timid. The geo holdout test adds something to read when the owner asked for decisions.",
+  "what_would_make_it_a_10": "Label Retargeting 'trim', not 'cut'. Give the Starter Kit a concrete prepaid or COD-confirmation fix. Put the ASC relaunch up front with a few ad cuts and the exact scale steps. Simplify the table and add a short block of ad ideas in brand voice."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both give clear verdicts and budgets that add up, and both catch the paused creator video, the women 25 to 34 split and the Starter Kit COD trap. Output 2 judges every ad set on after-RTO, attribution-adjusted numbers with a single break-even and a rule-based reserve. Output 1 reads more easily and has better creative notes, but its two-line system and its scale call on Catalog DPA are shakier."
+}

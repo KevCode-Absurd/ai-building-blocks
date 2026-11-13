@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data like an owner would: it brings back the paused transparency winner, spots taste as the missing hook, and addresses the ₹90 objection directly with launch-ready copy and a sensible first-4 test plan.",
+  "biggest_mistake": "It invents a tighter 27-character headline/description limit than the owner's own note and uses review-stat phrasing like '1 in 4' that may be more than needed for simple ad copy.",
+  "what_would_make_it_a_10": "Use the owner's stated display guidance more cleanly, keep the launch plan, and tighten any lines that feel slightly over-explained or legally debatable around review quoting."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It also sees the key opportunities: revive front-of-pack, test taste, and tackle price honestly, with a good spread of distinct angles.",
+  "biggest_mistake": "It adds made-up operating assumptions the brief did not give, including budget, test structure, and a live-control setup, and one primary text says 'our protein bar' without the approved 12 g claim while another headline-description pairing risks sounding less on-brand than the stronger copy in o1.",
+  "what_would_make_it_a_10": "Strip out the invented media plan details, stay tightly inside the approved claims and brief, and focus the answer on cleaner launch-ready copy plus a simpler first-4 test recommendation."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I would actually use tomorrow. It understands my data better, stays tighter to my brief, and gives me stronger copy and cleaner priorities without adding unnecessary assumptions."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the 46 to 90 day 'slipping' group first with no discount and runs separate Monsoon Dark and ex-subscriber tracks. The group counts reconcile: 8,060, 11,640 and 10,700 all check out once ex-subscribers and Monsoon Dark buyers are taken out. The profit is worked per group net of the discount (₹557, ₹442, ₹385), with a gated subscription restart and a creative Monsoon Dark pre-order idea.",
+  "biggest_mistake": "There is no explicit break-even lift per group, only 'keep if gain is above zero'. The ex-subscriber message says 'we listened' but gives no proof that on-time delivery has recovered. Value covers first orders only and uses email reach only, which makes it conservative and leaves WhatsApp-only reach unvalued.",
+  "what_would_make_it_a_10": "Add the minimum lift each group needs to break even and put the actual on-time rate in the ex-subscriber email. Name the farm or estate in every draft. Show a 12-month view alongside the first-order view."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The ex-subscriber track is very good: each cancel reason gets its own fix, the email shows proof of the recovered on-time rate, and the gate is clear. It also includes offer split tests (10% off vs free shipping), a minimum detectable lift, and an upside/downside range on the value.",
+  "biggest_mistake": "It ranks the 91 to 180 day group first and leaves the cheapest 9,000 at-risk customers (46 to 90 days) to an always-on side nudge. It says ex-subscribers are pulled out of the other groups, but group A (13,100) never subtracts them. The 12-month value rests on an assumed 2 orders per returner, and reachable counts are not reduced for the holdout.",
+  "what_would_make_it_a_10": "Make the 46 to 90 day group wave one, with its own message and value line. Reconcile the group counts with the ex-subscriber carve-out. Size the value on reachable counts after the holdout and justify the repeat-order assumption."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 starts where the money is cheapest, the 46 to 90 day slippers, and its numbers tie out cleanly. Output 2 has a sharper ex-subscriber pitch, but it gets the order wrong and its counts don't reconcile."
+}

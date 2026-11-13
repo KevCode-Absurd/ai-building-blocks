@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The copy reads exactly like a disciplined finance peer talking to a Controller, perfectly respecting the one-question, one-ask rule and grounding the sequencing in our pilot data.",
+  "biggest_mistake": "Repeating the exact 140-person proof stat in three separate steps risks feeling slightly repetitive if a prospect reads the thread back-to-back.",
+  "what_would_make_it_a_10": "Varying the framing of the proof point slightly across later steps rather than repeating the identical sentence."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 6,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Clear segmentation logic and honest benchmarking that anchors expectations directly to the pilot baseline.",
+  "biggest_mistake": "Violated the single ask/question constraint with double-barrel prompts and introduced gimmicky SDR marketing mechanics ('reply yes', 'reply steps') along with unapproved collateral assets.",
+  "what_would_make_it_a_10": "Remove the consumer-marketing style keyword replies ('reply steps') and align the call-to-actions to natural executive dialogue with no invented collateral."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 writes authentic peer-to-peer emails that strictly obey the single-ask constraint, whereas Output 2 resorts to gimmicky 'reply yes' / 'reply steps' CTAs and invents collateral we don't have."
+}

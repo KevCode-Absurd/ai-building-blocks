@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the real winning pattern: Controllers/Heads of Finance at 50–300 person SaaS companies, triggered by a pricing-page change, with no links in step 1 and clear list rules.",
+  "biggest_mistake": "The projection is a little optimistic at the 10% ceiling and the answer is slightly over-built, with the same proof repeated several times.",
+  "what_would_make_it_a_10": "Tighten the projection and copy slightly, and use the 9-to-4-day proof less repetitively."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly chooses the best segment and moment, keeps step 1 link-free, and gives a sober expected reply-rate range tied to the pilot data.",
+  "biggest_mistake": "The emails mostly ask for coded replies or unsupplied follow-up assets instead of asking for a sales conversation, which makes the sequence less ready to run.",
+  "what_would_make_it_a_10": "Replace the reply-code CTAs with one clean meeting-oriented ask and provide or remove the promised one-page summary and three-step follow-up."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would hand to the team tomorrow: it is more complete, more sales-ready, and better aligned to the finance persona while still following the data. Output 2 reads well, but its CTAs create extra collateral work and do not directly move the prospect toward a meeting."
+}

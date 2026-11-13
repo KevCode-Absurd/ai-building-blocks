@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the in-app checkout issue as a ship-now bug, sizes the upside in money, and then gives a sensible ranked test plan tied back to the actual evidence in the brief.",
+  "biggest_mistake": "It says Test 1 main metric is orders per session on all devices but gives a 0.70% baseline that blends devices loosely, and the note about running paired tests on 'separate splits' is a bit hand-wavy for experiment design.",
+  "what_would_make_it_a_10": "Tighten the measurement math and experiment setup, make the baselines fully explicit by device after the bug fix, and be sharper about what ships without testing versus what truly needs a test."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads exactly where I would want: fix the in-app browser checkout bug first, quantify the profit at stake, and then rank five tests around the biggest known customer questions.",
+  "biggest_mistake": "It leaves out moving the 100-night trial and reviews higher as explicit tests or stronger ship recommendations, and some projected rupee impacts from add-to-cart lifts rely on rough assumptions that are not fully explained.",
+  "what_would_make_it_a_10": "Keep the same priority order but add a crisper ship-now list around trial, reviews and delivery visibility, and make the payoff estimates for the add-to-cart tests more rigorous and less back-of-envelope."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and I would use either with edits, but 2 is a touch better on owner judgment: cleaner prioritisation, stronger call on the bug, and more realistic framing of what the tests can and cannot detect."
+}

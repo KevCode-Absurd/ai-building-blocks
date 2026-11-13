@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The finance case is airtight and honest: 12.5% break-even, four top-20 partners wiping out the saving, the lifetime maths ($1,677 vs $1,130, $1,174 net vs $1,130), and a 'bad news, said plainly' section that admits the 90-day window raises the bill and faster payouts mean a $52,500 switch month. The perk table sums to exactly $40,000 and the 30-day plan has dates, owners and a Partner definition (25+ customers) that matches the data's '20 people' reality.",
+  "biggest_mistake": "It leaves the top 20 on 30% while a named rival pays 40% in year one, and argues that perks and speed compensate without testing that with the 17 creator educators who could walk. The free-plan line ('up to 20 Partners') also sits oddly against the 25+ invite threshold, so the $12,480 could overshoot.",
+  "what_would_make_it_a_10": "A costed counter to the 40% rival (a capped first-year bonus or matched 40% for the top 20, with the exact cost and where it comes from), a quantified estimate of what the 90-day window will actually credit us from our own funnel, and a line confirming existing lifetime commissions are grandfathered."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It closes the rival gap directly with a Partner tier at 40% for the first 12 months (costed at about $46,000), makes the sharp point that the cut breaks a lifetime promise, splits the base into core / active middle / the 2,260 who brought nobody, and gives a day-90 scorecard with real targets (42% credited toward 70%, 140 to 180 active affiliates). The sample affiliate email sounds like us.",
+  "biggest_mistake": "The Partner threshold of 10+ paying customers contradicts 'named contact for every partner' with one manager and blurs the 20-person focus the data is begging for; the 15-day payout schedule also leaves almost no refund hold and is never reconciled against the 30-day hold argued elsewhere. Add the $46,000 tier cost and the window cost and the owner never sees one net number against finance's $210,000.",
+  "what_would_make_it_a_10": "Make Partner invite-only with a named-contact cap of about 25, fix the refund hold at 15 days, and put the tier cost, the window cost and the cash timing into a single cost line so the answer to finance is one number, not three."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the big calls right and the maths checks out, but Output 1 is the one I could hand to my partner manager tomorrow: tighter partner definition, a perk table that sums to $40,000, dated actions with owners, and it is honest about what its own fixes cost. Output 2 has the better competitive instinct on the 40% rival but muddies the focus with a 10-customer Partner bar and never gives me one net cost to take to finance."
+}

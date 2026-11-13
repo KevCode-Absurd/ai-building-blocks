@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ties every decision to our numbers. Existing users get the update in three waves, and each wave goes out only if migration tickets stay low. Product Hunt and Hacker News move to after the rollout. There is a dated timeline with owners, a go/no-go checklist, and a day-4 plan B.",
+  "biggest_mistake": "It leans hard on a tiny team: the launch manager also answers tickets on wave days. The email's subject line ('Your hotkeys didn't move') makes a firm promise before the beta has proven it. The email thanks the community but names no extension authors.",
+  "what_would_make_it_a_10": "Name specific authors in the email. Pull engineers in to cover support during the freeze instead of the launch manager. Soften the hotkey promise until the 300-tester gate passes. Add a short newcomer message (where to start) for the product manager and designer group."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 9,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It has good audience-specific ideas: 'Start with five' for newcomers with authors credited, engineers joining support during the freeze, and a strict claims gate that drops any feature or speed number not in the build. It also covers more channels and messages.",
+  "biggest_mistake": "The timeline is too tight and does not hang together. The 1,000-user beta starts 23 Nov, only a week before the freeze, and creators get builds on 24 Nov. The plan says existing users get the update in stages, yet emails all 420,000 on day one and tells them how to update now. Hacker News launches on the same day, and the timeline has no owners. Post 2 has a broken placeholder.",
+  "what_would_make_it_a_10": "Move the beta and creator builds earlier, before 20 Nov. Add owners to the timeline. Send the email in step with each update wave. Remove the 'update now' line and the broken speed placeholder. Cut the X thread down to one shortcut."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is a plan I could run with my small team. It has owners, dates that fit the freeze, a rollout that only moves forward if migration tickets stay low, and a fallback. Output 2 has nice ideas, but its timeline is too late and its update and email plan contradict each other."
+}

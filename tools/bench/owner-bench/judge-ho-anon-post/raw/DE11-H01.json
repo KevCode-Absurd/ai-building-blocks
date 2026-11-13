@@ -1,0 +1,29 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both catch the core insight and land inside the cash, but Output 1 reads like a plan I could hand to ops Monday without editing, while Output 2 has a real arithmetic slip in its hero-shade build-up and reads more like a strategy memo than an order sheet. Output 1's dated timeline and honest back-in-stock line are what I'd actually send."
+}

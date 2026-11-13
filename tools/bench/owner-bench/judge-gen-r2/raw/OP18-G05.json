@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts directly on the real signals: Asia-Pacific coverage, writing as the strongest predictor, no experience requirements, and the weekend rotation stated plainly.",
+  "biggest_mistake": "The salary is not near the top, and “five eight-hour days” clashes with the May–August four-day week promise.",
+  "what_would_make_it_a_10": "Move the $82,000 salary into the first screen, trim to the word limit, and clean up the workweek wording."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The job post sounds like the company: plain, honest, salary first, clear about the hard parts, and welcoming to career changers.",
+  "biggest_mistake": "The application writing prompt tests tone but not much problem-solving, and the longer written exercise is not fully specified.",
+  "what_would_make_it_a_10": "Give the application exercise a small factual problem to solve, add the full longer exercise prompt, and reduce the extra “why this job” filter."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, but Output 1 is more useful to the hiring team tomorrow because it includes a sharper application exercise, a fuller scorecard, and a complete workflow tied to the data. Output 2 has the cleaner post, especially with salary first, but needs more work on the actual selection process."
+}

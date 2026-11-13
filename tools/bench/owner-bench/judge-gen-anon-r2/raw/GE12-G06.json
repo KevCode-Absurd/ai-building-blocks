@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Impeccable data breakdown and logical prioritization based on the quickest time-to-value, recognizing that a major product build should come after quick lifecycle and pricing wins.",
+  "biggest_mistake": "Could have explicitly placed the Lite plan fix at number one since it addresses the largest absolute volume of lost revenue, although the logic for placing it second is sound.",
+  "what_would_make_it_a_10": "Ranking the Lite usage-limit fix strictly as #1 to perfectly match the owner's desire to see it identified as the absolute fastest money."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear, concise formatting and a very accurate initial diagnosis of the agency segment loss and Lite plan churn.",
+  "biggest_mistake": "Including a generic content marketing move (Move 5) with no specific numbers behind it, directly hitting a pet peeve outlined in the private notes.",
+  "what_would_make_it_a_10": "Dropping the generic content move entirely, and ranking the fast-money pricing fix ahead of a months-long reporting product build."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 understood exactly how an owner thinks: it prioritized quick, low-effort wins over long feature builds, whereas Output 2 fell into the trap of suggesting generic content advice."
+}

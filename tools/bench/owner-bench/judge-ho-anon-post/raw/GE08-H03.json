@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Realistic assumptions around fit finder selection bias (taking only half the 19-point gap) and calling out Christmas seasonality risks.",
+  "biggest_mistake": "Missed giving practical bra-fitting advice in the post-delivery message to help Jess check her fit before deciding to return.",
+  "what_would_make_it_a_10": "Add a dedicated post-delivery fit check email with tangible fitting checks (band snug on loosest hook, no cup gaping) and rank the cost impacts directly upfront."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The message sequence and bra-fitting copy (checking the band on loosest hook, cup smoothness, 5-day fit check) perfectly embody our brand voice while directly tackling the 'too small' issue.",
+  "biggest_mistake": "Assuming warehouse systems can support a 2-hour pre-dispatch size switch, though flagging it as an assumption mitigated the risk.",
+  "what_would_make_it_a_10": "It already hits every brief requirement, data signal, and brand note flawlessly."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 laid out our exact financial exposure upfront and wrote exceptional, on-brand message copy—especially the post-delivery bra fit instructions that solve Jess's hesitation without any body-shaming."
+}

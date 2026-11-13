@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the right strategic call: do not cut to 20%, because referred customers are better customers and the real problems are lost credit, slow payouts, and the top 20 partners feeling ignored.",
+  "biggest_mistake": "Some of the projection math around the 90-day window and the year-one savings from cutting only new referrals is a bit hand-wavy and would need finance to check before we publish it internally.",
+  "what_would_make_it_a_10": "Tighten the cost model for the 90-day window, simplify a few numbers, and turn the first-30-days table into the exact operating checklist for the partner manager."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very clear and gets the main answer right: the 20% cut is risky, the top 20 matter most, and the 30-day credit window is unfair to partners like Kwame.",
+  "biggest_mistake": "It adds a 40% first-year Partner tier even though the data says payout speed and attribution are the real complaints, and the cost estimate for that tier is not strong enough for a finance conversation.",
+  "what_would_make_it_a_10": "Keep the 30% rate, make the Partner tier about service, speed, attribution, and co-marketing, and sharpen the cost controls around the bonus and free account ideas."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather hand Output 1 to the team tomorrow because it fixes the real leaks without creating a new commission-cost problem. Output 2 is strong, but the 40% Partner tier feels like an unnecessary answer to a problem the data did not show."
+}

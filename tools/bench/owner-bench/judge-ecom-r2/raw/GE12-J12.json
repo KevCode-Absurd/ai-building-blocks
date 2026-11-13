@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 5,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Provides clean, succinct message templates that capture the brand's fast and young voice.",
+  "biggest_mistake": "Suggesting that a team of 4 agents, who already take 52 minutes to reply to chats, should make outbound calls for unconfirmed Tier 2 and Tier 3 orders.",
+  "what_would_make_it_a_10": "Recognize the severe limit on agent capacity by fully automating unconfirmed cancellations, and use the RTO data to justify a targeted prepaid discount."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The brilliant mathematical insight to offer a ₹30 prepaid discount only to Tier 2 and 3, because it only pays back where the RTO rate is above 17%.",
+  "biggest_mistake": "The after-hours script for size and fit could have included a link to the size guide immediately rather than making the customer wait until 10 am for a reply.",
+  "what_would_make_it_a_10": "It is already a 10; a tiny polish would be allowing the bot to instantly serve the size chart link after hours before an agent takes over."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 acts exactly like a sharp owner. It uses the exact data to make high-leverage business decisions, like mathematically proving why metros shouldn't get a prepaid discount and realizing that a swamped 4-person team cannot make confirmation calls."
+}

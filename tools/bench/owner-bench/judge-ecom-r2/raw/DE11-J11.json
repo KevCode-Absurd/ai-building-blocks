@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Correctly spots the in-app checkout bug as a ship-now fix worth ~₹34 lakh gross margin a month, then ranks tests by evidence and traffic with honest sample-size maths.",
+  "biggest_mistake": "Some variant copy and helper text contain blanks (e.g. '[real rating]', '[amount]') and the schedule runs tests in parallel pairs rather than one at a time, slightly muddying attribution.",
+  "what_would_make_it_a_10": "Fill every placeholder with a safe default or a clear instruction, and tighten the reading level and word count."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear, disciplined one-test-at-a-time plan with explicit decision rules and an honest range (₹17.0–34.0 lakh) for the checkout fix.",
+  "biggest_mistake": "Uses add-to-cart as the main metric for delivery-date and EMI tests, which understates the real purchase-intent effect those changes are meant to move, and gives a narrower fix estimate than the owner's own maths.",
+  "what_would_make_it_a_10": "Make orders-per-session the main metric for price/delivery/EMI tests and reconcile the checkout-fix projection to about ₹34 lakh."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gets the numbers, ranking and money sizing exactly right and even gives brand-voice copy; Output 2 is disciplined but its add-to-cart-first metric choice and narrower fix estimate would leave money on the table."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the actual data into usable creative, especially quiet wheels, solo women lifting the bag, and work flyers skipping the belt, while staying careful on claims and the scratch issue.",
+  "biggest_mistake": "A couple of concepts are slightly execution-heavy, like filming overhead-bin moments, and a few primary texts are longer than ideal for Meta.",
+  "what_would_make_it_a_10": "Trim a few ad texts, confirm exact review quotes before launch, and add simple production notes for how to shoot the airplane/airport scenes without overcomplicating them."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very clear, well structured, and picks up the right big opportunities: work flyers, women 25 to 40, quiet wheels, and real travel scenes instead of flat product shots.",
+  "biggest_mistake": "It is a little looser on claims, with lines like 'No rattle', 'Nobody woke up', and a cabin-sizer demo that could imply a stronger guarantee than 'fits most Indian domestic airline cabin limits'.",
+  "what_would_make_it_a_10": "Tighten claim language, make the quiet-wheel lines clearly review-led, and be more cautious with the gate-check visual so it does not overpromise airline fit."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would be happy using either, but Output 1 feels a bit more owner-ready and safer to hand to the team tomorrow. It handles the scratch objection, claim limits, test budgets, and first-three rationale with more discipline."
+}

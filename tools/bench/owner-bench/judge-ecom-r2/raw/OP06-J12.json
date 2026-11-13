@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It directly targets the real pain points in your data, especially tier-3 COD risk and order-status chat load, with usable flows and templates.",
+  "biggest_mistake": "It misclassifies the prepaid switch as Utility in one template and misses the full after-hours button set you were hoping for.",
+  "what_would_make_it_a_10": "Make the prepaid nudge fully Marketing, tighten a few numbers, and add the richer after-hours automation with track/size/exchange/COD buttons."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses your data sharply to create differentiated flows by risk band, gets the WhatsApp categories right, and turns the RTO maths into clear action.",
+  "biggest_mistake": "The prepaid ₹30 incentive is an assumption introduced without owner approval, and the holdout note on unconfirmed orders is a bit risky operationally.",
+  "what_would_make_it_a_10": "Keep the same structure but remove or justify the ₹30 offer with your margin reality and add a fuller after-hours button flow."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I'd rather pay for because it is more precise on categories, sharper on tier-based action, and stronger on the weekly scorecard tied to decisions. Output 1 is good and practical, but Output 2 feels more aligned to the signals in my data and needs less fixing."
+}

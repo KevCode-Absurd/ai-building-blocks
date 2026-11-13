@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Translates complex margin and LTV math into plain English rules (like the $94 CPA cap) that a non-expert owner and the team can instantly grasp and use.",
+  "biggest_mistake": "Missed adding Google's cost per first order explicitly to the weekly scorecard as requested in the brief.",
+  "what_would_make_it_a_10": "Adding the specific Google CPA target to the weekly scorecard to flawlessly fulfill every single detail of the prompt."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 7,
+  "voice": 7,
+  "range": 10,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Incredible analytical depth, including calculating the exact historical contribution margin and proposing a brilliant swatch kit acquisition funnel as a bolder move.",
+  "biggest_mistake": "Including literal algebra (w × -11%...) in the baseline working, which violates the Grade 8 reading level and alienates a non-expert owner.",
+  "what_would_make_it_a_10": "Translating the complex algebraic proofs into plain English and adopting a warmer, more brand-aligned tone instead of sounding like a clinical consultant."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both outputs absolutely nailed the math and the core strategy, but Output 1 presented the data in plain, Grade 8 English that perfectly matched our brand voice. Output 2 got bogged down in algebra that a non-expert owner shouldn't have to decipher."
+}

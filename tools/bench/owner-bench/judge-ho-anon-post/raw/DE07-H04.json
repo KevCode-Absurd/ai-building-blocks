@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Tells me the brutal truth: the pause does 80% of the work and the flow is worse than today without it, then backs it with a working range (+1,230 to +1,680) instead of a single fantasy number.",
+  "biggest_mistake": "The 'Cancel my subscription' button is only active once a reason is picked — that is exactly the 'don't make me hunt' friction Lena hates. It should stay live, with the reason required only to finish, not to unlock cancel.",
+  "what_would_make_it_a_10": "Keep cancel live from the first tap, and present the £29,160 discount saving as per-cohort or steady-state so a finance reader can't misread it."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "More granular per-reason offers (a smaller daily goal for people who already have a reminder, a 'remind me later' for trip-over) and it keeps the cancel button live and never greyed out.",
+  "biggest_mistake": "The switching-apps line counts 67 half-price keepers at the full £9 (£607, labelled 'after discount'), and the £136k first-year figure multiplies by 12 with no churn — I can't take that to finance without recutting it.",
+  "what_would_make_it_a_10": "Correct the discounted value, apply the 6% monthly churn, add an honest range, and drop or test the unexplained 50% offer to switchers."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd send to the product team: it tells me the pause is the whole game, gives numbers I can defend with a real range, and keeps the copy in our voice. Output 2 is tidy, but I caught a wrong revenue figure and no churn, so I'd have to rework the money before trusting it."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It leads with the three right numbers, puts the forecast miss, margin drop, Customer A, and VP Sales problem where investors will see them, and gives specific dated asks.",
+  "biggest_mistake": "The Customer A response is a little light; asking for a review is useful, but I would want a clearer owner and retention/learning plan.",
+  "what_would_make_it_a_10": "It is already very close; the only improvement would be adding a concrete owner and date for the Customer A post-mortem, plus a measured expected savings range from the 48-hour pause once modeled."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It does the best job explaining the AI-builder problem, including direct-created database growth and the margin impact of the extra compute cost.",
+  "biggest_mistake": "It is less send-ready: it says the New York base and dates need confirmation, and it promises reporting the real saving in November even though the engineering change may not give a full-month read by then.",
+  "what_would_make_it_a_10": "Remove the draft caveats, move the full metric table closer to the top or make the first screen tighter, and change the compute-saving language to report after the first full month post-ship."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather send Output 1 because it feels more like our actual investor email: candid, specific, and ready to go. Output 2 has one or two sharper analytical points, but it still reads a bit more like a draft that needs confirmation."
+}

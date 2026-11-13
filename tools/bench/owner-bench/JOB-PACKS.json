@@ -1,0 +1,229 @@
+{
+ "note": "Which agent pack runs each bench job. Take packs from marketplace/dist/packs/<pack>/ after packs:lock and build-packs.",
+ "jobs": [
+  {
+   "job": "J01",
+   "title": "Meta budget",
+   "pack": "jared-performance-marketing",
+   "role": "growth-marketer",
+   "ecom_kit": true,
+   "source": "recorded"
+  },
+  {
+   "job": "J02",
+   "title": "TikTok launch",
+   "pack": "zara-tiktok-ads",
+   "role": "tiktok-ads-media-buyer",
+   "ecom_kit": true,
+   "source": "recorded"
+  },
+  {
+   "job": "J03",
+   "title": "Meta concepts",
+   "pack": "tendai-ad-creative",
+   "role": "ad-creative-strategist",
+   "ecom_kit": true,
+   "source": "recorded"
+  },
+  {
+   "job": "J04",
+   "title": "UGC scripts",
+   "pack": "devon-video-ugc",
+   "role": "video-producer",
+   "ecom_kit": true,
+   "source": "recorded"
+  },
+  {
+   "job": "J05",
+   "title": "Meta ad copy",
+   "pack": "kofi-ad-copy",
+   "role": "advertising-copywriter",
+   "ecom_kit": true,
+   "source": "recorded"
+  },
+  {
+   "job": "J06",
+   "title": "Product page",
+   "pack": "georgia-product-copy",
+   "role": "ecommerce-copywriter",
+   "ecom_kit": true,
+   "source": "recorded"
+  },
+  {
+   "job": "J07",
+   "title": "Welcome series",
+   "pack": "lucia-email-copy",
+   "role": "email-marketing-specialist",
+   "ecom_kit": true,
+   "source": "recorded"
+  },
+  {
+   "job": "J08",
+   "title": "Win-back",
+   "pack": "imogen-retention",
+   "role": "lifecycle-marketer",
+   "ecom_kit": true,
+   "source": "recorded"
+  },
+  {
+   "job": "J09",
+   "title": "90-day plan",
+   "pack": "malcolm-ecommerce-growth",
+   "role": "ecommerce-manager",
+   "ecom_kit": true,
+   "source": "recorded"
+  },
+  {
+   "job": "J10",
+   "title": "Bundles and shipping",
+   "pack": "brendan-offers",
+   "role": "growth-marketer",
+   "ecom_kit": true,
+   "source": "recorded"
+  },
+  {
+   "job": "J11",
+   "title": "Mattress test plan",
+   "pack": "gretchen-store-testing",
+   "role": "cro-specialist",
+   "ecom_kit": true,
+   "source": "recorded"
+  },
+  {
+   "job": "J12",
+   "title": "WhatsApp COD",
+   "pack": "rohan-chat-sales",
+   "role": "chatbot-specialist",
+   "ecom_kit": true,
+   "source": "recorded"
+  },
+  {
+   "job": "G01",
+   "title": "SEO plan",
+   "pack": "danielle-seo",
+   "role": "seo-specialist",
+   "ecom_kit": false,
+   "source": "inferred"
+  },
+  {
+   "job": "G02",
+   "title": "Landing page",
+   "pack": "dawei-landing-pages",
+   "role": "cro-specialist",
+   "ecom_kit": false,
+   "source": "inferred"
+  },
+  {
+   "job": "G03",
+   "title": "Investor update",
+   "pack": "paloma-investorupdate",
+   "role": "startup-fundraising-consultant",
+   "ecom_kit": false,
+   "source": "inferred"
+  },
+  {
+   "job": "G04",
+   "title": "Cold email",
+   "pack": "silvia-sales-playbooks",
+   "role": "sales-enablement-specialist",
+   "ecom_kit": false,
+   "source": "inferred"
+  },
+  {
+   "job": "G05",
+   "title": "Job post",
+   "pack": "nathan-jobpost",
+   "role": "recruiter",
+   "ecom_kit": false,
+   "source": "inferred"
+  },
+  {
+   "job": "G06",
+   "title": "Competitor analysis",
+   "pack": "kojo-competitor-analysis",
+   "role": "market-research-analyst",
+   "ecom_kit": false,
+   "source": "inferred"
+  },
+  {
+   "job": "G07",
+   "title": "Launch plan",
+   "pack": "jocelyn-product-launch",
+   "role": "product-marketing-manager",
+   "ecom_kit": false,
+   "source": "inferred"
+  },
+  {
+   "job": "G08",
+   "title": "Pricing",
+   "pack": "osman-subscriptionpricing",
+   "role": "pricing-strategist",
+   "ecom_kit": false,
+   "source": "inferred, named in PRD-TOP10 appendix"
+  },
+  {
+   "job": "G09",
+   "title": "Content plan",
+   "pack": "achieng-content-strategy",
+   "role": "content-marketer",
+   "ecom_kit": false,
+   "source": "inferred, named in PRD-TOP10 appendix"
+  },
+  {
+   "job": "G10",
+   "title": "Onboarding emails",
+   "pack": "candice-email-marketing",
+   "role": "email-marketing-specialist",
+   "ecom_kit": false,
+   "source": "inferred, named in PRD-TOP10 appendix"
+  },
+  {
+   "job": "H01",
+   "title": "Stock plan",
+   "pack": "omar-inventory-planning",
+   "role": "supply-chain-planner",
+   "ecom_kit": true,
+   "source": "inferred"
+  },
+  {
+   "job": "H02",
+   "title": "Shopping and PMax",
+   "pack": "raymond-google-ads",
+   "role": "google-ads-media-buyer",
+   "ecom_kit": true,
+   "source": "inferred"
+  },
+  {
+   "job": "H03",
+   "title": "Post-purchase",
+   "pack": "latoya-post-purchase",
+   "role": "cx-manager",
+   "ecom_kit": true,
+   "source": "inferred"
+  },
+  {
+   "job": "H04",
+   "title": "Cancel flow",
+   "pack": "mercedes-cancel-save",
+   "role": "customer-success-manager",
+   "ecom_kit": false,
+   "source": "inferred"
+  },
+  {
+   "job": "H05",
+   "title": "Help centre",
+   "pack": "ankit-help-docs",
+   "role": "technical-writer",
+   "ecom_kit": false,
+   "source": "inferred"
+  },
+  {
+   "job": "H06",
+   "title": "Affiliates",
+   "pack": "varun-affiliates",
+   "role": "affiliate-influencer-manager",
+   "ecom_kit": false,
+   "source": "inferred"
+  }
+ ]
+}

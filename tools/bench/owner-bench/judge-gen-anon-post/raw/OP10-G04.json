@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks the right segment and trigger, uses the pricing-change pain well, and gives a practical list plan with expected replies tied to the pilot data.",
+  "biggest_mistake": "It adds a few extra rules and ideas that are not fully supported, especially the mid-month send window and the 'bolder move' to send untriggered contacts, which cuts against the strongest signal.",
+  "what_would_make_it_a_10": "Tighten the list math, remove the untriggered test suggestion, keep sends tied to the weekly pricing-change flag, and make the emails a little cleaner and less meeting-heavy."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows the data almost exactly: Controllers/Heads of Finance, 50 to 300 person SaaS companies, recent pricing-page change, no links, and an honest expected reply range.",
+  "biggest_mistake": "It slightly overstates confidence by saying the best segment plus best trigger should land at or above 7.9%, when the pilot did not test that exact combination.",
+  "what_would_make_it_a_10": "Make the reply forecast a touch more conservative, clarify that only the flagged subset of the 1,900 should be loaded now, and possibly move the 9-to-4 proof out of step 1 into a later email."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "I would hand Output 2 to the team tomorrow with only minor edits. It is cleaner, more focused on the winning segment and trigger, and avoids the extra unsupported tactics that could distract the campaign."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp diagnosis of the AI-builder margin leak, including the direct-vs-partner growth math and the 48-hour pause fix.",
+  "biggest_mistake": "It is denser than a phone-first investor update should be, and a few claims are over-explained or loosely tied, especially the margin-point comparison and the 'Ask 2 helps' line.",
+  "what_would_make_it_a_10": "Tighten the first screen, move runway into the headline table, simplify the margin explanation, and make the asks as forwardable as Output 2's hiring blurb."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is phone-readable, puts the bad news and runway up front, and turns the stalled VP search into a usable, forwardable investor ask.",
+  "biggest_mistake": "It still needs confirmation of dates and the New York base, and the assumptions sit after the signature rather than being fully woven into the send-ready copy.",
+  "what_would_make_it_a_10": "Confirm dates and base assumptions, and add one tighter sentence on what Customer A's loss does to forward ARR/NRR."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would send after small confirmations: it is tighter, clearer on a phone, and its asks are more usable, especially the forwardable VP hiring ask. Output 1 has strong analysis but feels more like a memo than an update I would publish."
+}

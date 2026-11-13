@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It brilliantly operationalizes the data by providing a flawlessly calculated time zone table and custom applicant exercises that test the exact constraints of the job.",
+  "biggest_mistake": "By explicitly telling the applicant how to fix the problem in the Priya prompt, it slightly lowers the difficulty of the deductive test in favor of testing their communication.",
+  "what_would_make_it_a_10": "It is already a 10, but could be pushed further by forcing candidates to spot the email typo in the Priya prompt without pointing it out for them."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It establishes a very clear, strict decision rule for reviewers (offer only at 4.0 or higher, with no line below 3) to ensure hiring standards remain high.",
+  "biggest_mistake": "It heavily weights a 'longer exercise' in the scorecard but fails to actually write it, leaving a critical placeholder and homework for the hiring team.",
+  "what_would_make_it_a_10": "Writing out the actual customer scenarios for the longer exercise so the package is complete and ready to run tomorrow."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 went the extra mile to provide a highly accurate time zone translation table and fully wrote out the test exercises, meaning zero homework for the hiring team. It absorbed the exact voice of the brand while perfectly leveraging the data signals to build a fast, effective hiring funnel."
+}

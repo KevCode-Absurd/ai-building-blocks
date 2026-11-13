@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Straight, numerically grounded answer on the 20% cut using lifetime value, plus a named top-20 focus and fixes to the window and payouts that match the data signals exactly.",
+  "biggest_mistake": "A few small arithmetic slips in the payout explanation (the $15.60 and 'seven customers' framing is muddled) and the discount-tier numbers are asserted rather than fully shown.",
+  "what_would_make_it_a_10": "Tighten the payout maths and show the work under the '12.5% revenue drop' break-even so every number traces cleanly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The 40%-for-12-months Partner tier plus a costed 31% first-year revenue estimate is a genuinely fresh, defensible option that beats the rival on year-one pay without blanket cost.",
+  "biggest_mistake": "The 90-day window cost is hedged ('may be the biggest cost', '$63,000 per 10% rise' is unexplained) and the free-account perk is added 'at no cost' outside the $40,000, which muddies the budget.",
+  "what_would_make_it_a_10": "Pin down the 90-day window cost with a shown calculation and reconcile every perk to the $40,000 so the budget is airtight."
+ },
+ "winner": "tie",
+ "margin": "slight",
+ "reason": "Both refuse the 20% cut with the lifetime maths, both build a named top-20 tier, both fix the window and payouts; Output 1 is cleaner and safer, Output 2 has the sharper Partner-rate idea, so I would pay about the same for either."
+}

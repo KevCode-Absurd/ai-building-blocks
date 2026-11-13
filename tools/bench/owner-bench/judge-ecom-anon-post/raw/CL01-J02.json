@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A tight, Monday-ready plan. The setup list is clean, the budget table adds to $30,000, and every kill and scale rule is in dollars tied to the $38 target. The day-30 scorecard checks new store customers against TikTok's claimed orders, so it tests whether TikTok adds customers rather than taking Meta's credit.",
+  "biggest_mistake": "The hooks rarely use Maria's or Tasha's exact words; most are paraphrases. It also misses that our trend sound may not be cleared for ads.",
+  "what_would_make_it_a_10": "Write the hooks in the customers' own lines, such as \"My feet don't ache by hour ten.\" Add a geo holdout as a cleaner incrementality check."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The creative table is built straight from Maria's and Tasha's words, and every number has its working shown. It uses three ways to read day 30 plus a geo holdout. It also catches details I'd have missed: the trend sound isn't cleared for ads, existing customers should be excluded, and there's a learning-budget bar for each ad group.",
+  "biggest_mistake": "The day-21 release rule counts TikTok-reported cost as one of its three votes. The \"Where it goes\" ad runs the donation line as its on-screen line, which edges toward a mission-led ad. The \"Worth $15?\" ad puts price up front.",
+  "what_would_make_it_a_10": "Drop platform-reported cost from the release vote. Make sure the donation line only ever closes an ad. Trim the length a little."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are plans I could hand over Monday. The second one speaks in my customers' words, catches the sound-rights issue and adds a holdout, so it's the one I'd rather run."
+}

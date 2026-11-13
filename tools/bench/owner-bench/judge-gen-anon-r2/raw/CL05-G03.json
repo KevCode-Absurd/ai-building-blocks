@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The top is built for a phone reader: three numbers, then a numbered bad-news list, then the headline ask with a date. The math checks out, including the roughly 476,000 AI-builder share of the 500,000 database increase, and the forwardable blurb for the VP ask is useful.",
+  "biggest_mistake": "It is clearly over the 700-word limit. It repeats the bad news in a list and again in a long section. The angel ask for free-tier advice is soft, and the New York base is a plan rather than a decision with a date.",
+  "what_would_make_it_a_10": "Cut it to 700 words by merging the bad-news list with the explanations. Add a one-line expected effect of the 48-hour pause on margin. Say Customer A will pull NRR down. Make the angel ask sharper and commit to a decision on the New York base."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ties the margin drop to the AI-builder channel with real analysis. $0.9M on about $10.4M of monthly revenue is roughly 9 points of margin, which more than explains the 7-point drop. It also shows direct-created databases grew only 2.6%, so nearly all the growth came from the channel, and it gives a 33 to 37 month runway range.",
+  "biggest_mistake": "It uses two tables when the brief asked for a small one, and it is still near or slightly over 700 words. It states opening the New York base as a plan even though its own assumptions say that needs confirming. The 'Ask 2 helps' line is awkward.",
+  "what_would_make_it_a_10": "Trim a little to land under 700 words. Fold the burn table into one line or the main table. Note that Customer A will pull NRR down. Confirm the New York decision and the ask dates, and tighten the margin math caveat."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 tells me something I didn't know: the channel's compute cost more than explains the margin drop, and direct growth is nearly flat. Its asks fit my two kinds of reader and it stays closer to the word limit, though both drafts are a bit long."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every move has a checked, ranged projection built from our own numbers: the per-1,000 trial table, 378 to 588 extra AWT conversions and 48 to 80 Lite saves. It also correctly calls Lite the biggest leak (70% of churners).",
+  "biggest_mistake": "It ranks by 'quickest money per effort' rather than by impact as I asked, which pushes the agency reporting bet to last. It also gives the data no dates, against our 'every claim has a number and a date' rule.",
+  "what_would_make_it_a_10": "Rank by impact, or make the case for a different ranking openly. Tie the AWT multi-site track explicitly to the agency report. Date the data sources."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It joins the moves together. The agency report is the focused bet, PPC parity is explicitly refused, and the AWT multi-site track feeds into the report. It adds sharp churn facts: only 37% of Lite left after 12 months, usage limits cause a third of all churn, and Semrush is only about 2% of churn.",
+  "biggest_mistake": "Move 5 (link-data studies) is close to the generic 'do more content' advice and has a weak success metric. The 'November 2026' date looks invented rather than sourced.",
+  "what_would_make_it_a_10": "Replace or sharpen Move 5 with a number-backed lever, such as smoothing the Lite-to-Standard price step. Give Moves 4 and 5 projected sizes. Use real source dates."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are accurate and usable. Output 2 ranks by impact as I asked, links the AWT pipeline to the agency report, and is more explicit about what not to build. Output 1's projections are a bit tighter, but its ordering drifts from my brief."
+}

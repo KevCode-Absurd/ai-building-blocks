@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes the 4.0 apart against the 2.5 break-even, shows non-brand loses about $20k, and rebuilds the $240k split with a disciplined reserve rule and week-one order that starts with the feed fix.",
+  "biggest_mistake": "The $104k reserve is very large and the bolder regional test adds complexity to a 30-day plan; the expected $198k profit leans on money deliberately left unspent, which could read as under-delivery rather than discipline.",
+  "what_would_make_it_a_10": "Tighter expected-range arithmetic shown step by step (including how the $198k is built from committed lines plus reserve), a smaller reserve with a clear deployment ladder, and the regional test demoted to an appendix so the core plan stays simple."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Cleanest read: brand is 11% of spend and half the value, non-brand PMax loses about $36.7k a month, and the feed fix plus title examples are practical and in the brand's voice.",
+  "biggest_mistake": "The forecast is over-optimistic and internally shaky: brand search at $18k returning 25 ROAS ($455k) and PMax at 2.6 after a cut imply a $1.11m value and 4.6 ROAS, and the cautious case at 2.2 PMax still claims $170k profit—numbers an owner will challenge, especially when brand buyers may not convert fully after the switch.",
+  "what_would_make_it_a_10": "A credible base and cautious case with the arithmetic shown, PMax target ROAS set at or above 2.5, and no brand-value inflation—plus a clear rule for what happens if the new non-brand Search campaign does not hit 2.8."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the big insight—brand is propping up PMax and the feed is broken—but Output 1 is the one I would act on: its numbers reconcile, the $240k adds up with a reserve rule, and it does not promise me a 4.6 ROAS I do not believe. Output 2 reads better and has the nicer title work, but I would spend the first meeting arguing about its forecast."
+}

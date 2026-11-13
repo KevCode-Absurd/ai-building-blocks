@@ -99,14 +99,15 @@ test("wordcount --raw counts every whitespace-separated token, like wc -w", () =
   assert.equal(visible.status, 0); assert.match(visible.stdout, /: \d+ words$/m); assert.doesNotMatch(visible.stdout, /raw words/);
 });
 
-test("wordcount --limit prints the share; it warns over 85% and fails only over the fail line", () => {
+test("wordcount --limit prints the share; it has no target share and fails only over the fail line", () => {
   const limit = "1000";
   const under = run("quality/wordcount.cjs", put("w800.md", words(800)), "--raw", "--limit", limit);
-  assert.equal(under.status, 0); assert.match(under.stdout, /^OK 800 raw words is 80% of the 1000-word limit/m);
-  const aim = run("quality/wordcount.cjs", put("w900.md", words(900)), "--raw", "--limit", limit);
-  assert.equal(aim.status, 0); assert.match(aim.stdout, /^WARN .*90%.*over the 85% aim/m);
+  assert.equal(under.status, 0); assert.match(under.stdout, /^OK 800 raw words is 80% of the 1000-word limit: within the limit/m);
+  const mid = run("quality/wordcount.cjs", put("w900.md", words(900)), "--raw", "--limit", limit);
+  assert.equal(mid.status, 0); assert.match(mid.stdout, /^OK .*90%/m);
   const near = run("quality/wordcount.cjs", put("w990.md", words(990)), "--raw", "--limit", limit);
-  assert.equal(near.status, 0); assert.match(near.stdout, /^WARN .*99%.*near the limit/m);
+  assert.equal(near.status, 0); assert.match(near.stdout, /^OK .*99%/m);
+  for (const r of [under, mid, near]) assert.doesNotMatch(r.stdout, /WARN|85%|aim/);
   const over = run("quality/wordcount.cjs", put("w1060.md", words(1060)), "--raw", "--limit", limit);
   assert.equal(over.status, 1); assert.match(over.stdout, /^FAIL 1060 raw words is 106%/m);
   const tight = run("quality/wordcount.cjs", put("w960.md", words(960)), "--raw", "--limit", limit, "--fail-above", "95");
@@ -129,8 +130,9 @@ test("qe-check --limit adds a raw limit row; the default visible count is unchan
   const file = put("qe900.md", `# Plan\n\n${words(890)}\n`);
   const plainRun = run("quality/qe-check.cjs", file);
   assert.doesNotMatch(plainRun.stdout, /\blimit\b/); assert.match(plainRun.stdout, /PASS\s+wordcount/);
-  const warned = run("quality/qe-check.cjs", file, "--limit", "1000");
-  assert.equal(warned.status, 0, warned.stdout); assert.match(warned.stdout, /WARN\s+limit/); assert.match(warned.stdout, /no failures/);
+  const within = run("quality/qe-check.cjs", file, "--limit", "1000");
+  assert.equal(within.status, 0, within.stdout); assert.match(within.stdout, /PASS\s+limit/); assert.match(within.stdout, /no failures/);
+  assert.doesNotMatch(within.stdout, /85%|aim about/);
   const failed = run("quality/qe-check.cjs", file, "--limit", "800");
   assert.equal(failed.status, 1, failed.stdout); assert.match(failed.stdout, /FAIL\s+limit/);
   const tight = run("quality/qe-check.cjs", file, "--limit", "920", "--fail-above", "95");
@@ -170,4 +172,82 @@ test("the owner's own analysis may count reviews; --customer-copy treats every l
   assert.equal(r.status, 0); assert.doesNotMatch(r.stdout, /WARN/);
   const asCopy = leak(analysis, "--customer-copy");
   assert.equal(asCopy.status, 0); assert.match(asCopy.stdout, /WARN \(2/);
+});
+
+// C4. Trace-to-brief checks (--brief): both checks read the work against the brief it answers.
+const BRIEF = put("brief.md", [
+  "# Brief: a reorder plan for a small candle shop",
+  "",
+  "Sales last 4 weeks: 1,240 candles. Average order ₹850. Repeat buyers: 31%.",
+  "In their words: \"Will it arrive before the party?\"",
+  "There is a fit quiz on the site. The owner wants a plan for the next six weeks.",
+].join("\n"));
+const DATED_BRIEF = put("dated-brief.md", "# Brief\n\nToday is 14 March. The spring sale runs 2 to 8 April. Average order ₹850.\n");
+const briefRun = (file: string, ...args: string[]) => both(file, "--brief", BRIEF, ...args);
+
+const BRIEF_FAILS: [string, string, string][] = [
+  ["a calendar date the brief does not give", "# Plan\n\nOrder the wax on 17 March and launch the bundle on Friday 3 April.\n", "date not in the brief"],
+  ["a month-first date", "# Plan\n\n| Step | When |\n|---|---|\n| Reorder | Mar 17 |\n", "date not in the brief"],
+  ["a day of the month", "# Plan\n\nSend step 1 between the 12th and the 15th, so step 4 lands by the 30th.\n", "date not in the brief"],
+  ["an exercise that is described, not written", "# Hiring\n\n1. **The reply.** A real ticket from the last 90 days, details removed.\n", "describes instead of writes"],
+  ["an ask to use a real example", "# Ad\n\n- **Primary text:** use a real customer quote about the scent.\n", "describes instead of writes"],
+  ["a list to pick from", "# Email\n\nOpening line: pick one from the three hooks above.\n", "describes instead of writes"],
+];
+for (const [name, text, what] of BRIEF_FAILS) {
+  test(`--brief fails in both checks: ${name}`, () => {
+    const file = put(`brief-fail-${name.replace(/\W+/g, "-")}.md`, text);
+    for (const r of briefRun(file)) { assert.equal(r.status, 1, r.stdout + r.stderr); assert.match(r.stdout, new RegExp(what)); }
+    // Without --brief the same text is not checked against a brief.
+    for (const r of both(file)) assert.doesNotMatch(r.stdout, /date not in the brief|describes instead/);
+  });
+}
+
+const BRIEF_PASSES: [string, string][] = [
+  ["relative days", "# Plan\n\nDay 1: reorder the wax. Week 2: launch the bundle. Every Monday, check stock. The Monday after launch, read the numbers.\n"],
+  ["ordinals that are not dates", "# Emails\n\nThe 2nd email goes out two days after the 1st email. The 3rd touch is a short reply.\n"],
+  ["a merge field that holds a date", "# Message\n\n- **Body:** It should arrive [Tue 18 Mar] to [Thu 20 Mar]. We'll message you when it ships.\n"],
+  ["a quiz the brief names", "# Page\n\n- **Body:** Not sure which size? Take the quiz and we'll pick for you.\n"],
+  ["figures the brief gives, rounded as shown", "# Plan\n\nAverage order is ₹850 and 31% of buyers come back. About ₹1.1 lakh of sales came from repeat buyers.\n"],
+];
+for (const [name, text] of BRIEF_PASSES) {
+  test(`--brief passes in both checks: ${name}`, () => {
+    const file = put(`brief-pass-${name.replace(/\W+/g, "-")}.md`, text);
+    for (const r of briefRun(file)) assert.equal(r.status, 0, r.stdout + r.stderr);
+  });
+}
+
+test("--brief: a brief that sets its own calendar lets dates on that calendar pass, but not far beyond it", () => {
+  const plan = put("dated-plan.md", "# Plan\n\nMonday 16 March: place the order. 30 March: stock lands. 2 April: sale opens.\n");
+  for (const r of both(plan, "--brief", DATED_BRIEF)) assert.equal(r.status, 0, r.stdout + r.stderr);
+  const far = put("dated-far.md", "# Plan\n\nReview the results on 20 September.\n");
+  for (const r of both(far, "--brief", DATED_BRIEF)) { assert.equal(r.status, 1, r.stdout); assert.match(r.stdout, /20 September/); }
+});
+
+test("--brief: a bolder move fails only in a copy job", () => {
+  const file = put("bolder.md", "# Welcome emails\n\n**Subject:** Your first candle\n\n**Bolder move:** add a second sample to email 3.\n\n## Bolder move: a refill club\n");
+  for (const r of both(file, "--brief", BRIEF, "--profile", "lifecycle-email")) { assert.equal(r.status, 1, r.stdout + r.stderr); assert.match(r.stdout, /"Bolder move" in a copy job/); }
+  assert.equal(leak(file, "--brief", BRIEF, "--customer-copy").status, 1);
+  for (const r of both(file, "--brief", BRIEF, "--profile", "launch-plan")) assert.equal(r.status, 0, r.stdout + r.stderr);
+});
+
+test("--brief: figures in neither the brief nor the ledger, weekdays and unwritten amounts warn without failing", () => {
+  const file = put("figures.md", "# Plan\n\nWe expect ₹2,40,000 in sales and a 12% lift. Reorder on Thursday.\n\n- **Body:** Add ₹X more for free shipping.\n");
+  const [l, h] = briefRun(file);
+  assert.equal(l.status, 0, l.stdout); assert.equal(h.status, 0, h.stdout);
+  for (const r of [l, h]) {
+    assert.match(r.stdout, /2 figures in neither the brief nor the numbers ledger: "₹2,40,000" \(line 3\), "12%" \(line 3\)/);
+    assert.match(r.stdout, /weekday not in the brief "Thursday"/);
+    assert.match(r.stdout, /unwritten amount "₹X"/);
+  }
+  assert.match(l.stdout, /^WARN \(3, does not fail\)/m); assert.match(h.stdout, /Worth a look/);
+  // A figure traced in the numbers ledger is known.
+  const ledger = put("numbers.json", JSON.stringify([{ id: "sales", value: 240000, unit: "INR", period: "6 weeks", basis: "revenue", source: "brief" }, { id: "lift", formula: "a / b", inputs: { a: 12, b: 100 }, label: "12%" }]));
+  for (const r of both(file, "--brief", BRIEF, "--numbers", ledger)) assert.doesNotMatch(r.stdout, /figures? in neither/);
+});
+
+test("--brief usage errors exit 2", () => {
+  const file = put("usage.md", "# Plan\n\nShip it.\n");
+  for (const r of both(file, "--brief", path.join(dir, "missing-brief.md"))) assert.equal(r.status, 2, r.stdout + r.stderr);
+  for (const r of both(file, "--brief")) assert.equal(r.status, 2, r.stdout + r.stderr);
+  for (const r of both(file, "--brief", BRIEF, "--numbers", path.join(dir, "missing.json"))) assert.equal(r.status, 2, r.stdout + r.stderr);
 });

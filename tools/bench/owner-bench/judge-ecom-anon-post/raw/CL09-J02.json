@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every rule is tied to our own numbers. It sets the $38.46 90-day break-even and $57 stop line, gives a budget that adds to exactly $30,000, and writes hooks in Maria's and Tasha's own words. It also catches that our trend sound isn't cleared for ads, and it proposes a state holdout for a cleaner day-30 read.",
+  "biggest_mistake": "It is dense and table-heavy for a Monday handoff. It leans on 8 staff phone videos where the main bet should be briefing more on-feet worker creators. One of its three day-20 release reads is TikTok-reported cost.",
+  "what_would_make_it_a_10": "Add a short creator brief for 6 to 10 new on-feet workers, name an owner for each workstream beyond set-up, and trim the tables so the team can scan it quickly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads cleanly and the team could run it as written. It has a thorough set-up list (event dedupe, domain verification, comment moderation), names an owner for each task, handles price without leading with a discount, and plans to own rights to winners before the March licences end. The day-30 scorecard includes an incrementality check.",
+  "biggest_mistake": "The hooks are less directly in our customers' words. Concept 4's close-ups drift toward product shots. A $76 no-purchase kill is aggressive for a $62 AOV, and it misses that the trend sound isn't cleared for ads.",
+  "what_would_make_it_a_10": "Write the hooks in Maria's exact phrases and add a holdout or survey-based read to the pass/fail table. Also justify the $34 scale threshold and the $45 fail line against the 90-day break-even."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are plans I'd hand to the team. Plan 1 ties its rules more tightly to our own data and catches things I'd have missed, like the uncleared sound and the holdout. Plan 2 is easier to read and assigns owners, but it is a bit less sharp on the specifics."
+}

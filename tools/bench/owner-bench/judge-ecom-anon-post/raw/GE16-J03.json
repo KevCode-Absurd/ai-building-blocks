@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent creative translation of the customer review lines into natural, clean scripts that fit the brand voice.",
+  "biggest_mistake": "The testing budget recommendation (₹4,500 or 3x CPA per concept) is statistically underpowered and would result in premature cutting of ads.",
+  "what_would_make_it_a_10": "More rigorous testing math and including technical ad specs like headlines, character counts, and safe zones."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Owner-first execution: puts the top 3 up front, includes realistic testing sample sizes (15 purchases per variant), and spotted the front pocket objection from the review data.",
+  "biggest_mistake": "Placing concept 7 as a spec demo Reel when carousels or statics might better serve comparison shoppers.",
+  "what_would_make_it_a_10": "It is virtually a 10 already; adding visual storyboard thumbnails or creator sourcing criteria would be the only addition."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 acts like a real head of growth: it gives production-ready copy with character counts, flags the front pocket data trap, and provides statistically sound budget rules for testing."
+}

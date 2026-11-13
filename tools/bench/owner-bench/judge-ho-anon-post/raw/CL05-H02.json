@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 6,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes the 4.0 apart against the 2.5 break-even, and gives a clean split that adds to $240,000 with daily budgets and line-by-line expected results. It also adds a non-brand Search campaign for the winning themes, plus ready ad copy.",
+  "biggest_mistake": "The forecast is too rosy. It assumes $18,000 of brand search returns about 25 ROAS ($455,000) and that PMax rises from about 2.0 to 2.6. That produces a 4.6 ROAS and +$60,900 profit, which is hard to trust. It also has few rules for weeks 2 to 4 beyond one reserve rule.",
+  "what_would_make_it_a_10": "Use a more cautious brand-value assumption and a wider profit range. Add explicit week 2 to 4 rules to scale or cut each line. Add negatives for broad and sustainable terms, and give each week-one action an owner and a done-when."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A careful, honest read. It combines brand across Search and PMax, shows non-brand at 2.26 against the 2.5 break-even, and warns that reported revenue will fall while profit rises. It gives a profit range and a week-one table with owner and done-when. It also sets monthly rules for cutting and scaling.",
+  "biggest_mistake": "The $104,000 reserve, 43% of budget, makes the split feel undecided, and the winning washable and work terms get no dedicated spend. The regional holdout test is complex for a small team and adds a lot of text. Some figures, such as the $61,900 feed upside, are loosely derived.",
+  "what_would_make_it_a_10": "Commit more of the budget to the proven winners, with a smaller reserve and a dedicated line for washable and work-comfort terms. Show expected results per line. Trim or simplify the regional test and add one line on preventing future price mismatches."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both break the 4.0 apart against the 2.5 break-even and fix the feed on day 1. Option 2 is more believable on results, has clear monthly rules and a week-one table my team can run, and admits revenue will drop while profit rises. Option 1 is tidier and more decisive on the split, but its 4.6 ROAS forecast leans on an unrealistic brand-search return."
+}

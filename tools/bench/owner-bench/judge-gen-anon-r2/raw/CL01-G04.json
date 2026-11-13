@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It goes straight to the right segment and trigger. The pilot math checks out: 3.1% overall, 38 of 44 positive replies booked at 86%, and the leave-out table is clean. Step 1 opens on their pricing change and the rev rec rebuild, with no link.",
+  "biggest_mistake": "The 8% forecast (7–10%) rests on an invented 1.25x uplift for combining role and trigger, so the top end reads more like hope than pilot data. Step 4's 'Closing the loop' is a stock subject line.",
+  "what_would_make_it_a_10": "Forecast from the pilot floor, around 7%, and stop there. Leave out the pilot Controllers who already got the old sequence. Give step 4 a subject line that sounds like us."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The forecast is honest: 6.8–7.9%, with an explicit refusal to multiply effects the pilot never tested together. It also adds smart list rules: rest the 1,300 Controllers already contacted and route 'later' replies to next quarter. The low-friction one-word reply asks suit busy finance people.",
+  "biggest_mistake": "It promises a 'one-page summary' and 'three steps' that don't exist yet, so someone has to write them. 'Within 60 days' and 'within a few days of the flag' are used a little loosely, and the piece is close to or slightly over the 900-word limit.",
+  "what_would_make_it_a_10": "Write or confirm the one-page summary and the three steps before launch. Tighten the timing rule to 'within two working days of the flag.' Trim to stay safely under 900 words."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nail the segment, the pricing trigger and the no-link rule, and I could send either with light edits. Output 2's forecast is the one I'd defend to my board, and it remembers not to re-hit the Controllers we already emailed."
+}

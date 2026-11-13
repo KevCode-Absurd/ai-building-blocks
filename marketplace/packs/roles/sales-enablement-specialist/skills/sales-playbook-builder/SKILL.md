@@ -45,7 +45,12 @@ For each stage: the goal, the actions, and what must be true about the buyer to 
 
 ### 4. Write the plays
 
-One page each, for up to eight common situations (inbound lead, referral, stalled deal, rival in the deal, price push, renewal at risk, trial user, champion leaves). Each play: trigger, steps, what to say (a talk track in plain words), proof to use, and the goal.
+One page each, for up to eight common situations (inbound lead, referral, stalled deal, rival in the deal, price push, renewal at risk, trial user, champion leaves). Each play: trigger, steps, what to say (a talk track in plain words), proof to use, and the goal. Write every talk track, email and message in full, word for word, so a new rep can use it as is; never a note on what it should say.
+
+For outbound and follow-up plays (cold email, a sequence, a stalled-deal nudge):
+- **One light ask per touch,** the lightest the team's own results support: a yes or no question, an offer to send one useful thing, or who owns this. Never two asks in one message.
+- **No call or meeting request in the first touch** unless the team's data shows call asks convert better. If the data shows a link or a calendar invite cut replies, leave it out.
+- **Timing runs from the trigger** (the event that makes the message relevant): the first touch goes soon after it, and follow-ups count days from the first touch. Never wait for a calendar window such as a set week of the month.
 
 ### 5. Write the qualification guide
 
@@ -66,6 +71,7 @@ List what the material did not show and what the client must decide (for example
 ## Checks
 
 - Every play traces to a real deal, call or the best seller's own words.
+- Every talk track and message is written in full; each outbound touch has one light ask, timed from its trigger.
 - Stages are defined by what the buyer has done, with exit criteria a manager can check.
 - Objection answers are honest; no false urgency or pressure tactics.
 - Every proof point has a source and permission where a customer is named.

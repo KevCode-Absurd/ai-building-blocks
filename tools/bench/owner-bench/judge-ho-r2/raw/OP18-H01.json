@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the main issue: rush the top 5 matte shades, re-carton held stock first, stop ordering slow matte shades, liquid lipstick and glitter palettes, and stay inside the cash limit.",
+  "biggest_mistake": "It assumes the held top-5 units are included in the 9,100 on hand, so it creates an avoidable out-of-stock gap and says the gap cannot be closed.",
+  "what_would_make_it_a_10": "Correct the held-stock treatment so re-cartoning lifts top-5 stock to about 13,000 units and aligns the customer/restock plan around avoiding the pre-sale stockout."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 7,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a clean Monday-ready order plan with costs, landing dates, reserve cash, demand logic and no spend on the overstocked lines.",
+  "biggest_mistake": "It makes the same held-stock mistake, saying the top 5 shades will sell out whatever we do when the re-cartoning should materially close that gap.",
+  "what_would_make_it_a_10": "Fix the re-cartoning math, make the back-in-stock/customer copy more SUGAR-like, and sharpen the glitter sell-through plan beyond one bundle."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both plans catch the big buying decision and both miss the same held-stock nuance, but Output 2 is a little cleaner for an ops lead to run on Monday, with better cash reserve and clearer demand math."
+}

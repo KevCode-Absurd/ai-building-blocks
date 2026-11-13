@@ -1,0 +1,36 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "biggest_strength": "Calm, on-brand voice throughout, with each email carrying one tip, one button, real-screen screenshot notes and quoted typed examples; goals and measures are stated per email and the drop list is quantified.",
+  "biggest_mistake": "Email 5 (Pro) is gated only on having a habit and still pitches an upgrade inside onboarding, and the day-3 second-device email doesn't build on whether the recurring-task habit is already in place; the series is also slightly less precise about triggering email 2/3 off events rather than fixed days.",
+  "what_would_make_it_a_10": "Tighten the trigger logic (skip/swap on each habit event, not just one), state the platform split percentages explicitly, and either move Pro fully out of onboarding or justify its day-14 gated placement with a target."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "biggest_strength": "Most rigorous trigger design: event-triggered emails with skip rules, an at-a-glance goals/measures table, a day-10 fallback for users who never made a recurring task, and explicit platform percentages (59%/41%).",
+  "biggest_mistake": "Voice slips slightly from the brief (subject 'Type it once. Todoist repeats it.' and 'Three tasks you'll never retype' lean clever/promotional, and email 4's copy is thinner), and email 5 repeats the recurring-task ask already covered by email 2, so the range of habits is narrower.",
+  "what_would_make_it_a_10": "Warm the subject lines and email 4 body back to the calm brand voice, and diversify the fifth email (e.g. a second-device or Today-view habit) so the series isn't two pushes at the same behavior."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and I'd ship either; output 2 wins on trigger logic and measurement rigor, which is exactly what I asked for, but output 1 sounds more like us and I'd have less copy-editing to do on it.",
+ "reason_note": ""
+}

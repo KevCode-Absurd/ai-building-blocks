@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Straight, honest answer on the 20% cut backed by lifetime-value maths, plus a complete tiers/payouts/first-30-days plan the one partner manager can actually run, all in Podia's plain cheerful voice.",
+  "biggest_mistake": "The 90-day window cost is hand-waved ('may be the biggest cost... every 10% rise adds $63,000... review at day 90'), so the owner is asked to approve a spend they can't see sized; it should be estimated like Output 2 does.",
+  "what_would_make_it_a_10": "Put a firm dollar range on the 90-day window cost (and net it against the churn advantage), and name the partner tier thresholds in revenue terms, not just '10+ customers'."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 10,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharpest read of the data: names the real problem as under-crediting not overpaying, quantifies the 90-day window cost ($62k-$89k), flags the written-promise risk, and adds a genuinely new idea (credit by 'Who sent you?').",
+  "biggest_mistake": "Voice and tidy-up slip: a dated first-30-days table aimed at a specific week, legal/tax asides, and 'the bad news: this plan costs more' frames the plan defensively and drifts from Podia's friendly read; the 'bolder move' adds a second bet the owner has to weigh.",
+  "what_would_make_it_a_10": "Keep the insight but land it in Podia's voice: one clean plan, sized costs in the main flow, the 'who sent you' idea folded into the core timeline, and drop the table that dates the plan to one week."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both say no to the 20% cut with the right maths, but Output 1 is the one I'd actually send to partners and finance: it's complete, in our voice, and I can run its 30 days as written, while Output 2 wins on cleverness but needs an edit before it sounds like us."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "One clean recommendation, a $79 Agency plan, with revenue math that ties out to my numbers. It includes a break-even on Team move-downs, a customer email that shows each person's own current bill, and clear go and stop rules.",
+  "biggest_mistake": "It treats the yearly-billing gap as a footnote and never fixes the monthly default or offers yearly in-app. It also assumes half of Essentials 8+ customers switch and their churn drops to 5% without much support.",
+  "what_would_make_it_a_10": "Add a proper yearly-billing step, a faster win than the new plan. State plainly that the first two quarters come from churn reduction because of the 12-month price hold. Support the 50% switch and 5% churn assumptions with something firmer."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses all three signals in my data: the Essentials 8+ leak (374 customers, $23.9k a month), the yearly-billing gap, and the 12-month promise. It gives low, mid and high cases and says honestly that the low case is near zero and yearly won't help within two quarters. It has a dated plan and a measurable stop rule.",
+  "biggest_mistake": "$99 is about 55% above what an 11-channel Essentials customer pays now, so the 25% upgrade assumption looks optimistic. The 'bolder move' section edges toward a menu when I asked for one recommendation. It is dense and uses terms like MRR and holdout.",
+  "what_would_make_it_a_10": "Price Agency closer to the current bill, or defend $99 with evidence. Drop or fold in the bolder-move section. Write in plainer words and keep a single recommendation, with the yearly change clearly secondary."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both recommend the right flat Agency plan for the Essentials 8+ group with sound math. Output 2 also uses the yearly-billing signal and the grandfathering limit, and gives an honest range of outcomes. Output 1 is cleaner, warmer and priced more realistically, but it treats yearly billing as an afterthought."
+}

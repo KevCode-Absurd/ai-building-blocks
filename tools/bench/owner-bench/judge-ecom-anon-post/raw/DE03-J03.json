@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ties every concept to a real signal in my data and tells me exactly what each one tests, with a first-three pick I believe in.",
+  "biggest_mistake": "Some hooks put review-table quotes in the buyer's mouth as voiceover copy; I'd want those trimmed to clearly-attributed lines before launch.",
+  "what_would_make_it_a_10": "Storyboard frames or shot lists per concept, and a slightly tighter primary-text length per format."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Sharp front-loaded framing of the two data stories and a strong, concrete test-spend plan with per-concept budgets.",
+  "biggest_mistake": "The table-first structure and long primary texts read more like a media plan than brand creative, and the voice drifts to spec-listing; hooks lean on quoted reviews where I asked for my own lines.",
+  "what_would_make_it_a_10": "Full draft primary text and visual scripts in our voice, not just a hook and a scene note, plus lighter colour lead stated up front rather than buried in the rules."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like creative work I could hand to a designer and creator tomorrow, stays calm and on-brand, and makes each concept earn its place from my own review and spend numbers. Output 2 has the better test-spend maths, but the concepts and copy are thinner and feel like a plan rather than ads."
+}

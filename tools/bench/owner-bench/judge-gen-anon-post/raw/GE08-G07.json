@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9.5,
+  "use_as_is": "as is",
+  "biggest_strength": "Impeccable brand voice and operational discipline. The calendar is mapped directly to our tiny 5-person team with crisp role ownership, and the focus on preventing the 2025 migration support disaster before the Dec 1 freeze is spot-on.",
+  "biggest_mistake": "Presents staged rollouts only as an optional 'bolder move' rather than cementing it as standard operational practice for a release of this scale.",
+  "what_would_make_it_a_10": "Commit to the staged rollout as a hard launch gate instead of treating it as an optional consideration."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9.1,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Outstanding launch gates and support mitigations, specifically putting engineers on 2-hour daily support shifts and staggering Product Hunt to the day after launch.",
+  "biggest_mistake": "The calendar has some odd dates (inviting creators on Nov 24 gives them very tight turnaround for Dec 8), and the X draft spans a 5-tweet thread where a simpler single announcement post with replies works better.",
+  "what_would_make_it_a_10": "Give creators earlier access than Nov 24, and tighten the copy to match Raycast's punchy, ultra-minimal cadence."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 feels like it was written by an in-house launch lead at Raycast: concise, craft-obsessed, and ruthlessly protective of user trust and engineering freeze dates. Output 2 had great operational ideas like engineer support shifts, but Output 1's timeline, voice, and copy are superior."
+}

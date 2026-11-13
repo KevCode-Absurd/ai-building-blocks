@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data the way an owner would: prioritises retained users over raw installs and makes migration reliability the main launch gate.",
+  "biggest_mistake": "It labels X above Hacker News and Product Hunt in the ranking even though retained users are lower than Product Hunt, which creates a small inconsistency between the table and the stated principle.",
+  "what_would_make_it_a_10": "Tighten that channel ranking logic, remove a couple of speculative targets, and add slightly clearer owner assignments for each support and creator task."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It understands that creators and extension authors should be the centre of the launch and gives a fuller staged rollout and audience plan than most generic launch checklists.",
+  "biggest_mistake": "It adds major requirements and promises not grounded in the brief or team reality, like 1,000 beta users, restore functionality, engineering support shifts during freeze, and an under-8-hour reply target, so I would not trust it as an operating plan without reworking it.",
+  "what_would_make_it_a_10": "Keep the same structure but strip out invented capabilities, align the ranking and numbers more carefully to my data, and make every launch gate achievable with the actual team and timeline."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is much closer to something I would actually run. It uses my data better, keeps the plan within the team I have, and directly addresses the migration risk that burned us last time."
+}

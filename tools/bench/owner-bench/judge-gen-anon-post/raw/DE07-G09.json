@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Turns the data into a clear, costed plan: sleep-led, narrator-clip-led, evening-led, with a week 1 that needs no clinical review and a stop list an owner can act on.",
+  "biggest_mistake": "The review-timing math is off by a day: submitting Monday 16 November and counting 5 business days lands on Monday 23 November, so reviewed posts can go live Monday 23 November — not Tuesday 24 November. It also puts reviewed posts on Tuesday and Wednesday, so the schedule doesn't actually exploit the earlier go-live it has earned.",
+  "what_would_make_it_a_10": "Fix the go-live date to Monday 23 November and rebuild the weekly grid around it, so the review-sensitive posts (stress-at-work, parents) land in the first available evening slot; then tighten the install projection to show the arithmetic per theme line by line."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 7,
+  "voice": 9,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Best strategic read of the data and the smartest portfolio: sleep-led narrator clips, a 24-post grid by week, a low/high install projection that accounts for sleep fatigue, and the boldest range of ideas (live stream option, parent timing).",
+  "biggest_mistake": "Says no post needs clinical or legal review, then schedules 'Awake at 2am' in week 3 and 'Quit meditation apps by day three' — the first is an insomnia-adjacent sleep condition hook, and the plan has no submission date or buffer. That is exactly the compliance trap the owner flagged, and it undermines an otherwise strong plan.",
+  "what_would_make_it_a_10": "Replace the 'no review needed' claim with a real review calendar (submit 16 November, live 23 November), flag which specific drafts need it, drop or reword 'Awake at 2am', and turn the 24-post grid into a table with formats and times so it can be handed to the editor without interpretation."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 2 has the sharper strategy and the better projections, but it claims nothing needs clinical review and then schedules 'Awake at 2am' — a compliance risk I can't ship. Output 1 is safer and closer to usable today, even though its review-date arithmetic is a day off."
+}

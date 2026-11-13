@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Complete 24-post grid plus six warm drafts using the customers' own phrases (day three, replaying emails, parked before pickup). The stop list is clear, and the success table gives low and high projections with working shown.",
+  "biggest_mistake": "Says no post needs review, yet draft 5 mentions work stress and draft 3 mentions replaying emails and sleep. It also adds a speculative live stream, and a few figures are shaky (24 posts with 16 clips is fine, but 'Awake at 2am' in week 3 would trigger insomnia review and isn't flagged). The 'review and then Tuesday 24 Nov' line is correct, but the plan never says when to submit later posts.",
+  "what_would_make_it_a_10": "Flag the later titles that need review (such as 'Awake at 2am') with a submit-by date of 16 Nov, drop the live-stream tangent, and tighten the word count. Make drafts 3 and 6 clearly narrator clips or sleep-led."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear, tight structure: lead with sleep, narrator clips and evening posting. It handles review timing explicitly (batch submit on 16 Nov, live from 24 Nov) and sets realistic success thresholds, including a caution that the 5.9% rate came from only 5 posts.",
+  "biggest_mistake": "Only one repeated weekly pattern with weekly angles but no post-by-post titles for weeks 2 to 4. It keeps stress-at-work carousels and a kindness-labelled parent clip. The review batch is declared before the content exists, and the 'every later post needs review' assumption is blunt. The drafts also use hashtags, which is fine, but 'Want to try?' repeats.",
+  "what_would_make_it_a_10": "Add a week-by-week list of topics for weeks 2 to 4 with a review flag on each. Label the parent clip as its own theme, and add a recut or best-performer rule to give the plan more range."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are usable and similar in strategy. Output 2 is cleaner and handles the review timing more explicitly, with sensible, careful success thresholds. Output 1 has more range and week-by-week detail but contains a review claim that does not hold up and a distracting live-stream idea."
+}

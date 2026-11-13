@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nailed every private-note signal and number perfectly, including the exact ₹34 lakh margin opportunity and putting the review summary alongside the trial in the ship-without-testing list.",
+  "biggest_mistake": "Scheduling two tests to run simultaneously on 'separate splits' while claiming each gets 'all the traffic' is statistically muddled and risks interaction effects.",
+  "what_would_make_it_a_10": "Clarify the concurrent test architecture as a clean 2x2 factorial split or adopt sequential 2-week cycles using add-to-cart as the primary velocity metric."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Outstanding testing hygiene with honest sample size formulas, sequential 2-week cycles, SRM checks, and using add-to-cart as the primary metric with an order guardrail.",
+  "biggest_mistake": "Kept moving reviews as Test 5 instead of shipping the review summary immediately without testing as a low-risk proof point.",
+  "what_would_make_it_a_10": "Move the top-line star rating into the ship-without-testing list and promote the hero image close-up into the test lineup."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are exceptional and capture the in-app bug and business math brilliantly. Output 2 wins by a hair because its sequential 2-week schedule and adoption of add-to-cart as the primary metric (with an orders guardrail) provide a cleaner, interaction-free testing program than Output 1's simultaneous test overlap."
+}

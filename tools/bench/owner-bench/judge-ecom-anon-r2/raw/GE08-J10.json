@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The insight to set the threshold at ₹599 rather than ₹699 specifically to protect Ishita's lone serum reorder while capturing extra cart adds.",
+  "biggest_mistake": "Overusing lip balm across two bundles instead of launching a body routine duo and letting lip balm serve as a universal cart add-on.",
+  "what_would_make_it_a_10": "Replace the serum + lip balm bundle with the body care duo (body wash + lotion) and relegate lip balm to a full-price threshold-bridging cart bump."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Perfect bundle selection spanning skin, hair, and body routines, while smartly reserving the lip balm as an undiscounted cart add-on to clear the shipping line.",
+  "biggest_mistake": "Recommending to keep ₹499 baseline without evaluating a modest ₹549 or ₹599 sweet spot between the status quo and the risky ₹699 jump.",
+  "what_would_make_it_a_10": "Incorporate intermediate threshold options (like ₹549 or ₹599) into the financial model alongside ₹499 and ₹699."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 gave me three genuine, multi-category routines (skin, hair, body) that customers already buy, and smartly kept the lip balm as an undiscounted cart add-on. Its COD refusal maths and grandfathered test plan show deep respect for our customer relationships."
+}

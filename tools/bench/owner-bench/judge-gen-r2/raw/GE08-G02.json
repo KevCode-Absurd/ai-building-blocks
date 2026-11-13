@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks the exact high-value recruiting segment and nails the seat conversion math immediately.",
+  "biggest_mistake": "Alternates between 'Get started' and 'Book a demo' across sections instead of standardizing on 'Book a demo' for this team buyer.",
+  "what_would_make_it_a_10": "Standardize the CTA on 'Book a demo' throughout the page to keep the path clean for team leads like Priya."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless execution of the CRO brief, maintaining strict CTA discipline ('Book a demo' for teams) and backing the A/B test with an exact sample size calculation.",
+  "biggest_mistake": "Headline in Version A is slightly less punchy than Priya's raw 'email tennis' phrasing, though it stays strictly on brand.",
+  "what_would_make_it_a_10": "Incorporate Priya's exact 'email tennis' phrase into the hero headline or subhead for maximum punch."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 kept strict CTA discipline by using 'Book a demo' consistently for this team buyer (Output 1 mixed in 'Get started'), and provided rigorous sample-size math for the A/B test."
+}

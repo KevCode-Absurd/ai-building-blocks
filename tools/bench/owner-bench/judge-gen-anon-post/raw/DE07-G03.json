@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The margin diagnosis is strong: it shows direct database growth was only about 2.6% and ties the $0.9M compute increase to the 7-point gross-margin drop.",
+  "biggest_mistake": "Customer A is not in the subject or preview and sits behind a long AI-builder paragraph; 'costing us more than it earns' is asserted without the revenue denominator.",
+  "what_would_make_it_a_10": "Put Customer A in the subject/preview, soften or prove the AI-builder cost claim, and tighten the asks and assumptions into confirmed decisions."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is owner-ready: the subject and preview surface the miss and Customer A, the three numbers are early, and each ask has a named profile, date and forwardable blurb.",
+  "biggest_mistake": "The New York base and 27 November ship date are assumptions presented as settled decisions, and the early 'What we need' summary duplicates the closing asks.",
+  "what_would_make_it_a_10": "Confirm the NY-base and ship-date assumptions, trim the duplicated ask summary, and quantify the expected compute saving or range from the 48-hour pause."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "I would send Output 2 with minor edits; it puts the bad news where a phone reader will see it and gives me forwardable asks. Output 1 has good margin analysis but buries Customer A and overstates one cost claim."
+}

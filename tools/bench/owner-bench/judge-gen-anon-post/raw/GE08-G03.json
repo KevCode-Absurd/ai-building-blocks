@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Executes the brand voice flawlessly by using our exact motto ('Here's what went wrong and what we're doing about it'), pairing problems directly with actions, and including ready-to-forward blurbs for the asks.",
+  "biggest_mistake": "The burn breakdown in bullet points is slightly less scannable than a mini-table, though the numbers themselves are completely accurate.",
+  "what_would_make_it_a_10": "It is already a 10 for an executive investor update email."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clean numerical hygiene, including an excellent standalone mini-table breaking down the $2.2M burn increase.",
+  "biggest_mistake": "Separating 'What went wrong' from 'What we're doing about it' creates disconnect, and misses the chance to summarize the core asks above the fold for mobile-reading investors.",
+  "what_would_make_it_a_10": "Integrate the fix immediately alongside each problem, provide forwardable text snippets for angel asks, and put the immediate help request summary up top."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 nails the Supabase voice and the mobile investor reading experience, putting the three numbers and high-level asks immediately on screen one. Adding forwardable copy for the angel intros shows exceptional instinct for how investor relations actually works."
+}

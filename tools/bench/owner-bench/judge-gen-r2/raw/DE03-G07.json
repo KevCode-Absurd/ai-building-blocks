@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the migration risk and the unused extension-author asset at the heart of the plan, ranks channels by retained users with the math, and stages the rollout with a hard no-go rule tied to the 58% ticket failure.",
+  "biggest_mistake": "The X post and email are strong but slightly thin on giving the newcomer persona a starting point; the plan handles persona 2 mostly through creator videos rather than in launch copy.",
+  "what_would_make_it_a_10": "Add one concrete 'start here' line or five-pick list for the new-to-launchers reader inside the launch copy itself, plus name the owner and deadline for the help article."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 6,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Excellent gate detail (top 200 extensions tested, undo, every claim in the build) and a genuinely useful message matrix plus a 'Start with five' idea for the newcomer persona.",
+  "biggest_mistake": "Leaves bracketed placeholders in both customer-facing drafts and publishes Product Hunt the day after launch, which contradicts its own single-attention logic and feels less finished than a launch manager would hand over.",
+  "what_would_make_it_a_10": "Kill every placeholder and ship finished X and email copy, and move Product Hunt to after the staged rollout completes rather than the day after launch."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both nailed the retained-users math and the migration gate, but Output 1 is finished copy I could post tomorrow while Output 2 still has brackets and a Product Hunt timing that undercuts its own plan."
+}

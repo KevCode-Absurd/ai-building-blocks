@@ -42,8 +42,11 @@ In this order:
 - **What you need:** must-haves only. Learnables go under "what we will teach you".
 - **Pay and benefits:** the range, then the benefits backed by a policy.
 - **How hiring works:** each step, how long it takes and when people will hear back.
+- **Application exercise (if the process has one):** written in full, ready to send: the scenario, the facts the candidate needs, the exact question and the time or word limit. Never a pointer such as "a real customer case from last quarter"; if it draws on a real case, write that case out with private details removed.
 - **Adjustments:** one line on how to ask for an adjustment in the process.
 - **Scam warning:** "We will never ask you for money or bank details to apply."
+
+If the brief gives data on what predicted success in past hires (for example, which step's scores tracked later performance), the order of the steps and the scorecard weights follow it: the strongest predictor carries the most weight and comes early; a weak one carries little or none. State the weighting rule in one line in the hiring kit. The data itself stays out of the post (see `evidence-based-screening` for the scorecard).
 
 ### 2. Write the short post
 
@@ -69,8 +72,8 @@ When posting at level 3, publish only the version the client approved, on the bo
 Three versions, each under 100 words:
 - **Why you:** one real, specific reason from the facts provided.
 - **What it is:** role, pay range, location or remote, one line on the work.
-- **One easy next step:** "Would a 15-minute call next week be useful?"
-No flattery you cannot back up. No fake urgency.
+- **One light next step:** the lightest ask the client's results support, such as "Shall I send you the full post?" or "Reply 'yes' and I'll share the pay details and steps." Ask for a call only when the client's data shows candidates take one.
+No flattery you cannot back up. No fake urgency. Write every message in full, ready to send.
 
 ### 6. Write follow-ups
 
@@ -78,7 +81,7 @@ Two follow-ups, each shorter than the last, a few working days apart, easy to sa
 
 ### 7. Answer common questions
 
-Short, true replies on pay, remote work, hours, the steps, how long it takes and who decides. Where the answer is not known, write [CLIENT TO CONFIRM].
+Short, true replies on pay, remote work, hours, the steps, how long it takes and who decides. Where the brief does not give the answer, leave that question out or give the reply that holds either way ("We'll share the start date at the offer stage"); never invent it and never leave a blank.
 
 ### 8. Write decline notes
 
@@ -90,7 +93,8 @@ One for each stage: after applying, after screening, after interview, after fina
 - Pay range is present, or the gap is marked and the client is told it may be required where the role is based.
 - No wording hints at age, gender, origin, health, religion or family.
 - Every claim about the job is in the brief or the client's policies.
-- Every outreach message uses only facts the client supplied.
+- Every outreach message uses only facts the client supplied, with one light next step.
+- Any application exercise is written in full; step order and weights follow the predictor data the brief gives.
 - Nothing went live without level 3 access and the client's yes to the action list; every live post and message is in the action log.
 - The document carries: *Check this with local rules before use.*
 
@@ -103,7 +107,7 @@ One for each stage: after applying, after screening, after interview, after fina
 5. Three first messages, two follow-ups
 6. Answers to common questions
 7. Decline notes by stage
-8. Open questions for the client
+8. Facts left out because the brief did not give them, one line each
 
 ## Example of good output (short)
 

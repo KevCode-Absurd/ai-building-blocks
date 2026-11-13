@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9.7,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliantly navigated the clinical review restriction by crafting sleep and wind-down drafts that speak directly to the audience's pain points without triggering review keywords, allowing us to launch high-converting sleep content immediately in week 1.",
+  "biggest_mistake": "Only provided a thematic outline for weeks 2-4 rather than showing a full title calendar.",
+  "what_would_make_it_a_10": "Include a brief full-calendar table for weeks 2–4 alongside the weekly template."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clean 4-week calendar overview and strong execution on parent-specific hooks.",
+  "biggest_mistake": "Misinterpreted the review rule by assuming any sleep post is a clinical condition, needlessly benching our #1 conversion driver for all of week 1 and splitting the 6 ready drafts across two weeks.",
+  "what_would_make_it_a_10": "Recognize that wind-down content can run without clinical review if worded without naming conditions, and provide a full first week of ready-to-run posts."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 understood how to write wind-down copy that sidesteps clinical review triggers, keeping our highest-ROI theme active in week 1 rather than benching it for an entire week like Output 2 did. The voice, data reasoning, and ready-to-post drafts are flawless."
+}

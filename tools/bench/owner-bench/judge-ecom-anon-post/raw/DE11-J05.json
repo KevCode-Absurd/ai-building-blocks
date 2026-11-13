@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 7,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data like an owner: it diagnoses the paused 'flip the pack' ad as fatigued rather than dead, brings it back in fresh words, and leads with it. The six angles are genuinely distinct, with counts shown and a clean 4-ad test plan.",
+  "biggest_mistake": "Taste and price lines lean on review quotes, which is defensible but hedged with backup swaps — and P1's 'Every ingredient is on the front' plus P4/P5 all repeat the same 12g/no-added-sugar tag, so several texts feel closer to one another than the brief wanted.",
+  "what_would_make_it_a_10": "Sharper, more distinct voices for Aditya and Priya in the body copy (P5 and P6 still read like a spec list), and a bolder human taste hook that doesn't need a review quote to land."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Every line is written in the buyers' own words — 'Save yourself the flip', '4 pm minus the samosa', the price said head-on — and the copy set, test cells, budget math and day-14 read are all launch-ready. It also builds a real control cell against the live ₹290 ad, which is what I'd actually do.",
+  "biggest_mistake": "It launches the price-first ad as one of four while P1 and P5/P6 restate the same sugar/protein stack underneath; the 'if it wins' advice is strong but the plan slightly buries the texture angle that 14% of reviews cite.",
+  "what_would_make_it_a_10": "Push one more primary text on texture ('dense and chewy') into the launch four, and make each body line carry a visibly different idea rather than leaning on the same dates/protein tag."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2's copy actually sounds like us and could be sent to media buying today — the buyer phrases, the price said first, and the control cell are decisions I'd defend. Output 1 is a good analyst's answer, but the lines read a little more like a report than an ad."
+}

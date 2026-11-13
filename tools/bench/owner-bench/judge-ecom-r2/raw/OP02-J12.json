@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the big operational levers: tier 3 RTO cost, missing shipped/out-for-delivery updates, after-hours automation, and pincode-based COD holds.",
+  "biggest_mistake": "The prepaid nudge is marked Utility even though it is a behavioral/payment switch nudge, and the exchange wording is not truly ready because it asks the owner to swap in real policy wording.",
+  "what_would_make_it_a_10": "Classify the prepaid switch as Marketing, add a clear incentive or test, remove policy placeholders, and make the pincode-risk flow a little firmer for tier 3."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into a sharper operating plan: tier 2/3 targeting, a prepaid incentive with payback logic, utility shipping messages to cut WISMO chats, and after-hours coverage.",
+  "biggest_mistake": "It invents a ₹30 prepaid discount without making it an explicit assumption or test budget, and the 10% 'unconfirmed' holdout line is a bit risky/unclear operationally.",
+  "what_would_make_it_a_10": "State the ₹30 offer as an assumption/test, clarify that the holdout is only for measurement without harming fulfilment, and tighten any EDD wording to avoid sounding like a promise."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is closer to what I asked for and what the data calls for: correct template categories, better tier-based RTO control, a real prepaid switch test, and more ready-to-submit messaging. Output 1 is strong, but the Utility classification for the prepaid nudge and the policy placeholder would need more cleanup before launch."
+}

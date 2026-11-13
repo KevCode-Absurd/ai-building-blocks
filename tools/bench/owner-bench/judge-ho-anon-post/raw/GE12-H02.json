@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Taking apart the overall ROAS to calculate the real profit across the brand and non-brand groupings.",
+  "biggest_mistake": "Holding $104,000 (nearly half the budget) in 'reserve' makes the initial plan far too passive for a strict 30-day window.",
+  "what_would_make_it_a_10": "Provide a more proactive day-one budget allocation rather than leaning on a massive reserve, and isolate the winning non-brand queries to ensure they receive spend."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Extracting the winning customer terms into a dedicated non-brand search campaign to guarantee we capture the audience PMax has been underfunding.",
+  "biggest_mistake": "Nothing significant; relying on the assumption that brand value holds at 95% after the PMax exclusion is a slight risk, but it is smartly called out.",
+  "what_would_make_it_a_10": "It is already a 10. The profit math is flawless, the strategic budget reallocation makes perfect sense, and the feed fix steps are highly technical and accurate."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 hit the exact 2.03 ROAS calculation for non-brand PMax, gave a highly practical and realistic budget split, and provided excellent technical steps for fixing the Merchant Center feed."
+}

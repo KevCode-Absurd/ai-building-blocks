@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It nails the busy lead partner persona immediately by putting the three numbers, the bad news, and 'What we need most' on the first screen, complete with a copy-paste forwardable blurb for the VP hire.",
+  "biggest_mistake": "The metrics table sits slightly high up before the narrative explanations, which might require a mobile reader to scroll past numbers they already saw summarized.",
+  "what_would_make_it_a_10": "It is already a 10; keeping the table compact or moving it below the deep-dive narrative would make mobile scanning even faster."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Superb analytical depth on the database metrics, catching that organic signups grew only 2.6% and translating compute cost directly into gross margin points.",
+  "biggest_mistake": "Separating 'What went wrong' from 'What we're doing about it' disconnects problems from their fixes, and it omits a forwardable blurb for the VP sales intro.",
+  "what_would_make_it_a_10": "Include a quick summary of what you need right at the top for mobile investors and provide a forwardable intro blurb."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are exceptional drafts that hit every test nuance, but Output 1 understands the mobile-reading investor better by flagging the primary ask upfront on screen one and including a ready-to-forward email blurb."
+}

@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Leads with the three numbers and the missed forecast honestly, then explains the margin math (the $0.9M compute cost against ~$10.4M monthly revenue is roughly 9 points, more than the 7-point drop) — exactly the causal honesty the brand asks for, with a clean burn table and specific, dated asks.",
+  "biggest_mistake": "The 'about 9 points of margin, more than the 7-point drop' reasoning is slightly hand-wavy and could confuse a reader; also the AI-builder explanation buries Customer A below a long first bullet, when the departing enterprise account is arguably the sharper bad news.",
+  "what_would_make_it_a_10": "Trim the margin-points arithmetic to its plain core (free compute up $0.9M, margin down 7 points, fix ships in two weeks), and put Customer A at the very top of the 'what went wrong' list since it is the most concrete revenue loss."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A true email: subject, preview line, 'what we need' up top, then bad news starting with Customer A, with forwardable intro snippets that make the asks trivially actionable for angels — this reads like a professional investor update.",
+  "biggest_mistake": "A couple of derived numbers are shakier: 'up 48% from about 0.99M' presents computed share×total figures with false precision, and the runway row comparing '52 months' (September) to '33' implies Sept burn was far lower, which is unexplained and could confuse; some of the arithmetic is inferred, not stated.",
+  "what_would_make_it_a_10": "Keep the email framing but flag or round the derived AI-builder counts and drop the potentially misleading September runway row, so every number in the table is either given or defensibly derived."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and I'd send either with a few edits, but Output 2 reads like an actual email I could forward — preview line, 'what we need' in the first screen, Customer A leading the bad news, and ready-made intro blurbs — which is what gets angels to act.",
+ "_note": "Output 2 wins on usability and investor-facing polish; Output 1 is cleaner on pure arithmetic and slightly more cautious with derived figures."
+}

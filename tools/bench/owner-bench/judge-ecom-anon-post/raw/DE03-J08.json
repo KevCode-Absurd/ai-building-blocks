@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 10,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks the at-risk 46-90 day group first, gives Monsoon Dark its own named track with a draft that names the blend, gates ex-subscribers behind a delivery fix, and includes a bold one-lot Monsoon Dark pre-order idea.",
+  "biggest_mistake": "The projection table is dense and its return-rate assumptions (e.g. 6-12% for ex-subscribers) feel optimistic; the 'bolder move' and cold-brew timing add complexity that could dilute focus.",
+  "what_would_make_it_a_10": "A tighter one-page summary of the ranked plan and numbers, with the projection assumptions justified in a line each and the pre-order idea held as a clearly optional appendix."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads cleanly and names the real reasons (delivery, discontinued blend), gives each cancel reason its own fix, and states the gross-profit per order and discount cost plainly.",
+  "biggest_mistake": "Puts the 91-180 day group first and treats the 46-90 day drifters only as a side 'stop the leak' note, so the cheapest-to-win group is not the headline; lift assumptions are also loose.",
+  "what_would_make_it_a_10": "Lead with the 46-90 day at-risk group as wave 1, and tighten the lift and gross-profit math so each group's return assumption is defended, not just stated."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 ranks the groups the way I would as owner (at-risk first, Monsoon Dark second, ex-subscribers gated), and its Monsoon Dark and pre-order ideas show real command of my data; Output 2 is cleaner to read but buries the cheapest group and leans on looser assumptions."
+}

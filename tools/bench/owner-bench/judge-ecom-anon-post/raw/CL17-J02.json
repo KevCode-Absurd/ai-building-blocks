@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every rule comes from our own numbers. Break-even is $27.10 on the first order and $38.46 over 90 days, and the kill, learning and stop lines all derive from them. The budget sums exactly to $30,000. Hooks use Maria's and Tasha's actual words.",
+  "biggest_mistake": "It is very dense with tables, so it reads like a spreadsheet for some of the team. The day-20 release rule also lets TikTok-reported cost count as one of its three votes.",
+  "what_would_make_it_a_10": "Add a short plain-language summary of who does what on Monday. Drop the platform-reported read from the release rule, or make it secondary to the store tags and survey."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clean and easy to hand off. Set-up is thorough (dedupe, domain verification, comment moderation), the budget sums correctly with a reserve, and named owners are listed. It also plans to own rights before the March licences end.",
+  "biggest_mistake": "The hooks lean less on our customers' own lines and leave out 'My feet don't ache by hour ten'. The day-30 order-count target of 790 assumes the full $30k is spent, even though $1k is a conditional reserve. The $76 no-purchase kill is aggressive for a new pixel.",
+  "what_would_make_it_a_10": "Write hooks directly from Maria's and Tasha's quotes. Align the day-30 order bar with actual spend. Add a geo holdout for a cleaner incrementality read."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are usable and correct, but the first ties every threshold to our margins and uses our customers' words. Its holdout idea gives a cleaner read on whether TikTok actually adds customers. The second is easier to read and better for team hand-off, but slightly less sharp."
+}

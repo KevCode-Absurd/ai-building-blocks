@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It cleanly separates what the data proves from what still needs checking, then turns that into a practical 90-day plan with ranked moves, owners, stop rules and a useful weekly scorecard.",
+  "biggest_mistake": "It is a little conservative on new ideas beyond fixing the obvious leaks, so it gives me fewer upside bets once the core issues are stabilised.",
+  "what_would_make_it_a_10": "Add one well-bounded growth test beyond the core fixes, such as a swatch or product-discovery offer, with clear success and stop criteria."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It brings more modelling and a wider range of ideas, including explicit scenario sizing and one bolder test, which helps me see possible upside.",
+  "biggest_mistake": "It overreaches on a few assumptions and calculations that are not solid enough to steer the business, and some recommendations are too specific or off-brand for what the brief actually proved.",
+  "what_would_make_it_a_10": "Tighten the maths to only what the data supports, simplify the plan, and remove or soften the more speculative claims and tactics so I can trust it without checking every line."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would actually use tomorrow. It stays closer to my brief and my data, gets the key economics right, and is more ready to run without me having to clean up assumptions first."
+}

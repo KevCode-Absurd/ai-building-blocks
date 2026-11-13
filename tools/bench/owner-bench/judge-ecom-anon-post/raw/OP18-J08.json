@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the two big business truths: Monsoon Dark needs its own track, and subscription win-back must wait until delivery is fixed. It also correctly starts with the 46 to 90 day at-risk group and uses holdouts to measure true lift.",
+  "biggest_mistake": "The Monsoon Dark message asks people to take a quiz instead of naming a clear closest replacement coffee, which is the main fix this group needs.",
+  "what_would_make_it_a_10": "Name the exact replacement roast or farm for Monsoon Dark, tidy a few over-specific dates and assumptions, and make the first drafts a little warmer and less operational."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The writing sounds very close to the brand: warm, simple, not discount-led, and clear about fixing the real reason people left.",
+  "biggest_mistake": "It does not put the 46 to 90 day customers first as a win-back group, even though they are the cheapest and most urgent people to bring back.",
+  "what_would_make_it_a_10": "Move the 46 to 90 day group to the top of the programme, subtract holdouts from the value table, and make the financial model a little more conservative and first-order focused."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather use Output 1 because it follows the shape of the business problem more closely: catch people before they lapse, give Monsoon Dark buyers their own path, and do not restart subscriptions until delivery is fixed. Output 2 is better written, but Output 1 is closer to the plan I would actually run."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Flawless translation of the correlation data into the scorecard weights (85% on exercises, 15% on interview) and providing a concrete, usable application prompt.",
+  "biggest_mistake": "Missed the opportunity to present the time zone conversions in an easy-to-read table format.",
+  "what_would_make_it_a_10": "Including a simple table mapping the 00:00 to 08:00 UTC hours to local times in target cities like Tokyo, Sydney, and Manila to remove all friction."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 5,
+  "reasoning": 5,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Excellent formatting in the job post, particularly the local time zone table which makes the requirements instantly clear.",
+  "biggest_mistake": "Assigned 45% of the scorecard weight to the interview, completely ignoring our data that shows interview impression (0.11) barely predicts success.",
+  "what_would_make_it_a_10": "Aligning the scorecard weights with our hiring data by heavily skewing the points toward the written exercise and minimizing the interview."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 understood the data profoundly, setting the scorecard weights perfectly to match the 0.62 vs 0.11 correlations, whereas Output 2 weighted the interview at 45% and ignored the math."
+}

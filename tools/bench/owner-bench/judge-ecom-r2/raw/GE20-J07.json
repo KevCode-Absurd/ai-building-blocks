@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The copywriting perfectly captures the brand's factual, transparent voice and directly addresses the customer quotes provided in the brief.",
+  "biggest_mistake": "It failed to include the active ingredient and strength directly in the subject lines, putting them in the preview text instead.",
+  "what_would_make_it_a_10": "Move the names of the actives and their strengths from the preview text directly into the subject lines, as requested in the delight notes."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Exceptional technical and operational insight, demonstrating knowledge of Klaviyo dynamic blocks, Smart Sending, and Indian DLT SMS regulations.",
+  "biggest_mistake": "Missed the specific instruction to put the active and strength in the subject lines, and didn't use the WhatsApp message for the expiring code reminder as suggested.",
+  "what_would_make_it_a_10": "Include the active and strength in the subject lines and move the WhatsApp message to act as a deadline reminder to drive urgency."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are expert-level outputs with brilliant use of the data, but Output 1's copywriting feels slightly more on-brand and it placed the WhatsApp reminder exactly where it was requested."
+}

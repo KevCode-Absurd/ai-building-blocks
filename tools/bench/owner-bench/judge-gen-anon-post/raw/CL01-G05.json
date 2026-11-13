@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hard parts come right after the opening: hours, a weekend rotation of 'one in six, about 8 or 9 a year', and working alone. A local-time table makes the Asia-Pacific need concrete, and $82,000 is in the title.",
+  "biggest_mistake": "45% of the scorecard weight sits on interview rows, which leans on the stage our own data says predicts little (0.11). The post also never shows the customer email applicants will answer, so the form isn't ready to launch.",
+  "what_would_make_it_a_10": "Raise the writing rows to about 50 to 60% and cut the interview weight. Include the actual sample customer email in the post. Trim the reviewer-hours table so the plan reads faster."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post includes a real-feeling HEY lockout email to answer, which makes the application exercise usable today. Writing gets 50% of the scorecard, there is a clear 4.0 offer rule, and the welcome to career changers sounds just like us.",
+  "biggest_mistake": "The weekend rotation sits under its own heading rather than leading the hard parts. The extra 'why this job' answer adds reading time without being scored. The post lists only one set of local times, which leaves out Sydney and Tokyo applicants.",
+  "what_would_make_it_a_10": "Fold the weekend rotation into the top of the hard parts. Add a short local-time table. Drop or score the 'why' question. Add the structured interview questions Output 1 provided."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both caught the overnight gap, the weekend rotation and the writing signal. Output 2 puts the most weight on writing and gives me a customer email I could publish tomorrow, so it's closer to ready."
+}

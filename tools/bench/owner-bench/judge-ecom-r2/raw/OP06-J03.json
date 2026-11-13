@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It reads the real signals in the data and turns them into distinct, testable concepts, with the right first three tied to quiet wheels, women solo travellers and skipping the belt.",
+  "biggest_mistake": "Concept 3 says '360-degree spinner wheels that just glide,' which edges beyond the approved spec by implying a performance claim rather than sticking only to the spec and review proof.",
+  "what_would_make_it_a_10": "Tighten any line that turns a spec into a claim, and keep every concept strictly on approved specs or clearly framed review language."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It spots the under-served women 25 to 40 audience and gives them dedicated concepts, while also using the quiet-wheels signal well.",
+  "biggest_mistake": "It includes risky or unsupported execution rules and one non-approved claim direction, especially 'Show no front pocket' and 'proof against price,' plus a few lines that stray from the approved-spec guardrails.",
+  "what_would_make_it_a_10": "Remove invented platform/build rules and unsupported constraints, tighten claims to approved specs only, and make the testing logic cleaner and more owner-focused."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to something I could hand straight to the team tomorrow. It uses my data better, stays more grounded in the brief, and gives stronger concept logic and prioritisation without adding distracting made-up rules."
+}

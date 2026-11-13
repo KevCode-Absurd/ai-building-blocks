@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ties every email to my data and the numbers check out. It reports ₹48 vs ₹9 sales per click, matches each quiz answer to one product from Email 1, gives priced two-step routines with correct code maths (₹628.20, ₹898.20, ₹359.10), and adds a holdout with a ₹32,900-per-point projection.",
+  "biggest_mistake": "Email 3 gives the sunscreen almost no 'what's inside' beyond SPF 50. Email 4 teaches all three actives at once, which edges toward the multi-active email I wanted to avoid. Email 5's CTA goes to the general collection instead of the matched routine.",
+  "what_would_make_it_a_10": "Name the sunscreen's filters and strength in Email 3. Point the Email 5 CTA at the matched two-product bundle. Tighten Email 4 so it reads as one idea."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 6,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The Email 2 versions are well written for each quiz path, especially the sensitive-skin 'don't start with an acid' version. The calm sunscreen FAQ, the first-name greeting and the marketplace-buyer line are thoughtful touches.",
+  "biggest_mistake": "Email 5 pushes all three products at ₹1,297 to everyone, including the sensitive and dry 19%. It also has the acid wash twice daily from day one, which contradicts the slow-start advice and my 'starter routine of 2–3, not the whole range' goal. Email 1 is a generic labeling welcome with no personalisation.",
+  "what_would_make_it_a_10": "Make Email 5 branch by quiz answer into a two-product routine. Personalise Email 1. Move the sunscreen email earlier. Add send times, a holdout test and a value estimate."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 uses my numbers more sharply and personalises from the first email. Its routines and prices are correct and branched by skin concern. Output 2's final email undoes its own slow-start advice by pushing the full range to everyone."
+}

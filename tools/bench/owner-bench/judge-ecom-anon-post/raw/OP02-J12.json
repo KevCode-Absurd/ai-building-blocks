@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very usable end-to-end plan with strong RTO math, tier-3 focus, shipped/OFD messages, after-hours automation, and clear short scripts in the right general Snitch tone.",
+  "biggest_mistake": "The prepaid switch is treated as Utility and has no incentive, while this should likely be a Marketing template if we are nudging payment behaviour; it also does not push tier-3 harder than metros on prepaid.",
+  "what_would_make_it_a_10": "Make the prepaid nudge a proper Marketing template with tiered incentive or advance-payment test, add holdouts/net savings, tighten Meta/template compliance details, and make the tier-3 COD hold/call rule the default rather than a cautious 2-week test."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the numbers like an operator: tier-3 gets a different flow, expected RTO loss is calculated by tier, prepaid discounts are sized against risk, and holdouts/net savings are built in.",
+  "biggest_mistake": "A few template details need cleanup before submission, especially the cancelled-order Utility template with an 'Order again' button and the assumption that opt-in exists before the shipping-step abandon point.",
+  "what_would_make_it_a_10": "Polish template compliance, make the night bot scripts slightly fuller, add exact fallback wording for address change and late courier cases, and verify opt-in coverage for abandoned-cart marketing."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "I would rather use Output 2 because it is more commercial and risk-based: it attacks tier-3 RTO hardest, sizes the incentives, and tells me how to prove net savings. Output 1 is strong and usable, but it is a little softer on prepaid/category strategy and measurement."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks by trials per 1,000 clicks using my own numbers, shows the arithmetic, and is honest that the 44,000-impression cookie post is a clicks win not a trials win. Ready-to-use titles and metas plus a day-by-day week 1 mean the writer starts Monday without me.",
+  "biggest_mistake": "Sequencing: week 1 and the top of the ranking go to the hardest page (/vs-google-analytics) while the two cheap cookie-intent wins wait until week 4 and month 2, so there is no fast result to show. It also spends 5 of 12 writer slots on alt-page refreshes with no trial forecast, and claims move 5 adds the most clicks when move 1's top end (+1,450) beats it (+1,230).",
+  "what_would_make_it_a_10": "A month-by-month trial forecast with the lag spelled out, the cookie-banner rewrite and cookies-page retitle inside week 1, a forecast attached to the 7 alt-page refreshes, and month 3's two TBD slots named rather than left to day-60 rules."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "More different ideas than the other plan, and two good ones: a trial prompt on the docs template (24,600 clicks at 4.8 per 1,000) and a page for Maya's real blocker, moving off GA4 without losing history. The opening trials-per-1,000 table is the clearest read of my data of the two.",
+  "biggest_mistake": "The ranking contradicts its own numbers: rank 5 (+25 trials) sits below rank 3 (+20) and rank 4 (+3). It also sells a 175-trials-a-month ceiling built on a 9% CTR borrowed from \"matomo vs plausible\" and applied to \"google analytics alternative\" at top 3, which I don't believe, and it hands the redirect audit to a \"strategist\" I don't employ.",
+  "what_would_make_it_a_10": "Rank strictly by the trials column, give ranges and timing instead of one ceiling, use a defensible CTR for the head term, drop the phantom strategist, measure trials by landing page monthly as asked rather than every Friday, and give week 1 the same day-by-day \"done when\" rigour the other plan has."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Plan 1 I could hand to the writer on Monday and defend the numbers to myself; plan 2 has two good ideas I'd steal but its own ranking table is out of order and its headline gain is a ceiling I don't believe."
+}

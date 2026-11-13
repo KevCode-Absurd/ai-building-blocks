@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It works the groups in the order my data argues for — slipping 46-90 day buyers first with no discount, then a named Monsoon Dark track, then ex-subscribers behind a hard delivery gate — and every row of the money table reconciles back to ₹557/₹442/₹385 per order.",
+  "biggest_mistake": "It never states the minimum lift each group needs to break even, which is the one measuring item I asked for; the ₹535 profit it uses for ex-subscribers is unexplained, and the ₹14,000 WhatsApp figure is a round guess.",
+  "what_would_make_it_a_10": "Add the break-even lift per group next to the assumed lift, explain the ₹535 ex-subscriber number (or use ₹385/₹557 as elsewhere), and show reach including WhatsApp opt-ins rather than email alone."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The diagnosis that most lapsed buyers did not leave over price — something broke — plus the day-28 'running low' nudge as the cheapest fix for a repeat rate falling from 34% to 28%; the cancel-reason split (late, too much, price, moving) is genuinely useful.",
+  "biggest_mistake": "It ranks 91-180 day buyers first and demotes the 46-90 day 'at risk' group to a side note, against the brief; and group A's 13,100 still contains the 900 Monsoon Dark buyers it mails separately and the subscribers it says it pulled out, so people get two sequences.",
+  "what_would_make_it_a_10": "Put the 46-90 day group first as its own wave with dates, de-duplicate group A against the Monsoon Dark and subscriber lists, and build the value case on ₹557/₹442/₹385 per order instead of assuming two to four orders per win-back."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to the team on Monday: it starts where my numbers say to start, gives each group a reason and an offer, and the arithmetic holds line by line; Output 2 reads better but gets the first priority wrong and double-counts 900 buyers, so I would not send it without rework."
+}

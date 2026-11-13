@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every ad set gets a verdict with a rupee reason, and the budget adds to ₹5,60,000. It relaunches 'Dad's razor vs mine' first and puts a rupee value on pausing it (about ₹65,000). It narrows women's razors to 25 to 34 instead of killing them, cuts the Starter Kit as a COD trap, and ends with concrete creative direction in Rohan's and Ananya's words.",
+  "biggest_mistake": "The two-line system (safe ₹282 and break-even ₹394) makes some calls feel hedged, such as 'Fix, then scale' and the 'hold' labels. The Meta-count loss figure (₹29,000) does not quite reconcile. It also adds an unrequested ₹35,000 'new creative test' line and probably runs over the word limit.",
+  "what_would_make_it_a_10": "Pick one clear Shopify-adjusted break-even per ad set and give one flat verdict each. Tighten the length, make the loss math reconcile, and open with the relaunch as a literal Monday first step."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 6,
+  "voice": 6,
+  "range": 7,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is the most rigorous on real economics. Break-even is worked out per ad set from its own COD and RTO mix with a haircut for Meta over-counting. It also catches the paused creator video, the 25 to 34 split and the Starter Kit trap, and the release rules for the reserve are specific.",
+  "biggest_mistake": "It scales nothing and parks ₹1,49,100 in a reserve, so the owner still has to decide what to do with a quarter of the budget. Retargeting is labelled 'Cut' but still gets ₹28,000. The UGC test is raised on only 31 purchases. The geo-holdout 'bolder move' adds complexity when the owner asked for decisions, not more measurement. Invented dates (14 to 27 November) are not in the brief.",
+  "what_would_make_it_a_10": "Commit the reserve to ASC with the relaunched creator video as the clear first move. Make the verdict labels match the budget actions, drop the holdout experiment, remove the invented dates, and add a short creative section that speaks in Rohan's and Ananya's voice."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 reads like decisions I can act on Monday: relaunch the creator video, narrow the women's razor to 25 to 34, cut the Starter Kit, scale the winners, with a budget that adds up and ad direction that sounds like us. Output 2 has sharper math, but it holds back a big reserve, labels some calls inconsistently and drifts into a testing side project."
+}

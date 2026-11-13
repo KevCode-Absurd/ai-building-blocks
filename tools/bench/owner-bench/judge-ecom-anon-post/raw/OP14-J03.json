@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the business signals well and turns them into distinct concepts, with the right first three tied directly to the data: women solo travellers, work flyers skipping the belt, and quiet wheels.",
+  "biggest_mistake": "It adds extra production and media rules the brief did not ask for, and a few lines feel slightly more technical or ad-ops heavy than the brand needs.",
+  "what_would_make_it_a_10": "Tighten the delivery to only the requested fields, keep every concept equally crisp, and make the voice a touch more understated and brand-like throughout."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very easy to read, sounds close to the brand, and clearly spots the under-served women 25 to 40 audience and the missing quiet-wheels story.",
+  "biggest_mistake": "A few facts and choices are shakier: it implies dimensions from the product page without having them, says quiet wheels are the top theme in the primary text in a way that is not an approved customer-facing claim, and the testing advice is too light for acting on immediately.",
+  "what_would_make_it_a_10": "Be stricter with approved claims, add sharper testing variables per concept, and make the recommendations a bit more hard-nosed and commercially grounded."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather use because it is more decision-ready and more tightly built around my actual data. Both are good, but 1 gives me clearer priorities, stronger concept separation, and more confidence that the work will translate into ads I can brief and launch."
+}

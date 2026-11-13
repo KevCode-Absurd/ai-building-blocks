@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 10,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It takes the 4.0 ROAS apart properly, shows non-brand loses money at 2.26 against a 2.5 break-even, and the $240,000 split adds up exactly with a clear reserve rule.",
+  "biggest_mistake": "It fiddles a little too much at once (regional test, several changes on day 1-3) and it could be a touch clearer for a non-specialist reader in the first few lines.",
+  "what_would_make_it_a_10": "Trim the regional test to a footnote, tighten the opening sentence for grade-7 reading, and state the actual profit number today and expected on one line up front."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It speaks in Rothy's voice and gives a clean, readable first-week checklist with practical feed-fix steps and title examples that use customer words.",
+  "biggest_mistake": "The budget split has a $128,000 PMax line projected at 2.6 ROAS against a 2.5 break-even, but the cautious case shows it at 2.2, which would lose money, and the expected results table adds up to more value than today on less spend without a watertight explanation.",
+  "what_would_make_it_a_10": "Rebuild the budget with the same discipline as Output 1: non-brand PMax cut harder, brand search sized to actual demand, and an expected profit range that reconciles to the $240,000 ceiling with no double counting."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would act on: it shows exactly where the money is made and lost, splits the budget to the dollar, and protects profit with a reserve rule. Output 2 is warmer and easier to read, but its numbers do not hang together well enough to trust with $240,000."
+}

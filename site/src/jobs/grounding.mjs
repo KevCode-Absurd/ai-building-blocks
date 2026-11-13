@@ -195,7 +195,7 @@ export const COMPLETENESS = Object.freeze({
   web_page: ['one primary action', 'proof beside the claim it supports', 'works on a 390 px phone screen', 'loads fast, with sized images'],
   ad_creative: ['every field the platform needs, including the description', 'character counts inside the platform limits', 'text and logo inside the placement\'s safe areas', 'the brand and the price named for a cold audience', 'the landing URL'],
   email: ['a subject line', 'preview text', 'one product and one ask in every email', 'working links', 'an exit rule', 'merge tags that match the email tool'],
-  plan: ['totals that add up', 'dated steps', 'an owner for each step', 'cut, keep and scale rules', 'break-even shown'],
+  plan: ['totals that add up', 'steps with days relative to the start', 'an owner for each step', 'cut, keep and scale rules', 'break-even shown'],
 });
 export const completenessFor = kind => [...(COMPLETENESS[kind] ?? [])];
 /** How much brand context a job takes from the brand file. A job takes its slice, never the whole file. */

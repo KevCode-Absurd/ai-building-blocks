@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Disciplined and honest. Every number checks out against my data, the projections are modest, there are ready-to-use titles and meta, and the day-60 decision rules tell the team what to do when a page doesn't move.",
+  "biggest_mistake": "It pushes the cookie-banner rewrite to month 2 and values it only at the blog rate, even though it is Maya's own question with 44,000 impressions. It also never consolidates or redirects the decaying blog posts, and it does nothing specific for Tomas.",
+  "what_would_make_it_a_10": "Move the cookie-banner rewrite into week 1. Add a merge-and-redirect pass on the dead blog posts. Add docs-to-trial links and one page aimed at agencies or DPO questions, all still inside the 12-page limit."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Wider coverage that still fits 12 pages. It does the cookie-banner rewrite in month 1 with the right nuance about other tools on a site, adds a GA4 history page for Maya and an agency/DPO page for Tomas, puts trial prompts on docs, and merges or redirects dead blog posts.",
+  "biggest_mistake": "The projections lean optimistic. Taking /vs-google-analytics from position 4.2 to the top 3 for +100 trials is a ceiling dressed up as a plan. Weekly trial reporting will also be noisy, and month 3 is left fairly vague.",
+  "what_would_make_it_a_10": "Give a conservative-to-ceiling range for each month instead of a single ceiling. Add ready-to-use titles and meta. Replace the vague month-3 slots with clear decision rules for what gets the second pass."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are solid and fit my capacity. Output 2 covers more of what I actually care about: the cookie banner early, both personas, docs links and cleaning up dead posts. Output 1 is more rigorous and closer to paste-ready, but it leaves those gaps."
+}

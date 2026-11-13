@@ -1,11 +1,11 @@
 ---
 name: meta-ads-for-cod-stores
-description: "A Meta setup for cash-on-delivery stores that stops rewarding orders that are later refused at the door. Measures return-to-origin (RTO) by campaign and ad from store and courier data, works out gross profit per placed COD order and the true break-even cost, then designs the signal: a confirmed-order and a prepaid-order event sent through the Conversions API within hours, with Meta's 7-day limit in mind, and a test of optimising on confirmed orders against plain Purchase, judged on cost per delivered order. Ends with a weekly campaign read on delivered gross profit. Use when most orders are COD, RTO is high or varies by ad, or Meta's results look far better than cash collected."
+description: "Meta media buying for cash-on-delivery stores, judged on orders that are delivered and paid, not orders placed. Measures return-to-origin (RTO) by campaign, ad and segment from store and courier data, sets the true break-even per placed order, designs a confirmed-order and prepaid signal through the Conversions API inside Meta's 7-day limit, relaunches the ads that brought delivered profit, ranks every segment on delivered profit, weights formats and messages to what delivers, plans the whole budget with a reserve of 15% or less, and gives each ad set a Scale, Hold, Trim or Cut verdict and one rule read on delivered numbers. Use when most orders are COD, RTO is high or uneven by ad, or Meta's results look far better than cash collected."
 ---
 
 # Meta ads for cash-on-delivery stores
 
-**You get:** an RTO table by campaign and ad, a money sheet with gross profit per placed COD order and the true break-even cost, a signal design (events, timing, values) for the developer or app, a test plan with its read date, and a weekly read sheet on delivered gross profit, all for the client's approval.
+**You get:** a COD media plan: RTO by campaign, ad and segment, break-even per placed order, a signal design for the developer or app, past winners on delivered profit to relaunch, the segments and formats that deliver, a full budget, and a Scale, Hold, Trim or Cut verdict with one rule per ad set, all read on delivered orders.
 
 ## When to use
 
@@ -25,114 +25,114 @@ description: "A Meta setup for cash-on-delivery stores that stops rewarding orde
 
 Required:
 
-1. **Shopify order export**, last 60 to 90 days: Name, Created at, Total, Payment Method (or gateway), Financial Status, Fulfillment Status, Tags, Shipping Zip, Lineitem sku.
-2. **Courier or shipping aggregator export** for the same orders: order number, AWB, final status (delivered, RTO, lost), status date, forward and return charges, COD remittance.
-3. **Order source by campaign**: Shopify's marketing attribution report by UTM campaign and content, or the checkout app's UTM export, joined to order numbers.
-4. **Meta Ads Manager export**, same window, campaign and ad level: spend, purchases, purchase value, on 7-day click.
-5. **Costs**: landed cost per SKU, packaging, payment and COD handling fees.
+1. **Shopify order export**, last 60 to 90 days: Name, Created at, Total, Payment Method, Financial Status, Fulfillment Status, Tags, Shipping Zip, Lineitem sku.
+2. **Courier or aggregator export** for the same orders: order number, AWB, final status (delivered, RTO, lost), status date, forward and return charges, COD remittance.
+3. **Order source by campaign and ad**: Shopify's marketing attribution report by UTM campaign and content, joined to order numbers.
+4. **Meta Ads Manager export**, same window, campaign, ad set and ad level, paused included, with age, gender, region and placement breakdowns.
+5. **Costs**: landed cost per SKU, packaging, payment and COD fees.
+6. **The budget** for the period.
 
-Optional: order confirmation log (who confirmed, when), pincode-level RTO from the courier.
+Optional: order confirmation log, pincode-level RTO from the courier.
 
-If 3 is missing, RTO can be read for the store but not by ad: say so, and set up UTM capture first (`set-up-utm-tracking-for-all-channels`). Reading needs level 1. Changing events, campaigns or optimisation needs draft access (level 2) and the client's yes; the event code is built by the store's developer or app through official integrations.
+If 3 is missing, RTO can be read for the store but not by ad: say so, and set up UTM capture first (`set-up-utm-tracking-for-all-channels`). Reading needs level 1. Changing events, campaigns or budgets needs draft access (level 2) and the client's yes, asked in your message. The event code is built by the store's developer or app through official integrations.
 
 ## Before you start: the gates
 
-1. **Delivered gross profit known.** Pass when gross profit per delivered order uses delivered costs [MEA-0037]: product cost "all in until it's in" [FIN-0007], shipping, fees. Fail: build it in step 2 before anything else.
-2. **Outcomes per order.** Pass when at least 80% of shipped orders in the window have a final courier status. Fail: wait for statuses or use an older window.
-3. **Signal path.** Pass when the store can send a custom server event (Conversions API through Shopify's app settings, a partner app or a developer). Fail: do steps 1 to 3 and 7 to 9 only; flag the gap.
-4. **Privacy.** Pass when customer phone and email are sent only hashed through official tools, under the store's privacy notice and India's data protection rules. Fail: stop the signal work.
+1. **Delivered gross profit known.** Pass when gross profit per delivered order uses delivered costs [MEA-0037]: product cost "all in until it's in" [FIN-0007], shipping, fees. Fail: build it in step 1 first.
+2. **Outcomes per order.** Pass when at least 80% of shipped orders in the window have a final courier status. Fail: use an older window.
+3. **Signal path.** Pass when the store can send a custom server event (Conversions API through Shopify's app settings, a partner app or a developer). Fail: skip the signal design; flag the gap.
+4. **Privacy.** Customer phone and email are sent only hashed through official tools, under the store's privacy notice and India's data protection rules. Fail: stop the signal work.
 
 ## Steps
 
-### 1. Measure the leak by ad
+Follow the house rules, chiefly **Brand brain first**, **Map every signal to an asset**, **Look it up before you decide**, **Only the brief's facts run the business** and **One basis per number**. Before step 1, write the brand brain (every segment the data ranks, each with its delivered number) and the signal-to-asset map. Run `node tools/ask-knowledge.mjs` once per signal and once per decision, logged in `context/trace.md`; every figure goes in `context/numbers.json`. Days count from the start; a calendar date only when the brief gives one.
 
-For each campaign and its top ads: placed orders, COD share, confirmed, shipped, delivered, RTO, and RTO rate (RTO divided by shipped). Rank ads by RTO rate. If the spread between the best and worst ads with 30 or more shipped orders each is more than about 10 points (practitioner default, test it), Meta is learning from the wrong buyers on some ads.
+### 1. Tracking
 
-### 2. Do the money on placed orders
+- **The leak by ad:** for each campaign and its top ads: placed orders, COD share, confirmed, shipped, delivered, RTO, and RTO rate (RTO divided by shipped). If the best and worst ads with 30 or more shipped orders each differ by more than about 10 points (practitioner default), Meta is learning from the wrong buyers on some ads.
+- **The money per placed order:** gross profit per delivered order (product margin is not gross margin [MEA-0023]); RTO cost per refused order = forward and return shipping plus packaging lost; delivery rate by campaign. Gross profit per placed order = delivery rate x delivered gross profit, minus refused share x RTO cost. That is the break-even cost per placed order; Meta's cost per purchase must sit under it. Your bid is your unit economics [ADC-0057].
+- **The signal:** send ConfirmedOrder (fired when a COD order is confirmed by call, chat or auto-reply) and PrepaidPurchase (fired when payment is captured) through the Conversions API with the same customer data and order ID as Purchase. Send within hours, in small batches: Meta rejects events older than 7 days, and one stale event fails the batch [MEA-6085]. Delivery arrives too late to steer Meta; keep it for your own reads. Keep Purchase firing for reporting. An ad set can optimise on a custom event [MEA-6086] once it reaches about 50 a week [ADC-0066].
+- Judge every verdict on delivered store numbers, not Meta's purchases. Lost or wrong signal makes Meta misjudge who buys [MEA-0046].
 
-- Gross profit per delivered order (GPd) from gate 1. Product margin is not gross margin [MEA-0023].
-- RTO cost per refused order (R) = forward shipping + return shipping + packaging lost + any damage write-off.
-- Delivery rate d = delivered / shipped, by campaign.
-- **Gross profit per placed order** = d x GPd minus (1 - d) x R.
-- **Break-even cost per placed order** = that figure. Meta's cost per purchase must sit under it, not under GPd.
+### 2. What worked before
 
-Illustrative: GPd 400 rupees, R 120, d 0.75: 0.75 x 400 minus 0.25 x 120 = 270. An ad at 300 per purchase that looks fine against 400 is losing 30 on every order. Your bid is your unit economics; a store with leakier orders can afford less in the auction [ADC-0057].
+- Rank every ad and ad set, paused included, on delivered gross profit after ads, not Meta's return. The best are often not the ones with the cheapest purchase.
+- Relaunch the delivered-profit winners first, with fresh cuts of the same concept: a new hook, first frame or length.
+- A winner paused for stock or season comes back when that reason has passed.
 
-### 3. Choose the optimisation event
+### 3. Audiences
 
-| Situation | Event to optimise on |
-|---|---|
-| RTO under about 10% and similar across ads | Keep Purchase; use step 2's break-even as the target |
-| RTO high or uneven, confirmed orders above about 50 a week per ad set | ConfirmedOrder (custom event) |
-| Strong prepaid share and prepaid buyers are the goal | PrepaidPurchase, or Purchase with values in step 5 |
-| Confirmed orders below about 50 a week | Keep Purchase for delivery; use ConfirmedOrder for reading and as a test campaign only |
-
-Meta's learning needs about 50 optimisation events in 7 days [ADC-0066]; an event that fires too rarely cannot steer delivery.
-
-### 4. Design the signal
-
-- **ConfirmedOrder:** fired when a COD order is confirmed by call, WhatsApp or auto-confirm reply, and **PrepaidPurchase** fired when payment is captured. Send both through the Conversions API with the same customer information and order ID as the original Purchase.
-- **Timing:** send within hours. Meta rejects any event with an event_time older than 7 days, and one stale event fails the whole batch [MEA-6085]; send in small, frequent batches.
-- **Not delivery:** work out the store's median days from order to delivery from the courier export. Click to delivery is longer still, so where it nears 7 days a "Delivered" event mostly falls outside a 7-day click window. Use delivery for your own reporting, not for Meta optimisation.
-- **action_source:** pick the value that matches where the confirmation happened (phone_call, chat, business_messaging, or website for a prepaid payment) [MEA-6085]. Before switching any ad set, check in Events Manager that the event shows as an optimisation choice for a website sales ad set.
-- Keep Purchase firing as now, so reporting stays comparable. Build a custom conversion on the new event if needed; an ad account can hold up to 100 [MEA-6086].
-
-### 5. Set values that tell the truth
-
-Practitioner default, test it: send Purchase value at full price for prepaid orders and at price x the store's delivery rate for COD orders, so value-based bidding sees the real expected value. Write the rule down so reported ROAS is read on this basis.
-
-### 6. Test before switching
-
-Through `store-meta-test`: one campaign or ad set optimised on ConfirmedOrder against a matched one on Purchase, same creative, budget and audience. Read on **cost per delivered order** and delivered gross profit after ads, 14 days after the test ends so deliveries have landed. Call it only after each cell spends 3 times the break-even cost [ADC-0039].
-
-### 7. Fix the ads and audiences
-
-- Ads must state the real payment terms: if COD has a fee, no "free COD" line.
-- Show the prepaid reason (a real prepaid discount or faster dispatch) on ads and landing pages, as set in `cod-and-prepaid-checkout-for-india`.
+- Rank every segment the data splits (age band, gender, region or pincode tier, placement, device, each ad set's audience) on cost per delivered order and RTO rate. Name the winner and give it its own ad set or creative.
+- No age or interest floor the data does not support. Exclude a region only where its delivered profit is negative on enough orders; check where Meta allows postal-code targeting for India before relying on it.
 - Remove refused and RTO buyers from customer lists and seed audiences (`build-meta-retargeting-and-exclusions`); otherwise Meta finds more people like them.
-- If certain regions carry very high RTO, test excluding them in location settings; check where Meta allows postal-code targeting for India before relying on it.
 
-### 8. Push upstream fixes
+### 4. Formats and messaging
 
-Hand off: confirmation routine to `confirm-cod-orders-by-chat-or-call`, pincode and order-pattern rules to `cut-rto-on-cod-orders`, full RTO cost by product to `returns-and-rto-cost-analysis`. Every point of RTO cut raises step 2's break-even.
+- Rank formats and angles on cost per delivered order. At least half of new creative goes to the style with the best delivered profit, with enough ads to feed the budget: each needs about 3 times the break-even cost per placed order to be judged [ADC-0039].
+- Ads state the real payment terms: if COD has a fee, no "free COD" line.
+- Show the prepaid reason (a real prepaid discount or faster dispatch) in ads and on landing pages, as set in `cod-and-prepaid-checkout-for-india`.
+- Messages that set honest expectations (delivery time, size, what is in the box) cut refusals; use the customers' own words from the brand brain.
 
-### 9. Read weekly on delivered profit
+### 5. Budget
 
-Lost or wrong signal makes Meta misjudge who buys [MEA-0046]; your read must not repeat the error. Each week, for orders placed two weeks earlier: campaign, spend, placed, confirmed, delivered, RTO rate, delivered gross profit, profit after ads. Scale or cut with `store-meta-budget` on this sheet, not on Meta's Purchase return. Read new-customer revenue against spend as acquisition MER on delivered orders [MEA-0025].
+The plan uses the whole budget (house rule **Spend plans add up**).
+- Fund delivered-profit winners from day one where tracking works. No zero-spend days except those a tracking fix needs.
+- A reserve is at most 15%, with a release rule on delivered numbers the account will hit within the period.
+- Optimisation event: keep Purchase when RTO is under about 10% and even across ads; use ConfirmedOrder when RTO is high or uneven and confirmed orders pass about 50 a week per ad set; PrepaidPurchase when prepaid buyers are the goal. Below 50 a week, keep Purchase for delivery and use ConfirmedOrder for reading.
+- Value rule (practitioner default, test it): send Purchase value at full price for prepaid and at price x the delivery rate for COD, so value bidding sees real expected value.
 
-**US note:** COD is rare, but the same logic applies to high-return categories (apparel): set the break-even on kept orders, not placed ones.
+### 6. Verdicts
+
+One label per ad set, matching its number in every table and note, on delivered gross profit after ads:
+- **Scale** (budget up): cost per placed order under break-even, delivered profit positive for two weekly reads.
+- **Hold** (same): near break-even, in learning, or deliveries for the window not yet landed.
+- **Trim** (lower): delivered profit thin or RTO rising, with a reason to keep it alive.
+- **Cut** (zero): delivered profit negative after spend of 3 times break-even cost [ADC-0039].
+
+### 7. Rules
+
+One rule per ad set, in one line, read on delivered orders placed two weeks earlier, never on Meta's Purchase return alone. For example: "Scale 20% while cost per delivered order stays under break-even for two weekly reads; Cut to zero if delivered profit after ads is negative after 3 times break-even spend." Read new-customer revenue against spend as acquisition MER on delivered orders [MEA-0025].
+
+### 8. Hand over
+
+- Run `node tools/quality/numbers.cjs context/numbers.json --final <deliverable> --brief <brief>` and fix every FAIL.
+- Order changes leverage first: refused buyers out of seeds and payment terms fixed in ads (no spend), Cut the highest-RTO losers, relaunch delivered-profit winners, then the signal work.
+- Switching the optimisation event is the one place a side-by-side read earns its keep: one ad set on ConfirmedOrder against a matched one on Purchase, read on cost per delivered order once deliveries land. Other tests appear only when the brief asks.
+- Hand off: confirmation to `confirm-cod-orders-by-chat-or-call`, pincode rules to `cut-rto-on-cod-orders`, RTO cost by product to `returns-and-rto-cost-analysis`. Every point of RTO cut raises break-even.
+
+**US note:** COD is rare, but the same logic applies to high-return categories: set break-even on kept orders, not placed ones.
 
 ## Checks before you hand it over
 
-- RTO is shown by campaign and ad with order counts.
-- Break-even cost per placed order is computed and shown beside Meta's cost per purchase.
-- The chosen optimisation event has a weekly volume above about 50, or is test-only.
-- Events are sent within hours, in small batches, never relying on delivery inside 7 days.
-- Purchase keeps firing for reporting.
-- Refused buyers are out of customer lists and seed audiences.
-- The test is read on cost per delivered order after deliveries land.
-- No event, campaign or audience change goes live without the client's yes.
+- RTO is shown by campaign, ad and segment with order counts.
+- Break-even per placed order sits beside Meta's cost per purchase.
+- Events are sent within hours, never relying on delivery inside 7 days; Purchase keeps firing.
+- Past winners are ranked on delivered profit and relaunched first.
+- Segments are ranked on cost per delivered order; no unsupported age floor; refused buyers are out of seeds.
+- The whole budget is planned; any reserve is 15% or less with a release rule.
+- Every verdict label matches its number; each ad set has one rule on delivered numbers.
 
 ## Output
 
-**Summary (one screen):** COD share, RTO overall and best and worst ads, break-even per placed order versus Meta's cost, the event decision, the test and read date, the yes needed.
+**Summary (one screen):** COD share, RTO overall and best and worst ads, break-even per placed order against Meta's cost, the event decision, the budget and the one limit that binds.
 
-**RTO table:** Campaign, Ad, Placed, COD %, Confirmed, Shipped, Delivered, RTO, RTO rate.
+**Each decision in two lines:** what to do, and why with one number.
 
-**Money sheet:** GPd, R, d, Gross profit per placed order, Break-even cost, Meta cost per purchase, Gap.
+**Table "RTO by ad":** Ad, Placed, Delivered, RTO rate, Delivered profit.
 
-**Signal spec:** Event name, Trigger, Sent from, Timing, action_source, Value rule, Customer fields, Dedup key.
+**Table "Budget":** Ad set, Now a day, New a day, Verdict, Rule.
 
-**Weekly read:** Week placed, Campaign, Spend, Placed, Confirmed, Delivered, RTO rate, Delivered GP, Profit after ads, Call.
+**Signal spec:** Event, Trigger, Timing, action_source, Dedup key.
+
+**Weekly read** (`cod-weekly-read.csv`): week placed, campaign, spend, placed, confirmed, delivered, RTO rate, delivered profit, verdict. The money working goes in the appendix.
 
 ## Common mistakes
 
-- **Break-even on delivered profit.** Step 2 uses profit per placed order.
-- **Optimising on delivery.** Step 4 explains why it arrives too late [MEA-6085].
-- **A new event too rare to learn from.** Step 3 checks weekly volume [ADC-0066].
-- **Switching without a test.** Step 6 tests on delivered orders.
-- **Feeding refused buyers back as seeds.** Step 7 removes them.
-- **Reading this week's orders.** Step 9 waits two weeks for deliveries.
+- **Break-even on delivered profit.** Step 1 uses profit per placed order.
+- **Optimising on delivery.** It arrives too late [MEA-6085].
+- **Relaunching the cheapest-purchase ad.** Step 2 ranks on delivered profit.
+- **Feeding refused buyers back as seeds.** Step 3 removes them.
+- **Reading this week's orders.** Step 7 waits two weeks for deliveries.
 
 ## Sources
 
@@ -144,7 +144,7 @@ Lost or wrong signal makes Meta misjudge who buys [MEA-0046]; your read must not
 - MEA-0025: acquisition MER.
 - MEA-0037: gross margin from delivered cost.
 - MEA-0046: lost signal misleads Meta's estimates.
-- MEA-6085: Conversions API 7-day event limit and action_source (proposed card).
-- MEA-6086: custom events and conversions for optimisation (proposed card).
+- MEA-6085: Conversions API 7-day event limit and action_source.
+- MEA-6086: custom events and conversions for optimisation.
 
-What makes this skill ours: break-even is set on gross profit per placed COD order, not per delivered one; the confirmed-order signal is designed around Meta's 7-day event limit instead of a delivery event that arrives too late; refused buyers are kept out of seed audiences; and every campaign is read two weeks later on delivered profit.
+What makes this skill ours: break-even on gross profit per placed COD order, a confirmed-order signal built around Meta's 7-day limit, winners and segments ranked on delivered profit, and every verdict read two weeks later on what the store actually collected.

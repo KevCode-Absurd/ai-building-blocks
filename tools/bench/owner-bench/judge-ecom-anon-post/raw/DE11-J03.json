@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Eight genuinely distinct concepts with customer-language hooks, a clear awareness level and single test variable each, and a first-three pick tied correctly to the data (quiet wheels, women solo, belt-skip).",
+  "biggest_mistake": "The quiet-wheels Reel is buried at position three in the ranking despite being the strongest unused proof and most common review theme; also leads one concept headline with a real review line ('Fit the overhead bin...') which risks reading as a fake attributed quote.",
+  "what_would_make_it_a_10": "Promote the sound-led Reel to first or second, tighten primary texts to grade-7 short lines throughout, and confirm the review-quote attribution handling up front."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts women 25 to 40 and the lift-it-alone message first, and the 5 am quiet-wheels Reel third, with a spend-per-concept testing plan (15 purchases each, ~₹63,000 total) that an owner can actually approve.",
+  "biggest_mistake": "Dense table-and-rules upfront and cramped prose make primary texts harder to skim than the brief's grade-7 short-line voice wants; a few concepts (Four specs, Under ₹300) read more like product copy than customer language.",
+  "what_would_make_it_a_10": "Loosen the layout, rewrite primary texts as short calm lines in our voice, and add the per-concept test variable explicitly to each concept rather than only in the summary table."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and both rank the same three ideas; Output 2 just comes closer to how I would actually spend, leading with the cheapest audience and giving me a test budget I can sign off, while Output 1 reads a touch cleaner.",
+ "reason_extra_note": "n/a"
+}

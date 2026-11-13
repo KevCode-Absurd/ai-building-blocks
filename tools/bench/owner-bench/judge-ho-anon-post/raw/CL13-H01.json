@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 6,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The rush and standard orders for the top 5 shades, with unit costs and arrival dates, fit inside the cash. It also covers the stock-out gap with honest back-orders and a pro pre-book, and has a clear glitter and liquid plan.",
+  "biggest_mistake": "It is dense and jargon-heavy ('reorder point', long maths paragraphs), which is hard for an ops lead to act on. It also holds the standard orders to Friday for no reason, and it treats the held 3,900 as already inside the 9,100, so it misses the 13,000 / 3.4 weeks / roughly 8 December outcome.",
+  "what_would_make_it_a_10": "Place every order on Monday, plainly, and make the re-cartoning step the headline task. State the top-5 stock as 13,000 after re-cartoning, if that is what the data means. Cut it to under 900 words with a simple date list, and add a short back-in-stock message in brand voice."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is one clean plan for Monday, with every order placed that day, a dated action table for the ops lead, and plain language. It protects both Tanvi and Farah honestly, with a real restock date, a notify button, a pro pre-order and no fake scarcity.",
+  "biggest_mistake": "It also treats the held units as inside the 9,100, so it plans for a stock-out and misses the longer cover after re-cartoning. The glitter clearance is thin: selling leftovers 'at no less than cost' to a buyer who may not exist, with no real cash target.",
+  "what_would_make_it_a_10": "Treat the re-cartoned top-5 stock as 13,000 and restate the stock-out date. Give a firmer glitter cash-recovery target and channel. Add a short on-brand back-in-stock message and tighten the ad pause and order cap."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the key moves right: rush the top 5 shades, skip the draft, order nothing for glitter or liquid, and stay inside ₹1.2 crore. I would hand Output 2 to my ops lead as written because it is simpler, places everything Monday and gives a dated action list. Output 1 has more depth but is harder to read."
+}

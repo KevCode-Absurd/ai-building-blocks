@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 10,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data the way I would: bring back the paused winner, add the missing taste hook, and address ₹90 honestly.",
+  "biggest_mistake": "It adds a fairly detailed media plan and budget assumption I did not ask for, and it may push the 1,000-word limit.",
+  "what_would_make_it_a_10": "Trim the run instructions, keep the launch plan, and double-check all character counts before trafficking."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clean, usable, and correctly spots that the front-of-pack ad was tired, not dead, while making taste the big new test.",
+  "biggest_mistake": "The six angles are a bit less varied; P1 and P5 are both transparency angles, and the copy is slightly more functional than sharp.",
+  "what_would_make_it_a_10": "Make the six primary texts more distinct, add a stronger 4 pm office-snack line, and sharpen the wit in the ad copy."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather launch Output 1 because the copy sounds more like us and gives me the better spread of angles. Output 2 is cleaner, but Output 1 is closer to ads I can actually see selling."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Effectively uses the data to ditch resumes and cover letters in favor of a short writing test, massively cutting reviewer hours.",
+  "biggest_mistake": "The application writing prompt is a bit generic and doesn't allow the applicant to demonstrate actual problem-solving skills.",
+  "what_would_make_it_a_10": "A more clever writing prompt that allows the applicant to uncover a root cause rather than just empathizing with an angry customer."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The 'Priya' typo exercise is a brilliant, highly specific filter that perfectly tests both writing and problem-solving without requiring software experience.",
+  "biggest_mistake": "None; this is an exceptional piece of work that nails the brand voice and perfectly actions the data.",
+  "what_would_make_it_a_10": "Nothing, this is ready to publish today."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 provides a masterclass in brand voice and practical hiring design. Putting the hard parts at the very top of the post is exactly how we write, and the specific customer reply exercise (finding the typo) is a stroke of genius that perfectly tests what our data says matters most."
+}

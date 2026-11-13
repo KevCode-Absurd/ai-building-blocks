@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It perfectly nails the unit economics and structures a meticulous, financially sound scale plan that safely protects the downside.",
+  "biggest_mistake": "It misses the easy win of using the customer's exact words for the ad hooks, opting to invent its own versions instead.",
+  "what_would_make_it_a_10": "Swap the newly written hook lines for the exact customer quotes provided in the brief, like 'My feet don't ache by hour ten'."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 4,
+  "correct": 7,
+  "clear": 9,
+  "voice": 5,
+  "range": 8,
+  "ready": 5,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The one-screen summary and the table formatting make the overall strategy incredibly easy to digest and communicate.",
+  "biggest_mistake": "It explicitly breaks the rule against opening ads with the donation line, directly contradicting its own stated policy in the process.",
+  "what_would_make_it_a_10": "Remove the donation-based opening hook and ensure the creative strategy stays strictly aligned with leading with the problem."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 nailed the math and respected our strict brand rules, giving me a solid, safe plan I can hand to the team on Monday. Output 2 grabbed our customer quotes but carelessly used the donation line as an opener, breaking a core rule and contradicting its own advice."
+}

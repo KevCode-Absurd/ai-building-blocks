@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The whole series serves the two habits that predict retention. Email 5 targets whichever habit each user is still missing, the skip and trigger logic uses only events our tool supports, and the mobile and web branches point each group to the right second device.",
+  "biggest_mistake": "The control group gets no onboarding emails at all, which is a riskier holdout than keeping them on the old series. Email 5 also carries two versions in compressed form, so the copywriter will have to untangle it before it can be built.",
+  "what_would_make_it_a_10": "Write out both versions of email 5 in full and compare the holdout against the old series. A short note on where Pro fits after day 30, with a draft, would also help."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, very readable emails in our calm voice with good typed examples. The drop section ties back to our personas well, using the 'perfect on Sunday, gone by Wednesday' line, and the Pro email for engaged users is a sensible way to keep revenue in.",
+  "biggest_mistake": "It spends the fifth slot on a Pro pitch instead of a second push toward the missing habit, so anyone who gets only one habit is never nudged toward the 67% 'both' group. It also claims timed reminders are Pro-only, and that needs checking.",
+  "what_would_make_it_a_10": "Replace or branch email 5 so users missing a habit get that habit, and send Pro only to those who have both. Email 3 should also be triggered after the recurring task rather than sent on a fixed day 3."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both are usable and well written. Output 1 stays focused on getting people to both habits, including a catch-up email for the one they missed, while Output 2 gives up its last email to a Pro pitch."
+}

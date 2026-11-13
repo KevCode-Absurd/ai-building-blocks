@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Week 1 is filled with evening sleep and wind-down narrator posts that avoid naming any condition, so they skip review. The drafts use the customer's own hooks (replaying emails, busy mind at bedtime, quit by day three) and each ends with one small action.",
+  "biggest_mistake": "The same six-slot pattern repeats every week, with only week 1 drafted. Sleep is 12 of 24 posts, and 8 kindness posts at about 100 installs each dilute the strongest theme. There are no per-draft review flags for later weeks.",
+  "what_would_make_it_a_10": "Give a week-by-week calendar with more variety, raise the sleep share, and flag review status on each post with exact submission dates."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 6,
+  "reasoning": 6,
+  "correct": 7,
+  "clear": 7,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 6,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts 15 of 24 posts on sleep with 16 narrator clips. It gives a full four-week calendar and marks each draft as needing review or not, with a clear submission plan.",
+  "biggest_mistake": "It treats every sleep post as needing review, so week 1 has no sleep content at all. The best install driver is held back for a week, and week 1 drafts are weaker kindness posts. The success threshold of 4,300 installs is also set low.",
+  "what_would_make_it_a_10": "Word the week 1 sleep posts so they skip review and post in the evening from day one, while keeping the calendar and the review flags."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 starts on sleep and the evening slots in week 1 with review-free drafts in the customer's own words. Output 2 has better flags and a fuller calendar, but it wastes week 1 on weaker kindness content by over-applying the review rule."
+}

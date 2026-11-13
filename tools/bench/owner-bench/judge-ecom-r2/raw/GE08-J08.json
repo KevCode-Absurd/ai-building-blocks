@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It perfectly integrates the 46-90 day 'at risk' cohort as priority one at day 68, while breaking down both Monsoon Dark and subscriber churn by cancellation reason with exact unit economics.",
+  "biggest_mistake": "The financial table could explicitly factor in messaging delivery costs alongside the gross margin calculations.",
+  "what_would_make_it_a_10": "It is already practically a 10; adding exact SMS/WhatsApp channel API delivery costs would make it completely airtight."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Great message drafts that hit the brand tone, including specific equipment and cold-brew sub-segments.",
+  "biggest_mistake": "It relegates the 9,000 customers in the 46-90 day band to an unmodeled side note instead of making them the top win-back priority.",
+  "what_would_make_it_a_10": "Include the 46-90 day cohort directly into the ranked program and avoid speculative multi-order LTV assumptions in the financial model."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 recognizes that the 46-90 day group (past the 34-day median reorder gap) is the highest-leverage cohort to target first and models them directly, whereas Output 2 leaves them out of the main ranking and economic projection."
+}

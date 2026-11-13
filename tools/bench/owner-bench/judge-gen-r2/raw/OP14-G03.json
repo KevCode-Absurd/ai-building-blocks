@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads like it understood the real story in the numbers: margin deterioration from low-quality AI-builder traffic, the Customer A loss, and the stalled VP Sales hire, all surfaced early with concrete actions and asks.",
+  "biggest_mistake": "The runway row in the table shows September as 52 months, which is wrong from the provided data and undermines trust in the numbers even though the October runway is right.",
+  "what_would_make_it_a_10": "Fix the incorrect September runway line and tighten one or two speculative 'we plan to' statements into confirmed actions before sending."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It explains the margin problem clearly with denominators and shows why the AI app-builder growth is not a clean win.",
+  "biggest_mistake": "It is less ready to send because it includes assumptions to confirm, uses markdown-style headings that feel less like an investor email, and makes one shaky direct-growth calculation that does not trace cleanly to the brief.",
+  "what_would_make_it_a_10": "Turn it into a send-ready email with no caveats, put the Customer A loss even higher in the first screen, and remove any derived metric that is not firmly supported by the brief."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I would actually send tomorrow: it puts the bad news up front, sounds like our brand, and gives specific asks. Output 2 has good analysis, but it still feels like a draft that needs owner cleanup before it goes out."
+}

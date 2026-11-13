@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Calculates staggeringly precise break-even lines per ad set based on store counts and refuses to spend budget on unprofitable campaigns.",
+  "biggest_mistake": "None; this is an exceptional piece of work.",
+  "what_would_make_it_a_10": "It is already a perfect 10."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Calculates custom break-even lines for each ad set based on its specific COD and RTO rates.",
+  "biggest_mistake": "Hedges on the UTM gap and allocates the full budget to scale and hold ad sets that are losing money on store counts.",
+  "what_would_make_it_a_10": "Judge purely on the Shopify-adjusted numbers as requested, and withhold budget rather than scaling into losses."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 perfectly executed the brief, adjusted all targets to the store's reality, and brilliantly withheld budget rather than forcing spend on unprofitable ad sets. Output 2 hedged on the data gap and kept losing campaigns alive."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It answers the lead partner's question on the first screen: three numbers including runway, the missed $125M forecast stated plainly, the bad news listed, and a 'what we need most' line naming a profile and a date before the detail.",
+  "biggest_mistake": "It never connects Customer A to next year's NRR, and it does not size the expected saving from the 48-hour pause, so the fix reads as an action rather than a number.",
+  "what_would_make_it_a_10": "Add one line showing what the 48-hour pause is expected to return in free-tier compute per month and what Customer A does to NRR after 31 January 2027."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The analysis is sharp: it shows direct-created databases grew only 2.6% so nearly all growth came from the AI-builder channel, and it works the $0.9M compute rise back to margin points on ~$10.4M of monthly revenue.",
+  "biggest_mistake": "Asks are buried at the bottom with no early pointer, and the forecast miss is repeated as a separate 'what went wrong' item after already appearing in the three numbers, which costs the phone reader time and weakens the 'what do you need from me' signal.",
+  "what_would_make_it_a_10": "Put a one-line 'what we need most' with a date next to the three numbers, fold the duplicate forecast-miss item into the ARR bullet, and tighten the margin-points comparison so it explains the offsetting costs."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives the lead partner exactly the shape he asked for — three numbers, bad news up front, and a named ask with a date in the first screen — and its runway figures tie cleanly across the table, while Output 2's sharper analysis is undercut by asks at the very bottom and a repeated forecast-miss line."
+}

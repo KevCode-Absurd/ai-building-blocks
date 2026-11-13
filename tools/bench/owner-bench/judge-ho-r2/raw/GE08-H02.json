@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Immediately dismantles the deceptive 4.0 ROAS against the 2.5 break-even threshold and crafts flawless customer-facing ad copy tailored to Claire.",
+  "biggest_mistake": "Lacks explicit stop-rules for weeks 2 to 4 beyond releasing the reserve budget.",
+  "what_would_make_it_a_10": "Add concrete rollback and cut thresholds for PMax performance during weeks 2 to 4."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Superior tactical execution details, including removing bags from PMax listing groups to stop cannibalization and providing explicit stop-rules for weeks 2 to 4.",
+  "biggest_mistake": "Customer ad headlines were slightly less fleshed out than Output 1's copy.",
+  "what_would_make_it_a_10": "Include full Search ad copy and descriptions tailored specifically to Claire and Nina."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are elite and nail the math, budget, and feed issues, but Output 2 wins by providing crucial tactical safeguards: removing bags from PMax listing groups, phasing the brand exclusion so ads don't drop, and defining explicit week 2 to 4 stop rules."
+}

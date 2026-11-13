@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Flawless adherence to constraints, especially the 'one action per section' rule and explicit bracketed placeholders for unverified integration and quote claims.",
+  "biggest_mistake": "Alternates somewhat inconsistently between 'Book a demo' and 'Get started' across informational sections instead of committing to the team sales motion.",
+  "what_would_make_it_a_10": "Commit primary CTAs consistently to team qualification and add practical CRO testing logistics like sample size or run duration."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Deep CRO sophistication: exact sample size calculations, crisp math on paid seat velocity, and the high-leverage idea to include security docs in the demo confirmation email.",
+  "biggest_mistake": "Violated the strict 'every section ends in one action' rule by adding secondary text links under the buttons in both the hero and section 8.",
+  "what_would_make_it_a_10": "Remove the secondary CTAs to honor the single-action rule, keeping the entire page focused squarely on getting the team demo."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nailed the recruitment math and customer voice, but Output 2 brought actual CRO intelligence to the table with sample size calculations, power analysis, and an operational tactic to unblock IT security right at demo confirmation."
+}

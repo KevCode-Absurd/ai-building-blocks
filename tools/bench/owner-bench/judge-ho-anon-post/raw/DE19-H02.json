@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes the 4.0 ROAS apart against the 2.5 break-even, puts the feed fix first, and gives a budget split that adds to exactly $240,000 with a base and cautious profit range.",
+  "biggest_mistake": "The brand search forecast jumps to about 25 ROAS (from 17) and $455,000 value on $18,000, which looks optimistic and may overstate expected profit; the title strings are long and some wording (e.g. 'Women's Machine Washable Pointed Toe Flat') drifts from the brand's plain, warm voice.",
+  "what_would_make_it_a_10": "A more defensible brand forecast (conservative and base shown separately), tighter voice-checked title patterns, and a one-line explanation of how the reserve rule protects profit if lines underperform."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 10,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Frames the whole month as brand hides losses in non-brand (2.26 ROAS), gives an honest warning that reported revenue will fall about 13%, and adds a genuine regional holdout test to check whether the cut spend was building brand.",
+  "biggest_mistake": "It changes many things at once and adds a $21,000 regional test in the same 30 days, which muddies the read and the owner may not be able to attribute results; the schedules and tables are denser and harder to scan.",
+  "what_would_make_it_a_10": "A clearer, simpler one-page timeline and a cleaner separation between the core plan and the optional test so the owner knows what is proven versus what is being probed."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and I would use either. Output 2 wins slightly because it is more honest about falling reported revenue, more cautious on brand forecasting, and it tests the one thing I would worry about: whether cutting the cheap broad spend actually builds brand later."
+}

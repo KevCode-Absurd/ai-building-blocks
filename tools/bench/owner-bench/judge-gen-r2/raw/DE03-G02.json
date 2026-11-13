@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks recruiting with the seat math shown and models Priya's phrase 'email tennis' inside a section flow that puts round robin, routing and security in the right order with the real usage stats.",
+  "biggest_mistake": "Leaves several [bracketed] placeholders in proof slots ('only the certifications...', logo rows, a customer quote) that need real material before this page can ship, and relies heavily on the same one hero idea echoed in the variants.",
+  "what_would_make_it_a_10": "Replace every bracket with verified proof (or cut the slot) so the page is paste-ready, and make version B feel like a genuinely different angle rather than the same hero reworded."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The segment math is shown with the working (2,100 × 9.4% × 7.8 = ~1,540 of 2,717), the hero leads with 'without the back and forth,' and every section names the proof to place, the button, and where the 48% security signal comes from.",
+  "biggest_mistake": "A couple of proof slots still need gathering (a named customer quote, ATS screenshot), and the demo-request metric lacks the team-signup fallback that would catch recruiting intent that doesn't book a call.",
+  "what_would_make_it_a_10": "Close the quote and integration proof gaps with real, permissioned material and add a team-signup qualifier to the deciding metric so it can't be gamed by cheap demo clicks."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick recruiting and use Priya's words well, but Output 2's math is fully traceable, it folds security into the story as 'they can read the code,' and the page reads as something I could paste with only proof to fill — Output 1 is nearly as good but leaves more open brackets and repeats one hero idea."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 9.8,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless brand voice that captures Doist's calm, uncluttered ethos while strictly obeying every formatting constraint, trigger limit, and data point.",
+  "biggest_mistake": "Moving Pro to Day 14 might still feel early to some free-tier advocates, though gating it to users who established habits makes total sense.",
+  "what_would_make_it_a_10": "Explicitly noting fallback copy if someone signs up on desktop rather than web for the second-device email, though it's already well handled in the assumptions."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8.9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Relentless commercial focus on driving the dual-habit metric, complete with a clean summary table and testable operational ideas.",
+  "biggest_mistake": "Email 5 introduces conditional branching logic inside the email on Day 8 that pushes the boundaries of our stated trigger setup, making execution trickier.",
+  "what_would_make_it_a_10": "Simplify Email 5 to avoid complex conditional body blocks that our tool can't cleanly automate, and match the lyrical, soothing cadence of Output 1."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels like it was written by Doist itself—calm, empathetic, and beautifully formatted, with zero wasted words. Output 2 is smart commercially, but Output 1 is ready to paste into our email provider right now without any technical friction."
+}

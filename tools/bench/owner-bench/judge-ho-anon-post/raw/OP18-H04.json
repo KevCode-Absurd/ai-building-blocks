@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives the product team a buildable one-screen flow with exact copy, matched offers, and mostly sound revenue maths.",
+  "biggest_mistake": "It keeps the 50% discount for switchers without evidence, and that weakens the principle of not using discounts unless the data supports them.",
+  "what_would_make_it_a_10": "Remove or test the switching-app discount instead of assuming it works, make the priority on rebuilding pause even sharper, and tighten the revenue assumptions for discounted users."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the pause first, avoids wasteful discounts, protects the cancel experience, and explains the business impact in a way I would act on next sprint.",
+  "biggest_mistake": "The first-year revenue and discount-savings maths could be shown a little more plainly, and the trip-over path could offer a simple reminder for the next trip.",
+  "what_would_make_it_a_10": "Add the trip reminder option, show the 12-month revenue working more transparently, and include the exact price example for the annual switch in the copy."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 feels more like the plan I would hand to product: it identifies the pause as the critical path, avoids giving away margin, and keeps the learner experience respectful. Output 1 is strong and usable, but it is too willing to keep a discount where the data does not justify it."
+}

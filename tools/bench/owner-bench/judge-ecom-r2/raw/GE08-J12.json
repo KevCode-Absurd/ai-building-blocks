@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Smart operational flow that differentiates 24-48h hold rules between metro and Tier 3, plus practical ideas like shifting an agent shift to cover evening volume.",
+  "biggest_mistake": "Classified the prepaid switch template as Utility and omitted mandatory opt-out footers on Marketing templates required by Meta.",
+  "what_would_make_it_a_10": "Incorporate Meta template compliance requirements (opt-out footers on marketing templates) and provide explicit after-hours branching for each script."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliant unit economics (calculating that a ₹30 prepaid discount only pays back where RTO is >17%) paired with fully compliant, ready-to-submit Meta templates including opt-out footers.",
+  "biggest_mistake": "Skipping confirmation entirely for repeat buyers in metros could slightly risk unverified address drift, though economically defensible.",
+  "what_would_make_it_a_10": "Include a quick fallback path if a customer needs an address change during the automated COD flow."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 nailed the exact unit economics of Tier 3 vs. metro COD risk, provided genuinely ready-to-submit Meta templates with required opt-out footers, and provided distinct live-agent and after-hours scripts for all five chat drivers."
+}

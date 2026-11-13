@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 7,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The money logic runs through the whole plan. The $27.10 first-order and $38.46 90-day break-even numbers set the target, the stop line and the kill spend. Day 30 is judged on three reads (store tags, survey, blended lift) plus a holdout, not platform ROAS. The budget adds to exactly $30,000, and the hooks are written in Maria's and Tasha's own words.",
+  "biggest_mistake": "The kill and scale rules overlap and come in many small variants ($100, $114, $190, a 3-day window, a 7-day window), so the team has to work to read them. It also assumes new 'Clogs test' and 'Hour ten' posts from the same two creators, which we have not agreed. The dense tables are not grade 6-7 reading.",
+  "what_would_make_it_a_10": "Collapse the kill rules into one short ladder. Spell out the brand guardrails (banned words, giving line) for the creative team. Add a short owner list for Monday. Flag the new creator posts as an assumption that needs a yes from the creators."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very easy to hand to a team. It has a clear week-0 checklist, a list of what never to say, a way to answer price inside the ad, a plan to own the rights before the March licences end, and named owners. The day-30 scorecard has pass, hold and fail columns, plus a check on whether TikTok adds new customers or just takes credit for Meta's.",
+  "biggest_mistake": "The day-30 bar is not fully consistent. It asks for 790 or more first orders (30,000 / 38), but only $29,000 is planned spend, and the first 14 days are excluded from the cost judgment. The 90-day repeat value sets the $38 target but does not drive the final decision, and there is no holdout. Some hooks are generic, for example concept 5 just repeats concept 1.",
+  "what_would_make_it_a_10": "Make the order-count threshold match the spend actually planned. Tie the month-2 decision more clearly to 90-day payback with survey and holdout checks. Write sharper hooks in Maria's own words, such as 'My feet don't ache by hour ten.'"
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both plans fit us and keep the mission as a fact, not a guilt trip, and Output 2 is easier to read. Output 1 ties its target, kill rules and day-30 test to our real margin and 90-day numbers, and it writes hooks in our customers' words. That is the plan I would trust with $30,000."
+}

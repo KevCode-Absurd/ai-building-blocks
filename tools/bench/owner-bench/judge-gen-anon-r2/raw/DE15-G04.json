@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks the winning segment and moment, then turns the pilot into concrete send timing, list rules, exclusions and a usable four-step sequence.",
+  "biggest_mistake": "It projects 8-10% by stacking a segment and trigger the pilot never tested together, and it uses the 9-to-4 proof in step 1 rather than holding it for a later step.",
+  "what_would_make_it_a_10": "Anchor the expected rate to the observed 6.8-7.9% band unless the team tests the combination, move the proof sentence out of step 1, and keep every email to one unmistakable question and one ask."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads like a real peer-to-peer finance email, keeps the right segment and pricing-change trigger, and handles the audit timing objection well.",
+  "biggest_mistake": "Steps 1-3 break the one-question/one-ask rule with extra conditional reply requests, and the 'about 4,100 stay out' count is inconsistent with loading only flagged targets.",
+  "what_would_make_it_a_10": "Cut each email to one ask, remove unbuilt assets like the one-page summary, fix the list math, and state the expected rate as 6.8-7.9% until a combined segment-plus-trigger test exists."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would hand Output 1 to the team with minor edits: it chooses the right people, ties the sequence to the pricing change, keeps links out, and gives clear list rules plus a defensible projection. Output 2 has the better conversational tone in places, but I would have to rewrite the asks in three emails and fix the list count before sending it."
+}

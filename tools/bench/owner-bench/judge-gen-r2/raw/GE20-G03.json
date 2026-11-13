@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Calculates exactly how much of the monthly database increase came from AI builders (476,000 of the 500,000 increase), making the core issue undeniable.",
+  "biggest_mistake": "The main data table is slightly dense and combines financial, product, and headcount metrics into a single block that requires more effort to scan.",
+  "what_would_make_it_a_10": "Highlighting the math on how the $0.9M compute increase directly maps to the gross margin percentage drop to fully close the loop for the reader."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Reveals that direct-created databases grew only 2.6% and calculates that the extra compute cost equals roughly 9 points of margin, delivering massive analytical value.",
+  "biggest_mistake": "There are practically no mistakes; the framing is exceptionally sharp, though the ask to the lead investor could have included deciding on the NY base.",
+  "what_would_make_it_a_10": "It is a 10 already; it acts like a true business partner by finding the stalled organic growth engine hidden in the top-line success."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both outputs are exceptional, following all instructions and brand constraints perfectly. Output 2 wins because it extracts deeper, unprompted insights from the raw data, calculating the stalled 2.6% growth in direct databases and explaining the math behind the margin drop."
+}

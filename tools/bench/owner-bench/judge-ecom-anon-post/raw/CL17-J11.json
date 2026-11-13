@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the in-app checkout fix and prices it correctly at about 558 orders and ₹34 lakh a month. Every run time and smallest effect is worked out from real session counts, and they check out (9.9%, 6.3%, 5.5%).",
+  "biggest_mistake": "It has no test aimed at the firmness question. Firmness is only touched through review filter tabs. The calendar dates and the two-lane overlap add complexity I did not ask for.",
+  "what_would_make_it_a_10": "Add a plain-words firmness test. Show the funnel-by-browser maths in one simple table. Drop the invented calendar dates or tie them to real launch constraints."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The diagnostic table splits the funnel by device and browser, and every rate in it is right. It ties the 4,130 in-app errors to the 4,800 lost carts. It adds an A/A test and event tracking before testing starts, and it covers firmness, which is the second-biggest chat topic.",
+  "biggest_mistake": "Test 5 bundles the new hero image with the moved reviews. If it wins, I won't know which change worked.",
+  "what_would_make_it_a_10": "Split test 5 into two tests or justify the bundle. Give the profit value of each test's smallest effect, not only the one general 10% example."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the checkout bug, the money and the sample-size maths right. Output 2 is easier to read, sets up clean tracking with an A/A check, and tests firmness, so it's the plan I'd hand my team, though Output 1's per-test maths is a bit sharper."
+}

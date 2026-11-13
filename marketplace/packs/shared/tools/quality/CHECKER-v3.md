@@ -46,7 +46,7 @@ Pick the clearest usable base. Graft only a necessary fact, requirement or worki
 
 Judge the native piece separately from setup notes. Does it answer promptly? Can the reader find and use the next action? Is the operating detail placed where needed rather than compressed into codes, slash stacks, dense tables or repeated disclaimers?
 
-Readability, sentence length and the family ceiling are diagnostics, not proof. Run readability.cjs on both candidates with the correct audience, and wordcount.cjs against plain. The owner's word limit wins; aim at about 85% of it. A ceiling is not a target. Neither longer nor shorter automatically wins.
+Readability, sentence length and the family ceiling are diagnostics, not proof. Run readability.cjs on both candidates with the correct audience, and wordcount.cjs against plain. The owner's word limit wins: stay within it. A ceiling is not a target. Neither longer nor shorter automatically wins.
 
 For customer copy, check the actual channel against a few short public brand examples. Generic enthusiasm is not brand voice. Keep disclosures concise but correctly placed. For internal work, clarity beats a house style.
 

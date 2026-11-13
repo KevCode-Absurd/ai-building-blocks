@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds bundles from the pairs customers already buy, then ties the shipping decision to COD/RTO economics with break-evens and a practical test plan.",
+  "biggest_mistake": "Some projection maths is compressed and slightly opaque, especially the Glow Routine break-even increment and the lip-balm cart lift, so the team would need to re-check those assumptions before quoting them.",
+  "what_would_make_it_a_10": "A one-page reconciliation table showing each bundle’s margin, break-even, threshold effect and COD impact, with cleaner assumptions and no ambiguous incremental-profit figures."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The serum-to-serum-plus-lip-to-routine ladder is a strong merchandising idea and the assumptions are stated clearly.",
+  "biggest_mistake": "The ₹599 threshold maths is materially off: it assumes only about 1,000 affected orders versus a likely much larger slice, and it counts lip-balm margin as gain while ignoring the lost ₹49 shipping fee, so the +₹28,000/month projection is not reliable.",
+  "what_would_make_it_a_10": "Rebuild the threshold P&L from the order export, net off lost shipping fees and COD RTO, and add explicit COD handling plus a clearer body/second-category bundle."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would hand to my team tomorrow: it uses our real buying patterns, accounts for COD/RTO, gives a defensible shipping line and has testable stop rules. Output 2 has a nice ladder, but the ₹599 shipping maths has material errors that could lead us into a bad launch decision."
+}

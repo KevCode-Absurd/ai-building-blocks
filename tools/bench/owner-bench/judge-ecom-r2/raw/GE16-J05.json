@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Rock-solid data analysis of ad fatigue and ruthless adherence to character limits with exact counts.",
+  "biggest_mistake": "Angle range is slightly repetitive, using two review-quote angles (P2, P3) and two front-of-pack label angles (P1, P5).",
+  "what_would_make_it_a_10": "Differentiate the six angles more completely rather than doubling up on review quotes and front-of-pack variants."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Captures the brand voice perfectly with brilliant, persona-specific hooks like the samosa trade-off and the 5-day training week math.",
+  "biggest_mistake": "Description D2 uses 'Not a bit' instead of the brand's canonical phrase 'Not even a little'.",
+  "what_would_make_it_a_10": "Use the exact brand phrase 'Not even a little' in D2 to match the established guidelines completely."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are exceptional and ready to run tomorrow, but Output 2 offers genuinely distinct, witty angles tailored to Aditya and Priya—especially the 5-day workout/6-bar pack and the 4 pm samosa hook—paired with benchmark targets for every test."
+}

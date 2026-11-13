@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very usable structure with clear bundle jobs, sensible discount levels, good break-even thinking, and a safe test plan focused on profit per visitor.",
+  "biggest_mistake": "The free-shipping math undercounts the orders affected by moving from ₹499 to ₹599, and it makes lip balm a discounted main bundle instead of mainly using it as the natural cart add-on.",
+  "what_would_make_it_a_10": "Make face wash + vitamin C serum the lead routine bundle or explain the trio more cleanly, fix the ₹599 affected-order math, and add a sharper COD/RTO move such as prepaid-only free shipping or a COD fee under ₹499."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the lip balm correctly as a cart add-on, takes COD/RTO seriously, gives practical test design, and avoids risking the serum reorder by jumping the threshold too quickly.",
+  "biggest_mistake": "The bundle break-even math is a little inconsistent, and the recommendation says keep ₹499 while also proposing a ₹699 test, which needs a cleaner decision path.",
+  "what_would_make_it_a_10": "Tighten the bundle economics, make the face wash + serum routine the obvious hero offer, and turn the shipping recommendation into a clearer staged plan: keep ₹499 now, test lip balm add-on, then test COD/prepaid-specific rules before any sitewide threshold rise."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "I would rather hand Output 2 to the team because it spots the real leak in small COD orders and uses lip balm as the right add-on instead of over-discounting it. Output 1 is good, but its threshold math is shakier and its first bundle choice is less aligned with how customers already buy."
+}

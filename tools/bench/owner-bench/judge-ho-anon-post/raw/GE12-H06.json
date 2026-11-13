@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Exceptional command of the math and business logic, plus a laser focus on the top 20 partners instead of the non-performers.",
+  "biggest_mistake": "Missed the chance to show the finance lead exactly how our 30% lifetime rate beats the rival's 40% first-year rate in the long run.",
+  "what_would_make_it_a_10": "Add a single line proving our 30% lifetime beats the 40% year-one offer to completely dismantle the rival threat."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The break-even margin math (a 12.5% drop wipes out the savings) is a brilliant, undeniable way to explain the risk of the cut to Finance.",
+  "biggest_mistake": "Allocating 25% of the perk budget to a 'first-customer bonus', which wastes resources trying to activate the dormant tail instead of rewarding the top 20.",
+  "what_would_make_it_a_10": "Spend the entire perk budget on the top-performing 20 partners and rethink raising the commission rate to 40%."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 understood that the program is really just 20 people and focused all the perks there, whereas Output 2 spent budget trying to activate dormant affiliates. Output 1 also brilliantly noted that the rate wasn't the complaint, saving us from a costly commission hike."
+}

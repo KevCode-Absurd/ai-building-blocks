@@ -182,7 +182,7 @@ export const COMPLETENESS: Partial<Record<DeliverableFamily, string[]>> = {
   web_page: ["one primary action", "proof beside the claim it supports", "works on a 390 px phone screen", "loads fast, with sized images"],
   ad_creative: ["every field the platform needs, including the description", "character counts inside the platform limits", "text and logo inside the placement's safe areas", "the brand and the price named for a cold audience", "the landing URL"],
   email: ["a subject line", "preview text", "one product and one ask in every email", "working links", "an exit rule", "merge tags that match the email tool"],
-  plan: ["totals that add up", "dated steps", "an owner for each step", "cut, keep and scale rules", "break-even shown"],
+  plan: ["totals that add up", "steps with days relative to the start", "an owner for each step", "cut, keep and scale rules", "break-even shown"],
 };
 
 /** How much brand context a job takes from the brand file. A job takes its slice, never the whole file. */
@@ -305,13 +305,13 @@ const SLICES: Record<DeliverableFamily, { taste: string; diverge: string; build:
   strategy: {
     taste: "Ask where they want to be positioned, at what price point, and which brands they admire or avoid.",
     diverge: CANDIDATES.strategy,
-    build: "Recommend the move, combining moves that work together (a runner-up only for a true either-or choice), with the first moves, their owners and the measure of success.",
+    build: "Recommend the move, combining moves that work together only when the owner did not ask for one move, said as one decision (a runner-up only for a true either-or choice), with the first moves, their owners and the measure of success.",
     check: "Check that each claim about the business or market traces to context/, and that every number adds up with its sum shown.",
   },
   plan: {
     taste: "Confirm the fixed dates, owners and limits before you plan.",
     diverge: CANDIDATES.plan,
-    build: "Every step has an owner, a date and a finish line a person can check. Where a planning number is unknown, give a working figure with its sum shown, never a blank.",
+    build: "Every step has an owner, a day relative to the start (a date only when the brief gives one) and a finish line a person can check. Where a planning number is unknown, give a working figure with its sum shown, never a blank.",
     check: "Walk the plan against the constraints in context/: does anything clash, and do the totals add up?",
   },
   code: {
@@ -361,7 +361,7 @@ export const WORD_BUDGETS: Record<DeliverableFamily, string> = {
  * that left blanks or ran 2 to 4 times longer than a plain answer lost on clarity; complete proposals and a length
  * near the plain answer won 88% of 128 blind verdicts.
  */
-export const HANDOVER_FINISH = "No unintended blanks or placeholders; preserve explicitly requested template fields with --requested-template. State at most three one-line assumptions instead of a to-do list; a legal or expert sign-off is one line next to its item, never inside publishable copy. Follow the matched quality family profile aim, ceiling and shape; the brief can ask for more. tools/check-handover.mjs with --profile <family> passes, along with the applicable v3 clarity, proof and visual checks.";
+export const HANDOVER_FINISH = "No unintended blanks or placeholders; preserve explicitly requested template fields with --requested-template. State at most three one-line assumptions instead of a to-do list; a legal or expert sign-off is one line next to its item, never inside publishable copy. Stay within the owner's limit and the family ceiling, and follow its shape; the brief can ask for more. tools/check-handover.mjs with --profile <family> passes, along with the applicable v3 clarity, proof and visual checks.";
 
 /**
  * Proven conversion levers by family (the same as grounding.mjs PROVEN_LEVERS). The blind test also found plain

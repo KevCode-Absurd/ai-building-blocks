@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9.6,
+  "use_as_is": "as is",
+  "biggest_strength": "Impeccable Bellroy brand tone with seamless integration of exact numbers, honest trade-offs, and an unexpected, highly actionable measurement plan.",
+  "biggest_mistake": "Left the break-in expectation out of the above-the-fold bullets, relying instead on the description and FAQ to catch it.",
+  "what_would_make_it_a_10": "Mention the one-week break-in period subtly in an above-the-fold bullet or directly under the add-to-cart button to preempt immediate returns."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8.6,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Proactively tackled the 7-day card-slot return issue right in the above-the-fold bullets and the 'What fits, in real life' section.",
+  "biggest_mistake": "Broke consumer brand immersion by putting raw internal review data directly into customer-facing copy ('Of our 400 reviews, 142 say the same thing').",
+  "what_would_make_it_a_10": "Remove the meta survey numbers from the sales copy and tighten the sentence rhythm to match Bellroy's effortless, minimalist voice."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 nails the authentic Bellroy tone and reading level without sounding like a data brief was dumped into the copy. Its SEO tags are exact, its handling of cash limits is honest yet enticing, and the testing framework at the end shows true commercial ownership."
+}

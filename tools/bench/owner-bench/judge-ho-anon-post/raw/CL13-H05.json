@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It rewrites \"How balances work\" under Jordan's own question, ranks the fixes by tickets we can remove, and the Pro article covers refunds and how to cancel. The forecast shows its working and adds a lower-end case.",
+  "biggest_mistake": "The delete article is titled \"How to undo a deleted expense\" and does not use the searched words \"restore\" or \"recover\". The Simplify article has a clumsy \"Follow the steps above\" step. The forecast is a single point estimate with only a halved fallback, and the plan to merge \"Recording a payment\" into a new article is weak.",
+  "what_would_make_it_a_10": "Put the searched phrases in the delete article's title. Fix the repeated-steps wording in article 1. Give a proper range instead of a point estimate. Drop the unneeded merge. Add a settle-up link and a firmer plan for the currency gap."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the decision, the bad news about store refunds and its assumptions. The delete article is titled \"Undo delete: restore a deleted expense\", in the words people search. The forecast is a range with a source for each share, the arithmetic checks out, and it adds an optional in-app line on the balances screen.",
+  "biggest_mistake": "It writes a new Simplify article instead of rewriting \"How balances work\" itself, so the old page stays only partly fixed. Article 1 states flatly that the group has Simplify debts on, which will be wrong for some readers. The Pro article does not give cancel steps.",
+  "what_would_make_it_a_10": "Soften the opening line of the Simplify article to \"probably\". Rewrite the old balances article, not just add a pointer to it. Add cancel steps to the Pro article. Include the week-2 currency article in the forecast."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both found the three big problems and wrote usable articles. Number 2 is easier to act on: it gives the decision first, a titled-in-searchers'-words delete article, an honest range with working, and a sensible link for each screen. Number 1's articles are a little fuller, but its forecast is a single number."
+}

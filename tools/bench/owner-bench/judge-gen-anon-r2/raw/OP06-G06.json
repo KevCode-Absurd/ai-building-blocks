@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets the core story right from the data: we mainly lose to Semrush in agencies on reporting and PPC, while our biggest leak is our own Lite limits and plan friction.",
+  "biggest_mistake": "It gives four moves instead of using the full room for five, and it ranks the AWT onboarding move above the Lite churn fix even though the Lite problem is the fastest money in the data.",
+  "what_would_make_it_a_10": "Put the Lite limit and pricing fix at #1, keep the focused agency reporting bet, and add one more tightly scoped move without losing the discipline of what not to build."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is clear, on-brand, and it explicitly says not to chase PPC parity while identifying agencies as the real competitive battleground.",
+  "biggest_mistake": "It puts the reporting build ahead of the self-inflicted Lite churn problem, and Move 5 drifts into generic content advice instead of staying tightly on the owner’s asked-for Semrush response.",
+  "what_would_make_it_a_10": "Re-rank around the fastest, highest-confidence wins in our own data: Lite limits first, agency reporting second, AWT multi-site nurture third, then keep every move tied to a measurable Semrush or churn problem."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to how I’d actually use this. It stays tighter to the brief, makes better use of the numbers, and focuses more on the specific leaks and segment dynamics that matter."
+}

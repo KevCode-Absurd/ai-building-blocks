@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 10,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sees the real business problem clearly: tiered COD treatment by pincode risk, shipped/out-for-delivery updates to cut WISMO chats, and an after-hours menu. It feels like someone used the data instead of writing a generic WhatsApp plan.",
+  "biggest_mistake": "A few execution choices are a bit too heavy or risky without more proof, especially the Tier 3 call/cancel flow and the bolder ₹99 advance idea; also one or two numbers are rounded a bit loosely.",
+  "what_would_make_it_a_10": "Tighten the exact weekly math, add the after-hours auto-reply as a fully written template/menu, and trim any risky extras so the main plan is easier to launch exactly as written."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is easy to read and operational. The flows are straightforward, it covers the requested templates and scripts, and it does add shipped/out-for-delivery messages plus an after-hours plan.",
+  "biggest_mistake": "It miscategorises the prepaid nudge as Utility even though it is promotional, and it misses the strongest opportunity in the brief by not really targeting Tier 3 harder than other segments.",
+  "what_would_make_it_a_10": "Fix the template categories, build a clearly different Tier 3 COD confirmation flow with firmer rules, and sharpen the scorecard around pincode-group RTO, confirmation rates, and chat reduction."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 understands my business better and acts on the actual signals in my data, especially Tier 3 COD risk and chat deflection from shipping updates. Output 2 is neat and usable, but it is more generic and makes a key category mistake I would not want to submit."
+}

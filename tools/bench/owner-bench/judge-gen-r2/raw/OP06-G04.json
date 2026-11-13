@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It locks onto the winning segment and trigger, gives a usable sequence, and turns the pilot data into clear list rules and an honest forecast.",
+  "biggest_mistake": "It says no email carries a link and then projects positive replies and meetings with assumptions that are a bit too modeled rather than sticking tighter to the pilot.",
+  "what_would_make_it_a_10": "Tighten the forecast to a simpler 6.8% to 7.9% expectation and make the asks in steps 1 and 4 slightly crisper and more natural."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It picks the right segment, uses the pricing-change trigger well, and the sequence is easy to scan and run.",
+  "biggest_mistake": "Step 1 breaks the brief by asking a question and then adding a second ask to reply for a one-page summary, and the math on positives and meetings is wrong enough to affect planning.",
+  "what_would_make_it_a_10": "Fix the one-question/one-ask discipline and correct the forecast numbers so every projection cleanly traces to the pilot."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather pay for because it fits the data and the brief more tightly, especially on list rules and expected results. Output 2 is solid on direction, but the broken email ask structure and bad rollout math make it less trustworthy."
+}

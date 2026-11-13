@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A sharp single recommendation aimed at the Essentials 8+ leak. The per-1,000-customer churn scenarios are correct, the stop rules are clean, and the invite email is in our voice, with the customer's own price difference shown.",
+  "biggest_mistake": "It talks itself out of the yearly-billing push with a shaky payback argument and ignores the 0.9% vs 4.0% churn gap. That leaves the cheapest fast win off the table, and the yearly default on the pricing page is never fixed.",
+  "what_would_make_it_a_10": "Add an honest yearly nudge alongside Agency, either an in-app offer or a yearly default on the page. Show a total-business net figure with the Team downgrade assumption built in, not only per-1,000 switchers."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The whole-business view: the Essentials 8+ share of churned revenue, base and downside cases with Team downgrades netted out, and the break-even downgrade rate. It also tests downgrade risk directly on Team customers and offers yearly at the switch.",
+  "biggest_mistake": "The customer message is a little softer and less concrete than it could be: it shows no price difference and has a slightly generic opening. The day-one net of +$2.7k is thin, and the plan doesn't flag clearly enough that most of the gain depends on an unproven churn drop.",
+  "what_would_make_it_a_10": "Show each customer the exact difference in the email. Add a yearly default on the pricing page as a parallel quick test. State plainly that new prices only reach new customers, so the two-quarter gain rests on retention."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both make the same right call. The second one gives me the whole-business numbers including Team downgrades, tests that risk directly, and keeps the yearly-billing win in play, so I'd take it to the board."
+}

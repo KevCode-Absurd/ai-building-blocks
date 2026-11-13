@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Exceptional brand voice alignment and a dedicated, sensible firmness test that directly answers Rohit and Neha's worry without making medical claims.",
+  "biggest_mistake": "Using 'orders per session' as the primary metric across almost all tests, which requires 4-week runs when upstream metrics like add-to-cart would give faster reads on top-of-funnel changes.",
+  "what_would_make_it_a_10": "More nuanced metric selection showing awareness of why add-to-cart might fluctuate (e.g. users currently adding to cart just to check delivery date/EMI)."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliant conversion reasoning on metric selection—noting that showing delivery date and EMI on the page might actually depress add-to-cart while increasing orders because users stop adding to cart as a workaround.",
+  "biggest_mistake": "Diluting the firmness question (19% of pre-sale chats) into review filters instead of giving it a clear visual widget like a firmness scale.",
+  "what_would_make_it_a_10": "A dedicated firmness explainer widget rather than bundling it into review tab filters."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both understood the data and business perfectly, but Output 2 showed deeper experimentation craft by spotting that showing delivery and EMI on-page would distort add-to-cart rates, and structuring two concurrent testing lanes to save months of time."
+}

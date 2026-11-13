@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranked by tickets it can actually remove, with the arithmetic shown and a range instead of a single wishful number; the three articles are publishable and in voice.",
+  "biggest_mistake": "'I'm not sure the Restore button and Activity wording match the real app in every case' — it says to verify but publishes the copy anyway; a couple of UI labels may be slightly off.",
+  "what_would_make_it_a_10": "Add the search-synonym fix for 'undo delete' as an explicit action (it mentions the searches but doesn't list adding them as search terms), and tighten the forecast so the ranges are easier to trust at a glance."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, short ranking that leads with the biggest topic and names the cause (Simplify debts) in the first two lines; asks for search synonyms for the delete article, a smart cheap fix.",
+  "biggest_mistake": "The forecast is a single point (3,700 / 21%) with a footnote fallback instead of a proper range in the table, and it claims a currency saving from a half-month article that wasn't one of the top three written — softer working than it looks.",
+  "what_would_make_it_a_10": "Give the ticket forecast as an honest range like the other submission, and write the currency article in full since it's counted in the savings."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and in voice, but Output 1 shows its working as ranges, ranks by tickets-removed with a clear reach table, and stays honest that 2,000 refunds are out of our hands — I'd publish it with a quick label check."
+}

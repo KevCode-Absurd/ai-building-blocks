@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the core strategic read — agencies are the only real Semrush loss, Lite usage limits are the biggest self-inflicted leak — and turns both into concrete ranked moves with owners, first steps and success metrics.",
+  "biggest_mistake": "A few supporting numbers are shaky or off-brief (the 0.9% 'everyone else' AWT conversion and the 4.9% blended churn are derived, not given), and Move 5 'teach with our link data' is the closest to generic content advice with a weak metric.",
+  "what_would_make_it_a_10": "Trim or sharpen Move 5 so every one of the five moves is a ranked, number-backed lever, and show the derivation for the derived churn and AWT figures."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the sharpest framing ('we lose in one place: agencies; our biggest leak is not Semrush but our own Lite plan'), backs every move with a per-1,000-trials table and a named assumed input, and ranks by quickest money first with the report honestly last because it's slowest to build.",
+  "biggest_mistake": "The many explicitly assumed projections, while honestly labeled, could read as false precision if the owner treats them as forecasts rather than sizing.",
+  "what_would_make_it_a_10": "Ground one or two of the assumed input ranges (AWT lift, Lite save rate) in an existing benchmark or a smaller stated test so the projections feel less invented."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the strategy right and are ready to use, but Output 2's per-1,000-trials table and per-move assumed inputs make it easier to defend in a budget meeting, and it ranks quickest-money-first more cleanly. Output 1's extra content move dilutes an otherwise tight five-move plan."
+}

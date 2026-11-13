@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A straight no to the 20% cut, with the lifetime maths and the break-even in top-20 partners. It also gives a dated first-30-days plan the one partner manager can run, and strong disclosure rules with real-world specifics (US/UK).",
+  "biggest_mistake": "Some numbers are shaky or unexplained: the $38,000 'cut only new referrals' saving, the 1,250 new referred customers from '3,365 x 3.1% x 12', and the $62-89k window cost rest on assumed pay-by-day-90 rates. The break-even range mixes revenue and margin assumptions. The 'pay October with September' step is also a confusing way to pull payouts forward.",
+  "what_would_make_it_a_10": "Show the derivation of each projection plainly, drop the muddled break-even range, and state the net effect of the whole plan against finance's $210k in one line. Keep the dated 30-day plan and the bolder 'Who sent you?' idea."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clear 'do not cut' answer with the lifetime maths (referred $1,677, net $1,174, others $1,130), the 12.5% break-even, and a sensible mid-tier of active affiliates. The rules are short and on voice.",
+  "biggest_mistake": "Tiering Partners to 40% for the first 12 months raises cost on a rule the brief wanted to avoid, and the cost math is muddled: '10 points on 31% of $1.49M' undercounts, and the '4 can wipe it out' claim is hand-wavy. The 30-day plan has no calendar dates. The $100 first-customer bonus could drift toward an earnings promise.",
+  "what_would_make_it_a_10": "Give calendar dates and a clearer total cost against the $210k. Tighten the cost lines, and justify the 40% tier or drop it. Add more on how the partner manager handles the load."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both say no to the 20% cut with the right maths, but Output 1 gives a dated 30-day plan, firmer disclosure rules and a sharper cost picture. Output 2's 40% tier and looser cost maths make it a bit less ready to act on."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Complete and usable page. Segment choice backed by clear seat math (733 seats per 1,000 signups vs 12 for coaching). The page puts security and routing up where Priya needs them, and the A/B plan has a sample size and a clear decision rule.",
+  "biggest_mistake": "It uses 'Book a demo' on almost every section, and the demo sits in the final section after security. It also states some details as fact: 'Candidates... PTO is skipped', and 'Send this to your security team'. The projection of 150 to 460 extra seats is speculative. The 'Monday' hook is used, but 'email tennis' is not. The sample-size figure is stated as fact and I cannot easily check it. The hero proof line (71% first booking in 7 days) is a mild stretch and hard to verify.",
+  "what_would_make_it_a_10": "Use Priya's own words ('email tennis') in the hero. Tighten the sample-size claim. Flag clearly which facts (video links, PTO skipping, hiring tool templates) are assumptions. Put a security proof point next to the first demo button."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The hero uses Priya's own words ('No email tennis'), the segment math is crisp (0.73 seats per signup vs 0.17 for sales demos), and unknowns are honestly marked in [brackets] instead of made up. The metric is well argued, tied to real use rather than clicks.",
+  "biggest_mistake": "Brackets and placeholders mean it is not publish-ready. It mixes 'Get started' and 'Book a demo' across sections, which dilutes the team call to action. The security section is late (section 6), and the 'Open source' section repeats the security copy. There is no sample size, and 'Fits your hiring tools' is thin. Section 2 asserts 'three or four emails per interview' without a source. The security button is not a stated approved CTA.",
+  "what_would_make_it_a_10": "Hold to one team action ('Book a demo') throughout, add a note on how long the test must run, move security up near the first demo button, source the 'three or four emails' claim or cut it, and give a ready-to-run fallback for the bracketed proof."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick recruiting and show the math, but the second uses our customer's own words ('email tennis'), keeps the voice, and refuses to invent proof. The first has the tighter test plan and a stronger CTA discipline, but it reads a bit more generic in the hero."
+}

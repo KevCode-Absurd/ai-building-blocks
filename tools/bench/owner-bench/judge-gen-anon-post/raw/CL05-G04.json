@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the call and then gives a complete, usable package: tight list rules, a link-free sequence built on the pricing-change and rev rec hook, send rules with an opt-out footer, reply handling, a subject test and an honest reply-rate floor.",
+  "biggest_mistake": "The 12th-to-15th send window makes flags that fire during close wait, which cuts against the freshness of the pricing-change trigger. The 4.0% positive-reply figure is also scaled up rather than taken from the pilot. The step 1 ask is a 20-minute call, which is heavy for a first cold email.",
+  "what_would_make_it_a_10": "Drop the send-window delay or tie it to the weekly flag, use only pilot-backed positive-rate numbers, soften the step 1 ask, and check that the total stays within 900 words."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 7,
+  "range": 6,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The expected-reply-rate reasoning is the most honest of the two. It takes the pilot floor, explains why it does not multiply the two gains, gives per-100 and full-list numbers, and sets a check after 300 sends.",
+  "biggest_mistake": "It invents assets and claims the brief did not supply: a one-page summary, three steps the team took, and Chargebee being built so finance and engineering share one setup. It also says \"controllers tell me,\" which is false familiarity. Emails have no opt-out or address footer, and the proof is absent from step 3.",
+  "what_would_make_it_a_10": "Remove the invented assets and the product claim, add a compliance footer and reply handling, and offer a bolder test idea, all while staying within 900 words."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick the right segment, trigger and link-free step 1. Output 1 is more complete and safer to send, with an opt-out footer, reply handling and no invented assets. Output 2 has the better expected-rate logic but promises materials we do not have."
+}

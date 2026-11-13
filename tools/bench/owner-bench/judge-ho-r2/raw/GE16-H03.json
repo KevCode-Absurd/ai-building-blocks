@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The messaging directly targets the core data signals, especially the morning-of-day-3 tracking update to preempt the ticket surge and the post-delivery bra fitting tips.",
+  "biggest_mistake": "The sales retained estimate assumes the full £58 AOV for swaps, which slightly overstates retained revenue given bra-only returns.",
+  "what_would_make_it_a_10": "It is already a 10; adding exact item-level swap values rather than full AOV is the only minor polish possible."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Solid quantitative breakdown and sensible sequence of work that clearly explains ticket costs and fit-finder drop-off.",
+  "biggest_mistake": "Scheduling Message 4 for the end of day 5 misses the critical day 3 to 5 window where 62% of WISMO tickets actually happen.",
+  "what_would_make_it_a_10": "Send the mid-transit message on day 3 rather than day 5, and include practical bra fit guidance in the post-delivery email instead of generic copy."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 understood the timing problem behind the WISMO tickets and intervened on morning of day 3, while also writing superb post-delivery bra fitting instructions that will actively prevent returns."
+}

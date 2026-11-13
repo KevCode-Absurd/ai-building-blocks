@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It allocates budget strictly where the historical data points (giving 81% of launch spend to on-feet workers) and calculates the exact TikTok ad group learning floor ($136/day for 25 conversions).",
+  "biggest_mistake": "Using a single manual campaign throughout rather than eventually graduating proven winners into a dedicated Scale campaign once learning stabilizes.",
+  "what_would_make_it_a_10": "Already a 10 for an actionable launch plan, but adding an explicit note on post ID carryover for social proof would make it unbeatable."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The classic Test-to-Scale two-campaign structure with post ID reuse and a strict incrementality check against flat Meta spend.",
+  "biggest_mistake": "Splitting the initial test budget equally ($200/$200/$200) across workers, family, and mission, which ignores the clear organic signal that on-feet workers vastly outperform everything else.",
+  "what_would_make_it_a_10": "Concentrate launch budget heavily into the proven shift-worker style instead of spreading a third of the spend into family and another third into mission."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 actually backs the winning horse from our organic data, putting over 80% of initial spend directly behind on-feet workers rather than spreading tests evenly. Its Monday-ready table with owners and completion criteria is ready to execute immediately."
+}

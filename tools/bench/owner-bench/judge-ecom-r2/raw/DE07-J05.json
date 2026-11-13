@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It brings the paused ₹210 winner back in fresh words and makes the protein number the proof behind a taste hook, with a beat-this number attached to every one of the four launches.",
+  "biggest_mistake": "It cites 'about 27 characters for headlines' as Meta's recommended display length when the real guide is about 40, and Launch 4 puts ₹90 in both the primary text and the headline while claiming each pair adds something new.",
+  "what_would_make_it_a_10": "Fix the Meta limit citation to the correct 125/40/30 figures and make each launch pair strictly additive, with no repeated price or claim across primary text and headline."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The taste line is backed by real proof ('1 in 4 of our 870 reviews'), the A vs C test cleanly isolates voice from fact, and the legal-safe backup lines make it safe to hand over.",
+  "biggest_mistake": "Two of its six 'different' angles are the same transparency idea (P1 and P5) and there is no protein-led primary text, so the set does not deliver the six distinct angles I asked for, and two character counts are off by up to three.",
+  "what_would_make_it_a_10": "Replace the duplicate label-reader text with a true protein-led and a true 4 pm text so all six angles are distinct, and re-count every line so the stated characters match exactly."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives me the six angles I actually asked for in my voice, with the tired winner revived first and a benchmark number on every launch; Output 2 is smart but sells me the front-of-pack idea twice and leaves out a protein-led line, which is a direct miss on the brief."
+}

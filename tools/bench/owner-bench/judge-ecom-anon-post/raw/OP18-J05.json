@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 10,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets the big calls right: revive the paused winner, lead with taste, and address the ₹90 objection honestly, all in a voice that feels close to The Whole Truth.",
+  "biggest_mistake": "It adds quite a bit of media-plan detail and assumed budget that was not asked for, and it may run a little long for the brief.",
+  "what_would_make_it_a_10": "Trim the extra testing mechanics, keep the launch plan tighter, and double-check every character count against actual Meta placements."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clean, practical, and correctly reads the data: the front-of-pack ad was tired, taste is the missing hook, and price needs to be tested upfront.",
+  "biggest_mistake": "The six angles are not quite different enough: transparency appears twice, taste and texture overlap, and the office-snack/protein angles are less fully covered.",
+  "what_would_make_it_a_10": "Make the six copy routes more distinct: transparency, taste, no added sugar, protein, 4 pm snack, and price/value, with a little more blunt wit in the lines."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather use Output 1 because it gives me the broader, sharper copy set and sounds more like our brand. Output 2 is cleaner, but Output 1 better turns the data into ads I can actually launch."
+}

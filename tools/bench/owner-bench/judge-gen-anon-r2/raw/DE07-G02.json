@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks recruiting with the seat math, then builds the page around Priya's email-tennis pain, round robin and routing proof, and moves security up without hype.",
+  "biggest_mistake": "Security sits one section too far from the demo, and the A/B sample-size math borrows the page's 3.1% signup baseline for a demo-request metric.",
+  "what_would_make_it_a_10": "Put security proof immediately beside the demo form, add real recruiting customer proof and screenshots, and tie the A/B test math to the demo-request baseline."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Same sharp recruiting seat math, a strong 'No email tennis' hero, and a thoughtful qualified-team-start metric.",
+  "biggest_mistake": "Gives open source its own full section despite 7% survey weight, and mixes 'Get started' CTAs into a team page that should drive demos.",
+  "what_would_make_it_a_10": "Cut the open-source section to supporting proof, use 'Book a demo' consistently, remove unsupported no-show/SMS claims, and keep routing and security close to the demo form."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd send: it makes the recruiting seat math, keeps the page on Priya's email-tennis pain, moves routing and security up, and uses consistent demo CTAs. Output 2 has good math and a strong hero line, but the standalone open-source section and mixed CTAs fight the data."
+}

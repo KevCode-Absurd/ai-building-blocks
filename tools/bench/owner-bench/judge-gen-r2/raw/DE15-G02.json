@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It does the seat math (0.73 paid seats per recruiting signup vs 0.17 for team sales demos) and puts Priya's own phrase in the hero: 'No email tennis.'",
+  "biggest_mistake": "It leaves real holes in the finished copy — [certifications], [tool logos], [customer quote] — so the team still has homework before the page can ship, and its testing metric bundles demo requests with a 7-day-later booking, which is slow and muddy for an A/B call.",
+  "what_would_make_it_a_10": "Fill or cut every bracket and land on one clean, fast deciding metric measured at the visitor level."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It hits all three signals — recruiting seat math, round robin/routing usage, security page traffic — and stays honest where the data is thin, promising reminders rather than fewer no-shows and framing the ATS fit as 'a booking link is just a link' instead of inventing an integration.",
+  "biggest_mistake": "The hero says 'without the back and forth' rather than Priya's sharper 'email tennis,' so the strongest phrase in the brief is buried in section 2.",
+  "what_would_make_it_a_10": "Put 'email tennis' in the headline where it belongs, and give the two hero variants one outcome-led option rather than two feature-versus-pain framings."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick recruiting and show the math, but output 2 is the one I can hand to my team tomorrow: the section order matches how a recruiter buys, the metric has a sample size I can act on, and it doesn't make claims about ATS integrations or no-show reduction it can't back. Output 1 writes the better headline but leaves brackets for me to fill."
+}

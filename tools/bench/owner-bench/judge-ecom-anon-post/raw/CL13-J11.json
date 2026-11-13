@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 6,
+  "voice": 6,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the in-app checkout fix first with a hedged money range (₹17 to ₹34 lakh a month). Each test has sample sizes that match our traffic, a per-test money estimate, and a clear reason the hero image ranks last.",
+  "biggest_mistake": "It is dense and jargon-heavy for a business owner ('server-side split', 'named segment', 'voids the result', the four-group note on tests 1 and 2). It also runs long and has a cold 'Bad news' tone. It has no test for firmness, our second most common chat question, and the bolder-move extra uses up words.",
+  "what_would_make_it_a_10": "The same rigorous maths in plain words, inside the word limit. Add a firmness and trial test with copy in our voice, drop the extras, and show the funnel by browser in one simple table up front."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The funnel table by device and browser makes the in-app problem obvious. It links the 4,130 in-app pop-up errors to the 4,800 lost carts, sizes the fix at about 560 orders and ₹34 lakh a month, and recommends an A/A check. The tests cover delivery, sizes, firmness, EMI and COD, and the hero image and reviews.",
+  "biggest_mistake": "Test 5 bundles the hero image and the reviews move, so a win cannot be traced to either change. The hypotheses carry no numbers. Running all five takes 11 weeks, which is slower than it needs to be, and the reviews move could simply ship.",
+  "what_would_make_it_a_10": "Split the hero and reviews into separate changes, with the reviews summary shipped now. State the detectable effect in orders and rupees for each test. Run the pairs in more parallel lanes to finish sooner, and give the exact delivery, trial and firmness copy in our voice."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both catch the broken in-app checkout and size it. Output 2 is easier to read, uses plain words, and covers firmness, EMI and COD in our voice with no medical claims. Output 1 has tighter sample-size maths but is heavier going and skips firmness."
+}

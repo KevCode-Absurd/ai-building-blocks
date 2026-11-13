@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A complete, buildable one-screen flow with reason-specific copy in Babbel's warm voice and 'Cancel my subscription' live throughout.",
+  "biggest_mistake": "Gives a 50%-off price match to the 'switching apps' group, which contradicts the owner's annoyance at keeping the discount and spends margin on 8% who are already leaving for a rival.",
+  "what_would_make_it_a_10": "Drop or reframe the discount for switchers, tighten the revenue maths with an explicit per-group net-value range, and add a clean first-month tracking dashboard."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Correctly kills the discount entirely, treats 'switching apps' as a clean exit, and puts the pause-rebuild as the first move with honest bad news and a range.",
+  "biggest_mistake": "The headline '2,170' and range are slightly loose: the reminder group is barely defensible and the 'if switch and reminder do as well as the pause' range is a stretch the owner may not buy.",
+  "what_would_make_it_a_10": "Tighten the revenue range to the tested pause-only floor plus a clearly labelled upside, and add a one-line first-month scorecard with the one metric that matters (kept at 90 days by reason)."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and buildable, but Output 2 reads the data the way I do: no discounts to people who'd return anyway, a clean exit for switchers, and it leads with the honest bad news and first move this week. Output 1's 50%-off to switchers is exactly the margin leak I wanted stopped."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Complete and careful. Ten templates with sample values, clear flow steps, a night auto-reply plus a shift move for the 31% after-hours wave, and sensible compliance guardrails such as quiet hours, message caps and a 10% holdout.",
+  "biggest_mistake": "The prepaid nudge is one flow for everyone with no incentive, and it is filed as Utility, which Meta may recategorise. Pincode risk only changes what happens after no reply, not the nudge itself. The cart sizing assumes about 18,000 abandoned carts a month, a figure the brief never gives.",
+  "what_would_make_it_a_10": "Tier the prepaid nudge and its incentive by pincode risk, file the nudge as Marketing, and show the RTO loss per COD order by tier. Drop the invented cart volume, and keep the 7-day exchange policy flagged as a placeholder."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Targets by pincode risk. It puts Tier 3 first, with calls and a 48-hour cancel, and works out expected loss per COD order (₹70, ₹41, ₹27) to size the ₹20 and ₹40 prepaid incentives. T4 is correctly Marketing. It also adds holdouts, a net-saving metric and an honest 'bad news' note.",
+  "biggest_mistake": "The ₹20 and ₹40 discounts and the ₹99 advance are invented numbers, and auto-cancelling unconfirmed Tier 3 orders is aggressive. There is no shift change to staff the evening wave, and the ₹99 advance may trigger the upfront-payment distrust it names.",
+  "what_would_make_it_a_10": "Flag the discount amounts clearly as test values, add a softer path before the Tier 3 auto-cancel, and say how agent hours move to cover the evening. Trim the tables so the templates are easier to copy into the provider."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 treats Tier 3 as the main problem, ties the incentive to the money at risk, files the prepaid nudge under the right category, and sets up measurement. Output 1 is solid and polished but gives everyone the same nudge."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent grasp of the core signals: instantly spots the paused 'Dad's razor' video, the Ananya 25-34 demographic goldmine, and the Starter Kit COD trap.",
+  "biggest_mistake": "Contradicts its own threshold logic on Beard Kit (costs ₹429 vs ₹333 safe line, yet labels it 'above safe line' and keeps spending ₹60k), and scales DPA despite already dangerously high frequency (5.2).",
+  "what_would_make_it_a_10": "Apply the safe line uniformly across all ad sets (cutting Beard Kit or reducing it) and avoid scaling high-frequency retargeting audiences."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Ruthless financial rigor and founder mindset: accurately applies the 72% Shopify haircut to every ad set, cuts Beard Kit appropriately, and has the guts to hold unallocated cash unspent until earned.",
+  "biggest_mistake": "Leaving ₹1.3L unspent might feel aggressive to an agency, though it is economically the right call on first-order economics.",
+  "what_would_make_it_a_10": "It is already virtually flawless; providing a small secondary creative test bucket for new angles (beyond UGC) would be the only minor addition."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 manages my cash like a real owner. It correctly applies the Shopify haircut across every single ad set—rightfully cutting the fatigued Beard Kit and holding back ₹1.3L unspent rather than forcing spend into loss-making buckets."
+}

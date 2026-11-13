@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ties every recommendation to the data and the money: the 90-day break-even target, the kill/scale rules in dollars, and the creative plan built on the winning on-feet worker posts.",
+  "biggest_mistake": "The 90-day profit calculation slightly misstates fees: $7 x 1.42 = $9.94, not $10, which would give $38.46 not $38.56. Minor, but the target of $38 is still right.",
+  "what_would_make_it_a_10": "A more explicit link between the day-30 holdout/survey and the budget decision, plus a clearer owner for each step in the set-up list. Also, the plan could include a simple creative brief template for the new creators."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear, concise structure with a strong focus on the day-30 scorecard and the 'Monday owners' list, making it easy to hand off.",
+  "biggest_mistake": "The kill rule 'spends $76 (2x target)' is too aggressive; $76 is only 2x the target cost per order, but at $38 target, $76 is just two orders' worth of spend, which is too little to judge an ad. Also, the budget phase total for Days 1-7 is $4,200, but $600/day x 7 = $4,200, correct, yet the total budget of $30,000 is met, but the reserve of $1,000 is added on top of the $29,000 spent? Actually, the table sums to $28,000 + $1,000 = $29,000, not $30,000. Let me check: $4,200 + $6,300 + $7,700 + $10,800 = $29,000. Plus $1,000 reserve = $30,000. Yes, correct. The mistake is the kill threshold: $76 is too low; it should be at least $114 (3x target) or more, as in Output 1.",
+  "what_would_make_it_a_10": "Tighten the kill and scale rules to be statistically sound (e.g., use $114 as the spend threshold before cutting an ad), and include a more detailed tracking set-up with Events API and test orders."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more rigorously tied to the data and the economics, with kill and scale rules that make sense for a $38 target, while Output 2 has a too-aggressive kill rule that would cut ads prematurely. Output 1 also provides a more detailed and actionable set-up and creative plan."
+}

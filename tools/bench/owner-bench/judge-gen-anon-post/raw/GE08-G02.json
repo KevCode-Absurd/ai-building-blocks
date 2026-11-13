@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9.5,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Flawless commercial math and tight landing page discipline, especially pairing open-source control directly with the IT security objection rather than treating open source as a vanity bullet.",
+  "biggest_mistake": "The hero copy uses 'without the back and forth' rather than Priya's punchier verbatim 'email tennis'.",
+  "what_would_make_it_a_10": "Incorporate Priya's vivid phrase 'email tennis' into the primary headline and flesh out the ATS/workflow integrations copy."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8.8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Great headline hook using Priya's exact 'email tennis' phrase and a brilliant definition of the winning metric incorporating 7-day activation.",
+  "biggest_mistake": "Fragmented CTA strategy that alternates between 'Get started' and 'Book a demo' across sections, confusing the buyer journey for a 6-interviewer team lead.",
+  "what_would_make_it_a_10": "Commit to one primary team CTA throughout the page instead of ping-ponging between self-serve and demo buttons, and remove bracketed placeholder notes."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both nailed the seat math and customer profile, but Output 1 is much more disciplined with CTA consistency and smartly folds open-source proof directly into the security blocker section where enterprise buyers care about it."
+}

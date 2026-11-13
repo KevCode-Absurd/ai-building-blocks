@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes the 4.0 apart honestly, puts the feed fix first, and lands a $240,000 split that adds up with profit ranges rather than vanity ROAS.",
+  "biggest_mistake": "The headline brand math mixes brand Search and PMax brand spend into one $26,700 line, which reads slightly muddled; and the title string at 106 characters runs long against the 70-character first-fold advice it gives elsewhere.",
+  "what_would_make_it_a_10": "Voice it in our words (\"Made to walk, made to wash\") rather than spreadsheet shorthand, and tighten the brand table so each line is clearly its own campaign."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "priorities_note": "",
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads like us: warm, plain, grade-7, with the customers' own lines in the search ads. The PMax-without-brand table is the clearest single exhibit either answer produced.",
+  "biggest_mistake": "The projection is too rosy: brand Search rebuilt to $18,000 at an assumed ~25 ROAS and PMax at 2.6 put profit at $205,900, a 42% lift in 30 days that its own cautious case does not defend. It also folds the feed fixes into a tight list without the 'what changed on 21 October' diagnosis step.",
+  "what_would_make_it_a_10": "A defensible, conservative profit range with the working shown per line, and the Day-1 feed diagnosis spelled out as the first action with root-cause checks."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are usable and both get the real story: brand is hiding a losing non-brand book and the best sellers are starved or switched off. Output 1 wins because its money math is honest line by line and its forecast is something I would actually put in front of the CFO; Output 2 reads better but promises a 42% profit jump on an assumed 25 ROAS, and I do not want to defend that number in a board meeting."
+}

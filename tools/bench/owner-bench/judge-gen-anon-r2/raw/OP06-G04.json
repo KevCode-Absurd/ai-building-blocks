@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It aims tightly at the right segment and trigger, uses the pilot data correctly, and gives practical list rules and realistic expected results I could actually run with.",
+  "biggest_mistake": "A few emails have slightly more than one ask or feel a bit process-heavy, and step 1 asks for a reply plus offers to send a summary rather than keeping the CTA as simple as possible.",
+  "what_would_make_it_a_10": "Tighten each email to one cleaner ask, make step 2 and step 4 slightly sharper in finance voice, and keep the sequence even more focused on the pricing-change to close-time chain."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It identifies the right segment, trigger, and no-link approach, and the structure is easy to read and operationalize.",
+  "biggest_mistake": "It overreaches on projected performance and breaks the brief in places: step 2 asks for a 20-minute meeting directly, several emails do not follow the one-question-one-ask rule cleanly, and some forecast math is too speculative.",
+  "what_would_make_it_a_10": "Bring the expected reply rate back to the pilot-based range, simplify the CTAs to one low-friction ask per email, and revise the copy to sound more like a finance peer than a sales rep pushing a meeting."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I asked for and I would trust it more with my money. It stays grounded in my pilot data, targets the right people, and is nearly ready to send with only light editing."
+}

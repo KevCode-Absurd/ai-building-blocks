@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 6,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Detailed ticket reduction math by topic and a clever suggestion to add a UI explanation on the balances screen.",
+  "biggest_mistake": "Replacing the broad 'How balances work' and 'Deleting expenses' articles entirely with niche fixes, which would confuse users looking for the original general information.",
+  "what_would_make_it_a_10": "Splitting the specific fixes into new articles instead of overwriting the broad ones, using the exact brand phrase provided, and presenting the ticket reduction as a range as requested."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Excellent content strategy: recognising that specific issues should be split into new articles linked from the general ones rather than destroying the general articles.",
+  "biggest_mistake": "Leaving 'Search words' visible in the drafted article text, which a junior employee might accidentally publish as-is instead of adding them as backend tags.",
+  "what_would_make_it_a_10": "Adding a note to ensure search terms are added as backend tags rather than body copy, and breaking down the math slightly more for the exact ticket sources."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 understood the danger of overwriting highly viewed general articles and instead created targeted fixes. It also perfectly integrated the required brand phrase, put the bottom-line savings range at the very top, and avoided the trap of merging too much."
+}

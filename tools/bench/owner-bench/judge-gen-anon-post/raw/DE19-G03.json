@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the owner's principles: bad news in the first screen (Customer A, margin, missed forecast), burn fully explained, correct runway both ways, and asks that name a profile, city and date with a forwardable line.",
+  "biggest_mistake": "Ask 3 (intro to an infrastructure lead who left) is a research ask dressed as help, and the 'To forward' scripts, while useful, push the email toward the 700-word ceiling; the forecast-miss fix appears twice (headline and body).",
+  "what_would_make_it_a_10": "Tighten to one mention of the forecast miss, add explicit denominator framing for the 0.4% vs 3.1% conversion (it does hint at it) and give an expected compute saving range, not just a promise to report later."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Best analytical insight: converts the $0.9M compute into roughly 9 margin points and calls out that direct database growth was only 2.6%, so essentially all growth came from the low-converting channel. The burn table and the partner-pricing ask are genuinely useful additions.",
+  "biggest_mistake": "Buries the Customer A departure as item 2 under 'What went wrong' rather than leading with it, and its margin arithmetic ('$10.4M monthly revenue' vs ARR/12) is a loose derivation that risks being wrong if scrutinised; also more than three asks in spirit (the CFO pricing question is a fourth, softer one).",
+  "what_would_make_it_a_10": "Lead the bad-news section with Customer A and the missed forecast, show the margin math cleanly (denominator stated), and cut to exactly three asks with the partner-pricing one prioritised."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and close, but Output 1 follows my brief order more exactly: Customer A and the miss are the very first things a phone reader sees, the asks are forwardable and dated, and the maths is safer. Output 2 has the sharper margin insight but hides the departure one click down and takes more arithmetic risk."
+}

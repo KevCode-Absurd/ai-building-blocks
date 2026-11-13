@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A full 24-post calendar with working titles for every slot, a smart rerun of an approved clip in week 4, and clear review flags on each draft.",
+  "biggest_mistake": "It sends every sleep post to review, even ones that name no condition. That leaves week 1 with zero sleep posts and loses our best-performing theme for a whole week. The review rule only covers named conditions.",
+  "what_would_make_it_a_10": "Put condition-free wind-down posts like 'switch your brain off' in week 1 so they skip review. Use the 'can't switch my brain off' hook in a draft. Keep the full calendar."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Week 1 leads with sleep and wind-down posts worded to skip review. All six drafts are in our warm voice, each ends with one small action, and they can go out on 16 November.",
+  "biggest_mistake": "Weeks 2 to 4 get only weekly angles, no post titles, yet it tells me to submit them all for review on 16 November. It also keeps a weekly stress-at-work post when that slot could go to another sleep post.",
+  "what_would_make_it_a_10": "Add titles for every post in weeks 2 to 4 so the review batch is real. Swap the stress-at-work slot for sleep. Use 'can't switch my brain off' word for word as a hook."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 got the review timing right and puts sleep, our best theme, live in week 1 with drafts I could post today. Output 1 was too cautious and spent week 1 on kindness, even though its calendar is more complete."
+}

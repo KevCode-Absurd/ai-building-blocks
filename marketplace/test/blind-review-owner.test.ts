@@ -13,10 +13,10 @@ const load = (rel: string): Promise<any> => import(rel);
 const TOOL = fileURLToPath(new URL("../packs/shared/tools/blind-review.mjs", import.meta.url));
 const QUALITY = fileURLToPath(new URL("../packs/shared/tools/quality/", import.meta.url));
 
-test("the sheet asks the owner's nine questions and three checks against the owner's brief", async () => {
+test("the sheet asks the owner's nine questions and five checks against the owner's brief", async () => {
   const { sheet, OWNER_QUESTIONS, OWNER_CHECKS } = await load("../packs/shared/tools/blind-review.mjs");
   assert.equal(OWNER_QUESTIONS.length, 9);
-  assert.equal(OWNER_CHECKS.length, 3);
+  assert.equal(OWNER_CHECKS.length, 5);
   const s: string = sheet("Cut churn in the next two quarters. Data: yearly payers churn far less.", ["Draft one", "Draft two"], 1);
   assert.match(s, /You are the owner who wrote the brief/);
   for (const name of ["Fit", "New insight", "Priorities", "Reasoning", "Correct", "Clear", "Voice", "Range", "Ready to use"]) {
@@ -25,6 +25,11 @@ test("the sheet asks the owner's nine questions and three checks against the own
   assert.match(s, /fully, partly or not at all/, "signal check");
   assert.match(s, /confirm lists, requests for my yes or sign-off, alternates/, "homework check");
   assert.match(s, /stock rule or template[\s\S]*goal and data point the other way/, "rule-over-owner check");
+  // Round 2 (13 Nov 2026): the two checks that catch a dropped ask and a weight, order or ask set against the signal.
+  assert.match(s, /## Five checks/);
+  assert.match(s, /^\d\. Asks\. List every explicit ask in the brief\. For each draft, name any ask it drops/m, "asks check");
+  assert.match(s, /^\d\. Signal sets the call\. Name any weight, order, ask or timing in a draft that cuts against a signal the draft itself quotes/m, "signal-sets check");
+  assert.match(s, /a bolder move or second recommendation when I asked for one/);
   assert.match(s, /Length is not quality/);
   assert.match(s, /VERDICT: A or B or TIE, naming the draft the owner would rather pay for/);
   assert.match(s, /GRAFT:/);
@@ -71,7 +76,14 @@ test("the checker, clarity, voice, lessons and profiles follow the owner", () =>
   assert.doesNotMatch(read("lessons-general.md"), /"To confirm" box/);
   assert.match(read("VOICE.md"), /persona's own lines[\s\S]*customer's words[\s\S]*count is the claim[\s\S]*Internal analytics never appear/);
   assert.match(read("CLARITY.md"), /first-screen rule/);
-  assert.match(read("PROFILES.md"), /owner's limit wins[\s\S]*85%/);
+  assert.match(read("PROFILES.md"), /owner's limit wins[\s\S]*Stay within it[\s\S]*never by a word-count aim/);
+  for (const f of ["CHECKER-v3.md", "PROFILES.md", "profiles.json", "QUALITY-ENGINE-v3.md"]) assert.doesNotMatch(read(f), /85%/, `${f} keeps the 85% aim`);
+  // Round 2 rollback (13 Nov 2026): the round 1 checker and voice rules come back; asks are never dropped to stay safe.
+  assert.match(read("CHECKER-v3.md"), /run three checks[\s\S]*\*\*Left for the owner\.\*\*[\s\S]*\*\*Rule over owner\.\*\*/);
+  assert.match(read("CLARITY.md"), /Every explicit ask in the brief gets a visible answer[\s\S]*most money per unit of effort comes first/);
+  assert.match(read("CLARITY.md"), /deliver every piece the owner asked for; never drop or water one down to stay safe/);
+  assert.doesNotMatch(read("CLARITY.md"), /works either way/);
+  assert.doesNotMatch(read("VOICE.md"), /it leads the hero or the hook/);
   const profiles = JSON.parse(read("profiles.json")) as Record<string, { aim: number; ceiling: number }>;
   for (const [family, p] of Object.entries(profiles)) {
     assert.ok(p.ceiling <= 1.1, `${family} ceiling ${p.ceiling}`);
@@ -81,5 +93,8 @@ test("the checker, clarity, voice, lessons and profiles follow the owner", () =>
   assert.match(lessons, /\*\*The owner's data first; the playbook as the default/);
   assert.match(lessons, /\*\*Act fully on the signal\.\*\*[\s\S]*?Won:[\s\S]*?Avoid: the half-measure/);
   assert.match(lessons, /\*\*Finish one-shot work: no homework\.\*\*[\s\S]*?Won:[\s\S]*?Avoid:/);
-  assert.match(read("cards/_any.md"), /\*\*SHAPE:\*\*.*bolder move/);
+  assert.match(read("cards/_any.md"), /\*\*SHAPE:\*\*.*one labelled bolder move sized in the owner's unit, with its first step and risk, never inside customer copy/);
+  // Profiles add no unasked test or measurement plans, and plans run in relative days.
+  const shapes = Object.values(JSON.parse(read("profiles.json")) as Record<string, { shape: string }>).map(p => p.shape).join("\n");
+  assert.doesNotMatch(shapes, /then a test plan|measurement plan of|owner and date|owners and dates|owner, date|placeholders/);
 });

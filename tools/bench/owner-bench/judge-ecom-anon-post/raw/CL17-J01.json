@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every ad set is judged on an attribution-adjusted, after-RTO profit line, and the plan gives a dated first move for Saturday. The retargeting geo holdout is a smart way to test whether retargeting adds orders at all.",
+  "biggest_mistake": "The 86%/72% attribution split is invented, and labels and numbers sometimes disagree: retargeting is marked 'Cut' but only halved. Committing just ₹4.1L of ₹5.6L, with zero scale calls, means it under-deploys budget even though stock and cash are fine.",
+  "what_would_make_it_a_10": "Fix the retargeting label. Justify or simplify the 86% assumption. Add a short creative brief for the revived hook. Give the reserve a clearer path to ASC so the team spends most of the budget when costs recover."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The ₹282 safe line and ₹394 break-even line give the team a simple scale/hold/cut rule. It puts a rupee value of about ₹65k on the paused creator video. The women's age losses are broken out by band, and the creative brief uses Rohan's and Ananya's words. I checked the per-ad-set break-evens, profits and budget total, and they hold up.",
+  "biggest_mistake": "The main results table is on Meta's count, so it shows ASC at +₹30k when the store-count view is far worse. Scaling Catalog DPA at frequency 5.2 is a stretch.",
+  "what_would_make_it_a_10": "Show a Shopify-adjusted profit column next to the Meta count. Hold Catalog DPA rather than scale it. Add a dated first-day checklist."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both did the math right and made the same core calls. Output 2 is clearer, ready to hand to my team, and includes a creative brief. Output 1's attribution rigour and holdout test are sharp, but it leaves budget unspent and its labels are messier."
+}

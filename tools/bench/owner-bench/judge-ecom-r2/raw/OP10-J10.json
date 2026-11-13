@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a practical, numbers-led plan with clear bundle economics, COD/RTO thinking, and a safe sequential test plan.",
+  "biggest_mistake": "It misses the obvious top bundle customers already built — face wash + vitamin C serum — and turns lip balm into discounted bundles instead of using it mainly as the threshold add-on.",
+  "what_would_make_it_a_10": "Make the face wash + serum routine the lead bundle, use lip balm as the cart add-on, and base the ₹599 threshold case on actual order-band data rather than an assumed 6% slice."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It spots the real signals: face wash + serum is the lead routine, COD under ₹500 is the leak, and lip balm is best used as a full-price cart add-on.",
+  "biggest_mistake": "The third bundle could be more explicitly tied to the low-price threshold job the owner asked for, rather than making body the third routine and placing lip balm outside the bundle set.",
+  "what_would_make_it_a_10": "Add one sharper low-price add-on offer or mini-threshold bundle while keeping the current face, hair and COD-safe testing logic."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is closer to how I would actually run this: it uses the top existing pair, keeps the serum reorder protected, works COD/RTO into the decision, and treats lip balm as the add-on rather than discounting it away. Output 1 is thoughtful, but its bundle choices fight the clearest buying signal in the data."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The numbers check out: 13.0 agency trials per 100 lost to Semrush, 60% of all Semrush losses, Lite at 70% of churners, 37% 12-month Lite retention, and 42% of AWT conversions from multi-site accounts. A clear 'what we should not do' section rules out PPC parity and creator discounts.",
+  "biggest_mistake": "Move 1 invites PPC scope creep by pulling in clients' ad data. Its 19% headline gain assumes we win back a quarter of agency losses, which is optimistic and not backed. The 'November 2026' data date is made up, which breaks our dated-source rule.",
+  "what_would_make_it_a_10": "Make the Lite top-up the fastest-money move with explicit timing. Keep the report to data we already have. Tie the content study to a dated, real dataset. Size Move 1 more conservatively."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The opening answer is built for an exec: lose / tie / win / not-Semrush, then what to do first, what to stop, and what not to fund, all with checked numbers. Move 1's beta uses only data we already have, and its sizing (5–10% more new paid customers) is cautious and correct.",
+  "biggest_mistake": "Move 5 overlaps heavily with Moves 1 and 3 and takes the slot of a teach-first content move that suits our brand. Move 3 compares against the old 9.2% rate when the comparison should be the live holdout.",
+  "what_would_make_it_a_10": "Replace or fold in Move 5 so the five moves cover separate ground. Put the Lite top-up first as the quickest money. Add dates to the data periods."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are accurate and on target. Output 2 gives me a sharper one-screen answer with stop and don't-spend calls, and a more realistic agency report bet built on data we already have. Output 1's content move fits our voice better, but its Move 1 math is rosier."
+}

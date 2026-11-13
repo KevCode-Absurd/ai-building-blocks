@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Nails the tone perfectly by separating the question and the ask, and offering low-friction, peer-to-peer value instead of pitching a meeting.",
+  "biggest_mistake": "The expected results section is a bit text-heavy compared to a clean table, but the logic is sound.",
+  "what_would_make_it_a_10": "Using a table for the projections to make the data instantly readable for me."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 5,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent use of tables to clearly lay out the segments to exclude and the projected math.",
+  "biggest_mistake": "Missed the 'one question and one ask' rule by blending them, and used a standard salesy 'Worth 20 minutes' CTA which breaks the finance-to-finance tone.",
+  "what_would_make_it_a_10": "Following the specific copy principles for asks and avoiding standard B2B sales rep language."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 actually listened to the brand notes and wrote like a finance peer, whereas Output 2 slipped into typical SDR meeting-pitch tropes."
+}

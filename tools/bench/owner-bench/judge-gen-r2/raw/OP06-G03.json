@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the real issues fast, explains the AI-builder margin problem clearly, and turns the VP Enterprise Sales gap into a concrete New York ask with dates.",
+  "biggest_mistake": "The runway row in the table shows September as 52 months, which is wrong enough to distract and undermine trust even though the main October runway is right.",
+  "what_would_make_it_a_10": "Fix the runway table error and tighten one or two softer 'we plan to' lines into firmer actions with owners or timing."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots and explains the hidden issue well: AI-builder growth is mostly low-quality traffic that drove the margin drop, and it quantifies that in a useful way.",
+  "biggest_mistake": "It does not put Customer A high enough or prominently enough in the first screen, and the added monthly revenue-to-margin calculation is an assumption the owner did not ask for.",
+  "what_would_make_it_a_10": "Move Customer A into the opening bad-news block, remove avoidable inferred math, and make the asks a bit more specific to named profiles and dates with less 'proposal' language."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to how I asked this to be written: bad news first, more candid, more specific on what changed and what I need from investors. Output 2 is good, but it buries one of the most important negatives a bit more and adds an unnecessary derived metric."
+}

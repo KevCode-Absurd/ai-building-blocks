@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The math is phenomenal. It accurately blends the COD RTO refusal rates into the marginal profit per step-up, giving incredibly realistic break-even targets.",
+  "biggest_mistake": "Didn't explore a separate, higher free shipping threshold specifically for COD orders to tackle the 29% RTO leak directly.",
+  "what_would_make_it_a_10": "A recommendation to introduce a COD fee or a different shipping threshold for COD versus prepaid orders to fully solve the margin leak."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The clever idea to set the free shipping threshold at ₹599, protecting the hero serum order while forcing smaller carts to stretch.",
+  "biggest_mistake": "Discounting the lip balm as part of a main bundle instead of keeping it as a full-price, high-margin cart add-on.",
+  "what_would_make_it_a_10": "Offering the best-selling face wash and serum as a simple duo rather than complicating it with a third item, and doing the blended RTO math."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 nailed the exact bundle strategy I was hoping for and used the lip balm perfectly as a full-price cart add-on. Its financial modeling, especially blending the RTO costs by price band into the margin, was outstanding."
+}

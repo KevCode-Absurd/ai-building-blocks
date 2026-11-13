@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting with the right seat math (1,540 of about 2,717 seats), builds the hero on the brand's own 'without the back and forth' line, moves routing and security up, and claims only what the data supports. The PTO handling is honest, and the reminders copy avoids promising fewer no-shows.",
+  "biggest_mistake": "The sample-size stop rule uses the 3.1% homepage signup rate as the baseline for demo requests, so the 13,400-visitor target is probably wrong for this metric.",
+  "what_would_make_it_a_10": "Base the test sizing on the real demo-request rate, and make the B hero an outcome promise rather than a second feature angle."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts Priya's 'email tennis' right in the hero, uses the same correct segment math, and suggests linking the security page from the top menu and asking about the hiring tool in the trimmed demo form.",
+  "biggest_mistake": "It mixes 'Get started' buttons into a team page meant for demos, invents a 'three or four emails, your week gone' claim, implies fewer no-shows without data, and leaves several bracketed placeholders.",
+  "what_would_make_it_a_10": "Use 'Book a demo' consistently, cut the invented figures and implied outcomes, fill or drop the placeholders, and give a concrete stop rule for the test."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both pick the right segment with the right math. The first is cleaner and more careful about claims, keeps the buttons on-brand and is closer to ready to launch. The second has placeholders, mixed buttons and a couple of made-up claims."
+}

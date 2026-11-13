@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent mathematical breakdown of the reviewer hours saved by switching to a short written prompt.",
+  "biggest_mistake": "The written prompt in the application doesn't provide any behind-the-scenes data for the applicant, explicitly stating you aren't testing if they know the fix. This misses a huge opportunity to test problem-solving early on.",
+  "what_would_make_it_a_10": "Design an application prompt that actually allows candidates from non-tech backgrounds to demonstrate their problem-solving and diagnostic skills, rather than just their tone."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The 'Priya' typo exercise is a phenomenal insight. It perfectly tests attention to detail and problem-solving without requiring a shred of technical or Zendesk experience, rolling out the red carpet for career changers.",
+  "biggest_mistake": "Very few flaws, though deriving an exact 85% to 15% scorecard weight directly from the correlation coefficients is a bit of statistical slight-of-hand, even if the resulting prioritization is correct.",
+  "what_would_make_it_a_10": "It is already a 10. The time zone chart, the specific shortlist exercises, and the perfectly nailed 37signals tone make this ready to publish."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 created a brilliant, custom-tailored test scenario that perfectly filters for the exact skills we need (careful reading and clear writing) while remaining completely accessible to the non-technical career changers we want to attract."
+}

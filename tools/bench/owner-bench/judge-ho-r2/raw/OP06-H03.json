@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds the three real levers in this business and turns them into a practical 60-day plan with usable copy, portal changes and sensible low-to-high ranges.",
+  "biggest_mistake": "It overstates the retained-sales upside from swaps with a headline figure that is too generous for the stated refund-share change and could mislead prioritisation.",
+  "what_would_make_it_a_10": "Tighten the swap revenue math, explicitly include the post-delivery bra-fit help as a measured lever, and keep every forecast fully traceable to the assumptions."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly identifies the silence before courier scan as the fastest ticket win and gives mostly strong, on-brand copy with a sensible build order.",
+  "biggest_mistake": "It misses the owner's hoped-for day-3 reassurance message, replaces it with a late-only message, and its projected totals and savings do not fully tie back to the stated assumptions.",
+  "what_would_make_it_a_10": "Add the proactive day-3 update, include a dedicated post-delivery first-bra fit message, and fix the forecast table so every number reconciles cleanly."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I asked for: it covers the messages, portal changes, sequencing and expected impact with better fit to the data signals. Output 2 is useful, but it misses a key proactive ticket fix and the numbers feel less dependable."
+}

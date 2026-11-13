@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It proves non-brand Google lost about $20,000 last month, puts every segment against the 2.5 break-even, and spots that the 1.2 on broad 'women's flats' is partly the 212 missing sizes, so it trims rather than kills it.",
+  "biggest_mistake": "It sets PMax to target ROAS 3.0 while its own expected range is 2.0-3.0, so the campaign could stall in week one and underspend the plan.",
+  "what_would_make_it_a_10": "Start PMax on a lower target (2.5-2.6) and raise it after the feed fix proves out, and add the size, colour and highlight fields to the feed instructions."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The feed and title sections are the most complete of the two, with structured-data checks, sale_price for promos, variant links, size and highlight fields, and ad copy built from Claire's and Nina's own words.",
+  "biggest_mistake": "Its headline profit gain (+$60,900) rests on brand search jumping to about 25 ROAS from $18,000 of spend, an efficiency jump it never justifies, and it leaves $128,000 in PMax at a near-break-even 2.6.",
+  "what_would_make_it_a_10": "Hold brand value at a realistic 85-95% at the current efficiency rather than assuming a ROAS jump, show the profit range that follows, and note that the broad 'women's flats' 1.2 is distorted by the disapproved sizes before capping it."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and the arithmetic checks out, but Output 1's profit case is the one I'd defend to my CFO: it names the $20,000 non-brand loss plainly, flags that the broad-term figure is contaminated by the feed gap, and projects a cautious range instead of a $60,900 gain built on a brand ROAS jump."
+}

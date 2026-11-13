@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Calculates precise, ad-set-specific break-even thresholds accounting for exact COD/RTO and Shopify attribution gaps, and shows extreme capital discipline with a conditional reserve instead of forcing unprofitable spend.",
+  "biggest_mistake": "Slightly conservative on holding unspent budget without giving a fast parallel testing vehicle outside UGC.",
+  "what_would_make_it_a_10": "It is essentially a 10; adding a dedicated re-testing contingency for starter kits on prepaid-only would make it untouchable."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Understands every core lever in the data—the paused winner, Ananya's age demo, and the COD starter-kit trap—and explains the dual-line concept very clearly.",
+  "biggest_mistake": "Scales Catalog DPA despite a frequency of 5.2 and keeps Beard Kit LAL live despite fatigue and thin unit margins.",
+  "what_would_make_it_a_10": "Tighter ad-set unit-economic thresholds instead of relying primarily on blended store-level lines, and avoiding budget increases on high-frequency retargeting/DPA pools."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both candidates spotted every single trap and hidden winner in the data, but Output 1 showed superior capital discipline by calculating custom break-even lines per ad set and refusing to force-spend money where the unit economics don't hold."
+}

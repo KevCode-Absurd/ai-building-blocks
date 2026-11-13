@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the hiring data into practical choices: Asia-Pacific hours up front, weekend rotation stated plainly, and a short written exercise replacing the resume and cover letter.",
+  "biggest_mistake": "The scorecard is a bit less specific than it could be about what exactly gets scored in the application versus later stages, and the application prompt is realistic but less diagnostic than a prompt with a visible underlying cause.",
+  "what_would_make_it_a_10": "Make the written exercise even more job-like and easier to score consistently, and tighten the scorecard examples so every stage maps cleanly to one weighted signal."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It is tightly built on the actual signals in the brief, especially the overnight coverage gap and the evidence that written work predicts success while prior experience does not.",
+  "biggest_mistake": "The time-zone table adds useful clarity but slightly over-specifies hours in a way that may date quickly or invite edge-case questions.",
+  "what_would_make_it_a_10": "Keep the same substance but simplify the location-hours section just a touch so the post stays timeless while remaining clear about the required coverage."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 is the one I'd rather publish tomorrow: it sounds like us, uses the data cleanly, gives a better application exercise and scorecard, and is fully ready to hand to the team with almost no rework."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Calculates the exact RTO break-even to prove the ₹30 discount only works for Tiers 2 and 3, and perfectly adapts to the 4-agent constraint.",
+  "biggest_mistake": "Very minor, but sending the 48-hour cancel auto-message could perhaps be A/B tested first before a full rollout.",
+  "what_would_make_it_a_10": "It is already a 10; this is exactly what an owner wants to receive."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 5,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 6,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Cleverly leverages the free 24-hour WhatsApp service window to send the prepaid nudge without paying for a template.",
+  "biggest_mistake": "Recommends making phone calls for unconfirmed Tier 2 and 3 orders, which would completely overwhelm a 4-person team that is already taking 52 minutes to reply.",
+  "what_would_make_it_a_10": "Acknowledge the severe agent capacity constraint and automate or cancel risky unconfirmed orders instead of suggesting manual calls."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 perfectly understood the operational reality of the business. It used brilliant math to justify the prepaid discount strategy and ruthlessly protected the overstretched agents, while Output 2 suggested an impossible volume of phone calls."
+}

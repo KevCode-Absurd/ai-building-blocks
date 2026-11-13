@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Rock-solid mathematical breakdown of the coverage gap, clear Monday PO schedule, and an ongoing weekly reorder framework.",
+  "biggest_mistake": "Missed the specific behavioral risks of bridal makeup artists like Farah, missing a chance to tailor order caps or pro allocations.",
+  "what_would_make_it_a_10": "Incorporate specific tactics for high-volume bridal kit buyers like Farah alongside Tanvi to prevent bulk stock wiping before the sale."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Directly integrates customer personas into operations by creating pro pre-orders for Farah and capping online cart quantities to protect Tanvi.",
+  "biggest_mistake": "Slightly tighter cash reserve (₹1.3 lakh vs ₹4.07 lakh) leaves marginally less breathing room for unexpected freight surcharges.",
+  "what_would_make_it_a_10": "Include the specific per-shade minimum reorder trigger formula table that ops can consult every Monday."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both plans handle the math, lead times, and budget constraints flawlessly, but Output 2 wins because it connects the operational moves directly to our customers—setting pro allocations for Farah and cart caps to protect Tanvi."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the store data well, especially the Tier 3 RTO cost and the order-status chat load, and gives complete flows, templates, scripts and weekly metrics.",
+  "biggest_mistake": "The prepaid switch nudge is submitted as Utility even though it is a behavioural nudge and should be Marketing, and the payment URL variable is wrong.",
+  "what_would_make_it_a_10": "Make the prepaid nudge a Marketing template with a tested incentive, tighten the pincode-risk logic, and fix the template variables so it can be submitted directly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It directly targets the biggest money leak by treating Tier 2 and Tier 3 COD differently, uses the right WhatsApp categories, and gives a clear first-week plan.",
+  "biggest_mistake": "The after-hours automation is less complete than it should be because it does not lay out a proper button menu for track order, size, exchange, COD and agent routing.",
+  "what_would_make_it_a_10": "Add a button-led after-hours flow, state the ₹30 prepaid offer as an assumption/test, and tighten a few template claims such as COD being open only when verified."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would rather run: it gets the category rules right, targets the high-RTO pincodes harder, and has sharper economics behind the prepaid offer. Output 1 is strong, but the Utility classification for the prepaid nudge is a practical submission risk."
+}

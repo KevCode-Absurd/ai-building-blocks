@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nailed the segment math and structured the landing page exactly to the brief's pain points and priorities.",
+  "biggest_mistake": "Missed the CTA constraint. The brief explicitly said 'Book a demo' for teams, but this output used 'Get started' in half of the sections.",
+  "what_would_make_it_a_10": "Following the CTA constraint perfectly, explicitly linking the no-show survey data to the reminders section, and giving a statistically sound stop rule for the A/B test."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Exceptional attention to detail: correctly applied the 'Book a demo' team CTA strictly, mapped the no-show survey data to justify the reminders section, and calculated actual statistical significance for the A/B test.",
+  "biggest_mistake": "Very minor, but the proof line under the button in the hero could potentially get slightly crowded on mobile displays.",
+  "what_would_make_it_a_10": "It is already a 10. You went above and beyond by including meta data and a mathematically precise A/B test plan."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Both correctly identified the segment math and pain points, but Output 2 flawlessly followed the negative constraints (like the team CTA rule) and brought massive owner-level insight with the A/B test statistical math."
+}

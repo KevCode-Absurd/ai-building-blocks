@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 6,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts the three numbers, the missed forecast, the bad news and the top ask on the first screen. The maths is right: 476k of the 500k database increase came from AI builders, and runway is about 33 months, or 37 without the deposit. Each ask names a profile and a date, and one comes with a forwardable blurb.",
+  "biggest_mistake": "At roughly 900 words it is well over the 700-word limit. It also repeats itself: the bad news is listed up top and then explained again, and the burn split is buried in a paragraph. The 10-row table is not small.",
+  "what_would_make_it_a_10": "Cut it to 700 words by merging the bad-news list with the 'what went wrong' section, shrink the table, and give the expected margin effect of the 48-hour pause as a range."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the three numbers and the missed forecast, then lists the bad news. It shows that direct-created databases grew only 2.6%, so nearly all the growth came from the money-losing channel, and it breaks the $2.2M burn rise into a small table. The runway is given as a 33-37 month range.",
+  "biggest_mistake": "It still runs over 700 words, with two tables and a long assumptions block. The '9 points of margin' comparison is loosely argued, and the 48-hour pause has no quantified expected saving.",
+  "what_would_make_it_a_10": "Trim to 700 words, merge the two tables, and give a range for the margin gain from the 48-hour pause."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the numbers right and name specific asks with dates. Output 2 is tighter and shows what the database growth hides: direct creation grew only 2.6%. It also shows the burn split in a table and gives runway as a range. Output 1 is longer and repeats itself more."
+}

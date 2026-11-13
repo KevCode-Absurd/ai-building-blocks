@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Leads with the three numbers including the missed forecast and margin drop, puts Customer A up front, and explains the burn split and runway range cleanly. The self-hosting-leavers ask is a genuinely sharp investor ask.",
+  "biggest_mistake": "The 'about 9 points of margin' math is a loose back-of-envelope tied to a $10.4M monthly revenue assumption; it invites a CFO to poke at it. Also slightly over 700 words with the assumptions block.",
+  "what_would_make_it_a_10": "Tighten to under 700 words, replace the 9-point margin estimate with the plain $0.9M compute figure, and make the Customer-A-learning ask name a person/team and date."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very readable; correct runway figures; forwardable blurb in ask 1 is a nice practical touch, and the 33 vs 37 month runway contrast is clear.",
+  "biggest_mistake": "The runway table row comparing 52 vs 33 months is apples-to-oranges and confusing; also leads 'the bad news' with margin rather than Customer A and the missed forecast, burying the forecast miss in the top block only.",
+  "what_would_make_it_a_10": "Fix the runway comparison row, put the forecast miss and Customer A ahead of the margin story, and add the burn-split table so the $5.5M underlying number is visible."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 puts the forecast miss and Customer A where I'll see them, explains the burn split with a table, and gives me sharper asks; Output 2 is cleaner to read but its runway row is misleading and the bad-news ordering is weaker."
+}

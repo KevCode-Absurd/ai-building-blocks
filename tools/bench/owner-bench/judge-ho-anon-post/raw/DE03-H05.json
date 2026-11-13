@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The ranked table is built on tickets we can actually remove, with clear arithmetic and a realistic range that shows its working; the three articles answer in the first two lines in plain, friendly language.",
+  "biggest_mistake": "Treats 'Deleting expenses' as the main restore fix without checking that the existing article's 64% helpful rating means it is already addressing the right need; a better plan would keep and retitle it, not write a competing article.",
+  "what_would_make_it_a_10": "State the assumed skill of the writer and how the two-week plan fits one person's hours; include a one-line risk that retitling the delete article may confuse search; name the expected drop in the first paragraph so the owner sees the bottom line immediately."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Covers more ground, including both app and web restore steps, search-term fixes, and a currency article in the forecast; the voice is calm and the first article's opening is strong.",
+  "biggest_mistake": "The ticket forecast gives single-point estimates (like 40%) with weak justification; it also merges 'Recording a payment' despite it being 71% helpful, which contradicts the brief's warning about rewriting everything at once.",
+  "what_would_make_it_a_10": "Replace the single-point forecast with an honest range and show the range low/high; drop the merge of 'Recording a payment' or justify it with ticket data; add a realistic count of in-app link changes with engineer hours."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more usable directly: it gives a ranked list with a clear range forecast and articles that sound like our brand from the first line, while Output 2 buries its bottom line and gives a single-number forecast without enough working. I'd send Output 1 to the writer with minor edits."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads the past 90 days correctly: the front-of-pack ad was tired, not dead, and taste is the never-run proof. The layout is the easiest of the two to review, and the judgement rules (cost per purchase, swap before frequency 3.5) are right.",
+  "biggest_mistake": "Only five real angles, not six: P1 and P5 are the same transparency idea, P6 fuses price with the 4 pm scene, and there is no straight protein or office-snack text. So launch ad D tests price and the 4 pm segment at once and proves neither, and the set has a duplicate.",
+  "what_would_make_it_a_10": "Make P5 a clean 4 pm/Priya text, make P6 price-only, add a straight protein angle, and give the first four a runnable test: a control cell, a daily budget, and a purchase count needed to call a winner."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_mistake": "Headlines drift off the angle being tested: ad D pairs a no-added-sugar primary with 'Ingredients on the front', and ad B pairs taste with '12 g protein per bar'. That blurs what each cell proves, and the price ad asserts ₹90 without a value comparison.",
+  "biggest_strength": "Six genuinely different angles in customers' own words, plus a test you can hand to a media buyer today: control cell copying the live ₹290 ad, ₹1,200 a day per cell, 58 vs 44 purchases at your known costs, an early-cut rule, a 20% decision rule, fatigue at 3.5 and UTMs. The ₹6,333 a day figure is derived correctly from the spend table, and ₹90 a bar is right.",
+  "what_would_make_it_a_10": "Match each headline to the angle its primary text is testing so each cell answers one question, tighten the copy to stay comfortably under the word cap, and give the ₹90 line one honest everyday comparison."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 gives me six truly different angles in my customers' own words and a test plan I can hand over as it stands, with a control and numbers that check out. Output 1 is easier to read but repeats the transparency angle and muddles its price test with the 4 pm scene, so I'd be rewriting before spending."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Dissects the 4.0 into profit per segment against a 2.5 break-even, puts the price-mismatch feed fix first, and builds a budget that adds to exactly $240,000 with a reserve rule, a downside range, and a bold regional test to challenge the 1.2.",
+  "biggest_mistake": "Complicated to run: a reserve rule, a regional state-split test, and several simultaneous changes make week one hard to execute and the 13% reported-revenue drop may scare the CFO if not framed first.",
+  "what_would_make_it_a_10": "Trim to the essential moves (feed fix, brand exclusion, reallocation), push the regional test to a later month, and state the revenue/profit trade-off even more plainly up front."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Cleanest read: brand is 11% of spend and 50% of value, PMax ex-brand is 2.03 and loses ~$36,700; a tidy split to $240,000, feed fix with concrete causes, and a usable title and ad copy rewrite.",
+  "biggest_mistake": "Forecast relies on an aggressive PMax jump to 2.6 and brand at 25 ROAS after the switch; the plan is competent but less ambitious, with no test to prove the broad spend isn't building future brand demand.",
+  "what_would_make_it_a_10": "Add a way to test whether the 1.2 broad spend drives later brand demand, and show profit ranges per line rather than a single base case."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are good and both would get used, but Output 1 goes further: it takes the 4.0 apart into profit per segment, fixes the feed first, gives a split that adds up, and has a downside range and a test, which is what I asked for. Output 2 is the cleaner read but a bit safer and more optimistic on the upside."
+}

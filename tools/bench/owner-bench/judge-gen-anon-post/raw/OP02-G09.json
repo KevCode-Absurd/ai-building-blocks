@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the right strategic shift: sleep, evening posting, narrator clips, and fewer weak themes/formats. The 24-post table and six drafts are close to something the team could run.",
+  "biggest_mistake": "The review timing note is a bit off, and the plan is slightly casual with riskier wording like 'expect fatigue' and a live-stream idea that is outside the core ask.",
+  "what_would_make_it_a_10": "Tighten the review guidance, remove the extra experimental live idea or clearly mark it as optional, and polish a few captions to feel a little more Headspace-soft."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clear, warm, and on-brand. It reads like Headspace, uses the right data points, and the six drafts are easy to hand to the editor and designer.",
+  "biggest_mistake": "The 4-week plan is less developed than it should be: it repeats the same weekly structure and only gives broad weekly angles, not a full post-by-post plan. The review timing also creates a possible gap for Monday 23 November.",
+  "what_would_make_it_a_10": "Add a true 24-post calendar with specific angles for each week, fix the review timing, and make the measurement plan tie more directly to each theme and format."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather use Output 1 because it gives me the fuller operating plan, not just the rhythm. Output 2 sounds a bit more polished, but Output 1 is closer to something I can put in motion on Monday."
+}

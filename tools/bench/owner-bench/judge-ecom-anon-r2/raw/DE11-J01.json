@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every ad set gets a rupee verdict, the paused 'Dad's razor vs mine' relaunch is the first move with a ₹65,000 number attached, and women 25 to 34 is split out instead of killing the body razor.",
+  "biggest_mistake": "The Beard Kit is held while Output 2's store-count math (₹429 vs a ₹333 safe line) suggests it actually loses money; o1 uses a ₹465 break-even that is too generous. Also the ASC ladder climbing to ₹25,000/day mid-fortnight risks overshooting the ₹282 safe line before the relaunch proves itself.",
+  "what_would_make_it_a_10": "Resolve the Beard Kit with store-count math, tighten the ASC ladder to only scale after a full 3-day read at the new level, and cut one more cut of the 'Dad's razor' hook into a named test cell so the creative test is concrete."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Refuses to deploy the full budget where the store numbers say it loses money; the unspent ₹1,30,400 with a named release condition (repeat profit per Meta customer above ₹90) is the most owner-honest move in either answer.",
+  "biggest_mistake": "Dense and slower to act on; the 'not spent' ₹1,30,400 will feel like leaving money on the table and the ₹282 line relies on an even 0.72 UTM haircut across ad sets, which it admits retargeting and DPA probably fail.",
+  "what_would_make_it_a_10": "A one-paragraph 'Monday morning' summary at the top with the four day-1 moves and the projected result, so the numbers don't bury the decisions."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and both nailed the three signals I care about. I'd pick Output 2 because it is honest about not spending budget that loses money and gives me a release condition, though I'd borrow Output 1's cleaner tables and creative briefs."
+}

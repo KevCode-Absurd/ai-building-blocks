@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It perfectly models the selection bias of the fit finder in its math and nails the post-delivery fit advice in the exact brand voice.",
+  "biggest_mistake": "It uses bracketed mock dates instead of dynamic liquid tags for the delivery window, requiring a minor technical tweak before launch.",
+  "what_would_make_it_a_10": "Replacing the bracketed dates with ready-to-use liquid syntax variables."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent use of liquid syntax in the copy and a very sharp callout that a swap still costs the brand £7.50.",
+  "biggest_mistake": "It misses the opportunity to provide actual fit advice in the post-delivery email and explicitly chooses not to pre-select swaps.",
+  "what_would_make_it_a_10": "Include actionable fit advice in the delivery email and pre-select the size swap option in the portal to proactively save the sale."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 caught almost all the hidden signals and delighters. It brilliantly modelled the fit finder data to account for self-selection bias, provided excellent post-purchase fit advice to prevent returns, and correctly pre-selected size swaps in the portal."
+}

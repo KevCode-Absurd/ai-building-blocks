@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Judges every ad set on Shopify-adjusted, after-RTO rupee lines and makes the paused 'Dad's razor vs mine' relaunch plus the 25-to-34 age split the first moves.",
+  "biggest_mistake": "Leaves ₹1,30,400 of the fortnight unspent and hedges the projection between two contradictory outcomes, which is harder to act on than a clean plan.",
+  "what_would_make_it_a_10": "A committed forecast on the store count and a plan for the unspent money, or a clear statement that underspending is itself the decision with the cost of it named."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Cleanest to read and act on: two-tier break-even lines, a budget table that adds up, and plain daily rules with rupee triggers.",
+  "biggest_mistake": "Judges on Meta's own count for most decisions (Beard Kit held, Retargeting 'profit', DPA scaled) despite showing the 72% UTM gap, so it risks scaling losses the owner flagged.",
+  "what_would_make_it_a_10": "Use the safe line as the decision basis for every ad set, not just as a secondary column, and be explicit that Beard Kit and Retargeting lose money on store count."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the one I'd send: it uses my store's real numbers to make the calls, catches the paused winner and the COD-trap starter kit, and writes down rupee lines I can hand to the team. Output 2 reads better but still trusts Meta's count in places, which is exactly the mistake I warned against."
+}

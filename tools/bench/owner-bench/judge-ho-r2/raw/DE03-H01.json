@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It answers the brief exactly: re-carton first, rush only the top 5 shades, stay inside ₹1.2 crore, and gives an honest back-in-stock line in brand voice.",
+  "biggest_mistake": "It spends about ₹1.187 crore with only ₹1.3 lakh spare, a thin buffer if freight or unit costs shift slightly.",
+  "what_would_make_it_a_10": "Show the exact per-shade split and the warehouse calendar for the re-cartoning run, so the ops lead can start Monday morning without any further maths."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Reserve rule and per-shade reorder points show good planning discipline, and it keeps a sensible ₹4.07 lakh cash reserve.",
+  "biggest_mistake": "It invents a 'Night-out kit' and a SKU bundle without owner sign-off, and its pre-order copy promises a ship date it cannot guarantee, which breaks the honesty principle.",
+  "what_would_make_it_a_10": "Drop the invented bundle, use only the owner's real lines, and lock every promise to a date the rush order actually supports."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the plan I would hand to my ops lead on Monday: it puts re-cartoning first, rushes only the five shades that sell, defends the brand with honest copy, and leaves no room for fake scarcity. Output 2 has good rigour but invents a product bundle and a shipping promise I did not ask for."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, shootable scripts built on the real data: taste-first openers, the 3 pm hook, price handled head-on, disclosure written into every brief.",
+  "biggest_mistake": "Script 3's hook leads on the kids line while the label moment sits mid-script; also the disclosure instruction ('start the caption with #ad') is thinner than platform toggles need, and the briefs are good but a shade wordier than they need to be.",
+  "what_would_make_it_a_10": "Tighten script 3 so the label is not the spine of a family ad, add the on-screen 'Ad' frame rule and delivered-asset specs (captions, safe zones, raw clips) from the other version, and give each hook a one-word note on what single thing it changes."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads like a producer's plan: opening-style table with cost per purchase, price math on screen, a real test budget with cut rules, and the strongest creator briefs and delivery specs of the two.",
+  "biggest_mistake": "The spoken disclosure lines ('Olipop paid me for this one', 'Olipop paid me to make this') are clunky and repeated mid-ad; the on-screen 'Ad' from frame one plus the toggle is the compliant part, and the extra spoken plugs hurt the voice. Script 1 also puts a claim before the full reveal rhythm settles.",
+  "what_would_make_it_a_10": "Drop the awkward spoken payment lines to a single natural mention early, keep the on-screen Ad and toggles, and rewrite script 3 so the dad's line is an observation after the kids' reaction rather than a claim lead-in."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are shootable and on-data, but number 2's cost-per-purchase table, on-screen price math, budget test plan and delivery specs are the things I would actually hand to a creator tomorrow; number 1 is the cleaner read but asks me to fill in more of the production detail myself."
+}

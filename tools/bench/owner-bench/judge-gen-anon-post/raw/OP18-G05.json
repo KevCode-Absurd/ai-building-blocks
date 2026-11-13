@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into the right hiring design: Asia-Pacific hours, weekend rotation stated plainly, no degree/tool/years requirements, and a short written customer reply as the first filter.",
+  "biggest_mistake": "The post says “No resume” very firmly, which may be fine, but I’d want to confirm that operationally before publishing. The application scoring also gives most first-pass replies only one reviewer, which is efficient but a little thin.",
+  "what_would_make_it_a_10": "Tighten the application mechanics slightly: make the blind review and second-reader rules a bit more robust, and confirm the no-resume choice. Otherwise this is very close to publishable."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The job post is warm, plain, and honest, with the salary, Asia-Pacific hours, weekend rotation, and remote setup easy to see right away.",
+  "biggest_mistake": "The scorecard leans too much on interviews after showing that interview impression barely predicts performance. It also does not include an actual customer email prompt in the post, so it is less ready to publish.",
+  "what_would_make_it_a_10": "Move more weight from interviews into written work, add the actual application reply prompt, and make the scorecard more centered on writing and handoff notes rather than spoken interview evidence."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather use Output 1 because it follows the evidence more tightly: writing is the main signal, the overnight gap is the hiring reason, and the weekend rotation is impossible to miss. Output 2 has a very good post, but its scorecard drifts back toward interviews too much."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It aims exactly at the winning segment and moment from the pilot, then turns the data into a focused sequence I could actually send.",
+  "biggest_mistake": "A few asks are a bit too conditional or busy for the brand rule of one clean ask, and step 2 leans a little product-y.",
+  "what_would_make_it_a_10": "Tighten each CTA to one simple next step, keep every note even more peer-to-peer, and trim any line that sounds like selling instead of finance-to-finance."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It still identifies the right audience and trigger, and it adds some practical operating rules around list hygiene and handling replies.",
+  "biggest_mistake": "Several emails break the brief: step 1 and other steps mix more than one ask, promise a 20-minute call too early, and add rules not grounded in the data like send windows and compliance footer language.",
+  "what_would_make_it_a_10": "Strip it back to the tested signal, remove invented process rules, make each email one question and one ask, and align the tone more closely to our finance voice."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I asked for, uses my pilot data more carefully, and feels much more ready to put into market. Output 2 gets the segment right, but it adds unsupported rules and needs more rewriting before I would trust it."
+}

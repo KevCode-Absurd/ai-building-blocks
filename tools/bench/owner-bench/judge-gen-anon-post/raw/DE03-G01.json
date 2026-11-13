@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every recommendation is tied to a number from our own data — trials per 1,000 clicks, per page — and the ranked table with ceilings and paid customers is exactly how I think about it.",
+  "biggest_mistake": "The docs 'trial prompt' move (rank 5) is soft and hand-wavy ('about +25 if docs rise by one trial per 1,000 clicks') — it reads like a guess in an otherwise disciplined table. The /vs-google-analytics projection (+3,190 clicks) is aggressive and the assumptions are thin about why.",
+  "what_would_make_it_a_10": "Tighter, defensible forecasts on the top two moves (show the CTR math like the competitor did), and put the cookie-banner rewrite where Maya actually converts rather than burying it at rank 4 with a near-zero trial number."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads like someone who read our brief: 'It doesn't use cookies' in the meta, 'when GA4 is the better choice', rollback rules, DPO page without a GDPR promise, and a dated 16 Nov start with a named finish line each month.",
+  "biggest_mistake": "The Month 3 agency page is flagged as low search demand and relies on sharing — it's the weakest slot; and the 18–46 trial range on move 1 is wide enough that I'd want the mid-case spelled out.",
+  "what_would_make_it_a_10": "Spell out the mid-case for move 1, and swap or hedge the agency page so the last writer slot stays a higher-conviction trial play."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both got the strategy right, but Output 2 sounds like us — no-cookie claims, dated tables, 'when GA4 is better', a DPO page without a GDPR promise — and its forecast ranges and rollback rules are things I'd actually put in front of the team on Monday. Output 1 is sharper on the trial math table but reads slightly more generic and oversells the GA rewrite."
+}

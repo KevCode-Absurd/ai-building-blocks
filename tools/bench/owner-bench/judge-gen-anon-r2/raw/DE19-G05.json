@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear, honest job post and a scorecard that directly addresses the overnight time zone gap and weekend rotation, backed by data.",
+  "biggest_mistake": "Assumes reviewer can score a reply in 2 minutes without testing; time zone coverage could be more explicitly tied to Asia-Pacific regions.",
+  "what_would_make_it_a_10": "A pilot to validate the 2-minute scoring assumption and a slightly more detailed explanation of how the hours align with Asia-Pacific locations."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Excellent job post with a clear, engaging voice, a scorecard with detailed rubrics, and an application process that is practical and fair, including a helpful time zone table.",
+  "biggest_mistake": "Minor: The scorecard's 'Calm judgment' row is sourced only from the call, which may have lower predictive validity; could be supplemented with a written element.",
+  "what_would_make_it_a_10": "Add a written component to assess calm judgment, as the call alone may not capture it as well as written responses."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 feels more like us: it's warm, clear, and practical, with a better scorecard and application process that would attract the right people and not drown us."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks recruiting with the right seat math and builds the hero on Priya's own 'email tennis' pain. It also moves routing and security up the page and cuts the demo form to 4 fields.",
+  "biggest_mistake": "Buttons switch between 'Get started' and 'Book a demo' on a page for teams. It also invents a '3–4 emails per interview, your week gone' claim, and the deciding metric is a compound one that waits 7 days for a first booking.",
+  "what_would_make_it_a_10": "Use one consistent team call to action and drop the made-up email count. Pick a simpler deciding metric with a sample-size rule, and put the security proof right next to the final demo button."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is careful and ready to ship. It states what it assumes about the product (calendar-based PTO skipping, no ATS integration claimed), keeps every button on 'Book a demo', uses real numbers as proof (71%, 41%, 88%, 74%), and names a clean deciding metric with a stop rule.",
+  "biggest_mistake": "The sample-size math uses the 3.1% homepage signup rate as the baseline for demo requests, so the visitor target is likely far too low. The two hero versions are also a bit close in wording.",
+  "what_would_make_it_a_10": "Base the test sizing on the real demo-request rate and put Priya's 'email tennis' phrase in the hero. Make Version B a clearer outcome-led idea."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both pick the right segment and build a sensible page. The second is more disciplined: it doesn't overclaim, keeps one call to action for teams, and gives me a clear metric and stop rule I can act on."
+}

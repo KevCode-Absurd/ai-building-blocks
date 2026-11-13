@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Targeted the 46-90 day cohort as priority #1 using the 68-day trigger (2x median reorder gap), perfectly capturing the lowest-hanging revenue without throwing unnecessary discounts.",
+  "biggest_mistake": "Assumed House Blend is the only substitute for Monsoon Dark without considering darker single-estate alternatives or seasonal preferences.",
+  "what_would_make_it_a_10": "Add dedicated copy handling for cold brew and equipment-only buyers instead of lumping them into a generic brew tip."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Superb brand voice and sharp segment awareness, especially recognizing equipment buyers and cold brew seasonality.",
+  "biggest_mistake": "Relegated the 46-90 day 'at risk' cohort (9,000 customers) to an afterthought note instead of ranking them as the first and most cost-effective target in the win-back sequence.",
+  "what_would_make_it_a_10": "Integrate the 46-90 day cohort directly as Rank 1 in the target table rather than starting with the older 91-180 day group."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 understood my customer lifecycle data best by prioritizing the 46-90 day 'at risk' cohort right at the top with zero initial discount. Output 2 wrote wonderful copy, but missed the immediate commercial priority by leaving the 46-90 day group out of the primary campaign ranking."
+}

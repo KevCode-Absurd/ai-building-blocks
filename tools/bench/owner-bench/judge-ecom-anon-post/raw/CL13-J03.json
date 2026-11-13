@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads like a production brief. Each concept has timed scenes, a headline with character count, and a sound-honesty note. The three picks follow the data (women's cost per purchase, work flyers, quiet wheels). It also sets a test budget with a clear win and stop rule, and keeps claims strictly to the approved specs.",
+  "biggest_mistake": "The concept details are uneven, and the \"who and awareness\" and \"tests\" fields sit in a table instead of under each concept. Concepts 2 and 7 are both proof-led and feel close. The \"lifts it into a cab with one hand\" shot hints at lightness beyond the approved spec.",
+  "what_would_make_it_a_10": "Put awareness and test variable under every concept. Swap one proof-led concept for a bolder idea. Drop the one-hand lift. Tighten the primary text into shorter, calmer lines in our voice."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows my requested structure for every concept: angle, who and awareness, hook, format, visual, text, test. The primary text is short and calm in our voice. It reads the data well (26% of purchases from 18% of spend). The reviews carousel and the plan to keep a control ad running are useful.",
+  "biggest_mistake": "Test spend is thin: about ₹4,500 per concept gives little to judge on. Broad targeting would blur the women-versus-men read it wants. The gate concept shows cabin dimensions that are not in the approved specs. It ignores the front-pocket request. Some copy leans on \"quiet\" and \"smooth\" as our own claims rather than review quotes.",
+  "what_would_make_it_a_10": "Add headlines and exact specs per format. Set a real test budget and audience split per concept. Keep quiet, smooth and sharp strictly as quoted review lines. Add a note on the front-pocket objection."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick the right three and keep the claims honest. Output 1 is closer to something I could hand to a team and launch, with scene timing, headlines, a sensible test budget and tighter claim rules. Output 2 reads a little more like our brand voice, but it is thinner on execution."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9.3,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent category range across skin, hair, and body, backed by an incisive understanding of the COD refusal cliff at ₹500 and a high-leverage proposal for a COD fee under ₹499.",
+  "biggest_mistake": "The Glow Routine at ₹999 bundles three items rather than testing the existing 3,100-order face wash + serum organic duo directly at a ₹849–899 price point.",
+  "what_would_make_it_a_10": "Offer a clean 2-step face wash + serum routine alongside the trio, and provide exact pin-code split mechanics for platforms that can't do client-side shipping rate A/B tests."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8.1,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Smart rationale for the ₹599 threshold protecting the ₹599 serum, accompanied by a clean, readable profit-per-visitor testing framework.",
+  "biggest_mistake": "Redundant bundle selection: dedicating two of the three bundles to serum + lip balm variations leaves out body care entirely despite existing pair data.",
+  "what_would_make_it_a_10": "Replace the Serum + Lip Balm bundle with a Body care routine (lotion + wash) and incorporate an actionable COD-specific solution to tackle the 29% RTO rate on small orders."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers a much better routine strategy across skin, hair, and body, while using the lip balm as an in-cart threshold bridge. More importantly, it actually solves my worst financial leak by tackling COD RTOs below ₹500 directly."
+}

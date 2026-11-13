@@ -1,0 +1,35 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "biggest_strength": "Runs the threshold maths in both directions and picks the middle line (₹599) that keeps the serum reorder free, with per-outcome money shown.",
+  "biggest_mistake": "Leads with the Serum + Lip Balm and Hair Wash Duo as bundle one and two, and buries the real best pair (face wash + serum) into a three-item ₹999 set that costs ₹36k a month if existing pair buyers switch; also leaves the ₹599 threshold under-explained for the 27% band between ₹500 and 699.",
+  "what_would_make_it_a_10": "Make face wash + serum the headline routine at a modest saving (~₹849), keep the lip balm as a cart add-on not a bundle, and put COD/RTO into the threshold table as a separate line (prepaid bar vs COD bar)."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "biggest_strength": "Bundles follow the data (face wash + serum first), the savings are honestly costed, and the decision is defendable with a full appendix plus a clean, testable threshold recommendation that protects Ishita's reorder.",
+  "biggest_mistake": "Keeps the threshold at ₹499, so it does not actually solve the small-COD leak it flags; the ₹699 test is proposed only 'on new shoppers' without modelling the COD fee or prepaid-only bar that would fix RTO.",
+  "what_would_make_it_a_10": "Pair the ₹499 keep with a COD-specific rule (e.g. free shipping at ₹699 on COD, or a ₹20 COD fee) and show the RTO rupees saved, so the leak is closed without charging Ishita's prepaid serum order."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 reads like a plan I could approve: the bundles are the pairs people actually buy, the savings are costed honestly, the copy sounds like us, and the appendix answers finance. Output 1 is clever but leads with the wrong bundles and its ₹599 threshold leaves the COD leak unaddressed."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the broken in-app checkout first with the money attached, and sizes every test honestly against the real traffic so I know these are big-lift-only tests.",
+  "biggest_mistake": "The lift figures on add-to-cart as the main metric leave me unsure whether a win on add-to-cart actually pays off in orders, since orders is only a loose guardrail.",
+  "what_would_make_it_a_10": "Tie each test's add-to-cart win to an expected order and rupee effect so I can rank by money, not just by evidence."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The funnel table by device and browser is the clearest read of where money leaks, and it makes orders-per-session the main metric, which is what actually pays.",
+  "biggest_mistake": "Running tests in parallel waves and changing two things in test 5 (first image and reviews) muddies what caused a win, and the 4-week runs on orders-per-session may still under-detect real effects.",
+  "what_would_make_it_a_10": "One change per test, a single sequential schedule, and a clear read on whether the estimated 10% detectable effect is realistic at this conversion rate."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both put the checkout bug and the money first, but Output 1 sequences the tests one at a time with cleaner maths and a stricter read on when to ship, so I trust its answers more when I'm about to spend weeks running them."
+}

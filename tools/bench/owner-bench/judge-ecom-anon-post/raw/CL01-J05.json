@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data correctly: it brings the paused front-of-pack winner back in new words and puts taste and price in the first four ads. Character counts are shown and accurate.",
+  "biggest_mistake": "Range is thin. Two primary texts are front-of-pack, and taste and texture are near-duplicates. Ad C spends a launch slot on a second transparency variant. Priya's samosa line and the 4 pm hook are mostly unused.",
+  "what_would_make_it_a_10": "Replace one transparency text with a true 4 pm or samosa angle in Priya's words. Add some wit to the headlines. Give a concrete budget and a decision rule for each cell."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Six genuinely different angles written in Aditya's and Priya's own words, with witty lines like \"Your 4 pm, minus the samosa\" and \"Fair. Here's your ₹90\". It adds a launch plan with a control cell, budget maths, kill rules and a fatigue trigger that I could run tomorrow.",
+  "biggest_mistake": "Ad C quotes the price objection in the ad itself. That is risky, though it is flagged as the bold bet. The front-of-pack text P1 carries no number. The ₹6,000 a day budget is an assumption.",
+  "what_would_make_it_a_10": "Add a number to P1. Offer a safer backup line for the price ad. Confirm that legal allows review quotes in ads."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both caught the paused winner, taste and price. The second one sounds more like us, covers more ground, and gives me a test plan with budget and rules I can launch as is."
+}

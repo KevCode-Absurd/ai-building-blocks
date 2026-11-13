@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ties every email to the two retention habits, branches on platform, and adds a control group and guardrail so we can actually prove it worked.",
+  "biggest_mistake": "Email 5's branching is a bit tangled (recurring vs one-device vs neither) and the 'bolder move' at the end adds a half-formed idea that isn't in the plan.",
+  "what_would_make_it_a_10": "Cleaner, simpler branches for email 5 and drop the trailing experiment so the whole thing reads as one finished plan."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Natural, calm copy with good typed examples and a sensible Pro email gated to engaged users.",
+  "biggest_mistake": "Uses the old series as its holdout instead of a true control, and its unsubscribe guardrail (0.4%) is stricter than the old day-1 benchmark without saying why.",
+  "what_would_make_it_a_10": "Compare against a no-email control group, not just the old series, and make the recurring/second-device path one clear story rather than three habits."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are usable and on-brief, but Output 1's plan is easier to act on this week: it names the two habits, skips emails people don't need, and measures against a control group."
+}

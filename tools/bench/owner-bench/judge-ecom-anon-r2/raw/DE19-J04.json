@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Hooks are lifted straight from real customer comments and the data logic (test and swap in front, label in the middle, founder dropped) is stated openly so I trust the choices.",
+  "biggest_mistake": "Disclosure is buried in the standing rules rather than written into each script or brief, so a creator could miss it, and the price handling on Script 1 is left thin.",
+  "what_would_make_it_a_10": "Put the Meta Paid Partnership label and TikTok branded-content toggle explicitly inside each creator brief and on-screen in the first seconds of every script, and give each script a one-line price answer."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Looks genuinely shoot-ready: a summary table up front, disclosure written into every script and into the shared brief, exact-word lines marked, plus deliverables, rights and timing spelled out.",
+  "biggest_mistake": "The 'Exact' lines are a bit stiff and read less like a real creator's words, and the board of banned words is strong but the creators get a little less conversational freedom than the brief promised.",
+  "what_would_make_it_a_10": "Loosen the locked lines so they sound like a person talking, and add one alternate hook per script that is a straight customer comment rather than a written line."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both get the data right and stay on brand, but Option 2 is the one I could actually send to creators today: disclosure is built into every script and brief, and it lists deliverables, rights and timing. Option 1 is strong but leaves me to add those pieces myself."
+}

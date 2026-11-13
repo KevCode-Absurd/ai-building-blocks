@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The launch gates are hard-nosed and fit our data. Migration must be proven on 1,000 real setups, there is a one-step undo, and the staged rollout depends on ticket volume. Putting engineers on support during the freeze turns idle capacity into faster replies.",
+  "biggest_mistake": "The X thread ships with broken placeholders (\"Opens in  ms on a  Mac\") and four extra posts, so it isn't paste-ready. The calendar also has no clear owner column, and creators get the build only two weeks before launch.",
+  "what_would_make_it_a_10": "Add owners to every row. Get creators the build a week earlier. Add success targets and a plan B. Tighten the X post into one finished post with real author credits."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with a clear decision and ties every step to our numbers. The ranking includes the retention math and totals. The dated calendar has owners and fits the freeze. It sets measurable targets against 2025 and has a plan B with triggers. This is what I'd hand the team on Monday.",
+  "biggest_mistake": "The projection paragraph is a bit muddled, and it probably runs slightly over 1,200 words. The staged rollout is offered as an optional 'bolder move' when it arguably belongs in the gates.",
+  "what_would_make_it_a_10": "Make the staged update and a one-step settings restore hard gates. Simplify the projection to one line. Name the specific authors to credit in the X post."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both read our data correctly and fix the hotkey problem first. Output 2 adds owners, targets and a plan B, and its X post and email are ready to send, while Output 1's thread still has blank placeholders."
+}

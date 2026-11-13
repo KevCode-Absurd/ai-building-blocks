@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reason-by-reason splitting (monthly vs annual, reminder set vs not) with every number traced and an honest low-end range from the pause alone, plus a 'Bad news' section that names the billing dependency before I find it.",
+  "biggest_mistake": "It only writes a done screen for the cancelled path, so the pause, switch and reminder confirmations are left for my team to invent, and the upper end of the range (+2,740) is not shown working.",
+  "what_would_make_it_a_10": "Add the confirmation screens for pause, switch and reminder, show the working behind the top of the range, and the sprint could start Monday with no gaps."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It gives every outcome its own confirmation screen and adds a 10% holdout against today's flow, which is the one thing I would want to see added to any version of this plan.",
+  "biggest_mistake": "The money has sloppy seams an owner would catch: £607 labelled 'after discount' when it is full-price treatment, 'about 173 in the new flow' conflated with acceptors, and a £136,000 'per monthly group' figure that overstates, and there is no honest range.",
+  "what_would_make_it_a_10": "Fix the value labels, add a range with the low end derived from the pause alone, and put the build notes in the order to do them (pause in billing first)."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the safer one to hand to a product team: every figure traces, the range is honest, and it tells me the pause must be rebuilt in billing before anything else, while Output 2's extra ideas (price match for switchers, a holdout test) are good but sit on value labels and a £136,000 extrapolation I would have to correct."
+}

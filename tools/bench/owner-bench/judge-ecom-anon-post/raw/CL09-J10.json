@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts COD refusals at the centre of the threshold decision. It shows that ₹499 already sits on the line where refusals drop from 29% to 17%, and it costs the leak correctly at about ₹1.04 lakh a month (6,880 orders under ₹499, 40% COD, 29% refused, ₹130 each). It also adds a COD fee option and a lip balm cart add-on to plug that leak.",
+  "biggest_mistake": "The opening 'bad news' block crams in break-even counts and lakh ranges before I know what the bundles are, so it is hard to follow on a first read. The face wash + serum pair is only offered as a three-item set, with no plain duo.",
+  "what_would_make_it_a_10": "Explain the bundles first, then the money, in plainer words. Put each bundle's profit and break-even next to its name. Make the bundle copy warmer and more playful, closer to Plum's cheerful voice."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The price ladder on the serum page (₹599, then ₹749, then ₹999) is easy to grasp and suits both Ishita and Kavya. The bundle copy is friendly and the reasoning reads clearly.",
+  "biggest_mistake": "The case for moving to ₹599 rests on assuming only 6% of orders fall between ₹499 and ₹598. My data puts 27% of orders in the ₹500 to 699 band, so that slice is more likely 12 to 14%, and the profit figure may be off. It also mostly ignores COD refusals in the threshold decision. Two of the three bundles hang on the serum, with no second category beyond hair.",
+  "what_would_make_it_a_10": "Base the threshold maths on the real order bands. Count refusal costs by order value and treat COD orders separately, for example with a COD fee or a higher bar for COD. Spread the bundles across categories, with body as a real option."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 actually uses my COD refusal numbers to decide the shipping line and gives me a safer, better-costed plan. Output 2 reads nicely, but it moves my threshold on a guessed share of orders that doesn't match my data."
+}

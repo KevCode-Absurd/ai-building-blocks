@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 5,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It clearly sees the big opportunity: shift hard toward sleep, narrator clips, and evening posting, and it cuts low-value formats and themes.",
+  "biggest_mistake": "It gets the review rule wrong by assuming all sleep posts need review and then says week 1 cannot run sleep, which is not what the brief says and leads to an overly restrictive week 1 plan.",
+  "what_would_make_it_a_10": "Keep the strong prioritization, but fix the review logic, make week 1 use non-review sleep/wind-down posts, and tighten the plan so channel mix and posting pattern feel more deliberate and immediately usable."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 4,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It is easy to read, usable in structure, and the drafts sound warm and close to the brand voice.",
+  "biggest_mistake": "It ignores the most important operating constraint and strategy signal: week 1 includes multiple sleep posts that would need review, and it keeps too much stress-at-work volume instead of pushing harder into sleep.",
+  "what_would_make_it_a_10": "Rebuild the schedule around the actual review timing, make narrator sleep clips the clear core of the plan, and cut stress-at-work further so the content mix follows the install data more decisively."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 understood the business case better and made the stronger strategic calls on what to lean into and what to stop. It has factual issues, but as an owner I would still rather start from that than from a cleaner plan that misses the biggest opportunity and breaks the review rule."
+}

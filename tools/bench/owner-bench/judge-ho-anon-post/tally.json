@@ -1,0 +1,126 @@
+{
+ "panel": [
+  "CL01:claude-opus-5-5",
+  "OP02:gpt-5.5",
+  "DE03:deepseek-chat",
+  "GE04:gemini-pro-latest",
+  "CL05:claude-sonnet-5-5",
+  "OP06:gpt-5.4",
+  "DE07:deepseek-reasoner",
+  "GE08:gemini-flash-latest",
+  "CL09:claude-opus-5-5",
+  "OP10:gpt-5.5",
+  "DE11:deepseek-chat",
+  "GE12:gemini-pro-latest",
+  "CL13:claude-sonnet-5-5",
+  "OP14:gpt-5.4",
+  "DE15:deepseek-reasoner",
+  "GE16:gemini-flash-latest",
+  "CL17:claude-opus-5-5",
+  "OP18:gpt-5.5",
+  "DE19:deepseek-chat",
+  "GE20:gemini-pro-latest"
+ ],
+ "verdicts": 115,
+ "failed": 5,
+ "tot": {
+  "agent": 64,
+  "plain": 50,
+  "tie": 1
+ },
+ "agent_share_of_decided": 0.561,
+ "perProvider": {
+  "claude": {
+   "agent": 17,
+   "plain": 12,
+   "tie": 1
+  },
+  "openai": {
+   "agent": 15,
+   "plain": 15,
+   "tie": 0
+  },
+  "deepseek": {
+   "agent": 19,
+   "plain": 6,
+   "tie": 0
+  },
+  "gemini": {
+   "agent": 13,
+   "plain": 17,
+   "tie": 0
+  }
+ },
+ "perJob": {
+  "H01": {
+   "agent": 3,
+   "plain": 15,
+   "tie": 0
+  },
+  "H02": {
+   "agent": 9,
+   "plain": 11,
+   "tie": 0
+  },
+  "H03": {
+   "agent": 5,
+   "plain": 14,
+   "tie": 0
+  },
+  "H04": {
+   "agent": 19,
+   "plain": 0,
+   "tie": 0
+  },
+  "H05": {
+   "agent": 17,
+   "plain": 2,
+   "tie": 1
+  },
+  "H06": {
+   "agent": 11,
+   "plain": 8,
+   "tie": 0
+  }
+ },
+ "dims": {
+  "agent": {
+   "fit": 9.01,
+   "insight": 8.82,
+   "priorities": 9.03,
+   "reasoning": 8.71,
+   "correct": 8.63,
+   "clear": 8.59,
+   "voice": 8.31,
+   "range": 8.55,
+   "ready": 8.38,
+   "overall": 8.66
+  },
+  "plain": {
+   "fit": 8.93,
+   "insight": 8.33,
+   "priorities": 8.68,
+   "reasoning": 8.27,
+   "correct": 8.5,
+   "clear": 9.01,
+   "voice": 8.67,
+   "range": 8.43,
+   "ready": 8.46,
+   "overall": 8.52
+  }
+ },
+ "use_as_is": {
+  "agent": {
+   "with small tweaks": 97,
+   "with major rework": 6,
+   "undefined": 2,
+   "as is": 10
+  },
+  "plain": {
+   "with small tweaks": 86,
+   "with major rework": 9,
+   "undefined": 2,
+   "as is": 18
+  }
+ }
+}

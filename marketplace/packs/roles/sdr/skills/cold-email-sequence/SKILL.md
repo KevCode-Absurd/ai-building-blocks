@@ -43,19 +43,25 @@ Use a dated fact from the notes: a new site, a job post, a change of rules in th
 
 If the client's own results show that leads with a trigger reply far better than leads without one, send to the triggered leads first. Put the rest on a watch list and write to them when a trigger appears, rather than loading everyone with a weaker opener.
 
+Time the sequence from the trigger, not from the calendar. Email 1 goes soon after the trigger fires (within the window the client's data ties to replies, if it gives one); each follow-up counts working days from email 1. Never hold a triggered lead for a set week of the month or a fixed send day.
+
 ### 3. Write email 1
 
 Four sentences or fewer:
 1. Who I am, in a few words, and why them (the true reason).
 2. The problem as they would say it.
 3. One proof point.
-4. One easy question: "Worth a 15-minute call next week?" or "Who looks after this at [company]?"
+4. One light ask, the lightest the client's data supports: a yes or no question ("Is this on your list this quarter?"), an offer to send one useful thing, or "Who looks after this at [company]?"
+
+No call or meeting request in email 1 unless the client's results show call asks convert better than lighter ones. If the data shows a link or a calendar invite cut replies, leave it out. One ask per email, never two in one line.
 
 Plain text, no images, at most one link. Sign with a real name and role.
 
 ### 4. Write follow-ups
 
-Three or four more, each shorter than the last and each adding something new: a short case, a number with its source, a different angle, a useful resource. Never "just checking in". The last one closes the loop: "I'll stop here. If this becomes a priority, reply any time." Suggest send gaps in working days that widen over the sequence.
+Three or four more, each shorter than the last and each adding something new: a short case, a number with its source, a different angle, a useful resource. Each has one light ask. Never "just checking in". The last one closes the loop: "I'll stop here. If this becomes a priority, reply any time." Suggest send gaps in working days that widen over the sequence.
+
+Write every email in full, ready to send: subject, body and sign-off. Never a one-line note on what a follow-up will say.
 
 ### 5. Subject lines
 
@@ -89,8 +95,9 @@ Show the action list and limits, get a yes, then enrol only the approved contact
 
 ## Checks
 
-- Email 1 is four sentences or fewer with one ask.
-- Each follow-up adds something new; the last one closes the loop.
+- Email 1 is four sentences or fewer with one light ask; no call request unless the data shows call asks convert.
+- Timing runs from the trigger, not a calendar window.
+- Every email is written in full. Each follow-up adds something new; the last one closes the loop.
 - Every first line uses a real fact or says it could not.
 - Subject lines match the content.
 - Opt-out, sender identity and postal address present.
@@ -115,10 +122,15 @@ Show the action list and limits, get a yes, then enrol only the approved contact
 > **Email 1** (day 0)
 > Subject: new patient bookings at [clinic]
 >
-> Hi Dr Shah, I run [Business], a small agency that only works with dental clinics. Many clinics with two to five dentists tell us their ads bring calls about check-ups, not the treatments they want to grow. For [Clinic A] we moved spend to implant searches and their implant consults went from 4 to 11 a month (shared with permission). Would a 15-minute call next week be useful?
+> Hi Dr Shah, I run [Business], a small agency that only works with dental clinics. Many clinics with two to five dentists tell us their ads bring calls about check-ups, not the treatments they want to grow. For [Clinic A] we moved spend to implant searches and their implant consults went from 4 to 11 a month (shared with permission). Is growing implant work on your list this year?
 >
 > Priya Nair, [Business], [postal address]. Not relevant? Reply "no thanks" and I won't write again.
 >
-> **Follow-up 2** (day 4): one short note on the three search terms that wasted most budget for clinics last quarter, from our own accounts.
+> **Follow-up 2** (day 4)
+> Subject: three search terms that waste clinic budgets
+>
+> Dr Shah, across the clinics we run ads for, three search terms took the most spend and booked the fewest treatments: "free dental check", "dentist open now" and "cheap teeth whitening". Blocking them is a ten-minute job. Want the full list of terms we block?
+>
+> Same sign-off, address and opt-out line as email 1.
 >
 > **Compliance flags:** two leads are sole traders (UK): removed until consent exists. Postal address and opt-out present. Clinic A result: named only with the clinic's written permission.

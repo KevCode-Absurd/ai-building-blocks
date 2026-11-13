@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Superb break-even math and clear explanation of why cutting commission breaks lifetime trust and loses money.",
+  "biggest_mistake": "Adding a 40% tier 1 rate on top of the 90-day window cost adds ~$46,000 of recurring expense when 30% lifetime already beats rival 40% capped at 12 months.",
+  "what_would_make_it_a_10": "Keep commission at 30% across tiers since our lifetime offer already beats the 12-month rival, reducing the cost shock to finance."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliant insight that 30% for life already crushes rival 40% capped at 1 year, paired with the ingenious signup survey attribution idea.",
+  "biggest_mistake": "The first-year cost projection for the 90-day window uses slightly complex churn math that finance might need explained on a whiteboard.",
+  "what_would_make_it_a_10": "Already practically perfect; simplifying the 90-day window cost formula would make it airtight."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both understand the data and lifetime math completely, but Output 2 recognizes that our 30% lifetime offer already beats the rival's 40% 1-year cap without burning extra margin. Its survey attribution idea and calendar-dated rollout make it ready to execute tomorrow."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It takes the 4.0 apart against the 2.5 break-even, puts the feed fix first, and moves the cut money to bags and the customer's own search words inside the fixed $240,000.",
+  "biggest_mistake": "Some projections are optimistic and the reserve rule adds a layer of complexity the owner may not want in month one.",
+  "what_would_make_it_a_10": "Trim the projection table to two credible cases with the working shown and confirm the price-mismatch root cause before leaping to the target-ROAS change."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean profit view by line and a strong feed diagnosis with the 15.6% of site revenue at stake.",
+  "biggest_mistake": "It claims brand terms are 50% of value when the brief's numbers make it about 41% of PMax value and 50% only if you add brand search, which muddles the core insight; the base case ROAS 4.6 and profit jump look too rosy.",
+  "what_would_make_it_a_10": "Get the brand share right and make the projections conservative and traceable line by line."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the big calls right, but Output 1's plan is tighter, more defensible on numbers and gives a first-week sequence I could run tomorrow with less rework."
+}

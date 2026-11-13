@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It cleanly separates what the data proves from what still needs checking, then turns that into a practical ranked plan with owners, stop rules and a usable weekly scorecard.",
+  "biggest_mistake": "It overreaches on a few calculations, especially the claim that Meta customers do not pay back within 18 months and the exact savings ranges from cutting ad spend, which are not fully supported by the brief.",
+  "what_would_make_it_a_10": "Tighten the payback math and targets so every financial claim clearly traces back to the provided data without extra assumptions."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It goes beyond diagnosis to quantify the likely contribution impact of each move and gives clear stop lines, which makes it feel operator-ready.",
+  "biggest_mistake": "It invents too much unsupported math and false precision—monthly revenue assumptions, contribution-margin baselines, flow revenue estimates and linen ad economics—which makes key decisions feel less trustworthy.",
+  "what_would_make_it_a_10": "Strip out the speculative dollar modeling or label it much more cautiously, and anchor every target and recommendation to numbers we actually know from the brief."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather hand to the team tomorrow because it sticks closer to my data, catches the switched-off email flows and linen problem, and gives me the ranked actions, owners and stop rules I asked for. Output 2 has some sharp ideas, but it leans too hard on made-up assumptions and exact-looking financial estimates I cannot really trust."
+}

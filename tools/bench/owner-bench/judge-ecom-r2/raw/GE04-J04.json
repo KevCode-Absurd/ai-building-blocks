@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The summary table perfectly maps your customer comments and performance data directly to the scripts, showing exactly why each decision was made.",
+  "biggest_mistake": "It outsources the handling of the price objection to the creator's 'honest view' instead of scripting a specific angle for them to use.",
+  "what_would_make_it_a_10": "Write a specific script line to frame the price objection (like comparing it to a daily coffee) rather than leaving it entirely up to the creator."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Skillfully scripts the answer to the price objection directly into the spoken lines and remembers to include the brand tagline.",
+  "biggest_mistake": "The alternate hooks often change the entire format (e.g., from spoken to text overlay) rather than isolating a single variable for a clean test.",
+  "what_would_make_it_a_10": "Use the exact customer comments for the hooks and ensure the alternates only change one variable so you get clean A/B test data."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 clearly mapped your specific customer comments and performance data to each script's angle in a brilliant summary table, proving it deeply understood your business and making it incredibly easy to review."
+}

@@ -1,0 +1,29 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 6,
+  "clear": 7,
+  "voice": 6,
+  "range": 8,
+  "ready": 7,
+  "overall": 7
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like something I could send to my team on Monday: every ad set has a verdict with a rupee number, the budget adds to ₹5,60,000, and the first move is to bring back the creator video with new cuts. Output 2 has the same sharp insights but it spends its energy on a confusing two-count projection and leaves ₹1,30,400 unspent, which is a harder story to defend than fixing and scaling. I'd take Output 1 and tighten the ASC numbers."
+}

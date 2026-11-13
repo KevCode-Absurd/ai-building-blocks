@@ -12,6 +12,9 @@
 //   sum of 1 / (60 + rank). Several phrasings of one question fuse the same way (multi-query retrieval). Two more
 //   rankers are built but off (TUNING): a heading-only ranker cut Hit@5 from 0.71 to 0.44 on the golden set, and
 //   pseudo-relevance feedback did not raise MRR (scripts/eval-retrieval.mjs, 13 Nov 2026).
+// - Aliases: a short list of short forms and their spelled-out names (ROAS and return on ad spend) joins the
+//   glossary expansion, the cheap answer to sparse search missing synonyms, with no embeddings and no model.
+// - Routing: a query may name the library modules to search (--module MCR,ADC); the whole pack is the fallback.
 // - Diversity and position: at most two passages per section and ten in all (accuracy saturates after 10 to 20
 //   documents, and what sits in the middle gets lost), best first.
 // - Citations: each passage carries the [n] source numbers it cites, resolved to title, URL and checked date, with a
@@ -218,7 +221,53 @@ class Bm25 {
  * off (Hit@5 0.44 with it, 0.71 without), feedback off (MRR 0.56 without, at most 0.54 with), glossary on (MRR 0.56
  * with, 0.54 without). Chunks of about 180 words beat 60, 90, 120 and 260.
  */
-export const TUNING = { heads: false, prf: 0, prfDocs: 3, prfWeight: 0.3, glossary: true };
+export const TUNING = { heads: false, prf: 0, prfDocs: 3, prfWeight: 0.3, glossary: true, aliases: true, aliasWeight: 0.7 };
+
+/**
+ * Short forms and their spelled-out names, searched as one (the paraphrase gap of sparse search, lecture 3): a
+ * question that says "ROAS" also reaches a passage that says "return on ad spend", and the other way round. Each
+ * group is one meaning; any phrase in it pulls in the others at TUNING.aliasWeight, through the glossary ranker.
+ * Kept small and unambiguous: a word with two common meanings stays out.
+ */
+export const ALIASES: string[][] = [
+  ["roas", "return on ad spend"], ["aov", "average order value", "order value", "basket size"],
+  ["cac", "customer acquisition cost", "cost per new customer", "cost to acquire"],
+  ["ltv", "clv", "lifetime value", "customer lifetime value"], ["cod", "cash on delivery"], ["rto", "return to origin"],
+  ["ugc", "user generated content", "creator video"], ["cvr", "conversion rate"], ["ctr", "click through rate"],
+  ["cpm", "cost per thousand impressions"], ["cpc", "cost per click"], ["cpa", "cost per acquisition", "cost per purchase"],
+  ["mer", "marketing efficiency ratio", "blended roas"], ["pdp", "product detail page", "product page"],
+  ["atc", "add to cart"], ["bnpl", "buy now pay later"], ["moq", "minimum order quantity"],
+  ["3pl", "third party logistics", "fulfilment partner"], ["cogs", "cost of goods sold"],
+  ["aeo", "answer engine optimisation", "answer engine"], ["pmax", "performance max"],
+  ["asc", "advantage shopping campaign", "advantage plus shopping"], ["capi", "conversions api", "server side tracking"],
+  ["mde", "minimum detectable effect", "smallest detectable effect"], ["nps", "net promoter score"],
+  ["wismo", "where is my order", "order status"], ["abandoned cart", "cart abandonment", "abandoned checkout"],
+  ["free shipping threshold", "free delivery threshold", "shipping threshold"], ["win back", "winback", "lapsed customer", "reactivation"],
+  ["welcome series", "welcome flow", "welcome email"], ["creative fatigue", "ad fatigue"], ["hook rate", "thumb stop rate"],
+  ["breakeven roas", "break even roas"], ["dtc", "d2c", "direct to consumer"], ["gmv", "gross merchandise value"],
+  ["repeat purchase", "repeat rate", "returning customer"], ["ecommerce", "online store"], ["pos", "point of sale"],
+  ["spark ad", "boosted creator post"], ["sms", "text message"], ["kpi", "key metric"],
+];
+
+/** ALIASES as token phrases, each group a list of phrases (each phrase its tokens joined by one space). */
+const ALIAS_GROUPS: string[][] = ALIASES.map(g => [...new Set(g.map(p => tokens(p).join(" ")).filter(Boolean))]);
+
+/** The other phrases of every alias group a query names (as token phrases). */
+export function aliasesOf(q: string[]): string[] {
+  const joined = ` ${q.join(" ")} `;
+  const out: string[] = [];
+  for (const g of ALIAS_GROUPS) if (g.some(p => joined.includes(` ${p} `))) for (const p of g) if (!joined.includes(` ${p} `)) out.push(p);
+  return out;
+}
+
+/**
+ * The pack paths that hold the given vertical modules: knowledge/<vertical>/<CODE>.md and its toolbox file. Lets a
+ * query search only the modules it needs (routing by metadata); the whole library stays the fallback.
+ */
+export function modulePaths(paths: string[], modules: string[]): string[] {
+  const codes = new Set(modules.map(m => m.trim().toUpperCase()).filter(Boolean));
+  return paths.filter(p => { const m = /^knowledge\/[^/]+\/(?:toolbox\/)?([A-Z]{2,4})\.md$/.exec(p); return !!m && codes.has(m[1]); });
+}
 
 /** Reciprocal rank fusion constant (Cormack et al.; lecture 3, slide 50). */
 export const RRF_K = 60;
@@ -275,7 +324,13 @@ export class KnowledgeIndex {
       if (!joined.includes(` ${term} `)) continue;
       for (const w of words) if (!q.includes(w)) out.set(w, 0.5);
     }
+    if (TUNING.aliases) for (const p of aliasesOf(q)) for (const w of p.split(" ")) if (!q.includes(w)) out.set(w, Math.max(out.get(w) ?? 0, TUNING.aliasWeight));
     return out;
+  }
+
+  /** True when the pack holds the word, or every word of one of its aliases ("roas" when only "return on ad spend" is there). */
+  private knows(w: string, has: (x: string) => boolean): boolean {
+    return has(w) || (TUNING.aliases && aliasesOf([w]).some(p => p.split(" ").every(has)));
   }
 
   /**
@@ -303,10 +358,13 @@ export class KnowledgeIndex {
    * `adjust` lets a caller with metadata (knowledge cards: tier, freshness, market) rescale a passage's fused score
    * or drop it (null) before the top k are picked.
    */
-  ask(questions: string | string[], opts: { k?: number; today?: string; paths?: string[]; adjust?: (chunk: Chunk, score: number) => number | null } = {}): Answer {
+  ask(questions: string | string[], opts: { k?: number; today?: string; paths?: string[]; modules?: string[]; adjust?: (chunk: Chunk, score: number) => number | null } = {}): Answer {
     const qs = (Array.isArray(questions) ? questions : [questions]).map(s => s.trim()).filter(Boolean);
     const k = Math.max(1, Math.min(MAX_PASSAGES, opts.k ?? 6));
-    const allowed = opts.paths?.length ? new Set(opts.paths) : null;
+    // A module filter narrows the search to those modules' files (and any paths given); none found: the whole pack.
+    const routed = opts.modules?.length ? modulePaths([...new Set(this.chunks.map(c => c.path))], opts.modules) : [];
+    const scope = [...(opts.paths ?? []), ...routed];
+    const allowed = scope.length ? new Set(scope) : null;
     const fused = new Map<number, number>();
     const qWords = [...new Set(qs.flatMap(tokens))];
     for (const q of qs) {
@@ -339,7 +397,7 @@ export class KnowledgeIndex {
     const informative = qWords.filter(w => this.body.idf(w) > 0.2);
     const has = (i: number) => new Set(tokens(`${this.chunks[i].context}\n${this.chunks[i].text}`));
     const bestWords = picked.length ? has(picked[0][0]) : new Set<string>();
-    const coverage = informative.length ? informative.filter(w => bestWords.has(w)).length / informative.length : 0;
+    const coverage = informative.length ? informative.filter(w => this.knows(w, x => bestWords.has(x))).length / informative.length : 0;
     const anywhere = new Set(picked.flatMap(([i]) => [...has(i)]));
     const passages: Passage[] = picked.map(([i, score]) => {
       const c = this.chunks[i];
@@ -348,8 +406,8 @@ export class KnowledgeIndex {
     });
     // A name the question depends on (an acronym, a law, a brand, a tool) that appears nowhere in the pack means the
     // pack does not know, however many other words match: "GST on shipping" must not be answered from an Amazon card.
-    const unknown = [...new Set(qs.flatMap(namesIn))].filter(w => !this.body.has(w));
-    return { question: qs.join(" | "), passages, coverage: Math.round(coverage * 100) / 100, enough: coverage >= MIN_COVERAGE && !unknown.length, missing: [...new Set([...unknown, ...informative.filter(w => !anywhere.has(w))])] };
+    const unknown = [...new Set(qs.flatMap(namesIn))].filter(w => !this.knows(w, x => this.body.has(x)));
+    return { question: qs.join(" | "), passages, coverage: Math.round(coverage * 100) / 100, enough: coverage >= MIN_COVERAGE && !unknown.length, missing: [...new Set([...unknown, ...informative.filter(w => !this.knows(w, x => anywhere.has(x)))])] };
   }
 
   private cite(n: number, today?: string): SourceRef | null {

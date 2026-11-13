@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The opening profit breakdown against the 2.5 break-even immediately exposes why profit felt low despite the blended 4.0 ROAS.",
+  "biggest_mistake": "Does not explicitly mention removing bags from PMax listing groups when scaling the Standard Shopping bags campaign, which risks internal cannibalization.",
+  "what_would_make_it_a_10": "Add negative keyword / listing group exclusion mechanics for bags in PMax, and include specific stop-loss rules for week two."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Deep tactical mastery: removes bags from PMax listing groups to avoid campaign conflict, bundles PMax changes into one edit to limit relearning, and includes practical stop rules.",
+  "biggest_mistake": "Title example at 106 characters runs slightly long for Google Shopping preview limits on mobile, though core keywords are well front-loaded.",
+  "what_would_make_it_a_10": "Keep title formulas strictly under 70-80 characters for clean mobile SERP truncation."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are exceptional and understand the unit economics immediately, but Output 2 shows superior Google Ads tradecraft by excluding bags from PMax to prevent internal bidding wars and giving actionable stop rules for weeks two to four."
+}

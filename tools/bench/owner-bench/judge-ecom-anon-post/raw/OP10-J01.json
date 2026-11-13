@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds the three biggest money moves: relaunch the paused Dad's razor video, stop the Starter Kit COD trap, and split Women Body Razor to 25-34 instead of cutting it.",
+  "biggest_mistake": "A few numbers and rules are a bit rough, especially the account-level UTM loss estimate and the very low ₹800 no-purchase pause rule.",
+  "what_would_make_it_a_10": "Tighten the Shopify-adjusted profit math, make the new creative test budget more explicit, and soften the ad-level kill rule to avoid cutting ads too early."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is financially disciplined, uses after-RTO contribution by ad set, and gives a clear reserve system instead of blindly spending the full budget.",
+  "biggest_mistake": "The 86% prospecting attribution assumption is made up, and it says no ad set earns a raise while increasing the UGC test budget despite weak purchase cost.",
+  "what_would_make_it_a_10": "Remove the arbitrary attribution split, make the budget table match the action rules, and be clearer on which cuts are true pauses versus reductions."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would hand Output 1 to the team first because it is more direct and closer to the decisions I asked for: cut Starter Kit, revive the best creative, isolate Women 25-34, and spend the 14-day budget. Output 2 is strong, but its extra attribution assumptions and conservative reserve plan make it a bit less clean to act on tomorrow."
+}

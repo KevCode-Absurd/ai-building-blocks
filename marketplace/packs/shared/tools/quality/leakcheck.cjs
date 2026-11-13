@@ -1,19 +1,41 @@
 // Reader-visible internal notes, unintended fields and homework left for the owner. Plain Node, no dependencies.
 // Usage: node leakcheck.cjs <file> [--requested-template] [--options-requested] [--customer-copy]
+//          [--brief <brief>] [--numbers <numbers.json>] [--profile <family>]
 // --requested-template accepts intentional fields only when the brief requests a fill-in template.
 // --options-requested accepts alternates (a "Runner-up:" line, "(test: ...)" in a subject or headline) only when the
 //   brief asks for options.
 // --customer-copy treats every line as copy a customer or candidate reads (for the evidence warning).
+// --brief checks the work against the brief it answers. It fails on a calendar date the brief does not give, on a
+//   "Bolder move" heading or bold label in a copy job (--profile names a copy family, or --customer-copy), and on
+//   describe-not-write lines ("use a real", "a real ticket from the last", "pick one from", "take the quiz", "[X]",
+//   "$X"). It warns on a weekday the brief does not give (a rhythm such as "every Monday" passes), and on a money or
+//   percentage figure in neither the brief nor the numbers ledger (--numbers, else context/numbers.json if present).
 // Finished work holds no homework: no "To confirm" box, no ask for the owner's yes or sign-off, no editor notes.
 // Evidence stacks in customer copy ("142 of our 400 reviewers say", correlation figures) warn without failing.
-// Exit 0 = clean (warnings allowed), 1 = something to fix, 2 = usage error. check-handover.mjs mirrors the homework rules.
+// Exit 0 = clean (warnings allowed), 1 = something to fix, 2 = usage error. check-handover.mjs mirrors the homework
+// and brief rules.
 const fs = require('fs');
+const path = require('path');
+const usage = 'Usage: node leakcheck.cjs <file> [--requested-template] [--options-requested] [--customer-copy] [--brief <brief>] [--numbers <numbers.json>] [--profile <family>]';
 const args = process.argv.slice(2);
-const file = args.find(x => !x.startsWith('--'));
-const requestedTemplate = args.includes('--requested-template');
-const optionsRequested = args.includes('--options-requested');
-const customerCopy = args.includes('--customer-copy');
-if (!file) { console.error('Usage: node leakcheck.cjs <file> [--requested-template] [--options-requested] [--customer-copy]'); process.exit(2); }
+const flags = new Set(), values = {}, files = [];
+for (let i = 0; i < args.length; i++) {
+  const a = args[i];
+  if (['--brief', '--numbers', '--profile'].includes(a)) {
+    const v = args[++i];
+    if (!v || v.startsWith('--')) { console.error(`${a} needs a value\n${usage}`); process.exit(2); }
+    values[a.slice(2)] = v;
+  } else if (a.startsWith('--')) flags.add(a);
+  else files.push(a);
+}
+const file = files[0];
+const requestedTemplate = flags.has('--requested-template');
+const optionsRequested = flags.has('--options-requested');
+const customerCopy = flags.has('--customer-copy');
+if (!file) { console.error(usage); process.exit(2); }
+let brief = null;
+if (values.brief) { try { brief = fs.readFileSync(values.brief, 'utf8'); } catch { console.error('Cannot read the brief ' + values.brief); process.exit(2); } }
+if (values.numbers && !fs.existsSync(values.numbers)) { console.error('Cannot read the numbers ledger ' + values.numbers); process.exit(2); }
 let text;
 try { text = fs.readFileSync(file, 'utf8'); }
 catch { console.error('Cannot read ' + file); process.exit(2); }
@@ -25,6 +47,113 @@ if (/\.html?$/i.test(file)) {
   for (const m of text.matchAll(tags)) hits.push('element looks like an internal note: ' + m[0].slice(0, 120));
   text = text.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<!--[\s\S]*?-->/g, ' ').replace(/<[^>]+>/g, '\n').replace(/&nbsp;/g, ' ');
 }
+// Trace-to-brief checks (--brief <file>). Keep in step with check-handover.mjs.
+// Copy families: the deliverable is words a customer or candidate reads, so it never carries a "Bolder move".
+const COPY_FAMILIES = new Set(['paid-social-ads', 'landing-page', 'lifecycle-email', 'notification-copy', 'support-macros', 'outbound-sales', 'review-replies', 'product-description', 'audio-ad-script', 'webinar-script', 'press-pitch', 'product-announcement', 'onboarding-flow', 'job-description', 'creator-brief', 'seo-article', 'help-docs', 'internal-announcement', 'crisis-response']);
+const MON = '(jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\\.?';
+const DAY = '(\\d{1,2})(?:st|nd|rd|th)?';
+const MONTHS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+// Each finder gives [day, month or null]. Month words must be capitalised, so "12 may" is not a date.
+const DATE_FINDERS = [
+  [new RegExp(`\\b${DAY}\\s+(?:of\\s+)?${MON}(?![a-z])`, 'gi'), m => /^[A-Z]/.test(m[2]) ? [[m[1], m[2]]] : []],
+  [new RegExp(`\\b${MON}\\s+${DAY}\\b(?!\\s*(?:%|[-\\u2013]\\s*\\d|days?|weeks?|months?|years?|hours?|minutes?))`, 'gi'), m => /^[A-Z]/.test(m[1]) ? [[m[2], m[1]]] : []],
+  [/\b20\d\d-(\d{1,2})-(\d{1,2})\b/g, m => [[m[2], m[1]]]],
+  [/\b(\d{1,2})[/.](\d{1,2})[/.](?:20)?\d\d\b/g, m => [[m[1], m[2]], [m[2], m[1]]]],
+  // "between the 12th and the 15th", "by the 30th": a day of the month, not "the 2nd email".
+  [/\bthe\s+(\d{1,2})(?:st|nd|rd|th)\b(?=\s*(?:$|[,.;:)!?]|of\b|and\b|to\b|or\b|through\b|until\b|[-\u2013]))/gi, m => [[m[1], null]]],
+];
+const datesIn = line => {
+  const out = [];
+  for (const [re, pick] of DATE_FINDERS) for (const m of line.matchAll(re)) for (const [d, mo] of pick(m)) {
+    const day = +d, month = mo === null ? null : /^\d+$/.test(mo) ? MONTHS[+mo - 1] : mo.slice(0, 3).toLowerCase();
+    if (day >= 1 && day <= 31 && month !== undefined) out.push({ day, month, text: m[0].trim().replace(/\.$/, '') });
+  }
+  return out;
+};
+const WEEKDAY = /\b(?:Mon|Tues|Wednes|Thurs|Fri|Satur|Sun)day\b(?!s)/g;
+const MULT = { k: 1e3, m: 1e6, mn: 1e6, million: 1e6, bn: 1e9, billion: 1e9, lakh: 1e5, lakhs: 1e5, l: 1e5, crore: 1e7, crores: 1e7, cr: 1e7 };
+const SCALE = '(?:\\s?(k|mn|m|bn|million|billion|lakhs?|crores?|cr|L)\\b)?';
+const FIGURE = new RegExp(`[₹$£€]\\s?(\\d[\\d,]*(?:\\.\\d+)?)${SCALE}|\\b(\\d[\\d,]*(?:\\.\\d+)?)\\s?%`, 'gi');
+const ANY_NUMBER = new RegExp(`(\\d[\\d,]*(?:\\.\\d+)?)${SCALE}`, 'gi');
+const numberOf = s => Number(String(s).replace(/,/g, ''));
+const ledgerNumbers = file => {
+  const out = [];
+  const walk = v => {
+    if (typeof v === 'number') out.push(v);
+    else if (typeof v === 'string') for (const m of v.matchAll(ANY_NUMBER)) out.push(numberOf(m[1]) * (m[2] ? MULT[m[2].toLowerCase()] ?? 1 : 1));
+    else if (v && typeof v === 'object') Object.values(v).forEach(walk);
+  };
+  try { walk(JSON.parse(fs.readFileSync(file, 'utf8'))); } catch { /* an unreadable ledger adds nothing; numbers.cjs reports it */ }
+  return out;
+};
+// A figure is known when a number in the brief or the ledger rounds to it at the precision shown
+// ("₹1.2 lakh" matches 1,21,700; "34%" matches 34.2).
+const figureKnown = (m, known) => {
+  const digits = m[1] ?? m[3], scale = m[2] ? MULT[m[2].toLowerCase()] ?? 1 : 1;
+  const value = numberOf(digits) * scale, step = 10 ** -((digits.split('.')[1] ?? '').length) * scale;
+  return known.some(v => Math.abs(Math.abs(v) - value) <= step / 2 + 1e-9);
+};
+const BOLDER = /^\s*>?\s*(?:#{1,6}\s+(?:\d+[.)]\s+)?(?:\*\*|__)?|(?:[-*+]\s+)?(?:\*\*|__))bolder move\b/i;
+// Each pattern passes when the brief itself says it (or, for the quiz, when the brief says the business has one).
+const DESCRIBE = [
+  [/\b(?:use|pick|choose|insert|add|paste|find|grab|pull)\s+(?:a|an|one)\s+real\b/i],
+  [/\ba real (?:[\w-]+\s+){1,2}from (?:the|your|our|last|a|this)\b/i],
+  [/\b(?:pick|choose|select) one from\b/i],
+  [/\btake (?:the|our|a) (?:\w+\s+)?quiz\b/i, 'quiz'],
+  [/\[X\]/],
+];
+const MONEY_BLANK = /[₹$£€]X\b/;
+// A brief sets its own calendar when it gives today's date or two or more dates (a launch day, a plan window).
+// Then dates on that calendar pass, from two weeks before its first date to about a quarter after its last.
+const briefChecks = ({ lines, brief, ledger, copy }) => {
+  const fails = [], warns = [];
+  const briefLower = brief.toLowerCase();
+  const briefDates = new Set(), calendar = [];
+  let today = false;
+  for (const line of brief.split(/\r?\n/)) for (const d of datesIn(line)) {
+    briefDates.add(`${d.day}-${d.month}`); briefDates.add(`${d.day}-*`);
+    if (d.month) { calendar.push(d); if (/\btoday\b/i.test(line)) today = true; }
+  }
+  const first = calendar.length ? MONTHS.indexOf(calendar[0].month) : 0;
+  const dayOf = d => { let m = MONTHS.indexOf(d.month); if (m < first - 3) m += 12; return m * 30.5 + d.day; };
+  const span = calendar.map(dayOf);
+  const dated = today || new Set(calendar.map(d => `${d.day}-${d.month}`)).size >= 2;
+  const onCalendar = d => dated && (d.month === null || (dayOf(d) >= Math.min(...span) - 14 && dayOf(d) <= Math.max(...span) + 92));
+  const known = [...ledger];
+  for (const m of brief.matchAll(ANY_NUMBER)) { const v = numberOf(m[1]); known.push(v); if (m[2]) known.push(v * (MULT[m[2].toLowerCase()] ?? 1)); }
+  const figures = new Map();
+  lines.forEach((line, i) => {
+    const where = `line ${i + 1}`, show = line.trim().slice(0, 100);
+    // A bracketed value such as "[Tue 18 Nov]" is a merge field the system fills, not a date the plan sets.
+    const unbracketed = line.replace(/\[[^\]]*\](?!\()/g, ' ');
+    const invented = [...new Set(datesIn(unbracketed).filter(d => !briefDates.has(`${d.day}-${d.month ?? '*'}`) && !onCalendar(d)).map(d => d.text.trim()))];
+    if (invented.length) fails.push(`${where}: date not in the brief "${invented.join('", "')}": use days relative to the start (Day 1, Week 2) unless the brief gives the date. In: ${show}`);
+    for (const m of line.matchAll(WEEKDAY)) {
+      const before = line.slice(0, m.index), after = line.slice(m.index + m[0].length);
+      if (briefLower.includes(m[0].toLowerCase()) || /\b(?:every|each|per|any)\s+$/i.test(before) || /^\s+(?:after|before)\b/i.test(after)) continue;
+      warns.push(`${where}: weekday not in the brief "${m[0]}": keep it only as a rhythm, never as an invented date. In: ${show}`); break;
+    }
+    if (copy && BOLDER.test(line)) fails.push(`${where}: a "Bolder move" in a copy job: ship the copy that was asked for and nothing beside it. In: ${show}`);
+    for (const [re, key] of DESCRIBE) {
+      const m = line.match(re);
+      if (m && !briefLower.includes(key ?? m[0].toLowerCase())) { fails.push(`${where}: describes instead of writes "${m[0]}": write the piece itself in full. In: ${show}`); break; }
+    }
+    // "$X" can be a live value ("Add ₹X more for free shipping"), so it warns: name the field and its fallback, or write the number.
+    const money = line.match(MONEY_BLANK);
+    if (money) warns.push(`${where}: unwritten amount "${money[0]}": write the number, or name the merge field and its fallback. In: ${show}`);
+    for (const m of line.matchAll(FIGURE)) {
+      const key = m[0].replace(/\s+/g, ''), value = numberOf(m[1] ?? m[3]);
+      if (figures.has(key) || value === 0 || (m[3] && value === 100) || figureKnown(m, known)) continue;
+      figures.set(key, `"${m[0].trim()}" (line ${i + 1})`);
+    }
+  });
+  if (figures.size) {
+    const list = [...figures.values()];
+    warns.push(`${list.length} figure${list.length > 1 ? 's' : ''} in neither the brief nor the numbers ledger: ${list.slice(0, 8).join(', ')}${list.length > 8 ? ` and ${list.length - 8} more` : ''}. Trace each in context/numbers.json or cut it.`);
+  }
+  return { fails, warns };
+};
+
 const rules = [
   { re: /\b(facts|market|research|lessons|preferences|contract|check)\.md\b/i },
   { re: /\[INTERNAL[^\]]*\]/i },
@@ -101,8 +230,17 @@ text.split(/\r?\n/).forEach((line, i) => {
   const corr = line.match(CORRELATION);
   if (corr && isCustomerLine(line, corr)) warnings.push(`${where}: internal figure "${corr[0]}": keep analysis out of customer or candidate copy. In: ${show}`);
 });
+if (brief !== null) {
+  const ledgerFile = values.numbers ?? ['context/numbers.json', path.join(path.dirname(values.brief), 'numbers.json')].find(f => fs.existsSync(f));
+  const copy = customerCopy || COPY_FAMILIES.has(values.profile ?? '');
+  const r = briefChecks({ lines: text.split(/\r?\n/), brief, ledger: ledgerFile ? ledgerNumbers(ledgerFile) : [], copy });
+  hits.push(...r.fails); warnings.push(...r.warns);
+  console.log(`Brief mode: checked against ${values.brief}${ledgerFile ? ' and ' + ledgerFile : ''}${copy ? ', as a copy job' : ''}.`);
+}
 if (requestedTemplate) console.log(`Requested-template mode: ${fields} intentional field matches accepted; field completion is not claimed.`);
 if (optionsRequested) console.log(`Options-requested mode: ${options} alternate matches accepted.`);
+// Failures print before warnings, so a short report (qe-check keeps the first lines) shows what to fix first.
+if (hits.length) console.log(`LEAKS (${hits.length}):\n` + hits.join('\n'));
 if (warnings.length) console.log(`WARN (${warnings.length}, does not fail):\n` + warnings.join('\n'));
-console.log(hits.length ? `LEAKS (${hits.length}):\n` + hits.join('\n') : 'clean');
+if (!hits.length) console.log('clean');
 process.exitCode = hits.length ? 1 : 0;

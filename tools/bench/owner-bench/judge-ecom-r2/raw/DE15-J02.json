@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every rule is priced off Bombas' own numbers, and the creative hooks are lifted word for word from Maria and Tasha, including turning her price worry into a hook (\"Pricey, but I'm never going back\").",
+  "biggest_mistake": "The budget table double-counts the $2,800 reserve against the $1,000-a-day Days 15 to 30 line, and its own fallback (\"stay at $800 a day\") means the plan would spend about $24,000, not the full $30,000, with no rule for where the rest goes.",
+  "what_would_make_it_a_10": "Fix the budget so the $30,000 adds up on every path, and add the landing page each ad group sends to."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Set-up is the most complete of the two (event-ID de-duplication, domain check, comment filters, ads uploaded by Day -2), and it stretches a clean incrementality check and an 'own at least half the winning rights before March' rule.",
+  "biggest_mistake": "The Day 30 scorecard contradicts itself: 'cost per first order $38 or less on Days 15 to 30' can pass while '790 orders in 30 days' fails on the same spend, so the team could be told both to scale and to hold.",
+  "what_would_make_it_a_10": "Settle the Day 30 table to one test with consistent windows, and write the hooks in Maria's and Tasha's actual words instead of near-misses like 'Sock check. Hour twelve.'"
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both would ship, but Output 1 is the one I'd hand over Monday: it opens with the decision and this week's owners, every kill and scale rule is in dollars pulled from my data, and the ad hooks use my customers' exact sentences; Output 2 is deep on set-up but its Day 30 test can give two answers at once and its hooks sound written, not heard."
+}

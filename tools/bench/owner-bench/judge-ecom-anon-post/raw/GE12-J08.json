@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Flawless mathematical reasoning. It correctly backed out the overlapping Monsoon Dark and ex-subscription buyers from the main date cohorts without double-counting, and perfectly calculated the reachable audience net of holdouts.",
+  "biggest_mistake": "In the Monsoon Dark draft (G2), it uses a quiz ('Tell us how you brew') instead of directly recommending the closest dark roast match as requested in the private notes.",
+  "what_would_make_it_a_10": "Updating the G2 draft to immediately name the closest match roast instead of adding the friction of a quiz."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent draft copy that strictly followed the brief (especially for Monsoon Dark), and a very sharp inclusion of cannibalization costs ('Discounts to people who would have bought anyway') in the financials.",
+  "biggest_mistake": "Claiming to pull the 2,400 subscription cancellers out of the date cohorts but failing to actually deduct them in the tables, and completely omitting the 9,000 'slipping' 46-90 day customers from the financial projections.",
+  "what_would_make_it_a_10": "Accurately doing the math to deduct the ex-subscribers from groups A and C, and formally including the 46-90 day cohort as Phase 1 of the win-back programme."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "As an owner who checks every number, Output 1 is a masterclass in data logic. It perfectly deduced the cohort overlaps and sizes, accurately modeled the reach after holdouts, and aligned perfectly with the priority of catching the 46-90 day slipping customers."
+}

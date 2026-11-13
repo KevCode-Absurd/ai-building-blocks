@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the key signals: 46-90 day buyers first, a separate Monsoon Dark track, and subscription win-back gated by fixing delivery.",
+  "biggest_mistake": "It is a bit overlong and the subscriber track lacks a ready first-message draft, while the Monsoon Dark match is an assumption that should be swapped if there is a closer dark roast.",
+  "what_would_make_it_a_10": "Tighten it under the word limit, add the subscriber first message, and show the break-even lift by segment after channel costs."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It clearly frames the real causes of lapse and gives strong separate treatments for Monsoon Dark buyers and ex-subscribers.",
+  "biggest_mistake": "It does not put the 46-90 day at-risk group first, uses placeholders instead of naming the Monsoon Dark replacement, and its reach and value model rely on rough assumptions that are less tied to the provided opt-in data.",
+  "what_would_make_it_a_10": "Make the 46-90 day group the first target, use actual email/WhatsApp reachable counts and holdouts, name the replacement roast, and firm up the gross-profit math."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to the programme I could hand to the team tomorrow: it prioritises the cheapest win-back segment correctly, handles Monsoon Dark and subscription churn properly, and shows cleaner profit maths from the supplied data. Output 2 is strong, but it misses the priority order and is less ready because of placeholders and rougher assumptions."
+}

@@ -1,0 +1,121 @@
+{
+ "panel": [
+  "CL01:claude-opus-5-5",
+  "OP02:gpt-5.5",
+  "DE03:deepseek-chat",
+  "GE04:gemini-pro-latest",
+  "CL05:claude-sonnet-5-5",
+  "OP06:gpt-5.4",
+  "DE07:deepseek-reasoner",
+  "GE08:gemini-flash-latest",
+  "CL09:claude-opus-5-5",
+  "OP10:gpt-5.5",
+  "DE11:deepseek-chat",
+  "GE12:gemini-pro-latest",
+  "CL13:claude-sonnet-5-5",
+  "OP14:gpt-5.4",
+  "DE15:deepseek-reasoner",
+  "GE16:gemini-flash-latest",
+  "CL17:claude-opus-5-5",
+  "OP18:gpt-5.5",
+  "DE19:deepseek-chat",
+  "GE20:gemini-pro-latest"
+ ],
+ "verdicts": 86,
+ "failed": 34,
+ "tot": {
+  "agent": 50,
+  "plain": 35,
+  "tie": 1
+ },
+ "agent_share_of_decided": 0.588,
+ "perProvider": {
+  "openai": {
+   "agent": 19,
+   "plain": 11,
+   "tie": 0
+  },
+  "deepseek": {
+   "agent": 16,
+   "plain": 9,
+   "tie": 1
+  },
+  "gemini": {
+   "agent": 15,
+   "plain": 15,
+   "tie": 0
+  }
+ },
+ "perJob": {
+  "H01": {
+   "agent": 3,
+   "plain": 10,
+   "tie": 0
+  },
+  "H02": {
+   "agent": 12,
+   "plain": 3,
+   "tie": 0
+  },
+  "H03": {
+   "agent": 3,
+   "plain": 12,
+   "tie": 0
+  },
+  "H04": {
+   "agent": 13,
+   "plain": 2,
+   "tie": 0
+  },
+  "H05": {
+   "agent": 12,
+   "plain": 3,
+   "tie": 0
+  },
+  "H06": {
+   "agent": 7,
+   "plain": 5,
+   "tie": 1
+  }
+ },
+ "dims": {
+  "agent": {
+   "fit": 9.08,
+   "insight": 8.77,
+   "priorities": 9.17,
+   "reasoning": 8.91,
+   "correct": 8.85,
+   "clear": 9.06,
+   "voice": 8.62,
+   "range": 8.02,
+   "ready": 8.83,
+   "overall": 8.74
+  },
+  "plain": {
+   "fit": 9,
+   "insight": 8.6,
+   "priorities": 8.8,
+   "reasoning": 8.45,
+   "correct": 8.36,
+   "clear": 9.07,
+   "voice": 8.74,
+   "range": 8.29,
+   "ready": 8.72,
+   "overall": 8.51
+  }
+ },
+ "use_as_is": {
+  "agent": {
+   "with small tweaks": 62,
+   "with major rework": 2,
+   "as is": 20,
+   "undefined": 2
+  },
+  "plain": {
+   "with small tweaks": 62,
+   "as is": 16,
+   "with major rework": 6,
+   "undefined": 2
+  }
+ }
+}

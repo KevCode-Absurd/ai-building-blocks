@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Turns the data into distinct concepts: quiet wheels sound Reel, women-solo lift concept, and belt-skip lead, each with one test variable and owner-ready primary text in a calm, short voice.",
+  "biggest_mistake": "Concept 3 primary text makes a claim about the review corpus ('Quiet wheels are the top theme in our 1,150 reviews') that is an internal data statement, not customer-facing copy; it should stay in the brief, not the ad. Minor: the per-trip maths (£292) assumes 24 trips is stated as example without making clear the buyer's own flight count.",
+  "what_would_make_it_a_10": "Tighten the review-derived claim out of live copy, add a lighter-colour note to the scratching objection inside a concept rather than only in assumptions, and give each hook a matching 3-second visual beat so the Reels are shoot-ready."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Strong operational build rules (safe zones, sizes, headline character counts, labelled review quotes) and a disciplined split of three concepts each for men and women, with quick test framing.",
+  "biggest_mistake": "Voice and format drift: heavy spec-dump primary text ('Polycarbonate shell, 360-degree spinner wheels, TSA-style lock. ₹6,999') reads like a product page, not the understated brand; several concepts are statics that resemble the current flat ads the owner wants to escape, and review lines are over-labelled in a way that weakens the hook.",
+  "what_would_make_it_a_10": "Rewrite primary text in the brand's short, calm voice, cut spec lists to one approved line, replace some statics with real travel-moment formats, and make the first three pick argue from review evidence rather than internal product logic."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels like it was written by someone who read our reviews and our customer language, with distinct concepts and a first-three that matches where the money and the cheapest wins are; Output 2 is well-organised but reads more like a media plan than ads I'd want to put in front of customers."
+}

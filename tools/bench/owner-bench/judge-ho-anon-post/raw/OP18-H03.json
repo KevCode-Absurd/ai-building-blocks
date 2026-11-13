@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It goes straight at the real leaks: delivery silence, bra fit, and a refund-first returns portal, with clear copy and sensible numbers.",
+  "biggest_mistake": "The sales-kept figure from swaps is a ceiling and could be read as hard savings; I would label that more carefully and separate it from cost savings.",
+  "what_would_make_it_a_10": "Tighten the copy a little more in our playful voice, add a stronger customer-safe refund presentation in the portal mock-up, and show the test readout plan by metric and owner."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The opening decision and target table are very owner-friendly, and the assumptions behind the projections are honest.",
+  "biggest_mistake": "It invents specific November and December dates and the day-3 message logic is weaker for customers with no courier scan, which is the core WISMO problem.",
+  "what_would_make_it_a_10": "Remove the made-up calendar dates, make the no-scan customer update proactive, add a post-delivery bra fit follow-up, and make refunds feel equally clear rather than a smaller link."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather use Output 1 because it feels more complete, safer for customers, and closer to our actual brand rules. Output 2 is sharp, but it has a few invented details and misses some of the reassurance we need after delivery."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the code and one matched product in the very first email, then gives the sunscreen its own email with the real review line answering the white-cast fear that explains its 2.2% order rate.",
+  "biggest_mistake": "Leaves a hole in the exit rule: a buyer who orders on a marketplace never shows as 'Placed Order' in Klaviyo and will keep getting the series, and no email states what the 10% is actually worth on a typical ₹699 order.",
+  "what_would_make_it_a_10": "Add the marketplace-buyer treatment and a price line like '₹70 off a typical order', and put the active and strength into more subject lines."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 6,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Spots the marketplace tracking gap, telling past marketplace buyers to ignore the email, and writes full three-way quiz versions with correct discounted prices (₹359, ₹1,167).",
+  "biggest_mistake": "Contradicts itself on sensitive skin: Email 2 tells the dry/sensitive group not to start with an acid, then Email 5 gives everyone a salicylic acid face wash morning and night while also saying to use actives every other day first.",
+  "what_would_make_it_a_10": "Remove the invented 14-day code expiry and its 'ends in 3 days/tomorrow' urgency, and make the Email 5 routine actually respect the sensitive-skin branch."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could hand to my team tomorrow — it leads with the code and a matched product, answers the sunscreen doubts and stays consistent — while Output 2 makes me fix a contradiction that would send my sensitive-skin customers a salicylic acid wash twice a day and builds urgency on a code deadline I never set."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Decisive opening that names the three fixes in order. It is honest about fit finder selection bias (it credits only half the 19-point gap) and adds a Christmas warning with a holdout. All of that is real owner thinking.",
+  "biggest_mistake": "There is no real post-delivery fit help for first-time bra buyers; the delivered email just points back to the quiz. The savings are spread across monthly and 90-day figures with no single total, which makes them hard to rank by money.",
+  "what_would_make_it_a_10": "Add a bra fit-check message after delivery with practical try-on tips. Show one total saving per 90 days with the three fixes ranked by pounds. Make the swap sales figure easier to read."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with where the cost sits: £139,800 in returns, £31,360 in tickets, 6,076 tickets on days 3 to 5. It covers more of the journey, including a pre-dispatch fit check, practical bra try-on tips on delivery and a day-5 'How's the fit?' email. All are on-voice with one button each, and the savings table has a clear total.",
+  "biggest_mistake": "It does not say outright that quiz users may differ from other buyers. The low-case 23.5% only hints at this. The 2-hour size switch rests on an operations assumption that may not hold, and the work order does not explain the Christmas timing risk.",
+  "what_would_make_it_a_10": "State the selection-bias caveat outright, flag the peak-season effect on the hold-out, and rank the three fixes by pounds saved in the summary."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are solid and the maths checks out. Output 2 gives me the cost picture up front, a clear total, and real fit help for bra buyers after delivery, which is what I wanted. Output 1 is sharper on caveats and seasonality, but it covers less of the journey."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Targets the tier 3 RTO money and the 44% order-status chat load head-on, with a pincode-graded confirm flow and shipped/out-for-delivery templates that stop the 'where is my order' flood.",
+  "biggest_mistake": "Quiet hours set at 9 pm to 9 am clash with the after-hours data (31% of chats 8 pm to midnight); silence from 9 pm may annoy evening buyers, and the agent shift change is mentioned but not fully costed.",
+  "what_would_make_it_a_10": "Keep the evening window warmer (auto-reply plus the 2 pm-midnight shift actually resourced), swap the placeholder exchange wording, and add a sample approved template with real variables so it is literally paste-ready."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The ₹30 prepaid break-even logic (only worth it above 17% RTO, so metro gets nothing) is sharp owner-grade thinking, and the scripts sound genuinely like Snitch with natural Hinglish.",
+  "biggest_mistake": "Aggressive tier 3 auto-cancel after 48 hours with no call risks losing real delivered sales and goodwill, and the cart-volume maths (42,000 ÷ 0.7) is shaky.",
+  "what_would_make_it_a_10": "Add a light call or WhatsApp fallback before cancelling tier 3 orders, show the RTO cost split by pincode group explicitly, and tighten the cart-recovery sizing numbers."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is more complete and owner-ready, with pincode-graded flows, the RTO rupees laid out by group, and a fuller scorecard, while Output 2 has the cleverer prepaid break-even and warmer voice but risks auto-cancelling good tier 3 sales."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The bug is called out first with the money, the browser split is read properly, and the tests are ranked by expected impact with honest sample maths in plain words.",
+  "biggest_mistake": "The five-test schedule runs two tests at once on shared page real estate with interactio checks left late; and test 3 (firmness) is weaker and less evidenced than the firmer review-relocation idea, so one ranking slot may be soft.",
+  "what_would_make_it_a_10": "Tie each test tighter to one evidence line (34%, 19%, 17%, 14%, 81%) with a scannable table up front, and state the ship-rule and stop-early rules as explicitly as the lane plan."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Precise arithmetic on the in-app gap (23.8% vs 53.3%, 1,860 checkouts, 558 orders, ₹17-34 lakh), calendar dates, and a clear two-lane schedule with a proper ship rule.",
+  "biggest_mistake": "Add-to-cart as the main metric on three of five tests despite mobile converting at 0.56% and a fix that removes the reason to reach checkout; it ranks reviews above the bigger firmness doubt and the hero image as a test despite thinnest evidence.",
+  "what_would_make_it_a_10": "Use orders per session (or checkout reach where it fits) as the main metric wherever it pays, demote the hero image to a ship item, and write the trial and delivery lines in the brand's own words."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both get the big call right and would be usable, but Output 1 reads more like our own voice, ranks the delivery-date and size tests on the right evidence, and keeps the money and the leak front and centre; Output 2 is sharper on the bug maths but leans on add-to-cart metrics and less of our tone."
+}

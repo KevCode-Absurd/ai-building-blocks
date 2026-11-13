@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the segment math (1,540 of 2,717 paid seats) in two lines and builds the hero around Priya's own phrase 'email tennis', with proof from the survey and product usage stats exactly where they belong.",
+  "biggest_mistake": "The security section slightly buries the lede by leading with 'open source' before the compliance proof; the 'Send to your security team' link should be more prominent, and the demo form field count is right but the form's reassurance about data location could be clearer.",
+  "what_would_make_it_a_10": "Add a real customer quote or logo (clearly marked as placeholder if not yet available), trim the section count slightly, and move the security link to the top menu as explicitly stated."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Strong segment math and correct data points, plus a clear emphasis on round robin and routing forms with usage stats; good that it marks placeholders in brackets.",
+  "biggest_mistake": "Overly long (nine sections) with many placeholder brackets that make it less ready to use as-is; also the hero headline 'No email tennis' is good but the subhead is a bit feature-listy and the voice occasionally slips into generic CRO language ('Get your Mondays back' repeated).",
+  "what_would_make_it_a_10": "Cut to seven or fewer sections, replace all bracketed placeholders with specific, true proof (or remove them), and tighten the copy to grade 7-8 reading level consistently."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more polished, ready to use, and stays closer to our voice without placeholders; it prioritizes security and proof better, and its test plan is more actionable."
+}

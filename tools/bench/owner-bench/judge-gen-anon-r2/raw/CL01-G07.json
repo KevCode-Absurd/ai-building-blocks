@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong go/no-go gates: migration proven on 1,000 real setups, one-step undo, top 200 extensions tested, and a rule to mention only claims that are in the build. The X thread credits authors and refuses an unmeasured speed number.",
+  "biggest_mistake": "The table is titled 'ranked by users who stay' but puts extension authors (2,470) above X (3,740), so the ranking contradicts its own numbers. The timeline also has no owners, and leaning on frozen engineers for support shifts is a thin capacity plan.",
+  "what_would_make_it_a_10": "Fix the ranking logic or state the method. Add an owner to each row. Give support a concrete staffing rota. Add measures with a plan B, and trim the X thread so each post carries one shortcut."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with a clear decision summary. Existing users get waves sized from the 420,000 list and gated on migration tickets. Product Hunt and HN are pushed to after the rollout. Every row has an owner, support has a staffed rota, and plan B has numeric triggers. All of it fits our real team and the 1 December code freeze.",
+  "biggest_mistake": "It ranks authors above X by retention rate rather than retained count. That choice is stated, but a strict 'users who stay' reading would put X second. The email is a bit thin on showing the product moving.",
+  "what_would_make_it_a_10": "Show both views, retained count and retention rate, and justify putting authors ahead on growth potential. Name example author credits in the email. Add a short clip to the email body."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the plan I could actually run Monday. It has owners, staged waves with real numbers, a support rota and plan-B triggers, and its maths and ranking method are explicit and correct. Output 1 is good but looser on who does what, and its ranking contradicts its own numbers."
+}

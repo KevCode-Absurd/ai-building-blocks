@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Gives a clear verdict per ad set with rupee logic, relaunches the paused winner first, and splits out women 25-34 instead of killing the ad set.",
+  "biggest_mistake": "The break-even math is applied inconsistently (uses ₹394 as 'break-even on Meta's own count' while calling ₹282 the safe/UTM line), so the per-ad-set lines and losses don't cleanly trace to one model.",
+  "what_would_make_it_a_10": "Show the working for each ad set's break-even line (order value, COD/RTO, and the 72% haircut) so the scale/hold/fix/cut calls are unarguable."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ties every decision to a per-ad-set break-even line built from its own COD/RTO mix and the 72% UTM gap, and calls out the unspent ₹1,30,400 rather than forcing the full budget out.",
+  "biggest_mistake": "Slightly heavier and more number-dense than a grade-7 reader wants, and the reserve ladder math is dense enough to slow a Monday-morning decision.",
+  "what_would_make_it_a_10": "Trim to the decisions and one-line reasons, keeping the per-ad-set lines, so the team can act without wading through the projection detail."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both follow the owner's signals, but Output 2 builds each ad set's line from its own COD/RTO mix and refuses to spend money that loses, which is exactly how this owner thinks. Output 1 is clear and right on the big calls but its break-even logic wobbles between ₹282 and ₹394."
+}

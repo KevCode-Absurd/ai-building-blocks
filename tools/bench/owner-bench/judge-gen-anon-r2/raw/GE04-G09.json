@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliantly navigated the clinical review rule by drafting sleep and wind-down content that avoids naming medical conditions, allowing our top-performing theme to run immediately in Week 1.",
+  "biggest_mistake": "It provided a single looping weekly schedule rather than a fully mapped out 4-week calendar table, although it did provide weekly thematic angles in the text.",
+  "what_would_make_it_a_10": "A complete week-by-week visual table showing all 24 posts over the 4 weeks would make this flawless."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 9,
+  "voice": 6,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The 4-week calendar table is excellent, making it incredibly easy to visualize exactly what is going live on any given day.",
+  "biggest_mistake": "Assumed all sleep content automatically required review, blocking our best content from Week 1. It also failed our brand principles by being instructive ('Try writing...', 'put your phone') and violating 'one idea per post' in Draft 5.",
+  "what_would_make_it_a_10": "Drafting wind-down hooks for Week 1 that avoid medical terms, and strictly following the 'invite, don't instruct' and 'one idea per post' principles for the captions and text."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 perfectly understood how to draft sleep content without triggering the review rule, which is exactly what we needed to maintain performance in Week 1. It also nailed our warm, inviting brand voice and strictly followed the 'one idea per post' principle, whereas Output 2 fell into the trap of sounding like an instructor."
+}

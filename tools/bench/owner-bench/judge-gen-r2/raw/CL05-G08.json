@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The revenue math covers the whole segment: a base case, a downside case (-$20.3k a month) and a break-even (the plan loses money if more than about 1 in 3 Team 8+ customers move down). The test and stop rules are built on those numbers, including a Team downgrade arm.",
+  "biggest_mistake": "The Team comparison is muddled: it says 11 channels on Team cost about $121 when that is the 10.4-channel average. The yearly-billing push is only a side note on the switch email, not a standalone quick win.",
+  "what_would_make_it_a_10": "Make the yearly-billing offer a proper second lever with its own estimate, and fix the small Team price inconsistency."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 9,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is a clean, honest package: bad news first, a per-1,000-switchers table with three churn scenarios, a randomised test with a delayed control, and ready-to-paste invite email, pricing card and public post.",
+  "biggest_mistake": "The revenue math never sums to a total net figure for the segment. It sets aside the yearly-billing quick win, which the owner would want pushed, and the Team downgrade guard only starts after launch, not in the test.",
+  "what_would_make_it_a_10": "Add a segment-level net revenue case with a downside, test the Team downgrade rate before launch, and include a cheap yearly-billing nudge."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick the same flat Agency plan, but Output 1 shows the full net revenue picture, including the downside and the break-even on Team downgrades, and tests that risk up front. Output 2 has slightly better copy, but its math is thinner at the decision level."
+}

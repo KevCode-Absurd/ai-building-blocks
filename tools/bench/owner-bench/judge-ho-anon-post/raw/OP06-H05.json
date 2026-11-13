@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ranks the work by likely ticket reduction, spots the Simplify debts and app-store refund issues clearly, and gives a sensible ticket-savings range with working.",
+  "biggest_mistake": "It invents product details that are not in the brief, especially restoring deleted expenses from Activity and turning off Simplify debts to see pairwise debts; if those steps are wrong, the article is risky to publish.",
+  "what_would_make_it_a_10": "Keep the prioritisation and forecast, but remove unverified product behavior, tighten the copy to only confirmed steps, and include the currency article plan without overreaching on UI behavior."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It understands the main business levers, writes in a friendly plain voice, and connects search intent and in-app links to likely ticket reduction.",
+  "biggest_mistake": "It makes more unsupported product claims than output 1, especially around undelete/history behavior, web steps, refund flows, and merging 'Recording a payment' into 'Settle up' despite the article already performing well.",
+  "what_would_make_it_a_10": "Re-rank the work around highest removable tickets, stop inventing unverified product steps, keep 'Recording a payment' separate, and make the forecast more evidence-led and conservative."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I would actually use: better prioritised, more grounded in the ticket data, and more honest about impact. Both over-assume product details, but output 2 does it more and makes a weaker call on what to change first."
+}

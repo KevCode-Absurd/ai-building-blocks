@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the key signals: the paused transparency winner, the unused taste reviews, and the ₹90-per-bar objection.",
+  "biggest_mistake": "The first four launches double up on transparency and leave out a clean 4 pm office-snack test, so the test plan is slightly less balanced than the brief asks for.",
+  "what_would_make_it_a_10": "Replace one duplicate transparency test with a sharper 4 pm or pure protein-number test, and tighten any borderline claims like “only with dates.”"
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It brings back the paused winning angle, adds the missing taste hook, handles price honestly, and gives a clean four-ad launch plan with clear test logic.",
+  "biggest_mistake": "P6 is a little weaker than the rest; the “one spare” training-week idea is clever but less proven by the data than taste, label, sugar, 4 pm, or price.",
+  "what_would_make_it_a_10": "Swap P6 for a stronger pure protein-number angle in the same blunt voice, while keeping the current launch plan."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and usable, but Output 2 gives the cleaner first-four launch plan across transparency, taste, 4 pm, and price. Output 1 has excellent insight, but its launch set spends two slots on very similar transparency tests."
+}

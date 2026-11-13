@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the 58% migration-ticket problem into hard gates: three staged waves sized from the 420,000 list, a no-go rule, a support rota and a day-4 hold trigger. It also moves Product Hunt and Hacker News to 15 December so they come after the rollout is safe.",
+  "biggest_mistake": "The launch-day X post and the email thank the community in general rather than naming specific extension authors, which falls short of the 'always credit the authors' principle.",
+  "what_would_make_it_a_10": "Name three or four specific authors and their extensions in the X post and the email, and test-read the copy against grade 8."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The gates are strong and practical. It requires 1,000 real-setup beta users with zero losses, cuts any claim for features not in the build, and uses engineers who are idle during the freeze to staff support in launch week.",
+  "biggest_mistake": "The email goes to all 420,000 users on day one and tells them to 'Check for updates' now. That undoes its own staged rollout, which was the safeguard against a repeat of the migration flood.",
+  "what_would_make_it_a_10": "Match the email to the staged waves, give each timeline row an owner from the small team, and get creators their builds earlier than 24 November."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives me a plan I could actually run with my tiny team: owners on every row, waves tied to ticket limits, and a plan B. Output 2 has good ideas, but its launch email would undo its own staged rollout."
+}

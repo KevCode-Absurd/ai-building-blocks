@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Three answer-first articles in our voice. Article 1 hedges with 'probably' for the 37% of balance cases that aren't Simplify debts, and article 3 adds how to cancel Pro. The forecast arithmetic checks out (3,743 tickets, about $15,300), and it adds the deleted-expense search terms as a cheap extra fix.",
+  "biggest_mistake": "It proposes merging 'Recording a payment', which already helps 71% of readers, for little gain. It counts all 2,900 deleted-or-edited tickets at 40% without separating edits from deletes. The headline forecast is a single point estimate, with a range added only afterwards by halving the shares.",
+  "what_would_make_it_a_10": "Drop the payment-article merge and use the in-app link to fix its reach instead. Lead with a short decision summary. Give the forecast as a range per topic from the start."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the decision and the bad news about Apple and Google refunds. Every forecast row is a range, and the totals all check out: 7,861 tickets in reach, 2,703 to 4,276 fewer, $11,082 to $17,532 saved. It sensibly leaves the 71% payment article alone and fixes its reach with a link. The costed bolder idea of a Simplify debts banner is a good addition.",
+  "biggest_mistake": "Article 1 states flatly 'Your group has Simplify debts turned on', but that is true for only 63% of balance tickets, so it misleads the rest. The refund article tells people to cancel but doesn't give the steps.",
+  "what_would_make_it_a_10": "Soften the first line of article 1 to 'probably' or 'if'. Add the cancel steps for each store to the refund article. Add the failed search terms as synonyms on the restore article."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are nearly ready to publish and the numbers hold up in each. Output 2 gives me the decision up front, an honest range, and smarter choices about what not to touch. I'd fix its overconfident first line before publishing."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data exactly as I would—sleep, narrator clips, evening posts, week-1 review timing—and the drafts sound like us, with 'replaying today's emails' and 'switch your brain off' hooks and one small action at the end.",
+  "biggest_mistake": "The Wednesday parent post at 14:30 is a test buried in a fixed weekly table, and the kindness carousel on day two drifts a little from the sleep-led story, so the plan is slightly less sharp than it could be.",
+  "what_would_make_it_a_10": "Keep the same warm, specific drafts and data logic, but make every week deliberately sleep-and-narrator-led with the parent test clearly flagged as an experiment."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It correctly spots that sleep posts need review and that week 1 therefore can't carry sleep, and its drafts reuse our customer phrases in a warm voice.",
+  "biggest_mistake": "It wrongly tells me 'no sleep post can go live before Tuesday 24 November' and fills week 1 with six kindness posts, even though winding-down language without naming a condition can post straight away—so it sacrifices a whole week of our best theme and overstates the review rule.",
+  "what_would_make_it_a_10": "Avoid needless review by wording week 1 sleep-adjacent posts without condition names, and keep the kindness content as support rather than a full week."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives me a sleep-led, evening, narrator-first plan that respects the review timing without wasting week 1, and its drafts are warmer and more specific—Output 2 loses a week of our best content to a review rule it has over-read."
+}

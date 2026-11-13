@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the real issue fast: top 5 matte shades will run out before the sale, so it prioritises re-cartoning and a rush PO while cutting zero-value orders on slow stock.",
+  "biggest_mistake": "It says the 9,100 top-5 units are 'counting the held ones' and then projects a stockout gap from that base, which misreads the hold stock and weakens the timing logic around the early-December gap.",
+  "what_would_make_it_a_10": "Use the held-stock math cleanly throughout, tighten the stockout date and pre-order timing, and keep the same cash-disciplined ordering plan."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It is built on the actual constraint: it puts almost all cash into the top 5 matte shades, starts re-cartoning on Monday, avoids dead-stock reorders, and gives a dated action plan the ops lead can run.",
+  "biggest_mistake": "The palette disposal idea on 1 February via a clearance buyer is a bit speculative and less grounded than the rest of the plan.",
+  "what_would_make_it_a_10": "Add one tighter customer-facing back-in-stock line in brand voice and show the top-5 rush/standard coverage math a touch more explicitly by date."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I could hand to my ops lead on Monday with least rework. It reads my data correctly, respects the cash limit, and fixes the exact stockout risk I care about without wasting money on slow lines."
+}

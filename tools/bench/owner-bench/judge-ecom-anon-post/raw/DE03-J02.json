@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ties every rule to our own numbers (the $27.10 first-order and $38 90-day break-even, the nurse/server watch times, the Meta hook costs) and gives dated owners, dollar kill/scale lines and a day-30 decision table I could hand over Monday.",
+  "biggest_mistake": "The day-21 to 30 release rule leans on TikTok-reported and store-tagged reads with a $50 store-tag threshold that is loose, and the multi-read 'two of three agree' logic is more machinery than a launch team will actually run cleanly; also leans on 'both creators' making new posts as if guaranteed.",
+  "what_would_make_it_a_10": "Tighten the day-30 scoring to one primary read (blended lift or survey) with the others as checks, tighten the store-tag threshold to something like $45, and confirm the two creators are contracted for the two new posts."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "insight_note": null,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Very readable, clean creative concept table with plain brand-safe wording rules and a sensible 'handle price inside the ad' instinct.",
+  "biggest_mistake": "It splits budget into a separate SCALE campaign that opens day 8 and mixes Smart+ in while also claiming cleaner reads, uses a looser scale bar ($34) and a $45 hold band that don't match our $38 break-even, and sets a 790-first-order pass bar that ignores the learning period and the $27.10 first-order reality.",
+  "what_would_make_it_a_10": "Anchor every threshold to the $38 90-day break-even, drop Smart+ and the early second campaign for month one, and give a single day-30 decision rule with an explicit lift or survey read rather than four pass/fail rows."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like it was written by someone who actually knows our numbers and our customers: every kill and scale line, the phased budget and the day-30 call are tied to the $27.10 first-order and $38 break-even, and it hands me owners and a Monday checklist. Output 2 is clean and easy to read but its thresholds drift off our economics and the early SCALE campaign muddies the read I need to make the day-30 decision."
+}

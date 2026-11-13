@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Locks onto the winning segment and trigger with the pilot numbers exposed, and projects an honest, defensible reply range instead of a wish.",
+  "biggest_mistake": "Voice slips in step 2 and 3 (long explanatory lines that don't sound like a finance peer), and the 10% ceiling math is a bit generous given the two factors were never tested together.",
+  "what_would_make_it_a_10": "Tighten step 2 and 3 to one question and one ask in a finance person's cadence, and replace the 'x1.25' assumption with a clearly stated single base case plus a simple test plan."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Voice is the best match to the brief and the 4,100-excluded / capacity math shows real operational thinking for the list.",
+  "biggest_mistake": "Breaks the one-ask rule repeatedly (reply 'yes', reply 'steps', then 'now' or 'later', plus calendar-link-style CTAs) and miscounts by excluding pilot contacts as if they were in the new 6,000 list; the 9-day/4-day proof in step 4 is vague ('the close I shared is the reason I wrote').",
+  "what_would_make_it_a_10": "Enforce one question and one ask per email with no reply-keyword mechanics, fix the list arithmetic so exclusions match the actual 6,000 contacts, and ground the expected reply rate in a single stated base rate with an explicit test plan."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick the right segment and trigger, but Output 1 is ready to load and send today with clean math and clear list rules, while Output 2 reads nicer but breaks the one-ask rule and miscounts the list, so I'd have to rework it before sending."
+}

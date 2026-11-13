@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The unit economics behind the tiering: calculating expected RTO loss per tier (₹70 vs ₹27) to calibrate prepaid discounts, plus introducing the ₹99 UPI partial COD advance test with holdouts.",
+  "biggest_mistake": "Meta occasionally flags 'Save/Discount' in utility follow-ups even when categorized as Marketing if sent too quickly after order confirmation without user initiation; ensure T4 fires strictly via the approved marketing channel.",
+  "what_would_make_it_a_10": "A quick operational tweak on agent scheduling for the 8 pm–midnight chat peak alongside the automated bot responses."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very practical operational insight on shifting one agent's schedule to 2 pm–midnight to solve the evening chat spike without increasing headcount.",
+  "biggest_mistake": "Leaves money on the table in Tier 3 by relying purely on an unpaid nudge without tiered financial incentives or partial prepaid booking tests.",
+  "what_would_make_it_a_10": "Tiered economic treatment for high-risk pincodes (prepaid discounts/advances) rather than treating Tier 2 and Tier 3 identically."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 acts like a real P&L owner: it breaks down expected RTO loss by pincode group (₹70 in Tier 3 vs ₹27 in Metros), sizes prepaid discounts accordingly, and tests a ₹99 COD advance to fix our biggest cost driver."
+}

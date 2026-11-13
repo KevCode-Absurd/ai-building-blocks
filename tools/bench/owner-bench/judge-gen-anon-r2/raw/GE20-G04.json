@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The tone is perfect. It reads exactly like a peer-to-peer message between finance professionals, entirely avoiding salesy filler.",
+  "biggest_mistake": "Step 1 only includes a question but omits an explicit ask (as requested in the 'one question and one ask' guideline), though it works well as a soft opener.",
+  "what_would_make_it_a_10": "Adding a very soft, natural ask to the first email to perfectly hit every constraint of the brief."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 4,
+  "range": 7,
+  "ready": 5,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Excellent, conservative breakdown of the pilot data and list targeting logic, keeping expectations incredibly realistic.",
+  "biggest_mistake": "The 'reply yes', 'reply steps', and 'reply with the month' calls to action feel like automated marketing gimmicks, ruining the peer-to-peer illusion.",
+  "what_would_make_it_a_10": "Rewriting the calls to action to sound like a normal human conversation rather than a chatbot."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 understood the audience and wrote like a peer, whereas Output 2 fell back on SDR gimmicks that a Head of Finance would immediately flag as automated."
+}

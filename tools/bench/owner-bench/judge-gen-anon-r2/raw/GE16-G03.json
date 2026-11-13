@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless adherence to founder/investor constraints: leads with the three critical numbers, pairs every problem immediately with its solution, and includes a copy-paste forwardable snippet for the VP search.",
+  "biggest_mistake": "Repeated the bad news list twice (first in the executive summary block, then expanded below), which adds slight redundancy.",
+  "what_would_make_it_a_10": "Incorporate Output 2's sharp calculation showing that the $0.9M compute increase represents ~9% of monthly revenue, directly explaining the gross margin swing."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Outstanding financial insight calculating monthly revenue ($10.4M) and demonstrating exactly how the $0.9M compute surge accounted for ~9 margin points.",
+  "biggest_mistake": "Pushed the core operating metrics table near the bottom of the email, and decoupled 'What went wrong' from 'What we're doing about it' so the reader has to cross-reference separated bulleted lists.",
+  "what_would_make_it_a_10": "Pair problems directly with actions, bring the primary metrics table above the fold, and add a forwardable blurb for the executive recruiting ask."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 nails the executive reading experience on mobile: the core metrics table is immediately visible, problem and resolution are grouped together, and Ask 1 includes a pre-written blurb that makes investor introductions effortless."
+}

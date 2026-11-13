@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It correctly identifies the 46–90 day group (past 2x median order gap) as the highest-priority, lowest-cost group to win back first, and provides an immediate concrete swap for Monsoon Dark with actionable brewing advice.",
+  "biggest_mistake": "The financial model excludes WhatsApp sending fees and potential discount cannibalization from buyers who would have returned organically.",
+  "what_would_make_it_a_10": "Incorporate net WhatsApp messaging costs and expected baseline redemption drag into the net profit projection."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent account of operational gating for subscriptions and thoughtful accounting for WhatsApp message costs and holdout cannibalization.",
+  "biggest_mistake": "Relegated the 9,000 customers in the 46–90 day bucket to an aside rather than making them the #1 win-back priority in the main campaign sequence.",
+  "what_would_make_it_a_10": "Place the 46–90 day at-risk segment at the top of the win-back target matrix instead of starting win-back at 91+ days."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 nailed the data signals by putting the 9,000 'at-risk' customers (46–90 days, past twice the 34-day median reorder cycle) as Group 1 with zero discount. Output 2 left that critical cohort out of its primary win-back table entirely."
+}

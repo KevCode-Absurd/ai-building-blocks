@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless arithmetic breaking down losses per 100 trials, and clear recognition of the Lite credit cliff as our biggest self-inflicted wound.",
+  "biggest_mistake": "Move 5 (content studies on link data) feels like business-as-usual Ahrefs marketing rather than a targeted strategic countermove.",
+  "what_would_make_it_a_10": "Replace Move 5 with a more aggressive commercial or product move tied directly to the churn/conversion data."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliant executive framing ('Stop / Don't spend on') and Move 5, which creatively bridges the AWT multi-site pipeline with the agency reporting wedge.",
+  "biggest_mistake": "Very little to fault; could have detailed the interview step for agency churn as concretely as Output 1 did.",
+  "what_would_make_it_a_10": "Incorporate Output 1's idea of inspecting the actual Monday spreadsheets/PDFs agencies send during customer discovery."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both analysts completely understood my business and nailed the math, but Output 2 won me over with its executive summary and Move 5, turning our multi-site free tier into a Trojan horse for client reporting instead of falling back on generic content marketing."
+}

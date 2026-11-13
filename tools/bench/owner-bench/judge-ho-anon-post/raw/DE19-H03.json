@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranks the three fixes by money saved with the working shown, writes every customer-facing message in the brand voice with one button each, and keeps a refund one tap away while making swap the first choice.",
+  "biggest_mistake": "The swap-first saving of 'up to £183,800 in sales kept' is wildly overstated and contradicts its own 'overall return rate moves from 22% to about 21%' line; a careful owner would distrust the biggest number in the plan.",
+  "what_would_make_it_a_10": "Make the swap saving consistent and conservative, tie it honestly to units returned rather than the £58 order value, and add a simple scoreboard showing which fix pays back first."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean decision-up-front structure, a sensible weekly scoreboard, an honest warning that the plan runs through Christmas, and a decent split-the-difference assumption on the fit finder gap.",
+  "biggest_mistake": "The 'Bolder move' of shipping the swap before the return arrives adds risk without a clear owner, and some numbers (exchange share 18% to 35-45%) are asserted with less working than the ticket and bra figures.",
+  "what_would_make_it_a_10": "Give the swap and bolder-move numbers the same worked arithmetic as the tickets, drop or fence off the ship-first idea, and include the post-delivery fit message for first-time bra buyers."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more usable as it stands: the messages are fully written in our voice, the fixes are ranked by saving with the maths visible, and it keeps refunds honest; Output 2 is tidy but thinner on copy, slightly loose on numbers, and its swap-first idea adds unnecessary risk."
+}

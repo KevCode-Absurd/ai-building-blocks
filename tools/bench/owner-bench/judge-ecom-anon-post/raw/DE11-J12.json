@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A deceptively sharp plan: it segments the flow by pincode risk with the refusal economics (₹70/₹41/₹27 loss per COD order) accounting for why each discount sits where it does, it includes holdouts so I can measure real lift, and it explicitly flags the downside of cancels and wasted discounts.",
+  "biggest_mistake": "The prepaid nudge is misfiled — it puts T4 (with a ₹20/₹40 discount) and the metro nudge inside the confirmation flow but the Table says Marketing, while the metro 'normal chat' nudge has no discount — the category logic across the flow gets muddy and a reviewer might reject or recategorise. Also spends a bit of the word budget on a speculative ₹99 advance idea that could dilute priorities.",
+  "what_would_make_it_a_10": "Tighten the category/label discipline (Utility vs Marketing per message, discount where and why, no offer bleeding into Utility), fix the voice to feel more like ours (fewer spreadsheet-toned phrases, more Hinglish in scripts), and keep the bolder ₹99 idea as a one-line appendix rather than a full section."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The most usable document: clean templates with sample values, tight flow with quiet hours, holdouts for the prepaid switch, an after-hours auto-reply plus a concrete staffing move (2 pm–midnight shift), and reply scripts that genuinely sound like Snitch with light Hinglish.",
+  "biggest_mistake": "Weak on the pincode-risk economics: it lumps Tier 2 and Tier 3 together for the call/hold, and the prepaid nudge is 'ease, not a deal' so it throws away the lever that targets the highest-RTO band — it doesn't show the refusal-loss math or use a discount tiered by risk, so it underserves the core RTO problem.",
+  "what_would_make_it_a_10": "Segment the RTO plan explicitly (metro/Tier2/Tier3 with loss per order and a risk-tiered nudge or advance for Tier 3), show the refusal-cost math by group, and add holdouts/a cancel-cost framing so I can see what each step is worth — keeping the current clarity and voice."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and I'd use either with tweaks, but Output 1 is the one that actually attacks the money — the Tier 3 refusal economics, the tiered discount that pays for itself, and the holdouts — while Output 2 is cleaner and better written but treats Tier 2 and Tier 3 alike and leaves the biggest RTO band under-targeted."
+}

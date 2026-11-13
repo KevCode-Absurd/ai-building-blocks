@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranks the fixes by money saved and gives clear cost and sales-kept ranges; the customer copy is strong, short and on-brand.",
+  "biggest_mistake": "It has no proactive day-3 update, yet credits the new flow with 50% to 67% of day-3-to-5 ticket reductions; moving dispatch earlier and a day-5 late email do not fully cover that silent window.",
+  "what_would_make_it_a_10": "Add the day-3 'nearly there' email or SMS, pre-select swap for size reasons while keeping refund visible, and align the ticket savings with the messages actually sent."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Directly fixes the silent day-3-to-5 window with a proactive email/SMS, and links the portal to size reasons with swap first but refund still visible.",
+  "biggest_mistake": "The swap upside of up to £183,800 in sales kept is optimistic and may be read as cash saved; it needs tighter framing and a clearer net margin or item-cost note.",
+  "what_would_make_it_a_10": "Turn every estimate into a holdout-tested range, show realistic net sales kept after item and postage costs, and make the delivery-range and day-3 triggers exact."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "I'd use 2: it actually sends the day-3 update that should kill most of the 'where is my order' tickets, and its fit and portal changes are tighter. Output 1 has good copy and cost framing, but it claims ticket savings without a day-3 message, so I'd have to rewrite the logic before using it."
+}

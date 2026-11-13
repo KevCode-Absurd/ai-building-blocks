@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clear no on the 20% cut, backed by correct lifetime maths ($1,677 against $1,130, and $1,174 kept after commission), the break-even point and the risk of losing just 4 of the top 20.",
+  "biggest_mistake": "The Partner tier pays 40% for the first year. That raises the rate, matches the rival on price instead of fixing what partners complained about, and the cost of the 90-day window is left vague.",
+  "what_would_make_it_a_10": "Keep the rate flat and reward the top tier with service instead. Put a real cost on the 90-day window, and give the first 30 days actual dates and owners."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It says plainly that the plan costs more, not $210,000 less, and gives a costed range for the 90-day window. It also shows that cutting only new referrals saves just about $38,000. The tiers reward the top partners with faster pay and service, not a higher rate.",
+  "biggest_mistake": "A few parts read above grade 7, such as the projection maths and the rel=\"sponsored\" note. Some estimates, like the $38,000 and the 65–75% credited by day 90, rest on assumptions that are stated but not proven.",
+  "what_would_make_it_a_10": "Simplify the wording to suit our reading level. Show the working behind the $38,000 figure in one line, and confirm it fits the word limit."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both say no to the cut with the right numbers, but the second is more honest about cost. It keeps the rate flat and fixes payouts and credit, and it gives me a dated 30-day plan with owners that I could hand to my partner manager today."
+}

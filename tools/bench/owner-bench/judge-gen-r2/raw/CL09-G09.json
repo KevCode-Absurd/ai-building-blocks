@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It keeps sleep wind-down posts in week 1 by wording them so they need no review, which matches the review rule and keeps our best-installing theme running from day one.",
+  "biggest_mistake": "It asks us to submit weeks 2 to 4 for review on 16 November but never writes those posts or says which ones will need review.",
+  "what_would_make_it_a_10": "Add a week-by-week calendar for weeks 2 to 4 with post titles and review flags so the batch submitted on 16 November is concrete."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a full four-week calendar, flags review on every draft and sets a clear submission schedule.",
+  "biggest_mistake": "It treats every 'busy mind at night' post as needing review, so week 1 is six kindness posts and our best-installing theme is dropped for a whole week.",
+  "what_would_make_it_a_10": "Reword a few sleep posts to avoid naming any condition so they can run in week 1, and keep the full calendar and review flags."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 saw that wind-down posts can skip review if worded carefully, so sleep content, our top installer, runs from day one. Output 2 is more complete on paper but gives up a full week of sleep posts by being too cautious."
+}

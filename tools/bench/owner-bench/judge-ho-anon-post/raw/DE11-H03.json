@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranks the three fixes by money with the working shown, writes every message with one button and honest date ranges, and flags the Christmas/holdout caveat.",
+  "biggest_mistake": "The swaps figure ('up to £61,000 to £97,000 of sales a month') is loose and overstates durable value; also the ticket count uses a rough 762/week baseline without weeks laid out.",
+  "what_would_make_it_a_10": "Tighten the swap value to net revenue kept after the £7.50 handling and next-size stock risk, with a clear low/high, and give a one-line expected total saving for the 60 days in a single figure range."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean cost-of-inaction framing, six genuinely different messages with fit-check copy in our voice ('comfort beats the number on the tag'), and a tidy staged order of work.",
+  "biggest_mistake": "The '£183,800 in sales kept' headline is a ceiling that oversells, and the fit-block language ('no gaps, no spilling over') drifts close to the shape-shaming tone we ban.",
+  "what_would_make_it_a_10": "Replace the sales-kept figure with realistic kept revenue net of handling, and soften the delivered fit guidance so it describes comfort and fit rather than how the body should look."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are usable, but Output 1 puts the money in the right order with cleaner working and catches the Christmas-holdout risk I'd actually want flagged; Output 2 has warmer copy but its 'sales kept' number and fit wording would make me edit before sending."
+}

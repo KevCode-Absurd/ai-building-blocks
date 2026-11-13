@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranked by tickets we can actually remove, with full working on the forecast, a low-end scenario, and all three articles written answer-first in our voice.",
+  "biggest_mistake": "The forecast bakes in optimistic shares (40%, 40%, 50%) as a single number, and the currency article is credited a partial-month saving even though it sits in week 2 with no in-app link; the Save/settle-up merge in step 5 is a small distraction.",
+  "what_would_make_it_a_10": "Give the forecast as a single defensible range with the shares justified against today's help rates, and show currency and merging separately as upside not counted."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, honest forecast given as a low-to-high band anchored to existing help rates, with currency and merging explicitly excluded so the number can only improve.",
+  "biggest_mistake": "It claims nothing needs merging and keeps 'How balances work' as a separate article while adding a new one, which still leaves the 21,000-view page unanswered; the lower-bound 25% on Pro refunds may undersell the 80% who are simply told the wrong place.",
+  "what_would_make_it_a_10": "Resolve the duplication with the old balances article (rewrite or retire it), add the in-app balance-screen callout, and show the exact search-term plumbing for 'undo delete' so those 4,900 searches land."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are publishable today, but Output 1 gives me the single number and dollar saving I asked for plus a downside case, and it fixes the balances article rather than leaving two versions of it; Output 2's range is cleaner but its article-1 plan still leaves the leaky page live."
+}

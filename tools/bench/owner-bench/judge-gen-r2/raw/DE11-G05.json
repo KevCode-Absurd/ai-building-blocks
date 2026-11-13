@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Built directly on the data: writing exercise scored heaviest, hours gap named and turned into a requirement, weekend rotation stated up front, and a concrete plan that cuts reviewer hours from 160 to ~70.",
+  "biggest_mistake": "The overnight window is presented a bit rigidly as a fixed 00:00-08:00 UTC shift without giving candidates time-zone math (o2's table is friendlier), and the short written exercise choice is fine but less sharp than a real typo-fix scenario.",
+  "what_would_make_it_a_10": "Add a small local-time table so an Asia-Pacific candidate instantly sees their clock, and give one slightly richer shortlist exercise so the 'getting to the bottom of it' row isn't only tested later."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post reads exactly like 37signals: hard parts up top, plain local-time table, a real-feeling Priya typo exercise that tests both warmth and root-cause fixing, and a scorecard with 85% written work and concrete 1/3/5 anchors tied to the task.",
+  "biggest_mistake": "Minor: the table lists Tokyo/Sydney/Auckland hours without noting the 00:00-08:00 UTC weekend rotation in local time, and 'We will never ask you for money' reads slightly off-tone for a calm brand.",
+  "what_would_make_it_a_10": "Confirm the weekend rotation in each row of the local-time table and tighten the anti-scam line to a quieter sentence, making the whole post instantly actionable for an Asia-Pacific reader."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nail the data and the scorecard, but o2's post speaks more like us and its Priya exercise is the one I'd actually send: it tests warmth and root-cause fixing in a single real scenario, and the local-time table makes the hard hours easy to picture."
+}

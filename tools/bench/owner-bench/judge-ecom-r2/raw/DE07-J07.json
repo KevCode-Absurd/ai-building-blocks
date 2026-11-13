@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Matches my ideal structure and hits the two things I most wanted: it ties sunscreen into the dark-spot routine and gives a real deadline reminder, with the 10% prices worked out correctly (₹359, ₹1,167).",
+  "biggest_mistake": "Email 5 sends everyone a twice-daily salicylic acid routine, which contradicts the 'don't start with an acid' advice it gave the dry/sensitive segment just a few emails earlier.",
+  "what_would_make_it_a_10": "Make Email 5's routine branch on the quiz answer (or default to the gentlest two-step for sensitive skin) so the advice stays consistent and safe for every segment."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Operationally the sharpest: it excludes past buyers at entry, turns Smart Sending off, targets the WhatsApp at non-engaged users, and gives a genuinely safe week-by-week slow start with a proper sensitive-skin exception.",
+  "biggest_mistake": "It assumes the coupon never expires and therefore drops the code-deadline reminder I asked for, so a buyer who is close to converting never gets a last nudge.",
+  "what_would_make_it_a_10": "Confirm the code's real expiry and add a genuine last-chance reminder with a little social proof, so the calm honesty stays but the deadline nudge isn't lost."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 reads like the template I had in mind, hits the deadline reminder and dark-spot-plus-sunscreen link, and shows its 10% math correctly; Output 2 is safer and technically better but stops short by assuming no code deadline, so I'd pay slightly more for Output 1."
+}

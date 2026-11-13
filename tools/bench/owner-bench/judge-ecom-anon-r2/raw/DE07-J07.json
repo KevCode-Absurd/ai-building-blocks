@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 6,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Strong data diagnosis and a clear deadline-based WhatsApp reminder; the copy is calm, factual and mostly on-brand.",
+  "biggest_mistake": "Email 5 contradicts the slow-start advice: it puts a 2% salicylic acid face wash in both morning and night for everyone, including sensitive skin, and it misses an entry filter for past buyers.",
+  "what_would_make_it_a_10": "Fix the final routine so it is segment-aware and truly slow-start, add a past-buyer entry filter, and put the active ingredient and strength into more subject lines."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Operationally strong and safe: personalised first email, correct slow-start routine, proper entry and exit rules, WhatsApp/DLT compliance, and no unverified sunscreen claim.",
+  "biggest_mistake": "The subject lines do not name the active ingredient and strength as the brief asks, and the WhatsApp is used as an early nudge rather than a code-deadline reminder.",
+  "what_would_make_it_a_10": "Add active plus strength to every subject and preview, add a compliant deadline reminder if the code actually expires, and tighten the dry/sensitive path so the serum is clearly optional and later."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is safer and more operational: it gets the slow-start routine right, sets clean entry and exit rules, and avoids unverified product claims. Output 1 has the better deadline reminder, but its final email tells everyone to use a 2% salicylic acid wash twice a day, which contradicts the brand's own slow-start promise."
+}

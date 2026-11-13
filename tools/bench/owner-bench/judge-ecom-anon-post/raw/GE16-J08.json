@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Nails the exact sequencing by putting the 46-90 day 'slipping' cohort first with zero discount, while also giving Monsoon Dark and ex-subscribers their own dedicated, gated tracks.",
+  "biggest_mistake": "Very dense presentation that requires close reading, though every word earns its keep.",
+  "what_would_make_it_a_10": "Already a 10 for an operational plan; adding an explicit subject line for WhatsApp would make it complete."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very crisp draft messages that perfectly adhere to the brew tip, single CTA, and brand voice guidelines.",
+  "biggest_mistake": "Relegated the 46-90 day cohort (the warmest, cheapest at-risk segment) to a side note rather than making them the top target in the win-back program.",
+  "what_would_make_it_a_10": "Promote the 46-90 day group to Wave 1 in the target table and economics instead of starting with older 91-180 day churn."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 understood the data best by making the 46-90 day slipping buyers Wave 1 at zero discount, protecting margin while capturing the lowest-hanging fruit. Its pre-order idea for Monsoon Dark and strict gating on subscription ops show genuine commercial and operational chops."
+}

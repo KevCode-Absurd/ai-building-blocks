@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data like an operator: 46-90 day buyers first, Monsoon Dark as its own problem, and subscription win-back gated behind delivery fixes.",
+  "biggest_mistake": "The Monsoon Dark draft does not actually name the closest replacement roast or farm, so the strongest segment still needs a better first message.",
+  "what_would_make_it_a_10": "Name the exact Monsoon Dark replacement, remove the arbitrary calendar dates, use combined email/WhatsApp reachable counts where possible, and tighten the message drafts to always name a farm or roast."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 6,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The copy is strong, brand-safe, and the subscription section correctly leads with the delivery fix instead of a discount.",
+  "biggest_mistake": "It largely misses the 46-90 day at-risk group as a main target, even though they are the cheapest win-back and directly tied to the repeat-rate fall.",
+  "what_would_make_it_a_10": "Put the existing 46-90 day customers first with counts, offers and value; separate them from the day-28 prevention flow; and recalc the forecast including that group and the 15% discount cases."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather use Output 1 because it gets the commercial order right and works from the actual segment counts. Output 2 is cleaner copy, but missing the 46-90 day group as a core win-back target is too important to overlook."
+}

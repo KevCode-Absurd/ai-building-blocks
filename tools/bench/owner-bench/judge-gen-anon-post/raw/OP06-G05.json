@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It follows the data instead of HR habit: it centers writing, targets the overnight UTC gap with Asia-Pacific hours, and states the weekend rotation plainly near the top.",
+  "biggest_mistake": "It adds extra process and assumptions I didn't ask for, especially the exact interview structure and some operational detail, while missing a concrete sample customer email in the application.",
+  "what_would_make_it_a_10": "Tighten it a bit, include the actual short customer reply prompt in the finished application, and simplify the process so it's immediately publishable without trimming."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sounds like us and is very usable right away: salary first, honest hard parts, career changers welcomed, and the application is much better than resumes plus cover letters.",
+  "biggest_mistake": "It weakens the strongest signal by making the first-stage score mainly about writing tone, then adds a longer exercise later instead of using the best predictor earlier and more directly.",
+  "what_would_make_it_a_10": "Weight problem-solving inside the written exercise more heavily, make the scorecard more specific with 1/3/5 anchored to the actual work, and tighten the hiring flow around the proven signal instead of adding a second written stage."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are good and I could use either with edits, but 1 reads my data more sharply and builds the post and scorecard around the real problems I need to solve: the overnight gap, the weekend clarity issue, and writing as the best predictor."
+}

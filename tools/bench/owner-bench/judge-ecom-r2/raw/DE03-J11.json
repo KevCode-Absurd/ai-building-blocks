@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Leads with the in-app checkout bug and its money, ranks five evidence-tied tests, and does honest sample-size maths using add-to-cart as metric with orders as guardrail.",
+  "biggest_mistake": "The A/B sample-size maths is slightly shaky (p reported inconsistently as 4.40%/4.00%), and the checkout-fix projection is presented as a range rather than committing to a stated assumption.",
+  "what_would_make_it_a_10": "Give the checkout-fix projection a single stated assumption and tighten the baseline/conversion figures so every number traces cleanly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Clean funnel table by browser and a strong ship-now list including tracking events, with the checkout fix sized to ~₹34 lakh gross margin.",
+  "biggest_mistake": "Uses orders-per-session as main metric for four-week page tests, which cannot realistically detect a 10% relative lift in that window at only 0.56% mobile conversion, so the power claim is wrong.",
+  "what_would_make_it_a_10": "Use early-funnel metrics (add-to-cart or cart-to-checkout) with orders as guardrail and show honest detectable-effect maths against real traffic."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is sharper on the ranking, the money case for the bug fix, and the honest detectable-effect maths, so I'd trust it to run next week; Output 2's orders-based sizing overstates what four weeks can prove."
+}

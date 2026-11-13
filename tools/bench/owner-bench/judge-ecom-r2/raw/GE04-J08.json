@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Superb sub-segmentation of 'Equipment only' and 'Cold Brew' buyers with highly tailored messaging and logic.",
+  "biggest_mistake": "Skips the 9,000 customers currently in the 46-90 days cohort from the immediate win-back table, leaving the cheapest wins untouched.",
+  "what_would_make_it_a_10": "Target the existing 46-90 days cohort as your first priority in the campaign rather than just proposing a day-28 nudge for future buyers."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliantly identifies Day 68 (twice the median order gap) as the exact lapse point, perfectly targeting the 46-90 day 'at risk' cohort as Priority 1.",
+  "biggest_mistake": "Suggesting a medium roast House Blend as the replacement for the discontinued Monsoon Dark roast, which slightly misses the mark on coffee logic.",
+  "what_would_make_it_a_10": "Suggest another dark roast (or leave a placeholder) for the Monsoon Dark replacement rather than defaulting to the medium House Blend."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are exceptional, nailing the math, data signals, and brand voice. Output 2 wins by directly prioritizing the 9,000 customers in the 46-90 day window for the immediate campaign, whereas Output 1 addresses them only as a future prevention tactic."
+}

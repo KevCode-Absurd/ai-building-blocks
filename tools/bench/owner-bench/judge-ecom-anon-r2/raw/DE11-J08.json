@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds the two real reasons people left (the discontinued Monsoon Dark blend and the courier failure) and gives each its own fix, with the maths worked out from ₹557 gross profit and a named message for the blend buyers.",
+  "biggest_mistake": "The reachable counts are worked out as 90% of the 62% email opt-in rate only, so WhatsApp reach is not added in; the group totals also still include cancelled subscribers, which the author admits but does not fix.",
+  "what_would_make_it_a_10": "Fix the reachable counts to combine email and WhatsApp properly, take subscribers out of the group totals cleanly, and give group 4's 10% vs 15% split a clear decision rule for which offer wins."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads exactly like us: warm, specific, no snobbery, and it adds smart sub-groups like equipment-only and cold brew buyers with a seasonal plan, plus a day-28 running-low nudge to stop the leak.",
+  "biggest_mistake": "It puts the 13,100 recent lapses ahead of the 5,200 Monsoon Dark buyers, which means the people with a clear reason to return wait behind a colder group; its lift assumptions are also on the optimistic side and the reachable figures are rough.",
+  "what_would_make_it_a_10": "Rank the Monsoon Dark track first or second, tie every projection to a stated minimum lift needed to break even against the holdout, and show reachable counts built from email plus WhatsApp opt-ins rather than a single 70% guess."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the one I would act on first: it ranks the groups by expected profit, puts the Monsoon Dark buyers and the delivery problem where they belong, and its numbers reconcile to my ₹557. Output 2 sounds more like us and has the better sub-group thinking, but it buries the clear reason people left and its money is looser."
+}

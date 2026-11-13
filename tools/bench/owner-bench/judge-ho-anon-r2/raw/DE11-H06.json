@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "A straight, numbers-backed 'no' to the 20% cut, plus a plan that fixes the real pain points (90-day window, faster payouts) with a first-30-days timeline the one partner manager can run.",
+  "biggest_mistake": "The partner tier's 40% first-year rate adds cost and complexity; a simpler perk-led tier might be cleaner, but it's a minor point.",
+  "what_would_make_it_a_10": "Nothing major; maybe a quick sensitivity check on the 90-day window cost and a note on how to phase it if cash is tight."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear, plain-English decision with solid lifetime-value maths and a practical first-30-days table; the 'bad news, said plainly' section builds trust.",
+  "biggest_mistake": "The 90-day window cost is underspecified—saying it will raise the bill but not estimating the extra $63k per 10% rise leaves finance without a number; also, the $25 minimum is a bigger change than needed and might invite fraud.",
+  "what_would_make_it_a_10": "Add a cost estimate for the 90-day window (like Output 1 does) and justify the $25 minimum against the $50 compromise."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 gives me a more complete, immediately actionable plan: it quantifies the 90-day window cost, sets a simpler two-tier structure with a clear partner rate, and lays out a first-30-days timeline that feels ready to hand to my partner manager. Output 2 is strong, but Output 1 edges it on readiness and financial detail."
+}

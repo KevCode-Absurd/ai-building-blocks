@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The opening decision with its three fixes in order is crisp. It adds a holdout, a conversion guardrail, a Christmas warning and a halved fit-finder effect, so the numbers read as honest ranges.",
+  "biggest_mistake": "It never states the baseline cost of returns (£139,800) or the cost of all tickets, and it doesn't rank the fixes by money saved. It also gives only one post-delivery message, and the sales-kept figures ignore that a swap still costs £7.50 in postage.",
+  "what_would_make_it_a_10": "Show a clear baseline cost and a ranked table of savings with a total in pounds. Add a dedicated fit-help follow-up for first-time bra buyers. Net the swap postage cost out of the sales-kept claim."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It opens with the cost baseline and the key facts, all correct: £139,800, 5,394 too-small returns and 6,076 day 3 to 5 tickets. Its six messages are warm and on brand, including the fit-help follow-up and \"Comfort beats the number on the tag\". The table of numbers is easy to check and states its assumptions.",
+  "biggest_mistake": "The fit-check email 10 minutes after ordering promises a free size switch within 2 hours. That depends on an ops capability we may not have. The £183,800 sales-kept figure is a big ceiling that is flagged but not netted out of the total.",
+  "what_would_make_it_a_10": "Drop the 2-hour switch promise or make it an optional extra. Show the swap value in a realistic range inside the total saved. Add a fit-finder placement test with a guardrail on bra conversion."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both plans fix the right three things in a sensible order, and I could use either. I'd pick the second because it shows me the cost baseline and savings in pounds, and its messages sound more like us, including the follow-up that helps with fit after delivery. The first has sharper tests and guardrails, but I'd have to work out the money myself."
+}

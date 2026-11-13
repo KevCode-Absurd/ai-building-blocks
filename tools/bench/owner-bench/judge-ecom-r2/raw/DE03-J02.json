@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Builds the plan directly on the on-feet worker signal and problem-first hook data, with a day-30 decision tied to the 90-day $38 break-even.",
+  "biggest_mistake": "A few small gaps: it assumes kids' and family packs exist and defers to a landing page without naming an approved giving line placement precisely.",
+  "what_would_make_it_a_10": "Tighten the day-30 new-customer check and name the exact approved mission line and its placement in every ad."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Uses the customer's own phrases as hooks and explicitly protects against platform-inflated results with a three-read day-30 verdict.",
+  "biggest_mistake": "The 60-day Spark code request conflicts with licences that end in March, a small but real rights error.",
+  "what_would_make_it_a_10": "Fix the Spark-code term to match the March licence end and keep everything else as is."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are Monday-ready and built on our data, but Output 2 speaks more in Maria's and Tasha's words and its three-read day-30 test is safer against TikTok over-claiming."
+}

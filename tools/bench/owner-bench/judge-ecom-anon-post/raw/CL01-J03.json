@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It covers all three signals: skip the belt, lift it yourself and the 5 am quiet wheels. The data reads are sharp (women bring 26% of purchases on 18% of spend), and the primary text is short and calm, in our voice.",
+  "biggest_mistake": "It stops short of production. There are no headlines and no scene timings. The test budget of about ₹4,500 per concept is too thin to judge cost per purchase. Concept 5 also states 'Quiet wheels' as brand copy, which is not an approved spec.",
+  "what_would_make_it_a_10": "Add headlines and second-by-second scene notes. Set a realistic test budget. Keep 'quiet' and 'light' inside buyer quotes. Put the women's concept first in the pick, since that is where the efficiency is."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is close to brief-ready for production. It has a recommendation up front and a summary table. Each concept has scene timings, safe zones and headlines with character counts. The claim rules are strict ('quiet' only as a buyer's line), and the per-audience test budget is sensible at about ₹63,000. It also leads the pick with the cheapest audience.",
+  "biggest_mistake": "Some primary text runs long and repeats the spec list, so it reads less like our short-line, grade-7 voice. Concept 7's live scale reading is a risk if the number does not show about 2.6 kg. Calling weekend couples 'unaware' is questionable.",
+  "what_would_make_it_a_10": "Cut the primary text to three or four short lines. Add a second awareness-level variant for the women's concept. Make sure the scale shot shows the approved weight."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both found the quiet wheels, the solo women and the belt-skip angle, and both kept clear of scuffed dark shells. The second one I could hand to a production team tomorrow, with headlines, timings and a real test budget, and it leads with the cheapest audience."
+}

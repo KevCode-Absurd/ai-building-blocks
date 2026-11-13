@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into the right hiring design: APAC hours, weekend rotation up front, no years/tool requirements, and the written reply as the main signal.",
+  "biggest_mistake": "It is a bit long and process-heavy, and the application section does not include the actual customer prompt we would put in the form.",
+  "what_would_make_it_a_10": "Trim it to the limit, add the exact customer email prompt, and tighten the hiring steps so the post and internal process are clearly separated."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The post is plain, warm, and very close to publishable, with the salary, APAC need, weekend rotation, and no-experience-needed message handled well.",
+  "biggest_mistake": "It adds a 'why this job' mini cover letter and a longer exercise after the application, which weakens the clean move toward using the written customer reply as the main filter.",
+  "what_would_make_it_a_10": "Remove the low-signal 'why this job' question, make the application reply the main written screen, add a little more structure to the interview scorecard, and state the full post-interview timing."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather use Output 1 because it connects the hiring process to our actual data more tightly and gives the team a stronger scorecard. Output 2 has the cleaner post, but Output 1 is the better operating plan."
+}

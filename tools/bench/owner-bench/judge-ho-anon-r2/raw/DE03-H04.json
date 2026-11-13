@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Nails the data: pause back for 'no time' as the main save, clean exits for trip-over leavers who return anyway, 12-month switch for monthly payers, reminder for non-progressors, and honest revenue maths with a range and no-invented-discount discipline.",
+  "biggest_mistake": "Trusts untested switch/reminder numbers as 9%/39% without flagging a holdout test or noting the switch's year-commitment risk explicitly; the 'other' text box sits oddly inside the save screen.",
+  "what_would_make_it_a_10": "Add a 10% holdout test on the old flow to validate the assumed rates, a one-line customer-facing reassurance that pausing won't lose progress, and a sharper build order with owners and dates."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong copy in voice, a 'remind me before next trip' opt-in that fits the data, per-panel exact wording, and a 10% holdout test that O1 lacks.",
+  "biggest_mistake": "Gives 50% off to 'switching to another app' — a reason with no evidence it responds to discount, and against the owner's brief to stop giving the blanket discount; also adds a 'smaller daily goal' offer with zero supporting data.",
+  "what_would_make_it_a_10": "Drop the discount on 'switching', replace the invented 'smaller goal' with data-backed options, and tighten the money model so discounted revenue is counted honestly and the range is stated."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 follows my data and my wishes end to end — pause back as the hero, clean exits where people return anyway, no blanket discount, honest money with a range and an explicit build order — while Output 2 drifts into discounts and made-up offers that contradict the brief."
+}

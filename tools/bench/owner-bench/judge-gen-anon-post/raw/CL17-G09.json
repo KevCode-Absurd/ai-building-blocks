@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A full 24-post calendar with named hooks, plus a sharp opening that tells me the decision and the first deadlines for the editor and designer.",
+  "biggest_mistake": "It dodges review instead of planning it. It never says to submit anything on 16 Nov, but week 3's 'Awake at 2am' sits close to insomnia territory and could easily get flagged.",
+  "what_would_make_it_a_10": "Batch-submit any borderline weeks 2 to 4 posts on 16 Nov with a clear review flag per post, and stop pasting the brand tagline into multiple captions."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Practical review handling: submit weeks 2 to 4 as one batch on 16 Nov, live from 24 Nov, and allow 8 business days for any rewrite. It also adds a sensible check on narrator save rates, since the baseline comes from only 5 posts.",
+  "biggest_mistake": "Weeks 2 to 4 get only one-line angles, not post-level hooks, so the team still has 18 posts to invent.",
+  "what_would_make_it_a_10": "Add a week-by-week title grid like the one in the other plan, and cut the hashtags in draft 1 so it reads as one clean voice."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the numbers right and lead with evening sleep narrator clips. I'd take 2 because it tells me exactly what to send to review and when, and its drafts read a touch warmer. I'd still borrow 1's 24-post calendar."
+}

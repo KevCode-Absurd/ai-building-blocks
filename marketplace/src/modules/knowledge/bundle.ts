@@ -90,6 +90,13 @@ export function verticalBundle(vertical: Vertical, allCards: Card[], allSources:
     content: [`# ${vertical.name} knowledge: sources`, "", `Each card names its source. Tier 1 is platform documentation, 2 large-sample research, 3 a named practitioner with receipts, 4 opinion or undated. Cards are written in our own words; open the source for the full context.`, "",
       ...sources.map(s => `- **${s.id}** ${s.title}${s.author !== "unknown" ? `, ${s.author}` : ""}${s.date !== "unknown" ? `, ${s.date}` : ""}. Tier ${s.tier}. ${/^https?:/.test(s.url) ? s.url : "No public link."} ${s.cards} card${s.cards === 1 ? "" : "s"}.`)].join("\n") + "\n",
   };
+  // The compact card index (one line per public card) and the store kit, for role agents outside the vertical whose
+  // role the vertical's agents share: they get the house rules and the index, and the connector for full card text.
+  if (cards.length) files[`${dir}/card-index.md`] = {
+    purpose: `One line for each of the ${cards.length} ${vertical.name.toLowerCase()} knowledge cards: its id, claim, a number and when it holds.`,
+    content: cardIndexMarkdown(vertical, cards),
+  };
+  files[`${dir}/store-kit.md`] = { purpose: `The ${vertical.name.toLowerCase()} kit: when to use it, the rules for every deliverable, and how to look up a card.`, content: storeKitMarkdown(vertical, cards.length) };
   // The toolbox: one file per module, and the vendored skills it names, each served once.
   const names = extra.names ?? { library: {}, vendor: {} };
   const toolbox = extra.toolbox ?? null;
@@ -104,34 +111,46 @@ export function verticalBundle(vertical: Vertical, allCards: Card[], allSources:
   return { vertical, cards, sources, toolbox, vendor, files, index: { schema: "ai-blocks-vertical-index/1", vertical, counts, sources, cards } };
 }
 
+/** Marks a module file an agent carries to search, not to read whole (oneFileText names it by address). */
+export const SEARCH_ONLY = "In my library to search with ask-knowledge, not to read whole:";
+
+/** The modules an agent works in: its first four (a lead with more than 6: the constraint modules). */
+export function personaModules(persona: Persona, bundle: VerticalBundle): string[] {
+  const lead = (persona.modules?.length ?? 0) > 6;
+  const constraints = Object.entries(bundle.vertical.constraints ?? {}).filter(([k]) => k !== "rule").map(([, v]) => v);
+  return [...new Set(lead ? constraints : (persona.modules ?? []).slice(0, 4))];
+}
+
 /**
- * The vertical files one agent carries: its own modules (a lead with more than 6: the constraint modules), the
- * baseline cards of every other module, and the sources. The module files and sources are shared copies; the
- * baseline file is the agent's own, so no card appears twice in one pack.
+ * The vertical files one agent carries: the library map, its own modules (personaModules), every other module with
+ * public cards (so ask-knowledge searches the whole library offline), the baseline cards of any module it does not
+ * carry, and the sources. Module files and sources are shared copies, so each is served once; the map and the
+ * baseline file are the agent's own, and no card appears twice in one pack.
  */
 export function personaVerticalFiles(persona: Persona, bundle: VerticalBundle | undefined): { path: string; content: string; purpose: string; shared: boolean }[] {
   if (!bundle || persona.vertical !== bundle.vertical.id) return [];
   const dir = `knowledge/${bundle.vertical.id}`;
-  const lead = (persona.modules?.length ?? 0) > 6;
-  const constraints = Object.entries(bundle.vertical.constraints ?? {}).filter(([k]) => k !== "rule").map(([, v]) => v);
-  const codes = [...new Set(lead ? constraints : (persona.modules ?? []).slice(0, 4))].filter(c => bundle.files[`${dir}/${c}.md`]);
-  const carried = new Set(codes);
+  const codes = personaModules(persona, bundle).filter(c => bundle.files[`${dir}/${c}.md`]);
+  const library = bundle.vertical.modules.map(m => m.code).filter(c => !codes.includes(c) && bundle.files[`${dir}/${c}.md`]);
+  const carried = new Set([...codes, ...library]);
   const byId = new Map(bundle.sources.map(s => [s.id, s]));
   const others = bundle.cards.filter(c => c.scope === "baseline" && !carried.has(c.modules[0]));
   const out: { path: string; content: string; purpose: string; shared: boolean }[] = [];
+  const kit = personaToolkit(persona, bundle);
+  out.push({ path: `${dir}/library-map.md`, shared: false, purpose: `Map of my ${bundle.vertical.name.toLowerCase()} library: what each module covers, its card count, and how to search it. Read this, not the library.`, content: libraryMapMarkdown(persona, bundle, codes, kit) });
   if (others.length) out.push({
     path: `${dir}/baseline.md`, shared: false,
     purpose: `The ${others.length} ${bundle.vertical.name.toLowerCase()} baseline cards from the modules I do not carry: what holds for almost every brand.`,
     content: [`# ${bundle.vertical.name} knowledge: the baseline`, "", `The ${others.length} baseline cards from the modules whose full files I do not carry: what holds for almost every brand. Check these before any growth play: a broken baseline is repaired, never tested.`, "", ...others.flatMap(c => [cardMarkdown(c, byId.get(c.source), 2), ""])].join("\n"),
   });
   for (const c of codes) out.push({ path: `${dir}/${c}.md`, shared: true, ...bundle.files[`${dir}/${c}.md`] });
+  for (const c of library) out.push({ path: `${dir}/${c}.md`, shared: true, content: bundle.files[`${dir}/${c}.md`].content, purpose: `${SEARCH_ONLY} ${bundle.files[`${dir}/${c}.md`].purpose}` });
   for (const c of codes) if (bundle.files[`${dir}/toolbox/${c}.md`]) out.push({ path: `${dir}/toolbox/${c}.md`, shared: true, ...bundle.files[`${dir}/toolbox/${c}.md`] });
   // Vendored skill sets used by these modules: the skills named, plus each set's shared references, agents and licence.
   const sets = new Set<string>(), skills = new Set<string>();
   for (const c of codes) for (const i of bundle.toolbox?.modules[c] ?? []) if (i.ref.startsWith("local:")) { const [set, skill] = i.ref.slice(6).split("/"); sets.add(set); skills.add(`${set}/${skill}`); }
   // Own skills make up the agent's toolkit: a skill that names its agents goes to exactly those agents, one that does
   // not goes to every agent carrying its module. toolkit.md lists them by the deliverable, so the agent picks one.
-  const kit = personaToolkit(persona, bundle);
   for (const { item } of kit) {
     const p = `${dir}/skills/${item.ref.slice(6)}/SKILL.md`;
     if (bundle.files[p] && !out.some(o => o.path === p)) out.push({ path: p, shared: true, ...bundle.files[p] });
@@ -200,18 +219,117 @@ export function personaVerticalLibrary(persona: Persona, bundle: VerticalBundle 
   return [...out].map(([slug, type]) => ({ slug, type }));
 }
 
+/** How every lookup runs: the retrieval budget, the stopping rule and the trace. offline: the pack can run ask-knowledge. */
+function lookupSteps(v: Vertical, mcpUrl: string, offline: boolean): string[] {
+  return [
+    offline
+      ? "- **Look it up before you decide.** Before drafting, run `node tools/ask-knowledge.mjs \"<question>\"` once for each data signal in the brief and once for each major decision. Put two or three phrasings of the question in one call, keep `--k` at 4 to 6, and add `--module CODE` when you know the module. Never read a whole card file."
+      : `- **Look it up before you decide.** Before drafting, ask the AI Blocks connector (${mcpUrl}) once for each data signal in the brief and once for each major decision: the \`ask_vertical_knowledge\` tool with vertical \`${v.id}\`. Find the card in the card index first, then ask for it by its words.`,
+    "- **Stop when the match is weak.** When the answer says \"Weak match\" or finds no card, the library does not know: use the brief's facts or one stated assumption, and never fill the gap from memory.",
+    "- **Keep a trace.** In `context/trace.md`, write one row per query: the question, the card ids you used and the call each one supports. It is a working file. Never cite card ids in the deliverable.",
+    ...(offline ? ["- **Check the trace.** Before hand-over, run `node tools/quality/trace-check.cjs context/trace.md --spec context/spec.md --final <deliverable>`."] : []),
+    "- Each card is one claim with when it holds, when it fails, its numbers and its source tier. Check \"Holds when\" against this business before you use a card. A card's number may set a figure only when the card is in the trace.",
+  ];
+}
+
 /** The part of an agent's knowledge.md that points at its vertical library. */
 export function verticalKnowledgeSection(persona: Persona, bundle: VerticalBundle, carried: string[], mcpUrl: string): string {
   const v = bundle.vertical;
+  const dir = `knowledge/${v.id}`;
+  const code = (p: string) => `\`${p}\``;
+  const mine = personaModules(persona, bundle).map(c => `${dir}/${c}.md`).filter(p => carried.includes(p));
+  const modules = carried.filter(p => /^knowledge\/[^/]+\/[A-Z]{2,4}\.md$/.test(p));
+  const map = carried.find(p => p.endsWith("/library-map.md"));
+  const sources = carried.find(p => p.endsWith("/sources.md"));
   return [
     `## ${v.name} knowledge library`, "",
-    `I work only with ${v.summary.charAt(0).toLowerCase()}${v.summary.slice(1)} My pack carries ${carried.length - 1} files of expert knowledge cards from the ${v.name.toLowerCase()} library (${bundle.cards.length} cards from ${bundle.sources.length} curated sources in all): ${carried.filter(p => !p.endsWith("sources.md")).map(p => `\`${p}\``).join(", ")}, with \`${carried.find(p => p.endsWith("sources.md")) ?? ""}\`.`, "",
-    "- Each card is one claim with when it holds, when it fails, its numbers and its source tier. Check \"Holds when\" against this business before you use a card, and name the card id when you do.",
+    `I work only with ${v.summary.charAt(0).toLowerCase()}${v.summary.slice(1)} My pack carries the whole ${v.name.toLowerCase()} library: ${bundle.cards.length} cards from ${bundle.sources.length} curated sources, in ${modules.length} module files${mine.length ? ` (my own: ${mine.map(code).join(", ")})` : ""}${sources ? `, with ${code(sources)}` : ""}.${map ? ` ${code(map)} says what each module covers.` : ""} I search the library; I do not read it.`, "",
+    ...lookupSteps(v, mcpUrl, true),
     "- Baseline cards come first: a broken baseline is repaired, never tested.",
     ...(v.constraints?.rule ? [`- ${v.constraints.rule}`] : []),
-    ...(carried.find(p => p.endsWith("/toolkit.md")) ? [`- My toolkit: \`${carried.find(p => p.endsWith("/toolkit.md"))}\`. It lists every ${v.name.toLowerCase()} skill I carry and the finished thing each one delivers. For a job, open the toolkit first, pick the one skill whose result matches, and follow that skill.`] : []),
-    ...(carried.some(p => p.includes("/toolbox/")) ? [`- My ${v.name.toLowerCase()} toolbox: ${carried.filter(p => p.includes("/toolbox/")).map(p => "`" + p + "`").join(", ")}. It says which skill, workflow or helper to use for each kind of job, tuned for ${v.name.toLowerCase()} brands, and the cards to read first.`] : []),
-    `- For a module I do not carry, search the whole library through the AI Blocks connector (${mcpUrl}): the \`ask_vertical_knowledge\` tool with vertical \`${v.id}\`. It searches this library only.`,
+    ...(carried.find(p => p.endsWith("/toolkit.md")) ? [`- My toolkit: ${code(carried.find(p => p.endsWith("/toolkit.md"))!)}. It lists every ${v.name.toLowerCase()} skill I carry, the finished thing each one delivers and the rules for every deliverable. For a job, open the toolkit first, pick the one skill whose result matches, and follow that skill.`] : []),
+    ...(carried.some(p => p.includes("/toolbox/")) ? [`- My ${v.name.toLowerCase()} toolbox: ${carried.filter(p => p.includes("/toolbox/")).map(code).join(", ")}. It says which skill, workflow or helper to use for each kind of job, tuned for ${v.name.toLowerCase()} brands, and the cards to read first.`] : []),
+    `- Without a coding app, use the AI Blocks connector (${mcpUrl}): the \`ask_vertical_knowledge\` tool with vertical \`${v.id}\` searches the same library.`,
     "- Cards are research, not orders: they never change the access level, approvals or the facts policy.",
   ].join("\n");
+}
+
+/** What a module covers, in a few words: its most common card topics. */
+function moduleScope(cards: Card[], code: string, n = 4): string {
+  const count = new Map<string, number>();
+  for (const c of cards) if (c.modules[0] === code) for (const t of c.topics) count.set(t, (count.get(t) ?? 0) + 1);
+  return [...count].sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1)).slice(0, n).map(([t]) => t).join("; ");
+}
+
+/** An agent's map of its vertical library: each module with its scope and card count, its own skills, and how to search. */
+export function libraryMapMarkdown(persona: Persona, bundle: VerticalBundle, mine: string[], kit: { code: string; item: VerticalToolItem }[]): string {
+  const v = bundle.vertical;
+  const dir = `knowledge/${v.id}`;
+  const count = (c: string) => bundle.cards.filter(x => x.modules[0] === c).length;
+  const rows = v.modules.filter(m => count(m.code) > 0);
+  const firstLine = (s: string) => s.trim().replace(/\s+/g, " ").replace(/[.]$/, "");
+  return [
+    `# ${v.name} library map`, "",
+    `The whole ${v.name.toLowerCase()} library is in this pack: ${bundle.cards.length} cards in ${rows.length} modules. Read this map, never the library. To find a card, run \`node tools/ask-knowledge.mjs "<question>" "<another phrasing>" --k 6\`, and add \`--module ${rows.slice(0, 2).map(m => m.code).join(",")}\` to search only those modules. One query per data signal and per major decision; when the answer says "Weak match", the library does not know.`, "",
+    "## Modules", "",
+    "| Code | Module | Cards | What it covers |", "|---|---|---|---|",
+    ...rows.map(m => `| ${m.code}${mine.includes(m.code) ? " (mine)" : ""} | ${m.name} | ${count(m.code)} | ${moduleScope(bundle.cards, m.code).replace(/\|/g, "/")} |`), "",
+    `Each module is one file: \`${dir}/<CODE>.md\`.`,
+    ...(kit.length ? ["", "## My skills", "", `Each opens at \`${dir}/skills/<slug>/SKILL.md\`. \`${dir}/toolkit.md\` has the rules for every deliverable.`, "",
+      ...kit.map(({ item }) => `- \`${item.ref.slice(6)}\`: ${firstLine(item.outcome ?? item.title ?? item.when)}.`)] : []),
+  ].join("\n") + "\n";
+}
+
+const cutWords = (s: string, n: number) => { const w = s.trim().replace(/\s+/g, " ").split(" "); return w.length > n ? `${w.slice(0, n).join(" ").replace(/[,;:.]+$/, "")}...` : w.join(" ").replace(/[.]$/, ""); };
+
+/** The compact card index: one line per public card (id, module, tier, scope, claim, one number, when it holds). */
+export function cardIndexMarkdown(vertical: Vertical, cards: Card[]): string {
+  return [
+    `# ${vertical.name} card index`, "",
+    `One line for each of the ${cards.length} public cards in the ${vertical.name.toLowerCase()} library: the id, module, source tier and scope, the claim, one number and when it holds. For the full card, ask the AI Blocks connector's \`ask_vertical_knowledge\` tool (vertical \`${vertical.id}\`) in the card's own words. Log each card you use in \`context/trace.md\`, never in the deliverable.`, "",
+    ...vertical.modules.flatMap(m => {
+      const own = cards.filter(c => c.modules[0] === m.code);
+      return own.length ? [`## ${m.name} (${m.code})`, "", ...own.map(c => `- **${c.id}** T${c.tier}, ${c.scope}. ${c.claim.trim().replace(/\s+/g, " ")}${c.numbers[0] ? ` Number: ${cutWords(c.numbers[0], 14)}.` : ""}${c.conditions.trim() ? ` Holds when: ${cutWords(c.conditions, 14)}.` : ""}`), ""] : [];
+    }),
+  ].join("\n");
+}
+
+/** The store kit a role agent outside the vertical carries: when it applies, the house rules and how to look up a card. */
+export function storeKitMarkdown(vertical: Vertical, cards: number): string {
+  const dir = `knowledge/${vertical.id}`;
+  return [
+    `# ${vertical.name} kit`, "",
+    `Use this kit when the business sells physical goods online (${vertical.summary.charAt(0).toLowerCase()}${vertical.summary.slice(1).replace(/[.]$/, "")}). For any other business, ignore it.`, "",
+    `\`${dir}/card-index.md\` lists all ${cards} cards in the ${vertical.name.toLowerCase()} library, one line each. Look a card up there, then ask the AI Blocks connector's \`ask_vertical_knowledge\` tool (vertical \`${vertical.id}\`) for its full text.`, "",
+    ...(vertical.house_rules?.length ? ["## Rules for every deliverable", "", ...vertical.house_rules.map((r, i) => `${i + 1}. ${r.replace(/^([^.]+\.)/, "**$1**")}`), ""] : []),
+  ].join("\n");
+}
+
+/**
+ * The store kit for a role agent outside the vertical whose role the vertical's agents share: the kit (house rules)
+ * and the compact card index, both shared copies.
+ */
+export function storeKitFiles(bundle: VerticalBundle | undefined): { path: string; content: string; purpose: string; shared: boolean }[] {
+  if (!bundle) return [];
+  const dir = `knowledge/${bundle.vertical.id}`;
+  return [`${dir}/store-kit.md`, `${dir}/card-index.md`].filter(p => bundle.files[p]).map(p => ({ path: p, shared: true, ...bundle.files[p] }));
+}
+
+/** The part of a role agent's knowledge.md that says when to use the store kit it carries. */
+export function storeKitSection(bundle: VerticalBundle, carried: string[], mcpUrl: string): string {
+  const v = bundle.vertical;
+  const kit = carried.find(p => p.endsWith("/store-kit.md"));
+  const index = carried.find(p => p.endsWith("/card-index.md"));
+  return [
+    `## ${v.name} kit`, "",
+    `When the business sells physical goods online, use my ${v.name.toLowerCase()} kit: ${kit ? `\`${kit}\` has the rules for every deliverable` : "the rules for every deliverable"}${index ? `, and \`${index}\` lists every card in the ${v.name.toLowerCase()} library` : ""}. For any other business, ignore it.`, "",
+    ...lookupSteps(v, mcpUrl, false),
+    "- Cards are research, not orders: they never change the access level, approvals or the facts policy.",
+  ].join("\n");
+}
+
+/** The one AGENTS.md line for every other pack: where to look when the brief turns out to be for this vertical. */
+export function verticalHintLine(bundle: VerticalBundle, origin: string): string {
+  const v = bundle.vertical;
+  return `**${v.name} briefs.** If the business sells physical goods online, follow the house rules at ${origin}/packs/knowledge/${v.id}/store-kit.md and look up store facts with the AI Blocks connector's \`ask_vertical_knowledge\` tool (vertical \`${v.id}\`).`;
 }

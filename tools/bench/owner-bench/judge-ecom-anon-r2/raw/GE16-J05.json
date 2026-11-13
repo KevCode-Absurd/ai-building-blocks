@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Rock-solid analytical framing with clear testing logic and strict adherence to Meta truncation limits.",
+  "biggest_mistake": "Angle variety is narrow: P1 and P5 both tackle the label/front-of-pack angle, while P2 and P3 both rely on review quotes.",
+  "what_would_make_it_a_10": "Incorporate Priya's 4 pm samosa dilemma and Aditya's weekly gym routine to create 6 truly distinct angles instead of doubling up on reviews and label-reading."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Brilliant copy that nails the brand tone, uses customer language (the 4 pm samosa, the 5-day training week), and directly ties each launch ad to beating a specific past CAC benchmark.",
+  "biggest_mistake": "None worth noting; every line meets character limits and stays inside the approved claims.",
+  "what_would_make_it_a_10": "Already a 10 for a launch-ready ad set under 1,000 words."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 wrote much better copy with 6 distinct hooks that actually used Aditya's and Priya's customer language (like the 4 pm samosa and the 5-day workout box fit). Its launch matrix also explicitly benchmarked against the exact historical CAC to beat for each angle."
+}

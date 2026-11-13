@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It answers the finance question head-on with lifetime maths, then puts the money and manager time exactly where the data points: the top 20 creator educators, the 90-day window and faster payouts.",
+  "biggest_mistake": "The table formatting is heavy and a couple of sentences (the 3.55% each line) are a bit dense for a grade-7 voice; also the one-rate-for-all choice leaves the top affiliates without a visibly better rate versus the 40% rival.",
+  "what_would_make_it_a_10": "A cleaner, plainer layout with the three money numbers (lifetime value, break-even drop, switch-month cash) in a small side box, and one short sentence on why perks beat a higher rate for the top 20."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very readable and well structured, with a strong set of extra ideas (partner tier at 40% first year, first-customer bonus, partner kit, day-90 review) and a friendly voice that matches the brand.",
+  "biggest_mistake": "It quietly creates a real cost: 40% first-year for Partners on top of a 90-day window and no clear cap, and the 31% first-year share maths is dense and easy to trip over; the plan also splits the top 20 across two focus groups rather than making them the whole point.",
+  "what_would_make_it_a_10": "Show the full cost of the Partner 40% tier against the $40,000 perk budget and the commission line, pick one number for the window rather than 'review at day 90', and keep the friendly voice while tightening the maths sentences."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives me the straight answer and the lifetime maths in one place, with a 30-day plan the one manager can run and no surprise cost; Output 2 reads beautifully and has more ideas, but the extra Partner rate and softer window decision make the money harder to pin down."
+}

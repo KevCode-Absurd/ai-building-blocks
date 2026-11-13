@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the core signals correctly: push sleep hard, use narrator clips as the backbone, post mostly in the evening, and cut low-yield formats and themes.",
+  "biggest_mistake": "It leaves too much room for reviewed content in weeks 2 to 4 without showing a fuller week-by-week calendar, and its weighted save/share baseline math is a bit shaky.",
+  "what_would_make_it_a_10": "Add a full 4-week dated calendar with review flags by post and tighten the KPI calculations so every target clearly traces to the source data."
+ },
+ "o2": {
+  "fit": 6,
+  "insight": 6,
+  "priorities": 7,
+  "reasoning": 5,
+  "correct": 3,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 4,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It uses strong customer-language hooks and makes sleep plus narrator clips the center of the plan.",
+  "biggest_mistake": "It makes a wrong call that no sleep post can run in week 1, which ignores the owner's signal that week 1 should use non-reviewed winding-down sleep content and leads to a poorer plan.",
+  "what_would_make_it_a_10": "Rebuild week 1 around non-reviewed evening wind-down sleep posts, fix the review logic and factual slips, and stop cutting off high-performing text videos categorically without evidence."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd actually use: it matches the business signals, respects capacity and review timing much better, and gives me workable drafts right away. Output 2 has good hooks, but the week 1 review mistake and a few factual/logical slips change the plan in the wrong direction."
+}

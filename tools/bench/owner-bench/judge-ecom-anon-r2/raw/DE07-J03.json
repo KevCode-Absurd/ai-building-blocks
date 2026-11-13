@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It ties every concept to a real buyer reason and puts the three data-backed bets first: work flyers, the solo woman lift, and quiet wheels.",
+  "biggest_mistake": "The per-trip maths conflates flights and trips, and the review quotes still need exact verification before launch.",
+  "what_would_make_it_a_10": "Fix the per-trip arithmetic, verify every quoted review line, and add one honest light-colour or scuff-handling note so the dark-shell objection is explicitly handled."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is production-ready: clear formats, build rules, headlines, and single-variable tests make it easy to hand to a creative team.",
+  "biggest_mistake": "The first three put gate-fear ahead of the women's lift-alone concept, and it assumes the review-table lines are word-for-word quotes.",
+  "what_would_make_it_a_10": "Move 'No asking for help' into the first three, verify all review quotes, and vary the primary copy so every ad does not repeat the same specs and price line."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like the owner's own brief: it gets the money math right, speaks in customer lines, and puts quiet wheels, the solo woman lift, and the work flyer first. Output 2 is production-ready but backs the wrong first-three bet."
+}

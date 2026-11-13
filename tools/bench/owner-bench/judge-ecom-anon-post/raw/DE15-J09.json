@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ties every recommendation to the owner's numbers, separates what is proved from what needs checking, and gives ranked moves with owners, gain/effort, stop items and a runnable scorecard.",
+  "biggest_mistake": "The contribution and move-lift forecasts rest on several assumptions and look more certain than the data supports; the team should label and validate them before treating them as targets.",
+  "what_would_make_it_a_10": "Add a one-page owner summary and first-week checklist, simplify the baseline math for the team, and flag every projection as an assumption to validate."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Very readable and brand-aware: it nails the core diagnosis, keeps the customer language, and gives a practical 90-day sequence with sensible stops.",
+  "biggest_mistake": "The scorecard and move ranking are not operational enough: there is no numeric contribution baseline or day-90 target, no gain/effort scoring, and vague targets like 'up every month' or 'pre-January level' instead of action thresholds.",
+  "what_would_make_it_a_10": "Quantify the contribution baseline and each move's gross-profit impact and effort, add weekly action thresholds and exact day-90 targets, and keep the plain-language voice."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would take Output 1 into Monday's meeting: it gives me the numbers, ranked moves, owners, stop list and scorecard I can actually run. Output 2 reads better, but it leaves the profit sizing and contribution targets too vague to manage the team against."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the data into the right hiring system: APAC hours, weekend rotation up front, no experience gate, and a short written customer reply as the first filter.",
+  "biggest_mistake": "The interview stage is a little thin; it says two video conversations but does not give the team much structure for those conversations beyond the scorecard row.",
+  "what_would_make_it_a_10": "Add the exact interview questions, tighten a few lines for publication, and decide whether we truly want no resume at all or just no cover letter."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The job post is warm, plain, and honest, with the hard parts, salary, remote setup, APAC hours, and weekend rotation all easy to see.",
+  "biggest_mistake": "The application is not quite finished because it does not include the actual customer email applicants will answer, and too much of the scorecard weight still sits in interviews rather than written work.",
+  "what_would_make_it_a_10": "Include the exact written exercise in the post, move more signal into the written stage, add a handoff-writing task, and make the scoring less interview-heavy."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather hand Output 1 to the team tomorrow because it is more directly built from our data and closer to usable as a full hiring process. Output 2 has a very good post, but it leaves a key piece of the application unfinished."
+}

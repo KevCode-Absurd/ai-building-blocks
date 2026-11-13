@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It makes the key business calls the owner wanted, ties them to rupee economics, catches the paused winning ASC ad and the Starter Kit COD trap, and reallocates budget in a way I could act on Monday.",
+  "biggest_mistake": "It treats the ₹282 'safe line' too broadly and keeps the UGC test plus a generic new creative test without being fully consistent about whether the account should commit only to clearly profitable spend.",
+  "what_would_make_it_a_10": "Tighten a few break-even assumptions and numbers, make the budget reallocation a bit more internally consistent, and be even stricter about only funding segments that clear Shopify-adjusted profitability."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It spots the same major account issues, especially restarting the paused ASC winner, cutting Starter Kit and isolating Women 25 to 34, and it gives concrete operating rules.",
+  "biggest_mistake": "It introduces too many extra assumptions and experiments that were not in the brief, especially the 86% prospecting attribution assumption and the state-level retargeting holdout, which makes the plan harder to trust and act on as an owner.",
+  "what_would_make_it_a_10": "Use simpler, cleaner assumptions grounded directly in the data provided, stay focused on the requested budget decisions, and remove the speculative testing framework unless the core decisions are already fully justified."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I asked for: direct ad set decisions, rupee-based reasons, a usable 14-day split and practical rules. Output 2 is smart, but it adds too many invented assumptions and side experiments before giving me the simplest decision I can run."
+}

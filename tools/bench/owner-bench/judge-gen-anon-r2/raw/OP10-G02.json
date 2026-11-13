@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It picks the right segment, shows the seat math clearly, and builds the page around the recruiting buyer’s real pain: candidate scheduling back and forth plus fair interviewer load.",
+  "biggest_mistake": "The sample-size and stop-rule detail is more than I need for the page brief, and the PTO/calendar wording needs a final product check before publishing.",
+  "what_would_make_it_a_10": "Tighten a few sections, keep every team CTA as “Book a demo,” and replace placeholder proof with real approved screenshots and customer proof."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is practical and well structured, with a strong test metric that avoids optimizing for low-quality signups.",
+  "biggest_mistake": "It adds a few unsupported or risky claims, like three or four emails per interview, text reminders, and tool/video support, and it uses “Get started” in team sections where the brief says to use “Book a demo.”",
+  "what_would_make_it_a_10": "Remove unsupported claims, align all team CTAs to “Book a demo,” and move the page a little more tightly around round robin, routing, and security as the buying blockers."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would hand Output 1 to the team with fewer caveats. It is more accurate, more on-brand, and closer to a usable recruiting landing page without inventing proof or product details."
+}

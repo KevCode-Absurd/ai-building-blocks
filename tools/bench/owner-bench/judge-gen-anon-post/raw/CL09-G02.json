@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The segment pick is sharp, with correct seat math (0.73 paid seats per recruiting signup against 0.17 for the next best segment). The hero uses Priya's own 'email tennis' phrase. The deciding metric only counts recruiting teams that get a first booking within 7 days, so curious visitors don't skew the test.",
+  "biggest_mistake": "Buttons swing between 'Get started' and 'Book a demo' on a page aimed at teams. Version B's headline reads awkwardly. The line 'that is your week gone' is an inflated claim that breaks our numbers-over-adjectives rule.",
+  "what_would_make_it_a_10": "Use 'Book a demo' consistently and offer 'Get started' as a secondary link. Tighten hero B. Put the security section right next to the demo form. Say how long the test needs to run for the traffic we get."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is close to shippable. It has a page title and meta description, a single consistent demo button with self-serve as the secondary option, and security moved up so it sits right before a 4-field demo form. The sample size (about 13,400 per version) and the seat projection both check out. Hero B uses Priya's 'skip whoever is on PTO' wording.",
+  "biggest_mistake": "The sample-size calculation uses the 3.1% homepage signup rate as its baseline without saying that this is a different rate from 'qualified starts'. The hero uses the brand's 'back and forth' line and drops Priya's sharper 'email tennis'.",
+  "what_would_make_it_a_10": "State the baseline assumption behind the sample size. Fold 'email tennis' into section 2. Add a placeholder slot for a real recruiting customer quote once one exists."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both pick recruiting with the right math, but the second one I could hand to my team today. Its buttons are consistent, security sits next to the demo form, and it tells me how much traffic the test needs and what the result is worth in seats."
+}

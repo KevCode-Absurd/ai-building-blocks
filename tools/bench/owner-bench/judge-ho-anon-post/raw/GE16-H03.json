@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The email copy is ready to put into our CRM today; the bra try-on advice ('loosest hook, band snug and level') shows a deep understanding of bra fitting without being clinical or preachy.",
+  "biggest_mistake": "Assumes an order edit window of two hours before picking, which might require extra tech lift depending on our warehouse management setup.",
+  "what_would_make_it_a_10": "A quick note about how to handle the fit finder if inventory for the recommended size is currently out of stock."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Outstanding commercial acumen—spotting the selection bias in the fit quiz data and warning me about the holiday return wave.",
+  "biggest_mistake": "The delivery email button is 'Find your fit' rather than letting the customer swap directly, which adds unnecessary friction once the parcel is already in their hands.",
+  "what_would_make_it_a_10": "Fleshing out the try-on guidance in the delivered message and giving me a dedicated post-delivery fit check email like Output 1 did."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are exceptional commercial plans, but Output 1 gives me copy that is 100% on brand, respects bra fitting reality, and is ready to load into our email platform this afternoon."
+}

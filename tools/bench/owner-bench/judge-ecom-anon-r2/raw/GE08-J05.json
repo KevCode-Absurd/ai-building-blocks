@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent grasp of ad fatigue versus angle failure, with clean formatting, exact character limits, and rigorous respect for approved claims.",
+  "biggest_mistake": "Angle overlap across the 6 primary texts (two front-of-pack variations and two review quote variations), which also resulted in testing two transparency variants in the 4-ad launch set.",
+  "what_would_make_it_a_10": "Differentiate all 6 angles cleanly (giving 4 pm office snack and gym training their own dedicated lines) so the first launch set tests broader territory."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless coverage of all 6 distinct angles with punchy customer language (samosa, 5-day training week), paired with exact historical CPA benchmarks for each launch ad.",
+  "biggest_mistake": "Minor character count discrepancy on P3 (labeled 119, actually 120), though well within the 125 display limit.",
+  "what_would_make_it_a_10": "Nothing—it is ready to load directly into Meta Ads Manager right now."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 gave me six truly distinct angles that nailed Aditya and Priya's exact words, and tied every launch test directly to the historical CPA benchmark it needs to beat."
+}

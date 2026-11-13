@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Correctly realized that a commission rate bump is too expensive and used the $40k perk budget to build a highly targeted top tier instead.",
+  "biggest_mistake": "Missed the ethical and trust issue of retroactively cutting rates on 'for life' customers, which would destroy affiliate trust.",
+  "what_would_make_it_a_10": "Include the insight about how a retroactive rate cut breaks a 'for life' promise to existing affiliates."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The brilliant insight that cutting commission to 20% on existing customers breaks the 'for life' promise we made to them.",
+  "biggest_mistake": "Proposed a commission rate increase for top partners that would cost an extra $46k a year, missing my goal of rewarding them without raising across-the-board costs.",
+  "what_would_make_it_a_10": "Stick to the 30% flat rate for all tiers and use the perk budget to create the Partner tier, rather than adding a $46,000 commission liability."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both did fantastic math on customer lifetime value and break-even points. Output 1 wins because it figured out that rewarding the top 20 with perks is much more cost-effective than raising the commission rate, keeping costs controlled."
+}

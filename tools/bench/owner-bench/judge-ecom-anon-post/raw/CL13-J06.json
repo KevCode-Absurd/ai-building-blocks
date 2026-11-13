@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Handles the cash and break-in issues in several places, and adds a measurement plan with the real return maths (3.3 per 100 orders, 1.0 per 100 early-tight returns) and a fallback if conversion drops. Assumptions are stated and cautious: the 10 notes is the total, hidden pocket included.",
+  "biggest_mistake": "Says the sweet spot is 'about 10 to 11 mm' for 6 or 7 cards, which is an invented number. The line under the button leaves out the break-in note, which is the best place to cut early returns. The measurement section is extra and pushes the word count past the limit. Putting 'not a thick roll' in the subtitle area and bullets may scare a few buyers.",
+  "what_would_make_it_a_10": "Drop the invented 10 to 11 mm figure, put 'snug for the first week, then it settles' in the line under the button, trim to under 1,000 words, and keep the measurement plan as a short note."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the break-in note in the bullets above the fold, which targets the early 'too tight' returns, and states trade-offs plainly: 'We would rather tell you now than have you send it back.' The 'what fits' scenarios (light day, full day, most it takes) are easy to use.",
+  "biggest_mistake": "Invents a fact: the hidden pocket takes 'one more flat note', so the total reaches about 11. That risks overstating cash capacity, which is the very problem we are trying to fix. It flags this as an assumption, but it still goes in the copy. It also says the wallet 'sits flat in a back pocket or jacket' without support, and 'slots are made snug so cards don't slide out' is a made-up reason. Nothing is said about how the work will be measured.",
+  "what_would_make_it_a_10": "Remove the invented extra note in the hidden pocket and the made-up reason for snug slots, put the break-in note under the button, and keep the cash number the same everywhere."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are on-brand and honest about the cash limit, but Output 1 keeps the capacity number consistent and cautious, and its return maths and fallback plan show it understands the real aim. Output 2 invents an extra note in the hidden pocket, which could cause the very returns we want to cut."
+}

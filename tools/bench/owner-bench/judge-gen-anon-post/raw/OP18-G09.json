@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the biggest signals: sleep, evening posting, and narrator clips become the core of the plan, with a clear 24-post calendar and usable drafts.",
+  "biggest_mistake": "The strategy language is a little sharper than our brand in places, and the review timing note is slightly off/conservative.",
+  "what_would_make_it_a_10": "Polish the plan copy to feel warmer, correct the review timing, and tighten a few phrases so every draft feels unmistakably Headspace."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very clear, brand-safe, and the customer-facing drafts feel warm, simple, and easy to post.",
+  "biggest_mistake": "The 4-week plan is less developed after week 1, and the review process is over-applied while still getting the earliest go-live timing a bit wrong.",
+  "what_would_make_it_a_10": "Add a more specific week-by-week topic plan for all 24 posts, sharpen the operational review timing, and include a little more testing detail by format and theme."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather use Output 1 because it gives me a fuller operating plan, stronger use of the data, and more concrete post ideas for the whole month. Output 2 sounds a little more like us, but Output 1 is closer to something the team could run with."
+}

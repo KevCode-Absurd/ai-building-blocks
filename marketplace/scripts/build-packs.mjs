@@ -331,10 +331,16 @@ const personas = housePersonas().filter(p => p.kind === "house" && p.status === 
 if (!personas.length) fatal("no live house personas to build");
 for (const p of personas) if (RESERVED_PACK_PATHS.has(p.id)) fatal(`persona id "${p.id}" is a reserved name under /packs; rename the persona`);
 for (const u of personasWithUnknownRole(personas)) warnings.push(`persona ${u.id}: role "${u.role}" is not in directory/data/roles.json, so it builds without a role`);
+// The store kit: a persona outside every vertical whose role one of the vertical's agents has (e-commerce: the roles of
+// its 45 agents) carries that vertical's house rules and card index. Every other pack gets one AGENTS.md line instead.
+const verticalRoles = new Map(); // role id -> vertical id (the first vertical, by id, whose agents have it)
+for (const p of housePersonas()) if (p.kind === "house" && p.status === "live" && p.vertical && verticals.has(p.vertical) && p.role && !verticalRoles.has(p.role)) verticalRoles.set(p.role, p.vertical);
+const verticalList = [...verticals.values()];
 const inputFor = (persona, kind, version) => {
   const role = getRole(persona.role);
   const mega = persona.mega ? megaKits.get(persona.mega.kit) ?? null : null;
-  return { persona, role, kit: role ? kits.get(role.id) ?? null : null, mega, jobTypes, templates, tools, library, helpers, vertical: persona.vertical ? verticals.get(persona.vertical) : undefined, options: { kind, ...version } };
+  const storeKit = !persona.vertical && verticalRoles.has(persona.role) ? verticals.get(verticalRoles.get(persona.role)) : undefined;
+  return { persona, role, kit: role ? kits.get(role.id) ?? null : null, mega, jobTypes, templates, tools, library, helpers, vertical: persona.vertical ? verticals.get(persona.vertical) : undefined, storeKit, verticals: verticalList, options: { kind, ...version } };
 };
 const started = Date.now();
 
@@ -522,7 +528,13 @@ if (withoutToolbox.length) console.warn(`build-packs: note: ${withoutToolbox.len
 const sharedCount = prefix => [...shared.keys()].filter(u => u.startsWith(prefix)).length;
 console.log(`build-packs: ${index.length} agents: ${index.length * 2} zips (${mb(zipBytes)} MB), browsable copies ${mb(browseBytes)} MB (shared: ${sharedCount("/packs/roles/")} role files, ${sharedCount("/packs/jobs/")} job skills, ${sharedCount("/packs/mega/")} mega kit files); ${fileCount} files in ${path.relative(ROOT, OUT) || "."}`);
 console.log(`build-packs: mega kits ready: ${megaKits.size}; mega agents: ${index.filter(p => p.mega).length}`);
-for (const [id, b] of verticals) console.log(`build-packs: vertical ${id}: ${b.cards.length} public cards from ${b.sources.length} public sources in ${Object.values(b.index.counts).filter(Boolean).length} modules; ${personas.filter(p => p.vertical === id).length} agents carry it`);
+for (const [id, b] of verticals) console.log(`build-packs: vertical ${id}: ${b.cards.length} public cards from ${b.sources.length} public sources in ${Object.values(b.index.counts).filter(Boolean).length} modules; ${personas.filter(p => p.vertical === id).length} agents carry it, ${personas.filter(p => !p.vertical && verticalRoles.get(p.role) === id).length} more carry its store kit`);
+// The largest zip of an agent that carries a vertical library or its store kit: packs must stay small enough to download.
+{
+  const sizes = index.filter(p => { const per = personas.find(x => x.id === p.id); return per && (per.vertical || verticalRoles.has(per.role)); }).flatMap(p => [[p.id, p.agent_zip.bytes], [`${p.id}-train`, p.train_zip.bytes]]);
+  const top = sizes.sort((a, b) => b[1] - a[1])[0];
+  if (top) console.log(`build-packs: largest vertical or store-kit zip: ${top[0]} ${(top[1] / 1024 / 1024).toFixed(2)} MB`);
+}
 console.log(`build-packs: toolboxes: ${toolboxes.size} of ${kits.size} role kits; ${toolboxPacks} agents carry one (${toolboxItemFiles} item files inside their zips); ${sharedCount("/packs/toolbox/")} library items stored once under toolbox/; ${libraryNotes.length} left out`);
 console.log(`build-packs: tools: ${TOOL_FILES.map(t => `${t.name} ${toolFrom[t.name] ? `from ${toolFrom[t.name]}` : "not available"}`).join("; ")}`);
 console.log(`build-packs: role kits ready: ${kits.size} of ${listRoles().length} roles; knowledge pending for ${pending} of ${index.length} agents; ${((Date.now() - started) / 1000).toFixed(1)}s`);

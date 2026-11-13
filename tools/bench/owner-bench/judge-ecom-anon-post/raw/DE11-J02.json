@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Ties every rule to Bombas' numbers, leads with on-feet shift workers, and builds a phased plan with dollar kill/scale lines that a team can execute Monday morning.",
+  "biggest_mistake": "The 90-day break-even calculation is opaque and may be off by a few dollars, but it doesn't change the $38 target.",
+  "what_would_make_it_a_10": "Clearer math on the 90-day break-even and a simple note on how the $57 stop line was chosen."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clear set-up checklist and a good mix of creative concepts, with detailed tracking and a structured Day-30 scorecard.",
+  "biggest_mistake": "The budget phasing adds to $29,000, not $30,000, and the Day-30 benchmarks mix cost per first order with 90-day break-even without reconciling them.",
+  "what_would_make_it_a_10": "Fix the budget total and align the Day-30 pass/fail numbers with the 90-day contribution math so the team isn't pulled between two targets."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more precise and usable: every rule ties to our real cost per first order, the creative plan centers on shift workers, and the budget adds to $30,000 with clear kill and scale lines. Output 2 is strong but has a budget math error and less integrated decision-making."
+}

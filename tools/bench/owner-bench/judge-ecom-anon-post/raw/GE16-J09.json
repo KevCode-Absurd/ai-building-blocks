@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The financial rigor is unmatched: it solves the contribution margin baseline (7.8% from 13.6%), models exact margin point gains for each move, and provides unambiguous scorecard thresholds.",
+  "biggest_mistake": "The swatch kit test under 'bolder move' could specify digital implementation details, though keeping it contained is smart.",
+  "what_would_make_it_a_10": "Already a 10; it is an executive-ready, mathematically airtight operating plan I can execute tomorrow."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Exceptionally well-structured diagnostic tables for 'what still needs checking' and a very natural, persuasive owner voice that weaves customer quotes seamlessly into solutions.",
+  "biggest_mistake": "Punted on calculating the contribution margin baseline on the weekly scorecard ('Set baseline in week 1' / 'Up every month') when the data to solve it was already in the prompt.",
+  "what_would_make_it_a_10": "Calculate the explicit baseline and target for contribution margin instead of leaving placeholder targets on the scorecard."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are masterclasses in DTC growth strategy, but Output 1 wins because it actually did the algebra to solve our contribution margin baseline (7.8% to 12.9%) and gave precise, quantified sizing and action thresholds for every initiative."
+}

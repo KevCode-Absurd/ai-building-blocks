@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It operationalizes every data point into concrete launch gates, staged rollout waves, and support rotas while delivering copy that is completely finished and captures Raycast's voice flawlessly.",
+  "biggest_mistake": "Delaying Product Hunt and Hacker News by an entire week might slightly bleed launch-week momentum, though the retention logic behind it is sound.",
+  "what_would_make_it_a_10": "It is already essentially a 10 for a launch brief response."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Accurate analysis of the retention data and sensible pre-launch gates around testing the top 200 extensions.",
+  "biggest_mistake": "Leaving numerous bracketed placeholders in both the X thread and email drafts makes the copy feel like an unfinished template rather than ready-to-run material.",
+  "what_would_make_it_a_10": "Write out concrete copy for the social thread and email instead of leaving brackets, and establish a realistic support coverage plan for our 3-person team rather than assuming engineers will take support shifts."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 is a masterclass in reading the owner's constraints: it solves the support bottleneck with specific shifts, gates the rollout on migration ticket rates, and delivers copy that is completely finished, punchy, and true to Raycast's voice."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It spots the real levers in the data—sleep, narrator clips, and evening posting—and turns them into a workable 4-week plan that fits capacity and week-1 review constraints.",
+  "biggest_mistake": "It includes a recurring 14:30 parent test in the 'same every week' schedule even though the strongest signal is to push hard into evening sleep content, and its baseline save/share averages are asserted without showing the weighting.",
+  "what_would_make_it_a_10": "Make the week-by-week table explicit, keep the parent daytime test to a limited experiment rather than a standing slot, and tighten the KPI math so every benchmark is fully traceable."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 6,
+  "correct": 4,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 5,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It pushes harder than most toward sleep and narrator clips, which matches the strongest performance signals.",
+  "biggest_mistake": "It gets a key rule wrong by claiming no sleep post can go live before 24 November and that sleep posts need review as a class, which breaks week-1 planning and is not what the brief says.",
+  "what_would_make_it_a_10": "Correct the review logic and timing, rebuild week 1 around non-review sleep/wind-down content, and fix the factual slips in the stop list and projections."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could actually use: it fits my data, respects capacity, and handles the review constraint sensibly. Output 2 has stronger ambition on sleep volume, but the wrong review assumption and a few factual errors make it risky."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It focuses the cash where the real risk is: top 5 matte shades, re-cartoning first, no orders for liquid or glitter, and a clear Monday action plan inside ₹1.2 crore.",
+  "biggest_mistake": "It is inconsistent on the held top-5 stock and creates a 1-8 December stockout gap that should mostly be avoided once the 3,900 top-5 crushed-carton units are re-cartoned.",
+  "what_would_make_it_a_10": "Fix the held-stock math, remove the unnecessary stockout/backorder plan if rush lands on 7 Dec, and make the shade-level PO split tighter for the top 5 hero shades."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a practical cash-controlled order plan, rejects the bad ₹1.86 crore draft, protects hero matte shades, and has a good pro pre-book idea for makeup artists.",
+  "biggest_mistake": "It gets the re-cartoning effect wrong: after re-cartoning, top-5 cover should rise, not stay at 2.4 weeks, so the December gap is overstated. It also delays some POs to 20 Nov without a strong reason.",
+  "what_would_make_it_a_10": "Place all POs on Monday, correct the top-5 cover to include re-cartoned stock, land the standard order earlier, and turn the backorder section into a contingency instead of the base plan."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "I would rather hand Output 1 to my ops lead because it is more complete, more date-driven, and closer to a usable operating plan. Both need the same correction on the re-cartoned hero shades, but Output 1 is a little stronger on execution."
+}

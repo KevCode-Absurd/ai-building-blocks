@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It takes apart the 4.0 ROAS properly, shows non-brand is below the 2.5 break-even, and turns that into a concrete reallocation and week-one plan.",
+  "biggest_mistake": "It includes a few risky or questionable platform moves, especially suggesting PMax negative keywords and removing image/video assets, and its reserve logic implies some budget may go unspent despite the brief saying to split the full $240,000 next month.",
+  "what_would_make_it_a_10": "Tighten the platform-specific recommendations, make every dollar of the $240,000 allocation operationally committed, and keep the strong profit math and feed-first prioritization."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the main business story fast: brand is masking weak non-brand performance, the feed issue is urgent, and the winners to fund are bags plus washable and comfort intent.",
+  "biggest_mistake": "Its forecast is too optimistic and leans on shaky assumptions, especially a very high brand-search ROAS after shifting PMax brand traffic over, which makes the expected gains look less grounded.",
+  "what_would_make_it_a_10": "Keep the clarity and prioritization, but show more conservative worked forecasts tied directly to the given numbers and sharpen the budget logic for PMax and reserve."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and owner-useful, but Output 1 goes a bit further on profit math, title examples using customer language, and explicit stop rules. Output 2 is cleaner, but its forecast feels more inflated and less anchored in the evidence."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 7,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds the real problem: the top 5 matte shades run out before the sale. It rushes them, orders nothing for slow lines, and comes in under ₹1.2 crore with clear unit maths and planning at 2.5 times demand for sale week.",
+  "biggest_mistake": "It is harder to read. The reorder-point table and the back-order arithmetic make it dense for an ops lead. It treats the held units as already inside the 9,100 without flagging what changes if they are extra stock.",
+  "what_would_make_it_a_10": "Add one simple dated timeline for the ops lead. Show both readings of the held stock. Add a short customer-facing message and real shade alternatives for the gap week."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The plan is clear and dated, and the ops lead can act on it Monday. It has rush and standard orders inside the cash, re-cartoning first, and honest ways to handle the 1 to 8 December gap: ad pause, order cap, pro pre-orders and a true back-in-stock message.",
+  "biggest_mistake": "The held units are assumed to be inside the 9,100 rather than extra. If they are extra, the gap is smaller than shown and the orders may be too big. Selling leftover palettes to a clearance buyer at cost gives up margin.",
+  "what_would_make_it_a_10": "Show the top-5 cover with the held stock counted as extra, as well as inside the 9,100. Name the actual 4 foundation shades and the hero matte shades. Make the palette bundle pair with the hero lipsticks to pull traffic."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both find the hero-shade problem and stay inside the cash. The second one gives my ops lead a cleaner day-by-day plan and a more honest, on-brand way to get customers through the sold-out week."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 4,
+  "insight": 5,
+  "priorities": 4,
+  "reasoning": 4,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 5,
+  "overall": 4,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The math and baseline projections are accurate and clearly explained.",
+  "biggest_mistake": "Assumed all sleep content would trigger a medical review, completely abandoning the highest-converting theme for the crucial first week.",
+  "what_would_make_it_a_10": "Drafting sleep posts for week 1 that focus on winding down without using medical terms to bypass the 5-day review."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Perfectly navigated the review constraint by drafting high-converting sleep posts for week 1 that avoid triggering a legal review.",
+  "biggest_mistake": "Keeping stress at work in the mix slightly dilutes the focus on the much stronger sleep theme.",
+  "what_would_make_it_a_10": "Dropping the stress at work theme completely to give every possible slot to sleep content, which drives five times as many installs."
+ },
+ "winner": "2",
+ "margin": "decisive",
+ "reason": "Output 2 understood that we can post sleep content immediately by simply avoiding medical terms. Output 1 misread this rule and unnecessarily benched our best-performing topic for an entire week, which would cost us hundreds of installs."
+}

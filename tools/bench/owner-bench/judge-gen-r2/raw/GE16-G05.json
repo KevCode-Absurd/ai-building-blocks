@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "The application prompt (Priya's email with the hidden domain typo) is ingenious because it immediately tests both warm customer writing and problem-solving without needing prior product training.",
+  "biggest_mistake": "The salary, while prominently placed under 'Pay and terms', could have sat right in the very first block of the post.",
+  "what_would_make_it_a_10": "It is already a 10—it captures the 37signals cadence and data signals flawlessly."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Puts the $82,000 salary immediately beneath the header and gives explicit funnel cutoff targets (top 15 to exercise, top 5 to calls).",
+  "biggest_mistake": "The application prompt gives the candidate no underlying facts to solve, stating 'we are reading how you write, not whether you know the fix,' which misses the chance to screen for problem-solving alongside tone.",
+  "what_would_make_it_a_10": "Provide a concrete scenario with discoverable clues for the customer prompt instead of an unsolvable lockout ticket, and format the scorecard rubric into a quick-scanning table."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both candidates executed this brief at an elite level, but Output 1 wins because its Priya application exercise has a real, solvable detail (the domain typo) that tests actual troubleshooting alongside tone on day one."
+}

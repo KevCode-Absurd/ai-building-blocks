@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole series around the two behaviors that actually predict retention and uses the allowed triggers and platform split correctly.",
+  "biggest_mistake": "It removes any upgrade path entirely and uses day-14 as a success metric even though the owner pointed to day-7 and day-30 as the key measures.",
+  "what_would_make_it_a_10": "Tighten the measurement to day 7 plus day 30, and clarify any monetization follow-up outside onboarding without diluting the habit-building focus."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The copy is calm, on-brand, and the inactivity and platform-specific second-device emails are well judged.",
+  "biggest_mistake": "It spends one of the five emails on a Pro upsell instead of another habit-building email, despite the data clearly saying recurring tasks and second-device use are the strongest retention levers.",
+  "what_would_make_it_a_10": "Replace the Pro email with another behavior-driving email tied to recurring tasks or second-device adoption, and sharpen the success metrics around both habits by day 7 and day-30 retention."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I'd rather ship because it follows the retention signals more faithfully, drops the low-value emails for the right reasons, and works within the trigger limits without wasting a slot on an early upsell."
+}

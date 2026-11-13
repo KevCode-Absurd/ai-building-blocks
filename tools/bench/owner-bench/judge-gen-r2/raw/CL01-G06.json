@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reframes the problem with checked numbers: agencies are 27% of trials but 60% of losses to Semrush, Lite is 70% of monthly churn, and usage-limit exits are about a third of all churn.",
+  "biggest_mistake": "Move 5, a content study measured by in-house trial share, is the generic 'do more content' advice I said I didn't want, and it pushes out a sharper move.",
+  "what_would_make_it_a_10": "Drop Move 5, put the Lite top-up first as the fastest money, and give each projection a named, ranged assumption."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "A clear ranking rule (quickest money first) and four focused moves, each with an assumption-labelled projection range that checks out, such as 378 to 588 extra AWT conversions and 48 to 80 Lite customers kept per 10,000.",
+  "biggest_mistake": "The data has no date, despite our 'every claim has a number and a date' principle, and only PPC is named as something not to build.",
+  "what_would_make_it_a_10": "Date the data, and add one more explicit 'don't build' call, such as not cutting prices for solo creators."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both get the numbers right and see that agencies, Lite limits and multi-site AWT accounts are the story. The second ranks its moves by quickest money, gives every projection a named assumption, and leaves out the filler content move."
+}

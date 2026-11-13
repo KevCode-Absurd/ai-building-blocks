@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It puts one plan on the table, proves the number with our own data, and then hands the team a ready test with a go rule, a stop rule and customer copy I could send almost unchanged — including showing each customer their own current bill next to the new price.",
+  "biggest_mistake": "The plan's shape: $79 for 15 channels sits below Team's per-channel economics and stops right where a 4 to 8 client freelancer actually lives, so it invites Team downgrades and creates a cliff at 16 channels. Its own base case also assumes half of 8+ Essentials switch while the go bar is 35%, so the headline number leans optimistic.",
+  "what_would_make_it_a_10": "A plan designed so Team customers have no reason to move down (25 channels at $99, or approvals limited in a way that keeps Team the obvious choice for real teams), a base case that matches the test's go bar, and a direct fix for the monthly-default toggle instead of just offering yearly at the switch."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sees two things the other misses: that no rise for existing customers can count inside the board's two quarters because of our own 12-month promise, and that our yearly option is hidden — then it fixes the toggle outright. The $99/25-channel design also keeps Team as the real team plan instead of hollowing it out.",
+  "biggest_mistake": "It's three recommendations where the brief asked for one: Agency, yearly display, and a 'bolder move' price lock. Worse, the test stop rule only fires under 10% upgrades while the mid case needs 25%, so we could keep going on a plan that isn't working, and the 'bolder move' half-analyses yearly economics in a way that muddies the main story.",
+  "what_would_make_it_a_10": "Pick one recommendation, make the yearly toggle a one-line supporting change rather than a second decision, drop the bolder move, and align the test thresholds with the mid case so the stop rule actually protects the projection."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are real work with the math right, but I'd hand output 1 to the team tomorrow because it's one clear plan with a test my team can run and copy I could send almost as written; output 2 is sharper on the yearly problem and designs the safer plan, but I'd have to cut it down to one recommendation before anyone could act on it."
+}

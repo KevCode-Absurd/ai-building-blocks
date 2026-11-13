@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails the real problem - top 5 matte shades run out ~1 Dec, rush order lands 7 Dec - and builds every number, date and message around that gap, including the 6,400 held units as a day-one fix.",
+  "biggest_mistake": "It orders 22,000 rush + 25,000 standard top-5 units where the brief's own demand math suggests less is needed, and the 6-day gap is handled but the reserve of only ₹1.3 lakh is thinner than the freight/overrun risk it names.",
+  "what_would_make_it_a_10": "Tighten the rush and standard quantities to the demand build (so nothing over-orders cash) and show the shade-level split arithmetic explicitly so the ops lead can place POs without guessing."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It shows its working line by line - the 20,100-unit rush demand build, the reorder points, the Night-out kit margin - and turns dead stock into a sellable bundle with real economics.",
+  "biggest_mistake": "It spends ₹115.93 lakh including a ₹0.38 lakh re-carton and leaves a ₹4.07 lakh reserve, but the standard top-5 order of 20,000 lands 28 Dec while the rush covers only to ~27 Dec, so any sale spike above 2.5x risks a second thin gap it doesn't flag.",
+  "what_would_make_it_a_10": "Flag the late-December handoff risk between rush and standard stock explicitly and give the owner a one-line \"if this slips, do this\" fallback."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both get the core call right, but Output 2 shows the demand build, reorder points and a costed Night-out kit that turns the glitter palettes into cash, which is exactly the owner's ask - I'd pay for the plan with the working shown.",
+ "reason_short": "Output 2 wins on shown arithmetic and turning dead stock into a costed bundle."
+}

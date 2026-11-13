@@ -19,12 +19,13 @@ const FAMILIES = Object.keys(WORD_BUDGETS) as DeliverableFamily[];
 const DATA = new URL("../src/modules/catalogue/data/", import.meta.url);
 const allJobTypes = (): JobType[] => readdirSync(DATA).filter(f => f.endsWith(".json")).flatMap(f => JSON.parse(readFileSync(new URL(f, DATA), "utf8")));
 
-test("WORK-METHOD.md is under 1,120 words and still covers every part of the method", () => {
+test("WORK-METHOD.md is under 1,200 words and still covers every part of the method", () => {
   const words = METHOD.split(/\s+/).filter(Boolean).length;
   // 1,000 until 13 Nov 2026; the pack lookup, outside-evidence checks and two-order blind pick added about 100. The
   // owner rules (13 Nov) fit inside the same cap: their detail lives in the quality engine, and the whole one-shot
-  // reading list is held under 6,000 words in packs-grounded.test.ts.
-  assert.ok(words < 1120, `WORK-METHOD.md has ${words} words`);
+  // reading list is held under 6,000 words in packs-grounded.test.ts. The round 2 rollback (13 Nov) added the doubt
+  // rule, the owner's named priority and the copy check, about 75 words.
+  assert.ok(words < 1200, `WORK-METHOD.md has ${words} words`);
   const parts: [string, RegExp][] = [
     ["spec sheet", /## 0\. Frame: the spec sheet[\s\S]*who must do what after seeing this[\s\S]*\*\*Deliverables:\*\* exact count and format/],
     ["signal pass", /\*\*Signal pass:\*\* the three strongest signals in the owner's data[^\n]*For each: its number, what it means for the decision, and where the deliverable acts on it\./],
@@ -43,10 +44,10 @@ test("WORK-METHOD.md is under 1,120 words and still covers every part of the met
     ["expert and playbook", /\*\*Expert and playbook:\*\*[\s\S]*One is the expert's standard playbook done excellently; clever ones must beat it\./],
     ["plain yardstick and final pick", /plain one-pass answer from the brief alone: the yardstick[\s\S]*a fresh reader chooses between anonymous final and plain/],
     ["facts versus proposals", /\*\*Facts and proposals differ\.\*\* Facts carry a source\. Recommendations are complete and decided\. Keep explicitly requested template fields; otherwise no blanks or placeholders\./],
-    ["length against the owner's limit", /\*\*Length follows use:\*\* aim at about 85% of the owner's limit, counted the way the owner counts; without one, the family profile[\s\S]*ceiling is never a target\. No sections about method or assumptions\./],
+    ["length against the owner's limit", /\*\*Length follows use:\*\* stay within the owner's limit, counted the way the owner counts; without one, the family profile[\s\S]*ceiling is never a target\. No sections about method or assumptions\./],
     // The owner rules (13 Nov 2026 owner bench): finish one-shot work, combine complementary levers, act fully, project.
     ["owner override", /^# Work method\n\n\*\*The owner comes first:\*\* if a rule in this pack would make the work worse for this owner's stated goal and data, follow the owner and say why in one line\./],
-    ["one-shot finish", /\*\*One-shot jobs\*\*[^\n]*decide every open point with the assumption a top practitioner would pick, and finish\. At most three assumption lines[^\n]*Never ask for confirmation, a yes, a sign-off or a choice inside the deliverable/],
+    ["one-shot finish", /\*\*One-shot jobs\*\*[^\n]*decide every open point with the assumption a top practitioner would pick, and finish\. Deliver every piece the owner asked for; never drop or water one down to stay safe\. At most three assumption lines[^\n]*Never ask for confirmation, a yes, a sign-off or a choice inside the deliverable/],
     ["legal sign-off next to its item", /A sign-off that law or a platform needs is one line next to its item\./],
     ["fast path", /\*\*Fast path:\*\* when the brief carries the data, skip site capture, brand DNA, the taste brief and knowledge reading; read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill\./],
     ["decide, combining complementary moves", /\*\*Decide\.\*\* One recommendation, which may combine complementary moves; a runner-up only when the options truly exclude each other\. Never a menu\./],
@@ -54,6 +55,13 @@ test("WORK-METHOD.md is under 1,120 words and still covers every part of the met
     ["persona's real moment", /\*\*Fit the persona's real moment\*\* in every time, place, unit and channel \(quality engine step 4\)\./],
     ["first screen", /its first screen holds the decision, the numbers the owner asked for by name, every piece of bad news, and the first move this week\./],
     ["nothing left to the owner", /4\. What is left for the owner to do: questions, sign-offs, choices, placeholders\.[\s\S]*Fix 1, 3 and 4, cut 5,/],
+    // Round 2 rollback (13 Nov 2026): the owner's named priority, no bolder move in copy, counts by script, nothing
+    // internal in customer copy, relative days.
+    ["owner's priority", /A priority the owner names takes a top slot unless the data clearly says otherwise; then say why in one line\./],
+    ["no bolder move in copy", /Plans add one labelled bolder move \(quality engine rule 4\); customer copy never carries one\./],
+    ["copy counted by script", /character counts checked with `node tools\/quality\/copy-check\.cjs`/],
+    ["nothing internal in customer copy", /no working notes, signal maps, ledgers or monitoring lines in what the customer reads/],
+    ["plans in relative days", /Plans: totals that add up, steps with owners and relative days\./],
     ["fresh facts", /Re-check on the day facts that change/],
     ["hand-over check tool", /Run `node tools\/check-handover\.mjs <deliverable> <plain answer> --profile <family>` and fix every hit\./],
   ];

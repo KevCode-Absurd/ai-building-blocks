@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It nails all three levers from my data (silent days 3-5, fit finder hidden, refund-first portal) and writes each message in our voice with one button and an honest expected range.",
+  "biggest_mistake": "Message 2 asking a first-time buyer to 'change it on the result page before we pack' depends on an unproven 'orders can be changed until packed' assumption, which risks a broken promise if the warehouse can't hold orders.",
+  "what_would_make_it_a_10": "Tighten the copy so every line is grade 6-7 and drop or soften the change-before-packing line into a safer 'reply if you need a different size' fallback."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The fit-check copy is practical and body-positive ('band on the loosest hook', 'comfort beats the number on the tag'), and the hold-out advice is sensible.",
+  "biggest_mistake": "The swap saving of 'up to £183,800' assumes every extra swap is a £58 order, which inflates the headline number I'd quote to my team.",
+  "what_would_make_it_a_10": "Ground the swap saving in a realistic per-swap value (as o1 does at 1,300-2,240 kept orders) and make the day-3 message a clear value-add rather than a status update."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 reads like it was built from my numbers and my customers, ranks the fixes by money, and every message sounds like us with an honest range; Output 2 is strong but the inflated swap saving and slightly thinner insight make it the second choice."
+}

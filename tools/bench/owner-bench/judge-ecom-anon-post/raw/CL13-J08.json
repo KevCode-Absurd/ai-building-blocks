@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 6,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Complete and well costed. It has a gated ex-subscriber track, a no-discount start for Monsoon Dark buyers, and a worked profit table net of discounts and WhatsApp costs.",
+  "biggest_mistake": "It puts the 91 to 180 day group first and treats the 9,000 customers at 46 to 90 days only as a future day-28 nudge. That is my cheapest group to win back, so it is not targeted now.",
+  "what_would_make_it_a_10": "Target the 46 to 90 day group first with a light reminder and no offer, and state the break-even lift per group. Make the drafts less generic and keep it clearly under 1,500 words."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gets the order right: slipping 46 to 90 day buyers first with no code, then Monsoon Dark buyers, with ex-subscribers held until delivery is fixed. It shows the 29% vs 6% Monsoon Dark gap, and its drafts use my own lines, such as \"one coffee, not a list of 40\" and Nisha's date-picking fix.",
+  "biggest_mistake": "The pre-order idea for one more Monsoon Dark lot ignores that I stopped it for a reason. The \"Stay or go\" sunset email also sits close to guilt territory, and the ₹535 profit per returned subscriber is not explained.",
+  "what_would_make_it_a_10": "Drop or clearly caveat the Monsoon Dark pre-order. Soften the sunset wording and show the break-even lift per group. Add a few more finished drafts, such as G3 and G4."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 starts with the cheapest group, the 46 to 90 day buyers, gives the Monsoon Dark buyers their own track, and gates the ex-subscribers on the delivery fix, and its messages sound like us. Output 1 is solid and well costed, but it misses the at-risk group as a first target."
+}

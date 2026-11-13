@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads like it understands the real story in the numbers: the AI app-builder growth is hurting margin, Customer A is material bad news, and the VP Enterprise Sales hire is the key ask.",
+  "biggest_mistake": "It includes an extra assumptions section and a few internal-style notes that make it feel slightly less like a finished investor email.",
+  "what_would_make_it_a_10": "Tighten the ending, remove the assumptions block, and make the first screen even cleaner by putting Customer A alongside the forecast miss immediately under the three headline numbers."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 7,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very well prioritized for an investor reading on a phone: the miss, the margin drop, the customer loss, and the asks are all easy to find.",
+  "biggest_mistake": "The runway row in the table is wrong for September and creates an avoidable factual error, which is a big trust problem in an investor update.",
+  "what_would_make_it_a_10": "Fix the runway math, keep only defensible calculations, and slightly sharpen the asks so each one is tied even more directly to the highest-priority problems."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong, but I would rather send 1 because it is more numerically reliable and still gets the core story right. Output 2 is a bit sharper editorially, but the runway error is the kind of mistake that makes investors question the rest."
+}

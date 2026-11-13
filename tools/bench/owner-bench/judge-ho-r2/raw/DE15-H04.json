@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every branch is finished — the six reason labels, the offer card, the done screen and the email confirmation — plus logging and a 10% holdout, so the product team can build it next sprint without another meeting.",
+  "biggest_mistake": "It keeps a speculative 50% discount for switchers with no test behind it and then books that group at £607 'after discount' when 67 subscribers at half price is about £300, and it gives no honest range as I asked.",
+  "what_would_make_it_a_10": "Cut or properly price the switcher discount and add a low-to-high range on kept subscribers and revenue, each end tied to a stated basis."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It leads with the decision and the billing blocker, puts 'rebuild the pause this week' first, and backs the headline with a +930 to +2,740 range and a clean reason-by-reason table that matches my splits exactly.",
+  "biggest_mistake": "It never says what a pauser, a plan switcher or a reminder-setter sees after they accept — the single done screen reads 'Your subscription is cancelled', which would tell a paused learner they cancelled — and the top of its range doesn't follow from its own 34%-accept assumption.",
+  "what_would_make_it_a_10": "Write the done screen and confirmation email for each accepted offer, spell out the six reason labels, and tie the high end of the range to the stated accept rate."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is the one my team could build as written, because the states that matter most — pause, switch, reminder — all have a done screen and email, where Output 2 leaves the biggest lever (the pause) with a confirmation that says the learner has cancelled. Output 2 is the cleaner read and the honest range I asked for, but it hands back homework at exactly the point the build starts."
+}

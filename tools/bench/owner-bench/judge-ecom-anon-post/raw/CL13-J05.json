@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The data read is accurate and tight. It brings back the paused winner as fatigue, leads with taste and the 9% price objection, and shows character counts and clean one-line tests.",
+  "biggest_mistake": "Too many primary texts repeat '12 g protein. No added sugar.' P1 and P5 are the same angle, and P2 and P3 are both taste. The 4 pm snack angle is missing, and the voice is plainer than ours.",
+  "what_would_make_it_a_10": "Six truly different angles, with no repeated spec tail and a real 4 pm text. Add sharper, wittier lines in Aditya's and Priya's own words. Make each launch pair test one clear variable."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Six distinct angles written in our blunt, witty voice and our customers' own words. 'Save yourself the flip', 'Fair. Here's your ₹90' and 'isn't a samosa' sound like us. The launch plan comes with a control, budget math, win rules and fatigue triggers.",
+  "biggest_mistake": "It is dense and likely at or over the 1,000-word cap. The control cell and the 20% win rule add complexity we did not ask for. Ad D changes only the wording of the sugar ad, which is a weaker test than a new angle.",
+  "what_would_make_it_a_10": "Trim to safely under 1,000 words and cut some of the test mechanics. Make the fourth launch ad test a new idea, not a rewording. Show the 125-character limit more plainly for each primary text."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 reads like our brand. Its six angles are really different, and it takes on the paused winner, taste and the ₹90 price objection head-on. Output 1 is accurate but repeats the spec line and sounds flatter."
+}

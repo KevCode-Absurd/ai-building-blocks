@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It explains the margin drop well. The $0.9M of extra compute on about $10.4M of monthly revenue is roughly 9 points of margin, and direct-created databases grew only 2.6%, so nearly all the growth came from a channel that rarely pays.",
+  "biggest_mistake": "The fix for the AI app builders stops at the 48-hour pause. It does not change how we judge those partners, and it never says what the pause should save, even as a range. The markdown headers may also not display properly in an email client.",
+  "what_would_make_it_a_10": "Give an expected range for the margin recovery after the 48-hour pause. Add a forwardable blurb for the VP Enterprise Sales intros. Format it as plain email text."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The phone-reading lead partner gets everything in the first screen: the three numbers, the missed forecast, the bad news and the top ask with a date. The forwardable VP blurb makes the angels' intros easy, and adding a runway row to the table is useful.",
+  "biggest_mistake": "It is long and may run past the 700-word limit. Like the other draft, it gives no expected range for the margin recovery from the 48-hour pause.",
+  "what_would_make_it_a_10": "Trim it to fit within 700 words and add an expected effect of the pause on gross margin, given as a range."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are honest and specific, and I'd be comfortable sending either. Draft 2 puts the main ask in the first screen and adds a forwardable intro blurb, which makes it easier for busy investors to act on."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Takes apart the 4.0 ROAS, leads with the feed fix, and delivers a budget split that adds to exactly $240,000 with profit, not just ROAS, as the yardstick.",
+  "biggest_mistake": "A few plan-level numbers are questionable (brand Search at $24,000 assumed to hold ~$479,520 of value at 20x-plus, and the PMax line's own profit range sits oddly against the reserve math), which a careful owner would want re-checked before trusting the projected profit band.",
+  "what_would_make_it_a_10": "Tighten one or two of the projection assumptions so the headline profit range traces cleanly to the data and the brand-search math is defensible."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, honest decomposition showing brand terms are 11% of spend and 50% of value, with PMax ex-brand losing ~$36,700, and a ready-to-paste title and feed checklist.",
+  "biggest_mistake": "The base-case projection (ROAS 4.6, profit +$60,900) leans on optimistic ROAS assumptions for PMax and non-brand Search that the brief's own numbers don't support, so the expected profit may overstate the realistic range.",
+  "what_would_make_it_a_10": "Use the data's own current ROAS bands for each line rather than step-up assumptions, and show the downside case with as much confidence as the base case."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both answers nail the core job, but Output 1's projections are anchored to the data's actual ROAS ranges and it puts the reserved budget rule and stop rules in more operational order, making it the slightly safer month-one plan to run."
+}

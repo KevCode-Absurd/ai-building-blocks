@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The brilliant mitigation plan for the stockout gap, specifically the pro pre-order to protect bridal artists and honest alert buttons for everyday customers.",
+  "biggest_mistake": "Assuming the held stock was already included in the on-hand units. If added together (9,100 + 3,900), the stock lasts until December 8, completely eliminating the stockout gap.",
+  "what_would_make_it_a_10": "Catching that the held stock was in addition to the on-hand stock, which would mean the rush order arrives just in time with no out-of-stock gap to mitigate."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The clear margin analysis on the Night-out kit bundle, which is a highly actionable way to turn slow-moving glitter palettes back into cash.",
+  "biggest_mistake": "Like the other draft, assuming held stock was part of the on-hand units instead of extra, thereby missing the fact that the gap could be closed entirely.",
+  "what_would_make_it_a_10": "Noticing the math that 9,100 + 3,900 = 13,000 units covers the 21-day lead time for a rush order perfectly, and injecting a bit more of the brand's bold voice."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Both missed that the warehouse stock was additive (which would have closed the gap), but Output 1 provided a vastly superior mitigation plan by directly targeting our high-value makeup artists and nailing the brand voice."
+}

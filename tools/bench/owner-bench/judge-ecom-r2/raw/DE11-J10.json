@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It uses the actual data to build bundles from existing top pairs and squarely addresses the COD/RTO leak with a tested threshold plan.",
+  "biggest_mistake": "The claim that no bundle asks Ishita to spend more is slightly misleading: the Vitamin C Duo bundles two items, and although her serum alone stays at ₹499, the bundle itself is an upsell. Also, the break-even for the Vitamin C Duo assumes the saving applies only to new buyers, but the text says 'all of them'.",
+  "what_would_make_it_a_10": "Show the full profit calculation for each bundle including COD mix and RTO, and be more precise about who the savings apply to."
+ },
+ "o2": {
+  "fit": 5,
+  "insight": 4,
+  "priorities": 6,
+  "reasoning": 5,
+  "correct": 3,
+  "clear": 8,
+  "voice": 7,
+  "range": 6,
+  "ready": 6,
+  "overall": 5,
+  "use_as_is": "with major rework",
+  "biggest_strength": "The writing is clear and the bundle ladder concept is easy to grasp.",
+  "biggest_mistake": "It misreads the data and makes arithmetic errors: the ₹749 lip balm bundle saves only ₹49 but the copy says 'for just ₹150 more' (which is actually ₹150 more than the serum, but the saving is ₹49); the profit per order for the bundle is wrongly calculated (₹749 - ₹192 - ₹90 - ₹70 = ₹397, not ₹398, and the comparison to serum alone is off); the threshold analysis invents an 'assumed' 6% slice and uses unverified assumptions that lead to a wrong conclusion; and it completely ignores the face wash + serum pair (the top pair) for a bundle, instead choosing a lip balm bundle that contradicts its own logic.",
+  "what_would_make_it_a_10": "Base every number on the actual data, correct the arithmetic, and use the strongest signals (face wash + serum, COD under ₹500) instead of speculative assumptions."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 is data-driven, mathematically sound, and directly answers the brief with actionable, tested recommendations, while Output 2 contains significant factual and arithmetic errors that would mislead the owner."
+}

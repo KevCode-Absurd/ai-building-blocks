@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The decision and the numbers come first: 3.2% vs 0.25% conversion, the 13% fall in organic clicks, and what the lost blog clicks were worth. The week 1 plan is Monday-ready with a draft title, meta, and outline in our voice, and the plan includes rollback and measurement rules.",
+  "biggest_mistake": "It tells the writer to leave decaying posts alone. It never says to merge or redirect them. It also makes no case for a GA4 data-migration page, which is Maya's biggest worry. It is also a little long for the 1,000-word cap.",
+  "what_would_make_it_a_10": "Add a stop-or-redirect rule for the decaying blog posts. Add a 'moving from GA4 without losing history' page for Maya. Trim to under 1,000 words. Keep the conservative trial forecast by month and the dated draft title and meta."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean trials-per-1,000-clicks table and a well-ranked list with paid-customer figures. It adds a GA4 history page for Maya's main fear and a rule to merge or redirect dead posts, and every month is mapped to the 12-page limit.",
+  "biggest_mistake": "The forecasts are optimistic. Moving /vs-google-analytics to a 9% CTR gives +100 trials, and the plan then calls the sum of these a 'ceiling'. Month 3 is vague ('pick two competitors'). The week 1 plan has no concrete title or meta draft. It also sends the draft to me for a facts check when I'm unavailable.",
+  "what_would_make_it_a_10": "Use realistic forecasts per month. Write the actual title and meta in week 1. Name the Month 3 pages. Cut the developer-day tasks to what one day can really hold. Keep the GA4 history page and the redirect rule."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 is more realistic and more ready to hand to the writer on Monday, with a draft title and meta, a ranked table, and clear rollback rules. Output 2 has better ideas on Maya's data worry and on redirecting dead posts, but its forecasts are rosier and its first week is less concrete."
+}

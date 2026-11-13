@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Finds the three rupee stories the owner cares about most — the paused ₹250 creator video, the COD trap Starter Kit at ₹463 vs ₹271, and the women 25–34 split at ₹414 — and turns each into a concrete Monday move with a budget that adds up to ₹5,60,000.",
+  "biggest_mistake": "The dual safe/break-even line system is clever but slightly self-contradicting: it labels Beard Kit as profitable at ₹429 vs safe ₹333 while the ₹394 break-even line says the opposite, and the 'ASC lost ₹29,000 on Meta count' note is muddied by the ₹282 line. A few break-even figures (Women ₹435) are not shown in the workings, so the reader has to trust them.",
+  "what_would_make_it_a_10": "Show the per-ad-set break-even arithmetic in one line each (order value × COD mix), and simplify to one break-even line per ad set — the owner asked for decisions, not a two-tier system that occasionally sends mixed signals."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 10,
+  "ready": 7,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The state-split retargeting experiment is a genuinely rare, testable idea that answers a real question ('does retargeting pay at all?') with a read date and a rupee bar of 39 orders — plus break-even is shown transparently per order type (prepaid ₹450, COD ₹325, blended ₹394).",
+  "biggest_mistake": "Dated the plan '14 to 27 November' as if real, and the reserve-heavy structure (₹1,49,100 held back, ₹4,10,900 committed) makes it less of a budget split than output 1's; also it cuts retargeting outright (to ₹28,000) which contradicts the 'fix' spirit of the owner notes and risks losing warm buyers. Voice drifts drier — 'on Meta's count' repeated constantly is analyst-speak, not the confident straight-talk the brand wants.",
+  "what_would_make_it_a_10": "Align dates to 'the next 14 days,' keep the state split but run it while still spending on retargeting at a floor, and rewrite the calls in the brand's straight-talking voice so a founder could forward the table to the team without translation."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 wins on insight and range — the state-split retargeting test is the kind of thing an owner would actually brag about, and its per-order break-even math is the most transparent — but it's only slight because Output 1 is more usable as-is, ties every call to a rupee number the owner recognizes, and sounds more like the brand. If I had to send one to my team on Monday morning, I'd send Output 1; if I wanted the plan that teaches me something new, I'd keep Output 2."
+}

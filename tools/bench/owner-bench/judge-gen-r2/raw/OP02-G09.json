@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It correctly makes sleep, evening posting, and narrator clips the core of the plan, with useful install/save projections and strong week-one drafts in the brand voice.",
+  "biggest_mistake": "The review timing is slightly over-conservative and creates a small conflict around whether Monday 23 November posts can go live.",
+  "what_would_make_it_a_10": "Clarify the review calendar so approved posts can start Monday 23 November, and show the four weeks as dated rows rather than one repeated weekly pattern."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 6,
+  "reasoning": 6,
+  "correct": 6,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 6,
+  "overall": 6,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It spots the main performance signals: sleep wins, narrator clips are underused, and app news, quote cards, productivity, and morning posts should stop.",
+  "biggest_mistake": "It wrongly assumes all sleep content needs review, which removes sleep from week 1 and delays the strongest theme without the brief requiring that.",
+  "what_would_make_it_a_10": "Rebuild week 1 around non-condition sleep and wind-down posts, keep review only for posts that mention conditions, and tighten the drafts to be warmer and less generic."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 is much closer to the actual operating answer: it uses the winning theme and format immediately, respects capacity, and gives ready-to-post copy in the right voice. Output 2 has good data instincts but its mistaken review assumption changes the plan in a way that would cost performance in the first week."
+}

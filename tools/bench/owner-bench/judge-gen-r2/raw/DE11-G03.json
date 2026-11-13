@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Names the margin problem behind the database headline, quantifies Customer A at ~$2.6M, and ties each fix to a specific date and owner.",
+  "biggest_mistake": "The line 'On about $10.4M of monthly revenue, that extra $0.9M is roughly 9 points of margin, more than the 7-point drop' is a shaky, slightly confused derivation that a sharp investor CFO could pick apart.",
+  "what_would_make_it_a_10": "Cut or clean up the revenue/margin arithmetic so every figure is traceable, and trim the second table's redundancy to keep it under the 700-word target with margin to spare."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Same sharp diagnosis of the AI-builder margin leak and Customer A loss, with a clean runway table, a forwardable hiring blurb and dated, profile-specific asks.",
+  "biggest_mistake": "The '476,000 of the month's 500,000 increase' framing is inferential (share x totals) and could look like precision it doesn't have; it's an assumption worth flagging.",
+  "what_would_make_it_a_10": "Add one sentence stating how much the 48-hour pause is expected to save and by when, so the fix has a number attached."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both nail the brief, but Output 2 reads cleaner on a phone, has the runway in the table, and avoids Output 1's shaky margin arithmetic — the kind of thing an owner would fix before sending.",
+ "reason_detail": ""
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Disciplined experimentation logic: smartly recognized that mobile order volume has low statistical power in short windows, using add-to-cart as the primary metric with orders as a guardrail, paired with exact MDE math.",
+  "biggest_mistake": "Missed shipping the star rating summary under the title immediately alongside the trial, leaving mobile hero image improvements completely unaddressed.",
+  "what_would_make_it_a_10": "Add the star rating summary to the 'ship now' list and address the hero image framing issue."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawlessly hit every business nuance: sized the in-app fix exactly (1,860 checkouts, 560 orders, ₹34 lakh margin), shipped the star rating upfront, and incorporated the hero image fix into Test 5.",
+  "biggest_mistake": "Running simultaneous tests on the same page without formally defining a 2x2 factorial split risks confounding interaction effects between delivery date and size picker.",
+  "what_would_make_it_a_10": "Clarify the multi-variate/factorial tracking setup for running Test 1 and Test 2 in parallel."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both outputs are exceptional, but Output 2 nailed the exact financial sizing of the in-app bug and correctly identified all three low-risk items (bug, trial, and star rating) to ship immediately without wasting test cycles."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Ranks channels by users who actually stayed with the arithmetic shown, and turns the 58% migration-ticket history into eight hard gates timed to the 1 December freeze.",
+  "biggest_mistake": "The single biggest risk in the data — 3 support staff, 31-hour replies, 2,400 tickets — gets only an unquantified 'under 8 hours' target with no rota or coverage plan, and the drafts are littered with [bracketed] blanks.",
+  "what_would_make_it_a_10": "Staff launch-week support concretely (who covers which hours, which wave-hold thresholds trigger) and fill every placeholder so the X posts and email could be pasted and sent."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Splits the launch so new users still go on 8 December even if the migration gate fails (they have no settings to lose), moves Product Hunt and Hacker News to 15 December, and puts an owner and a ticket-rate threshold on every step.",
+  "biggest_mistake": "The launch email credits 'the community' but names no extension author, breaking the always-credit rule, and a 95% tester pass gate is softer than the developer persona's 'please don't break my hotkeys'.",
+  "what_would_make_it_a_10": "Name three extension authors and their extensions in the launch email and tighten the migration gate to zero reported hotkey or setting losses before the 1 December freeze."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I'd hand to the team tomorrow: every date has an owner, the rollout waves have real thresholds and a plan B, and it sensibly lets new users launch even if migration slips. Output 1 has the better X thread and stricter 'zero lost hotkeys' gate, but its answer to the support flood is a target with no staffing behind it."
+}

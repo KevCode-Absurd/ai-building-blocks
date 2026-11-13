@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the whole series around the two behaviors that actually predict retention: recurring tasks and a second device, then uses the allowed triggers and platform split well.",
+  "biggest_mistake": "A few implementation assumptions and bits of wording need tightening, especially the confusing assumption about buttons opening on the signup platform when the goal is a second device.",
+  "what_would_make_it_a_10": "Polish the customer-facing copy a little, make the skip/branching logic simpler to implement, and remove any ambiguous assumptions before building."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The copy is calm, clear, and very close to Todoist’s voice, with simple tips, good examples, and strong platform-specific second-device messaging.",
+  "biggest_mistake": "It uses the fifth email for Pro instead of helping users complete the missing retention habit, which puts revenue ahead of the strongest onboarding signal too early.",
+  "what_would_make_it_a_10": "Replace the Pro email with a day-8 or day-14 missing-habit email that helps users get to both recurring task plus second device, and move Pro outside this onboarding series."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather use Output 1 because it is more disciplined about the data and focuses the whole onboarding path on the two habits that make users stick. Output 2 sounds a little smoother, but the Pro email is the wrong priority for this job."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Uses the data precisely: 8.0%/6.8%/2.2% click-to-order rates, leads dark spots (44%/55% with dullness), gives sunscreen its own email answering white cast and stickiness with the real review, and builds a slow-start path for the 61% new to actives.",
+  "biggest_mistake": "Email 5's main routine uses the salicylic face wash for everyone (including dry/sensitive), and the 'ignore this email' marketplace line breaks the voice; also the code-expiry and 14-day assumptions should be flagged more loudly as placeholders.",
+  "what_would_make_it_a_10": "Tighten Email 5's routine to a per-block version, remove or fix the marketplace line, and make the code-expiry dependency unambiguous so it can be pasted and launched."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean, calm and quiz-personalised: three blocks in Emails 1 and 5, sunscreen email using the real review, and a sensible 'no deadline' assumption that avoids fake urgency.",
+  "biggest_mistake": "Leaves Ksh 0 placeholders/liquid tags in copy ({% coupon_code 'WELCOME10' %}) and a bracketed [Block A] format that needs a build step before it is customer-ready, plus no reminder tied to a code deadline, which the owner explicitly wanted.",
+  "what_would_make_it_a_10": "Resolve the coupon tag and block merge into send-ready copy, add a clear code-deadline reminder (or explicitly drop the deadline with a reason), and fix the '6 in 10' line to match the brief's 61%."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong and data-led, but Output 1 is closer to paste-ready: it has a code-deadline reminder, a WhatsApp placement that helps, and fewer unresolved template placeholders, even though its Email 5 routine and marketplace line need a small fix."
+}

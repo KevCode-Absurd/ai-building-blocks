@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks recruiting with clear seat math and builds a tight, prioritized page that moves routing and security up, with a practical test plan and sample-size math.",
+  "biggest_mistake": "The A/B deciding metric counts recruiting signups without requiring a first booking, so it can reward low-intent signups; the hero also misses Priya's exact 'email tennis' phrase.",
+  "what_would_make_it_a_10": "Tighten the metric to demo or recruiting signup with first booking in 7 days, use 'email tennis' in one hero variant, and trim extras to stay comfortably under the word limit."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp segment math and a hero that uses Priya's 'email tennis' plus round robin and PTO, with honest placeholders and a strong metric definition.",
+  "biggest_mistake": "Many bracketed placeholders for proof and integrations make it less finished, and the separate open-source section slightly dilutes the recruiter-first focus.",
+  "what_would_make_it_a_10": "Replace every bracket with verified proof or cut it, put security proof immediately beside the demo CTA, and trim or merge the open-source section."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "O1 is the one I'd hand to the team tomorrow: the recruiting math is front and center, the page order puts the security blocker before the demo, and the test plan is fully costed. O2 has the better hero phrasing and metric, but its placeholders and extra open-source section make it less ready."
+}

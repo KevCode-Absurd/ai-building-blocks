@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The 'How to tell it worked' section is gold for an owner, and the conservative assumption on cash capacity protects my return rate.",
+  "biggest_mistake": "The description flow is slightly choppy in the final paragraph.",
+  "what_would_make_it_a_10": "Weaving the gift buyer's concerns (Jen) naturally into the main description, rather than just leaving her for the FAQ."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 6,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The 'What fits, in real life' section is excellent—it gives the customer an exact mental picture of their daily carry.",
+  "biggest_mistake": "Assuming the hidden pocket holds an extra note; this is dangerous when my main goal is to cut returns caused by overstating cash capacity.",
+  "what_would_make_it_a_10": "Sticking strictly to the given 10-note capacity limit instead of guessing it could hold more, which defeats the purpose of the brief."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Number 1 understood the business problem deeply, playing it safe on capacity to cut returns and giving me a clear way to measure success. Number 2's guess about extra cash capacity was too risky given why people are returning the wallet."
+}

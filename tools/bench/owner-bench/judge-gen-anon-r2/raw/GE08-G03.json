@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Perfect executive structure with bad news and key table above the fold, problem/solution tightly paired, and an immediately forwardable blurb for the VP sales ask.",
+  "biggest_mistake": "Could have highlighted the direct mathematical drag of the $0.9M compute bill directly against monthly revenue margin like Output 2 did.",
+  "what_would_make_it_a_10": "Add the specific calculation showing that the $0.9M free compute spike accounts for ~8.7 percentage points of margin drag on monthly revenue."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp financial reasoning connecting the $0.9M compute increase to monthly revenue ($10.4M) to explain the margin drop.",
+  "biggest_mistake": "Separating 'What went wrong' from 'What we're doing about it' forces fragmented reading, and pushing the main metric table near the bottom hurts the mobile reading experience.",
+  "what_would_make_it_a_10": "Move the core KPI table to the top screen and pair the fixes directly with the problems rather than splitting them into two separate sections."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 nails the mobile reading experience for a lead partner by putting the three numbers, bad news, and main KPI table right at the top, and includes a ready-to-use forwardable blurb for the critical VP hire."
+}

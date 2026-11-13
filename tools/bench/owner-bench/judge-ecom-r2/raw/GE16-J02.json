@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Executes every nuance of the brief and unit economics flawlessly, from exact contribution margins and clean $30,000 budget phasing to robust incrementality checks against flat Meta spend.",
+  "biggest_mistake": "None of note; it is an exceptional, Monday-ready media plan.",
+  "what_would_make_it_a_10": "Already a 10; could only be enhanced with specific creator outreach email templates."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very strong grounding in unit economics and clear operational checklists assigned by team role.",
+  "biggest_mistake": "Violates a clear rule in the hook table by writing 'I like that a pair gets donated' as an opening line, directly contradicting the data showing mission-first hooks underperform.",
+  "what_would_make_it_a_10": "Fix the creative table to never open on the donation angle and tighten the kill threshold from 3x CPA ($114) to 2x CPA."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is virtually flawless media buying work that catches every constraint, builds a superior Test/Scale structure, and avoids Output 2's mistake of opening a hook with the donation line."
+}

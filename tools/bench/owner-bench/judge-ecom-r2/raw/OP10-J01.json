@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the three key account signals: the paused winning creator video, the Razor Starter Kit COD/RTO trap, and the Women 25 to 34 pocket.",
+  "biggest_mistake": "It is a little over-conservative by leaving ₹1,30,400 unspent and its projection section is harder to follow than the rest.",
+  "what_would_make_it_a_10": "Simplify the projection, show exactly when the held budget gets redeployed, and tighten a few assumptions around returns and repeat value."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is very readable, catches the Women 25 to 34 opportunity, cuts the Starter Kit trap, and brings back the paused winner.",
+  "biggest_mistake": "It says to judge by the safe Shopify-adjusted line but still funds or scales ad sets that only work on Meta-counted purchases, especially Beard, retargeting and ASC at a ₹320 gate.",
+  "what_would_make_it_a_10": "Make the budget decisions obey the Shopify-adjusted break-even line consistently and be stricter with marginal ad sets."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather hand to the team because it makes harder, more profit-aware decisions using the tracking gap and COD/RTO math. Output 2 is cleaner to read, but it tolerates too much spend that only looks safe if Meta's purchase count is trusted."
+}

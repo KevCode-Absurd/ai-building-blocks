@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Builds pincode-differentiated COD confirm/hold logic and an after-hours bot around the exact RTO and chat-load signals, with a usable 48-hour hold and weekly scorecard.",
+  "biggest_mistake": "The prepaid-switch template is labeled Utility but pushes UPI payment and 'same exchange rules' — that can read as an offer/promotion and should likely be Marketing or split; plus a few placeholders (exchange wording) need filling.",
+  "what_would_make_it_a_10": "Tighten the template categories (clean Utility vs Marketing split for the prepaid nudge) and remove all placeholder wording so it can be pasted and submitted today."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Sharp economics — the ₹30 prepaid offer only pays back above 17% RTO, so metros are excluded — and a clean 'cancel unconfirmed tier 3' rule instead of overloading agents.",
+  "biggest_mistake": "It has only 9 templates and skips a dedicated delivery-day reattempt/'not home' handling and an explicit after-hours button menu, so the flow is thinner; also the prepaid '₹30 off' template risk and some sample variables feel less ready to paste.",
+  "what_would_make_it_a_10": "Add the missing delivery-day and after-hours button set, and make every template body exactly submittable with no internal assumptions left for the owner."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both are strong; Output 1 is more complete — full template set, pincode-tiered hold logic, after-hours bot and scorecard — so an owner can run it tomorrow with less filling in. Output 2's ₹30 payback logic is excellent but the pack is thinner and needs more rework."
+}

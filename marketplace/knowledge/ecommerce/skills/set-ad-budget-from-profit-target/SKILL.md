@@ -1,160 +1,158 @@
 ---
 name: set-ad-budget-from-profit-target
-description: "Gives the most a store can spend on ads next month, split by channel, worked back from the owner's profit target and then capped by cash in the bank and stock on hand. Builds gross profit per order from delivered costs, splits returning-customer profit from new-customer profit, sets an allowed cost per new customer from first-order and 90-day profit, reads how fast that cost rises as spend grows, and takes the lowest of the profit, cash and stock ceilings. Ends with a channel split, weekly pacing and stop lines the owner approves. Use before each month starts, when the owner asks 'how much can we spend', before a sale month, or when cash or stock changes."
+description: "Gives the most a store can spend on ads next month, split by channel and campaign, worked back from the owner's profit target and capped by cash and stock. Reads each channel on store orders, funds what worked before first, ranks the customer segments that pay back, sizes the creative the budget needs, builds the allowed cost per new customer from first-order and 90-day profit, reads how fast cost rises with spend, takes the lowest of the profit, cash and stock ceilings, and plans the whole amount with a reserve of 15% or less. Each channel gets a Scale, Hold, Trim or Cut verdict against last month and one rule read on store numbers. Use before each month, when the owner asks 'how much can we spend', before a sale month, or when cash or stock changes."
 ---
 
 # Monthly ad budget from a profit target
 
-**You get:** one budget sheet for next month: the total ad ceiling, the ceiling by channel (Meta, Google, TikTok and any test), weekly pacing, and the stop line for each, with the profit, cash and stock maths that set it, ready for the owner to approve.
+**You get:** one budget for next month: the total ceiling and which limit set it, the split by channel with past winners funded first, the segments and creative it pays for, weekly pacing, and a verdict and one rule per channel on store numbers, ready for the owner's yes.
 
 ## When to use
 
 - The month is about to start and nobody has said how much the ads can spend.
-- The owner names a profit goal ("I need 3 lakh profit" or "$20k profit") and asks what ad spend that allows.
+- The owner names a profit goal and asks what ad spend that allows.
 - Cash is tight, a big stock order is due, or payouts are slow.
 - A sale month is coming and spend will jump.
 - Spend was set as a percent of revenue and profit fell anyway.
 
 ## Not for
 
-- Moving money between Meta and Google campaigns inside a fixed cap: use `cross-channel-budget-reallocation`.
-- Setting daily budgets and bids inside Meta: use `store-meta-budget`.
+- Moving money between Meta and Google inside a fixed cap: use `cross-channel-budget-reallocation`.
+- Daily budgets and bids inside Meta: use `store-meta-budget`.
 - A full week-by-week cash plan: use `build-13-week-cash-forecast`; this skill reads its result.
-- Finding what each new customer costs by channel today: run `new-customer-cost-by-channel` first and feed its table in here.
+- Finding what each new customer costs by channel today: run `new-customer-cost-by-channel` first.
 
 ## What you need
 
 Required (read access, level 1):
 
-1. **Shopify order export**, last 6 months or more: Name, Created at, Customer Email, Subtotal, Discount Amount, Shipping, Taxes, Total, Refunded Amount, Payment Method, Lineitem sku, Lineitem quantity. On India stores, add the delivery status from the courier panel so return-to-origin (RTO) orders can be removed.
-2. **Delivered cost per order**: landed cost per SKU, pick and pack, shipping, payment fees, returns and RTO. If `build-sku-profit-sheet` or `store-meta-math` has run, use its gross profit per order.
-3. **Ad spend by channel by week**, same 6 months, from each ads manager export.
-4. **Fixed costs per month** (salaries, rent, software, agency fees) and the **profit target** for the month, from the owner.
-5. **Cash**: bank balance today, payouts expected, bills and stock payments due next month.
-6. **Stock**: units on hand and inbound with dates, per SKU that ads will push.
+1. **Shopify order export**, last 6 months or more: Name, Created at, Customer Email, Subtotal, Discount Amount, Shipping, Taxes, Total, Refunded Amount, Payment Method, Lineitem sku, landing site or UTM fields. On India stores, add courier delivery status so return-to-origin (RTO) orders can be removed.
+2. **Delivered cost per order**: landed cost per SKU, pick and pack, shipping, payment fees, returns and RTO.
+3. **Ad spend and platform results by channel and campaign by week**, same 6 months, paused campaigns included.
+4. **Fixed costs per month** and the **profit target**, from the owner.
+5. **Cash**: bank balance today, payouts expected, bills and stock payments due.
+6. **Stock**: units on hand and inbound per SKU that ads will push.
 
-Optional: the new-customer cost table from `new-customer-cost-by-channel`, 90-day value by first order month from `cohort-repeat-and-ltv-analysis`, and the sale calendar.
+Optional: new-customer cost by channel, 90-day value by first-order month from `cohort-repeat-and-ltv-analysis`, the sale calendar.
 
-If fixed costs or the profit target are missing, ask once; without them, give the cash and stock ceilings only and say the profit ceiling is open. No access above level 1 is needed. Changing any live budget is a separate step done by the channel agent with the owner's yes.
+If fixed costs or the profit target are missing, the plan gives the cash and stock ceilings and states one assumption line for the profit side. Changing any live budget is a separate step done by the channel agent with the owner's yes.
 
 ## Before you start: the gates
 
-1. **Gross profit per order is known.** Pass when it is built from delivered cost to the customer's door, not product cost against price [MEA-0037]. A tee with a 70% product margin had 24% true gross margin after freight, shipping, fees and allowances [MEA-0023]. Fail: compute it here from the order export and costs, or stop.
-2. **New and returning customers can be split.** Shopify's customer type or first order date per email must work. Fail: plan on blended numbers, mark the budget "rough", and cap any increase at the current spend.
-3. **Cash covers the month.** Pass when the cash forecast stays above the owner's floor in every week with the planned spend. Fail: the cash ceiling decides the budget, whatever profit says.
-4. **Tracking is good enough to read new customers by channel.** Fail: set one blended budget and hand off to `set-up-utm-tracking-for-all-channels` before a channel split next month.
+1. **Gross profit per order is known.** Pass when built from delivered cost to the customer's door [MEA-0037]; product margin is not gross margin [MEA-0023]. Fail: compute it here first.
+2. **New and returning customers can be split.** Fail: plan on blended numbers, mark the budget rough, and cap any rise at current spend.
+3. **Cash covers the month.** Fail: the cash ceiling decides the budget, whatever profit says.
 
 ## Steps
 
-### 1. Build the base month without new paid customers
+Follow the house rules, chiefly **Brand brain first**, **Map every signal to an asset**, **Look it up before you decide**, **Only the brief's facts run the business** and **One basis per number**. Before step 1, write the brand brain (every segment the data ranks, each with its number) and the signal-to-asset map. Run `node tools/ask-knowledge.mjs` once per signal and once per decision, logged in `context/trace.md`; every figure goes in `context/numbers.json`. Weeks count from the start of the month.
 
-From the order export, split last month and the same month last year into first-time and returning orders [MEA-0055]. Returning customer gross profit is the base the store earns with little ad spend. Do not use Shopify's returning customer rate for this; it moves when acquisition slows [MEA-0014]. Forecast next month's returning profit from cohort decay: each past cohort's size x its repeat rate at that age x returning order gross profit [MEA-0022].
+### 1. Tracking
 
-### 2. Work back the contribution the ads must deliver
+- For each channel, use the store-vs-platform gap the brief gives; where it gives none, store new customers tagged to the channel divided by the platform's purchases. Never a midpoint between two gaps.
+- Read new customers from store orders, not platform purchases. If a channel cannot be read, give it one blended line and hand off to `set-up-utm-tracking-for-all-channels`; its budget holds at current spend.
 
-Required contribution from new customers = profit target + fixed costs - returning customer gross profit.
+### 2. What worked before
 
-If that number is zero or negative, the target is met by the base and ads only need to pay back inside the month. If it is large, it sets how many new customers are needed:
+- List the channels, campaigns and months that brought new customers at or under the allowance (step 5), paused ones included, with the spend they ran at.
+- Fund those first in the split, and relaunch paused winners with fresh creative before any new channel gets money.
+- Find past spend steps: marginal cost = extra spend / extra new customers between weeks. Adding 25% spend in one account kept average cost under the limit while the extra buyers cost about 2.5 times it [ADC-0049].
 
-New customers needed = required contribution / (first-order gross profit - allowed cost per new customer).
+### 3. Audiences
 
-### 3. Set the allowed cost per new customer
+- Split last month and the same month last year into first-time and returning orders [MEA-0055]. Returning profit is the base the store earns with little ad spend; forecast it from cohort decay: each cohort's size x its repeat rate at that age x returning gross profit [MEA-0022]. Do not use Shopify's returning customer rate; it moves when acquisition slows [MEA-0014].
+- Rank the new-customer segments the data shows (first product, channel, region, age band where given) on 90-day gross profit per customer. Name the winner; the channels and campaigns that reach it get money first.
+- Existing-customer ads are set in money: customers x monthly frequency x CPM / 1,000 [ADC-0068].
 
-- First-order gross profit per new customer from the export, after refunds [MEA-0020].
-- 90-day gross profit per new customer, only from cohorts at least 90 days old [MEA-0048].
-- Read the ratio of time-bound gross profit to new-customer cost: under 1 loses money, 1 to 2 needs proven repeat, 2 to 3 is the zone to scale [MEA-0024].
+### 4. Formats and messaging
 
-Rule: allowed cost per new customer = first-order gross profit, unless cohort data shows 90-day profit; then up to 90-day gross profit / 2 if that is higher. Never fund a cost above first-order profit with repeat profit the store has not yet seen [MEA-0026]. Set a separate, lower allowance for a November or Diwali month, because sale-month buyers can repeat less [MEA-0035].
+- Name the format and message that bring new customers at the lowest store-basis cost on each channel. The budget pays for more of that style first.
+- Creative volume is part of the budget: each new ad needs about 3 times the target cost to be judged, so ads needed a week = weekly new-ad spend / (3 x target cost) [ADC-0039]. If the team cannot make that many, lower the channel's line to what its creative can feed.
 
-### 4. Read how cost rises with spend
+### 5. Budget
 
-Plot weekly ad spend against weekly new customers for the last 12 to 26 weeks. The cost of the last extra customers, not the average, decides the ceiling: adding 25% spend in one account kept average cost under the limit while the extra buyers cost about 2.5 times the limit [ADC-0049].
+The plan uses the whole budget it sets (house rule **Spend plans add up**).
+- **Required contribution from new customers** = profit target + fixed costs - returning gross profit. If zero or less, ads only need to pay back inside the month.
+- **Allowed cost per new customer** = first-order gross profit after refunds [MEA-0020], unless cohorts at least 90 days old show 90-day gross profit [MEA-0048]; then up to half of that, if higher. Ratio bands: under 1 loses money, 1 to 2 needs proven repeat, 2 to 3 is the zone to scale [MEA-0024]. Never fund cost with repeat profit the store has not seen [MEA-0026]. Sale-month buyers can repeat less, so set them a lower allowance [MEA-0035].
+- **Profit ceiling** = spend where marginal cost reaches the allowance, or the spend that delivers the required contribution, whichever is lower. With no spend history, plan steps of 20 to 30% a fortnight (practitioner default).
+- **Cash ceiling**: list weeks with opening cash, payouts (card payouts lag by days; COD remittances in India often by a week or more), stock payments, bills and ad spend. The most spend that keeps every week above the owner's floor. Judge rises on 60 to 180-day cash [FIN-0029]; stock-funded growth can push profit near zero [FIN-0011]. India: GST on ad spend billed in India counts as cash out.
+- **Stock ceiling**: no push on a SKU with fewer days of stock than lead time [ADC-0023]. Hold winners at a steady spend when stock is short; push harder when stock must clear [ADC-0012].
+- **Monthly ceiling** = lowest of the three; name the one that binds.
+- **Split**: existing-customer ads in money; past winners next; then each proven channel in order of marginal cost until it reaches the allowance; new ads about 30% when profitable, 10% or none when not [ADC-0053]. A reserve is at most 15%, with a release rule the account will hit in the month, such as "release in Week 3 to the channel whose store-basis cost stayed under the allowance for two weekly reads".
+- **Pacing**: split the month by last year's weekly order share, not evenly.
 
-- Find the weeks where spend stepped up. Marginal cost = extra spend / extra new customers.
-- Stop the budget where marginal cost reaches the allowed cost from step 3.
-- If spend never varied, plan in steps of about 20 to 30% a fortnight and read each step (practitioner default, test it).
+### 6. Verdicts
 
-Profit ceiling = the spend at which marginal cost per new customer hits the allowance, or the spend that delivers step 2's contribution, whichever is lower.
+One label per channel against last month's spend, matching its number:
+- **Scale** (up): marginal cost under the allowance, stock and cash allow it.
+- **Hold** (same): marginal cost near the allowance, or not readable.
+- **Trim** (lower, above zero): marginal cost above the allowance on the last step, or a ceiling binds.
+- **Cut** (zero): store-basis cost above the allowance for the whole period with no feeder role.
 
-### 5. Set the cash ceiling
+### 7. Rules
 
-Ad spend leaves the bank before order money arrives. List next month by week: opening cash, payouts (card payouts lag sales by days; COD remittances in India often lag by a week or more, check the courier's cycle), stock payments, bills, ad spend. Cash ceiling = the most spend that keeps every week above the owner's floor. Inventory-funded growth can push net profit near zero even while revenue triples [FIN-0011], so judge any increase on 60 to 180-day cash, not 30 days [FIN-0029].
+One rule per channel, in one line, on store new customers, never on platform cost alone. For example: "Hold at current spend if the 7-day store-basis cost per new customer is above the allowance for two weekly reads; Scale one step when it is under for two." Judge small accounts on 7 days or more [ADC-0064].
 
-India note: Meta and Google charge GST on ad spend billed in India; include it in cash out and ask the accountant whether the store can claim input credit.
+### 8. Hand over
 
-### 6. Set the stock ceiling
-
-For each SKU the ads push: days of stock = units available / daily units sold. If days of stock are fewer than the reorder lead time, do not plan spend to push it; raise its target or pause it [ADC-0023]. Stock ceiling = spend that sells no more than the units on hand and arriving before the month ends. When stock is short, hold winners at a modest steady spend to last; when excess stock must clear, push harder at worse efficiency [ADC-0012].
-
-### 7. Take the lowest ceiling and split by channel
-
-Monthly ceiling = lowest of profit, cash and stock. Write which one bound it.
-
-Split:
-
-1. **Existing-customer ads** in money, not percent: customers x desired monthly frequency x CPM / 1,000 [ADC-0068].
-2. **Each proven channel** gets spend in order of its marginal new-customer cost from `new-customer-cost-by-channel`, until its cost reaches the allowance.
-3. **Tests**: about 70% proven and 30% tests when the store is profitable; 90/10 or none when it is not [ADC-0053]. A new channel test goes through `test-a-new-ad-channel` with its own capped loss.
-
-### 8. Pace it and write stop lines
-
-Weekly pacing: split the month by last year's weekly order share, not evenly. Per channel, write the weekly read: new customers from store orders, cost per new customer, contribution after ads. Stop line: if the 7-day cost per new customer is above the allowance for two weekly reads, hold at current spend and re-run step 4. Judge small accounts on 7 days or more; daily swings below about $1,000 a day are noise [ADC-0064].
+- Run `node tools/quality/numbers.cjs context/numbers.json --final <deliverable> --brief <brief>` and fix every FAIL. Channel lines add to the ceiling.
+- Rank changes leverage first: relaunched past winners and the cheapest marginal channel first.
+- Tests appear only when the brief asks or tracking cannot answer; a new channel goes through `test-a-new-ad-channel` with its own capped loss.
 
 ## Checks before you hand it over
 
-- Gross profit per order is from delivered costs, with RTO and refunds out.
-- Returning profit and new-customer profit are separate lines.
-- The allowed cost per new customer is shown with the cohort data behind it.
-- The ceiling uses marginal, not average, cost.
-- All three ceilings are shown and the binding one is named.
-- Weekly cash never drops below the owner's floor in the plan.
-- Channel amounts add up to the total ceiling.
-- No budget was changed in any ad account.
+- Each channel is read on store new customers with a gap from the brief or store orders.
+- Past winners, paused ones too, are funded first.
+- Returning profit and new-customer profit are separate lines; the winning segment is named.
+- The creative count matches what the budget needs.
+- All three ceilings show, the binding one is named, and the ceiling uses marginal cost.
+- The whole budget is planned; any reserve is 15% or less with a release rule.
+- Each verdict label matches its number; each channel has one rule.
+- Weekly cash never drops below the owner's floor.
 
 ## Output
 
-**One-screen summary:** total ceiling, which limit bound it (profit, cash or stock), allowed cost per new customer, expected new customers, expected contribution and profit against target, and the one risk to watch. Fallback in one line, with its trigger (for example, a lower ceiling if a stock order slips).
+**One-screen summary:** total ceiling and the limit that set it, allowed cost per new customer, expected new customers, profit against target, and the one risk.
 
-**Budget sheet** (`ad-budget-<month>.csv` or a Google Sheet with live formulas):
+**Each decision in two lines:** what to do, and why with one number.
 
-| Section | Fields |
-|---|---|
-| Inputs | Profit target, fixed costs, returning gross profit forecast, first-order gross profit, 90-day gross profit, allowed cost per new customer |
-| Ceilings | Profit ceiling, cash ceiling, stock ceiling, chosen ceiling, binding limit |
-| Channel plan | Channel, Role (proven, existing customers, test), Monthly spend, Week 1 to Week 5 spend, Marginal cost per new customer, Expected new customers, Stop line |
-| Cash by week | Week, Opening cash, Payouts in, Stock and bills out, Ad spend out, Closing cash, Floor |
-| Stock check | SKU, Units available, Inbound date, Days of stock, Lead time, Ad status (push, hold, pause) |
+**Table "Ceilings":** Ceiling, Amount, What sets it.
 
-**Assumptions:** the profit target, cash floor and inbound stock date used where not given, one line each with what moves if it differs.
+**Table "Channel plan":** Channel, Last month, Next month, Verdict, Rule. A total row equals the ceiling.
+
+**Table "Cash by week":** Week, Cash in, Cash out, Closing cash, Floor.
+
+**Budget sheet** (`ad-budget-<month>.csv`) with the inputs, cohort working, stock check and weekly pacing.
 
 ## Common mistakes
 
-- **Budget as a percent of revenue.** It ignores margin and the cost of the last customers; steps 3 and 4 replace it.
-- **Average cost per customer.** The average can look fine while the last customers lose money; step 4 uses marginal cost.
-- **Counting repeat profit that has not happened.** Step 3 only uses cohorts old enough to show it.
-- **Ignoring cash timing.** COD and payout lags can empty the bank in a profitable month; step 5 checks each week.
-- **Pushing a product that will sell out.** Step 6 pauses or holds SKUs with less stock than lead time.
-- **Reading daily swings.** Step 8 reads weekly.
+- **Budget as a percent of revenue.** Step 5 works back from profit.
+- **Average cost per customer.** Step 2 reads marginal cost.
+- **Counting repeat profit that has not happened.** Step 5 uses only old enough cohorts.
+- **Ignoring cash timing.** Step 5 checks each week.
+- **Money with no creative to spend it on.** Step 4 sizes creative to the budget.
+- **A big unspent reserve.** Step 5 caps it at 15% with a release rule.
 
 ## Sources
 
 - MEA-0014: Shopify's returning customer rate moves with acquisition.
-- MEA-0020: time-bound lifetime gross profit sets cost targets.
-- MEA-0022: forecast returning revenue from cohort decay.
+- MEA-0020: time-bound gross profit sets cost targets.
+- MEA-0022: returning revenue from cohort decay.
 - MEA-0023: product margin is not gross margin.
 - MEA-0024: gross profit to cost bands.
-- MEA-0026: first-order contribution at or above cost per customer.
-- MEA-0035: November cohorts can repeat less.
-- MEA-0037: gross margin uses delivered cost.
-- MEA-0048: rank on profit only from cohorts old enough.
+- MEA-0026: first-order contribution at or above cost.
+- MEA-0035: sale-month cohorts can repeat less.
+- MEA-0037: delivered cost.
+- MEA-0048: rank only on cohorts old enough.
 - MEA-0055: split first-time and returning P&Ls.
 - ADC-0012: push or hold winners by stock and cash.
-- ADC-0023: tie targets to days of stock.
-- ADC-0049: scale on marginal, not average, cost.
-- ADC-0053: proven versus test share by profitability.
-- ADC-0064: small accounts swing daily; read 7 days.
+- ADC-0023: tie spend to days of stock.
+- ADC-0039: judge an ad after 3 times target cost.
+- ADC-0049: marginal, not average, cost.
+- ADC-0053: proven versus new share.
+- ADC-0064: read 7 days at low spend.
 - ADC-0068: existing-customer spend in money.
-- FIN-0011: inventory-funded growth squeezes profit.
+- FIN-0011: stock-funded growth squeezes profit.
 - FIN-0029: judge changes on 60 to 180-day cash.
 
-What makes this skill ours: the budget is the lowest of three ceilings (profit, cash, stock) with the binding one named; returning profit is separated so ads are not credited with it; the ceiling stops at the marginal cost of new customers; and India's COD remittance lag and GST on ad spend are in the cash test.
+What makes this skill ours: the budget is the lowest of three ceilings with the binding one named, past winners are funded first, returning profit is kept apart so ads are not credited with it, and the creative the money needs is part of the plan.

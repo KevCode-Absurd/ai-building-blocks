@@ -1,0 +1,38 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads the data the way I do: sleep-led, narrator clips, evening posting, and it correctly spots that reviewed sleep posts can't go live until 24 November so week 1 leans on kindness.",
+  "biggest_mistake": "It treats all sleep posts as needing review, which forces a whole kindness-only week 1 when non-condition evening sleep content could partly fill week 1, and it flags Draft 6 ('house is finally quiet') as reviewed while calling the kindness posts safe a touch loosely.",
+  "what_would_make_it_a_10": "Tighten the review logic so only posts naming conditions go to review, and reshape week 1 to use safe winding-down content without conditions instead of six kindness posts."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Its week 1 drafts deliberately avoid conditions so nothing misses the review window, and it keeps a small, sensible stress-at-work slot while cutting app news, quote cards and morning posts.",
+  "biggest_mistake": "It keeps stress at work as a weekly post and gives only 12 of 24 slots to sleep, underweighting the theme that drives 450 installs per post, and its week-1 sleep posts name no condition yet read as sleep content that arguably still fires the review rule it claims to dodge.",
+  "what_would_make_it_a_10": "Shift the mix decisively to sleep and narrator clips, and resolve the contradiction between 'week 1 needs no review' and posting sleep/wind-down content.",
+  "judge_note": "See reason."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the plan I'd pay for: it puts sleep and narrator clips at the centre of the mix, posts in the evening, flags review timing clearly and gives a clean stop list and success measure, where Output 2 hedges too much on stress and sleep volume. Output 1 just needs its review logic tightened; Output 2 needs the mix reworked."
+}

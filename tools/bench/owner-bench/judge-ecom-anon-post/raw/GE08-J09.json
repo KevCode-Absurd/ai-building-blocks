@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Superb clarity and pacing; the unit economics ($71 contribution, $33 first-order loss, $94 18-month break-even cap) are translated into clear, actionable rules.",
+  "biggest_mistake": "Lacks explicit contribution margin percentage targets and baseline math to tie directly back to the board's primary mandate.",
+  "what_would_make_it_a_10": "Add quantitative contribution margin impact sizing to the 6 moves and include decision thresholds in the weekly scorecard."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 10,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless financial modeling of contribution margin (7.8% up to 12.9%) coupled with acute brand awareness, notably catching that Sarah's 'nice hotel' quote violates the brand rule against hotel claims.",
+  "biggest_mistake": "The prose in the baseline working section is very dense and requires careful reading compared to Output 1's conversational flow.",
+  "what_would_make_it_a_10": "Loosen up the dense algebraic baseline paragraph to match the grade 8 reading ease of the rest of the memo."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Output 2 delivers extraordinary financial rigor directly answering the board's contribution margin mandate, and its sharp brand catch—warning us not to use Sarah's 'nice hotel' quote because of our brand guidelines—proves it truly understands our business."
+}

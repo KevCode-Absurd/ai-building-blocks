@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It identifies the real problem correctly: we lose to Semrush mainly in agencies because of reporting and PPC, while our biggest churn problem is self-inflicted on Lite, and it turns both into specific ranked moves with owners, first steps and success metrics.",
+  "biggest_mistake": "Move 5 is a bit speculative and slightly overlaps with moves 1 and 3, so it is the least necessary item in an otherwise tight plan.",
+  "what_would_make_it_a_10": "It is already very close; the only improvement would be to tighten move 5 or replace it with a smoother plan-step fix for the in-house price jump so every move is more direct and less overlapping."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads clearly, gets the main facts right, and correctly says not to chase PPC parity while prioritizing agency reporting, Lite limits, and the high-converting multi-site AWT segment.",
+  "biggest_mistake": "It spends one of only five moves on generic content marketing instead of a more direct fix to the in-house price jump or plan/limit problem, so it is less focused on the fastest money in our own data.",
+  "what_would_make_it_a_10": "Replace the content move with a concrete packaging or pricing step for the Lite-to-Standard cliff and make the agency reporting move more execution-ready, with a tighter MVP and clearer success threshold."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is more actionable and closer to what I asked for. It does the sharper owner job: it separates competitive losses from self-inflicted leaks, ranks the moves better, and gives me a plan I would actually use now."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Each script is a genuinely different angle built from the real comment themes and winning opening styles, with claims and price handled in the middle after a taste-led hook.",
+  "biggest_mistake": "The creator briefs are thinner than they should be on disclosures and rights, and the third script leans on a label-read moment that the data says underperforms, even if it comes after the kids.",
+  "what_would_make_it_a_10": "Write the platform disclosure and rights terms into each individual creator brief rather than a general rules block, so a creator never has to cross-reference."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It names the buyer, angle, format, hook source and first frame up front, tells the owner to shoot Script 1 first, and packs every creator brief with disclosures, deliverables, rights and a timing plan the owner can send tomorrow.",
+  "biggest_mistake": "The on-screen 'Paid partnership with Olipop' in the first three seconds may crowd the hook frame and should be checked against each platform's current label requirements.",
+  "what_would_make_it_a_10": "Confirm the exact current Meta and TikTok disclosure mechanics and bake the correct label placement into each brief's opening shot so there is zero ambiguity for the creator."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both get the strategy right, but Output 2 is more complete and ready to send: it orders the shoots, names the buyer and first frame for each, and puts disclosure, rights and deliverables in every brief rather than a shared rules block."
+}

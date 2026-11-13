@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Quantifies each move in contribution, with owners, stop lines and weekly action thresholds.",
+  "biggest_mistake": "Some targets are worded confusingly (for example 'Down 15% or better'), and the voice is drier than the brand.",
+  "what_would_make_it_a_10": "Tighten the target wording, add a few customer-facing ideas like swatches or return-reason page fixes, and warm the voice without losing the math."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads like the brand and turns the data into clear customer-facing actions, including swatches and return-reason page fixes.",
+  "biggest_mistake": "Move impacts and scorecard targets are too loose; some revenue-versus-gross-profit language and the $104 mix claim need tightening.",
+  "what_would_make_it_a_10": "Quantify each move's contribution, add act-when thresholds and a specific contribution-margin target, and fix the payback and mix math."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I'd hand 1 to the team tomorrow: it ranks moves by contribution, gives owners, stop lines and weekly thresholds. 2 reads better and has stronger customer ideas, but its impact numbers and scorecard are too loose to run the quarter from."
+}

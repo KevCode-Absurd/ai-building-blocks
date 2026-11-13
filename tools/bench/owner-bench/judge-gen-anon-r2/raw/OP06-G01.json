@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It stays tightly anchored to the actual numbers, moves capacity toward comparison pages, and gives a concrete first week the writer can start on Monday.",
+  "biggest_mistake": "It says the first move should be /vs-google-analytics, but the cheaper near-page-one refreshes on the cookie-banner and no-cookies queries were the clearest quick wins from the data.",
+  "what_would_make_it_a_10": "Start week 1 with the cookie-banner post and the 'website analytics without cookies' page alongside the GA comparison work, and keep the same quantified forecasting and stop list."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It adds useful buyer-blocker ideas like migration-history and agency/DPO messaging, and it keeps the writing plain and mostly on-brand.",
+  "biggest_mistake": "It breaks focus and capacity discipline by adding net-new pages not supported by the search data, and it overstates some forecasts, especially the +100 trials for the GA page rewrite.",
+  "what_would_make_it_a_10": "Cut the speculative new pages, center the plan on the proven comparison and near-page-one opportunities, and tighten the math so every projected gain clearly follows from the query and conversion data."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to what I would actually run this quarter. It uses our numbers better, respects capacity better, and gives a more actionable plan without wandering into extra pages we have not validated."
+}

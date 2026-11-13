@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharp, concise copy set with a strong diagnosis of the paused winner and the untapped taste gap, plus a legal fallback if review quotes are not allowed.",
+  "biggest_mistake": "Misses a dedicated protein-number angle and a standalone 4 pm office angle, and misstates Meta's headline/description limits as 27 characters.",
+  "what_would_make_it_a_10": "Cover all six requested angles distinctly, correct the Meta display limits, and add a control or benchmark to the launch test plan."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Covers all six angles in buyer language and gives a genuinely actionable test design with a control, budget, cut rules, and tracking.",
+  "biggest_mistake": "Runs long against the 1,000-word cap, overstates Meta's headline/description limits, and relies on review quotes without a fallback if legal blocks them.",
+  "what_would_make_it_a_10": "Trim it under 1,000 words, fix the Meta display limits, and add a no-review-quote backup while keeping the test rigor."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I would hand to the team: it covers all six angles in customer language and gives a real test plan with a control, budget and cut rules. Output 1 is cleaner and has a useful legal fallback, but it misses a dedicated protein angle and some test rigor."
+}

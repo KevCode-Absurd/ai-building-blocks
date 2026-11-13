@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It targets Controllers at 50-300 person firms after a pricing change, keeps every email link-free, and gives a cautious reply-rate estimate tied to the pilot (6.8% floor, per-1,900 projection that checks out).",
+  "biggest_mistake": "It offers assets that were never approved or don't exist ('a one-page summary of what they changed', 'the three steps that team took') and says 'a lot of controllers tell me', so the sales team would be promising material they can't send.",
+  "what_would_make_it_a_10": "Replace the invented one-page summary and three-steps offers with asks that use only the approved proof, and trim the length to stay safely under 900 words."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 6,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Every email carries one question and one ask, uses only the approved 9-to-4-day proof, and the plan is backed by pilot arithmetic that checks out (3.1% overall replies, 1.4% positive, 86% of positive replies booked).",
+  "biggest_mistake": "The 8% expected rate (up to 10%) leans on an invented '1.25x uplift' that the pilot never tested, which is a little optimistic, though the assumption is stated.",
+  "what_would_make_it_a_10": "Set the headline expectation at the measured 7% floor and describe the 10% ceiling only as an upside, and make the step 2 ask lighter than a 20-minute walkthrough."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I'd hand to the team: emails use only proof I approved, no made-up assets, and the pilot math is shown and right. Output 1 is also well targeted, but it promises a one-page summary and 'three steps' that don't exist."
+}

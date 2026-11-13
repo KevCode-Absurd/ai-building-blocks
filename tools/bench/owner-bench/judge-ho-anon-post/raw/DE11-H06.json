@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Straight, well-argued no to the 20% cut with the lifetime-value maths and the break-even point, plus a clean, costed plan the one partner manager can actually run.",
+  "biggest_mistake": "The 40% first-year Partner rate risks being read as a rate war and its 12-month maths is a small reach; a couple of cost lines (commissioned revenue impact) are estimates presented a bit tightly.",
+  "what_would_make_it_a_10": "Tighten the Partner 40%/new-customer cost model and state it as a test with a clear kill/scale rule, and add one line on what happens to the 4-of-20 retention risk if two leave."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 10,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 7,
+  "clear": 8,
+  "voice": 8,
+  "range": 10,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Sharpest insight in either piece — 'under-crediting, not overpaying' — plus the bold 'Who sent you?' credit idea and a dated, owner-assigned 30-day table.",
+  "biggest_mistake": "The window-cost projection (1,250 new customers, 65-75% band) is a pile of assumptions stacked up, and one commission-cost range leans on a gross-margin figure it admits it doesn't have.",
+  "what_would_make_it_a_10": "Replace the projection with a small, bounded test (top 20, one quarter) and a stated cap on added commission, so the owner sees the downside before saying yes."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both say the right thing on 20% and fix credit and payouts; Output 2 wins on insight — the under-crediting framing and the 'Who sent you?' idea are things I'd actually steal — but Output 1 is the safer, cleaner document to send today. I'd take Output 2's ideas and Output 1's discipline."
+}

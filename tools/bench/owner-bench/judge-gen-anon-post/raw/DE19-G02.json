@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Picks recruiting with the seat math front and center, leads the hero with Priya's own 'email tennis' phrase, and puts security proof and a trimmed 4-field demo form exactly where the data says they belong.",
+  "biggest_mistake": "The A/B section drifts into stats detail (sample size, power, projection) that clutters a copy deliverable, and section 6 'Fits how you hire' leans on integration logos that may not exist yet — could read as promise-y.",
+  "what_would_make_it_a_10": "Tighten the test plan to the metric and one paragraph of rules, drop the projection math, and make every proof line explicitly say 'use our real data/screens or cut' so nothing reads as fabricated."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very clean section order with bracketed placeholders for facts it can't verify, and a strong, honest 'qualified team starts' metric that ties the test to real use rather than clicks.",
+  "biggest_mistake": "Buries the 'answer security before they ask' insight mid-page instead of near the demo button, and mixes CTAs ('Get started' on sections 2, 4, 5 vs 'Book a demo' elsewhere) without a clear rule for which visitor gets which, which could split the recruiting audience.",
+  "what_would_make_it_a_10": "Move security proof up next to the demo form, use 'Book a demo' consistently for recruiting-team sections, and pull the open-source point into the hero's supporting line rather than a late standalone section."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both pick recruiting with the right math, but #1 puts security proof and the demo form where Priya actually decides and its hero sounds like her ('no back and forth'), while #2 is cleaner but scatters CTAs and hides the security win mid-page."
+}

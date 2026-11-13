@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 7,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It directly addresses the real return drivers with exact carry numbers and honest trade-offs in a voice that feels close to the brand.",
+  "biggest_mistake": "It adds an unsupported claim that the hidden pocket can take one extra flat note, which goes beyond the brief's facts.",
+  "what_would_make_it_a_10": "Remove the unverified hidden-pocket note claim and use the under-button line to set the one-week break-in expectation even more clearly."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 6,
+  "ready": 6,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It shows strong understanding of the return problem and places the cash-capacity and break-in messages in the highest-leverage spots.",
+  "biggest_mistake": "It does not follow the brief because it includes process commentary and is missing the required one-line subtitle-plus-full-page finish in a clean ready-to-publish format.",
+  "what_would_make_it_a_10": "Strip out the internal commentary, add the missing finished product-page feel, and keep the same sharp focus on cash limits and break-in expectations."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I could publish tomorrow with minor edits. Output 2 has good strategy, but it reads like notes to me rather than clean finished product page copy."
+}

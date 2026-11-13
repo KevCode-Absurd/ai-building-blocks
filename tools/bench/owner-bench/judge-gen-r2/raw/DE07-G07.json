@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "On-brand, grade-8 launch copy with real angles — a five-post X thread, a \"start with five\" first-day path for the newcomer persona, named author credits, and per-video growth math (about 750 kept per video, 6,750 across nine creators).",
+  "biggest_mistake": "The channel table is headed and framed as \"users who stay\" but puts extension authors (2,470) at #2 above X (3,740), Hacker News (2,940) and Product Hunt (3,420) without stating the growth basis, so the ranking looks like an arithmetic error; the copy also ships with blanks ([Opens in __ ms on a __ Mac], [Extension] by [author], [support address]) and there is no owner column or contingency plan.",
+  "what_would_make_it_a_10": "State plainly that the rank is by retention rate and growth headroom, and finish every piece of copy with no blanks plus an owner on each timeline row."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Turns the migration history into an operating plan: existing users go out in three gated waves (42,000/168,000/210,000, summing to the 420,000 list), Product Hunt and Hacker News move to 15 December, and new users can still launch on 8 December because \"new users have no settings to lose\" — with a no-go rule and day-4 plan B, all numbers traceable (93,500 installs, 17,080 kept, 18%, 19% of installs/41% of retained).",
+  "biggest_mistake": "It breaks the brand rule to always credit extension authors by name — neither the X post nor the email names a single author (only a general \"built by someone in our community\") — and \"kept the lowest share\" overstates the case, since Hacker News at 14% was fourth of five, not the lowest.",
+  "what_would_make_it_a_10": "Name three extension authors in the launch post and email, and fix the Product Hunt/Hacker News retention claim."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both get the retention math and the migration gate right, but Output 2 gives me a plan I can run tomorrow: a decision block, owners on every row, three gated waves that sum to my list, a no-go rule and a plan B, while Output 1 leaves blanks in the copy and headlines a ranking its own numbers contradict."
+}

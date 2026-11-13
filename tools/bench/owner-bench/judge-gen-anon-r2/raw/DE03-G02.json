@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Segment math is explicit and correct (about 1,540 of 2,717 paid seats), and the page reorders sections around what paying recruiting accounts actually use: round robin, routing, security up from the footer, and a 4-field demo form.",
+  "biggest_mistake": "Hero A buries Priya's own words (\"email tennis\") in section 2 while the headline uses the tamer \"back and forth\"; the test also spends a lot of text on a sample-size calculation that risks looking over-engineered for a copy brief.",
+  "what_would_make_it_a_10": "Put \"email tennis\" in the hero itself, tighten the test section to one sentence on the deciding metric, and mark every proof point clearly as an example so nothing reads as a real customer claim."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Hero leads with \"No email tennis\" in Priya's exact words, and the page keeps the voice tight and human; the bracket convention for unverified facts is a mature way to ship without inventing proof.",
+  "biggest_mistake": "Mixes \"Get started\" (self-serve) and \"Book a demo\" buttons across almost every section with no logic, adds a separate open-source section and a problem section that pad length, and the bracket placeholders mean it is not publishable as it stands.",
+  "what_would_make_it_a_10": "Pick one CTA per stage (demo for the recruiting page, self-serve only in the tail), fold open source into security as supporting proof, drop the redundant problem section into the hero, and resolve placeholders so it can ship."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 does the seat math up front, rebuilds the page in the order a recruiter actually decides, and gives a testable pair with one clean metric; Output 2 has the better hero line but is full of placeholder brackets and CTA noise I would have to clean up before sending it."
+}

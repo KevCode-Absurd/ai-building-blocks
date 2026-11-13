@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9.5,
+  "use_as_is": "as is",
+  "biggest_strength": "The strategic reallocation is flawless: spinning out the proven non-brand themes into dedicated Search campaigns while moving PMax to a feed-led setup protects volume while cutting waste.",
+  "biggest_mistake": "Could have included an explicit incrementality test for broad terms rather than simply capping them.",
+  "what_would_make_it_a_10": "Add a task owner/accountability column to the week one schedule and detail how to test if cut broad spend hurts new-customer acquisition."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 10,
+  "ready": 9,
+  "overall": 9.1,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The regional geo-split test to measure whether broad spend actually drives halo brand sales is brilliant, and the Day/Action/Owner/Done-when table is wonderfully clear.",
+  "biggest_mistake": "Holding back $104,000 (43% of the budget) in reserve is too timid and drastic of a spend reduction that risks choking overall store volume and stalling PMax algorithms.",
+  "what_would_make_it_a_10": "Deploy more of the cut spend into capturing the high-performing non-brand search queries rather than leaving over $100k unallocated in reserve."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 gives me an immediate, commercial media plan that reallocates budget into dedicated non-brand search and un-starves our winning products without leaving $104k unspent on the sidelines."
+}

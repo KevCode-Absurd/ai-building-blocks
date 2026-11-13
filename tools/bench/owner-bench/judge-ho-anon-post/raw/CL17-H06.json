@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a straight no on the 20% cut and backs it with correct lifetime maths ($1,677 vs $1,130, $1,174 net), a break-even range and a top-20 loss count. It also sizes the 90-day window cost from the real customer base (3,365 customers, about 1,250 new a year).",
+  "biggest_mistake": "The window-cost projection rests on an assumed 65–75% pay-by-day-90 curve. It also includes legal disclosure claims (\"affiliate link alone is not enough\" in the US) that a lawyer should check before partners see them.",
+  "what_would_make_it_a_10": "Show a sensitivity check on the 90-day uplift, and add a measure of whether partner tier status actually changes partner behaviour, beyond faster payouts. Tighten the wording toward grade 7 in the tables."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The case against the cut is clean and well argued: a 12.5% break-even, four top partners able to wipe out the saving, and first-year commission compared against the rival's 40%. It also matches the rival directly for the core partners.",
+  "biggest_mistake": "It adds a 40% first-year rate (about $46k) and a first-customer bonus. Both raise cost and spend perk money away from the top 20. The window cost is left vague ('every 10% adds $63k'), and the 30-day plan has no real dates.",
+  "what_would_make_it_a_10": "Put a number on the 90-day window cost. Justify the 40% partner rate against keeping the cost flat, or drop it. Put calendar dates on the 30-day plan."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both say no to the cut with the right maths. The first plan holds cost tighter, puts a number on the window, and gives my partner manager real dates. The second is very readable but spends more on a 40% tier without fully pricing the window."
+}

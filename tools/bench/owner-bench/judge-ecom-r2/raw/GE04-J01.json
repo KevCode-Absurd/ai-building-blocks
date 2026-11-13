@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It brilliantly deduces the distinct average order value for each ad set to calculate accurate, customized break-even and safe lines.",
+  "biggest_mistake": "It establishes a 'safe line' based on your true store numbers but then chooses to hold ad sets (like the Beard Kit) that are losing on that line, falling back to Meta's inflated count to justify the spend.",
+  "what_would_make_it_a_10": "Strictly enforce your own 'safe line' for all cut/hold decisions, aligning perfectly with the brief's requirement to judge on Shopify-adjusted numbers."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "It calculates the exact rupee loss on the store's adjusted numbers for every single ad set and acts ruthlessly on that reality, even leaving budget unspent rather than burning your cash.",
+  "biggest_mistake": "It assumes that Retargeting can be easily narrowed to '7-day ATC and checkout only' without a massive drop in reach that might cause delivery issues, though the financial logic is sound.",
+  "what_would_make_it_a_10": "This is a masterclass; it is already a 10."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both specialists pulled off highly advanced math, accurately deducing hidden metrics like ad-set specific AOV and RTO impact. However, Output 2 strictly judged on the Shopify-adjusted numbers as requested, cutting losers that Output 1 kept alive, and boldly left unspent budget rather than burning cash on unprofitable ad sets."
+}

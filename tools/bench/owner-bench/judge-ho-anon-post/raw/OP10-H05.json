@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It finds the biggest preventable causes, writes the three most useful articles in our voice, and gives a sensible ticket-saving range with clear working.",
+  "biggest_mistake": "A few article steps and labels would need a product check before publishing, especially the exact paths for settings and store refunds.",
+  "what_would_make_it_a_10": "Tighten the articles after checking exact app labels on iOS, Android and web, and make the Simplify debts article the main rewrite of the existing balance page rather than only a new linked page."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is practical, clear, and puts the Simplify debts, deleted expense, and app-store refund problems near the top with usable draft articles.",
+  "biggest_mistake": "It overpromises in places, especially 'nothing is lost for good,' and it misses the Settle up help link even though that is a large ticket area with an already helpful article.",
+  "what_would_make_it_a_10": "Remove the overclaim about history, verify the web and refund steps, add the Settle up in-app link, and give an honest range rather than mainly one point estimate."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "I would rather hand Output 1 to the team tomorrow because it is more careful about what we can actually reduce, gives a better forecast range, and includes the right in-app links. Output 2 is useful, but it has a few more risky claims and misses an easy high-volume link change."
+}

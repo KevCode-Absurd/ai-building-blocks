@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It builds the plan around the real signals: YouTube and extension authors first, Product Hunt/Hacker News later, and migration as the launch gate.",
+  "biggest_mistake": "The channel table says it is ranked by week-4 active share rather than retained-user impact, which could confuse the stated ranking logic.",
+  "what_would_make_it_a_10": "Tighten the ranking wording and make the migration gate stricter, such as zero known hotkey or extension carry-over losses before wave 1."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 7,
+  "clear": 8,
+  "voice": 7,
+  "range": 8,
+  "ready": 5,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "It catches the biggest issues in the data: retained channels matter more than raw installs, and the hotkey/settings migration problem must be solved before launch.",
+  "biggest_mistake": "The launch copy and email are not ready to use because they contain placeholders, and the plan puts Show HN and email to everyone too early for a retention-led staged rollout.",
+  "what_would_make_it_a_10": "Remove placeholders, move Hacker News/Product Hunt later, align email with the staged rollout, and set migration testing before the 1 December code freeze."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the plan I could hand to the team tomorrow: it has a practical dated rollout, clear gates, finished copy, and makes the right channel bets. Output 2 understands much of the data, but it needs rework because of placeholders, weaker launch sequencing, and some unrealistic support assumptions."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent math on reviewer calibration and two-pass grading, plus a smart table mapping UTC to local cities.",
+  "biggest_mistake": "Did not write out the actual prompt for the customer reply in the post, leaving that step unfinished before publishing.",
+  "what_would_make_it_a_10": "Include the exact customer ticket text in the job post so we can paste and publish immediately."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Included the exact customer scenario right in the post, captured our calm tone effortlessly, and kept the math lean and actionable.",
+  "biggest_mistake": "Could have included a quick timezone conversion table like O1 did for applicant clarity.",
+  "what_would_make_it_a_10": "Add a 3-city local time reference table to make the schedule instantly clear to APAC candidates."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 writes in our exact voice and gave me a finished product with the real HEY prompt included, meaning I can publish it today without writing missing copy."
+}

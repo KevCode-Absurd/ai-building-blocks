@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 9,
+  "range": 8,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Uses our own signals precisely: overnight UTC gap drives the hours, the 0.62 writing correlation drives an 85% written-work weighting, and the weekend rotation is repeated in post, call and offer.",
+  "biggest_mistake": "The post is a bit long and busy (time-zone table, application puzzle inside the post) which risks diluting the calm, simple feel for the career-changer reader.",
+  "what_would_make_it_a_10": "Tighten the post to one calm read and move the time-zone table to a link or appendix, keeping the honest hard parts and salary at the top."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 10,
+  "voice": 10,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Reads exactly like us: salary first, plain hard parts, the weekend rotation stated kindly with the reason, and career changers explicitly welcomed in their own words.",
+  "biggest_mistake": "The 'why this job?' 100-word question quietly slips a mini cover letter back in, which works against the goal of cutting reviewer load and the write-like-a-person ethos.",
+  "what_would_make_it_a_10": "Replace the open 'why this job?' prompt with a signal-bearing task or a single gate, so the application stays short and every word scored is meaningful."
+ },
+ "winner": "2",
+ "margin": "slight",
+ "reason": "Both are strong and hireable, but Output 2 sounds more like 37signals and is easier to read at a glance, while Output 1 packs its intelligence into a busier post that a tired applicant could skim past."
+}

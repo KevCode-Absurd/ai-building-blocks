@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is tightly built around your actual signals: on-feet worker creative, problem-first hooks, Shopify-based measurement, Spark Ads on the nurse and server from day 1, and a day-30 decision tied to the real 90-day economics.",
+  "biggest_mistake": "A few rules are a bit over-engineered or shakier than the rest, especially the holdout-by-state idea and some measurement thresholds that mix store and platform reads in a way the team may debate.",
+  "what_would_make_it_a_10": "Tighten the measurement plan to one simple owner-grade scorecard, soften or remove the state holdout unless you are sure ops can support it, and make the launch creative list slightly simpler to execute."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is clear, practical, and very usable for a team, with good setup steps, a sensible creative plan, and strong emphasis on worker-led problem-first ads instead of generic TikTok advice.",
+  "biggest_mistake": "It adds a few assumptions and decision rules that are less grounded in your case, like 21+ targeting, Smart+ in month one, family-pack landing page assumptions, and a day-30 bar that leans too much on volume targets and TikTok-claimed orders.",
+  "what_would_make_it_a_10": "Anchor every rule more directly to your numbers, keep the month-one structure simpler and more manual, and make the success test rest more clearly on Shopify new-customer economics rather than platform reporting or extra assumptions."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 feels more like it was written from your brief and your data, and I would trust it more as the Monday plan. Output 2 is good, but it makes a few more assumptions and is a little less disciplined about how success should be judged."
+}

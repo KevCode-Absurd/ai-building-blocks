@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent data synthesis and rigorous prioritization based on time-to-value, matching the exact voice guidelines.",
+  "biggest_mistake": "Missed the nuance that the 'price jump' for in-house users is closely tied to the Lite limit cliff, missing an opportunity to link them directly in the fix.",
+  "what_would_make_it_a_10": "Explicitly linking the in-house price jump to the usage limit solution, creating a smoother step to Standard."
+ },
+ "o2": {
+  "fit": 7,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with major rework",
+  "biggest_strength": "Clear presentation of the math per 100 trials and accurate diagnosis of where the churn is coming from.",
+  "biggest_mistake": "Included a generic content marketing move (Move 5) with no hard numbers behind it, exactly what I stated would annoy me.",
+  "what_would_make_it_a_10": "Drop the generic content advice, factor build-time into the priority ranking so we tackle quick wins first, and stick strictly to the data."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 perfectly captured our blunt, data-led voice, ranked the moves logically by quickest time to value, and completely avoided the generic fluff that dragged down Output 2."
+}

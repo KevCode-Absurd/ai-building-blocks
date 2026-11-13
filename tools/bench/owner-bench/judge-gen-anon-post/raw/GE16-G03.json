@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Executes the brand notes flawlessly—leads with the three numbers, uses the exact 'Here's what went wrong and what we're doing about it' framing, pairs problems immediately with fixes, and includes ready-to-send forwardable blurbs for the asks.",
+  "biggest_mistake": "The table includes a runway row that calculates an apples-to-oranges comparison for September without adjusting for the one-off conference deposit in October.",
+  "what_would_make_it_a_10": "Already virtually perfect; could add a footnote to the runway row in the table clarifying that October's underlying runway excluding the deposit is 37 months."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Excellent insight linking the $0.9M compute increase to monthly revenue ($10.4M) to explain the margin drop, and smart segmentation of asks by reader type (angels, lead partner).",
+  "biggest_mistake": "Separates 'What went wrong' from 'What we're doing about it', which delays the solution, and misses the opportunity to provide copy-paste forwardable blurbs for the intro asks.",
+  "what_would_make_it_a_10": "Pair each problem directly with its immediate action item, use the exact Supabase voice header from the brief, and provide forwardable copy for the asks."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Output 1 nails the Supabase voice and builder mentality, pairs every negative disclosure immediately with its operational fix, and makes investor introductions effortless by including ready-to-forward blurbs."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 7,
+  "ready": 9,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Clean per-ad-set verdicts with rupee reasons and a 14-day budget that adds to ₹5,60,000, led by the correct move of relaunching the paused creator video and splitting out women 25 to 34.",
+  "biggest_mistake": "It arrives at a slightly inconsistent break-even story (₹394 vs ₹282 lines) and still recommends scaling ASC and DPA on thin/uncertain margins, so the 'safe line' logic isn't applied consistently to its own scale calls.",
+  "what_would_make_it_a_10": "Make the break-even lines internally consistent and show exactly where the ₹65,000 ASC upside and each scale call sits against the store-counted line, not just Meta's count."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Because Meta over-counts, it correctly says most ad sets lose on store-counted numbers and refuses to manufacture scale, holding ₹1,30,400 unspent rather than buying orders above break-even; each ad set's line uses its own COD/RTO mix.",
+  "biggest_mistake": "Leaving ₹1,30,400 unspent is defensible but could feel over-cautious to an owner who wants growth; the ₹90-per-customer release condition is a good hook but underdeveloped.",
+  "what_would_make_it_a_10": "Show the exact trigger and ad-by-ad plan for releasing the ₹1,30,400 the moment ASC proves it clears ₹282, so the owner sees the growth path, not just the restraint."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 is the one I'd pay for: it refuses to scale anything that loses money on real store orders, makes the paused-video fix the first move, and gives me per-ad-set rupee lines that hold together. Output 1 is good and prettier, but it stretches to scale ASC and DPA on a 'safe line' it doesn't apply consistently."
+}

@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 9,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Genuinely analytical: it spots that direct-created databases grew only 2.6% (so nearly all growth came from the low-converting partner channel), gives the burn walk in a table, and owns the forecast miss plainly ('That is on us').",
+  "biggest_mistake": "Customer A should be the first thing in 'what went wrong', not the second item after a long margin paragraph; and the aside that the $0.9M compute rise is 'roughly 9 points of margin, more than the 7-point drop' invites a challenge it never answers.",
+  "what_would_make_it_a_10": "Put the losing account and the missed forecast at the very top, move the asks into the first screen the way the lead partner reads on his phone, cut the speculative margin-points arithmetic, and drop the 'Assumptions in this draft' block into two clean lines."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "It reads like a note a partner can act on in 90 seconds: bad news first, a 'what we need' line with dates in the first screen, the runway row showing 52 months to 33, and forwardable one-liners for the angel intros.",
+  "biggest_mistake": "Small ones only: the pause 'ships by 27 November' but the saving is promised in the November update, which leaves almost no month to show it; and it announces the New York base as settled when that is still an open decision.",
+  "what_would_make_it_a_10": "State the pause saving as something you will measure over the first full month (December update), flag the New York base as a decision you have made only if it is, and add one line on Customer A's ARR timing versus NRR so the January hit is unambiguous."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Both are candid and get the numbers right, but #2 puts the losing customer and the ask in the first screen and hands my angels ready-to-forward intro text, which is what makes it usable tomorrow; #1 has one extra insight but buries the worst news and argues itself into a margin claim an investor will pick at."
+}

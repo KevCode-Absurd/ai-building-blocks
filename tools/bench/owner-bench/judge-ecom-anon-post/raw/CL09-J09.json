@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 8,
+  "clear": 6,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It turns the diagnosis into hard numbers I can manage to. It estimates contribution after ads at 7.8% now, down from 13.6%. Each move is sized in margin points, with an owner, week-4 and week-8 checkpoints, and clear 'continue, change or stop' rules. It also caps ad sets at the $94 payback level.",
+  "biggest_mistake": "It is dense and full of jargon ('points', solving for w, low/likely/high ranges), so it is hard for me to read quickly or share with the team. Some figures look more precise than the stacked assumptions allow. The 'flows should be about half of email revenue' yardstick is stated without support.",
+  "what_would_make_it_a_10": "Rewrite it in plainer, grade-8 language and add a short week-by-week timeline. Show the linen return impact on the overall return rate (about 5.2% to 7.0%). Give the flow target as the pre-January figure rather than an outside benchmark."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It reads clearly and is easy to follow. The 'needs checking' table gives each question an owner and a deadline. The payback by channel stands out: Meta loses $27 per customer, Google breaks even, and other channels make $14. It also has a simple 90-day timeline and sensible return fixes across the whole range.",
+  "biggest_mistake": "The scorecard does not commit to a contribution baseline ('set in week 1', target 'up every month') and has no action thresholds. The moves are ranked by words like 'High' and 'Medium' instead of sized gains, so I cannot compare them properly.",
+  "what_would_make_it_a_10": "Estimate the current contribution margin and give it a day-90 number. Size each move in dollars or margin points. Add trigger thresholds to each scorecard line so the weekly meeting leads to decisions."
+ },
+ "winner": "1",
+ "margin": "slight",
+ "reason": "Both found the real problems: Meta, linen, and the email capture that was switched off. The first gives me numbers and decision rules I can run the business on, though the second is easier to read and I would happily borrow its checks table and timeline."
+}

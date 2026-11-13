@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 8,
+  "insight": 7,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very practical, complete flows. The tier 3 48-hour hold, the switch from COD to UPI sent as a normal chat right after confirmation, and moving one agent to a 2 pm to midnight shift all fit how we actually run.",
+  "biggest_mistake": "The prepaid nudge (template 3) is filed as Utility. Meta will likely recategorise it, and I wanted that nudge as Marketing. Tier 3 also gets no stronger nudge or incentive, and the 7-day exchange window is made up.",
+  "what_would_make_it_a_10": "File the prepaid nudge as Marketing with a tiered incentive. Make the tier 3 handling stronger, for example an advance option. Show net savings after costs. Pull the exchange wording from our real policy instead of assuming it."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 8,
+  "voice": 8,
+  "range": 9,
+  "ready": 8,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It sizes the prepaid discount by pincode tier using the expected RTO loss (₹70, ₹41 and ₹27 per order). It also has holdouts, a net-saving metric, a ₹99 tier 3 advance test, and skips confirmation for trusted repeat buyers like Arjun. That shows me where the money actually is.",
+  "biggest_mistake": "Promising agent calls to all unconfirmed tier 3 orders could stretch 4 agents thin. The T1 confirmation also shows a delivery range before the order ships, which edges toward promising dates.",
+  "what_would_make_it_a_10": "Use an automated call or IVR for tier 3 confirmations. Drop the EDD from T1. Add an evening agent shift so after-hours size questions get a person."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 gets the template categories right, puts its money and effort where the tier 3 losses are, and tells me how to prove each step pays off. Output 1 is solid but more generic, and it files the prepaid nudge as Utility."
+}

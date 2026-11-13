@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 10,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 10,
+  "overall": 10,
+  "use_as_is": "as is",
+  "biggest_strength": "Correctly interpreting the review rule to word sleep posts carefully, allowing us to keep our high-converting sleep content in Week 1 without triggering legal review.",
+  "biggest_mistake": "Missed the opportunity to use the exact brand phrase provided in the brief ('Take a breath. You've got this.').",
+  "what_would_make_it_a_10": "Sprinkling in the exact brand phrases provided in the guidelines. Strategically and mathematically, it is already a 10."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 7,
+  "reasoning": 7,
+  "correct": 9,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Great insight to merge the 'replaying emails' work-stress hook into a night-time sleep post.",
+  "biggest_mistake": "Assuming all sleep posts required review and completely dropping our highest-converting theme from Week 1, costing us roughly 1,400 app installs.",
+  "what_would_make_it_a_10": "Drafting Week 1 sleep posts that don't name medical conditions to avoid review, so we don't sacrifice our best-performing theme for an entire week."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 understood how to write high-converting sleep content in Week 1 without triggering the clinical review process. Output 2 played it too safe, dropped sleep from Week 1 entirely, and left thousands of potential app installs on the table."
+}

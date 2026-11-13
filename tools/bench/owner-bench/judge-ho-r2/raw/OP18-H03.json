@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It acts on the three real levers in the data: the silent delivery gap, low fit finder use for bras, and the refund-first portal.",
+  "biggest_mistake": "A few customer-facing lines could be softened slightly, and the swap-sales number is an upper bound that needs clearer caveats.",
+  "what_would_make_it_a_10": "Tighten the customer copy a little more to feel fully Lounge, and show the swap impact as a range net of likely exchange behaviour rather than a headline maximum."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 8,
+  "voice": 7,
+  "range": 7,
+  "ready": 7,
+  "overall": 7,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It gives a clear first move and gets the core maths right, especially on tickets, bra returns and swaps keeping sales rather than saving return cost.",
+  "biggest_mistake": "It misses the proactive day-3 update, weakens the portal nudge by not pre-selecting size swap, and some copy sounds too certain about delivery timing.",
+  "what_would_make_it_a_10": "Add the day-3 reassurance message, make size swap the default for fit reasons while keeping refund visible, and rewrite delivery copy so it gives a range without sounding like a promise."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is closer to something I could hand to the team: it has the day-3 delivery message, the bra-specific fit follow-up, the right portal behaviour, and careful expected ranges. Output 2 is solid, but it misses a couple of the highest-signal fixes and needs more copy edits before I would trust it with customers."
+}

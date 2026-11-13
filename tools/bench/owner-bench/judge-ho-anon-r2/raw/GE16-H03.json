@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9.7,
+  "use_as_is": "as is",
+  "biggest_strength": "Directly targets the root causes: it adds a proactive day-3 check-in to intercept the 62% of WISMO tickets before they peak, and message 5 gives actual, non-shaming bra fitting advice (loosest hook, band level, no spill) to salvage fit before a return is initiated.",
+  "biggest_mistake": "The sales-kept calculation assumes the full £58 AOV per return swapped, though it rightly acknowledges in parentheses that swaps are usually single items.",
+  "what_would_make_it_a_10": "Explicitly rank the three interventions by net financial impact in the executive summary table."
+ },
+ "o2": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 10,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8.3,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "The upfront summary table and clear attribution of operational owners per week make it easy for leadership to digest.",
+  "biggest_mistake": "Waiting until the end of day 5 to send message 4 misses the window where 62% of WISMO tickets occur (days 3–5), and the delivery message offers no practical bra fit guidance before offering a swap.",
+  "what_would_make_it_a_10": "Send a proactive update on day 3 instead of day 5, and include practical bra fitting education in the post-delivery flow."
+ },
+ "winner": "1",
+ "margin": "decisive",
+ "reason": "Output 1 understood the customer journey far better: sending an update on the morning of day 3 intercepts tickets right when customers start worrying, and giving actual bra fit advice at delivery solves returns before they happen."
+}

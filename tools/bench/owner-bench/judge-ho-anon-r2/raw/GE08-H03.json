@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 9,
+  "reasoning": 8,
+  "correct": 9,
+  "clear": 9,
+  "voice": 7,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Very crisp financial realism, specifically noting that a size swap protects the sale but still incurs the £7.50 postage/handling cost.",
+  "biggest_mistake": "Customer-facing copy in Message 2 leaks internal business jargon: telling a shopper 'People who use it send back less than half as many bras' is awkward and unbranded.",
+  "what_would_make_it_a_10": "Fix Message 2 copy to speak to customer confidence rather than return rates, and add actual fit guidance (band, hook, cups) in the post-delivery bra email."
+ },
+ "o2": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 9,
+  "reasoning": 9,
+  "correct": 10,
+  "clear": 9,
+  "voice": 10,
+  "range": 9,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "as is",
+  "biggest_strength": "Outstanding customer-facing copy that perfectly executes the brand voice, especially the delivery email offering practical bra fit guidance (loosest hook, band level, smooth cups) before pushing a swap.",
+  "biggest_mistake": "Assumes a full swap can pre-select and automate inventory hold without addressing out-of-stock sizes or Loungewear split sizing.",
+  "what_would_make_it_a_10": "Explicitly address out-of-stock fallback handling during one-step swaps and rank the financial gains directly by net profit impact."
+ },
+ "winner": "2",
+ "margin": "clear",
+ "reason": "Output 2 wrote genuinely usable customer copy that sounds like Lounge, including real bra fit guidance on delivery. Output 1 leaked back-office return metrics into its customer emails."
+}

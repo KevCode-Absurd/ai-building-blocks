@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 10,
+  "insight": 9,
+  "priorities": 10,
+  "reasoning": 10,
+  "correct": 10,
+  "clear": 10,
+  "voice": 9,
+  "range": 9,
+  "ready": 9,
+  "overall": 9.5,
+  "use_as_is": "as is",
+  "biggest_strength": "Flawless financial grounding and strategic execution: accurately models the $38 90-day break-even CPA, sets up a clean Test-to-Scale framework, uses Maria's problem hooks while saving the mission for the close, and incorporates a smart incrementality sanity-check against flat Meta spend.",
+  "biggest_mistake": "Does not explicitly mention uploading an existing customer exclusion audience in the tracking setup phase.",
+  "what_would_make_it_a_10": "Add a customer list exclusion audience during setup to ensure 100% of the $30k targets true net-new prospective customers."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 9,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 8,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 7,
+  "overall": 7.8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "Strong analytical breakdown of the 90-day margin economics and a great triangulation method for Day 30 (Shopify orders, post-purchase survey, blended CPA).",
+  "biggest_mistake": "Listed 'I like that a pair gets donated' as an opening hook line for an ad, directly violating the brief's guidance and data showing mission-first hooks underperform dramatically.",
+  "what_would_make_it_a_10": "Fix the opening hook error so donation is strictly an end-card reason-to-believe, and tighten the $114 0-purchase kill threshold, which burns too much test budget before cutting a zero-converter."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 delivers an airtight, battle-tested launch plan with a proven Test/Scale structure, disciplined kill rules, and zero unforced errors. Output 2 is good, but it mistakenly scripted an ad opening with the donation line—the exact hook type our Meta data proved was least effective."
+}

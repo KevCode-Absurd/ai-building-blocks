@@ -1,0 +1,37 @@
+{
+ "o1": {
+  "fit": 9,
+  "insight": 8,
+  "priorities": 10,
+  "reasoning": 9,
+  "correct": 9,
+  "clear": 9,
+  "voice": 9,
+  "range": 8,
+  "ready": 9,
+  "overall": 9,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It catches the three biggest removable causes, writes usable answer-first articles, changes the right in-app links, and shows conservative ticket-saving working with correct numbers.",
+  "biggest_mistake": "The restore article includes visible 'Search words' text and assumes exact app labels/restore behaviour that should be checked before publishing.",
+  "what_would_make_it_a_10": "Hide the search terms as metadata, verify the exact restore and settings labels across platforms, and add the currency article brief for week 2."
+ },
+ "o2": {
+  "fit": 8,
+  "insight": 8,
+  "priorities": 8,
+  "reasoning": 8,
+  "correct": 7,
+  "clear": 9,
+  "voice": 8,
+  "range": 8,
+  "ready": 8,
+  "overall": 8,
+  "use_as_is": "with small tweaks",
+  "biggest_strength": "It is tightly focused on the main ticket drivers and gives clear, publishable drafts with good in-app link fixes and a reasonable savings estimate.",
+  "biggest_mistake": "It invents some product behaviour and risky claims, especially 'nothing is lost for good', and the proposed merge of the already-working payment article is not well justified.",
+  "what_would_make_it_a_10": "Remove unsupported claims, skip the low-value payment merge, verify platform steps, and make the forecast a clearer range rather than one headline number."
+ },
+ "winner": "1",
+ "margin": "clear",
+ "reason": "Output 1 is the one I would rather ship: it is more disciplined about priorities, avoids unnecessary article merging, gives a cleaner conservative forecast, and better matches the one-writer/two-week constraint. Output 2 is good, but it has more unsupported product claims and a less convincing work plan."
+}

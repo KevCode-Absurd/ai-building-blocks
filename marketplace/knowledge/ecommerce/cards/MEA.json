@@ -2186,5 +2186,605 @@
     },
     "strength": "stated_by_practitioner",
     "public": true
+  },
+  {
+    "id": "MEA-6085",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "Conversions API",
+      "event timing",
+      "cash on delivery"
+    ],
+    "claim": "Conversions API events must be sent within 7 days of event_time; one event older than that fails the whole request, so slow signals like delivered COD orders need their own fast batch.",
+    "body": "Meta's Conversions API parameter reference says event_time can be up to 7 days before the event is sent, and if any event in a request is older than 7 days Meta returns an error for the entire request and processes none of the events. event_name can be a standard event or a custom event name, and must match the browser event name when the same event is also sent by the pixel for deduplication. action_source must be one of email, website, app, phone_call, chat, physical_store, system_generated, business_messaging or other. For cash-on-delivery stores this sets the design: an order confirmed by call or WhatsApp a few hours after it is placed can be sent as a custom event (for example ConfirmedOrder) well inside the window, while a delivery that happens 8 to 12 days after the click can still be sent with its own recent event_time but will often fall outside a 7-day click attribution window. How to apply: send confirmation events within hours, in their own batches so one late event cannot block the rest, and do not plan to optimise on an event that usually happens more than 7 days after the click.",
+    "conditions": "Stores sending server events to Meta, especially cash-on-delivery and other delayed-outcome orders.",
+    "fails_when": "Stores without a server or partner integration able to send custom events; very low order volume where a new event cannot reach enough weekly volume to optimise on.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "event_time up to 7 days old",
+      "one stale event fails the whole request"
+    ],
+    "asks": [
+      "Can I send COD delivered orders back to Meta?",
+      "Why did my whole Conversions API batch fail?",
+      "How old can a Conversions API event be?",
+      "Which action_source should a WhatsApp confirmed order use?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6085",
+    "evidence": {
+      "where": "Server event parameters: event_time, event_name and action_source"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6086",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "custom conversions",
+      "optimisation event"
+    ],
+    "claim": "Meta lets an ad set optimise for a custom event or custom conversion instead of Purchase; an ad account can hold up to 100 custom conversions.",
+    "body": "Meta's pixel conversion tracking guide separates standard events (such as Purchase), custom events a business defines and sends itself, and custom conversions built from rules on events or URLs. It says custom conversions can be used to optimise ad campaigns and that the maximum per ad account is 100. Together with the Conversions API, this lets a store send a business-specific outcome, such as a confirmed cash-on-delivery order or a prepaid order, and build an ad set that optimises toward it rather than toward every placed order. Meta also flags and restricts custom conversions that may suggest information not allowed under its terms, so names and rules must stay plain. How to apply: name the outcome plainly, check it reaches the volume an ad set needs to learn before switching optimisation, and keep Purchase reporting running beside it so results stay comparable.",
+    "conditions": "Stores with a working pixel or Conversions API that can send an extra event.",
+    "fails_when": "The custom event fires too rarely for delivery to learn; the custom conversion name or rule hints at sensitive data and gets restricted.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Up to 100 custom conversions per ad account"
+    ],
+    "asks": [
+      "Can I make Meta optimise for confirmed orders instead of all purchases?",
+      "What is the difference between a custom event and a custom conversion?",
+      "How many custom conversions can one ad account have?",
+      "How do I tell Meta which orders actually count?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6086",
+    "evidence": {
+      "where": "Conversion tracking: standard events, custom events, custom conversions",
+      "quote": "The maximum number of custom conversions per ad account is 100."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6100",
+    "modules": [
+      "MEA",
+      "WLD"
+    ],
+    "topics": [
+      "attribution windows",
+      "new channel tests"
+    ],
+    "claim": "Pinterest conversion insights default to a 1-day view and 30-day click window when no window is chosen, a click window about four times longer than a 7-day click read on Meta.",
+    "body": "Pinterest's help article on conversion insights says that if no conversion window is selected it shows data for 1-day view and 30-day click; otherwise the window follows the account's conversion reporting preference, and a window chosen there can be saved as the account default. A 30-day click window credits Pinterest with any purchase up to 30 days after a click, so its reported return is not comparable with a Meta report read on 7-day click. How to apply: before comparing a Pinterest test with other channels, set the reporting window to match the store's standard (for example 7-day click, 1-day view), and judge the test on store orders and new customers, not on the in-platform figure alone.",
+    "conditions": "Stores testing or running Pinterest ads with the Pinterest tag; comparisons against Meta, Google or TikTok results.",
+    "fails_when": "Accounts that have already saved a different default window; then read the window shown in Ads Manager.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "default when no window is selected: 1-day view and 30-day click",
+      "60-day windows are not available in conversion insights"
+    ],
+    "asks": [
+      "Why does Pinterest show a much better ROAS than Meta?",
+      "What attribution window does Pinterest use?"
+    ],
+    "platforms": [
+      "pinterest"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6100",
+    "evidence": {
+      "where": "Section on choosing a conversion window",
+      "quote": "we'll show data for 1-day view and 30-day click"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6101",
+    "modules": [
+      "MEA",
+      "WLD"
+    ],
+    "topics": [
+      "attribution windows",
+      "new channel tests"
+    ],
+    "claim": "Snap's Marketing API sets the swipe-up attribution window to 28 days and the view window to 1 day by default; 1 and 7-day swipe windows are the other options.",
+    "body": "Snap's measurement documentation lists swipe_up_attribution_window values of 1, 7 or 28 days with 28 days as the default, and view_attribution_window values from none up to 7 days with 1 day as the default (the 28-day view window is deprecated). Reports pulled at the default therefore credit Snap with purchases up to 28 days after a swipe, which makes a new Snap test look stronger than a channel read on 7-day click. How to apply: pull Snap results at a 7-day swipe window to match the store's other channels, and decide the test on store orders and new customers.",
+    "conditions": "Stores testing Snapchat ads with the Snap Pixel or Conversions API; reports pulled through Ads Manager or the API.",
+    "fails_when": "An ad account with its own saved reporting default; then the account setting applies.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "swipe-up window: 1, 7 or 28 days, default 28",
+      "view window default 1 day"
+    ],
+    "asks": [
+      "What attribution window does Snapchat use?",
+      "Why do Snap ads report more purchases than the store sees?"
+    ],
+    "platforms": [
+      "snap"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6101",
+    "evidence": {
+      "where": "Measurement reference, attribution window parameters",
+      "quote": "1_DAY, 7_DAY, 28_DAY (default)"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6102",
+    "modules": [
+      "MEA",
+      "WLD"
+    ],
+    "topics": [
+      "attribution windows",
+      "new channel tests"
+    ],
+    "claim": "Reddit Ads defaults to a 28-day click and 1-day view attribution window, with 1, 7 or 28-day options, and the view window can never be longer than the click window.",
+    "body": "Reddit's web attribution overview says the click-through setting defaults to 28 days and the recommended view-through and click-through setting defaults to 28 days for clicks and 1 day for views; each can be set to 1, 7 or 28 days, and a longer view window needs a longer click window. Settings are changed in Events Manager under Attribution Settings. How to apply: before a Reddit test, set the window to the store's standard (for example 7-day click, 1-day view) so its results compare with other channels, and judge the test on store orders.",
+    "conditions": "Stores testing Reddit ads with the Reddit Pixel or Conversions API.",
+    "fails_when": "Reddit changes its defaults; re-check Events Manager on the day.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "default 28-day click, 1-day view",
+      "options 1, 7 or 28 days"
+    ],
+    "asks": [
+      "What attribution window does Reddit Ads use?",
+      "How do I compare Reddit ads with Meta?"
+    ],
+    "platforms": [
+      "reddit"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6102",
+    "evidence": {
+      "where": "Attribution windows section"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6125",
+    "modules": [
+      "MEA",
+      "GAD"
+    ],
+    "topics": [
+      "conversion tracking"
+    ],
+    "claim": "Only primary conversion actions fill the Conversions column and drive bidding; secondary actions are observe-only, and GA4-created conversions start as secondary.",
+    "body": "Google Ads groups conversion actions into goals. Primary actions are reported in the Conversions column and used for bidding when their goal is used for bidding. Secondary actions appear only in All conversions and are not used for bidding, except inside a custom goal. Conversions created from Google Analytics arrive as secondary by default and can only be made primary inside Google Ads. Smart Bidding may show Learning for up to 7 days after major changes, and Google advises allowing 1 to 2 conversion cycles after a big change in conversion behaviour. How to apply: keep exactly one purchase action as primary (the Google Ads tag or the store's Google channel), set GA4 purchase and micro-events to secondary, and expect a learning period after any switch.",
+    "conditions": "Any Google Ads account with more than one purchase-like conversion action.",
+    "fails_when": "Custom goals deliberately bid on secondary actions; interface names change.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Learning status up to 7 days after major changes",
+      "allow 1 to 2 conversion cycles after big changes"
+    ],
+    "asks": [
+      "Why are my Google Ads conversions double counted?",
+      "Should GA4 purchases be primary in Google Ads?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6125",
+    "evidence": {
+      "where": "About primary and secondary conversion actions"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6126",
+    "modules": [
+      "MEA",
+      "GAD"
+    ],
+    "topics": [
+      "conversion tracking"
+    ],
+    "claim": "Enhanced conversions for web send the buyer's email, name, address or phone from the conversion page, hashed with SHA256 before it leaves the site, to match conversions to signed-in Google users.",
+    "body": "Enhanced conversions add first-party data the buyer typed at checkout to the conversion tag. The tag hashes it with one-way SHA256 before sending, and Google matches it to Google accounts that were signed in when the person engaged with an ad. This recovers conversions that cookies miss and gives bidding more signal. Data that can be sent includes email, name, home address and phone number. How to apply: switch enhanced conversions on for the primary purchase action, confirm the store's privacy notice and consent set-up cover it, and check the diagnostics in the conversion action after a week.",
+    "conditions": "Google Ads web purchase conversions where checkout collects email or phone.",
+    "fails_when": "Consent rules in the buyer's market require opt-in that the store does not collect; the tag fires where the email field is not available; setting names change.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "What are enhanced conversions?",
+      "Is customer data sent to Google in plain text?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6126",
+    "evidence": {
+      "where": "About enhanced conversions for web"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6203",
+    "modules": [
+      "MEA",
+      "SEC"
+    ],
+    "topics": [
+      "bot traffic in analytics"
+    ],
+    "claim": "GA4 excludes known bots automatically using Google research and the IAB spiders and bots list; you cannot turn this off or see how much traffic it removed.",
+    "body": "Google Analytics help states that traffic from known bots and spiders is excluded automatically, to the extent possible, identified through Google research and the International Spiders and Bots List kept by the Interactive Advertising Bureau. At this time the exclusion cannot be disabled, and the property cannot show how much known bot traffic was excluded. How to use it: GA4 already removes declared bots, so a gap between GA4 and a store's own session count is expected and is not by itself proof of an attack. Bots that disguise themselves as browsers are not on the list and still reach GA4; find them by pattern (one-page sessions with zero engagement, odd sources, sudden spikes from one country or city) and exclude them with data filters, segments or comparisons, not by assuming GA4 caught them.",
+    "conditions": "Google Analytics 4 properties.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Does GA4 filter bot traffic?",
+      "Why does GA4 show fewer sessions than Shopify?"
+    ],
+    "platforms": [
+      "ga4"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6203",
+    "evidence": {
+      "where": "Known bot-traffic exclusion help article"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6220",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "UTM integrity",
+      "channel grouping"
+    ],
+    "claim": "GA4 files a visit as Paid Social only when the source is a known social site and the medium matches cp, ppc, retargeting or paid*; a social source with any other medium becomes Organic Social.",
+    "body": "GA4's default channel group is a fixed rule set that cannot be edited and is not case sensitive. Paid Social (manual tags): source matches Google's list of social sites AND medium matches the pattern ^(.*cp.*|ppc|retargeting|paid.*)$. Organic Social: source matches the social list OR medium is social, social-network, social-media, sm, social network or social media. Paid Search: a search-site source with the same paid medium pattern. Email: source or medium is email, e-mail, e_mail or e mail. SMS: source or medium is exactly sms. Affiliates: medium is exactly affiliate. Display: medium is display, banner, expandable, interstitial or cpm. Referral: medium is referral, app or link. Cross-network: campaign name contains cross-network. Anything matching no rule is Unassigned. So utm_source=facebook with utm_medium=paid_social lands in Paid Social, but utm_medium=facebook_ads or utm_medium=ads lands in Organic Social and makes paid traffic look free. A WhatsApp broadcast tagged medium=whatsapp lands in Organic Social or Unassigned depending on the source, so pick the medium on purpose.",
+    "conditions": "GA4 default channel group as published on the date checked; custom channel groups can be built separately and do not change the default one.",
+    "fails_when": "Google changes the rules or the social and search site lists, which it reviews at least once a year.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Paid medium pattern: ^(.*cp.*|ppc|retargeting|paid.*)$",
+      "SMS: source or medium exactly sms",
+      "Affiliates: medium exactly affiliate"
+    ],
+    "asks": [
+      "Why does my Meta ad traffic show as Organic Social in GA4?",
+      "What utm_medium should I use for paid social?",
+      "Why is so much traffic Unassigned in GA4?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6220",
+    "evidence": {
+      "where": "Channel rules table: Paid Social, Organic Social, Email, SMS",
+      "quote": "Channel definitions aren't case sensitive and can't be edited."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6221",
+    "modules": [
+      "MEA"
+    ],
+    "topics": [
+      "UTM integrity"
+    ],
+    "claim": "Always set utm_source, utm_medium and utm_campaign; GA4 also reads utm_id, utm_source_platform, utm_term and utm_content, and values are case sensitive, so Google and google split into two rows.",
+    "body": "Google's guide lists the UTM parameters GA4 collects: utm_id (campaign ID), utm_source (the referrer), utm_medium (the marketing medium), utm_campaign (product, slogan or promo), utm_source_platform (the buying platform), utm_term (paid keyword) and utm_content (to tell creatives or links apart). utm_creative_format and utm_marketing_tactic exist but are not reported in GA4 properties. Source, medium and campaign should always be set; missing parameters show as (not set). Values are case sensitive, so utm_source=google and utm_source=Google are different rows; Google's best practice is lowercase. Use this with the channel group rules (MEA-6220): the medium value decides the channel.",
+    "conditions": "GA4 web data streams; parameter list as published on the date checked.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "3 parameters always set: source, medium, campaign",
+      "2 parameters not reported in GA4: utm_creative_format, utm_marketing_tactic"
+    ],
+    "asks": [
+      "Which UTM parameters do I need?",
+      "Why do I see google and Google as separate sources?",
+      "Why is campaign (not set) in GA4?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6221",
+    "evidence": {
+      "where": "URL parameters table and best practices",
+      "quote": "Parameter values are case sensitive"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6222",
+    "modules": [
+      "MEA"
+    ],
+    "topics": [
+      "data retention"
+    ],
+    "claim": "Standard GA4 properties keep event-level data for 2 or 14 months; the setting limits explorations and funnel reports only, and a raise applies to data still held, not to data already deleted.",
+    "body": "On standard properties, event data and user-level data can each be kept for 2 or 14 months; 26, 38 and 50 months are for paid 360 properties. Retention affects only explorations and funnel reports; standard aggregated reports keep their history. Raising the period applies to data GA4 still holds; data past the old limit has already been deleted and does not come back. Lowering it takes effect at the next monthly deletion run, and GA4 waits 24 hours before applying a change. For a store this means: set 14 months on day one, or year-on-year cohort and funnel explorations will be empty.",
+    "conditions": "Standard (non-360) GA4 properties.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "2 or 14 months on standard properties",
+      "24-hour wait before a change applies"
+    ],
+    "asks": [
+      "How long does GA4 keep my data?",
+      "Why can't I see last year in a GA4 exploration?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6222",
+    "evidence": {
+      "where": "Data retention options and how changes apply",
+      "quote": "only affects explorations and funnel reports"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6223",
+    "modules": [
+      "MEA"
+    ],
+    "topics": [
+      "deduplication",
+      "event contracts"
+    ],
+    "claim": "GA4 deduplicates purchase events that share a transaction_id, so every order needs its own ID; an empty-string ID collapses all such purchases into one.",
+    "body": "Google Analytics deduplicates purchase events with the same transaction ID. That protects against a thank-you page reload counting twice, but only if the ID is the store's real, unique order ID. Sending the same ID for different orders undercounts purchases, and sending an empty string makes GA4 treat every purchase with an empty ID as one. Check: compare GA4 purchases to store orders for the same days and time zone, and look for gaps or duplicates by transaction_id in an exploration.",
+    "conditions": "GA4 web and app streams; app streams send transaction IDs through the Firebase SDK.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Why does GA4 show more purchases than Shopify?",
+      "Why does GA4 show far fewer purchases than my orders?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6223",
+    "evidence": {
+      "where": "Best practices for transaction IDs",
+      "quote": "Google Analytics deduplicates purchase events with the same transaction ID."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6224",
+    "modules": [
+      "MEA",
+      "SET"
+    ],
+    "topics": [
+      "event contracts"
+    ],
+    "claim": "GA4's recommended ecommerce events run view_item_list, select_item, view_item, add_to_cart, view_cart, begin_checkout, add_shipping_info, add_payment_info, purchase and refund; purchase needs transaction_id, and currency goes with value.",
+    "body": "Google's ecommerce guide sets the event names GA4's monetization reports expect: view_item_list and select_item, view_item, add_to_cart, add_to_wishlist, view_cart, remove_from_cart, begin_checkout, add_shipping_info, add_payment_info, purchase, refund, and view_promotion and select_promotion. transaction_id is required for purchase and refund. Set currency at event level whenever value is sent; value is the sum of price times quantity for the items. Each item needs item_id or item_name, ideally both. A store whose purchase event lacks currency or sends value in the wrong currency will show wrong revenue even when the order count matches.",
+    "conditions": "GA4 web streams using recommended events; names must match exactly.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Which ecommerce events should GA4 receive?",
+      "Why is GA4 revenue wrong when purchases match?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6224",
+    "evidence": {
+      "where": "Purchase event section",
+      "quote": "Set currency at the event level when sending value"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6225",
+    "modules": [
+      "MEA",
+      "GAD"
+    ],
+    "topics": [
+      "UTM integrity",
+      "attribution"
+    ],
+    "claim": "Keep Google Ads auto-tagging on: Google calls the gclid it adds required for conversion tracking, and in GA4 it takes priority over manual UTM tags on the same click.",
+    "body": "Auto-tagging adds a gclid click identifier to ad URLs so Google can tie clicks to conversions and import data into GA4. It is on by default for new accounts and Google describes it as a required feature for conversion tracking; some browsers need it. In GA4 auto-tagging is prioritized over manual tagging because GA4 has no override setting. So a store does not need hand-made UTMs on Google Ads for GA4; it can add them only for other tools (for example a survey or a Shopify report), and should never turn auto-tagging off to make its UTMs show.",
+    "conditions": "Google Ads linked to GA4.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Do I need UTMs on Google Ads?",
+      "Should I turn off auto-tagging?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6225",
+    "evidence": {
+      "where": "How auto-tagging works with manual tagging",
+      "quote": "auto-tagging is prioritized over manual tagging"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6226",
+    "modules": [
+      "MEA",
+      "SET"
+    ],
+    "topics": [
+      "event contracts",
+      "checkout"
+    ],
+    "claim": "Shopify's deadline to upgrade Thank you and Order status pages was 26 August 2026; stores were upgraded automatically, and old scripts, apps and pixels there must be replaced.",
+    "body": "Shopify set 26 August 2026 as the last date to upgrade and replace the Thank you and Order status pages; stores that had not done it were upgraded automatically. Customisations from incompatible apps, scripts or pixels on those pages have to be replaced, and Shopify links guides for replacing Google Tag Manager scripts and additional scripts. For measurement this matters twice: a purchase tag or a post-purchase survey that lived in old additional scripts may have stopped working, so check purchase tracking and survey answers from that date onward against orders.",
+    "conditions": "Shopify stores; date as stated on the help page when checked.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Deadline: 26 August 2026"
+    ],
+    "asks": [
+      "Why did my purchase tracking stop after August 2026?",
+      "Where does a post-purchase survey go on Shopify now?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6226",
+    "evidence": {
+      "where": "Top of page",
+      "quote": "Stores that weren't upgraded by that date were upgraded automatically."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-6227",
+    "modules": [
+      "MEA",
+      "SET"
+    ],
+    "topics": [
+      "event contracts",
+      "consent and tracking loss"
+    ],
+    "claim": "Shopify custom pixels collect customer events on checkout and post-purchase pages from a sandbox without theme code; use one only when no app pixel fits, and consent compliance stays with the store.",
+    "body": "Custom pixels run in a lax sandbox meant to control what data goes to third parties, and they extend event collection to checkout and post-purchase pages without editing the theme. Not every tag works in the sandbox, so the provider may need to help. Shopify suggests them only when no app pixel meets the need, does not support them itself, and puts compliance with laws, consent, code security and updates on the merchant. Practical rule: prefer the official app (for GA4, the Google and YouTube channel); add a custom pixel only for a gap, and never both for the same event, or page views, add-to-carts and checkouts count twice.",
+    "conditions": "Shopify stores using Customer events.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Should I use a custom pixel or an app for GA4 on Shopify?",
+      "Can I track checkout events on Shopify without Plus?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6227",
+    "evidence": {
+      "where": "Overview and caution",
+      "quote": "Compliance with applicable laws, consents, code security, troubleshooting, and updates are your responsibility."
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

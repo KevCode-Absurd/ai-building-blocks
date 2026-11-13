@@ -4383,5 +4383,2608 @@
     "why": "Influencer pay maths (target half your Meta CPM, flat fees from the last 10 videos' average views, cut for off-target audience share), an in-house scouting team, 'restock' as validity marketing, and over-producing so a retailer PO is never missed.",
     "cards": 4,
     "public": true
+  },
+  {
+    "id": "S6020",
+    "file": "",
+    "title": "Statement of Policy Regarding Comparative Advertising",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/statement-policy-regarding-comparative-advertising",
+    "date": "1979-08-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR",
+      "ADC"
+    ],
+    "why": "FTC position that naming competitors is encouraged when the comparison is clear, truthful and not deceptive.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6021",
+    "file": "",
+    "title": "Consumer Reviews and Testimonials Rule: Questions and Answers",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers",
+    "date": "2024-10-21",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR",
+      "ADC",
+      "LPG"
+    ],
+    "why": "Plain-language guide to the 2024 federal rule on fake reviews and testimonials, including AI avatars.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6022",
+    "file": "",
+    "title": "FTC Policy Statement Regarding Advertising Substantiation",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/ftc-policy-statement-regarding-advertising-substantiation",
+    "date": "1984-11-23",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR",
+      "ADC"
+    ],
+    "why": "Rule that objective claims need a reasonable basis before they run, and claims of proof need that level of proof.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6023",
+    "file": "",
+    "title": "Advertising Standards: Privacy Violations and Personal Attributes",
+    "author": "Meta",
+    "url": "https://transparency.meta.com/policies/ad-standards/objectionable-content/privacy-violations-personal-attributes/",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR",
+      "ADC"
+    ],
+    "why": "Meta ad policy banning copy that asserts or implies a viewer's personal attributes, with allowed and banned examples.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6024",
+    "file": "",
+    "title": "The ASCI Code (Chapters I and IV)",
+    "author": "Advertising Standards Council of India",
+    "url": "https://www.ascionline.in/the-asci-code/",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR",
+      "ADC"
+    ],
+    "why": "Indian self-regulatory code: claims must be capable of substantiation; comparisons must be factual and must not unfairly denigrate.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6025",
+    "file": "",
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "date": "2023-06-29",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR",
+      "ADC",
+      "ORG"
+    ],
+    "why": "FTC guidance on honest endorsements, generally expected results and disclosing material connections, revised 2023.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6040",
+    "file": "",
+    "title": "Meta Ads Guide: Instagram Stories image ads (and the matching Instagram Reels image page)",
+    "author": "Meta (Meta Ads Guide)",
+    "url": "https://www.facebook.com/business/ads-guide/update/image/instagram-story",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR",
+      "ADC"
+    ],
+    "why": "Meta's own spec for 9:16 Stories and Reels images: ratio, 1440 x 2560 resolution and the 14% top, 35% bottom, 6% sides safe-zone guidance.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6041",
+    "file": "",
+    "title": "Meta Ads Guide: Facebook Feed carousel ads",
+    "author": "Meta (Meta Ads Guide)",
+    "url": "https://www.facebook.com/business/ads-guide/update/carousel/facebook-feed",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR",
+      "ADC"
+    ],
+    "why": "Meta's own carousel spec: 2 to 10 cards, 1:1 at 1080 x 1080 or more, file limits and text length guidance per card.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6042",
+    "file": "",
+    "title": "About responsive display ads: image and logo specifications",
+    "author": "Google (Google Ads Help)",
+    "url": "https://support.google.com/google-ads/answer/9823397",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "GAD",
+      "MCR"
+    ],
+    "why": "Google's own image specs for responsive display ads (1.91:1, 1:1, 9:16 sizes, 5,120 KB) and its advice against overlaid text, logos and fake buttons.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6043",
+    "file": "",
+    "title": "Image link [image_link]: Merchant Center product data specification",
+    "author": "Google (Merchant Center Help)",
+    "url": "https://support.google.com/merchants/answer/6324350",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "GAD",
+      "LPG",
+      "SET"
+    ],
+    "why": "Google's rules for the main product image in Shopping: no promotional overlays, watermarks, borders or added logos; minimum and recommended sizes; product fills 75 to 90% of the frame.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6044",
+    "file": "",
+    "title": "Meta Advertising Standards: Health and Wellness",
+    "author": "Meta (Transparency Center)",
+    "url": "https://transparency.meta.com/policies/ad-standards/restricted-goods-services/health-wellness",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR",
+      "ADC"
+    ],
+    "why": "Meta's own rules on weight-loss and cosmetic ads: 18+ targeting, side-by-side transformation limits and negative self-perception, with dated versions shown on the page.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6045",
+    "file": "",
+    "title": "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR",
+      "CXP",
+      "ADC"
+    ],
+    "why": "Primary US government source for 16 CFR Part 465: fake and AI-generated reviews, undisclosed insider reviews, paying for sentiment and review suppression are banned, with civil penalties for knowing violators.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6047",
+    "file": "",
+    "title": "Meta Commerce Platform: catalog fields reference",
+    "author": "Meta (Meta for Developers)",
+    "url": "https://developers.facebook.com/docs/commerce-platform/catalog/fields",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC",
+      "MCR"
+    ],
+    "why": "Meta's own field rules for catalog price, sale_price, sale_price_effective_date and image_link, which decide what price and discount overlays can show.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6060",
+    "file": "",
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "date": "2023-06-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR",
+      "ORG",
+      "CXP"
+    ],
+    "why": "US regulator guidance on testimonials, incentives, typical results and how disclosures must appear in video.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6062",
+    "file": "",
+    "title": "Our Approach to Labeling AI-Generated Content and Manipulated Media",
+    "author": "Meta Newsroom",
+    "url": "https://about.fb.com/news/2024/04/metas-approach-to-labeling-ai-generated-content-and-manipulated-media/",
+    "date": "2024-04-05",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR"
+    ],
+    "why": "Meta's own statement of when it shows the AI info label and when advertisers must disclose digitally altered media.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6063",
+    "file": "",
+    "title": "Disclosing use of altered or synthetic content",
+    "author": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/14328491",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR"
+    ],
+    "why": "Platform list of which AI uses need a realistic-content disclosure and which minor edits do not.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6064",
+    "file": "",
+    "title": "Use music and sound effects from the Audio Library",
+    "author": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/3376882",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR"
+    ],
+    "why": "Platform terms for the free YouTube Audio Library: monetised use, Content ID, attribution and no off-platform guidance.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6080",
+    "file": "web",
+    "title": "Advantage+ campaigns (Marketing API documentation)",
+    "author": "Meta for Developers",
+    "url": "https://developers.facebook.com/docs/marketing-api/advantage-campaigns",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC"
+    ],
+    "why": "Meta's own description of Advantage+ sales campaigns: the three automation levers, the end of the existing customer budget percentage field for new campaigns, and the two ad set method for capping spend on existing customers.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6081",
+    "file": "web",
+    "title": "Partnership ads: account-level permissioning (Marketing API documentation)",
+    "author": "Meta for Developers",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/ad-creative/partnership-ads/account-level-permissioning",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC",
+      "ORG"
+    ],
+    "why": "How a brand requests account-level partnership ad permission, where the creator accepts it, what the brand can then run from the creator's handle, and how permission is listed and revoked.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6082",
+    "file": "web",
+    "title": "Meta Advertising Standards: overview and ad review",
+    "author": "Meta Transparency Center",
+    "url": "https://transparency.meta.com/policies/ad-standards/",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC"
+    ],
+    "why": "What Meta's ad review checks (image, video, text, targeting, landing page), typical review time, rejection and edit, requesting another review in Account Quality, and restriction of accounts and business assets.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6084",
+    "file": "web",
+    "title": "Business (Marketing API reference)",
+    "author": "Meta for Developers",
+    "url": "https://developers.facebook.com/docs/marketing-api/reference/business/",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SEC",
+      "ADC"
+    ],
+    "why": "The business portfolio's two-factor setting (none, admin_required, all_required), its verification status values, and the rule that a business must keep at least one admin.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6085",
+    "file": "web",
+    "title": "Conversions API: server event parameters",
+    "author": "Meta for Developers",
+    "url": "https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "why": "The 7-day limit on event_time, the rule that one stale event fails the whole request, the allowed action_source values and the standard or custom event_name rule.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6086",
+    "file": "web",
+    "title": "Meta Pixel: conversion tracking",
+    "author": "Meta for Developers",
+    "url": "https://developers.facebook.com/docs/meta-pixel/implementation/conversion-tracking",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "why": "Standard events, custom events and custom conversions, the limit of 100 custom conversions per ad account, and that custom conversions can be used to optimise campaigns.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6087",
+    "file": "web",
+    "title": "Catalog: supported fields for products",
+    "author": "Meta for Developers",
+    "url": "https://developers.facebook.com/docs/commerce-platform/catalog/fields",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC",
+      "SET"
+    ],
+    "why": "Required product fields for a Meta catalog, the price format, the in stock and out of stock values and what out of stock does to ads, and the rule that links must sit on the business's own domain.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6100",
+    "file": "",
+    "title": "Conversion insights (Pinterest Business Help Center)",
+    "author": "Pinterest",
+    "url": "https://help.pinterest.com/en/business/article/conversion-insights",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA",
+      "WLD"
+    ],
+    "why": "Pinterest's own statement of the conversion window it reports on when none is chosen: 1-day view and 30-day click.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6101",
+    "file": "",
+    "title": "Measurement (Snap Marketing API documentation)",
+    "author": "Snap Inc.",
+    "url": "https://developers.snap.com/api/marketing-api/Ads-API/measurement",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA",
+      "WLD"
+    ],
+    "why": "Snap's documented attribution window options and defaults: 28-day swipe up and 1-day view.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6102",
+    "file": "",
+    "title": "Web Attribution Overview (Reddit Ads Help)",
+    "author": "Reddit Inc.",
+    "url": "https://business.reddithelp.com/articles/Knowledge/Web-Attribution-Overview",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA",
+      "WLD"
+    ],
+    "why": "Reddit's documented attribution windows: 28-day click and 1-day view by default, options of 1, 7 or 28 days, view window never longer than click window.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6120",
+    "file": "web",
+    "title": "Google Ads policy: Trademarks",
+    "author": "Google Ads Help",
+    "url": "https://support.google.com/adspolicy/answer/6118",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "GAD"
+    ],
+    "why": "Platform rule: trademarks as keywords are not restricted; trademark use in ad text by competitors can be restricted after an owner complaint.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6121",
+    "file": "web",
+    "title": "About brand settings for Search and Performance Max",
+    "author": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/13721847?hl=en",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "GAD"
+    ],
+    "why": "Platform rule: brand exclusions for Search and Performance Max, brand inclusions for Search only, and how brand lists match.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6122",
+    "file": "web",
+    "title": "Mismatched product price (Merchant Center)",
+    "author": "Google Merchant Center Help",
+    "url": "https://support.google.com/merchants/answer/6098334",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "GAD"
+    ],
+    "why": "Platform rule: feed price must match the landing page price exactly; mismatches disapprove products and can suspend the account.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6123",
+    "file": "web",
+    "title": "Title [title] product data specification",
+    "author": "Google Merchant Center Help",
+    "url": "https://support.google.com/merchants/answer/6324415",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "GAD"
+    ],
+    "why": "Platform rule: title length limit, most important details first, and what titles may not contain.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6124",
+    "file": "web",
+    "title": "About Demand Gen campaigns",
+    "author": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/13695777",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "GAD"
+    ],
+    "why": "Platform guidance: Demand Gen placements and the recommended daily budget of at least 10 times target CPA.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6125",
+    "file": "web",
+    "title": "About primary and secondary conversion actions",
+    "author": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/11461796",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA",
+      "GAD"
+    ],
+    "why": "Platform rule: only primary actions feed the Conversions column and bidding; GA4 conversions arrive as secondary.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6126",
+    "file": "web",
+    "title": "About enhanced conversions for web",
+    "author": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/9888656",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA",
+      "GAD"
+    ],
+    "why": "Platform rule: enhanced conversions send SHA256-hashed email, name, address or phone from the conversion page.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6127",
+    "file": "web",
+    "title": "Google Ads Import (Microsoft Advertising API guide)",
+    "author": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/advertising/guides/google-ads-import",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "GAD"
+    ],
+    "why": "Platform rule: Google import scheduling options, budget adjustment and delete-removed options, and the need to review what did not import.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6140",
+    "file": "",
+    "title": "About responsive search ads (Google Ads Help)",
+    "author": "Google Ads Help Center",
+    "url": "https://support.google.com/google-ads/answer/7684791",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "GAD",
+      "ADC"
+    ],
+    "why": "Official limits for responsive search ads: up to 15 headlines of 30 characters and 4 descriptions of 90, path fields of 15, minimums, and how pinning works and when to avoid it.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6141",
+    "file": "",
+    "title": "Performance Max campaigns specs and format requirements (Google Ads Help)",
+    "author": "Google Ads Help Center",
+    "url": "https://support.google.com/google-ads/answer/17091269",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "GAD",
+      "ADC"
+    ],
+    "why": "Official text asset counts and character limits for Performance Max asset groups, including the short-headline and business name rules.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6142",
+    "file": "",
+    "title": "Editorial policy (Google Ads policy help)",
+    "author": "Google Ads Policy Center",
+    "url": "https://support.google.com/adspolicy/answer/6021546",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC",
+      "GAD"
+    ],
+    "why": "What Google disapproves in ad text: misused capitals, punctuation and symbols, gimmicky repetition or spacing, phone numbers in ad text, unclear or unidentified business.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6143",
+    "file": "",
+    "title": "Advantage+ catalog ads: get started (Meta Marketing API documentation)",
+    "author": "Meta for Developers",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/advantage-catalog-ads/get-started.md",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC"
+    ],
+    "why": "The catalog fields a catalog ad template can insert (name, price, current_price, brand, description, custom labels), price options and transformations, and which text fields accept them.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6145",
+    "file": "",
+    "title": "16 CFR 233.1 Former price comparisons (Guides Against Deceptive Pricing)",
+    "author": "US Federal Trade Commission, via Cornell Legal Information Institute",
+    "url": "https://www.law.cornell.edu/cfr/text/16/233.1",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OFF",
+      "ADC"
+    ],
+    "why": "When a 'was' price is genuine (offered openly, in good faith, for a reasonable time) and when it is fictitious (inflated to create a markdown, never offered, or cut right after being set).",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6146",
+    "file": "",
+    "title": "The ASCI Code, Chapter I: Truthful and honest representation",
+    "author": "Advertising Standards Council of India",
+    "url": "https://ascionline.in/the-asci-code/",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC",
+      "OFF"
+    ],
+    "why": "India's self-regulatory ad code: substantiation on demand, research cited with source and date, permission to refer to people, rules on 'free' and buy-one-get-one, no misleading omissions, ad labels on social media.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6147",
+    "file": "",
+    "title": "Guidelines for Online Deceptive Design Patterns in Advertising (15 June 2023)",
+    "author": "Advertising Standards Council of India",
+    "url": "https://www.ascionline.in/wp-content/uploads/2023/05/Guidelines-for-Online-Deceptive-Design-Patterns-in-Advertising.pdf",
+    "date": "2023-06-15",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC",
+      "OFF"
+    ],
+    "why": "Four ad dark patterns India's ad regulator treats as misleading from 1 September 2023: drip pricing, bait and switch, false urgency (advertiser must prove the stock level) and disguised ads.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6161",
+    "file": "web/sellercentral.amazon.com/seller-forums/discussions/t/b2b15728-0d43-453e-974f-59eb63f73059",
+    "title": "New product title requirements effective January 21, 2025",
+    "author": "News_Amazon (official Amazon account), Seller Forums News and Announcements",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/b2b15728-0d43-453e-974f-59eb63f73059",
+    "date": "2025-01-21",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ",
+      "LPG"
+    ],
+    "why": "Amazon's announced title rules: 200 characters for most categories, banned special characters, no word more than twice, and the 14-day window before Amazon rewrites non-compliant brand titles.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6164",
+    "file": "web/ftc.gov/business-guidance/resources/business-guide-ftcs-mail-internet-or-telephone-order-merchandise-rule",
+    "title": "Business Guide to the FTC's Mail, Internet, or Telephone Order Merchandise Rule",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/business-guide-ftcs-mail-internet-or-telephone-order-merchandise-rule",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "CXP",
+      "LPG",
+      "OPS"
+    ],
+    "why": "US rule for shipping promises: a reasonable basis for any stated or implied ship time, 30 days when none is stated, delay notices with a free cancel option, and prompt refunds.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6166",
+    "file": "web/developers.google.com/search/docs/appearance/structured-data/faqpage",
+    "title": "FAQ (FAQPage) structured data: documentation update log",
+    "author": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/faqpage",
+    "date": "2026-06-15",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SEO",
+      "AEO",
+      "LPG"
+    ],
+    "why": "Google records that FAQ rich results stopped appearing in Google Search from 7 May 2026, so FAQ blocks must earn their place with buyers, not with search snippets.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6167",
+    "file": "web/baymard.com/research-articles/apparel-size-information",
+    "title": "Apparel: 10 Best Practices on Sizing",
+    "author": "Edward Scott, Baymard Institute",
+    "url": "https://baymard.com/research-articles/apparel-size-information",
+    "date": "2022-07-06",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "CXP",
+      "LPG"
+    ],
+    "why": "Large-sample usability benchmark: 83% of desktop and 87% of mobile apparel sites gave insufficient sizing information; ten sizing practices from measurements in two units to model size worn.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6180",
+    "file": "",
+    "title": "Cart abandonment rate statistics (list page)",
+    "author": "Baymard Institute",
+    "url": "https://baymard.com/lists/cart-abandonment-rate",
+    "date": "2025-00-00",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "CRO",
+      "LPG"
+    ],
+    "why": "Average documented cart abandonment across 50 studies and the ranked reasons shoppers give for leaving checkout.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6181",
+    "file": "",
+    "title": "Checkout UX: the average checkout has too many form fields",
+    "author": "Baymard Institute",
+    "url": "https://baymard.com/blog/checkout-flow-average-form-fields",
+    "date": "2024-06-26",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "CRO",
+      "SET"
+    ],
+    "why": "Benchmark of form fields in live checkouts against the number most stores need.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6182",
+    "file": "",
+    "title": "E-commerce search query types and how sites support them",
+    "author": "Baymard Institute",
+    "url": "https://baymard.com/blog/ecommerce-search-query-types",
+    "date": "2026-04-29",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "CRO",
+      "SEO"
+    ],
+    "why": "Benchmark of how well large ecommerce sites handle each kind of site search query.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6183",
+    "file": "",
+    "title": "Web Vitals",
+    "author": "Google (web.dev)",
+    "url": "https://web.dev/articles/vitals",
+    "date": "2024-00-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SPD"
+    ],
+    "why": "Primary definition of the Core Web Vitals, their good thresholds and the 75th percentile rule.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6184",
+    "file": "",
+    "title": "Theme images: requirements and formats",
+    "author": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/online-store/images/theme-images",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SPD",
+      "SET"
+    ],
+    "why": "Shopify's own image limits, accepted formats and how images are served (WebP or AVIF where the browser supports it).",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6185",
+    "file": "",
+    "title": "Product media types and limits",
+    "author": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/products/product-media/product-media-types",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SPD",
+      "SET"
+    ],
+    "why": "Shopify's limits for product images, videos and 3D models, and how video is converted for serving.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6186",
+    "file": "",
+    "title": "Manual payment methods",
+    "author": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/payments/manual-payments",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SET",
+      "CRO",
+      "FIN"
+    ],
+    "why": "How Shopify treats cash on delivery: a manual payment, marked unpaid until the merchant records payment.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6187",
+    "file": "",
+    "title": "Customizing payment methods and delivery options at checkout",
+    "author": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/checkout-settings/checkout-customization",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SET",
+      "CRO"
+    ],
+    "why": "Which plans can sort, hide and rename payment methods at checkout, and that it is done through payment customization apps.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6200",
+    "file": "",
+    "title": "How Shopify blocks card testing attacks",
+    "author": "Amit Moran (Shopify Enterprise blog)",
+    "url": "https://www.shopify.com/enterprise/blog/block-card-testing-attacks",
+    "date": "2026-06-17",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "SEC"
+    ],
+    "why": "Shopify's own description of how card testing now works (low-volume attempts spread across many stores through residential proxies) and what its Shopify Payments model blocks.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6201",
+    "file": "",
+    "title": "Responding to chargebacks and inquiries",
+    "author": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/payments/chargebacks/chargeback-process",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SEC",
+      "FIN"
+    ],
+    "why": "Platform rules for Shopify Payments disputes: evidence window, automatic submission on the due date, fees by country, bank decision time, no appeal, and the evidence to send for each dispute reason.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6202",
+    "file": "",
+    "title": "Collaborator accounts",
+    "author": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/your-account/users/security/collaborator-accounts",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SEC",
+      "OPS"
+    ],
+    "why": "How outside partners get into a Shopify admin: 4-digit request code, required two-step authentication, permission choice, and permanent removal.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6203",
+    "file": "",
+    "title": "[GA4] Known bot-traffic exclusion",
+    "author": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/9888366",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA",
+      "SEC"
+    ],
+    "why": "States that GA4 excludes known bots automatically from the IAB list and Google research, and that this cannot be turned off or measured.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6204",
+    "file": "",
+    "title": "Collecting duties and import taxes at checkout",
+    "author": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/international/duties-and-import-taxes/charging-duties",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SET"
+    ],
+    "why": "Requirements for charging duties at checkout per market (HS codes, DDP-capable carrier, not on Shopify Fulfillment Network), the fee, and what inaccurate product data does to the customer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6205",
+    "file": "",
+    "title": "GST in India FAQ",
+    "author": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/taxes/india-gst",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SET",
+      "FIN"
+    ],
+    "why": "How Shopify handles Indian GST: when registration is generally mandatory, CGST and SGST versus IGST, default rates, HSN codes, and that Shopify does not create GST-compliant invoices or file returns.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6206",
+    "file": "",
+    "title": "Understanding US tax liability",
+    "author": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/taxes/us/us-tax-liability",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SET",
+      "FIN"
+    ],
+    "why": "Physical and economic nexus, the tax liability insights page and its 80% monitoring line, and the rule that a state permit comes before collecting tax.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6220",
+    "file": "web",
+    "title": "[GA4] Default channel group",
+    "author": "Google (Analytics Help)",
+    "url": "https://support.google.com/analytics/answer/9756891",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA"
+    ],
+    "why": "Google's own rules for how GA4 sorts traffic into channels from source, medium and campaign name; decides whether tagged traffic lands in Paid Social, Organic Social, Email, SMS or Unassigned.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6221",
+    "file": "web",
+    "title": "[GA4] Collect campaign data with custom URLs",
+    "author": "Google (Analytics Help)",
+    "url": "https://support.google.com/analytics/answer/10917952",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA"
+    ],
+    "why": "The UTM parameters GA4 reads, which three to always set, and that values are case sensitive.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6222",
+    "file": "web",
+    "title": "[GA4] Data retention",
+    "author": "Google (Analytics Help)",
+    "url": "https://support.google.com/analytics/answer/7667196",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA"
+    ],
+    "why": "Retention choices for standard GA4 properties (2 or 14 months), what they affect and how changes apply.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6223",
+    "file": "web",
+    "title": "[GA4] Minimize duplicate key events with transaction IDs",
+    "author": "Google (Analytics Help)",
+    "url": "https://support.google.com/analytics/answer/12313109",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA"
+    ],
+    "why": "GA4 deduplicates purchases by transaction_id; empty or reused IDs collapse real orders.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6224",
+    "file": "web",
+    "title": "Measure ecommerce (GA4 developer guide)",
+    "author": "Google (Google for Developers)",
+    "url": "https://developers.google.com/analytics/devguides/collection/ga4/ecommerce",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA"
+    ],
+    "why": "The recommended GA4 ecommerce events and the purchase parameters (transaction_id, value, currency, items).",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6225",
+    "file": "web",
+    "title": "About auto-tagging",
+    "author": "Google (Google Ads Help)",
+    "url": "https://support.google.com/google-ads/answer/3095550",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA",
+      "GAD"
+    ],
+    "why": "Auto-tagging adds gclid, is required for conversion tracking, and wins over manual UTM tags in GA4.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6226",
+    "file": "web",
+    "title": "Upgrading your Thank you and Order status pages",
+    "author": "Shopify (Shopify Help Center)",
+    "url": "https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations/upgrade-thank-you-order-status",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA",
+      "SET"
+    ],
+    "why": "The 26 August 2026 deadline after which Shopify upgraded Thank you and Order status pages automatically; incompatible scripts, apps and pixels must be replaced.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6227",
+    "file": "web",
+    "title": "Custom pixels",
+    "author": "Shopify (Shopify Help Center)",
+    "url": "https://help.shopify.com/en/manual/promoting-marketing/pixels/custom-pixels",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA",
+      "SET"
+    ],
+    "why": "Custom pixels collect customer events on checkout and post-purchase pages in a sandbox; use only when no app pixel fits; consent compliance is the merchant's job.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6240",
+    "file": "",
+    "title": "Understanding Shopify Payments payout timing (Shopify Help Center)",
+    "author": "Shopify",
+    "url": "https://help.shopify.com/en/manual/payments/shopify-payments/payouts/payout-timing",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "FIN"
+    ],
+    "why": "First-party payout timing rules: settlement in business days, weekend batching, holiday shifts and bank lag, needed for weekly cash forecasts and payout matching.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6241",
+    "file": "",
+    "title": "Resolving lower or missing Shopify Payments payouts (Shopify Help Center)",
+    "author": "Shopify",
+    "url": "https://help.shopify.com/en/manual/payments/shopify-payments/payouts/lower-or-missing-payouts",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "FIN"
+    ],
+    "why": "First-party list of what is netted out of a payout (refunds, disputes and dispute fees, processing fees, reserves, holds, adjustments, currency conversion) and why payouts go missing.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6242",
+    "file": "",
+    "title": "Overview of reserves in Shopify Payments (Shopify Help Center)",
+    "author": "Shopify",
+    "url": "https://help.shopify.com/en/manual/payments/shopify-payments/reserves",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "FIN"
+    ],
+    "why": "First-party definition of fixed and percentage reserves, their release and the risk signals that trigger them.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6243",
+    "file": "",
+    "title": "Refunding orders (Shopify Help Center)",
+    "author": "Shopify",
+    "url": "https://help.shopify.com/en/manual/fulfillment/managing-orders/refunding-orders",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "FIN",
+      "MEA"
+    ],
+    "why": "First-party rule on whether card and transaction fees come back when an order is refunded.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6244",
+    "file": "",
+    "title": "Shopify Capital glossary of terms (Shopify Help Center)",
+    "author": "Shopify",
+    "url": "https://help.shopify.com/en/manual/finance/shopify-capital/shopify-capital-glossary",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "FIN"
+    ],
+    "why": "First-party definitions of remittance rate, fixed borrowing cost and total payment amount for sales-linked store financing.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6260",
+    "file": "",
+    "title": "Imports in GST Regime (taxpayer flyer)",
+    "author": "Directorate General of Taxpayer Services, CBEC (now CBIC), published on gstcouncil.gov.in",
+    "url": "https://gstcouncil.gov.in/sites/default/files/e-version-gst-flyers/Imports_in_GST_Regime.pdf",
+    "date": "2017-00-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "why": "Government flyer on how integrated tax is charged on imported goods, its value base and which import taxes can be taken as input tax credit.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6261",
+    "file": "",
+    "title": "CBP ready to enforce end of de minimis loophole, securing borders and strengthening trade enforcement",
+    "author": "U.S. Customs and Border Protection (national media release)",
+    "url": "https://www.cbp.gov/newsroom/national-media-release/cbp-ready-enforce-end-de-minimis-loophole-securing-borders-and",
+    "date": "2025-08-29",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "why": "Primary source for the end of duty-free de minimis treatment for all countries from 29 August 2025.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6262",
+    "file": "",
+    "title": "What Every Member of the Trade Community Should Know About: Customs Value (Informed Compliance Publication)",
+    "author": "U.S. Customs and Border Protection",
+    "url": "https://www.cbp.gov/sites/default/files/assets/documents/2020-Feb/ICP-Customs-Value-2006-Final.pdf",
+    "date": "2006-07-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "why": "CBP's own explanation of transaction value: what is excluded (international freight, insurance) and what is added (packing, selling commissions, assists, royalties).",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6263",
+    "file": "",
+    "title": "Threading Your Way Through the Labeling Requirements Under the Textile and Wool Acts",
+    "author": "U.S. Federal Trade Commission (business guidance)",
+    "url": "https://www.ftc.gov/business-guidance/resources/threading-your-way-through-labeling-requirements-under-textile-wool-acts",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "SET"
+    ],
+    "why": "Regulator guidance on what a US textile label must carry and where it goes; date is the access date.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6264",
+    "file": "",
+    "title": "Legal Metrology overview",
+    "author": "Department of Consumer Affairs, Government of India",
+    "url": "https://consumeraffairs.gov.in/pages/legal-metrology-overview",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "SET"
+    ],
+    "why": "Government list of the mandatory declarations on pre-packaged goods under the Legal Metrology (Packaged Commodities) Rules, 2011; date is the access date.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6265",
+    "file": "",
+    "title": "Trade Assurance",
+    "author": "Alibaba.com",
+    "url": "https://tradeassurance.alibaba.com/",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG"
+    ],
+    "why": "The platform's own description of what its order protection covers and that payment must go through the platform; date is the access date.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6266",
+    "file": "",
+    "title": "Products under compulsory certification",
+    "author": "Bureau of Indian Standards",
+    "url": "https://www.bis.gov.in/product-certification/products-under-compulsory-certification/",
+    "date": "2026-09-24",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "SET"
+    ],
+    "why": "BIS explanation of Quality Control Orders that make the Standard Mark compulsory for listed products.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6280",
+    "file": "",
+    "title": "Business Guide to the FTC's Mail, Internet, or Telephone Order Merchandise Rule (FTC)",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/business-guide-ftcs-mail-internet-or-telephone-order-merchandise-rule",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "CXP"
+    ],
+    "why": "US government rule on ship times, delay option notices, backorders, substitutions and refund timing; governs pre-orders, backorders and delay messages for US buyers.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6281",
+    "file": "",
+    "title": "Pre-orders (Shopify Help Center)",
+    "author": "Shopify",
+    "url": "https://help.shopify.com/en/manual/products/purchase-options/pre-orders",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "SET"
+    ],
+    "why": "First-party pre-order rules: payment taken in full, in part or not at all, eligible payment providers, app requirement and data deletion after uninstall.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6282",
+    "file": "",
+    "title": "Selling when out of stock (Shopify Help Center)",
+    "author": "Shopify",
+    "url": "https://help.shopify.com/en/manual/products/inventory/getting-started-with-inventory/selling-when-out-of-stock",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "SET"
+    ],
+    "why": "First-party rule for the Continue selling when out of stock setting, its tracking requirement, location effects and POS behaviour.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6283",
+    "file": "",
+    "title": "Return rules (Shopify Help Center)",
+    "author": "Shopify",
+    "url": "https://help.shopify.com/en/manual/fulfillment/managing-orders/returns/return-rules",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "CXP",
+      "OPS"
+    ],
+    "why": "First-party settings for return windows, overrides, return shipping fees, restocking fees, final sale items and cancellation windows.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6284",
+    "file": "",
+    "title": "Inventory reports (Shopify Help Center)",
+    "author": "Shopify",
+    "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/inventory-reports",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "First-party definitions of ABC analysis, sell-through rate, days of inventory remaining, percent sold and month-end inventory value.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6285",
+    "file": "",
+    "title": "Template categorization guidelines (WhatsApp Business Platform, Meta for Developers)",
+    "author": "Meta",
+    "url": "https://developers.facebook.com/docs/whatsapp/updates-to-pricing/new-template-guidelines",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "EML"
+    ],
+    "why": "First-party rule for utility versus marketing WhatsApp templates, including backorder and delay examples and automatic recategorisation.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6286",
+    "file": "",
+    "title": "DMM 223 Priority Mail prices and eligibility, dimensional weight (USPS Domestic Mail Manual)",
+    "author": "United States Postal Service",
+    "url": "https://pe.usps.com/text/dmm300/223.htm",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS"
+    ],
+    "why": "Carrier primary rule for when dimensional weight applies to Priority Mail parcels and the divisors used.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6300",
+    "file": "",
+    "title": "Prohibited and restricted content, Maps user generated content policy (Google Help)",
+    "author": "Google",
+    "url": "https://support.google.com/contributionpolicy/answer/7400114",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "CXP"
+    ],
+    "why": "First-party rule for Google reviews: no incentives, no selective asking of happy customers, no discouraging negative reviews, no staff review quotas, conflict of interest.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6301",
+    "file": "",
+    "title": "Consumer Reviews and Testimonials Rule: Questions and Answers (FTC, November 2024)",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "CXP"
+    ],
+    "why": "Regulator guidance on asking only happy customers, incentives tied to sentiment, review suppression by intimidation and equal moderation rules on a store's own site.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6302",
+    "file": "",
+    "title": "WhatsApp Business Messaging Policy",
+    "author": "WhatsApp (Meta)",
+    "url": "https://whatsappbusiness.com/policy/",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "CXP",
+      "OPS"
+    ],
+    "why": "First-party rule that automated replies need prompt, clear, direct escalation paths to a person, and that contact needs the number plus opt-in.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6303",
+    "file": "",
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "CXP"
+    ],
+    "why": "Regulator guidance that rewarded recommenders must disclose the incentive and that the advertiser must train and monitor the people it rewards.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6304",
+    "file": "",
+    "title": "15 U.S. Code 8403, Negative option marketing on the Internet (Cornell LII)",
+    "author": "US Congress, via Cornell Legal Information Institute",
+    "url": "https://www.law.cornell.edu/uscode/text/15/8403",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OFF"
+    ],
+    "why": "Statute text for online subscriptions in the US: disclose terms before billing details, get express informed consent, give a simple way to stop charges.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6305",
+    "file": "",
+    "title": "Introducing: The Net Promoter System (Bain and Company, 8 December 2011)",
+    "author": "Bain and Company",
+    "url": "https://www.bain.com/insights/introducing-the-net-promoter-system-loyalty-insights/",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "CXP"
+    ],
+    "why": "Originator's definition of the NPS question, 0 to 10 scale, promoter, passive and detractor bands and the formula.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6306",
+    "file": "",
+    "title": "Shopify Subscriptions (Shopify Help Center)",
+    "author": "Shopify",
+    "url": "https://help.shopify.com/en/manual/products/purchase-options/shopify-subscriptions",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OFF"
+    ],
+    "why": "First-party description of what subscribers can do themselves (resume, skip, cancel, change payment and address) and what discounts and frequencies merchants can set.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6307",
+    "file": "",
+    "title": "Processing of e-mandate on cards for recurring transactions, RBI circular RBI/2019-20/47 (21 August 2019)",
+    "author": "Reserve Bank of India",
+    "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11668",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OFF",
+      "FIN"
+    ],
+    "why": "Regulator rules for recurring card charges in India: extra authentication at registration, 24-hour pre-debit notice and opt-out or withdrawal at any time.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6320",
+    "file": "web",
+    "title": "Get opt-in for WhatsApp",
+    "author": "Meta (WhatsApp Business Platform developer docs)",
+    "url": "https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML"
+    ],
+    "why": "Meta's own opt-in rules before a business messages people on WhatsApp: name the business, say they are opting in, follow local law.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6321",
+    "file": "web",
+    "title": "Messaging limits",
+    "author": "Meta (WhatsApp Business Platform developer docs)",
+    "url": "https://developers.facebook.com/docs/whatsapp/messaging-limits",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML"
+    ],
+    "why": "How many unique users a WhatsApp business portfolio can message outside the service window each day, and how the limit grows with quality.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6322",
+    "file": "web",
+    "title": "Pricing on the WhatsApp Business Platform",
+    "author": "Meta (WhatsApp Business Platform developer docs)",
+    "url": "https://developers.facebook.com/docs/whatsapp/pricing",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML"
+    ],
+    "why": "Per-message pricing by template category, and the 1 October 2026 changes to utility and service message charges.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6323",
+    "file": "web",
+    "title": "47 CFR 64.1200, Delivery restrictions (TCPA rules)",
+    "author": "US Federal Communications Commission, via Cornell Legal Information Institute",
+    "url": "https://www.law.cornell.edu/cfr/text/47/64.1200",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML"
+    ],
+    "why": "The US federal rule text on written consent for automated marketing, the 8 a.m. to 9 p.m. calling window and revoking consent by any reasonable means.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6324",
+    "file": "web",
+    "title": "The Telecom Commercial Communications Customer Preference Regulations, 2018",
+    "author": "Telecom Regulatory Authority of India (TRAI)",
+    "url": "https://www.trai.gov.in/sites/default/files/2024-09/RegulationUcc19072018.pdf",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML"
+    ],
+    "why": "India's DLT rules: registered headers, content templates, consent templates and customer preferences for commercial SMS.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6325",
+    "file": "web",
+    "title": "Understanding scoring and customer groups in the recency, frequency, and monetary analysis (RFM) report",
+    "author": "Klaviyo (Help Center)",
+    "url": "https://help.klaviyo.com/hc/en-us/articles/17797937793179",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML"
+    ],
+    "why": "How Klaviyo scores recency, frequency and spend, its six customer groups, and the data a store needs to use the report.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6326",
+    "file": "web",
+    "title": "Understanding Klaviyo's predictive analytics",
+    "author": "Klaviyo (Help Center)",
+    "url": "https://help.klaviyo.com/hc/en-us/articles/360020919731",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML"
+    ],
+    "why": "Data needed for predicted lifetime value, churn risk, expected next order date and average days between orders on each profile.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6327",
+    "file": "web",
+    "title": "Understanding SMS consent collection",
+    "author": "Klaviyo (Help Center)",
+    "url": "https://help.klaviyo.com/hc/en-us/articles/360035056972",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML"
+    ],
+    "why": "Where SMS disclosure goes, that consent cannot be a condition of purchase, and the US carrier double opt-in rule for cart abandonment texts.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6340",
+    "file": "",
+    "title": "Email sender guidelines (Google Workspace Admin Help)",
+    "author": "Google",
+    "url": "https://support.google.com/a/answer/81126",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML"
+    ],
+    "why": "Gmail's own rules for bulk senders: authentication, one-click unsubscribe, spam rate limits, and honest subject lines and display names.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6341",
+    "file": "",
+    "title": "CAN-SPAM Act: A Compliance Guide for Business (FTC)",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML"
+    ],
+    "why": "US law on commercial email: honest subject lines, ad identification, postal address, opt-out timing and the primary purpose test for mixed order and marketing emails.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6343",
+    "file": "",
+    "title": "WhatsApp template components (Meta for Developers)",
+    "author": "Meta",
+    "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/components",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML"
+    ],
+    "why": "Exact character limits for template header, body, footer and buttons, button counts and parameter rules; template review timing from the message templates page.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6344",
+    "file": "",
+    "title": "Telecom Commercial Communications Customer Preference (Second Amendment) Regulations, 2025 (TRAI, 12 February 2025)",
+    "author": "Telecom Regulatory Authority of India",
+    "url": "https://www.trai.gov.in/sites/default/files/2025-02/Regulation_12022025.pdf",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML"
+    ],
+    "why": "India's commercial SMS rules: header suffixes by message type, opt-out in every promotional message, mixed messages count as promotional, template fixed content and variable rules, whitelisted links.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6345",
+    "file": "",
+    "title": "Understanding US SMS compliance laws (Klaviyo Help Center)",
+    "author": "Klaviyo",
+    "url": "https://help.klaviyo.com/hc/en-us/articles/360035055312",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML"
+    ],
+    "why": "Platform summary of US SMS consent, opt-in wording, opt-out and frequency disclosure, and TCPA quiet hours.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6360",
+    "file": "",
+    "title": "WhatsApp Business Messaging Policy",
+    "author": "WhatsApp (Meta), whatsappbusiness.com/policy",
+    "url": "https://whatsappbusiness.com/policy/",
+    "date": "2026-09-23",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "CRO",
+      "EML",
+      "OPS"
+    ],
+    "why": "The platform's own rules for business messaging: opt-in before contact, honouring opt-outs, the 24-hour window, human escalation for automation and banned sales categories. Date is the page's last-updated date.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6361",
+    "file": "",
+    "title": "Pricing on the WhatsApp Business Platform",
+    "author": "Meta for Developers",
+    "url": "https://developers.facebook.com/docs/whatsapp/pricing/",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML",
+      "CRO",
+      "FIN"
+    ],
+    "why": "Meta's documentation of per-message pricing, template categories, the customer service window and the free entry point window from click-to-WhatsApp ads. Date is the access date.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6362",
+    "file": "",
+    "title": "Private Replies (Instagram Platform)",
+    "author": "Meta for Developers",
+    "url": "https://developers.facebook.com/docs/instagram-platform/private-replies/",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG",
+      "CRO"
+    ],
+    "why": "Meta's limits on replying privately by DM to a comment on a post, reel or Live. Date is the access date.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6363",
+    "file": "",
+    "title": "Instagram Messaging API (Instagram API with Instagram Login)",
+    "author": "Meta for Developers",
+    "url": "https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/messaging-api/",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG",
+      "CRO"
+    ],
+    "why": "Meta's rules for business DMs on Instagram: who may start a conversation, the standard and human agent windows, escalation and automation disclosure. Date is the access date.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6380",
+    "file": "",
+    "title": "GST flyer: Tax Invoice and other such instruments in GST (CBIC, Directorate General of Taxpayer Services)",
+    "author": "Central Board of Indirect Taxes and Customs, India",
+    "url": "https://www.gstcouncil.gov.in/sites/default/files/e-version-gst-flyers/Tax_Invoice_and_other_new.pdf",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "FIN"
+    ],
+    "why": "Official summary of section 31 and rule 46: what a GST tax invoice must show, when it is issued for goods, copies, receipt vouchers for advances and credit notes for returns.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6381",
+    "file": "",
+    "title": "E-invoice mandate: changes, exemptions, documents and transactions covered (IRIS IRP, a GST Invoice Registration Portal)",
+    "author": "IRIS Business Services, authorised IRP on einvoice6.gst.gov.in",
+    "url": "https://einvoice6.gst.gov.in/content/e-invoice-mandate-e-invoicing-changes-exemptions-documents-covered-transactions-and-more/",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "FIN"
+    ],
+    "why": "States the Rs 5 crore AATO e-invoicing threshold from 1 August 2023 (Notification 10/2023), what is covered and the 30-day reporting limit for AATO of Rs 10 crore and above from 1 April 2025.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6382",
+    "file": "",
+    "title": "MSME Samadhaan: delayed payment to micro and small enterprises (Ministry of MSME)",
+    "author": "Ministry of Micro, Small and Medium Enterprises, India",
+    "url": "https://samadhaan.msme.gov.in/MyMsme/MSEFC/MSEFC_Welcome.aspx",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "FIN"
+    ],
+    "why": "Official statement of the MSMED Act payment rule: buyers pay Udyam-registered micro and small suppliers within 45 days of accepting goods, with interest at three times the RBI bank rate if late.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6383",
+    "file": "",
+    "title": "Amazon selling fees and pricing (sell.amazon.com)",
+    "author": "Amazon",
+    "url": "https://sell.amazon.com/pricing",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party US fee structure: selling plans, referral fee rules and minimums, closing fees, and that referral fees apply to the total price including shipping.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6384",
+    "file": "",
+    "title": "Manufacturer-imposed requirements (FTC Guide to Antitrust Laws)",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/advice-guidance/competition-guidance/guide-antitrust-laws/dealings-supply-chain/manufacturer-imposed-requirements",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OFF"
+    ],
+    "why": "US federal position on suggested retail prices, unilateral pricing policies, minimum resale price agreements and territorial or customer limits on dealers.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6385",
+    "file": "",
+    "title": "CAN-SPAM Act: A Compliance Guide for Business (FTC)",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "EML"
+    ],
+    "why": "Confirms CAN-SPAM covers business-to-business email and lists the requirements for commercial email, opt-out timing and the per-email penalty.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6387",
+    "file": "",
+    "title": "Publication 463, Travel, Gift, and Car Expenses: Gifts (IRS)",
+    "author": "US Internal Revenue Service",
+    "url": "https://www.irs.gov/publications/p463",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "FIN"
+    ],
+    "why": "The US 25 dollar per recipient per year deduction limit for business gifts and what is excluded from it, which shapes how US corporate gift buyers set budgets.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6400",
+    "file": "",
+    "title": "Before you get started with catalogs",
+    "author": "Pinterest Business Help Center",
+    "url": "https://help.pinterest.com/en/business/article/before-you-get-started-with-catalogs",
+    "date": "2026-11-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG",
+      "SET"
+    ],
+    "why": "Pinterest's own requirements for uploading a product catalog: account, claimed site, tag, merchant rules, data source format and required fields.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6401",
+    "file": "",
+    "title": "Pin performance and distribution",
+    "author": "Pinterest Business Help Center",
+    "url": "https://help.pinterest.com/en/business/article/pin-performance-and-distribution",
+    "date": "2026-11-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG",
+      "SEO"
+    ],
+    "why": "Pinterest's own guidance on what helps organic Pins reach people: keywords, fresh Pins, weekly posting, 2:3 images, matching landing pages, long Pin life.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6402",
+    "file": "",
+    "title": "Sharing links with your audiences",
+    "author": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/13748639?hl=en",
+    "date": "2026-11-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG"
+    ],
+    "why": "YouTube's own table of which links are clickable where, including Shorts descriptions and comments, related video links and channel profile links.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6403",
+    "file": "",
+    "title": "Get started with shopping on YouTube",
+    "author": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/12257682?hl=en",
+    "date": "2026-11-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG"
+    ],
+    "why": "YouTube's eligibility rules for a channel selling its own products through YouTube Shopping, and where tagged products appear.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6404",
+    "file": "",
+    "title": "IG Media Collaborators reference",
+    "author": "Meta for Developers, Instagram Platform",
+    "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-graph-api/reference/ig-media/collaborators.md",
+    "date": "2026-11-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG"
+    ],
+    "why": "Meta's developer reference for Instagram collaborator tagging: how many accounts, which formats and invite statuses.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6405",
+    "file": "",
+    "title": "Disclosures 101 for Social Media Influencers",
+    "author": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers",
+    "date": "2019-11-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "why": "US regulator guidance on when a brand relationship must be disclosed on social posts, where and in what words.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6406",
+    "file": "",
+    "title": "ASCI Social FAQs on influencer advertising",
+    "author": "Advertising Standards Council of India",
+    "url": "https://www.ascionline.in/social/faqs/",
+    "date": "2026-11-00",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "why": "India's self-regulator on permitted disclosure labels, how long a label must stay on video, what counts as a material connection and who is responsible.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6420",
+    "file": "",
+    "title": "Guidelines for Influencer Advertising in Digital Media, with Addendum I (15 July 2021) and Addendum II (17 August 2023) (ASCI)",
+    "author": "Advertising Standards Council of India",
+    "url": "https://www.ascionline.in/wp-content/uploads/2023/08/GUIDELINES-FOR-INFLUENCER-ADVERTISING-IN-DIGITAL-MEDIA.pdf",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG"
+    ],
+    "why": "India's self-regulatory rule for influencer ads: material connection, placement, live streams, audio, virtual influencers, joint responsibility, due diligence and health and finance influencer qualifications.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6421",
+    "file": "",
+    "title": "Works Made for Hire, Circular 30 (U.S. Copyright Office)",
+    "author": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/circs/circ30.pdf",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG"
+    ],
+    "why": "First-party US rule on who owns commissioned work: the creator, unless an employee made it or a signed written agreement makes an eligible commissioned work a work made for hire.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6422",
+    "file": "",
+    "title": "Pay creators on Collabs (Shopify Help Center)",
+    "author": "Shopify",
+    "url": "https://help.shopify.com/en/manual/promoting-marketing/collabs/merchants/payments",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG"
+    ],
+    "why": "First-party rules for paying affiliate commissions through Shopify Collabs: holding period, refunds, processing fee, tax forms.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6423",
+    "file": "",
+    "title": "TDS on perquisites and benefits: CBDT issues guidelines on new Section 194R (Lakshmikumaran and Sridharan)",
+    "author": "Lakshmikumaran and Sridharan Attorneys",
+    "url": "https://www.lkslaw.com/insights/news/tds-on-perquisites-and-benefits-cbdt-issues-guidelines-on-new-section-194r",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "FIN"
+    ],
+    "why": "Law-firm summary of CBDT Circular 12 of 2022 on Section 194R, including the rule for products retained by social media influencers. The government PDF refused automated access.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6440",
+    "file": "",
+    "title": "Get customer reviews with Amazon Vine (Sell on Amazon)",
+    "author": "Amazon",
+    "url": "https://sell.amazon.com/tools/vine",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party Vine terms: under 30 reviews, FBA, Brand Registry for branded items, up to 30 units, fee by units per parent product, charged only after a first review.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6441",
+    "file": "",
+    "title": "Amazon Brand Registry (Sell on Amazon)",
+    "author": "Amazon",
+    "url": "https://sell.amazon.com/brand-registry",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party Brand Registry eligibility (pending or registered trademark, brand on product or packaging) and the tools it unlocks.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6442",
+    "file": "",
+    "title": "Featured Offer eligibility requirement removal, Seller Forums announcement by Indy_Amazon",
+    "author": "Indy_Amazon (Amazon staff account), Seller Forums, Create and Manage Listings",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/86513d71-2e86-4cc0-aaba-0fbeac6b43a9",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "Amazon's own list of Featured Offer selection factors and the July 2026 removal of the separate seller eligibility requirement.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6443",
+    "file": "",
+    "title": "Account Health Dashboard intro series (2 of 3): Shipping Performance Metrics",
+    "author": "Quincy_Amazon (Amazon staff account), Seller Forums, Account Health",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/f4a247c2-430d-49c6-9ab7-a10efa0c7953",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "Amazon's targets and windows for late shipment rate, pre-fulfillment cancel rate and valid tracking rate on seller-fulfilled orders.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6444",
+    "file": "",
+    "title": "Amazon seller policies to know to keep your business thriving (Sell on Amazon blog)",
+    "author": "Amazon Selling Partner Blog",
+    "url": "https://sell.amazon.com/blog/selling-policies",
+    "date": "2024-10-16",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party summary of order defect rate, late shipment and cancellation targets and the consequences of breaking selling policies.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6445",
+    "file": "",
+    "title": "Listings Lounge: Optimizing Your Product Search Results in the New Year",
+    "author": "Michelle_Amazon (Amazon staff account), Seller Forums, Create and Manage Listings",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/2f501da5-d393-44bc-9d85-c8c35d744235",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "Amazon's 249-byte search terms limit and the word types it bans from the field.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6446",
+    "file": "",
+    "title": "How to create A+ Content: Design tips, guidelines, and examples (Sell on Amazon blog)",
+    "author": "Amazon Selling Partner Blog",
+    "url": "https://sell.amazon.com/blog/a-plus-content-design-guide",
+    "date": "2025-09-24",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ",
+      "LPG"
+    ],
+    "why": "First-party A+ Content eligibility, module counts, image size and the content A+ may not contain.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6447",
+    "file": "",
+    "title": "Guide to dynamic bidding, up and down, with Sponsored Products (Amazon Ads)",
+    "author": "Amazon Ads",
+    "url": "https://advertising.amazon.com/library/guides/dynamic-bidding-sponsored-products",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "Amazon Ads' own statement of how far dynamic bids up and down can move a Sponsored Products bid.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6448",
+    "file": "",
+    "title": "Prime Day Prep: Ethically Build Your Product Reviews on Amazon, Seller Forums post by Manny_Amazon",
+    "author": "Manny_Amazon (Amazon staff account), Seller Forums",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/3311bbef-3c04-4fbe-a1bc-8edcf5370528",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ",
+      "CXP"
+    ],
+    "why": "Amazon staff summary of allowed review routes (Request a Review 5 to 30 days after delivery, Vine) and banned ones (incentives, packaging requests, asking to change reviews).",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6460",
+    "file": "web/developers.google.com/search/docs/appearance/ai-features",
+    "title": "AI features and your website (AI Overviews and AI Mode)",
+    "author": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/ai-features",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AEO",
+      "SEO"
+    ],
+    "why": "Google's own statement that AI Overviews and AI Mode need no special files, markup or schema; a page must be indexed and snippet-eligible; traffic is reported inside the Performance report under Web.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6461",
+    "file": "web/developers.google.com/search/docs/essentials/spam-policies",
+    "title": "Spam policies for Google web search",
+    "author": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SEO",
+      "AEO"
+    ],
+    "why": "Defines scaled content abuse (including mass AI pages without added value), site reputation abuse, link spam including bought links, cloaking, hidden text and doorway pages.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6462",
+    "file": "web/developers.google.com/search/docs/specialty/international/localized-versions",
+    "title": "Tell Google about localized versions of your page",
+    "author": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/specialty/international/localized-versions",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SEO"
+    ],
+    "why": "Google's hreflang rules: three equal methods, every version lists itself and all others, ISO 639-1 and ISO 3166-1 alpha 2 codes, x-default, and untranslated pages count as duplicates.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6463",
+    "file": "web/developers.google.com/search/docs/appearance/google-images",
+    "title": "Google image SEO best practices",
+    "author": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/google-images",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SEO"
+    ],
+    "why": "How Google reads alt text with computer vision and page content, its warning against keyword-stuffed alt attributes, and its advice on short descriptive file names.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6464",
+    "file": "web/developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+    "title": "How to specify a canonical URL with rel=\"canonical\" and other methods",
+    "author": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SEO"
+    ],
+    "why": "Ranks canonical signals (redirect strong, rel canonical strong, sitemap weak) and says not to use robots.txt, noindex or the removal tool to choose a canonical.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6465",
+    "file": "web/developers.google.com/search/docs/appearance/structured-data/review-snippet",
+    "title": "Review snippet (Review, AggregateRating) structured data",
+    "author": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/review-snippet",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "SEO",
+      "CXP"
+    ],
+    "why": "Review markup must match reviews visible on the page, ratings must come from users, fake or undisclosed incentivised reviews are barred, and rich results are never guaranteed.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6466",
+    "file": "web/developers.openai.com/api/docs/bots",
+    "title": "Overview of OpenAI crawlers",
+    "author": "OpenAI",
+    "url": "https://developers.openai.com/api/docs/bots",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AEO",
+      "SEC"
+    ],
+    "why": "Separates OAI-SearchBot (ChatGPT search results), GPTBot (model training) and ChatGPT-User (user-initiated fetches); each robots.txt setting is independent; changes take about 24 hours.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6467",
+    "file": "web/help.shopify.com/en/manual/online-sales-channels/agentic-storefronts",
+    "title": "Agentic storefronts",
+    "author": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AEO",
+      "SET"
+    ],
+    "why": "Shopify's description of selling in AI channels (ChatGPT, Google AI Mode and Gemini, Microsoft Copilot, Meta), on by default for eligible stores, needing Shopify Catalog eligibility and completed terms, privacy and refund policies.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6480",
+    "file": "",
+    "title": "FAQ about Google Trends data (Google Trends Help)",
+    "author": "Google",
+    "url": "https://support.google.com/trends/answer/4365533",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "PRD"
+    ],
+    "why": "First-party description of how Trends normalises a sample of searches to a 0 to 100 relative scale, so it shows direction and share, not search volume.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6481",
+    "file": "",
+    "title": "About Popular products in Merchant Center Analytics (Google Merchant Center Help)",
+    "author": "Google",
+    "url": "https://support.google.com/merchants/answer/9488679",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "PRD"
+    ],
+    "why": "Free first-party ranking of popular products and brands on Google by category and country, including India and the US, updated weekly.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6482",
+    "file": "",
+    "title": "About Pricing in Merchant Center Analytics (Google Merchant Center Help)",
+    "author": "Google",
+    "url": "https://support.google.com/merchants/answer/9626903",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "PRD",
+      "OFF"
+    ],
+    "why": "First-party benchmark price per GTIN across retailers and the price gap report, a free way to compare the store's prices with rivals.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6483",
+    "file": "",
+    "title": "Meta Ad Library tools (Meta Transparency Center)",
+    "author": "Meta",
+    "url": "https://transparency.meta.com/researchtools/ad-library-tools",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "PRD",
+      "MCR"
+    ],
+    "why": "First-party statement of what the Ad Library holds: ads running now, issue and political ads for 7 years, and EU-delivered ads for one year after their last impression.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6484",
+    "file": "",
+    "title": "Likelihood of confusion (USPTO)",
+    "author": "United States Patent and Trademark Office",
+    "url": "https://www.uspto.gov/trademarks/search/likelihood-confusion",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "BRD"
+    ],
+    "why": "Regulator test for refusing a mark: similar in sound, look, meaning or impression, used on related goods.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6485",
+    "file": "",
+    "title": "Comprehensive clearance search for similar trademarks (USPTO)",
+    "author": "United States Patent and Trademark Office",
+    "url": "https://www.uspto.gov/trademarks/search/comprehensive-clearance-search-similar-trademarks",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "BRD"
+    ],
+    "why": "Regulator guidance that a clearance search covers federal marks, state registers and unregistered common-law use found on the internet.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6500",
+    "file": "",
+    "title": "16 CFR 251.1 Guide concerning use of the word 'Free' and similar representations (Cornell LII)",
+    "author": "US Federal Trade Commission, via Cornell Legal Information Institute",
+    "url": "https://www.law.cornell.edu/cfr/text/16/251.1",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OFF"
+    ],
+    "why": "The US rule for 'free with purchase' offers: regular price basis, no recouping the gift cost, terms disclosed at the outset, and how often one product may carry a free offer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6501",
+    "file": "",
+    "title": "16 CFR 239.3 Satisfaction guarantees and similar representations in advertising (Cornell LII)",
+    "author": "US Federal Trade Commission, via Cornell Legal Information Institute",
+    "url": "https://www.law.cornell.edu/cfr/text/16/239.3",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OFF"
+    ],
+    "why": "When a US store may say 'money back guarantee' or 'satisfaction guarantee', and what conditions it must disclose.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S6502",
+    "file": "",
+    "title": "16 CFR 239.4 'Lifetime' and similar representations (Cornell LII)",
+    "author": "US Federal Trade Commission, via Cornell Legal Information Institute",
+    "url": "https://www.law.cornell.edu/cfr/text/16/239.4",
+    "date": "2026-11-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OFF"
+    ],
+    "why": "A 'lifetime' guarantee must say whose or what lifetime it covers.",
+    "cards": 1,
+    "public": true
   }
 ]

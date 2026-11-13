@@ -425,5 +425,165 @@
     },
     "strength": "stated_by_practitioner",
     "public": true
+  },
+  {
+    "id": "SEC-6084",
+    "modules": [
+      "SEC",
+      "ADC"
+    ],
+    "topics": [
+      "account access",
+      "two-factor authentication"
+    ],
+    "claim": "A Meta business portfolio can require two-factor login for admins only or for everyone, has a verification status, and must always keep at least one admin.",
+    "body": "Meta's Marketing API reference for the Business object lists a two-factor setting with three values: none, admin_required and all_required. It also lists a verification status (verified, not verified, pending, rejected, expired and others), and an error that says at least one admin is required in a business. In practice a portfolio with one admin who loses their login, or whose personal profile is disabled, leaves nobody able to manage the ad accounts, Pages and datasets inside it. How to apply: add a second trusted admin, set two-factor to all_required, give agencies and freelancers access through partner sharing or employee roles rather than admin, and record who holds each role.",
+    "conditions": "Stores managing ad accounts, Pages, Instagram accounts and datasets through a Meta business portfolio.",
+    "fails_when": "Very small stores where the owner is the only trusted person; a second admin then needs to be a family member or a lawyer-held account the owner trusts, not a freelancer.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Two-factor values: none, admin_required, all_required"
+    ],
+    "asks": [
+      "How do I stop losing my Meta ad account if one login is hacked?",
+      "Should my Meta business portfolio have two admins?",
+      "How do I make two-factor login required for my whole team on Meta?",
+      "What access should my agency have in Meta Business?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6084",
+    "evidence": {
+      "where": "Business reference: two_factor_type updating parameter, verification_status field, error 3914",
+      "quote": "At least one admin is required in Business Manager."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEC-6200",
+    "modules": [
+      "SEC"
+    ],
+    "topics": [
+      "card testing",
+      "velocity and fraud rules"
+    ],
+    "claim": "Card testing now spreads low-volume attempts across thousands of stores through residential proxies; Shopify says its Payments-only model blocks about 90% of attacks on guest card checkouts.",
+    "body": "Shopify describes card testing as fraudsters using a store's checkout to check whether stolen card numbers work. Attackers no longer send fast bursts from one IP address; they spread small numbers of attempts across thousands of merchants and route them through residential proxies, so each attempt looks like a plausible shopper. That makes per-IP blocking and simple rate rules weaker than they were. Shopify says its own machine learning model scores payment attempts before they reach the processor, is available only to merchants using Shopify Payments, blocks about 90% of card testing attacks on guest credit card checkouts and helped merchants get 13% more legitimate sales approved. How to use it: on Shopify Payments, rely on the built-in screening first and add rules for what gets through (small orders, many failed payments, mismatched names and addresses); on a third-party gateway, ask the provider what card testing screening it runs and add your own checkout bot protection.",
+    "conditions": "Shopify stores; the 90% figure applies to guest credit card checkouts on Shopify Payments as reported by Shopify.",
+    "fails_when": "The store uses a third-party gateway, where this model does not run.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "about 90% of card testing attacks on guest card checkouts blocked",
+      "13% more legitimate sales approved"
+    ],
+    "asks": [
+      "What is card testing and does Shopify stop it?",
+      "Why did per-IP blocking stop working against card testers?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6200",
+    "evidence": {
+      "where": "Article body: how attacks have changed, and the Shopify Payments model results"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEC-6201",
+    "modules": [
+      "SEC",
+      "FIN"
+    ],
+    "topics": [
+      "chargeback disputes",
+      "evidence"
+    ],
+    "claim": "Shopify Payments disputes give usually 7 to 21 days for evidence, submit automatically on the due date, can take up to 75 days to decide, and have no appeal; the fee (US $15) returns only if you win.",
+    "body": "Shopify's help page says the store usually has 7 to 21 days to build a chargeback response; the exact due date shows on the dispute in the admin. On Shopify Payments the response is sent to the card company on the due date even if the merchant adds nothing, with basic order information included, and some low-chance disputes are accepted automatically. The disputed amount and the chargeback fee are withdrawn at once; the fee is returned if the merchant wins. Example fees: US $15, Canada $15, UK 10 GBP, Australia 25 AUD. The bank can take up to 75 days after submission to decide (65 to 75 days for inquiries) and the decision is final, with no appeal. Shopify lists evidence by reason: for fraud, AVS and CVV results, IP and device data, 3D Secure records, order history and delivery to the billing address; for item not received, tracking and delivery confirmation; for not as described, the listing at time of purchase, pre-shipment photos, messages and the return policy; for credit not processed, the refund record and policy; for subscription cancelled, the agreement, cancellation policy and records.",
+    "conditions": "Shopify Payments; other gateways set their own windows and fees.",
+    "fails_when": "The store is enrolled in network dispute resolution, where some disputes resolve before becoming chargebacks and have no evidence window.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "usually 7 to 21 days to respond",
+      "up to 75 days for the bank to decide",
+      "US $15 chargeback fee, returned on a win"
+    ],
+    "asks": [
+      "How long do I have to respond to a chargeback?",
+      "What evidence do I send for a fraud chargeback?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6201",
+    "evidence": {
+      "where": "Sections on response time, fees, outcomes and evidence by dispute type"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEC-6202",
+    "modules": [
+      "SEC",
+      "OPS"
+    ],
+    "topics": [
+      "admin access",
+      "app and plugin permission risk"
+    ],
+    "claim": "Shopify collaborators need the store's 4-digit request code and their own two-step login; grant only the permissions the job needs, since removal is permanent and they must re-request.",
+    "body": "Shopify lets outside partners (agencies, developers, freelancers) work in a store through collaborator accounts. The store has a 4-digit collaborator request code under Users, Security; generating a new code invalidates the old one. Partners must turn on two-step authentication or they cannot log in. Collaborators do not count toward the plan's user limit, which tempts owners to add many and forget them. Shopify's advice is to grant only the permissions the partner needs, give only what the owner is comfortable giving, and ask the partner why before granting anything unclear. A collaborator can be removed from Settings, Users; the removal cannot be undone and the partner must send a new request to regain access. How to use it: keep the request code required, rotate it after each project, review collaborators monthly and remove any whose work has ended.",
+    "conditions": "Shopify stores; exact menu labels vary between organisation and single-store admins.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "4-digit collaborator request code",
+      "collaborators do not count toward the user limit"
+    ],
+    "asks": [
+      "How do I give an agency access to my Shopify store safely?",
+      "How do I remove a freelancer from my store?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6202",
+    "evidence": {
+      "where": "Sections on the collaborator request code, permissions and removing a collaborator"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

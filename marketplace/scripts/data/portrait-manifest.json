@@ -9,7 +9,7 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:10:13.786Z"
   },
-  "spent_usd": 7.74705,
+  "spent_usd": 7.83107,
   "achieng-content-strategy": {
     "sha256": "cdbf62328530e34274fd6540619171144daa5628682630d5ebec8bc0360954fa",
     "model": "gpt-image-2.5-flare",
@@ -2729,5 +2729,35 @@
     "sha256": "07533e391a15116c5a04075ed8a887e4537ac69ae3f03df4a9d847619bb84154",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-13T06:18:06.800Z"
+  },
+  "mei-wholesale-sales": {
+    "sha256": "9bc2c4022eb6f1a91815522b824f498f7f98af876fa540df9136652d4e42da63",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T07:55:18.601Z"
+  },
+  "lucia-email-copy": {
+    "sha256": "adae9d62fe9d78c12e51e1fa22f8265d25fcaa6ff0a2549aa947695487fa84e7",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T07:55:19.620Z"
+  },
+  "kofi-ad-copy": {
+    "sha256": "582855ecdb5c26c2fd02b4fb1986e7633dd18cdee8d23f6a25bfdb2908ea6794",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T07:55:20.312Z"
+  },
+  "rohan-chat-sales": {
+    "sha256": "7f03ca7c298ffe00b66e2fb8ca4a9cc5f5177d9faea73353e4aa2f738f607f25",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T07:55:21.266Z"
+  },
+  "tomas-social-community": {
+    "sha256": "5ad3bf721bcefe603f309039eb79a808ee59b799cf8492de56b8d5fb9f4f9e5a",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T07:55:33.842Z"
+  },
+  "zara-tiktok-ads": {
+    "sha256": "95b9a799f21b82a25ef1c56bb6d094fa1f6d62a7242c15b116ff4f2c44f77c8b",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-13T07:55:34.363Z"
   }
 }

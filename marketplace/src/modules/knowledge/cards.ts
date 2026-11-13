@@ -117,7 +117,7 @@ export function moduleMarkdown(vertical: Vertical, code: string, cards: Card[], 
   return [
     `# ${vertical.name} knowledge: ${mod.name} (${code})`,
     "",
-    `${cards.length} expert knowledge cards, ${baseline} baseline (true for almost every brand) and ${cards.length - baseline} growth (true under the stated conditions). Each card is one claim in our own words, with when it holds, when it fails and its source. Tier 1 is platform documentation, 2 large-sample research, 3 a named practitioner with receipts, 4 opinion. Re-check anything time-sensitive before a buyer sees it.`,
+    `${cards.length} expert knowledge cards on ${mod.name.toLowerCase()}, ${baseline} baseline (true for almost every brand) and ${cards.length - baseline} growth (true under the stated conditions). Each card is one claim in our own words, with when it holds, when it fails and its source. Tier 1 is platform documentation, 2 large-sample research, 3 a named practitioner with receipts, 4 opinion. Re-check anything time-sensitive before a buyer sees it.`,
     "",
     ...cards.flatMap(c => [cardMarkdown(c, sources.get(c.source), 2), ""]),
   ].join("\n");

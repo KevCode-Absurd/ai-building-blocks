@@ -512,5 +512,234 @@
     },
     "strength": "shown_with_numbers",
     "public": true
+  },
+  {
+    "id": "SEO-6160",
+    "modules": [
+      "SEO",
+      "AEO",
+      "LPG"
+    ],
+    "topics": [
+      "structured data",
+      "FAQ"
+    ],
+    "claim": "Google stopped showing FAQ rich results in Search from 7 May 2026 and removed the feature, so FAQPage markup no longer earns expandable FAQ snippets; write FAQs for buyers and answer engines, not for the snippet.",
+    "body": "Google Search Central's FAQ structured data page now carries only an update log: on 8 May 2026 Google noted the feature would no longer appear in Google Search starting 7 May 2026, and on 15 June 2026 that the FAQ rich result is no longer shown in Google Search results. How to apply: keep FAQ content because buyers read it at the moment of doubt and answer engines can quote plain, visible question-and-answer text, but do not justify an FAQ block, or pad one, on the promise of extra search snippet space. Any markup kept must match visible text.",
+    "conditions": "Google Search, from May 2026 onward.",
+    "fails_when": "Other search engines and AI assistants may still read FAQ markup; Google may change features again, so recheck the Search Gallery before a markup project.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Removed from Google Search from 7 May 2026"
+    ],
+    "asks": [
+      "Do FAQ rich results still show in Google?",
+      "Should I add FAQ schema to my product pages?",
+      "Why did my FAQ snippets disappear from Google?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6166",
+    "evidence": {
+      "where": "Documentation update log, 8 May 2026 and 15 June 2026 entries",
+      "quote": "The FAQ rich result feature is no longer shown in Google Search results."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEO-6461",
+    "modules": [
+      "SEO",
+      "AEO"
+    ],
+    "topics": [
+      "content quality",
+      "link building",
+      "spam"
+    ],
+    "claim": "Google's spam policies treat mass-generated pages without added value (including generative AI pages), bought links, third-party content placed on a strong host site to borrow its ranking, hidden text, cloaking and doorway pages as spam.",
+    "body": "Google's spam policies define scaled content abuse as many pages generated mainly to manipulate rankings, and give as an example using generative AI tools to generate many pages without adding value for users. Link spam is creating links mainly to manipulate rankings, and buying or selling links for ranking purposes is listed. Site reputation abuse covers third-party content published on a host site mainly to use that host's ranking signals. Hidden text and cloaking (showing search engines different content from users) and doorway pages built to rank for many similar queries are also spam. How to apply: AI may help draft, but every page must add something a buyer needs; never buy link insertions, never place content on other strong domains only to borrow their ranking, and never hide text or instructions for crawlers or AI agents.",
+    "conditions": "Any site that wants to rank in Google web search.",
+    "fails_when": "Policies are enforced by Google's systems and manual review; enforcement varies, but the policy text is the standard to work to.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Will Google penalise AI-written blog posts?",
+      "Is buying link insertions allowed?",
+      "Can I publish articles on high-authority sites to rank faster?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6461",
+    "evidence": {
+      "where": "Scaled content abuse, link spam, site reputation abuse, cloaking, hidden text and doorway sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEO-6462",
+    "modules": [
+      "SEO"
+    ],
+    "topics": [
+      "international SEO",
+      "hreflang"
+    ],
+    "claim": "Google's hreflang rules: every language or country version must list itself and all others or the tags are ignored; use ISO 639-1 language and optional ISO 3166-1 alpha 2 region codes; x-default is the fallback; untranslated copies count as duplicates.",
+    "body": "Google accepts hreflang in HTML link tags, HTTP headers or the sitemap and treats the three the same, so pick the one easiest to maintain; using all three adds work without benefit. Each language version must list itself and every other version, and if two pages do not point to each other the tags are ignored. Only ISO 639-1 language codes and ISO 3166-1 alpha 2 region codes are supported; the language comes first and a region alone is not valid (en-GB works, GB does not). The reserved x-default value is used when no version matches the user's browser setting. Google does not use hreflang or the lang attribute to detect a page's language, and localised versions are only duplicates if the main content stays untranslated. How to apply: check reciprocity and codes on every market version, and translate or genuinely localise the main content rather than copying it.",
+    "conditions": "Stores with more than one language or country version of the same pages.",
+    "fails_when": "Single-language, single-country stores need none of this; other search engines handle language signals differently.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "3 equal methods",
+      "ISO 639-1 language, ISO 3166-1 alpha 2 region"
+    ],
+    "asks": [
+      "Why is Google ignoring my hreflang tags?",
+      "Is en-IN or IN the right hreflang code?",
+      "Do I need x-default?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6462",
+    "evidence": {
+      "where": "Guidelines for all methods",
+      "quote": "If two pages don't both point to each other, the tags will be ignored."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEO-6463",
+    "modules": [
+      "SEO",
+      "PRD"
+    ],
+    "topics": [
+      "image SEO",
+      "alt text"
+    ],
+    "claim": "Google reads alt text together with computer vision and the page's content; it wants useful, specific alt text that fits the page and warns that keyword-stuffed alt attributes are a poor experience that may be treated as spam.",
+    "body": "Google's image best practices say it uses alt text along with computer vision algorithms and the contents of the page to understand an image's subject, and that alt text acts as anchor text when an image is a link. It asks for useful, information-rich alt text that uses keywords appropriately and fits the context, and it advises against filling alt attributes with keywords, which creates a poor user experience and may cause the site to be seen as spam. Its examples move from no alt text, to a single word, to a short specific description of what the image shows. File names give only very light clues; short descriptive names beat generic camera names, and localised sites should translate file names too. How to apply: describe what each image shows (product, colour, angle, use) in a short phrase, never a keyword list.",
+    "conditions": "Any store image indexed by Google Images or read by screen readers.",
+    "fails_when": "Decorative images that carry no information can use empty alt text for accessibility; this card covers informative images.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "How should I write alt text for product images?",
+      "Does keyword stuffing alt text help SEO?",
+      "Do image file names matter for Google?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6463",
+    "evidence": {
+      "where": "Use descriptive alt text and file names"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEO-6464",
+    "modules": [
+      "SEO"
+    ],
+    "topics": [
+      "canonical",
+      "duplicate content"
+    ],
+    "claim": "To choose the canonical among duplicate URLs, Google rates redirects and rel canonical as strong signals and sitemap inclusion as weak.",
+    "body": "Do not use robots.txt, noindex or the URL removal tool to pick a canonical, and Google may choose its own. Google's canonicalisation guide lists three ways to tell it which duplicate URL to show: redirects (a strong signal that the target should be canonical), rel canonical link annotations (also strong), and sitemap inclusion (a weak signal). None is required; if you specify nothing, Google picks what it judges the best version. It warns against using robots.txt for canonicalisation, against noindex to steer canonical choice within one site because it blocks the page from Search entirely, and against the URL removal tool for this purpose. How to apply: merge true duplicates with a 301 redirect, point near-duplicates to the main page with rel canonical, list only canonical URLs in the sitemap, and keep noindex for pages that should not be in Search at all.",
+    "conditions": "Sites with the same or near-same content reachable at more than one URL (variants, collection paths, tags, parameters).",
+    "fails_when": "Google may still pick a different canonical if signals conflict; the URL Inspection tool shows its choice.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Redirect: strong",
+      "rel canonical: strong",
+      "Sitemap: weak"
+    ],
+    "asks": [
+      "Should I noindex or canonical duplicate product pages?",
+      "Why does Google pick a different canonical than mine?",
+      "Can I block duplicate URLs in robots.txt?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6464",
+    "evidence": {
+      "where": "Choose a canonicalization method; Avoid common mistakes",
+      "quote": "Don't use the robots.txt file for canonicalization purposes."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SEO-6465",
+    "modules": [
+      "SEO",
+      "CXP"
+    ],
+    "topics": [
+      "structured data",
+      "reviews"
+    ],
+    "claim": "Google's review snippet rules: marked-up reviews must be visible on the page, ratings must come from users, fake or undisclosed incentivised reviews are barred from the page and the markup, and Google never guarantees the rich result.",
+    "body": "Google's review snippet guidelines say the review content you mark up must be readily available to users on the marked-up page, and it must be immediately obvious that the page has review content. Ratings must be sourced directly from users, and when several individual reviews are marked up an AggregateRating of them should be included. Product is an eligible reviewed type. Reviews written in exchange for money, discounts, vouchers or free products must clearly disclose the incentive, and fake or undisclosed incentivised reviews must not appear on the page or in the markup. Self-serving reviews of a local business or organisation by itself are not eligible for stars. Google does not guarantee that features using structured data will appear. How to apply: only output rating markup from the real review app data shown on that product page, with the same count and average.",
+    "conditions": "Product pages using Review or AggregateRating structured data.",
+    "fails_when": "Merchant Center product ratings follow a separate programme with its own rules.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I add star rating schema to my product pages?",
+      "Why are my review stars not showing in Google?",
+      "Can I mark up reviews from free-product reviewers?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6465",
+    "evidence": {
+      "where": "Review snippet guidelines",
+      "quote": "Ratings must be sourced directly from users."
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

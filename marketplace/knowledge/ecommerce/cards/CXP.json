@@ -861,5 +861,319 @@
     },
     "strength": "anecdote",
     "public": true
+  },
+  {
+    "id": "CXP-6160",
+    "modules": [
+      "CXP",
+      "LPG",
+      "OPS",
+      "SET"
+    ],
+    "topics": [
+      "delivery promise",
+      "shipping copy"
+    ],
+    "claim": "Under the FTC's mail order rule a US store needs a reasonable basis for any ship time it states or implies, must ship within 30 days if it states none.",
+    "body": "Under the FTC's mail order rule a US store needs a reasonable basis for any ship time it states or implies, must ship within 30 days if it states none, and on a delay must notify the buyer with a free way to cancel and refund promptly. The FTC's Business Guide to the Mail, Internet, or Telephone Order Merchandise Rule says sellers must have a reasonable basis for stating or implying that they can ship within a certain time, meaning information that would satisfy a reasonable and prudent business person acting in good faith, judged on demand, supply, fulfilment capacity and records. With no shipment statement, the seller needs a reasonable basis for shipping within 30 days of a properly completed order (50 days where a credit application is involved). If a promise cannot be met, the seller must notify the buyer reasonably quickly with a revised date or an explanation, seek consent to the delay, and say the buyer may cancel instead, with a free way to do so. Required refunds must be prompt, generally within seven working days for most payment methods, and include shipping charges; store credit does not count. How to apply: every cutoff date, 'ships in 24 hours' line or gift-delivery promise must come from the store's real dispatch records, and a delay message template with a cancel option must exist before a peak.",
+    "conditions": "US orders taken online, by phone or by mail.",
+    "fails_when": "Non-US orders follow local consumer law; the rule governs shipment, not carrier transit, so delivery-date promises also need carrier performance data.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "30 days default when no ship time is stated",
+      "Refunds generally within 7 working days"
+    ],
+    "asks": [
+      "Can I promise delivery before Christmas on my site?",
+      "What do I have to do if orders ship late in the US?",
+      "Is it legal to say ships in 24 hours if we sometimes miss it?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6164",
+    "evidence": {
+      "where": "Sections on shipment statements, delay notices and refunds",
+      "quote": "you must have a reasonable basis for stating or implying that you can ship"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "CXP-6161",
+    "modules": [
+      "CXP",
+      "LPG"
+    ],
+    "topics": [
+      "size and fit",
+      "returns"
+    ],
+    "claim": "In Baymard's 2022 benchmark, 83% of desktop and 87% of mobile apparel sites gave insufficient sizing information; uncertainty about size was a common reason test users abandoned a product.",
+    "body": "Baymard's large-scale usability testing of apparel sites found nearly all sites offer some sizing information but only 17% of desktop and 13% of mobile sites offer enough. In testing, users hesitated to buy when unsure of their size, and an item that does not fit has to be returned, which costs the buyer effort and loads support. Baymard's ten sizing practices: show conventional sizes (S, M, L) or a conversion to them; numeric sizes where the product type uses them; measurements in both inches and centimetres; international size conversions; instructions for taking body measurements; sizing tailored to the product type (ideally by brand); a prominent size guide link next to the size selector; the browser Back button closing the guide and returning to the product; a link to support or chat inside the guide; and model measurements plus the size the model wears next to on-model images. How to apply: build the guide per product type from real garment measurements and the store's return reasons, and place it beside the size picker.",
+    "conditions": "Apparel, footwear and accessories sold online, desktop and mobile.",
+    "fails_when": "The benchmark is from 2022, so shares may have moved; products without sizing (one-size goods) need a use or fit guide instead.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "83% of desktop and 87% of mobile apparel sites gave insufficient sizing information",
+      "Ten sizing practices"
+    ],
+    "asks": [
+      "What should an apparel size guide include?",
+      "Where should the size chart link go on a product page?",
+      "How do I cut returns from wrong sizes?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6167",
+    "evidence": {
+      "where": "Article intro and the ten numbered best practices"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CXP-6284",
+    "modules": [
+      "CXP",
+      "OPS"
+    ],
+    "topics": [
+      "returns policy",
+      "store settings"
+    ],
+    "claim": "Shopify return rules set a window (none, 14, 30, 90 days, unlimited or custom) from delivery, per-product overrides where the shortest wins, return shipping and restocking fees, and final sale items.",
+    "body": "Shopify return rules let a store choose no returns, 14, 30 or 90 days, unlimited or a custom number of days, counted from each item's delivery or from delivery of the last item in the order, with an option to extend to the next business day. Collections, products or variants can have their own window; if an item sits in several overrides the shortest window applies. Return shipping can be free, a flat fee charged once per return, or a label the buyer buys. A restocking fee is a percentage shown when the buyer asks for a return, but fees are not deducted from refunds automatically, so staff must deduct them when refunding. Products or collections can be marked final sale; bundles cannot. Self-serve returns, where buyers request returns from their account, is a separate setting, and return rules still apply to returns made by staff. Cancellation windows are set separately: none, until fulfilled, 15 minutes, 1 hour or 24 hours.",
+    "conditions": "Shopify stores as described in the help article on the date fetched.",
+    "fails_when": "The store runs returns through a third-party returns app with its own rules, or local law sets a minimum right that overrides the store's window.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "window options: none, 14, 30, 90 days, unlimited, custom",
+      "shortest override window applies",
+      "cancellation window options: none, until fulfilled, 15 minutes, 1 hour, 24 hours"
+    ],
+    "asks": [
+      "What return settings can I set in Shopify?",
+      "Does Shopify deduct restocking fees from refunds?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6283",
+    "evidence": {
+      "where": "Return rules article"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "CXP-6300",
+    "modules": [
+      "CXP"
+    ],
+    "topics": [
+      "review collection",
+      "review platform rules"
+    ],
+    "claim": "Google's review policy bars merchants from offering any incentive for reviews, asking only happy customers, discouraging negative reviews, or setting staff quotas for reviews.",
+    "body": "Google's Maps user generated content policy lists, under fake engagement, that merchants may not offer incentives such as payment, discounts, free goods or services for reviews (or for removing a negative one), may not discourage or prohibit negative reviews or selectively solicit positive reviews, and may not ask staff to collect a set number of reviews. Content based on a conflict of interest, including current or former employment, is not allowed. For a store, this means a Google review ask must go to every eligible buyer with the same wording and no reward, and no survey may sit in front of it to filter out unhappy buyers.",
+    "conditions": "Reviews on Google (Business Profile and Maps). Applies to any store that asks buyers to review it on Google.",
+    "fails_when": "Reviews on the store's own site or other platforms follow their own rules; an incentive allowed by the FTC for an on-site review is still banned for a Google review.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "no incentives of any kind",
+      "no selective solicitation of positive reviews",
+      "no staff review quotas"
+    ],
+    "asks": [
+      "Can we give a discount for a Google review?",
+      "Can we only send happy customers to Google?",
+      "What are Google's rules on asking for reviews?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6300",
+    "evidence": {
+      "where": "Fake engagement section"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "CXP-6301",
+    "modules": [
+      "CXP"
+    ],
+    "topics": [
+      "review collection",
+      "review suppression",
+      "US law"
+    ],
+    "claim": "The FTC says review incentives are allowed only with no stated or implied sentiment required; asking only happy buyers may break the FTC Act; intimidation to remove reviews is banned; site moderation must treat good and bad reviews equally.",
+    "body": "The FTC's November 2024 questions and answers on its consumer reviews rule say: the rule has no specific ban on asking only satisfied customers for reviews, but the practice could violate the FTC Act under the Endorsement Guides. Incentives for reviews are allowed as long as there is no express or implied requirement for a particular sentiment; 'tell us how much you loved it and get a coupon' implies one. A business must not use threats or intimidation, which includes abusive messages and character attacks, to get a review removed or changed. A store may keep some reviews off its own site (for example ones about other products, or only about customer service) only if the rule is applied equally to positive and negative reviews. Courts can impose civil penalties for knowing violations.",
+    "conditions": "US buyers and US-facing stores; reviews on the store's own site, emails and ads.",
+    "fails_when": "Other platforms (Google, Amazon) can be stricter than the FTC, for example banning incentives outright.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "civil penalties for knowing violations",
+      "guidance dated November 2024"
+    ],
+    "asks": [
+      "Can we filter unhappy customers before asking for a review?",
+      "Can we hide negative reviews on our site?",
+      "Can we pay for reviews?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6301",
+    "evidence": {
+      "where": "Questions on review gating, incentives and review suppression"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "CXP-6302",
+    "modules": [
+      "CXP",
+      "OPS"
+    ],
+    "topics": [
+      "chatbot",
+      "WhatsApp",
+      "escalation"
+    ],
+    "claim": "WhatsApp allows automated replies but requires prompt, clear and direct escalation paths to a person, such as in-chat human transfer, phone, email, web support or a form.",
+    "body": "The WhatsApp Business Messaging Policy (page updated 23 September 2026) says a business may use automation when responding during the 24-hour window, but must also have prompt, clear and direct escalation paths available. It lists in-chat human agent transfer, phone number, email, web support, in-store visits and a support form. It also says a business may contact people only if they gave their number and opted in to receive messages, and recommends separate opt-in by message category. For a store chatbot on WhatsApp this makes a working human handoff a policy requirement, not a nice-to-have.",
+    "conditions": "Stores using the WhatsApp Business Platform or app for support or sales replies.",
+    "fails_when": "Other chat channels (site chat, Instagram) have their own rules; the handoff is still good practice there.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "automation allowed in the 24-hour window",
+      "six listed escalation paths"
+    ],
+    "asks": [
+      "Can we run a bot on WhatsApp?",
+      "Do we need a human handoff on WhatsApp?",
+      "What opt-in does WhatsApp need?"
+    ],
+    "platforms": [
+      "whatsapp"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6302",
+    "evidence": {
+      "where": "Section 2, automation and escalation; opt-in section"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "CXP-6303",
+    "modules": [
+      "CXP"
+    ],
+    "topics": [
+      "referral",
+      "disclosure",
+      "US law"
+    ],
+    "claim": "Under the FTC's Endorsement Guides, a reward that could change how much weight people give a recommendation must be disclosed, and the advertiser must train and monitor the people it rewards.",
+    "body": "The FTC's 'What people are asking' guidance says that if a reward could affect the weight or credibility readers give an endorsement, it should be disclosed, and that even an incentive with no money value may need disclosure. For network programs it advises telling members to disclose free products and checking periodically that they do; advertisers need reasonable programs to train and monitor the people they pay or reward. For a referral program, a customer who posts a referral link publicly for a reward should say they get something, and the store should tell them so and check.",
+    "conditions": "US-facing referral, affiliate and ambassador programs where customers post or share for a reward.",
+    "fails_when": "A private one-to-one share between friends who know about the reward carries less risk; the guidance does not name refer-a-friend programs directly.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "disclose any reward that could affect weight given",
+      "advertiser must train and monitor"
+    ],
+    "asks": [
+      "Do referral posts need a disclosure?",
+      "Are we responsible for what our referrers post?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6303",
+    "evidence": {
+      "where": "Incentives, network marketing and monitoring answers"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "CXP-6305",
+    "modules": [
+      "CXP"
+    ],
+    "topics": [
+      "NPS",
+      "surveys"
+    ],
+    "claim": "Net Promoter Score asks how likely someone is to recommend the brand on a 0 to 10 scale; 9 to 10 are promoters, 7 to 8 passives, 0 to 6 detractors, and NPS is percent promoters minus percent detractors.",
+    "body": "Bain's 2011 introduction of the Net Promoter System defines the question as how likely it is that you would recommend the product, service or company to a friend or colleague, scored 0 to 10. Promoters score 9 or 10, passives 7 or 8 and detractors 0 to 6. The score is the percentage of promoters minus the percentage of detractors; passives count in the base but not in the score, so NPS runs from minus 100 to plus 100. Because 0 to 6 are all detractors, a 6 and a 0 move the score the same way, which is why the follow-up comment and a fast reply to low scorers matter more than the number.",
+    "conditions": "Any store running a recommend-likelihood survey and comparing scores over time.",
+    "fails_when": "Small samples swing the score; comparisons across brands or survey timings are unreliable.",
+    "scope": "growth",
+    "tier": 2,
+    "numbers": [
+      "0 to 10 scale",
+      "promoters 9 to 10",
+      "passives 7 to 8",
+      "detractors 0 to 6",
+      "range minus 100 to plus 100"
+    ],
+    "asks": [
+      "How do we calculate NPS?",
+      "What counts as a detractor?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6305",
+    "evidence": {
+      "where": "Definition of the score"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

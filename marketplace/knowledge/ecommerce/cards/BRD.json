@@ -802,5 +802,77 @@
     },
     "strength": "anecdote",
     "public": true
+  },
+  {
+    "id": "BRD-6484",
+    "modules": [
+      "BRD"
+    ],
+    "topics": [
+      "naming",
+      "trademark"
+    ],
+    "claim": "The USPTO refuses a mark that is confusingly similar to an existing one on related goods; marks need not be identical, and similar sound, look, meaning or overall impression counts, including different spellings said the same way.",
+    "body": "The USPTO's likelihood of confusion page says confusion exists when marks are confusingly similar and the goods or services are related, so consumers would wrongly believe they come from the same source. Marks do not have to be identical: they can be similar in sound, appearance or meaning or create a similar commercial impression, and marks pronounced the same way but spelled differently can conflict. Goods can be related if they are identical, similar or competitive. The USPTO says the best way to avoid a refusal is a comprehensive clearance search. How to apply to naming: knock out any candidate whose sound-alike, look-alike or same-meaning twin is registered for related goods, not only exact matches, and check translations where the store sells in more than one language.",
+    "conditions": "Brands or product names that will be sold or registered in the US.",
+    "fails_when": "Other countries apply their own law (India's Trade Marks Act 1999); the final call on registrability belongs to an examiner or a trademark attorney.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I use a brand name that is spelled differently from an existing trademark?",
+      "Do trademarks have to be identical to conflict?",
+      "How do I check if a brand name is safe to use in the US?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6484",
+    "evidence": {
+      "where": "Similarity of marks; relatedness of goods",
+      "quote": "Trademarks don't have to be identical to be confusingly similar"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "BRD-6485",
+    "modules": [
+      "BRD"
+    ],
+    "topics": [
+      "naming",
+      "trademark"
+    ],
+    "claim": "A US trademark clearance search covers the free USPTO database of registered and pending marks, state trademark and business registers, and unregistered common-law use found by searching the internet.",
+    "body": "The USPTO's clearance search page lists the federal search system of registered and pending marks (with its free resources), the Trademark Official Gazette, the 50 state registers plus D.C. and Puerto Rico, and common-law rights that come from using a mark in commerce without registering it. It says earlier common-law use by others may affect a federal registration and advises searching several search engines for goods and services that may conflict. At a minimum, it says to check the federal database and the Gazette and also search the internet for common-law use. How to apply: a name screen is not done after one database lookup; also search marketplaces, social handles and the web for the same or similar name on related goods, and hand the survivors to a trademark attorney before buying stock or packaging.",
+    "conditions": "Brands or product names that will be sold in the US.",
+    "fails_when": "Non-US markets have their own registers (India: IP India public search); a search lowers risk but does not guarantee registration.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Is searching the USPTO database enough before choosing a brand name?",
+      "What is a common-law trademark?",
+      "How do I do a trademark clearance search?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6485",
+    "evidence": {
+      "where": "Clearance search resources list",
+      "quote": "search for common-law use of the trademark by others"
+    },
+    "strength": "regulator_rule",
+    "public": true
   }
 ]

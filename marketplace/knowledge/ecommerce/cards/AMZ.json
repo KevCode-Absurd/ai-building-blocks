@@ -287,5 +287,473 @@
     },
     "strength": "anecdote",
     "public": true
+  },
+  {
+    "id": "AMZ-6160",
+    "modules": [
+      "AMZ",
+      "LPG"
+    ],
+    "topics": [
+      "listing",
+      "product titles"
+    ],
+    "claim": "Since 21 January 2025 Amazon titles in most categories may not exceed 200 characters with spaces, may not use ! $ ? _ { } ^ ¬ ¦ unless part of the brand.",
+    "body": "Since 21 January 2025 Amazon titles in most categories may not exceed 200 characters with spaces, may not use ! $ ? _ { } ^ ¬ ¦ unless part of the brand, and may not repeat a word more than twice. In an official Seller Forums announcement, Amazon set new product title requirements from 21 January 2025. For most product categories titles may not exceed 200 characters including spaces; some categories set a lower limit. The special characters ! $ ? _ { } ^ ¬ and ¦ are not allowed unless they are part of the brand name. A title may not contain the same word more than twice, with prepositions, articles and conjunctions exempt. Sellers can find and fix non-compliant titles in Manage All Inventory; brand owners receive suggested rewrites and have 14 days to act before Amazon updates the title itself. How to apply: write the title from the product's real attributes once, count characters with spaces, scan for the banned characters and for any word used three times (keyword stuffing usually trips this), and check the category style guide in Seller Central, which can be stricter.",
+    "conditions": "Amazon listings in categories covered by the general title policy; check the marketplace's own Seller Central help for local variants such as Amazon.in.",
+    "fails_when": "Categories with their own shorter limit or style guide; brand names that legitimately contain a restricted character.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "200 characters including spaces for most categories",
+      "No word more than twice",
+      "14 days for brand owners to act on suggested rewrites"
+    ],
+    "asks": [
+      "How long can an Amazon product title be?",
+      "Why did Amazon change my listing title?",
+      "Which characters are banned in Amazon titles?",
+      "Can I repeat my main keyword in an Amazon title?"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "amazon_first",
+    "source": "S6161",
+    "evidence": {
+      "where": "News and Announcements post by News_Amazon",
+      "quote": "Titles may not contain the same word more than twice."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-6383",
+    "modules": [
+      "AMZ"
+    ],
+    "topics": [
+      "marketplace fees",
+      "channel choice"
+    ],
+    "claim": "Amazon US charges 0.99 dollars per item (Individual) or 39.99 dollars a month (Professional) plus a referral fee that is the greater of a category percentage, often 8 to 15%, or a minimum, usually 0.30 dollars.",
+    "body": "Amazon US charges 0.99 dollars per item (Individual) or 39.99 dollars a month (Professional) plus a referral fee that is the greater of a category percentage, often 8 to 15%, or a minimum, usually 0.30 dollars, on the total price including shipping. Amazon's US pricing page lists two plans: Individual at 0.99 dollars per item sold and Professional at 39.99 dollars per month. Every sale also pays a referral fee: a category percentage of the total price or a per-item minimum, whichever is greater. Most categories have a 0.30 dollar minimum. Rates range from 3% to 45% by category; examples on the page include 8% for computers and 15% for home and kitchen, toys and games, and everything else, and clothing uses tiered rates of 5%, 10% or 17% by price. The total price includes the item price, shipping and gift wrap charges, so free-shipping maths must include it. Media items add a 1.80 dollar closing fee. Fulfilment by Amazon fees are separate and estimated with Amazon's revenue calculator. How to use it: model marketplace gross profit per order with the referral fee on the shipped price plus fulfilment, storage and returns, never the referral fee alone.",
+    "conditions": "Amazon.com (US) as published on the date fetched; other Amazon marketplaces such as Amazon.in have their own fee schedules.",
+    "fails_when": "The seller is on another Amazon marketplace, fees have changed, or category-specific tiers apply.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "0.99 dollars per item Individual plan",
+      "39.99 dollars a month Professional plan",
+      "most referral minimums 0.30 dollars",
+      "referral rates 3% to 45%, commonly 15%"
+    ],
+    "asks": [
+      "What does it cost to sell on Amazon US?",
+      "Is the Amazon referral fee charged on shipping?"
+    ],
+    "platforms": [],
+    "platform": [
+      "amazon"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "amazon_first",
+    "source": "S6383",
+    "evidence": {
+      "where": "Selling plans, referral fees and closing fee sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-6440",
+    "modules": [
+      "AMZ",
+      "CXP"
+    ],
+    "topics": [
+      "reviews",
+      "Vine",
+      "launch"
+    ],
+    "claim": "Amazon Vine takes products with fewer than 30 reviews, sold through FBA and, if branded, enrolled in Brand Registry; up to 30 units per product, with a fee by units charged only after a first review.",
+    "body": "Amazon's Vine page sets eligibility: the product has fewer than 30 reviews on its detail page, FBA is the fulfilment method, and a branded product's brand is enrolled in Brand Registry (generic products can also qualify). Adult, digital and bundled products are not eligible. The seller can offer up to 30 units per product. The fee is per parent product: 0 for up to 2 units, 75 US dollars for 3 to 10 units and 200 US dollars for 11 to 30 units, with no extra cost for child products. Amazon charges 30 days after enrolment and after the first review is published, and charges nothing if no review arrives within 90 days. Vine Voices receive the product free and are asked for honest, unbiased opinions; the seller does not choose them or the rating. How to apply: enrol only when the product, listing and stock are final, because the 30 units go to experienced reviewers who will report every flaw; count the units as a launch cost at landed cost plus FBA fees.",
+    "conditions": "Amazon.com sellers with eligible FBA products; fees are US figures on the day fetched, other marketplaces set their own.",
+    "fails_when": "The product is adult, digital or a bundle, already has 30 or more reviews, or ships seller-fulfilled; fees changed after the fetch date.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "fewer than 30 reviews",
+      "up to 30 units",
+      "fee 0 for up to 2 units, 75 US dollars for 3 to 10, 200 US dollars for 11 to 30",
+      "no charge if no review within 90 days"
+    ],
+    "asks": [
+      "Is my product eligible for Amazon Vine?",
+      "How much does Vine cost?",
+      "How many units should I put into Vine?"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "amazon_first",
+    "source": "S6440",
+    "evidence": {
+      "where": "Eligibility and fees sections",
+      "quote": "Fewer than 30 reviews on its product detail page"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-6441",
+    "modules": [
+      "AMZ",
+      "BRD"
+    ],
+    "topics": [
+      "Brand Registry",
+      "trademark",
+      "brand protection"
+    ],
+    "claim": "Amazon Brand Registry needs a pending or registered trademark from an office in a country with an Amazon store, owned by the applicant, plus the brand name or logo permanently on the product or packaging.",
+    "body": "Amazon's Brand Registry page lists the requirements: a pending or registered trademark for the brand name or logo, issued by a government trademark office in a country that has an Amazon store; the applicant must be the trademark owner; the mark must be a word mark or a design mark containing words, letters or numbers; and a logo including the brand name must be permanently affixed to the products or packaging. Enrolment asks for the registration or application number and the product categories. One country's office is chosen at enrolment and others can be added after approval. Registered brands get A+ Content, a free Brand Store, Sponsored Brands, Brand Analytics, Vine access and protection tools (Report a Violation, automated protections, Transparency serial codes and Project Zero for eligible brands). Brands without a trademark can use Amazon's IP Accelerator list of vetted law firms. How to apply: file the trademark first, in the exact spelling printed on the product, then enrol with the application number rather than waiting for registration.",
+    "conditions": "Brand owners selling their own brand on any Amazon store; incentive amounts on the page change and are not part of this card.",
+    "fails_when": "The seller is a reseller or distributor, not the trademark owner; the mark is a pure image with no letters; the brand on the product differs from the filed mark.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "pending trademark accepted",
+      "one trademark office chosen at enrolment, more added later"
+    ],
+    "asks": [
+      "Can I join Brand Registry with a pending trademark?",
+      "What do I need for Amazon Brand Registry?",
+      "What does Brand Registry unlock?"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com",
+      "amazon.in"
+    ],
+    "mode": "amazon_first",
+    "source": "S6441",
+    "evidence": {
+      "where": "Eligibility and FAQ sections",
+      "quote": "Have a pending or registered trademark for your brand name or logo"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-6442",
+    "modules": [
+      "AMZ"
+    ],
+    "topics": [
+      "Buy Box",
+      "Featured Offer",
+      "pricing"
+    ],
+    "claim": "Amazon picks the Featured Offer on total item plus shipping price, delivery speed, free shipping, free returns, seller performance and stock; reviews, star rating, Prime badge and fulfilment method are not factors.",
+    "body": "In a Seller Forums announcement, an Amazon staff account said that from July 2026 Amazon is removing the separate seller eligibility requirement for the Featured Offer, rolling out across all stores by the end of 2026, while the selection method is unchanged. Offers are ranked on the combined item and shipping cost, delivery speed, free shipping, free returns, seller performance (including order volume, chargebacks and Voice of the Customer complaints) and stock availability. The post says reviews, star ratings, the Prime badge and the fulfilment method are not selection factors, and that being considered does not guarantee being featured. Amazon's suggested checks: Pricing Health for prices that make an offer ineligible, Automate Pricing rules, Voice of the Customer complaints, shipping settings, and Featured Offer percentage in Business Reports. How to apply: diagnose a lost Featured Offer factor by factor in that order before cutting price, and never match a price below the profit floor.",
+    "conditions": "Amazon stores where several offers share one detail page, or a single offer that can lose the Featured Offer to pricing problems; from July 2026 onward.",
+    "fails_when": "Amazon changes the method again; marketplaces outside Amazon use their own rules.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "eligibility requirement removed from July 2026, complete by end of 2026"
+    ],
+    "asks": [
+      "Why did I lose the Buy Box?",
+      "Does FBA win the Buy Box?",
+      "Do reviews affect the Featured Offer?"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "amazon_first",
+    "source": "S6442",
+    "evidence": {
+      "where": "Announcement post",
+      "quote": "Amazon is removing the separate seller eligibility requirement for the Featured Offer"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-6443",
+    "modules": [
+      "AMZ",
+      "OPS"
+    ],
+    "topics": [
+      "account health",
+      "shipping performance"
+    ],
+    "claim": "For seller-fulfilled Amazon orders, keep late shipment rate under 4% (10 or 30 days), pre-fulfillment cancel rate under 2.5% (7 days) and valid tracking rate over 95% (30 days, per category).",
+    "body": "In its Account Health Dashboard series, an Amazon staff account set the shipping performance targets for orders the seller ships. Late shipment rate is measured over 10 or 30 days and should stay under 4%; above it, the account can be deactivated. Pre-fulfillment cancellation rate is measured over 7 days and should stay under 2.5%, with deactivation possible above it. Valid tracking rate is measured over 30 days, per product category, and should stay above 95%; below it, Amazon may restrict selling non-FBA items in that category. FBA orders do not count toward these three. How to apply: when any metric nears its line, move the affected SKUs to FBA or cut the handling-time promise before fixing the process, because the short windows recover only as new clean orders replace the bad ones.",
+    "conditions": "Seller-fulfilled (FBM) orders on Amazon; targets as stated by Amazon staff, checked against the live Account Health dashboard.",
+    "fails_when": "All orders are FBA; the dashboard shows a different target for the marketplace or category.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "late shipment rate under 4%",
+      "pre-fulfillment cancel rate under 2.5% over 7 days",
+      "valid tracking rate above 95% over 30 days"
+    ],
+    "asks": [
+      "What late shipment rate gets an Amazon account suspended?",
+      "What is a good valid tracking rate?",
+      "Do FBA orders count in shipping metrics?"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "amazon_first",
+    "source": "S6443",
+    "evidence": {
+      "where": "Shipping performance metrics post",
+      "quote": "maintain an LSR under 4% in order to sell on Amazon"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-6444",
+    "modules": [
+      "AMZ"
+    ],
+    "topics": [
+      "account health",
+      "order defect rate",
+      "policy"
+    ],
+    "claim": "Amazon tells sellers to keep order defect rate under 1% and warns that breaking selling policies can cost deactivation, Featured Offer eligibility and withheld funds.",
+    "body": "Amazon's Selling Partner Blog summary of seller policies says to keep the order defect rate (orders with negative feedback, an A-to-z Guarantee claim or a chargeback) under 1% to avoid restrictions on selling privileges, the late shipment rate ideally under 4% for seller-fulfilled offers, and the cancellation rate under 2.5%. It lists valid tracking rate among other rates to track. It also says that ignoring or breaking the rules may result in account deactivation, loss of Featured Offer eligibility and withholding of funds, and points sellers to the customer product reviews, intellectual property and pricing policies. How to apply: read each metric on the Account Health dashboard, find the orders behind each defect, and fix the cause in the product, listing or shipping before writing any appeal.",
+    "conditions": "Amazon sellers on any fulfilment method; ODR counts FBA and seller-fulfilled orders.",
+    "fails_when": "A marketplace or programme sets a stricter target; the dashboard shows a newer rule.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "order defect rate under 1%",
+      "late shipment rate under 4%",
+      "cancellation rate under 2.5%"
+    ],
+    "asks": [
+      "What order defect rate is safe on Amazon?",
+      "What happens if I break Amazon's selling policies?"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "amazon_first",
+    "source": "S6444",
+    "evidence": {
+      "where": "Account health section",
+      "quote": "keep your ODR under 1% to avoid restrictions"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-6445",
+    "modules": [
+      "AMZ",
+      "SEO"
+    ],
+    "topics": [
+      "listing",
+      "search terms",
+      "backend keywords"
+    ],
+    "claim": "Amazon's search terms field has a 249-byte limit; going over can make Amazon ignore the whole field, and brand names, temporary words and subjective words are not allowed in it.",
+    "body": "An Amazon staff post on listing search results reminded sellers of the 249-byte limit for the search terms (generic keyword) attribute and warned that exceeding it can cause Amazon to ignore the attribute completely. It told sellers not to enter prohibited words, giving three groups: brand names (other brands, including Amazon), temporary words such as available now, brand new, current, discounted or just launched, and subjective words such as amazing, best, cheap, effective or fastest. The limit is in bytes, not characters, so letters with accents and non-Latin scripts use more than one byte each. How to apply: fill the field with buyer words not already in the title and bullets, separated by single spaces, count bytes with a byte counter rather than a character counter, and stop at or under 249.",
+    "conditions": "Amazon listings where the seller controls the search terms attribute; marketplaces may set their own limit, so check the Keyword attributes help page in Seller Central.",
+    "fails_when": "A category or marketplace sets a different limit; Amazon updates the attribute rules.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "249 bytes"
+    ],
+    "asks": [
+      "How long can Amazon backend keywords be?",
+      "Can I put competitor brands in search terms?",
+      "Why are my backend keywords not indexed?"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "amazon_first",
+    "source": "S6445",
+    "evidence": {
+      "where": "Staff post on search results",
+      "quote": "exceeding this limit can cause Amazon to completely ignore your search term attribute"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-6446",
+    "modules": [
+      "AMZ",
+      "LPG"
+    ],
+    "topics": [
+      "A+ Content",
+      "listing"
+    ],
+    "claim": "Basic A+ Content needs a Professional plan and Brand Registry, allows up to 5 modules (Premium up to 7), and may not contain best-selling claims, prices, shipping, warranty text, links, QR codes, contact details or competitor comparisons.",
+    "body": "Amazon's A+ Content guide says Basic A+ Content is open to Professional sellers enrolled in Brand Registry, with up to five modules per ASIN; Premium A+ is for registered brands meeting further criteria and allows up to seven. Images should be no larger than 2 MB and follow the module dimensions; avoid low-resolution or animated images. Not allowed: claims such as best-selling or top-rated in text or images, warranty or guarantee information in text placements, pricing, promotional or shipping details, QR codes, hyperlinks, directions to other web pages, contact information, and any reference to or comparison with competitors. Awards must name the body and year. Content goes live after a validation step. The guide also cites Amazon internal data on sales lifts from A+; treat those as Amazon's claim, not a forecast for one product. How to apply: plan modules from buyer questions, compare only the brand's own products in comparison charts, and check every line against the banned list before submitting.",
+    "conditions": "Brand-registered sellers on Amazon stores that offer A+ Content.",
+    "fails_when": "The marketplace or category has its own A+ guideline; Premium criteria change.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "up to 5 Basic modules per ASIN",
+      "up to 7 Premium modules",
+      "images no larger than 2 MB"
+    ],
+    "asks": [
+      "What can't I put in Amazon A+ Content?",
+      "How many A+ modules can I use?",
+      "Can my A+ compare us to competitors?"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "amazon_first",
+    "source": "S6446",
+    "evidence": {
+      "where": "Guidelines section",
+      "quote": "Never reference or compare products with competitors."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-6447",
+    "modules": [
+      "AMZ",
+      "ADC"
+    ],
+    "topics": [
+      "Sponsored Products",
+      "bidding"
+    ],
+    "claim": "With Sponsored Products dynamic bids up and down, Amazon can raise or lower a bid by up to 100% based on likely performance, so a click can cost up to double the bid entered.",
+    "body": "Amazon Ads' guide to dynamic bidding says that under dynamic bids up and down Amazon will increase or decrease bids by up to 100% for all placements based on performance, and tells advertisers to be prepared to potentially spend double the bid they input. The strategy is chosen in the campaign bidding strategy section; the alternatives are dynamic bids down only and fixed bids. The guide suggests reviewing bids about every two weeks and limiting changes while testing so results can be traced to one change. Placement adjustments for top of search and product pages stack on top of the strategy. How to apply: at launch, set the entered bid at no more than half the maximum cost per click the product can afford when using up and down, or use down only so the entered bid is the ceiling.",
+    "conditions": "Sponsored Products campaigns on Amazon; check the campaign settings page for current limits, since placement caps have differed in other Amazon documentation.",
+    "fails_when": "Amazon changes the strategy limits; placement adjustments raise the ceiling further.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "up to 100% increase or decrease under up and down",
+      "review bids about every two weeks"
+    ],
+    "asks": [
+      "How much can dynamic bidding raise my Amazon bid?",
+      "Which Amazon bidding strategy should a new campaign use?"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "amazon_first",
+    "source": "S6447",
+    "evidence": {
+      "where": "Dynamic bids up and down section"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-6448",
+    "modules": [
+      "AMZ",
+      "CXP"
+    ],
+    "topics": [
+      "reviews",
+      "review requests"
+    ],
+    "claim": "Amazon's allowed review routes are the Request a Review button, which sends a standard request 5 to 30 days after delivery, and Vine; incentives, review requests in packaging and asking buyers to change reviews are banned.",
+    "body": "An Amazon staff post on building reviews ethically says the Request a Review button on the order details page sends a standardised review request 5 to 30 days after delivery, and that Vine is available to brand-registered sellers to jumpstart first reviews. It lists what to avoid: never offer incentives for reviews, never ask buyers to change or remove reviews, avoid messaging customers outside Amazon's system, and do not include review requests in product packaging. It recommends product quality, accurate listings, quick answers to buyer questions and easy returns. How to apply: send the button request for every eligible order rather than a chosen few, keep inserts to use and care instructions with no review request, and route complaints to support without asking for a review change.",
+    "conditions": "Amazon sellers; a staff summary of the Customer Product Reviews policy, so read the policy page in Seller Central for the full list.",
+    "fails_when": "The marketplace has a stricter local rule; the full policy lists further banned practices not in the summary.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "Request a Review 5 to 30 days after delivery"
+    ],
+    "asks": [
+      "Can I put a review card in my Amazon package?",
+      "When can I use Request a Review?",
+      "Can I give a discount for an Amazon review?"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "amazon_first",
+    "source": "S6448",
+    "evidence": {
+      "where": "Staff post, do and avoid lists",
+      "quote": "Never offer incentives for reviews."
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

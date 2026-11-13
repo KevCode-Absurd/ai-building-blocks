@@ -506,5 +506,307 @@
     },
     "strength": "anecdote",
     "public": true
+  },
+  {
+    "id": "COG-6260",
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "topics": [
+      "incoterms and landed cost",
+      "GST on imports"
+    ],
+    "claim": "In India, IGST on imported goods is charged on assessable value plus customs duties; a GST-registered importer can claim the IGST back as input tax credit, but never the basic customs duty.",
+    "body": "The government flyer on imports under GST says all imports are treated as inter-State supplies, so integrated tax (IGST) is charged in addition to basic customs duty, collected at the point customs duty is levied. The value for IGST is the assessable value plus the customs duty and any other duty charged in the same manner as customs duty; its worked example takes an assessable value of Rs 100, adds 10% basic duty and a cess to reach Rs 110.30, and charges IGST on that. Input tax credit of the IGST and compensation cess paid at import is available to the importer, so IGST is in essence a pass-through for a registered business. Basic customs duty (and the education cess in the example) is not available as input tax credit. The importer declares its GSTIN. For a landed cost sheet this means: basic customs duty and any surcharge on it are a real cost per unit; IGST is a cash outlay that comes back as credit for a GST-registered store, but is a real cost for a store that cannot claim credit.",
+    "conditions": "Goods imported into India by a business; rates in the example are illustrative and the duty rate for each product comes from the current Customs Tariff by HSN code.",
+    "fails_when": "The importer is not GST-registered or cannot use the credit (for example under the composition scheme), in which case IGST is a cost; duty rates and surcharges change by notification, so the flyer's example rates are not current rates.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Worked example: assessable value Rs 100, basic customs duty 10%, value for IGST Rs 110.30"
+    ],
+    "asks": [
+      "Is GST on imports a cost for my store?",
+      "How is IGST on imported goods calculated?",
+      "Can I claim customs duty back as GST credit?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6260",
+    "evidence": {
+      "where": "Import of Goods; Input tax credit of integrated tax",
+      "quote": "shall in essence be a pass through to that extent"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-6261",
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "topics": [
+      "incoterms and landed cost",
+      "US tariffs"
+    ],
+    "claim": "Duty-free de minimis entry into the US ended for all countries on 29 August 2025, so low-value imports, including small sample and air shipments, now carry duty.",
+    "body": "CBP's release of 29 August 2025 says the president ordered the suspension of de minimis globally from that date, covering shipments moved by cargo carriers, express couriers and postal operators. Personal letters, genuine gifts under 100 dollars and personal travel items under 200 dollars are not affected. For a store this removes the old route of bringing in small batches under 800 dollars free of duty: every commercial shipment, including air-freighted launch batches and paid samples, must be costed with duty and any additional tariffs in force on the day, plus broker or courier clearance fees.",
+    "conditions": "Goods imported into the US from any country for a business, from 29 August 2025.",
+    "fails_when": "Tariff rules have changed repeatedly since 2025; the rate and the treatment of postal shipments must be checked on the day of import with a customs broker.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "De minimis suspended for all countries from 29 August 2025",
+      "Unaffected: bona fide gifts under 100 dollars, personal travel items under 200 dollars"
+    ],
+    "asks": [
+      "Do I pay duty on small shipments into the US?",
+      "Can I still import samples duty-free under 800 dollars?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6261",
+    "evidence": {
+      "where": "Release body",
+      "quote": "the suspension of de minimis globally, effective August 29"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-6262",
+    "modules": [
+      "COG",
+      "FIN"
+    ],
+    "topics": [
+      "incoterms and landed cost",
+      "US customs value"
+    ],
+    "claim": "US duty is charged on the price paid to the seller excluding international freight and insurance, plus packing costs, selling commissions, assists such as moulds you supply, and royalties.",
+    "body": "CBP's guide to customs value says the transaction value is the price actually paid or payable when sold for export to the US, which excludes international freight, insurance and other C.I.F. charges, plus amounts for packing costs incurred by the buyer, selling commissions incurred by the buyer, the apportioned value of any assist (for example moulds, tools or artwork the buyer gives the factory), and royalties or licence fees paid as a condition of sale. For a landed cost sheet this means duty is calculated on the factory price (adjusted for those additions), not on the freight-inclusive cost, and a mould paid for separately still has to be spread over units and declared. Proof of the actual freight cost should come from the carrier's documents.",
+    "conditions": "Commercial imports into the US valued by transaction value, the primary method.",
+    "fails_when": "Related-party sales, or freight that cannot be documented, where CBP may value differently; other countries such as India value goods differently, so the rule does not carry across.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Is US duty charged on freight too?",
+      "Do I pay duty on moulds I paid the factory for?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6262",
+    "evidence": {
+      "where": "What is the Price Actually Paid or Payable?",
+      "quote": "excluding international freight, insurance, and other C.I.F. charges"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-6263",
+    "modules": [
+      "COG",
+      "SET"
+    ],
+    "topics": [
+      "product specification",
+      "labelling"
+    ],
+    "claim": "A US textile label needs fibre content by percentage, the country of origin on the front of the label, and the maker's name or RN number; at a neck, the origin label sits inside centre of the neck.",
+    "body": "The FTC's guide to the Textile and Wool Acts says each generic fibre must be listed with its percentage by weight in descending order, in English, with fibres under 5% usually grouped as other fibre. The country of origin names the country where the product was made and must be on the front of the label; for garments with a neck it goes inside centre of the neck, between the shoulder seams or next to another neck label, and no other label may hide it. The manufacturer or dealer is identified by full business name or a Registered Identification Number with its RN prefix. Labels must stay attached until the product reaches the buyer, and required terms are not abbreviated. For a factory spec sheet, the label artwork, its wording and its exact sewn position belong in the spec, not left to the factory.",
+    "conditions": "Textile and wool products sold in the US.",
+    "fails_when": "Products outside the Acts' scope, or other categories with their own rules (children's products, cosmetics, electronics).",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Fibres under 5% generally listed as other fiber"
+    ],
+    "asks": [
+      "What must a clothing label say in the US?",
+      "Where does the made-in label go?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6263",
+    "evidence": {
+      "where": "Country of origin; Placement",
+      "quote": "The country of origin must be on the front of the label."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-6264",
+    "modules": [
+      "COG",
+      "SET"
+    ],
+    "topics": [
+      "product specification",
+      "labelling"
+    ],
+    "claim": "In India, a pre-packaged product must declare maker, packer or importer, country of origin for imports, generic name, net quantity, month and year of manufacture, MRP inclusive of all taxes, unit sale price and consumer care details.",
+    "body": "The Department of Consumer Affairs lists the declarations the Legal Metrology (Packaged Commodities) Rules, 2011 require on packaged goods: name and address of the manufacturer, packer or importer; country of origin for imported products; common or generic name; net quantity in a standard unit of weight, measure or number; month and year of manufacture; best-before or use-by date where goods can become unfit; retail sale price as Maximum Retail Price inclusive of all taxes; consumer care details; dimensions where relevant; and unit sale price. For a factory spec sheet, these lines must be on the retail pack artwork before printing, with the Indian importer's details, not the factory's, where goods are imported.",
+    "conditions": "Pre-packaged goods sold to consumers in India.",
+    "fails_when": "Exempt cases such as large industrial packs; rules are amended from time to time, so check the current notification before printing.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Ten mandatory declaration types listed"
+    ],
+    "asks": [
+      "What must my product packaging say in India?",
+      "Does an imported product need the importer's address on the box?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6264",
+    "evidence": {
+      "where": "Declarations on packaged commodities",
+      "quote": "Inclusive of all taxes"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-6265",
+    "modules": [
+      "COG"
+    ],
+    "topics": [
+      "supplier discovery and vetting",
+      "payment terms"
+    ],
+    "claim": "Alibaba.com's order protection holds payment in escrow and covers non-shipment, loss, defects and late delivery only when the order is paid through Alibaba.com.",
+    "body": "The Trade Assurance page says buyers check out with an online payment method or a wire transfer via Alibaba.com; payment is held in escrow and released to the supplier after the product is received and confirmed. A refund can be claimed if the order is not shipped, goes missing or arrives with defects, wrong items or damage, and the scheduled delivery date carries delay compensation. The practical rule for a store: a supplier who asks to be paid off-platform (a personal account, a different company name, or a payment app) is asking the buyer to give up this protection, which is a vetting red flag. The page does not state claim deadlines; read the current terms before ordering.",
+    "conditions": "Orders placed with suppliers on Alibaba.com.",
+    "fails_when": "Large repeat orders placed directly with a factory under a contract, where the protection is replaced by contract terms, an inspection gate and staged payments.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Is it safe to pay an Alibaba supplier directly?",
+      "What does Trade Assurance cover?"
+    ],
+    "platforms": [
+      "alibaba"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6265",
+    "evidence": {
+      "where": "Secure payments; Money-back policy",
+      "quote": "released to the supplier after the product is received and confirmed"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-6266",
+    "modules": [
+      "COG",
+      "SET"
+    ],
+    "topics": [
+      "supplier discovery and vetting",
+      "product compliance"
+    ],
+    "claim": "In India, Quality Control Orders make the BIS Standard Mark, under a licence or certificate of conformity, compulsory for listed products; check the list before choosing a supplier.",
+    "body": "The Bureau of Indian Standards says certification is basically voluntary, but the central government can make compliance with an Indian Standard mandatory on grounds of public interest, health and safety, environment, unfair trade practice or national security. It does this through Quality Control Orders that require the Standard Mark under a BIS licence or a certificate of conformity. For sourcing, if the product appears on a current order, a supplier who cannot show the right BIS licence for that product cannot be used for the Indian market, however good the price.",
+    "conditions": "Products sold in India that fall under a current Quality Control Order.",
+    "fails_when": "Products not covered by any order; the list changes, so it must be checked on the day.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Does my product need BIS certification?",
+      "Can I import a product that has no BIS mark?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6266",
+    "evidence": {
+      "where": "Compulsory certification",
+      "quote": "Quality Control Orders"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-6285",
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "topics": [
+      "inventory reports",
+      "slow stock"
+    ],
+    "claim": "Shopify's inventory reports grade products A, B, C by 80%, 15% and 5% of revenue over the last 28 days, ignoring cost; days of inventory remaining is ending stock divided by average daily sales over 28 days.",
+    "body": "Shopify defines its inventory reports as follows. ABC analysis uses a fixed last-28-day window, updated daily, and ranks by revenue only: A items together make 80% of revenue, B the next 15%, C the last 5%; cost is not a factor. Sell-through rate is quantity sold divided by quantity sold plus quantity left, over the latest 30-day period with about a two-day processing delay. Days of inventory remaining is ending quantity divided by average quantity sold per day over the last 28 days; it shows N/A when nothing sold. Average inventory sold per day is quantity sold divided by days in the period. Month-end inventory value multiplies on-hand units by cost per item, so variants without a cost are not valued.",
+    "conditions": "Shopify stores with the inventory reports available on their plan, as defined in the help article on the date fetched.",
+    "fails_when": "Stock was out for part of the 28 days (velocity reads low), or cost per item is missing, or revenue rank is used as a profit rank.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "ABC: 80% / 15% / 5% of revenue, last 28 days",
+      "days of inventory remaining uses 28 days of sales",
+      "sell-through uses the latest 30 days"
+    ],
+    "asks": [
+      "How does Shopify calculate days of inventory remaining?",
+      "What is Shopify's ABC analysis based on?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6284",
+    "evidence": {
+      "where": "Inventory reports article"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

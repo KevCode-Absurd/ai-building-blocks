@@ -2665,5 +2665,612 @@
     },
     "strength": "research",
     "public": false
+  },
+  {
+    "id": "EML-6320",
+    "modules": [
+      "EML",
+      "CRO",
+      "OPS"
+    ],
+    "topics": [
+      "WhatsApp",
+      "consent"
+    ],
+    "claim": "WhatsApp requires opt-in before a business messages someone: the opt-in must name the business, state the person is opting in to its messages, and comply with local law.",
+    "body": "Meta's opt-in page for the WhatsApp Business Platform sets three requirements: clearly state that the person is opting in to receive communication from the business, clearly state the business's name, and comply with applicable law. The business must hold the person's number and the person must have confirmed they want later messages. The page says opt-in can be general and need not mention WhatsApp by name, but local law (for example US written consent rules or India's consent rules) can ask for more. How to apply: write one opt-in line that names the store and the channel, store the time, source and wording of each opt-in, and never import a bought or scraped list.",
+    "conditions": "Any store sending WhatsApp messages through the WhatsApp Business Platform (Cloud API or a provider built on it).",
+    "fails_when": "Opt-in wording omits the business name, the list was bought or scraped, or local law requires channel-specific consent that the general opt-in does not cover.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "three opt-in requirements"
+    ],
+    "asks": [
+      "What opt-in does WhatsApp need?",
+      "Can I message customers on WhatsApp who gave me their number at checkout?"
+    ],
+    "platforms": [
+      "WhatsApp"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6320",
+    "evidence": {
+      "where": "Meta WhatsApp Business Platform developer docs, Get opt-in for WhatsApp"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "EML-6321",
+    "modules": [
+      "EML"
+    ],
+    "topics": [
+      "WhatsApp",
+      "messaging limits",
+      "quality rating"
+    ],
+    "claim": "WhatsApp caps unique users messaged outside the service window per moving 24 hours per business portfolio: new portfolios start at 250, reach 2,000 via verification, then scale with quality.",
+    "body": "Meta's messaging limits page counts unique WhatsApp numbers a business can message outside a customer service window in a moving 24-hour period. Limits are per business portfolio, shared by all its numbers. New portfolios start at 250. Three paths lift it to 2,000: verify the business, have the onboarding partner verify it, or deliver 2,000 messages outside service windows to unique numbers in 30 days with high-quality templates; Meta then reviews message quality. From 2,000, automatic scaling to 10,000, 100,000 and unlimited happens when messages stay high quality across all numbers and templates and the business has used at least half its current limit in the last 7 days. How to apply: verify the business first, size broadcasts to the current limit, and protect quality by sending only to engaged opted-in buyers.",
+    "conditions": "Stores sending template messages on the WhatsApp Business Platform.",
+    "fails_when": "The store only replies inside customer service windows, or uses the consumer WhatsApp Business app, which has different limits.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "start 250 unique users per 24 hours",
+      "2,000 after verification path",
+      "then 10,000, 100,000, unlimited",
+      "use half of limit in last 7 days to scale"
+    ],
+    "asks": [
+      "How many people can I message on WhatsApp per day?",
+      "Why is my WhatsApp broadcast limited?"
+    ],
+    "platforms": [
+      "WhatsApp"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6321",
+    "evidence": {
+      "where": "Meta WhatsApp Business Platform developer docs, Messaging limits"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "EML-6322",
+    "modules": [
+      "EML",
+      "FIN",
+      "CRO"
+    ],
+    "topics": [
+      "WhatsApp",
+      "pricing"
+    ],
+    "claim": "WhatsApp has charged per delivered template message by category and market since 1 July 2025; from 1 October 2026 utility messages in an open window are billed and each number gets 1,000 free service messages a month.",
+    "body": "Meta's pricing page says that since 1 July 2025 businesses pay per delivered message, with rates set by template category (marketing, utility, authentication) and the recipient's market; messages users send are free. As of 1 October 2026, utility templates sent inside an open customer service window move from free to the regular utility rate, and service (non-template) replies get 1,000 free messages per business number per month, then are charged. A free entry point window of up to 7 days opens when a user messages from a Click to WhatsApp ad, during which messages are not charged. How to apply: cost every WhatsApp step at the current marketing or utility rate for the store's market, and recheck the rate card before each quarter.",
+    "conditions": "Stores on the WhatsApp Business Platform, any market; rates differ by recipient country.",
+    "fails_when": "The store uses a provider that bundles or marks up message fees; use the provider's invoice rate then.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "per-message pricing from 1 July 2025",
+      "utility in-window billed from 1 October 2026",
+      "1,000 free service messages per number per month",
+      "free entry point window up to 7 days"
+    ],
+    "asks": [
+      "What does a WhatsApp message cost?",
+      "Are WhatsApp utility messages free?"
+    ],
+    "platforms": [
+      "WhatsApp"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6322",
+    "evidence": {
+      "where": "Meta WhatsApp Business Platform developer docs, Pricing"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "EML-6323",
+    "modules": [
+      "EML"
+    ],
+    "topics": [
+      "SMS",
+      "consent",
+      "US law"
+    ],
+    "claim": "US FCC rules bar telephone solicitation before 8 a.m. or after 9 p.m. at the recipient's local time, require prior express written consent for automated marketing to mobiles, and honour revocation by any reasonable means within 10 business days.",
+    "body": "47 CFR 64.1200 (the FCC's rules under the Telephone Consumer Protection Act) sets: (c)(1) no telephone solicitation to a residential subscriber before 8 a.m. or after 9 p.m. local time at the called party's location; (a)(2) calls that include or introduce an advertisement or are telemarketing, made with an autodialer or artificial or prerecorded voice to mobile numbers, need the called party's prior express written consent; (a)(10) a person may revoke consent by any reasonable method that clearly says they want no more messages, and the request must be honoured within a reasonable time not over ten business days. Marketing texts are commonly handled under these rules; some states add stricter hours and rules. How to apply: send US marketing texts only inside 8 a.m. to 9 p.m. recipient time (narrower is safer), keep written consent records, and treat STOP, 'unsubscribe', 'no more' and similar replies as opt-outs at once. Confirm specifics with counsel.",
+    "conditions": "Stores texting US recipients for marketing.",
+    "fails_when": "State law is stricter (some states set narrower hours or extra rules), or messages are purely transactional and not marketing.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "8 a.m. to 9 p.m. recipient local time",
+      "revocation honoured within 10 business days"
+    ],
+    "asks": [
+      "What hours can I send marketing texts in the US?",
+      "What consent do I need for SMS marketing in the US?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6323",
+    "evidence": {
+      "where": "47 CFR 64.1200 (a)(2), (a)(10), (c)(1)"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "EML-6324",
+    "modules": [
+      "EML"
+    ],
+    "topics": [
+      "SMS",
+      "consent",
+      "India law",
+      "DLT"
+    ],
+    "claim": "India's TCCCPR 2018 allows commercial SMS only from registered headers, with registered content templates (promotional or transactional/service) and consent templates, and only per the recipient's registered preferences or consent.",
+    "body": "TRAI's Telecom Commercial Communications Customer Preference Regulations, 2018 require access providers to let commercial communication run only through registered headers assigned to registered senders (regulation 3), to register senders, headers, content templates and consent templates (regulation 8), and to send nothing except as per the recipient's registered preferences or digitally registered consent (regulation 9). A content template for promotion is fixed text; a content template for transactions or service has a fixed part and variable parts such as order numbers and dates. A consent template must clearly state the purpose of the consent and the sender. Customers can block categories, days and time bands through their operator. How to apply: register the business, sender header and every template on an operator's DLT portal (directly or through the SMS provider) before sending in India, and keep order updates on transactional or service templates with no offer inside.",
+    "conditions": "Stores sending SMS to Indian mobile numbers.",
+    "fails_when": "Messages go only by WhatsApp, email or app push, which DLT does not cover; later TRAI amendments may add rules, so check the operator portal.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "regulations 3, 8 and 9",
+      "time band blocks set by the customer"
+    ],
+    "asks": [
+      "What is DLT registration?",
+      "Do I need to register SMS templates in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6324",
+    "evidence": {
+      "where": "TCCCPR 2018, definitions and regulations 3, 8, 9; Schedule on preference time bands"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "EML-6325",
+    "modules": [
+      "EML",
+      "CXP"
+    ],
+    "topics": [
+      "segmentation",
+      "RFM"
+    ],
+    "claim": "Klaviyo's RFM report scores recency, frequency and spend from 1 to 3, with recency cutoffs at 180 and 365 days.",
+    "body": "Frequency and spend at the 33rd and 66th percentiles) into six groups, and needs 500 buyers, 180 days of orders and some 3-order customers. Klaviyo's help centre says each customer gets a 1 to 3 score per dimension. Recency defaults: within 180 days scores 3, over 365 days scores 1. Frequency and monetary use the 33rd and 66th percentiles of the store's own customers, and thresholds can be customised per model. Groups: Champions (recent, frequent, highest spend), Loyal (repeat buyers with recency 2 or 3), Recent (bought recently, not frequent), Needs attention (valuable, not bought recently), At risk (not recent, low or medium spend), Inactive (infrequent and long lapsed). Requirements: at least 500 customers who placed an order, some customers with 3 or more orders, at least 180 days of order history with orders in the last 30 days, and the plan that includes the feature. How to apply: use the built-in groups where available; otherwise score the order export the same way in a sheet, and set the recency cutoffs from the store's own reorder gap rather than the 180 and 365 defaults.",
+    "conditions": "Stores on Klaviyo meeting the data and plan requirements, or any store copying the method in a sheet.",
+    "fails_when": "Under 500 buyers or few repeat buyers; long-cycle products where 180 days is too short to call someone recent.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "scores 1 to 3",
+      "recency cutoffs 180 and 365 days",
+      "33rd and 66th percentiles",
+      "500 buyers",
+      "180 days history"
+    ],
+    "asks": [
+      "How does Klaviyo RFM work?",
+      "How do I segment customers by RFM?"
+    ],
+    "platforms": [
+      "Klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6325",
+    "evidence": {
+      "where": "Klaviyo Help Center, RFM scoring and customer groups"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "EML-6326",
+    "modules": [
+      "EML",
+      "MEA"
+    ],
+    "topics": [
+      "predictive analytics",
+      "replenishment",
+      "segmentation"
+    ],
+    "claim": "Klaviyo's predictions (predicted lifetime value, churn risk, expected date of next order, average days between orders) need 500+ buyers, 180+ days of orders with orders in the last 30 days, and some 3-order customers.",
+    "body": "Klaviyo's predictive analytics article sets the data floor: at least 500 customers who actually placed non-cancelled, non-refunded orders, an ecommerce integration or API sending placed orders, at least 180 days of order history with orders in the last 30 days, and some customers with three or more orders. Profiles then carry predicted lifetime value (one year by default), historic and total lifetime value, churn risk (falls with each order, rises as time passes), expected date of next order and average time between orders. How to apply: below the floor, compute days between orders from the order export instead; above it, compare the predicted next-order date with the store's own product reorder gap before using it to time messages.",
+    "conditions": "Klaviyo accounts with Shopify or another order integration.",
+    "fails_when": "Below the data floor; one-off or rarely repeated products where predictions have little to learn from.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "500 buyers",
+      "180 days history",
+      "orders in last 30 days",
+      "some customers with 3+ orders"
+    ],
+    "asks": [
+      "When can I use Klaviyo predicted next order date?",
+      "What data does Klaviyo need for CLV predictions?"
+    ],
+    "platforms": [
+      "Klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6326",
+    "evidence": {
+      "where": "Klaviyo Help Center, Understanding Klaviyo's predictive analytics"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "EML-6327",
+    "modules": [
+      "EML"
+    ],
+    "topics": [
+      "SMS",
+      "consent",
+      "sign-up forms"
+    ],
+    "claim": "SMS disclosure must sit above the consent box or button wherever consent is collected, consent can never be a condition of purchase, and US carriers require double opt-in for cart abandonment texts.",
+    "body": "Klaviyo's SMS consent article says subscribers must understand what they agree to before signing up, so the disclosure language goes above the SMS consent checkbox or button on every form that collects it. It is illegal to force SMS sign-up to make a purchase, and optional consent must not look required. In the US, double opt-in (two actions before someone is added) is a carrier requirement for any shopping cart abandonment flow. How to apply: put the full disclosure on the popup's phone step and at checkout, leave the checkout SMS box unticked, and turn on double opt-in before any US abandonment text goes live.",
+    "conditions": "Stores collecting SMS consent, especially for US recipients.",
+    "fails_when": "Non-US markets with different carrier rules; check the provider's country guide.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Where does SMS disclosure go on a popup?",
+      "Do I need double opt-in for SMS?"
+    ],
+    "platforms": [
+      "Klaviyo"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6327",
+    "evidence": {
+      "where": "Klaviyo Help Center, Understanding SMS consent collection"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "EML-6340",
+    "modules": [
+      "EML"
+    ],
+    "topics": [
+      "deliverability",
+      "subject lines"
+    ],
+    "claim": "Gmail requires bulk senders to authenticate with SPF, DKIM and DMARC, offer one-click unsubscribe plus a visible unsubscribe link, keep spam rate below 0.30% (aim under 0.10%), and never use misleading subjects or fake Re: or Fwd:.",
+    "body": "Google's sender guidelines set the rules for anyone sending 5,000 or more messages a day to personal Gmail accounts. The sending domain needs SPF and DKIM, plus a DMARC record (the policy can be none), and the From domain must align with SPF or DKIM. Marketing and subscribed messages must support one-click unsubscribe through the List-Unsubscribe and List-Unsubscribe-Post headers and also show a clear unsubscribe link in the body. The spam rate reported in Postmaster Tools must stay below 0.30%, and Google recommends keeping it below 0.10%. Subject lines, headers and display names must not mislead about who is sending or what the message is; subjects must not start with Re: or Fwd: unless the message is a real reply or forward, and the display name must not carry subject or message content. For a copywriter this means the subject line is held to the same honesty rule as the body, and a trick subject that lifts opens but draws spam reports damages every later send.",
+    "conditions": "Senders of 5,000 or more messages a day to personal Gmail accounts; most email platforms add the unsubscribe headers when the domain is set up. Smaller senders are still judged on spam reports.",
+    "fails_when": "The rule is read as optional for small lists: spam complaints still hurt placement below the bulk threshold.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "5,000 messages a day threshold",
+      "spam rate below 0.30%, recommended below 0.10%",
+      "DKIM key 1024 bits or longer"
+    ],
+    "asks": [
+      "Can I start a subject line with Re: to get more opens?",
+      "What spam rate does Gmail allow?",
+      "Do marketing emails need one-click unsubscribe?"
+    ],
+    "platforms": [],
+    "platform": [
+      "gmail"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6340",
+    "evidence": {
+      "where": "Requirements for all senders and for bulk senders; subject line and display name guidance"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "EML-6341",
+    "modules": [
+      "EML"
+    ],
+    "topics": [
+      "compliance",
+      "subject lines"
+    ],
+    "claim": "US CAN-SPAM: subject lines must not deceive, marketing email must be identified as an ad, carry a valid postal address and an opt-out honoured within 10 business days.",
+    "body": "A mixed order and promo email is commercial if its subject reads commercial. The FTC's compliance guide sets out the rules for commercial email to US recipients. Header information must be accurate and identify the sender. The subject line must not be deceptive and must match the content. The message must be clearly identified as an advertisement, include a valid physical postal address (a street address, registered post office box or registered private mailbox), and offer a clear way to stop marketing email, which must keep working for at least 30 days after sending. Opt-outs must be honoured within 10 business days, with no fee and no information asked beyond the email address. The primary purpose decides which rules apply: purely transactional or relationship messages are largely exempt, but a mixed message counts as commercial if a reasonable reader would see the subject line as commercial or if the transactional content is not mainly at the start. Each violating email can draw penalties of up to 53,088 dollars (inflation figure updated January 2024).",
+    "conditions": "Commercial email sent to recipients in the US; consult counsel for edge cases. Other countries have their own consent rules.",
+    "fails_when": "An order confirmation or shipping email is loaded with promotions and a sales subject line, which turns it into a commercial message.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "opt-out honoured within 10 business days",
+      "opt-out works at least 30 days after sending",
+      "penalty up to 53,088 dollars per email"
+    ],
+    "asks": [
+      "Can I put a promo in my order confirmation email?",
+      "Does my marketing email need a postal address?",
+      "How fast must I process unsubscribes?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6341",
+    "evidence": {
+      "where": "Main requirements list and the primary purpose section"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "EML-6343",
+    "modules": [
+      "EML"
+    ],
+    "topics": [
+      "WhatsApp",
+      "templates"
+    ],
+    "claim": "A WhatsApp template allows a 60-character header, 1,024-character body, 60-character footer and buttons of 25 characters (up to 2 URL buttons, 1 phone); every parameter needs an example, and review can take up to 24 hours.",
+    "body": "Meta's template component reference sets the limits a copywriter must write to. Header text is at most 60 characters with one parameter and no Markdown characters; the body is at most 1,024 characters and may hold several parameters; the footer is at most 60 characters. Quick reply, URL and phone buttons each take at most 25 characters of text. A template can carry up to 10 buttons, with at most 2 URL buttons and 1 phone button; with more than three buttons only two show and the rest sit behind See all options. A URL button supports one variable at the end of the URL, which needs an example value and percent-encoding. Every header and body parameter needs an example value at submission. Templates are reviewed automatically on creation or edit, and Meta says review can take up to 24 hours, so templates for a sale must be submitted well before the send.",
+    "conditions": "WhatsApp Business Platform templates, as documented on the date fetched; providers may show the same limits in their own editors.",
+    "fails_when": "Copy is written in a chat window without counting characters, or a template is submitted on sale day.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "header 60 characters",
+      "body 1,024 characters",
+      "footer 60 characters",
+      "button text 25 characters",
+      "up to 2 URL buttons and 1 phone button",
+      "review up to 24 hours"
+    ],
+    "asks": [
+      "How long can a WhatsApp template be?",
+      "How many buttons can a WhatsApp message have?",
+      "How long does WhatsApp template approval take?"
+    ],
+    "platforms": [],
+    "platform": [
+      "whatsapp"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6343",
+    "evidence": {
+      "where": "Component character limits, button counts and parameter rules; review timing on the message templates page"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "EML-6344",
+    "modules": [
+      "EML"
+    ],
+    "topics": [
+      "SMS",
+      "India",
+      "compliance"
+    ],
+    "claim": "India's 2025 commercial SMS rules: headers end in -P, -S, -T or -G by type, every promotional SMS carries an opt-out, promo mixed into a service or transactional SMS makes it promotional.",
+    "body": "India's 2025 commercial SMS rules: headers end in -P, -S, -T or -G by type, every promotional SMS carries an opt-out, promo mixed into a service or transactional SMS makes it promotional, and templates need 30% fixed text and whitelisted links. TRAI's Second Amendment to the Telecom Commercial Communications Customer Preference Regulations, notified 12 February 2025, tightens how Indian commercial SMS is written and registered. A promotional message must give the recipient an opt-out in the same message, and if promotional content is mixed into a transactional or service message, the whole message is treated as promotional and goes only to people who have not blocked that category or who consented. SMS headers carry a suffix so recipients can tell the type: -P promotional, -S service, -T transactional, -G government. Content templates registered on DLT must keep at least 30% of characters as fixed text, each variable must be pre-tagged for its purpose, more than three variables are allowed only on justification, a variable is normally limited to 30 characters, and one template may be linked to only one header. Messages with URLs, APKs, OTT links or callback numbers are scrubbed against the sender's whitelist. In practice: register the exact wording and links before a campaign, never add an offer to an order update SMS, and use only whitelisted full-domain links, not public link shorteners.",
+    "conditions": "Commercial SMS sent to Indian mobile numbers through DLT-registered senders; check TRAI for later directions before each campaign season.",
+    "fails_when": "A brand edits template wording or links at send time; unregistered text or links are blocked.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "header suffixes -P, -S, -T, -G",
+      "at least 30% fixed content per template",
+      "more than three variables only with justification",
+      "30 characters per variable"
+    ],
+    "asks": [
+      "Can I add a discount to my order update SMS in India?",
+      "Why was my SMS with a link blocked in India?",
+      "What is DLT template registration?"
+    ],
+    "platforms": [],
+    "platform": [
+      "sms"
+    ],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6344",
+    "evidence": {
+      "where": "Regulation 2 (definition of promotional message), Schedule items on header suffixes, content template conditions (j) to (l) and URL scrubbing (f)"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "EML-6345",
+    "modules": [
+      "EML"
+    ],
+    "topics": [
+      "SMS",
+      "US",
+      "compliance"
+    ],
+    "claim": "US marketing texts need express written consent that says consent is not a condition of purchase, no sends before 8 a.m. or after 9 p.m. recipient time, and STOP opt-out instructions at least once a month; some states are stricter.",
+    "body": "Klaviyo's summary of US SMS law says a store must have express written consent before sending marketing texts: a signed agreement, a digital signature, or an SMS opt-in through a form or keyword. Owning a phone number is not consent, consent cannot be shared across brands, and bought or lead-generation lists do not count. The opt-in wording must say the person agrees to recurring marketing texts at that number, that texts may be sent by an autodialer, and that consent is not a condition of purchase. Message frequency should be disclosed at sign-up. Messages should name the brand, and an automated opt-out such as replying STOP must be offered regularly, at least once a month (one carrier suggests every fifth message). The TCPA bars telephone solicitation, including texts, before 8 a.m. and after 9 p.m. in the recipient's time zone, and some states set tighter windows, so a 9 a.m. to 8 p.m. window does not satisfy every state. Klaviyo advises against more than 1 or 2 texts a day or 4 to 5 a week.",
+    "conditions": "Marketing SMS to US numbers; this is a platform summary, not legal advice, and state mini-TCPA laws vary.",
+    "fails_when": "Texts are sent to customers who only gave a number at checkout for delivery updates.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "quiet hours before 8 a.m. and after 9 p.m. recipient time",
+      "opt-out instructions at least once a month",
+      "no more than 1 or 2 texts a day or 4 to 5 a week (platform advice)"
+    ],
+    "asks": [
+      "What hours can I send marketing texts in the US?",
+      "Do I need STOP in every text?",
+      "Can I text customers who gave their number at checkout?"
+    ],
+    "platforms": [],
+    "platform": [
+      "sms",
+      "klaviyo"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6345",
+    "evidence": {
+      "where": "Consent, opt-in disclosure, message content and quiet hours sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "EML-6363",
+    "modules": [
+      "EML",
+      "CRO",
+      "MCR"
+    ],
+    "topics": [
+      "WhatsApp",
+      "click-to-WhatsApp ads",
+      "messaging cost"
+    ],
+    "claim": "When a buyer messages from a click-to-WhatsApp ad on Android or iOS and the business replies inside the 24-hour window, a free entry point window opens that can last up to 7 days.",
+    "body": "Meta's WhatsApp Business Platform pricing documentation describes a free entry point (FEP) window. It applies only when the user messages the business from a click-to-WhatsApp ad on Android or iOS. It opens when the business responds within the customer service window and may stay open for up to 7 days; utility messages are not charged inside it. How to apply for chat sales: 1) answer ad-driven chats fast so the free window opens; 2) plan the follow-up for an ad lead (questions, quote, order link) inside those 7 days rather than with paid templates later; 3) track ad-driven chats as their own source in the daily chat report.",
+    "conditions": "Stores running click-to-WhatsApp ads and using the WhatsApp Business Platform.",
+    "fails_when": "The chat did not start from an eligible ad or entry point, the user is on WhatsApp Web or desktop, or Meta changes the rule; recheck the live page.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "free entry point window up to 7 days"
+    ],
+    "asks": [
+      "Are WhatsApp messages free after a click-to-WhatsApp ad?",
+      "How long can I follow up with a WhatsApp ad lead?"
+    ],
+    "platforms": [
+      "WhatsApp",
+      "Meta"
+    ],
+    "platform": [
+      "WhatsApp",
+      "Meta"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6361",
+    "evidence": {
+      "where": "Free entry point section",
+      "quote": "The FEP window may remain open for up to 7 days"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "EML-6385",
+    "modules": [
+      "EML"
+    ],
+    "topics": [
+      "B2B outreach",
+      "compliance",
+      "cold email"
+    ],
+    "claim": "CAN-SPAM makes no exception for business-to-business email: sales emails to shops need accurate headers, honest subject lines, a postal address and an opt-out honoured within 10 business days; penalties reach 53,088 dollars per email.",
+    "body": "The FTC's compliance guide says the law makes no exception for business-to-business email. A commercial message must have accurate From, To, Reply-To and routing information; a subject line that reflects the content; a clear disclosure that it is an advertisement; a valid physical postal address; and a clear, easy way to opt out of future marketing email, with opt-outs honoured within 10 business days. Each separate email that breaks the law can draw a penalty of up to 53,088 dollars. How to use it: every pitch and follow-up to a US retailer, boutique or corporate buyer carries the brand's postal address and a plain line such as 'Reply stop and I will not email again', and a stop ends the sequence for that address at once.",
+    "conditions": "Commercial email to US recipients, as stated in the FTC guide on the date fetched.",
+    "fails_when": "The message is purely transactional or relationship content (for example an invoice for an agreed order), which has different rules.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "opt-out honoured within 10 business days",
+      "up to 53,088 dollars per violating email"
+    ],
+    "asks": [
+      "Does CAN-SPAM apply to emails to shops and businesses?",
+      "What must a B2B sales email include?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6385",
+    "evidence": {
+      "where": "Compliance guide, requirements list and penalties"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

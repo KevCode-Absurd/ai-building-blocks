@@ -1195,5 +1195,465 @@
     },
     "strength": "stated_by_practitioner",
     "public": true
+  },
+  {
+    "id": "FIN-6205",
+    "modules": [
+      "FIN",
+      "SET"
+    ],
+    "topics": [
+      "GST",
+      "tax settings"
+    ],
+    "claim": "Shopify sets only starting GST rates for India, cannot split CGST and SGST into two lines, does not create GST-compliant invoices and does not file; interstate goods sales generally need registration.",
+    "body": "Shopify's India GST FAQ says registration is generally mandatory when turnover in a financial year passes Rs 20 lakh (Rs 10 lakh in North Eastern and hill states), or when the business supplies goods between states or sells on online marketplaces, among other conditions. Sales inside the business's own state carry CGST plus SGST; sales to other states carry a single IGST. Shopify cannot show multiple tax lines, so CGST and SGST are combined into one charge for in-state sales. Default settings (9% CGST country tax, 18% IGST for other states, 9% SGST for the home state in the example) are only a starting point; rates depend on the product, so different rates need collections with tax overrides. HSN codes go in the HS tariff code field, which needs at least 6 digits. Shopify does not create a GST-compliant bill, so a GST invoice app or service is needed, and Shopify does not remit or file. How to use it: confirm registration status and product rates with a chartered accountant before launch, then set overrides and an invoice app.",
+    "conditions": "Shopify stores registered or selling in India.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Rs 20 lakh turnover threshold (Rs 10 lakh North Eastern and hill states)",
+      "HS tariff code field needs at least 6 digits"
+    ],
+    "asks": [
+      "How do I set up GST on Shopify?",
+      "Does Shopify make GST invoices?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6205",
+    "evidence": {
+      "where": "GST in India FAQ: registration, CGST/SGST/IGST, HSN codes, invoices"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6206",
+    "modules": [
+      "FIN",
+      "SET"
+    ],
+    "topics": [
+      "US sales tax",
+      "nexus"
+    ],
+    "claim": "US sales tax applies where a store has physical nexus or passes a state's economic threshold, measured on net sales; Shopify flags states at 80% of a threshold, but you register with each state yourself.",
+    "body": "Shopify's help centre says a business location in a state gives physical nexus automatically, and some states count inventory or fulfilment locations too. Economic nexus starts when sales into a state reach that state's threshold, which differs by state; then the store must register and collect sales tax there. Shopify's tax liability insights page lists states under 'Action required' and moves a state to 'Monitoring' once sales reach at least 80% of its economic nexus threshold. Liability is calculated on net sales (sales minus refunds, shipping and tax), and sales made outside Shopify may also count toward a threshold. Before collecting, the store must register with the state tax authority to get a permit, then enter the sales tax ID in Shopify. Shopify does not remit sales tax unless the store uses its managed filing. How to use it: check the insights page monthly and register before the threshold is crossed, with an accountant confirming each state.",
+    "conditions": "Shopify stores selling to US customers.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Monitoring at 80% of a state's economic nexus threshold"
+    ],
+    "asks": [
+      "When do I need to collect sales tax in another US state?",
+      "What is economic nexus?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6206",
+    "evidence": {
+      "where": "Physical nexus, economic nexus and liability insights sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6240",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "payout timing",
+      "cash forecasting"
+    ],
+    "claim": "US Shopify Payments settles in at least 3 business days; Friday to Sunday captures go out as one payout, nothing pays on weekends or holidays, and banks can add 1 to 3 days.",
+    "body": "Shopify counts settlement in business days only, so a Friday charge with a 3-business-day settlement pays out on the following Wednesday. Charges captured Friday, Saturday and Sunday are grouped and sent as one payout. Payouts are not processed on weekends or public holidays; a payout that falls on one moves to the next business day. Capture dates are recorded in UTC. After a payout shows as deposited, the bank may take another 1 to 3 days to show the money. For a weekly cash forecast this means receipts arrive in lumps, Monday-heavy weekend sales land mid-week, and holiday weeks shift cash into the next week. Settlement times differ by country; check the store's own payout history for the real lag.",
+    "conditions": "Shopify Payments in the United States, as stated in the help article on the date fetched; other countries and gateways have their own timing.",
+    "fails_when": "The store uses a third-party gateway, a different country's Shopify Payments, or Shopify Balance, which has its own timing for new merchants.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "minimum 3 business days settlement in the US",
+      "Friday to Sunday captures grouped into one payout",
+      "bank may add 1 to 3 business days"
+    ],
+    "asks": [
+      "When will my Shopify payout arrive?",
+      "Why do weekend sales arrive in one payout?",
+      "How do I time Shopify payouts in a cash forecast?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6240",
+    "evidence": {
+      "where": "Payout timing article, US settlement and pay period sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6241",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "payout reconciliation",
+      "payment fees"
+    ],
+    "claim": "A Shopify Payments payout is net: processing fees, refunds, disputed amounts with dispute fees, reserves, holds, adjustments and currency conversion all come out before it is sent.",
+    "body": "Shopify lists the reasons a payout can be lower than expected: processing fees are deducted before the payout is sent, and in some regions tax on those fees too; refunded amounts are deducted from the next available payout; disputed amounts and dispute fees are deducted; a reserve may hold part of the funds; a negative balance from past fees or refunds reduces the next payout; adjustments can move it up or down; currency conversion can add fees; and a payout hold can keep back part of the money. Payouts can be missing because of an unsupported currency, a bank account under review, wrong bank details, or a bank change while a payout is in transit. To reconcile, match each payout to its transactions in the payouts activity report rather than to the day's orders.",
+    "conditions": "Shopify Payments, per the help article on the date fetched; other gateways net similar items but report them in their own settlement files.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Why is my Shopify payout lower than my sales?",
+      "What gets deducted from a Shopify payout?",
+      "Why is my payout missing?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6241",
+    "evidence": {
+      "where": "Lower payouts and missing payouts sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6242",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "reserves",
+      "cash forecasting"
+    ],
+    "claim": "Shopify Payments can hold a fixed amount or a percentage of sales in a reserve for a set period, often after high refund or chargeback rates, long delivery times or volume surges.",
+    "body": "A reserve is a temporary hold on part, or sometimes all, of the money from transactions. A fixed reserve sets aside a set sum for a set time; a percentage reserve withholds a share of each transaction for a set number of days while the rest pays out normally. Money not needed for refunds or disputes is returned when the reserve period ends and appears in upcoming payouts, which can take several business days. Shopify applies reserves so funds exist to cover disputes and refunds, and flags accounts for risks such as long billing cycles, high chargeback or refund rates, long delivery timelines and sudden volume surges. In a cash forecast, reserved money is not available cash; pre-orders, slow shipping and a sudden sale spike all raise the chance of a reserve.",
+    "conditions": "Shopify Payments, per the help article on the date fetched.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "What is a Shopify Payments reserve?",
+      "Why is Shopify holding my money?",
+      "When are reserved funds released?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6242",
+    "evidence": {
+      "where": "Reserve types, release and reasons sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6243",
+    "modules": [
+      "FIN",
+      "MEA"
+    ],
+    "topics": [
+      "payment fees",
+      "refunds"
+    ],
+    "claim": "On Shopify Payments, card fees are not returned when an order is refunded, so every refund costs the store the original processing fee.",
+    "body": "Shopify states that if an order was processed through Shopify Payments, no credit card fees are refunded. With a third-party gateway in a country where Shopify Payments is available, Shopify's transaction fees are not refunded either. Only where Shopify Payments is not available are transaction fees refunded in proportion to the refunded amount, and only for refunds issued from the Shopify admin. For return and refund costing, add the lost processing fee to the cost of each refunded order; for payout matching, expect the fee on a refunded order to stay in the fees column.",
+    "conditions": "Shopify, per the help article on the date fetched; the gateway's own fee rules apply on top for third-party gateways.",
+    "fails_when": "The store is in a country without Shopify Payments and refunds from the admin, where transaction fees are refunded pro rata.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Do I get my card fees back when I refund an order on Shopify?",
+      "What does a refund really cost?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6243",
+    "evidence": {
+      "where": "Refunding orders, fees section"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6244",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "revenue-based financing",
+      "funding"
+    ],
+    "claim": "Shopify Capital collects a set percentage of daily sales (the remittance rate) until the amount received plus a fixed borrowing cost is repaid, so faster sales mean a shorter term.",
+    "body": "Shopify Capital offers merchant cash advances and loans. Its glossary defines the remittance rate as the percentage of daily sales revenue remitted to Shopify Capital until the total to remit has been paid, the fixed borrowing cost as the fee for obtaining the loan, and the total payment amount as the loan amount plus that fixed cost. Because the fee is fixed and repayment follows sales, strong sales repay the money sooner, which makes the same fee a higher annual cost; slow sales stretch the term. Compare any sales-linked offer on its effective annual cost at the store's own forecast, and read the country-specific terms for minimum payment rules.",
+    "conditions": "Shopify Capital terms as defined in the glossary on the date fetched; available only in the countries Shopify lists; other sales-linked lenders use similar structures with their own terms.",
+    "fails_when": "The offer is a term loan with fixed instalments or interest that accrues by time, not a fixed fee repaid from sales.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "How does Shopify Capital repayment work?",
+      "What is a remittance rate?",
+      "Is revenue-based financing cheaper if I repay fast?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6244",
+    "evidence": {
+      "where": "Glossary: remittance rate, fixed borrowing cost, total payment amount"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6380",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "GST invoice",
+      "bulk orders",
+      "advance payment"
+    ],
+    "claim": "A GST tax invoice for goods must be issued before or at removal of the goods, in triplicate (recipient, transporter, supplier), with rule 46 fields such as both GSTINs, HSN, taxable value, tax split and place of supply.",
+    "body": "CBIC's taxpayer flyer on section 31 and rule 46 says no invoice format is prescribed, but a registered supplier's tax invoice must carry: supplier name, address and GSTIN; a consecutive serial number unique for the financial year; date; recipient name, address and GSTIN if registered (and delivery address with state and code for an unregistered recipient where the taxable value is Rs 50,000 or more); HSN code; description; quantity and unit; total and taxable value after discount; tax rate and amount by central, state, integrated or UT tax and cess; place of supply with state name for inter-State supplies; delivery address if different; whether reverse charge applies; and a signature, which is not needed on an electronic invoice under the IT Act. For goods the invoice is issued before or at the time of removal or delivery, in three copies marked ORIGINAL FOR RECIPIENT, DUPLICATE FOR TRANSPORTER and TRIPLICATE FOR SUPPLIER. A registered buyer cannot claim input tax credit without a tax invoice or debit note. When an advance is received the supplier issues a receipt voucher; the flyer notes GST is payable on advances for services only. Goods returned after invoicing are handled with a credit note that refers to the original invoice. A proforma invoice is named only as a commercial document type, not a tax invoice. How to use it: send a proforma or quote to agree terms, then raise the tax invoice at dispatch; confirm rates and fields with a chartered accountant.",
+    "conditions": "GST-registered suppliers in India selling goods; summary as published by CBIC on the date fetched; rule 46 has been amended over time.",
+    "fails_when": "The seller is unregistered or on the composition scheme (bill of supply instead), the supply is services, or later amendments change the fields; check the current rule text.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "invoice in triplicate for goods",
+      "delivery address and state needed for unregistered recipients at Rs 50,000 or more",
+      "no invoice needed under Rs 200 subject to conditions"
+    ],
+    "asks": [
+      "What must a GST invoice show for a bulk order?",
+      "Is a proforma invoice a tax invoice?",
+      "When do I issue the invoice for goods?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6380",
+    "evidence": {
+      "where": "Contents of Invoice; Goods; Receipt Voucher; Credit and Debit Notes; Manner of Issuing Invoice"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6381",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "e-invoicing",
+      "GST",
+      "B2B"
+    ],
+    "claim": "Indian GST e-invoicing applies to businesses with aggregate turnover above Rs 5 crore from 1 August 2023 for B2B, export and similar documents, not B2C.",
+    "body": "From 1 April 2025 those at Rs 10 crore and above must report within 30 days. The IRIS IRP page lists Notification 10/2023 extending the e-invoice mandate to businesses with aggregate annual turnover above Rs 5 crore from 1 August 2023. Covered: B2B and B2G supplies, SEZ supplies, exports, deemed exports, and the credit and debit notes on them; B2C, import and job-work transactions are not covered, and bills of supply and delivery challans need not be reported. A release note dated 31 March 2025 says taxpayers with aggregate turnover of Rs 10 crore and above must report invoices, credit notes and debit notes to the Invoice Registration Portal within 30 days of the invoice date from 1 April 2025, after which IRN generation is blocked. The same page also refers to the earlier Rs 10 crore threshold as latest in one place, so check the current notification. How to use it: if the store's turnover is above Rs 5 crore, every bulk invoice to a GST-registered buyer needs an IRN and QR code before it is valid, so build e-invoice generation into the bulk-order process and never let a B2B invoice sit unreported.",
+    "conditions": "India GST, as published by an authorised IRP on the date fetched; thresholds change by notification.",
+    "fails_when": "Turnover is below the threshold, the buyer is an unregistered consumer (B2C), or a newer notification changes the threshold or time limit.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "Rs 5 crore aggregate turnover from 1 August 2023",
+      "30-day reporting limit for Rs 10 crore and above from 1 April 2025"
+    ],
+    "asks": [
+      "Do I need e-invoices for wholesale orders in India?",
+      "Is there a time limit to report e-invoices?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6381",
+    "evidence": {
+      "where": "Threshold table, transactions covered section and 31 March 2025 release note"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6382",
+    "modules": [
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "payment terms",
+      "receivables",
+      "MSME"
+    ],
+    "claim": "Under India's MSMED Act a buyer must pay a Udyam-registered micro or small supplier within 45 days of accepting the goods, or owe compound interest at three times the RBI bank rate; claims go to the MSME ODR portal.",
+    "body": "The Ministry of MSME's delayed payment page says section 16 of the MSMED Act makes a buyer that pays late liable for compound interest with monthly rests at three times the bank rate notified by the RBI, with the payment due within 45 days of acceptance of the goods or service. Any micro or small enterprise with a valid Udyam Registration can apply, and new delayed payment applications are filed on the MSME ODR portal (odr.msme.gov.in). How to use it: a brand registered as a micro or small enterprise can put its Udyam number on quotes and invoices and set wholesale credit terms no longer than 45 days to Indian business buyers, knowing it has a statutory remedy if a stockist or distributor pays late. It does not help a brand that is not registered, and it does not apply to consumers.",
+    "conditions": "Indian suppliers with Udyam Registration as micro or small enterprises selling to business buyers; as stated on the ministry page on the date fetched.",
+    "fails_when": "The supplier is a medium enterprise or unregistered, the buyer is a consumer, or the goods were never accepted.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "payment within 45 days of acceptance",
+      "interest at three times the RBI bank rate, compounded monthly"
+    ],
+    "asks": [
+      "How long can an Indian retailer take to pay my wholesale invoice?",
+      "What can I do if a distributor pays late?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6382",
+    "evidence": {
+      "where": "MSEFC welcome page, section 16 summary and ODR notice"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6387",
+    "modules": [
+      "FIN",
+      "OFF"
+    ],
+    "topics": [
+      "corporate gifting",
+      "US tax"
+    ],
+    "claim": "US businesses can deduct no more than 25 dollars per recipient per year for business gifts; engraving, packaging, insuring and mailing are generally excluded, and branded items of 4 dollars or less are not counted as gifts.",
+    "body": "IRS Publication 463 says a business can deduct no more than 25 dollars for business gifts it gives directly or indirectly to each person during its tax year. Incidental costs such as engraving, packaging, insuring and mailing are generally not counted in the gift's cost if they do not add substantial value. Items costing 4 dollars or less with the giver's name permanently imprinted and given out widely, such as pens, are not treated as gifts, nor are signs or display racks for use on the recipient's premises. How to use it: when pitching US corporate gifting, expect client gift budgets to be set with this limit in mind, show packaging and shipping as separate lines on the quote, and never give tax advice; the client's accountant decides how it is treated. Gifts to employees follow different rules.",
+    "conditions": "US federal income tax, Publication 463 as published on the date fetched.",
+    "fails_when": "The gift goes to an employee, counts as entertainment, or the buyer is outside the US.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "25 dollars per recipient per year",
+      "branded items of 4 dollars or less not counted as gifts"
+    ],
+    "asks": [
+      "How much can a US company deduct for client gifts?",
+      "Should packaging be priced separately on a corporate gift quote?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6387",
+    "evidence": {
+      "where": "Chapter 3 Gifts: 25 dollar limit, incidental costs, exceptions"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-6423",
+    "modules": [
+      "FIN"
+    ],
+    "topics": [
+      "influencer gifting",
+      "TDS",
+      "India tax"
+    ],
+    "claim": "In India, from 1 July 2022 a business giving a benefit to a resident must deduct 10% tax at source under Section 194R.",
+    "body": "In India, from 1 July 2022 a business giving a benefit to a resident must deduct 10% tax at source under Section 194R, and a product given to a social media influencer to make content is covered if the influencer keeps it. A law-firm summary of CBDT Circular 12 of 2022 says Section 194R requires the person providing a benefit or perquisite to a resident to deduct tax at source at 10% of the value (or the total value) of the benefit, effective 1 July 2022; benefits given on or before 30 June 2022 are outside it. The circular says tax is to be deducted when a product given to a social media influencer to use and then make audio or video content is retained by the influencer, which implies a product sent back after use is treated differently. TDS is deducted in the name of the recipient. The section also has an annual value threshold and exemptions for some small deductors; this source does not state them, so confirm them with a chartered accountant. How to apply: log the value of every product an Indian brand gifts to each creator per financial year, decide with the accountant whether TDS applies, and say in the gifting note whether the product is to be kept or returned.",
+    "conditions": "Indian businesses gifting products, trips or other perks to resident Indian creators and influencers.",
+    "fails_when": "Gifts below the section's annual threshold or from deductors outside its scope; products returned after use; non-resident creators (other rules). Tax rules change with each Finance Act, so recheck before relying on it.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "10% TDS on value of benefit",
+      "effective 1 July 2022"
+    ],
+    "asks": [
+      "Do we owe TDS on products we send influencers in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6423",
+    "evidence": {
+      "where": "Summary of key clarifications in Circular 12 of 2022"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

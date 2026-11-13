@@ -938,5 +938,178 @@
     },
     "strength": "stated_by_practitioner",
     "public": true
+  },
+  {
+    "id": "CRO-6180",
+    "modules": [
+      "CRO",
+      "LPG"
+    ],
+    "topics": [
+      "checkout abandonment",
+      "research and diagnosis"
+    ],
+    "claim": "Baymard's average documented cart abandonment is 70.22% across 50 studies; among checkout leavers, extra costs (40%), slow delivery (20%) and card distrust (19%) top the reasons.",
+    "body": "Baymard keeps a running list of published cart abandonment studies; the unweighted mean of 50 studies from 2006 to 2025 is 70.22%. A large share of abandoners were only browsing (42% of US online shoppers gave that reason), so Baymard reports the checkout reasons with that group set aside. In that list: extra costs such as shipping, tax and fees were too high (40%), delivery was too slow (20%), the shopper did not trust the site with card details (19%), the site wanted an account (18%), checkout was too long or complicated (17%), website errors or crashes (17%), the returns policy was not good enough (13%), the shopper could not see or work out the total cost up front (12%), the card was declined (10%) and there were not enough payment methods (9%). How to apply: use the list as a checklist of causes to test against the store's own funnel and its post-purchase or exit survey answers, not as the store's own split. Several causes (surprise costs, account wall, too many steps, errors) are repairs rather than test ideas. The page does not state the sample size or fieldwork date for the reasons survey, so treat the percentages as a ranking, not exact shares.",
+    "conditions": "Any online store with a cart and checkout; the reasons list sets aside shoppers who were only browsing, and the page frames the browsing share on US online shoppers.",
+    "fails_when": "Used as the store's own abandonment split, or to set a target abandonment rate; markets with cash on delivery have different payment reasons.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "70.22% average cart abandonment across 50 studies",
+      "40% extra costs too high",
+      "20% delivery too slow",
+      "19% did not trust site with card details",
+      "18% account required",
+      "17% checkout too long or complicated",
+      "17% website errors",
+      "13% returns policy",
+      "12% could not see total cost up front",
+      "10% card declined",
+      "9% not enough payment methods"
+    ],
+    "asks": [
+      "Why do shoppers leave at checkout?",
+      "What is a normal cart abandonment rate?",
+      "What should I fix first in checkout?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6180",
+    "evidence": {
+      "where": "Cart abandonment rate list page: average rate and reasons for abandonment during checkout"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-6181",
+    "modules": [
+      "CRO",
+      "SET"
+    ],
+    "topics": [
+      "checkout form fields",
+      "checkout friction"
+    ],
+    "claim": "Baymard's benchmark found the average checkout had 11.3 form fields in 2024 (12.7 in 2019), while most stores need only 8.",
+    "body": "Baymard counts the form fields shoppers must deal with across benchmarked checkouts. The average fell from 12.7 in 2019 to 11.8 in 2021 and 11.3 in 2024, yet Baymard says most sites need only 8 fields in total for checkout, and many still ask for more. Fields that often can go or collapse: a second address line shown by default, separate first and last name where one full name works, company name, and a separate billing address shown before the shopper asks for one. How to apply: count every field a guest buyer sees from cart to order on a phone, mark each as required by law, carrier or payment, and remove, auto-fill or hide behind a link the rest. On Shopify most checkout fields are set by Shopify; the store controls a few (company name, address line 2, phone required or optional) in checkout settings. Sample size is not stated in the article.",
+    "conditions": "Stores with their own checkout or checkout settings they can change; Shopify stores change fewer fields than custom builds.",
+    "fails_when": "A field is needed for delivery in the market (for example a landmark or phone number for Indian couriers), in which case keeping it beats the count.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "11.3 average form fields in 2024",
+      "11.8 in 2021",
+      "12.7 in 2019",
+      "8 fields needed by most sites"
+    ],
+    "asks": [
+      "How many fields should my checkout have?",
+      "Is my checkout too long?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6181",
+    "evidence": {
+      "where": "Article body: average form fields by year and recommended total"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-6182",
+    "modules": [
+      "CRO",
+      "SEO"
+    ],
+    "topics": [
+      "site search",
+      "navigation"
+    ],
+    "claim": "Baymard's 2026 search benchmark says 56% of sites fail to support shoppers' search needs; non-product (66%) and abbreviation or symbol (54%) queries fail most, exact searches least (12%).",
+    "body": "Baymard's Search UX benchmark (10,000+ usability scores across 170+ sites and apps, article updated April 2026) rates 46% of desktop sites, 58% of mobile sites and 64% of apps mediocre or worse on search. Share of sites with issues by query type: exact product name 12%, product type 20%, symptom or problem 37%, use case 43%, feature 39%, compatibility 44%, abbreviation and symbol 54%, non-product queries such as returns, shipping or size guide 66%. Misspellings, including phonetic ones, matter even for exact product searches. How to apply: export the store's own search terms, sort them into these types, and run the top terms of each type on a phone. Fix zero-result and wrong-result queries with synonyms, redirects for policy words (returns, shipping, track order) and product data (features, compatibility, problem words in tags or metafields) before redesigning the search box.",
+    "conditions": "Stores with a site search box and enough searches to export the top terms; benchmark sites are large retailers, so small stores should read the shares as typical failure points, not their own rate.",
+    "fails_when": "The store has fewer than about 20 products and almost no searches, where menu and collection fixes matter more than search.",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "56% of sites fail to support search needs",
+      "58% of mobile sites mediocre or worse",
+      "66% fail non-product queries",
+      "54% fail abbreviation and symbol queries",
+      "44% compatibility",
+      "43% use case",
+      "39% feature",
+      "37% symptom",
+      "20% product type",
+      "12% exact"
+    ],
+    "asks": [
+      "Is my site search good enough?",
+      "What searches should my store handle?",
+      "Why do shoppers get no results?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6182",
+    "evidence": {
+      "where": "Article: benchmark summary and table of query types"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "CRO-6361",
+    "modules": [
+      "CRO",
+      "OPS"
+    ],
+    "topics": [
+      "WhatsApp",
+      "chat automation",
+      "human handoff"
+    ],
+    "claim": "On WhatsApp a business may reply without a template inside the 24-hour window and may automate those replies, but any automated experience must offer a prompt, clear and direct path to a human.",
+    "body": "The WhatsApp Business Messaging Policy (23 September 2026) says a business may reply to a user's message without a Message Template while inside the 24-hour customer service window; outside that window only approved Message Templates may be sent. Automation is allowed when replying inside the window, but the business must also have prompt, clear and direct escalation paths. The paths the policy lists are an in-chat transfer to a human agent, a phone number, email, web support, an in-store visit or a support form. How to apply for a store's sales chat: 1) every bot menu and auto-reply carries a visible 'talk to a person' option; 2) say in the greeting when a person is available and how soon they reply; 3) when the window is about to close on an open question, reply before it closes or plan an approved template follow-up; 4) never let a bot loop a buyer who asked for a person.",
+    "conditions": "Businesses using automated replies, bots or AI agents on WhatsApp.",
+    "fails_when": "The policy wording changes; recheck the live page. Local consumer law may add disclosure duties for automated chats.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "24-hour customer service window"
+    ],
+    "asks": [
+      "Can I use a chatbot on WhatsApp?",
+      "Do I need a human handoff for WhatsApp automation?",
+      "When can I message a customer on WhatsApp without a template?"
+    ],
+    "platforms": [
+      "WhatsApp"
+    ],
+    "platform": [
+      "WhatsApp"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6360",
+    "evidence": {
+      "where": "Policy section on automated experiences",
+      "quote": "must also have available prompt, clear, and direct escalation paths"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

@@ -99,6 +99,28 @@ test("only public cards from public sources are published, and a vertical agent 
   assert.match(cardMarkdown(b.cards[1], b.sources[0]), /\*\*Fails when:\*\*[\s\S]*\*\*Source:\*\* Source S0001, A practitioner, 2026-06-01 \(https:\/\/example\.org\/S0001\)/);
 });
 
+test("own skills go to the agents they name, else to the module's agents, with a toolkit listing what each delivers", () => {
+  const skill = (slug: string, title: string) => `---\nname: ${slug}\ndescription: "Does ${slug}."\n---\n\n# ${title}\n\n**You get:** a ${slug} file.\n`;
+  const vendor = { "knowledge/ecommerce/skills/a/SKILL.md": skill("a", "Skill A"), "knowledge/ecommerce/skills/b/SKILL.md": skill("b", "Skill B"), "knowledge/ecommerce/skills/c/SKILL.md": skill("c", "Skill C") };
+  const item = (ref: string, use: string, extra = {}) => ({ ref, type: "skill", use, when: "When the job needs it.", tune: "Store first.", cards: [], ...extra });
+  const toolbox = { schema: "ai-blocks-vertical-toolbox/1" as const, reviewed: "2026-11-13", modules: {
+    MCR: [item("skill:a", "check", { agents: ["copywriter"], title: "Skill A", outcome: "Ten checked headlines." }), item("skill:b", "build")],
+    GAD: [item("skill:c", "build", { agents: ["copywriter", "buyer"] })],
+  } };
+  const b = verticalBundle(VERTICAL, [card("MCR-0001")], [src("S0001")], { toolbox, vendor });
+  const copywriter: Persona = { ...NOVA, id: "copywriter", title: "Ad copywriter", vertical: "ecommerce", modules: ["ADC"] };
+  const creative: Persona = { ...NOVA, id: "creative", vertical: "ecommerce", modules: ["MCR"] };
+  const paths = (p: Persona) => personaVerticalFiles(p, b).map(f => f.path).filter(x => /skills|toolkit/.test(x));
+  assert.deepEqual(paths(copywriter), ["knowledge/ecommerce/skills/a/SKILL.md", "knowledge/ecommerce/skills/c/SKILL.md", "knowledge/ecommerce/toolkit.md"], "named agents get the skill even outside their modules");
+  assert.deepEqual(paths(creative), ["knowledge/ecommerce/skills/b/SKILL.md", "knowledge/ecommerce/toolkit.md"], "a skill naming other agents skips the module's agents; an unnamed one follows the module");
+  const kit = personaVerticalFiles(copywriter, b).find(f => f.path.endsWith("toolkit.md"))!;
+  assert.equal(kit.shared, false);
+  assert.match(kit.content, /2 skills I carry as Ad copywriter/);
+  assert.match(kit.content, /## Check and diagnose\n\n- \*\*Skill A\*\*\. You get: Ten checked headlines\. Use it when the job needs it\./);
+  assert.match(kit.content, /## Make and deliver\n\n- \*\*Skill C\*\*/, "the title falls back to the skill's heading");
+  assert.match(verticalKnowledgeSection(copywriter, b, personaVerticalFiles(copywriter, b).map(f => f.path), "https://x/mcp"), /My toolkit: `knowledge\/ecommerce\/toolkit\.md`/);
+});
+
 test("query options from loose input keep only known modules and values", () => {
   const q = cardQuery(VERTICAL, { modules: "lpg, OFF,xyz", jurisdiction: "in", mode: "amazon_first", platform: "magento", k: "50" });
   assert.deepEqual(q.modules, ["LPG", "OFF"]);

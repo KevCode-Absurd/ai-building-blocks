@@ -30,7 +30,7 @@ for (const file of inputs) {
     for (const i of items) {
       const list = (modules[code] ??= []);
       if (list.some(x => x.ref === i.ref)) continue;
-      const ok = i.ref?.startsWith("library:") ? inLibrary(i.ref.slice(8)) : i.ref?.startsWith("local:") ? vendored(i.ref.slice(6)) : false;
+      const ok = i.ref?.startsWith("library:") ? inLibrary(i.ref.slice(8)) : i.ref?.startsWith("local:") ? vendored(i.ref.slice(6)) : i.ref?.startsWith("skill:") ? existsSync(path.join(DIR, "skills", i.ref.slice(6), "SKILL.md")) : false;
       if (!ok) { notes.push(`${code}: ${i.ref} not found, left out`); continue; }
       const cards = (i.cards ?? []).filter(c => cardIds.has(c));
       if (cards.length < (i.cards ?? []).length) notes.push(`${code}: ${i.ref} names unknown cards ${(i.cards ?? []).filter(c => !cardIds.has(c)).join(", ")}`);

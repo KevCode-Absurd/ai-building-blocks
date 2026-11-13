@@ -870,5 +870,200 @@
     },
     "strength": "anecdote",
     "public": true
+  },
+  {
+    "id": "OPS-6281",
+    "modules": [
+      "OPS",
+      "CXP"
+    ],
+    "topics": [
+      "backorders",
+      "refunds"
+    ],
+    "claim": "For a US backorder the store may only get the buyer's agreement to wait or refund in full; it may not ship a materially different item without prior agreement, and a refund may not be paid as store credit.",
+    "body": "The FTC guide says the rule allows two answers to a backordered, properly completed order: get the buyer's consent to the delay, or make a full, prompt refund. Changing design, style, colour, fabric or promoted use counts as a material difference, so a substitute needs the buyer's express agreement first. Refunds cannot be issued as credit toward future purchases, vouchers or scrip. When nothing ships, the refund includes shipping and handling; when part ships, the refund is the difference for the unshipped items. Testing demand for a product that does not exist yet is allowed only when the store says plainly the product is planned and may never ship, makes no promise of shipment and offers refunds if it decides not to ship.",
+    "conditions": "US buyers under the FTC mail order rule, as stated in the FTC business guide on the date fetched.",
+    "fails_when": "The buyer has agreed in advance to a substitute or to store credit, or the sale is outside the rule's scope.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "two lawful responses to a backorder: consent to delay or full prompt refund"
+    ],
+    "asks": [
+      "Can I send a different colour when the ordered one is out of stock?",
+      "Can I refund a late order with store credit?",
+      "Can I take orders for a product I have not made yet?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6280",
+    "evidence": {
+      "where": "Backorders, substitutions, refund amount and dry-testing sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "OPS-6282",
+    "modules": [
+      "OPS",
+      "SET"
+    ],
+    "topics": [
+      "pre-orders",
+      "store settings"
+    ],
+    "claim": "Shopify pre-orders can take full, partial or no payment at order and collect the rest at fulfilment; they need Shopify Payments or PayPal Express and a pre-order app, whose data is deleted 48 hours after uninstall.",
+    "body": "Shopify describes pre-orders as a way to sell items that are out of stock or not yet released, to gauge demand or build interest in a launch. The store chooses to collect full payment, a partial payment or nothing at checkout; the buyer's payment method is stored and the balance is charged later, at fulfilment. Pre-orders are available only to stores using Shopify Payments or PayPal Express. Each item is set up inside a pre-order app from the Shopify App Store and managed in the admin. If the app is uninstalled, its pre-order data, other than payment details, is deleted after 48 hours unless the app has its own backup. The store must follow the consumer laws where it and its buyers are located.",
+    "conditions": "Shopify stores as described in the help article on the date fetched.",
+    "fails_when": "The store uses another gateway (for example a cash-on-delivery-only or third-party Indian gateway setup), or sells pre-orders with the Continue selling when out of stock setting alone, which takes full payment at checkout.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "full, partial or no payment at order",
+      "pre-order data deleted 48 hours after the app is uninstalled"
+    ],
+    "asks": [
+      "Can I take a deposit on a Shopify pre-order?",
+      "Which payment providers support Shopify pre-orders?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6281",
+    "evidence": {
+      "where": "Pre-orders overview, requirements and app sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "OPS-6283",
+    "modules": [
+      "OPS",
+      "SET"
+    ],
+    "topics": [
+      "inventory settings",
+      "backorders"
+    ],
+    "claim": "Shopify's Continue selling when out of stock works only with inventory tracked; an item counts as out of stock at zero or below at the location that fulfils online orders, and POS ignores the setting.",
+    "body": "To sell past zero, a product or variant must have Inventory tracked turned on, then Continue selling when out of stock selected. Shopify suggests it for pre-orders, incoming stock and selling before supplies are ordered. By default buyers cannot buy an out of stock item. With several locations, an item still shows out of stock online when the location that fulfils online orders is at zero or below, even if another location holds stock, so location fulfilment settings and priority decide which items oversell. Shopify POS ignores the setting and only warns staff before selling an unavailable item.",
+    "conditions": "Shopify stores as described in the help article on the date fetched.",
+    "fails_when": "Inventory is not tracked, or a pre-order app manages availability with its own rules.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "out of stock means available at zero or below"
+    ],
+    "asks": [
+      "How do I let buyers order when stock is zero on Shopify?",
+      "Why does my product show sold out when another location has stock?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6282",
+    "evidence": {
+      "where": "Selling when out of stock article"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "OPS-6286",
+    "modules": [
+      "OPS",
+      "EML"
+    ],
+    "topics": [
+      "WhatsApp templates",
+      "order updates"
+    ],
+    "claim": "A WhatsApp backorder or delay update counts as a utility template only with no offer in it; add a credit or discount and it becomes marketing, and repeat miscategorising can restrict utility templates.",
+    "body": "Meta's WhatsApp template rules say a utility template must be non-promotional and either specific to or requested by the user (their order, account or transaction) or essential to them. Mixed utility and marketing content is marketing. Meta's own examples treat a backordered-item notice as utility when it offers no promotion, and a delivery-delay apology that includes a credit offer as marketing. A template approved as utility that should be marketing is moved automatically, usually with a day's notice, and the business can ask for review within 60 days. Repeat misuse can bring warnings, rate limits or a utility restriction that moves all utility templates to marketing and blocks new ones for 7 days, or 30 for repeat cases.",
+    "conditions": "WhatsApp Business Platform (Cloud API or a provider built on it), as described on the date fetched.",
+    "fails_when": "The store uses the free WhatsApp Business app for one-to-one replies inside an open chat, where template categories do not apply.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "review request within 60 days",
+      "utility restriction 7 days, 30 for repeat violations"
+    ],
+    "asks": [
+      "Is a WhatsApp delay message utility or marketing?",
+      "Can I add a discount code to a WhatsApp order update?"
+    ],
+    "platforms": [],
+    "platform": [
+      "whatsapp"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6285",
+    "evidence": {
+      "where": "Utility template rules and examples, recategorisation and misuse sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "OPS-6287",
+    "modules": [
+      "OPS"
+    ],
+    "topics": [
+      "shipping costs",
+      "packaging"
+    ],
+    "claim": "USPS Priority Mail charges the greater of actual and dimensional weight for parcels over 1 cubic foot (1,728 cubic inches) to zones 1 to 9, dividing cubic inches by 139 for rectangular parcels.",
+    "body": "The USPS Domestic Mail Manual section on Priority Mail says parcels to zones 1 to 9 that exceed one cubic foot pay on the greater of actual weight and dimensional weight. For a rectangular parcel, length times width times height in inches, each rounded to the nearest inch, is divided by 139 and rounded up to give pounds. Non-rectangular parcels use an adjustment factor of 0.785 and a divisor of 166. A dimensional weight above 70 pounds pays the 70-pound price. Other carriers and services publish their own divisors, so a box that is cheap by weight can cost more by size; check each carrier's rate guide before choosing boxes.",
+    "conditions": "USPS Priority Mail in the US, as stated in DMM 223 on the date fetched.",
+    "fails_when": "The parcel is 1 cubic foot or smaller, the service is not Priority Mail, or another carrier's divisor applies.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "applies above 1,728 cubic inches",
+      "divisor 139 rectangular, 166 with 0.785 factor non-rectangular",
+      "dimensional weight capped at the 70-pound price"
+    ],
+    "asks": [
+      "When does USPS charge dimensional weight?",
+      "Why did my larger box cost more to ship?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6286",
+    "evidence": {
+      "where": "DMM 223 section 1.4"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

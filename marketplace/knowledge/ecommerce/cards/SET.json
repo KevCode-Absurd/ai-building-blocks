@@ -349,5 +349,117 @@
     },
     "strength": "stated_by_practitioner",
     "public": true
+  },
+  {
+    "id": "SET-6186",
+    "modules": [
+      "SET",
+      "CRO",
+      "FIN"
+    ],
+    "topics": [
+      "payments",
+      "cash on delivery"
+    ],
+    "claim": "On Shopify, cash on delivery is a manual payment method: those orders show as unpaid or pending until the merchant marks them paid after collecting the money.",
+    "body": "Shopify's manual payments page lists cash on delivery (COD), money orders and bank transfers as common manual payments. Orders paid this way are marked unpaid (pending) on the Orders page; after the store receives the money it marks the order as paid on the order page and fulfils it as usual. Shopify does not charge its third-party transaction fee on manual payments. The page describes no native COD fee and no native rule to limit COD by order value or region; those need a payment customization app or a checkout partner. How to apply: in reports, keep COD orders that were never paid (refused or returned to origin) out of revenue and gross profit until cash is collected, and reconcile courier COD remittances against orders marked paid.",
+    "conditions": "Shopify stores offering cash on delivery, mainly in India, the Middle East and Southeast Asia.",
+    "fails_when": "The store uses a third-party checkout or COD app that records payment status differently.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "How does cash on delivery work on Shopify?",
+      "When should I mark a COD order paid?",
+      "Can I add a COD fee in Shopify?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6186",
+    "evidence": {
+      "where": "Manual payment methods page: types, order status and marking orders as paid"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SET-6187",
+    "modules": [
+      "SET",
+      "CRO"
+    ],
+    "topics": [
+      "payments",
+      "checkout customization"
+    ],
+    "claim": "Shopify lets Basic and higher plans sort, reorder, hide and rename payment methods at checkout through payment customization apps; custom apps built with Shopify Functions are Plus only.",
+    "body": "Shopify's checkout customization page says payment customization can sort, reorder, hide and rename payment methods (and, on Plus, set payment terms) by installing a payment customization app from the Shopify App Store, and that a store can run more than one such app. Public apps built with Shopify Functions work on Basic and higher plans; custom apps built with Functions need Shopify Plus. In the US and Canada, custom settings on credit card fields do not apply at checkout. How to apply: this is the native route to rules such as hiding cash on delivery above an order value or for certain pincodes, or listing UPI and prepaid options first; check the chosen app's conditions before promising a rule, because the help page does not list them.",
+    "conditions": "Shopify stores on Basic or higher using Shopify's own checkout.",
+    "fails_when": "The store sends buyers to a third-party checkout, where that provider's rules apply instead.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I hide cash on delivery for big orders on Shopify?",
+      "How do I reorder payment methods at checkout?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6187",
+    "evidence": {
+      "where": "Payment customization section and eligibility table"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SET-6204",
+    "modules": [
+      "SET"
+    ],
+    "topics": [
+      "international selling",
+      "duties and import taxes"
+    ],
+    "claim": "Charging duties at Shopify checkout is set per market and needs HS codes, a DDP-capable label carrier and no Shopify Fulfillment Network; wrong product data can still leave buyers a bill on delivery.",
+    "body": "Shopify's help centre lists what a store needs to collect duties and import taxes at checkout: HS codes on products, a carrier that supports Delivered Duty Paid labels if the store buys labels through Shopify, and not using Shopify Fulfillment Network. It is turned on per market with the 'Collect duties and import tax' setting. Amounts are estimates set from each product's classification, its country of origin and the destination's rules; without an HS code, Shopify falls back to description and category, and without those the result is likely to be inaccurate. Inaccurate data might lead to more duties being charged to the customer on delivery. A transaction fee applies to these orders (0.85% with Shopify Payments, 1.5% with other gateways, per the page at the time read), even when the calculated amount is zero. Stores that do not meet the requirements can use a third-party app. How to use it: add HS codes and country of origin to every product before opening a market, then test a checkout to that country.",
+    "conditions": "Shopify stores selling across borders; fee levels as shown on the help page when read, recheck before quoting.",
+    "fails_when": "The store ships through Shopify Fulfillment Network or a carrier without DDP labels.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "0.85% fee with Shopify Payments, 1.5% with other gateways (recheck)"
+    ],
+    "asks": [
+      "How do I charge duties at checkout on Shopify?",
+      "Why did my international customer get a customs bill?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6204",
+    "evidence": {
+      "where": "Requirements, transaction fees and accuracy sections"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

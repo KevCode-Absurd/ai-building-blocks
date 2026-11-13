@@ -287,6 +287,9 @@ if (existsSync(KNOWLEDGE)) {
     const vendor = {};
     const vendorDir = path.join(dir, "vendor");
     if (existsSync(vendorDir)) for (const f of walk(vendorDir).filter(f => f.endsWith(".md"))) vendor[`knowledge/${id}/vendor/${f}`] = normalizeText(readFileSync(path.join(vendorDir, f), "utf8"));
+    // The vertical's own skills, written for this kind of business: carried like the vendored ones, at their own path.
+    const ownDir = path.join(dir, "skills");
+    if (existsSync(ownDir)) for (const f of walk(ownDir).filter(f => f.endsWith(".md"))) vendor[`knowledge/${id}/skills/${f}`] = normalizeText(readFileSync(path.join(ownDir, f), "utf8"));
     const names = { library: {}, vendor: {} };
     const verticalNotes = [];
     for (const [code, items] of Object.entries(toolbox?.modules ?? {})) for (const i of items) {
@@ -298,6 +301,11 @@ if (existsSync(KNOWLEDGE)) {
           if (!got.item) verticalNotes.push(`knowledge/${id}/toolbox.json ${code}: library item ${slug} ${got.skip}, so it is left out`);
         }
         if (library[slug]) names.library[slug] = { name: library[slug].name, type: library[slug].type };
+      } else if (i.ref.startsWith("skill:")) {
+        const slug = i.ref.slice(6), p = `knowledge/${id}/skills/${slug}/SKILL.md`;
+        const heading = vendor[p] ? /^#\s+(.+)$/m.exec(vendor[p].replace(/^---[\s\S]*?---/, ""))?.[1] : null;
+        if (vendor[p]) names.vendor[`own/${slug}`] = { name: heading ?? slug.replace(/-/g, " "), path: p, set: "own" };
+        else verticalNotes.push(`knowledge/${id}/toolbox.json ${code}: ${i.ref} has no SKILL.md, so it is left out`);
       } else if (i.ref.startsWith("local:")) {
         const [set, skill] = i.ref.slice(6).split("/");
         const p = `knowledge/${id}/vendor/${set}/skills/${skill}/SKILL.md`;

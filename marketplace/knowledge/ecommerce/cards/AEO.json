@@ -1395,5 +1395,120 @@
     },
     "strength": "stated_by_practitioner",
     "public": true
+  },
+  {
+    "id": "AEO-6460",
+    "modules": [
+      "AEO",
+      "SEO"
+    ],
+    "topics": [
+      "generative answer surfaces",
+      "AI Overviews"
+    ],
+    "claim": "Google says AI Overviews and AI Mode need no special files, AI text files, markup or schema.",
+    "body": "A page must simply be indexed and eligible to show with a snippet, and its traffic is counted in Search Console's Web performance data. Google Search Central states there are no additional requirements or special optimisations to appear in AI Overviews or AI Mode, and that site owners do not need new machine-readable files, AI text files or special schema.org markup. To be shown as a supporting link a page must be indexed and eligible to appear in Search with a snippet. Google recommends the usual basics: allow crawling in robots.txt, keep important content available as text, and make structured data match the visible text. Traffic from these features is included in the Search Console Performance report under the Web search type, not in a separate report. To limit what is shown, Google points to nosnippet, data-nosnippet, max-snippet and noindex; Google-Extended limits AI training and grounding in some other Google systems. How to apply: spend AI-search effort on indexable, text-first pages and accurate markup, not on files such as llms.txt sold as a Google requirement.",
+    "conditions": "Google Search AI Overviews and AI Mode.",
+    "fails_when": "Other assistants (ChatGPT, Perplexity, Copilot) have their own crawlers and rules; Google may change these features.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "No special files, markup or schema required",
+      "Must be indexed and snippet-eligible"
+    ],
+    "asks": [
+      "Do I need llms.txt or special schema to show in Google AI Overviews?",
+      "How do I see AI Overview traffic in Search Console?",
+      "What makes a page eligible to be cited in AI Mode?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6460",
+    "evidence": {
+      "where": "Requirements and Search Console sections",
+      "quote": "There are no additional requirements to appear in AI Overviews or AI Mode"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AEO-6466",
+    "modules": [
+      "AEO",
+      "SEC"
+    ],
+    "topics": [
+      "crawler access",
+      "ChatGPT search"
+    ],
+    "claim": "OpenAI runs separate crawlers: OAI-SearchBot decides whether a site can appear in ChatGPT search answers, GPTBot gathers training data, and ChatGPT-User fetches pages for user actions; each robots.txt setting is independent and changes take about 24 hours.",
+    "body": "OpenAI's crawler documentation says OAI-SearchBot is used to surface websites in ChatGPT's search features, and sites that opt out of it will not be shown in ChatGPT search answers. GPTBot crawls content that may be used to train generative AI models; disallowing it signals the content should not be used for training. ChatGPT-User handles certain user-initiated actions and is not used for automatic crawling. Each setting is independent of the others, and it can take about 24 hours after a robots.txt update for OpenAI's systems to adjust. How to apply: a store that wants to be recommended in ChatGPT must allow OAI-SearchBot; it may still choose to block GPTBot for training without losing search visibility.",
+    "conditions": "Stores that want to appear in ChatGPT search answers.",
+    "fails_when": "CDN or firewall bot rules can block a crawler even when robots.txt allows it; other assistants use their own crawler names.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "About 24 hours for robots.txt changes to apply"
+    ],
+    "asks": [
+      "Which OpenAI bot do I need to allow to show in ChatGPT?",
+      "Can I block AI training but still appear in ChatGPT search?",
+      "Why is my store missing from ChatGPT answers?"
+    ],
+    "platforms": [
+      "openai"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6466",
+    "evidence": {
+      "where": "OAI-SearchBot, GPTBot and ChatGPT-User entries"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AEO-6467",
+    "modules": [
+      "AEO",
+      "SET"
+    ],
+    "topics": [
+      "agentic commerce",
+      "AI shopping channels"
+    ],
+    "claim": "Shopify's agentic storefronts let buyers find and buy a store's products inside AI channels (ChatGPT, Google AI Mode and Gemini, Microsoft Copilot, Meta).",
+    "body": "It is on by default for eligible stores and needs Shopify Catalog eligibility plus completed terms, privacy and refund policies. Shopify's help centre describes agentic storefronts as letting customers discover and purchase products in AI channels, with Shop Pay available through personal AI agents. Channels named are ChatGPT, Google AI Mode and Gemini, Microsoft Copilot and Meta surfaces. Every channel needs the products to be eligible for Shopify Catalog, and the store must complete its Terms of service, Privacy policy and Return and refund policy in Settings, Policies. Each channel has its own rules, such as countries served, and eligibility is reviewed over time. Product data reaches the channels through Shopify Catalog, or for Google AI Mode and Gemini through the Google and YouTube channel or Merchant Center. It is active by default for eligible stores and managed under Sales channels, Agentic. How to apply: complete the three policy pages, fix product data that blocks catalog eligibility, and check which channels are on before relying on them.",
+    "conditions": "Shopify stores in markets where these AI channels are offered.",
+    "fails_when": "Non-Shopify stores; channel lists, countries and settings are changing quickly, so recheck the help page before each audit.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "How do I sell my Shopify products in ChatGPT?",
+      "Why are my products not showing in AI shopping channels?",
+      "Which policies do I need for Shopify agentic storefronts?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6467",
+    "evidence": {
+      "where": "Agentic storefronts overview and requirements",
+      "quote": "Shopify's agentic storefronts lets customers discover and purchase your products in AI channels."
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

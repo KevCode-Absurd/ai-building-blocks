@@ -3278,5 +3278,574 @@
     },
     "strength": "stated_by_practitioner",
     "public": true
+  },
+  {
+    "id": "MCR-6020",
+    "modules": [
+      "MCR",
+      "ADC",
+      "LPG"
+    ],
+    "topics": [
+      "comparison ads",
+      "advertising law"
+    ],
+    "claim": "In the US, comparison ads may name a competitor and may be unflattering to it, as long as the basis of comparison is clear and the ad is truthful and not deceptive.",
+    "body": "The FTC's 1979 policy statement encourages advertisers to name or refer to competitors, because truthful comparisons give shoppers useful information. It asks for clarity, and a disclosure where needed, so buyers are not misled about what is being compared. Disparaging a rival is allowed if it is truthful and not deceptive. Comparative ads are judged by the same test as any ad: does it tend to deceive. How to apply: write the exact attribute compared (price per use, material, warranty length) on the ad, keep proof for each side of the comparison, and compare like with like (same size, same date, same market).",
+    "conditions": "US advertising of physical products where the attribute compared is objectively measurable or a price.",
+    "fails_when": "Claims about a competitor that cannot be checked, comparisons to a different size or an old price, or using a competitor's trademark in a way that suggests endorsement (a separate trademark question).",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "policy dated 13 August 1979"
+    ],
+    "asks": [
+      "Can I name a competitor in my ad in the US?",
+      "Is it legal to say our product is better than a named brand?"
+    ],
+    "platforms": [
+      "meta",
+      "google",
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6020",
+    "evidence": {
+      "where": "Policy statement, paragraphs on naming competitors and disparagement"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-6021",
+    "modules": [
+      "MCR",
+      "ADC",
+      "LPG",
+      "CXP"
+    ],
+    "topics": [
+      "reviews and testimonials",
+      "AI disclosure",
+      "advertising law"
+    ],
+    "claim": "The US rule on fake reviews (in force 21 October 2024) bans writing, buying or using fake or false reviews and testimonials, and allows civil penalties for knowing violations.",
+    "body": "AI avatars are not banned, but a testimonial they give must not be fake. The FTC's Consumer Reviews and Testimonials Rule covers anyone who writes, creates or sells a fake or false consumer review or testimonial, and makes a business liable when it knew or should have known that a hired creator misrepresented using the product. There is no blanket ban on AI-generated avatars; the avatar's testimonial is illegal when the experience it describes is fake. A celebrity likeness used without permission breaks the rule if viewers would think the celebrity gave the testimonial. How to apply: every quote in an ad must come from a real customer record you can show; an AI presenter may read a real customer's words only when it is labelled as a dramatisation and does not claim to be that customer.",
+    "conditions": "US marketing using reviews, testimonials, creator content or AI presenters.",
+    "fails_when": "Purely fictional characters that make no claim to be real customers and no claim of personal experience; even then platform AI labelling rules apply.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "effective 21 October 2024",
+      "civil penalties for knowing violations"
+    ],
+    "asks": [
+      "Can I use AI people in testimonial ads?",
+      "Is it illegal to write reviews for my own product?"
+    ],
+    "platforms": [
+      "meta",
+      "google",
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6021",
+    "evidence": {
+      "where": "Q&A sections on fake reviews, AI avatars and effective date"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-6022",
+    "modules": [
+      "MCR",
+      "ADC"
+    ],
+    "topics": [
+      "claims substantiation",
+      "advertising law"
+    ],
+    "claim": "US advertisers need a reasonable basis for every objective claim before the ad runs, and a claim like 'tests prove' or 'doctors recommend' needs at least that level of proof.",
+    "body": "The FTC's 1984 substantiation policy says making objective claims without a reasonable basis is an unfair or deceptive practice under Section 5 of the FTC Act. When an ad states its level of support (tests prove, studies show, doctors recommend), the advertiser must hold at least that support, and must also hold whatever proof the ad as a whole communicates to buyers. How to apply: build a claims sheet before production with each objective claim, the evidence file, its date and who checked it; cut or narrow any claim whose evidence is weaker than the wording.",
+    "conditions": "Objective claims in US advertising: performance, comparisons, results, test and expert claims.",
+    "fails_when": "Pure opinion or puffery that no buyer would read as measurable; health, drug and children's claims, which carry stricter rules on top.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "policy dated 23 November 1984"
+    ],
+    "asks": [
+      "What proof do I need before making a claim in an ad?",
+      "Can I say clinically proven?"
+    ],
+    "platforms": [
+      "meta",
+      "google",
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6022",
+    "evidence": {
+      "where": "Policy statement, reasonable basis and express claims of support"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-6023",
+    "modules": [
+      "MCR",
+      "ADC"
+    ],
+    "topics": [
+      "ad policy",
+      "copy rules"
+    ],
+    "claim": "Meta ads must not assert or imply a viewer's personal attributes (health, age, finances, religion, race and others).",
+    "body": "Meta ads must not assert or imply a viewer's personal attributes (health, age, finances, religion, race and others), so a line asking the viewer if they have a condition gets rejected while a line describing the product for that condition can pass. Meta's advertising standard on personal attributes bans ad content that asserts or implies personal attributes, directly or indirectly, including physical or mental health, age, financial vulnerability, religion, race or ethnicity, sexual orientation, gender identity, disability, criminal record, voting status, union membership and name. Allowed examples describe a product or a group; banned examples address the viewer with the attribute, such as asking whether the viewer is bankrupt or 18 years old. How to apply: when an angle comes from buyer pain, write it about the product or the situation, not about 'you' having the condition; check every hook and on-screen line for 'you', 'your' and questions next to a sensitive attribute.",
+    "conditions": "Ads on Facebook, Instagram, Messenger and Threads.",
+    "fails_when": "Organic posts, which follow community standards rather than ad standards; other platforms have their own wording rules.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "covers about 12 attribute types"
+    ],
+    "asks": [
+      "Why was my ad rejected for personal attributes?",
+      "Can my ad ask viewers if they have back pain?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6023",
+    "evidence": {
+      "where": "Policy text and allowed and not allowed examples"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-6024",
+    "modules": [
+      "MCR",
+      "ADC",
+      "LPG",
+      "BRD"
+    ],
+    "topics": [
+      "comparison ads",
+      "advertising law",
+      "India"
+    ],
+    "claim": "In India, the ASCI Code allows comparison ads only when what is compared is clear, the comparison is factual, accurate and capable of substantiation, it is not picked for an artificial advantage, and it does not unfairly denigrate a rival.",
+    "body": "Chapter IV of the ASCI Code (fair in competition) permits comparisons in the interest of competition and public enlightenment, on conditions: the aspects compared must be clear; the comparison must be factual, accurate and capable of substantiation; it must not be chosen to give the advertiser an artificial advantage; there must be no likelihood of misleading the consumer; and the ad must not unfairly denigrate, attack or discredit other products directly or by implication. Chapter I requires claims of objectively ascertainable fact to be capable of substantiation, with proof supplied when ASCI asks. How to apply: in India, prefer comparisons against a category or the old way over a named brand, keep the tone factual, and keep the test file ready.",
+    "conditions": "Advertising seen in India, including digital and influencer ads.",
+    "fails_when": "ASCI is self-regulatory; statutory consumer protection rules and trademark law also apply and may be stricter in a given case.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Chapters I and IV of the code"
+    ],
+    "asks": [
+      "Can I name a competitor brand in an Indian ad?",
+      "What does ASCI say about comparison ads?"
+    ],
+    "platforms": [
+      "meta",
+      "google",
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6024",
+    "evidence": {
+      "where": "Code Chapter I (substantiation) and Chapter IV (fair in competition)"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-6025",
+    "modules": [
+      "MCR",
+      "ADC",
+      "ORG",
+      "CXP"
+    ],
+    "topics": [
+      "reviews and testimonials",
+      "founder ads",
+      "advertising law"
+    ],
+    "claim": "US endorsements must reflect the endorser's honest opinion and real use; when a featured result is exceptional the ad must show generally expected results, and employee, family, paid or free-product links must be clearly disclosed.",
+    "body": "The FTC's Endorsement Guides (revised 2023) say an endorsement must reflect the honest opinion of the endorser, and nobody may describe experience with a product they have not tried. If an endorser's result is not what people generally get, the advertiser must either prove it is typical or make clear what results people can generally expect. A connection a significant minority of viewers would not expect (employee, relative, payment, free product given to promote) must be disclosed clearly and conspicuously. How to apply: label founder, staff and family appearances as such, keep each creator's real use on file, and pair any standout result with the typical one.",
+    "conditions": "US ads and posts using customers, creators, staff, founders or experts as endorsers.",
+    "fails_when": "Brand statements made in the brand's own voice with no endorser, which fall under the substantiation rules instead.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "guides revised 2023"
+    ],
+    "asks": [
+      "Do I need to disclose that the person in my ad works for us?",
+      "Can I show my best customer result in an ad?"
+    ],
+    "platforms": [
+      "meta",
+      "google",
+      "tiktok",
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6025",
+    "evidence": {
+      "where": "Sections on honest opinions, expected results and material connections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-6040",
+    "modules": [
+      "MCR",
+      "ADC"
+    ],
+    "topics": [
+      "format and placement"
+    ],
+    "claim": "Meta's Ads Guide asks for 9:16 Stories and Reels images at 1440 x 2560 and suggests keeping about 14% of the top, 35% of the bottom and 6% of each side free of text and logos.",
+    "body": "Meta's Ads Guide pages for Instagram Stories and Instagram Reels image ads both list a 9:16 ratio at 1440 x 2560 pixels and advise leaving roughly 14% of the top, 35% of the bottom and 6% on each side of the asset free from text, logos or other key creative elements, so the profile icon and the call-to-action do not cover them or crop them. On a 1080 x 1920 export that is about 270 px at the top, 672 px at the bottom and 65 px each side. Older third-party guides quote 20% at the bottom; the current Meta pages say 35%, so build to 35% and treat anything else as out of date. The background and image can run to the edges; only words, logo, price and the product's key detail must sit inside the safe area.",
+    "conditions": "Meta Stories and Reels placements for image ads, as shown in the Ads Guide on the date opened.",
+    "fails_when": "Meta changes the Ads Guide; recheck the live page before a large batch.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "9:16 at 1440 x 2560",
+      "14% top",
+      "35% bottom",
+      "6% each side"
+    ],
+    "asks": [
+      "What is the safe zone for Instagram Stories ads?",
+      "How much space should I leave at the bottom of a Reels ad?",
+      "Why is my Story ad text covered by the button?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6040",
+    "evidence": {
+      "where": "Instagram Stories and Instagram Reels image ad pages, Design recommendations"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-6041",
+    "modules": [
+      "MCR",
+      "ADC"
+    ],
+    "topics": [
+      "format and placement"
+    ],
+    "claim": "Meta's Feed carousel spec allows 2 to 10 cards at 1:1 and at least 1080 x 1080, with guidance of 80 characters primary text, 20 headline and 18 description, and a required landing URL.",
+    "body": "The Meta Ads Guide page for Facebook Feed carousel ads lists: 2 to 10 cards; ratio 1:1 with a 3% tolerance; resolution at least 1080 x 1080; JPG or PNG images up to 30 MB, or MP4, MOV or GIF video; text guidance of 80 characters primary text, 20 characters headline and 18 characters description per card; and a landing page URL is required. The short headline and description limits mean the card image itself must carry the story beat; the card headline can only name it. Each card can link to its own URL, which lets a card point to the exact product or bundle it shows.",
+    "conditions": "Meta carousel ads in Facebook Feed; other placements may crop or show fewer characters.",
+    "fails_when": "Meta updates the Ads Guide; text over the guidance is cut off with an ellipsis rather than rejected.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "2 to 10 cards",
+      "1:1 at least 1080 x 1080",
+      "80 characters primary text",
+      "20 characters headline",
+      "18 characters description"
+    ],
+    "asks": [
+      "How many cards can a Meta carousel ad have?",
+      "What size should carousel images be?",
+      "How long can a carousel card headline be?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6041",
+    "evidence": {
+      "where": "Facebook Feed carousel page, Design and Text recommendations"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-6044",
+    "modules": [
+      "MCR",
+      "ADC"
+    ],
+    "topics": [
+      "format and placement",
+      "angle versus format"
+    ],
+    "claim": "Meta requires weight-loss and cosmetic ads to target people 18 or older, and its 2024 and July 2026 Health and Wellness versions bar side-by-side weight-loss transformations and imagery that builds negative self-perception; recheck the live page first.",
+    "body": "Meta's Health and Wellness advertising standard, as shown on the Transparency Center on 13 November 2026, requires weight-loss products and services and cosmetic products, procedures or surgeries to be targeted to people at least 18 years old. The page shows dated versions. The 26 December 2024 and 22 July 2026 versions say ads must not imply or try to generate negative self-perception or declare a perfect body type, ban side-by-side comparisons after use of a product for weight loss (fitness classes excepted), and the 2024 version bans close-up skin-ageing comparisons after using a product; the July 2026 version allows general cosmetic before-and-after images that avoid negative self-perception tactics. The current version is worded differently and prohibits statements of inferiority about physical appearance, and the page notes the negative self-perception guidance was revised. Because the wording moves, read the live page on the day and treat any weight, body or skin before-and-after as high risk on Meta.",
+    "conditions": "Meta ads for weight loss, cosmetics, skin care, supplements and other personal health and appearance products.",
+    "fails_when": "Meta revises the standard again; review outcomes can also differ from the written text, so keep a policy-safe variant ready.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "18+ targeting for weight-loss and cosmetic ads",
+      "versions dated 26 Dec 2024 and 22 Jul 2026"
+    ],
+    "asks": [
+      "Can I run before-and-after photos on Facebook ads?",
+      "Are weight-loss before and after ads allowed on Meta?",
+      "What age targeting do cosmetic ads need on Meta?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6044",
+    "evidence": {
+      "where": "Health and Wellness standard, version tabs Today, Jul 22 2026 and Dec 26 2024"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-6045",
+    "modules": [
+      "MCR",
+      "CXP",
+      "ADC"
+    ],
+    "topics": [
+      "proof placement"
+    ],
+    "claim": "The FTC's 2024 rule (16 CFR Part 465) bans fake reviews and testimonials, including AI-generated ones, undisclosed insider reviews, paying for positive or negative sentiment, and suppressing negative reviews.",
+    "body": "On 14 August 2024 the US Federal Trade Commission announced its final Trade Regulation Rule on the Use of Consumer Reviews and Testimonials, 16 CFR Part 465, effective 60 days after Federal Register publication. It bans creating, buying, selling or spreading fake or false reviews and testimonials, including AI-generated ones and fake celebrity testimonials, when the business knew or should have known; offering compensation or incentives conditioned on the review being positive or negative; reviews by officers, managers, employees or their relatives without clear disclosure of the connection; presenting a company-controlled review site as independent; suppressing reviews through baseless legal threats, intimidation or false accusations, or claiming a filtered review section shows all or most reviews; and buying or selling fake followers or views. The FTC can seek civil penalties against knowing violators. For ads, every review shown must be a real review by a real buyer, unchanged in meaning, with any incentive disclosed and never tied to the star rating.",
+    "conditions": "Businesses advertising to US consumers; a useful floor everywhere.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "16 CFR Part 465",
+      "announced 14 August 2024"
+    ],
+    "asks": [
+      "Can I use AI to write reviews for my ads?",
+      "Can I give a discount for a 5-star review?",
+      "Can my staff leave reviews?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6045",
+    "evidence": {
+      "where": "Press release list of prohibited practices"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-6060",
+    "modules": [
+      "MCR",
+      "ORG"
+    ],
+    "topics": [
+      "disclosure",
+      "video endorsements",
+      "sound-off viewing"
+    ],
+    "claim": "In a video endorsement, the FTC wants the disclosure both on screen and spoken, early rather than only at the end, and inside the video, not just in the description.",
+    "body": "The FTC's endorsement FAQ says that when an endorsement is both visual and audible, the disclosure should be made both visually and audibly. Viewers are more likely to miss a disclosure at the end of a video, so the beginning is better and repeating it during the video is better still. A disclosure placed only in the video description can easily be missed, and one covered by other elements is not clear and conspicuous. An audio-only disclosure fails viewers who watch with the sound off. How to apply in ecommerce video ads: when a creator or customer was paid, gifted product or told they might be featured, put a short on-screen line in the first seconds inside the placement's safe zone and say it once in the voice track; never rely on the caption field alone.",
+    "conditions": "US-facing video ads and posts that carry an endorsement or testimonial with a material connection (payment, free product, discount, advance notice of being featured).",
+    "fails_when": "Pure brand-made ads with no endorser, where no endorsement disclosure applies; other countries' rules may set different wording or placement (check ASCI in India).",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Where do I put the paid partnership disclosure in a video ad?",
+      "Is a disclosure in the caption enough?",
+      "Do I need to say the disclosure out loud?"
+    ],
+    "platforms": [
+      "meta",
+      "tiktok",
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6060",
+    "evidence": {
+      "where": "Q and A on YouTube videos, Snapchat and Stories, and video disclosures",
+      "quote": "the disclosure should be made both visually and audibly"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-6063",
+    "modules": [
+      "MCR"
+    ],
+    "topics": [
+      "AI disclosure",
+      "Meta",
+      "labels"
+    ],
+    "claim": "Meta adds an 'AI info' label when it detects industry-standard AI signals or the uploader discloses AI content; content only edited by AI gets the label in the post menu, and political or social issue ads must disclose digital alteration.",
+    "body": "Meta's newsroom post (5 April 2024, updated July and September 2024) says it labels a wider range of video, audio and image content as 'AI info' when it detects industry-standard AI indicators or when people disclose that they are uploading AI-generated content. From September 2024, content that was only modified or edited by AI tools has its label moved into the post's menu, while content detected as AI-generated keeps a visible label. Advertisers running political or social issue ads must disclose when they digitally create or alter the ad in certain cases. Meta may add a more prominent label where altered media risks materially deceiving the public on a matter of importance. How to apply: assume generated clips may carry the label, design the ad so it still works if labelled, and never rely on the label being absent to pass off generated people as real customers.",
+    "conditions": "Facebook and Instagram organic posts and ads using generated or AI-edited images, video or audio.",
+    "fails_when": "Meta's ad-specific help pages may set additional or newer rules for commercial ads; check the current Ads Manager disclosure options at launch.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "policy first published 5 April 2024",
+      "label renamed 'AI info' 1 July 2024"
+    ],
+    "asks": [
+      "Will Meta label my AI-generated ad?",
+      "Do I have to disclose AI in Facebook ads?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6062",
+    "evidence": {
+      "where": "Takeaways and 12 September 2024 update",
+      "quote": "when people disclose that they're uploading AI-generated content"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-6064",
+    "modules": [
+      "MCR"
+    ],
+    "topics": [
+      "AI disclosure",
+      "YouTube",
+      "synthetic media"
+    ],
+    "claim": "YouTube requires disclosure of realistic synthetic content (a real person shown saying or doing what they did not, altered real events, realistic scenes that never happened) but not of captions, colour fixes, scripts, upscaling or cloning your own voice.",
+    "body": "YouTube's help page on altered or synthetic content asks creators to disclose content that seems realistic and was meaningfully made or changed with AI: making a real person appear to say or do something they did not, altering footage of a real event or place, generating a realistic scene that did not occur, and music that is the main focus of the video. Minor or clearly unrealistic changes do not need disclosure: beauty, colour and lighting filters, background blur, caption creation, production help such as scripts and thumbnails, sharpening or upscaling, and cloning your own voice for voiceover or dubbing. How to apply: treat this list as a working test across platforms. A generated presenter or a realistic generated product scene gets a disclosure; AI captions or an upscaled real clip do not.",
+    "conditions": "YouTube and Shorts uploads; useful as a practical yardstick for other platforms whose rules are less specific.",
+    "fails_when": "Paid YouTube ads follow Google Ads policies as well; other platforms and countries can be stricter.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Do AI captions need an AI disclosure?",
+      "Do I have to disclose an AI voiceover?",
+      "Which AI edits need a label on YouTube?"
+    ],
+    "platforms": [
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6063",
+    "evidence": {
+      "where": "Examples of content that requires disclosure and content that does not",
+      "quote": "seems realistic"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-6065",
+    "modules": [
+      "MCR"
+    ],
+    "topics": [
+      "music licensing",
+      "free audio",
+      "YouTube"
+    ],
+    "claim": "YouTube Audio Library tracks can be used in monetised YouTube videos without Content ID claims; Creative Commons tracks need artist credit, and YouTube gives no guidance on use off YouTube.",
+    "body": "YouTube's help page says creators can monetise videos that use music and sound effects from the Audio Library, and that downloaded tracks will not be claimed by a rights holder through Content ID. Tracks under a Creative Commons licence require crediting the artist in the video description; tracks under the standard Audio Library licence do not, and can be filtered with 'Attribution not required'. YouTube says it cannot give legal guidance on music issues that occur off the platform. How to apply: use the Audio Library as the free path for YouTube and Shorts ads, keep the track name and licence type in the ad's rights log, and do not assume the same track is cleared for Meta or TikTok ads; use each platform's own commercial library there or buy a licence that names paid social use.",
+    "conditions": "YouTube uploads and YouTube video ads made by the store.",
+    "fails_when": "Ads on Meta, TikTok or a website, where YouTube's terms give no cover; a track's licence type changes or carries attribution terms the ad cannot show.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Where can I get free music for YouTube ads?",
+      "Can I use YouTube Audio Library music on Instagram?"
+    ],
+    "platforms": [
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6064",
+    "evidence": {
+      "where": "Monetisation and attribution sections",
+      "quote": "won't be claimed by a rights holder through the Content ID system"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

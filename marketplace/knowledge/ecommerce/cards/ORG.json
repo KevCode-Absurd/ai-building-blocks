@@ -1695,5 +1695,504 @@
     },
     "strength": "stated_by_practitioner",
     "public": true
+  },
+  {
+    "id": "ORG-6364",
+    "modules": [
+      "ORG",
+      "CRO"
+    ],
+    "topics": [
+      "Instagram",
+      "comment to DM",
+      "private replies"
+    ],
+    "claim": "An Instagram private reply to a comment is one message per comment, sent within 7 days of the comment; more messages only after the person replies, within 24 hours of that reply; on Live, only during the broadcast.",
+    "body": "Meta's Instagram Platform documentation on private replies (the mechanism behind 'comment a keyword and we will DM you') sets these limits: only one message can be sent to the commenter; it must be sent within 7 days of the comment on the post or reel; further messages are allowed only after the person responds, and must be sent within 24 hours of that response; and for Instagram Live, private replies can only be sent while the broadcast is running. How to apply: 1) the first DM after a keyword comment must do the whole job alone (deliver what was promised and ask one question that invites a reply); 2) never plan a second automatic DM before the person answers; 3) run keyword campaigns on Live only while live, and reply manually afterwards to people who wrote to the account themselves.",
+    "conditions": "Business or creator accounts using comment-to-DM automation through Meta's API or a tool built on it.",
+    "fails_when": "Meta changes the limits; recheck the live page. Manual DMs a person sends in the app follow the in-app rules, not the API limits, but the same respect for one unanswered message is sensible.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "one private reply per comment",
+      "within 7 days of the comment",
+      "follow-ups within 24 hours of the user's reply"
+    ],
+    "asks": [
+      "How many DMs can I send after a comment keyword?",
+      "How long after a comment can I send a DM?",
+      "Can I auto-DM people who comment on my Live?"
+    ],
+    "platforms": [
+      "Instagram"
+    ],
+    "platform": [
+      "Instagram"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6362",
+    "evidence": {
+      "where": "Limitations section",
+      "quote": "Only one message can be sent to the commenter"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-6365",
+    "modules": [
+      "ORG",
+      "CRO",
+      "OPS"
+    ],
+    "topics": [
+      "Instagram",
+      "DM sales",
+      "automation disclosure"
+    ],
+    "claim": "Through Meta's API a business cannot start an Instagram DM.",
+    "body": "It may reply in a standard window of usually 24 hours (up to 7 days after a click-to-Direct ad), or 7 days with the human agent tag, and automated chats should say they are automated. Meta's Instagram messaging documentation says an app may message a user only after that user has sent the professional account a message. Replies must go inside the standard messaging window, which lasts 24 hours for most user actions and up to 7 days after a first message from a click-to-Direct ad. Where a person may need longer to answer, the reply can be tagged to use a separate 7-day human agent window. Automated experiences must offer an escalation path to a human (one inbox, or a handover between apps). Automated chats must disclose that the person is talking to an automated service where the law requires it, and Meta recommends disclosing it even when the law does not. How to apply: 1) no cold DMs to followers or commenters beyond the one private reply per comment; 2) a bot greeting says it is automated and how to reach a person; 3) human follow-ups on product questions use the human agent window, not marketing blasts; 4) requests left inactive 30 days drop out of the API, so clear the Requests folder daily.",
+    "conditions": "Instagram professional accounts replying through Meta's API, an inbox tool or an automation tool built on it.",
+    "fails_when": "Meta changes the windows or tags; recheck the live page. The human agent tag is for people, not bots or promotions.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "standard window usually 24 hours",
+      "up to 7 days after a click-to-Direct ad",
+      "human agent window 7 days",
+      "requests inactive 30 days not returned"
+    ],
+    "asks": [
+      "Can I DM people who did not message me first on Instagram?",
+      "How long do I have to reply to an Instagram DM?",
+      "Do I have to say my Instagram chatbot is a bot?"
+    ],
+    "platforms": [
+      "Instagram"
+    ],
+    "platform": [
+      "Instagram"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6363",
+    "evidence": {
+      "where": "Messaging window, human agent and escalation sections",
+      "quote": "the separate 7-day Human Agent window"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-6400",
+    "modules": [
+      "ORG",
+      "SET"
+    ],
+    "topics": [
+      "distribution planning",
+      "pinterest catalog"
+    ],
+    "claim": "Pinterest catalogs need a business account, a claimed site with the Pinterest tag and clear contact, shipping and refund policies, plus a feed with id, title, description, link, image_link, price and availability.",
+    "body": "Pinterest's catalog guide sets the preconditions before product Pins can be made from a feed. The account must be a business account; the website must be claimed, the Pinterest tag installed and the site must meet merchant guidelines, including easy-to-find contact details, a shipping policy and a refund policy. Catalogs are not available in every region. The data source can be CSV, TSV, XML (RSS 2.0 or ATOM 1.0) or Google Sheets, UTF-8 encoded, hosted at a direct-download link or uploaded by hand. Required fields are id, title, description, link, image_link, price and availability, plus item_group_id when products have variants; if they are missing or badly formatted the whole catalog fails ingestion. Hosted sources are read daily, so the link must stay live. Title can run to 500 characters and id to 127. How to apply: check region availability, claim the domain, install the tag and confirm the policy pages before building boards; reuse the store's existing product feed (Shopify's Pinterest sales channel or the Google feed) rather than building a new one by hand.",
+    "conditions": "Stores in a region where Pinterest catalogs are available, using a Pinterest business account.",
+    "fails_when": "Regions where catalogs are not offered; stores without public shipping and refund policies; feeds with variant products but no item_group_id.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "7 required fields plus item_group_id for variants",
+      "id up to 127 characters",
+      "title up to 500 characters",
+      "hosted feeds read daily",
+      "up to 20 million products per catalog"
+    ],
+    "asks": [
+      "What do I need before I can upload products to Pinterest?",
+      "Why did my Pinterest catalog fail?",
+      "Does Pinterest need a product feed?"
+    ],
+    "platforms": [
+      "pinterest"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6400",
+    "evidence": {
+      "where": "Requirements and data source sections",
+      "quote": "your entire retail catalog will fail ingestion"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-6401",
+    "modules": [
+      "ORG",
+      "SEO"
+    ],
+    "topics": [
+      "distribution planning",
+      "posting cadence and volume",
+      "pinterest"
+    ],
+    "claim": "Pinterest says keywords in Pin titles, descriptions and board names, fresh Pins posted weekly, 2:3 vertical images and a matching landing page help distribution, and Pins have no set engagement window.",
+    "body": "Pinterest's help article on Pin performance tells businesses to include relevant keywords in the Pin title, Pin description, board titles and board descriptions, and to check that the description matches the landing page. It advises publishing your own fresh Pins rather than re-saving others' Pins, creating Pins frequently and consistently, and aiming for original content weekly. It recommends a 2:3 aspect ratio for images and videos because most people use Pinterest on mobile, high-quality images, no broken links, and a landing page clearly related to the Pin. It also says there is no set engagement window for Pins: Pins last on the platform and relevant ones can resurface seasonally. The separate Pin specs page allows titles up to 100 characters and descriptions up to 800. How to apply: write each Pin for a search phrase a buyer would type, post new Pins every week rather than in bursts, and plan seasonal Pins well ahead because they keep resurfacing.",
+    "conditions": "Organic Pins from a business account aimed at search and home-feed distribution.",
+    "fails_when": "Paid Pinterest ads, which have their own specs and auction; stores whose buyers do not plan purchases on Pinterest.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "2:3 aspect ratio",
+      "original content weekly",
+      "no set engagement window"
+    ],
+    "asks": [
+      "How often should a store post on Pinterest?",
+      "What size should a Pin be?",
+      "Do Pinterest keywords matter?"
+    ],
+    "platforms": [
+      "pinterest"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6401",
+    "evidence": {
+      "where": "Optimize your content section",
+      "quote": "There's no set engagement window for Pins"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-6402",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "distribution planning",
+      "short-form organic mechanics",
+      "youtube shorts"
+    ],
+    "claim": "URLs typed in YouTube Shorts descriptions and comments are not clickable; a Short can carry a clickable related video link, and the channel page can show up to 14 profile links.",
+    "body": "YouTube's help page on sharing links lists which link types are clickable. To reduce spam and scams, URLs placed in Shorts comments and Shorts descriptions are not clickable. What a Short can carry is a clickable related video link to another video on the same channel, mentions and hashtags, remix attribution links and YouTube Shopping affiliate links. Channel profile links, up to 14, show on the channel page, and clickable external links in long-form descriptions need the channel's advanced features access. The related video help page says it is set in YouTube Studio per Short, needs advanced features, and the chosen video must be public or unlisted. How to apply for a store: do not plan a Short around a typed store URL; point each Short's related video at a longer product video whose description holds the store link, keep the store link first among the channel profile links, and use product tagging through YouTube Shopping where the channel is eligible.",
+    "conditions": "Organic YouTube Shorts from a brand channel.",
+    "fails_when": "Long-form videos, whose descriptions can hold clickable links with advanced features; paid YouTube ads, which carry their own call to action.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "up to 14 channel profile links",
+      "1 related video per Short"
+    ],
+    "asks": [
+      "Can I put my store link in a YouTube Short?",
+      "Why is my link in the Shorts description not clickable?",
+      "How do I send Shorts viewers to my store?"
+    ],
+    "platforms": [
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6402",
+    "evidence": {
+      "where": "Link types table and Shorts notes",
+      "quote": "URLs placed in YouTube Shorts comments and Shorts descriptions are non-clickable"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-6403",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "distribution planning",
+      "youtube shopping"
+    ],
+    "claim": "To tag its own products in YouTube videos, Shorts and lives, a channel must be in the YouTube Partner Program, not set as made for kids and free of hate speech strikes.",
+    "body": "YouTube's shopping help page lists the conditions for a channel that sells its own products from a connected store such as Shopify. The channel must be in the YouTube Partner Program and meet its subscriber threshold (or be an Official Artist Channel); its audience must not be set as made for kids, nor a significant number of its videos; and it must have no hate speech Community Guideline strikes. Once eligible, products can show as tags in videos, Shorts and live streams, in the channel's store tab, in the video description, in a product shelf below the content and through a Shopping button. How to apply: until the channel qualifies, Shorts send viewers to the store through the related video link and channel links; once it qualifies, connect the store's catalog and tag the product shown in each Short.",
+    "conditions": "Brand channels selling their own products through YouTube Shopping with a connected store, in a market where the feature runs.",
+    "fails_when": "Channels below the Partner Program threshold; made-for-kids channels; markets where YouTube Shopping is not offered.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I tag my Shopify products in YouTube Shorts?",
+      "What do I need for YouTube Shopping?"
+    ],
+    "platforms": [
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6403",
+    "evidence": {
+      "where": "Eligibility for your own store",
+      "quote": "You are in the YouTube Partner Program."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-6404",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "creator and influencer collaboration",
+      "distribution planning",
+      "instagram collab posts"
+    ],
+    "claim": "An Instagram post can carry up to 5 collaborator accounts, on feed images, Reels and carousels but not Stories, and each invite stays pending until the collaborator accepts.",
+    "body": "Meta's developer reference for Instagram collaborators says up to 5 Instagram accounts can be added as collaborators on a post. Collaborator tagging supports feed images, Reels and carousels; Stories are not supported. Each collaborator's invite status is either accepted or pending, and only users who have enabled collaborator tagging appear. Accepted collab posts show on each collaborator's profile and in their followers' feeds. How to apply: plan collabs as Reels or carousels, not Stories; agree the caption, disclosure and who posts before sending the invite; and count the post as live for the partner only once the invite shows accepted.",
+    "conditions": "Instagram professional accounts posting to feed, Reels or carousel.",
+    "fails_when": "Stories, which do not support collaborator tags; partners who have turned off collaborator tagging; reading the reference as a rule on reach, which it does not give.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "up to 5 collaborator accounts",
+      "feed, Reels and carousel only"
+    ],
+    "asks": [
+      "How many accounts can be on an Instagram collab post?",
+      "Can I do a collab on Stories?"
+    ],
+    "platforms": [
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6404",
+    "evidence": {
+      "where": "Collaborators reference, limitations",
+      "quote": "Up to 5 Instagram accounts can be added as collaborators"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-6405",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "creator and influencer collaboration",
+      "whitelisting and usage rights",
+      "disclosure"
+    ],
+    "claim": "The FTC says any brand relationship, including free or discounted product, must be disclosed in the post itself in plain words like 'ad' or 'sponsored'; platform tools alone and vague tags like 'collab' are not enough.",
+    "body": "The FTC's guide for social media influencers says a disclosure is needed for any financial, employment, personal or family relationship with a brand, and that free or discounted products count. Disclose even if the review feels unbiased. The disclosure goes with the endorsement where it is hard to miss: not only on a profile page, at the end of a post, behind a 'more' link or buried in a group of hashtags. On images and Stories, put it on the picture with time to read it; in video, inside the video and ideally spoken as well; in live streams, repeat it. Plain words like 'ad', 'advertisement' or 'sponsored', or 'Thanks to [brand] for the free product', work; vague terms like 'sp', 'spon', 'collab' or a lone 'thanks' do not. Platform disclosure tools help but should not be relied on alone. The disclosure should be in the same language as the post. How to apply: every collab post, gifted creator post and reposted customer clip given anything of value carries a plain label in the first line or on screen.",
+    "conditions": "Posts that reach US consumers, including posts made abroad that are expected to affect US buyers.",
+    "fails_when": "Content with no material connection, such as an unpaid customer who bought the product and was not asked; other countries' rules may set different labels (see ASCI for India).",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Does a gifted creator need to say #ad?",
+      "Is the Paid partnership label enough?",
+      "Is #collab a valid disclosure?"
+    ],
+    "platforms": [
+      "instagram",
+      "tiktok",
+      "youtube",
+      "facebook",
+      "pinterest"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6405",
+    "evidence": {
+      "where": "How to disclose, platform tools section",
+      "quote": "Make disclosures even if you think your evaluations are unbiased."
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-6406",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "creator and influencer collaboration",
+      "disclosure",
+      "india"
+    ],
+    "claim": "ASCI permits only set labels (Advertisement, Ad, Sponsored, Collaboration, Partnership, Employee, Free gift), and a video label must stay 3 seconds on clips up to 15 seconds and a third of the length up to 2 minutes.",
+    "body": "ASCI's social FAQ for influencer advertising in India lists the permitted disclosure labels: Advertisement, Ad, Sponsored, Collaboration, Partnership, Employee and Free gift; no other labels may be used. A material connection includes free products, with or without conditions, even when received unsolicited. For video, a label must stay at least three seconds on videos of 15 seconds or less, at least a third of the length on videos over 15 seconds and under 2 minutes, and for the whole of each section mentioning the brand on videos of 2 minutes or more. ASCI issues notices to both the brand and the influencer when a guideline is broken. How to apply in India: brief every collaborator and gifted creator with one of the listed labels in the caption's first line and on screen for the required time, and treat the brand as jointly responsible for checking it.",
+    "conditions": "Influencer and creator posts seen in India, including gifted product posts.",
+    "fails_when": "Posts with no material connection; the label list may be revised by ASCI, so check the current page before briefing.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "7 permitted labels",
+      "3 seconds minimum on videos up to 15 seconds",
+      "one third of length on videos 15 seconds to 2 minutes"
+    ],
+    "asks": [
+      "Which hashtags count as disclosure in India?",
+      "How long must #ad stay on a Reel?",
+      "Is the brand responsible if the influencer forgets #ad?"
+    ],
+    "platforms": [
+      "instagram",
+      "youtube",
+      "facebook"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6406",
+    "evidence": {
+      "where": "FAQ on labels and video duration",
+      "quote": "the disclosure label must stay for a minimum of 1/3rd of the length"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-6420",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "influencer disclosure",
+      "live streams",
+      "India law"
+    ],
+    "claim": "ASCI wants a live stream's ad label announced at the start and end of the broadcast and added to the caption if it stays up.",
+    "body": "Virtual influencers must also say they are not human, and health influencers must hold and state relevant qualifications. ASCI's influencer guidelines say disclosure is needed whenever there is a material connection, which includes free products even when received unsolicited, and must be upfront and hard to miss: not only in a bio, at the end of a post, behind 'more' or inside a pile of hashtags. In live streams the label should be announced at the beginning and the end, and if the recording stays visible, the caption needs the label. In audio, it is announced at the start, the end and around every break. A virtual influencer (a computer-made character) must also disclose upfront that viewers are not dealing with a real person. Responsibility is joint: the influencer makes the disclosure, and the advertiser must check the posted ad and ask for edits or deletion where needed. Influencers are advised to satisfy themselves that the advertiser can back its claims. Addendum II (17 August 2023) says influencers giving advice on health and nutrition, or banking, finance and insurance, must hold relevant qualifications (for health: a medical degree, nurse, nutritionist, dietician, physiotherapist, psychologist and similar) and state them upfront in the post. How to apply: put the live label in the host's opening line and closing line, add it to the replay caption, and screen health-category creators for stated qualifications before booking them to give advice.",
+    "conditions": "Influencer and creator content seen in India, including live streams, podcasts, AI or virtual characters and health or finance advice.",
+    "fails_when": "ASCI is self-regulatory, so enforcement against non-member influencers is limited; the Consumer Protection Act and CCPA rules can still apply. A creator who only says they like a product they bought, with no material connection, needs no label.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "live: label at start and end of broadcast",
+      "addendum II dated 17 August 2023"
+    ],
+    "asks": [
+      "How do we disclose a paid live stream in India?",
+      "Can a nutrition creator give advice about our supplement?",
+      "Does an AI avatar need a disclosure?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6420",
+    "evidence": {
+      "where": "Guidelines 1.2(f), 1.2(g), 1.4, 1.5, 2 and Addendum II"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-6421",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "usage rights",
+      "copyright",
+      "US law"
+    ],
+    "claim": "In the US the person who makes a work owns its copyright.",
+    "body": "A freelancer's commissioned video becomes the brand's only through a signed written agreement that says so, so a creator's video is the creator's unless the contract assigns or licenses it. The US Copyright Office's circular on works made for hire says the author is normally the person who actually created the work. A work is made for hire in only two cases: an employee makes it as part of regular duties, or a work in one of nine listed categories (which include part of a motion picture or other audiovisual work) is specially ordered or commissioned and both parties expressly agree in a written instrument they sign that it is a work made for hire. If any of those conditions fails, it is not a work made for hire. For a store, an independent creator who films a video has made a work they own; paying for it does not by itself transfer the copyright. How to apply: every creator agreement states in writing either a licence (which channels, paid or organic, how long, which territories, edits allowed) or an assignment, signed by both sides before the brand runs the video as an ad.",
+    "conditions": "US-made creator content: UGC videos, photos and captions made by independent creators, not employees.",
+    "fails_when": "Content made by employees within their duties; other countries, including India, have their own copyright rules, so local counsel decides there. A creator's own likeness and voice raise separate publicity rights.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "two routes to work made for hire",
+      "nine eligible commissioned categories"
+    ],
+    "asks": [
+      "Do we own the creator videos we paid for?",
+      "Can we run a creator's video as an ad?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6421",
+    "evidence": {
+      "where": "Definition section and 'Specially ordered or commissioned works' four criteria"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-6422",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "affiliate program",
+      "commission payouts",
+      "Shopify"
+    ],
+    "claim": "Shopify Collabs holds creator commission for a period the store sets (1 to 90 days, default 30), cancels it on cancelled or fully refunded orders inside that period, and charges a 2.9% processing fee on each automatic commission payment.",
+    "body": "Shopify's help page on paying creators says commissions are paid automatically, shown on the Shopify bill as a separate 'Shopify Collabs Commission' line and paid out after the bill is paid, once the creator has turned on automatic payouts; until then the commission waits. The store chooses a holding period between 1 and 90 days in Collabs settings, 30 by default. During the holding period, commission on cancelled and fully refunded orders is cancelled automatically, and the store can open a payment dispute if a commission looks suspicious. There is a 2.9% processing fee on every automatic commission payment, so a 10 commission costs 10.29. Manual payouts stopped tracking new commissions on 8 January 2024. Payments run in US dollars; conversion fees can apply. US merchants may need to issue Form 1099, and if a requested W-9 is not submitted the creator's payouts are capped at 599.99 US dollars a year. The page does not say how partial refunds are handled. How to apply: set the holding period at least as long as the return window plus return transit, and add the 2.9% to the commission cost in the profit sheet.",
+    "conditions": "Shopify stores running affiliate or creator commissions through the Shopify Collabs app.",
+    "fails_when": "Stores on other affiliate apps or networks (each has its own terms); partial refunds are not covered by the page; fees and availability may change by country.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "holding period 1 to 90 days, default 30",
+      "2.9% fee on each automatic commission payment",
+      "payouts capped at 599.99 USD a year without a requested W-9"
+    ],
+    "asks": [
+      "How long should we hold affiliate commission?",
+      "What does Shopify Collabs charge?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6422",
+    "evidence": {
+      "where": "Automatic payouts, holding period, fees and taxes sections"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

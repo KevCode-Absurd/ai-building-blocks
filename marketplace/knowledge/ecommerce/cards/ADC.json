@@ -2767,5 +2767,362 @@
     },
     "strength": "stated_by_practitioner",
     "public": true
+  },
+  {
+    "id": "ADC-6047",
+    "modules": [
+      "ADC",
+      "MCR"
+    ],
+    "topics": [
+      "catalog mapping",
+      "retargeting structure"
+    ],
+    "claim": "In a Meta catalog, sale_price must be below price.",
+    "body": "Without sale_price_effective_date an item stays on sale until the sale price is removed; images must be JPEG or PNG, at least 500 x 500 and up to 8 MB; a changed image needs a new URL. Meta's catalog fields reference sets the data that catalog ad overlays read. price is a number, a space and a three-letter ISO currency code (9.99 USD), with a period as decimal and no symbols. sale_price is the discounted price, must be less than the full price, uses the same format, and should be removed after the sale ends. sale_price_effective_date gives the start and end date, time and time zone; if it is missing, items with a sale_price stay on sale until the sale price is removed. image_link must be JPEG or PNG, at least 500 x 500 pixels and up to 8 MB, and if an image changes later the new image needs a different URL or the change is not picked up. A shipping field allows a shipping-related overlay. So any price, strikethrough or percent-off overlay is only as true as these fields; set the effective date for every sale so a badge cannot outlive the offer.",
+    "conditions": "Meta catalogs used for Advantage+ catalog ads, Shops and dynamic overlays.",
+    "fails_when": "A Shopify channel app or feed tool may write these fields for the store; check what it sends.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "image at least 500 x 500, up to 8 MB",
+      "sale_price less than price"
+    ],
+    "asks": [
+      "Why does my catalog ad still show the sale price?",
+      "How do I schedule a sale price in a Meta catalog?",
+      "Why did my new product image not update in catalog ads?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6047",
+    "evidence": {
+      "where": "Fields price, sale_price, sale_price_effective_date, image_link, shipping"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-6080",
+    "modules": [
+      "ADC"
+    ],
+    "topics": [
+      "campaign setup and tracking",
+      "existing customers",
+      "Advantage+"
+    ],
+    "claim": "New Advantage+ sales campaigns no longer take the existing-customer budget percentage; Meta's documented way to cap that spend is two ad sets, one for existing customers with a spend cap and one excluding them.",
+    "body": "Meta's Marketing API guide for Advantage+ campaigns says the existing_customer_budget_percentage field is not available for new Advantage+ campaigns, and that old Advantage+ shopping campaigns using it will be paused at API version 26.0 unless migrated in Ads Manager. For new campaigns the guide suggests two ad sets under one Advantage campaign budget. The first includes a custom audience that defines existing customers, with targeting relaxation set to zero so the audience is a hard rule, and a daily spend cap (and optionally a daily minimum spend target) on that ad set. The second is a copy of the first that excludes the same custom audience. A campaign counts as Advantage+ sales only when three levers are on: budget set at campaign level, an Advantage+ audience (or no targeting beyond location) in at least one ad set, and no ad set level placement targeting or exclusions. The guide also notes that legacy campaigns with more than 50 ads in one ad set cannot be migrated. How to apply: write the existing-customer audience definition (for example a customer list plus purchasers from the last 180 days) and the cap in money per day into the launch sheet, check the campaign still shows as Advantage+ after the second ad set is added, and read new-customer results from the excluding ad set.",
+    "conditions": "Meta sales campaigns built on Advantage+ settings in Ads Manager or the Marketing API, from 2025 onward.",
+    "fails_when": "Stores with no customer list or purchase audience to define existing customers; Ads Manager screens that change faster than the API guide, so check the live setup screen before building.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Legacy ASC with more than 50 ads in one ad set cannot be migrated",
+      "existing_customer_budget_percentage paused at API v26.0"
+    ],
+    "asks": [
+      "How do I stop Advantage+ spending my budget on people who already bought?",
+      "Where did the existing customer budget cap go in Advantage+?",
+      "Is my campaign still Advantage+ if I add a second ad set?",
+      "What makes a Meta campaign count as Advantage+ sales?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6080",
+    "evidence": {
+      "where": "Sections on the existing customer budget percentage, creating two ad sets, and the advantage_state levers",
+      "quote": "The existing_customer_budget_percentage field is not available for new Advantage+ campaigns"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-6081",
+    "modules": [
+      "ADC",
+      "ORG"
+    ],
+    "topics": [
+      "partnership ads",
+      "creator permissions"
+    ],
+    "claim": "Once a creator accepts a brand's account-level partnership ad permission in the Instagram app, the brand can run ads from the creator's handle without an existing post, and can revoke it later.",
+    "body": "Meta's partnership ads documentation describes two permission models, account level and post level. For account level, the brand (or an app acting for it) sends a request to the creator's Instagram account; the creator accepts it inside the Instagram app. After acceptance the brand can create partnership ads from the creator's handle without an existing post, can promote the creator's existing posts that tag the brand (paid partnership label, mentions, people or product tags, or Collabs), and can choose to include or exclude the creator's audience. Each permission has a status such as approved, revoked or pending, and the brand can revoke it. The documentation does not state an expiry, so the end date of usage belongs in the written creator agreement. Separately, a creator can make a partnership ad code for a post they own and share it with the brand, which uses it in Ads Manager; the creator can remove that code. How to apply: get the written usage terms first, then the platform permission, then record the permission status and the code per creator in one sheet before any ad is built.",
+    "conditions": "Brands running Meta partnership ads with Instagram creators.",
+    "fails_when": "The creator has no professional Instagram account or declines; usage rights in the contract are narrower than the platform permission; local disclosure rules ask for more than the platform label.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "How do I get permission to run ads through a creator's account?",
+      "What is a partnership ad code and who makes it?",
+      "Can I run a creator ad without them posting first?",
+      "How do I stop running ads through a creator's handle?"
+    ],
+    "platforms": [
+      "meta",
+      "instagram"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6081",
+    "evidence": {
+      "where": "Account-level permissioning: request, acceptance in the Instagram app, capabilities, listing and revoking",
+      "quote": "When a creator accepts an account-level permission request in the Instagram app"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-6082",
+    "modules": [
+      "ADC"
+    ],
+    "topics": [
+      "ad review",
+      "account restrictions",
+      "appeals"
+    ],
+    "claim": "Meta reviews each ad's image, video, text, targeting and landing page, usually within 24 hours; a rejected ad can be edited (it is then reviewed as new) or sent for another review in Account Quality.",
+    "body": "Meta's Advertising Standards say review is mostly automated with some manual review, and covers images, video, text, targeting information and the ad's landing page or other destination. Review usually ends within 24 hours, and ads can be reviewed again after they go live. When an ad breaks a standard it is rejected, and the ad account, Page or business portfolio and its assets may be restricted; a restricted account or asset cannot be used to advertise across Meta technologies. Advertisers usually get the chance to edit a rejected ad, and the edited ad is treated as a new ad and reviewed again. If the advertiser believes an ad, account, Page or business portfolio was wrongly rejected or restricted, they can request a review in Account Quality. Meta also says it monitors advertiser behaviour and may restrict accounts that keep breaking the standards. How to apply: treat every rejection as a signal about the account's record, fix the cause across all similar ads rather than resubmitting one, and use Account Quality, not a new account, for appeals.",
+    "conditions": "Any advertiser on Facebook, Instagram, Messenger, Threads or Audience Network.",
+    "fails_when": "Special ad categories and regulated goods carry extra rules and authorisations beyond the general review process.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Review usually within 24 hours"
+    ],
+    "asks": [
+      "Why was my Meta ad rejected and how do I appeal?",
+      "How long does Meta ad review take?",
+      "What happens to my account if ads keep getting rejected?",
+      "Where do I request another review of a restricted ad account?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6082",
+    "evidence": {
+      "where": "Introduction to the Advertising Standards: ad review process, rejection and requesting review",
+      "quote": "you can request a review in Account Quality"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-6087",
+    "modules": [
+      "ADC",
+      "SET"
+    ],
+    "topics": [
+      "catalog ads",
+      "product feed"
+    ],
+    "claim": "A Meta catalog item needs id, title, description, availability, condition, price, link and image_link plus one of brand, GTIN or MPN; out-of-stock items stop appearing in ads.",
+    "body": "Meta's catalog field reference lists the required fields for a product: id, title, description, availability, condition, price, link and image_link, and at least one of brand, gtin or mpn. Missing or badly formatted required fields can stop products from uploading. Price is a number, a space and a three-letter ISO currency code with a full stop as the decimal mark and no currency symbol (for example 499.00 INR or 24.99 USD). Availability takes in stock or out of stock; items marked out of stock show as sold out in a shop and do not appear in ads. Links must start with http or https, be valid and sit on the business's own website domain, not a Facebook Page. How to apply: check these fields on every item before building catalog ads, keep availability synced with the store at a frequency that matches how fast stock moves, and spot-check that the feed price equals the live page price, because the field reference itself does not enforce that match.",
+    "conditions": "Stores running Meta catalog (Advantage+ catalog or dynamic product) ads or a Facebook and Instagram shop.",
+    "fails_when": "Catalogs filled by a platform integration that controls fields the store cannot edit directly; variant-heavy catalogs where the item id differs between the feed and the pixel.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "8 required fields plus one of brand, GTIN or MPN"
+    ],
+    "asks": [
+      "Why are my catalog ads showing sold-out products?",
+      "Which fields does a Meta product feed need?",
+      "How should prices be written in a Meta catalog?",
+      "Why did some of my products not upload to Meta Commerce Manager?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6087",
+    "evidence": {
+      "where": "Supported fields for products: required fields, availability and link rules"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-6142",
+    "modules": [
+      "ADC",
+      "GAD"
+    ],
+    "topics": [
+      "ad policy",
+      "editorial rules",
+      "google ads"
+    ],
+    "claim": "Google disapproves ad text with misused capitals, punctuation or symbols, gimmicky repetition or spacing, a phone number in the text, or no clear name of the business or product.",
+    "body": "Google's editorial policy does not allow capitalisation or punctuation and symbols used for anything but their normal purpose, invalid or unsupported characters, missing or extra spaces, gimmicky spacing, and non-standard or unnecessary repetition of names, words or phrases, including repeating the same text across assets in an ad group, campaign or account. Ads must make sense, use commonly accepted spelling and grammar, and name the product, service or business they promote. A phone number may not be typed into ad text; call assets exist for that. Google says it warns at least 7 days before suspending an account for these issues. How to apply: write in normal sentence or title case, no ALL CAPS words or '!!!', no 'FREE FREE FREE', no phone numbers, and check repeated lines across the ad group before upload.",
+    "conditions": "Google Ads text in Search, Performance Max and other formats.",
+    "fails_when": "Trademarks styled in capitals or a recognised stylised spelling can be allowed; check the policy's exceptions before rewriting a brand name.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "warning at least 7 days before suspension"
+    ],
+    "asks": [
+      "Why was my Google ad disapproved for punctuation?",
+      "Can I use all caps in Google ads?",
+      "Can I put a phone number in a Google ad headline?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [
+      "google"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6142",
+    "evidence": {
+      "where": "Style and spelling, Unidentified business and phone number rules"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-6143",
+    "modules": [
+      "ADC"
+    ],
+    "topics": [
+      "catalog ads",
+      "dynamic product ads",
+      "meta"
+    ],
+    "claim": "Meta catalog ad text can insert catalog fields (name, price, current_price, brand, description, custom_label_0 to 4); current_price shows the sale price only inside the sale dates, then falls back to price.",
+    "body": "Meta's Advantage+ catalog ads documentation lists the template values filled from the catalog when the ad shows: brand, current_price, description, name (the item's title), price (formatted, such as $1,234.56), retailer_id, url and custom_label_0 to custom_label_4. current_price shows the sale price while a sale price and its dates are active, and the regular price otherwise. Price options: raw drops the currency symbol, strip_zeros drops zero cents, round drops cents. Transformations: number_format, titleize (capitalises words) and urlencode. In the template, the message (primary text), name (headline) and description fields accept template values; the link is always replaced by each item's link. How to apply: write one template that reads well for every item, check the longest and shortest titles and any missing brand or label, and use current_price only when the feed carries sale dates.",
+    "conditions": "Meta Advantage+ catalog ads (dynamic product ads) built from a product catalog.",
+    "fails_when": "Ads Manager may show these fields with a different insert menu; the field set and syntax can change, so preview with real items before publishing.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "custom_label_0 to custom_label_4"
+    ],
+    "asks": [
+      "What dynamic fields can I use in Meta catalog ads?",
+      "How do I show the sale price in a dynamic product ad?",
+      "Why does my catalog ad show the old price?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [
+      "meta"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6143",
+    "evidence": {
+      "where": "Use data feed file data in your template; Build a template creative"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-6146",
+    "modules": [
+      "ADC",
+      "OFF"
+    ],
+    "topics": [
+      "advertising law",
+      "india",
+      "claims",
+      "free offers"
+    ],
+    "claim": "India's ASCI Code requires verifiable claims to be substantiated on demand, cited research to show its source and date, permission to refer to people, 'free' only when nothing but delivery is charged, and an ad label on social posts.",
+    "body": "Chapter I of the ASCI Code says claims about objectively verifiable facts must be substantiated, and advertisers must produce that proof when ASCI asks. If an ad cites independent research, the source and date should appear in the ad. Ads must not distort facts or mislead by implication or omission, and must not be so exaggerated that they cause grave or widespread disappointment; obvious humour or hyperbole is allowed. Referring to a person, firm or institution needs permission. A product may not be called free if the buyer pays anything beyond delivery, freight or postage, and that cost must be stated. In buy-one-get-one-free offers, the price of the item bought must be no more than its usual price without the offer. 'Prices from as low as' claims must not mislead about availability. Ads on social media must carry a clear label at the start, such as Ad, Sponsored, Partnership or Collaboration. Special care applies to health claims. How to apply: keep a proof file per claim and check every 'free', BOGO and 'from' line against the real price.",
+    "conditions": "Advertising seen in India, including digital and social ads.",
+    "fails_when": "Category rules (food, cosmetics, health, finance) and the Consumer Protection Act add further limits; check those for regulated products.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "What does ASCI say about free offers?",
+      "Do I need proof for claims in Indian ads?",
+      "Is buy one get one legal in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6146",
+    "evidence": {
+      "where": "Chapter I, clauses 1 to 8"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-6147",
+    "modules": [
+      "ADC",
+      "OFF"
+    ],
+    "topics": [
+      "dark patterns",
+      "india",
+      "urgency",
+      "pricing"
+    ],
+    "claim": "ASCI treats drip pricing, bait and switch, false urgency and disguised ads as misleading from 1 September 2023; for 'limited stock' claims the advertiser must show the stock really was that low.",
+    "body": "ASCI's Guidelines for Online Deceptive Design Patterns in Advertising (15 June 2023, applicable from 1 September 2023) apply Chapter I of the code to digital ads and e-commerce. Drip pricing: quoted prices must include non-optional taxes, fees and charges that apply to all or most buyers, rather than revealing them at the end. Bait and switch: an ad that implies one outcome but delivers another, such as a product shown at a price that is then only available at a higher one, or an attractive product later found out of stock with an alternative pushed. False urgency: stating or implying quantities are more limited than they are is misleading, and on a complaint the advertiser must show the stock position when the message appeared justified it. Disguised ads: content formatted like editorial or organic posts, including influencer posts and paid reviews, must clearly say it is an ad. How to apply: show all-in prices, keep stock evidence for any scarcity line, and label creator and advertorial-style ads.",
+    "conditions": "Digital advertising and e-commerce in India.",
+    "fails_when": "The government's own 2023 dark patterns guidelines under the Consumer Protection Act list more patterns; check them for checkout and site design, not just ads.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "applicable from 1 September 2023"
+    ],
+    "asks": [
+      "Is a 'only 3 left' message legal in India?",
+      "Do Indian ads have to show the price with GST?",
+      "Do influencer ads need a label in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6147",
+    "evidence": {
+      "where": "Guidelines 1 to 4"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

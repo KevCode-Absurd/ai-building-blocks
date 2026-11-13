@@ -563,5 +563,129 @@
     },
     "strength": "shown_with_numbers",
     "public": true
+  },
+  {
+    "id": "SPD-6183",
+    "modules": [
+      "SPD"
+    ],
+    "topics": [
+      "LCP",
+      "INP",
+      "CLS",
+      "field versus lab metrics"
+    ],
+    "claim": "Core Web Vitals pass when LCP is 2.5 seconds or less, INP 200 ms or less and CLS 0.1 or less, measured at the 75th percentile of real page loads, split by mobile and desktop.",
+    "body": "Google's web.dev defines the three Core Web Vitals and their good thresholds: Largest Contentful Paint within 2.5 seconds of the page starting to load, Interaction to Next Paint of 200 milliseconds or less, and Cumulative Layout Shift of 0.1 or less. A page meets the target when the 75th percentile of page loads, segmented across mobile and desktop, is within all three. INP replaced First Input Delay as the responsiveness metric and became a stable Core Web Vital in 2024, so checklists that still quote FID under 100 ms are out of date. How to apply: judge speed work on field data (the Chrome UX Report shown in PageSpeed Insights or Search Console) for mobile first, at the 75th percentile, and use lab scores only to find causes.",
+    "conditions": "Any website with enough Chrome traffic to have field data; pages without field data fall back to origin-level data or lab tests.",
+    "fails_when": "A lab score (the 0 to 100 Lighthouse number) is treated as the target instead of the field metrics.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "LCP 2.5 seconds or less",
+      "INP 200 ms or less",
+      "CLS 0.1 or less",
+      "75th percentile",
+      "INP stable Core Web Vital in 2024"
+    ],
+    "asks": [
+      "What speed numbers should my store hit?",
+      "Is FID still a Core Web Vital?",
+      "What does passing Core Web Vitals mean?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6183",
+    "evidence": {
+      "where": "Core Web Vitals section: metric thresholds and the 75th percentile rule"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SPD-6184",
+    "modules": [
+      "SPD",
+      "SET"
+    ],
+    "topics": [
+      "image and font strategy"
+    ],
+    "claim": "Shopify caps uploaded images at 20 MB or 20 megapixels, does not compress on upload, and serves WebP or AVIF automatically to browsers that support them.",
+    "body": "Shopify's help page on theme images sets the upload limits at 20 MB or 20 megapixels (width x height / 1,000,000). Accepted formats are JPEG, progressive JPEG, PNG, GIF, HEIC and WebP; SVG is accepted but cannot be resized or cropped unless converted; TIFF and BMP are converted on upload. Images are not compressed on upload but may be compressed when served through the theme, and Shopify's CDN delivers WebP or AVIF where the browser supports it; GIFs are converted to animated WebP. How to apply: there is no need to convert product photos to WebP by hand on Shopify; the gains come from uploading at a sensible size (not camera originals), compressing before upload, and making sure the theme requests the right size for each slot. Note that the same help centre gives other limits for product media (see the product media page).",
+    "conditions": "Shopify online stores using theme images and the Shopify CDN.",
+    "fails_when": "Images are hosted outside Shopify (an app or external CDN) or hard-coded in theme files at a fixed large size.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "20 MB upload limit",
+      "20 megapixel limit",
+      "WebP or AVIF served where supported"
+    ],
+    "asks": [
+      "Do I need to convert my Shopify images to WebP?",
+      "What is the maximum image size on Shopify?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6184",
+    "evidence": {
+      "where": "Image requirements, supported formats and image optimization sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "SPD-6185",
+    "modules": [
+      "SPD",
+      "SET"
+    ],
+    "topics": [
+      "image and font strategy",
+      "video"
+    ],
+    "claim": "Shopify says square product images at 2048 x 2048 px usually display best; product videos may be up to 10 minutes, 1 GB and 4K, and are converted to MP4 or HLS for serving.",
+    "body": "Shopify's product media page allows product and collection images up to 5000 x 5000 px (25 megapixels) and under 20 MB, and says square images at 2048 x 2048 px usually display best. Uploaded product videos can be up to 10 minutes long, 1 GB and 4K (4096 x 2160), in MP4, MOV or WebM; Shopify converts them to MP4 or HLS for serving. YouTube and Vimeo links can be added instead and do not have to meet these limits. 3D models take GLB or USDZ up to 500 MB. How to apply: upload product images near 2048 px on the long side, not at the 5000 px ceiling, and keep product videos short and well below the limits; the limit is what Shopify accepts, not what a phone on a slow network should download. Prefer Shopify-hosted video (served as adaptive HLS) over a standard YouTube iframe for product galleries, or use a click-to-load thumbnail.",
+    "conditions": "Shopify stores adding images, videos or 3D models to products.",
+    "fails_when": "A theme or app replaces Shopify's media player or loads full-size originals.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "2048 x 2048 px recommended square",
+      "5000 x 5000 px or 25 MP max",
+      "under 20 MB image",
+      "video up to 10 minutes",
+      "video up to 1 GB",
+      "video up to 4K",
+      "3D up to 500 MB"
+    ],
+    "asks": [
+      "What size should Shopify product photos be?",
+      "How big can a Shopify product video be?"
+    ],
+    "platforms": [],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6185",
+    "evidence": {
+      "where": "Images, videos and 3D models sections of the product media types page"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

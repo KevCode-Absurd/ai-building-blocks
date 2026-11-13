@@ -3111,5 +3111,314 @@
     },
     "strength": "research",
     "public": false
+  },
+  {
+    "id": "OFF-6145",
+    "modules": [
+      "OFF",
+      "ADC"
+    ],
+    "topics": [
+      "discount claims",
+      "reference prices",
+      "advertising law",
+      "us"
+    ],
+    "claim": "A 'was' price is genuine only if the item was openly offered at it, in good faith, for a reasonable recent time; a price inflated to create a markdown, never offered, or cut right after being set is fictitious.",
+    "body": "The FTC's Guides Against Deceptive Pricing (16 CFR 233.1) say a former price comparison is fine when the former price is the actual, bona fide price at which the item was offered to the public on a regular basis for a reasonably substantial period. A price can be genuine even with few sales at it, if it was openly offered in good faith in the ordinary course of business, but the ad should not imply it was a selling price unless substantial sales happened. It is fictitious when it was set artificially high to allow a large advertised cut, when the item was never offered at that price, when it was used only in the distant past without saying so, or when it was cut right after being set. The rule's example: pens normally at 7.50 briefly listed at 10 with few sales, then advertised as 'Were 10, now 7.50', is a false bargain. How to apply: before writing 'was' or 'save X', check the price history on the store and use only a price really charged recently.",
+    "conditions": "US ads and product pages that compare to a former price.",
+    "fails_when": "State laws and other countries' rules differ in the time period required; check local rules for each market.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I show a compare-at price in my sale ad?",
+      "Is it legal to raise prices before a sale?",
+      "What makes a 'was' price misleading?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6145",
+    "evidence": {
+      "where": "16 CFR 233.1 (a) to (e)"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-6304",
+    "modules": [
+      "OFF"
+    ],
+    "topics": [
+      "subscription",
+      "US law",
+      "cancellation"
+    ],
+    "claim": "US law on online subscriptions requires clear disclosure of all material terms before taking billing details, express informed consent before charging, and a simple way to stop recurring charges.",
+    "body": "The Restore Online Shoppers' Confidence Act, 15 U.S.C. 8403, makes it unlawful to charge a consumer through an online negative option (auto-renewing) sale unless the seller clearly and conspicuously discloses all material terms before obtaining billing information, obtains express informed consent before charging, and provides simple mechanisms to stop recurring charges. For a subscribe-and-save offer this means the price after any first-order discount, the frequency, and how to cancel are shown before checkout, the buyer actively agrees to the subscription, and cancelling online is easy. Some US states add their own auto-renewal rules on top.",
+    "conditions": "US buyers on auto-renewing subscriptions sold online.",
+    "fails_when": "State auto-renewal laws can be stricter; this card does not cover them. Not legal advice.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "three conditions: disclose, consent, simple stop"
+    ],
+    "asks": [
+      "What do we have to show before someone subscribes?",
+      "How easy must cancelling be in the US?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6304",
+    "evidence": {
+      "where": "15 U.S.C. 8403 (1) to (3)"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-6306",
+    "modules": [
+      "OFF"
+    ],
+    "topics": [
+      "subscription",
+      "Shopify"
+    ],
+    "claim": "Shopify Subscriptions lets customers resume, skip or cancel and update payment and address from their account; merchants can set amount, percentage, buy X get Y or fixed-price discounts and weekly, monthly or yearly renewals.",
+    "body": "Shopify's help page for its Subscriptions app says customers can sign in to their customer account and resume, skip or cancel their subscriptions and manage payment methods and shipping address. Merchants can apply dollar amount, percentage, buy X get Y or fixed-amount discounts to subscription products, create auto-billed plans that renew weekly, monthly or yearly, and modify, skip, pause and cancel plans and contracts from the admin. Eligibility depends on a separate eligibility article (markets and payment methods), which should be checked for each store.",
+    "conditions": "Shopify stores using Shopify's own Subscriptions app.",
+    "fails_when": "Third-party subscription apps differ in features; eligibility varies by market and payment method, which this page does not list.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "customer self-serve: resume, skip, cancel",
+      "four discount types",
+      "weekly, monthly or yearly renewals"
+    ],
+    "asks": [
+      "Can customers skip or cancel on their own?",
+      "What discounts can a Shopify subscription carry?"
+    ],
+    "platforms": [
+      "shopify"
+    ],
+    "platform": [
+      "shopify"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6306",
+    "evidence": {
+      "where": "Features overview"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-6307",
+    "modules": [
+      "OFF",
+      "FIN"
+    ],
+    "topics": [
+      "subscription",
+      "India",
+      "payments"
+    ],
+    "claim": "In India, a recurring card charge needs an e-mandate registered with extra authentication, a pre-debit notice at least 24 hours before each charge, and lets the buyer opt out or withdraw at any time.",
+    "body": "The RBI circular of 21 August 2019 on e-mandates for recurring card transactions says a mandate is registered only after successful additional factor authentication, the issuer must notify the cardholder at least 24 hours before each debit, and the cardholder may opt out of that charge or the whole mandate, and withdraw any mandate online at any time. Charges above a per-transaction cap need authentication each time; the 2019 cap was 2,000 rupees and RBI has revised it since, so check the current circular. For subscribe-and-save in India this means renewals can fail when buyers skip authentication, every renewal triggers a bank notice the buyer sees, and a UPI or card mandate flow must be tested before launch.",
+    "conditions": "Indian stores charging cards on a recurring basis. UPI AutoPay runs under its own NPCI rules, not covered here.",
+    "fails_when": "Caps and processes change by circular; confirm the current limit with the payment gateway. Not legal advice.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "AFA at registration",
+      "pre-debit notice at least 24 hours before",
+      "2019 cap 2,000 rupees per charge without AFA, revised since"
+    ],
+    "asks": [
+      "Can we auto-charge subscriptions in India?",
+      "Why do Indian subscription renewals fail?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6307",
+    "evidence": {
+      "where": "Paragraphs on registration, pre-transaction notification and opt-out"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-6384",
+    "modules": [
+      "OFF"
+    ],
+    "topics": [
+      "wholesale pricing",
+      "MAP",
+      "distributor terms"
+    ],
+    "claim": "In the US a brand may suggest a retail price and, acting alone, stop supplying dealers who ignore it; agreed minimum resale prices are judged under a rule of reason federally but are illegal per se in some states.",
+    "body": "The FTC's guide on manufacturer-imposed requirements says reasonable price, territory and customer restrictions on dealers can be lawful because they can help competition between brands. A suggested retail price leaves the dealer free to set its own price, and a manufacturer acting on its own may adopt a take-it-or-leave-it policy and stop dealing with retailers that do not follow it; what is unlawful is a collective agreement among competitors. Since a 2007 Supreme Court decision, manufacturer-imposed minimum resale price programmes are evaluated under a rule of reason, but some state antitrust laws and international authorities treat minimum price rules as illegal per se. Territorial and customer restrictions imposed by the manufacturer alone are generally legal. How to use it: write wholesale terms with a suggested retail price or a unilateral advertised price policy, not a signed promise from the retailer to sell at or above a price, and have a lawyer check the states and countries involved.",
+    "conditions": "US federal antitrust guidance as published by the FTC on the date fetched; state law and other countries differ.",
+    "fails_when": "The policy is agreed with or among retailers, enforced through coordination with competitors, or used in a state or country that bans minimum resale prices outright.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I force stockists to sell at my retail price?",
+      "Is a minimum advertised price policy legal?",
+      "Can I give a distributor an exclusive territory?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6384",
+    "evidence": {
+      "where": "Manufacturer-imposed requirements page, resale price and territorial sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-6500",
+    "modules": [
+      "OFF"
+    ],
+    "topics": [
+      "gift with purchase",
+      "free offers",
+      "pricing law",
+      "us"
+    ],
+    "claim": "A US 'free with purchase' offer must rest on the paid item's regular price, not raised to cover the gift, with terms stated at the outset.",
+    "body": "A US 'free with purchase' offer must rest on the paid item's regular price, not raised to cover the gift, with terms stated at the outset, and one product size should not carry a free offer more than 6 months in any 12. The FTC's guide on the word 'Free' (16 CFR 251.1) says a free item offered with a purchase is judged against the regular price of the item the buyer must pay for. The regular price is the price at which the item was openly and actively sold, in the same quantity and quality, in the trade area for at least 30 days; if few sales happened at that price, the free offer is not proper (introductory offers are an exception). The seller may not recover the gift's cost by raising that price, cutting quality or shrinking quantity. All conditions must be stated clearly and conspicuously at the outset; an asterisk to a footnote does not count. So that a free offer stays special, one size of a product should not carry a free offer in a trade area for more than 6 months in any 12-month period, at least 30 days should pass between such offers, no more than three may run there in 12 months, and sales of that size under the offer should not exceed half of its sales there. How to apply: before a gift-with-purchase, confirm the paid item's price has been stable for 30 days and stays the same during the offer, write the threshold and gift terms next to the offer, and log each free offer on the yearly calendar so no product runs one more than 6 months a year.",
+    "conditions": "US stores advertising a free gift or free item conditional on a purchase.",
+    "fails_when": "Outside the US the rules differ; state laws may add rules; the guide is FTC guidance on what is deceptive, so a lawyer should confirm edge cases.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "30 days regular price",
+      "6 months in any 12-month period",
+      "30 days between offers",
+      "3 offers in 12 months",
+      "50 percent of sales"
+    ],
+    "asks": [
+      "Can I raise the price while I run a free gift offer?",
+      "How often can I run a free gift promotion in the US?",
+      "Where do the gift terms have to go?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6500",
+    "evidence": {
+      "where": "16 CFR 251.1 (b), (c), (h)"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-6501",
+    "modules": [
+      "OFF",
+      "CXP"
+    ],
+    "topics": [
+      "guarantee",
+      "risk reversal",
+      "us",
+      "advertising law"
+    ],
+    "claim": "In the US, say 'money back guarantee' or 'satisfaction guarantee' only if the store refunds the full purchase price when the buyer asks, and state any material condition clearly in the ad itself.",
+    "body": "The FTC's Guides for the Advertising of Warranties and Guarantees (16 CFR 239.3) say terms such as 'Satisfaction Guarantee', 'Money Back Guarantee' and 'Free Trial Offer' should be used only when the seller refunds the full purchase price of the advertised product at the purchaser's request. An ad that mentions such a guarantee should clearly and prominently disclose any material limitation or condition, for example that only the unused part must be returned within 30 days, or that the product must come back in its original package. How to apply: if the store keeps outbound shipping, charges a restocking fee, requires the item unopened, or gives store credit instead of money, either drop those conditions or stop calling it a money-back guarantee and state the exact terms next to the claim on the product page, cart and ads.",
+    "conditions": "US ads, product pages and emails that mention a satisfaction or money-back guarantee.",
+    "fails_when": "Other countries' consumer laws set their own minimum rights; Magnuson-Moss written warranty rules add duties for consumer products with written warranties; confirm complex cases with a lawyer.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "full purchase price"
+    ],
+    "asks": [
+      "Can I call it a money-back guarantee if I keep the shipping fee?",
+      "What do I have to disclose with a satisfaction guarantee?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6501",
+    "evidence": {
+      "where": "16 CFR 239.3 (a), (b) and examples"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-6502",
+    "modules": [
+      "OFF"
+    ],
+    "topics": [
+      "guarantee",
+      "lifetime warranty",
+      "us",
+      "advertising law"
+    ],
+    "claim": "A US 'lifetime' guarantee must clearly say whose or what lifetime it covers, such as the original buyer's ownership or the product's life.",
+    "body": "The FTC's guide on 'lifetime' and similar representations (16 CFR 239.4) advises that an ad using 'lifetime', 'life' or similar words for a warranty or guarantee should clearly and prominently disclose the life the promise refers to, for example the life of the product or the time the original purchaser owns it. How to apply: never write a bare 'lifetime guarantee'; write 'guaranteed for as long as you own it' or the exact period, plus what is covered (repair, replacement or refund) on the product page and claims page.",
+    "conditions": "US ads and pages that describe a guarantee or warranty as lifetime.",
+    "fails_when": "Other markets set their own rules; written-warranty law may require more detail.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I say lifetime guarantee?",
+      "What does lifetime have to mean in an ad?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6502",
+    "evidence": {
+      "where": "16 CFR 239.4"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

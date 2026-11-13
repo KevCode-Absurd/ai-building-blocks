@@ -475,5 +475,161 @@
     },
     "strength": "stated_by_practitioner",
     "public": true
+  },
+  {
+    "id": "PRD-6480",
+    "modules": [
+      "PRD"
+    ],
+    "topics": [
+      "demand and trend reading",
+      "candidate screening"
+    ],
+    "claim": "Google Trends scores are a sample of searches divided by all searches in that place and time, then scaled 0 to 100; they show relative interest and direction, not how many people search.",
+    "body": "Google's Trends FAQ says Trends uses a sample of Google searches. Each data point is divided by the total searches of the geography and time range it represents, to compare relative popularity, and the result is scaled on a range of 0 to 100 based on the topic's proportion of all searches. Google adds that regions showing the same search interest do not always have the same total search volume. How to apply: use Trends to read direction (rising, flat, falling), seasonality and which regions over-index, always over the same time range and region when comparing terms; never quote a Trends score as a count of buyers, and get volume from Keyword Planner, Merchant Center or marketplace data instead.",
+    "conditions": "Any market where Google is the main search engine, including India and the US.",
+    "fails_when": "Very low-volume terms show zeros or spikes from sampling; buyers in the niche search mostly on Amazon, Flipkart or TikTok rather than Google.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "scale 0 to 100"
+    ],
+    "asks": [
+      "Does a Google Trends score of 100 mean lots of people search for it?",
+      "How do I read Google Trends for a product idea?",
+      "Can I compare Google Trends numbers between countries?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S6480",
+    "evidence": {
+      "where": "How Trends data is adjusted"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-6481",
+    "modules": [
+      "PRD"
+    ],
+    "topics": [
+      "demand and trend reading",
+      "candidate screening"
+    ],
+    "claim": "Merchant Center's free Popular products tab ranks products and brands on Google by how often people search for or buy them, by category and country (India and the US included), with brand rank change and price range, refreshed weekly.",
+    "body": "Google's help page says the Popular products tab in Merchant Center Analytics shows cards for popular products, popular brands, brands gaining popularity, top-selling products and out-of-stock products the merchant might restock. Popularity is ranked by how often customers search for or buy the items, and a smaller rank number means more popular. Brand rank change shows how far a brand has risen against an earlier period, and price range shows current prices for a product across Google. Results filter by category and cover 36 countries including India, the United States and the United Kingdom. Data updates weekly, though new data can take up to two weeks to appear. Cards with product suggestions may be hidden if Google decides the merchant sells only its own products, and the data is for internal use only: it cannot be resold, shown publicly or aggregated across businesses. How to apply: a free Merchant Center account gives a store a first-party list of rising products and brands in its category to screen, without a paid spy tool.",
+    "conditions": "Stores with a Merchant Center account selling in one of the 36 listed countries.",
+    "fails_when": "The category is too small to rank, the store sells only its own brand (suggestion cards can be hidden), or the products sell mainly on marketplaces and social shops rather than through Google.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "36 countries",
+      "weekly refresh, up to 2 weeks delay"
+    ],
+    "asks": [
+      "Is there a free way to see best-selling products in my category?",
+      "How do I find rising brands on Google Shopping?",
+      "Does Merchant Center show popular products in India?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "IN",
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S6481",
+    "evidence": {
+      "where": "Popular products tab description",
+      "quote": "brands gaining popularity"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-6482",
+    "modules": [
+      "PRD",
+      "OFF"
+    ],
+    "topics": [
+      "competitor pricing",
+      "price monitoring"
+    ],
+    "claim": "Merchant Center's Pricing tab gives a benchmark price per product, built from every retailer selling the same GTIN on Shopping ads and free listings, and the store's price gap against it; it needs a valid GTIN.",
+    "body": "Google's help page says the benchmark is the average price that typically leads to more successful ad auctions, impressions, clicks or conversions, depending on available data, and it is calculated from the prices of all retailers selling a product with the same GTIN across Shopping ads and organic listings. The report shows how many of the store's products are cheaper or dearer than benchmark, the price gap as a percentage difference between the store's price and the benchmark, the price distribution and the products with the highest gaps. A valid GTIN is needed for benchmark data; sale price suggestions are a separate feature that needs purchase conversions reported. How to apply: for branded or resold products with GTINs, use the price gap report as the free weekly feed for rival price tracking; own-brand products with unique GTINs will have no rival benchmark, so track named rivals by hand.",
+    "conditions": "Products with valid GTINs listed in Merchant Center.",
+    "fails_when": "Private-label products with no shared GTIN, or categories where few retailers list on Google.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "How do I see if my prices are higher than competitors on Google?",
+      "What is the benchmark price in Merchant Center?",
+      "Is there a free competitor price tracker?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S6482",
+    "evidence": {
+      "where": "Benchmark and price gap definitions",
+      "quote": "Price gap is the percentage difference between your price and the benchmark price"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-6483",
+    "modules": [
+      "PRD",
+      "MCR"
+    ],
+    "topics": [
+      "competitor research",
+      "ad library"
+    ],
+    "claim": "Meta's Ad Library shows ads running now across Meta apps; inactive ads stay only for issue, election and political ads (7 years) and for ads delivered in the EU (one year after their last impression).",
+    "body": "Meta's Transparency Center says the Ad Library lets anyone search ads currently running across Meta technologies. Ads about social issues, elections or politics are shown whether active or inactive and are stored for seven years, with spend, reach and funding entity. Ads that delivered impressions in the EU are archived for one year after their last impression. A separate database shows active branded content carrying a paid partnership label. How to apply: for an ordinary store in India or the US, the library is a snapshot of what a rival runs today, without spend or results; log captures with dates each week, because a stopped ad disappears, and check EU-delivered rivals' history where it exists. Ad presence or run length is a proxy, never proof of profit.",
+    "conditions": "Researching rival ads on Facebook, Instagram, Messenger and Audience Network.",
+    "fails_when": "Rivals sell mainly through Google, marketplaces or TikTok; a rival runs ads from several pages or creators' handles.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "issue and political ads kept 7 years",
+      "EU-delivered ads kept 1 year after last impression"
+    ],
+    "asks": [
+      "Can I see a competitor's old Facebook ads?",
+      "Does the Meta Ad Library show ad spend?",
+      "How long does the Ad Library keep ads?"
+    ],
+    "platforms": [
+      "meta"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S6483",
+    "evidence": {
+      "where": "Ad Library description",
+      "quote": "archived for one year upon the delivery of their last impression"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

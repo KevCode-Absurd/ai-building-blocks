@@ -2007,5 +2007,377 @@
     },
     "strength": "anecdote",
     "public": true
+  },
+  {
+    "id": "GAD-6042",
+    "modules": [
+      "GAD",
+      "MCR"
+    ],
+    "topics": [
+      "format and placement"
+    ],
+    "claim": "Google responsive display ads take 1.91:1 (1200 x 628), 1:1 (1200 x 1200) and optional 9:16 (900 x 1600) images up to 5,120 KB, and Google advises against text, logos or fake buttons laid over the image.",
+    "body": "Google Ads Help lists the responsive display image specs: horizontal 1.91:1 recommended 1200 x 628 (minimum 600 x 314), square 1:1 recommended 1200 x 1200 (minimum 300 x 300), vertical 9:16 recommended 900 x 1600 (minimum 600 x 1067); JPG or PNG; up to 5,120 KB each; up to 15 images. Google assembles the ad itself, adding headlines and descriptions from separate fields, so it advises not to place text on top of images (it repeats the headline and becomes unreadable at small sizes), not to overlay logos or graphics, and not to add play or close buttons that cannot be clicked. Text or a logo that is naturally part of the photo, such as a sign or the product label, is fine. A Meta ad with a big headline baked in therefore should not be reused as a Google display image; supply the clean image and type the words into the text fields.",
+    "conditions": "Google responsive display ads, and Demand Gen and Performance Max image assets that follow the same guidance.",
+    "fails_when": "Uploaded display ads (fixed-size HTML5 or image banners) follow different rules.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "1200 x 628",
+      "1200 x 1200",
+      "900 x 1600",
+      "5,120 KB",
+      "up to 15 images"
+    ],
+    "asks": [
+      "What image sizes do Google display ads need?",
+      "Can I put text on Google display ad images?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6042",
+    "evidence": {
+      "where": "Image and logo specifications table and 'Avoid' guidance"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "GAD-6043",
+    "modules": [
+      "GAD",
+      "LPG",
+      "SET"
+    ],
+    "topics": [
+      "feed optimisation",
+      "image sequence and slot jobs"
+    ],
+    "claim": "Google Merchant Center bans promotional overlays, watermarks, borders and added logos on the main product image, sets a 500 x 500 minimum from 31 January 2027, recommends about 1500 x 1500.",
+    "body": "Google Merchant Center bans promotional overlays, watermarks, borders and added logos on the main product image, sets a 500 x 500 minimum from 31 January 2027, recommends about 1500 x 1500, and wants the product to fill 75 to 90% of the frame. The Merchant Center image_link specification says the main product image must give a clean, unobstructed view of the exact item sold. Not allowed: promotional elements or overlays (calls to action, price or shipping details, promotional words, condition text), barcodes or QR codes over the photo, watermarks or copyright stamps, brand or retailer logos added in post-production unless physically on the product, placeholders or generic graphics, single-colour squares, borders, and products not sold together. Minimum size is 500 x 500 pixels from 31 January 2027; about 1500 x 1500 or larger is recommended; files up to 64 megapixels or 16 MB. It asks for one variant per image with its true colour, a product filling 75 to 90% of the image, stable URLs and extra angles in additional_image_link. So any sale badge, price sticker or frame belongs on an ad layer, never baked into the image the feed uses.",
+    "conditions": "Products shown in Google Shopping, free listings and Performance Max via Merchant Center.",
+    "fails_when": "Some categories have exceptions (hardware, vehicles and parts, some paint). Additional images are less strict than the main image.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "500 x 500 minimum from 31 January 2027",
+      "about 1500 x 1500 recommended",
+      "16 MB or 64 megapixels maximum",
+      "product fills 75 to 90%"
+    ],
+    "asks": [
+      "Can I put a sale badge on my Google Shopping image?",
+      "What size should Merchant Center product images be?",
+      "Why was my product image disapproved for a promotional overlay?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6043",
+    "evidence": {
+      "where": "Requirements, image size and 'what not to include' sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "GAD-6120",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "brand versus non brand"
+    ],
+    "claim": "Google does not restrict rivals from bidding on your trademark as a keyword; it can restrict a rival's use of the trademark in ad text after the owner files a complaint.",
+    "body": "Google's trademark policy says it will not restrict trademarks used as keywords. The policy looks at whether the trademark appears in the ad itself. Ads from a direct competitor that use the trademark in ad text, or that use it in a confusing or misleading way, can be restricted. Resellers and sellers of compatible parts may use the term if the landing page mainly sells those goods and shows prices, and the ad makes clear they are a reseller. Complaints go through Google's Report Content process, are limited to the countries and industries where the owner shows trademark rights, and name specific advertisers by URL. How to apply: a store cannot stop rivals bidding on its name, so it protects brand searches with its own brand campaign, and files a trademark complaint only for rivals that put its name in their ad text.",
+    "conditions": "Google Ads Search and Shopping in markets where the store holds a registered or provable trademark.",
+    "fails_when": "The store has no trademark rights in that country or industry; the rival uses a descriptive dictionary word that is also the brand name; Google changes its policy. This is not legal advice.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "warning at least 7 days before account suspension for violations"
+    ],
+    "asks": [
+      "Can I stop competitors bidding on my brand name on Google?",
+      "A rival uses my brand name in their Google ad, what can I do?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6120",
+    "evidence": {
+      "where": "Trademarks policy page, keyword and ad text sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "GAD-6121",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "brand versus non brand"
+    ],
+    "claim": "Brand exclusions work on Search and Performance Max (Search and Shopping inventory); brand inclusions are Search only; one brand entry matches other spellings and languages.",
+    "body": "Google's brand settings let a Search campaign serve only on queries tied to chosen brands (inclusions) or keep Search and Performance Max campaigns off queries tied to brands (exclusions). For Performance Max, exclusions cover Search and Shopping inventory. Brand lists use broad matching, so one entry matches other languages, scripts and common variants; brands that share no words need separate entries. Only brands in Google's library (logo, trademark, domain, dominant product name or business name) can be picked. Exclusions win over inclusions. Google warns that brand settings narrow reach and may lower performance, so use them only where needed. How to apply: exclude the store's own brand from Performance Max and non-brand Search, and run a separate brand campaign with exact-match brand keywords or a brand inclusion.",
+    "conditions": "Google Ads accounts running Search or Performance Max where brand and non-brand traffic must be reported apart.",
+    "fails_when": "The store's brand is not yet in Google's brand library (use negative keywords instead); the brand name is also a common word, so broad brand matching can block real non-brand queries; Google changes the settings.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "How do I keep Performance Max off my brand searches?",
+      "What is the difference between brand inclusions and exclusions?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6121",
+    "evidence": {
+      "where": "About brand settings for Search and Performance Max"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "GAD-6122",
+    "modules": [
+      "GAD",
+      "SET"
+    ],
+    "topics": [
+      "feed optimisation"
+    ],
+    "claim": "Merchant Center needs the feed price to match the landing page price exactly; mismatches disapprove products and can lead to account suspension.",
+    "body": "Googlebot compares the price attribute with the price in the page HTML and structured data. Prices must match exactly, in the same currency shown on the page; prices added by script after the page loads can trigger errors. Sale price dates and time zones must be right, and minimum-quantity items must show the total for that quantity. A product with a mismatch may be disapproved, and repeated mismatches may lead to account suspension. After the fix, Google re-crawls over the next hours or days and reapproves the product; a website check can be requested to speed this up. Scheduled feed fetches or the Merchant API keep prices current. How to apply: before any sale, schedule the feed update for the minute site prices change, and check that the page price sits in the HTML, not only in a script.",
+    "conditions": "Google Merchant Center feeds for Shopping, Performance Max, Demand Gen product ads and free listings.",
+    "fails_when": "Setting names and review times change; a native platform sync may already update prices fast enough for stores with rare price changes.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Why was my product disapproved for mismatched price?",
+      "Can price mismatches suspend my Merchant Center account?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6122",
+    "evidence": {
+      "where": "Mismatched product price help page"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "GAD-6123",
+    "modules": [
+      "GAD",
+      "SEO",
+      "LPG"
+    ],
+    "topics": [
+      "feed optimisation"
+    ],
+    "claim": "Merchant Center titles may run 1 to 150 characters with the most important details first, since buyers often see only the first 70 or fewer; no promotional text or caps for emphasis.",
+    "body": "Google's title specification allows 1 to 150 characters and truncates longer titles with a warning. It asks for the most important details first, because users usually notice only the first 70 or fewer characters depending on screen size. Include the product name, the brand where it sets the product apart, and variant details such as size or colour, and describe the same product as the landing page. Titles must not include promotional text (price, sale, shipping, delivery dates, company name), capital letters for emphasis, symbols, HTML, extra spaces or poorly understood foreign words. How to apply: rewrite feed titles so searched words sit in the first 70 characters, keep sale messages in their own attributes, and check every rewrite against this list before upload.",
+    "conditions": "Google Merchant Center product data for Shopping, Performance Max and free listings.",
+    "fails_when": "Google updates the specification; marketplace or regional rules may differ for other channels.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "title 1 to 150 characters",
+      "users usually notice the first 70 or fewer characters"
+    ],
+    "asks": [
+      "How long can a Google Shopping title be?",
+      "Can I put 'sale' or 'free shipping' in my product title?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6123",
+    "evidence": {
+      "where": "Title [title] specification page"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "GAD-6124",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "campaign setup and tracking"
+    ],
+    "claim": "Demand Gen serves image and video ads on YouTube (including Shorts), Discover, Gmail, Maps and the Display Network; on target CPA Google recommends a daily budget of at least 10 times the target.",
+    "body": "Demand Gen is Google's visual campaign type for people who are not yet searching. It places image and video ads across YouTube and Shorts, Discover, Gmail, Maps, the Google Display Network and Google video partners. For target CPA bidding Google recommends a daily budget of at least ten times the target CPA, and warns against setting the target far below the historical average. Conversion tracking must be set up and working; Google suggests lighter events such as add to basket when purchases are too few. How to apply: size a Demand Gen test from the store's target cost per purchase times ten per day, and if cash cannot carry that, do not launch it yet.",
+    "conditions": "Google Ads accounts with working purchase tracking that want prospecting beyond search.",
+    "fails_when": "Budget recommendations and placements change; stores without enough purchases for the bid strategy; optimising for add to cart can buy cheap clicks that never purchase.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "daily budget at least 10 times target CPA"
+    ],
+    "asks": [
+      "How much budget does a Demand Gen campaign need?",
+      "Where do Demand Gen ads show?"
+    ],
+    "platforms": [
+      "youtube"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6124",
+    "evidence": {
+      "where": "About Demand Gen campaigns, budget and bidding sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "GAD-6127",
+    "modules": [
+      "GAD"
+    ],
+    "topics": [
+      "campaign setup and tracking"
+    ],
+    "claim": "Microsoft Advertising can import Google Ads campaigns now, once, daily, weekly or monthly, with options to scale budgets, skip budget updates and delete removed items; not everything imports, so review after.",
+    "body": "Microsoft's Google import links a Google account and copies chosen campaigns into a Microsoft Advertising account. Imports can run now, once at a set time, daily, weekly, monthly or on an automatic schedule. Options include raising or lowering imported budgets by a percentage, not updating budgets that already exist in Microsoft, and deleting items removed in Google. New entity types Microsoft starts supporting are added to scheduled imports by default. Microsoft says not all information will be imported, so campaigns must be reviewed after each import and missing items added back. Microsoft counts conversions through its own UET tag and conversion goals, which are set up in Microsoft Advertising, so check them before any imported campaign runs. How to apply: import once, fix the gaps by hand, then keep any scheduled import from overwriting Microsoft-only budget and bid changes.",
+    "conditions": "Stores running Google Ads Search or Shopping campaigns that want to test Microsoft Advertising.",
+    "fails_when": "Microsoft changes what imports; Performance Max assets and some audiences, locations and languages may not import; scheduled imports overwrite manual Microsoft edits if budget update options are left on.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "schedule options: now, once, daily, weekly, monthly, auto"
+    ],
+    "asks": [
+      "How do I copy my Google Ads to Microsoft Ads?",
+      "Will a scheduled import overwrite my Microsoft changes?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6127",
+    "evidence": {
+      "where": "Google Ads Import guide: import options, schedule, review results"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "GAD-6140",
+    "modules": [
+      "GAD",
+      "ADC"
+    ],
+    "topics": [
+      "responsive search ads",
+      "ad copy limits",
+      "pinning"
+    ],
+    "claim": "A responsive search ad takes up to 15 headlines of 30 characters and 4 descriptions of 90 (minimum 3 and 2); Google advises against pinning for most advertisers and suggests 2 or 3 options per pinned slot.",
+    "body": "Google's help page sets the limits: up to 15 headlines and 4 descriptions per responsive search ad, at least 3 headlines and 2 descriptions, 30 characters per headline, 90 per description and 15 per display path field. Korean, Japanese and Chinese characters count double. Pinning fixes a headline or description to one position; headline positions 1 and 2 and description position 1 always show, while headline 3 and description 2 may not. Google says pinning is not recommended for most advertisers and can lower ad strength; if every position is pinned, unpinned text never shows. Where pinning is needed, pin 2 or 3 different options to each pinned slot, and put text that must always appear (such as a required disclaimer) in headline 1, headline 2 or description 1. Google also advises as many unique headlines as possible, at least one keyword in headlines, first three headlines that work together, and at least two ads rated Good or Excellent per ad group. How to apply: write the full bank, pin only what must always show, and check every line stands alone in any order.",
+    "conditions": "Google Search responsive search ads, any account size.",
+    "fails_when": "Limits and pinning advice can change; recheck the help page before a large build. Low-volume ad groups may not have the traffic to test all 15 headlines.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "15 headlines x 30 characters",
+      "4 descriptions x 90 characters",
+      "path fields 15 characters",
+      "minimum 3 headlines and 2 descriptions",
+      "2 or 3 options per pinned position"
+    ],
+    "asks": [
+      "How many headlines can a Google search ad have?",
+      "Should I pin headlines in responsive search ads?",
+      "What are the character limits for Google RSA descriptions?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [
+      "google"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6140",
+    "evidence": {
+      "where": "Responsive search ad limits, pinning and Ad Strength sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "GAD-6141",
+    "modules": [
+      "GAD",
+      "ADC"
+    ],
+    "topics": [
+      "performance max",
+      "asset groups",
+      "ad copy limits"
+    ],
+    "claim": "Performance Max text assets: 3 to 15 headlines of 30 characters (one of 15 or fewer), 1 to 5 long headlines of 90, 2 to 5 descriptions of 90.",
+    "body": "Performance Max text assets: 3 to 15 headlines of 30 characters (one of 15 or fewer), 1 to 5 long headlines of 90, 2 to 5 descriptions of 90, and a business name of 25 that matches the domain or verified name. Google's Performance Max specs list, per asset group without a Merchant Center feed: headlines up to 30 characters, minimum 3, maximum 15, with 11 or more recommended and at least one of 15 characters or fewer; long headlines up to 90 characters, minimum 1, maximum 5, 2 or more recommended and ideally at least 30 characters long; descriptions up to 90 characters, minimum 2, maximum 5, 4 or more recommended; a business name of up to 25 characters that exactly matches the domain or legally verified business name with no promotional text; one call to action; one final URL; optional display path of up to 15 characters per field. Character limits are the same across languages, with double-width scripts counting as 2. The page says the minimums apply to asset groups without a feed, so feed-attached retail asset groups can run with fewer text assets. How to apply: write to the recommended counts, include a short headline, and keep the business name clean.",
+    "conditions": "Google Performance Max asset groups for online stores.",
+    "fails_when": "Feed-only asset groups deliberately carry no text assets; specs change, so recheck before a build.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "headlines 3 to 15 at 30 characters, 11+ recommended",
+      "one headline 15 characters or fewer",
+      "long headlines 1 to 5 at 90 characters",
+      "descriptions 2 to 5 at 90 characters",
+      "business name 25 characters"
+    ],
+    "asks": [
+      "How many headlines does a Performance Max asset group need?",
+      "What is the long headline limit in Performance Max?",
+      "Can my business name include a promotion in PMax?"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [
+      "google"
+    ],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "",
+    "source": "S6141",
+    "evidence": {
+      "where": "Text asset requirements table"
+    },
+    "strength": "platform_rule",
+    "public": true
   }
 ]

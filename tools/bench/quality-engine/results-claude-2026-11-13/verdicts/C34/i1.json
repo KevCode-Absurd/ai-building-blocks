@@ -1,0 +1,77 @@
+{
+  "judge": "i1",
+  "pairs": [
+    {
+      "id": "F01",
+      "X": {"usefulness": 8, "accuracy": 9, "specificity": 9, "clarity": 9, "craft": 8, "overall": 8, "note": "Under 150 words, dry voice, all the given fabric facts; fit, pockets and care (machine wash warm, tumble dry low, pilling) match Patagonia's listing. The Fair Trade line correctly says workers' elected committee decides how the premium is spent, and it uses Patagonia's own 'We guarantee everything we make' wording."},
+      "Y": {"usefulness": 8, "accuracy": 8, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Almost identical and equally on-brand. The Fair Trade line ('the people who made it earned a premium for their work') is looser than Patagonia's own explanation, and the 'room for a layer underneath' fit gloss is unverified."},
+      "winner": "X"
+    },
+    {
+      "id": "F02",
+      "X": {"usefulness": 8, "accuracy": 9, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Clear numbered day-one SOP covering every given rule, with decline scripts, bagging steps and an end-of-day count. The count sheet is only described in one line, not laid out."},
+      "Y": {"usefulness": 9, "accuracy": 8, "specificity": 8, "clarity": 9, "craft": 9, "overall": 8, "note": "Same SOP plus a fill-in count sheet table a new hire can actually use. The added credit script (Patagonia-owned stores and patagonia.com) is mostly right but leaves out WornWear.com, and the card number and PIN step is unverified."},
+      "winner": "Y"
+    },
+    {
+      "id": "F03",
+      "X": {"usefulness": 8, "accuracy": 9, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Calm, factual, under 120 words, no jargon or fix time. 'Have seen' reads slightly past-tense for an ongoing incident."},
+      "Y": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "Same facts in present tense ('are seeing'), plus status-page fields. 'Viewing content' is a real component on Atlassian's Jira status page, so it can be pasted straight in."},
+      "winner": "Y"
+    },
+    {
+      "id": "F04",
+      "X": {"usefulness": 9, "accuracy": 8, "specificity": 9, "clarity": 8, "craft": 9, "overall": 8, "note": "Thorough and well sourced: residency scope, TLS 1.2+/AES-256, CMK, ISO 27001/27018, SOC 2, C5, CSA STAR, DORA, Guard, Marketplace vetting (Cloud Fortified ending 31 Dec 2026 checks out) and 60-day retention. The summary table and reference list suit procurement and a CISO, and the confirm box is clear. It runs a little over 3 pages, and the CSA renewal date is unverified."},
+      "Y": {"usefulness": 8, "accuracy": 8, "specificity": 9, "clarity": 8, "craft": 8, "overall": 7, "note": "Similar, accurate content with handy inline [Confirm] flags. But the customer-facing text states Guard user account data as pinnable while also listing it as out of scope, and it asserts early deletion on request without hedging. There is no summary table, and the many inline notes must all be stripped before sending."},
+      "winner": "X"
+    },
+    {
+      "id": "F05",
+      "X": {"usefulness": 8, "accuracy": 8, "specificity": 7, "clarity": 9, "craft": 8, "overall": 8, "note": "Clean one-page policy with the cap maths right ($150 and $300 cases), the 12-month rule, evidence asks, a log list and three worked cases. It misses routing listing problems to the Rebooking and Refund Policy."},
+      "Y": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "Adds a four-check order, routes host or listing problems to the Rebooking and Refund Policy (72-hour report) and the Resolution Centre, and gives a paste-in log template. It also rightly flags that Airbnb's public MDE policy excludes personal illness, so transfers might dead-end."},
+      "winner": "Y"
+    },
+    {
+      "id": "F06",
+      "X": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "Tight one-page brief. The yen format (¥107,500 JPY with (5泊)) and button examples (ホストになる, すべて表示) match live airbnb.jp. It adds useful placeholder and {name}さん guidance, plus strong kanji, warikan and keisha-warikan cultural points."},
+      "Y": {"usefulness": 8, "accuracy": 8, "specificity": 8, "clarity": 8, "craft": 8, "overall": 8, "note": "Solid and similar, but longer. It says ¥12,345 'matches how prices already appear', yet airbnb.jp shows a JPY suffix. It invents a 60-character push body guide and a 20 to 35 age band, and has no placeholder guidance."},
+      "winner": "X"
+    },
+    {
+      "id": "F07",
+      "X": {"usefulness": 8, "accuracy": 7, "specificity": 7, "clarity": 9, "craft": 8, "overall": 7, "note": "Ten clean answers within length, with no 'cheapest' claim. It is vaguer and partly dated: it describes the fee as 'fixed fee plus percentage' and says the setup fee 'covers verification', where Wise frames it as access to every feature."},
+      "Y": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 9, "craft": 8, "overall": 9, "note": "Details checked against wise.com: account details in 22 currencies, free local receipts in AUD/CAD/EUR/GBP/HUF/NZD/PHP/SGD/USD, the 6.11 USD wire fee, and volume tracked per calendar month with same-currency transfers excluded. It adds useful links and stays compliant."},
+      "winner": "Y"
+    },
+    {
+      "id": "F08",
+      "X": {"usefulness": 8, "accuracy": 7, "specificity": 8, "clarity": 8, "craft": 8, "overall": 7, "note": "The maths is right (Q2 about £37.6m, Q2 volume about £5.3bn, £3m mix cost), with a direct treatment of the slip and a concrete 0.60% floor proposal. But it invents that 'we committed to August in our last update', and 'strong for a business at this size' is mild spin."},
+      "Y": {"usefulness": 8, "accuracy": 8, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Same correct maths, and it leads with revenue growing about half as fast as volume. The what/cause/fix structure is crisp, with no invented history. The asks are actionable today, though the floor number is deferred to the next meeting."},
+      "winner": "Y"
+    },
+    {
+      "id": "F09",
+      "X": {"usefulness": 9, "accuracy": 9, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Natural, slightly weird host read with a clear ad opener, a marked ad-lib spot, no health or dairy claims, and the code said twice. The host note 'only say you use it if you do' covers FTC endorsement rules."},
+      "Y": {"usefulness": 8, "accuracy": 7, "specificity": 8, "clarity": 9, "craft": 8, "overall": 7, "note": "Equally lively, but it scripts the host's personal experience ('Here's something I've learned in my kitchen') without a note that the host must actually use it, which is an endorsement-rule risk."},
+      "winner": "X"
+    },
+    {
+      "id": "F10",
+      "X": {"usefulness": 8, "accuracy": 9, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Under 180 words, no faked familiarity or exclamation marks, the news in two sentences and a clear two-option ask. It matches the request exactly."},
+      "Y": {"usefulness": 8, "accuracy": 9, "specificity": 8, "clarity": 9, "craft": 8, "overall": 8, "note": "Word-for-word identical to the other answer, with the same strengths."},
+      "winner": "tie"
+    },
+    {
+      "id": "F11",
+      "X": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 9, "craft": 9, "overall": 9, "note": "Honest, warm announcement with correct LEGO climate facts: 37% absolute cut by 2032 vs 2019, net zero 2050, and the 2024 bonus KPI that includes business travel. Its pre-posting confirm list catches real gaps (per-flight vs per-journey, how rail time is measured, Billund having no rail station, trips booked before 1 January)."},
+      "Y": {"usefulness": 8, "accuracy": 9, "specificity": 9, "clarity": 9, "craft": 8, "overall": 8, "note": "Identical announcement text, but without the confirm list, so the ambiguous rules would go live unexamined."},
+      "winner": "X"
+    },
+    {
+      "id": "F12",
+      "X": {"usefulness": 9, "accuracy": 9, "specificity": 9, "clarity": 8, "craft": 9, "overall": 9, "note": "The weighted maths and sensitivity tests check out, and the split-award costs are correct, with spare capacity for Option 4 right at 350m. Verified LEGO detail (FSC C117818, the 95% paper coated bag spec, factory list) and a rule for sizing C's share make it stronger."},
+      "Y": {"usefulness": 8, "accuracy": 7, "specificity": 8, "clarity": 8, "craft": 8, "overall": 7, "note": "Same scorecard, but Option 4 spare capacity is shown as 400m when it is 350m (950m minus 600m), an arithmetic error in a board table. It also drops the guidance for sizing C's share and the bag-spec trial detail."},
+      "winner": "X"
+    }
+  ]
+}

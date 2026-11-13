@@ -1,0 +1,110 @@
+[
+ {
+  "id": "F01",
+  "job": "design-work",
+  "lead": "renata-brand-identity",
+  "basis": "default",
+  "card": "_any",
+  "depth": "light",
+  "kind": "ops_doc"
+ },
+ {
+  "id": "F02",
+  "job": "document-work",
+  "lead": "eleanor-dev-docs",
+  "basis": "setting:software",
+  "card": "_any",
+  "depth": "standard",
+  "kind": "code"
+ },
+ {
+  "id": "F03",
+  "job": "organise-work",
+  "lead": "zachary-meetings",
+  "basis": "variant",
+  "card": "_any",
+  "depth": "light",
+  "kind": "other"
+ },
+ {
+  "id": "F04",
+  "job": "make-skills",
+  "lead": "ishaan-customgpt",
+  "basis": "default",
+  "card": "_any",
+  "depth": "standard",
+  "kind": "ops_doc"
+ },
+ {
+  "id": "F05",
+  "job": "help-customers",
+  "lead": "hyejin-returns",
+  "basis": "variant",
+  "card": "_any",
+  "depth": "standard",
+  "kind": "ops_doc"
+ },
+ {
+  "id": "F06",
+  "job": "keep-customers",
+  "lead": "behrouz-translation",
+  "basis": "deliverable:notification-copy",
+  "card": "notification-copy",
+  "depth": "light",
+  "kind": "copy"
+ },
+ {
+  "id": "F07",
+  "job": "document-work",
+  "lead": "ankit-help-docs",
+  "basis": "deliverable:help-docs",
+  "card": "help-docs",
+  "depth": "standard",
+  "kind": "web_page"
+ },
+ {
+  "id": "F08",
+  "job": "track-numbers",
+  "lead": "shalini-kpireports",
+  "basis": "deliverable:investor-update",
+  "card": "investor-update",
+  "depth": "standard",
+  "kind": "copy"
+ },
+ {
+  "id": "F09",
+  "job": "check-ads",
+  "lead": "bruno-ad-copy",
+  "basis": "default",
+  "card": "paid-social-ads",
+  "depth": "standard",
+  "kind": "ad_creative"
+ },
+ {
+  "id": "F10",
+  "job": "write-and-tell-stories",
+  "lead": "ghada-crisis-comms",
+  "basis": "deliverable:crisis-response",
+  "card": "crisis-response",
+  "depth": "light",
+  "kind": "email"
+ },
+ {
+  "id": "F11",
+  "job": "document-work",
+  "lead": "ankit-help-docs",
+  "basis": "deliverable:help-docs",
+  "card": "help-docs",
+  "depth": "standard",
+  "kind": "plan"
+ },
+ {
+  "id": "F12",
+  "job": "plan-supply-chain",
+  "lead": "huong-sourcing",
+  "basis": "variant",
+  "card": "_any",
+  "depth": "standard",
+  "kind": "other"
+ }
+]

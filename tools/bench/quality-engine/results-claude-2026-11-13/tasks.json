@@ -1,0 +1,122 @@
+[
+  {
+    "id": "F01",
+    "brand": "patagonia",
+    "site": "https://www.patagonia.com",
+    "type": "product detail page description",
+    "size": "short",
+    "brief": "I'm on the e-commerce content team at Patagonia (patagonia.com). I need the product detail page description for the men's Better Sweater fleece jacket. Keep it under 150 words: a two-sentence opener, then 4 or 5 bullet points on fit, fabric and care. Fabric facts for this exercise: 100% recycled polyester fleece, dyed with a low-impact process, Fair Trade Certified sewing, a sweater-knit face with a soft fleece interior. Our voice is plain and a little dry, never hypey. Don't use words like 'ultimate', 'game-changing' or 'must-have', and don't make warmth-rating or carbon-saving claims we can't back up. Mention our Ironclad Guarantee and that it can be repaired through Worn Wear.",
+    "ext": "md",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "F02",
+    "brand": "patagonia",
+    "site": "https://www.patagonia.com",
+    "type": "store trade-in SOP",
+    "size": "medium",
+    "brief": "I manage retail operations for Patagonia (patagonia.com) stores in the Pacific Northwest. Write a one-page SOP for how store staff take in Worn Wear trade-ins at the register. For this exercise, the rules are: we accept clean Patagonia apparel in working condition; the credit amount is set by the trade-in app, never by the staffer; items with broken zippers or big stains go to the repair bin, not trade-in; no trade-ins on swimwear or underwear; a customer can trade in up to 10 items per visit. Include the steps, what to say when declining an item, how to bag and tag accepted items, and the end-of-day count. Write it for a new seasonal hire on day one: numbered steps, short sentences.",
+    "ext": "md",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "F03",
+    "brand": "atlassian",
+    "site": "https://www.atlassian.com",
+    "type": "status page incident update",
+    "size": "short",
+    "brief": "I'm the incident communications lead at Atlassian (atlassian.com). Jira Cloud has a partial outage right now and I need the next update for our status page, under 120 words. Facts for this exercise: starting 14:05 UTC, some customers in the EU region are seeing slow page loads and errors when opening boards; about 8% of EU sites are affected; Confluence and Jira Service Management are not affected; engineering has traced it to a database failover problem and is rolling back a configuration change; no data loss found so far. Next update in 30 minutes. Be factual and calm. No apology paragraph, no guess at a fix time, and no internal jargon like 'shard' or 'P1'.",
+    "ext": "md",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "F04",
+    "brand": "atlassian",
+    "site": "https://www.atlassian.com",
+    "type": "RFP answer section",
+    "size": "long",
+    "brief": "I'm a solutions engineer at Atlassian (atlassian.com) working on an RFP from a mid-sized European insurer moving 4,000 users to Jira and Confluence Cloud Enterprise. I need our answer to their Section 5, 'Data security, residency and compliance', 2 to 3 pages. Their questions: where is data stored and can it be pinned to the EU; how is data encrypted at rest and in transit; which certifications do we hold; how do admins control access (SSO, SCIM, IP allowlisting); how are third-party Marketplace apps vetted; and what happens to their data when the contract ends. Answer each under its own heading. Only state certifications and features Atlassian publicly documents, and flag anything I should confirm with our security team rather than guessing. Formal but readable: the reviewers are procurement plus a CISO.",
+    "ext": "md",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "F05",
+    "brand": "airbnb",
+    "site": "https://www.airbnb.com",
+    "type": "refund exception policy",
+    "size": "medium",
+    "brief": "I lead a community support team at Airbnb (airbnb.com). Agents keep making different calls on guest refund requests that fall outside a listing's cancellation policy, so I need a one-page refund-exception policy they can apply mid-call. For this exercise: agents may approve a goodwill refund of up to $300 or 50% of the nightly total, whichever is lower, without escalation; anything above that goes to a team lead; serious illness and government travel bans go through the separate Major Disruptive Events process, not this one; a guest can get at most one goodwill exception per 12 months. Cover when to say yes, when to say no, what evidence to ask for, how to log the decision, and two or three worked example cases. Plain language, no legal tone.",
+    "ext": "md",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "F06",
+    "brand": "airbnb",
+    "site": "https://www.airbnb.com",
+    "type": "localisation brief",
+    "size": "medium",
+    "brief": "I'm a product marketing manager at Airbnb (airbnb.com). For this exercise, we're launching a 'Split the cost with friends' payment feature in Japan next quarter, and I need a localisation brief for our Tokyo translation agency. One page. Cover who the feature is for, the core message, tone guidance for Japanese (polite but warm, not stiff keigo everywhere), which terms stay in English, words to avoid, character limits for the in-app button (12 characters) and push notification title (20 characters), and how to format yen amounts and dates. Also flag cultural points, like how groups in Japan usually settle shared costs, that should shape the copy. Don't write the Japanese copy itself; that's the agency's job.",
+    "ext": "md",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "F07",
+    "brand": "wise",
+    "site": "https://wise.com",
+    "type": "pricing page FAQ",
+    "size": "medium",
+    "brief": "I write content for Wise Business (wise.com). We're refreshing the FAQ block on our business pricing page and I need 8 to 10 questions and answers, about a page in total. Customers keep asking why the fee changes by currency, what the 'mid-market rate' means, whether there's a monthly fee, what the one-time setup fee covers, how volume discounts work, and whether receiving money costs anything. For this exercise, use these numbers: a one-time setup fee of £50, no monthly fee, and volume discounts that start once a business sends more than £20,000 a month. Keep each answer to 2 to 4 sentences, plain English, UK spelling. Don't claim we're always the cheapest option; compliance won't sign that off.",
+    "ext": "md",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "F08",
+    "brand": "wise",
+    "site": "https://wise.com",
+    "type": "quarterly board update",
+    "size": "long",
+    "brief": "I'm chief of staff to the head of Wise Platform (wise.com), the part of Wise that powers cross-border payments for banks and other partners. I need the Platform section of our quarterly board update, 2 to 3 pages. Numbers for this exercise only: Q3 revenue £41m, up 9% on Q2 and 38% year on year; 4 new bank partners signed, 2 went live; one partner launch slipped from August to November because of the partner's own compliance review; partner volume £6.2bn; take rate fell from 0.71% to 0.66% as larger partners grew their share. Structure: headline summary, a metrics table, what went well, what didn't, key risks, and three decisions or asks for the board. Be direct about the slip and the take-rate drop. This board hates spin.",
+    "ext": "md",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "F09",
+    "brand": "oatly",
+    "site": "https://www.oatly.com",
+    "type": "podcast host-read ad script",
+    "size": "short",
+    "brief": "I'm on the brand team at Oatly (oatly.com). We've bought host-read ads on a US home-cooking podcast and need a 60-second script, around 150 words, for the host to read in their own voice. Product: Oatly Barista Edition oat milk, which foams well for lattes and doesn't split in hot coffee. For this exercise, the offer is $1 off with code COOKOAT on a partner grocery app through December 31. Our brand tone is self-aware and a bit weird, but the host should sound like a person, not like they're reading our packaging. No health claims, don't trash dairy, and leave one marked spot where the host can ad-lib a personal story. End with the code said twice.",
+    "ext": "md",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "F10",
+    "brand": "oatly",
+    "site": "https://www.oatly.com",
+    "type": "press pitch email",
+    "size": "short",
+    "brief": "I'm in PR at Oatly (oatly.com), based in London. Write a pitch email, under 180 words, to a food business reporter at a UK national newspaper. The hook, for this exercise: in February we're opening our production site in Landskrona, Sweden, to a group of UK independent café owners for a two-day visit, so they can see how our oat drink is made and ask hard questions about sourcing. We want a feature or a mention in a wider piece, not a product review. Give me a subject line, a short opener that doesn't fake familiarity with their past articles, the news in two sentences, why it matters to their readers, and a clear ask. No exclamation marks and no 'disrupting the dairy aisle'.",
+    "ext": "md",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "F11",
+    "brand": "lego",
+    "site": "https://www.lego.com",
+    "type": "all-hands policy announcement",
+    "size": "medium",
+    "brief": "I work in internal communications at the LEGO Group (lego.com) in Billund. Leadership is changing our business travel policy and I need the all-hands announcement for our intranet, about one page. For this exercise, the changes are: from 1 January, flights under 5 hours are economy for everyone, VPs included; rail is required for trips under 4 hours where a route exists; every team gets a yearly travel carbon budget shown on a dashboard; exceptions need a director's sign-off. The reasons are our climate targets and cost. Colleagues will see this as a perk being taken away, so be honest about that rather than dressing it up. Include a short 'what this means for you' section and a 4-question FAQ. Warm and plain, not corporate.",
+    "ext": "md",
+    "evaluation_set": "held-out"
+  },
+  {
+    "id": "F12",
+    "brand": "lego",
+    "site": "https://www.lego.com",
+    "type": "vendor comparison scorecard",
+    "size": "long",
+    "brief": "I'm a sourcing manager at the LEGO Group (lego.com). We're choosing suppliers for the paper bags that hold bricks inside our boxes, and I need a vendor comparison scorecard for the steering group, 2 to 3 pages. Three suppliers, for this exercise only: Supplier A (Germany) quotes €0.021 per bag, 10-week lead time, FSC certified, capacity 400m bags a year; Supplier B (Poland) €0.018, 14 weeks, FSC certified, 250m a year; Supplier C (Mexico) €0.024, 8 weeks, FSC certification pending, 300m a year, close to our Monterrey factory. We need 600m bags a year across all sites. Set weighted criteria (cost, capacity, lead time, certification, location risk), score each supplier with reasoning, show the maths in Markdown tables, and recommend a split award if that beats a single supplier.",
+    "ext": "md",
+    "evaluation_set": "held-out"
+  }
+]

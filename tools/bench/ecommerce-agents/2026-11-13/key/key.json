@@ -1,0 +1,502 @@
+{
+ "JD01": {
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "JD02": {
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "JD03": {
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "JD04": {
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "JD05": {
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "JD06": {
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "JD07": {
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "agent",
+   "2": "plain"
+  }
+ },
+ "JD08": {
+  "J01": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J04": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "JD09": {
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J09": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J10": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ },
+ "JD10": {
+  "J01": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J02": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J03": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J04": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J05": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J06": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J07": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J08": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J09": {
+   "1": "agent",
+   "2": "plain"
+  },
+  "J10": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J11": {
+   "1": "plain",
+   "2": "agent"
+  },
+  "J12": {
+   "1": "plain",
+   "2": "agent"
+  }
+ }
+}

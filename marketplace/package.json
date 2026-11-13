@@ -14,7 +14,9 @@
     "db:migrate:staging": "wrangler d1 migrations apply ai-blocks-agents-staging --remote --env staging",
     "db:migrate:production": "wrangler d1 migrations apply ai-blocks-agents --remote --env production",
     "deploy:staging": "npm run typecheck && npm test && npm run build && wrangler deploy --env staging",
-    "deploy:production": "npm run typecheck && npm test && npm run build && wrangler deploy --env production"
+    "deploy:production": "npm run typecheck && npm test && npm run build && wrangler deploy --env production",
+    "knowledge:check": "node scripts/check-knowledge.mjs",
+    "knowledge:eval": "node scripts/eval-retrieval.mjs"
   },
   "dependencies": {
     "@clerk/backend": "3.26.1",

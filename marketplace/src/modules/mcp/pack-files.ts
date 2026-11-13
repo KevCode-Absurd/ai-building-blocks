@@ -2,7 +2,8 @@
 // so a connected AI can take the agent on in its own chat, on the user's own AI plan. Only paths listed in the
 // agent's files.json are read; nothing here runs a model. The layout is in ARCHITECTURE.md ("Agent packs").
 import type { Env } from "../../env.ts";
-import { bestRoute, relevantSections, type RouteCandidate, type RouteMatch } from "../packs/route.ts";
+import { bestRoute, type RouteCandidate, type RouteMatch } from "../packs/route.ts";
+import { KnowledgeIndex, indexedPath, knowledgeExcerpt, parseSourcesMd, type Answer } from "../packs/retrieve.ts";
 
 export interface PackIndexFile { path: string; url: string; bytes: number; purpose: string; kind: string }
 export interface PackIndex {
@@ -159,11 +160,48 @@ export async function loadPayload(env: Env, index: PackIndex, request?: string, 
   const knowledge = request || named ? index.files.find(x => x.path === "knowledge.md") : undefined;
   if (knowledge && left() > 2_000) {
     const { text } = await readPackFile(env, knowledge);
-    const picked = relevantSections(text, `${request ?? ""} ${route?.candidate.name ?? ""} ${route?.candidate.text ?? ""}`, Math.min(MAX_KNOWLEDGE_CHARS, left() - 500));
-    if (picked.length) {
-      sections.push(...picked.map(s => s.heading));
-      add("knowledge.md", picked.map(s => s.text).join("\n\n"), true, `sections: ${sections.join("; ")}`);
+    // Passages, not whole sections (retrieve.ts): the parts of knowledge.md this request needs, each under its
+    // heading trail, plus one passage of each section every job leans on.
+    const { passages, headings } = knowledgeExcerpt(text, `${request ?? ""} ${route?.candidate.name ?? ""} ${route?.candidate.text ?? ""}`, Math.min(MAX_KNOWLEDGE_CHARS, left() - 500));
+    if (passages.length) {
+      sections.push(...headings);
+      add("knowledge.md", passages.map(p => `[${p.context}, lines ${p.lines[0]}-${p.lines[1]}]\n${p.text}`).join("\n\n"), true, `passages from: ${sections.join("; ")}`);
     }
   }
   return { parts, route, sections, chars, held, curated };
+}
+
+/** Most pack files one knowledge lookup reads, and how many at a time. */
+export const MAX_INDEXED_FILES = 160;
+const READ_AT_ONCE = 8;
+/** Built indexes kept per Worker, by agent and pack version, so a run of questions reads the files once. */
+const indexCache = new Map<string, Promise<KnowledgeIndex>>();
+const INDEX_CACHE_SIZE = 16;
+
+/** The agent's own knowledge index: every on-demand file of its pack (retrieve.ts indexedPath), with its sources. */
+export function packKnowledgeIndex(env: Env, index: PackIndex): Promise<KnowledgeIndex> {
+  const key = `${index.agent_id}@${index.version}`;
+  const hit = indexCache.get(key);
+  if (hit) return hit;
+  const build = (async () => {
+    const files = index.files.filter(f => indexedPath(f.path)).slice(0, MAX_INDEXED_FILES);
+    const texts: { path: string; text: string }[] = [];
+    for (let i = 0; i < files.length; i += READ_AT_ONCE) {
+      const got = await Promise.all(files.slice(i, i + READ_AT_ONCE).map(async f => ({ path: f.path, text: (await readPackFile(env, f)).text })));
+      texts.push(...got);
+    }
+    const src = index.files.find(f => f.path === "sources.md");
+    const sources = src ? parseSourcesMd((await readPackFile(env, src)).text) : [];
+    const k = index.knowledge as { review_every_days?: number } | string | null;
+    return new KnowledgeIndex(texts, { sources, reviewDays: typeof k === "object" && k ? k.review_every_days ?? 0 : 0 });
+  })();
+  build.catch(() => indexCache.delete(key));
+  indexCache.set(key, build);
+  while (indexCache.size > INDEX_CACHE_SIZE) indexCache.delete(indexCache.keys().next().value!);
+  return build;
+}
+
+/** ask_agent_knowledge: the passages of an agent's pack that answer a question (one or more phrasings). */
+export async function askPack(env: Env, index: PackIndex, questions: string[], opts: { k?: number; today?: string; paths?: string[] } = {}): Promise<Answer> {
+  return (await packKnowledgeIndex(env, index)).ask(questions, opts);
 }

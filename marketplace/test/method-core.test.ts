@@ -19,9 +19,10 @@ const FAMILIES = Object.keys(WORD_BUDGETS) as DeliverableFamily[];
 const DATA = new URL("../src/modules/catalogue/data/", import.meta.url);
 const allJobTypes = (): JobType[] => readdirSync(DATA).filter(f => f.endsWith(".json")).flatMap(f => JSON.parse(readFileSync(new URL(f, DATA), "utf8")));
 
-test("WORK-METHOD.md is under 1,000 words and still covers every part of the method", () => {
+test("WORK-METHOD.md is under 1,120 words and still covers every part of the method", () => {
   const words = METHOD.split(/\s+/).filter(Boolean).length;
-  assert.ok(words < 1000, `WORK-METHOD.md has ${words} words`);
+  // 1,000 until 13 Nov 2026; the pack lookup, outside-evidence checks and two-order blind pick added about 100.
+  assert.ok(words < 1120, `WORK-METHOD.md has ${words} words`);
   const parts: [string, RegExp][] = [
     ["spec sheet", /## 0\. Frame: the spec sheet[\s\S]*who must do what after seeing this[\s\S]*Acceptance tests:\*\* 5 to 7 questions/],
     ["ground only what the job needs", /## 1\. Ground: only what the job needs\n\nCapture what the acceptance tests depend on, and no more/],

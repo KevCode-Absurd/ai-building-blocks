@@ -22,7 +22,8 @@ import { hasScope, type Scope } from "./service.ts";
 import { personaTeam, TEAM_SEAT_TYPES } from "../directory/team.ts";
 import { parseSeat, parseTeam, trimmedSeatPack, SeatInputError } from "./team-seats.ts";
 import type { SeatRequest } from "../directory/team.ts";
-import { loadPayload, ON_DEMAND_FILES, PackUnavailable, readPackFile, readPackIndex, type PackIndex, type PackIndexFile } from "./pack-files.ts";
+import { askPack, loadPayload, ON_DEMAND_FILES, PackUnavailable, readPackFile, readPackIndex, type PackIndex, type PackIndexFile } from "./pack-files.ts";
+import { answerText } from "../packs/retrieve.ts";
 import {executionPlan,checkExecutionDelivery} from '../directory/execution.ts';
 import {outputPolicyMarkdown} from '../runner/output-policy.ts';
 import { leadAgentOfRole } from "../packs/toolbox.ts";
@@ -473,6 +474,36 @@ export const TOOLS: ToolDef[] = [
       return {
         text: `===== ${f.path} (${p.name}, ${f.purpose}) =====\n${body}${trimmed ? "\n[Cut short here. The full file is in the download.]" : ""}`,
         data: { agent_id: p.id, path: f.path, purpose: f.purpose, kind: f.kind, text: body, trimmed },
+      };
+    },
+  },
+  {
+    name: "ask_agent_knowledge", title: "Ask an agent's knowledge", scope: "marketplace:read", costly: false,
+    description: "Look up what one AI Blocks agent knows about a question, in that agent's own pack only (its role knowledge, skills, prompts, workflows and toolbox items): returns the best passages, best first, each with its file, lines, heading and the dated sources it cites, so you read a few hundred words instead of whole files. Give two or three phrasings in questions when the user's words may not be the pack's. When enough is false, the pack does not know: say so, then ask the user or research it, and never fill the gap from memory. It searches one agent's pack, never the wider library.",
+    inputSchema: schema({
+      agent_id: { type: "string", maxLength: 128, description: "The agent_id, such as nova-seo." },
+      questions: { type: "array", minItems: 1, maxItems: 4, items: { type: "string", minLength: 3, maxLength: 500 }, description: "One to four phrasings of the same question, such as [\"how long after a core update before judging a drop\", \"traffic fell after Google update\"]." },
+      k: { type: "integer", minimum: 1, maximum: 10, description: "How many passages to return, 1 to 10 (default 6)." },
+      in: { type: "array", maxItems: 10, items: { type: "string", maxLength: 300 }, description: "Only these pack files, such as [\"knowledge.md\"]. Leave out to search all of the agent's files." },
+    }, ["agent_id", "questions"]),
+    annotations: read("Ask an agent's knowledge"),
+    async run(c, args) {
+      const { persona: p, index } = await packFor(c, id(args, "agent_id")!);
+      const raw = (args as Record<string, unknown>).questions;
+      const questions = Array.isArray(raw) ? raw.filter((q): q is string => typeof q === "string" && q.trim().length >= 3).map(q => q.trim().slice(0, 500)).slice(0, 4) : [];
+      if (!questions.length) return no("Give questions: one to four phrasings of what you need to know, each at least 3 characters.");
+      const kRaw = Number((args as Record<string, unknown>).k);
+      const k = Number.isInteger(kRaw) && kRaw >= 1 && kRaw <= 10 ? kRaw : 6;
+      const inRaw = (args as Record<string, unknown>).in;
+      const paths = Array.isArray(inRaw) ? inRaw.filter((x): x is string => typeof x === "string").map(x => x.replace(/^\.?\/+/, "")).slice(0, 10) : [];
+      const unknown = paths.filter(x => !index.files.some(f => f.path === x));
+      if (unknown.length) return no(`${unknown.join(", ")} ${unknown.length === 1 ? "is" : "are"} not in ${p.name}'s pack. Leave in out to search all of its files.`);
+      let answer: Awaited<ReturnType<typeof askPack>>;
+      try { answer = await askPack(c.env, index, questions, { k, today: nowIso().slice(0, 10), paths }); }
+      catch (err) { if (err instanceof PackUnavailable) return no(`${err.message} Try again in a minute.`); throw err; }
+      return {
+        text: answerText(answer, p.name),
+        data: { agent_id: p.id, version: index.version, ...answer, passages: answer.passages.map(x => ({ id: x.id, path: x.path, lines: x.lines, context: x.context, text: x.text, score: x.score, matched: x.matched, cites: x.cites })) } as unknown as Record<string, unknown>,
       };
     },
   },

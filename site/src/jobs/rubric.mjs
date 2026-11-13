@@ -1,4 +1,4 @@
-import { craftRubric, familyOf, gatesFor, DELIVERABLE_KINDS } from './grounding.mjs';
+import { cardGates, cardRubric, craftRubric, familyOf, gatesFor, DELIVERABLE_KINDS } from './grounding.mjs';
 
 /**
  * The standard criteria for every team job. The job leads by a clear margin, 30 of 100, as it does in every craft
@@ -26,10 +26,12 @@ export const CRAFT_FLOOR = 5;
  * @param {{kind?: string}} [options] kind: the job's deliverable_kind. When set, the rubric adds the craft criteria for
  *   that family (job-first: "does the job" carries the largest weight, then fidelity, own material and the rest) and
  *   its pass/fail gates (acceptance tests, sourced claims, the buyer can act, format complete). Legacy jobs replay
- *   without it.
+ *   without it. shape and selling (from grounding.mjs jobFit): the card's own rubric and gates, as prepare_job_context
+ *   gives them, so a team job is checked against the same list as one lead would be.
  */
-export function assembleRubric(card, items = [], { kind } = {}) {
-  const craft = DELIVERABLE_KINDS.includes(kind) ? { deliverable_kind: kind, family: familyOf(kind), criteria: craftRubric(kind), gates: gatesFor(kind), pass: CRAFT_PASS, floor: CRAFT_FLOOR } : null;
+export function assembleRubric(card, items = [], { kind, shape, selling } = {}) {
+  const fitted = shape !== undefined || selling !== undefined;
+  const craft = DELIVERABLE_KINDS.includes(kind) ? { deliverable_kind: kind, family: familyOf(kind), criteria: fitted ? cardRubric(kind, shape ?? null) : craftRubric(kind), gates: fitted ? cardGates(kind, { shape: shape ?? null, selling }) : gatesFor(kind), pass: CRAFT_PASS, floor: CRAFT_FLOOR } : null;
   return { schema: 'ai-blocks-rubric/1', standard: STANDARD_CRITERIA.map(c => ({ ...c, ...(c.id === 'range' && card?.dials?.variety_mix?.preset === 'focused' ? { text: 'Tests the agreed variable within the chosen method while preserving all controlled dimensions.' } : {}) })), job_specific: (card?.acceptance ?? []).map(c => ({ ...c })), item_checks: items.flatMap(i => (i.checks ?? []).map(check => ({ slug: i.slug, check: typeof check === 'string' ? check : check.text ?? check.name ?? JSON.stringify(check) }))), pass: { overall: 0.75, critical_must_pass: true }, ...(craft ? { craft } : {}) };
 }
 const inRange = value => Number.isFinite(value) && value >= 0 && value <= 10;

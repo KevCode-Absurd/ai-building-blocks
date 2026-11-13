@@ -5,7 +5,8 @@
 // rule, and to capture the brand's colours, fonts and screenshots, name competitors and write a taste brief. A creative
 // brief listing its channels was read as email work and as a team job. The card names the actual deliverable, so the
 // card decides these where it knows better:
-//   kinds/kind   the deliverable kinds that fit; a guessed kind outside them becomes `kind`
+//   kinds/kind   the deliverable kinds that fit; a guessed writing kind (email, copy, web page, none) outside them
+//                becomes `kind`. A job of any other kind outside them (an audit, a strategy, code) gets no shape.
 //   context      how much brand context: 'facts' (the request's facts plus sourced public facts) or 'voice' (also
 //                5 to 10 real lines in the channel). No card here needs the look capture, screenshots or a taste brief.
 //   fresh        new work for this moment, so the mode is new unless the request asks to change something existing
@@ -26,9 +27,10 @@ const t = (type, test) => Object.freeze({ type, test });
 
 const SUPPORT_REPLY = Object.freeze({
   kinds: ['email', 'copy'], kind: 'email', context: 'facts', fresh: true, light: true, levers: [],
+  // Answered only by the facts or terms themselves: "a refund on her order" names neither what happened nor the policy.
   questions: [
-    q('case_facts', 'What do we know about this customer\'s order or account that the reply should use (dates, items, what was already tried)?', 'Only what the customer\'s message and your note say; nothing else is assumed.', /\b(?:order|box|shipment|parcel|account|bought|subscri\w+|ticket|booking|reservation|charge)\b/i),
-    q('allowed', 'What may the reply offer or promise (refund, replacement, credit, an exception), and who approves anything beyond policy?', 'Only what the policy in your note allows; anything beyond it goes to a lead.', /\b(?:policy|refund|replace\w*|reship\w*|credit|exception|we (?:can|will|offer))\b/i),
+    q('case_facts', 'What do we know about this customer\'s order or account that the reply should use (dates, items, what was already tried)?', 'Only what the customer\'s message and your note say; nothing else is assumed.', /\b(?:order (?:#|no\.? ?|number )\s?\w*\d|#\d{3,}|\d+ (?:days?|weeks?) (?:ago|late)|(?:arrived|came|showed up|was delivered)(?: [\w-]+){0,3} (?:damaged|broken|torn|crushed|late|wrong|missing|leaking|cracked|opened|empty|dented)|(?:damaged|broken|torn|crushed|leaking|cracked|missing|wrong|dented) (?:[\w-]+ ){0,2}(?:bag|box|item|items|parcel|package|order|shipment|product|size|colou?r)|(?:ordered|bought|placed|shipped|charged|booked|delivered) (?:on|last|yesterday|\d)|already (?:tried|sent|refunded|replaced|reshipped|contacted)|tracking (?:number|shows|says)|charged twice|double[- ]charged)\b/i),
+    q('allowed', 'What may the reply offer or promise (refund, replacement, credit, an exception), and who approves anything beyond policy?', 'Only what the policy in your note allows; anything beyond it goes to a lead.', /\b(?:(?:our|the|their) (?:[\w-]+ ){0,2}polic(?:y|ies) (?:is|are|says|allows|gives|covers|lets)|policy:|within \d+ (?:days?|weeks?|hours?)|\d+[- ](?:day|week) (?:return|refund|exchange|money[- ]back|guarantee)|we (?:can|will|may|offer|allow|give|cover)|(?:you|the reply) (?:can|may) offer|assum(?:e|ing))\b/i),
     q('sender', 'Who signs it, and in which channel: email, chat or the help desk?', 'Signed by you, by first name, as an email.', /\b(?:e-?mail|chat|signed? (?:by|as|off)|from me|my reply)\b/i),
   ],
   tests: [
@@ -62,6 +64,13 @@ const FIRST_TOUCH = Object.freeze({
   job_test: 'The named prospect gets a true reason to reply and one easy ask. Every acceptance test on the spec sheet passes.',
   candidates: 'Three subject line and opening pairs, each written in full.',
   scope_note: 'One first-touch email: card must-haves 1, 2 and 4 apply; 3 and 5 (the follow-up cadence, reply scripts and test plan) only if asked.',
+});
+// More than one email, a follow-up or a call: not one first-touch email.
+const NOT_FIRST_TOUCH = /\b(?:sequence|cadence|series|touches|follow[- ]?ups?|\d+[- ](?:step|email|touch)|(?:\d+|two|three|four|five|six|seven|eight|nine|ten) (?:[\w-]+ ){0,3}e-?mails|(?:one|1|an?) (?:[\w-]+ )?(?:e-?mails?|notes?|messages?|touch(?:es)?) (?:per|a|each|every) (?:week|day|month|few days)|(?:one|1) (?:per|each|every) (?:week|day|month|few days)|(?:weekly|daily) (?:e-?mails?|touches)|(?:call|phone|calling) scripts?|cold[- ]call\w*|voicemails?)\b/i;
+// A cold call script: spoken, so no subject line; an opener, one question, objections and one ask.
+const CALL_SCRIPT = Object.freeze({
+  kinds: ['copy', 'plan'], kind: 'copy',
+  complete: ['who is calling and why this person, in the first breath', 'one question that earns the next 30 seconds', 'answers to the two likeliest objections', 'one ask with a time', 'a voicemail version under 30 seconds'],
 });
 
 // A short status-page or incident update: what is affected, what to do and the next update time, in a few lines.
@@ -204,16 +213,18 @@ export const CARD_SHAPES = Object.freeze({
       q('desk', 'Which help desk do agents use, and which merge fields does it have?', 'Plain fields such as {first_name} and {order_number} that you map to your help desk.', /\b(?:zendesk|gorgias|intercom|freshdesk|help ?scout|kustomer|salesforce|front|hubspot)\b/i),
     ],
     complete: ['when to use and when not to, for each macro', 'line one names the customer\'s problem', 'policy terms match the dated policy', 'merge fields match the help desk', 'an escalation route'],
+    // A staffing plan is a plan; a schedule or forecast counts only with the team, shifts or tickets it is for, so "why
+    // her delivery schedule changed" is still a reply. Scripts for agents to use are a macro set, not one reply.
     variants: [
-      { when: /\b(?:staffing|coverage|schedul\w*|forecast\w*|capacity|headcount|rota)\b/i, none: true },
-      { when: /\b(?:repl(?:y|ies)|respon(?:d|se)|answer|write back)\b/i, unless: /\bmacros?\b|templates?|canned|saved replies|ticket types|most common/i, ...SUPPORT_REPLY },
+      { when: /\b(?:staffing|headcount|rota|coverage (?:plan|model|gaps?)|(?:weekend|holiday|night|support|desk|queue) coverage|capacity (?:plan\w*|model\w*)|(?:support|team|agent|desk) capacity)\b|\b(?:schedul\w*|forecast\w*)\b[^.]{0,40}\b(?:agents?|staff|shifts?|tickets?|volume|backlog|team)\b|\b(?:agents?|staff|shifts?|ticket|support|team) (?:[\w-]+ ){0,3}(?:schedul\w*|forecast\w*)/i, none: true },
+      { when: /\b(?:repl(?:y|ies)|respon(?:d|se)|answer|write back)\b/i, unless: /\bmacros?\b|templates?|canned|saved replies|ticket types|most common|\bscripts?\b|\bagents? (?:can|could|will|should|to) use\b|\bfor (?:our |the )?agents\b/i, ...SUPPORT_REPLY },
     ],
   }),
   'outbound-sales': Object.freeze({
     kinds: ['email', 'copy', 'plan'], kind: 'email', context: 'facts', fresh: true, levers: [],
     questions: FIRST_TOUCH.questions,
     complete: ['two subject lines per email', 'each touch adds something new', 'one ask per touch', 'a polite close-out touch', 'personalisation slots tied to real research'],
-    variants: [{ when: /./, unless: /\b(?:sequence|cadence|series|touches|follow-?ups?|\d+[- ](?:step|email|touch))\b/i, ...FIRST_TOUCH }],
+    variants: [{ when: /\b(?:(?:call|phone|calling) scripts?|cold[- ]call\w*)\b/i, ...CALL_SCRIPT }, { when: /./, unless: NOT_FIRST_TOUCH, ...FIRST_TOUCH }],
   }),
   'notification-copy': Object.freeze({
     kinds: ['copy'], kind: 'copy', context: 'voice', fresh: true, light: true, levers: [],
@@ -342,7 +353,8 @@ export const CARD_SHAPES = Object.freeze({
   }),
   // Documents about other channels: one lead, whatever channels they list.
   'creator-brief': Object.freeze({ document: true }),
-  'launch-plan': Object.freeze({ document: true }),
+  // A launch plan that lists its channels is a plan, not the landing page it names.
+  'launch-plan': Object.freeze({ kinds: ['plan', 'strategy'], kind: 'plan', document: true }),
   'social-calendar': Object.freeze({ document: true }),
   'research-design': Object.freeze({ document: true }),
   'experiment-design': Object.freeze({ document: true }),
@@ -359,6 +371,14 @@ export function cardShape(card, ask = '') {
   if (variant.none) return null;
   const { when, unless, ...over } = variant;
   return { ...rest, ...over };
+}
+
+/** The card's shape for a job of this kind, or null. A shape is written for the kinds it names: an audit of help desk
+ *  replies, a sales strategy or a React component keeps its own kind's questions, tests, depth and grounding. With no
+ *  kind given, the shape applies. prepare_job_context, the quality engine, the mode and the team path all use this. */
+export function jobShape(card, ask = '', kind) {
+  const shape = cardShape(card, ask);
+  return shape && kind && shape.kinds && !shape.kinds.includes(kind) ? null : shape;
 }
 
 /** The card's own intake questions, minus those the request answers, at most `max`; null when the card has none. */

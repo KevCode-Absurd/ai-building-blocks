@@ -1,6 +1,6 @@
 // Model-free routing. The host confirms the family and depth against the brief.
 import { QUALITY_PROFILES } from './quality-profiles.mjs';
-import { cardShape, shortWordLimit } from './card-shapes.mjs';
+import { cardShape, jobShape, shortWordLimit } from './card-shapes.mjs';
 
 export const QUALITY_ENGINE_VERSION = '3.4';
 const BASE = 'https://agents.useaiblocks.com/tools/quality/';
@@ -12,7 +12,7 @@ const BASE = 'https://agents.useaiblocks.com/tools/quality/';
 const PITCH_TARGET = String.raw`(?:journalists?|reporters?|editors?|writers?|producers?|columnists?|correspondents?|bloggers?|the press|press|media|outlets?|publications?|newsletters?|podcast hosts?|hosts?)`;
 const matches = [
   ['claims-review', /claims? (?:review|audit|check)|regulatory claims|(?:fda|ftc|asa)\b[^.]{0,40}\b(?:risk|claims?)|claims? substantiation|marketing compliance/i],
-  ['press-pitch', new RegExp(String.raw`^(?![\s\S]*\b(?:crisis|recall|breach|outage|going viral|apolog\w*|holding statement|backlash|lawsuit|scandal)\b)[\s\S]*(?:\b(?:press|media|story|feature|exclusive|podcast guest) pitch(?:es)?\b|\bpitch(?:ing)?(?: (?:e-?mails?|notes?|letters?|messages?))? (?:to|for) (?:a |an |the |our |some |these |\d+ |two |three |five )?(?:[\w'’-]+ ){0,3}${PITCH_TARGET}\b|\bpitch (?:(?:me|us|our [\w-]+|[\w-]+) )?(?:as an? (?:guest|expert|source) )?(?:to|for|on) (?:a |the |\d+ |two |three |five )?(?:[\w-]+ ){0,2}podcasts?\b|\b${PITCH_TARGET} pitch(?:es)?\b|\b(?:media|press|journalist) outreach\b|\bpitch (?:(?:a|the|our|this) )?(?:story|feature|exclusive)\b)`, 'i')],
+  ['press-pitch', new RegExp(String.raw`^(?![\s\S]*\b(?:crisis|recall|breach|outage|going viral|apolog\w*|holding statement|backlash|lawsuit|scandal)\b)[\s\S]*(?:\b(?:press|media|story|feature|exclusive|podcast guest) pitch(?:es)?\b|\bpitch(?:ing)?(?: (?:e-?mails?|notes?|letters?|messages?))?(?:, [^,.;]{1,40},)? (?:to|for) (?:a |an |the |our |some |these |\d+ |two |three |five )?(?:[\w'’-]+ ){0,3}${PITCH_TARGET}\b|\bpitch (?:(?:me|us|our [\w-]+|[\w-]+) )?(?:as an? (?:guest|expert|source) )?(?:to|for|on) (?:a |the |\d+ |two |three |five )?(?:[\w-]+ ){0,2}podcasts?\b|\b${PITCH_TARGET} pitch(?:es)?\b|\b(?:media|press|journalist) outreach\b|\bpitch (?:(?:a|the|our|this) )?(?:story|feature|exclusive)\b)`, 'i')],
   ['crisis-response', /crisis|holding statement|press (?:reply|statement|inquiry|enquiry)|statement (?:we'?ll |to )?send|\breporter\b|going viral|public apology|recall notice|breach notice|outage update|status[- ]page|incident (?:update|statement|notice|message|comms|communications?|e-?mail|post|summary)|(?:outage|downtime|disruption|service) (?:updates?|notices?|messages?|statements?|e-?mails?|posts?|alerts?)|(?:update|notice|message|statement|post|e-?mail|note) (?:\w+ ){0,3}(?:on|about|for) (?:the |an? |our |this |today'?s |yesterday'?s |last night'?s |this morning'?s )?(?:[\w-]+ ){0,2}(?:outage|incident|downtime|disruption)\b|degraded (?:performance|service)/i],
   ['internal-announcement', /all[- ]hands (?:announcement|e-?mail|note|message|post|memo|update|script)|announc\w* (?:[\w-]+ ){0,6}(?:at|in|to|for|with) (?:the |our |all |tomorrow'?s |this week'?s |next week'?s |friday'?s |monday'?s )?(?:all[- ]hands|all[- ]staff|whole company|company|staff|employees|team meeting|town ?hall)\b|internal (?:announcements?|memos?|comms|communications?)|(?:company[- ]wide|all[- ]staff|staff|employee|org[- ]wide|team[- ]wide) (?:announcements?|memos?|notes?|e-?mails?|messages?|posts?|updates?|comms)|(?:announcement|memo|note|e-?mail|message|post) to (?:all |the whole |our |the )?(?:staff|employees|company|team|everyone)\b|town ?hall (?:announcement|e-?mail|note|script)|announc\w* (?:[\w-]+ ){0,4}(?:reorg|re-?organi[sz]ation|restructur\w*|layoffs?|new (?:ceo|cto|cfo|leader|head|benefits?|office))|(?:reorg|re-?organi[sz]ation|change|policy change) (?:announcements?|notices?|e-?mails?|memos?)|leadership memos?/i],
   ['review-replies', /review repl|repl(?:y|ies|ying) to (?:a |the |this |that |our )?(?:\w+ )?reviews?|respon(?:d|se|ses|ding) to (?:a |the |this |that )?(?:\w+ )?reviews?|\b(?:g2|trustpilot|yelp|app store|google) reviews?\b|negative review|angry customer|public reply/i],
@@ -23,7 +23,7 @@ const matches = [
   // A brief for translators; translating push or UI strings themselves stays notification copy, above.
   ['localisation-brief', /locali[sz]ation (?:briefs?|plans?|guides?|style guides?|kits?|handoffs?|notes|checklists?|requirements)|(?:translation|translator|transcreation) (?:briefs?|guides?|style guides?|kits?|instructions|notes|handoffs?)|\btranscreation\b|brief (?:\w+ ){0,2}(?:for|to) (?:the |our |an? )?(?:\w+ )?(?:translators?|translation (?:agency|team|vendor|partner)|locali[sz]ation (?:agency|team|vendor|partner))|glossary (?:handoff|for (?:the |our )?translators?)|locale guides?/i],
   // The policy itself: rules people or agents apply. A guide, reply or memo about a policy keeps its own card.
-  ['policy-doc', /(?:write|draft|create|prepare|rewrite|put together|set out|define) (?:the |a |an |our |my |new |clear )?(?:(?!(?:for|to|on|about|of|with|under|in|that|which|and)\b)[\w-]+ ){0,4}(?:polic(?:y|ies)|decision rules|approval rules|guardrails)\b(?! (?:pages?|announcements?|changes?|sections?|faqs?|summary|e-?mails?|notices?))|\b(?:hr|people|workplace|internal|company|staff|operating|approval|acceptable use) polic(?:y|ies)\b(?! (?:pages?|announcements?|changes?|faqs?|e-?mails?|notices?))|(?:employee|staff) handbook|handbook (?:sections?|policy|chapters?)|code of conduct|(?:decision|approval|escalation) rules (?:for|that) (?:our |the )?(?:\w+ )?(?:agents?|staff|team|reps?)|(?:agent|staff) (?:rules|guidelines)|guardrails for (?:\w+ )?agents?|rules of engagement/i],
+  ['policy-doc', /(?:write|draft|create|prepare|rewrite|put together|set out|define) (?:the |a |an |our |my |new |clear )?(?:(?!(?:for|to|on|about|of|with|under|in|that|which|and)\b)[\w-]+ ){0,4}(?:polic(?:y|ies)|decision rules|approval rules|guardrails)\b(?! (?:pages?|announcements?|changes?|sections?|faqs?|summary|e-?mails?|notices?))|\b(?:hr|people|workplace|internal|company|staff|operating|approval|acceptable use) polic(?:y|ies)\b(?! (?:pages?|announcements?|changes?|faqs?|e-?mails?|notices?))|(?:employee|staff) handbook|handbook (?:sections?|policy|chapters?)|code of conduct|(?:decision|approval|escalation) rules (?:for|that) (?:our |the )?(?:\w+ )?(?:agents?|staff|team|reps?)|(?:agent|staff) (?:rules|guidelines)|\b(?:exception|escalation|approval|goodwill|refund|returns?) polic(?:y|ies) (?:that |which )?(?:agents?|staff|they|reps?|(?:the |our )?team) (?:can|should|must|will) (?:apply|use|follow)\b|guardrails for (?:\w+ )?agents?|rules of engagement/i],
   ['audio-ad-script', /(?:radio|podcast|audio|streaming audio|spotify|host[- ]read|pre[- ]roll|mid[- ]roll|sponsor(?:ship)?) (?:ad )?(?:ads?|spots?|scripts?|reads?|commercials?)\b|\bhost[- ]read\b|\bradio spots?\b|\b(?:sponsor|ad) reads?\b|\baudio ads?\b/i],
   ['product-announcement', /release notes|changelog|product announcement|launch announcement|feature announcement|press release|news release|launch (?:email|post|blog)/i],
   ['launch-plan', /launch plan|go-to-market|\bgtm\b|rollout plan|launch calendar|release plan/i],
@@ -48,7 +48,7 @@ const matches = [
   ['webinar-script', /webinar|talk track|workshop script|live session|virtual event/i],
   ['help-docs', /help[- ]?(?:cent(?:er|re)|guide|doc|article)|knowledge base|\bfaqs?\b|how.to guide|user guide|getting started guide|troubleshooting (?:article|guide)/i],
   ['research-design', /survey|research (?:design|plan)|diary study|interview guide|usability (?:test|study)|discovery plan|study protocol|focus group|facilitator guide/i],
-  ['investor-update', /(?:leadership|investor|board|shareholder|stakeholder|founder|lender) (?:update|report|letter)|quarterly (?:update|letter)|monthly update/i],
+  ['investor-update', /(?:leadership|investor|board|shareholder|stakeholder|founder|lender) (?:update|report|letter)|quarterly (?:update|letter)|monthly update|\bupdate (?:for|to) (?:our |the |all |my )?(?:investors|board|shareholders|stakeholders|lenders)\b/i],
   ['analysis-memo', /(?:analysis|decision|recommendation|options|strategy|finance|board) (?:memo|paper|note)|business case|root.cause analysis|churn analysis|unit economics|memo (?:on|about) (?:why|whether|how)/i],
   ['social-calendar', /social (?:media )?(?:calendar|plan)|content calendar|posting schedule|post schedule/i],
   ['seo-article', /blog post|\bseo\b|\barticle\b|pillar page|long-form guide/i],
@@ -93,17 +93,36 @@ const ADS_OR_EMAILS = String.raw`(?:\bads?\b|\be-?mails?\b(?! (?:us|me|them|her|
 const MIXED = new RegExp(`${WEB_PAGE}.*(?:and|plus|,).*${ADS_OR_EMAILS}|${ADS_OR_EMAILS}.*(?:and|plus|,).*${WEB_PAGE}`, 'i');
 export const isMixedRequest = request => MIXED.test(String(request));
 
-export function qualityEngineContext(request = '', kind = 'other') {
+// Words that add a separate deliverable to a document ("a creative brief, plus 3 Meta ads"), rather than list its subject
+// ("Channels: a landing page, Meta ads and email").
+const WORK_NOUN = String.raw`(?:ads?|adverts?|creatives?|e-?mails?|newsletters?|pages?|websites?|sites?|posts?|videos?|scripts?|images?|banners?|decks?)`;
+const EXTRA_WORK = new RegExp(String.raw`\b(?:plus|as well as|along with|together with|and also|in addition to)\b[^.;:]{0,60}?\b${WORK_NOUN}\b|\b(?:and|also|then)\s+(?:also\s+)?(?:write|make|build|design|create|draft|produce)\b`, 'i');
+/** A brief, memo or plan whose channels are its subject: one document for one lead, not mixed work. The router and the
+ *  quality depth both use this, so a document kept single is never given team depth. */
+export function documentAboutChannels(request = '', family = qualityFamily(request)) {
+  const ask = askOf(String(request ?? ''));
+  return Boolean(cardShape(family, ask)?.document) && !EXTRA_WORK.test(ask);
+}
+
+// The head asks for a plan, series, guide or policy itself, not a reply that mentions one.
+const ASKS_FOR_DOCUMENT = /\b(?:write|draft|create|build|make|prepare|produce|need|want|rewrite|update)\s+(?:(?:a|an|the|our|my|new|up)\s+)?(?:[\w'-]+\s+){0,3}?(?:plans?|series|sequences?|guides?|polic(?:y|ies)|playbooks?|analysis|macros|sop)\b/i;
+
+/** kind: the job's deliverable kind. A card's shape applies only to the kinds it names; with no kind it applies. */
+export function qualityEngineContext(request = '', kind) {
   const text = String(request);
-  const family = qualityFamily(text, kind);
+  const family = qualityFamily(text, kind ?? 'other');
   const profile = QUALITY_PROFILES[family] ?? QUALITY_PROFILES._any;
-  // A reviewer's discipline never creates a second writing role.
-  const mixed = isMixedRequest(text);
+  // A reviewer's discipline never creates a second writing role. A document about several channels is one lead's job.
+  const mixed = isMixedRequest(text) && !documentAboutChannels(text, family);
   // Light is decided on the ask, not the whole request: "assume our policy is ..." in a later sentence does not make a
-  // 180-word reply a policy document. The card, a short word limit or the old short-piece words make it light.
-  const ask = askOf(text), head = askHead(ask), shape = cardShape(family, ask);
-  const light = (Boolean(shape?.light) || /reply|short email|push notification|support macro|social post/i.test(head) || shortWordLimit(ask))
-    && !/\b(?:plans?|series|sequences?|guides?|policy|policies|playbooks?|analysis|macros|sop)\b/i.test(head);
+  // 180-word reply a policy document. The card, a short word limit or the old short-piece words make it light. A card
+  // that is light (a reply, a first-touch email) stays light when the reply mentions a policy or a refund; only a head
+  // that asks for a plan, series, guide or policy itself is not light.
+  const ask = askOf(text), head = askHead(ask), shape = jobShape(family, ask, kind);
+  // An audit or analysis is never a short piece in one voice, even of "reply rates".
+  const light = shape?.light ? !ASKS_FOR_DOCUMENT.test(head)
+    : kind !== 'audit' && kind !== 'analysis' && (/reply|short email|push notification|support macro|social post/i.test(head) || shortWordLimit(ask))
+      && !/\b(?:plans?|series|sequences?|guides?|policy|policies|playbooks?|analysis|macros|sop)\b/i.test(head);
   const full = /(?:distinct|alternative|different|three|3) (?:concepts|directions|structures)/i.test(text);
   const depth = mixed ? 'team' : light ? 'light' : full ? 'full' : 'standard';
   return {

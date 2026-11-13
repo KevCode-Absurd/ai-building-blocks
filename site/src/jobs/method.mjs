@@ -3,10 +3,10 @@ import { executionQualityMethod } from './execution-quality.mjs';
 /** How a job with one lead runs. Sent in start_job for single mode; there is no record keeping to learn. */
 export const SINGLE_LEAD_METHOD = [
   'One lead does this job. You are the orchestrator.',
-  '1 Ask the `questions` in one message. Each has a default, so "you decide" is an answer.',
-  '2 Write the spec sheet (`next_action.context` pre-fills it): the job in one sentence, deliverables with counts, 5 to 7 acceptance tests.',
+  '1 If `questions` came (from_context omits them), ask them once. Each has a default, so "you decide" is an answer.',
+  '2 Write the spec sheet (from `next_action.context`, if sent): the job, deliverables with counts, 5 to 7 acceptance tests.',
   '3 Load the lead with `next_action` (or its `pack.one_file`). Hand it the answers, the spec sheet and the brief. It works from its toolbox.md and does not search the library.',
-  '4 The lead grounds the job in what the tests need, makes the drafts its depth names (expert and plain; a third only at full depth) and builds the best.',
+  '4 The lead grounds the job in what the tests need, makes the drafts its depth names (expert and plain; a third at full depth) and builds the best.',
   '5 One fresh reviewer who did not draft checks the finished candidates against `rubric` and picks: a new sub-agent, or a separate pass labelled SAME-CONTEXT. Every gate must pass.',
   '6 The lead hands back. Check each acceptance test and each gate against the work yourself. Any fail: send it back once, naming the failed tests. Hand over the work first, opened by 3 to 5 lines: what this is, the main decision and why, what to check before use.',
   'Nothing here permits sending, spending, publishing or deleting. Those stop for the owner.',

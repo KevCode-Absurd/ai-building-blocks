@@ -9,7 +9,7 @@
 import { intakeQuestions } from './intake-questions.mjs';
 import { brandFileStep } from './brand-file.mjs';
 import { QUALITY_ENGINE_VERSION, askOf, qualityEngineContext, qualityFamily } from './quality-engine.mjs';
-import { cardShape, cardQuestions } from './card-shapes.mjs';
+import { cardShape, cardQuestions, jobShape } from './card-shapes.mjs';
 
 const list = value => Array.isArray(value) ? value : [];
 const text = value => typeof value === 'string' && value.trim().length > 0;
@@ -318,14 +318,15 @@ export function requestedCount(request = '') {
   const word = m[1].toLowerCase();
   return /^\d+$/.test(word) ? Number(word) : NUMBER_WORDS[word] ?? 1;
 }
-/** The one-screen spec sheet, pre-filled from the request. Blank strings are for the maker to fill before any work. */
-export function specSheet({ request = '', kind, mode, kindSource = 'declared', shape = null } = {}) {
+/** The one-screen spec sheet, pre-filled from the request. Blank strings are for the maker to fill before any work.
+ *  in_client_words is the request itself, or a pointer to it when the caller (prepare_job_context) carries it already. */
+export function specSheet({ request = '', kind, mode, kindSource = 'declared', shape = null, requestPointer } = {}) {
   const need = shape?.context ? { level: shape.context, take: CONTEXT_LEVELS[shape.context], brand_file: true } : contextNeed(kind), count = requestedCount(request);
   return {
     path: 'context/spec.md',
     fill: 'One screen. Fill every blank before you make anything. Decide what the client did not say and list it under assumptions.',
     job: { text: '', prompt: 'Who must do what after seeing this (buy, sign up, reply, approve a budget)? One sentence.' },
-    deliverables: [{ kind, count, in_client_words: 'annex.request_verbatim', prompt: count === null ? 'State the exact count and format in the client\'s words.' : 'Confirm the count and format in the client\'s words.' }],
+    deliverables: [{ kind, count, in_client_words: requestPointer ?? String(request ?? ''), prompt: count === null ? 'State the exact count and format in the client\'s words.' : 'Confirm the count and format in the client\'s words.' }],
     acceptance_tests: shape?.tests ? shape.tests.map((row, n) => ({ id: `t${n + 1}`, ...row })) : acceptanceTests(kind),
     acceptance_rule: 'Keep 5 to 7. Rewrite each for this job. At least two on the commercial job, one on readiness, one on truth and one on clarity.',
     decisions: decisionsFor(kind),
@@ -451,12 +452,16 @@ export function suggestDeliverableKind(request = '') {
   // A scorecard or comparison for choosing among vendors is a plan for a decision, new work rather than an audit of
   // existing data; a hiring scorecard is not one.
   if (/\b(?:scorecards?|scoring matri(?:x|ces)|decision matri(?:x|ces)|evaluation matri(?:x|ces)|(?:vendor|supplier|provider|tool|software|platform) (?:comparisons?|evaluations?|selection))\b|\bcompar(?:e|ing|ison of) (?:the |our |these |those |\d+ |two |three |four |five )?(?:[\w-]+ ){0,3}(?:vendors|suppliers|providers|quotes|bids)\b/i.test(words) && !/\b(?:hiring|interview\w*|candidates?|recruit\w*)\b/i.test(words)) return kind('plan', 'comparison words');
+  // A reply to one person is a message, whatever it is about ("why her delivery schedule changed", "outside our refund
+  // policy"): a schedule or a policy named in it is not the deliverable.
+  if (/\b(?:write|draft|prepare|send)\s+(?:(?:a|an|the|my|our|this)\s+)?(?:[\w-]+\s+){0,3}?(?:repl(?:y|ies)|response)\b(?!\s+(?:rates?|times?|templates?|macros?|plans?|playbooks?|polic(?:y|ies)|guides?)\b)/i.test(words)) return kind('email', 'reply words');
   // An email series or newsletter is email work even when it asks for the "body copy" of each email.
   // Mixed work (a page or ads as well) falls through to the rules below.
   if (/\b(?:emails?|newsletters?)\b/i.test(words) && /\b(?:series|sequences?|subject lines?|preview text|welcome|drip|flows?|newsletters?)\b/i.test(words)
     && !/\b(?:landing[ -]?pages?|web ?pages?|websites?|ads?|creatives?)\b/i.test(words)) return kind('email', 'email words');
-  // Words to be read or spoken are copy, including a script for a video about an app.
-  if (/\b(?:copy|copywriting|headlines?|taglines?|wording|captions?|product descriptions?|blog posts?|articles?|press releases?|case stud(?:y|ies)|white ?papers?|(?:social(?: media)?|linkedin|instagram|facebook|twitter|tiktok) posts?|speech(?:es)?|(?:video|ad|explainer|podcast|sales|call|youtube) scripts?|proposals?)\b/i.test(words) && !/\b(?:build|code|implement|redesign|launchable|working)\b/i.test(words)) return kind('copy', 'copy words');
+  // Words to be read or spoken are copy, including a script for a video about an app and push or in-app messages to app
+  // users ("app" alone is not code). Building the component that shows them is code.
+  if (/\b(?:push notifications?|push (?:messages?|alerts?)|in-app (?:messages?|copy|prompts?)|sms (?:messages?|copy)|text messages?|microcopy|notification copy|copy|copywriting|headlines?|taglines?|wording|captions?|product descriptions?|blog posts?|articles?|press releases?|case stud(?:y|ies)|white ?papers?|(?:social(?: media)?|linkedin|instagram|facebook|twitter|tiktok) posts?|speech(?:es)?|(?:video|ad|explainer|podcast|sales|call|youtube) scripts?|proposals?)\b/i.test(words) && !/\b(?:build|code|implement|redesign|launchable|working)\b/i.test(words)) return kind('copy', 'copy words');
   if (/\b(?:landing[ -]?pages?|web ?pages?|websites?|home ?page|(?:product|sales|pricing|sign[ -]?up|checkout|about|contact|collection|category) pages?|site)\b/i.test(words)) return kind('web_page', 'page or site words');
   if (/\b(?:emails?|newsletters?|drip|welcome series|flows? in klaviyo)\b/i.test(words)) return kind('email', 'email words');
   if (/\b(?:ads?|creatives?|advertising|advertisements?|ugc|thumb-?stop)\b/i.test(words)) return kind('ad_creative', 'ad words with a creation verb');
@@ -468,13 +473,16 @@ export function suggestDeliverableKind(request = '') {
   if (/\b(?:sop|process|policy|playbook|checklist|handbook|guide|documents?|template)\b/i.test(words)) return kind('ops_doc', 'document words');
   return kind('other', 'no deliverable word matched');
 }
+/** Guessed kinds a card may correct: writing kinds read from channel words, or no match. An audit, analysis, strategy,
+ *  plan or code request keeps its kind ("Audit our help desk replies" is an audit, not a reply). */
+const CARD_CORRECTS = new Set(['email', 'copy', 'web_page', 'other']);
 /** The declared kind wins; a suggestion fills in only when the host declared none. */
 export function resolveDeliverableKind(declared, request) {
   const suggestion = suggestDeliverableKind(request);
   if (DELIVERABLE_KINDS.includes(declared)) return { kind: declared, source: 'declared', suggestion };
   // "Write a creative brief ... Channels: push, email" is a document, not email work: the card knows the deliverable.
   const card = qualityFamily(request, suggestion.kind), shape = cardShape(card, askOf(request));
-  if (shape?.kind && shape.kinds && !shape.kinds.includes(suggestion.kind)) return { kind: shape.kind, source: 'suggested', suggestion: { ...suggestion, kind: shape.kind, basis: `the ${card} card names the deliverable` } };
+  if (shape?.kind && shape.kinds && !shape.kinds.includes(suggestion.kind) && CARD_CORRECTS.has(suggestion.kind)) return { kind: shape.kind, source: 'suggested', suggestion: { ...suggestion, kind: shape.kind, basis: `the ${card} card names the deliverable` } };
   return { kind: suggestion.kind, source: 'suggested', suggestion };
 }
 
@@ -484,9 +492,11 @@ export function resolveMode({ request = '', site_url, has_existing_asset, kind }
   if (has_existing_asset === false) return { mode: 'new', reason: 'The host reports no existing asset.' };
   if (/\b(?:new brand|from scratch|no (?:website|site|brand) yet|don'?t have a (?:website|site)|brand[ -]new business)\b/i.test(words)) return { mode: 'new', reason: 'The request says there is no existing brand or asset.' };
   if (DATA_KINDS.includes(kind)) return { mode: 'patch', reason: 'An audit or analysis works on the existing account or data.' };
-  if (has_existing_asset === true || /\b(?:improve|fix|redesign|rewrite|refresh|(?<!\b(?:investor|board|status|incident|outage|quarterly|monthly|weekly|progress|leadership|stakeholder|shareholder|team|company|policy|product|service) )update|optimi[sz]e|tweak|edit|my (?:current|existing)|our (?:current|existing))\b/i.test(words)) return { mode: 'patch', reason: 'An existing asset exists, so improve it with ranked edits rather than replace it.' };
+  // "update" counts as a verb on something that exists ("update the hero section"), not as the thing to write ("an
+  // update for our investors", "our Q3 investor update", "update the board on Q3").
+  if (has_existing_asset === true || /\b(?:improve|fix|redesign|rewrite|refresh|(?<!\b(?:an?|the|this|that|our|my|their|quick|short|brief|final|first|next|investor|board|status|incident|outage|quarterly|monthly|weekly|progress|leadership|stakeholder|shareholder|team|company|policy|product|service) )update(?! (?:(?:for|to|on) )?(?:(?:our|the|all|my) )?(?:board|investors?|team|staff|company|customers?|shareholders?|stakeholders?|lenders?)\b)|optimi[sz]e|tweak|edit|my (?:current|existing)|our (?:current|existing))\b/i.test(words)) return { mode: 'patch', reason: 'An existing asset exists, so improve it with ranked edits rather than replace it.' };
   // A reply, a first-touch email, a brief or a memo is new work for this moment: there is nothing to patch.
-  if (cardShape(qualityFamily(words, kind), askOf(words))?.fresh) return { mode: 'new', reason: 'New work for this moment: there is nothing existing to patch.' };
+  if (jobShape(qualityFamily(words, kind ?? 'other'), askOf(words), kind)?.fresh) return { mode: 'new', reason: 'New work for this moment: there is nothing existing to patch.' };
   if (text(site_url)) return { mode: 'extend', reason: 'The client has a site; add the new asset inside its existing system.' };
   return { mode: 'patch', reason: 'Assumed: most clients have an existing site or asset. Ask for it; switch to new only if none exists.', confirm: true };
 }
@@ -497,16 +507,18 @@ export function dialsLine(dials = {}) {
   return `Using a ${mix} mix, ${volume} output${volume === 1 ? '' : 's'} and a ${depth} review; say if you want otherwise.`;
 }
 
-/** Which context artifacts production needs for this kind. */
-export function groundingRequirement(kind) {
+/** Which context artifacts production needs for this kind. A card shape with its own context (a reply, a first-touch
+ *  email, a memo) rests on the request's facts and sourced public facts: no capture, snapshot or taste brief. */
+export function groundingRequirement(kind, shape = null) {
+  if (shape?.context) return { brand_dna: false, data_snapshot: false, taste_brief: false };
   return { brand_dna: BRAND_KINDS.includes(kind), data_snapshot: DATA_KINDS.includes(kind), taste_brief: BRAND_KINDS.includes(kind) };
 }
 const contextPath = (value, name) => typeof value === 'string' && value.length <= 240 && !/\.\.|\\|^[a-z]:|^\//i.test(value) && (name ? new RegExp(`(?:^|/)context/${name.replace('.', '\\.')}$`).test(value) : /(?:^|\/)context\/[A-Za-z0-9._-]+$/.test(value));
 const isoDate = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}/.test(value) && Number.isFinite(Date.parse(value.slice(0, 10)));
 const textList = (value, min) => Array.isArray(value) && value.length >= min && value.length <= 40 && value.every(v => text(v) && v.length <= 2000);
 /** Structure check only. The files stay in the user's project; these are host reports, not proof of capture. */
-export function validateGrounding(grounding, kind, { path = 'grounding' } = {}) {
-  const need = groundingRequirement(kind), errors = [], add = (p, message) => errors.push({ path: `${path}${p ? `.${p}` : ''}`, message });
+export function validateGrounding(grounding, kind, { path = 'grounding', shape = null } = {}) {
+  const need = groundingRequirement(kind, shape), errors = [], add = (p, message) => errors.push({ path: `${path}${p ? `.${p}` : ''}`, message });
   if (!need.brand_dna && !need.data_snapshot && !need.taste_brief) return errors;
   if (!object(grounding)) { add('', `A ${kind} job needs ${need.data_snapshot ? 'a data snapshot in context/' : 'context/brand-dna.json and context/taste-brief.md'} before production. Run prepare_job_context, capture, then report grounding: ${need.data_snapshot ? '{data_snapshot}' : '{brand_dna, taste_brief}'}. If capture is impossible, ask the user; never fall back to a template.`); return errors; }
   if (need.brand_dna) {
@@ -653,12 +665,19 @@ const askQuestions = (kind, family, request) => intakeQuestions({ deliverableKin
 const AVOID_RESERVE = 150;
 /** prepare_job_context: a short brief for the model plus a structured annex. The brief names the annex parts to open. */
 // Cards whose work sells nothing at a price: no stock, price or link check for them.
-// A product description and an audio ad sell, so they keep the stock, price and link check.
-const NOT_SELLING_CARDS = new Set(['analysis-memo', 'creative-brief', 'notification-copy', 'support-macros', 'crisis-response', 'help-docs', 'job-description', 'investor-update', 'review-replies', 'research-design', 'webinar-script', 'press-pitch', 'rfp-response', 'sop', 'internal-announcement', 'vendor-scorecard', 'policy-doc', 'localisation-brief']);
+// A product description and an audio ad sell, so they keep the stock, price and link check. A cold email or a
+// partnership pitch asks for a meeting, not a purchase at a link.
+const NOT_SELLING_CARDS = new Set(['analysis-memo', 'creative-brief', 'notification-copy', 'support-macros', 'crisis-response', 'help-docs', 'job-description', 'investor-update', 'review-replies', 'research-design', 'webinar-script', 'press-pitch', 'rfp-response', 'sop', 'internal-announcement', 'vendor-scorecard', 'policy-doc', 'localisation-brief', 'outbound-sales', 'partnership-pitch']);
+/** The card, its shape for this kind of work and whether the work sells something at a price. prepare_job_context and
+ *  the team path (start_job, advance_job) both use it, so their grounding, gates and rubric agree. */
+export function jobFit(request = '', kind) {
+  const text = String(request ?? ''), family = qualityFamily(text, kind ?? 'other');
+  return { family, shape: jobShape(family, askOf(text), kind), selling: BRAND_KINDS.includes(kind) && !NOT_SELLING_CARDS.has(family) };
+}
 export function prepareJobContext(input = {}, context = {}) {
   const request = String(input.request ?? '').trim();
   const resolved = resolveDeliverableKind(input.deliverable_kind, request), kind = resolved.kind, family = familyOf(kind);
-  const quality = qualityEngineContext(request, kind), shape = cardShape(quality.family, askOf(request)), shaped = Boolean(shape?.context);
+  const quality = qualityEngineContext(request, kind), { shape, selling } = jobFit(request, kind), shaped = Boolean(shape?.context);
   const draftPlan = quality.depth === 'full' ? 'Expert and plain drafts, plus one real creative alternative.' : quality.depth === 'team' ? 'Specialist parts integrated by one lead, plus a plain draft.' : 'One expert draft and one plain request-only draft.';
   const siteUrl = typeof input.site_url === 'string' && /^https?:\/\/[^\s]+$/i.test(input.site_url) ? input.site_url : undefined;
   const mode = resolveMode({ request, site_url: siteUrl, has_existing_asset: input.has_existing_asset, kind });
@@ -666,10 +685,9 @@ export function prepareJobContext(input = {}, context = {}) {
   const onePass = quality.depth === 'light' || quality.depth === 'standard';
   const patterns = normalizePatterns(context.patterns), defaults = defaultsFor(kind, patterns).filter(d => !(d.id === 'copy-rule-of-three' && requestedCount(askOf(request)) === 3));
   // A card with a shape sizes the grounding to the job: its facts (and voice lines), never a look capture or taste brief.
-  const need = shaped ? { brand_dna: false, data_snapshot: false, taste_brief: false } : groundingRequirement(kind);
-  const selling = BRAND_KINDS.includes(kind) && !NOT_SELLING_CARDS.has(quality.family);
+  const need = groundingRequirement(kind, shape);
   const questions = (cardQuestions(shape, request) ?? askQuestions(kind, family, request)).map(q => ({ ...q })), rubric = cardRubric(kind, shape), gates = cardGates(kind, { shape, selling }), levers = shape?.levers ?? leversFor(kind);
-  const complete = shape?.complete ?? completenessFor(kind), spec = specSheet({ request, kind, mode, kindSource: resolved.source, shape });
+  const complete = shape?.complete ?? completenessFor(kind), spec = specSheet({ request, kind, mode, kindSource: resolved.source, shape, requestPointer: 'annex.request_verbatim' });
   const audit = family === 'audit_analysis' && !shaped, method = shape?.candidates ? null : candidateMethod(kind);
   const brandNeed = shaped ? { level: shape.context, take: CONTEXT_LEVELS[shape.context], brand_file: true } : contextNeed(kind);
   const steps = GJP_STEPS.map(step => ({ ...step, do: audit && AUDIT_STEP_OVERRIDES[step.id] ? AUDIT_STEP_OVERRIDES[step.id] : shaped && SHAPED_STEP_OVERRIDES[step.id] ? SHAPED_STEP_OVERRIDES[step.id] : !onePass || step.id !== 'check' ? step.do : ONE_PASS_CHECK }));
@@ -715,6 +733,10 @@ export function prepareJobContext(input = {}, context = {}) {
   const defaultsLine = avoid.length ? `AVOID unless chosen on purpose: ${avoid.join('; ')}${avoid.length < defaults.length ? ` (+${defaults.length - avoid.length} in annex)` : ''}.` : '';
   let brief = [...head, askLine, defaultsLine, ...tail].filter(Boolean).join('\n');
   if (brief.length > 1500) brief = short(brief, 1500);
+  // The capture tools travel only with jobs that capture: a reply, memo or brief never runs Playwright on the site.
+  const capture = need.brand_dna || scripts.length ? { order: ['capture-brand-dna.mjs (Node + Playwright)', 'brand-dna-snippet.js (browser console)', 'ask for URL, screenshots and CSS'], fields: need.brand_dna ? [...BRAND_DNA_FIELDS] : [], tools: scripts, skills: Object.values(GJP_SKILLS).map(slug => ({ slug, get_skill: { slug, response_format: 'detailed' } })) } : null;
+  // The blind side-by-side tool is named only when annex.capture carries it.
+  const compareTool = capture?.tools.some(t => t.file === 'compare-candidates.mjs');
   return {
     schema: 'ai-blocks-job-context/1', brief,
     annex: {
@@ -727,14 +749,13 @@ export function prepareJobContext(input = {}, context = {}) {
       brand_context: { ...brandNeed, next: brandFileStep({ kind, status: input.brand_file_status && typeof input.brand_file_status === 'object' ? input.brand_file_status : null }) },
       protocol: steps,
       context_requirements: shaped ? shapedRequirements(shape, siteUrl) : contextRequirements(kind, { siteUrl, hasExistingAsset: input.has_existing_asset, light: quality.depth === 'light' }),
-      // The capture tools travel only with jobs that capture: a reply, memo or brief never runs Playwright on the site.
-      capture: need.brand_dna || scripts.length ? { order: ['capture-brand-dna.mjs (Node + Playwright)', 'brand-dna-snippet.js (browser console)', 'ask for URL, screenshots and CSS'], fields: need.brand_dna ? [...BRAND_DNA_FIELDS] : [], tools: scripts, skills: Object.values(GJP_SKILLS).map(slug => ({ slug, get_skill: { slug, response_format: 'detailed' } })) } : null,
+      capture,
       artifacts: { spec_sheet: 'context/spec.md', facts: 'context/facts.md', ...(need.brand_dna ? { brand_dna: 'context/brand-dna.json', screenshots: 'context/screenshots/' } : {}), ...(need.data_snapshot ? { data_snapshot: 'context/data-snapshot.json' } : {}), ...(need.taste_brief ? { taste_brief: 'context/taste-brief.md' } : {}), working_notes: 'DECISIONS.md' },
       taste_brief: need.taste_brief ? { path: 'context/taste-brief.md', required_before_production: true, sections: [...TASTE_BRIEF_SECTIONS], fill_from: 'The capture, the answers to annex.questions and the references you find. Ask nothing more.' } : null,
       production_gate: { requires: need, report_as: need.data_snapshot ? { grounding: { data_snapshot: { path: 'context/data-snapshot.json', sha256: '<sha256>', source: '<account or connector>', captured_at: '<ISO date>' } } } : need.brand_dna ? { grounding: { brand_dna: { path: 'context/brand-dna.json', sha256: '<sha256>', source: siteUrl ?? '<site URL>', captured_at: '<ISO date>', method: 'capture-brand-dna.mjs' }, taste_brief: { path: 'context/taste-brief.md', sha256: '<sha256>', brand_codes: ['<code>'], references_admired: ['<ref>', '<ref>'], reference_avoid: ['<ref>'], defaults_to_avoid: defaults.slice(0, 3).map(d => d.id), conventions_break: [] } } } : null, note: 'start_job and advance_job check this structure before PRODUCE. It is a host report, not proof of capture.' },
       truth: { rule: 'Every fact a reader sees needs a dated source. Cut what has none, or rewrite it to what the source says. Never flag it and leave it in.', method: craftMethod(CRAFT_METHODS.truth) },
       buyer_can_act: selling ? { check: 'Before you build, confirm the thing being sold is live, in stock in the sizes or variants that matter, at the stated price, at the link you will use.', if_not: 'Make the call yourself, build for the option that works, and say so in the first line of the hand-over.', method: craftMethod(CRAFT_METHODS.buyer) } : null,
-      candidates: { make: draftPlan, ...(quality.depth === 'light' ? {} : { family_reference: shape?.candidates ?? candidatesFor(kind) }), ...(method ? { method } : {}), ...(['web_page', 'ad_creative'].includes(kind) ? { when_the_look_is_open: craftMethod(CRAFT_METHODS.look) } : {}), ...(selling ? { compare_with: 'compare-candidates.mjs (annex.capture.tools): puts the candidates side by side under blind labels for the reviewer.' } : {}), as: 'Real work, not descriptions.', axes: selling && quality.depth === 'full' ? [...CANDIDATE_AXES] : [], differ_on_at_least: selling && quality.depth === 'full' ? 2 : null, reject: 'Candidates that differ only in colour, crop, wording or style label.', patch_mode: mode.mode === 'patch' ? 'Each candidate is the live asset as you would change it, with its ranked edits and their evidence.' : null },
+      candidates: { make: draftPlan, ...(quality.depth === 'light' ? {} : { family_reference: shape?.candidates ?? candidatesFor(kind) }), ...(method ? { method } : {}), ...(['web_page', 'ad_creative'].includes(kind) ? { when_the_look_is_open: craftMethod(CRAFT_METHODS.look) } : {}), ...(selling && compareTool ? { compare_with: 'compare-candidates.mjs (annex.capture.tools): puts the candidates side by side under blind labels for the reviewer.' } : {}), as: 'Real work, not descriptions.', axes: selling && quality.depth === 'full' ? [...CANDIDATE_AXES] : [], differ_on_at_least: selling && quality.depth === 'full' ? 2 : null, reject: 'Candidates that differ only in colour, crop, wording or style label.', patch_mode: mode.mode === 'patch' ? 'Each candidate is the live asset as you would change it, with its ranked edits and their evidence.' : null },
       reviewer: onePass ? { who: REVIEWER.who, passes: 1, final_reader: { ...ONE_PASS_READER, method: craftMethod(CRAFT_METHODS.check) } } : { who: REVIEWER.who, passes: 2, choose: { ...REVIEWER.choose, method: craftMethod(CRAFT_METHODS.choose) }, clients_eye: { ...REVIEWER.clients_eye, method: craftMethod(CRAFT_METHODS.check) } },
       craft_floor: [...CRAFT_RULES],
       completeness: complete,

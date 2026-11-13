@@ -11,24 +11,40 @@ const { spawnSync } = require('child_process');
 
 const argv = process.argv.slice(2);
 const opt = { sources: [], audience: 'business', online: false, template: false, strict: false };
+const AUDIENCES = ['consumer', 'business', 'specialist'];
+const usage = 'Usage: node qe-check.cjs <final> [--plain <plain>] [--audience consumer|business|specialist] [--sources <files...>] [--contract <json> | --max-words <n>] [--online] [--requested-template] [--strict]';
+const bad = message => { console.error(message + '\n' + usage); process.exit(2); };
 let file = null;
 for (let i = 0; i < argv.length; i++) {
-  const a = argv[i];
-  if (a === '--plain') opt.plain = argv[++i];
-  else if (a === '--audience') opt.audience = argv[++i];
-  else if (a === '--sources') { while (i + 1 < argv.length && !argv[i + 1].startsWith('--')) opt.sources.push(argv[++i]); }
-  else if (a === '--contract') opt.contract = argv[++i];
-  else if (a === '--max-words') opt.maxWords = Number(argv[++i]);
+  // Both "--audience consumer" and "--audience=consumer".
+  let a = argv[i], inline;
+  const eq = a.startsWith('--') ? a.indexOf('=') : -1;
+  if (eq > 2) { inline = a.slice(eq + 1); a = a.slice(0, eq); }
+  const value = () => {
+    if (inline !== undefined) { if (!inline) bad(a + ' needs a value'); return inline; }
+    const next = argv[i + 1];
+    if (next === undefined || next.startsWith('--')) bad(a + ' needs a value');
+    i++; return next;
+  };
+  if (a === '--plain') opt.plain = value();
+  else if (a === '--audience') opt.audience = value();
+  else if (a === '--sources') { if (inline !== undefined) opt.sources.push(value()); while (i + 1 < argv.length && !argv[i + 1].startsWith('--')) opt.sources.push(argv[++i]); }
+  else if (a === '--contract') opt.contract = value();
+  else if (a === '--max-words') opt.maxWords = Number(value());
+  else if (inline !== undefined && ['--online', '--requested-template', '--strict'].includes(a)) bad(a + ' takes no value');
   else if (a === '--online') opt.online = true;
   else if (a === '--requested-template') opt.template = true;
   else if (a === '--strict') opt.strict = true;
   else if (!a.startsWith('--') && !file) file = a;
-  else { console.error('Unknown option ' + a); process.exit(2); }
+  else bad('Unknown option ' + a);
 }
-const usage = 'Usage: node qe-check.cjs <final> [--plain <plain>] [--audience consumer|business|specialist] [--sources <files...>] [--contract <json> | --max-words <n>] [--online] [--requested-template] [--strict]';
-if (!file || !fs.existsSync(file)) { console.error(file ? 'Cannot read ' + file : usage); process.exit(2); }
-if (opt.plain && !fs.existsSync(opt.plain)) { console.error('Cannot read ' + opt.plain); process.exit(2); }
-if (opt.maxWords !== undefined && !(Number.isInteger(opt.maxWords) && opt.maxWords > 0)) { console.error('--max-words needs a positive whole number'); process.exit(2); }
+// Usage errors are found here, before any check runs, so they exit 2 and never read as a failed check.
+if (!file || !fs.existsSync(file)) bad(file ? 'Cannot read ' + file : 'Name the final file to check.');
+if (opt.plain && !fs.existsSync(opt.plain)) bad('Cannot read ' + opt.plain);
+if (!AUDIENCES.includes(opt.audience)) bad('--audience must be one of ' + AUDIENCES.join(', '));
+if (opt.contract && !fs.existsSync(opt.contract)) bad('Cannot read the contract ' + opt.contract);
+for (const source of opt.sources) if (!fs.existsSync(source)) bad('Cannot read the source ' + source);
+if (opt.maxWords !== undefined && !(Number.isInteger(opt.maxWords) && opt.maxWords > 0)) bad('--max-words needs a positive whole number');
 
 const here = __dirname, rows = [];
 const run = (name, script, args, { advisory = false } = {}) => {
@@ -54,6 +70,9 @@ else rows.push({ name: 'format', status: 'NOT_RUN', detail: 'no --contract or --
 if (temp) fs.rmSync(temp, { force: true });
 
 for (const r of rows) console.log(`${r.status.padEnd(8)} ${r.name}${r.detail ? '\n    ' + r.detail : ''}`);
-const failed = rows.filter(r => r.status === 'FAIL' || r.status === 'ERROR');
+// A check script that refused its arguments is a usage error (exit 2), not a failed check.
+const errored = rows.filter(r => r.status === 'ERROR');
+if (errored.length) { console.log(`qe-check: usage error in ${errored.map(r => r.name).join(', ')}. Fix the arguments and run again.`); process.exit(2); }
+const failed = rows.filter(r => r.status === 'FAIL');
 console.log(failed.length ? `qe-check: ${failed.length} failed (${failed.map(r => r.name).join(', ')}). Fix them and run again.` : 'qe-check: no failures. Automated checks are diagnostics, not proof of clarity or truth.');
 process.exit(failed.length ? 1 : 0);

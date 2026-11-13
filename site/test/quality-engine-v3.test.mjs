@@ -1,6 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import { qualityEngineContext } from '../src/jobs/quality-engine.mjs';
 import { QUALITY_PROFILES } from '../src/jobs/quality-profiles.mjs';
 import { prepareJobContext } from '../src/jobs/grounding.mjs';
@@ -37,6 +41,21 @@ test('job context exposes the portable v3 method and its one check command witho
   assert.match(context.brief, /annex.quality_engine/);
   assert.equal(context.annex.quality_engine.profile.ceiling, QUALITY_PROFILES['landing-page'].ceiling);
   assert.ok(context.annex.production_gate.requires.brand_dna);
+});
+
+test('qe-check exits 2 on a usage error, its own or a check script\'s, and never reports one as a failed check', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'qe-check-')), at = name => path.join(dir, name);
+  fs.writeFileSync(at('final.md'), 'Your order ships today. Reply to this email if anything is wrong.\n');
+  fs.writeFileSync(at('bad.json'), '{not json');
+  const script = fileURLToPath(new URL('../../marketplace/packs/shared/tools/quality/qe-check.cjs', import.meta.url));
+  const run = (...args) => spawnSync(process.execPath, [script, at('final.md'), ...args], { encoding: 'utf8', timeout: 60000 });
+  try {
+    for (const args of [['--audience'], ['--audience', 'nobody'], ['--contract', at('missing.json')], ['--max-words='], ['--online=yes']]) assert.equal(run(...args).status, 2, args.join(' '));
+    const broken = run('--contract', at('bad.json'));
+    assert.equal(broken.status, 2); assert.doesNotMatch(broken.stdout, /1 failed/); assert.match(broken.stdout, /usage error in format/);
+    const inline = run('--audience=consumer', '--max-words=60');
+    assert.notEqual(inline.status, 2, inline.stdout + inline.stderr); assert.match(inline.stdout, /qe-check: /);
+  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
 });
 
 test('transport profiles match the resources carried in downloadable packs', () => {

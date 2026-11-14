@@ -6,7 +6,7 @@ Follow `tools/quality/QUALITY-ENGINE-v3.md`; task and brand come first.
 
 **Ask or start:** run the readiness check in `tools/quality/INTAKE.md`: a specific brief starts; a gap that would change the work gets questions first.
 
-**One-shot jobs** (nobody can reply: a test or an API call): decide every open point with the assumption a top practitioner would pick, and finish. Deliver every piece the owner asked for; never drop or water one down to stay safe. At most three assumption lines, only where they change what to do. Never ask for confirmation, a yes, a sign-off or a choice inside the deliverable; no "To confirm" list. A sign-off that law or a platform needs is one line next to its item. **Fast path:** when the brief carries the data, skip site capture, brand DNA, the taste brief and knowledge reading; read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill.
+**One-shot jobs** (nobody can reply: a test or an API call): decide every open point with the assumption a top practitioner would pick, and finish. Deliver every piece the owner asked for; never drop or water one down to stay safe. At most three assumption lines, only where they change what to do. Never ask for confirmation, a yes, a sign-off or a choice inside the deliverable; no "To confirm" list. A sign-off that law or a platform needs is one line next to its item. **Fast path:** when the brief carries the data and nothing in it is buyer-facing, skip site capture, the taste brief and knowledge reading; read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill. Buyer-facing work (ads, copy, emails, pages) never skips the brand brain: build or check it first (`tools/quality/FOUNDATION.md`).
 
 ## 0. Frame: the spec sheet
 
@@ -20,9 +20,9 @@ Read `context/brand-file/worked.md` if any, then write `context/spec.md`, one sc
 - **Assumptions**, one line each. **Mode:** `patch` (default), `extend` or `new`. **Brand file slice:** none, facts, voice, look or full.
 - **Rubric:** `node tools/make-rubric.mjs` writes `context/rubric.md` from `context/intake.md`.
 
-## 1. Ground: only what the job needs
+## 1. Ground: foundation first, then only what the job needs
 
-Capture what the signals and the decision depend on, and no more (`context/README.md`), including the buyer's real setting. Re-check on the day facts that change: prices, offers, stock, ownership, lawsuits.
+Follow `tools/quality/FOUNDATION.md`: gather what the client has, fall back to public sources, and build or check the two layers (foundation and data) before you make anything. For buyer-facing work this is the first thing you do, before any analysis or copy: `node tools/brand-brain.mjs build --from <the folder with their material>`, then write the files it starts, then `node tools/brand-brain.mjs gate --for <kind>` must pass. Capture what the signals and the decision depend on, and no more (`context/README.md`), including the buyer's real setting. Re-check on the day facts that change: prices, offers, stock, ownership, lawsuits.
 
 Unless the slice is none, run `node tools/brand-file.mjs status --for <kind>` and do only what it lists. To capture:
 
@@ -70,7 +70,7 @@ A fresh reviewer (as in step 3) gets only the client's brief, the finished deliv
 
 Remove each unsourced claim, or rewrite it to what the source says. Never flag or footnote it. Fix 1, 3 and 4, cut 5, checked with outside evidence, not rereading; two repair rounds at most. Run `node tools/check-handover.mjs <deliverable> <plain answer> --profile <family>` and fix every hit. Then run the v3 reading, proof and render checks. Last, a fresh reader chooses between anonymous final and plain; lower clarity vetoes the final.
 
-**Gates.** Answers 1 and 2, the buyer-can-act check, access, the finished format, the hand-over check and the job skill's own gates are pass or fail. No craft score makes up for a failure.
+**Gates.** Answers 1 and 2, the brand brain gate for buyer-facing work (`brand-brain.mjs gate`), the creative-set check for a set of static ads (`check-creative-set.mjs`), the buyer-can-act check, access, the finished format, the hand-over check and the job skill's own gates are pass or fail. No craft score makes up for a failure.
 
 **Craft.** "Does the job" (for the buyer or the decision) weighs most, 30 of 100. "Own material" weighs 10: proof or ideas a generic answer would lack. `context/rubric.md` scores the same craft lines after the owner's own.
 

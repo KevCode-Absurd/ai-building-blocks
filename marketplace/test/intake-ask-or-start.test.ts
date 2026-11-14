@@ -17,7 +17,7 @@ test("the intake rule is a readiness check, not a fixed habit of asking or of as
   assert.match(intake, /\*\*Start\*\* when all six are answered/);
   assert.match(intake, /\*\*Ask\*\* when any gap would change what you make if you guessed wrong/);
   assert.match(intake, /at most five questions/);
-  assert.match(intake, /brand-file\.mjs ask --for <kind>/);
+  assert.match(intake, /brand-brain\.mjs ask --for <kind>/);
   assert.match(intake, /What good looks like/);
   assert.match(intake, /## When nobody can answer[\s\S]*never ask/);
   assert.match(intake, /When the brief already answered everything, do not stop: start/, "a fully specified brief runs without a Go stop");

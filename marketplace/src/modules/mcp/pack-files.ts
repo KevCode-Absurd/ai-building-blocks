@@ -34,12 +34,17 @@ const ACCESS_WORDS = /\b(access|accounts?|connect\w*|log ?ins?|sign ?ins?|permis
 /** A request for something built, published or sent in its real format, not only written in the chat. */
 const NATIVE_WORDS = /\b(build|built|go(?:es|ing)? live|publish\w*|deploy\w*|ship|send|print\w*|export\w*|ready to (?:use|send|publish|post|print)|files?|pdf|pptx?|docx?|xlsx?|csv|html|figma|canva|web ?sites?|web ?pages?|landing pages?|apps?|code|scripts?|spreadsheets?|decks?|slides?|videos?|images?)\b/i;
 
+/** A request for work a business's buyers see, or that reads its numbers: the brand brain comes first. */
+const BUSINESS_WORDS = /\b(ads?|advert\w*|creatives?|campaigns?|copy|copywrit\w*|emails?|newsletters?|sms|landing|home ?page|pages?|web ?sites?|stores?|shop\w*|products?|brand\w*|posts?|captions?|social|reels?|carousels?|statics?|banners?|audit\w*|dashboards?|roas|cro|conversion\w*|funnel\w*|customers?|audiences?|launch\w*|offers?|promo\w*|sales?)\b/i;
+
 /**
  * Files the first load leaves out unless the request needs them, so less is read before any work starts. The rule
  * for each is stated to the AI, and every one stays a get_agent_file away. A one-file text for chat apps
  * (skillOneFile) carries them all, because a chat cannot fetch a file later.
  */
 export const ON_DEMAND_FILES: { path: string; after: string; rule: string; needed(request: string | undefined): boolean }[] = [
+  { path: "tools/quality/INTAKE.md", after: "AGENTS.md", rule: "comes with every request: the readiness check to run before any work", needed: r => !!r },
+  { path: "tools/quality/FOUNDATION.md", after: "tools/quality/INTAKE.md", rule: "comes when the request is work for a business: gather, then build or check the brand brain first", needed: r => !!r && BUSINESS_WORDS.test(r) },
   { path: "personality.md", after: "soul.md", rule: "comes when you load the agent with no request, to talk as it", needed: r => !r },
   { path: "access.md", after: "playbook.md", rule: "comes when the request means working in the user's tools or accounts", needed: r => !!r && ACCESS_WORDS.test(r) },
   { path: "OUTPUT-POLICY.md", after: "access.md", rule: "comes when the request asks for something built, published or sent in its real format", needed: r => !!r && NATIVE_WORDS.test(r) },

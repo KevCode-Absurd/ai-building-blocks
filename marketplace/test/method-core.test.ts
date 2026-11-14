@@ -27,11 +27,12 @@ test("WORK-METHOD.md is under 1,200 words and still covers every part of the met
   // rule, the owner's named priority and the copy check, about 75 words.
   // Ask or start (14 Nov) added the readiness check and the rubric. Owner, 14 Nov: no cap that costs quality, so this
   // is a bloat guard, not a target: raise it when the method needs the words, never cut useful lines to fit.
-  assert.ok(words < 1350, `WORK-METHOD.md has ${words} words`);
+  // Brand brain v2 (14 Nov) made build, write and gate the first step of buyer-facing work and a hand-over gate: +40 words.
+  assert.ok(words < 1450, `WORK-METHOD.md has ${words} words`);
   const parts: [string, RegExp][] = [
     ["spec sheet", /## 0\. Frame: the spec sheet[\s\S]*who must do what after seeing this[\s\S]*\*\*Deliverables:\*\* exact count and format/],
     ["signal pass", /\*\*Signal pass:\*\* the three strongest signals in the owner's data[^\n]*For each: its number, what it means for the decision, and where the deliverable acts on it\./],
-    ["ground only what the job needs", /## 1\. Ground: only what the job needs\n\nCapture what the signals and the decision depend on, and no more/],
+    ["ground only what the job needs", /## 1\. Ground: foundation first, then only what the job needs\n\nFollow `tools\/quality\/FOUNDATION\.md`[\s\S]*Capture what the signals and the decision depend on, and no more/],
     ["toolbox", /\nYour `toolbox\.md` lists what to use when; pick at your own discretion and open only what you pick\.\n/],
     ["real candidates", /make about 3 candidates of the part that decides the outcome, as real work, not descriptions/],
     ["outside chooser", /fresh reviewer who has not seen your reasoning[\s\S]*SAME-CONTEXT[\s\S]*one more round only/],
@@ -51,7 +52,9 @@ test("WORK-METHOD.md is under 1,200 words and still covers every part of the met
     ["owner override", /^# Work method\n\n\*\*The owner comes first:\*\* if a rule in this pack would make the work worse for this owner's stated goal and data, follow the owner and say why in one line\./],
     ["one-shot finish", /\*\*One-shot jobs\*\*[^\n]*decide every open point with the assumption a top practitioner would pick, and finish\. Deliver every piece the owner asked for; never drop or water one down to stay safe\. At most three assumption lines[^\n]*Never ask for confirmation, a yes, a sign-off or a choice inside the deliverable/],
     ["legal sign-off next to its item", /A sign-off that law or a platform needs is one line next to its item\./],
-    ["fast path", /\*\*Fast path:\*\* when the brief carries the data, skip site capture, brand DNA, the taste brief and knowledge reading; read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill\./],
+    // Brand brain v2 (14 Nov 2026): the fast path once skipped brand DNA on every data-rich brief, so buyer-facing
+    // work had no voice to match. Now it never skips the brand brain for ads, copy, emails or pages.
+    ["fast path", /\*\*Fast path:\*\* when the brief carries the data and nothing in it is buyer-facing, skip site capture, the taste brief and knowledge reading; read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill\. Buyer-facing work \(ads, copy, emails, pages\) never skips the brand brain/],
     ["decide, combining complementary moves", /\*\*Decide\.\*\* One recommendation, which may combine complementary moves; a runner-up only when the options truly exclude each other\. Never a menu\./],
     ["act fully", /\*\*Act fully\.\*\* If the deliverable keeps anything a signal says to cut, say why in one line with the number\./],
     ["persona's real moment", /\*\*Fit the persona's real moment\*\* in every time, place, unit and channel \(quality engine step 4\)\./],

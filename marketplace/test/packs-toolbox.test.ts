@@ -21,18 +21,21 @@ import { getRole, listRoles } from "../src/modules/directory/roles.ts";
 import { listJobTypes } from "../src/modules/catalogue/index.ts";
 import { CORE_FILES, firstLoadFiles } from "../src/modules/mcp/pack-files.ts";
 
-test("the first load holds back three files unless the request needs them, and says which rule brings each in", () => {
+test("the first load holds back five files unless the request needs them, and says which rule brings each in", () => {
   assert.deepEqual([...CORE_FILES], ["AGENTS.md", "toolbox.md", "WORK-METHOD.md", "context/README.md", "soul.md", "playbook.md"]);
   const held = (request?: string) => firstLoadFiles(request).held.map(h => h.path);
   // No request: the agent is met first, so its voice comes along, after soul.md.
   assert.deepEqual(firstLoadFiles(undefined).paths, ["AGENTS.md", "toolbox.md", "WORK-METHOD.md", "context/README.md", "soul.md", "personality.md", "playbook.md"]);
   assert.deepEqual(held("Make a 6-slide Instagram carousel for the launch of the Allbirds Tree Runner"), ["personality.md", "access.md"], "slides are a real format; a product launch is not work in the user's accounts");
   assert.deepEqual(held("Plan the launch of our spring range"), ["personality.md", "access.md", "OUTPUT-POLICY.md"]);
-  assert.deepEqual(held("Reconcile last month's bank statement against our books"), ["personality.md", "access.md", "OUTPUT-POLICY.md"]);
+  assert.deepEqual(held("Reconcile last month's bank statement against our books"), ["tools/quality/FOUNDATION.md", "personality.md", "access.md", "OUTPUT-POLICY.md"], "bookkeeping is not buyer-facing work");
   assert.deepEqual(held("Connect to our Klaviyo account and schedule the welcome emails"), ["personality.md", "OUTPUT-POLICY.md"]);
   assert.deepEqual(held("Build the landing page as an HTML file"), ["personality.md", "access.md"]);
   assert.deepEqual(firstLoadFiles("Publish the fixes to our Shopify store").paths.slice(-3), ["playbook.md", "access.md", "OUTPUT-POLICY.md"]);
-  for (const h of firstLoadFiles("Write three subject lines").held) assert.match(h.rule, /^comes when /);
+  for (const h of firstLoadFiles("Write three subject lines").held) assert.match(h.rule, /^comes (when|with) /);
+  // Every request gets the readiness check straight after AGENTS.md; with no request it waits.
+  assert.equal(firstLoadFiles("Plan the launch of our spring range").paths[1], "tools/quality/INTAKE.md");
+  assert.deepEqual(held(undefined).slice(0, 2), ["tools/quality/INTAKE.md", "tools/quality/FOUNDATION.md"]);
   // A one-file text for a chat app carries them all: a chat cannot fetch a file later.
   assert.deepEqual(firstLoadFiles(undefined, true).held, []);
 });

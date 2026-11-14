@@ -23,7 +23,7 @@ const file = (pack: BuiltPack, path: string) => pack.files.find(f => f.path === 
 test("AGENTS.md is a short entry point that starts every job by grounding it", async () => {
   const agents = file(await build(), "AGENTS.md")!;
   assert.ok(agents.split("\n").length <= 75, `AGENTS.md has ${agents.split("\n").length} lines`);
-  assert.match(agents, /## How to start every job\n\n1\. \*\*Ground first\.\*\*/);
+  assert.match(agents, /## How to start every job\n\n1\. \*\*Foundation first\.\*\*/);
   assert.match(agents, /five questions at most/);
   // The method lives in WORK-METHOD.md and the choice of tools in toolbox.md; AGENTS.md only points at both.
   assert.match(agents, /run the job the way `WORK-METHOD\.md` says/);

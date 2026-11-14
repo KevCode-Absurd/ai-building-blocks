@@ -113,6 +113,8 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "check-brand-fidelity.mjs", purpose: "Checks a built page against context/brand-dna.json." },
   { name: "ai-default-patterns.md", purpose: "The named AI defaults to avoid unless chosen on purpose." },
   { name: "brand-file.mjs", purpose: "Keeps the client's living brand file in context/brand-file/: status says what is stale, slice takes only what a job needs, learn records what the client kept or killed, ask gives the brand brain question for the intake message, import keeps a brand file or guide the client already has." },
+  { name: "brand-brain.mjs", purpose: "Builds and checks the brand brain's two layers in context/brand-file/: check scores it out of 100, ask writes the intake questions for what is missing; ads, reviews, segments and creatives read the Ad Library, past ads, reviews and ad account breakdowns in; plan splits a set of creatives across segments by the numbers; voice-check tests each line against the brand's real lines (plain Node, no network)." },
+  { name: "check-creative-set.mjs", purpose: "Checks a set of static ad creatives before hand-over: the size, layout variety read from the pixels (no layout on more than 30% of a set of 10+), near-copies, and from the set's manifest the product's share of the frame, empty buttons, money written the wrong way, placeholders and review quotes on the wrong product (plain Node, no packages)." },
   { name: "compare-candidates.mjs", purpose: "Puts 2 to 4 candidates side by side at desktop and phone width, labelled A to D, for an outside pick (Node; Playwright for the PNG sheets)." },
   { name: "check-handover.mjs", purpose: "Checks a finished deliverable before hand-over: nothing internal or unfinished a reader would see, and its length against a plain answer (plain Node)." },
   // Knowledge and review tools (agent-rag): every agent pack carries them, brand-facing or not.
@@ -124,6 +126,7 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "quality/CHECKER-v3.md", purpose: "Quality Engine v3: CHECKER-v3.md" },
   { name: "quality/CLARITY.md", purpose: "Quality Engine v3: CLARITY.md" },
   { name: "quality/INTAKE.md", purpose: "Quality Engine v3: INTAKE.md" },
+  { name: "quality/FOUNDATION.md", purpose: "Quality Engine v3: FOUNDATION.md" },
   { name: "quality/ROUTING.md", purpose: "Quality Engine v3: ROUTING.md" },
   { name: "quality/PROFILES.md", purpose: "Quality Engine v3: PROFILES.md" },
   { name: "quality/profiles.json", purpose: "Quality Engine v3: profiles.json" },
@@ -193,7 +196,7 @@ const BRAND_DEPARTMENTS = new Set(["marketing", "content", "design", "ecommerce"
 /** The tools that capture, check or compare work a buyer sees. The list of AI defaults to avoid is for every kind of work, so every pack carries it. */
 /** The pack's map of every passage it can look up (retrieve.ts knowledgeMap). */
 export const KNOWLEDGE_MAP = "knowledge-map.md";
-export const BRAND_TOOLS = new Set(["capture-brand-dna.mjs", "brand-dna-snippet.js", "check-brand-fidelity.mjs", "brand-file.mjs", "compare-candidates.mjs"]);
+export const BRAND_TOOLS = new Set(["capture-brand-dna.mjs", "brand-dna-snippet.js", "check-brand-fidelity.mjs", "brand-file.mjs", "brand-brain.mjs", "check-creative-set.mjs", "compare-candidates.mjs"]);
 export function brandFacing(department: string, families: DeliverableFamily[]): boolean {
   if (BRAND_DEPARTMENTS.has(department)) return true;
   if (families.some(f => f === "web_page" || f === "ad_creative")) return true;
@@ -1468,11 +1471,12 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     let content = d.template ? fillTemplate(d.template, templates[d.template], values) : d.content!;
     // A pack never names a tools/ file it lacks: train packs ship no tools/, so their role kit files, playbook and knowledge point at the public copy.
     let source = sourceOf(d);
-    if (d.resolveTools || (kind === "train" && (source === "role" || d.path === "playbook.md" || d.path === "knowledge.md" || d.path.startsWith("knowledge/")))) {
+    // The shared quality rules (FOUNDATION.md, INTAKE.md) name brand tools; a pack without them gets the public links.
+    if (d.resolveTools || (source === "tools" && d.path.endsWith(".md")) || (kind === "train" && (source === "role" || d.path === "playbook.md" || d.path === "knowledge.md" || d.path.startsWith("knowledge/")))) {
       const resolved = resolveToolRefs(content, toolNames, origin);
       // A job skill is one shared file for every pack that links the job. In a pack without the brand tools its text
       // points at their public copies instead, so that pack keeps its own copy and the shared one stays the same.
-      if (agent && (source === "job" || source === "role") && resolved !== resolveToolRefs(content, allTools, origin)) source = "agent";
+      if (agent && (source === "job" || source === "role" || source === "tools") && resolved !== resolveToolRefs(content, allTools, origin)) source = "agent";
       content = resolved;
     }
     if (!agent && (d.path === "soul.md" || d.path === "personality.md") && !content.replace(/^\uFEFF/, "").trimStart().startsWith(TEMPLATE_MARKER)) {

@@ -25,6 +25,8 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 ## Named agents for this role
 
 - Joaquin (joaquin-priceeffect)
+- Juliet (juliet-merchandising)
+- Mei (mei-wholesale-sales)
 - Olu (olu-pricing)
 - Osman (osman-subscriptionpricing)
 - Delphine (delphine-offers)

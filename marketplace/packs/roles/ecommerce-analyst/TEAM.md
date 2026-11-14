@@ -26,5 +26,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 - Nurlan (nurlan-rfm)
 - Intan (intan-storereports)
+- Radek (radek-unit-economics)
+- Zara (zara-tiktok-ads)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

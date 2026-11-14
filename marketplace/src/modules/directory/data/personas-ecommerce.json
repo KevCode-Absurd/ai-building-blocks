@@ -165,16 +165,30 @@
     "team": {
       "roles": [
         "daily-contribution-margin-tracker",
+        "discount-and-price-change-checker",
         "ecommerce-manager",
         "experiment-readout-desk",
         "growth-idea-ranker",
+        "monthly-catalogue-clean-up-keeper",
         "monthly-channel-budget-reviewer",
         "one-goal-marketing-plan-builder",
-        "plan-the-cash-for-your-next-stock-order"
+        "plan-the-cash-for-your-next-stock-order",
+        "raise-order-value-with-bundles-and-add-ons-you-can-check"
       ],
-      "families": [],
+      "families": [
+        "architecture-delivery",
+        "bundles-upsells",
+        "catalog-experience",
+        "growth-routes",
+        "marketplace-launch",
+        "shopping-feed",
+        "unit-costs"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",
@@ -320,15 +334,23 @@
     "team": {
       "roles": [
         "amazon-product-viability-scorer",
+        "compare-supplier-prices-on-the-same-basis",
         "find-a-product-idea-in-buyer-complaints-and-score-it",
+        "get-a-product-made-right-from-tech-pack-to-inspected-shipment",
         "landed-cost-calculator",
         "physical-product-developer",
+        "product-sample-approval-loop",
         "product-tech-pack-writer",
         "star-rating-review-miner"
       ],
-      "families": [],
+      "families": [
+        "sourcing-suppliers"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "fact_checker",
@@ -480,14 +502,25 @@
       "roles": [
         "build-a-buyer-profile-from-interviews-and-reviews",
         "buying-story-interview-guide",
+        "check-a-marketing-survey-before-sending-it",
         "customer-insights-researcher",
+        "find-a-product-idea-in-buyer-complaints-and-score-it",
         "interview-customers-and-map-what-they-hire-you-to-do",
         "monthly-customer-voice-keeper",
-        "product-review-mining"
+        "prepare-a-survey-findings-briefing",
+        "product-review-mining",
+        "review-ad-copy",
+        "weekly-product-feedback-triager"
       ],
-      "families": [],
+      "families": [
+        "customer-discovery",
+        "interviews-observation"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "fact_checker",
@@ -633,14 +666,28 @@
         "bundle-and-quantity-break-builder",
         "discount-and-price-change-checker",
         "discount-impact-checker",
+        "experiment-readout-desk",
         "growth-marketer",
         "guarantee-designer",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "monthly-channel-budget-reviewer",
         "order-threshold-planner",
-        "raise-order-value-with-bundles-and-add-ons-you-can-check"
+        "raise-order-value-with-bundles-and-add-ons-you-can-check",
+        "set-your-cac-limit-and-test-what-ads-really-add",
+        "subscription-churn-watcher",
+        "weekly-product-funnel-watcher"
       ],
-      "families": [],
+      "families": [
+        "bundles-upsells",
+        "growth-routes",
+        "priorities",
+        "risk-urgency"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -785,16 +832,28 @@
     },
     "team": {
       "roles": [
+        "brand-file-from-website",
         "brand-strategist",
+        "brand-voice-reviewer",
         "make-every-touchpoint-say-the-same-thing",
         "name-and-position-a-new-brand",
+        "one-word-positioning",
+        "position-name-launch",
         "positioning-statement-writer",
         "store-name-tester",
         "write-a-voice-guide-from-your-documents-and-check-copy"
       ],
-      "families": [],
+      "families": [
+        "format-framework",
+        "naming",
+        "position-architecture",
+        "positioning"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -946,15 +1005,24 @@
     "team": {
       "roles": [
         "leftover-app-code-finder",
+        "monthly-store-speed-keeper",
         "pre-launch-store-checker",
         "product-and-variant-setup-planner",
+        "quarterly-accessibility-keeper",
         "shopify-markets-setup-planner",
         "shopify-specialist",
         "shopify-store-setup-planner"
       ],
-      "families": [],
+      "families": [
+        "built-experiences",
+        "catalog-experience",
+        "shopify-launch"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -1109,13 +1177,21 @@
         "daily-contribution-margin-tracker",
         "ecommerce-analyst",
         "ga4-store-setup-checker",
+        "monthly-repeat-buyer-keeper",
+        "monthly-returns-and-refunds-reviewer",
         "monthly-tracking-health-keeper",
         "store-ltv-payback-reader",
+        "weekly-product-funnel-watcher",
         "weekly-store-numbers-watcher"
       ],
-      "families": [],
+      "families": [
+        "unit-costs"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -1261,15 +1337,30 @@
     "team": {
       "roles": [
         "ad-matched-landing-page-writer",
+        "buyer-aware-headline",
         "claim-and-proof-matcher",
         "conversion-copywriter",
         "hardest-objections-answer-writer",
+        "headline-test",
         "landing-page-auditor",
-        "product-page-doubt-mapper"
+        "product-page-doubt-mapper",
+        "product-review-mining"
       ],
-      "families": [],
+      "families": [
+        "catalog-experience",
+        "customer-evidence",
+        "direct-response",
+        "experiment-first",
+        "outreach",
+        "promise-proof",
+        "risk-urgency"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -1415,14 +1506,23 @@
       "roles": [
         "app-script-auditor",
         "hero-image-loading-fixer",
+        "monthly-store-speed-keeper",
+        "pre-launch-store-checker",
+        "quarterly-accessibility-keeper",
         "shopify-specialist",
         "speed-budget-and-sale-check",
         "speed-fix-ranker",
         "store-speed-report-reader"
       ],
-      "families": [],
+      "families": [
+        "built-experiences",
+        "shopify-launch"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -1568,13 +1668,21 @@
         "ab-test-traffic-checker",
         "cro-specialist",
         "experiment-readout-desk",
+        "landing-page-fix-loop",
         "one-change-experiment-planner",
         "payments-and-checkout-settings-checker",
-        "sales-funnel-drop-off-finder"
+        "sales-funnel-drop-off-finder",
+        "weekly-product-funnel-watcher"
       ],
-      "families": [],
+      "families": [
+        "catalog-experience",
+        "prototype-experiments"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -1720,15 +1828,45 @@
       "roles": [
         "ad-angle-planner",
         "ad-creative-strategist",
+        "ad-test-sprint-runner",
         "competitor-ad-theme-and-gap-mapper",
         "creative-test-reader",
         "five-tactic-ad-hook-writer",
         "seven-bucket-ad-concept-brainstormer",
         "video-ad-production-plan-builder"
       ],
-      "families": [],
+      "families": [
+        "3d-cutaway-image-ad-maker",
+        "accurate-product-image-ad-maker",
+        "carousel-ad-writer",
+        "clay-scene-image-ad-maker",
+        "clay-town-image-ad-maker",
+        "comic-strip-image-ad-maker",
+        "creative-diagnostics",
+        "creative-divergence",
+        "creative-patterns",
+        "customer-proof",
+        "designed-type",
+        "drawn-story",
+        "editorial-headline",
+        "format-framework",
+        "hooks-headlines",
+        "knitted-wool-image-ad-maker",
+        "native-notes",
+        "paper-craft-image-ad-maker",
+        "paper-cutout-image-ad-maker",
+        "portrait-photography",
+        "problem-moments",
+        "single-image-ad-planner",
+        "talking-object-image-ad-maker",
+        "watercolor-image-ad-maker"
+      ],
       "lenses": [
-        "customer"
+        "brand-guardian",
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "maker",
@@ -1872,16 +2010,25 @@
     "team": {
       "roles": [
         "ad-fatigue-watcher",
+        "ad-test-sprint-runner",
         "meta-account-structure-planner",
         "meta-ads-30-check-account-auditor",
         "meta-ads-compliance-checker",
+        "meta-ads-weekly-account-keeper",
         "meta-media-buyer",
         "meta-server-tracking-checker",
+        "monthly-tracking-health-keeper",
         "platform-roas-reality-check"
       ],
-      "families": [],
+      "families": [
+        "campaign-launch",
+        "creative-divergence"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -2030,14 +2177,22 @@
         "brand-and-non-brand-splitter",
         "google-ads-media-buyer",
         "google-ads-store-account-auditor",
+        "google-ads-weekly-account-keeper",
         "merchant-center-feed-health-checker",
+        "monthly-tracking-health-keeper",
         "performance-max-routine-keeper",
         "search-term-junk-sorter",
         "shopping-feed-title-writer"
       ],
-      "families": [],
+      "families": [
+        "pmax-demand",
+        "shopping-feed"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -2189,15 +2344,25 @@
     "team": {
       "roles": [
         "affiliate-influencer-manager",
+        "build-a-clear-sponsorship-decision-brief",
         "creator-gifting-brief",
         "creator-pay-planner",
         "influencer-gifting-planner",
         "traction-affiliate-programs",
         "turn-your-best-organic-posts-and-creator-videos-into-meta-ads"
       ],
-      "families": [],
+      "families": [
+        "creator-partnerships",
+        "creator-proof",
+        "growth-routes",
+        "loyalty-community"
+      ],
       "lenses": [
-        "customer"
+        "brand-guardian",
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",
@@ -2353,13 +2518,24 @@
         "email-marketing-specialist",
         "email-segment-builder",
         "email-setup-health-checker",
+        "fix-inbox-placement-and-win-back-your-opens",
+        "lead-nurture-follow-up",
+        "marketing-email-html-builder",
         "monthly-email-flow-keeper",
         "sunset-flow-and-list-cleaner",
-        "welcome-flow-builder"
+        "weekly-newsletter-keeper",
+        "welcome-flow-builder",
+        "write-a-welcome-email-sequence-that-teaches-then-sells"
       ],
-      "families": [],
+      "families": [
+        "delivery-segmentation",
+        "lifecycle-flows"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -2511,14 +2687,26 @@
       "roles": [
         "audit-your-sites-seo-and-fix-titles-tags-and-markup-first",
         "customer-question-keyword-finder",
+        "find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it",
         "fix-a-drop-in-search-traffic-and-check-it-recovers",
+        "monthly-search-console-keeper",
+        "plan-a-topic-cluster-from-keywords-to-post-briefs-and-links",
         "search-console-quick-win-finder",
         "seo-specialist",
-        "store-seo-fix-prioritiser"
+        "store-seo-fix-prioritiser",
+        "write-a-post-that-beats-the-pages-ranking-today"
       ],
-      "families": [],
+      "families": [
+        "authority-distribution",
+        "intent-content",
+        "publishing",
+        "technical-discovery"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "maker"
@@ -2668,9 +2856,16 @@
         "get-your-store-named-on-the-pages-ai-quotes",
         "shopper-question-and-fan-out-mapper"
       ],
-      "families": [],
+      "families": [
+        "answers-citations",
+        "commerce-pages",
+        "technical-discovery"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "maker"
@@ -2818,12 +3013,18 @@
     },
     "team": {
       "roles": [
+        "check-a-marketing-survey-before-sending-it",
         "complaint-reply-promise-checker",
+        "customer-onboarding-keeper",
         "cx-manager",
         "get-a-stuck-customer-issue-unstuck-and-close-the-loop",
+        "interview-customers-and-map-what-they-hire-you-to-do",
         "make-every-touchpoint-say-the-same-thing",
         "monthly-customer-voice-keeper",
-        "monthly-returns-and-refunds-reviewer"
+        "monthly-returns-and-refunds-reviewer",
+        "plan-assumption-tests",
+        "prepare-a-survey-findings-briefing",
+        "review-support-bot-errors-with-retest-cases"
       ],
       "families": [],
       "lenses": [
@@ -2978,16 +3179,27 @@
     },
     "team": {
       "roles": [
+        "check-capacity-before-promising-a-delivery-date",
+        "explain-a-warehouse-stock-count-variance",
         "landed-cost-calculator",
         "plan-the-cash-for-your-next-stock-order",
+        "prepare-a-supplier-corrective-action-review",
         "reorder-stock-before-you-run-out-and-track-the-shipment",
+        "set-your-order-size-and-split-it-across-suppliers",
         "supplier-quote-comparer",
         "supplier-quote-request-writer",
-        "supply-chain-planner"
+        "supply-chain-planner",
+        "weekly-stock-and-cash-reorder-watcher"
       ],
-      "families": [],
+      "families": [
+        "sourcing-suppliers",
+        "stock-cash"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "maker",
@@ -3131,15 +3343,27 @@
     "team": {
       "roles": [
         "channel-decay-checker",
+        "experiment-readout-desk",
         "growth-idea-ranker",
         "growth-marketer",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "monthly-channel-budget-reviewer",
         "plan-assumption-tests",
         "product-market-fit-checker",
-        "traction-channel-ranker"
+        "set-your-cac-limit-and-test-what-ads-really-add",
+        "subscription-churn-watcher",
+        "traction-channel-ranker",
+        "weekly-product-funnel-watcher"
       ],
-      "families": [],
+      "families": [
+        "growth-routes",
+        "priorities"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -3290,15 +3514,26 @@
     "team": {
       "roles": [
         "bad-year-plan-stress-tester",
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
         "cash-versus-earnings-checker",
+        "explain-a-department-budget-overrun",
+        "forecast-your-startup-runway-and-prepare-a-finance-pack",
         "fpa-analyst",
         "monthly-budget-versus-actual-keeper",
+        "plan-a-year-of-hiring-and-what-it-will-cost",
         "plan-the-cash-for-your-next-stock-order",
-        "prepare-a-seasonal-cash-buffer"
+        "prepare-a-seasonal-cash-buffer",
+        "subscription-churn-watcher",
+        "weekly-saas-numbers-keeper"
       ],
-      "families": [],
+      "families": [
+        "operating-forecasts"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -3450,15 +3685,27 @@
     "team": {
       "roles": [
         "check-capacity-before-promising-a-delivery-date",
+        "discount-and-price-change-checker",
         "ecommerce-manager",
         "explain-a-warehouse-stock-count-variance",
         "get-a-stuck-customer-issue-unstuck-and-close-the-loop",
         "monthly-catalogue-clean-up-keeper",
+        "raise-order-value-with-bundles-and-add-ons-you-can-check",
         "weekly-stock-and-cash-reorder-watcher"
       ],
-      "families": [],
+      "families": [
+        "architecture-delivery",
+        "bundles-upsells",
+        "catalog-experience",
+        "marketplace-launch",
+        "shopping-feed",
+        "unit-costs"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",
@@ -3612,13 +3859,19 @@
         "amazon-inbound-stock-planner",
         "amazon-listing-first-draft-writer",
         "amazon-marketplace-manager",
+        "amazon-monthly-account-keeper",
         "amazon-ppc-launch-builder",
         "amazon-reimbursement-claim-finder",
         "amazon-unit-profit-checker"
       ],
-      "families": [],
+      "families": [
+        "sourcing-suppliers"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",
@@ -3765,12 +4018,17 @@
     "team": {
       "roles": [
         "bot-and-ai-agent-access-planner",
+        "build-a-backup-recovery-rehearsal",
         "cut-risky-apps-and-scripts-from-your-store",
         "cybersecurity-specialist",
+        "find-leaked-keys-move-them-to-safe-storage-and-check-th-aec32235",
         "fraud-rules-setter",
         "lock-down-your-store-logins-and-staff-against-takeover",
+        "prepare-a-vendor-security-questionnaire-response",
+        "quarterly-store-security-keeper",
         "stop-fake-orders-card-testing-and-bot-abuse",
-        "store-security-checkup"
+        "store-security-checkup",
+        "turn-an-incident-into-a-safer-procedure"
       ],
       "families": [],
       "lenses": [
@@ -3942,11 +4200,23 @@
         "chief-of-staff",
         "decision-checklist-keeper",
         "executive-work-keeper",
+        "monthly-roles-and-goals-reviewer",
+        "prepare-a-board-decision-brief",
+        "prepare-a-small-team-offsite",
+        "quarterly-strategy-reviewer",
+        "team-goals-one-on-ones",
+        "weekly-meeting-actions-keeper",
         "weekly-priorities-plan"
       ],
-      "families": [],
+      "families": [
+        "priorities",
+        "written-narratives"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "maker"
@@ -4093,14 +4363,24 @@
       "roles": [
         "cac-payback-checker",
         "channel-decay-checker",
+        "experiment-readout-desk",
         "growth-marketer",
+        "interview-customers-and-map-what-they-hire-you-to-do",
         "monthly-channel-budget-reviewer",
         "platform-roas-reality-check",
-        "set-your-cac-limit-and-test-what-ads-really-add"
+        "set-your-cac-limit-and-test-what-ads-really-add",
+        "subscription-churn-watcher",
+        "weekly-product-funnel-watcher"
       ],
-      "families": [],
+      "families": [
+        "growth-routes",
+        "priorities"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",
@@ -4253,9 +4533,38 @@
         "creative-test-reader",
         "make-every-touchpoint-say-the-same-thing"
       ],
-      "families": [],
+      "families": [
+        "3d-cutaway-image-ad-maker",
+        "accurate-product-image-ad-maker",
+        "carousel-ad-writer",
+        "clay-scene-image-ad-maker",
+        "clay-town-image-ad-maker",
+        "comic-strip-image-ad-maker",
+        "creative-diagnostics",
+        "creative-divergence",
+        "creative-patterns",
+        "customer-proof",
+        "designed-type",
+        "drawn-story",
+        "editorial-headline",
+        "format-framework",
+        "hooks-headlines",
+        "knitted-wool-image-ad-maker",
+        "native-notes",
+        "paper-craft-image-ad-maker",
+        "paper-cutout-image-ad-maker",
+        "portrait-photography",
+        "problem-moments",
+        "single-image-ad-planner",
+        "talking-object-image-ad-maker",
+        "watercolor-image-ad-maker"
+      ],
       "lenses": [
-        "customer"
+        "brand-guardian",
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",
@@ -4404,14 +4713,25 @@
         "lifecycle-marketer",
         "loyalty-and-vip-program-designer",
         "monthly-repeat-buyer-keeper",
+        "plan-a-sale-across-email-and-sms",
         "reorder-and-second-order-planner",
         "subscription-cancel-flow-builder",
+        "subscription-churn-watcher",
         "subscription-offer-designer",
         "win-back-flow-builder"
       ],
-      "families": [],
+      "families": [
+        "cancellation-recovery",
+        "delivery-segmentation",
+        "lifecycle-flows",
+        "loyalty-community",
+        "offer-economics"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",
@@ -4558,6 +4878,7 @@
     },
     "team": {
       "roles": [
+        "compare-supplier-prices-on-the-same-basis",
         "factory-shortlist-vetter",
         "get-a-product-made-right-from-tech-pack-to-inspected-shipment",
         "landed-cost-calculator",
@@ -4566,9 +4887,14 @@
         "product-sample-approval-loop",
         "sample-approval-gatekeeper"
       ],
-      "families": [],
+      "families": [
+        "sourcing-suppliers"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",
@@ -4714,14 +5040,24 @@
       "roles": [
         "buyer-identity-segment-finder",
         "competitor-white-space-mapper",
+        "customer-interview-program-keeper",
         "idea-market-test",
         "idea-validation-analyst",
         "market-research-analyst",
-        "monthly-competitor-watcher"
+        "monthly-competitor-watcher",
+        "price-test-keeper",
+        "quarterly-battle-card-keeper"
       ],
-      "families": [],
+      "families": [
+        "customer-discovery",
+        "interviews-observation",
+        "segments-identity"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "fact_checker",
@@ -4866,16 +5202,30 @@
     "team": {
       "roles": [
         "amazon-product-viability-scorer",
+        "customer-interview-program-keeper",
         "find-a-product-idea-in-buyer-complaints-and-score-it",
+        "idea-market-test",
+        "idea-validation-analyst",
         "market-research-analyst",
+        "monthly-competitor-watcher",
+        "price-test-keeper",
         "product-margin-checker",
+        "quarterly-battle-card-keeper",
         "star-rating-review-miner",
         "supplier-quote-request-writer",
         "winning-product-scorer"
       ],
-      "families": [],
+      "families": [
+        "customer-discovery",
+        "interviews-observation",
+        "segments-identity",
+        "sourcing-suppliers"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -5023,14 +5373,47 @@
       "roles": [
         "design-brief-rules-writer",
         "graphic-designer",
+        "make-a-readable-event-poster",
         "static-ad-critic",
         "story-carousel-ad-writer",
         "twelve-pattern-static-ad-brief-maker",
         "visual-system-rules-writer"
       ],
-      "families": [],
+      "families": [
+        "3d-cutaway-image-ad-maker",
+        "accurate-product-image-ad-maker",
+        "brand-identity",
+        "carousel-ad-writer",
+        "clay-scene-image-ad-maker",
+        "clay-town-image-ad-maker",
+        "comic-strip-image-ad-maker",
+        "customer-proof",
+        "designed-type",
+        "drawn-story",
+        "editorial-brand-sites",
+        "editorial-headline",
+        "editorial-type",
+        "knitted-wool-image-ad-maker",
+        "layout-clarity",
+        "native-notes",
+        "paper-craft-image-ad-maker",
+        "paper-cutout-image-ad-maker",
+        "portrait-photography",
+        "problem-moments",
+        "problem-story",
+        "research-handoff",
+        "single-image-ad-planner",
+        "talking-object-image-ad-maker",
+        "video-social",
+        "watercolor-image-ad-maker"
+      ],
       "lenses": [
-        "customer"
+        "brand-guardian",
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "maker"
@@ -5172,16 +5555,27 @@
     },
     "team": {
       "roles": [
+        "approved-plan-video-production-workflow",
         "creator-filming-brief-writer",
         "social-video-edit-planner",
         "sound-off-commercial-checker",
         "video-ad-shot-list-maker",
         "video-ad-text-overlays",
+        "video-audio-finishing-plan",
         "video-producer"
       ],
-      "families": [],
+      "families": [
+        "creator-proof",
+        "motion-graphics",
+        "plot-world",
+        "video-social"
+      ],
       "lenses": [
-        "customer"
+        "brand-guardian",
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -5326,16 +5720,26 @@
     },
     "team": {
       "roles": [
+        "make-matching-photos-for-a-product-sheet-and-check-them",
         "phone-product-photoshoot",
+        "photo-product-gallery",
+        "product-gallery-answers",
         "product-image-spec-writer",
         "product-page-image-checker",
+        "product-photo-set-maker",
         "product-photo-shoot-planner",
         "product-photographer",
-        "product-shot-list-writer"
+        "product-shot-list-writer",
+        "turn-a-clothing-flat-lay-into-marketplace-ready-photos"
       ],
-      "families": [],
+      "families": [
+        "shoot-retouch"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -5484,13 +5888,23 @@
         "claim-and-proof-matcher",
         "collection-page-planner",
         "ecommerce-copywriter",
+        "monthly-catalogue-clean-up-keeper",
+        "monthly-review-proof-keeper",
+        "plan-collection-pages-that-rank-for-buying-searches",
         "product-page-doubt-mapper",
         "product-page-section-planner",
         "product-page-seo-builder"
       ],
-      "families": [],
+      "families": [
+        "catalog-experience",
+        "commerce-pages",
+        "shopping-feed"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "maker",
@@ -5637,12 +6051,22 @@
         "creator-pay-planner",
         "live-auction-show-planner",
         "price-a-product-so-it-pays-after-delivery-ads-and-discounts",
+        "start-your-stores-organic-social-from-zero",
         "tiktok-shop-breakout-finder",
         "tiktok-shop-manager"
       ],
-      "families": [],
+      "families": [
+        "bundles-upsells",
+        "cancellation-recovery",
+        "commerce-growth",
+        "creator-partnerships",
+        "video-social"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",
@@ -5798,11 +6222,23 @@
         "customer-inbox-triage-and-reply-drafter",
         "customer-support-specialist",
         "delivery-update-flow-builder",
-        "monthly-help-centre-keeper"
+        "monthly-help-centre-keeper",
+        "monthly-returns-and-refunds-reviewer",
+        "public-review-reply-desk",
+        "review-support-bot-errors-with-retest-cases"
       ],
-      "families": [],
+      "families": [
+        "answers-citations",
+        "cancellation-recovery",
+        "empathetic-replies",
+        "onboarding-service",
+        "self-service"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",
@@ -5948,15 +6384,25 @@
     "team": {
       "roles": [
         "amazon-inbound-stock-planner",
+        "check-capacity-before-promising-a-delivery-date",
+        "explain-a-warehouse-stock-count-variance",
         "inventory-cash-planner",
+        "plan-the-cash-for-your-next-stock-order",
+        "prepare-a-supplier-corrective-action-review",
         "reorder-stock-before-you-run-out-and-track-the-shipment",
         "set-your-order-size-and-split-it-across-suppliers",
         "supply-chain-planner",
         "weekly-stock-and-cash-reorder-watcher"
       ],
-      "families": [],
+      "families": [
+        "sourcing-suppliers",
+        "stock-cash"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "strategist"
@@ -6107,17 +6553,33 @@
     },
     "team": {
       "roles": [
+        "build-an-offer-that-sells-without-cutting-your-margin",
         "bundle-tier-layout-planner",
         "collection-page-planner",
         "discount-and-price-change-checker",
         "monthly-catalogue-clean-up-keeper",
+        "offer-refresh-keeper",
         "pick-a-sale-offer-check-profit-set-an-honest-deadline",
+        "price-a-product-so-it-pays-after-delivery-ads-and-discounts",
+        "price-test-keeper",
+        "price-your-software-in-tiers-people-pick-then-test-it",
         "pricing-strategist",
+        "set-your-price-from-what-buyers-say-then-test-it-safely",
         "three-tier-price-ladder-drafter"
       ],
-      "families": [],
+      "families": [
+        "bundles-upsells",
+        "change-discounts",
+        "commerce-pages",
+        "offer-economics",
+        "tiers-presentation",
+        "value-research"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",
@@ -6281,11 +6743,24 @@
         "conversion-copywriter",
         "ecommerce-copywriter",
         "editor",
+        "make-a-readable-event-poster",
         "translator"
       ],
-      "families": [],
+      "families": [
+        "controlled-experiments",
+        "editorial-type",
+        "growth-routes",
+        "hooks-headlines",
+        "jingle-video-ad-script-writer",
+        "music-sound",
+        "proof-mechanism",
+        "voice-edit-translation"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "critic",
@@ -6443,11 +6918,23 @@
         "ecommerce-copywriter",
         "editor",
         "email-marketing-specialist",
-        "lifecycle-marketer"
+        "fix-inbox-placement-and-win-back-your-opens",
+        "lead-nurture-follow-up",
+        "lifecycle-marketer",
+        "marketing-email-html-builder",
+        "monthly-email-flow-keeper",
+        "weekly-newsletter-keeper",
+        "write-a-welcome-email-sequence-that-teaches-then-sells"
       ],
-      "families": [],
+      "families": [
+        "delivery-segmentation",
+        "lifecycle-flows"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "maker"
@@ -6601,14 +7088,25 @@
       "roles": [
         "automation-specialist",
         "chatbot-specialist",
+        "check-an-ai-app-improvement",
         "conversion-copywriter",
         "customer-support-specialist",
+        "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+        "monthly-help-centre-keeper",
+        "review-support-bot-errors-with-retest-cases",
         "sales-enablement-specialist",
-        "sdr"
+        "sdr",
+        "track-agent-injection-controls-and-retest-evidence"
       ],
-      "families": [],
+      "families": [
+        "answers-citations",
+        "self-service"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",
@@ -6762,16 +7260,28 @@
     "team": {
       "roles": [
         "ap-ar-specialist",
+        "build-a-developer-partner-program",
         "business-development-manager",
         "channel-sales-manager",
+        "discount-and-price-change-checker",
         "event-manager",
         "marketplace-manager",
         "pricing-strategist",
-        "proposal-writer"
+        "proposal-writer",
+        "send-reorder-emails-that-fit-each-buyer-then-read-results"
       ],
-      "families": [],
+      "families": [
+        "lifecycle-flows",
+        "market-entry",
+        "negotiation",
+        "outbound",
+        "value-research"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",
@@ -6927,14 +7437,26 @@
       "roles": [
         "community-manager",
         "content-marketer",
+        "monthly-content-repurposer",
         "pinterest-marketer",
+        "public-review-reply-desk",
         "reputation-manager",
+        "social-comment-and-reply-desk",
         "social-media-manager",
+        "weekly-community-keeper",
+        "weekly-social-content-planner",
         "youtube-strategist"
       ],
-      "families": [],
+      "families": [
+        "creator-partnerships",
+        "video-social",
+        "written-platform-posts"
+      ],
       "lenses": [
-        "customer"
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",
@@ -7088,15 +7610,31 @@
     "team": {
       "roles": [
         "ad-creative-strategist",
+        "ad-fatigue-watcher",
         "affiliate-influencer-manager",
         "ecommerce-analyst",
         "marketing-analyst",
+        "monthly-tracking-health-keeper",
         "tiktok-ads-media-buyer",
-        "tiktok-shop-manager"
+        "tiktok-ads-weekly-account-keeper",
+        "tiktok-shop-manager",
+        "weekly-video-ad-batch-maker"
       ],
-      "families": [],
+      "families": [
+        "budget-pacing",
+        "campaign-launch",
+        "creator-partnerships",
+        "creator-proof",
+        "hooks-headlines",
+        "video-social",
+        "written-platform-posts"
+      ],
       "lenses": [
-        "customer"
+        "brand-guardian",
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
       ],
       "seat_suitability": [
         "coordinator",

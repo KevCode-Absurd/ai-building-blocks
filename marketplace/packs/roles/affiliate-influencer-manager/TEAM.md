@@ -25,6 +25,8 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 ## Named agents for this role
 
 - Varun (varun-affiliates)
+- Pilar (pilar-creators)
+- Zara (zara-tiktok-ads)
 - Chelsea (chelsea-creator-partnerships)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

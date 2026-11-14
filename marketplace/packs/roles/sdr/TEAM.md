@@ -28,6 +28,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Gareth (gareth-account-research)
 - Sunil (sunil-cold-calls)
 - Tyler (tyler-inbound-leads)
+- Rohan (rohan-chat-sales)
 - Isaiah (isaiah-outreach)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

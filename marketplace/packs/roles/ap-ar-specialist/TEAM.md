@@ -26,6 +26,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 - Moira (moira-credit-terms)
 - Syafiqah (syafiqah-billing)
+- Mei (mei-wholesale-sales)
 - Rafael (rafael-collections)
 - Odette (odette-payables)
 

@@ -26,6 +26,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 - Darren (darren-shopping-ads)
 - Wyatt (wyatt-local-google-ads)
+- Raymond (raymond-google-ads)
 - Nikhil (nikhil-google-ads)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

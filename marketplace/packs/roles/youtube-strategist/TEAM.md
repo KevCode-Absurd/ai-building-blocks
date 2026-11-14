@@ -26,6 +26,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 - Brianna (brianna-youtube-growth)
 - Miles (miles-thumbnails)
+- Tomas (tomas-social-community)
 - Anthony (anthony-video-scripts)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

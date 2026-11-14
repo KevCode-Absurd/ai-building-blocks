@@ -28,6 +28,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Zeynep (zeynep-focus-groups)
 - Giulia (giulia-taste-tests)
 - Jonah (jonah-customer-discovery)
+- Funmilayo (funmilayo-customer-research)
 - Megan (megan-survey-design)
 - Mauricio (mauricio-customer-interviews)
 - Kimberly (kimberly-review-mining)

@@ -26,5 +26,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 - Nasrin (nasrin-tech-packs)
 - Takeshi (takeshi-product-development)
+- Revathi (revathi-product-research)
+- Thanh (thanh-product-sourcing-lead)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

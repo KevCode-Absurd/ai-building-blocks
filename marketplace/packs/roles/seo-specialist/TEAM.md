@@ -26,6 +26,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 - Chaminda (chaminda-technical-seo)
 - Courtney (courtney-local-seo)
+- Stuart (stuart-store-seo)
 - Danielle (danielle-seo)
 - Beatriz (beatriz-local-marketing)
 - Alfonso (alfonso-content-refresh)

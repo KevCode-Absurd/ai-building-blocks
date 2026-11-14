@@ -26,6 +26,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 - Lindiwe (lindiwe-local-aeo)
 - Sigrid (sigrid-b2b-geo)
+- Rustam (rustam-ai-answers)
 - Bakary (bakary-ai-search)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

@@ -30,5 +30,6 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Rania (rania-menu-design)
 - Lorenzo (lorenzo-merch)
 - Riley (riley-carousels)
+- Ayaka (ayaka-ad-design)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

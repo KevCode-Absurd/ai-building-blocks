@@ -36,6 +36,8 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Adaeze (adaeze-whatsapp-support)
 - Sung-min (sung-min-chat-flows)
 - Loretta (loretta-cs-training)
+- Darlene (darlene-support-lead)
+- Rohan (rohan-chat-sales)
 - Vanessa (vanessa-vet)
 - Joshua (joshua-ai-quality)
 - Araceli (araceli-inbox)

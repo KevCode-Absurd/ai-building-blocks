@@ -24,6 +24,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 ## Named agents for this role
 
+- Margaret (margaret-job-orchestrator)
 - Tamsin (tamsin-okrs)
 - Ugo (ugo-chiefofstaff)
 

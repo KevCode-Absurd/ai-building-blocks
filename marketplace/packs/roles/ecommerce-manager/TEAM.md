@@ -28,6 +28,8 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Imelda (imelda-merchandising)
 - Tilly (tilly-digital-products)
 - Houda (houda-catalogue)
+- Malcolm (malcolm-ecommerce-growth)
+- Marivic (marivic-fulfilment)
 - Estelle (estelle-order-value)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

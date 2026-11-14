@@ -24,6 +24,8 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 ## Named agents for this role
 
+- Kofi (kofi-ad-copy)
+- Lucia (lucia-email-copy)
 - Beverley (beverley-editor)
 - Lorraine (lorraine-paper-review)
 

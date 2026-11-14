@@ -25,6 +25,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 ## Named agents for this role
 
 - Anahera (anahera-brand-naming)
+- Philippa (philippa-brand)
 - Ayumi (ayumi-brand-voice)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

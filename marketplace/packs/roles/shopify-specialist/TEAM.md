@@ -26,6 +26,8 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 - Nikolai (nikolai-store-migration)
 - Nabin (nabin-shopifytheme)
+- Facundo (facundo-store-setup)
+- Arjun (arjun-page-speed)
 - Javier (javier-store-launch)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

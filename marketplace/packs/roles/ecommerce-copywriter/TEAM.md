@@ -24,6 +24,9 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 ## Named agents for this role
 
+- Georgia (georgia-product-copy)
+- Kofi (kofi-ad-copy)
+- Lucia (lucia-email-copy)
 - Yasmin (yasmin-foodmaker)
 - Faye (faye-product-pages)
 

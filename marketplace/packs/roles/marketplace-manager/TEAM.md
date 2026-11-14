@@ -27,6 +27,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Selim (selim-delivery-apps)
 - Kemar (kemar-ebaywalmart)
 - Shanice (shanice-marketplace-service)
+- Mei (mei-wholesale-sales)
 - Huiling (huiling-cross-border)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

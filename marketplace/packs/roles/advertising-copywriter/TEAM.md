@@ -29,5 +29,6 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Malik (malik-audio-ads)
 - Marsha (marsha-jingles)
 - Ursula (ursula-book-blurbs)
+- Kofi (kofi-ad-copy)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

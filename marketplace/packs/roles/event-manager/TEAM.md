@@ -25,6 +25,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 ## Named agents for this role
 
 - Craig (craig-trade-shows)
+- Mei (mei-wholesale-sales)
 - Winston (winston-events)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

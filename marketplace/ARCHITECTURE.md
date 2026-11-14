@@ -266,6 +266,7 @@ two kinds. Both are under the AI Blocks Agent Pack Licence 1.0 (free to use and 
 | `src/modules/packs/format.ts` | `PACK_SCHEMA`, `PACK_LICENSE`, `TEMPLATE_MARKER`, the pack.json types and the upload schema. |
 | `src/modules/directory/roles.ts` | Loads and validates `roles.json` (`{ id, name, department, summary, aliases }`); `checkRoleKitJson` checks a kit's role.json against it. |
 | `scripts/build-packs.mjs` | Runs after `vite build` (`npm run build`), writes `dist/packs`. |
+| `scripts/build-claude-plugins.mjs` | Runs after build-packs, writes `dist/packs/claude/`: the Claude Code plugin marketplace (`marketplace.json`) and one plugin zip per job role (`<role-id>.zip`). |
 | `src/modules/studio/import.ts` | `POST /api/studio/import`: start a studio agent from a trained pack. |
 | `scripts/check-pack-sources.mjs` | Checks every source URL in the role kits; first step of the knowledge refresh. |
 
@@ -367,8 +368,23 @@ After any change to personas, job types, roles, kits or templates: `npm run pack
 
 **Build step.** `npm run build` = `node scripts/mega-team.mjs`, `node scripts/role-toolbox.mjs`, `vite build`, then `node scripts/build-packs.mjs` (also used by `worker:dev` and both
 deploy scripts). `--only=id,id` builds a few. Static assets serve the packs; the Worker routes `/tools/<file>`
-and `/agents/<id>/skills/<skill>.txt` read from them. Agent ids may not be `roles`, `jobs`, `mega`, `tools` or
+and `/agents/<id>/skills/<skill>.txt` read from them. Agent ids may not be `roles`, `claude`, `jobs`, `mega`, `tools` or
 `index`.
+
+**Claude Code plugins** (`scripts/build-claude-plugins.mjs`, last in `npm run build`). One plugin per job role, so people
+install only the teams they want: every installed agent's description sits in context in every Claude Code session
+(about 70 to 90 tokens an agent). Users run `/plugin marketplace add <origin>/packs/claude/marketplace.json`, then
+`/plugin install <role-id>@ai-blocks`; agents show as `<role-id>:<agent-id>` under Custom agents. Each entry is an
+`archive` source pinned with `sha256`, so no git repository is involved. A plugin zip holds `agents/<agent-id>.md`
+(front matter plus the pack's AGENTS.md, with the pack folder named as `${CLAUDE_PLUGIN_ROOT}/packs/<agent-id>/`),
+the agent's whole pack under `packs/<agent-id>/`, `.claude-plugin/plugin.json`, README.md and LICENSE.md. The agent
+works in `ai-blocks/<agent-id>/` in the user's project and runs the pack's scripts from there, because the plugin
+folder is replaced on update. The entry `version` (newest pack date plus the zip's hash, e.g. `2026.11.14-623ea5b0`)
+changes only when a plugin's content does, which is what tells Claude Code an update is out; plugin.json has no
+version of its own, so the two never disagree. Zips stay byte-identical while their packs are unchanged. Limits the
+script enforces: 24 MiB a zip (Workers' 25 MiB asset limit) and 60,000 entries (no zip64). The profile's "Start in
+your AI" block has a Claude Code tab for agents with a job role (`startGuides` in `ui/pages/directory/packs.ts`).
+Check a build with `claude plugin validate dist/packs/claude/marketplace.json`.
 
 **The pack linter** (`src/modules/packs/lint.ts`, `lintPack`) runs on every pack the build makes, agent and train, and
 any finding fails the build. Rules: `missing_file` (a file names a pack file or folder path the pack does not hold;

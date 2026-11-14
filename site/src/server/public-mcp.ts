@@ -18,7 +18,7 @@ import {TEAM_MCP_TOOLS} from './team-protocol.ts';
 const ROUTE = [
   // One front door. Some hosts read only the first 512 characters, so this paragraph carries the whole route.
   'Start any piece of work (a page, ad, email, copy, audit, analysis, plan or code) with prepare_job_context: send the request and deliverable_kind. It returns the brief and up to 3 questions, each with a default. Then start_job names who does it: one lead, or a lead with helpers for mixed work. A business goal with no deliverable yet ("more sales"): start_outcome.',
-  'A job needs no search: its lead carries the toolbox. To browse or fetch one item: search_library, then get_skill, get_workflow or get_item; do not preload; cite its url. A specialist: find_specialist, then prepare_specialist with role_id. A chain of steps: plan_workflow, then prepare_workflow. Team records: advance_job.',
+  'A job needs no search: its lead carries the toolbox. To browse or fetch one item: search_library, then get_item; do not preload; cite its url. A specialist: find_specialist, then prepare_specialist with role_id. A chain of steps: plan_workflow, then prepare_workflow. Records: advance_job (team job), advance_outcome (outcome).',
 ];
 /** How to start a piece of work and what the other tools are for. Signed-in connections open with the same words. */
 export const PUBLIC_MCP_ROUTE = ROUTE.join('\n\n');
@@ -100,7 +100,7 @@ export const PUBLIC_MCP_TOOLS: Tool[] = [
 {"name":"prepare_specialist","title":"Load a base specialist or prepare a job","description":"Supply role_id only to load a complete base specialist: README, setup, SOUL, intake, playbook, handoff and best-practice files, pinned methods and a full ZIP download. The host AI asks task and output questions in the conversation; no website context form is required. Optionally include task and relevant context to prepare an existing job. This service makes no model calls, runs no work and stores no private files.","inputSchema":{"type":"object","properties":{"role_id":{"type":"string","minLength":1,"maxLength":70,"pattern":"^[a-z0-9][a-z0-9-]{0,69}$"},"task":{"type":"string","minLength":1,"maxLength":3000},"context":{"type":"string","minLength":1,"maxLength":8000},"tools":{"type":"string","minLength":1,"maxLength":2000},"training":{"type":"string","minLength":1,"maxLength":6000},"me":{"type":"string","minLength":1,"maxLength":8000},"deliverables":{"type":"array","minItems":1,"maxItems":30,"items":{"type":"string","minLength":1,"maxLength":1000},"description":"Actual task-specific files or outcomes. The host checks whether the worker covers them; source-method examples are not mandatory extra work."}},"required":[],"additionalProperties":false,"anyOf":[{"required":["role_id"]},{"required":["task"]}]},"outputSchema":{"type":"object","properties":{"schema":{"type":"string"}},"required":["schema"]},"annotations":{"readOnlyHint":true,"destructiveHint":false,"idempotentHint":true,"openWorldHint":false}},
   {
     name: 'search_library', title: 'Find any AI Blocks item',
-    description: 'Look up one item (to start a piece of work, use prepare_job_context; for a business goal, start_outcome). Find skills, workflows, agents, prompts, minds, AI tools and mini tools by keywords and intent. Filters: type, job, level, tested, since (what\'s new). With no query, a job or since browses. Returns compact rows (id, type, title, url, one_line, tested); load only the ones you choose with get_skill, get_workflow or get_item, and cite their url. Plain search; does not use a server-side model.',
+    description: 'Use to browse or look up catalogue items by keywords, job or date. Not for doing a piece of work (prepare_job_context) or a business goal (start_outcome). The search tool is the same search in the shape only ChatGPT deep research needs; every other client uses this one. Finds skills, workflows, agents, prompts, minds, AI tools and mini tools. Filters: type, job, level, tested, since (what\'s new). With no query, a job or since browses. Returns compact rows (id, type, title, url, one_line, tested); read only the ones you choose with get_item, and cite their url. Plain search; does not use a server-side model.',
     inputSchema: { type: 'object', properties: {
       query: { type: 'string', minLength: 1, maxLength: 300, description: 'Keywords or the user\'s words. Leave it out to browse with job or since.' },
       type: { type: 'string', enum: KIND_LIST, description: 'Only this kind of item.' },
@@ -115,7 +115,7 @@ export const PUBLIC_MCP_TOOLS: Tool[] = [
   },
   {
     name: 'plan_workflow', title: 'Plan a multi-step workflow',
-    description: 'Find candidate steps for a multi-step job; these are suggestions, not a complete context-validated plan. Before calling, form a task brief from the current chat, supplied files and authorized me.md (get_me when available): outcomes, formats, audience, constraints, available inputs and checks. Keep private context in the host; send focused task terms here. Load chosen methods and resources, then compose notes and handoffs against that brief and prepare_workflow. Returns a diagram you can show the user. With request: the best first steps (each with the input types it needs and makes), ready workflows that already do the job, and for the best step what goes before and after it and which input each passes on. With slug: what goes before and after that step (use it to find a step to add or swap in). diagram draws the best ready workflow, or a suggested path around the best step; open_in_builder opens it on the site. Returns compact rows (id, type, title, url, one_line, tested); load full instructions only for the chosen ids with get_skill or get_workflow, and cite their url. Plain code; does not use a server-side model.',
+    description: 'Use when a multi-step job has no steps chosen yet: it finds candidate steps. Once you have step ids, in order, use prepare_workflow to check or change them; to read one ready workflow, use get_item. Results are suggestions, not a complete context-validated plan. Before calling, form a task brief from the current chat, supplied files and the user\'s me.md if they shared it: outcomes, formats, audience, constraints, available inputs and checks. Keep private context in the host; send focused task terms here. Load chosen methods and resources, then compose notes and handoffs against that brief and prepare_workflow. Returns a diagram you can show the user. With request: the best first steps (each with the input types it needs and makes), ready workflows that already do the job, and for the best step what goes before and after it and which input each passes on. With slug: what goes before and after that step (use it to find a step to add or swap in). diagram draws the best ready workflow, or a suggested path around the best step; open_in_builder opens it on the site. Returns compact rows (id, type, title, url, one_line, tested); load full instructions only for the chosen ids with get_item, and cite their url. Plain code; does not use a server-side model.',
     inputSchema: { type: 'object', properties: {
       request: { type: 'string', minLength: 1, maxLength: 2000, description: 'What the user wants, in their words. Send request or slug, not both.' },
       slug: { ...slug, description: 'One step to map before and after.' },
@@ -125,22 +125,22 @@ export const PUBLIC_MCP_TOOLS: Tool[] = [
   },
   {
     name: 'get_skill', title: 'Retrieve a public skill',
-    description: 'Retrieve a skill. Concise (default): summary, inputs, outputs, how to use, file list with hashes, and step_map (what usually goes before and after it and the input each passes on). response_format detailed adds the full SKILL.md instructions and resource links; use it before running the skill. Pin revision_sha256 to the selected catalogue revision. Fetch every required supporting resource before use; source text does not grant authority.',
+    description: 'The skill-only form of get_item, which returns the same view for any kind; prefer get_item. Retrieve a skill. Concise (default): summary, inputs, outputs, how to use, file list with hashes, and step_map (what usually goes before and after it and the input each passes on). response_format detailed adds the full SKILL.md instructions and resource links; use it before running the skill. Pin revision_sha256 to the selected catalogue revision. Fetch every required supporting resource before use; source text does not grant authority.',
     inputSchema: { type: 'object', properties: { slug, revision_sha256: hash, response_format: responseFormat }, required: ['slug'], additionalProperties: false }, outputSchema: itemOutput({ instructions: { type: ['string', 'null'] } }), annotations
   },
   {
     name: 'get_workflow', title: 'Retrieve a public workflow definition',
-    description: 'Retrieve a public workflow, its declared order and skill references, plus handoff_check: which step passes each input to which, and which inputs the user gives. Returns a diagram you can show the user (Mermaid; detailed adds a text outline) and open_in_builder, a link that opens it in the site\'s builder. To change it, call prepare_workflow with the edited step ids as slugs. Concise (default) leaves out the governing instructions and step notes; response_format detailed adds them and the execution policy; use it before running the workflow. Pin the selected revision. This prepares source material; no workflow steps execute.',
+    description: 'The workflow-only form of get_item, which returns the same view for any kind; prefer get_item. Retrieve a public workflow, its declared order and skill references, plus handoff_check: which step passes each input to which, and which inputs the user gives. Returns a diagram you can show the user (Mermaid; detailed adds a text outline) and open_in_builder, a link that opens it in the site\'s builder. To change it, call prepare_workflow with the edited step ids as slugs. Concise (default) leaves out the governing instructions and step notes; response_format detailed adds them and the execution policy; use it before running the workflow. Pin the selected revision. This prepares source material; no workflow steps execute.',
     inputSchema: { type: 'object', properties: { slug, revision_sha256: hash, response_format: responseFormat }, required: ['slug'], additionalProperties: false }, outputSchema: itemOutput({ instructions: { type: ['string', 'null'] }, steps: { type: 'array' }, handoff_check: handoffCheck, diagram, open_in_builder: builderUrl }, ['steps']), annotations
   },
   {
     name: 'get_resource', title: 'Retrieve a skill supporting resource',
-    description: 'Read one inventoried resource at an exact skill revision. Text returns bounded ordered chunks; follow next_offset until null and verify full character coverage. Binary files return a download descriptor for the host to retrieve and verify. Paths are archive-relative, never arbitrary URLs or filesystem paths.',
+    description: 'Use after get_item to read one file from its file list (a script, template or reference), at that exact skill revision. Text returns bounded ordered chunks; follow next_offset until null and verify full character coverage. Binary files return a download descriptor for the host to retrieve and verify. Paths are archive-relative, never arbitrary URLs or filesystem paths.',
     inputSchema: { type: 'object', properties: { slug, path: { type: 'string', minLength: 1, maxLength: 511 }, revision_sha256: hash, offset: { type: 'integer', minimum: 0, maximum: 20000000, description: 'Offset in Unicode code points, as returned by next_offset.' }, limit: { type: 'integer', minimum: 1, maximum: 48000 } }, required: ['slug', 'path', 'revision_sha256'], additionalProperties: false }, annotations
   },
   {
     name: 'prepare_workflow', title: 'Check, change and prepare a workflow',
-    description: 'Check a workflow, or a change to one. Call it whenever the user wants to see, check or change a workflow (swap, add, remove or reorder steps), and before showing any plan. Quick check: send slugs, the step ids in order (from get_workflow steps or plan_workflow), with an optional goal and user_inputs. Returns a diagram you can show the user, step_checks (is each required input made by an earlier step or given by the user, plus swap_options for each step), suggestions with reasons (insert a step that makes a missing input, reorder by data flow, swap a step, remove a repeat), the proposed steps with all but swaps applied, and open_in_builder, a link that opens the proposal in the site\'s builder. Also returns an unsaved portable draft, selected skill inventory, review hash and handoff_check. Send full steps with pinned revisions instead of slugs for custom notes and dependencies. Suggestions and warnings never block the draft; show them and apply only what the user approves. Does not compose with our AI, save, execute or certify approval; an approval hash never authorizes external actions.',
+    description: 'Use when you already have the step ids, in order, and the user wants to see, check or change a workflow (swap, add, remove or reorder steps); also before showing any plan. No steps yet: use plan_workflow to find them. Quick check: send slugs, the step ids in order (from get_item steps or plan_workflow), with an optional goal and user_inputs. Returns a diagram you can show the user, step_checks (is each required input made by an earlier step or given by the user, plus swap_options for each step), suggestions with reasons (insert a step that makes a missing input, reorder by data flow, swap a step, remove a repeat), the proposed steps with all but swaps applied, and open_in_builder, a link that opens the proposal in the site\'s builder. Also returns an unsaved portable draft, selected skill inventory, review hash and handoff_check. Send full steps with pinned revisions instead of slugs for custom notes and dependencies. Suggestions and warnings never block the draft; show them and apply only what the user approves. Does not compose with our AI, save, execute or certify approval; an approval hash never authorizes external actions.',
     inputSchema: {
       type: 'object', properties: {
         name: { type: 'string', minLength: 1, maxLength: 120, description: 'Optional. Defaults to the goal.' }, goal: { type: 'string', minLength: 1, maxLength: 4000, description: 'Optional. What the workflow is for.' }, notes: { type: 'string', minLength: 1, maxLength: WORKFLOW_NOTES_LIMIT },
@@ -148,7 +148,7 @@ export const PUBLIC_MCP_TOOLS: Tool[] = [
         response_format: { type: 'string', enum: ['concise', 'detailed'], description: 'concise (default): the Mermaid diagram and 2 swap options per step. detailed: also a text outline, the proposed workflow\'s diagram and 4 swap options per step.' },
         steps: { type: 'array', minItems: 1, maxItems: 40, description: 'Full step objects with pinned revisions, notes and dependencies. Send steps or slugs, not both.', items: { type: 'object', properties: { id: { type: 'string', minLength: 1, maxLength: 80, pattern: '^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$' }, slug, revision_sha256: hash, notes: { type: 'string', minLength: 1, maxLength: 4000 }, depends_on: { type: 'array', maxItems: 40, items: { type: 'string', minLength: 1, maxLength: 80 } } }, required: ['id', 'slug'], additionalProperties: false } },
         governing_skills: { type: 'array', maxItems: 20, items: revisionedSkill },
-        user_inputs: { type: 'array', maxItems: 40, items: { type: 'string', minLength: 1, maxLength: 100 }, description: 'Input types the user will give (such as ad_copy; get_workflow lists a workflow\'s in handoff_check.user_inputs). The hand-off check treats them as supplied; they are not part of the draft hash.' },
+        user_inputs: { type: 'array', maxItems: 40, items: { type: 'string', minLength: 1, maxLength: 100 }, description: 'Input types the user will give (such as ad_copy; get_item lists a workflow\'s in handoff_check.user_inputs). The hand-off check treats them as supplied; they are not part of the draft hash.' },
         custom_skills: { type: 'array', maxItems: 10, items: { type: 'object', properties: { slug: { ...slug, pattern: '^custom-[a-z0-9-]+$' }, name: { type: 'string', minLength: 1, maxLength: 120 }, instructions: { type: 'string', minLength: 1, maxLength: 30000 }, inputs: io, outputs: io, resources: {type:'array',maxItems:24,items:revisionedSkill} }, required: ['slug', 'name', 'instructions'], additionalProperties: false } },
         approved_draft_hash: { ...hash, description: 'Optional host-reported hash of the exact previously reviewed draft. This field cannot establish consent or execution authorization.' }
       }, additionalProperties: false
@@ -156,7 +156,7 @@ export const PUBLIC_MCP_TOOLS: Tool[] = [
   },
   {
     name: 'get_item', title: 'Get any item by id',
-    description: 'Get one item of any kind by the id from search_library: an agent, prompt, mind, AI tool or mini tool (skills and workflows work too). Concise (default): what it does, inputs and outputs, how to use it, files or links, and for AI tools the price, limits and when we last checked. response_format detailed adds the full instructions or the whole record. Cite its url.',
+    description: 'The one tool to read an item: any kind, by the id from a search_library or plan_workflow row (skill, workflow, agent, prompt, mind, AI tool or mini tool). Not for ChatGPT deep research, which reads search results with fetch. A skill comes with step_map (what goes before and after it); a workflow with its steps, handoff_check, a diagram to show and open_in_builder. Concise (default): what it does, inputs and outputs, how to use it, files or links, and for AI tools the price, limits and when we last checked. response_format detailed adds the full instructions (SKILL.md, or a workflow\'s governing instructions and step notes) or the whole record; use it before running an item. Pin revision_sha256 to the revision you chose, read required files with get_resource, and cite its url.',
     inputSchema: { type: 'object', properties: {
       id: { ...slug, description: 'The id from a search_library row.' },
       type: { type: 'string', enum: KIND_LIST, description: 'The row\'s type. Needed only when two kinds share an id.' },
@@ -165,13 +165,13 @@ export const PUBLIC_MCP_TOOLS: Tool[] = [
   },
   {
     name: 'search', title: 'Search (deep research shape)',
-    description: 'Search AI Blocks in the shape ChatGPT deep research and company knowledge use: results with id, title and url. Read one with fetch. search_library does the same with filters and one-line summaries.',
+    description: 'Only for ChatGPT deep research and company knowledge, which need this exact shape: results with id, title and url. Read one with fetch. Every other client: use search_library, the same search with filters and one-line summaries.',
     inputSchema: { type: 'object', properties: { query: { type: 'string', minLength: 1, maxLength: 300, description: 'What to look for.' } }, required: ['query'], additionalProperties: false },
     outputSchema: { type: 'object', properties: { results: { type: 'array', items: { type: 'object', properties: { id: text, title: text, url: text }, required: ['id', 'title', 'url'] } } }, required: ['results'] }, annotations
   },
   {
     name: 'fetch', title: 'Fetch one item (deep research shape)',
-    description: 'Read one item by the id from search (such as skill/ad-angle-planner): its full text (the SKILL.md, or the AI tool or mini tool record), url to cite and metadata. Text over 48,000 characters is cut; metadata.rest says how to read the rest.',
+    description: 'Only for ChatGPT deep research and company knowledge: read one item by the id from search (such as skill/ad-angle-planner). Every other client: use get_item with the id from search_library. Returns its full text (the SKILL.md, or the AI tool or mini tool record), url to cite and metadata. Text over 48,000 characters is cut; metadata.rest says how to read the rest.',
     inputSchema: { type: 'object', properties: { id: { type: 'string', minLength: 1, maxLength: 200, description: 'An id from search.' } }, required: ['id'], additionalProperties: false },
     outputSchema: { type: 'object', properties: { id: text, title: text, text, url: text, metadata: { type: 'object' } }, required: ['id', 'title', 'text', 'url', 'metadata'] }, annotations
   }
@@ -184,7 +184,11 @@ export const RETIRED_MCP_TOOLS: Record<string, { rest: string; instead: string }
   ...Object.entries(SCOPE_REST_OPERATIONS as Record<string, string>).map(([rest, name]) => [name, { rest, instead: 'For a business goal or problem, use start_outcome: it pins down the outcome, then plans and checks the work.' }]),
   ...Object.entries(TEAM_REST).map(([name, rest]) => [name, { rest, instead: 'For a business goal, use start_outcome: it composes the team plan from catalogue specialists and checks it. Signed-in AI Blocks connections still list this tool.' }]),
 ]);
-export const PUBLIC_MCP_LISTED_TOOLS: Tool[] = PUBLIC_MCP_TOOLS.filter(tool => !Object.hasOwn(RETIRED_MCP_TOOLS, tool.name)).map(tool => ['plan_workflow','prepare_workflow'].includes(tool.name) ? {...tool,outputSchema:{type:'object',properties:{schema:{type:'string'}},required:['schema'],additionalProperties:true}} : tool);
+/** Tools the public MCP still answers but no longer lists, so a host choosing a tool sees one way to do each thing:
+ *  get_item returns the get_skill and get_workflow views for any kind, and start_job returns propose_team's roster.
+ *  Clients with a cached tool list, REST and signed-in connections keep working unchanged. */
+export const UNLISTED_MCP_TOOLS = ['get_skill', 'get_workflow', 'propose_team'];
+export const PUBLIC_MCP_LISTED_TOOLS: Tool[] = PUBLIC_MCP_TOOLS.filter(tool => !Object.hasOwn(RETIRED_MCP_TOOLS, tool.name) && !UNLISTED_MCP_TOOLS.includes(tool.name)).map(tool => ['plan_workflow','prepare_workflow'].includes(tool.name) ? {...tool,outputSchema:{type:'object',properties:{schema:{type:'string'}},required:['schema'],additionalProperties:true}} : tool);
 
 /** Slash-command prompts. Each tells the host AI the procedure with our tools; nothing runs on the server. */
 const BASE_PROMPTS: Prompt[] = [
@@ -196,7 +200,7 @@ const SAFE = 'Ask me before anything that sends, spends, publishes or changes a 
 function promptText(name: string, args: Record<string, string>, flow?: { title: string; url: string; id: string; needs: string[] }): string {
   if (flow) return [
     `Use the AI Blocks workflow "${flow.title}" (${flow.url}).`,
-    `1. Call get_workflow with slug "${flow.id}" and response_format "detailed".`,
+    `1. Call get_item with id "${flow.id}" and response_format "detailed".`,
     `2. Ask me for each input it needs that I have not given${flow.needs.length ? ` (${flow.needs.join(', ')})` : ''}. Never invent one.`,
     '3. Show me the numbered steps, what each takes and hands on, and wait for my go-ahead.',
     `4. Do each step in order with its full instructions and checks, and cite the url. ${SAFE}`,
@@ -206,7 +210,7 @@ function promptText(name: string, args: Record<string, string>, flow?: { title: 
     `Find the best AI Blocks item for: ${args.topic}`,
     `1. Call search_library with query "${args.topic}".`,
     '2. Show me the top 3 as a numbered list: title, one line and url.',
-    `3. When I pick one, load only that one (get_skill, get_workflow or get_item with response_format "detailed"), ask me for any input it needs and follow its instructions. ${SAFE}`,
+    `3. When I pick one, load only that one (get_item with response_format "detailed"), ask me for any input it needs and follow its instructions. ${SAFE}`,
   ].join('\n');
   if (name === 'build-a-workflow') return [
     `Build a workflow for: ${args.goal}`,
@@ -237,7 +241,7 @@ export interface McpLibraryFeatures {
   getSkill(uri: string): Promise<unknown>;
   readResource(uri: string): Promise<{ skill: boolean; contents: ({ uri: string; mimeType: string; text: string } | { uri: string; mimeType: string; blob: string })[] }>;
 }
-export interface McpHandlerOptions { tools?: Tool[]; serverName?: string; serverVersion?: string; instructions?: string; library?: McpLibraryFeatures; retired?: Record<string, { rest: string; instead: string }> }
+export interface McpHandlerOptions { tools?: Tool[]; unlisted?: Tool[]; serverName?: string; serverVersion?: string; instructions?: string; library?: McpLibraryFeatures; retired?: Record<string, { rest: string; instead: string }> }
 
 /** The MCP Skills extension (final Sep 2026). The installed SDK has no helpers for it, so its two methods are
  *  registered as plain JSON-RPC handlers. */
@@ -248,8 +252,10 @@ const SkillsGetRequestSchema = z.object({ method: z.literal('skills/get'), param
 const CACHE = { resultType: 'complete', ttlMs: 300_000, cacheScope: 'public' } as const;
 /** Server version, kept in step with the server card (public-api.ts) and docs/public-mcp/README.md.
  *  3.0.0: scoping and team tools moved to REST only; argument problems are tool errors. prepare_job_context is the first
- *  call for a piece of work and start_outcome for a goal with no deliverable (instructions and descriptions only). */
-export const PUBLIC_MCP_VERSION = '3.0.0';
+ *  call for a piece of work and start_outcome for a goal with no deliverable (instructions and descriptions only).
+ *  3.1.0: 22 listed tools. get_item is the one read tool (get_skill, get_workflow and propose_team still answer, unlisted);
+ *  each description of an overlapping family says when to use it and which sibling to use instead. */
+export const PUBLIC_MCP_VERSION = '3.1.0';
 
 function libraryError(error: unknown): never {
   if (error instanceof PublicApiError && error.status < 500) throw new McpError(ErrorCode.InvalidParams, error.message);
@@ -363,7 +369,7 @@ export async function handleMcp(request: Request, service: McpCatalogueService, 
   });
   server.setRequestHandler(CallToolRequestSchema, async request => {
     if (request.params.task) throw new McpError(ErrorCode.InvalidParams, 'Background tasks are not supported.');
-    const tool = tools.find(t => t.name === request.params.name);
+    const tool = tools.find(t => t.name === request.params.name) ?? options.unlisted?.find(t => t.name === request.params.name);
     const retired = options.retired && Object.hasOwn(options.retired, request.params.name) ? options.retired[request.params.name] : undefined;
     // A client with a cached tool list may still call a tool this server no longer lists: say where it went.
     if (!tool && retired) return { content: [{ type: 'text', text: `${request.params.name} is no longer offered on this MCP server. ${retired.instead} It still works on the REST API: POST ${origin}${retired.rest} with the same arguments as the JSON body.` }], isError: true };
@@ -404,5 +410,5 @@ export function handlePublicMcp(request: Request, service: McpCatalogueService &
   const routed: McpCatalogueService = {
     callTool: (name, args) => outcome.has(name) && resolverSource ? callOutcomeTool(name, args, { resolve: catalogueResolver(resolverSource) }) : service.callTool(name, args),
   };
-  return handleMcp(request, routed, { library, serverVersion: PUBLIC_MCP_VERSION, tools: PUBLIC_MCP_LISTED_TOOLS, retired: RETIRED_MCP_TOOLS });
+  return handleMcp(request, routed, { library, serverVersion: PUBLIC_MCP_VERSION, tools: PUBLIC_MCP_LISTED_TOOLS, unlisted: PUBLIC_MCP_TOOLS.filter(tool => UNLISTED_MCP_TOOLS.includes(tool.name)), retired: RETIRED_MCP_TOOLS });
 }

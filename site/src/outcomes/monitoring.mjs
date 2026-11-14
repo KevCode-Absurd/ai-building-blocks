@@ -194,7 +194,7 @@ const s = (maxLength = 300) => ({ type: 'string', minLength: 1, maxLength });
 const n = { type: 'number' };
 export const READBACK_TOOL = {
   name: 'read_back_outcome_experiment', title: 'Read back a running experiment', rest: '/api/v1/outcome-readbacks', engagement: true, path: 'reading',
-  description: 'Without a reading: the read-back schedule for every open experiment and a routine prompt for a host scheduler (Claude Code scheduled task or cron), set up only if the owner agrees. With a reading: compares it with the registered baseline, minimum volume and guardrails; flags a guardrail breach at once; after the window, returns an honest verdict and the close payload for record_outcome_experiment. Budget and pause ideas come back as proposals for the owner; nothing is ever changed.',
+  description: 'Use while an experiment from record_outcome_experiment is live (that tool registers and closes it). Without a reading: the read-back schedule for every open experiment and a routine prompt for a host scheduler (Claude Code scheduled task or cron), set up only if the owner agrees. With a reading: compares it with the registered baseline, minimum volume and guardrails; flags a guardrail breach at once; after the window, returns an honest verdict and the close payload for record_outcome_experiment. Budget and pause ideas come back as proposals for the owner; nothing is ever changed.',
   input: { properties: {
     engagement: { type: 'object', description: 'The complete engagement.json from the last outcome tool result, unchanged.' },
     engagement_sha256: { type: 'string', pattern: '^[a-f0-9]{64}$' },

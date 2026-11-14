@@ -38,11 +38,11 @@ test('prepare_job_context returns a short brief and a structured annex for each 
   assert.ok(a.context_requirements.some(r => r.id === 'brand_dna' && r.required));
   // Work a buyer sees also gets the tool that puts candidates side by side for the reviewer.
   assert.deepEqual(a.capture.tools.map(t => t.file), ['capture-brand-dna.mjs', 'brand-dna-snippet.js', 'check-brand-fidelity.mjs', 'brand-file.mjs', 'compare-candidates.mjs']);
-  for (const tool of a.capture.tools) { assert.equal(tool.get_skill.response_format, 'detailed'); assert.equal(tool.status, 'CHECK_GET_SKILL'); assert.equal(tool.agents_app, undefined); }
+  for (const tool of a.capture.tools) { assert.equal(tool.get_item.response_format, 'detailed'); assert.equal(tool.status, 'CHECK_GET_ITEM'); assert.equal(tool.agents_app, undefined); }
   // The agents app serves the three capture and check tools; the compare tool comes from its library skill.
   // Every pack now carries all five tools, so each has an agents.useaiblocks.com address.
   for (const tool of a.capture.tools) assert.equal(tool.marketplace_url, `https://agents.useaiblocks.com/tools/${tool.file}`);
-  const compare = a.capture.tools[4]; assert.deepEqual(compare.get_skill, { slug: 'make-three-first-screens', response_format: 'detailed' }); assert.equal(compare.get_resource.path, 'scripts/compare-candidates.mjs'); assert.match(compare.use, /side by side/);
+  const compare = a.capture.tools[4]; assert.deepEqual(compare.get_item, { id: 'make-three-first-screens', response_format: 'detailed' }); assert.equal(compare.get_resource.path, 'scripts/compare-candidates.mjs'); assert.match(compare.use, /side by side/);
   assert.match(a.candidates.compare_with, /^compare-candidates\.mjs/);
   assert.equal(a.taste_brief.questions, undefined); assert.match(a.taste_brief.fill_from, /Ask nothing more/); assert.equal(a.taste_brief.path, 'context/taste-brief.md');
   assert.equal(a.craft_rubric.reduce((n, c) => n + c.weight, 0), 100);
@@ -279,7 +279,7 @@ test('the catalogue service reads patterns.json and script URLs from the publish
   assert.deepEqual(r.annex.defaults_to_avoid.map(d => d.id), ['web-from-catalogue']);
   const capture = r.annex.capture.tools.find(t => t.file === 'capture-brand-dna.mjs');
   assert.equal(capture.status, 'PUBLISHED'); assert.match(capture.resource_url, /\/api\/v1\/resources\/brand-dna-capture\?path=scripts%2Fcapture-brand-dna\.mjs&revision_sha256=2{64}$/);
-  assert.equal(r.annex.capture.tools.find(t => t.file === 'check-brand-fidelity.mjs').status, 'CHECK_GET_SKILL');
+  assert.equal(r.annex.capture.tools.find(t => t.file === 'check-brand-fidelity.mjs').status, 'CHECK_GET_ITEM');
   // A broken catalogue never blocks grounding.
   service.catalogue = async () => { throw new Error('down'); };
   assert.equal((await service.callTool('prepare_job_context', { request: 'audit my Meta ad account' })).annex.deliverable_kind, 'audit');

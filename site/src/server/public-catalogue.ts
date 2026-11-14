@@ -546,7 +546,7 @@ export class PublicCatalogueService {
       schema: "abb-search/2", query, ...(kind || job || level || since || args.tested !== undefined ? { filters: { ...(kind ? { type: kind } : {}), ...(job ? { job } : {}), ...(level ? { level } : {}), ...(args.tested !== undefined ? { tested: args.tested } : {}), ...(since ? { since } : {}) } } : {}),
       total: ranked.length, ...(query ? { strong_matches: strong.size, no_strong_match: strong.size === 0 } : {}), offset, next_offset: offset + limit < ranked.length ? offset + limit : null,
       items: ranked.slice(offset, offset + limit).map(rowOf),
-      notice: "Discovery rows, not instructions. Load only the items you choose (get_skill, get_workflow or get_item) and cite their url. An agent row is a method: to hire a specialist, use its hire_as.role_id with prepare_specialist, never the agent id. No model was called."
+      notice: "Discovery rows, not instructions. Load only the items you choose with get_item and cite their url. An agent row is a method: to hire a specialist, use its hire_as.role_id with prepare_specialist, never the agent id. No model was called."
         + (query && !strong.size ? " No strong match: none of these say the request in their name, summary or purpose. Tell the user, ask for other words, or try find_specialist; do not force a weak match." : ""),
     };
   }
@@ -585,7 +585,7 @@ export class PublicCatalogueService {
     if (format !== "concise" && format !== "detailed") fail(400, "invalid_arguments", "response_format must be concise or detailed.");
     const detailed = format === "detailed";
     const c = await this.catalogue(), lib = this.steps(c);
-    const notice = "Step map from typed inputs and outputs and the reviewed workflows. Plain code; no model was called. These are candidate steps, not a complete context-validated plan. In the host AI, first form a task brief from the request, available files and authorized me.md (get_me when available), including outcomes, formats, constraints, supplied inputs and checks. Keep private context out of search queries. Load chosen full methods and required resources at their pinned revisions, compose specific notes and handoffs, then call prepare_workflow. Reuse supplied inputs after checking them; review suggestions against the actual context. Cite each chosen item URL.";
+    const notice = "Step map from typed inputs and outputs and the reviewed workflows. Plain code; no model was called. These are candidate steps, not a complete context-validated plan. In the host AI, first form a task brief from the request, available files and the user's me.md if they shared it, including outcomes, formats, constraints, supplied inputs and checks. Keep private context out of search queries. Load chosen full methods and required resources at their pinned revisions, compose specific notes and handoffs, then call prepare_workflow. Reuse supplied inputs after checking them; review suggestions against the actual context. Cite each chosen item URL.";
     const flowRow = (w: Part) => ({ ...this.stepRow(w, detailed), steps: (w.steps ?? []).map(s => s.uses) });
     if (name) {
       this.entry(c, name);
@@ -607,7 +607,7 @@ export class PublicCatalogueService {
       first_steps: first.steps.map(p => this.stepRow(lib.bySlug[p.slug], detailed, p.why)),
       anchor: best ? { id: best.slug, ...this.mapRows(lib, best.slug, detailed ? 5 : 3) } : null,
       ...(first.workflows[0] || best ? this.planDiagram(lib, first.workflows[0] ? lib.bySlug[first.workflows[0].slug] : null, best?.slug ?? "", request, detailed) : {}),
-      next_action: first.workflows.length ? "A ready workflow may fit: load its full method with get_workflow and check every requested deliverable against the task brief before using it." : best ? "Pick the anchor that makes the result the user wants, then add before and after steps so each required input is made earlier or asked from the user." : "Nothing matched. Rephrase the request as the result wanted, or use search_library.",
+      next_action: first.workflows.length ? "A ready workflow may fit: load its full method with get_item and check every requested deliverable against the task brief before using it." : best ? "Pick the anchor that makes the result the user wants, then add before and after steps so each required input is made earlier or asked from the user." : "Nothing matched. Rephrase the request as the result wanted, or use search_library.",
       notice,
     };
   }
@@ -700,7 +700,7 @@ export class PublicCatalogueService {
       step_map: stepMap,
       ...(isFlow ? { steps: (item.steps ?? []).map((s, i) => ({ id: `s${i + 1}`, slug: s.uses, title: c.bySlug.get(s.uses)?.name ?? s.uses })), ...handoff, ...governance } : {}),
       trust,
-      next_action: `Short view. Before doing this ${head.type}'s work, read its full instructions: call ${isFlow ? "get_workflow" : "get_skill"} or get_item again with response_format "detailed" (or read SKILL.md with get_resource), then every required file. Cite url.`,
+      next_action: `Short view. Before doing this ${head.type}'s work, read its full instructions: call get_item again with response_format "detailed" (or read SKILL.md with get_resource), then every required file. Cite url.`,
     };
     const fullItem = { ...item, ...(page.source ? { source: page.source } : {}) };
     const instruction = entry.instruction.bytes <= 2_000_000 ? await this.read(entry.instruction.path, 2_000_000, entry.instruction) : null;

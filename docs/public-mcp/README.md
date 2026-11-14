@@ -1,6 +1,6 @@
 # Public MCP server
 
-Version **3.0.0** (`PUBLIC_MCP_VERSION` in `site/src/server/public-mcp.ts`, also on the server card and `/api/v1/status`). The server is at `https://useaiblocks.com/mcp`: stateless, read-only, no model calls, no hosted execution.
+Version **3.1.0** (`PUBLIC_MCP_VERSION` in `site/src/server/public-mcp.ts`, also on the server card and `/api/v1/status`). The server is at `https://useaiblocks.com/mcp`: stateless, read-only, no model calls, no hosted execution.
 
 ## One front door
 
@@ -17,13 +17,21 @@ The other listed tools serve narrower jobs:
 | Sharing a plan that worked | `prepare_outcome_pattern` (anonymised, owner consent, human review; REST `/api/v1/outcome-patterns`) |
 | Any piece of work | `prepare_job_context` first (REST `POST /api/v1/job-context`), then `start_job` |
 | Who does the job | `start_job` with `deliverable_kind`: one lead by default (`mode: single`), or a lead with helpers (`mode: team`) for mixed kinds of work, more than 12 pieces, or when asked |
-| Team records | `advance_job`; `propose_team`, `get_approaches`, `get_job_templates` (the short team method, plus `JOB-RECORDS.md`, the field reference to open only when a record is refused), `get_job_preferences`, `set_job_preferences` |
-| One item | `search_library`, then `get_skill`, `get_workflow` or `get_item`; `get_resource` for supporting files |
+| Team records | `advance_job` (team jobs from `start_job`; outcome engagements use `advance_outcome`); `get_approaches`, `get_job_templates` (the short team method, plus `JOB-RECORDS.md`, the field reference to open only when a record is refused), `get_job_preferences`, `set_job_preferences` |
+| One item | `search_library`, then `get_item` (any kind, skills and workflows included); `get_resource` for supporting files |
 | One specialist | `find_specialist`, then `prepare_specialist` |
-| A multi-step workflow | `plan_workflow`, then `prepare_workflow` |
-| Hosts that need these names | `search`, `fetch` |
+| A multi-step workflow | `plan_workflow` (no steps chosen yet), then `prepare_workflow` (check or change chosen steps) |
+| ChatGPT deep research and company knowledge only | `search`, `fetch` (every other host uses `search_library` and `get_item`) |
 
-Every tool has a `title`. The public MCP lists 25 tools.
+Every tool has a `title`. The public MCP lists 22 tools.
+
+**Choosing between siblings.** Each description in an overlapping family opens with when to use it and names the sibling to use instead: `prepare_job_context` / `start_job` / `start_outcome`, `advance_job` / `advance_outcome`, `search_library` / `search`, `get_item` / `fetch`, `plan_workflow` / `prepare_workflow`. A listed description or the instructions never name a tool the public server does not list (an old `plan_workflow` text named `get_me`, which only the signed-in personal connection has). `site/test/public-mcp-v2.test.mjs` checks both.
+
+**No read or delete call for jobs and outcomes.** The server stores nothing. The state `advance_job` returns, and `engagement.json` from the outcome tools, are the record: the host reads them from its local files, and deleting those files ends the job. The `advance_*` descriptions say so.
+
+## Tools still answered but no longer listed
+
+Since 3.1.0 the public `tools/list` leaves out `get_skill`, `get_workflow` (`get_item` returns the same views for any kind) and `propose_team` (`start_job` returns the roster for a team job). They still answer on the public MCP with their full results, so a client with a cached tool list keeps working, and REST and signed-in connections list them as before. `UNLISTED_MCP_TOOLS` in `site/src/server/public-mcp.ts` holds the list.
 
 The server instructions (`PUBLIC_MCP_INSTRUCTIONS`) are under 170 words in three paragraphs. The first fits in 512 characters, because some hosts read no more: start any piece of work with `prepare_job_context`, then `start_job` names who does it, and a goal with no deliverable goes to `start_outcome`. The second names the other tools for what they are (one item, a specialist, a chain of steps, team records). The third holds the run and authority rules. Domain guidance (for example how to read ad results) lives in the outcome method (`METHOD.md`, returned once by `start_outcome`), in `prepare_job_context` and in the specialist playbooks, not in the instructions.
 

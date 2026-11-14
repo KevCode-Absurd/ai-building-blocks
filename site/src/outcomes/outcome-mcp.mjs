@@ -40,7 +40,7 @@ export const OUTCOME_TOOLS = [
   },
   {
     name: 'advance_outcome', title: 'Move an outcome engagement forward', rest: '/api/v1/outcome-steps', engagement: true,
-    description: 'Apply one event to an engagement. Before the run: brief (the pinned-down outcome), plan (research and the composed plan, checked against our rules and the live catalogue), approve_plan (owner only). During the run: data, start, complete (with outputs and checks), approve (owner only), skip, block, reopen, next_round; a plan event during the run is a revision. autonomy (owner only) works any time. Every problem in an event comes back at once, with its field path.',
+    description: 'For an engagement from start_outcome only; a team job from start_job moves with advance_job. Apply one event to an engagement. This server keeps no copy, so there is no read or delete call: engagement.json in outcomes/<id>/ is the record (read it there; deleting the folder ends the engagement). Before the run: brief (the pinned-down outcome), plan (research and the composed plan, checked against our rules and the live catalogue), approve_plan (owner only). During the run: data, start, complete (with outputs and checks), approve (owner only), skip, block, reopen, next_round; a plan event during the run is a revision. autonomy (owner only) works any time. Every problem in an event comes back at once, with its field path.',
     input: { properties: { engagement, engagement_sha256: hash, event: EVENT_SCHEMA }, required: ['engagement', 'engagement_sha256', 'event'] },
     async run(a, { engagement: e, resolve, today }) {
       let planCheck;

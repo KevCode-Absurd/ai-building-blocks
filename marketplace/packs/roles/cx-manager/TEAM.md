@@ -27,6 +27,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Fabienne (fabienne-mystery-shopping)
 - Kirsty (kirsty-nps)
 - Alejandra (alejandra-journeys)
+- LaToya (latoya-post-purchase)
 - Wenjing (wenjing-behaviour-research)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

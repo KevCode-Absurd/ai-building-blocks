@@ -701,7 +701,7 @@ export function prepareJobContext(input = {}, context = {}) {
   const scripts = CAPTURE_TOOLS.filter(t => need.brand_dna || (t.skill === 'brand-dna-capture' && family === 'strategy_plan' && !shaped)).map(tool => {
     const resolvedTool = list(context.scripts).find(s => s.file === tool.file);
     const { agents_app, ...row } = tool;
-    return { ...row, get_skill: { slug: tool.skill, response_format: 'detailed' }, get_resource: { slug: resolvedTool?.slug ?? tool.skill, path: resolvedTool?.path ?? tool.path, revision_sha256: resolvedTool?.revision_sha256 ?? null }, resource_url: resolvedTool?.resource_url ?? null, marketplace_url: tool.agents_app === false ? null : MARKETPLACE_TOOLS_BASE + tool.file, status: resolvedTool ? 'PUBLISHED' : 'CHECK_GET_SKILL' };
+    return { ...row, get_item: { id: tool.skill, response_format: 'detailed' }, get_resource: { slug: resolvedTool?.slug ?? tool.skill, path: resolvedTool?.path ?? tool.path, revision_sha256: resolvedTool?.revision_sha256 ?? null }, resource_url: resolvedTool?.resource_url ?? null, marketplace_url: tool.agents_app === false ? null : MARKETPLACE_TOOLS_BASE + tool.file, status: resolvedTool ? 'PUBLISHED' : 'CHECK_GET_ITEM' };
   });
   const ground = shaped ? `GROUND what the tests need: the facts in the request first; add only public facts the work uses, each with a dated source${shape.context === 'voice' ? ', plus 5 to 10 real lines from the brand\'s own messages in this channel' : ''}. No site capture, screenshots or taste brief.`
     : need.data_snapshot ? 'GROUND what the tests need: pull the real account or data at read level into context/ (for example context/data-snapshot.json) with source and date range.'

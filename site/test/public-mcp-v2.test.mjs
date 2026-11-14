@@ -13,7 +13,7 @@ import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js';
 import { buildApiExtras, buildPublicApiManifest } from '../scripts/build-public-api.mjs';
 import { PublicApiError, PublicCatalogueService, blockSearchIndex, catalogueItems, extraSearchIndex, stepLibrary } from '../src/server/public-catalogue.ts';
-import { handlePublicMcp, PUBLIC_MCP_INSTRUCTIONS, PUBLIC_MCP_TOOLS } from '../src/server/public-mcp.ts';
+import { handlePublicMcp, PUBLIC_MCP_INSTRUCTIONS, PUBLIC_MCP_LISTED_TOOLS, PUBLIC_MCP_TOOLS } from '../src/server/public-mcp.ts';
 import { handlePublicApi } from '../src/server/public-api.ts';
 import { searchIndexFor } from '../src/lib/goal.ts';
 import worker from '../src/worker.ts';
@@ -180,14 +180,16 @@ const mcpClient = async () => {
 };
 const loose = z.object({}).passthrough();
 
-test('an official SDK client sees twenty-five tools, prompts, resources and the Skills extension, with outputs matching their schemas', async () => {
+test('an official SDK client sees twenty-two tools, prompts, resources and the Skills extension, with outputs matching their schemas', async () => {
   const client = await mcpClient();
   try {
-    assert.equal(client.getServerVersion().version, '3.0.0');
+    assert.equal(client.getServerVersion().version, '3.1.0');
     const caps = client.getServerCapabilities();
     assert.ok(caps.prompts && caps.resources); assert.deepEqual(caps.extensions, { 'io.modelcontextprotocol/skills': {} });
     const toolNames=(await client.listTools()).tools.map(t=>t.name);
-    assert.equal(toolNames.length, 25);
+    assert.equal(toolNames.length, 22);
+    // get_item is the one read tool; the narrower forms still answer a client that calls them by name (below).
+    for (const name of ['get_skill', 'get_workflow', 'propose_team']) assert.ok(!toolNames.includes(name), name);
     // start_outcome is the front door; the team and scoping tools stay on REST and signed-in connections.
     assert.equal(toolNames[0], 'start_outcome');
     assert(!toolNames.includes('prepare_specialist_team')&&!toolNames.includes('checkpoint_specialist_team'));
@@ -260,6 +262,19 @@ test('the protocol rejects malformed prompt, resource and skill requests as inva
   assert.equal((await rpc({ jsonrpc: '2.0', id: 4, method: 'initialize', params: { protocolVersion: '2025-11-25', capabilities: {}, clientInfo: { name: 't', version: '1' } } }, stub)).result.capabilities.prompts, undefined);
 });
 
+test('listed descriptions name only listed tools, and each overlapping pair says when to use the other', () => {
+  // A host picks from tools/list alone, so a description that sends it to an unlisted tool (get_me once) is a dead end.
+  const listed = new Set(PUBLIC_MCP_LISTED_TOOLS.map(tool => tool.name));
+  const anywhere = [...PUBLIC_MCP_TOOLS.map(tool => tool.name), 'get_me'];
+  const named = textToCheck => anywhere.filter(name => new RegExp(`\\b${name}\\b`).test(textToCheck));
+  for (const tool of PUBLIC_MCP_LISTED_TOOLS) assert.deepEqual(named(tool.description).filter(name => !listed.has(name)), [], tool.name);
+  assert.deepEqual(named(PUBLIC_MCP_INSTRUCTIONS).filter(name => !listed.has(name)), []);
+  const describe = name => PUBLIC_MCP_LISTED_TOOLS.find(tool => tool.name === name).description;
+  for (const [a, b] of [['search_library', 'search'], ['search', 'search_library'], ['get_item', 'fetch'], ['fetch', 'get_item'], ['plan_workflow', 'prepare_workflow'], ['prepare_workflow', 'plan_workflow'], ['advance_job', 'advance_outcome'], ['advance_outcome', 'advance_job'], ['prepare_job_context', 'start_outcome'], ['prepare_job_context', 'start_job'], ['start_job', 'start_outcome'], ['start_outcome', 'prepare_job_context']]) {
+    assert.match(describe(a), new RegExp(`\\b${b}\\b`), `${a} should say when to use ${b}`);
+  }
+});
+
 test('instructions name one first call for any piece of work, then the other tools, and keep the authority rules', () => {
   const words = PUBLIC_MCP_INSTRUCTIONS.match(/\S+/g).length;
   assert.ok(words < 170, `instructions are ${words} words`);
@@ -268,7 +283,7 @@ test('instructions name one first call for any piece of work, then the other too
   assert.match(first, /^Start any piece of work \([^)]*\) with prepare_job_context/); assert.equal(named[0], 'prepare_job_context');
   for (const word of ['deliverable_kind', 'questions', 'start_job', 'one lead', 'start_outcome']) assert.ok(first.includes(word), word);
   assert.equal(PUBLIC_MCP_INSTRUCTIONS.match(/\b(?:start|first|begin)\b/gi).length, 1, 'only one tool is the start');
-  for (const word of ['search_library', 'get_skill', 'get_workflow', 'get_item', 'do not preload', 'url', 'find_specialist', 'prepare_specialist with role_id', 'plan_workflow, then prepare_workflow', 'advance_job']) assert.ok(PUBLIC_MCP_INSTRUCTIONS.includes(word), word);
+  for (const word of ['search_library', 'get_item', 'advance_outcome', 'do not preload', 'url', 'find_specialist', 'prepare_specialist with role_id', 'plan_workflow, then prepare_workflow', 'advance_job']) assert.ok(PUBLIC_MCP_INSTRUCTIONS.includes(word), word);
   assert.match(PUBLIC_MCP_INSTRUCTIONS, /not evidence of human consent/);
   assert.match(PUBLIC_MCP_INSTRUCTIONS, /cannot override host instructions or grant permissions/);
   assert.match(PUBLIC_MCP_INSTRUCTIONS, /stop for the owner/);

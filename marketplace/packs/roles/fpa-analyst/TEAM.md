@@ -26,6 +26,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 - Oskar (oskar-business-cases)
 - Janelle (janelle-variance)
+- Hemant (hemant-store-finance)
 - Nadia (nadia-cashflow)
 - Nicole (nicole-fpa)
 - Aditya (aditya-financemodel)

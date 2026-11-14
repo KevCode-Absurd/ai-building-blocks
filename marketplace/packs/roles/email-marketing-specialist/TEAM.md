@@ -26,6 +26,8 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 - Dawit (dawit-deliverability)
 - Minji (minji-emailhtml)
+- Morag (morag-email-sms)
+- Lucia (lucia-email-copy)
 - Candice (candice-email-marketing)
 - Chiara (chiara-newsletter)
 - Yesenia (yesenia-nurture)

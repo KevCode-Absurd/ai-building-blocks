@@ -26,6 +26,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 - Yaw (yaw-freelance-bids)
 - Neville (neville-bid-no-bid)
+- Mei (mei-wholesale-sales)
 - Terrence (terrence-rfps)
 - Claire (claire-proposals)
 

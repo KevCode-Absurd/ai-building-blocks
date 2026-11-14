@@ -27,5 +27,6 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Bongani (bongani-explainer-videos)
 - Octavio (octavio-storyboards)
 - Ryo (ryo-motion)
+- Devon (devon-video-ugc)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

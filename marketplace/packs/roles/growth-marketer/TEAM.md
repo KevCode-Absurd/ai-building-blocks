@@ -24,6 +24,9 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 ## Named agents for this role
 
+- Brendan (brendan-offers)
+- Barnaby (barnaby-wild-bets)
+- Jared (jared-performance-marketing)
 - Cedric (cedric-marketing-plan)
 - Corey (corey-saas-growth)
 - Rhys (rhys-traction-saas)

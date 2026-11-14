@@ -88,7 +88,7 @@ test('plan_workflow returns compact rows: a first-step plan for a request and a 
   const before = plan.anchor.before.find(x => x.id === 'ad-writer');
   assert.deepEqual(before.passes, ['ad_copy']); assert.equal(before.required, true);
   assert.deepEqual(Object.keys(before), ['id', 'type', 'title', 'url', 'one_line', 'tested', 'passes', 'required', 'basis']);
-  assert.match(plan.next_action, /get_workflow/);
+  assert.match(plan.next_action, /get_item/);
   assert.match(plan.notice, /no model was called/);
   const text = JSON.stringify(plan);
   assert.ok(!/instructions"|revision_sha256/.test(text), 'no full instructions or revisions in the plan');

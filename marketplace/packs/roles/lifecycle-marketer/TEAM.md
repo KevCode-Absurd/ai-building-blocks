@@ -24,6 +24,8 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 ## Named agents for this role
 
+- Imogen (imogen-retention)
+- Lucia (lucia-email-copy)
 - Holly (holly-store-emails)
 - Fraser (fraser-subscriptions)
 

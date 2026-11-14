@@ -26,6 +26,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 - Achieng (achieng-content-strategy)
 - Rocio (rocio-tour-scripts)
+- Tomas (tomas-social-community)
 - Andile (andile-seo-articles)
 - Celeste (celeste-case-studies)
 - Donghyun (donghyun-repurposing)

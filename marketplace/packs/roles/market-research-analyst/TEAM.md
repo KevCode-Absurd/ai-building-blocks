@@ -28,6 +28,8 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Cheryl (cheryl-market-analysis)
 - Lars (lars-export-markets)
 - Desmond (desmond-segments)
+- Shannon (shannon-market-research)
+- Sipho (sipho-product-hunter)
 - Keisha (keisha-market-research)
 - Kojo (kojo-competitor-analysis)
 - Lewis (lewis-idea-validation)

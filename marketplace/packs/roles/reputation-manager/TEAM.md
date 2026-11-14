@@ -25,6 +25,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 ## Named agents for this role
 
 - Alyssa (alyssa-testimonials)
+- Tomas (tomas-social-community)
 - Brenda (brenda-reputation)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

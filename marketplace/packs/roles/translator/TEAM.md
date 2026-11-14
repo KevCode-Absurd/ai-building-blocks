@@ -25,6 +25,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 ## Named agents for this role
 
 - Phoebe (phoebe-captions)
+- Kofi (kofi-ad-copy)
 - Behrouz (behrouz-translation)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

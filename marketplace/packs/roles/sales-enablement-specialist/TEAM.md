@@ -29,6 +29,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Henrik (henrik-spec-sheets)
 - Ricardo (ricardo-buyer-progress)
 - Darnell (darnell-sales-training)
+- Rohan (rohan-chat-sales)
 - Felicia (felicia-discovery)
 - Vikram (vikram-deal-strategy)
 - Hector (hector-negotiation)

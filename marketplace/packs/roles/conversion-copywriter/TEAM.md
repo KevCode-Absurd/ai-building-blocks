@@ -24,6 +24,10 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 ## Named agents for this role
 
+- Annabel (annabel-landing-pages)
+- Kofi (kofi-ad-copy)
+- Lucia (lucia-email-copy)
+- Rohan (rohan-chat-sales)
 - Pooja (pooja-lead-funnels)
 - Bao (bao-website-copy)
 - Bilal (bilal-sales-letters)

@@ -27,6 +27,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Lesley (lesley-regsummary)
 - Armando (armando-contracts)
 - Tahmina (tahmina-governance)
+- Kofi (kofi-ad-copy)
 - Farid (farid-data-privacy)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

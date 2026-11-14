@@ -24,6 +24,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 ## Named agents for this role
 
+- Garrett (garrett-amazon)
 - Gina (gina-amazon-launch)
 - Hassan (hassan-product-research)
 

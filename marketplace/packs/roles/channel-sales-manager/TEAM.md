@@ -24,6 +24,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 ## Named agents for this role
 
+- Mei (mei-wholesale-sales)
 - Rodrigo (rodrigo-wholesale)
 - Rekha (rekha-partners)
 

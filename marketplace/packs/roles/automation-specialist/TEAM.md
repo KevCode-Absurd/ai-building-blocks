@@ -28,6 +28,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Kagiso (kagiso-python)
 - Keeley (keeley-workspaces)
 - Catalina (catalina-nocode-automation)
+- Rohan (rohan-chat-sales)
 - Thandi (thandi-automation)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

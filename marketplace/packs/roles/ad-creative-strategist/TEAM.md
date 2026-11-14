@@ -24,6 +24,9 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 ## Named agents for this role
 
+- Tendai (tendai-ad-creative)
+- Kemal (kemal-creative-director)
+- Zara (zara-tiktok-ads)
 - Bruno (bruno-ad-copy)
 - Brittany (brittany-image-ads)
 - Bryony (bryony-video-ads)

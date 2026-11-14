@@ -27,6 +27,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 - Mateo (mateo-reddit-communities)
 - Monique (monique-membership)
 - Bernadette (bernadette-moderation)
+- Tomas (tomas-social-community)
 - Dario (dario-community)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

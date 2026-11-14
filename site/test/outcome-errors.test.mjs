@@ -157,9 +157,9 @@ test('one front door: a small tool list with titles, short instructions, and cle
   assert.ok(PUBLIC_MCP_INSTRUCTIONS.length <= 2200, `instructions are ${PUBLIC_MCP_INSTRUCTIONS.length} characters`);
   assert.match(PUBLIC_MCP_INSTRUCTIONS.slice(0, 512), /start_outcome/);
   assert.doesNotMatch(PUBLIC_MCP_INSTRUCTIONS, /ROAS|CPA|AOV/);
-  assert.equal(PUBLIC_MCP_VERSION, '3.0.0');
+  assert.equal(PUBLIC_MCP_VERSION, '3.1.0');
   const init = await rpc({ jsonrpc: '2.0', id: 4, method: 'initialize', params: { protocolVersion: '2025-11-25', capabilities: {}, clientInfo: { name: 't', version: '1' } } }, library);
-  assert.equal(init.result.serverInfo.version, '3.0.0');
+  assert.equal(init.result.serverInfo.version, '3.1.0');
 });
 
 test('start_outcome sends the method once and the example only when asked', async () => {
@@ -167,7 +167,7 @@ test('start_outcome sends the method once and the example only when asked', asyn
   assert.equal(r.method, undefined);
   assert.equal(r.example, undefined);
   assert.ok(r.files['METHOD.md'].includes('| Field | Ask | Note | Example |'));
-  assert.match(r.files['METHOD.md'], /personal-agent-builder with get_skill/);
+  assert.match(r.files['METHOD.md'], /personal-agent-builder with get_item/);
   assert.match(r.files['METHOD.md'], /formal engagement or publication is optional/);
   // Method v3's aim-higher section adds about 2.7 KB; still well under the 17.6 KB that sent the method twice.
   assert.ok(Buffer.byteLength(JSON.stringify(r)) < 15_000, `start_outcome is ${Buffer.byteLength(JSON.stringify(r))} bytes`);

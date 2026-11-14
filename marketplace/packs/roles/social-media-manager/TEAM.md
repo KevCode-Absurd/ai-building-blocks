@@ -24,6 +24,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 ## Named agents for this role
 
+- Tomas (tomas-social-community)
 - Ximena (ximena-social-media)
 - Emilio (emilio-short-video)
 - Abena (abena-instagram)

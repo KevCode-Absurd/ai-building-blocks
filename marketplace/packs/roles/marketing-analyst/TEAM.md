@@ -26,6 +26,7 @@ Grade work I made, hide failed checks, invent evidence, or send, publish or spen
 
 - Felix (felix-ga4)
 - Kendra (kendra-attribution)
+- Zara (zara-tiktok-ads)
 - Bogdan (bogdan-marketing-reports)
 
 Each agent's own TEAM.md is generated from its saved soul and playbook in its downloadable pack.

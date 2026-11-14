@@ -343,6 +343,11 @@ test('the server card and AI Catalog follow the discovery draft: media types, op
   const record = (await proof.text()).trim(), key = record.match(/^v=MCPv1;\s*k=ed25519;\s*p=([A-Za-z0-9+/=]+)$/);
   assert.ok(key, record); assert.equal(Buffer.from(key[1], 'base64').length, 32);
   assert.equal((await handlePublicApi(new Request(origin + '/.well-known/mcp-registry-auth', { method: 'POST', headers: edge }), e)).status, 405);
+  // Glama's connector claim: public JSON under the MCP path, answered before the MCP handler, with no auth or redirect.
+  const glama = await worker.fetch(new Request(origin + '/mcp/.well-known/glama.json', { headers: { ...edge, accept: 'application/json', 'user-agent': 'glama/1.0' } }), e);
+  assert.equal(glama.status, 200); assert.match(glama.headers.get('content-type'), /^application\/json/);
+  assert.deepEqual(await glama.json(), { $schema: 'https://glama.ai/mcp/schemas/connector.json', claim: 'glama_claim_eSzknqZBWBG9xRXfrELIv0egY8rWDsQi' });
+  assert.equal((await handlePublicApi(new Request(origin + '/mcp/.well-known/glama.json', { method: 'POST', headers: edge }), e)).status, 405);
   assert.equal((await worker.fetch(get('/.well-known/oauth-authorization-server'), { ...e, MCP_OAUTH_ENABLED: 'false' })).headers.get('content-type')?.includes('mcp-server-card'), false, 'OAuth discovery stays on its own route');
 });
 

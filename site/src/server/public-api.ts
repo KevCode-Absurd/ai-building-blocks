@@ -141,8 +141,12 @@ const SERVER_CARD = '/mcp/server-card', AI_CATALOG = '/.well-known/ai-catalog.js
  *  the private half stays outside the repo (tools/publish-mcp-registry.mjs). */
 export const MCP_REGISTRY_AUTH = '/.well-known/mcp-registry-auth';
 export const MCP_REGISTRY_RECORD = 'v=MCPv1; k=ed25519; p=BafhgP3kRG94ovxOR+Li8beTcDKpS8ojGySRWlIQ84Q=';
+/** Glama (glama.ai) proves we own the https://useaiblocks.com/mcp connector by fetching this file (no auth, no redirect).
+ *  The claim token is bound to our Glama account, holds no personal data, and must stay published to stay verified. */
+export const GLAMA_CLAIM = '/mcp/.well-known/glama.json';
+export const GLAMA_CLAIM_RECORD = { $schema: 'https://glama.ai/mcp/schemas/connector.json', claim: 'glama_claim_eSzknqZBWBG9xRXfrELIv0egY8rWDsQi' };
 /** Every path this module answers; the Worker and the Vite bridge route them here before static assets. */
-export const isPublicApiRoute = (path: string) => path === '/mcp' || path === '/api/v1' || path.startsWith('/api/v1/') || path === SERVER_CARD || path === AI_CATALOG || path === MCP_REGISTRY_AUTH;
+export const isPublicApiRoute = (path: string) => path === '/mcp' || path === '/api/v1' || path.startsWith('/api/v1/') || path === SERVER_CARD || path === AI_CATALOG || path === MCP_REGISTRY_AUTH || path === GLAMA_CLAIM;
 
 /** MCP discovery (SEP-2127 server cards and the AI Catalog, docs/discovery.md in modelcontextprotocol/experimental-ext-server-card):
  *  a card for the public server at <mcp url>/server-card and a domain catalogue pointing to it. Public metadata only,
@@ -182,6 +186,10 @@ export async function handlePublicApi(request: Request, env: PublicApiEnv): Prom
   if (discoveryRoute === MCP_REGISTRY_AUTH) {
     if (!['GET', 'HEAD'].includes(request.method)) return new Response('Use GET.', { status: 405, headers: { allow: 'GET, HEAD', 'content-type': 'text/plain; charset=utf-8' } });
     return new Response(request.method === 'HEAD' ? null : MCP_REGISTRY_RECORD + '\n', { status: 200, headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, max-age=300', 'x-content-type-options': 'nosniff' } });
+  }
+  if (discoveryRoute === GLAMA_CLAIM) {
+    if (!['GET', 'HEAD'].includes(request.method)) return new Response('Use GET.', { status: 405, headers: { allow: 'GET, HEAD', 'content-type': 'text/plain; charset=utf-8' } });
+    return new Response(request.method === 'HEAD' ? null : JSON.stringify(GLAMA_CLAIM_RECORD, null, 2) + '\n', { status: 200, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'public, max-age=300', 'access-control-allow-origin': '*', 'x-content-type-options': 'nosniff' } });
   }
   if (discoveryRoute === SERVER_CARD || discoveryRoute === AI_CATALOG) return discovery(request, env, discoveryRoute);
   const url = new URL(request.url), route = url.pathname.replace(/\/+$/, '');

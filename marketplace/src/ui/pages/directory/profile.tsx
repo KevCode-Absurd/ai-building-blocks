@@ -120,7 +120,7 @@ function Profile(props: { agent: AgentProfile; related: AgentCardData[] }) {
 
       <HowHiringWorks name={a.name} />
 
-      {pack.data && <PackDownloads agentId={a.id} name={a.name} title={a.title} area={a.area} pack={pack.data} />}
+      {pack.data && <PackDownloads agentId={a.id} name={a.name} title={a.title} area={a.area} role={a.role} pack={pack.data} />}
       {pack.data && pack.data.files.length > 0 && <PackInside agent={a} pack={pack.data} />}
       {!pack.loading && !pack.data && a.kind === "house" && (
         <section class="dir-section dir-pack" id="dir-pack" aria-labelledby="dir-pack-title">

@@ -6,7 +6,7 @@
   "description": "AI Blocks marketplace: finished work from expert AI agents, at agents.useaiblocks.com",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/mega-team.mjs && node scripts/role-toolbox.mjs && vite build && node scripts/build-packs.mjs && node ../tools/qa/check-production-files.mjs --marketplace",
+    "build": "node scripts/mega-team.mjs && node scripts/role-toolbox.mjs && vite build && node scripts/build-packs.mjs && node scripts/build-claude-plugins.mjs && node ../tools/qa/check-production-files.mjs --marketplace",
     "packs:lock": "node scripts/build-packs.mjs --lock",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "node --test --experimental-test-module-mocks --test-reporter=spec \"test/**/*.test.ts\"",

@@ -169,3 +169,21 @@ test("Start in your AI: a tab per app, each with a first message that needs no e
   assert.match(startGuides({ ...agent, area: "finance" })[0].message, /the numbers or export to work from/);
   assert.match(startGuides({ ...agent, area: "engineering" })[0].message, /business name and website \(or the code or repo to work in\)/);
 });
+
+test("Start in your AI: an agent with a job role gets a Claude Code tab that installs the role's plugin", () => {
+  const agent = { id: "danielle-seo", name: "Danielle", title: "SEO strategist", role: { id: "seo-specialist", name: "SEO specialist" } };
+  const guides = startGuides(agent, 130000);
+  assert.deepEqual(guides.map(g => g.id), ["chatgpt", "claude", "gemini", "claude-code", "coding", "connector"]);
+  const cc = guides.find(g => g.id === "claude-code")!;
+  assert.equal(cc.get, "plugin");
+  assert.ok(isStartApp("claude-code"));
+  assert.deepEqual(cc.commands, [
+    "/plugin marketplace add https://agents.useaiblocks.com/packs/claude/marketplace.json",
+    "/plugin install seo-specialist@ai-blocks",
+  ]);
+  assert.match(cc.message, /^Use the seo-specialist:danielle-seo agent\. Before you start, ask me/);
+  assert.match(cc.open, /Custom agents as seo-specialist:danielle-seo/);
+  assert.match(cc.open, /the SEO specialist team/, "an acronym keeps its capitals");
+  assert.match(startGuides({ ...agent, role: { id: "growth-marketer", name: "Growth marketer" } }).find(g => g.id === "claude-code")!.open, /the growth marketer team/);
+  assert.match(startGuides(agent, null, "https://agents-staging.useaiblocks.com/").find(g => g.id === "claude-code")!.commands![0], /^\/plugin marketplace add https:\/\/agents-staging\.useaiblocks\.com\/packs\//);
+});

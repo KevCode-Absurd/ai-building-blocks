@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// brand-brain.mjs (AI Blocks, brand-dna-capture) - version 2.1.0
+// brand-brain.mjs (AI Blocks, brand-dna-capture) - version 2.1.1
 //
 // Builds the two layers every buyer-facing job stands on, inside context/brand-file/ next to the brand file:
 //   foundation/  how the brand talks and looks, what it can claim, who buys and why (slow: fresh for 90 days)
@@ -39,7 +39,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-export const VERSION = '2.1.0';
+export const VERSION = '2.1.1';
 export const FOLDER = 'brand-file';
 const DAY = 864e5;
 
@@ -485,7 +485,7 @@ export function planCreatives(ctx, { n = 20, now = new Date() } = {}) {
     pickTable ? `Segments from: data/segments.md, by ${pickTable[0]}.` : 'No segments yet.', personas.length ? `Personas: ${personas.join('; ')}.` : 'No personas yet: write foundation/personas.md first.', '',
     '| # | Segment | Why this segment (the number) | Persona | Insight (their words or a result) | Angle | Format | Proof line (source) | Hook (first 5 to 8 words) |', '|---|---|---|---|---|---|---|---|---|',
     ...slots.slice(0, n).map((s, i) => `| ${i + 1} | ${s.segment} | ${s.why} |  |  |  |  |  |  |`), '',
-    'Rules: no two creatives share both an angle and a format. At least 4 different formats, 3 of them native (a notes list, a chat, a comparison table, an explainer, a review card). One local or seasonal moment for each segment the data names. A button on the image in the brand\'s own style from its real ads. Every hook passes voice-check.', '', stamp(now)];
+    'Rules: no two creatives share both an angle and a format. At least 4 different formats, 3 of them native (a notes list, a chat, a comparison table, an explainer, a review card). One local or seasonal moment for each segment the data names. A button on the image in the brand\'s own style from its real ads. Headlines in the brand\'s own font files, passing check-creative-set.mjs probe. Every hook passes voice-check.', '', stamp(now)];
   return { slots: slots.slice(0, n), text: out.join('\n') };
 }
 

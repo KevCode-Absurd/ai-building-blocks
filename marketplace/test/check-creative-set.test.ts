@@ -53,7 +53,7 @@ test("a varied set passes on layout, and a mirrored arch counts as the same layo
   const files = ["01-arch.png", "02-arch.png", "03-arch.png", "04-band.png", "05-band.png", "06-band.png", "07-circle.png", "08-circle.png", "09-grid.png", "10-grid.png"];
   const formats = ["product", "notes list", "chat", "comparison table", "product", "offer", "product", "review card", "product", "product"];
   writeFileSync(path.join(dir, "manifest.json"), JSON.stringify(files.map((file, i) => ({ file, layout: file.slice(3, -4), format: formats[i], product: `Piece ${i}`, product_box: [0.2, 0.2, 0.6, 0.6], headline: "Gold for every day.", cta: "Shop now", price: "₹21,130" }))));
-  const r = m.checkSet(dir, { size: "120x120", buttons: false });
+  const r = m.checkSet(dir, { size: "120x120", buttons: false, type: false });
   assert.equal(r.ok, true, m.reportText(r));
   assert.equal(r.layouts.length, 4);
   const img = m.decodePng(png(S, S, T.arch(1))), mirror = m.decodePng(png(S, S, (x, y) => T.arch(1)(S - 1 - x, y)));
@@ -99,7 +99,7 @@ test("the button is read from the pixels, and a set of 10 needs buttons and 3 na
   // Real buttons on 7 of 10 would pass; here, give the set 3 native formats and a moment, and drop the buttons rule.
   const fmts = ["notes list", "chat", "18K vs 22K table", "product", "explainer", "product", "product", "product", "product", "product"];
   writeFileSync(path.join(dir, "manifest.json"), JSON.stringify(files.map((f, i) => entry(f, i, { format: fmts[i], moment: i === 0 ? "Margazhi season" : undefined, cta_box: i < 6 ? box : undefined }))));
-  r = m.checkSet(dir, { size: "120x120", buttons: false });
+  r = m.checkSet(dir, { size: "120x120", buttons: false, type: false });
   assert.equal(r.ok, true, m.reportText(r));
   assert.equal(m.nativeFormat("WhatsApp chat"), "chat");
   assert.equal(m.nativeFormat("split photo panel"), null);
@@ -112,6 +112,64 @@ test("absolute claims need a source; everyday words do not", async () => {
   assert.deepEqual(m.claimIssues({ headline: "Every stone we set is natural.", claim_source: "FAQ: all gemstones natural; lab-grown line is diamonds only" }).fails, []);
   assert.deepEqual(m.claimIssues({ headline: "Light gold for every day.", body: "All three checks, before you pay." }).fails, []);
   assert.match(m.claimIssues({ headline: "A snowflake that never melts." }).notes[0], /"never"/);
+});
+
+// Round 5 (14 Nov): with buttons, formats and moments fixed, AI Blocks lost its finish score to type. The headline cut
+// of Bodoni Moda kerns "To" but not "Wo"/"We" ("W orn now"), its comma is 4% tail so "₹15,710" read as "₹15.710",
+// and some product photos were drawn 1.4x to 1.7x their own pixels. The probe measures these in the browser; these
+// numbers are what it measured on the round 5 pages.
+const probeOf = (over: Record<string, unknown> = {}) => ({
+  canvas: 1080,
+  texts: [
+    { text: "Worn now. Passed on later.", font: "Bodoni Moda", weight: "500", loaded: true, px: 82 },
+    { text: "₹15,710", font: "Bodoni Moda", weight: "500", loaded: true, px: 66 },
+    { text: "TOP 3 IN PENDANTS", font: "Lato", weight: "900", loaded: true, px: 18 },
+    { text: "Royal Verde: natural emeralds, diamonds and a pearl in 18K gold.", font: "Lato", weight: "400", loaded: true, px: 30 },
+  ],
+  fonts: [{ font: "Bodoni Moda", weight: "500", kerns: true, commaTail: 0.04 }, { font: "Lato", weight: "900", kerns: true, commaTail: 0.33 }, { font: "Lato", weight: "400", kerns: true, commaTail: 0.34 }],
+  kern: [{ pair: "Wo", font: "Bodoni Moda", weight: "500", kern: 0, px: 82, sample: "Worn now. Pas" }, { pair: "To", font: "Bodoni Moda", weight: "500", kern: -0.061, px: 82, sample: "To" }],
+  images: [{ src: "earrings_1.jpg", natural: [1000, 1000], drawn: [1674, 1080], scale: 1.67 }],
+  ...over,
+});
+
+test("the type report catches an unkerned W, a comma that reads as a decimal, and a soft photo", async () => {
+  const m = await load(tool);
+  const r = m.typeIssues(probeOf());
+  assert.ok(r.fails.some((f: string) => /Bodoni Moda does not kern "Wo"/.test(f)), r.fails.join("\n"));
+  assert.ok(r.fails.some((f: string) => /comma is nearly all dot \(4% tail\), so ₹15,710 reads like a decimal/.test(f)));
+  assert.ok(r.fails.some((f: string) => /earrings_1\.jpg is drawn at 1\.67x/.test(f)));
+  assert.ok(r.notes.some((n: string) => /small text .*18px "TOP 3 IN PENDANTS"/.test(n)), "18px is a note; under 18px fails");
+  assert.ok(!r.fails.some((f: string) => /"To"/.test(f)), "a kerned pair passes");
+  // The brand's own fonts kern "Wo" and have a real comma tail; a fallback font and an off-brand font fail.
+  const good = m.typeIssues(probeOf({
+    texts: [{ text: "Worn now. ₹15,710", font: "Nanum Myeongjo", weight: "400", loaded: true, px: 82 }, { text: "Shop now", font: "Lato", weight: "900", loaded: true, px: 26 }],
+    fonts: [{ font: "Nanum Myeongjo", weight: "400", kerns: true, commaTail: 0.44 }, { font: "Lato", weight: "900", kerns: true, commaTail: 0.33 }],
+    kern: [{ pair: "Wo", font: "Nanum Myeongjo", weight: "400", kern: -0.086, px: 82, sample: "Worn now" }], images: [{ src: "a.jpg", natural: [2000, 2000], drawn: [1080, 1080], scale: 0.54 }],
+  }), { fonts: ["Nanum Myeongjo", "Lato"] });
+  assert.deepEqual(good.fails, []);
+  const off = m.typeIssues(probeOf(), { fonts: ["Nanum Myeongjo", "Lato"] });
+  assert.ok(off.fails.some((f: string) => /set in Bodoni Moda, which is not one of the brand's fonts/.test(f)));
+  const fb = m.typeIssues(probeOf({ texts: [{ text: "Gold", font: "Gehna Serif", weight: "400", loaded: false, px: 80 }] }));
+  assert.match(fb.fails[0], /fallback font: "Gehna Serif" did not load/);
+  // Small text does not show a missing kern, so only text 40px and up is held to it.
+  const small = m.typeIssues(probeOf({ kern: [{ pair: "Wo", font: "Bodoni Moda", weight: "500", kern: 0, px: 30, sample: "Wo" }] }));
+  assert.ok(!small.fails.some((f: string) => /kern/.test(f)));
+});
+
+test("a set of 10 needs a type report, found by file name or number, and the probe is self-contained", async () => {
+  const m = await load(tool);
+  const dir = makeSet(["arch", "band", "circle", "grid", "arch", "band", "circle", "grid", "arch", "band"]);
+  let r = m.checkSet(dir, { size: "120x120", buttons: false });
+  assert.ok(r.fails.some((f: string) => /the type was checked on 0 of 10 creatives/.test(f)));
+  const report: Record<string, unknown> = {};
+  for (let i = 1; i <= 10; i++) report[`${String(i).padStart(2, "0")}.html`] = probeOf({ images: [] });
+  writeFileSync(path.join(dir, "type-report.json"), JSON.stringify(report));
+  r = m.checkSet(dir, { size: "120x120", buttons: false });
+  assert.ok(!r.fails.some((f: string) => /the type was checked/.test(f)));
+  assert.equal(r.per.filter((p: any) => p.fails.some((f: string) => /does not kern "Wo"/.test(f))).length, 10, "01.html matches 01-arch.png");
+  // page.evaluate sends only the function's source to the browser, so it must not lean on anything in the module.
+  const src = m.typeProbe.toString();
+  for (const name of ["RULES", "short(", "path.", "fs.", "typeIssues"]) assert.ok(!src.includes(name), `typeProbe uses ${name}`);
 });
 
 test("brand-facing packs carry the check, and the method gates a set of ads on it", () => {

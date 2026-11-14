@@ -1,8 +1,10 @@
 #!/usr/bin/env node
-// check-creative-set.mjs (AI Blocks, brand-dna-capture) - version 1.1.0
+// check-creative-set.mjs (AI Blocks, brand-dna-capture) - version 1.2.0
 //
 // Checks a set of static ad creatives before hand-over, from the pixels and from the set's manifest.
-//   node check-creative-set.mjs <folder of creatives> [--manifest <file>] [--size 1080x1080] [--no-buttons] [--json]
+//   node check-creative-set.mjs <folder of creatives> [--manifest <file>] [--size 1080x1080] [--fonts "Lato,Nanum Myeongjo"]
+//     [--type <type-report.json>] [--no-buttons] [--no-type] [--json]
+//   node check-creative-set.mjs probe <folder of creative .html files> --out <creatives>/type-report.json [--size 1080x1080]
 //
 // From the pixels (PNG, plain Node, no packages):
 //   - size and shape: every creative is the asked size (default 1080x1080)
@@ -29,14 +31,25 @@
 //   - absolute claims ("every stone we set", "all our pieces", "100%", "guaranteed", "the only") need a
 //     claim_source that was checked against the whole range, or softer words. "always" and "never" are notes
 //   - a set of 10 or more with no local or seasonal moment (the moment field) gets a note
-// It exits 1 when anything fails, so it can gate a hand-over. It only reads files.
+// How the type renders (from a type report: the probe runs in the page that draws each creative, in a browser):
+//   - every font loaded (no fallback font), and with --fonts, every text is in one of the brand's fonts
+//   - text 40px and up kerns the pairs a good font always kerns (Wo, Te, Ya, AV, LT ...): a font that leaves
+//     "Wo" unkerned prints "W orn now" with a gap
+//   - no text under 18px on a 1080 frame, and a note under 24px (hard to read on a phone)
+//   - a number like 15,710 is not set in a face whose comma is nearly all dot (a hairline tail), where it reads 15.710
+//   - no photo is drawn more than 1.3x bigger than its own pixels (it looks soft)
+//   The probe: node check-creative-set.mjs probe <html folder> (needs Playwright), or in your own renderer:
+//     const { typeProbe } = await import('./check-creative-set.mjs'); report[file] = await page.evaluate(typeProbe, { canvas: 1080 });
+//   Save { "01-x.png": <probe>, ... } as type-report.json next to the creatives, or put it in each manifest entry as "type".
+// It exits 1 when anything fails, so it can gate a hand-over. It only reads files (probe also opens the pages).
 import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { createRequire } from 'node:module';
 
-export const VERSION = '1.1.0';
-export const RULES = Object.freeze({ minLayouts: 4, maxLayoutShare: 0.3, minSetForVariety: 10, minProductShare: 1 / 3, minProductContrast: 22, minButtonShare: 0.7, minNativeFormats: 3 });
+export const VERSION = '1.2.0';
+export const RULES = Object.freeze({ minLayouts: 4, maxLayoutShare: 0.3, minSetForVariety: 10, minProductShare: 1 / 3, minProductContrast: 22, minButtonShare: 0.7, minNativeFormats: 3, minTextPx: 18, readTextPx: 24, minKernPx: 40, minCommaTail: 0.15, maxUpscale: 1.3 });
 
 // ---------- PNG: enough of a decoder for 8-bit, non-interlaced images (what browsers and image APIs save) ----------
 export function decodePng(buf) {
@@ -192,12 +205,122 @@ export function textIssues(entry) {
 }
 const norm = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
+// ---------- how the type renders ----------
+/** Runs inside the page that draws one creative (Playwright: await page.evaluate(typeProbe, { canvas: 1080 })).
+ *  Self-contained on purpose: the browser gets only this function's source. Reads fonts, kerning, sizes and photo scale. */
+export async function typeProbe(opts = {}) {
+  const canvas = opts.canvas || 1080, root = document.querySelector(opts.root || 'body') || document.body;
+  await document.fonts.ready;
+  const k = canvas / (root.getBoundingClientRect().width || innerWidth);
+  const els = [...root.querySelectorAll('*')]; // before the probe adds its own measuring span
+  // Pairs a good text or display font always kerns, and a few to tell whether a font kerns at all.
+  const MUST = { T: 'aeoruwy', V: 'aeo', W: 'aeo', Y: 'aeo', L: 'TVWY', A: 'TVWY' }, CONTROL = ['To', 'Ta', 'AV', 'Yo', 'LT'];
+  const sp = document.createElement('span');
+  sp.style.cssText = 'position:absolute;left:-99999px;top:0;white-space:pre;font-size:100px;letter-spacing:0;word-spacing:0';
+  document.body.appendChild(sp);
+  const width = (cs, t, fam) => {
+    sp.style.fontFamily = fam || cs.fontFamily; sp.style.fontWeight = cs.fontWeight; sp.style.fontStyle = cs.fontStyle;
+    sp.style.fontStretch = cs.fontStretch; sp.style.fontFeatureSettings = cs.fontFeatureSettings; sp.style.fontVariationSettings = cs.fontVariationSettings;
+    sp.style.fontKerning = cs.fontKerning === 'none' ? 'none' : 'normal'; sp.textContent = t; return sp.getBoundingClientRect().width;
+  };
+  const kernOf = (cs, ab) => (width(cs, ab) - width(cs, ab[0]) - width(cs, ab[1])) / 100;
+  // How much of the comma's ink hangs below the baseline. A hairline tail (under ~15%) makes 15,710 read as 15.710.
+  const cv = document.createElement('canvas'); cv.width = 200; cv.height = 300; const cx = cv.getContext('2d', { willReadFrequently: true });
+  const commaTail = (cs) => {
+    cx.clearRect(0, 0, 200, 300); cx.font = `${cs.fontStyle} ${cs.fontWeight} 160px ${cs.fontFamily}`; cx.fillStyle = '#000'; cx.textBaseline = 'alphabetic'; cx.fillText(',', 20, 150);
+    const d = cx.getImageData(0, 0, 200, 300).data; let up = 0, down = 0;
+    for (let y = 0; y < 300; y++) for (let x = 0; x < 200; x++) if (d[(y * 200 + x) * 4 + 3] > 127) { if (y >= 150) down++; else up++; }
+    return up + down ? Math.round((down / (up + down)) * 100) / 100 : null;
+  };
+  const visible = (cs, r) => r.width > 0 && r.height > 0 && cs.visibility !== 'hidden' && cs.display !== 'none' && Number(cs.opacity) > 0;
+  const texts = [], kern = [], fonts = [], images = [], seen = new Set(), seenFont = new Set();
+  for (const el of els) {
+    const own = [...el.childNodes].filter((n) => n.nodeType === 3).map((n) => n.textContent).join('').replace(/\s+/g, ' ').trim();
+    if (!own) continue;
+    const cs = getComputedStyle(el), r = el.getBoundingClientRect(); if (!visible(cs, r)) continue;
+    const fam = cs.fontFamily.split(',')[0].trim().replace(/^["']|["']$/g, '');
+    const generic = /^(serif|sans-serif|monospace|cursive|fantasy|system-ui|ui-serif|ui-sans-serif)$/i.test(fam);
+    // A font that did not load draws the same as the fallback after it.
+    const loaded = generic || ['monospace', 'serif'].some((g) => Math.abs(width(cs, own + 'WMiw', `"${fam}", ${g}`) - width(cs, own + 'WMiw', g)) > 0.5);
+    const px = Math.round(parseFloat(cs.fontSize) * k * 10) / 10;
+    texts.push({ text: own.slice(0, 80), font: fam, weight: cs.fontWeight, loaded, px, kerning: cs.fontKerning });
+    const fk = `${fam}|${cs.fontWeight}|${cs.fontStyle}`;
+    if (!seenFont.has(fk)) { seenFont.add(fk); fonts.push({ font: fam, weight: cs.fontWeight, kerns: CONTROL.some((pr) => kernOf(cs, pr) < -0.01), off: cs.fontKerning === 'none', commaTail: commaTail(cs) }); }
+    for (let i = 0; i + 1 < own.length; i++) {
+      const ab = own[i] + own[i + 1]; if (!(MUST[own[i]] || '').includes(own[i + 1])) continue;
+      const key = `${fk}|${ab}`; if (seen.has(key)) continue; seen.add(key);
+      kern.push({ pair: ab, font: fam, weight: cs.fontWeight, kern: Math.round(kernOf(cs, ab) * 1000) / 1000, px, sample: own.slice(Math.max(0, i - 10), i + 12), off: cs.fontKerning === 'none' });
+    }
+  }
+  const natural = (src) => new Promise((res) => { const im = new Image(); im.onload = () => res([im.naturalWidth, im.naturalHeight]); im.onerror = () => res(null); im.src = src; });
+  for (const el of els) {
+    const cs = getComputedStyle(el), r = el.getBoundingClientRect(); if (!visible(cs, r)) continue;
+    let src = null, nat = null, fit = 'fill';
+    if (el.tagName === 'IMG') { if (!el.naturalWidth) continue; src = el.currentSrc || el.src; nat = [el.naturalWidth, el.naturalHeight]; fit = cs.objectFit; }
+    else {
+      const m = /url\(["']?([^"')]+)["']?\)/.exec(cs.backgroundImage || ''); if (!m) continue;
+      src = m[1]; nat = await natural(src); const bs = cs.backgroundSize;
+      fit = bs === 'contain' ? 'contain' : /^auto( auto)?$/.test(bs) ? 'none' : 'cover';
+    }
+    if (!nat || !nat[0] || !nat[1]) continue;
+    const sx = r.width / nat[0], sy = r.height / nat[1];
+    const s = (fit === 'contain' || fit === 'scale-down' ? Math.min(sx, sy) : fit === 'none' ? 1 : Math.max(sx, sy)) * k;
+    images.push({ src: src.startsWith('data:') ? 'an inline image' : decodeURIComponent(src.split(/[\\/]/).pop()).slice(0, 80), natural: nat, drawn: [Math.round(r.width * k), Math.round(r.height * k)], scale: Math.round(s * 100) / 100 });
+  }
+  sp.remove();
+  return { canvas, texts, fonts, kern, images };
+}
+const short = (t, n = 40) => { const s = String(t); return s.length > n ? `${s.slice(0, n - 1)}…` : s; };
+/** What the type report says about one creative. */
+export function typeIssues(p, { fonts = null, rules = RULES } = {}) {
+  const fails = [], notes = [];
+  if (!p || !Array.isArray(p.texts)) return { fails, notes: ['no type report for this creative'] };
+  const f = 1080 / (p.canvas || 1080), texts = p.texts, brand = fonts && fonts.map((x) => x.toLowerCase());
+  const done = new Set(), once = (key, msg) => { if (!done.has(key)) { done.add(key); fails.push(msg); } };
+  for (const t of texts) {
+    if (!t.loaded) once(`fb|${t.font}`, `"${short(t.text)}" draws in a fallback font: "${t.font}" did not load. Load the font file before the screenshot`);
+    else if (brand && !brand.includes(String(t.font).toLowerCase())) once(`bf|${t.font}`, `"${short(t.text)}" is set in ${t.font}, which is not one of the brand's fonts (${fonts.join(', ')})`);
+  }
+  for (const fo of p.fonts || []) if (fo.off) once(`off|${fo.font}`, `${fo.font} has font-kerning turned off, so letters sit unevenly: remove font-kerning: none`);
+  // A font that kerns "To" but not "Wo" prints the gap the Gehna round 5 judges saw ("W orn now").
+  for (const kp of p.kern || []) {
+    if (kp.off || Math.abs(kp.kern) >= 0.005 || kp.px * f < rules.minKernPx) continue;
+    const fo = (p.fonts || []).find((x) => x.font === kp.font && x.weight === kp.weight);
+    if (fo && !fo.kerns) once(`nk|${kp.font}`, `${kp.font} does not kern at all (tested To, AV, Yo), so "${short(kp.sample)}" shows gaps. Use the brand's own font file, or a cut that kerns`);
+    else once(`k|${kp.font}|${kp.pair}`, `${kp.font} does not kern "${kp.pair}" ("${short(kp.sample)}"), so it prints with a gap after "${kp.pair[0]}". Use the brand's own font file, or a cut that kerns the pair`);
+  }
+  const list = (ts) => `${ts.slice(0, 3).map((t) => `${Math.round(t.px * f)}px "${short(t.text, 28)}"`).join(', ')}${ts.length > 3 ? ` and ${ts.length - 3} more` : ''}`;
+  const tiny = texts.filter((t) => t.px * f < rules.minTextPx), small = texts.filter((t) => t.px * f >= rules.minTextPx && t.px * f < rules.readTextPx);
+  if (tiny.length) fails.push(`text under ${rules.minTextPx}px on a 1080 frame cannot be read on a phone: ${list(tiny)}. Make it bigger or cut it`);
+  if (small.length) notes.push(`small text (under ${rules.readTextPx}px on a 1080 frame): ${list(small)}. Look at it at phone size; cut words before shrinking them`);
+  // A comma that is nearly all dot: "15,710" reads as "15.710" (the Gehna round 5 judges saw it in Bodoni Moda).
+  for (const t of texts) {
+    if (!/\d,\d/.test(t.text)) continue;
+    const fo = (p.fonts || []).find((x) => x.font === t.font && x.weight === t.weight);
+    if (fo && typeof fo.commaTail === 'number' && fo.commaTail < rules.minCommaTail) once(`cm|${t.font}|${t.weight}`, `"${short(t.text)}" is set in ${t.font}, whose comma is nearly all dot (${Math.round(fo.commaTail * 100)}% tail), so ${(t.text.match(/[^\s]*\d,\d[\d,]*/) || [''])[0]} reads like a decimal. Set numbers in the body font`);
+  }
+  for (const im of p.images || []) if (im.scale > rules.maxUpscale) once(`im|${im.src}`, `${im.src} is drawn at ${im.scale}x its own pixels (${im.natural[0]}px wide shown at ${im.drawn[0]}px), so it will look soft. Use a bigger source or draw it smaller`);
+  return { fails, notes };
+}
+/** Finds the type report for one creative file: the manifest's "type", or type-report.json by file, html or number. */
+function typeFor(file, entry, report) {
+  if (entry && entry.type) return entry.type;
+  if (!report) return null;
+  const stem = file.replace(/\.[^.]+$/, ''), num = (file.match(/^\d+/) || [])[0];
+  const htmlKey = entry && entry.html ? path.basename(entry.html) : null;
+  for (const key of [file, htmlKey, `${stem}.html`]) if (key && report[key]) return report[key];
+  if (num) { const hit = Object.keys(report).find((x) => (x.match(/^\d+/) || [])[0] === num); if (hit) return report[hit]; }
+  return null;
+}
+
 // ---------- the whole set ----------
-export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RULES, buttons = true } = {}) {
+export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RULES, buttons = true, type = true, fonts = null, typeReport = null } = {}) {
   const files = fs.readdirSync(dir).filter((f) => /\.(png|jpe?g|webp)$/i.test(f)).sort();
   const mPath = manifest || path.join(dir, 'manifest.json');
   let entries = null;
   if (fs.existsSync(mPath)) { const doc = JSON.parse(fs.readFileSync(mPath, 'utf8')); entries = Array.isArray(doc) ? doc : doc.creatives || []; }
+  const tPath = typeReport || path.join(dir, 'type-report.json');
+  const report = fs.existsSync(tPath) ? JSON.parse(fs.readFileSync(tPath, 'utf8')) : null;
   const [sw, sh] = size.split('x').map(Number);
   const fails = [], notes = [], per = [];
   const maps = [], decoded = new Map();
@@ -252,6 +375,16 @@ export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RUL
     const keys = new Set(fills.map((f) => f.map((v) => v >> 6).join(',')));
     if (keys.size > 2) notes.push(`buttons use ${keys.size} different fills; one button style, taken from the brand's real ads, reads as one brand`);
   }
+  // How the type renders, from the type report (or a "type" field in each manifest entry).
+  if (type) {
+    let probed = 0;
+    for (const row of per) {
+      const t = typeFor(row.file, entries && entries.find((e) => e.file === row.file), report);
+      if (!t) continue; probed++;
+      const ti = typeIssues(t, { fonts, rules }); row.fails.push(...ti.fails); row.notes.push(...ti.notes);
+    }
+    if (n >= rules.minSetForVariety && probed < n) fails.push(`the type was checked on ${probed} of ${n} creatives: run the type probe on the page that draws each one (node check-creative-set.mjs probe <html folder> --out ${path.join(path.basename(dir), 'type-report.json')}), then look at every headline at full size. Use --no-type only when no creative has text drawn from HTML`);
+  }
   const failCount = fails.length + per.reduce((k, r) => k + r.fails.length, 0);
   return { ok: failCount === 0, files: n, layouts: groups, fails, notes, per, failCount };
 }
@@ -263,10 +396,37 @@ export function reportText(r) {
   if (rows.length) out.push('EACH CREATIVE:', ...rows.flatMap((p) => [`  ${p.file}`, ...p.fails.map((f) => `    FAIL ${f}`), ...p.notes.map((x) => `    note ${x}`)]));
   return out.join('\n');
 }
-function main(argv = process.argv.slice(2), print = console.log) {
-  const a = { _: [] }; for (let i = 0; i < argv.length; i++) { const x = argv[i]; if (x.startsWith('--')) { const v = argv[i + 1] && !argv[i + 1].startsWith('--') ? argv[++i] : true; a[x.slice(2)] = v; } else a._.push(x); }
-  if (!a._[0]) { print(fs.readFileSync(fileURLToPath(import.meta.url), 'utf8').split('\n').filter((l) => l.startsWith('//')).slice(0, 34).map((l) => l.replace(/^\/\/ ?/, '')).join('\n')); return 2; }
-  try { const r = checkSet(path.resolve(a._[0]), { manifest: typeof a.manifest === 'string' ? path.resolve(a.manifest) : null, size: typeof a.size === 'string' ? a.size : '1080x1080', buttons: !a['no-buttons'] }); print(a.json ? JSON.stringify(r, null, 2) : reportText(r)); return r.ok ? 0 : 1; }
-  catch (err) { print(`check-creative-set: ${err.message}`); return 2; }
+async function probeFiles(target, { out, size = '1080x1080', print = console.log } = {}) {
+  const files = fs.statSync(target).isDirectory() ? fs.readdirSync(target).filter((f) => /\.html?$/i.test(f)).sort().map((f) => path.join(target, f)) : [target];
+  if (!files.length) throw new Error(`no .html files in ${target}`);
+  let pw = null;
+  for (const name of ['playwright', 'playwright-core']) {
+    for (const from of [process.cwd(), path.join(process.cwd(), 'site')]) { try { pw = createRequire(path.join(from, 'noop.js'))(name); break; } catch {} }
+    if (pw) break;
+    try { pw = await import(name); break; } catch {}
+  }
+  if (!pw || !pw.chromium) throw new Error('the probe needs Playwright (npm i -D playwright, then npx playwright install chromium). Or run typeProbe in your own renderer: report[file] = await page.evaluate(typeProbe, { canvas: 1080 })');
+  const [w, h] = size.split('x').map(Number), browser = await pw.chromium.launch();
+  try {
+    const page = await browser.newPage({ viewport: { width: w, height: h } }), report = {};
+    for (const f of files) { await page.goto(pathToFileURL(f).href, { waitUntil: 'load' }); report[path.basename(f)] = await page.evaluate(typeProbe, { canvas: w }); }
+    if (out) { fs.writeFileSync(out, JSON.stringify(report, null, 1)); print(`type report for ${files.length} pages: ${out}`); }
+    return report;
+  } finally { await browser.close(); }
 }
-if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) process.exitCode = main();
+async function main(argv = process.argv.slice(2), print = console.log) {
+  const a = { _: [] }; for (let i = 0; i < argv.length; i++) { const x = argv[i]; if (x.startsWith('--')) { const v = argv[i + 1] && !argv[i + 1].startsWith('--') ? argv[++i] : true; a[x.slice(2)] = v; } else a._.push(x); }
+  if (!a._[0]) { const src = fs.readFileSync(fileURLToPath(import.meta.url), 'utf8').split('\n'); print(src.slice(1, src.findIndex((l) => l.startsWith('import '))).map((l) => l.replace(/^\/\/ ?/, '')).join('\n')); return 2; }
+  const size = typeof a.size === 'string' ? a.size : '1080x1080';
+  try {
+    if (a._[0] === 'probe') {
+      if (!a._[1]) throw new Error('probe needs a folder of .html files');
+      const r = await probeFiles(path.resolve(a._[1]), { out: typeof a.out === 'string' ? path.resolve(a.out) : null, size, print });
+      if (!a.out) print(JSON.stringify(r, null, 1)); return 0;
+    }
+    const r = checkSet(path.resolve(a._[0]), { manifest: typeof a.manifest === 'string' ? path.resolve(a.manifest) : null, size, buttons: !a['no-buttons'], type: !a['no-type'],
+      fonts: typeof a.fonts === 'string' ? a.fonts.split(',').map((x) => x.trim()).filter(Boolean) : null, typeReport: typeof a.type === 'string' ? path.resolve(a.type) : null });
+    print(a.json ? JSON.stringify(r, null, 2) : reportText(r)); return r.ok ? 0 : 1;
+  } catch (err) { print(`check-creative-set: ${err.message}`); return 2; }
+}
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main().then((code) => { process.exitCode = code; });

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// check-creative-set.mjs (AI Blocks, brand-dna-capture) - version 1.3.0
+// check-creative-set.mjs (AI Blocks, brand-dna-capture) - version 1.4.0
 //
 // Checks a set of static ad creatives before hand-over, from the pixels and from the set's manifest.
 //   node check-creative-set.mjs <folder of creatives> [--manifest <file>] [--size 1080x1080] [--fonts "Lato,Nanum Myeongjo"]
@@ -25,7 +25,8 @@
 //     "format": "notes list", "cta_box": [x, y, w, h], "moment": "Margazhi season", "claim_source": "FAQ: ...",
 //     "angle": "...", "price_checked": "2026-11-15", "in_stock": true, "compare_at": "₹24,000", "offer_terms": "...",
 //     "timing_check": "...", "spec_source": "...", "policy_source": "...", "ai_scene": "...", "source_photo": "...",
-//     "ad": { "primary_text": "...", "headline": "...", "description": "...", "url": "https://...?utm_source=..." } }
+//     "ad": { "primary_text": "...", "headline": "...", "description": "...", "url": "https://...?utm_source=..." },
+//     "faces": [[x, y, w, h]] (every face that shows, or [] for none), "photo_box": [x, y, w, h], "funnel": "prospecting" }
 //   - the product fills at least a third of the frame
 //   - every creative has a headline and a CTA; no empty field shipped as a blank bar
 //   - money is written the local way (₹10,000 or ₹1,00,000, never ₹10.000); no placeholders ([X], TBD, {{...}})
@@ -37,7 +38,10 @@
 //     claim_source that was checked against the whole range, or softer words. "always" and "never" are notes
 //   - a set of 10 or more with no local or seasonal moment (the moment field) gets a note
 //   - the mix: in any set of 3 or more, at least half the creatives are image-led (product or lifestyle); text cards
-//     (notes, chats, tables, receipts) are the rest. 5 or more name at least 2 segments; no two share angle and format
+//     (notes, chats, tables, receipts) are the rest, each with 40 words or fewer on the image. 5 or more name at least
+//     2 segments, and at least one piece is for people who already know the store (funnel "retargeting") or carries an
+//     offer (a payment plan, a gift, free shipping); no two share angle and format
+//   - faces: every face that shows is in faces; none is cut by the frame or its photo_box, and no button sits on one
 // E-commerce promises (each one checked against its terms):
 //   - a date promise ("Wedding in February?", "by Diwali") needs timing_check: when the buyer really gets it
 //   - a pay-later line (EMI, "pay monthly", "6 x ₹2,817") needs offer_terms, and a pay-first plan must say when it ships
@@ -67,10 +71,11 @@ import zlib from 'node:zlib';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createRequire } from 'node:module';
 
-export const VERSION = '1.3.0';
+export const VERSION = '1.4.0';
 export const RULES = Object.freeze({ minLayouts: 4, maxLayoutShare: 0.3, minSetForVariety: 10, minProductShare: 1 / 3, minProductContrast: 22, minButtonShare: 0.7, minNativeFormats: 3, minTextPx: 18, readTextPx: 24, minKernPx: 40, maxKernGap: -0.008, minCommaTail: 0.15, maxUpscale: 1.3,
   minStrokeContrast: 0.2, strokeMinPx: 30, minContrast: 4.5, minContrastLarge: 3, largeTextPx: 48, maxImageWords: 50, noteImageWords: 30, minSetForMix: 3, maxTextCardShare: 0.5,
-  minSegments: 2, minSetForSegments: 5, maxHeadlineWords: 14, noteHeadlineWords: 10, maxPriceAgeDays: 7, maxPrimaryHook: 125, maxAdHeadline: 40, maxAdDescription: 30 });
+  minSegments: 2, minSetForSegments: 5, maxHeadlineWords: 14, noteHeadlineWords: 10, maxPriceAgeDays: 7, maxPrimaryHook: 125, maxAdHeadline: 40, maxAdDescription: 30,
+  maxTextCardWords: 40, faceEdge: 0.005, minSetForFunnel: 5 });
 
 // ---------- PNG: enough of a decoder for 8-bit, non-interlaced images (what browsers and image APIs save) ----------
 export function decodePng(buf) {
@@ -523,6 +528,34 @@ export async function matchPages(entries, { fetcher = globalThis.fetch, timeoutM
   return out;
 }
 
+/** A person in the picture: every face is listed, and none is cut by the frame, by its photo box, or covered by the button. */
+const PERSON_HINT = /\b(?:model|worn|wearing|person|people|woman|women|man|men|face|portrait|selfie|ugc|lifestyle|on a model|hands?)\b/i;
+const NO_PERSON = /\b(?:no|without|not any)\s+(?:a\s+)?(?:people|persons?|faces?|hands?|models?|woman|women|man|men)\b(?:\s+(?:drawn|shown|in (?:it|the (?:scene|frame|photo))))?/gi;
+export function faceIssues(entry, { rules = RULES } = {}) {
+  const fails = [], notes = [], hint = [entry.format, entry.layout, entry.ai_scene, entry.photo].map((x) => String(x ?? '')).join(' ').replace(NO_PERSON, ' ');
+  if (!Array.isArray(entry.faces)) {
+    if (PERSON_HINT.test(hint)) fails.push(`this creative shows a person ("${hint.match(PERSON_HINT)[0]}") but the manifest has no faces: list each face as [x, y, w, h], so a crop through a face can be caught`);
+    else notes.push('no faces field: write faces: [] when no person shows, or the box of each face');
+    return { fails, notes };
+  }
+  const e = rules.faceEdge, inside = (f, b) => f[0] >= b[0] - e && f[1] >= b[1] - e && f[0] + f[2] <= b[0] + b[2] + e && f[1] + f[3] <= b[1] + b[3] + e;
+  const overlap = (a, b) => Math.max(0, Math.min(a[0] + a[2], b[0] + b[2]) - Math.max(a[0], b[0])) * Math.max(0, Math.min(a[1] + a[3], b[1] + b[3]) - Math.max(a[1], b[1]));
+  entry.faces.forEach((f, i) => {
+    if (!Array.isArray(f) || f.length !== 4) { fails.push(`faces[${i}] is not a box [x, y, w, h]`); return; }
+    const tag = entry.faces.length > 1 ? `face ${i + 1}` : 'the face';
+    if (f[0] < e || f[1] < e || f[0] + f[2] > 1 - e || f[1] + f[3] > 1 - e) fails.push(`${tag} is cut by the edge of the frame: keep the whole head in, or crop below the chin`);
+    else if (Array.isArray(entry.photo_box) && entry.photo_box.length === 4 && !inside(f, entry.photo_box)) fails.push(`${tag} is cut by the edge of its photo: keep the whole head inside the photo, or crop below the chin`);
+    if (Array.isArray(entry.cta_box) && entry.cta_box.length === 4 && overlap(f, entry.cta_box) > 0.15 * f[2] * f[3]) fails.push(`the button covers ${tag}`);
+  });
+  return { fails, notes };
+}
+/** For people who already know the store, or carrying a real offer: a set of 5 that is all cold prospecting misses both. */
+const OFFER_HINT = /\b(?:offer|emi|instal(?:l)?ments?|pay (?:monthly|later|over)|payment plan|discount|% off|sale|gift with|free (?:gift|shipping|delivery|resize)|bundle|cart|retarget(?:ing)?|returning|come back|still thinking)\b/i;
+export function isRetargetOrOffer(entry) {
+  if (/^(?:retarget(?:ing)?|remarketing|returning|cart|bottom|bofu)/i.test(String(entry.funnel || '').trim())) return true;
+  return OFFER_HINT.test([entry.angle, entry.format, entry.offer_terms ? 'offer' : '', entry.headline].map((x) => String(x ?? '')).join(' '));
+}
+
 // ---------- the whole set ----------
 export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RULES, buttons = true, type = true, fonts = null, typeReport = null, domain = null, today = new Date() } = {}) {
   const files = fs.readdirSync(dir).filter((f) => /\.(png|jpe?g|webp)$/i.test(f)).sort();
@@ -556,7 +589,7 @@ export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RUL
   } else {
     const declared = new Set(entries.map((e) => e.layout).filter(Boolean));
     if (n >= rules.minSetForVariety && declared.size < rules.minLayouts) fails.push(`the manifest names only ${declared.size} layouts`);
-    let withButton = 0, textCards = 0; const natives = new Set(), fills = [];
+    let withButton = 0, textCards = 0, funnelHits = 0; const natives = new Set(), fills = [];
     for (const e of entries) {
       const row = per.find((r) => r.file === e.file); if (!row) { fails.push(`manifest names ${e.file}, which is not in the folder`); continue; }
       row.fails.push(...textIssues(e));
@@ -564,6 +597,8 @@ export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RUL
       const o = offerIssues(e, { today, rules }); row.fails.push(...o.fails); row.notes.push(...o.notes);
       const ad = adIssues(e, { domain, rules }); row.fails.push(...ad.fails); row.notes.push(...ad.notes);
       const nf = nativeFormat(e.format); if (nf) { natives.add(nf); textCards++; }
+      const fc = faceIssues(e, { rules }); row.fails.push(...fc.fails); row.notes.push(...fc.notes);
+      if (isRetargetOrOffer(e)) funnelHits++;
       if (Array.isArray(e.cta_box) && e.cta_box.length === 4) {
         const img = decoded.get(e.file);
         if (!img) withButton++;
@@ -580,6 +615,7 @@ export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RUL
     for (const r of per) if (!entries.some((e) => e.file === r.file)) r.notes.push('not in the manifest');
     // The mix (round 6: 3 of 5 were text cards and 9 of 10 judges called the set text-heavy).
     if (n >= rules.minSetForMix && textCards / n > rules.maxTextCardShare) fails.push(`${textCards} of ${n} creatives are text cards (notes, chat, table, explainer, review, receipt): keep at least half image-led, with the product or a person wearing it as the hero`);
+    if (n >= rules.minSetForFunnel && !funnelHits) fails.push(`all ${n} creatives are prospecting with no offer: make at least one for people who already know the store (funnel "retargeting": cart and site visitors, past buyers) or one that carries a real offer from the store (a payment plan, a gift, free shipping), with its terms`);
     if (n >= rules.minSetForSegments) {
       const segs = new Set(entries.map((e) => norm(e.segment || '')).filter(Boolean));
       if (entries.some((e) => !String(e.segment || '').trim())) fails.push('some creatives name no segment: tie each one to a buyer group the data names');
@@ -613,6 +649,11 @@ export function checkSet(dir, { manifest = null, size = '1080x1080', rules = RUL
       const t = typeFor(row.file, entries && entries.find((e) => e.file === row.file), report);
       if (!t) continue; probed++;
       const ti = typeIssues(t, { fonts, rules }); row.fails.push(...ti.fails); row.notes.push(...ti.notes);
+      const entry = entries && entries.find((e) => e.file === row.file);
+      if (entry && nativeFormat(entry.format)) {
+        const words = (t.texts || []).reduce((n2, x) => n2 + (x.words ?? String(x.text).split(/\s+/).filter(Boolean).length), 0);
+        if (words > rules.maxTextCardWords) row.fails.push(`a text card (${entry.format}) with ${words} words on the image: keep it to ${rules.maxTextCardWords} or fewer (round 7: the 44-word checklist and review card read slowest)`);
+      }
     }
     if (n >= rules.minSetForVariety && probed < n) fails.push(`the type was checked on ${probed} of ${n} creatives: run the type probe on the page that draws each one (node check-creative-set.mjs probe <html folder> --out ${path.join(path.basename(dir), 'type-report.json')}), then look at every headline at full size. Use --no-type only when no creative has text drawn from HTML`);
   }

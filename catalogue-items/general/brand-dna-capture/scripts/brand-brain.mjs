@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// brand-brain.mjs (AI Blocks, brand-dna-capture) - version 2.2.0
+// brand-brain.mjs (AI Blocks, brand-dna-capture) - version 2.2.1
 //
 // Builds the two layers every buyer-facing job stands on, inside context/brand-file/ next to the brand file:
 //   foundation/  how the brand talks and looks, what it can claim, who buys and why (slow: fresh for 90 days)
@@ -39,7 +39,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-export const VERSION = '2.2.0';
+export const VERSION = '2.2.1';
 export const FOLDER = 'brand-file';
 const DAY = 864e5;
 
@@ -485,7 +485,7 @@ export function planCreatives(ctx, { n = 20, now = new Date() } = {}) {
     pickTable ? `Segments from: data/segments.md, by ${pickTable[0]}.` : 'No segments yet.', personas.length ? `Personas: ${personas.join('; ')}.` : 'No personas yet: write foundation/personas.md first.', '',
     '| # | Segment | Why this segment (the number) | Persona | Insight (their words or a result) | Angle | Format | Proof line (source) | Hook (first 5 to 8 words) |', '|---|---|---|---|---|---|---|---|---|',
     ...slots.slice(0, n).map((s, i) => `| ${i + 1} | ${s.segment} | ${s.why} |  |  |  |  |  |  |`), '',
-    'Rules: no two creatives share both an angle and a format. At least half image-led (the product, or a real person wearing it); text cards (a notes list, a chat, a comparison table, an explainer, a review card) are the rest, and a set of 10 or more uses 3 of them. One local or seasonal moment for each segment the data names. A button on the image in the brand\'s own style from its real ads. Headlines in the site\'s own heading font, never a hairline stand-in, passing check-creative-set.mjs probe. Every date, pay-later, ranking, policy and price line carries its source and terms in the manifest. Every hook passes voice-check.', '', stamp(now)];
+    'Rules: no two creatives share both an angle and a format. At least half image-led (the product, or a real person wearing it); text cards (a notes list, a chat, a comparison table, an explainer, a review card) are the rest, 40 words or fewer each, and a set of 10 or more uses 3 of them. A set of 5 or more has at least one piece for people who already know the store, or one with a real offer. One local or seasonal moment for each segment the data names. A button on the image in the brand\'s own style from its real ads. Headlines in the site\'s own heading font, never a hairline stand-in, passing check-creative-set.mjs probe. Every date, pay-later, ranking, policy and price line carries its source and terms in the manifest. Every hook passes voice-check.', '', stamp(now)];
   return { slots: slots.slice(0, n), text: out.join('\n') };
 }
 

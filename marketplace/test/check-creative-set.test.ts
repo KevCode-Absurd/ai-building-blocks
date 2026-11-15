@@ -98,7 +98,7 @@ test("the button is read from the pixels, and a set of 10 needs buttons and 3 na
   assert.ok(r.notes.some((n: string) => /local or seasonal moment/.test(n)));
   // Real buttons on 7 of 10 would pass; here, give the set 3 native formats and a moment, and drop the buttons rule.
   const fmts = ["notes list", "chat", "18K vs 22K table", "product", "explainer", "product", "product", "product", "product", "product"];
-  writeFileSync(path.join(dir, "manifest.json"), JSON.stringify(files.map((f, i) => entry(f, i, { format: fmts[i], moment: i === 0 ? "Margazhi season" : undefined, cta_box: i < 6 ? box : undefined }))));
+  writeFileSync(path.join(dir, "manifest.json"), JSON.stringify(files.map((f, i) => entry(f, i, { format: fmts[i], moment: i === 0 ? "Margazhi season" : undefined, cta_box: i < 6 ? box : undefined, funnel: i === 1 ? "retargeting" : "prospecting" }))));
   r = m.checkSet(dir, { size: "120x120", buttons: false, type: false });
   assert.equal(r.ok, true, m.reportText(r));
   assert.equal(m.nativeFormat("WhatsApp chat"), "chat");
@@ -264,6 +264,39 @@ test("the mix: half image-led, two segments, and no repeated angle and format", 
   writeFileSync(path.join(dir, "manifest.json"), JSON.stringify(files.map((file, i) => ({ file, layout: file.slice(3, -4), format: i < 2 ? "product" : mixed[i], angle: i < 2 ? "gift" : `angle ${i}`, segment: segs[i], product: `Piece ${i}`, product_box: [0.2, 0.2, 0.6, 0.6], headline: "Gold for every day.", cta: "Shop now" }))));
   r = m.checkSet(dir, { size: "120x120", buttons: false, type: false });
   assert.ok(r.fails.some((f: string) => /01-arch\.png and 02-band\.png share both angle \("gift"\) and format/.test(f)));
+});
+
+// Round 7 (15 Nov): 9 of 10 for AI Blocks, but judges still marked down two 44-word text cards, a face cropped tight in
+// the notes card, and a set that was all cold prospecting with no retargeting or payment-plan ad.
+test("round 7 follow-ups: text cards over 40 words, faces cut by a crop, and a set with no retargeting or offer", async () => {
+  const m = await load(tool);
+  // Faces: listed, inside the frame and the photo, and not under the button.
+  assert.match(m.faceIssues({ format: "model photo (everyday)" }).fails[0], /shows a person \("model"\) but the manifest has no faces/);
+  assert.deepEqual(m.faceIssues({ format: "product still life", ai_scene: "Silk behind the real photo. No people drawn." }).fails, []);
+  assert.match(m.faceIssues({ format: "notes list", faces: [[0.6, 0, 0.3, 0.25]] }).fails[0], /the face is cut by the edge of the frame/);
+  assert.match(m.faceIssues({ format: "notes list", faces: [[0.55, 0.1, 0.2, 0.2]], photo_box: [0.6, 0, 0.4, 0.6] }).fails[0], /cut by the edge of its photo/);
+  assert.match(m.faceIssues({ format: "model photo", faces: [[0.3, 0.6, 0.2, 0.2]], cta_box: [0.25, 0.65, 0.4, 0.1] }).fails[0], /the button covers the face/);
+  assert.deepEqual(m.faceIssues({ format: "model photo", faces: [[0.3, 0.1, 0.2, 0.2]], photo_box: [0.2, 0, 0.6, 0.7], cta_box: [0.3, 0.8, 0.4, 0.08] }).fails, []);
+  // The funnel: a set of 5 needs one piece for warm buyers, or one with a real offer.
+  assert.equal(m.isRetargetOrOffer({ angle: "Desire: an heirloom" }), false);
+  assert.equal(m.isRetargetOrOffer({ funnel: "retargeting", angle: "Still thinking about it?" }), true);
+  assert.equal(m.isRetargetOrOffer({ angle: "Payment plan", offer_terms: "FAQ: 6 monthly payments, ships after the last" }), true);
+  const dir = makeSet(["arch", "band", "circle", "grid", "arch"]);
+  const files = ["01-arch.png", "02-band.png", "03-circle.png", "04-grid.png", "05-arch.png"];
+  const base = (i: number, extra = {}) => ({ file: files[i], layout: files[i].slice(3, -4), format: ["product", "lifestyle", "product", "notes list", "review card"][i], angle: `angle ${i}`, segment: i % 2 ? "Women 35-44" : "Women 45-54", product: `Piece ${i}`, product_box: [0.2, 0.2, 0.6, 0.6], headline: "Gold for every day.", cta: "Shop now", faces: [], ...extra });
+  writeFileSync(path.join(dir, "manifest.json"), JSON.stringify(files.map((_, i) => base(i))));
+  let r = m.checkSet(dir, { size: "120x120", buttons: false, type: false });
+  assert.ok(r.fails.some((f: string) => /all 5 creatives are prospecting with no offer/.test(f)), m.reportText(r));
+  writeFileSync(path.join(dir, "manifest.json"), JSON.stringify(files.map((_, i) => base(i, i === 2 ? { funnel: "retargeting", angle: "Still thinking about the studs?" } : {}))));
+  r = m.checkSet(dir, { size: "120x120", buttons: false, type: false });
+  assert.ok(!r.fails.some((f: string) => /prospecting with no offer/.test(f)), m.reportText(r));
+  // Text cards: 40 words at most, read from the type report (round 7's checklist and review card had 44).
+  const words = (n: number) => ({ canvas: 1080, texts: [{ text: Array(n).fill("gold").join(" "), font: "Lato", weight: "400", loaded: true, px: 30, contrast: 12, words: n }], fonts: [{ font: "Lato", weight: "400", kerns: true, commaTail: 0.33, stroke: 0.7 }], kern: [], images: [] });
+  writeFileSync(path.join(dir, "type-report.json"), JSON.stringify({ "01.html": words(12), "02.html": words(20), "03.html": words(12), "04.html": words(44), "05.html": words(38) }));
+  r = m.checkSet(dir, { size: "120x120", buttons: false });
+  const card = r.per.find((p: any) => p.file === "04-grid.png");
+  assert.ok(card.fails.some((f: string) => /a text card \(notes list\) with 44 words on the image/.test(f)), m.reportText(r));
+  assert.ok(!r.per.find((p: any) => p.file === "05-arch.png").fails.some((f: string) => /text card/.test(f)), "38 words on a review card passes");
 });
 
 test("brand-facing packs carry the check, and the method gates a set of ads on it", () => {

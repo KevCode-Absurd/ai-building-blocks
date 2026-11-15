@@ -17,7 +17,8 @@ Kevin's brief: "Imagine what questions an e-commerce owner will ask, and then op
 | `RUBRIC.md` | The seven owner grades with anchors, job checks, reproducibility, image grades | Judges get the grades section |
 | `ARMS.md`, `arms/RULES-DELIVERABLE.md` | The three arms and the shared deliverable rules | Arms get the rules |
 | `judge/` | Sheet templates: pairwise, single answer, checker, images | Judges |
-| `scripts/` | `make-sheets.mjs`, `finish-run.mjs`, `score.mjs`, `compare-rounds.mjs`, `render-images.mjs`, `selftest.mjs`, `lib.mjs` | Maintainers |
+| `scripts/` | `make-sheets.mjs`, `finish-run.mjs`, `asserts.mjs` (free code checks), `save-verdict.mjs`, `score.mjs`, `review.mjs` (the owner's review page), `agreement.mjs` (judges against the owner), `compare-rounds.mjs`, `render-images.mjs`, `selftest.mjs`, `lib.mjs` | Maintainers |
+| `METHOD-NOTES.md` | Why the bench works this way: what we took from Hamel Husain's evals FAQ and Anthropic's agent-eval guide | Maintainers |
 
 ## The brands
 
@@ -42,21 +43,23 @@ All real, small to mid size, across categories. Account data is test data; publi
 
 Text runs and judges always go on the Claude plan: `claude -p` with no `ANTHROPIC_API_KEY` set, or Claude Code subagents. Never an API key for text. OpenAI is used only to render images, and only with a spend cap.
 
-1. **Self-test** (offline, about a minute): `node scripts/selftest.mjs`
+1. **Self-test** (offline, about a minute): `node scripts/selftest.mjs` (add `--packs <dist/packs folder>` in a checkout without built packs)
 2. **Build the run folders.** Put rounds outside any repo, so no arm can stumble on packs or keys:
    `node scripts/make-sheets.mjs prompts --round R1 --rounds-dir C:/aib/evals/rounds`
    Options: `--tasks E04,E13`, `--arms plain,code`, `--runs 3`, `--model opus`, `--packs <dist/packs folder>`.
    Build the packs you mean to test first, and note the commit; each run's `meta.json` records the pack's sha256.
-3. **Run the arms:** `bash C:/aib/evals/rounds/R1/run-arms.sh`. Each run is a fresh `claude -p` in its own folder, with MCP servers off (`--strict-mcp-config`), skills, subagents and the web blocked, and only the tools its arm allows. It skips runs that already have `answer.md`, so you can stop and restart. `finish-run.mjs` saves the answer, logs tokens and cost, and audits every tool call; a run that read outside its folder is marked contaminated and left out of judging.
+3. **Run the arms:** `bash C:/aib/evals/rounds/R1/run-arms.sh`. Each run is a fresh `claude -p` in its own folder, with MCP servers off (`--strict-mcp-config`), skills, subagents and the web blocked, and only the tools its arm allows. It skips runs that already have `answer.md`, so you can stop and restart. `finish-run.mjs` saves the answer, logs tokens, cost and the model that really ran, and audits every tool call; a run that read outside its folder is marked contaminated and left out of judging. It then runs the free code checks (`asserts.mjs`: no dashes, no placeholders, no internal codes, the task's must-include figures, plus advisory readability, homework and traced-figure checks). They measure every arm the same way and never keep a run out of judging. For an older round: `node scripts/asserts.mjs --round R1 --rounds-dir ...`.
    With subagents instead: give each line of `RUNS.md` to a fresh subagent. Subagent runs cannot be audited automatically, so read a sample of transcripts.
 4. **Render images** (creative tasks E16 to E18): dry run first, then render with a cap:
    `node scripts/render-images.mjs --round R1 --rounds-dir C:/aib/evals/rounds`
    `node scripts/render-images.mjs --round R1 --rounds-dir C:/aib/evals/rounds --go --max-usd 4 --usd-per-image <current price>`
    Defaults: model gpt-image-2.5-sunburst, quality medium, 1024x1024, run 1's 5 prompts per arm per task. The key is read inside the script from the `.env` one folder above the repo and is never printed.
-5. **Build the blind sheets:** `node scripts/make-sheets.mjs sheets --round R1 --rounds-dir ...` and, after images, `... image-sheets --round R1 ...`. The unblinding key goes to `R1/_key/`, apart from the sheets.
-6. **Run the judges:** `bash .../R1/run-judges.sh` (one fresh `claude -p` per sheet, Read only), or give `JUDGES.md` lines to fresh subagents. Image sheets need a judge that can open images (a subagent with Read). Judges never see the arm, word counts, file names, `TASKS.json`, `keys/` or `_key/`.
+5. **Build the blind sheets:** `node scripts/make-sheets.mjs sheets --round R1 --rounds-dir ...` and, after images, `... image-sheets --round R1 ...`. The unblinding key goes to `R1/_key/`, apart from the sheets. Add `--examples <owner-labels.jsonl>` once Kevin has labelled a round: up to 4 of his train-split critiques from tune tasks go into every single-answer sheet as worked examples.
+6. **Run the judges:** `bash .../R1/run-judges.sh` (one fresh `claude -p` per sheet, Read only), or give `JUDGES.md` lines to fresh subagents. Image sheets need a judge that can open images (a subagent with Read). Judges never see the arm, word counts, file names, `TASKS.json`, `keys/` or `_key/`. The single-answer judge answers each grade's yes/no sub-checks and writes a critique that quotes the answer before it scores. `save-verdict.mjs` records which model judged.
 7. **Score:** `node scripts/score.mjs --round R1 --rounds-dir ...` writes `SCORE.md`, `score.json` and `tune-reasons.md`.
-8. **Compare with the last promoted round:** `node scripts/compare-rounds.mjs --base R0 --cand R1 --arm code --rounds-dir ...`. Exit 0 means promote.
+8. **Owner review (Kevin, about 15 minutes a batch):** `node scripts/review.mjs pick --round R1 --rounds-dir ...`, then `node scripts/review.mjs serve --round R1 --rounds-dir ...` and open http://127.0.0.1:5199. For each answer, pass or fail each grade at 7, say whether you would act on it today, and write one line on the first thing that went wrong. The judge's grades show only after you save. Aim for 40 to 60 answers over a few sittings.
+9. **Check the judges:** `node scripts/agreement.mjs --round R1 --rounds-dir ...` (dev split while tuning a judge sheet, `--split test` once at the end). Then `node scripts/review.mjs notes --round R1 ...` and group the notes into counted failure types in `review/failure-taxonomy.md`.
+10. **Compare with the last promoted round:** `node scripts/compare-rounds.mjs --base R0 --cand R1 --arm code --rounds-dir ...`. Exit 0 means promote.
 
 ## What one round costs
 
@@ -70,7 +73,7 @@ Text runs and judges always go on the Claude plan: `claude -p` with no `ANTHROPI
 | **Claude calls in total** | **1,488** | 506 |
 | Images rendered (OpenAI, medium) | 3 tasks x 3 arms x 5 = 45 | 2 x 2 x 5 = 20 |
 
-Drop the code vs chat pair with `--pairs code:plain,chat:plain` to save 198 judge calls. Agent runs in the coding app take the most tokens; `SCORE.md` reports logged tokens and cost per arm, so the plan's usage can be checked after each round.
+Drop the code vs chat pair with `--pairs code:plain,chat:plain` to save 198 judge calls. For a cheap tune round, judge pairs on run 1 only: `--pairs code:plain --pair-runs r1` makes 42 pairwise calls instead of 126. Single-answer grades and the checker still cover all 3 runs, so worst-of-3 and pass^3 are unchanged. Keep all pairs and all runs for promotion and held-out. Agent runs in the coding app take the most tokens; `SCORE.md` reports logged tokens and cost per arm, so the plan's usage can be checked after each round.
 
 ## How scoring works
 
@@ -79,16 +82,25 @@ Drop the code vs chat pair with `--pairs code:plain,chat:plain` to save 198 judg
 - **pass^3:** a run passes a task when the checker marks every job check pass, no decoy is taken and no false signal is presented. pass^3 is the share of tasks where all 3 runs pass. Worst-of-3 and spread come from the owner score.
 - **Knowledge lift:** per task, agent minus context-matched plain on grade 2 (domain principles) and grade 4 (backed by sound sources), plus grade 7 (insight). This is the part only our method and knowledge add, since plain Claude had the same files. A good answer is never marked down for using a sound outside source.
 - **Length check:** the share of decided pairs won by the longer answer. Well above half means length may be swaying judges.
-- **Held-out:** reported as numbers only. Its judge reasons are never written to `tune-reasons.md`.
+- **Pass line:** for each grade, the share of runs at 7 or more, shown next to the mean. Judges are checked against Kevin on this line.
+- **Sub-checks:** how often each yes/no sub-check is "yes", per arm. When a grade falls, look here first.
+- **Must-pass gate:** a run fails it if the judge finds something invented, or a claim the brand cannot make, or the checker marks a decoy taken. The owner score stays the headline; promotion also needs the held-out must-pass rate not to fall.
+- **Code checks:** the share of runs passing every hard check from `asserts.mjs`.
+- **First failure:** for runs that missed a job check, the checker names where it first went wrong (read, diagnose, decide, number, decoy, deliver). The most common cell is where to fix first.
+- **Task flags:** a task every arm passed every run is "always passed": graduate it to a regression set and add a harder one. A task no arm ever passed is "never passed": check its key and checks before blaming the arms.
+- **Judge agreement:** `agreement.mjs` gives, per grade, the share of Kevin's fails the judge also failed and the share of his passes it also passed, plus a pass rate corrected for judge error. Until both reach 0.85, read a grade's mean as a guide, not a fact.
+- **Held-out:** reported as numbers only. Its judge reasons are never written to `tune-reasons.md`, and its answers are never used for owner labels or judge examples.
 
 ## The improvement loop
 
 1. **Run** a round on the current packs (the base).
-2. **Find the weakest areas** in `SCORE.md`: lowest owner score, lowest worst-of-3, failed pass^3, negative knowledge lift, decoys taken, false signals. Read `tune-reasons.md` and a sample of tune transcripts to find the failure reason (missed a signal, took a decoy, off voice, unbacked claim, unclear first screen).
-3. **Fix the thing behind it:** the agent's job skill, the knowledge card, the tool, or the method rule. One family of changes per round, so a result can be traced to a change. New rules start on probation.
-4. **Re-run tune** for the touched areas (`--tasks`), score, and check the gain is real (outside the interval, and not just longer answers).
-5. **Check held-out:** run the full held-out set once on the candidate packs. Do not read held-out answers or reasons to decide anything.
-6. **Promote** only if `compare-rounds.mjs` says PROMOTE: tune improved and held-out did not fall on owner score, worst-of-3, pass^3, win share, or any single grade by more than 0.1. Otherwise keep the base and try the next fix.
+2. **Find the weakest areas** in `SCORE.md`: lowest owner score, lowest worst-of-3, failed pass^3, must-pass fails, negative knowledge lift, decoys taken, false signals, the hot first-failure cell.
+3. **Read the failures yourself before deciding the fix.** Kevin labels a batch on the review page, with a one-line note on the first thing that went wrong in each answer. Claude groups the notes into counted failure types in `review/failure-taxonomy.md`, and Kevin accepts or changes the groups. Read a few full transcripts (`run.jsonl`) for the top type. Keep reading until new answers stop showing new kinds of failure. Log problems that are not the agent's fault too (a broken input, a tool error, a pack too big to read). `tune-reasons.md` is the judges' view; use it to find examples, not to decide.
+4. **Fix the thing behind the most common failure type:** the agent's job skill, the knowledge card, the tool, or the method rule. One family of changes per round, so a result can be traced to a change. New rules start on probation. Prefer a code check over a new judge question whenever the failure can be checked by code. Add a job check only for a failure we have actually seen, or for a hard rule (claims law, platform policy).
+5. **Re-run tune** for the touched areas (`--tasks`), score, and check the gain is real (outside the interval, and not just longer answers).
+6. **Check held-out:** run the full held-out set once on the candidate packs. Do not read held-out answers or reasons to decide anything.
+7. **Promote** only if `compare-rounds.mjs` says PROMOTE: tune improved and held-out did not fall on owner score, worst-of-3, pass^3, win share, must-pass rate, or any single grade by more than 0.1. Otherwise keep the base and try the next fix. If it warns that the rubric version or judge model changed, re-check judge agreement first.
+8. **Keep the suite hard.** A suite where every arm passes everything has stopped teaching. Graduate "always passed" tasks, fix "never passed" ones, and add tasks on fresh brands aimed at the newest failure types, so that roughly 70% of runs pass.
 
 House rules for the bench:
 - Never put key text, brand names from this suite, avatar names or key figures into packs, skills, cards or method files. That would teach to the test. `../owner-bench/scripts/bench-leak-guard.cjs` reads this suite's brand names, avatar tags ("Dan, 41") and key figures; run it before promoting a round.

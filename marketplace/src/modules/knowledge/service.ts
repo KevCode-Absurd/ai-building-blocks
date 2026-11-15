@@ -59,7 +59,8 @@ export function verticalShelf(env: Env, id: string): Promise<LoadedShelf | null>
 
 /** One item's full text from its built file, or null. */
 export async function shelfText(env: Env, path: string): Promise<string | null> {
-  if (!env.ASSETS || !/^\/packs\/knowledge\/[a-z0-9-]+\/[a-z0-9/._-]+\.(md|txt)$/.test(path)) return null;
+  // Skill files are SKILL.md, so the file part allows capitals. No ".." anywhere: the path stays inside the library.
+  if (!env.ASSETS || path.includes("..") || !/^\/packs\/knowledge\/[a-z0-9-]+\/[A-Za-z0-9/._-]+\.(md|txt)$/.test(path)) return null;
   const res = await env.ASSETS.fetch(new Request(new URL(path, env.APP_ORIGIN)));
   return res.ok ? res.text() : null;
 }

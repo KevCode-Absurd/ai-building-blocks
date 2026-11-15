@@ -5,7 +5,8 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { testEnv } from "./helpers.ts";
 import { buildShelf, ShelfSearch, type ShelfInput, type ShelfItem } from "../src/modules/knowledge/shelf.ts";
-import { forgetVerticals } from "../src/modules/knowledge/service.ts";
+import { forgetVerticals, shelfText } from "../src/modules/knowledge/service.ts";
+import type { Env } from "../src/env.ts";
 import { ECOMMERCE_MODULE_STAGES, ECOMMERCE_STAGES } from "../src/modules/directory/team-stages.ts";
 
 const prompt = (slug: string, title: string, extra: Record<string, unknown> = {}) => ({
@@ -65,6 +66,10 @@ after(() => forgetVerticals());
 test("GET /api/knowledge/ecommerce/shelf, a shelf page and one item", async () => {
   forgetVerticals();
   const { files } = buildShelf(input());
+  // The skill's own file, as the pack build ships it (capital SKILL.md).
+  const skill = JSON.parse(files[Object.keys(files).find(p => p.endsWith("/shelf.json")) ?? ""] ?? "{}").skills?.[0]?.path
+    ?? "/packs/knowledge/ecommerce/skills/build-klaviyo-segments/SKILL.md";
+  files[skill] = "---\nname: build-klaviyo-segments\n---\n# Klaviyo segments\n";
   const assets = { async fetch(req: Request) {
     const p = new URL(req.url).pathname;
     if (!(p in files)) return new Response("Not found", { status: 404 });
@@ -83,6 +88,10 @@ test("GET /api/knowledge/ecommerce/shelf, a shelf page and one item", async () =
   assert.equal(one.status, 200);
   assert.match(one.body.text, /# Ten ad hooks/);
   assert.match(one.body.prompt, /^You are a direct-response strategist/);
+  const sk = await t.api("GET", "/api/knowledge/ecommerce/shelf/skills/build-klaviyo-segments");
+  assert.equal(sk.status, 200, "a skill's SKILL.md (capital letters in the file name) loads");
+  assert.match(sk.body.text, /# Klaviyo segments/);
+  assert.equal(await shelfText({ ASSETS: assets as unknown as Fetcher, APP_ORIGIN: "https://x.test" } as unknown as Env, "/packs/knowledge/ecommerce/../../secret.md"), null, "no path outside the library");
   assert.equal((await t.api("GET", "/api/knowledge/ecommerce/shelf/widgets")).status, 404);
   assert.equal((await t.api("GET", "/api/knowledge/ecommerce/shelf/prompts/nope")).status, 404);
   assert.equal((await t.api("GET", "/api/knowledge/saas/shelf")).status, 404);

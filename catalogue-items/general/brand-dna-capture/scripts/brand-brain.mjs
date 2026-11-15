@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// brand-brain.mjs (AI Blocks, brand-dna-capture) - version 2.1.0
+// brand-brain.mjs (AI Blocks, brand-dna-capture) - version 2.2.1
 //
 // Builds the two layers every buyer-facing job stands on, inside context/brand-file/ next to the brand file:
 //   foundation/  how the brand talks and looks, what it can claim, who buys and why (slow: fresh for 90 days)
@@ -39,7 +39,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-export const VERSION = '2.1.0';
+export const VERSION = '2.2.1';
 export const FOLDER = 'brand-file';
 const DAY = 864e5;
 
@@ -485,7 +485,7 @@ export function planCreatives(ctx, { n = 20, now = new Date() } = {}) {
     pickTable ? `Segments from: data/segments.md, by ${pickTable[0]}.` : 'No segments yet.', personas.length ? `Personas: ${personas.join('; ')}.` : 'No personas yet: write foundation/personas.md first.', '',
     '| # | Segment | Why this segment (the number) | Persona | Insight (their words or a result) | Angle | Format | Proof line (source) | Hook (first 5 to 8 words) |', '|---|---|---|---|---|---|---|---|---|',
     ...slots.slice(0, n).map((s, i) => `| ${i + 1} | ${s.segment} | ${s.why} |  |  |  |  |  |  |`), '',
-    'Rules: no two creatives share both an angle and a format. At least 4 different formats, 3 of them native (a notes list, a chat, a comparison table, an explainer, a review card). One local or seasonal moment for each segment the data names. A button on the image in the brand\'s own style from its real ads. Every hook passes voice-check.', '', stamp(now)];
+    'Rules: no two creatives share both an angle and a format. At least half image-led (the product, or a real person wearing it); text cards (a notes list, a chat, a comparison table, an explainer, a review card) are the rest, 40 words or fewer each, and a set of 10 or more uses 3 of them. A set of 5 or more has at least one piece for people who already know the store, or one with a real offer. One local or seasonal moment for each segment the data names. A button on the image in the brand\'s own style from its real ads. Headlines in the site\'s own heading font, never a hairline stand-in, passing check-creative-set.mjs probe. Every date, pay-later, ranking, policy and price line carries its source and terms in the manifest. Every hook passes voice-check.', '', stamp(now)];
   return { slots: slots.slice(0, n), text: out.join('\n') };
 }
 
@@ -498,6 +498,14 @@ export const AI_TELLS = Object.freeze([
 ]);
 /** Claims about a whole range ("every stone we set", "all our pieces") are where a true-sounding line turns false. */
 export const ABSOLUTE_CLAIM = /\b(?:every|all)\s+(?:of\s+)?(?:[\p{L}'’]+\s+){0,2}?(?:stones?|pieces?|gems?|gemstones?|diamonds?|products?|items?|orders?|designs?|rings?|customers?|ingredients?|batch(?:es)?|plans?|users?|clients?|materials?)\b|\b(?:100\s?%|guaranteed|the only|no one else|purest)\b/iu;
+// Promises a buyer holds the store to (round 6: "Wedding in February?" on a plan that ships in May; "#1 most added"
+// overstating a site tag). The ad must carry the source; check-creative-set.mjs fails a creative without it.
+export const STORE_PROMISES = [
+  [/\b(?:in|by|before|for)\s+(?:january|february|march|april|may|june|july|august|september|october|november|december|diwali|christmas|eid|the wedding|your wedding|the weekend)\b|\bin time for\b/i, 'a date promise: work out when the buyer really gets it under the offer terms (a pay-first plan ships after the last payment)'],
+  [/\b(?:emi|instal(?:l)?ments?|pay (?:over|monthly|later)|per month|book (?:it )?at today'?s price)\b/i, 'a pay-later line: copy the plan terms from the store, and say when it ships'],
+  [/#\s?\d+\b|\btop\s?\d+\b|\bbest[- ]?sell(?:er|ing)\b|\bmost[- ](?:added|loved|popular|bought)\b/i, 'a ranking: quote the store\'s own tag and the date you checked it'],
+  [/\b(?:refunds?|free (?:shipping|delivery|returns?)|cash on delivery|warranty|money[- ]back|\d+[- ]day (?:returns?|exchange))\b/i, 'a policy promise: quote the policy and its conditions'],
+];
 export function voiceCheck(ctx, draftText, { ads = false } = {}) {
   const bankText = read(path.join(brain(ctx), 'foundation', 'voice-bank.md')) || '';
   const bankLines = [...bankText.matchAll(/^- "(.*)" \|/gm)].map((m) => m[1]).filter((l) => !/review/.test(l));
@@ -520,6 +528,7 @@ export function voiceCheck(ctx, draftText, { ads = false } = {}) {
     if (ads && words(sents[0] || '') > 14) warns.push(`the first line is ${words(sents[0])} words; the hook must land in the first 8 to 12`);
     if ((line.match(/,/g) || []).length >= 4 && words(line) > 30) warns.push('a list sentence: split it or cut it');
     const abs = line.match(ABSOLUTE_CLAIM); if (abs) warns.push(`an absolute claim ("${abs[0]}"): check it against the whole range, such as a lab-grown or budget line, and name the source, or soften it`);
+    for (const [re, why] of STORE_PROMISES) { const m = line.match(re); if (m) warns.push(`${why} ("${m[0]}")`); }
     return { line: cut(line, 160), fails, warns, shared, words: words(line) };
   });
   const failed = results.filter((r) => r.fails.length), warned = results.filter((r) => r.warns.length);
@@ -561,7 +570,7 @@ export function funnelOf(rows) {
 const STARTERS = {
   'foundation/messaging.md': ['# Messaging', '', '<!-- Write from facts.json, the site, the ads and the reviews. Every claim needs its source in brackets. -->', '', '## Pillars (3 to 5: what the brand stands for, in its own words)', '', '## Proof bank (each claim with its source and date)', '', '## Offers allowed', '', '## Claims not allowed'],
   'foundation/personas.md': ['# Personas', '', '<!-- 2 to 5 buyers. One "## Name: who" heading each. Under it: the evidence (segment numbers from data/segments.md, review quotes from why-they-buy.md), what they buy and for which occasion, the words they use, what stops them. -->'],
-  'foundation/design.md': ['# Design', '', '<!-- From look.json (the site) AND the ad images. Numbers, not adjectives: colours with their share, fonts by role, how much text an ad carries and where, product framing (model, flat lay, close-up), logo place, what the best-running ads look like. -->'],
+  'foundation/design.md': ['# Design', '', '<!-- From look.json (the site) AND the ad images. Numbers, not adjectives: colours with their share, fonts by role (the site heading and body fonts first: an ad headline uses the site heading font unless the brand ad font file is in hand, never a "closest open" hairline face), how much text an ad carries and where, product framing (model, flat lay, close-up), logo place, what the best-running ads look like. -->'],
   'foundation/dos-donts.md': ['# Dos and don\'ts', '', '<!-- One rule a line, each with where it came from. Quote never-words so voice-check catches them: - Never: "cheap" (brand guide). -->'],
 };
 export function buildBrain(ctx, { from, site = null, now = new Date() } = {}) {

@@ -240,18 +240,31 @@ export function packOneFile(...sources: (ZipsSource | null | undefined)[]): Pack
 
 // ---------- Starting the agent in the person's own AI ----------
 
-export type StartApp = "chatgpt" | "claude" | "gemini" | "coding" | "connector";
+export type StartApp = "chatgpt" | "claude" | "gemini" | "claude-code" | "coding" | "connector";
+const START_APPS: readonly StartApp[] = ["chatgpt", "claude", "gemini", "claude-code", "coding", "connector"];
 
 /** One tab of "Start in your AI": what to get, where to open it and the first message to paste. */
 export interface StartGuide {
   id: StartApp;
   label: string;
-  /** file: the one-file version (<id>.txt); folder: the zip; connect: the MCP connector, nothing to download. */
-  get: "file" | "folder" | "connect";
+  /**
+   * file: the one-file version (<id>.txt); folder: the zip; connect: the MCP connector, nothing to download;
+   * plugin: the job role's Claude Code plugin, installed with the commands in `commands`.
+   */
+  get: "file" | "folder" | "connect" | "plugin";
+  /** For a plugin: the lines to paste into Claude Code, one command each. */
+  commands?: string[];
   open: string;
   message: string;
   tip: string | null;
 }
+
+/**
+ * The Claude Code plugin marketplace, built by scripts/build-claude-plugins.mjs: one plugin per job role, named by the
+ * role id, so the agent is "<role-id>:<agent-id>" in Claude Code.
+ */
+export const CLAUDE_MARKETPLACE_PATH = "/packs/claude/marketplace.json";
+export const CLAUDE_MARKETPLACE_NAME = "ai-blocks";
 
 /** Above this many bytes the one file is too long for a single Claude chat, so Claude gets a project instead. */
 export const LARGE_ONE_FILE = 300_000;
@@ -278,12 +291,27 @@ export function groundingAsk(area?: string): string {
  * The tabs of "Start in your AI", most used app first. Each first message needs no editing: the agent's first move is
  * to ask for the person's business and what they need (groundingAsk), so the start takes about a minute.
  */
-export function startGuides(a: { id: string; name: string; title: string; area?: string }, oneFileBytes: number | null = null): StartGuide[] {
-  const { name, title } = a;
+export function startGuides(
+  a: { id: string; name: string; title: string; area?: string; role?: { id: string; name: string } | null },
+  oneFileBytes: number | null = null,
+  origin = "https://agents.useaiblocks.com",
+): StartGuide[] {
+  const { name, title, role } = a;
   const hello = groundingAsk(a.area);
   const read = "holds your instructions, method and knowledge. Read it and follow it, starting with its AGENTS.md part.";
   const chat = `You are ${name}, ${title}. The file I attached ${read} ${hello}`;
   const large = (oneFileBytes ?? 0) > LARGE_ONE_FILE;
+  // Only agents with a job role have a plugin (the plugin is the role's team).
+  const claudeCode: StartGuide[] = role ? [{
+    id: "claude-code", label: "Claude Code", get: "plugin",
+    commands: [
+      `/plugin marketplace add ${origin.replace(/\/+$/, "")}${CLAUDE_MARKETPLACE_PATH}`,
+      `/plugin install ${role.id}@${CLAUDE_MARKETPLACE_NAME}`,
+    ],
+    open: `Start a new Claude Code session in your project. ${name} is listed under Custom agents as ${role.id}:${a.id}, with the rest of the ${lowerFirstWord(role.name)} team.`,
+    message: `Use the ${role.id}:${a.id} agent. ${hello}`,
+    tip: `Claude Code also hands ${name} matching work on its own. To get new versions, run /plugin marketplace update ${CLAUDE_MARKETPLACE_NAME}.`,
+  }] : [];
   return [
     { id: "chatgpt", label: "ChatGPT", get: "file", open: "Open ChatGPT and start a new chat. Select + by the message box and add the file.", message: chat,
       tip: `To keep ${name} ready, make a project in ChatGPT and add the file to it. Start each chat there with the same message.` },
@@ -294,6 +322,7 @@ export function startGuides(a: { id: string; name: string; title: string; area?:
           tip: `To keep ${name} ready, make a project in Claude and add the file to its knowledge. Start each chat there with the same message.` },
     { id: "gemini", label: "Gemini", get: "file", open: "Open Gemini and start a new chat. Select + by the message box and upload the file.", message: chat,
       tip: `To keep ${name} ready, make a Gem, add the file under Knowledge, and start each chat with the same message.` },
+    ...claudeCode,
     { id: "coding", label: "Coding apps", get: "folder", open: "Unzip the folder and open it in Claude Code, Codex or Cursor. They read its AGENTS.md on their own, and the skills are already in place.",
       message: `Read AGENTS.md and follow it. You are ${name}, ${title}. ${hello}`, tip: null },
     { id: "connector", label: "Connector", get: "connect", open: "Start a new chat in the AI you connected.",
@@ -303,7 +332,12 @@ export function startGuides(a: { id: string; name: string; title: string; area?:
 }
 
 export function isStartApp(v: unknown): v is StartApp {
-  return v === "chatgpt" || v === "claude" || v === "gemini" || v === "coding" || v === "connector";
+  return typeof v === "string" && (START_APPS as readonly string[]).includes(v);
+}
+
+/** "SEO specialist" stays as it is; "Growth marketer" reads "growth marketer" mid-sentence. */
+function lowerFirstWord(s: string): string {
+  return /^[A-Z][a-z]/.test(s) ? s[0].toLowerCase() + s.slice(1) : s;
 }
 
 const DAY = /^(\d{4})-(\d{2})-(\d{2})$/;

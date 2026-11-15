@@ -63,6 +63,18 @@ test("seeded rows keep their role from the data files, and an unknown role id sh
   assert.equal((await t.api("GET", "/api/agents/nova-seo")).body.agent.role, null);
 });
 
+// 15 Nov 2026: production's /e-commerce page said "The team is on its way" because seeded rows dropped the vertical
+// (the personas table has no column for it), so /api/agents?vertical=ecommerce returned 0 of the 45 e-commerce agents.
+test("seeded rows keep their vertical and knowledge modules from the data files, so the e-commerce team lists", async () => {
+  setPersonasForTests([SEO, ADA, { ...IVO, vertical: "ecommerce", modules: ["seo", "cro"] }, LEO]);
+  const t = await testEnv();
+  await seedPersonas(t.env, "user_ops");
+  const team = await t.api("GET", "/api/agents?vertical=ecommerce");
+  assert.deepEqual(team.body.agents.map((a: any) => a.id), ["ivo-store-search"]);
+  assert.deepEqual((await t.api("GET", "/api/agents/ivo-store-search")).body.agent.vertical, { id: "ecommerce", modules: ["seo", "cro"] });
+  assert.equal((await t.api("GET", "/api/agents/nova-seo")).body.agent.vertical, null);
+});
+
 test("?role= lists the agents in that role across areas, with the role's name and summary", async () => {
   const t = await testEnv();
   const res = await t.api("GET", "/api/agents?role=seo-specialist");

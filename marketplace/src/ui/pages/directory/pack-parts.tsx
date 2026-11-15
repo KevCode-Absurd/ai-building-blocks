@@ -50,17 +50,17 @@ function savedApp(): StartApp {
   try { const v = localStorage.getItem(START_KEY); return isStartApp(v) ? v : "chatgpt"; } catch { return "chatgpt"; }
 }
 
-/** The first message, shown in full and copied with one press. */
-function FirstMessage(props: { text: string }) {
+/** The first message (or the commands to paste), shown in full and copied with one press. */
+function FirstMessage(props: { text: string; label?: string; commands?: boolean }) {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
     try { await navigator.clipboard.writeText(props.text); setCopied(true); setTimeout(() => setCopied(false), 2000); }
     catch { /* No clipboard here: the message stays on the page to select by hand. */ }
   };
   return (
-    <div class="dir-start-message">
+    <div class={`dir-start-message${props.commands ? " dir-start-commands" : ""}`}>
       <p>{props.text}</p>
-      <button type="button" class="btn btn-line" onClick={copy}>{copied ? "Copied" : "Copy the message"}</button>
+      <button type="button" class="btn btn-line" onClick={copy}>{copied ? "Copied" : props.label ?? "Copy the message"}</button>
     </div>
   );
 }
@@ -70,11 +70,11 @@ function FirstMessage(props: { text: string }) {
  * version (one attachment), coding apps the folder, and the connector needs no download. The chosen tab is
  * remembered on this device.
  */
-export function PackDownloads(props: { agentId: string; name: string; title: string; area?: string; pack: PackInfo }) {
+export function PackDownloads(props: { agentId: string; name: string; title: string; area?: string; role?: { id: string; name: string } | null; pack: PackInfo }) {
   const { pack, name } = props;
   const [app, setApp] = useState<StartApp>(savedApp);
   const oneFile = pack.oneFile ?? { path: `/packs/${encodeURIComponent(props.agentId)}.txt`, bytes: null };
-  const guides = startGuides({ id: props.agentId, name, title: props.title, area: props.area }, oneFile.bytes);
+  const guides = startGuides({ id: props.agentId, name, title: props.title, area: props.area, role: props.role }, oneFile.bytes);
   const g = guides.find(x => x.id === app) ?? guides[0];
   const choose = (id: StartApp, focus = false) => {
     setApp(id);
@@ -117,6 +117,12 @@ export function PackDownloads(props: { agentId: string; name: string; title: str
             {g.get === "connect" && <>
               <p>Connect your AI to AI Blocks once. It works in Claude, ChatGPT, Cursor and other apps that take a connector.</p>
               <Link href="/connect" class="btn btn-primary">Connect your AI</Link>
+            </>}
+            {g.get === "plugin" && g.commands && <>
+              <p>In Claude Code, add AI Blocks once, then install {name}'s team. Send each command as its own message.</p>
+              <div class="dir-start-command-list">
+                {g.commands.map(c => <FirstMessage text={c} label="Copy" commands />)}
+              </div>
             </>}
           </li>
           <li><p>{g.open}</p></li>

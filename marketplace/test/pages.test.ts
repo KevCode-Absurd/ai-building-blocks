@@ -237,6 +237,9 @@ test("/e-commerce has its own head tags, plain content for crawlers and the team
   assert.match(html, /<meta property="og:url" content="https:\/\/agents\.test\/e-commerce" \/>/);
   assert.match(html, /"@type":"CollectionPage"/);
   assert.match(html, /"@type":"BreadcrumbList"/);
+  // The team as an ItemList, so an answer engine can name the agent for each store job.
+  assert.match(html, /"mainEntity":\{"@type":"ItemList","numberOfItems":\d+,"itemListElement":\[\{"@type":"ListItem","position":1,"url":"https:\/\/agents\.test\/agents\//);
+  for (const p of ["/agents", "/guides", "/connect"]) assert.match(String((await t.api("GET", p)).body), /<script type="application\/ld\+json">/, `${p} carries structured data`);
   assert.match(html, /<h1>AI agents for your online store<\/h1>/);
   assert.ok(html.includes('<a href="/guides/use-an-agent-pack">') && html.includes('<a href="/connect">'), "how to start links to the guide and the connect page");
   // The team: the same agents, in the same order, the app asks for; the page carries that answer.

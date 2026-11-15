@@ -172,10 +172,16 @@ async function agentsPage(env: Env, url: URL): Promise<PageView> {
       body: `<h1>${esc(role.name)} agents</h1><p>${esc(role.summary)}</p><ul>${inRole.map(agentLine).join("")}</ul><p><a href="/agents">See every agent</a></p>`,
     };
   }
+  const origin = originOf(env);
   return {
     status: 200, index: !filtered, path: "/agents",
     title: AGENTS_TITLE,
     description: clip(`${everyone.length} named AI agents for marketing, sales, finance, operations and more. Each one is free to download or load into your own AI.`, 160),
+    jsonLd: [
+      { "@context": "https://schema.org", "@type": "CollectionPage", name: "AI agents", url: `${origin}/agents`, isAccessibleForFree: true,
+        description: `${everyone.length} named AI agents, each hired for a job role. Every one is free.`, publisher: { "@type": "Organization", name: SITE, url: LIBRARY },
+        hasPart: [{ "@type": "CollectionPage", name: "AI agents for e-commerce stores", url: `${origin}${ECOMMERCE_PATH}` }] },
+    ],
     body: `<h1>AI agents</h1><p>${everyone.length} named agents, each hired for a job role. Every one is free.</p><p><a href="${ECOMMERCE_PATH}">Run an online store? Meet the e-commerce team</a></p>${agentsByArea(everyone)}`,
   };
 }
@@ -239,11 +245,14 @@ async function expertPage(env: Env, slug: string): Promise<PageView> {
   };
 }
 
-function guidesPage(): PageView {
+function guidesPage(env: Env): PageView {
+  const origin = originOf(env);
   return {
     status: 200, index: true, path: "/guides",
     title: GUIDES_TITLE,
     description: "How to load a free AI Blocks agent into the AI you use, and how to train your own version of an agent.",
+    jsonLd: [{ "@context": "https://schema.org", "@type": "CollectionPage", name: "Guides", url: `${origin}/guides`, publisher: { "@type": "Organization", name: SITE, url: LIBRARY },
+      mainEntity: { "@type": "ItemList", itemListElement: GUIDES.map((g, i) => ({ "@type": "ListItem", position: i + 1, url: `${origin}/guides/${g.slug}`, name: g.title })) } }],
     body: `<h1>Guides</h1><ul>${GUIDES.map(g => `<li><a href="/guides/${g.slug}">${esc(g.title)}</a>: ${esc(g.description)}</li>`).join("")}</ul>`,
   };
 }
@@ -258,11 +267,15 @@ function guidePage(slug: string): PageView {
   };
 }
 
-function connectPage(): PageView {
+function connectPage(env: Env): PageView {
+  const origin = originOf(env);
+  const description = "Add AI Blocks to Claude, ChatGPT or another AI app once, then ask it to find an agent and load it into your chat. Free, on your own AI plan.";
   return {
     status: 200, index: true, path: "/connect",
     title: CONNECT_TITLE,
-    description: "Add AI Blocks to Claude, ChatGPT or another AI app once, then ask it to find an agent and load it into your chat. Free, on your own AI plan.",
+    description,
+    jsonLd: [{ "@context": "https://schema.org", "@type": "WebPage", name: "Connect your AI", url: `${origin}/connect`, description, isAccessibleForFree: true,
+      publisher: { "@type": "Organization", name: SITE, url: LIBRARY } }],
     body: `<h1>Connect your AI</h1><p>Add AI Blocks to Claude, ChatGPT or another AI app once. Then ask it to find an agent and load it into your chat. The agent is free and works on your own AI plan.</p><p>Developers can read every agent through the public API: <a href="/api/agents">/api/agents</a> and <a href="/packs/index.json">/packs/index.json</a>.</p>`,
   };
 }
@@ -307,7 +320,10 @@ async function ecommercePage(env: Env): Promise<PageView> {
     description: ECOMMERCE_DESCRIPTION,
     jsonLd: [
       { "@context": "https://schema.org", "@type": "CollectionPage", name: "AI agents for e-commerce stores", description: ECOMMERCE_DESCRIPTION, url: `${origin}${ECOMMERCE_PATH}`,
-        isAccessibleForFree: true, publisher: { "@type": "Organization", name: SITE, url: LIBRARY } },
+        isAccessibleForFree: true, publisher: { "@type": "Organization", name: SITE, url: LIBRARY },
+        // The team as a list, so an answer engine can name the agent for each store job.
+        mainEntity: { "@type": "ItemList", numberOfItems: team.length, itemListElement: team.map((p, i) => ({
+          "@type": "ListItem", position: i + 1, url: `${origin}/agents/${p.id}`, name: `${p.name}, ${p.title}` })) } },
       { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
         { "@type": "ListItem", position: 1, name: "Agents", item: `${origin}/agents` },
         { "@type": "ListItem", position: 2, name: "E-commerce", item: `${origin}${ECOMMERCE_PATH}` },
@@ -322,8 +338,8 @@ async function viewFor(env: Env, url: URL): Promise<PageView> {
   const path = url.pathname.replace(/\/+$/, "") || "/";
   if (path === "/") return homePage(env);
   if (path === "/agents") return agentsPage(env, url);
-  if (path === "/guides") return guidesPage();
-  if (path === "/connect") return connectPage();
+  if (path === "/guides") return guidesPage(env);
+  if (path === "/connect") return connectPage(env);
   if (path === ECOMMERCE_PATH) return ecommercePage(env);
   let m = path.match(/^\/agents\/([a-z0-9-]+)$/);
   if (m) return agentPage(env, m[1]);

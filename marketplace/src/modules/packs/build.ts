@@ -1595,7 +1595,7 @@ export function fileUrl(pack: BuiltPack, file: PackFile): string {
 }
 
 /** Folder names under /packs that are not agents, so no agent id may use them. */
-export const RESERVED_PACK_PATHS = new Set(["roles", "jobs", "mega", "tools", "toolbox", "knowledge", "toolbox-index.json", "toolbox-index", "index.json", "index"]);
+export const RESERVED_PACK_PATHS = new Set(["roles", "claude", "jobs", "mega", "tools", "toolbox", "knowledge", "toolbox-index.json", "toolbox-index", "index.json", "index"]);
 
 /**
  * The pack as a zip: every file under its folder, then a copy of skills/ in each of SKILL_MIRRORS (.agents/skills

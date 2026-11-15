@@ -99,6 +99,12 @@ test("voice-check fails the stiff AI lines that made the Gehna ad bad, and passe
   const abs = bb.voiceCheck(ctx, "Every stone we set is natural.");
   assert.match(abs.text, /an absolute claim \("Every stone"\)/);
   assert.doesNotMatch(bb.voiceCheck(ctx, "Light gold for every day.").text, /absolute claim/);
+  // Round 6: a date promise on a plan that ships after the last payment, and a ranking no source backed.
+  const promise = bb.voiceCheck(ctx, "Wedding in February? Book it at today's price.\nOur #1 most added earring this season.");
+  assert.match(promise.text, /a date promise/);
+  assert.match(promise.text, /a pay-later line/);
+  assert.match(promise.text, /a ranking: quote the store's own tag/);
+  assert.doesNotMatch(bb.voiceCheck(ctx, "Light gold you will wear every day.").text, /date promise|ranking|pay-later/);
 });
 
 test("sources record where each part came from, and whether access worked", async () => {

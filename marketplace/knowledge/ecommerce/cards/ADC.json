@@ -75,7 +75,12 @@
       "where": "Hijack 5, change daily behaviour (Bulletproof, Miracle Morning, probiotics)"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "ADC-0003",
@@ -158,7 +163,12 @@
       "where": "Testing section, live account walkthrough"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "small"
+      ]
+    }
   },
   {
     "id": "ADC-0005",
@@ -200,7 +210,13 @@
       "where": "Testing structure section: broad pack one, two, three; ad set spending limits"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "ADC-0006",
@@ -238,7 +254,13 @@
       "where": "Iteration engine section: column set, compare attribution window, incremental attribution"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "ADC-0007",
@@ -325,7 +347,13 @@
       "quote": "select incremental attribution"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "ADC-0009",
@@ -449,7 +477,12 @@
       "where": "Partnership ads section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "mid"
+      ]
+    }
   },
   {
     "id": "ADC-0012",
@@ -489,7 +522,16 @@
       "where": "Creative fatigue and portfolio management sections"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "ADC-0013",
@@ -531,7 +573,12 @@
       "where": "Client case study in the creative budget section"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "large"
+      ]
+    }
   },
   {
     "id": "ADC-0014",
@@ -571,7 +618,16 @@
       "where": "CBO versus ad-set budget section, Pareto discussion"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "ADC-0015",
@@ -613,7 +669,16 @@
       "where": "Ads Manager walkthrough: ML Prospecting campaign settings"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "ADC-0016",
@@ -651,7 +716,13 @@
       "where": "Ads Manager walkthrough: naming convention and packs"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "ADC-0017",
@@ -770,7 +841,13 @@
       "quote": "Our net profit is 3 percent"
     },
     "strength": "anecdote",
-    "public": false
+    "public": false,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "ADC-0020",
@@ -891,7 +968,17 @@
       "where": "Product-level economics section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ],
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "ADC-0023",
@@ -977,7 +1064,12 @@
       "quote": "Your best ad is actually costing you money."
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "ADC-0025",
@@ -1019,7 +1111,12 @@
       "quote": "exclude existing customers from your cold campaigns"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "ADC-0026",
@@ -1058,7 +1155,12 @@
       "quote": "you don't want 70% of your account spend in DPAs"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "ADC-0027",
@@ -1176,7 +1278,13 @@
       "quote": "we really just want to look at what the frequency is"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "ADC-0030",
@@ -1296,7 +1404,16 @@
       "where": "Hack 2, one keyword hack, and hack 5, broad targeting with specific creative"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "ADC-0033",
@@ -1418,7 +1535,15 @@
       "where": "Targeting section: interest targeting warning and fashion brand example; lookalike settings"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "ADC-0036",
@@ -1545,7 +1670,12 @@
       "where": "$250k+ section and the $25k/day worked example; ABO vs CBO seasonality"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "large"
+      ]
+    }
   },
   {
     "id": "ADC-0039",
@@ -1587,7 +1717,13 @@
       "where": "sub-$50k section: common mistakes and ad-set budget back-propagation"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "ADC-0040",
@@ -1629,7 +1765,15 @@
       "where": "brand A/B worked examples; retargeting campaign section; DPA rules section"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "marketplace",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "ADC-0041",
@@ -1671,7 +1815,17 @@
       "where": "sub-$50k and $50k-$250k spend playbooks"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ],
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "ADC-0042",
@@ -1713,7 +1867,12 @@
       "where": "myth 1, paid media as a retention channel"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "ADC-0043",
@@ -1793,7 +1952,12 @@
       "quote": "Nobody really ran out of people."
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "ADC-0045",
@@ -1872,7 +2036,16 @@
       "quote": "In November, it goes to 80%"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "ADC-0047",
@@ -1912,7 +2085,12 @@
       "quote": "spend will peak in a lot of accounts between 5:00 a.m. to 7:00 a.m."
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "ADC-0048",
@@ -1957,7 +2135,12 @@
       "quote": "31 to 43% of September to December budget"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "ADC-0049",
@@ -2082,7 +2265,18 @@
       "quote": "It should be sub 1% of your marketing spend."
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "dtc"
+      ],
+      "size": [
+        "large"
+      ]
+    }
   },
   {
     "id": "ADC-0052",
@@ -2127,7 +2321,18 @@
       "quote": "does it get spend"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "early"
+      ],
+      "price": [
+        "mid"
+      ],
+      "spend": [
+        "small"
+      ]
+    }
   },
   {
     "id": "ADC-0053",
@@ -2212,7 +2417,13 @@
       "where": "about 59:58-01:10:04 AppLovin scaling and channel mix"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "ADC-0055",
@@ -2249,7 +2460,15 @@
       "where": "Sections on vector-based targeting and what you still control in targeting; consolidation takeaway"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "ADC-0056",
@@ -2286,7 +2505,16 @@
       "where": "Section on common wrong statements about the algorithm"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "ADC-0057",
@@ -2402,7 +2630,16 @@
       "where": "Step two: which variable to gain insights on; ROAS reliability by account level"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "ADC-0060",
@@ -2481,7 +2718,12 @@
       "where": "Pareto's principle section, options one and two"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "ADC-0062",
@@ -2525,7 +2767,12 @@
       "where": "TikTok Shop and GMV Max section; affiliate invitation setup"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "ADC-0063",
@@ -2566,7 +2813,16 @@
       "where": "Campaign setup: budget and learning phase; account structures by budget"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "prelaunch",
+        "early"
+      ],
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "ADC-0064",
@@ -2606,7 +2862,13 @@
       "where": "Sections on the learning phase, signal quality and 'don't listen to Facebook' close"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "small",
+        "mid"
+      ]
+    }
   },
   {
     "id": "ADC-0065",
@@ -2645,7 +2907,12 @@
       "quote": "On flexible ads, you can't read the data."
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "ADC-0066",
@@ -2725,7 +2992,12 @@
       "quote": "allowing about 40% of total budget to just flow wherever it wants"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "ADC-0068",
@@ -3123,6 +3395,89 @@
       "where": "Guidelines 1 to 4"
     },
     "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-7009",
+    "modules": [
+      "ADC",
+      "ORG"
+    ],
+    "topics": [
+      "tiktok",
+      "india",
+      "channel choice"
+    ],
+    "claim": "TikTok has been blocked in India since 29 June 2020 under Section 69A of the IT Act, so Indian brands cannot advertise to or sell to Indian buyers on TikTok.",
+    "body": "On 29 June 2020 India's Ministry of Electronics and Information Technology blocked TikTok and 58 other apps under Section 69A of the Information Technology Act and its 2009 blocking rules, citing threats to sovereignty, defence, state security and public order and reports of user data being sent to servers outside India. Further orders blocked more apps later in 2020. The block means TikTok ads, TikTok Shop and TikTok creator programmes do not reach audiences in India. How to apply: for an Indian brand selling at home, short-form video plans go to Instagram Reels, YouTube Shorts and Indian short-video apps, and TikTok cards in this library (all scoped to other markets) do not apply. An Indian brand exporting to the US, UK or EU can still use TikTok in those markets through a local seller or ad account that meets that market's rules, and should apply the US or UK TikTok cards there.",
+    "conditions": "Brands selling to buyers in India.",
+    "fails_when": "Indian brands targeting buyers abroad, where TikTok is available; the block could be lifted by a future government order, so check before planning.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "blocked 29 June 2020",
+      "59 apps in the first order"
+    ],
+    "asks": [
+      "Can I advertise on TikTok in India?",
+      "Is TikTok Shop available in India?",
+      "What should I use instead of TikTok for my Indian brand?",
+      "Can my Indian brand sell on TikTok in the US?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7007",
+    "evidence": {
+      "where": "Press release of 29 June 2020"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-7010",
+    "modules": [
+      "ADC",
+      "MCR",
+      "LPG"
+    ],
+    "topics": [
+      "india",
+      "advertising law",
+      "claims",
+      "reviews"
+    ],
+    "claim": "Under India's E-Commerce Rules, a brand's ads must match the product's real characteristics and use conditions, it must not post reviews posing as a buyer, and vouching '100% genuine' makes it liable for authenticity.",
+    "body": "Rule 7 of the Consumer Protection (E-Commerce) Rules, 2020 sets three duties that reach ads and product pages for a brand selling its own stock. Rule 7(3): advertisements must be consistent with the actual characteristics, access and usage conditions of the goods. Rule 7(2): the entity must not falsely represent itself as a consumer and post reviews, or misrepresent the quality or features of goods. Rule 7(5): an entity that explicitly or implicitly vouches for, or guarantees, the authenticity of goods bears the liability in any action over their authenticity. Rule 4(6) adds that an entity selling imported goods must name the importer it bought them from. Marketplace sellers carry the same ad and review duties under rule 6. How to apply: check every ad claim against the product spec sheet before launch, never seed reviews from staff or agency accounts, and use 'genuine' or 'authentic' badges only where you can prove the chain of supply, because the badge shifts liability to you.",
+    "conditions": "Ads, listings and reviews for goods sold online to consumers in India.",
+    "fails_when": "ASCI's code and the CCPA's 2022 ad guidelines add further claim rules (substantiation, disclaimers); product-specific laws apply to regulated categories.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can my team post reviews of our products in India?",
+      "Is it risky to say 100% genuine on my product page?",
+      "Do my ads have to match the product exactly in India?",
+      "Do I need to name the importer on my Indian website?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7000",
+    "evidence": {
+      "where": "Rules 4(6), 7(2), 7(3) and 7(5)"
+    },
+    "strength": "regulator_rule",
     "public": true
   }
 ]

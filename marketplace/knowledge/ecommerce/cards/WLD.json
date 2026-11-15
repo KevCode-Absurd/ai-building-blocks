@@ -37,7 +37,13 @@
       "where": "'The Cards Against Humanity Black Friday Masterclass' table"
     },
     "strength": "shown_with_numbers",
-    "public": false
+    "public": false,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "WLD-0002",
@@ -75,7 +81,12 @@
       "where": "'Empirical Application: The Chewy Case Study'"
     },
     "strength": "anecdote",
-    "public": false
+    "public": false,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "WLD-0003",
@@ -113,7 +124,15 @@
       "where": "'The Architecture of Radical Generosity' (artifacts vs swag, unexpected timing, inner circle)"
     },
     "strength": "anecdote",
-    "public": false
+    "public": false,
+    "situations": {
+      "model": [
+        "wholesale"
+      ],
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "WLD-0004",
@@ -151,7 +170,12 @@
       "where": "'Product as Retention: Micro-Innovations and Unorthodox Distribution' (Mokobara)"
     },
     "strength": "anecdote",
-    "public": false
+    "public": false,
+    "situations": {
+      "price": [
+        "low"
+      ]
+    }
   },
   {
     "id": "WLD-0005",
@@ -227,7 +251,12 @@
       "quote": "proof beats claims"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "early"
+      ]
+    }
   },
   {
     "id": "WLD-0007",
@@ -345,7 +374,12 @@
       "where": "Part 1, case 1.1 Scarcity Drops: Last Crumb"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "WLD-0010",
@@ -383,7 +417,12 @@
       "where": "Part 3.2 How to Apply This to E-commerce; case 1.12 Heaven Mayhem"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "early"
+      ]
+    }
   },
   {
     "id": "WLD-0011",

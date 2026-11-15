@@ -20,7 +20,7 @@ Then decide:
 
 ## How to ask
 
-One message, before any work. Only the gaps, at most five questions, each with choices or a default so one word answers it, and "you decide" always allowed. Say what you already have from the brief, so nothing repeats.
+In stages, the way `tools/quality/GUIDE.md` says: the goal, material and access before any work; the way forward after you have read the data. Only the gaps: at most three questions in one message and at most two rounds of asking before you deliver, each with choices or a default so one word answers it, and "you decide" always allowed. Say what you already have from the brief, so nothing repeats.
 
 > Before I start, four quick questions (or say "you decide"):
 > 1. Do you have a brand brain (a brand file, guide or folder)? a) Yes: attach it or paste a link b) No: send your store URL and I will build one and keep it

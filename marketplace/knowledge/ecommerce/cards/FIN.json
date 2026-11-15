@@ -37,7 +37,15 @@
       "where": "Late interview, 'exit valuation' question"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "marketplace",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "FIN-0002",
@@ -84,7 +92,15 @@
       "quote": "Everyone's looking for 45 to 50%."
     },
     "strength": "stated_by_practitioner",
-    "public": false
+    "public": false,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "FIN-0003",
@@ -127,7 +143,12 @@
       "quote": "you have to have at least $2 million of IBIDA"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "FIN-0004",
@@ -214,7 +235,15 @@
       "quote": "your payment terms minus your production lead times is literally the float"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "FIN-0006",
@@ -409,7 +438,12 @@
       "where": "P&L section, gross vs net revenue"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "FIN-0011",
@@ -450,7 +484,15 @@
       "where": "Cash conversion cycle section"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "size": [
+        "mid"
+      ]
+    }
   },
   {
     "id": "FIN-0012",
@@ -491,7 +533,16 @@
       "where": "Unit economics section, pricing strategy"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "FIN-0013",
@@ -532,7 +583,12 @@
       "where": "Cash flow vs profit section, inventory grades and CFO vs CMO example"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "FIN-0014",
@@ -575,7 +631,12 @@
       "where": "CAC payback period for subscription businesses video"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "FIN-0015",
@@ -619,7 +680,12 @@
       "where": "Discounts to lower CAC video (Ordergroove case study), scenarios A to C"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "FIN-0016",
@@ -662,7 +728,15 @@
       "where": "four quarter accounting segment, then benchmarks for cost of delivery, CAC and opex"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "size": [
+        "large"
+      ]
+    }
   },
   {
     "id": "FIN-0017",
@@ -817,7 +891,12 @@
       "quote": "every business should have a revolver of debt"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "FIN-0021",
@@ -858,7 +937,12 @@
       "quote": "two to three is is is a conservative number"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "FIN-0022",
@@ -900,7 +984,15 @@
       "where": "Billion dollar facility section"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "FIN-0023",
@@ -941,7 +1033,12 @@
       "where": "about 17:58-23:56 inventory bet; about 01:10:04-01:15:13 raising debt via vendor terms"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "FIN-0024",
@@ -982,7 +1079,12 @@
       "where": "about 01:15:13-01:21:40 retail strategy, Leap, Target"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "FIN-0025",
@@ -1019,7 +1121,12 @@
       "where": "Fundraising and M&A segment (about 01:04:00 to 01:31:00)"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "FIN-0026",
@@ -1106,7 +1213,18 @@
       "quote": "We need to increase marketing spend even further"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "dtc"
+      ],
+      "size": [
+        "large"
+      ]
+    }
   },
   {
     "id": "FIN-0028",
@@ -1150,7 +1268,12 @@
       "where": "Levers three, five and six; combined example at the end"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "FIN-0029",
@@ -1194,7 +1317,12 @@
       "where": "Levers one, two and four; note on 60-day impact"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "FIN-6205",
@@ -1579,7 +1707,13 @@
       "where": "MSEFC welcome page, section 16 summary and ODR notice"
     },
     "strength": "platform_rule",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "prelaunch",
+        "early"
+      ]
+    }
   },
   {
     "id": "FIN-6387",

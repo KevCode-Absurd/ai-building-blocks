@@ -1,0 +1,586 @@
+{
+  "schema": "ai-blocks-journey/1",
+  "id": "product-pages",
+  "name": "Product page copy and layout (PDP)",
+  "vertical": "ecommerce",
+  "asked_as": [
+    "rewrite our product page",
+    "our product page does not convert",
+    "product page copy for the new launch",
+    "too many returns for wrong size",
+    "make our product page look like this one",
+    "people visit but don't add to cart"
+  ],
+  "lead_agents": [
+    "georgia-product-copy",
+    "annabel-landing-pages",
+    "gretchen-store-testing"
+  ],
+  "outcome": "One product page, written in full and laid out for a phone, that answers the doubts stopping this product's buyers (found in reviews, returns and chats) with real proof beside the buy button, states fit and limits as numbers, frames the price honestly, shows what Indian consumer rules require, and comes with one number to watch, a guardrail and a fallback line.",
+  "first_principles": [
+    "A product page is a decision, not a description. Its job is to remove the two or three doubts that stop this product's buyers, in the order they have them. Those doubts are in returns, 3-star reviews, pre-purchase chats and 'what almost stopped you' answers, not in the founder's feature list.",
+    "The first phone screen does most of the work: rating, the promise, price, variant, the button and one risk line under it. Most visitors never scroll past it, and more shoppers swipe the whole gallery than read the whole page, so the gallery is a second sales page, not a set of angles.",
+    "Returns are a page problem. A wrong expectation (runs small, darker than it looks, holds less) is answered with a number where the buyer decides, plus a pointer to the product that fits them. Stopping the wrong-fit order protects more profit than one more sale.",
+    "Proof answers one objection at a time: a real review from a different kind of buyer per doubt, placed by the decision, beats a wall of stars. Under about 80 reviews, collecting more can matter more than the copy.",
+    "Match the traffic. An ad that sells one benefit to one buyer needs the page to open on that same promise; a page that lists every benefit converts worse for each ad that sends people to it.",
+    "Price is framed, never faked: cost per use, what is in the box, the bundle saving in rupees, a strike-through only against a price it really sold at. In India these are legal duties as well as good selling: the full price up front, no false urgency, no charges sprung at checkout."
+  ],
+  "goal": {
+    "questions": [
+      {
+        "id": "product",
+        "ask": "Which product page should I work on first?",
+        "why": "The page with the most lost profit pays back first; a page for a product that loses money should not be improved at all.",
+        "options": [
+          {
+            "label": "The one you named",
+            "pro": "your priority",
+            "con": "may not be where most profit leaks"
+          },
+          {
+            "label": "The one losing the most gross profit",
+            "pro": "the biggest payback",
+            "con": "may not be the one you had in mind"
+          }
+        ],
+        "default": "The page with the most lost gross profit: high sessions, add-to-cart rate well below the store's average, positive gross profit per order",
+        "skip_if": [
+          "the brief names the product"
+        ],
+        "settle_with_data": "Rank product pages by sessions times the gap between their add-to-cart rate and the store's average, weighted by gross profit per order, over 30 to 90 days (Shopify or GA4). Say the ranking and its source in one line."
+      },
+      {
+        "id": "traffic",
+        "ask": "Who mostly lands on this page: people from one ad, search shoppers, or a mix?",
+        "why": "Ad visitors need the ad's promise on the first screen; search and returning visitors need specs, comparison and proof sooner.",
+        "options": [
+          {
+            "label": "People from one ad angle",
+            "pro": "the page can open on exactly what they were promised",
+            "con": "other visitors are served a little less"
+          },
+          {
+            "label": "Search and returning shoppers",
+            "pro": "lead with specs, fit and comparison",
+            "con": "cold ad visitors may not get the why"
+          },
+          {
+            "label": "A mix",
+            "pro": "one page for all",
+            "con": "the promise must be broad enough to hold; angle pages can follow"
+          }
+        ],
+        "default": "A mix, with the top ad's winning promise in the headline",
+        "skip_if": [
+          "the brief says where traffic comes from"
+        ],
+        "settle_with_data": "Read sessions to this page by source and campaign (GA4 or Shopify) and the top ads sending traffic with their headlines. If one paid angle sends most sessions, lead with it."
+      },
+      {
+        "id": "scope",
+        "ask": "Copy only, or copy and layout (section order, gallery, buy box)?",
+        "why": "If the layout hides the proof or the price, new copy alone cannot fix the page.",
+        "options": [
+          {
+            "label": "Copy only",
+            "pro": "paste into the theme today",
+            "con": "the layout's leaks stay"
+          },
+          {
+            "label": "Copy plus a layout plan and gallery shot list",
+            "pro": "fixes order and proof placement; your team or theme editor builds it",
+            "con": "a little theme work"
+          },
+          {
+            "label": "Copy plus a built theme section",
+            "pro": "ready to switch on in the theme editor",
+            "con": "needs theme access on a duplicate theme and your yes to publish"
+          }
+        ],
+        "default": "Copy plus a layout plan and gallery shot list",
+        "skip_if": [
+          "the brief limits the job to copy"
+        ],
+        "settle_with_data": "Render the live page at phone width: if the rating, price, button and a risk line are not all on the first screen, or reviews and guarantee sit far below, the layout is part of the job."
+      },
+      {
+        "id": "market",
+        "ask": "Do you sell in India only, or abroad too?",
+        "why": "It decides the legal disclosures, the price and tax lines, COD and delivery wording.",
+        "options": [
+          {
+            "label": "India only",
+            "pro": "one set of rules and one currency",
+            "con": "none"
+          },
+          {
+            "label": "India and abroad",
+            "pro": "covers every buyer",
+            "con": "disclosures and delivery lines per market"
+          }
+        ],
+        "default": "India only",
+        "skip_if": [
+          "the store has a single currency and ships to India only"
+        ],
+        "settle_with_data": "Check the store's markets, currencies and shipping zones."
+      }
+    ]
+  },
+  "gather": {
+    "brand_brain": "required",
+    "sources": [
+      {
+        "what": "The live product page",
+        "why": "the current copy, gallery, price, variants and theme layout",
+        "where": "the product URL, saved and rendered at phone width",
+        "ask_if_missing": "Which product URL should I work on?",
+        "fallback": "none: the page must be readable"
+      },
+      {
+        "what": "Reviews for this product",
+        "why": "buyer words, the promise most buyers name, and the doubts in 3-star reviews",
+        "where": "review app export (rating, title, body, date, verified, photo, product)",
+        "ask_if_missing": "Can you export your reviews for this product from your review app?",
+        "fallback": "public reviews on the site and marketplaces; under 30, add tickets and chats"
+      },
+      {
+        "what": "Return and exchange reasons",
+        "why": "the wrong expectations the page sets, by variant",
+        "where": "Shopify returns, the returns app, exchange records (from size to size), COD return-to-origin by reason",
+        "ask_if_missing": "Can you export returns and exchanges for this product with the reason and the size or variant swapped to?",
+        "fallback": "review complaints about size, colour and quality as a stand-in, labelled as such"
+      },
+      {
+        "what": "Pre-purchase questions",
+        "why": "every repeated question is a missing line near the button",
+        "where": "chats, WhatsApp, support tickets, on-site search terms",
+        "ask_if_missing": "Can you export the last 3 months of chats or tickets, or list the ten questions people ask most before buying?",
+        "fallback": "the FAQ and reviews"
+      },
+      {
+        "what": "Product facts",
+        "why": "every claim, measurement and legal line must be exact",
+        "where": "spec sheet, size chart measured on the product, materials, box contents, care, warranty, MRP, net quantity, country of origin, maker, packer or importer details",
+        "ask_if_missing": "Can you share the spec sheet and the measured size chart, plus the maker or importer details printed on the pack?",
+        "fallback": "only what the pack and the current page state; unknown lines are left out, never guessed"
+      },
+      {
+        "what": "Policies and delivery",
+        "why": "guarantee, return and delivery lines must match what the store really does",
+        "where": "shipping, returns and COD policy pages; dispatch times by region",
+        "fallback": "the live policy pages"
+      },
+      {
+        "what": "Page numbers",
+        "why": "shows whether the page is the leak, and on which device",
+        "where": "Shopify or GA4: product views, add-to-cart rate, checkout and orders for this page by device and source, 30 to 90 days",
+        "ask_if_missing": "Can I read your Shopify analytics or GA4, or can you export this page's numbers?",
+        "fallback": "a phone walk-through only; the gain is marked unmeasured"
+      },
+      {
+        "what": "Gross profit per order",
+        "why": "a better page for a loss-making product loses more",
+        "where": "a product profit sheet or product cost in Shopify",
+        "fallback": "ask once for the product cost"
+      },
+      {
+        "what": "Rival pages for the same buyer",
+        "why": "how rivals frame price, fit and proof; the gaps they leave",
+        "where": "public product pages and marketplace listings",
+        "fallback": "skip"
+      }
+    ],
+    "setup": [
+      {
+        "need": "Page access",
+        "why": "decides the hand-over format",
+        "check": "Is draft access to a duplicate theme given, or is the hand-over a document?",
+        "options": [
+          {
+            "label": "Copy and layout plan for your team to paste",
+            "pro": "no access needed",
+            "con": "someone builds it"
+          },
+          {
+            "label": "Draft access on a duplicate theme",
+            "pro": "I build it ready to preview",
+            "con": "needs access and your yes to publish"
+          }
+        ],
+        "default": "Copy and layout plan for your team to paste"
+      },
+      {
+        "need": "A phone preview",
+        "why": "the first screen is judged at phone width, not on a laptop",
+        "check": "Does node tools/quality/render.cjs run here?",
+        "options": [
+          {
+            "label": "Render an HTML mock at phone and desktop width",
+            "pro": "everyone sees the first screen before anyone builds it",
+            "con": "needs Node and a local browser"
+          },
+          {
+            "label": "A wireframe in the doc",
+            "pro": "works anywhere",
+            "con": "less exact"
+          }
+        ],
+        "default": "Render an HTML mock at phone and desktop width"
+      },
+      {
+        "need": "How the change will be read",
+        "why": "the read must match the page's order volume",
+        "check": "How many orders a month does this page take?",
+        "options": [
+          {
+            "label": "A split test against the current page",
+            "pro": "a clean read on orders",
+            "con": "needs enough orders and weeks"
+          },
+          {
+            "label": "A before-and-after read in matching weeks",
+            "pro": "works on small stores",
+            "con": "noisier; the season can move it"
+          }
+        ],
+        "default": "A split test above about 30 orders a month on this page; below that, before and after in matching weeks"
+      }
+    ],
+    "data_map": [
+      {
+        "question": "Is the page the leak?",
+        "data": "Product views, add-to-cart rate against the store's average, checkout and orders, by device and source",
+        "where": "Shopify or GA4",
+        "if_missing": "a phone walk-through; the gain is marked unmeasured"
+      },
+      {
+        "question": "What doubts stop buyers?",
+        "data": "Review themes with counts and exact quotes, 3-star reviews first; repeated pre-purchase questions",
+        "where": "review export, chats, tickets",
+        "tool": "node tools/brand-brain.mjs reviews <reviews.csv>",
+        "if_missing": "public reviews and the FAQ"
+      },
+      {
+        "question": "What comes back, and why?",
+        "data": "Return and exchange reasons per 100 orders, by variant; exchanges by size from and to",
+        "where": "returns app or Shopify returns",
+        "if_missing": "review complaints as a stand-in, labelled"
+      },
+      {
+        "question": "What were visitors promised before they landed?",
+        "data": "Sessions by source and campaign; the top ads' headlines and hooks",
+        "where": "GA4, Meta export",
+        "tool": "node tools/find-insights.mjs <export-folder>",
+        "if_missing": "write for a mix"
+      },
+      {
+        "question": "How far do people get on the page?",
+        "data": "Scroll depth, gallery swipes, taps on the size chart and reviews",
+        "where": "heatmap or recording tool",
+        "if_missing": "assume most never leave the first screen and the gallery"
+      },
+      {
+        "question": "Is price the doubt?",
+        "data": "Chats that mention price; rival prices for the same product delivered",
+        "where": "inbox, rival pages",
+        "if_missing": "frame the price with per-use cost and what is in the box"
+      }
+    ]
+  },
+  "diagnose": {
+    "tools": [
+      "node tools/brand-brain.mjs reviews <reviews.csv>",
+      "node tools/brand-brain.mjs check --for web_page",
+      "node tools/quality/render.cjs <saved-page.html> context/render/pdp-before",
+      "node tools/prepare-job.mjs context/brief.md"
+    ],
+    "look_for": [
+      "Where it leaks: healthy views with add-to-cart well below the store's average is the page; add-to-cart fine but few orders is cart or checkout, where page copy will not help; few views is traffic or collection placement.",
+      "The first phone screen at 390 px: are the rating, the promise, the price, the variant picker, the button and a risk line all visible without scrolling? A headline that is only the product name wastes the most-read line.",
+      "3-star reviews: they name the real doubt in the buyer's words ('lovely but runs small', 'smaller than it looks in photos').",
+      "Returns by variant: one size or colour with far more returns than its share of orders means the page sets a wrong expectation for it.",
+      "One-way exchanges: most exchanges going from M to L means the chart runs small. Say so on the page with the measurement, not 'true to size'.",
+      "Repeated pre-purchase questions (delivery to my pincode, COD, real silver or plated, washable, will it fit my space): each one is a missing line near the button.",
+      "Ad-to-page mismatch: the top ad promises one benefit and the page opens on another.",
+      "Proof far from the decision: reviews at the bottom, the guarantee folded inside an accordion, no photo reviews, press logos with no quote.",
+      "Price with no frame: no per-use cost, bundle saving in percent rather than rupees, a strike-through price with no real sales history behind it.",
+      "A gallery that does not sell: one angle, no in-hand or on-body shot for scale, no 'what is in the box', no image that answers the top doubt.",
+      "India legal gaps: MRP inclusive of taxes, net quantity, country of origin, maker or importer details, seller details and a grievance contact missing; a COD or shipping fee shown only at checkout.",
+      "Machine copy: lines that would fit any rival's product."
+    ],
+    "hypothesis_patterns": [
+      {
+        "pattern": "A wrong expectation drives returns",
+        "evidence": "one return reason above about 10% of this product's returns, or a variant whose returns far exceed its share of orders",
+        "bet": "state the limit as a number at each decision point, add a scale image to the gallery and a 'not for you if' link to the better-fit product"
+      },
+      {
+        "pattern": "An unanswered pre-purchase doubt",
+        "evidence": "a question in about 10% or more of pre-purchase chats",
+        "bet": "answer it in the line under the button and in the first FAQ"
+      },
+      {
+        "pattern": "Proof sits far from the decision",
+        "evidence": "reviews exist but below the fold; rating not by the title",
+        "bet": "rating above the title and 3 objection-matched reviews beside the buy box"
+      },
+      {
+        "pattern": "The page breaks the ad's promise",
+        "evidence": "most sessions come from one ad angle that the first screen does not mention",
+        "bet": "headline and subhead in the ad's winning words, or an angle page for that traffic"
+      },
+      {
+        "pattern": "Price is the doubt",
+        "evidence": "price comes up in chats; rivals look cheaper on the shelf",
+        "bet": "per-use cost, what is in the box and the bundle saving in rupees; trust lines above the price and under the button"
+      },
+      {
+        "pattern": "A weak first screen on mobile",
+        "evidence": "phone add-to-cart rate well below desktop on the same page",
+        "bet": "rebuild the first screen and the gallery order for a phone"
+      }
+    ]
+  },
+  "choose": {
+    "decisions": [
+      {
+        "id": "promise",
+        "ask": "Which promise should lead the page?",
+        "options": [
+          {
+            "label": "The outcome most buyers name in reviews",
+            "pro": "true for the widest group, in their words",
+            "con": "may not match a specific ad",
+            "when": "traffic is a mix and returns are low"
+          },
+          {
+            "label": "The top ad's winning angle",
+            "pro": "message match, so ad visitors convert",
+            "con": "other visitors are served a little less",
+            "when": "one paid angle sends most sessions"
+          },
+          {
+            "label": "The biggest doubt, answered as a promise",
+            "pro": "cuts returns and wrong-fit orders",
+            "con": "can read defensive if overdone",
+            "when": "returns cost more gross profit than the conversion gap"
+          }
+        ],
+        "recommend": "From the data: one paid angle with most sessions, lead with it; returns costing more gross profit than the add-to-cart gap, lead with the answered doubt; otherwise the most-named outcome that the claims sheet can prove."
+      },
+      {
+        "id": "rollout",
+        "ask": "Rewrite the live page, test it against the current one, or build a separate page for ad traffic?",
+        "options": [
+          {
+            "label": "Rewrite the live page",
+            "pro": "fast; every visitor gets it",
+            "con": "no clean read of the gain",
+            "when": "under about 30 orders a month, or fixing a clear error (a legal line, a wrong fact)"
+          },
+          {
+            "label": "Test against the current page",
+            "pro": "a real read on orders",
+            "con": "needs traffic and a few weeks",
+            "when": "enough orders for the test to reach a verdict"
+          },
+          {
+            "label": "A separate page for one ad angle",
+            "pro": "exact match for that ad's buyers",
+            "con": "one more page to keep up to date",
+            "when": "ads test different buyers or benefits on the same product"
+          }
+        ],
+        "recommend": "Legal or factual errors are fixed live at once. Above about 30 orders a month, test the rewrite; below it, rewrite and read in matching weeks. Add an angle page only when one ad angle scales and the main page cannot lead with it."
+      }
+    ]
+  },
+  "make": {
+    "pieces": [
+      {
+        "piece": "Find why the page loses buyers",
+        "skill": "diagnose-low-add-to-cart-products",
+        "when": "the cause is not yet clear from the data"
+      },
+      {
+        "piece": "The claims sheet",
+        "skill": "product-claims-profile",
+        "when": "no sorted claims list exists for this product"
+      },
+      {
+        "piece": "The page copy in page order",
+        "skill": "write-product-page-copy",
+        "when": "always"
+      },
+      {
+        "piece": "The image gallery",
+        "skill": "pdp-image-gallery-rebuild",
+        "when": "the gallery does not answer the top doubts",
+        "variety": "one image per doubt: scale, in use, what is in the box, a review, the guarantee"
+      },
+      {
+        "piece": "Size, fit and how-to-use guides",
+        "skill": "write-size-fit-and-how-to-use-guides",
+        "when": "returns or questions about size, fit or use"
+      },
+      {
+        "piece": "The FAQ",
+        "skill": "write-faq-from-tickets-and-reviews",
+        "when": "repeated pre-purchase questions"
+      },
+      {
+        "piece": "The guarantee",
+        "skill": "guarantee-and-risk-reversal",
+        "when": "risk is a doubt and the store can keep the promise"
+      },
+      {
+        "piece": "Buy-box, delivery and COD lines",
+        "skill": "write-cart-checkout-and-shipping-microcopy",
+        "when": "delivery, COD or payment doubts near the button"
+      },
+      {
+        "piece": "Bundles and price framing",
+        "skill": "offer-bundle-threshold-design",
+        "when": "bundles or packs exist, or price is the doubt"
+      },
+      {
+        "piece": "Every point of doubt on the page",
+        "skill": "trust-and-reassurance-audit",
+        "when": "trust in the store itself is a doubt (new brand, high price, COD-heavy)"
+      },
+      {
+        "piece": "Layout from a page the owner likes",
+        "skill": "page-layout-rebuild",
+        "when": "the owner shares a reference page"
+      },
+      {
+        "piece": "A theme section the team can edit",
+        "skill": "shopify-theme-section-builder",
+        "when": "the scope includes a built section"
+      },
+      {
+        "piece": "Ad-to-page match",
+        "skill": "store-meta-landing",
+        "when": "most traffic comes from Meta ads"
+      },
+      {
+        "piece": "A page for one cold ad angle",
+        "skill": "reasons-to-buy-listicle-page",
+        "when": "the rollout decision is a separate angle page"
+      },
+      {
+        "piece": "The test plan",
+        "skill": "design-store-ab-test",
+        "when": "the rollout decision is a test"
+      },
+      {
+        "piece": "Product schema for search",
+        "skill": "add-product-schema-and-rich-results",
+        "when": "price, stock and rating do not show in search results"
+      },
+      {
+        "piece": "Policy pages the page links to",
+        "skill": "write-store-policy-pages",
+        "when": "return, shipping or contact pages are missing or vague"
+      },
+      {
+        "piece": "A final pass for machine-written lines",
+        "skill": "machine-copy-scrubber",
+        "when": "always, before hand-over"
+      }
+    ],
+    "rules": [
+      "The first phone screen (390 px wide) holds the rating with its count, the promise in under 10 words, the price, the variant picker, the button and one risk line directly under it.",
+      "Every claim traces to the claims sheet; when the proof supports only a narrower line, narrow the claim or let one customer say it in their words.",
+      "A limit that changes who should buy is a number ('chest 102 cm on M', 'fits a 15-inch laptop'), stated in a bullet, the details table, the first FAQ and under the button, with a 'not for you if' link to the better-fit product.",
+      "Each top doubt gets one real review from a different kind of buyer, placed by the decision, with first name, date and source; counts of reviewers stay in the notes, not the copy.",
+      "Price framing uses real numbers only: the bundle saving in rupees, cost per use, what is in the box. A strike-through only against a price it really sold at; from 1 January 2027 a price cut shows the lowest price of the past 30 days.",
+      "No false urgency or scarcity: stock and deadlines come from live inventory and real end dates. No pre-ticked add-ons. COD and shipping fees are shown before checkout, not sprung at it.",
+      "For India the page shows: MRP inclusive of all taxes, net quantity, country of origin, the maker, packer or importer name and address, the seller's name and address, customer care and grievance contacts, return, refund and exchange terms, delivery estimate, and best-before where it applies; from 1 January 2027 also the GSTIN or MSME number.",
+      "Guarantee, return and delivery lines match the live policy pages in substance; a pincode check line sits near the button.",
+      "Copy is in the brand's words, at its reading level; Hinglish or a regional-language headline only when the reviews are written that way.",
+      "The gallery shows the real product as it ships; no AI-made person, photo or quote is presented as a customer.",
+      "Live copy holds no placeholder ([X], TBC, 'link here'); an unknown fact gets the safest true wording or is left out."
+    ]
+  },
+  "check": {
+    "preflight": [
+      "node tools/brand-brain.mjs gate --for web_page"
+    ],
+    "checks": [
+      "node tools/quality/render.cjs page.html context/render/pdp-after",
+      "node tools/brand-brain.mjs voice-check page.md",
+      "node tools/quality/copy-check.cjs page.md --limit \"SEO title=60\" --limit \"Meta description=155\"",
+      "node tools/quality/readability.cjs page.md --audience consumer",
+      "node tools/quality/proof.cjs page.md --sources context/",
+      "node tools/quality/consistency-check.mjs context/hypotheses.json page.md",
+      "Every claim and price line through check-ad-copy-for-policy-and-claims (Indian consumer rules, dark patterns, comparisons).",
+      "Walk the rendered page on a phone as the buyer from the top ad: the first screen keeps the ad's promise and the top doubt is answered within a thumb's reach of the button."
+    ],
+    "senior_review": [
+      "If I were the buyer who returned this, would this page have stopped me ordering the wrong one?",
+      "Which of the top three doubts is still not answered near the button?",
+      "Does every number (rating, count, measurement, price, delivery days) come from a dated source?",
+      "Would a consumer officer find a missing disclosure, a fake strike-through or a dark pattern?",
+      "Does the page still sell if the visitor sees only the first screen and swipes the gallery?",
+      "Is there one number to watch, a guardrail, a read date and a fallback line?"
+    ]
+  },
+  "knowledge": {
+    "diagnose": {
+      "modules": [
+        "LPG",
+        "CRO",
+        "AVT"
+      ],
+      "ask": [
+        "Benchmarks for product view to add-to-cart on a store product page",
+        "How to find buying objections from reviews, returns and chats"
+      ]
+    },
+    "make": {
+      "modules": [
+        "LPG",
+        "OFF"
+      ],
+      "ask": [
+        "What goes on the first screen of a mobile product page, in what order",
+        "Where to place reviews and risk reducers so they answer objections",
+        "How to frame bundle savings and a premium price"
+      ]
+    },
+    "check": {
+      "modules": [
+        "LPG",
+        "OFF",
+        "CRO",
+        "MCR"
+      ],
+      "ask": [
+        "India E-Commerce Rules and packaged goods disclosures for a product listing",
+        "India dark pattern rules: false urgency, drip pricing, basket sneaking",
+        "The lowest-price-in-30-days rule for price cuts from 2027"
+      ]
+    },
+    "never": [
+      "Product facts, measurements, prices, policies and customer quotes come from the store and the brand brain, never from the library.",
+      "Card ids stay in the trace, never on the page."
+    ]
+  },
+  "handover": {
+    "files": [
+      "page.md: the full copy in page order (headline, subhead, proof line, benefit blocks, chosen reviews, details table, fit block, FAQ, guarantee, buy-box lines, legal block), with a source for every claim in the notes",
+      "A layout plan with a rendered first screen at phone width (PNG) and the section order",
+      "A gallery shot list, one image per doubt",
+      "A size chart or how-to-use block when fit or use is a doubt",
+      "One line each: the number to watch, the guardrail, the read date and the fallback line"
+    ],
+    "next_moves": [
+      "Ads that send their buyers here with the same promise (creatives journey)",
+      "The same treatment for the next product losing the most gross profit",
+      "A test plan against the current page",
+      "A size and fit guide for the whole category"
+    ]
+  }
+}

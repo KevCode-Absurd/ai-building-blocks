@@ -1,0 +1,703 @@
+{
+  "schema": "ai-blocks-journey/1",
+  "id": "cro-audit",
+  "name": "Conversion audit and redesign (homepage, collection, product, cart, checkout or the whole site)",
+  "vertical": "ecommerce",
+  "asked_as": [
+    "audit my product page",
+    "why is my conversion rate so low",
+    "do a CRO audit of my store",
+    "redesign my homepage",
+    "people add to cart but don't buy",
+    "my ads get clicks but no sales",
+    "make my landing page convert better"
+  ],
+  "lead_agents": [
+    "gretchen-store-testing",
+    "annabel-landing-pages",
+    "arjun-page-speed"
+  ],
+  "outcome": "The owner sees the whole path from ad or search to repeat order, with the drop at each step from their own numbers, knows which leak costs the most gross profit and why, and gets either a ranked fix list or a rebuilt page in their brand, each change with its evidence and how it will be measured.",
+  "first_principles": [
+    "Conversion rate belongs to the traffic, not the page. A sitewide rate moves when the mix of cold social, search, returning and mobile visitors moves, so never judge a page until it is cut by source, device and new versus returning. The unit that matters is gross profit per session, set against what that session cost to buy.",
+    "The leak is the step that drops most against the store's own best cell (its best source, device or landing page), not against an industry average. Benchmarks only say where to look. Then put the best page next to the worst page on like-for-like traffic and ask what one has that the other lacks: a promise, a first screen, proof, a delivery date, a price point, stock.",
+    "Many 'page problems' live upstream or downstream of the page. An ad that promises one thing and lands on another, the wrong products in the first rows, sold-out sizes, a slow first load, surprise shipping cost, failed payments or COD friction. Fix the cause where it lives; a prettier page does not fix a broken promise.",
+    "Testing spends traffic. Below about 1,000 weekly visitors to a page, or about 300 orders a month, a split test cannot read the 1 to 5% lifts that mature pages really get. Ship evidence-backed changes, read them before and after against a control, and save tests for big swings the traffic can read. Repairs never wait for a test.",
+    "Fix when the page is close to the store's best cell and the leaks are local. Rebuild when the page has the wrong job for its traffic (cold buyers on a product page that needs explaining, a homepage that is just a catalogue), when three or more leaks share one root cause, or when the theme blocks the fixes. A rebuild keeps everything the best page has already proved.",
+    "Every recommendation carries two pieces of evidence (a number plus behaviour or the buyer's own words), its gross profit a month at stake, its chance of working and its build cost. Rank on that, never on how many best practices a page fails, and never on case-study lifts."
+  ],
+  "goal": {
+    "questions": [
+      {
+        "id": "scope",
+        "ask": "Should I map the whole path from ad to repeat order, one page type, or one page?",
+        "why": "The page an owner suspects is often not where the money leaks; scope sets how much data to pull and whether a rebuild is on the table.",
+        "options": [
+          {
+            "label": "The whole path",
+            "pro": "finds the real leak, which is often upstream or at checkout",
+            "con": "more data to pull before the first fix"
+          },
+          {
+            "label": "One page type (all product pages, say)",
+            "pro": "fixes one template across many pages",
+            "con": "can miss a leak on another step"
+          },
+          {
+            "label": "One page",
+            "pro": "fastest, good for a key landing page",
+            "con": "a fix there may move little if traffic or checkout is the problem"
+          }
+        ],
+        "default": "The whole path, then depth on the step that loses the most gross profit",
+        "skip_if": [
+          "brief names one page and the funnel confirms it is the biggest leak",
+          "the owner only wants a page rebuilt from a reference"
+        ],
+        "settle_with_data": "Build the funnel by device first. If one step's drop is far worse than the store's own best cell and costs the most gross profit, say so and go deep there, whatever the brief named."
+      },
+      {
+        "id": "goal_metric",
+        "ask": "What should this win: more orders from the same traffic, bigger orders, or profit on paid traffic?",
+        "why": "Conversion work, order value work (bundles, thresholds) and paid landing work are different jobs with different pages.",
+        "options": [
+          {
+            "label": "More orders",
+            "pro": "the usual lever",
+            "con": "can lower order value if it leans on discounts"
+          },
+          {
+            "label": "Bigger orders",
+            "pro": "lifts profit without more traffic",
+            "con": "needs real bundle and threshold logic, not a bar"
+          },
+          {
+            "label": "Profit on paid traffic",
+            "pro": "decides whether ad spend can grow",
+            "con": "narrower: the pages ads land on"
+          }
+        ],
+        "default": "Gross profit per session, which covers all three",
+        "settle_with_data": "If paid traffic is most sessions and gross profit per session (conversion rate x gross profit per order) is below its cost per click, profit on paid traffic is the goal. If the order-value spread shows a clear peak just under the free-shipping line, bigger orders is in play."
+      },
+      {
+        "id": "access",
+        "ask": "Can you give me read access to GA4 and your store analytics, or send exports?",
+        "why": "Landing page, device and source cuts need analytics; without them the audit rests on ad counts, a phone walk-through and reviews, and says so.",
+        "options": [
+          {
+            "label": "Read access",
+            "pro": "every cut I need, fastest",
+            "con": "a few minutes to add a viewer"
+          },
+          {
+            "label": "Exports",
+            "pro": "no access shared",
+            "con": "I send a list of reports; slower to go deeper"
+          },
+          {
+            "label": "Neither",
+            "pro": "start today",
+            "con": "conclusions marked directional until numbers arrive"
+          }
+        ],
+        "default": "Exports: I send the exact list, and start the phone walk-through and review reading meanwhile",
+        "skip_if": [
+          "a connector to GA4 or the store already works",
+          "exports are attached"
+        ]
+      },
+      {
+        "id": "build",
+        "ask": "Who will build the changes: you in the theme editor, a developer, or should I hand over ready-made sections?",
+        "why": "It decides how big the fixes can be and whether a rebuild is realistic.",
+        "options": [
+          {
+            "label": "Me, in the theme editor",
+            "pro": "no cost",
+            "con": "limits fixes to what the theme allows"
+          },
+          {
+            "label": "A developer",
+            "pro": "any fix, including a rebuild",
+            "con": "costs hours; I size each fix in build time"
+          },
+          {
+            "label": "Ready-made sections from you",
+            "pro": "drop-in, built on a theme copy",
+            "con": "needs draft access to an unpublished theme"
+          }
+        ],
+        "default": "Theme-editor fixes first, plus ready-made sections for anything bigger",
+        "settle_with_data": "Read the theme and installed apps: if the theme has the sections a fix needs, the editor is enough."
+      }
+    ]
+  },
+  "gather": {
+    "brand_brain": "helpful",
+    "sources": [
+      {
+        "what": "GA4 property",
+        "why": "landing pages, paths, device, source, engagement and the purchase funnel",
+        "where": "GA4 connector or a Viewer seat; else exports of the landing page, funnel and tech reports",
+        "ask_if_missing": "Can you add me as a Viewer in GA4 (Admin > Property access), or export the landing page and purchase journey reports for 90 days by device and source?",
+        "fallback": "Shopify reports, then Meta funnel counts"
+      },
+      {
+        "what": "Store analytics and order export (Shopify or the store's platform)",
+        "why": "sessions, carts, checkouts and orders by device and landing page; order value spread, discounts, first versus repeat buyers",
+        "where": "Shopify Analytics and Orders > Export (Name, Created at, Subtotal, Discount, Shipping, Total, Lineitem sku, Payment method, Customer)",
+        "ask_if_missing": "Can you export the last 90 days of orders and screenshot the conversion breakdown by device?",
+        "fallback": "Meta purchase counts and the owner's monthly order total"
+      },
+      {
+        "what": "Gross profit per order",
+        "why": "every fix is sized in gross profit, not revenue",
+        "where": "SKU costs, shipping, payment fees, returns and failed COD",
+        "ask_if_missing": "What does an average order cost you to make, pack and deliver, or can you share SKU costs?",
+        "fallback": "build-sku-profit-sheet from costs, else rank by severity and mark it unranked"
+      },
+      {
+        "what": "Ad funnel counts",
+        "why": "click, landing page view, add to cart, checkout and purchase per ad and landing URL; shows load loss and ad-to-page mismatch",
+        "where": "Meta connector or Ads Manager export with landing_page_view, add to cart, initiated checkout and purchase",
+        "fallback": "Meta Ad Library (public) for the ads, to check message match by eye"
+      },
+      {
+        "what": "Session recordings and heatmaps",
+        "why": "what buyers do on the page: scroll depth, clicks, dead and rage clicks, quick backs",
+        "where": "Microsoft Clarity, Hotjar or similar",
+        "ask_if_missing": "Do you have a recording tool installed? If not, may I give you the free one to add, with privacy masking on?",
+        "fallback": "a timed phone walk-through and the on-page survey"
+      },
+      {
+        "what": "Reviews and product questions",
+        "why": "the promises buyers hold the store to, and the doubts it leaves open",
+        "where": "store review app export, marketplace listings, Google reviews",
+        "fallback": "public reviews of the store and of its two closest rivals"
+      },
+      {
+        "what": "Support tickets and chats",
+        "why": "the questions people ask before buying are page content that is missing",
+        "where": "helpdesk export, WhatsApp or chat labels",
+        "fallback": "FAQ page and review questions"
+      },
+      {
+        "what": "Returns and RTO",
+        "why": "a page that oversells converts and then refunds; return reasons show which promise broke",
+        "where": "returns app or order export with refunds and delivery status",
+        "fallback": "low-star review themes"
+      },
+      {
+        "what": "Post-purchase survey",
+        "why": "'what almost stopped you' names the last doubt in the buyer's words",
+        "where": "survey app or order status page",
+        "fallback": "set one up now; read it in three weeks"
+      },
+      {
+        "what": "The live site on a real phone",
+        "why": "most traffic sees the store on a mid-range phone over mobile data; desktop audits miss the real first screen",
+        "where": "the store URL, from an ad link and from search",
+        "fallback": "Chrome device mode with throttling, labelled as emulated"
+      }
+    ],
+    "setup": [
+      {
+        "need": "Analytics access when the owner can't share GA4",
+        "why": "landing page and source cuts are the backbone of best-versus-worst comparison",
+        "check": "Is there a GA4 connector, a Viewer seat, or exports in the folder?",
+        "options": [
+          {
+            "label": "Store platform reports",
+            "pro": "sessions, conversion and landing page reports exist on every Shopify plan",
+            "con": "bots inflate sessions; fewer cuts by source"
+          },
+          {
+            "label": "Meta funnel counts",
+            "pro": "landing page view to add to cart to checkout to purchase per ad and URL, today",
+            "con": "covers ad traffic only, on the ad platform's counting"
+          },
+          {
+            "label": "Phone walk-through plus reviews and tickets",
+            "pro": "no access needed; finds what buyers meet",
+            "con": "no sizes; every finding marked directional"
+          }
+        ],
+        "default": "Use all three that exist, label each finding with its source, and send the export list once"
+      },
+      {
+        "need": "Tracking you can trust",
+        "why": "GA4 purchases that don't match orders, or sessions full of bots, produce confident wrong answers",
+        "check": "GA4 purchases within about 5% of store orders for the same days; GA4 rate filtered to the purchase event; store sessions against GA4 sessions for a bot gap",
+        "options": [
+          {
+            "label": "Fix tracking first",
+            "pro": "every later number holds",
+            "con": "a week before the audit can read cleanly"
+          },
+          {
+            "label": "Go ahead on store order counts",
+            "pro": "start now",
+            "con": "path and source cuts stay directional"
+          }
+        ],
+        "default": "Go ahead on store order counts, flag the gap, and add set-up-ga4-for-store-and-check-data to the fix list"
+      },
+      {
+        "need": "A behaviour tool",
+        "why": "numbers say where buyers leave; recordings and maps say why",
+        "check": "Look for a Clarity or Hotjar script in the page source",
+        "options": [
+          {
+            "label": "Install Microsoft Clarity now",
+            "pro": "free; two weeks gives enough sessions on key pages",
+            "con": "needs the owner's yes, masking checked and the privacy page updated"
+          },
+          {
+            "label": "Use the tool already there",
+            "pro": "history to read today",
+            "con": "check masking and consent before watching"
+          },
+          {
+            "label": "Skip it",
+            "pro": "nothing to install",
+            "con": "behaviour evidence comes only from the walk-through and surveys"
+          }
+        ],
+        "default": "Install Clarity on day one with the owner's yes, audit with what exists, and read recordings in week three"
+      },
+      {
+        "need": "Somewhere to build",
+        "why": "mockups and rebuilt sections must never be edited on the live theme",
+        "check": "Draft access to an unpublished duplicate theme",
+        "options": [
+          {
+            "label": "Duplicate theme",
+            "pro": "real preview screenshots, ready to publish",
+            "con": "needs staff or collaborator access"
+          },
+          {
+            "label": "HTML mockups and section files",
+            "pro": "no access needed",
+            "con": "someone pastes them in"
+          }
+        ],
+        "default": "HTML mockups and section files, labelled as mockups; the owner publishes"
+      }
+    ],
+    "data_map": [
+      {
+        "question": "Where does the path from landing to purchase drop most, and on which device?",
+        "data": "Sessions, product view, add to cart, begin checkout, purchase by device and by new versus returning, 90 days and the same window a year ago",
+        "where": "GA4 purchase journey or funnel exploration; Shopify conversion breakdown",
+        "tool": "storefront-conversion-audit",
+        "if_missing": "Meta landing page view, add to cart, checkout and purchase counts for ad traffic, plus store carts, checkouts and orders"
+      },
+      {
+        "question": "Which landing pages hold visitors best and worst on like-for-like traffic?",
+        "data": "Sessions, engagement rate (bounce is its inverse), add to cart rate, purchase rate and revenue per session by landing page, within one source and device, only pages with about 300+ sessions",
+        "where": "GA4 Landing page report with session source and device; Shopify sessions and conversion by landing page",
+        "if_missing": "Meta landing page view to purchase per landing URL"
+      },
+      {
+        "question": "Does the page keep the ad's promise, and does it load?",
+        "data": "Per ad: link clicks, landing page views, add to carts, purchases, landing URL; the ad's copy and visual",
+        "where": "Meta connector or Ads Manager export",
+        "tool": "node tools/find-insights.mjs <meta-export> --margin <m>",
+        "if_missing": "the store's live ads in the Ad Library, opened next to their landing pages on a phone"
+      },
+      {
+        "question": "Which products get looked at but not added to cart?",
+        "data": "Item views, add to carts and purchases by product and device; price, stock by variant, review count",
+        "where": "GA4 item reports; Shopify product analytics",
+        "tool": "diagnose-low-add-to-cart-products",
+        "if_missing": "product page walk-through for the top sellers and top-traffic products"
+      },
+      {
+        "question": "Where inside cart and checkout do buyers leave?",
+        "data": "begin_checkout, add_shipping_info, add_payment_info, purchase; abandoned checkouts by step and pincode or region; payment success by method",
+        "where": "GA4 funnel exploration; Shopify abandoned checkouts; payment gateway report",
+        "tool": "fix-checkout-drop-off",
+        "if_missing": "a test-mode checkout run on a phone and the abandoned checkout list"
+      },
+      {
+        "question": "What does an order earn, and does the first order lead to a second?",
+        "data": "Gross profit per order, the order-value spread and its peaks, discount share, repeat rate and time to second order by first product and first landing page",
+        "where": "Shopify order export plus SKU costs",
+        "tool": "cohort-repeat-and-ltv-analysis",
+        "if_missing": "average order value and the owner's margin, marked rough"
+      },
+      {
+        "question": "What do buyers actually do on the leaking page?",
+        "data": "Scroll reach at 25, 50 and 75%; click share per element; dead and rage clicks; quick backs; recordings of lost buyers versus buyers",
+        "where": "Clarity or Hotjar",
+        "tool": "review-session-recordings-and-heatmaps",
+        "if_missing": "timed phone walk-through of five buyer paths"
+      },
+      {
+        "question": "What doubt stops them, in their words?",
+        "data": "Top pre-sale questions, 1 to 3 star review themes, return reasons, 'what almost stopped you' answers",
+        "where": "helpdesk, chats, review app, returns app, survey",
+        "tool": "turn-support-tickets-into-insights",
+        "if_missing": "public reviews of the store and its two closest rivals"
+      },
+      {
+        "question": "Is speed costing sales on phones?",
+        "data": "Field LCP, INP and CLS at the 75th percentile per template on mobile; app and script count",
+        "where": "PageSpeed Insights field data; theme and app list",
+        "tool": "shopify-speed-audit-and-fix-list",
+        "if_missing": "three repeated lab runs per template, labelled lab"
+      },
+      {
+        "question": "Is the traffic real?",
+        "data": "Store sessions against GA4 sessions; sessions with no interaction by source and country",
+        "where": "Shopify and GA4",
+        "tool": "spot-bot-traffic-in-analytics",
+        "if_missing": "judge on GA4 or on orders only"
+      }
+    ]
+  },
+  "diagnose": {
+    "tools": [
+      "node tools/find-insights.mjs <meta-export-folder> --margin <gross margin>",
+      "node tools/prepare-job.mjs context/brief.md",
+      "node tools/ask-knowledge.mjs \"<the leaking step> on <device>\" --module CRO,LPG,SPD,CXP"
+    ],
+    "look_for": [
+      "Split the change first: revenue = sessions x conversion x order value; a small fall in two parts compounds and is often noise, so chase only what moved beyond its usual swing.",
+      "Mix before page: if the sitewide rate fell but each source-and-device rate held, the traffic changed (more cold social, more mobile, a new country), not the page.",
+      "Claims match across ads, product pages and policy pages: material words (natural, lab-grown, hallmarked, certified), offers (EMI or pay in parts versus layaway or pay-first plans, free shipping, gift packing), return and exchange terms, prices and delivery dates. Read the live ads (Ad Library or the connector), the product pages and the policy pages side by side. A mismatch (a lab-grown piece badged 'natural', 'EMI' in the ad but a pay-first plan on the site) is a trust leak and a legal risk: fix it before any test.",
+      "Payment terms, exactly: for each term in the ads or on the site (EMI, no-cost EMI, pay later, instalments, gold savings or layaway plans), write who pays how much, when, and when the piece ships. EMI means the buyer gets the piece now and pays a lender over months; a plan where the buyer pays first and gets the piece later is a savings or layaway plan, never EMI. An ad that says EMI for a pay-first plan is a mismatch at the moment of buying: it goes at the top of the fixes.",
+      "The path from an ad inside the Instagram and Facebook apps: most paid social clicks open in their in-app browser, where Google sign-in is blocked, saved cards and autofill are missing, and some payment apps fail to hand back. Walk it on a phone from a real ad to the order page: forced sign-in, a social login that fails, a payment that does not return.",
+      "Best versus worst landing page within the same source and device: list what the best one's first screen has that the worst lacks (the promise, price, proof type, delivery date, offer, product in view). That difference is hypothesis one.",
+      "The step with the biggest drop against the store's own best cell; benchmarks only flag where to look (view product 50 to 70%, view to cart 12 to 20%, cart to checkout 40 to 60%, checkout to purchase 45 to 60%).",
+      "Clicks that never become landing page views, well below the account's own rate for some ads: the page is slow or breaks before it loads. That is a speed fix, not a copy fix.",
+      "High click-through ads with low landing-page-view-to-cart on the same URL: the page does not continue the ad's angle or persona; each angle needs a first screen that leads with that one benefit.",
+      "A weak product view rate with a healthy view-to-cart rate: the leak is the menu, the first rows of collections or search, not the product page.",
+      "Low view-to-cart on a few products only: price against rivals, sold-out key sizes, photos, under about 80 reviews, or a missing delivery date for those items, not the template.",
+      "Cart to checkout weak: surprise costs (fees above about 10% of order value), a discount box that sends buyers hunting for codes, a free-shipping line set from the mean order value instead of the peaks of the order spread.",
+      "Checkout to purchase weak: payment failures by method, OTP or COD friction, pincode and delivery checks, forced accounts; read the gateway's success rates before touching copy.",
+      "Scroll map: where half the visitors are gone, and whether price, proof and risk reducers sit above that line; elements under about 1% of clicks are clutter; elements with many clicks but few visitors reaching them should move up.",
+      "Recordings: dead clicks on images, price or size, back and forth between size chart and variants, quick backs from product to collection mean missing information, not missing persuasion.",
+      "The top pre-sale questions and top return reasons are missing page content; 1 to 3 star reviews name the promise the page made and the product didn't keep.",
+      "Repeat side: which first product and first landing page produce second orders; a page that converts on a deep discount and brings no repeat buyers is buying one-time customers.",
+      "Gross profit per session against cost per click by source: if paid traffic earns less per session than it costs, no ad tweak helps until the page or the offer lifts.",
+      "Data traps before any claim: bot sessions in store counts, GA4 key events that are not purchases, sale days in the window, COD orders that never deliver."
+    ],
+    "hypothesis_patterns": [
+      {
+        "pattern": "A traffic-mix shift, not a page problem",
+        "evidence": "per-source and per-device rates flat while the share of cold social or mobile sessions rose",
+        "bet": "judge pages per segment; move the work to message match or the offer for the new traffic"
+      },
+      {
+        "pattern": "The best page has what the worst lacks",
+        "evidence": "two landing pages with comparable source and device traffic far apart on engagement and add to cart; the best shows an element the worst does not (delivery date, review count by the title, the ad's promise as the headline)",
+        "bet": "carry the element across; read before and after against the untouched pages"
+      },
+      {
+        "pattern": "The ad's promise breaks on landing",
+        "evidence": "ads with strong click-through and weak landing-page-view-to-cart on the same URL; the ad's angle is not in the first screen",
+        "bet": "a first screen per angle, or a page built for that traffic"
+      },
+      {
+        "pattern": "Navigation is the leak",
+        "evidence": "low product view rate, exits from home and collections, dead clicks on the menu, failed site searches",
+        "bet": "menu, first rows and search fixed before any product page work"
+      },
+      {
+        "pattern": "A surprise at the end",
+        "evidence": "cart to checkout or checkout to purchase far below the store's best cell; abandoned checkouts bunch at shipping or payment; one payment method fails often",
+        "bet": "show full cost and a padded delivery date early; fix the failing method; repairs ship now"
+      },
+      {
+        "pattern": "The page leaves the main doubt unanswered",
+        "evidence": "the top pre-sale question or return reason is not answered on the page, or only below where most visitors stop scrolling",
+        "bet": "answer it where the doubt arises: by the size picker, under the button"
+      },
+      {
+        "pattern": "Slow on phones",
+        "evidence": "click-to-landing-page-view loss; mobile LCP above 2.5 seconds at the 75th percentile; many app scripts",
+        "bet": "speed fixes first: hero image, then third-party scripts"
+      },
+      {
+        "pattern": "The wrong page for the traffic (revamp)",
+        "evidence": "cold traffic on a product page that needs explaining, with high bounce and long scroll but few carts; three or more leaks with one root cause",
+        "bet": "rebuild the page, or build a listicle, story or angle page for that traffic, and keep the current page for warm visitors"
+      }
+    ]
+  },
+  "choose": {
+    "decisions": [
+      {
+        "id": "fix_or_rebuild",
+        "ask": "Fix the current page, rebuild it, or add a new page for one kind of traffic?",
+        "options": [
+          {
+            "label": "Targeted fixes",
+            "pro": "fast, low risk, each change readable on its own",
+            "con": "caps the gain when the structure is the problem",
+            "when": "the page sits close to the store's best cell and the leaks are local"
+          },
+          {
+            "label": "Rebuild around the main doubt",
+            "pro": "the biggest possible lift; fixes a shared root cause in one go",
+            "con": "more build time, harder to say which part worked, can dip before it rises",
+            "when": "a big gap to the best cell, three or more leaks with one cause, or a theme that blocks the fixes"
+          },
+          {
+            "label": "Keep it, add a page for one source",
+            "pro": "protects what works for warm visitors, matches cold traffic",
+            "con": "one more page to keep up to date",
+            "when": "one source (often cold social) converts far below the others on the same page"
+          }
+        ],
+        "recommend": "Pick from the gap: fixes when the page is within reach of the store's best cell; a rebuild when the gap is large and the causes share a root; a new page when one source is the outlier. Name the two numbers that decided it."
+      },
+      {
+        "id": "prove",
+        "ask": "How do we prove each change worked?",
+        "options": [
+          {
+            "label": "Ship and read before and after",
+            "pro": "no waiting for traffic",
+            "con": "weaker proof; season and ad changes can muddy it",
+            "when": "under about 1,000 weekly visitors to the page or about 300 orders a month; read against a control (another device, untouched pages, the same weeks last year)"
+          },
+          {
+            "label": "Split test the big change",
+            "pro": "real proof of the lift",
+            "con": "weeks of traffic, one test at a time, no checkout tests on standard Shopify, no price splits on one product",
+            "when": "the page's own traffic reaches the sample for the expected lift within about four weeks"
+          },
+          {
+            "label": "Ship repairs now, test the one bold bet",
+            "pro": "speed where it is safe, proof where it counts",
+            "con": "only one idea gets real proof",
+            "when": "middle traffic, or a mix of broken things and one big idea"
+          }
+        ],
+        "recommend": "Set by the store's monthly orders and the page's own traffic: under about 30 orders a month, research and ship; 30 to 300, one bold test sized for a 20%+ lift; 300 to 3,000, regular tests; repairs always ship. Show the sample sum."
+      }
+    ]
+  },
+  "make": {
+    "pieces": [
+      {
+        "piece": "Whole-path funnel map, leak table and ranked fixes",
+        "skill": "storefront-conversion-audit",
+        "when": "always; it holds the funnel by device, the sizing in gross profit and the ship, test or research call"
+      },
+      {
+        "piece": "Phone walk-through of five buyer paths",
+        "skill": "mobile-conversion-audit",
+        "when": "always when phones are half or more of sessions, and whenever analytics access is missing"
+      },
+      {
+        "piece": "Pages ads land on, checked against the ad",
+        "skill": "store-meta-landing",
+        "when": "paid social is a large share of traffic or ads get clicks but few sales"
+      },
+      {
+        "piece": "Recording and heatmap review",
+        "skill": "review-session-recordings-and-heatmaps",
+        "when": "a recording tool has two weeks of data on the leaking page"
+      },
+      {
+        "piece": "Products viewed but not carted",
+        "skill": "diagnose-low-add-to-cart-products",
+        "when": "view-to-cart is weak on some products, not all"
+      },
+      {
+        "piece": "Cart and checkout leaks",
+        "skill": "fix-checkout-drop-off",
+        "when": "cart to checkout or checkout to purchase is the biggest drop"
+      },
+      {
+        "piece": "Speed fix list",
+        "skill": "shopify-speed-audit-and-fix-list",
+        "when": "click-to-landing-page-view loss or failing mobile field data"
+      },
+      {
+        "piece": "Doubt map from first visit to delivery",
+        "skill": "trust-and-reassurance-audit",
+        "when": "questions, reviews or returns show doubt the pages leave open"
+      },
+      {
+        "piece": "Menu, search and filters",
+        "skill": "fix-site-search-and-navigation",
+        "when": "product view rate is the weak step"
+      },
+      {
+        "piece": "Homepage and collection slot plan",
+        "skill": "merchandise-homepage-and-collections",
+        "when": "the first rows or homepage slots hold the wrong products for the traffic"
+      },
+      {
+        "piece": "Bundles, thresholds and cart offers",
+        "skill": "offer-bundle-threshold-design",
+        "when": "the goal is bigger orders or the free-shipping line sits off the order-value peaks"
+      },
+      {
+        "piece": "Rebuilt page in the store's brand",
+        "skill": "page-layout-rebuild",
+        "when": "the decision is a rebuild; structure from the store's own best page or a reference, never another brand's words or images"
+      },
+      {
+        "piece": "Page for cold traffic",
+        "skill": "reasons-to-buy-listicle-page",
+        "when": "cold buyers need reasons before the product page"
+      },
+      {
+        "piece": "Story page for cold traffic",
+        "skill": "advertorial-story-page",
+        "when": "the product needs a few minutes of explaining or trust is low"
+      },
+      {
+        "piece": "Product page words",
+        "skill": "write-product-page-copy",
+        "when": "fixes or a rebuild need new first-screen copy, answers to doubts or proof lines"
+      },
+      {
+        "piece": "Homepage words",
+        "skill": "write-homepage-copy",
+        "when": "the homepage is being rebuilt or its first screen fails"
+      },
+      {
+        "piece": "Cart, checkout and shipping words",
+        "skill": "write-cart-checkout-and-shipping-microcopy",
+        "when": "the leak is a doubt at cart or checkout"
+      },
+      {
+        "piece": "Theme section for the winning change",
+        "skill": "shopify-theme-section-builder",
+        "when": "a fix needs a section the theme lacks, built on an unpublished copy"
+      },
+      {
+        "piece": "Test plan",
+        "skill": "design-store-ab-test",
+        "when": "the decision is to test and the traffic can read it"
+      },
+      {
+        "piece": "Test readout",
+        "skill": "read-store-ab-test-result",
+        "when": "a test reaches its planned end week"
+      },
+      {
+        "piece": "Tracking repair",
+        "skill": "set-up-ga4-for-store-and-check-data",
+        "when": "GA4 purchases are off from orders by more than about 5%"
+      },
+      {
+        "piece": "Gross profit per order",
+        "skill": "build-sku-profit-sheet",
+        "when": "no delivered cost per order exists yet"
+      },
+      {
+        "piece": "Claim check: each claim, where it appears (ad, product page, policy page), whether they match, and the fix",
+        "when": "always"
+      }
+    ],
+    "rules": [
+      "Every before image is a real, unclipped screenshot of today's page on a phone; every after image is labelled a mockup until it is live.",
+      "Every fix names its hypothesis, two pieces of evidence, its gross profit a month, its chance of working, its build hours, and how it will be read.",
+      "A page with no leak is marked fine; there is no quota of findings or tests per page.",
+      "Plan on 1 to 5% lifts unless the store's own tests show more; case-study lifts are the top of a range, never the plan.",
+      "Repairs ship without a test. No split tests on standard Shopify checkout, and never two prices for one product.",
+      "Proof on any page must be true: real reviews with names and sources, real deadlines and stock; no invented counters, badges or timers, and no hidden costs (Indian dark-pattern rules and US claim rules apply).",
+      "A rebuild keeps what the store's best page has proved and borrows only structure from other brands, never their words, images, icons or fonts.",
+      "New words on the page come from the brand brain and the buyers' own words, in the brand's language and register.",
+      "Mockups are built from HTML with the brand's real words; run copy-check and the consistency check on the mockup source folder before rendering, so a banned word ('sale') never reaches an image."
+    ]
+  },
+  "check": {
+    "checks": [
+      "node tools/quality/consistency-check.mjs context/hypotheses.json <audit.md>",
+      "node tools/quality/copy-check.cjs <page-copy.md> --limit \"SEO title=60\" --limit \"Meta description=155\"",
+      "node tools/check-handover.mjs <audit.md>",
+      "node tools/quality/qe-check.cjs <final> --audience business",
+      "Sessions x conversion x order value multiplies back to the revenue change in the summary.",
+      "Every rate in a finding names its source, period, device and traffic segment.",
+      "Rebuilt pages pass a phone check at 390 px: price, button and risk reducer in the first screen, no layout shift from apps, hero image not lazy-loaded.",
+      "Claim table filled: every material, offer, return and price claim checked across the live ads, the product pages and the policy pages.",
+      "The in-app browser path from a real ad was walked on a phone, and sign-in and payment were tried there.",
+      "Payment terms table: each term, the exact mechanism (who pays, when, when it ships) from the site's own page, and every ad or page that names it."
+    ],
+    "senior_review": [
+      "Could a change in traffic mix explain this finding instead of the page?",
+      "Did I compare the best and worst pages on like-for-like traffic, and name what one has that the other lacks?",
+      "Is the top fix where the most gross profit sits, or only the most visible flaw?",
+      "Did the evidence call for a rebuild, and did I say plainly why or why not?",
+      "Is test versus ship matched to this store's traffic, with the sample sum shown?",
+      "Can the owner build this in the hours they have?",
+      "Does every new line sound like the brand and rest on a true fact?",
+      "What did I assume that the data contradicts?",
+      "Does anything we say in ads, on the page or in a policy contradict another, and would a buyer feel misled?",
+      "Does every payment word (EMI, pay later, instalments) mean the same thing in the ad, on the product page and at checkout?",
+      "Does any cut or fix rest on a short window that the 90-day numbers contradict?"
+    ]
+  },
+  "knowledge": {
+    "diagnose": {
+      "modules": [
+        "CRO",
+        "LPG",
+        "MEA",
+        "SPD"
+      ],
+      "ask": [
+        "funnel step benchmarks for a store",
+        "testing method by monthly orders",
+        "GA4 and Shopify session counting traps",
+        "reading scroll maps, click maps and recordings"
+      ]
+    },
+    "make": {
+      "modules": [
+        "LPG",
+        "OFF",
+        "CXP"
+      ],
+      "ask": [
+        "mobile product page first screen",
+        "delivery date and risk reducers near the button",
+        "bundle savings and free-shipping threshold",
+        "which page type for cold versus warm traffic"
+      ]
+    },
+    "check": {
+      "modules": [
+        "CRO",
+        "LPG",
+        "SET"
+      ],
+      "ask": [
+        "sample size for the expected lift",
+        "Shopify checkout testing limits",
+        "India price display and dark pattern rules"
+      ]
+    },
+    "never": [
+      "The store's numbers, voice and proof come from its own data and brand brain, never from the library.",
+      "Case-study lifts are ranges to sanity-check, never a forecast for this store."
+    ]
+  },
+  "handover": {
+    "files": [
+      "A one-screen summary as one branded HTML page: the leakiest step and device, the top three fixes with gross profit a month, any claim that does not match across ads, site and policy, and the one thing to do this week.",
+      "The funnel map as a sheet and CSV: source to landing page to product to cart to checkout to purchase to repeat, by device and source, with the drop and gross profit at each step.",
+      "A best-versus-worst page table: the pages, their traffic, their rates, and the elements one has that the other lacks.",
+      "A claim table: claim, where it appears, match or mismatch, the fix and the risk.",
+      "A ranked findings CSV: finding, evidence (two), fix, gross profit a month, chance, build hours, ship or test, owner, how it is read.",
+      "Real before screenshots and labelled after mockups (PNG), or the rebuilt page as HTML plus Shopify section files on an unpublished theme.",
+      "A test plan per test, or a before-and-after reading plan with its control and read date.",
+      "A short deck in the brand's colours for the owner or their team."
+    ],
+    "next_moves": [
+      "Build the top fix as a section on a theme copy, ready for you to publish.",
+      "A landing page for each ad angle that sends cold traffic.",
+      "Install Clarity and a 'what almost stopped you' survey now, and reread the pages in three weeks.",
+      "The emails that turn these first orders into second ones (email-retention journey)."
+    ]
+  }
+}

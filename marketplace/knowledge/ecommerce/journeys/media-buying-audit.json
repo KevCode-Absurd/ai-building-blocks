@@ -1,0 +1,525 @@
+{
+  "schema": "ai-blocks-journey/1",
+  "id": "media-buying-audit",
+  "name": "Ad account audit for waste and growth (Meta first)",
+  "vertical": "ecommerce",
+  "asked_as": [
+    "audit my Meta ads",
+    "where am I wasting money on ads",
+    "my ROAS dropped, what's wrong with the account",
+    "we're taking over this ad account, review it",
+    "can our ads take more budget",
+    "is our agency doing a good job"
+  ],
+  "lead_agents": [
+    "dustin-ad-deployment",
+    "jared-performance-marketing",
+    "radek-unit-economics"
+  ],
+  "outcome": "The owner knows, in money, what the ad account is losing now, what is stopping them from seeing the truth, and the few changes to make first, ranked by gross profit gained for the effort. Each finding shows its evidence and its fix, nothing in the account was changed, and every fix waits for their yes.",
+  "first_principles": [
+    "Work in this order: tracking, then structure, then spend against return, then creative. A winner chosen on a doubled or missing Purchase event is not a winner, and a budget call on it moves money on a wrong number.",
+    "Waste is measured in gross profit, not ROAS. Spend is wasted when its purchases times gross profit per purchase come to less than the spend. Break-even ROAS (order value divided by gross profit per purchase) is the line; an account average above it hides segments, placements and ads far below it.",
+    "Platform-reported ROAS over-counts against store orders: view-through credit, existing customers who would have bought anyway and catalog retargeting all inflate it. Reconcile Meta purchases with store orders week by week and read new-customer revenue per ad spend before calling anything a winner or advising more budget.",
+    "Fragmentation is a silent tax. An ad set needs about 50 purchases in 7 days to leave learning; an account split into many small ad sets pays more per purchase than the same money in a few funded ones, and every edit restarts the clock.",
+    "Cheap clicks are not cheap. Clicks, traffic and engagement objectives, and placements where clicks rarely become page views, inflate CTR and teach delivery to find clickers instead of buyers.",
+    "Read only. The audit never changes the account: no pauses, budget edits, new audiences or test events. Every fix is a proposal with money at stake, how easily it can be undone and a review date, and the owner approves each one."
+  ],
+  "goal": {
+    "questions": [
+      {
+        "id": "profit_per_order",
+        "ask": "What does one typical order leave you after product, shipping, fees and returns, or what cost per purchase do you aim for?",
+        "why": "Without it no ad set can be called a loser or a winner, and no finding can carry money at stake.",
+        "options": [
+          {
+            "label": "I'll give the number",
+            "pro": "fastest",
+            "con": "often forgets shipping, fees or returns"
+          },
+          {
+            "label": "Work it out from my costs",
+            "pro": "delivered cost per product",
+            "con": "needs cost per item in the store"
+          },
+          {
+            "label": "Use my target cost per purchase",
+            "pro": "matches how you judge today",
+            "con": "may itself be above break-even"
+          }
+        ],
+        "default": "Work it out from product costs and the order export with store-meta-math; until then run only the tracking and structure checks and give no kill or money figures",
+        "skip_if": [
+          "brief or brand brain gives gross profit per purchase or break-even ROAS"
+        ],
+        "settle_with_data": "Store products export with cost per item plus the 90-day order export (discounts, shipping, refunds, payment method) give gross profit per purchase by product; check the owner's target cost against it and flag a target above break-even as a finding."
+      },
+      {
+        "id": "waste_meaning",
+        "ask": "What counts as wasted money to you?",
+        "why": "It decides which lens ranks the findings: losing money per order, paying for buyers you already had, or spend that does not grow new customers.",
+        "options": [
+          {
+            "label": "Spend that loses money on the order",
+            "pro": "hard number from break-even",
+            "con": "misses spend on people who would buy anyway"
+          },
+          {
+            "label": "Spend on people who'd buy anyway",
+            "pro": "catches retargeting and existing-customer overspend",
+            "con": "needs store new-customer data to size"
+          },
+          {
+            "label": "Spend that doesn't bring new customers",
+            "pro": "growth lens, best for scaling",
+            "con": "can look harsh on profitable retargeting"
+          }
+        ],
+        "default": "Rank on the first lens and show the second beside it, since both come from the same exports",
+        "skip_if": [
+          "brief says what the worry is (for example 'retargeting looks too good')"
+        ],
+        "settle_with_data": "Compute all three from the exports (spend below break-even; existing-customer spend and frequency; new-customer revenue per ad spend). Ask only if the top three fixes change with the lens."
+      },
+      {
+        "id": "freed_money",
+        "ask": "If we free up money, should it go back into what works or come off your ad bill?",
+        "why": "It changes the plan from cuts only to cuts plus moves, and whether a scale check is needed.",
+        "options": [
+          {
+            "label": "Back into what works",
+            "pro": "more profit at the same spend",
+            "con": "needs stock, cash and tracking to hold"
+          },
+          {
+            "label": "Save it",
+            "pro": "cash now",
+            "con": "growth stays flat"
+          },
+          {
+            "label": "You decide from the data",
+            "pro": "fits stock and cash",
+            "con": "one more check before any move"
+          }
+        ],
+        "default": "You decide from the data: move it to proven winners only where scale-readiness-check passes, otherwise save it",
+        "skip_if": [
+          "brief names a fixed or falling budget"
+        ],
+        "settle_with_data": "Stock cover on advertised products, the cash limit and whether tracking passes decide if freed money can be moved safely."
+      },
+      {
+        "id": "access",
+        "ask": "Can I read the ad account and your store orders: a read-only connection, exports, or screenshots?",
+        "why": "The audit is only as good as what it reads; store orders are what makes it honest.",
+        "options": [
+          {
+            "label": "Read-only connection",
+            "pro": "complete, with breakdowns and history",
+            "con": "a few minutes to set up"
+          },
+          {
+            "label": "Exports",
+            "pro": "no access granted",
+            "con": "needs the exact columns"
+          },
+          {
+            "label": "Screenshots only",
+            "pro": "quickest",
+            "con": "many checks marked not checked"
+          }
+        ],
+        "default": "Use the connector if live, read only; otherwise ask once for the 90-day ad-level export with breakdowns, Events Manager screenshots, the activity history and the order export",
+        "skip_if": [
+          "the Meta connector is connected",
+          "exports are attached"
+        ],
+        "settle_with_data": "Check the connector first. Read access covers the whole audit; never ask for more."
+      }
+    ]
+  },
+  "gather": {
+    "brand_brain": "not_needed",
+    "sources": [
+      {
+        "what": "Ads Manager export, last 90 days by day at ad level, with Compare attribution settings columns (7-day click, 1-day view) and breakdowns by age and gender, placement, region and, for Advantage+ Sales, audience segment",
+        "why": "spend against return by campaign, segment, placement and ad; winners; fatigue",
+        "where": "Meta connector or Ads Manager export",
+        "ask_if_missing": "Please export Ads Manager at ad level for 90 days by day, with spend, impressions, reach, frequency, link clicks, landing page views, purchases and value, under 7-day click and 1-day view, plus the same by age and gender and by placement.",
+        "fallback": "Audit at campaign level from screenshots and mark segment and creative checks not checked"
+      },
+      {
+        "what": "Events Manager for Purchase, AddToCart and ViewContent: browser and server counts, deduplication, match quality, diagnostics",
+        "why": "tracking truth comes before every other finding",
+        "where": "Meta connector (dataset quality and details) or screenshots",
+        "ask_if_missing": "Please screenshot Events Manager for Purchase: overview, deduplication, event match quality and diagnostics.",
+        "fallback": "Infer tracking health from Meta purchases against store orders only"
+      },
+      {
+        "what": "Store order export for the same 90 days with customer ID, first-order flag, discount, shipping, refunds and payment method",
+        "why": "store truth, new-customer share, cash-on-delivery losses",
+        "where": "Shopify or WooCommerce export",
+        "ask_if_missing": "Please export orders for the last 90 days with customer, discount, shipping, refund and payment method columns.",
+        "fallback": "Every money figure is marked 'Meta-reported, unverified'"
+      },
+      {
+        "what": "Account activity history, last 30 days",
+        "why": "edits that reset learning, budget swings, who changed what",
+        "where": "Meta connector or Ads Manager activity history",
+        "fallback": "Skip the edit-frequency check"
+      },
+      {
+        "what": "Stock on hand for advertised products and the monthly cash limit",
+        "why": "spend on products about to run out; whether freed money can move",
+        "where": "inventory sheet, owner",
+        "fallback": "Answer 'can it take more spend' as unknown"
+      }
+    ],
+    "setup": [
+      {
+        "need": "Read-only access",
+        "why": "the audit must not change the account, even by accident",
+        "check": "connector scope or Business settings role",
+        "options": [
+          {
+            "label": "Read-only connector",
+            "pro": "full data, cannot change anything",
+            "con": "setup time"
+          },
+          {
+            "label": "Exports by the owner",
+            "pro": "no access at all",
+            "con": "snapshot only"
+          }
+        ],
+        "default": "Read-only connector if available, else exports; never publish or edit access for an audit"
+      }
+    ],
+    "data_map": [
+      {
+        "question": "Does Meta count each store order once, with the right value?",
+        "data": "Meta 7-day click purchases vs store paid orders by week; browser vs server events; deduplication; match quality",
+        "where": "Meta export, Events Manager, order export",
+        "tool": "skill store-meta-capi",
+        "if_missing": "Mark tracking unverified; findings use store numbers or stay provisional"
+      },
+      {
+        "question": "How much of Meta's credit is real?",
+        "data": "Click vs view purchases; new vs existing customers; store new-customer revenue",
+        "where": "Compare attribution settings, segment breakdown, order export",
+        "tool": "skill store-meta-attribution",
+        "if_missing": "Report on 7-day click and say the store-truth factor is pending"
+      },
+      {
+        "question": "Is the structure able to learn?",
+        "data": "Purchases per ad set per week, delivery status, objective, optimisation event, overlap, edits",
+        "where": "Meta export, activity history",
+        "tool": "node tools/preflight-meta.mjs context/current-structure.json",
+        "if_missing": "Read from campaign screenshots"
+      },
+      {
+        "question": "Which segments, placements and ads lose money, and which are underfunded?",
+        "data": "Spend, purchases and value by age and gender, placement, region and ad",
+        "where": "Meta export breakdowns",
+        "tool": "node tools/find-insights.mjs <export> --margin <m>",
+        "if_missing": "Campaign-level verdicts only"
+      },
+      {
+        "question": "Which winners are paused or tiring?",
+        "data": "Lifetime vs last-90-day ROAS, purchases, frequency, status by ad",
+        "where": "Meta export",
+        "tool": "node tools/find-insights.mjs <export>",
+        "if_missing": "Ask the owner which ads they remember working"
+      },
+      {
+        "question": "Are existing customers soaking up budget?",
+        "data": "30-day frequency on purchasers, existing-customer share of spend, exclusions",
+        "where": "audience segment breakdown, ad set settings",
+        "tool": "skill build-meta-retargeting-and-exclusions",
+        "if_missing": "Check exclusions on every prospecting ad set"
+      }
+    ]
+  },
+  "diagnose": {
+    "tools": [
+      "node tools/find-insights.mjs <export-folder> --margin <gross margin> --json context/insights.json",
+      "node tools/preflight-meta.mjs context/current-structure.json (the live account written in plan shape; every FAIL is a finding)"
+    ],
+    "look_for": [
+      "Tracking: Meta 7-day click purchases above store orders means double counting (two pixels, pixel and server without a shared event ID, thank-you page reloads); far below means lost events (consent banner, checkout change, broken app).",
+      "Tracking: Purchase without value or currency, a value that does not match the break-even definition (tax, shipping, discount), or a test event code left live sending real purchases to Test Events.",
+      "Tracking: low match quality on Purchase from missing hashed email and phone on server events; rank fixes by what they add to the Purchase signal, not to page views.",
+      "Attribution: the share of reported purchases from view-through; the gap between default and 7-day click ROAS; in Advantage+ Sales, ROAS on new customers against overall. A big gap means the 'best' campaigns are partly existing demand.",
+      "Structure: purchases per ad set per week against about 50; the share of spend in learning-limited ad sets; how many ad sets the budget could actually feed (weekly purchases / 50).",
+      "Structure: objective mismatch. Every traffic, engagement, reach or clicks campaign, and every ad set optimising for link clicks or landing page views, on a sales goal goes straight to the waste bucket unless it has a written purpose and cap.",
+      "Structure: overlap. Several campaigns selling the same products to the same people in the same country bid against each other and split learning.",
+      "Structure: more than one significant edit a week on a core ad set in the activity history; constant tinkering keeps it in learning.",
+      "Audiences: prospecting with no purchaser exclusion; 30-day frequency on existing customers far above about 10; catalog and retargeting ads holding a large share of spend.",
+      "Spend against return: segments, regions and placements with spend share well above revenue share and ROAS under break-even with enough purchases to trust (15+); and the reverse, underfunded segments returning well above break-even.",
+      "Junk clicks: placements where link clicks rarely turn into landing page views (in-stream video, Audience Network); high CTR there is accidental taps, not interest.",
+      "Funnel break: the biggest drop between landing page view, add to cart, checkout and purchase. A weak page or checkout is not fixed by ad changes.",
+      "Winners: paused ads that beat break-even with 15+ purchases; relaunching them (by post ID) is usually the cheapest gain in the account.",
+      "Fatigue: past winners whose last-90-day ROAS fell well below lifetime while frequency climbed; cold ad-level frequency above about 2 is a warning.",
+      "Creative depth: distinct concepts live, not files; a few ads holding most of the spend is normal until they tire, then the account has nothing behind them.",
+      "Kill rule check: ads and ad sets that spent 3x target cost per purchase with 0 to 1 purchases and still run; judge at ad set level, since ad-level credit is noisy.",
+      "Money leaks: spend on products out of stock or nearly so, and bid caps or ROAS goals so tight the campaign barely spends.",
+      "Scaling read: the cost of the last extra customers when spend rose, not the average; for cash on delivery, delivered orders, not placed ones.",
+      "Not spending: account disabled, payment failed, spending limit, rejected ads, empty product set. Check these before any budget idea."
+    ],
+    "hypothesis_patterns": [
+      {
+        "pattern": "Tracking is doubling or losing purchases",
+        "evidence": "Meta 7-day click purchases differ from store orders by more than about 20% over 14 days; no shared event ID; low Purchase match quality",
+        "bet": "Fix tracking first and re-read every other finding on store numbers"
+      },
+      {
+        "pattern": "The account is too fragmented to learn",
+        "evidence": "most ad sets under 10 purchases a week; large share of spend learning limited; overlapping campaigns",
+        "bet": "Consolidate in stages into one prospecting campaign per business split plus a testing lane"
+      },
+      {
+        "pattern": "Money is buying clicks, not buyers",
+        "evidence": "clicks or traffic objective on a sales goal; placements with link clicks far above landing page views and few purchases",
+        "bet": "Move that spend to Sales optimised for Purchase; exclude the junk placements in manual campaigns"
+      },
+      {
+        "pattern": "Existing customers take the budget and the credit",
+        "evidence": "no purchaser exclusion, high frequency on buyers, ROAS on new customers far below overall",
+        "bet": "Exclude buyers from prospecting and cap their spend in money; expect reported ROAS to drop and store new-customer orders to rise"
+      },
+      {
+        "pattern": "A segment loses money while another is underfunded",
+        "evidence": "spend share far above revenue share under break-even, 15+ purchases; another segment the reverse",
+        "bet": "Shift through creative made for the strong segment and exclusions, not narrow targeting"
+      },
+      {
+        "pattern": "Proven winners are off or tiring",
+        "evidence": "paused ads above break-even with 15+ purchases; last-90-day ROAS well below lifetime at rising frequency",
+        "bet": "Relaunch by post ID with a fresh hook and first frame, and add new formats behind them"
+      }
+    ]
+  },
+  "choose": {
+    "decisions": [
+      {
+        "id": "structure_fix",
+        "ask": "How do we act on the structure findings?",
+        "options": [
+          {
+            "label": "Consolidate in stages, side by side (my usual pick)",
+            "pro": "results stay steady; old winners pause last with a rollback rule",
+            "con": "2 to 3 weeks of mixed numbers",
+            "when": "some ad sets are at target and tracking passes"
+          },
+          {
+            "label": "Consolidate in one go",
+            "pro": "fastest clean structure",
+            "con": "everything restarts learning at once",
+            "when": "nothing holds target, or tracking was broken so past learning is worthless"
+          },
+          {
+            "label": "Leave the structure, cut only the waste",
+            "pro": "least risk and effort",
+            "con": "fragmentation keeps costing",
+            "when": "core ad sets already get about 50 purchases a week at target"
+          }
+        ],
+        "recommend": "Staged unless no ad set held target for 7 days. Never within 21 days of a sale or launch. If tracking fails, the first move is the tracking fix and the structure change waits for two clean weeks."
+      },
+      {
+        "id": "freed_money_use",
+        "ask": "Where does the money from the cuts go?",
+        "options": [
+          {
+            "label": "Into proven winners and underfunded segments (my usual pick)",
+            "pro": "same spend, more profit",
+            "con": "needs stock, cash and a scale check",
+            "when": "tracking passes and winners have stock for twice their current daily sales"
+          },
+          {
+            "label": "Save it",
+            "pro": "cash back now; no new risk",
+            "con": "growth stays flat",
+            "when": "cash is tight, stock is thin, or tracking is unverified"
+          },
+          {
+            "label": "Into the testing lane",
+            "pro": "builds the next winners",
+            "con": "slower payback",
+            "when": "the account has few proven concepts and fatigue is the main risk"
+          }
+        ],
+        "recommend": "From the diagnosis: move it to winners only where scale-readiness-check passes; to the testing lane when creative depth is the bottleneck; save it when tracking or cash fails."
+      }
+    ]
+  },
+  "make": {
+    "pieces": [
+      {
+        "piece": "Money lines: gross profit per purchase, break-even ROAS and cost per purchase",
+        "skill": "store-meta-math",
+        "when": "first, unless given"
+      },
+      {
+        "piece": "Tracking truth: pixel and Conversions API, deduplication, value and currency, daily store-vs-Meta table",
+        "skill": "store-meta-capi",
+        "when": "always first of the checks"
+      },
+      {
+        "piece": "Match quality fixes event by event",
+        "skill": "meta-event-match-quality-fixes",
+        "when": "Purchase match quality is low or customer data is missing on server events"
+      },
+      {
+        "piece": "How much of Meta's credit to believe: store-truth factor and reporting basis",
+        "skill": "store-meta-attribution",
+        "when": "always"
+      },
+      {
+        "piece": "The full audit: five checks, findings with money at stake, three buckets, week list",
+        "skill": "store-meta-audit",
+        "when": "always; the lead piece"
+      },
+      {
+        "piece": "Merge plan and switch calendar",
+        "skill": "consolidate-fragmented-meta-account",
+        "when": "structure findings show fragmentation or overlap"
+      },
+      {
+        "piece": "Exclusions and existing-customer cap",
+        "skill": "build-meta-retargeting-and-exclusions",
+        "when": "buyers reach prospecting or retargeting looks too good"
+      },
+      {
+        "piece": "Creative verdicts, fatigue and concept gaps",
+        "skill": "store-meta-creative-review",
+        "when": "always"
+      },
+      {
+        "piece": "Scale, Hold, Trim or Cut per ad set, winners to relaunch, one rule each",
+        "skill": "store-meta-budget",
+        "when": "always, after tracking"
+      },
+      {
+        "piece": "Delivered-order view for cash on delivery",
+        "skill": "meta-ads-for-cod-stores",
+        "when": "most orders are cash on delivery"
+      },
+      {
+        "piece": "Meta and Google on one store basis",
+        "skill": "blended-channel-profit-view",
+        "when": "the store also runs Google and the platforms claim the same orders"
+      },
+      {
+        "piece": "One cause for a drop",
+        "skill": "store-meta-deep-dive",
+        "when": "the ask is 'why did it drop', not a full audit"
+      },
+      {
+        "piece": "Can freed money be moved into winners",
+        "skill": "scale-readiness-check",
+        "when": "the owner wants the money reinvested"
+      },
+      {
+        "piece": "Ranked plan by gross profit for the effort, as a short deck if a partner must approve",
+        "skill": "audit-to-action-deck",
+        "when": "owner or partner needs to fund the fixes"
+      },
+      {
+        "piece": "Change proposals the owner approves one by one",
+        "skill": "ad-change-approval-gate",
+        "when": "always"
+      }
+    ],
+    "rules": [
+      "Read only: never pause, edit, create, publish or send test events in the account. Proposals only.",
+      "Tracking first: if the store-vs-Meta check fails, it is finding 1 and every money figure is re-read on store orders or marked provisional.",
+      "Every finding has evidence (export row, date range or screenshot), money at stake per month with its method, the fix, the effort and whether it can be undone.",
+      "Money at stake is gross profit, never revenue: spend below break-even is spend minus purchases x gross profit per purchase. For measurement findings write 'decisions on this much spend a month', never an invented loss.",
+      "No verdict on fewer than 15 purchases or less than 3x target cost per purchase spent; mark it 'not enough data'.",
+      "Read on 7-day windows; daily swings at low spend are normal.",
+      "Rank by monthly gross profit gained divided by effort, inside three buckets: losing money now, blocking measurement, costing growth. Hygiene items that move no money go to an appendix.",
+      "The week list has at most five changes, each a yes or no, with its risk (for example 'restarts learning on two ad sets') and a review date.",
+      "No 0 to 100 score: a weighted score lets a broken purchase event hide behind good creative.",
+      "Say what the data cannot tell, for example true incrementality without a lift test."
+    ]
+  },
+  "check": {
+    "preflight": [
+      "node tools/preflight-meta.mjs context/current-structure.json (findings source: each FAIL is listed)",
+      "node tools/preflight-meta.mjs context/proposed-plan.json (any proposed new structure must PASS with zero FAIL)"
+    ],
+    "checks": [
+      "node tools/quality/consistency-check.mjs context/hypotheses.json AUDIT.md",
+      "No finding contradicts the tracking verdict; numbers are the same everywhere they appear.",
+      "Not-spending causes were checked before any budget recommendation.",
+      "Every change is written as a proposal; nothing is described as done."
+    ],
+    "senior_review": [
+      "Did I reconcile Meta purchases with store orders before trusting any ROAS in this audit?",
+      "Is every 'waste' figure gross profit lost, with its method, and not revenue or a benchmark?",
+      "Which campaigns optimise for something other than Purchase, and did I put their spend in the waste bucket or justify it?",
+      "Which ad sets can never leave learning at their budget, and does the fix reduce the ad set count?",
+      "Did I check how much of the best-looking ROAS is existing customers and view-through?",
+      "Are the top three fixes the biggest gross profit for the effort, or just the easiest to spot?",
+      "Can each fix be undone, and does it restart learning? Is that written next to it?",
+      "What does the owner need to approve this week, in five items or fewer?"
+    ]
+  },
+  "knowledge": {
+    "diagnose": {
+      "modules": [
+        "ADC",
+        "MEA",
+        "MCR"
+      ],
+      "ask": [
+        "How to reconcile Meta purchases with store orders and spot doubled or lost events",
+        "Learning phase volume and the signs of a fragmented account",
+        "How much existing-customer frequency is too much",
+        "Fatigue and kill-rule thresholds for a store this size"
+      ]
+    },
+    "make": {
+      "modules": [
+        "ADC",
+        "MEA",
+        "FIN"
+      ],
+      "ask": [
+        "How to put money at stake on each audit finding from the store's own gross profit",
+        "Order of fixes: data, structure, creative"
+      ]
+    },
+    "check": {
+      "modules": [
+        "ADC",
+        "MEA",
+        "GAD"
+      ],
+      "ask": [
+        "Conversions API deduplication, event match quality and test event codes",
+        "Attribution setting and reporting basis for a store"
+      ]
+    },
+    "never": [
+      "The owner's margins, spend and results come from their data, never the library; library thresholds are labelled as rules of thumb."
+    ]
+  },
+  "handover": {
+    "files": [
+      "AUDIT.md: one screen first: losing money now (top three, gross profit per month each), blocking measurement, this week (five items at most), and can it take more spend: yes, after fixes, or not yet.",
+      "Findings table (CSV): rank, bucket, check, finding, evidence, gross profit at stake per month with method, fix, effort, can it be undone, access needed, review date.",
+      "Reconciliation table: week, Meta 7-day click purchases, Meta default purchases, store paid orders, new-customer orders, ad spend, new-customer revenue per ad spend.",
+      "Ranked action plan by gross profit gained for the effort, with winners to relaunch and kill rules per ad set.",
+      "Change list for approval, with the line: I have not changed anything in your account; each change waits for your yes.",
+      "Not checked: each missing input and what it would change."
+    ],
+    "next_moves": [
+      "Build the fixed structure as a plan that passes preflight (meta-account-structure journey)",
+      "Relaunch the paused winners with fresh hooks (creatives journey)",
+      "A daily watch that flags fatigue and tracking drift early (ad-early-warning-watch)",
+      "The landing page or checkout fix if the funnel break is on the site (cro-audit journey)"
+    ]
+  }
+}

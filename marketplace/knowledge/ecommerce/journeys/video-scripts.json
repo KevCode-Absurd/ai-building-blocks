@@ -1,0 +1,645 @@
+{
+  "schema": "ai-blocks-journey/1",
+  "id": "video-scripts",
+  "name": "Video and UGC ad scripts (hooks, first 3 seconds, shoot plans)",
+  "vertical": "ecommerce",
+  "asked_as": [
+    "write me UGC scripts",
+    "a script for our creator",
+    "a Reels ad for our new product",
+    "new hooks for our video ads",
+    "a founder video ad",
+    "TikTok ad scripts",
+    "our video ads lose people in the first few seconds"
+  ],
+  "lead_agents": [
+    "devon-video-ugc",
+    "kofi-ad-copy",
+    "pilar-creators"
+  ],
+  "outcome": "Scripts the owner, a customer or a creator can film on a phone without a call: each with at least three openers to test, timed beats with the exact spoken lines and on-screen text, a shot list that fits who and what is really available, the one claim it rests on with its proof, and the number that will say it worked.",
+  "first_principles": [
+    "The first 3 seconds are the ad: most viewers leave during the hook. Write the opener as three levers (what is seen, what is said, the words on screen) and test 3 to 5 openers on one body before writing new bodies.",
+    "A hook must filter, not just stop. Delivery learns from who keeps watching, so a broad curiosity or meme hook trains the ad toward people who never buy. Name the buyer, their moment or their problem in the first line.",
+    "Many people watch with the sound off. The words on screen must make the point on their own; the spoken line and the on-screen line say the same thing in different words.",
+    "Who can be on camera picks the format, not the other way round: a founder with a true story, real customers with consent, a creator who has used the product for weeks, or hands and product only. Never an AI-made person presented as a customer.",
+    "Show, don't claim. The body shows the product doing its job (the texture, the fit, the size in hand, the box as it arrives) and holds one claim with its proof; feature lists lose the second half. In problem-led ads the product comes in late; in demos it is there from the first frame.",
+    "Read by the second: hook rate (3-second views over impressions) judges the opener, hold rate judges the body, store-side cost per purchase judges the ad. Fix the part that leaks and keep what holds."
+  ],
+  "goal": {
+    "questions": [
+      {
+        "id": "presenter",
+        "ask": "Who can be on camera?",
+        "why": "It decides the format, the lines and the rights paperwork.",
+        "options": [
+          {
+            "label": "The founder",
+            "pro": "trust, a true story, no fee",
+            "con": "needs a real story and some comfort on camera"
+          },
+          {
+            "label": "Real customers",
+            "pro": "the most believable",
+            "con": "needs written consent and time to collect"
+          },
+          {
+            "label": "A paid creator",
+            "pro": "skill and speed; can run through their handle as partnership ads",
+            "con": "a fee, usage terms in writing, and they must have used the product for weeks"
+          },
+          {
+            "label": "No one: hands and product only",
+            "pro": "fastest, no rights to agree",
+            "con": "less human trust; works best when the product shows its result"
+          }
+        ],
+        "default": "Hands and product only, plus a founder version when the brand brain holds a true founder story",
+        "skip_if": [
+          "the brief names the presenter"
+        ],
+        "settle_with_data": "Read the brand brain and past ads: which presenter type has the best store-side cost per purchase, whether the founder already appears, and whether customer videos with consent exist."
+      },
+      {
+        "id": "shoot",
+        "ask": "What can you shoot with?",
+        "why": "A script that needs shots nobody can get is useless; the run sheet must fit the place, the kit and the time.",
+        "options": [
+          {
+            "label": "A phone at home",
+            "pro": "native look, cheap, quick",
+            "con": "limits on light, sound and settings"
+          },
+          {
+            "label": "Existing footage only",
+            "pro": "no shoot, no cost",
+            "con": "limited to what was filmed; I write recuts"
+          },
+          {
+            "label": "A planned shoot day",
+            "pro": "many openers and bodies from one session",
+            "con": "cost and planning"
+          },
+          {
+            "label": "Motion clips made from product photos",
+            "pro": "no shoot at all",
+            "con": "short clips only; labelled as AI; the product must stay exact"
+          }
+        ],
+        "default": "A phone at home, with a two-hour run sheet",
+        "skip_if": [
+          "the brief says what footage or shoot is available"
+        ],
+        "settle_with_data": "Look in the ad dump and Drive for raw footage, past creator files and unused takes; if a long-running video's raw files exist, recuts come first."
+      },
+      {
+        "id": "platform",
+        "ask": "Where will it run?",
+        "why": "Length, pace, native style and safe zones differ between Reels, TikTok and YouTube.",
+        "options": [
+          {
+            "label": "Meta Reels and Stories",
+            "pro": "where most store video spend goes",
+            "con": "safe zones cover the bottom third"
+          },
+          {
+            "label": "TikTok",
+            "pro": "native creator style rewards lo-fi",
+            "con": "polished ads read as ads and get skipped"
+          },
+          {
+            "label": "YouTube",
+            "pro": "longer explanations hold",
+            "con": "skippable after 5 seconds; the opener must earn the rest"
+          },
+          {
+            "label": "All of them",
+            "pro": "one shoot, many placements",
+            "con": "needs a cut per platform, not one export"
+          }
+        ],
+        "default": "Meta Reels and Stories at 9:16, a 15-second and a 30-second cut",
+        "skip_if": [
+          "the brief names the platform"
+        ],
+        "settle_with_data": "Read spend and store-side cost per purchase by platform and placement; write for the one with the most spend and add cuts for the next."
+      },
+      {
+        "id": "job",
+        "ask": "Is this to win new buyers, or to convert people who already know you?",
+        "why": "Cold buyers need the problem or the want first and the product later; warm buyers need proof, the objection answered and the offer.",
+        "options": [
+          {
+            "label": "New buyers (cold)",
+            "pro": "grows the customer base",
+            "con": "harder; needs a strong filter hook"
+          },
+          {
+            "label": "People who know you (warm)",
+            "pro": "converts faster",
+            "con": "a small pool that tires quickly"
+          },
+          {
+            "label": "Both",
+            "pro": "covers the full path",
+            "con": "two scripts, not one that tries to do both"
+          }
+        ],
+        "default": "New buyers, since most store spend goes to prospecting",
+        "skip_if": [
+          "the brief says who the video is for"
+        ],
+        "settle_with_data": "Split spend between prospecting and retargeting, and tag live videos by awareness stage; write for the stage with the biggest gap."
+      }
+    ]
+  },
+  "gather": {
+    "brand_brain": "required",
+    "sources": [
+      {
+        "what": "Past video ads with retention",
+        "why": "shows which openers hold and where bodies lose people",
+        "where": "Meta connector or an ad-level export with 3-second views, ThruPlays, 25/50/75/95% views, average watch time, purchases and cost per purchase, plus the video files",
+        "ask_if_missing": "Can I read your Meta ad account, or can you export your video ads with their view metrics and share the files?",
+        "fallback": "no read; the first batch tests openers on one body to create the read"
+      },
+      {
+        "what": "Raw footage and past creator videos",
+        "why": "a recut or new openers on old footage is the cheapest new video",
+        "where": "Drive or the editor's project folder",
+        "ask_if_missing": "Do you have raw footage or the original files of past videos? A Drive link is fine.",
+        "fallback": "write for a fresh phone shoot"
+      },
+      {
+        "what": "Customer words",
+        "why": "spoken lines must sound like a buyer, and the best lines are already in reviews and comments",
+        "where": "reviews export, ad and post comments, support tickets and chats",
+        "fallback": "public reviews on the site and marketplaces"
+      },
+      {
+        "what": "The founder's true story",
+        "why": "founder ads stand only on facts that can be proven",
+        "where": "brand brain, about page, a short founder interview",
+        "ask_if_missing": "Can the founder answer five questions on why they started this and what they got wrong first?",
+        "fallback": "no founder ad; use a founder quote card instead"
+      },
+      {
+        "what": "Product facts and the claims sheet",
+        "why": "every spoken claim must be one the store can prove",
+        "where": "product page, claims sheet, spec sheet",
+        "fallback": "only what the product page already states"
+      },
+      {
+        "what": "Customer videos and consent",
+        "why": "real customers are the most believable presenters, but only with written consent for paid use",
+        "where": "tagged posts, review videos, the inbox",
+        "fallback": "collect them first with a testimonial ask"
+      },
+      {
+        "what": "Rivals' long-running videos",
+        "why": "shows which video structures the category rewards",
+        "where": "Meta Ad Library; TikTok's public ad library",
+        "fallback": "skip; use the store's own winners and reviews"
+      }
+    ],
+    "setup": [
+      {
+        "need": "Presenter and rights",
+        "why": "paid use of a person's face needs written terms before filming",
+        "check": "Is there a signed creator or customer agreement covering paid ads, the period and edits?",
+        "options": [
+          {
+            "label": "Rights agreed before filming",
+            "pro": "the video can run as an ad and as a partnership ad",
+            "con": "a step before the shoot"
+          },
+          {
+            "label": "Organic use only",
+            "pro": "no paperwork",
+            "con": "cannot run as a paid ad"
+          }
+        ],
+        "default": "Rights agreed in writing before filming"
+      },
+      {
+        "need": "Making the video",
+        "why": "decides whether I write a shoot plan, a recut plan or a clip plan",
+        "check": "Who will film or edit, with what phone or editor, and is a video-model key set in their own environment (never asked for in chat)?",
+        "options": [
+          {
+            "label": "Phone shoot from my run sheet",
+            "pro": "real, native, cheap",
+            "con": "someone needs two hours"
+          },
+          {
+            "label": "Recut existing footage",
+            "pro": "fast and free",
+            "con": "only what was filmed"
+          },
+          {
+            "label": "Motion clips from real product photos",
+            "pro": "no shoot",
+            "con": "3 to 6 second clips; labelled as AI; product checked frame by frame"
+          }
+        ],
+        "default": "Phone shoot from my run sheet"
+      },
+      {
+        "need": "Music and sound",
+        "why": "a track without a paid-ads licence gets the ad muted or rejected",
+        "check": "Do they use the platform's commercial library or hold a paid licence?",
+        "options": [
+          {
+            "label": "The platform's commercial library",
+            "pro": "free and cleared for ads",
+            "con": "the tracks everyone uses"
+          },
+          {
+            "label": "A paid music library",
+            "pro": "distinct sound",
+            "con": "a subscription"
+          }
+        ],
+        "default": "The platform's commercial library"
+      }
+    ],
+    "data_map": [
+      {
+        "question": "Which openers hold?",
+        "data": "Hook rate (3-second views over impressions) per ad, grouped by opener",
+        "where": "Meta export with video metrics",
+        "tool": "node tools/brand-brain.mjs creatives <ad_results.csv> --copy <scripts.csv>",
+        "if_missing": "the first batch tests 3 to 5 openers on one body to create the read"
+      },
+      {
+        "question": "Where do viewers leave?",
+        "data": "25, 50, 75 and 95% view rates and average watch time per video",
+        "where": "Meta export",
+        "if_missing": "write the first half to hold: benefit first, product late, no feature list"
+      },
+      {
+        "question": "Which presenter and format sold?",
+        "data": "Videos tagged by presenter type and format, with store-side cost per purchase",
+        "where": "the joined ad table",
+        "if_missing": "start with the format that fits the main gap"
+      },
+      {
+        "question": "What do buyers say, in their words?",
+        "data": "Review, comment and ticket themes with exact quotes",
+        "where": "review app, comments, inbox",
+        "tool": "node tools/brand-brain.mjs reviews <reviews.csv>",
+        "if_missing": "public reviews"
+      },
+      {
+        "question": "Which buyer does the data underfund?",
+        "data": "Spend and revenue by age x gender, region and placement",
+        "where": "Meta breakdown export",
+        "tool": "node tools/brand-brain.mjs segments <breakdown.csv>",
+        "if_missing": "personas from reviews; labelled a guess to test"
+      },
+      {
+        "question": "What does the category reward on video?",
+        "data": "Rivals' video ads with how long each has run",
+        "where": "Meta Ad Library",
+        "if_missing": "skip"
+      }
+    ]
+  },
+  "diagnose": {
+    "tools": [
+      "node tools/find-insights.mjs <export-folder> --margin <gross margin>",
+      "node tools/brand-brain.mjs creatives <ad_results.csv> --copy <scripts.csv>",
+      "node tools/brand-brain.mjs segments <breakdown.csv>",
+      "node tools/prepare-job.mjs context/brief.md"
+    ],
+    "look_for": [
+      "Opener or body: a high hook rate with a steep drop before the product means the body loses them (often the jump from hook to pitch); a low hook rate on a body that holds the people who stay means the body deserves new openers, not a rewrite.",
+      "A hook that stops but does not filter: hook rate well above the account's, purchases well below. The opener needs the buyer, their moment or their problem named.",
+      "The product too early or too late: on a cold problem-led ad the product in second 1 reads as an ad and people swipe; in a demo, a product that appears at second 15 loses everyone who wanted to see it work.",
+      "Lines nobody would say: brochure copy read to camera. Spoken lines come from reviews and comments, in the buyer's own words, under about 12 words each.",
+      "A failed sound-off test: muted, the first 3 seconds do not say who it is for or what it does.",
+      "One face, one room: every video uses the same person in the same setting. A new presenter or place on a proven script can revive spend; recut footage of the same person often cannot.",
+      "A long-running winner whose openers were never tested: 3 to 5 new openers on its body is the cheapest win in the account.",
+      "Hidden words: captions, price or product under the platform's buttons and caption area (the bottom third and the right edge).",
+      "Claims said aloud that the page or proof cannot back: results in a set time, 'clinically', 'best', 'safe for everyone'.",
+      "Formats never tried: founder to camera, a customer review, day in the life, unboxing, a 15-second demo, a reply to a comment. Rivals running one of these for months is a strong hint."
+    ],
+    "hypothesis_patterns": [
+      {
+        "pattern": "The opener leaks",
+        "evidence": "hook rate below the account's median on a body whose hold is at or above median",
+        "bet": "3 to 5 new openers on the same body, each a different tactic (call-out, problem, result first, surprise, reply to a comment)"
+      },
+      {
+        "pattern": "The body leaks",
+        "evidence": "good hook rate, then most viewers gone before the product or the proof",
+        "bet": "recut the first half: the benefit earlier, the product later, features cut, one proof shown"
+      },
+      {
+        "pattern": "An untested presenter or setting",
+        "evidence": "one face and one room across all videos, or a winner fading on rising frequency",
+        "bet": "the proven script with a new person or place"
+      },
+      {
+        "pattern": "A visible result never filmed",
+        "evidence": "buyers name something you can see (the texture, the fit, the size in hand, the finish) and no video shows it",
+        "bet": "a 15-second demo that shows it with the sound off"
+      },
+      {
+        "pattern": "An objection no video answers",
+        "evidence": "a review, return or chat theme above about 10%",
+        "bet": "a customer or creator review that answers it in their own words"
+      },
+      {
+        "pattern": "No video history",
+        "evidence": "rival videos running for months, review themes",
+        "bet": "3 bodies on the category's proven formats, 3 openers each"
+      }
+    ]
+  },
+  "choose": {
+    "decisions": [
+      {
+        "id": "format",
+        "ask": "Which format should lead?",
+        "options": [
+          {
+            "label": "Founder to camera",
+            "pro": "trust and a reason to believe; cheap to shoot",
+            "con": "needs a true story; one face can tire",
+            "when": "a trust gap, a new brand, or a product with a real origin story"
+          },
+          {
+            "label": "Customer or creator review (UGC)",
+            "pro": "believable proof in buyer words",
+            "con": "consent or a fee; the person must have used it for weeks",
+            "when": "a proof gap or one big objection"
+          },
+          {
+            "label": "Demo in 15 seconds",
+            "pro": "shows it works, even muted",
+            "con": "only works when the result is visible",
+            "when": "'does it really work' is the doubt"
+          },
+          {
+            "label": "Day in the life",
+            "pro": "shows how it fits a routine and who it is for",
+            "con": "slower to reach the product",
+            "when": "a use moment or daily habit sells it"
+          },
+          {
+            "label": "Unboxing",
+            "pro": "shows exactly what arrives; strong for gifts",
+            "con": "weak if the packaging is plain",
+            "when": "'what will I get' or 'is it a good gift' is the doubt"
+          }
+        ],
+        "recommend": "Pick from the diagnosis: trust gap, founder or review; 'does it work', demo; 'what will arrive' or gifting, unboxing; 'will it fit my life', day in the life. If one format has clearly won in data/creatives.md, lead with it and add one new format as the test."
+      },
+      {
+        "id": "depth",
+        "ask": "New openers on a body that works, or new bodies?",
+        "options": [
+          {
+            "label": "New openers on a body that works (my usual pick when one exists)",
+            "pro": "cheapest and fastest to read; keeps what sells",
+            "con": "cannot fix a weak body",
+            "when": "any video holds viewers at or above the account's median"
+          },
+          {
+            "label": "New bodies, 3 openers each",
+            "pro": "new ideas and new buyers",
+            "con": "more shoot time and more budget to read",
+            "when": "no body holds, or a new buyer or format is the bet"
+          },
+          {
+            "label": "Recut existing footage",
+            "pro": "no shoot",
+            "con": "limited by what was filmed",
+            "when": "good raw footage exists and the leak is in the edit"
+          }
+        ],
+        "recommend": "If any video holds viewers well, new openers on it first; if the leak is in the edit and raw files exist, recut; otherwise one new body per hypothesis, each with 3 openers."
+      }
+    ]
+  },
+  "make": {
+    "pieces": [
+      {
+        "piece": "A creator or customer script with shot list and brief",
+        "skill": "creator-video-script",
+        "when": "a person films one concept",
+        "variety": "one buyer in one moment per script"
+      },
+      {
+        "piece": "Platform-native scripts in five formats",
+        "skill": "write-tiktok-ad-scripts",
+        "when": "a batch for one product",
+        "variety": "talking-head story, demo, reply to a comment, list, reaction or day in the life"
+      },
+      {
+        "piece": "Openers on a body that works",
+        "skill": "ad-opener-writer",
+        "when": "a body holds and needs openers",
+        "variety": "each opener a different tactic on all three levers"
+      },
+      {
+        "piece": "The first frame",
+        "skill": "first-frame-design",
+        "when": "every video; it doubles as the cover"
+      },
+      {
+        "piece": "Openers with no presenter and no voice",
+        "skill": "wordless-video-openers",
+        "when": "no one can be on camera, or as extra openers to test"
+      },
+      {
+        "piece": "Founder ads",
+        "skill": "founder-story-ads",
+        "when": "a true founder story; the founder need not be on camera"
+      },
+      {
+        "piece": "A 15-second demo",
+        "skill": "product-demo-in-15-seconds",
+        "when": "the result is visible"
+      },
+      {
+        "piece": "An unboxing ad",
+        "skill": "unboxing-video-ad",
+        "when": "packaging or gifting is the point"
+      },
+      {
+        "piece": "An animated mechanism explainer",
+        "skill": "mechanism-explainer-video-ad",
+        "when": "buyers do not understand why it works"
+      },
+      {
+        "piece": "Collecting real customer videos",
+        "skill": "customer-testimonial-videos",
+        "when": "customers will film, with consent"
+      },
+      {
+        "piece": "A home shoot run sheet",
+        "skill": "plan-ugc-shoot-at-home",
+        "when": "a phone shoot by the owner or a creator"
+      },
+      {
+        "piece": "Recuts from one shoot",
+        "skill": "cut-raw-footage-into-ad-variants",
+        "when": "raw footage exists",
+        "variety": "three openers on one body, a short and a long cut"
+      },
+      {
+        "piece": "Motion clips from product photos",
+        "skill": "photos-to-motion-clips",
+        "when": "no shoot is possible; b-roll and openers"
+      },
+      {
+        "piece": "Captions and on-screen text",
+        "skill": "captions-and-text-for-sound-off",
+        "when": "every video"
+      },
+      {
+        "piece": "Voiceover",
+        "skill": "voiceover-script-and-voice-pick",
+        "when": "the video is voiced rather than spoken to camera"
+      },
+      {
+        "piece": "Music and sound",
+        "skill": "music-and-sound-for-ads",
+        "when": "every video"
+      },
+      {
+        "piece": "Creator terms and usage rights",
+        "skill": "influencer-contract-and-usage-rights",
+        "when": "a paid creator or a customer's video runs as an ad"
+      },
+      {
+        "piece": "Partnership ads through the creator's handle",
+        "skill": "run-creator-partnership-ads",
+        "when": "the creator agrees to it"
+      },
+      {
+        "piece": "Fixing where live videos lose people",
+        "skill": "video-ad-retention-fix",
+        "when": "live videos have enough spend to read"
+      },
+      {
+        "piece": "Indian-language versions",
+        "skill": "write-ad-copy-in-indian-languages",
+        "when": "the buyers speak Hinglish or a regional language"
+      }
+    ],
+    "formats": [
+      "unboxing",
+      "ugc-testimonial",
+      "street-interview",
+      "creator-talking-head",
+      "founder-to-camera",
+      "day-in-the-life",
+      "reply-to-comment",
+      "green-screen-reaction",
+      "three-reasons",
+      "demo-15s",
+      "split-screen",
+      "asmr-closeup",
+      "mechanism-explainer",
+      "podcast-clip",
+      "stylised-animation",
+      "photo-motion"
+    ],
+    "rules": [
+      "Each script names its hypothesis at the top: one buyer in one moment, one want, one claim with its proof.",
+      "Pick the format from formats.json by insight_fit and by who can really be on camera; high-effort formats only when the people, footage or budget exist.",
+      "The first 3 seconds are written on all three levers (the visual, the spoken line, the on-screen text), with at least 3 openers per body, each a different tactic.",
+      "Spoken lines are read aloud before hand-over: about 2.5 words a second, each line under about 12 words, in buyer words from reviews and comments.",
+      "On-screen text makes the point with the sound off and sits inside the safe zone (keep about 14% of the top, 35% of the bottom and 6% of each side clear on 9:16).",
+      "Every shot is one the presenter can get in the stated place, with the stated kit, in the stated time; the product is shown exactly as it ships.",
+      "A creator says only what they experienced: experience lines are prompts to answer in their own words, and they have used the product long enough to say them.",
+      "Paid use is agreed in writing before filming; a paid creator's ad says so on screen and aloud, early in the video (ASCI in India, FTC in the US).",
+      "Never an AI-made person presented as a customer, reviewer or founder; AI-made clips carry the platform's AI label.",
+      "Two cuts per body (about 15 and 30 seconds); length comes from the body, never from padding.",
+      "The call to action is spoken and on screen, and matches the first screen of the page it points to.",
+      "When the owner gives no count, 5 or 6 scripts across at least 3 formats, each with 3 openers and two cuts; every chosen hypothesis gets at least two formats.",
+      "Every script ships with its post copy: primary text with the hook in the first 125 characters, a headline under 40 characters and the call to action, in the brand's words, checked with copy-check.",
+      "Every script has a 9:16 cut for Reels and Stories and a 4:5 cut for feed, with the safe zones and where the product sits in each.",
+      "Personas are named only with the one line that says who they are and the number behind them."
+    ]
+  },
+  "check": {
+    "preflight": [
+      "node tools/brand-brain.mjs gate --for ad_creative"
+    ],
+    "checks": [
+      "node tools/brand-brain.mjs voice-check scripts.md --ads",
+      "node tools/quality/copy-check.cjs scripts.md",
+      "node tools/quality/consistency-check.mjs context/hypotheses.json scripts.md",
+      "Every spoken and on-screen line through check-ad-copy-for-policy-and-claims.",
+      "Each finished cut through prelaunch-ad-check: the muted first seconds, the claims and the call to action.",
+      "Every AI-made clip through keep-product-accurate-in-ai-media.",
+      "Time each script read aloud against its length; cut lines until it fits."
+    ],
+    "senior_review": [
+      "Muted, do the first 3 seconds tell the right buyer this is for them?",
+      "Could this presenter film it this week, in their space, with what they have?",
+      "Is there one claim, and is it shown rather than said?",
+      "Would a real customer say these lines out loud?",
+      "Are the openers truly different tactics, or one line reworded three times?",
+      "Is it clear which number judges the opener, which the body, and when to read them?"
+    ]
+  },
+  "knowledge": {
+    "diagnose": {
+      "modules": [
+        "MCR",
+        "ADC"
+      ],
+      "ask": [
+        "How do I read hook rate and hold rate to tell an opener problem from a body problem?",
+        "How many openers per body can the budget read before ads stall in learning?"
+      ]
+    },
+    "make": {
+      "modules": [
+        "MCR",
+        "AVT"
+      ],
+      "ask": [
+        "How to run a founder ad without the founder on camera",
+        "Script structure for a problem-led cold video: when to reveal the product",
+        "How to batch openers and bodies from one short shoot"
+      ]
+    },
+    "check": {
+      "modules": [
+        "MCR"
+      ],
+      "ask": [
+        "Disclosure rules for paid creator videos in India and the US",
+        "Safe zones for 9:16 Reels, Stories and TikTok",
+        "When Meta and YouTube require an AI label"
+      ]
+    },
+    "never": [
+      "Spoken lines, brand voice, product facts and the founder's story come from the brand brain and the store, never from the library.",
+      "Card ids stay in the trace, never in a script or brief."
+    ]
+  },
+  "handover": {
+    "files": [
+      "scripts.html: one branded page in the brand's fonts and colours, one card per script with the hypothesis, the format, the openers, the timed table and a real product photo or first-frame mock, so the owner can read it on a phone and send it to whoever films",
+      "Post copy per script (primary text, headline, call to action) as a CSV ready for the upload sheet",
+      "scripts.md: per script, a table of time, beat, exact spoken line, on-screen text and shot, with 3 or more openers and the claim it rests on",
+      "A shot list and run sheet for the shoot, timed",
+      "A creator brief ready to send once approved, with the usage terms checklist",
+      "Caption files (.srt) or on-screen text per cut",
+      "One line per script on the number that judges it and when to read it"
+    ],
+    "next_moves": [
+      "Three more openers on whichever body holds best after the first week",
+      "Statics built from the same concepts (creatives journey)",
+      "The landing page these videos should point to (product-pages journey)",
+      "A retention read on the live cuts after the first week of spend"
+    ]
+  }
+}

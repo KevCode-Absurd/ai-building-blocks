@@ -5,9 +5,13 @@
 //   two-query: the first request sentence and the first data signal, the typical agent in round 2;
 //   prepare:   the prepare step (query plan, fact filters, rerank, diversity).
 // Reports must-recall at 10 and 15, any-useful precision, wrong cards surfaced, digest words and time.
+// --split also reports the tuning half (odd-numbered briefs) and the held-out half (even-numbered) on their own.
+// The vertical's owner-words layer (knowledge/<vertical>/synonyms.json) is used when present; --no-synonyms turns it
+// off. --stage=diagnose|make|check runs prepare at that stage; --hypotheses adds each brief's golden "signals" as the
+// agent's own hypotheses (what an agent passes after reading the data), a separate mode, never the headline number.
 //
-//   node scripts/eval-prepare.mjs [--vertical=ecommerce] [--k=15] [--json] [--brief <file>]
-import { readFileSync } from "node:fs";
+//   node scripts/eval-prepare.mjs [--vertical=ecommerce] [--k=15] [--json] [--split] [--no-synonyms] [--stage=make] [--hypotheses] [--brief <file>]
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { loadVertical } from "./eval-vertical.mjs";
@@ -29,11 +33,15 @@ export function packCards(id) {
 
 const cards = packCards(vertical);
 export { cards };
-const prep = new JobPrep(cards);
+const synFile = path.join(ROOT, "knowledge", vertical, "synonyms.json");
+const synonyms = !process.argv.includes("--no-synonyms") && existsSync(synFile) ? JSON.parse(readFileSync(synFile, "utf8")) : null;
+const stage = arg("stage", undefined);
+const prep = new JobPrep(cards, { synonyms });
+const prepOpts = b => ({ k: K, ...(stage ? { stage } : {}), ...(process.argv.includes("--hypotheses") && b.signals ? { hypotheses: b.signals } : {}) });
 const bi = process.argv.indexOf("--brief");
 if (bi > 0) {
   const t = Date.now();
-  const p = prep.prepare(readFileSync(process.argv[bi + 1], "utf8"), { k: K });
+  const p = prep.prepare(readFileSync(process.argv[bi + 1], "utf8"), prepOpts({}));
   console.log(preparedMarkdown(p));
   console.error(`${cards.length} cards, ${Date.now() - t} ms`);
   process.exit(0);
@@ -41,9 +49,9 @@ if (bi > 0) {
 const golden = JSON.parse(readFileSync(path.join(ROOT, "test", "fixtures", `${vertical}-jobs-golden.json`), "utf8"));
 const known = new Set(cards.map(c => c.id));
 const ways = {
-  "one-query": b => oneQuery(b),
-  "two-query": b => twoQuery(b),
-  prepare: b => prep.prepare(b, { k: K }).picks.map(p => p.card.id),
+  "one-query": b => oneQuery(b.brief),
+  "two-query": b => twoQuery(b.brief),
+  prepare: b => prep.prepare(b.brief, prepOpts(b)).picks.map(p => p.card.id),
 };
 // The plain baselines run the same index without the plan, filters, rerank or diversity.
 function oneQuery(b) { return rawAsk([b.replace(/\s+/g, " ").slice(0, 2000)]); }
@@ -59,12 +67,12 @@ for (const b of golden.briefs) {
   const row = { id: b.id, module: b.module, must: must.length };
   for (const [name, fn] of Object.entries(ways)) {
     const t = Date.now();
-    const got = fn(b.brief);
+    const got = fn(b);
     const ms = Date.now() - t;
     const at = n => must.length ? must.filter(id => got.slice(0, n).includes(id)).length / must.length : 0;
     row[name] = { r10: at(10), r15: at(15), useful: got.length ? got.filter(id => good.has(id)).length / got.length : 0, wrong: got.filter(id => wrong.has(id)).length, ms };
   }
-  row.words = preparedMarkdown(prep.prepare(b.brief, { k: K })).split(/\s+/).length;
+  row.words = preparedMarkdown(prep.prepare(b.brief, prepOpts(b))).split(/\s+/).length;
   rows.push(row);
 }
 const avg = (name, f) => (rows.reduce((s, r) => s + r[name][f], 0) / rows.length);
@@ -78,7 +86,7 @@ if (process.argv.includes("--split")) {
 }
 if (process.argv.includes("--json")) console.log(JSON.stringify({ summary, rows }, null, 2));
 else {
-  console.log(`${vertical}: ${cards.length} public cards, ${rows.length} briefs, k=${K}`);
+  console.log(`${vertical}: ${cards.length} public cards, ${rows.length} briefs, k=${K}${synonyms ? ", synonyms on" : ""}${stage ? `, stage ${stage}` : ""}${process.argv.includes("--hypotheses") ? ", golden signals as hypotheses" : ""}`);
   for (const [n, s] of Object.entries(summary)) if (typeof s === "object") console.log(`  ${n.padEnd(10)} must@10 ${s.r10}  must@15 ${s.r15}  useful ${s.useful}  wrong ${s.wrong}  ${s.ms} ms`);
   console.log(`  digest words ${summary.digestWords}`);
   for (const r of rows) console.log(`  ${r.id} ${r.module.padEnd(4)} must ${r.must}  one ${r["one-query"].r15.toFixed(2)}  two ${r["two-query"].r15.toFixed(2)}  prep ${r.prepare.r15.toFixed(2)}  wrong ${r.prepare.wrong}`);

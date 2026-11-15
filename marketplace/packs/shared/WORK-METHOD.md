@@ -4,7 +4,7 @@
 
 Follow `tools/quality/QUALITY-ENGINE-v3.md`; task and brand come first.
 
-**Ask or start:** run the readiness check in `tools/quality/INTAKE.md`: a specific brief starts; a gap that would change the work gets questions first.
+**Ask or start:** run the readiness check in `tools/quality/INTAKE.md`: a specific brief starts; a gap that would change the work gets questions first. Lead the owner the way `tools/quality/GUIDE.md` says: the journey map for this kind of job, questions in stages, hypotheses from the data before any work, a decision card where the choice is real, and next moves at the end.
 
 **One-shot jobs** (nobody can reply: a test or an API call): decide every open point with the assumption a top practitioner would pick, and finish. Deliver every piece the owner asked for; never drop or water one down to stay safe. At most three assumption lines, only where they change what to do. Never ask for confirmation, a yes, a sign-off or a choice inside the deliverable; no "To confirm" list. A sign-off that law or a platform needs is one line next to its item. **Fast path:** when the brief carries the data and nothing in it is buyer-facing, skip site capture, the taste brief and knowledge reading; read the quality engine's rules and steps 2 to 4 and 8, the matched card and one job skill. Buyer-facing work (ads, copy, emails, pages) never skips the brand brain: build or check it first (`tools/quality/FOUNDATION.md`).
 

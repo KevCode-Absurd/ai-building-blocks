@@ -276,7 +276,8 @@ export function pickLead(input={},context={}) {
  const pickedRoles=array((pickedRow?.team??pickedRow?.facets??pickedRow)?.roles);
  if(pickedRow)lead=makers.find(role=>pickedRoles.includes(role.id))??lead;
  const persona=pickedRow??selectPersona(rows,lead,'maker',array(lead.lenses)[0],new Set());
- return {role_id:lead.id,name:lead.name??lead.id,...(text(lead.summary)?{does:text(lead.summary)}:{}),persona_id:persona?.id??null,owns:'The deliverable, from first draft to hand-over.',alternatives:makers.filter(role=>role!==lead).slice(0,2).map(role=>role.id)};
+ // An e-commerce lead also names the journey map it follows with the owner (lead-agents.json `store`).
+ return {role_id:lead.id,name:lead.name??lead.id,...(text(lead.summary)?{does:text(lead.summary)}:{}),persona_id:persona?.id??null,owns:'The deliverable, from first draft to hand-over.',alternatives:makers.filter(role=>role!==lead).slice(0,2).map(role=>role.id),...(pickedRow&&picked.journey?{journey:picked.journey}:{})};
 }
 
 export function buildOrgChart({roles=[],personas=[]}={}) {

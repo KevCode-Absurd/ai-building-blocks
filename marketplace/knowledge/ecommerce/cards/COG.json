@@ -39,7 +39,12 @@
       "quote": "99 out of a 100 founders"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "COG-0002",
@@ -117,7 +122,12 @@
       "quote": "you want to keep them on their toes as much as possible"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "COG-0004",
@@ -192,7 +202,15 @@
       "quote": "don't let them make any decisions for you"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "COG-0006",
@@ -505,7 +523,12 @@
       "where": "Discussion of the EPG supplier acquisition (about 05:22 to 13:28) and RXBAR date-supplier crisis"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "COG-6260",
@@ -807,6 +830,52 @@
       "where": "Inventory reports article"
     },
     "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "COG-7000",
+    "modules": [
+      "COG",
+      "OPS",
+      "FIN"
+    ],
+    "topics": [
+      "india",
+      "jewellery",
+      "hallmarking",
+      "compliance"
+    ],
+    "claim": "Any Indian business selling hallmarked gold must register with BIS (free, online, valid for life); hallmarking falls on the first sale, pieces under 2 grams are exempt, and charges are itemised on invoices.",
+    "body": "The Bureau of Indian Standards' page for jewellers says every manufacturer, wholesaler, distributor or retailer selling hallmarked gold or silver must register with BIS, which is done online through the NSWS portal, granted at once, free and valid for life. Mandatory hallmarking of gold jewellery and artefacts applies in the districts listed in the Mandatory Hallmarking Order as amended, and the duty sits with whoever makes the first point of sale, so an item is hallmarked once in the chain. The exemption list includes articles under 2 grams, kundan, polki and jadau jewellery, gold thread, gold watches and fountain pens, articles for export to a buyer's specification, items not yet complete, bullion forms, and jewellers with annual turnover up to Rs 40 lakh, who may register voluntarily. Hallmarking charges must be shown separately on the sales invoice; printing the HUID on invoices is voluntary. Under the BIS Act 2016 a breach can bring imprisonment and fines of at least Rs 1 lakh, rising to five times the value of the goods, and buyers of under-purity items are owed twice the shortfall plus testing charges. How to apply: register before launch, buy only HUID-marked stock from suppliers, and add a hallmarking line to invoices.",
+    "conditions": "Jewellery brands, including online-only sellers, selling gold or silver articles in India.",
+    "fails_when": "Districts outside the order's list; exempt categories; silver hallmarking rules differ from gold.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "registration free and valid for life",
+      "pieces under 2 grams exempt",
+      "turnover up to Rs 40 lakh exempt",
+      "fine at least Rs 1 lakh up to five times the goods' value",
+      "compensation twice the purity shortfall plus testing charges"
+    ],
+    "asks": [
+      "Do I need BIS registration to sell gold jewellery online?",
+      "Is hallmarking mandatory for small jewellery pieces?",
+      "Do I have to show hallmarking charges on my invoice?",
+      "What's the penalty for selling unhallmarked gold in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7003",
+    "evidence": {
+      "where": "Registration, exemptions (a) to (m), penalties"
+    },
+    "strength": "regulator_rule",
     "public": true
   }
 ]

@@ -3,6 +3,7 @@
 // are ever published; licensed and study-only material stays in the repo. Pure: no file access.
 import { cardMarkdown, moduleMarkdown, type Card, type Source, type Vertical } from "./cards.ts";
 import type { Persona } from "../../core/types.ts";
+import { journeyIndexMarkdown, journeyMarkdown, type Journey } from "./journeys.ts";
 
 /**
  * One toolbox entry for a module (knowledge/<vertical>/toolbox.json): a library item (library:<slug>) or a vendored
@@ -30,6 +31,31 @@ export interface VerticalBundle {
   /** Served once each at /packs/knowledge/<vertical>/<name>, and carried by the vertical's agents at the same path. */
   files: Record<string, { content: string; purpose: string }>;
   index: { schema: "ai-blocks-vertical-index/1"; vertical: Vertical; counts: Record<string, number>; sources: Source[]; cards: Card[] };
+  /** The guide's journey maps (knowledge/<vertical>/journeys/*.json), one per job family. */
+  journeys?: Journey[];
+}
+
+interface FormatEntry { id: string; name: string; medium: string; what: string; works_when?: string; needs?: string; insight_fit?: string[]; risk?: string; skill?: string; effort?: string }
+interface MomentEntry { id: string; name: string; market: string; regions?: string[]; when?: string; lead_time_days?: number; buyers?: string; angle?: string; watch_out?: string }
+type FormatsData = { how_to_pick?: string[]; formats?: FormatEntry[] };
+type MomentsData = { moments?: MomentEntry[] } | MomentEntry[];
+const cell = (v: unknown) => String(v ?? "").replace(/\|/g, "/").replace(/\s+/g, " ").trim();
+
+/** formats.md: the creative format library the guide offers at the choose stage. */
+export function formatsMarkdown(data: FormatsData): string {
+  const fs = data.formats ?? [];
+  return ["# Creative format library", "", `${fs.length} ad formats. Offer formats that fit the hypothesis, not variety for its own sake; open the skill named to make one.`, "",
+    ...(data.how_to_pick?.length ? ["## How to pick", "", ...data.how_to_pick.map(r => `- ${r}`), ""] : []),
+    "| Id | Format | Medium | Works when | Needs | Fits insight | Risk | Skill | Effort |", "|---|---|---|---|---|---|---|---|---|",
+    ...fs.map(f => `| ${cell(f.id)} | ${cell(f.name)}: ${cell(f.what)} | ${cell(f.medium)} | ${cell(f.works_when)} | ${cell(f.needs)} | ${cell((f.insight_fit ?? []).join(", "))} | ${cell(f.risk)} | ${f.skill ? "`" + f.skill + "`" : ""} | ${cell(f.effort)} |`), ""].join("\n");
+}
+
+/** moments.md: buying moments by market and region, with lead times. */
+export function momentsMarkdown(data: MomentsData): string {
+  const ms = Array.isArray(data) ? data : data.moments ?? [];
+  return ["# Buying moments", "", "Match a moment to the regions and segments in the store's data, and start ads by the lead time. Lunar dates move every year: check the year's calendar.", "",
+    "| Moment | Market | Regions | When | Lead (days) | Who buys | Angle | Watch out |", "|---|---|---|---|---|---|---|---|",
+    ...ms.map(m => `| ${cell(m.name)} | ${cell(m.market)} | ${cell((m.regions ?? []).join(", "))} | ${cell(m.when)} | ${cell(m.lead_time_days)} | ${cell(m.buyers)} | ${cell(m.angle)} | ${cell(m.watch_out)} |`), ""].join("\n");
 }
 
 const USE_LABEL: Record<string, string> = { brief: "brief", explore: "explore", build: "build", check: "check", think: "think" };
@@ -64,7 +90,7 @@ export function moduleToolboxMarkdown(vertical: Vertical, code: string, items: V
   ].join("\n");
 }
 
-export function verticalBundle(vertical: Vertical, allCards: Card[], allSources: Source[], extra: { toolbox?: VerticalToolbox | null; vendor?: Record<string, string>; names?: ToolNames } = {}): VerticalBundle {
+export function verticalBundle(vertical: Vertical, allCards: Card[], allSources: Source[], extra: { toolbox?: VerticalToolbox | null; vendor?: Record<string, string>; names?: ToolNames; journeys?: Journey[]; formats?: FormatsData | null; moments?: MomentsData | null; synonyms?: unknown } = {}): VerticalBundle {
   const sources = allSources.filter(s => s.public);
   const open = new Set(sources.map(s => s.id));
   const cards = allCards.filter(c => c.public && open.has(c.source)).sort((a, b) => a.id < b.id ? -1 : 1);
@@ -108,7 +134,17 @@ export function verticalBundle(vertical: Vertical, allCards: Card[], allSources:
   }
   const vendor = extra.vendor ?? {};
   for (const [p, text] of Object.entries(vendor)) files[p] = { content: text, purpose: p.includes("/vendor/") ? (p.endsWith("LICENSE.md") ? "Licence and source of the open-source skills beside it." : `Open-source skill file (${p.split("/").slice(3).join("/")}), carried as written.`) : `${vertical.name} skill: ${(/^description:\s*"?(.+?)"?\s*$/m.exec(text)?.[1] ?? p.split("/")[3]).slice(0, 160)}` };
-  return { vertical, cards, sources, toolbox, vendor, files, index: { schema: "ai-blocks-vertical-index/1", vertical, counts, sources, cards } };
+  // The guide's data: journey maps, the format library and buying moments, served once each and carried by the vertical's agents.
+  const journeys = extra.journeys ?? [];
+  if (journeys.length) {
+    files[`${dir}/journeys/README.md`] = { purpose: `Which journey map to open for which ${vertical.name.toLowerCase()} request.`, content: journeyIndexMarkdown(journeys) };
+    for (const j of journeys) files[`${dir}/journeys/${j.id}.md`] = { purpose: `Journey map: ${j.name}. Stages, questions, data, hypotheses, choices, skills and checks for this kind of job.`, content: journeyMarkdown(j) };
+  }
+  if (extra.formats?.formats?.length) files[`${dir}/formats.md`] = { purpose: `The creative format library: ${extra.formats.formats.length} ad formats, when each works and the skill that makes it.`, content: formatsMarkdown(extra.formats) };
+  const moments = extra.moments ? (Array.isArray(extra.moments) ? extra.moments : extra.moments.moments ?? []) : [];
+  if (extra.synonyms) files[`${dir}/synonyms.json`] = { content: JSON.stringify(extra.synonyms, null, 2) + "\n", purpose: "Owner words to expert terms, used by ask-knowledge and prepare-job." };
+  if (moments.length) files[`${dir}/moments.md`] = { purpose: `${moments.length} buying moments by market and region, with lead times.`, content: momentsMarkdown(moments) };
+  return { vertical, cards, sources, toolbox, vendor, files, journeys, index: { schema: "ai-blocks-vertical-index/1", vertical, counts, sources, cards } };
 }
 
 /** Marks a module file an agent carries to search, not to read whole (oneFileText names it by address). */
@@ -164,6 +200,18 @@ export function personaVerticalFiles(persona: Persona, bundle: VerticalBundle | 
     out.push({ path: p, shared: true, ...bundle.files[p] });
   }
   if (bundle.files[`${dir}/sources.md`]) out.push({ path: `${dir}/sources.md`, shared: true, ...bundle.files[`${dir}/sources.md`] });
+  // The guide: every agent of the vertical carries every journey map, the format library and the moments, plus the skills
+  // its own journeys name (a lead over all modules carries every journey's skills), so a map never points at a missing skill.
+  for (const p of Object.keys(bundle.files).filter(p => p.startsWith(`${dir}/journeys/`) || p === `${dir}/formats.md` || p === `${dir}/moments.md` || p === `${dir}/synonyms.json`).sort())
+    out.push({ path: p, shared: true, ...bundle.files[p] });
+  const allModules = (persona.modules?.length ?? 0) >= bundle.vertical.modules.length - 1;
+  for (const j of bundle.journeys ?? []) {
+    if (!allModules && !(j.lead_agents ?? []).includes(persona.id)) continue;
+    for (const x of j.make?.pieces ?? []) {
+      const p = x.skill ? `${dir}/skills/${x.skill}/SKILL.md` : "";
+      if (p && bundle.files[p] && !out.some(o => o.path === p)) out.push({ path: p, shared: true, ...bundle.files[p] });
+    }
+  }
   return out;
 }
 
@@ -195,7 +243,7 @@ export function toolkitMarkdown(persona: Persona, bundle: VerticalBundle, kit: {
     // "Use it when ..." reads only when the text names a situation; otherwise it is shown as it is.
     const use = /^(when|whenever|before|after|if|once|for|while)\b/i.test(when) ? `Use it ${when.charAt(0).toLowerCase()}${when.slice(1)}.` : `${when}.`;
     const outcome = i.outcome?.trim().replace(/^[a-z]/, c => c.toUpperCase());
-    return `- **${titleOf(i)}**.${outcome ? ` You get: ${outcome}${/[.!?]$/.test(outcome) ? "" : "."}` : ""}${outcome && outcome.startsWith(when) ? "" : ` ${use}`} File: \`${fileOf(i)}\``;
+    return `- **${titleOf(i)}**${/[.!?]$/.test(titleOf(i)) ? "" : "."}${outcome ? ` You get: ${outcome}${/[.!?]$/.test(outcome) ? "" : "."}` : ""}${outcome && outcome.startsWith(when) ? "" : ` ${use}`} File: \`${fileOf(i)}\``;
   };
   const known = new Set(KIT_GROUPS.map(([u]) => u));
   const sections: [string, typeof kit][] = [...KIT_GROUPS.map(([u, label]) => [label, kit.filter(k => k.item.use === u)] as [string, typeof kit]), ["Other", kit.filter(k => !known.has(k.item.use))]];

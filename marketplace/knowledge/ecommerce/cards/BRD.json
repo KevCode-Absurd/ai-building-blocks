@@ -33,7 +33,12 @@
       "quote": "find that intersection of altruism and narcissism"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "BRD-0002",
@@ -343,7 +348,13 @@
       "where": "Chapter 7, Positioning of a follower, sections 'The high-price creneau' and 'The low-price creneau'"
     },
     "strength": "stated_by_practitioner",
-    "public": false
+    "public": false,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "BRD-0010",
@@ -455,7 +466,12 @@
       "where": "Chapter 9, The power of the name, sections 'How to choose a name' and 'When to use a coined name'"
     },
     "strength": "stated_by_practitioner",
-    "public": false
+    "public": false,
+    "situations": {
+      "stage": [
+        "early"
+      ]
+    }
   },
   {
     "id": "BRD-0013",
@@ -567,7 +583,16 @@
       "quote": "same liquid, sales were three times"
     },
     "strength": "stated_by_practitioner",
-    "public": false
+    "public": false,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "BRD-0016",
@@ -687,7 +712,13 @@
       "quote": "quantity leads to quality"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "prelaunch",
+        "early"
+      ]
+    }
   },
   {
     "id": "BRD-0019",
@@ -763,7 +794,12 @@
       "quote": "We have never seen that as evidence in the marketplace."
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "early"
+      ]
+    }
   },
   {
     "id": "BRD-0021",

@@ -127,7 +127,13 @@
       "quote": "even though it's a complete bait and switch"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "MCR-0004",
@@ -161,7 +167,13 @@
       "where": "'Why now' and technology adoption curve section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "MCR-0005",
@@ -238,7 +250,12 @@
       "where": "Dynamic script structure section, MCP pull of founder ads"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MCR-0007",
@@ -320,7 +337,12 @@
       "where": "Warning section on VSLs and founder ads"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MCR-0009",
@@ -399,7 +421,12 @@
       "where": "Ad teardown of the premium toothbrush founder ad; natural deodorant ad critique"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "MCR-0011",
@@ -437,7 +464,12 @@
       "where": "Ad breakdowns at the end: skincare oil founder ad and supplement drink ad library"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "MCR-0012",
@@ -591,7 +623,12 @@
       "where": "First ad (nootropic, knife hook) and second ad (protein shaker) critiques"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MCR-0016",
@@ -661,7 +698,13 @@
       "where": "Fourth ad critique (creatine gummies), positioning section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "MCR-0018",
@@ -982,7 +1025,12 @@
       "where": "Section on how many static ads to test, churn and revenue-per-ad forecasting"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "MCR-0026",
@@ -1021,7 +1069,13 @@
       "where": "Purpose of a hook section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "MCR-0027",
@@ -1098,7 +1152,13 @@
       "where": "Three elements of a hook; jerky and electrolyte rewrites"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "MCR-0029",
@@ -1139,7 +1199,13 @@
       "where": "Creative testing walkthrough, 13-ad test in a $30/day account"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "MCR-0030",
@@ -1179,7 +1245,12 @@
       "quote": "all you need is curiosity in some ads"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MCR-0031",
@@ -1262,7 +1333,15 @@
       "where": "seven-part framework section and 'common mistakes' at the end"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "MCR-0033",
@@ -1305,7 +1384,13 @@
       "where": "opening account walkthrough and 'who should be doing VSLs'"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "MCR-0034",
@@ -1424,7 +1509,13 @@
       "where": "Old 2026 strategy vs new 2027 strategy; creative lifetime section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "MCR-0037",
@@ -1467,7 +1558,13 @@
       "where": "Step one, the 33% rule; step two, ad-level funnel structure; pillar speeds"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "MCR-0038",
@@ -1549,7 +1646,12 @@
       "where": "Creative budget section and closing spend-band summary"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MCR-0040",
@@ -1673,7 +1775,12 @@
       "where": "Creative production section, three content types"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "MCR-0043",
@@ -1712,7 +1819,12 @@
       "where": "Bottom of funnel section; Joel Lee and HexClad examples"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "MCR-0044",
@@ -1792,7 +1904,12 @@
       "where": "Reaction style video segment"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "MCR-0046",
@@ -1835,7 +1952,12 @@
       "quote": "view volume doesn't always equate to sales volume"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "MCR-0047",
@@ -2110,7 +2232,12 @@
       "where": "Chapter 2, Principle #13: Message Sideness"
     },
     "strength": "research",
-    "public": false
+    "public": false,
+    "situations": {
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "MCR-0055",
@@ -2232,7 +2359,12 @@
       "where": "volume and structure section and post-Andromeda explanation at the end"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "MCR-0058",
@@ -2273,7 +2405,19 @@
       "quote": "concept diversification is changing the angle, offer, or persona"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "traffic": [
+        "low",
+        "medium"
+      ],
+      "size": [
+        "large"
+      ]
+    }
   },
   {
     "id": "MCR-0059",
@@ -2314,7 +2458,16 @@
       "quote": "$1,000 of ad spend per new ad"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "MCR-0060",
@@ -2476,7 +2629,12 @@
       "quote": "roughly the copy is going to be about 80%"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MCR-0064",
@@ -2520,7 +2678,12 @@
       "where": "Acquisition model and pricing and offer sections"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "MCR-0065",
@@ -2604,7 +2767,12 @@
       "quote": "One named mechanism beats five adjectives."
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "MCR-0067",
@@ -2644,7 +2812,12 @@
       "where": "Acquisition model and brand and distribution sections"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "MCR-0068",
@@ -2770,7 +2943,12 @@
       "quote": "realistic working ceiling of a winner is 12K a day or 10K a day"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "MCR-0071",
@@ -2814,7 +2992,19 @@
       "quote": "we literally launch hundreds of ads a week"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ],
+      "spend": [
+        "large"
+      ]
+    }
   },
   {
     "id": "MCR-0072",
@@ -2858,7 +3048,16 @@
       "where": "Inflection point section and advanced TikTok Shop tip"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "MCR-0073",
@@ -3027,7 +3226,13 @@
       "quote": "The opener is the whole thing."
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "MCR-0077",
@@ -3110,7 +3315,12 @@
       "where": "Section on the entity ID trap; GEM and Andromeda update timeline"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "MCR-0079",
@@ -3151,7 +3361,13 @@
       "where": "Section on creative diversity and Andromeda: net-new concepts versus variations"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "MCR-0080",
@@ -3192,7 +3408,13 @@
       "where": "Product-market fit and angle testing section"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "MCR-0081",
@@ -3234,7 +3456,15 @@
       "where": "[00:00:00-00:04:13] marketing mix and creative volume"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "size": [
+        "small"
+      ]
+    }
   },
   {
     "id": "MCR-0082",
@@ -3277,7 +3507,16 @@
       "quote": "25% of this spend needs to be going towards production"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "MCR-6020",
@@ -3929,6 +4168,51 @@
     "evidence": {
       "where": "Commentary on Rule 4(15)",
       "quote": "a yearly self-audit confirming that its platform is free of such patterns"
+    },
+    "strength": "regulator_rule",
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
+  },
+  {
+    "id": "MCR-7004",
+    "modules": [
+      "MCR",
+      "LPG"
+    ],
+    "topics": [
+      "india",
+      "advertising law",
+      "disclaimers"
+    ],
+    "claim": "Indian ad disclaimers must not contradict or correct the main claim, must be in the claim's language and font, visible on one normal reading, and keep pace with any voice-over.",
+    "body": "Clause 11 of the CCPA's Guidelines for Prevention of Misleading Advertisements and Endorsements, 2022 says a disclaimer may explain or qualify a claim but must not contradict the main claim or message, change the ordinary meaning of the words, hide material information or correct a claim that would otherwise mislead. It must be in the same language as the claim and the same font, placed prominently (ideally on the same panel for packaging), clearly visible to a normally-sighted person reading it once from a reasonable distance at a reasonable speed, and, where there is a voice-over, in sync with it at the same speed. Clause 12 adds that guarantees must state a fixed period, and research cited in an ad needs its source and date. How to apply: if a claim only works with an asterisk ('huge savings*', 'visible results fast*'), rewrite the headline so it is true without the asterisk; set disclaimers in the same typeface as the headline at a readable size and hold them on screen long enough to read.",
+    "conditions": "Print, packaging, video and digital ads seen in India.",
+    "fails_when": "Category rules (finance, health, food) may require specific disclaimer text; ASCI's code adds its own disclaimer guidance.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "guidelines dated 9 June 2022"
+    ],
+    "asks": [
+      "Can I fix a claim with 'T&C apply' in India?",
+      "How big does my ad disclaimer need to be in India?",
+      "Can my disclaimer be in English if my ad is in Hindi?",
+      "Do I need a time limit on my guarantee claim?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7006",
+    "evidence": {
+      "where": "Clauses 11 and 12"
     },
     "strength": "regulator_rule",
     "public": true

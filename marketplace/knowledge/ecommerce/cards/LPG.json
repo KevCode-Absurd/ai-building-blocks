@@ -35,7 +35,12 @@
       "quote": "you could have multiple steps and multiple unlocks"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low"
+      ]
+    }
   },
   {
     "id": "LPG-0002",
@@ -159,7 +164,12 @@
       "where": "opening section: why advertorials beat product pages; awareness levels"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "LPG-0005",
@@ -234,7 +244,23 @@
       "where": "Trick 6, the paradox of choice, Wildman Drinking bundle example"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ],
+      "traffic": [
+        "medium",
+        "high"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "LPG-0007",
@@ -273,7 +299,13 @@
       "where": "Trick 6, reducing items on the page, Sumach audit"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0008",
@@ -312,7 +344,13 @@
       "where": "Trick 7, strategic bundling, Wildman Drinking A/B test on savings display"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0009",
@@ -351,7 +389,13 @@
       "where": "Trick 5, smart pop-up timing"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0010",
@@ -540,7 +584,12 @@
       "where": "Step on conversion events and contact forms, near the end of the video"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "LPG-0015",
@@ -745,7 +794,12 @@
       "quote": "around every three to four questions or five questions"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "LPG-0020",
@@ -782,7 +836,15 @@
       "where": "Trick on reducing options in the bundle selector"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "LPG-0021",
@@ -818,7 +880,13 @@
       "where": "Strategic bundling and price anchoring section, Wildman Drinking A/B test"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0022",
@@ -857,7 +925,12 @@
       "where": "Trick on pop-up timing"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "LPG-0023",
@@ -895,7 +968,13 @@
       "where": "Section on the most important trust markers, first item: founder video"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0024",
@@ -976,7 +1055,13 @@
       "where": "sections 1 to 10 of the teardown"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0026",
@@ -1167,7 +1252,13 @@
       "where": "First mistake: building advertorials before knowing the winning messaging"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "LPG-0031",
@@ -1207,7 +1298,13 @@
       "where": "Examples section, face-yoga and hair-loss quiz walkthroughs"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0032",
@@ -1243,7 +1340,13 @@
       "where": "Recommendations section, A/B testing the first three questions"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0033",
@@ -1318,7 +1421,15 @@
       "where": "E-commerce section, product page comparison to the Figma framework"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "LPG-0035",
@@ -1356,7 +1467,13 @@
       "quote": "we don't want people to do math"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "LPG-0036",
@@ -1394,7 +1511,12 @@
       "where": "Lead-gen weight loss retreat audit and hair loss redesign"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "LPG-0037",
@@ -1432,7 +1554,12 @@
       "quote": "what is hidden will not get seen"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0038",
@@ -1513,7 +1640,12 @@
       "where": "Step 1 simplify navigation and step 2 images and icons"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0040",
@@ -1558,7 +1690,16 @@
       "quote": "the view product rate is by far 90 to 95% of the times"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "LPG-0041",
@@ -1600,7 +1741,13 @@
       "quote": "about a 60% drop off after the hero section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0042",
@@ -1643,7 +1790,18 @@
       "quote": "what almost stopped you from buying"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "dtc"
+      ],
+      "traffic": [
+        "medium"
+      ]
+    }
   },
   {
     "id": "LPG-0043",
@@ -1685,7 +1843,13 @@
       "where": "Microsoft Clarity area map sections, homepage and product page"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0044",
@@ -1836,7 +2000,19 @@
       "where": "Feedback section on reading level, staccato AI copy and metaphor specificity"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "LPG-0048",
@@ -1949,7 +2125,12 @@
       "where": "section on framing by traffic source and awareness; pain point and wall-of-love sections"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "LPG-0051",
@@ -2035,7 +2216,12 @@
       "where": "High-level overview and section walkthrough of the Square Set advertorial"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "LPG-0053",
@@ -2111,7 +2297,13 @@
       "where": "Risk reversal, call to action and close sections"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "LPG-0055",
@@ -2190,7 +2382,13 @@
       "quote": "It should act as a micro commitment"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0057",
@@ -2307,7 +2505,13 @@
       "where": "Test number four, collection and label pricing"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "LPG-0060",
@@ -2422,7 +2626,12 @@
       "where": "Proof section, reviews and claim-matching proof"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "LPG-0063",
@@ -2460,7 +2669,15 @@
       "where": "Offer section on shipping; checkout section relaying Baymard abandonment reasons"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0064",
@@ -2499,7 +2716,12 @@
       "where": "Continuity section after the above-the-fold mockup; copywriting section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "LPG-0065",
@@ -2771,7 +2993,13 @@
       "where": "about 46:12-54:02 split-testing mistakes and product page breadcrumbs"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "LPG-0072",
@@ -2847,7 +3075,13 @@
       "where": "Sections on duties of sellers on marketplaces and of inventory e-commerce entities"
     },
     "strength": "regulator_rule",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "LPG-6604",
@@ -2888,6 +3122,185 @@
     "source": "S6601",
     "evidence": {
       "where": "Sections on Rule 4, amended Rules 6(5)(d) and 6(5)(j), marketplaces and Rule 7(1)(a)"
+    },
+    "strength": "regulator_rule",
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
+  },
+  {
+    "id": "LPG-7000",
+    "modules": [
+      "LPG",
+      "CXP"
+    ],
+    "topics": [
+      "india",
+      "advertising law",
+      "page disclosures",
+      "returns policy"
+    ],
+    "claim": "An Indian brand selling its own stock online must show, prominently, its return, refund, exchange, warranty, delivery and return-shipping cost terms, payment methods and fees, and a single all-in price with its breakup.",
+    "body": "The Consumer Protection (E-Commerce) Rules, 2020 call a business that owns its inventory and sells straight to consumers an inventory e-commerce entity, and expressly include single brand retailers, so a D2C brand's own website is covered. Rule 7(1) says it must display, clearly and prominently: accurate information on return, refund, exchange, warranty and guarantee, delivery and shipment, the cost of return shipping, modes of payment and the grievance mechanism; all notices required by other laws; the payment methods offered, their security, any fees, how to cancel regular payments, chargeback options and the payment provider's contact; and the total price as one figure with a breakup of every compulsory and voluntary charge, such as delivery, handling and tax. It must also give each complaint a ticket number the buyer can track. Rule 4(2) adds the entity's legal name, head office and branch addresses, website and customer care and grievance officer contacts. How to apply: put a short returns, delivery and payments summary on every product page and in the cart, link the full policies in the footer, and show the cart total with each charge listed before payment.",
+    "conditions": "Brands selling their own products to consumers in India through their own website or app.",
+    "fails_when": "Marketplace sellers give the same details to the marketplace to display (rule 6(5)); the 2026 amendment, in force 1 January 2027, adds further listing details.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "What do I legally need to show on my Indian online store?",
+      "Do I need a return policy on my Shopify store in India?",
+      "Do I have to show delivery charges before checkout in India?",
+      "What does the E-Commerce Rules say about D2C websites?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7000",
+    "evidence": {
+      "where": "Rules 3(1)(f), 4(2) and 7(1)"
+    },
+    "strength": "regulator_rule",
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
+  },
+  {
+    "id": "LPG-7001",
+    "modules": [
+      "LPG",
+      "EML",
+      "CRO"
+    ],
+    "topics": [
+      "india",
+      "dark patterns",
+      "pop-ups",
+      "email capture"
+    ],
+    "claim": "India's dark pattern guidelines make it unlawful to force a newsletter sign-up or app download to buy, nag without a 'No' option, hide or fade the decline button, or word opt-outs as 'Yes / Not now'.",
+    "body": "Four of the 13 patterns in Annexure 1 of the CCPA's 2023 guidelines sit in pop-ups and sign-up flows. Forced action: making a user subscribe to a newsletter, download an unrelated app, share contacts or social networks, or give unnecessary details such as Aadhaar or card numbers in order to buy or use what they came for. Nagging: repeated requests or interruptions the user has not specifically allowed, such as repeatedly asking to download the app, or asking to enable notifications or cookies with no option to say no. Interface interference: design that highlights one choice and hides another, such as a faint 'No' button, a tiny cancel symbol, or a top-right 'X' that opens an ad instead of closing the pop-up. Trick question: confusing wording that steers the user, such as an opt-out whose choices are 'Yes, I would like updates' and 'Not now' instead of yes or no. How to apply: let shoppers check out as guests, give every email or SMS pop-up a clear, equally visible 'No thanks' that closes it, show it once per session, and phrase consent as a plain yes or no.",
+    "conditions": "Websites and apps selling to buyers in India: pop-ups, sign-up gates, permission prompts and consent screens.",
+    "fails_when": "Details genuinely needed to deliver (address, phone for the courier) are not forced action; repeated prompts the user has agreed to are not nagging.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "13 specified dark patterns"
+    ],
+    "asks": [
+      "Can I make customers create an account to check out in India?",
+      "Is my email pop-up legal in India?",
+      "Can I keep asking visitors to download my app?",
+      "Is 'Not now' allowed instead of 'No' on my pop-up?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7001",
+    "evidence": {
+      "where": "Annexure 1, items 4, 6, 10 and 11"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "LPG-7002",
+    "modules": [
+      "LPG",
+      "SET",
+      "COG"
+    ],
+    "topics": [
+      "india",
+      "page disclosures",
+      "labelling",
+      "country of origin"
+    ],
+    "claim": "Indian packaged-goods rules require an online seller to show every mandatory label declaration on the product page except manufacture date, and from 1 July 2026 a country-of-origin filter for imports.",
+    "body": "Rule 6(10) of the Legal Metrology (Packaged Commodities) Rules, 2011, in force from 1 January 2018, says an e-commerce entity must display on its website or app the mandatory declarations in rule 6(1), except the month and year of manufacture or packing. Those declarations include the name and address of the manufacturer, packer or importer, the country of origin or manufacture for imports, the common or generic name, net quantity in a standard unit, the retail sale price as maximum retail price inclusive of all taxes, consumer care details, dimensions where relevant and the unit sale price. On a marketplace, the seller or manufacturer is responsible for the accuracy of what it supplies, while the platform keeps intermediary protection only if it does not edit that information. Rule 6(10-A), inserted in 2026 with effect from 1 July 2026, requires an e-commerce entity selling imported products to let buyers search and sort listings by country of origin. Online display does not remove the duty to print every declaration on the pack. How to apply: add a 'Product details' block to each product template with these fields, fed from the same data as the label.",
+    "conditions": "Pre-packaged goods sold online to consumers in India.",
+    "fails_when": "Food labels follow FSSAI rules for some fields and cosmetics the Drugs and Cosmetics Rules; packs of 10 g or 10 ml or less are generally exempt (rule 26); loose garments have their own list.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "rule 6(10) in force from 1 January 2018",
+      "rule 6(10-A) country-of-origin filter from 1 July 2026"
+    ],
+    "asks": [
+      "Do I need to show MRP on my Indian website?",
+      "What product details must I list online in India?",
+      "Do I have to show country of origin on my store?",
+      "Do I need a country-of-origin filter for imported products in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7002",
+    "evidence": {
+      "where": "Rule 6(1), 6(10) and 6(10-A) with footnotes 34 and 35"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "LPG-7003",
+    "modules": [
+      "LPG",
+      "BRD",
+      "COG"
+    ],
+    "topics": [
+      "india",
+      "jewellery",
+      "hallmarking",
+      "page disclosures"
+    ],
+    "claim": "Hallmarked gold in India carries three marks since 1 July 2021: the BIS logo, purity in carat and fineness, and a six-digit alphanumeric HUID buyers can check in the BIS Care app.",
+    "body": "The Bureau of Indian Standards' hallmarking FAQ says hallmarking is the official recording of precious metal content and covers gold and silver. Gold jewellery and artefacts are hallmarked in six grades under IS 1417:2016: 14K (585), 18K (750), 20K (833), 22K (916), 23K (958) and 24KS (995); silver has its own six grades under IS 2112:2014. Since 1 July 2021 a hallmark on gold has three parts: the BIS standard mark, the caratage and fineness, and a six-digit alphanumeric Hallmark Unique Identification (HUID) that is unique to each item and traceable. Buyers can verify any HUID through the 'Verify HUID' feature in the BIS Care app. Registered jewellers must show the BIS registration certificate and the caratage-to-fineness relationship and keep a magnifier of at least 10X so buyers can see the mark. How to apply: for an online jewellery store, state the caratage and fineness on every gold product page, show a close-up photo of the hallmark, tell buyers the HUID is on the piece and how to check it in BIS Care, and keep the HUID per item in your stock records so support can answer queries.",
+    "conditions": "Gold and silver jewellery and artefacts sold to consumers in India.",
+    "fails_when": "Exempt items such as pieces under 2 grams or kundan, polki and jadau work (see the BIS registration card); gold bullion and coins follow refinery rules.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "six gold grades: 14K (585), 18K (750), 20K (833), 22K (916), 23K (958), 24KS (995)",
+      "three marks since 1 July 2021",
+      "six-digit alphanumeric HUID",
+      "magnifier of at least 10X"
+    ],
+    "asks": [
+      "What does the hallmark on gold mean in India?",
+      "What is HUID on jewellery?",
+      "How can my customers check my gold is real?",
+      "What should my jewellery product page say about purity?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7004",
+    "evidence": {
+      "where": "Hallmarking FAQs: marks, grades and HUID"
     },
     "strength": "regulator_rule",
     "public": true

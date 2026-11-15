@@ -37,7 +37,13 @@
       "where": "Discounts chapter: amount off order, minimum purchase, combinations"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "SET-0002",
@@ -304,7 +310,18 @@
       "where": "Optimize the mobile checkout section"
     },
     "strength": "platform_rule",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ],
+      "traffic": [
+        "high"
+      ]
+    }
   },
   {
     "id": "SET-0009",
@@ -387,7 +404,12 @@
       "where": "Manual payment methods page: types, order status and marking orders as paid"
     },
     "strength": "platform_rule",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "cod"
+      ]
+    }
   },
   {
     "id": "SET-6187",

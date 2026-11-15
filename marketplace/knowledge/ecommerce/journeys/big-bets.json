@@ -1,0 +1,239 @@
+{
+  "schema": "ai-blocks-journey/1",
+  "id": "big-bets",
+  "name": "One big bet to double revenue (profit tree, candidate bets, a small test first)",
+  "vertical": "ecommerce",
+  "asked_as": [
+    "how do we double revenue",
+    "what's our one big bet this year",
+    "we've plateaued, what should we try",
+    "should we go on Amazon or into retail",
+    "give us bold growth ideas"
+  ],
+  "lead_agents": ["barnaby-wild-bets", "malcolm-ecommerce-growth", "radek-unit-economics", "hemant-store-finance"],
+  "outcome": "The owner sees their store's profit tree with real numbers and the one term that binds growth, 3 to 5 candidate bets each with its mechanism, evidence, cash, team, time to signal and a small first test, and one recommended bet with honest risks and a test plan they can start this month without breaking cash or the team.",
+  "first_principles": [
+    "Write the profit tree with the store's own numbers before any idea: revenue = sessions x conversion rate x order value, plus repeat orders from past buyers; profit = orders x (order value x gross margin - delivery, fees and returns - ad cost per order) - fixed costs. Doubling needs one term to roughly double or several to move together, and the arithmetic shows which is even possible.",
+    "The binding constraint is the term that stops growth when the others move. Most often it is first-order profit against the cost of a new customer: a store that loses money on each new buyer, with weak repeat, cannot buy its way to double. Next comes the rising cost of the last extra buyer as ad spend grows, then stock and cash.",
+    "Small optimisations stack but rarely double. A big bet changes where demand comes from (a marketplace, retail, a new country, creators), what the store sells (a product its buyers already ask for), how much each visit earns (price and offer architecture), or how often buyers return (a retention engine).",
+    "Start from what is already true: the segment, first product, channel or country that already over-performs on small volume. The best big bet is often a proven thing that has never been fed properly.",
+    "Cash and capacity are preconditions, not risks to footnote. Stock bets tie up cash months before sales; marketplaces and wholesale pay late; growth funded by stock and loans can run profit to zero. A bet with no named owner who has free hours is not a bet.",
+    "Test the riskiest assumption first, small and capped, with the pass and kill lines written before money moves. Size every bet as a range with its sum shown, and judge retention and order-value moves on 60 to 180-day cash, not the first month."
+  ],
+
+  "goal": {
+    "questions": [
+      {
+        "id": "horizon",
+        "ask": "By when do you want revenue doubled?",
+        "why": "It decides which bets qualify: a new market or product line needs 6 to 12 months to pay; an offer change shows in weeks.",
+        "options": [
+          {"label": "12 months", "pro": "room for one new engine plus fixes", "con": "the test must start this quarter"},
+          {"label": "24 months", "pro": "allows a slower, bigger build (retail, a new line)", "con": "less pressure to learn fast"},
+          {"label": "6 months", "pro": "focus", "con": "only bets on proven demand qualify"}
+        ],
+        "default": "12 months",
+        "skip_if": ["brief gives a date"]
+      },
+      {
+        "id": "cash",
+        "ask": "Can the business fund a few months of lower profit for the bet?",
+        "why": "It sets the cash cap on every candidate and rules out stock-heavy or slow-paying bets.",
+        "options": [
+          {"label": "No, stay cash-positive every month", "pro": "safe", "con": "rules out most stock and wholesale bets"},
+          {"label": "Yes, down to a cash floor I name", "pro": "opens new channels and lines", "con": "needs a weekly cash watch"},
+          {"label": "Yes, with outside money (loan, financing, investors)", "pro": "fastest", "con": "cost and repayment squeeze cash; only for a bet already proven small"}
+        ],
+        "default": "Stay above a cash floor the owner names; if none, the next stock payment plus one month of fixed costs",
+        "settle_with_data": "Build or read the 13-week cash forecast: the lowest-cash week with normal trading, the payout lags and the stock payments due. The room above the floor is the most any bet may put at risk."
+      },
+      {
+        "id": "owner",
+        "ask": "Who would run the bet day to day?",
+        "why": "A bet needs an owner with free hours; the founder's time is usually the scarcest input.",
+        "options": [
+          {"label": "The founder", "pro": "fast decisions", "con": "something else must stop"},
+          {"label": "Someone on the team", "pro": "founder stays free", "con": "their current work needs cover"},
+          {"label": "A hire, agency or partner", "pro": "new skills", "con": "cost and ramp-up before any signal"}
+        ],
+        "default": "The founder for the test, with agents doing the prep; a hire only after the test passes"
+      },
+      {
+        "id": "limits",
+        "ask": "Is anything off-limits?",
+        "why": "It removes whole classes of bets before we size them.",
+        "options": [
+          {"label": "Nothing, show me everything", "pro": "widest choice", "con": "some bets may clash with the brand"},
+          {"label": "No marketplaces or discount channels", "pro": "protects price and brand", "con": "drops a common fast route"},
+          {"label": "No new stock risk", "pro": "protects cash", "con": "drops new lines and wholesale"}
+        ],
+        "default": "Nothing off-limits, but the retail price is protected in every bet",
+        "skip_if": ["brief states limits"]
+      }
+    ]
+  },
+
+  "gather": {
+    "brand_brain": "helpful",
+    "sources": [
+      {"what": "Orders export, 12 to 24 months: order value, products, customer, discounts, refunds, ship-to country, channel", "why": "the profit tree, cohorts, order-value shape and country demand all come from it", "where": "Shopify admin export or connector", "ask_if_missing": "Please export all orders for the last 24 months (or as far back as you have) as CSV.", "fallback": "Shopify Analytics totals by month; cohort bets become hypotheses only"},
+      {"what": "Cost per product, delivery, fees, returns and failed COD deliveries", "why": "gross profit per order, the tree's real margin", "where": "SKU profit sheet, supplier invoices, 3PL and payment reports", "ask_if_missing": "What does each product cost you landed, and what do you pay per order for shipping and fees?", "fallback": "a margin band the owner confirms, labelled as assumed"},
+      {"what": "Ad spend and new customers by channel, by week", "why": "cost of a new customer now and how it rises with spend", "where": "ad platform exports, store first-order data, post-purchase survey", "fallback": "blended spend over first orders by month"},
+      {"what": "Sessions and conversion by device, source and landing page", "why": "the traffic and conversion terms of the tree", "where": "GA4 (purchase event only) or Shopify Analytics", "fallback": "Shopify sessions, noting they include bots"},
+      {"what": "Cash: bank balance, payout lags, stock on order, bills due", "why": "the cash floor every bet must respect", "where": "13-week cash forecast or the owner's numbers", "ask_if_missing": "What is in the bank today, and what big payments (stock, tax, loans) fall in the next 3 months?", "fallback": "no bet that needs stock or slow-paying channels"},
+      {"what": "Stock cover, supplier lead times and minimum orders", "why": "whether demand bets can be supplied", "where": "inventory report, supplier terms", "fallback": "ask the lead time and minimum order for the top 5 products"},
+      {"what": "What buyers ask for and say: reviews, tickets, chats, survey answers", "why": "evidence for a new product, market or creator bet", "where": "review app, helpdesk, post-purchase survey", "fallback": "public reviews of the store and rivals"},
+      {"what": "Inbound asks: wholesale enquiries, international orders, marketplace resellers, creator requests", "why": "demand already knocking", "where": "inbox, order data, marketplace search", "fallback": "a marketplace and search check for the brand and category"}
+    ],
+    "setup": [
+      {"need": "Order and cost data in one place", "why": "the profit tree cannot be built from platform dashboards", "check": "an orders CSV and a cost per product exist",
+       "options": [
+         {"label": "Store connector", "pro": "complete and current", "con": "access to set up"},
+         {"label": "CSV exports from the owner", "pro": "no access shared", "con": "a one-off snapshot"}
+       ],
+       "default": "CSV exports"}
+    ],
+    "data_map": [
+      {"question": "Which term of the profit tree binds?", "data": "Sessions, conversion rate, order value, gross margin per order, ad cost per order, repeat orders per buyer at 90 and 365 days, fixed costs; this year vs last", "where": "orders export, analytics, ad exports, cost sheet", "tool": "node tools/ask-knowledge.mjs \"find the constraint holding store growth\" --module MEA,FIN", "if_missing": "build the tree first; no bet is ranked without it"},
+      {"question": "Can paid traffic carry more growth?", "data": "First-order gross profit over cost per new customer, and new customers per week against spend per week (the cost of the last extra buyer)", "where": "store first orders and ad spend by week", "tool": "node tools/find-insights.mjs <ads-export-folder> --margin <gross margin>", "if_missing": "say paid headroom is unknown"},
+      {"question": "Is there a retention engine to build?", "data": "Repeat rate and gross profit per customer at 90, 180, 365 days by first-order month and first product; time to second order", "where": "orders export", "if_missing": "repeat rate from the last 12 months of orders, labelled rough"},
+      {"question": "Is order value leaving money on the table?", "data": "Order value distribution (its shape and peaks, not the average), units per order, multi-unit buyers, shipping cost per order", "where": "orders export", "if_missing": "skip the offer bet"},
+      {"question": "Is there demand in a new channel or market?", "data": "Orders and traffic by country; brand and category searches on marketplaces; resellers; wholesale enquiries", "where": "orders, analytics, marketplace search, inbox", "if_missing": "a niche and marketplace check from public data"},
+      {"question": "Is there a product buyers already ask for?", "data": "Counted asks in reviews, tickets and chats; what buyers of the hero product buy next", "where": "review and helpdesk exports, orders", "if_missing": "a short survey to recent buyers"},
+      {"question": "Do creators or word of mouth already sell?", "data": "Survey share naming friends, creators or social; discount-code and affiliate sales; customer content", "where": "post-purchase survey, order discount codes", "if_missing": "add the survey; treat the creator bet as untested"},
+      {"question": "How much can the bet put at risk?", "data": "Lowest-cash week, cash floor, stock and payment timing, payout lags per channel", "where": "13-week cash forecast", "if_missing": "cap every test at an amount the owner names"}
+    ]
+  },
+
+  "diagnose": {
+    "tools": [
+      "node tools/prepare-job.mjs context/brief.md",
+      "node tools/find-insights.mjs <ads-export-folder> --margin <gross margin>",
+      "node tools/ask-knowledge.mjs \"first order profit vs cost of a new customer bands\" \"growth funded by stock cash\" --module MEA,FIN",
+      "node tools/ask-knowledge.mjs \"small test with kill rule for a bold bet\" --module WLD,OFF"
+    ],
+    "look_for": [
+      "Write the doubling arithmetic both ways: what one term would need alone, and a realistic mix (for example more sessions from a new channel plus a higher order value). If no mix reaches double inside the horizon, say so and reset the goal or the horizon.",
+      "First-order gross profit below the cost of a new customer with weak 90-day repeat: no traffic bet works until price, offer or margin is fixed; that fix is the bet.",
+      "The cost of the last extra customer far above the average at recent spend steps: the current channel is saturating; growth needs new demand, not more budget.",
+      "One first product whose buyers repeat or spend far more over a year than the rest: lead acquisition with it, and it sets the retention bet.",
+      "An order value distribution with a cluster just below a natural threshold, or many buyers ordering several units: an offer architecture bet (bundles, tiers, threshold).",
+      "Orders and traffic from a country the store never set up for (no local currency, high checkout drop-off, shipping complaints): a market already pulling.",
+      "The brand or its category searched on a marketplace, or resellers listing the product: demand the store is not capturing, and a price-control risk.",
+      "Counted asks in reviews and tickets for a size, refill, companion product or format: a product line bet with built-in demand.",
+      "Survey answers naming friends, creators or social well above the share of spend those sources get: a referral or creator program bet.",
+      "Hero product carrying most revenue: any bet that grows it raises concentration risk; one that adds a second leg lowers it.",
+      "Cash conversion cycle: how many weeks stock is paid for before it sells. A bet that adds stock or slow-paying buyers stretches it; check the lowest-cash week with the bet in.",
+      "The founder's hours: if they already run ads, product and support, any bet that needs them must name what stops."
+    ],
+    "hypothesis_patterns": [
+      {"pattern": "Marketplace channel", "evidence": "brand or category searched on the marketplace, resellers present, profit per order after every fee, ad cost and return still positive for the top products", "bet": "List the top 3 to 5 products on one marketplace with a capped ad budget for 60 days; pass on contribution per order after fees and no fall in site sales; signal in 4 to 8 weeks; needs buffer stock and someone on account health"},
+      {"pattern": "Retail or wholesale", "evidence": "inbound stockist enquiries, gross margin that leaves the retailer its margin at today's retail price, a product that sells on the shelf without explanation", "bet": "5 to 10 stockists in one area on clear terms; pass on reorders after the first sell-through; signal in 8 to 16 weeks; needs case-packed stock, samples and cash to wait for payment"},
+      {"pattern": "New product line", "evidence": "counted buyer asks for one product, what hero buyers buy next, margin and minimum order that fit cash", "bet": "Pre-order or deposit waitlist before buying stock, with a go line in orders; signal in 2 to 4 weeks; needs design, a supplier sample and minimum-order cash only after the go"},
+      {"pattern": "New market", "evidence": "organic orders and traffic from one country, landed margin after duties and shipping, rivals not dominant there", "bet": "Open that one country with local prices, delivery promise and returns, then a capped ad test; signal in 4 to 8 weeks; needs duty and returns set-up"},
+      {"pattern": "Price and offer architecture", "evidence": "order value shape, multi-unit buyers, a price below the rival band with proof to sit higher, first-order profit below the cost of a new buyer", "bet": "A bundle, tier, threshold or price change tested on profit per visitor; signal in 2 to 6 weeks; little cash; often the enabler that lets paid traffic scale"},
+      {"pattern": "Retention engine", "evidence": "a repeat-use product, repeat rate below what the time-to-run-out implies, a strong first product", "bet": "Replenishment timing, a subscription or post-purchase sequence with a holdout; signal in 60 to 180 days; little cash, needs flow set-up"},
+      {"pattern": "Creator program", "evidence": "word of mouth and creator answers high in the survey, customer content that beats studio ads, a product that shows well on video", "bet": "Seed 20 to 30 vetted creators with commission worked back from gross profit; pass on sales per creator; signal in 4 to 8 weeks; needs samples and someone to manage creators"}
+    ]
+  },
+
+  "choose": {
+    "decisions": [
+      {"id": "boldness", "ask": "How bold should the bet be?",
+       "options": [
+         {"label": "Feed what already works (more of a proven channel, product or offer)", "pro": "fastest signal, least cash, least new skill", "con": "may not reach double; saturation comes sooner", "when": "the profit tree shows headroom in a proven term and cash is tight"},
+         {"label": "A new engine (marketplace, retail, new market, new line)", "pro": "can double; adds a second leg", "con": "cash, months to pay back, new skills and new risks", "when": "the proven channel is saturating and cash covers the test"},
+         {"label": "One of each: the proven bet funds the new one (my usual pick)", "pro": "early profit pays for the slower bet", "con": "two things for a small team to run", "when": "there is one proven term with headroom and one new engine with evidence"}
+       ],
+       "recommend": "Pick from the binding constraint. If first-order profit is below the cost of a new buyer, the offer or price fix comes first whatever else is chosen. If paid headroom is gone, a new engine is needed. If cash or the owner's hours are tight, feed what works and test the new engine at the smallest size."},
+      {"id": "funding", "ask": "How do we fund the bet?",
+       "options": [
+         {"label": "From monthly profit", "pro": "no cost, no repayment", "con": "slow; caps the test size", "when": "the test fits inside the room above the cash floor"},
+         {"label": "Free up cash first (supplier terms, clearing slow stock)", "pro": "cheap money already in the business", "con": "takes negotiation and some margin on clearance", "when": "stock is slow and suppliers will extend terms"},
+         {"label": "Outside money (credit line, revenue-based financing, investors)", "pro": "speed and scale", "con": "true cost often high; repayments hit the lowest-cash week", "when": "only after the small test proved payback inside the repayment term"}
+       ],
+       "recommend": "Read the 13-week cash forecast with the bet in it. Fund the test from profit or freed-up cash; outside money only to scale a bet the test has already proven."}
+    ]
+  },
+
+  "make": {
+    "pieces": [
+      {"piece": "Profit per product, after every cost", "skill": "build-sku-profit-sheet", "when": "gross profit per order is unknown or a guess"},
+      {"piece": "Profit tree, constraint and 90-day plan", "skill": "store-90-day-growth-plan", "when": "always; it finds the binding term and holds the chosen bet"},
+      {"piece": "Break-even and target cost per new customer", "skill": "store-meta-math", "when": "paid traffic is a term in the bet"},
+      {"piece": "Real cost of a new customer by channel", "skill": "new-customer-cost-by-channel", "when": "before judging paid headroom"},
+      {"piece": "Cohort repeat and 365-day value", "skill": "cohort-repeat-and-ltv-analysis", "when": "retention or a first-product lead is a candidate"},
+      {"piece": "13-week cash view with the bet in it", "skill": "build-13-week-cash-forecast", "when": "always, before recommending"},
+      {"piece": "Candidate scoring on expected profit, cash and hours", "skill": "prioritize-growth-backlog", "when": "3 to 5 candidates are on the table"},
+      {"piece": "Marketplace bet", "skill": "choose-next-marketplace", "when": "a marketplace is a candidate"},
+      {"piece": "Wholesale price list and terms", "skill": "build-wholesale-price-list-and-terms", "when": "retail or wholesale is a candidate"},
+      {"piece": "First stockists and the pitch", "skill": "find-and-pitch-retail-stockists", "when": "wholesale is chosen and terms are set"},
+      {"piece": "Next product to add", "skill": "plan-product-line-extension", "when": "a product line is a candidate"},
+      {"piece": "Demand test before buying stock", "skill": "validate-demand-before-buying-stock", "when": "the chosen bet needs new stock"},
+      {"piece": "New market sizing", "skill": "niche-size-and-competition-check", "when": "a new country or category is a candidate"},
+      {"piece": "Opening one new country", "skill": "set-up-markets-and-currencies", "when": "a new market is chosen"},
+      {"piece": "Bundles, tiers and thresholds", "skill": "offer-bundle-threshold-design", "when": "offer architecture is a candidate"},
+      {"piece": "Price test", "skill": "run-a-price-test", "when": "price is the lever"},
+      {"piece": "Subscribe and save", "skill": "design-subscribe-and-save-program", "when": "the retention bet suits a repeat-use product"},
+      {"piece": "Creator commissions and rules", "skill": "set-up-affiliate-program", "when": "a creator or referral program is a candidate"},
+      {"piece": "Creators who fit and what to pay", "skill": "find-and-vet-influencers", "when": "the creator program is chosen"},
+      {"piece": "A new ad channel test", "skill": "test-a-new-ad-channel", "when": "a new paid channel is the demand bet"},
+      {"piece": "Lift test to prove the bet adds sales", "skill": "measure-channel-lift-with-holdouts", "when": "the bet could take credit for sales the store would make anyway"},
+      {"piece": "Financing verdict", "skill": "evaluate-revenue-based-financing", "when": "the funding decision includes outside money"}
+    ],
+    "rules": [
+      "No bet is ranked before the profit tree is written with the store's own numbers and the binding term is named in one sentence with the number that proves it.",
+      "Every candidate gets one card: the mechanism (why it creates demand or profit), the evidence from this store's data, the tree term it moves and by how much as a range with its sum, peak cash out and the week it pays back, team hours and who, time to first signal, the small test with pass and kill lines and a cap on money at risk, and the biggest risk.",
+      "3 to 5 candidates, no more; at least one feeds what already works.",
+      "Recommend one bet. Say plainly what would make it wrong and what the runner-up is.",
+      "The lowest-cash week, with the bet and a downside case in, stays above the owner's cash floor; otherwise shrink the test.",
+      "The retail price is protected: no marketplace, wholesale or creator bet may undercut the store's own price without the owner's choice.",
+      "Pass and kill lines are written before money moves, in profit, not revenue or clicks."
+    ]
+  },
+
+  "check": {
+    "preflight": [
+      "node tools/quality/numbers.cjs context/numbers.json --final <deliverable>",
+      "node tools/check-handover.mjs <deliverable> --brief context/brief.md"
+    ],
+    "checks": [
+      "node tools/quality/consistency-check.mjs context/hypotheses.json <deliverable>",
+      "node tools/quality/qe-check.cjs <deliverable> --brief context/brief.md",
+      "Every number in the profit tree and the bet cards is in the numbers ledger with its source, and the doubling sum adds up.",
+      "Every fee, duty or commission used was read from the source on the day, with the date."
+    ],
+    "senior_review": [
+      "Does the arithmetic really reach double inside the horizon, or does the plan say honestly that it cannot?",
+      "Is the binding constraint proven by a number, and does the recommended bet act on it?",
+      "With the bet and a bad month in, does cash stay above the floor every week?",
+      "Who runs it, for how many hours, and what stops to make room?",
+      "Is the first test small enough to lose without hurting the store, and is the kill line one we would really act on?",
+      "Does the bet eat existing sales (marketplace taking site buyers, wholesale undercutting retail, discounts training buyers to wait)?",
+      "What is the strongest case against the pick, and did we answer it?"
+    ]
+  },
+
+  "knowledge": {
+    "diagnose": {"modules": ["MEA", "FIN", "WLD"], "ask": ["find the constraint holding store growth", "first order profit vs cost of a new customer", "growth funded by stock and cash conversion cycle", "repeat rate by cohort, not returning customer rate"]},
+    "make": {"modules": ["OFF", "FIN", "AMZ", "WLD"], "ask": ["marketplace profit after fees", "wholesale margins and retailer terms", "bundle and threshold design from order value distribution", "small capped test with kill rule"]},
+    "check": {"modules": ["FIN", "OFF"], "ask": ["true cost of revenue-based financing", "resale price rules for wholesale", "subscription and price display law"]},
+    "never": ["The store's numbers come from its own data, never the library.", "Fee schedules, duties and commissions are read from the source on the day, never remembered."]
+  },
+
+  "handover": {
+    "files": [
+      "Profit tree sheet with this year, last year and the binding term marked.",
+      "3 to 5 bet cards, one page each, with the recommended bet first.",
+      "Recommendation note: the bet, why, the runner-up, the risks and what would make it wrong.",
+      "Test plan for the chosen bet: steps, cap on money at risk, dates, pass and kill lines, who does what.",
+      "13-week cash view with the bet and a downside case in."
+    ],
+    "next_moves": [
+      "Start the first test: the listing, the stockist pitch, the pre-order page or the offer, built with the matching skill.",
+      "The fix the constraint calls for first (price, offer or margin), if first-order profit is below the cost of a new buyer.",
+      "A readout on the test's end date: grow it, change it or stop.",
+      "The runner-up bet's test, once the first one reads."
+    ]
+  }
+}

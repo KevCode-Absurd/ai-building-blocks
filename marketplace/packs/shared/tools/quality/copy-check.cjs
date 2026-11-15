@@ -15,19 +15,22 @@
 // 3. Inside a copy field. A field fails on a placeholder ([X], [link], [Block A], TBD). It warns on a template tag
 //    with no fallback ({{ first_name }} rather than {{ first_name|default:"there" }}, or {% ... %}), and on words that
 //    belong in your notes, not in front of a customer: the brief, the owner, persona, segment, signal, ledger, ROAS.
+// 4. Never say. Every word or phrase the owner banned fails anywhere in the copy: from context/never-say.txt (one per
+//    line, read from the folder you run in) and from each --never "phrase".
 // Exit 0 = clean (warnings allowed), 1 = something to fix, 2 = usage error.
 const fs = require("fs");
 
-const usage = 'Usage: node copy-check.cjs <file> [--limit "Label=N"]...';
+const usage = 'Usage: node copy-check.cjs <file> [--limit "Label=N"]... [--never "phrase"]...';
 const args = process.argv.slice(2);
-const limits = [];
+const limits = [], never = [];
 let file = null;
 for (let i = 0; i < args.length; i++) {
   if (args[i] === "--limit") {
     const m = /^(.+?)=(\d+)$/.exec(args[++i] ?? "");
     if (!m) { console.error(`--limit needs "Label=N"\n${usage}`); process.exit(2); }
     limits.push({ label: m[1].trim().toLowerCase(), max: Number(m[2]) });
-  } else if (!file) file = args[i];
+  } else if (args[i] === "--never") never.push(args[++i] ?? "");
+  else if (!file) file = args[i];
   else { console.error(usage); process.exit(2); }
 }
 if (!file) { console.error(usage); process.exit(2); }
@@ -95,6 +98,16 @@ for (let i = 0; i < lines.length; i++) {
     if (quoted.length) { claim(`line ${i + 2}`, plain(tail[1]), Number(tail[2]), quoted.join(" ")); field(`line ${i + 2}`, plain(tail[1]), quoted.join(" ")); }
   }
 }
+
+try { never.push(...fs.readFileSync("context/never-say.txt", "utf8").split(/\r?\n/)); } catch {}
+const norm = s => " " + s.toLowerCase().replace(/[’']/g, "").replace(/[^a-z0-9₹%]+/g, " ").trim() + " ";
+const banned = never.map(x => x.replace(/^[-*]\s*/, "").replace(/^["“]|["”]$/g, "").trim()).filter(x => x && !x.startsWith("#"));
+let infence = false;
+lines.forEach((line, i) => {
+  if (/^\s*(```|~~~)/.test(line)) { infence = !infence; return; }
+  if (infence) return;
+  for (const p of banned) if (norm(p).trim() && norm(line).includes(norm(p))) fails.push(`line ${i + 1}: says "${p}", which the owner said never to say: "${line.trim().slice(0, 80)}"`);
+});
 
 for (const w of warns) console.log(`warn  ${w}`);
 for (const f of fails) console.log(`FAIL  ${f}`);

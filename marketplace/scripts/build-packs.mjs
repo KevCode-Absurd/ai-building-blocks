@@ -315,7 +315,13 @@ if (existsSync(KNOWLEDGE)) {
     }
     for (const slug of Object.keys(library)) if (!library[slug]) delete library[slug];
     warnings.push(...verticalNotes);
-    verticals.set(id, verticalBundle(vertical, cards, sources, { toolbox, vendor, names }));
+    // The guide's data (ecom-journey): one journey map per job family, the creative format library and the buying moments.
+    const jDir = path.join(dir, "journeys");
+    const journeys = existsSync(jDir) ? readdirSync(jDir).filter(f => f.endsWith(".json")).sort().map(f => JSON.parse(readFileSync(path.join(jDir, f), "utf8"))) : [];
+    const formats = existsSync(path.join(dir, "formats.json")) ? JSON.parse(readFileSync(path.join(dir, "formats.json"), "utf8")) : null;
+    const moments = existsSync(path.join(dir, "moments.json")) ? JSON.parse(readFileSync(path.join(dir, "moments.json"), "utf8")) : null;
+    const synonyms = existsSync(path.join(dir, "synonyms.json")) ? JSON.parse(readFileSync(path.join(dir, "synonyms.json"), "utf8")) : null;
+    verticals.set(id, verticalBundle(vertical, cards, sources, { toolbox, vendor, names, journeys, formats, moments, synonyms }));
   }
 }
 

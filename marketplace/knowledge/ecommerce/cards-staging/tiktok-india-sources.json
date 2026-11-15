@@ -1,0 +1,499 @@
+[
+  {
+    "id": "S7000",
+    "file": "web",
+    "title": "Consumer Protection (E-Commerce) Rules, 2020 (G.S.R. 462(E), 23 July 2020)",
+    "author": "Ministry of Consumer Affairs, Food and Public Distribution (Department of Consumer Affairs), Government of India",
+    "url": "https://taxguru.in/wp-content/uploads/2020/07/Consumer-Protection-E-Commerce-Rules-2020.pdf",
+    "date": "2020-07-23",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "LPG",
+      "CXP",
+      "CRO",
+      "ADC"
+    ],
+    "why": "Full text of the gazette notification (rules 1 to 8), read from a verbatim copy hosted by Taxguru because egazette and consumeraffairs.nic.in refuse automated connections. Duties of every e-commerce entity, marketplaces, marketplace sellers and inventory (own-stock) sellers.",
+    "cards": 4,
+    "public": true
+  },
+  {
+    "id": "S7001",
+    "file": "web",
+    "title": "Guidelines for Prevention and Regulation of Dark Patterns, 2023 (F. No. CCPA-1/1/2023-CCPA (Reg), 30 November 2023)",
+    "author": "Central Consumer Protection Authority, Government of India",
+    "url": "https://taxguru.in/?p=896142",
+    "date": "2023-11-30",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "LPG",
+      "OFF",
+      "ORG"
+    ],
+    "why": "Notification text with Annexure 1 (13 specified dark patterns, illustrations and exceptions), read from Taxguru's reproduction because the CCPA and gazette sites refuse automated connections.",
+    "cards": 6,
+    "public": true
+  },
+  {
+    "id": "S7002",
+    "file": "web",
+    "title": "Legal Metrology (Packaged Commodities) Rules, 2011, as amended up to 13 February 2026",
+    "author": "Ministry of Consumer Affairs, Food and Public Distribution, Government of India (consolidated text compiled by Khaitan & Co.)",
+    "url": "https://www.khaitanco.com/sites/default/files/2026-03/Legal%20Metrology%20%28Packaged%20Commodities%29%20Rules%202011.pdf",
+    "date": "2026-02-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "LPG",
+      "COG"
+    ],
+    "why": "Consolidated rule text with amendment footnotes: rule 6(1) declarations, rule 6(10) e-commerce display duty, rule 6(10-A) country-of-origin filter (from 1 July 2026), rule 6(11) unit sale price, rule 26 exemptions.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7003",
+    "file": "web",
+    "title": "Hallmarking: information for jewellers",
+    "author": "Bureau of Indian Standards",
+    "url": "https://www.bis.gov.in/hallmarking-jewellers/?lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "BIS page on mandatory jeweller registration, first point of sale, the exemption list, HUID, invoice rules and penalties under the BIS Act 2016; date is the access date.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7004",
+    "file": "web",
+    "title": "Hallmarking FAQs",
+    "author": "Bureau of Indian Standards",
+    "url": "https://www.bis.gov.in/hallmarking-overview/hallmarking-faqs/hallmarking-faq/?lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "LPG",
+      "COG"
+    ],
+    "why": "BIS FAQ on the three hallmark marks, the six gold caratages, HUID and the BIS Care app check; date is the access date.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7006",
+    "file": "web",
+    "title": "Guidelines for Prevention of Misleading Advertisements and Endorsements for Misleading Advertisements, 2022 (F. No. J-25/4/2020-CCPA (Reg), 9 June 2022)",
+    "author": "Central Consumer Protection Authority, Government of India",
+    "url": "https://taxguru.in/?p=828129",
+    "date": "2022-06-09",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OFF",
+      "ORG",
+      "MCR"
+    ],
+    "why": "Notification text on valid ads, bait ads, free claims, disclaimers, endorsement due diligence and material connections, read from Taxguru's reproduction because government sites refuse automated connections; penalty figures are the page's summary of the Consumer Protection Act.",
+    "cards": 3,
+    "public": true
+  },
+  {
+    "id": "S7007",
+    "file": "web",
+    "title": "Government Bans 59 mobile apps which are prejudicial to sovereignty and integrity of India, defence of India, security of state and public order",
+    "author": "Press Information Bureau, Ministry of Electronics and IT, Government of India",
+    "url": "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=1635206&reg=48&lang=2",
+    "date": "2020-06-29",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC",
+      "ORG"
+    ],
+    "why": "Official release blocking TikTok and 58 other apps in India under Section 69A of the IT Act; read through search excerpts.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7010",
+    "file": "web",
+    "title": "Learning Phase FAQs",
+    "author": "TikTok for Business (Ads Manager Help Center)",
+    "url": "https://ads.tiktok.com/help/article/learning-phase-faq",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC"
+    ],
+    "why": "When an ad group has passed learning (50 conversions) and what to change if it has not. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7012",
+    "file": "web",
+    "title": "Campaign Budget Optimization FAQ",
+    "author": "TikTok for Business (Ads Manager Help Center)",
+    "url": "https://ads.tiktok.com/help/article/campaign-budget-optimization-faq",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC"
+    ],
+    "why": "Learning measured at campaign level under CBO: 50 results for installs, 20 for deeper-funnel goals. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7013",
+    "file": "web",
+    "title": "About the Sales advertising objective",
+    "author": "TikTok for Business (Ads Manager Help Center)",
+    "url": "https://ads.tiktok.com/resources/help/article/sales-advertising-objective-tiktok?lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC"
+    ],
+    "why": "Website Conversions and Product Sales merged into one Sales objective with TikTok Shop, website and app destinations. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7014",
+    "file": "web",
+    "title": "GMV Max migration for TikTok Shop Ads",
+    "author": "TikTok for Business (Ads Manager Help Center)",
+    "url": "https://ads.tiktok.com/help/article/gmv-max-migration-tiktok-shop-ads?lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC"
+    ],
+    "why": "GMV Max becomes the default and only TikTok Shop Ads campaign type from July 2025; historical ROI becomes the target. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7015",
+    "file": "web",
+    "title": "Best practices for Product GMV Max",
+    "author": "TikTok for Business (Ads Manager Help Center)",
+    "url": "https://ads.tiktok.com/help/article/best-practices-for-product-gmv-max?lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC"
+    ],
+    "why": "How to set a Product GMV Max ROI target from historical non-LIVE GMV and ad cost. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7016",
+    "file": "web",
+    "title": "About ROI protection for GMV Max campaigns",
+    "author": "TikTok for Business (Ads Manager Help Center)",
+    "url": "https://ads.tiktok.com/help/article/about-roi-protection-for-gmv-max-campaigns?lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC",
+      "FIN"
+    ],
+    "why": "Ad credits when delivered ROI falls below 90% of target, for campaigns above 20 daily orders. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7018",
+    "file": "web",
+    "title": "How to create Spark Ads for Manual and Search Campaigns in TikTok Ads Manager",
+    "author": "TikTok for Business (Ads Manager Help Center)",
+    "url": "https://ads.tiktok.com/help/article/spark-ads-creation-guide?lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG",
+      "ADC"
+    ],
+    "why": "Authorisation codes (7, 30, 60 or 365 days), batch of 20, Duet and Stitch codes, privacy and caption locks. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7019",
+    "file": "web",
+    "title": "TikTok Auction In-Feed Ads specifications",
+    "author": "TikTok for Business (Ads Manager Help Center)",
+    "url": "https://ads.tiktok.com/resources/help/article/tiktok-auction-in-feed-ads",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR"
+    ],
+    "why": "Ratios, minimum resolutions, length, file size, bitrate and safe-zone files for auction in-feed video. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7020",
+    "file": "web",
+    "title": "Video Advertising Guide for Small Businesses",
+    "author": "TikTok for Business",
+    "url": "https://ads.tiktok.com/business/en/guides/video-advertising-guide",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR"
+    ],
+    "why": "In-feed ads can run to 60 seconds; TikTok recommends 21 to 34 seconds for most ads. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7021",
+    "file": "web",
+    "title": "Creative best practices for performance ads",
+    "author": "TikTok for Business (Ads Manager Help Center)",
+    "url": "https://ads.tiktok.com/help/article/creative-best-practices",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR"
+    ],
+    "why": "Put the proposition in the first 3 seconds and the hook within the first 6. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7022",
+    "file": "web",
+    "title": "Event Deduplication (TikTok API for Business, v1.3)",
+    "author": "TikTok for Business (developer documentation)",
+    "url": "https://business-api.tiktok.com/portal/docs/event-deduplication/v1.3",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA"
+    ],
+    "why": "48-hour deduplication on event name plus event_id, 5-minute merge window, _ttp cookie fallback. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7023",
+    "file": "web",
+    "title": "Standard Events and Parameters",
+    "author": "TikTok for Business (Ads Manager Help Center)",
+    "url": "https://ads.tiktok.com/help/article/standard-events-parameters?lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA"
+    ],
+    "why": "Standard web events and recommended parameters for Pixel and Events API. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7024",
+    "file": "web",
+    "title": "Shopping Ads checklist: set up and post back signals",
+    "author": "TikTok for Business",
+    "url": "https://ads.tiktok.com/business/library/TikTok_ShoppingAds_Checklist.pdf",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "why": "Catalog-signal minimums for Shopping Ads: content IDs matching inventory (50% prospecting, 80% retargeting) and Advanced Matching. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7025",
+    "file": "web",
+    "title": "How To Build Campaigns Your Way With Smart+",
+    "author": "TikTok for Business",
+    "url": "https://ads.tiktok.com/business/en/blog/smart-plus-ai-performance-solution",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC"
+    ],
+    "why": "Smart+ automation modules, campaign limits (30 ad groups, 30 asset groups, 50 creatives) and supported objectives. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7026",
+    "file": "web",
+    "title": "TikTok Shop Referral Fee Updates - 2024",
+    "author": "TikTok Shop Seller University (US)",
+    "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=5982454398175018&lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "FIN"
+    ],
+    "why": "US referral fee 6% from 1 April 2024, 5% jewellery sub-categories, refund administration fee 20% capped at $5 per SKU from 15 May 2025. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7027",
+    "file": "web",
+    "title": "Beginner's Guide: What documents do I need to register?",
+    "author": "TikTok Shop Seller University (US)",
+    "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=3460256793413390&lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS",
+      "FIN"
+    ],
+    "why": "US seller types, documents, file limits and the $2,000 tax-information threshold. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7028",
+    "file": "web",
+    "title": "Setting Up Affiliate Collaborations",
+    "author": "TikTok Shop Seller University (US)",
+    "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=6837873164896001&lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG"
+    ],
+    "why": "Open and Target collaborations, 1% to 80% commission, edit lead times of 30 and 5 days. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7029",
+    "file": "web",
+    "title": "What You Need to Know Before Becoming a TikTok Shop Creator",
+    "author": "TikTok Shop Seller University (US)",
+    "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=7608640301074219&lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG"
+    ],
+    "why": "US creator checklist: 18+, US-based, 1,000 followers for affiliate creators, age and identity checks. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7030",
+    "file": "web",
+    "title": "Requirements for Responsible Health-Related Content",
+    "author": "TikTok Shop Seller University (US)",
+    "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=4545471832983342",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "why": "TikTok Shop limits on disease, wellness and weight claims, before-and-after content and GLP-1 references. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7031",
+    "file": "web",
+    "title": "TikTok Ads Policy: Misleading and false content",
+    "author": "TikTok for Business (Ads Manager Help Center)",
+    "url": "https://ads.tiktok.com/help/article/tiktok-ads-policy-misleading-and-false-content",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "MCR"
+    ],
+    "why": "Ad policy on exaggerated results, before-and-after product comparisons and absolute claims. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7033",
+    "file": "web",
+    "title": "TikTok Shop seller registration portal (market selector)",
+    "author": "TikTok Shop",
+    "url": "https://seller.tiktok.com/",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OPS"
+    ],
+    "why": "Markets where sellers can register for TikTok Shop, each registered separately; US has no setup fee and a 6% commission. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7034",
+    "file": "web",
+    "title": "Differences between LIVE Shopping Ads and LIVE GMV Max campaigns",
+    "author": "TikTok for Business (Ads Manager Help Center)",
+    "url": "https://ads.tiktok.com/resources/help/article/differences-between-live-shopping-ads-and-live-gmv-max-campaigns?lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC",
+      "ORG"
+    ],
+    "why": "LIVE GMV Max is created in Seller Center at shop level, one per TikTok identity, judged on total LIVE room revenue. Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7035",
+    "file": "web",
+    "title": "About Budget",
+    "author": "TikTok for Business (Ads Manager Help Center)",
+    "url": "https://ads.tiktok.com/resources/help/article/budget?lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC"
+    ],
+    "why": "Daily budget minimums ($50 campaign, $20 ad group) and change limits (40% during learning, 30% after, every two days at most). Read through search-engine excerpts of the official page because tiktok.com refuses direct fetch from this environment; date is the access date; re-check figures in a browser before quoting to a buyer.",
+    "cards": 1,
+    "public": true
+  }
+]

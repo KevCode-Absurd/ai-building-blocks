@@ -1630,6 +1630,269 @@
       "android"
     ]
   },
+  "store": {
+    "note": "Added 2026-11-14. A request for an online store goes to the e-commerce agents (marketplace personas-ecommerce.json), which carry the e-commerce toolbox, its cards and the guide's journey maps. The ask is read first, then the whole request: the first rule whose pattern matches names the agent and its journey map. No rule: the card's row, then the job type's row, then the house table. A named card outside `cards` (a press pitch, an SOP, a job post) keeps its house specialist.",
+    "online": "\\b(?:shopify|woocommerce|bigcommerce|e-?commerce|online (?:store|shop|brand)|web ?shop|d2c|dtc|direct[- ]to[- ]consumer|roas|cod|cash on delivery|abandoned carts?|add to cart|klaviyo|pdps?|product pages?|collection pages?)\\b",
+    "not_online": "\\b(?:in-store|retail (?:store|shop)s?|physical (?:store|shop)s?|brick[- ]and[- ]mortar|store (?:managers?|traffic|openings?|staff)|foot traffic|high street|app store|play store)\\b",
+    "journey_line": "Lead the owner the way tools/quality/GUIDE.md says, with knowledge/ecommerce/journeys/<id>.md.",
+    "why": "The request is for an online store, so the e-commerce specialist for this work leads; its pack carries the store toolbox, cards and journey maps.",
+    "rules": [
+      {
+        "id": "tiktok-shop",
+        "pattern": "\\btiktok shop\\b",
+        "agent": "ploy-tiktok-shop"
+      },
+      {
+        "id": "unit-economics",
+        "pattern": "\\bunit economics\\b|\\bcontribution margins?\\b|\\bbreak[- ]even (?:roas|cpa|cac)\\b|\\b(?:profit|margin) per order\\b|\\bwhat (?:each|an?) order (?:really )?(?:earns|makes)\\b|\\bcac payback\\b",
+        "agent": "radek-unit-economics"
+      },
+      {
+        "id": "customer-research",
+        "pattern": "\\bcoding (?:guide|frame|scheme)s?\\b|\\bcode (?:these|the|this)\\b[\\s\\S]{0,60}\\b(?:comments|responses|reviews|feedback|answers)\\b|\\bbuyer (?:profiles?|personas?)\\b|\\bvoice of (?:the )?customer\\b|\\bwhy (?:people|customers|buyers) (?:buy|choose)\\b|\\bcustomer interviews?\\b",
+        "agent": "funmilayo-customer-research"
+      },
+      {
+        "id": "big-bet",
+        "pattern": "\\b(?:big|bold|wild) bets?\\b|\\bmoonshots?\\b|\\blong[- ]shots?\\b",
+        "agent": "barnaby-wild-bets",
+        "journey": "big-bets"
+      },
+      {
+        "id": "growth-plan",
+        "pattern": "\\bgrowth (?:plan|strategy|roadmap)\\b|\\bdouble (?:our |my |the )?(?:revenue|sales)\\b|\\bplateau(?:ed|ing)?\\b|\\bbold growth ideas\\b|\\bgrow (?:our|my|the) (?:store|brand|revenue|sales)\\b|\\b(?:should we|whether to) (?:go|expand|move|sell) (?:on|onto|into)\\b",
+        "agent": "malcolm-ecommerce-growth",
+        "journey": "big-bets"
+      },
+      {
+        "id": "aeo",
+        "pattern": "\\b(?:aeo|geo|chatgpt|perplexity|gemini|copilot|llms\\.?txt|answer engines?|generative engine)\\b|\\bai (?:answers?|search|overviews?|mode|assistants?)\\b|\\bask(?:s|ing)? ai\\b|\\bai (?:does ?n\\W?o?t |never |wo ?n\\W?o?t )?(?:mention|recommend|name|quote|cite)s?\\b",
+        "agent": "rustam-ai-answers",
+        "journey": "aeo"
+      },
+      {
+        "id": "seo",
+        "pattern": "\\bseo\\b|\\bsearch engine optimi[sz]ation\\b|\\borganic (?:search|traffic|sales)\\b|\\brank(?:s|ing)? (?:on|in|higher on) google\\b|\\bkeyword (?:map|plan|research|list)s?\\b|\\bsearch console\\b|\\bwhich keywords\\b|\\bkeywords? (?:should we|to) (?:target|rank|go after)\\b",
+        "agent": "stuart-store-seo",
+        "journey": "seo"
+      },
+      {
+        "id": "ad-copy",
+        "pattern": "\\b(?:ad|ads|meta|facebook|instagram|google|tiktok|shopping|search) (?:copy|headlines?|captions?|primary text|descriptions?)\\b|\\bprimary text\\b|\\bcopy for (?:our |my |the )?(?:meta |facebook |instagram |google |tiktok )?ads?\\b",
+        "agent": "kofi-ad-copy",
+        "journey": "creatives"
+      },
+      {
+        "id": "creative-strategy",
+        "pattern": "\\bcreative (?:brief|strategy|direction|roadmap|testing plan)s?\\b|\\bcreative testing\\b",
+        "agent": "kemal-creative-director",
+        "journey": "creatives"
+      },
+      {
+        "id": "tiktok-ads",
+        "pattern": "\\b(?:launch|run|scale|set ?up|start|audit|manage|structure)\\s+(?:\\w+\\s+){0,2}?tiktok (?:ads|campaigns?)\\b|\\btiktok (?:ads? )?(?:campaigns?|account|media buying|budget|spend)\\b",
+        "agent": "zara-tiktok-ads"
+      },
+      {
+        "id": "video-scripts",
+        "pattern": "\\bugc\\b|\\b(?:video|ad|ugc|reels?|tiktok|youtube|creator|founder|influencer|voiceover)\\s+(?:ad\\s+)?scripts?\\b|\\bscripts? for (?:our |my |a |the )?(?:creators?|influencers?|videos?|reels?|tiktoks?|ads?)\\b|\\breels?\\b|\\bvideos?\\b|\\bshot lists?\\b|\\bstoryboards?\\b|\\bfirst (?:3|three|few) seconds\\b",
+        "agent": "devon-video-ugc",
+        "journey": "video-scripts"
+      },
+      {
+        "id": "cross-channel",
+        "pattern": "\\bmeta\\b[\\s\\S]*\\bgoogle\\b|\\bgoogle\\b[\\s\\S]*\\bmeta\\b|\\bcross[- ]channel\\b|\\bacross (?:all )?(?:our |my )?(?:channels|platforms)\\b|\\bchannel mix\\b|\\bwhere to (?:move|put|shift|spend) (?:the |our |my )?(?:ad )?budget\\b|\\bmarketing budget\\b",
+        "agent": "jared-performance-marketing",
+        "journey": "meta-account-structure",
+        "journeys": [
+          {
+            "pattern": "\\b(?:audit|review|check|diagnose|assess|wast(?:e|ing)|roas|move|shift)\\b",
+            "journey": "media-buying-audit"
+          }
+        ]
+      },
+      {
+        "id": "page-not-converting",
+        "pattern": "\\bproduct pages? (?:does ?n[o']?t|do ?n[o']?t|is ?n[o']?t|are ?n[o']?t|not|never) (?:convert|sell)|\\bsize (?:guides?|charts?)\\b|\\breturns? for (?:the )?wrong size\\b",
+        "agent": "georgia-product-copy",
+        "journey": "product-pages"
+      },
+      {
+        "id": "retention",
+        "pattern": "\\bwin[- ]?backs?\\b|\\bretention\\b|\\brepeat (?:buyers?|purchases?|customers|orders?|buying)\\b|\\bsecond orders?\\b|\\bbuy once\\b|\\bloyalty\\b|\\bvip\\b|\\blapsed\\b|\\bchurn(?:ed|ing)?\\b",
+        "agent": "imogen-retention",
+        "journey": "email-retention"
+      },
+      {
+        "id": "email-flows",
+        "pattern": "\\bflows?\\b|\\bklaviyo\\b|\\bomnisend\\b|\\b(?:email|sms|whatsapp) (?:strategy|plan|program(?:me)?|calendar|setup|marketing|segments?)\\b|\\bset ?up (?:our |my )?(?:email|sms)s?\\b|\\bdeliverability\\b|\\bemails? (?:do ?n[o']?t|never) make money\\b",
+        "agent": "morag-email-sms",
+        "journey": "email-retention"
+      },
+      {
+        "id": "email-copy",
+        "pattern": "\\be-?mails?\\b|\\bnewsletters?\\b|\\bsms\\b|\\btext messages?\\b|\\bwhatsapp (?:messages?|broadcasts?)\\b|\\bsubject lines?\\b",
+        "agent": "lucia-email-copy",
+        "journey": "email-retention"
+      },
+      {
+        "id": "conversion",
+        "pattern": "\\bcro\\b|\\bconversion (?:rates?|audit|optimi[sz]ation)\\b|\\bconvert(?:s|ing)? (?:better|more)\\b|\\badd to cart\\b|\\bdo ?n[o']?t (?:buy|check ?out)\\b|\\bclicks? but no (?:sales|orders)\\b|\\bcheckout (?:drop|abandon)",
+        "agent": "gretchen-store-testing",
+        "journey": "cro-audit"
+      },
+      {
+        "id": "ad-account-audit",
+        "pattern": "\\b(?:audit|review|check|diagnose|assess|look at|go through|take over)\\s+(?:\\w+\\s+){0,3}?(?:meta|facebook|instagram|fb|ig|paid|ad|ads|campaigns?)\\b|\\bwast(?:e|ing)\\b[\\s\\S]{0,40}\\b(?:money|spend|budget)\\b|\\broas (?:dropped|fell|has dropped|is down|went down|tanked)\\b|\\bmedia buying\\b|\\bad account audit\\b|\\btake more budget\\b|\\b(?:tak(?:e|ing) over|inherit(?:ed|ing)?)\\s+(?:\\w+\\s+){0,3}?(?:ad |ads )?accounts?\\b|\\b(?:ad|ads|marketing) agency\\b|\\bagency\\b[\\s\\S]{0,30}\\b(?:good job|doing well|performing|worth it)\\b",
+        "agent": "dustin-ad-deployment",
+        "journey": "media-buying-audit"
+      },
+      {
+        "id": "creatives",
+        "pattern": "\\bcreatives?\\b|\\bstatic (?:ads?|images?)\\b|\\bcarousels?\\b|\\bimage ads?\\b|\\bad (?:designs?|images?|concepts?|visuals?|angles?|sets?)\\b|\\bbanners?\\b",
+        "agent": "tendai-ad-creative",
+        "journey": "creatives"
+      },
+      {
+        "id": "meta-account",
+        "pattern": "\\b(?:meta|facebook|instagram|fb|ig|ad account|ads manager)\\b[\\s\\S]*\\b(?:set ?up|structure[ds]?|launch|campaigns?|plan|rebuild|restructure)\\b|\\b(?:set ?up|structure|launch|plan|rebuild|restructure)\\b[\\s\\S]*\\b(?:meta|facebook|instagram|ad account)\\b|\\badvantage ?(?:\\+|plus)|\\bcampaign structure\\b",
+        "agent": "dustin-ad-deployment",
+        "journey": "meta-account-structure"
+      },
+      {
+        "id": "store-audit",
+        "pattern": "\\b(?:audit|review|teardown|tear down|redesign|fix)\\b[\\s\\S]*\\b(?:store|shop|site|website|homepage|home page|product pages?|collection pages?|checkout|cart|landing pages?|pdps?)\\b",
+        "agent": "gretchen-store-testing",
+        "journey": "cro-audit"
+      },
+      {
+        "id": "product-page",
+        "pattern": "\\bproduct (?:detail )?(?:pages?|descriptions?|listings?|titles?|copy)\\b|\\bpdps?\\b|\\bcollection (?:pages?|descriptions?)\\b",
+        "agent": "georgia-product-copy",
+        "journey": "product-pages"
+      },
+      {
+        "id": "landing-page",
+        "pattern": "\\blanding pages?\\b|\\bsales pages?\\b|\\bpre-?sell pages?\\b|\\badvertorials?\\b",
+        "agent": "annabel-landing-pages",
+        "journey": "product-pages"
+      },
+      {
+        "id": "store-test",
+        "pattern": "\\ba/?b tests?\\b|\\bsplit tests?\\b|\\bexperiments?\\b",
+        "agent": "gretchen-store-testing",
+        "journey": "cro-audit"
+      },
+      {
+        "id": "ads",
+        "pattern": "\\bads?\\b|\\badverts?\\b",
+        "agent": "tendai-ad-creative",
+        "journey": "creatives"
+      }
+    ],
+    "cards": {
+      "paid-social-ads": {
+        "agent": "tendai-ad-creative",
+        "journey": "creatives"
+      },
+      "creative-brief": {
+        "agent": "kemal-creative-director",
+        "journey": "creatives"
+      },
+      "creator-brief": {
+        "agent": "pilar-creators",
+        "journey": "video-scripts"
+      },
+      "landing-page": {
+        "agent": "annabel-landing-pages",
+        "journey": "product-pages"
+      },
+      "product-description": {
+        "agent": "georgia-product-copy",
+        "journey": "product-pages"
+      },
+      "lifecycle-email": {
+        "agent": "lucia-email-copy",
+        "journey": "email-retention"
+      },
+      "experiment-design": {
+        "agent": "gretchen-store-testing",
+        "journey": "cro-audit"
+      },
+      "seo-article": {},
+      "analysis-memo": {}
+    },
+    "jobs": {
+      "make-image-ads": {
+        "agent": "tendai-ad-creative",
+        "journey": "creatives"
+      },
+      "make-video-ads": {
+        "agent": "devon-video-ugc",
+        "journey": "video-scripts"
+      },
+      "write-ad-copy": {
+        "agent": "kofi-ad-copy",
+        "journey": "creatives"
+      },
+      "check-ads": {
+        "agent": "kofi-ad-copy",
+        "journey": "creatives"
+      },
+      "plan-ad-tests": {
+        "agent": "tendai-ad-creative",
+        "journey": "creatives"
+      },
+      "launch-and-scale-ads": {
+        "agent": "dustin-ad-deployment",
+        "journey": "meta-account-structure"
+      },
+      "read-ad-results": {
+        "agent": "dustin-ad-deployment",
+        "journey": "media-buying-audit"
+      },
+      "run-google-ads": {
+        "agent": "raymond-google-ads"
+      },
+      "write-landing-page": {
+        "agent": "annabel-landing-pages",
+        "journey": "product-pages"
+      },
+      "audit-landing-page": {
+        "agent": "gretchen-store-testing",
+        "journey": "cro-audit"
+      },
+      "test-store-changes": {
+        "agent": "gretchen-store-testing",
+        "journey": "cro-audit"
+      },
+      "speed-up-store": {
+        "agent": "arjun-page-speed"
+      },
+      "write-emails": {
+        "agent": "lucia-email-copy",
+        "journey": "email-retention"
+      },
+      "keep-customers": {
+        "agent": "imogen-retention",
+        "journey": "email-retention"
+      },
+      "get-found-in-search": {
+        "agent": "stuart-store-seo",
+        "journey": "seo"
+      },
+      "plan-strategy": {
+        "agent": "malcolm-ecommerce-growth",
+        "journey": "big-bets"
+      },
+      "product-photos": {
+        "agent": "aurelio-product-photos"
+      },
+      "sell-on-amazon": {
+        "agent": "garrett-amazon"
+      }
+    }
+  },
   "deliverables_note": "A named deliverable (its quality card, from quality-engine.mjs) is more specific than a job type: its specialist leads, and when the job type is only a guess, the card job replaces it. Variants pick within the card by request words.",
   "deliverables": {
     "claims-review": {

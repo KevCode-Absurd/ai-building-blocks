@@ -66,7 +66,14 @@ async function main(argv) {
   try { reviewDays = JSON.parse(fs.readFileSync(path.join(pack, "pack.json"), "utf8")).knowledge?.review_every_days ?? 0; } catch {}
   const sourcesFile = path.join(pack, "sources.md");
   const sources = fs.existsSync(sourcesFile) ? parseSourcesMd(fs.readFileSync(sourcesFile, "utf8")) : [];
-  const index = new KnowledgeIndex(files, { sources, reviewDays });
+  // The library's owner-words files (knowledge/<vertical>/synonyms.json), when the pack carries any.
+  const synonyms = { groups: [], phrases: [] };
+  const lib = path.join(pack, "knowledge");
+  if (fs.existsSync(lib)) for (const v of fs.readdirSync(lib)) {
+    const syn = path.join(lib, v, "synonyms.json");
+    if (fs.existsSync(syn)) { try { const s = JSON.parse(fs.readFileSync(syn, "utf8")); synonyms.groups.push(...(s.groups ?? [])); synonyms.phrases.push(...(s.phrases ?? [])); } catch {} }
+  }
+  const index = new KnowledgeIndex(files, { sources, reviewDays, synonyms });
   const today = new Date().toISOString().slice(0, 10);
   const modules = args.modules.map(m => m.trim()).filter(Boolean);
   if (modules.length && !modulePaths(files.map(f => f.path), modules).length) console.error("No knowledge file for module " + modules.join(", ") + " in this pack, so the whole pack is searched.");

@@ -233,7 +233,12 @@
       "where": "Stage 3, easy access to a human"
     },
     "strength": "research",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "OPS-0007",
@@ -272,7 +277,12 @@
       "where": "Late sections: town hall Slack reporting and why overseas instead of the US"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "OPS-0008",
@@ -349,7 +359,12 @@
       "quote": "per incident (not per year)"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "OPS-0010",
@@ -390,7 +405,12 @@
       "where": "labour and flex staffing discussion; 'profit engineer' role section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "OPS-0011",
@@ -428,7 +448,16 @@
       "where": "Purchase order management section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "size": [
+        "small",
+        "mid"
+      ]
+    }
   },
   {
     "id": "OPS-0012",
@@ -503,7 +532,12 @@
       "where": "Customer service section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "OPS-0014",
@@ -547,7 +581,12 @@
       "where": "Forecasting and inventory planning section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "OPS-0015",
@@ -629,7 +668,21 @@
       "quote": "the easiest way to improve your conversion is just get better people"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ],
+      "size": [
+        "mid"
+      ]
+    }
   },
   {
     "id": "OPS-0017",
@@ -669,7 +722,15 @@
       "quote": "human payroll is 7% of revenue or something"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "size": [
+        "large"
+      ]
+    }
   },
   {
     "id": "OPS-0018",
@@ -792,7 +853,20 @@
       "where": "[00:10:00-00:16:00] death of the traditional media buyer; founder-in-account question"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "spend": [
+        "small",
+        "mid"
+      ],
+      "size": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "OPS-0021",
@@ -831,7 +905,12 @@
       "where": "AI roles inside the agency segment"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "OPS-0022",
@@ -1106,6 +1185,12 @@
       "where": "Duties of all e-commerce entities and of sellers on marketplaces"
     },
     "strength": "regulator_rule",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "marketplace"
+      ]
+    }
   }
 ]

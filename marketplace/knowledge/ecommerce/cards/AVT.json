@@ -39,7 +39,12 @@
       "quote": "we were instead in the business of moving lives"
     },
     "strength": "shown_with_numbers",
-    "public": false
+    "public": false,
+    "situations": {
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "AVT-0002",
@@ -155,7 +160,12 @@
       "where": "Chapter on SNHU, 'What are the experiences customers seek'"
     },
     "strength": "shown_with_numbers",
-    "public": false
+    "public": false,
+    "situations": {
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "AVT-0005",
@@ -225,7 +235,15 @@
       "where": "Reddit and Quora section, 'why don't you go to the gym' and 'no time to work out' threads"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "AVT-0007",
@@ -338,7 +356,12 @@
       "quote": "your best customers are going to be people who have already spent"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid"
+      ]
+    }
   },
   {
     "id": "AVT-0010",
@@ -455,7 +478,15 @@
       "quote": "you should try to go as specific as possible. Then you go broader out"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "early"
+      ],
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "AVT-0013",
@@ -532,7 +563,12 @@
       "where": "opening section on new avatar versus new mechanism, and the ab stimulator walkthrough"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "early"
+      ]
+    }
   },
   {
     "id": "AVT-0015",
@@ -647,7 +683,12 @@
       "where": "Four-pronged research segment, discussion of customer conversations and the Deploy Empathy citation"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "AVT-0018",
@@ -763,7 +804,13 @@
       "where": "Acquisition section, athlete vs coach pop-up example"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "AVT-0021",
@@ -838,7 +885,13 @@
       "quote": "quizzes have a double function"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "AVT-0023",

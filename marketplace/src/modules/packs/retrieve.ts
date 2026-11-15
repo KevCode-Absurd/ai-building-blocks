@@ -13,7 +13,10 @@
 //   rankers are built but off (TUNING): a heading-only ranker cut Hit@5 from 0.71 to 0.44 on the golden set, and
 //   pseudo-relevance feedback did not raise MRR (scripts/eval-retrieval.mjs, 13 Nov 2026).
 // - Aliases: a short list of short forms and their spelled-out names (ROAS and return on ad spend) joins the
-//   glossary expansion, the cheap answer to sparse search missing synonyms, with no embeddings and no model.
+//   glossary expansion, the cheap answer to sparse search missing synonyms, with no embeddings and no model. A
+//   vertical's owner-words file (knowledge/<vertical>/synonyms.json) adds its own groups and owner phrases.
+// - Line ranker (MaxP): each list item, table row and paragraph is also scored alone and the passage keeps its best
+//   unit, so the one rule or number a question needs counts in full inside a long list of unrelated ones.
 // - Routing: a query may name the library modules to search (--module MCR,ADC); the whole pack is the fallback.
 // - Diversity and position: at most two passages per section and ten in all (accuracy saturates after 10 to 20
 //   documents, and what sits in the middle gets lost), best first.
@@ -219,9 +222,53 @@ class Bm25 {
 /**
  * Ranker settings, chosen on the 75-question golden set (scripts/eval-retrieval.mjs, 13 Nov 2026): heading ranker
  * off (Hit@5 0.44 with it, 0.71 without), feedback off (MRR 0.56 without, at most 0.54 with), glossary on (MRR 0.56
- * with, 0.54 without). Chunks of about 180 words beat 60, 90, 120 and 260.
+ * with, 0.54 without). Chunks of about 180 words beat 60, 90, 120 and 260. The line ranker (14 Nov 2026, tuned on
+ * the odd-numbered questions, eval-retrieval.mjs --split): on, at weight 1.5, each unit with its passage's heading
+ * trail, number lines x1.4 for a quantity question and rule lines x1.4 for a should-I question; Hit@1 0.43 to 0.55,
+ * Hit@5 0.69 to 0.79, MRR 0.56 to 0.64 (held-out half Hit@5 0.65 to 0.73).
  */
-export const TUNING = { heads: false, prf: 0, prfDocs: 3, prfWeight: 0.3, glossary: true, aliases: true, aliasWeight: 0.7 };
+export const TUNING = { heads: false, prf: 0, prfDocs: 3, prfWeight: 0.3, glossary: true, aliases: true, aliasWeight: 0.7, lines: true, lineWeight: 1.5, lineContext: "context", numBoost: 1.4, ruleBoost: 1.4 };
+
+export interface UnitKind { num: boolean; rule: boolean }
+/**
+ * What a question asks for, read from its words: a quantity ("how long", "what share", "how many", "roughly") or a
+ * call ("should I", "can we", "is it OK", "what do I do"). The line ranker then favours units of the same kind: a
+ * line with a number for a quantity, a rule line ("If ..., do ...", "never", "always") for a call.
+ */
+export function questionKind(q: string): UnitKind {
+  return {
+    num: /\bhow (?:long|many|much|big|high|low|often|fast|soon|far|well)\b|\bwhat (?:share|percent(?:age)?|proportion|fraction|rate|number|size)\b|\broughly\b|\b(?:deadline|benchmark|on average)\b/i.test(q),
+    rule: /\b(?:should|can|could|may|must) (?:i|we|you|my|our|they)\b|\bis it (?:ok|okay|fine|safe|bad|wise|worth|allowed|legal)\b|\bwhat (?:do|should|must) (?:i|we)\b|\bdo (?:i|we) (?:need|have) to\b|\bwhat (?:should )?happens?\b/i.test(q),
+  };
+}
+/** The kind of one unit: it holds a number (citation marks aside), or it states a rule. */
+export function unitKind(u: string): UnitKind {
+  return {
+    num: /\d/.test(u.replace(/\[\d{1,3}\]/g, "")),
+    rule: /^(?:[-*+]\s+|\d{1,2}[.)]\s+|\|\s*)?(?:\*\*[^*]+\*\*[:.]?\s*)?(?:if|when|unless|never|always|do not|don't|before|once)\b/i.test(u) || /\b(?:never|always|must|do not|don't)\b/i.test(u),
+  };
+}
+
+/**
+ * The units a passage is made of, for the line ranker: each list item (with its wrapped lines), each table row and
+ * each plain paragraph. Rules, numbers and mistakes sections hold one fact per line, so a 200-word passage of twelve
+ * unrelated rules scores low on any one of them as a whole; scored line by line (MaxP, the best unit stands for the
+ * passage) the line that answers the question counts in full.
+ */
+export function passageUnits(text: string): string[] {
+  const out: string[] = [];
+  let cur: string[] = [];
+  const flush = () => { if (cur.length) out.push(cur.join(" ")); cur = []; };
+  for (const line of text.split("\n")) {
+    const t = line.trim();
+    if (!t) { flush(); continue; }
+    if (/^\|?\s*:?-{2,}/.test(t) && /^[|:\-\s]+$/.test(t)) continue;
+    if (/^\|/.test(t) || /^\s*(?:[-*+]|\d{1,2}[.)])\s+/.test(line)) { flush(); cur.push(t); continue; }
+    cur.push(t);
+  }
+  flush();
+  return out;
+}
 
 /**
  * Short forms and their spelled-out names, searched as one (the paraphrase gap of sparse search, lecture 3): a
@@ -253,11 +300,38 @@ export const ALIASES: string[][] = [
 const ALIAS_GROUPS: string[][] = ALIASES.map(g => [...new Set(g.map(p => tokens(p).join(" ")).filter(Boolean))]);
 
 /** The other phrases of every alias group a query names (as token phrases). */
-export function aliasesOf(q: string[]): string[] {
+export function aliasesOf(q: string[], groups: string[][] = ALIAS_GROUPS): string[] {
   const joined = ` ${q.join(" ")} `;
   const out: string[] = [];
-  for (const g of ALIAS_GROUPS) if (g.some(p => joined.includes(` ${p} `))) for (const p of g) if (!joined.includes(` ${p} `)) out.push(p);
+  for (const g of groups) if (g.some(p => joined.includes(` ${p} `))) for (const p of g) if (!joined.includes(` ${p} `)) out.push(p);
   return out;
+}
+
+/**
+ * A vertical's owner-words layer (knowledge/<vertical>/synonyms.json): `groups` are terms that mean the same thing
+ * (ROAS and return on ad spend), searched as one both ways like ALIASES; `phrases` map how owners say a problem
+ * ("people add to cart and leave") to the words experts and cards use ("cart abandonment"), one way only. A
+ * vertical with no file searches exactly as before.
+ */
+export interface Synonyms { groups?: string[][]; phrases?: { owner: string[]; expert: string[] }[] }
+interface SynonymIndex { groups: string[][]; phrases: { owner: string[][]; expert: string[] }[] }
+function synonymIndex(s?: Synonyms | null): SynonymIndex | null {
+  if (!s || (!s.groups?.length && !s.phrases?.length)) return null;
+  const phrase = (p: string) => tokens(p).join(" ");
+  return {
+    groups: (s.groups ?? []).map(g => [...new Set(g.map(phrase).filter(Boolean))]).filter(g => g.length > 1),
+    // An owner phrase matches when all its words are in the query, in any order ("leave after adding to cart").
+    phrases: (s.phrases ?? []).map(p => ({ owner: p.owner.map(o => [...new Set(tokens(o))]).filter(o => o.length), expert: [...new Set(p.expert.map(phrase).filter(Boolean))] })).filter(p => p.owner.length && p.expert.length),
+  };
+}
+/** The expert phrases a query's owner words point to, and the other names of the terms it uses (as token phrases). */
+export function synonymsOf(q: string[], s: SynonymIndex | null): string[] {
+  if (!s) return [];
+  const words = new Set(q);
+  const joined = ` ${q.join(" ")} `;
+  const out = aliasesOf(q, s.groups);
+  for (const p of s.phrases) if (p.owner.some(o => o.every(w => words.has(w)))) for (const e of p.expert) if (!joined.includes(` ${e} `)) out.push(e);
+  return [...new Set(out)];
 }
 
 /**
@@ -296,24 +370,44 @@ export class KnowledgeIndex {
   readonly chunks: Chunk[];
   private body: Bm25;
   private heads: Bm25;
+  private units: Bm25;
+  private unitOf: number[];
+  private unitKind: UnitKind[];
   private glossary: Map<string, string[]>;
   private sources: Map<number, SourceRow>;
   private reviewDays: number;
   private citeFiles: Set<string>;
+  private synonyms: SynonymIndex | null;
+  private lines: boolean;
   /**
    * `sources` resolve the [n] numbers of the files in `citeFiles` (default knowledge.md, whose numbers point to
    * sources.json); other files number their own sources, so their [n] stay as they are.
    */
-  constructor(files: { path: string; text: string }[], opts: { sources?: SourceRow[]; reviewDays?: number; glossaryFrom?: string; citeFiles?: string[] } = {}) {
+  constructor(files: { path: string; text: string }[], opts: { sources?: SourceRow[]; reviewDays?: number; glossaryFrom?: string; citeFiles?: string[]; synonyms?: Synonyms | null; lines?: boolean } = {}) {
     this.chunks = files.flatMap(f => chunkMarkdown(f.path, f.text));
     this.citeFiles = new Set(opts.citeFiles ?? ["knowledge.md"]);
     // The situating context counts once in the body ranker and alone in the heading ranker.
     this.body = new Bm25(this.chunks.map(c => tokens(`${c.context}\n${c.text}`)));
     this.heads = new Bm25(this.chunks.map(c => tokens(c.context)));
+    // The line ranker: every unit of every passage (a list item, a table row, a paragraph), scored on its own.
+    const units: string[][] = [];
+    this.unitOf = [];
+    this.unitKind = [];
+    this.chunks.forEach((c, i) => {
+      for (const u of passageUnits(c.text)) {
+        const t = tokens(u);
+        if (t.length < 3) continue;
+        t.push(...tokens(TUNING.lineContext === "context" ? c.context : TUNING.lineContext === "heading" ? c.heading : ""));
+        units.push(t); this.unitOf.push(i); this.unitKind.push(unitKind(u));
+      }
+    });
+    this.units = new Bm25(units);
     const gloss = opts.glossaryFrom ?? files.find(f => f.path === "knowledge.md")?.text ?? "";
     this.glossary = glossaryOf(gloss);
     this.sources = new Map((opts.sources ?? []).filter(s => s && Number.isFinite(s.n)).map(s => [s.n, s]));
     this.reviewDays = opts.reviewDays ?? 0;
+    this.synonyms = synonymIndex(opts.synonyms);
+    this.lines = opts.lines ?? TUNING.lines;
   }
 
   /** The query's glossary expansion: definition words of every glossary term the query names, at half weight. */
@@ -324,13 +418,24 @@ export class KnowledgeIndex {
       if (!joined.includes(` ${term} `)) continue;
       for (const w of words) if (!q.includes(w)) out.set(w, 0.5);
     }
-    if (TUNING.aliases) for (const p of aliasesOf(q)) for (const w of p.split(" ")) if (!q.includes(w)) out.set(w, Math.max(out.get(w) ?? 0, TUNING.aliasWeight));
+    if (TUNING.aliases) for (const p of [...aliasesOf(q), ...synonymsOf(q, this.synonyms)]) for (const w of p.split(" ")) if (!q.includes(w)) out.set(w, Math.max(out.get(w) ?? 0, TUNING.aliasWeight));
     return out;
   }
 
   /** True when the pack holds the word, or every word of one of its aliases ("roas" when only "return on ad spend" is there). */
   private knows(w: string, has: (x: string) => boolean): boolean {
-    return has(w) || (TUNING.aliases && aliasesOf([w]).some(p => p.split(" ").every(has)));
+    return has(w) || (TUNING.aliases && [...aliasesOf([w]), ...synonymsOf([w], this.synonyms)].some(p => p.split(" ").every(has)));
+  }
+
+  /** Each passage scored by its best unit (passageUnits), over the expanded query. */
+  private lineScores(q: string[], weights: Map<string, number>, want: UnitKind): number[] {
+    const out = new Array<number>(this.chunks.length).fill(0);
+    this.units.scores(q, weights).forEach((s, u) => {
+      const i = this.unitOf[u], k = this.unitKind[u];
+      const v = s * (want.num && k.num ? TUNING.numBoost : 1) * (want.rule && k.rule ? TUNING.ruleBoost : 1);
+      if (v > out[i]) out[i] = v;
+    });
+    return out;
   }
 
   /**
@@ -356,11 +461,12 @@ export class KnowledgeIndex {
    * The passages that answer a question, best first. `questions` may hold several phrasings of one need (the
    * agent's own rewrites); their rankings fuse like the rankers do. `today` (YYYY-MM-DD) marks stale sources.
    * `adjust` lets a caller with metadata (knowledge cards: tier, freshness, market) rescale a passage's fused score
-   * or drop it (null) before the top k are picked.
+   * or drop it (null) before the top k are picked. `max` raises the ceiling on k (MAX_PASSAGES) for a caller that
+   * reranks a deeper pool itself, such as job preparation.
    */
-  ask(questions: string | string[], opts: { k?: number; today?: string; paths?: string[]; modules?: string[]; adjust?: (chunk: Chunk, score: number) => number | null } = {}): Answer {
+  ask(questions: string | string[], opts: { k?: number; max?: number; today?: string; paths?: string[]; modules?: string[]; adjust?: (chunk: Chunk, score: number) => number | null } = {}): Answer {
     const qs = (Array.isArray(questions) ? questions : [questions]).map(s => s.trim()).filter(Boolean);
-    const k = Math.max(1, Math.min(MAX_PASSAGES, opts.k ?? 6));
+    const k = Math.max(1, Math.min(opts.max ?? MAX_PASSAGES, opts.k ?? 6));
     // A module filter narrows the search to those modules' files (and any paths given); none found: the whole pack.
     const routed = opts.modules?.length ? modulePaths([...new Set(this.chunks.map(c => c.path))], opts.modules) : [];
     const scope = [...(opts.paths ?? []), ...routed];
@@ -374,12 +480,13 @@ export class KnowledgeIndex {
       const expQuery = [...qt, ...exp.keys()];
       const weights = new Map<string, number>([...exp, ...qt.map(w => [w, 1] as [string, number])]);
       const first = this.body.scores(qt);
-      const rankers = [first, TUNING.heads ? this.heads.scores(qt) : null, TUNING.glossary && exp.size ? this.body.scores(expQuery, weights) : null];
-      if (TUNING.prf > 0) rankers.push(this.feedback(first, qt, weights));
-      for (const scores of rankers) {
+      const rankers: [number[] | null, number][] = [[first, 1], [TUNING.heads ? this.heads.scores(qt) : null, 1], [TUNING.glossary && exp.size ? this.body.scores(expQuery, weights) : null, 1]];
+      if (TUNING.prf > 0) rankers.push([this.feedback(first, qt, weights), 1]);
+      if (this.lines) rankers.push([this.lineScores(expQuery, weights, questionKind(q)), TUNING.lineWeight]);
+      for (const [scores, w] of rankers) {
         if (!scores) continue;
         const order = scores.map((s, i) => [s, i] as const).filter(([s, i]) => s > 0 && (!allowed || allowed.has(this.chunks[i].path))).sort((a, b) => b[0] - a[0] || a[1] - b[1]);
-        order.forEach(([, i], rank) => fused.set(i, (fused.get(i) ?? 0) + 1 / (RRF_K + rank + 1)));
+        order.forEach(([, i], rank) => fused.set(i, (fused.get(i) ?? 0) + w / (RRF_K + rank + 1)));
       }
     }
     const adjusted = opts.adjust ? [...fused].flatMap(([i, s]) => { const v = opts.adjust!(this.chunks[i], s); return v === null ? [] : [[i, v] as [number, number]]; }) : [...fused];

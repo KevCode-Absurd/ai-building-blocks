@@ -122,7 +122,7 @@ function buildFilePurpose(p: string, text: string): string {
     return p.endsWith(".json") ? `Process: ${name}. Its stages, checks, sign-offs and hand-offs, as Claude copies it.` : `Process: ${name}, as a readable page.`;
   }
   if (p.startsWith("access/")) return `Access guide: ${(/^# (.+)$/m.exec(text)?.[1] ?? p).replace(/^Give your agents access to /, "")}, step by step.`;
-  return `Build kit file (BUILD.md copies it to ${p.replace(/^files\//, "")} in the store folder).`;
+  return "Build kit file: BUILD.md copies it into the store folder (its Appendix A says where).";
 }
 
 /** The README section for a pack that carries a build folder. */

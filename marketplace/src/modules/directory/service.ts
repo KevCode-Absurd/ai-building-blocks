@@ -31,22 +31,23 @@ export function rowToPersona(row: PersonaRow): Persona {
   return {
     id: row.id, kind: row.kind, expert_id: row.expert_id, name: row.name, title: row.title, tagline: row.tagline,
     area: row.area as Persona["area"], ...(extra?.role ? { role: extra.role } : {}), ...(extra?.mega ? { mega: extra.mega } : {}), ...(extra?.team ? { team: extra.team } : {}),
+    ...(extra?.vertical ? { vertical: extra.vertical, ...(extra.modules ? { modules: extra.modules } : {}) } : {}),
     profile: { ...emptyProfile(row.id), ...parseJson<Partial<PersonaProfile>>(row.profile, {}) },
     status: row.status, sort: row.sort,
   };
 }
 
-type HouseExtras = Pick<Persona, "role" | "mega" | "team">;
+type HouseExtras = Pick<Persona, "role" | "mega" | "team" | "vertical" | "modules">;
 let extrasIndex: { list: Persona[]; byId: Map<string, HouseExtras> } | null = null;
 
 /**
- * A house persona's job role and mega settings, from the data files. The personas table has no columns for them, so
+ * A house persona's job role, mega settings and vertical (with its knowledge modules), from the data files. The personas table has no columns for them, so
  * a seeded row gets them here; they follow the data files on every deploy, with no reseed. Expert personas have neither.
  */
 export function houseExtras(id: string): HouseExtras | undefined {
   const list = housePersonas();
   if (!extrasIndex || extrasIndex.list !== list) {
-    extrasIndex = { list, byId: new Map(list.filter(p => p.role || p.mega || p.team).map(p => [p.id, { role: p.role, mega: p.mega, team: p.team }])) };
+    extrasIndex = { list, byId: new Map(list.filter(p => p.role || p.mega || p.team || p.vertical).map(p => [p.id, { role: p.role, mega: p.mega, team: p.team, vertical: p.vertical, modules: p.modules }])) };
   }
   return extrasIndex.byId.get(id);
 }

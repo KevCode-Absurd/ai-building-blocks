@@ -48,7 +48,7 @@ output_sample:
     - Customer questions or People Also Ask questions (optional)
     - Three real reviews that name the products (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your org context from the Org context builder (optional, makes the result better)
     - Your Shopify theme name, if you want the notes for splitting the description (optional)
   output:
     - name: FIELDS

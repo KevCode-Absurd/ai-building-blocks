@@ -46,7 +46,7 @@ output_sample:
     - A way to reach 50 to 200 buyers, such as an email list or post-purchase survey
     - Six attributes buyers care about (optional)
     - Two themes you want to compare (optional)
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   prerequisites:
     - A way to send the survey, such as Google Forms, which is free
     - Your answers pasted back into the chat once buyers have replied
@@ -133,7 +133,7 @@ test:
 improve:
   - Add your category's usual reasons to buy to the skill file so the attributes start from a good list.
   - Add words to avoid and claims you cannot support, so the "what to claim" part is safe.
-  - Save each year's result to your brand file, with the sample size and date.
+  - Save each year's result to your org context, with the sample size and date.
   - Add the survey to your post-purchase flow so you collect answers all year.
   - Pair it with the Say-do gap checker to check how far ratings match real buying, and with the Positioning statement writer to turn the lead into a statement.
 

@@ -25,7 +25,7 @@ not_for:
 you_give:
   - What you already own, such as skills, customers, know-how and assets (required)
   - The new market ideas you are weighing (required, in the same message)
-  - Your brand file, for what you sell and to whom (optional)
+  - Your org context, for what you sell and to whom (optional)
   - What the new markets look like today (optional)
 you_get:
   - Each idea sorted as reinvention, coaction or diversification
@@ -43,7 +43,7 @@ output_sample:
   input:
     - "What you already own: skills, customers, know-how and assets"
     - The new market ideas you are weighing, one line each
-    - Your brand file (optional)
+    - Your org context (optional)
     - How the new markets work today (optional)
   output:
     - name: What you own
@@ -133,7 +133,7 @@ test:
 improve:
   - Add your own list of strengths, with proof for each, so the carry-over test is firm.
   - Add rules for what you will not do, such as avoiding a new fixed-cost base.
-  - Save the ranking in your brand file and update it each year.
+  - Save the ranking in your org context and update it each year.
   - Pair it with "Business power tester" to test the power you plan to build.
 
 works_best_with:

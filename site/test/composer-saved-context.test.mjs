@@ -47,7 +47,7 @@ test('personal writing gets personal voice while customer emails use the brand v
   assert.match(planningMeContext(me, 'Write my own LinkedIn posts', '2026-10-29'), /dry humour/);
   const brand = planningMeContext(me, 'Write customer emails', '2026-10-29');
   assert(!brand.includes('dry humour'));
-  assert.match(brand, /brand brain/);
+  assert.match(brand, /org context/);
 });
 
 test('opting out preserves explicit notes exactly and context overflow fails without truncation', () => {

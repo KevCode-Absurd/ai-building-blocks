@@ -15,7 +15,7 @@ outputs:
   - {type: upscaled_image}
 uses: [repeated-image-campaign-planner, image-ad-maker-with-exact-text, pre-launch-ad-checker, image-upscale-checker]
 steps:
-  - {uses: repeated-image-campaign-planner, note: "Starts from your one photo and your brand file. It hands over a plan with the colour list and steps."}
+  - {uses: repeated-image-campaign-planner, note: "Starts from your one photo and your org context. It hands over a plan with the colour list and steps."}
   - {uses: image-ad-maker-with-exact-text, note: "Turns each piece in the plan into a prompt with every word spelled out. It hands over the prompts."}
   - {uses: pre-launch-ad-checker, note: "Reads the prompts from the step before and names anything to fix before you spend on images. It hands over a fix list."}
   - {uses: image-upscale-checker, note: "Uses the images you approve after the pause, not the fix list from step 3. It hands over the enlarged images with a change check."}

@@ -40,7 +40,7 @@ output_sample:
     - Your daily budget, conversions per month and cost per sale on non-brand search
     - Whether your feed and purchase tracking work
     - After the pause, your asset group, product, search term and placement reports
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - Live Shopping and Search campaigns that are steady
     - A Google Ads account you can export reports from

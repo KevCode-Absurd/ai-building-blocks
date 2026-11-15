@@ -26,7 +26,7 @@ you_give:
   - The idea, the problem it solves and for whom
   - What you already know, such as customer words, tests, costs and limits
   - Customer reviews or messages (optional)
-  - Your brand file, for rules on claims and fit (optional)
+  - Your org context, for rules on claims and fit (optional)
 you_get:
   - Each of the four risks with the evidence, or marked unknown
   - A score out of 100 for how well the evidence covers the risks
@@ -43,7 +43,7 @@ output_sample:
     - Your idea, the problem it solves and who it is for
     - What you already know, such as customer words, tests, costs and limits
     - Customer reviews or messages (optional)
-    - Your brand file, for rules on claims and fit (optional)
+    - Your org context, for rules on claims and fit (optional)
   output:
     - name: The problem
       contains: The problem and the customer in plain words, written without naming your solution.
@@ -138,7 +138,7 @@ works_best_with:
   inputs:
     - "Customer reviews or call notes that mention the problem"
     - "Cost estimates from the people who would build it"
-    - "Rules or limits from legal, sales or your brand file"
+    - "Rules or limits from legal, sales or your org context"
 
 terms:
   - term: Value risk

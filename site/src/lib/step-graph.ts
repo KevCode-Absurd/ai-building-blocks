@@ -9,7 +9,7 @@
 import { startPicks, type Library, type Part } from "./composer-core.ts";
 import { handsOver, isLoosePort, nextSteps, previousSteps } from "./next-steps.mjs";
 
-/** The brand profile builder makes the product facts and buyers nearly every line of work reads (suggest-before.ts). */
+/** The org context builder makes the product facts and buyers nearly every line of work reads (suggest-before.ts). */
 const MAKERS = ["website-brand-brain-builder"];
 const notAgent = (x: Part) => x.type === "agent";
 const required = (b: Part) => b.inputs.filter(p => p.required).map(p => p.type);

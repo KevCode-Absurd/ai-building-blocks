@@ -112,5 +112,5 @@ test:
 improve:
   - Put your naming scheme into the test planner, so ad names match your reports.
   - Add your real minimum order and margin to the allocator, so stop points use your numbers.
-  - Save the winning ideas and the concepts marked dead in your brand file for the next round.
+  - Save the winning ideas and the concepts marked dead in your org context for the next round.
   - Pair it with an ad script or image prompt skill, using the next brief from step 3.

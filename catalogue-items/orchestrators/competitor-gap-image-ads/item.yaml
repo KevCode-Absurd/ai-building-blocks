@@ -12,8 +12,6 @@ inputs:
   - {type: competitor_set, required: false}
   - {type: offer, required: false}
   - {type: voc_reviews, required: false}
-  - {type: script, required: false}
-  - {type: static_ads, required: false}
   - {type: landing_page, required: false}
 outputs:
   - {type: audit_report}

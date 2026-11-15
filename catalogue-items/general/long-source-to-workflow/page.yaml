@@ -24,7 +24,7 @@ not_for:
 
 you_give:
   - The full text of the source, with its title, who made it and a link
-  - A few lines on your work, or your brand file (optional)
+  - A few lines on your work, or your org context (optional)
   - The skills you already have, so it can reuse them (optional)
 you_get:
   - The skeleton, each step with where it came from, what it reads and what it makes
@@ -41,7 +41,7 @@ how_to_use:
 output_sample:
   input:
     - The full text of a long article, transcript or book notes, with its title, maker and link
-    - A few lines on your work, or your brand file (optional)
+    - A few lines on your work, or your org context (optional)
     - The names of skills you already have (optional)
   prerequisites:
     - A source you have the right to paste and reuse

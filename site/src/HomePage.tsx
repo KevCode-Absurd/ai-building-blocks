@@ -165,7 +165,7 @@ function Library({ c, complete = true, error = "", retry, onNeedFull }: { c: Cat
       {audience && <div className="audience-guide small" data-testid="audience-guide">
         <p><strong>{audience.goal}</strong> These are starter picks. Clear this filter to explore all tasks.</p>
         <p>Bring: {audience.bring}</p>
-        <p><button className="link-btn" onClick={openBusiness}>Add your brand file</button> · <a href={starterTemplate(audience.id)} download>Download a details template</a></p>
+        <p><button className="link-btn" onClick={openBusiness}>Add your org context</button> · <a href={starterTemplate(audience.id)} download>Download a details template</a></p>
         {audience.id === "enterprise" && <p>These packs support your work in your chosen AI tool. Team access controls, company system connections and audit storage need your own implementation.</p>}
       </div>}
       <div id="library-results" role="tabpanel" aria-labelledby={`format-${f.kind}`}>

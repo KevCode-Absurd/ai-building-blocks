@@ -23,7 +23,7 @@ you_give:
   - The cost per sale or ROAS each ad needs to hit
   - The history file from your last run, once it exists
   - Stock and cash for your best seller, and the words of your winning ad (advised)
-  - Your brand brain, if the account needs new ideas
+  - Your org context, if the account needs new ideas
 you_get:
   - A list of sliding ads, each with its last runs of numbers and the cause
   - Weak ads that never worked, kept apart from tired winners
@@ -46,7 +46,7 @@ output_sample:
     - The words of your winning ad (optional)
   prerequisites:
     - An AI that can read files, to keep the history between runs
-    - Your brand brain, only if the whole account needs new ideas (optional)
+    - Your org context, only if the whole account needs new ideas (optional)
   output:
     - name: Sliding ads
       contains: Each ad with its last runs of return, frequency and click rate, and whether the ad is spent or the audience is small.

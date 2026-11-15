@@ -210,7 +210,7 @@ test:
   - Lay the end frames of clips 1 and 3 side by side. Faces, clothes, sides and microphones should match.
   - Play the finished ad on a phone speaker with your eyes closed. You should always know who is talking.
 improve:
-  - Save your approved cast cards, picks and sheets in your brand file, so a second podcast-style ad keeps the same two people.
+  - Save your approved cast cards, picks and sheets in your org context, so a second podcast-style ad keeps the same two people.
   - Write your room and light into stage 3 of the skill file, so every run starts in your buyer's world.
   - Add your caption colours and disclosure wording to the finishing step.
   - Pair it with the podcast clip script skill, which writes the turns, the clip plan, the cast note and the disclosure this skill reads.

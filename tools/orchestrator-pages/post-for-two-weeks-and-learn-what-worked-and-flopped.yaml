@@ -20,7 +20,7 @@ not_for:
   - "You want posts for one account on X and LinkedIn: use the X and LinkedIn post pair writer."
 you_give:
   - The platforms you use and your goal
-  - Your brand file (optional)
+  - Your org context (optional)
   - Who you want to reach (optional)
   - "Your post numbers after two weeks (reach, likes, comments, shares, clicks and impressions)"
   - "Numbers for your past posts, to compare against (optional)"
@@ -37,7 +37,7 @@ how_to_use:
 output_sample:
   input:
     - The platforms you post on and your goal
-    - Your brand file (optional)
+    - Your org context (optional)
     - Who you want to reach (optional)
     - After two weeks, an export of reach, likes, comments, shares and clicks for each post
   prerequisites:
@@ -103,6 +103,6 @@ test:
   - Check that the post step 4 picked really ranks near the bottom.
   - Fix the weakest reason in three posts before you post them and see if they beat the rest.
 improve:
-  - Keep what worked in your brand file so the next plan starts from it.
+  - Keep what worked in your org context so the next plan starts from it.
   - Repeat the two weeks with the one change from step 4 and compare.
   - Add a note for each post saying what time and day it went out, so timing can be read next round.

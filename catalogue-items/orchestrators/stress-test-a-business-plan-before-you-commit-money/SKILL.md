@@ -36,7 +36,7 @@ How to start:
 
 ## What you need
 
-This is a business plan job. The general "Before you start" list above mentions a buyer brief and a brand brain. This job does not use either. Ignore the buyer brief lines and the "Recommended steps before this one" list in that box. This workflow needs the plan, the numbers behind it and what you are putting in.
+This is a business plan job. The general "Before you start" list above mentions a buyer brief and an org context. This job does not use either. Ignore the buyer brief lines and the "Recommended steps before this one" list in that box. This workflow needs the plan, the numbers behind it and what you are putting in.
 
 - **The business plan** (required): however rough.
 - **The numbers behind it** (required): costs, prices, how many customers and when. Give the inputs of any forecast, not only its results, because step 3 changes the inputs.

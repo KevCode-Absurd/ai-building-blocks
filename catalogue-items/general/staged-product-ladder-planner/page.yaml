@@ -136,7 +136,7 @@ test:
 improve:
   - Add your costs for tools, labour and stock to the funding check so it uses your real numbers.
   - Add a rule on how much cash you keep in reserve.
-  - Save the end goal and ladder in your brand file so future products fit it.
+  - Save the end goal and ladder in your org context so future products fit it.
   - Pair it with "Raw cost breakdown finder" to find the real cost of each step.
 
 works_best_with:

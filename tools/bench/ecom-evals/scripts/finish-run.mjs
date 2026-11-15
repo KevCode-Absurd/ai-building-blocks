@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+// Finishes one arm run after `claude -p --output-format stream-json --verbose > run.jsonl`:
+// saves the final reply to answer.md (unless the run wrote one), logs usage and cost into meta.json, and audits
+// every tool call for reads outside the run folder. A run that touched files outside its folder, or the web,
+// is marked contaminated and make-sheets leaves it out of judging.
+//
+//   node scripts/finish-run.mjs <run folder>
+import { existsSync, readFileSync, writeFileSync, statSync } from "node:fs";
+import path from "node:path";
+
+const dir = path.resolve(process.argv[2] ?? ".");
+const log = path.join(dir, "run.jsonl");
+if (!existsSync(log)) { console.error(`no ${log}`); process.exit(2); }
+const events = readFileSync(log, "utf8").split(/\r?\n/).filter(Boolean).map(l => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+const result = [...events].reverse().find(e => e.type === "result") ?? {};
+const outside = [], web = [], tools = {};
+const inside = p => { const r = path.relative(dir, path.resolve(dir, p)); return r === "" || (!r.startsWith("..") && !path.isAbsolute(r)); };
+for (const e of events) {
+  const content = e.type === "assistant" ? e.message?.content ?? [] : [];
+  for (const c of content) {
+    if (c.type !== "tool_use") continue;
+    tools[c.name] = (tools[c.name] ?? 0) + 1;
+    const i = c.input ?? {};
+    if (/^Web/.test(c.name)) web.push(c.name);
+    for (const k of ["file_path", "path", "notebook_path"]) if (typeof i[k] === "string" && !inside(i[k])) outside.push(`${c.name} ${i[k]}`);
+    if (typeof i.pattern === "string" && /^([A-Za-z]:|\/|\.\.)/.test(i.pattern) && !inside(i.pattern.replace(/[*?{].*$/, "") || ".")) outside.push(`${c.name} ${i.pattern}`);
+    if (c.name === "Bash" && typeof i.command === "string") {
+      for (const m of i.command.matchAll(/(?:[A-Za-z]:[\\/]|\/(?:c|d|Users|home|tmp)\/|\.\.[\\/])[^\s"'`;|&)]*/g)) if (!inside(m[0])) outside.push(`Bash ${m[0]}`);
+      if (/\b(curl|wget|Invoke-WebRequest)\b/.test(i.command)) web.push("Bash network");
+    }
+  }
+}
+const answer = path.join(dir, "answer.md");
+if (!existsSync(answer) || !statSync(answer).size) writeFileSync(answer, result.result ?? "");
+const metaPath = path.join(dir, "meta.json");
+const meta = existsSync(metaPath) ? JSON.parse(readFileSync(metaPath, "utf8")) : {};
+Object.assign(meta, { finished: new Date().toISOString(), usage: result.usage ?? null, cost_usd: result.total_cost_usd ?? null, num_turns: result.num_turns ?? null,
+  is_error: result.is_error ?? null, tool_calls: tools, audit: { outside_reads: outside, web, contaminated: outside.length > 0 || web.length > 0 } });
+writeFileSync(metaPath, JSON.stringify(meta, null, 1));
+console.log(`${path.basename(path.dirname(path.dirname(dir)))}/${path.basename(path.dirname(dir))}/${path.basename(dir)}: ${meta.audit.contaminated ? "CONTAMINATED " + JSON.stringify(meta.audit) : "clean"}`);

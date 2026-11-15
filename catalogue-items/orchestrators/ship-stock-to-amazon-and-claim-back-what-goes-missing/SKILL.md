@@ -30,7 +30,7 @@ How to start:
 
 ## What you need
 
-This is an Amazon seller job. The general "Before you start" list above mentions a brand brain. This job does not use one. The Seller Central reports below are what step 2 reads.
+This is an Amazon seller job. The general "Before you start" list above mentions an org context. This job does not use one. The Seller Central reports below are what step 2 reads.
 
 Gather the sales and product facts now. The reports and proof come after the shipments close.
 - **Your sales so far, lead times and case sizes** (required): units sold per week, how fast they are growing, your maker's lead time, shipping time and monthly capacity, and units per case. Put them in a sheet or paste them.

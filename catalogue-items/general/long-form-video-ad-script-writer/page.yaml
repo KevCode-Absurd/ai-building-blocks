@@ -50,7 +50,7 @@ output_sample:
     - Your product facts and the proof you hold, each with a source
     - Footage you own, as screenshots (optional)
   prerequisites:
-    - A brand brain from the Brand profile builder (optional)
+    - An org context from the Org context builder (optional)
     - A buyer brief from the Buyer brief writer (optional)
   output:
     - name: Stock
@@ -233,7 +233,7 @@ improve:
   - Add your proof list with sources (studies, tests, survey lines marked "of surveyed users") to "What you need" in the skill file, so step 2 counts the same things every time.
   - Write the lengths you really run into step 3, so it only plans for those.
   - Add your brand's own phrases to step 6, so the voice still sounds like you at minute eight.
-  - When the notes name a missing problem or proof, add it to your brand file. Each one earns more minutes than any rewrite.
+  - When the notes name a missing problem or proof, add it to your org context. Each one earns more minutes than any rewrite.
 
 works_best_with:
   tools:

@@ -129,7 +129,7 @@ improve:
   - Add your real flow volumes to the skill file so the queue starts from them.
   - "Add your test history: what you tried, the metric and the result."
   - Add your tool's test settings, such as where to set a manual 50/50 split.
-  - Save each result to your brand file. The next email starts from what you learned.
+  - Save each result to your org context. The next email starts from what you learned.
   - Pair it with the signup popup builder for popup tests and the email campaign calendar planner for send-time tests.
 
 works_best_with:

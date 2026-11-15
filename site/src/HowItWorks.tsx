@@ -52,7 +52,7 @@ const CHOOSE: [string, string, string][] = [
 ];
 
 const WORDS: [string, string][] = [
-  ["Brand file", "A short file about you or your business: what you do, who it's for, how you talk. Your AI reads it before each job."],
+  ["Org context", "A short file about you or your business: what you do, who it's for, how you talk. Your AI reads it before each job."],
   ["SKILL.md", "The file a skill lives in. It's plain text, so you can read it and change it."],
   ["HANDOFF.md", "The plan inside a downloaded workflow. Your AI follows it step by step."],
   ["Step", "One skill inside a workflow."],
@@ -232,7 +232,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
               <p>A workflow download contains the plan and the skill files. Give it to an AI assistant with the tools it needs, then ask it to follow the plan. Downloading the pack prepares the job; your AI carries it out when you start it.</p>
             </div>
             <div className="hiw-flow" aria-label="An example workflow">
-              {[["Brand profile builder", "brand file"], ["Buyer brief writer", "brief"], ["Fact-based ad copy writer", "ad copy"], ["Meta ads compliance checker", ""]].map(([step, carry], i) => (
+              {[["Org context builder", "org context"], ["Buyer brief writer", "brief"], ["Fact-based ad copy writer", "ad copy"], ["Meta ads compliance checker", ""]].map(([step, carry], i) => (
                 <div className="hiw-flow-step" key={step}>
                   <span className="hiw-flow-box"><span className="hiw-n">{i + 1}</span>{step}</span>
                   {carry && <span className="hiw-carry">{carry}</span>}
@@ -320,9 +320,9 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <ul className="checks">
               <li>Try one skill on a small real job first. Check whether it uses your facts, gives the promised result and follows its own checklist. Keep it if the result helps; adapt it if it misses your needs.</li>
               <li>Give it real facts. Your AI only knows what you tell it. When it has to guess, it can make things up.</li>
-              <li data-testid="hiw-me-md"><button type="button" className="link-btn" onClick={openBusiness}>Add your brand file once.</button> Every task then fits your business. Your <Link to="/me-md">me.md</Link> is the optional part about you.</li>
+              <li data-testid="hiw-me-md"><button type="button" className="link-btn" onClick={openBusiness}>Add your org context once.</button> Every task then fits your business. Your <Link to="/me-md">me.md</Link> is the optional part about you.</li>
               <li data-testid="hiw-train-agent"><Link to="/train-your-own-ai-agent">Train your own AI agent for a job you do often.</Link> Each edit you make becomes a rule it follows next time.</li>
-              <li>Set up your brand file once. Run “Brand profile builder” first, and every later step can use it.</li>
+              <li>Set up your org context once. Run “Org context builder” first, and every later step can use it.</li>
               <li>Start a new chat for a new job. Long chats about many things get muddled.</li>
               <li>Read the result before you use it, most of all prices, claims and anything legal.</li>
               <li>When a workflow writes MISSING, add what's missing and run that step again.</li>

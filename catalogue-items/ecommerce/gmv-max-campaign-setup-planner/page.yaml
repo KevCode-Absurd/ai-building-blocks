@@ -138,7 +138,7 @@ test:
 improve:
   - Add your real shipping, fees and returns rate to the skill file so the margin check uses your numbers.
   - Change the sample thresholds to match your sample budget and how many creators you want.
-  - Save the creators who drove revenue to your brand file, with their rates, to reuse in target invites.
+  - Save the creators who drove revenue to your org context, with their rates, to reuse in target invites.
   - Pair it with the TikTok Shop ad planner for the wider plan, and the TikTok ad test reader for videos you test outside GMV Max.
 
 works_best_with:

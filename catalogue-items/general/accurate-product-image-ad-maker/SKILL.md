@@ -15,24 +15,23 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
 **Makes it better (optional):**
-- **Brand file**, made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context**, made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 - **Your lessons**, made by the [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules): what past ads taught you: what worked, what failed and why.
-- **Hooks** (yours): opening lines, each with the angle and persona it targets.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand file.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand file and buyer brief.
-4. **Your lessons** with the [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules). Bring your notes (optional). It uses your brand file.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your org context.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your org context and buyer brief.
+4. **Your lessons** with the [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules). Bring your notes (optional). It uses your org context.
 5. This one.
 
-**From the brand file, read:** `index.md`, `look.json`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `look.json`, `foundation/design.md`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for a buyer brief, your brand file, product photos. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for a buyer brief, your org context, product photos. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -144,7 +143,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## If something is missing
 Write `MISSING: <photo role | product fact | approved words | price>` rather than guessing a size, an opening or a part. Show the product closed or at rest until the fact arrives.
 
-If photos are named but you can't see them, say so in one line, and don't call what you got a description unless one was given. Take the product's look and label words from the lock lines, the brand file or the input, mark the photo match as still to do on the first-image check, and never describe a photo you didn't see. Before writing MISSING for a fact, look for it in the brand file and the input; write MISSING only when both lack it.
+If photos are named but you can't see them, say so in one line, and don't call what you got a description unless one was given. Take the product's look and label words from the lock lines, the org context or the input, mark the photo match as still to do on the first-image check, and never describe a photo you didn't see. Before writing MISSING for a fact, look for it in the org context and the input; write MISSING only when both lack it.
 
 ## Avoid
 - Describing a reference you haven't seen.

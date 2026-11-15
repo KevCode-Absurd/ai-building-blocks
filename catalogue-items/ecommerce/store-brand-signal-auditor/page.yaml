@@ -26,7 +26,7 @@ you_give:
   - Your homepage, a product page, the cart and thank-you page, as screenshots or links
   - A welcome email, a shipping email and your support replies
   - Your packaging, inserts, social profiles and main ad
-  - Your promise and audience, and your brand file if you have one
+  - Your promise and audience, and your org context if you have one
   - Five stores your audience trusts and five they distrust (optional)
 
 you_get:
@@ -49,7 +49,7 @@ output_sample:
     - Five stores your audience trusts and five they distrust (optional)
   prerequisites:
     - An AI chat that can read images
-    - Your brand brain or Store promise writer result (optional)
+    - Your org context or Store promise writer result (optional)
   output:
     - name: SCORE
       contains: A score out of 100 now and with fixes made, with the sum of five parts shown.
@@ -137,7 +137,7 @@ test:
 improve:
   - Change the five weights in the skill file to suit your store. A pack-led brand may weigh pack more.
   - Add your own flags, such as a badge you fly on purpose, so they are not marked as problems.
-  - Save the fix list to your brand file, with owners and dates.
+  - Save the fix list to your org context, with owners and dates.
   - Pair it with a landing page audit, since this checks fit and not conversion.
 
 works_best_with:

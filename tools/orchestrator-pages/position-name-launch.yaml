@@ -22,7 +22,7 @@ you_give:
   - Your product and who it is for
   - Your main rivals and what each is known for
   - What you can truthfully claim (optional)
-  - Your brand file, or a few lines on what your brand stands for
+  - Your org context, or a few lines on what your brand stands for
   - The new product you want to add, and what it is (optional)
   - Product facts such as price, benefits and proof
 you_get:
@@ -34,18 +34,18 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your product and rivals, plus your brand file if you have one. It works step by step and saves each result.
+  - Paste your product and rivals, plus your org context if you have one. It works step by step and saves each result.
   - Check the weak-spot claim against a real source before you use it anywhere public.
 output_sample:
   input:
     - Your product and who it is for
     - Your main rivals and what each is known for
-    - Your brand file, or a few lines on what your brand stands for
+    - Your org context, or a few lines on what your brand stands for
     - The new product you want to add (optional)
     - Product facts such as price, benefits and proof
   prerequisites:
     - An AI that can read a folder of files, such as Claude Code or a Claude Project
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Positioning statement
       contains: The ladders of top brands, what each rival owns, the weak spot you can use, your position and a one-line statement.
@@ -107,6 +107,6 @@ test:
   - Read the one-line statement to someone who doesn't know your market. They should say what you stand for without help.
   - Swap one rival for another and run it again. The position can change, but it should still be one idea.
 improve:
-  - Save your position and the line to your brand file, so ads, pages and press use the same words.
+  - Save your position and the line to your org context, so ads, pages and press use the same words.
   - Add press you have already won, so the plan builds on stories that exist.
   - Re-run the name check each time you think of a new product under the same name.

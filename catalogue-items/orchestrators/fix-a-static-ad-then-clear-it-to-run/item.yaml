@@ -10,8 +10,6 @@ inputs:
   - {type: image, required: true}
   - {type: copy_draft, required: true}
   - {type: landing_page, required: false}
-  - {type: product_data, required: false}
-  - {type: static_ads, required: false}
   - {type: brand_brain, required: false}
 outputs:
   - {type: audit_report}

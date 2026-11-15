@@ -140,7 +140,7 @@ test:
 improve:
   - Add your own return rate and refund policy to the skill file so the returns step knows when to split them out.
   - Add the tiles your team looks at each week, so the score covers them first.
-  - Save the cash collected definition to your brand file so every report uses one revenue line.
+  - Save the cash collected definition to your org context so every report uses one revenue line.
   - Pair it with the store sales decline investigator when sales fall, and the GA4 store setup checker if the session gap is large.
 
 works_best_with:

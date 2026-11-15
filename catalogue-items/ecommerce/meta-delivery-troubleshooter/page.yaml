@@ -125,7 +125,7 @@ test:
   - Run it twice on the same facts. The first change it picks should match.
 
 improve:
-  - Save your last diagnosis and what you changed in your brand file, so the next run sees your history.
+  - Save your last diagnosis and what you changed in your org context, so the next run sees your history.
   - Add your break-even CPA so the cost-per-sale line has a clear pass mark.
   - Update the myths list in the skill file when Meta changes a rule. Names and defaults change.
   - Pair it with the Meta account structure planner for the layout and the ad awareness stage checker for the creative mix.

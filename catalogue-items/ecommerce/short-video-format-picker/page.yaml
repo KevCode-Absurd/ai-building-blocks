@@ -134,7 +134,7 @@ test:
 improve:
   - Add your claim rules to the skill file, such as words you may not use for health or beauty.
   - Add a list of the formats you have already filmed so it picks new ones.
-  - Save your best-performing hook and its format in your brand file.
+  - Save your best-performing hook and its format in your org context.
   - Pair it with an ad copy checker for the version that runs as an ad.
 
 works_best_with:

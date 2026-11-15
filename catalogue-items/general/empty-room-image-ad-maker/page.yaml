@@ -174,7 +174,7 @@ test:
   - Test it against a snapshot with a person in it. Some buyers respond to the empty room, some to a face.
 
 improve:
-  - Add what buyers say changed at home, in their own words, to your brand file. Those details become the trace and stop the flags.
+  - Add what buyers say changed at home, in their own words, to your org context. Those details become the trace and stop the flags.
   - Add your brand's light and time of day to step 5, so the hour matches your look.
   - Add the objects your brand never shows (medicine, bins, mess) to the house rules.
   - Write the trace into your story's first line, so the reader can match picture and text at once.

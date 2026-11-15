@@ -39,7 +39,7 @@ output_sample:
     - Your new public reviews, with stars, date, product and text
     - Your support email and the remedies you have approved (first run)
     - A few replies you wrote and liked (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can keep files, such as Claude Code, to save the reply log between weeks
   output:

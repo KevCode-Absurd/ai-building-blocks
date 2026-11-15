@@ -124,7 +124,7 @@ test:
 improve:
   - "Add your place's real limits (budget, rules, site) to \"What you need\", so rules stay possible."
   - "Add the words your team uses for the feeling, so the statement sounds like you."
-  - "Save the signed statement to your brand file and re-read it each year."
+  - "Save the signed statement to your org context and re-read it each year."
   - "Pair it with \"Design brief rules writer\" to turn the statement into a brief for a designer."
 
 works_best_with:

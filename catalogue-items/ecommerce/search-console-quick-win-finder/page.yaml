@@ -126,7 +126,7 @@ test:
 improve:
   - Add your list of key products so they are marked as sales pages.
   - Add your rule for how many actions you can do a month, so the list is cut to fit.
-  - Save last month's list in your brand file so the next run shows what moved.
+  - Save last month's list in your org context so the next run shows what moved.
   - Pair it with the organic search report builder to see the trend, and a store keyword map if you have too little data.
 
 works_best_with:

@@ -131,7 +131,7 @@ test:
 
 improve:
   - Add your own margin rule to the skill file, such as the lowest blended result you accept, so every plan is checked against it.
-  - Save your channel list and daily caps in your brand file so each run starts from them.
+  - Save your channel list and daily caps in your org context so each run starts from them.
   - Edit the reference stores in the skill file when you learn a closer example from your own category.
   - Add a line naming who owns each channel, so each cap has a person.
   - Pair it with the next dollar budget allocator, which shares one budget across campaigns, and the holdout test planner, which designs the tests.

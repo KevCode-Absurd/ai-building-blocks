@@ -123,7 +123,7 @@ example:
     resealable top. Colours: forest green, warm cream, sunflower.
     Tools: one-box music tool; video clips up to 8 s with timed
     prompts and an end frame; no mouth sync.
-    Brand file: attached (brand.md).
+    Org context: attached (brand.md).
     Approvals: take the avatar card and sheets as approved, and write
     every stage now. I'll make the track and tell you if it drifts.
   output: |
@@ -213,7 +213,7 @@ test:
 
 improve:
   - Write your fixed look line and product-showing rules into stage 3 of the skill file, so every song ad matches your other ads.
-  - Save your approved character sheet in your brand file, so the same lead comes back and new songs start at stage 4.
+  - Save your approved character sheet in your org context, so the same lead comes back and new songs start at stage 4.
   - Note your music tool's layout and your video tool's clip length in "What you need", so you don't repeat them.
   - Pair it with the skill that writes a song ad script, if you don't have one yet.
 

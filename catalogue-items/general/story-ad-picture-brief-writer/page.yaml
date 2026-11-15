@@ -98,7 +98,7 @@ test:
 improve:
   - Add your brand's props and rooms to the prompt.
   - List claims and body areas that platforms flag.
-  - Save the picture rules in your brand file.
+  - Save the picture rules in your org context.
   - Pair it with the Review quote ad card planner for a second style.
 works_best_with:
   tools:

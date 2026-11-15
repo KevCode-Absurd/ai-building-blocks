@@ -49,7 +49,7 @@ output_sample:
     - Your buyer and how much they already know (optional)
   prerequisites:
     - An AI chat that can read pasted text
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: VIEWER PROBLEM and CLAIM
       contains: One line on the problem your buyer has, and one bold claim you can prove.
@@ -132,7 +132,7 @@ improve:
   - Add your own story facts to the skill file, so every run starts from the same true version.
   - Add your proof library, with what each item shows and where it came from.
   - Add the claims you may not make, so the script avoids them.
-  - Save which narrator role worked best to your brand file.
+  - Save which narrator role worked best to your org context.
   - Pair it with the founder ad shoot planner to film many ads in one day.
 
 works_best_with:

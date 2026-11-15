@@ -23,7 +23,7 @@ you_give:
   - Your business, who you sell to and what you sell
   - Your budget and team size
   - What is already running (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - A blunt read of what is hollow in the strategy and what holds
   - A clear problem, policy and set of actions that fit together
@@ -41,7 +41,7 @@ output_sample:
     - Your business, who you sell to and what you sell
     - Your budget and team size
     - What is already running (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can read the handoff folder and save files, such as Claude Code or a Claude Project
   output:
@@ -83,7 +83,7 @@ tweaks:
     how: Give a number and a date. Step 2 cuts channels that do not fit it.
   - what: A shorter plan
     how: Ask for the 90-day roadmap only and skip the 12-month outlook.
-  - what: Your brand file
+  - what: Your org context
     how: Add it so the marketing plan uses your voice and offers.
 judge:
   - The diagnosis names the real problem, not a goal like grow sales.

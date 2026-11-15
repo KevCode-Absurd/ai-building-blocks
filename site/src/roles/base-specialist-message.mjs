@@ -1,5 +1,5 @@
 // "Copy as one message" for a specialist: setup, the questions it asks first and its core method in one chat
-// message. The published pack (base-specialist.mjs) stays generic. The owner's brand file is passed in by the
+// message. The published pack (base-specialist.mjs) stays generic. The owner's org context is passed in by the
 // browser at click time and never reaches our servers.
 import {MESSAGE_LIMIT,SITE,ACTION_RULE,bullets,numbered,fitMethod,brandBlock} from '../lib/one-message.mjs';
 
@@ -19,7 +19,7 @@ export function specialistMessage(role,{method=null,brandFile='',limit=MESSAGE_L
   `## How to start\n${numbered([
    'If I have not said what I need yet, ask: "What would you like me to do, and what would you like back?"',
    `Ask only for what is missing, in one short list:\n${bullets(['What job should you do, and what is out of scope?','What should you hand back, and what makes it good enough?','Which facts, files or examples can you use?',...take(role.inputs,4).map(i=>`If the job needs it: ${i}`)])}`,
-   `Do not ask again for anything I already gave you${brandFile?', including my brand file at the end of this message':''}. Never make up facts, numbers, prices or quotes.`,
+   `Do not ask again for anything I already gave you${brandFile?', including my org context at the end of this message':''}. Never make up facts, numbers, prices or quotes.`,
    'Then do the work here in the chat, step by step, and show me the result.',
   ])}`,
   role.capabilities?.length?`## How an expert does this\n${numbered(take(role.capabilities,6).map(c=>`${c.name}: ${c.description}`))}`:'',

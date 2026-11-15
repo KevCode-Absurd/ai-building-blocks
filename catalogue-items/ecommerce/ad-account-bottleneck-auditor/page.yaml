@@ -128,7 +128,7 @@ test:
 improve:
   - Add your own margin and CAC targets to the skill file, so the ratio bands match your store and not one agency's rule of thumb.
   - Change the score weights to fit your business. A store with weak tracking may want data worth more than 40 points.
-  - Save your bottleneck and fix order to your brand file, so next quarter's audit starts from it.
+  - Save your bottleneck and fix order to your org context, so next quarter's audit starts from it.
   - Run the specialist skills it names after each fix, such as the platform ROAS reality check and the CAC payback checker.
 
 works_best_with:

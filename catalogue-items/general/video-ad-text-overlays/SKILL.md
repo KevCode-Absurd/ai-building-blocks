@@ -19,9 +19,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand file and offer and buying reasons.
-3. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand file.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your org context and offer and buying reasons.
+3. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your org context.
 4. This one.
 
 How to start:
@@ -42,7 +42,7 @@ This skill runs on its own. If something marked required below is missing, ask o
 - **The finished video, or frames from it** (required): about one frame every 2 to 3 seconds. Read attached frames directly, and ask for screenshots rather than a description. Take a description only if the person can't attach frames, and then mark every placement as unchecked. Anything placed between frames is a guess a person must check.
 - **Allowed copy** (required): the offer, numbers, claims, site address and customer quotes, exactly as approved.
 - **Captions** (required): whether every spoken line is already burned in.
-- **Brand file** (optional): text habits, fonts, colours, what never to say.
+- **Org context** (optional): text habits, fonts, colours, what never to say.
 - **Format** (optional): clean, tactile, graphic or premium (step 6).
 
 ## Steps
@@ -112,7 +112,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 <!-- /next -->
 
 ## If something is missing
-Before you write `MISSING:` for a fact, look for it in the brand file and the input; write it only when both lack it. Frames named but not visible to you: say so in one line, judge placement on the written frame notes if there are any, mark every placement as unchecked, and never describe a frame you didn't see. Write `MISSING: <what>`. No scene lengths: label every time an estimate. No allowed copy: use only the script's words and flag every number for checking. No format given: premium for demos, clean for people talking.
+Before you write `MISSING:` for a fact, look for it in the org context and the input; write it only when both lack it. Frames named but not visible to you: say so in one line, judge placement on the written frame notes if there are any, mark every placement as unchecked, and never describe a frame you didn't see. Write `MISSING: <what>`. No scene lengths: label every time an estimate. No allowed copy: use only the script's words and flag every number for checking. No format given: premium for demos, clean for people talking.
 
 ## Avoid
 - New claims, new numbers, rounded or stronger wording.

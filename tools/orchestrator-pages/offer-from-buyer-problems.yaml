@@ -15,14 +15,14 @@ when:
   - You have many ideas for what to include and cannot tell which to keep.
   - You are about to set or raise a price and want it tied to the value.
 not_for:
-  - "You have no buyer data yet: run the Brand profile builder first, then come back."
+  - "You have no buyer data yet: run the Org context builder first, then come back."
   - "You only want a bonus package on an offer you already have: use the Offer bonus package builder."
   - "You only need to price a one-off discount: use the pricing planner step alone, or ask a person who knows your margins."
 you_give:
   - Who your buyer is and what they want, or a buyer profile
   - Your product facts (optional)
   - Reviews or call notes in the buyer's words (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
   - Sales numbers (optional)
 you_get:
   - A table of problems by stage, each turned into a promise, with the evidence for it
@@ -41,10 +41,10 @@ output_sample:
     - Who your buyer is and what they want, or a buyer profile
     - Your product facts (optional)
     - Reviews or call notes in the buyer's words (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
     - Hours and cash you can spend delivering (optional)
   prerequisites:
-    - A brand brain from the Website brand brain builder helps, but is not required
+    - An org context from the Org context builder helps, but is not required
   output:
     - name: "Step 1: Problems and promises"
       contains: A table of problems by stage, each with its driver, a promise and the evidence.
@@ -106,5 +106,5 @@ test:
   - Redo the sums in steps 3 and 5 by hand. The totals and ratios should match.
 improve:
   - Keep the problems list. Each time a buyer raises a new doubt, add it and rerun from step 2.
-  - Save the stack in your brand file, so later offers reuse your assets.
+  - Save the stack in your org context, so later offers reuse your assets.
   - Run "Make your offer harder to refuse" on the result, to add limits, bonuses, a guarantee and a name.

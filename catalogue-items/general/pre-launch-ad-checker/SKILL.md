@@ -14,7 +14,7 @@ You give one page per ad: a short **stop-ship** list, a list **worth a look**, t
 This skill runs on its own. What's below makes the result better, but none of it is required.
 
 **Makes it better (optional):**
-- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Org context**, made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your video ads** (yours): the video ads, attached or linked.
 - **Your image ads** (yours): the image ads, attached as pictures.
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
@@ -22,12 +22,12 @@ This skill runs on its own. What's below makes the result better, but none of it
 - **Image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words. It uses your brand brain and your offer and buying reasons.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words. It uses your org context and your offer and buying reasons.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your org context and a buyer brief.
 4. This one.
 
-**From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `foundation/claims.md`, `offers.json`, `voice.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
 
 How to start:
 1. Read the supplied brief, pasted text and relevant attachments first. With file tools, open only the business project or files the user named. With chat alone, work from the supplied text; an unavailable file is a gap, not a fact to guess.
@@ -38,7 +38,7 @@ How to start:
 
 ## What you need
 - **The ad** (required): the image at full size, the video's key frames or storyboard with script and timings, or the ad plan and image prompt. Plus every word that runs with it (main text, headline, button) and where it runs. Read the attached image or frames directly, and ask for them rather than a description.
-- **The facts** (recommended): live price, offer and dates, approved claims and their proof (reviews word for word), from `offers.md` and `proof-and-claims.md` in the brand file. Every proof figure, survey result and review quote must come from the user's own brand file or documents. Any figure in a worked example on the page is for illustration only. If the user has no proof, mark the claim "not confirmed"; never supply a stat or a quote to fill the gap.
+- **The facts** (recommended): live price, offer and dates, approved claims and their proof (reviews word for word), from `offers.md` and `proof-and-claims.md` in the org context. Every proof figure, survey result and review quote must come from the user's own org context or documents. Any figure in a worked example on the page is for illustration only. If the user has no proof, mark the claim "not confirmed"; never supply a stat or a quote to fill the gap.
 - **Brand marks** (recommended): the logo file, font names and real product photos.
 - **Who it's for** (recommended): the buyer, and whether they know the brand.
 - **The brief, an earlier version or the whole batch** (optional).

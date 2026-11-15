@@ -129,7 +129,7 @@ test:
 improve:
   - Add your own tiers, fallbacks and framing lines to the skill file as standing rules.
   - Add the lines you tested that worked or failed in your tone of voice.
-  - Set margin floors per product in your brand file.
+  - Set margin floors per product in your org context.
   - Pair it with the cart and checkout upsell planner and with a skill that sets price tiers and anchors.
 
 works_best_with:

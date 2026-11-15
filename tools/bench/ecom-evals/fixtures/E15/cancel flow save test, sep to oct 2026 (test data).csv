@@ -1,0 +1,6 @@
+# (test data) 50/50 split test of the save offer shown in the cancel flow, by product. Built for an e-commerce eval. Not Ritual's real figures.
+product,cancel_attempts,offer_a,saved_a,offer_b,saved_b
+Women's Multivitamin 18+,2400,20% off next 2 months,23%,Skip a month,14%
+Perimenopause Health,900,20% off next 2 months,12%,Skip a month,44%
+Synbiotic+,1100,20% off next 2 months,19%,Skip a month,16%
+Prenatal,700,20% off next 2 months,9%,Skip a month,11%

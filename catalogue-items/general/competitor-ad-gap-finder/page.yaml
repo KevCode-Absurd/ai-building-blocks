@@ -232,8 +232,8 @@ test:
 improve:
   - Mark the types your market never uses, so they're never counted as open.
   - Change the sample in "Sampling and run time" if your market has many small advertisers, and keep the cap per competitor.
-  - Keep your claims rules and reviews in your brand file, and log each ad's result in the "Results" section of log.md, so it never suggests a repeat or a claim you can't make.
-  - Save the category map and the top three gaps to your brand file with the date, so the next run shows what moved.
+  - Keep your claims rules and reviews in your org context, and log each ad's result in the "Results" section of log.md, so it never suggests a repeat or a claim you can't make.
+  - Save the category map and the top three gaps to your org context with the date, so the next run shows what moved.
   - Pair it with a skill that sorts competitor ads into a study board first, and one that briefs image ads for the gaps.
 
 works_best_with:

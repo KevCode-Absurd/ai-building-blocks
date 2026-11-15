@@ -1,0 +1,7 @@
+# (test data) TikTok ad-level export, USD. Built for an e-commerce eval. Not KraveBeauty's real figures.
+ad,campaign,status,spend,conversions,ctr,ad_text
+Spark | @creator: skincare for guys who hate skincare,Spark Ads | Creator posts,Active,3600,301,2.1%,3 steps. That's the whole routine.
+Spark | @creator: my barrier was wrecked,Spark Ads | Creator posts,Active,5200,214,1.6%,Great Barrier Relief saved my skin barrier*
+"Smart+ | 3 steps, that's it",Smart+ | All products,Active,11800,470,1.3% (was 1.9% on 4 Nov),Cleanse. Treat. Protect.
+"Smart+ | Beet The Sun, reef safe and waterproof",Smart+ | All products,Active,4100,151,1.2%,"Reef safe, waterproof SPF 40 you'll actually wear"
+In-feed | Slow down skincare (brand film),In-feed | Brand video,Active,10000,160,0.7%,Press reset on your routine

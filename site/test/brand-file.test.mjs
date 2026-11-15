@@ -51,13 +51,13 @@ test("picks are ordered by the brand file: local businesses see local-service it
   assert.deepEqual(biz.orderByProfile(items, s => s, { reach: "local" }).slice(0, 2), local.slice(0, 2));
 });
 
-test("one name: the brand file, in the menu, drawer, specialist setup and team page", () => {
-  assert.match(src("../src/SiteHeader.tsx"), />Your brand file<\/button>/);
+test("one name: the org context, in the menu, drawer, specialist setup and team page", () => {
+  assert.match(src("../src/SiteHeader.tsx"), />Your org context<\/button>/);
   assert.doesNotMatch(src("../src/SiteHeader.tsx"), /Business details/);
   assert.match(src("../src/BusinessDrawer.tsx"), /BRAND_FILE_TITLE/);
-  assert.equal(biz.BRAND_FILE_TITLE, "Your brand file");
-  for (const file of ["../src/roles/RoleTaskSetup.tsx", "../src/teams/TeamPage.tsx", "../src/BusinessDrawer.tsx"]) assert.doesNotMatch(src(file), /[Bb]rand brain/, file);
-  assert.match(src("../../docs/WRITING.md"), /brand brain \| your brand file/);
+  assert.equal(biz.BRAND_FILE_TITLE, "Your org context");
+  for (const file of ["../src/roles/RoleTaskSetup.tsx", "../src/teams/TeamPage.tsx", "../src/BusinessDrawer.tsx"]) assert.doesNotMatch(src(file), /[Bb]rand brain|[Bb]rand file/, file);
+  assert.match(src("../../docs/WRITING.md"), /brand brain \| your (?:brand file|org context)/);
 });
 
 test("the kind of business names its playbook in the brand file, and only a real board counts", () => {

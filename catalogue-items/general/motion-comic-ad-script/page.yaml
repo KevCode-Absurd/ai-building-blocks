@@ -49,7 +49,7 @@ output_sample:
     - Your video length and lettering typeface (optional)
   prerequisites:
     - A chat AI that can read pictures, if you attach a product photo
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: FIT
       contains: Why a comic suits this ad, or what to use instead.
@@ -205,7 +205,7 @@ test:
 improve:
   - Paste a few buyer phrases from your reviews into "What you need" in the skill file, so the captions use their words instead of ad lines.
   - Write your hero line and palette into step 5, so every comic ad in a series looks the same.
-  - Add how your product works, with a source, to your brand file. Without it, step 7 drops the cutaway.
+  - Add how your product works, with a source, to your org context. Without it, step 7 drops the cutaway.
   - Pair it with "Motion comic video clip prompt writer", which runs the avatar, sheets, storyboard and clips.
 
 works_best_with:

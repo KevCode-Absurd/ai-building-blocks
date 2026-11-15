@@ -189,7 +189,7 @@ function workflow(id) {
       tweaks: wf.tweaks ?? [{ what: "What you give the first step", how: "Every later step builds on the first one's result, so the more exact your first input, the better the whole run." }],
       judge: wf.judge ?? ["Each step used the result of the step before.", "No step invented a fact to fill a gap.", "The final result follows the source's method, not a generic one."],
       test: wf.test ?? ["Run it twice on the same input. The steps should land in the same places, even if the wording differs.", "Stop it after step 1 and check that result yourself before letting it carry on."],
-      improve: wf.improve ?? ["Save the first step's result in your brand file, so later runs can start from step 2."],
+      improve: wf.improve ?? ["Save the first step's result in your org context, so later runs can start from step 2."],
       draft_from: `intake/${id}/skeleton.yaml`,
     };
     files.push({ file: pageFile, text: YAML.stringify(page, { lineWidth: 0 }) });

@@ -29,7 +29,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-In the list above, the document is your rough notes and "your question" is the reader, the action and the format. You do not need a brand brain or an ad draft. The inputs in full:
+In the list above, the document is your rough notes and "your question" is the reader, the action and the format. You do not need an org context or an ad draft. The inputs in full:
 
 
 - **The rough notes** (required): pasted text or files. If missing, write `MISSING: notes` and stop.
@@ -108,6 +108,5 @@ This is the one next-step list. The "After this" list below names the same two s
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Training handout writer](https://useaiblocks.com/prompts/training-handout-writer).
-- The [PowerPoint audience handout builder](https://useaiblocks.com/skills/powerpoint-audience-handout-builder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

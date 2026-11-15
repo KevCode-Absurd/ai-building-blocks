@@ -45,7 +45,7 @@ output_sample:
     - Your daily sales and the cash you can put into ads
     - Your Meta spend split by new, engaged and existing audiences (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your org context from the Org context builder (optional, makes the result better)
     - Results from a scale test run by you, for the last step (the delivery check)
   output:
     - name: "Step 1: Platform ROAS reality check"
@@ -103,7 +103,7 @@ test:
   - Scale only one ad set on the first step of the ladder. Check the stop rule works before you rely on it.
   - Ask the delivery step the same question twice. The failing step should be the same both times.
 improve:
-  - Save your real margin and break-even return in your brand file, so you do not retype them.
+  - Save your real margin and break-even return in your org context, so you do not retype them.
   - Run a holdout or lift test on Meta when you can afford it, then enter the factor it finds.
   - Edit the ladder steps to suit your daily spend. The defaults come from larger accounts.
   - Pair it with a creative hit rate planner, so new ads arrive as spend rises.

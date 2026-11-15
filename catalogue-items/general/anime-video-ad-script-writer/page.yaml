@@ -1,12 +1,12 @@
 new_slug: anime-video-ad-script-writer
 name: "Anime video ad script writer"
-summary: "Write an anime-style video ad script from your idea and brand file. You get shot cards, one original hero and a cast note for your clips."
+summary: "Write an anime-style video ad script from your idea and org context. You get shot cards, one original hero and a cast note for your clips."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Anime video ad script writer"
-subhead: Give it your selling idea and brand file. It designs one original adult hero for an anime-style video, picks one thing the drawing exaggerates, and writes every shot as two key poses and a hold. You get shot cards, a cast note and any check it missed.
+subhead: Give it your selling idea and org context. It designs one original adult hero for an anime-style video, picks one thing the drawing exaggerates, and writes every shot as two key poses and a hold. You get shot cards, a cast note and any check it missed.
 
 explain: |
   Hand-drawn anime can push things past real life. A chore can tower over the hero, a sigh can become a storm cloud, one quick tear of a pack can stretch into a moment. That makes it good for stopping a scroll. It also goes wrong easily: copied characters, a fight with no product in it, or a hero who "powers up" in a way that reads as a promised result.
@@ -24,7 +24,7 @@ not_for:
 
 you_give:
   - Your selling idea or an existing script
-  - Your brand file, with the product's look and label words, the old way it replaces, and your approved claims
+  - Your org context, with the product's look and label words, the old way it replaces, and your approved claims
   - The length and your video tool's clip length (optional)
 you_get:
   - A proposed look line, a hero sentence and the one thing the drawing exaggerates
@@ -35,18 +35,18 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your selling idea and brand file. Include, in your buyer's words, the old way your product replaces.
+  - Paste your selling idea and org context. Include, in your buyer's words, the old way your product replaces.
   - Say the length, such as "20 seconds", and your tool's clip length if you know it.
   - Picture it with the sound off. If you can't name the old way, the change and the product's part, ask for a clearer turn pose.
   - Take the shot cards and cast note to "Anime video clip prompt writer". It takes it from there, with the avatar, sheets, storyboard and clips.
 output_sample:
   input:
     - Your selling idea or an existing script
-    - Your brand file with the product look, label words and approved claims
+    - Your org context with the product look, label words and approved claims
     - The old way your product replaces, in your buyer's words
     - Video length and your tool's clip length (optional)
   prerequisites:
-    - A brand file or brand notes (optional, but it improves the result)
+    - An org context or brand notes (optional, but it improves the result)
   output:
     - name: Look line
       contains: "One proposed look set on four dials: line, shading, palette and backgrounds."
@@ -109,7 +109,7 @@ example:
     giant. One daily pack cuts it down to size.
     Buyer: the powder quitter. Review: "I've been choking on [a
     big-name greens powder] for the last few years".
-    The old way (brand file): a half-used tub of powder and a
+    The old way (org context): a half-used tub of powder and a
     shaker.
     Product: glossy deep-green pouch, big yellow wordmark, yellow
     bear face top right, "28 Daily Packs" at the bottom. Daily pack
@@ -207,7 +207,7 @@ test:
 
 improve:
   - Write the old way in your buyer's own words into "What you need" in the skill file, so the giant is always theirs.
-  - Save the look line and hero sentence you like in your brand file, so a series of ads looks like one family.
+  - Save the look line and hero sentence you like in your org context, so a series of ads looks like one family.
   - Add your banned claims to the checks, so no pose shows a result you can't back.
   - Pair it with "Anime video clip prompt writer" for the sheets and clip prompts.
 

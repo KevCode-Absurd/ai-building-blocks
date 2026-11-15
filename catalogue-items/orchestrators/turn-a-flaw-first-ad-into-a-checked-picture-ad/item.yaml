@@ -10,8 +10,6 @@ inputs:
   - {type: brief, required: true}
   - {type: product_data, required: true}
   - {type: voc_reviews, required: false}
-  - {type: competitor_set, required: false}
-  - {type: persona, required: false}
   - {type: brand_brain, required: false}
 outputs:
   - {type: audit_report}

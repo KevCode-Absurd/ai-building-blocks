@@ -110,7 +110,7 @@ test:
   - Ask your factory for the first rung of the terms ladder and note what they say.
   - Run the plan again with a longer lead time and see how far the lowest cash point moves.
 improve:
-  - Save the landed costs in your brand file or product sheet, so the next order starts at step 2.
+  - Save the landed costs in your org context or product sheet, so the next order starts at step 2.
   - Add your own funding options and their real cost to the cash planner.
   - Edit the stock grade rules to match how fast your products sell.
   - Repeat the plan before every order and keep each one, so you can see how your cash cycle changes.

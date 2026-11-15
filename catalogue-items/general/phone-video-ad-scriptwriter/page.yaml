@@ -41,7 +41,7 @@ output_sample:
     - Your approved claims, your offer and the video length (30 seconds if you skip it)
   prerequisites:
     - A buyer brief from the Buyer brief writer (optional but helps)
-    - Your brand brain from the Brand profile builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: SPINE
       contains: One line with the situation, the snag and what the person did about it.
@@ -105,7 +105,7 @@ test:
 improve:
   - Add your tone and banned words to the prompt.
   - Save the disclosure line your platform asks for.
-  - Keep your real use steps in your brand file.
+  - Keep your real use steps in your org context.
   - Pair it with the Video ad script angle chooser to test other kinds of script.
 works_best_with:
   tools:

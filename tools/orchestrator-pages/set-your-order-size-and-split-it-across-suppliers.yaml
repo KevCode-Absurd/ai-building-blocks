@@ -92,6 +92,6 @@ test:
   - Add the cost of the split by supplier. It should equal the total step 3 reports.
   - Change the holding cost by a third and rerun step 2. See if the pick moves. If it moves a lot, the pick is fragile.
 improve:
-  - Keep your order cost and holding cost in your brand file so the next run starts from step 2.
+  - Keep your order cost and holding cost in your org context so the next run starts from step 2.
   - Rerun when a supplier changes price or lead time.
   - After each order, note the real lead time. Late supplies change the split.

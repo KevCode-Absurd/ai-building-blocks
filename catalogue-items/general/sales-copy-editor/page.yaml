@@ -232,7 +232,7 @@ improve:
   - Paste your full facts list and the claims your brand must never make into "What you need" in the skill file. Then every fix has real numbers, and none goes near a banned claim.
   - If your copy always has the same parts, list them in step 1 (for example "headline, main text, button").
   - Set your own reading grade target in step 2. Add your platform's limits to step 7, such as "main text before See more under 125 characters".
-  - When the same MISSING fact comes up twice, find it and save it to your brand file. Save the specifics it protects there too.
+  - When the same MISSING fact comes up twice, find it and save it to your org context. Save the specifics it protects there too.
   - If an AI tool wrote the draft, run "Anti-AI-slop copy editor" first. Finish with "Sales copy readiness checker".
 works_best_with:
   tools:

@@ -23,7 +23,7 @@ you_give:
   - A clean, sharp main product photo
   - The camera move you want, such as push in or orbit (optional)
   - The ID of a video model your account can use
-  - Your brand file for colour and style (optional)
+  - Your org context for colour and style (optional)
   - ffmpeg, only for captions or joining clips (optional)
 you_get:
   - A 3 to 5 second product clip
@@ -45,7 +45,7 @@ output_sample:
     - Your main product photo, tall 3:4 or square, as sharp as you can get
     - The camera move you want, such as push in, pull back, orbit or macro sweep
     - The ID of a video model you can use
-    - Your brand file for colour and style (optional)
+    - Your org context for colour and style (optional)
   prerequisites:
     - An AI that can run code
     - A paid API key for a video model, such as fal or Replicate

@@ -1,0 +1,7 @@
+# (test data) Return reasons and top review phrases for printed iPhone cases, last 6 months. Built for an e-commerce eval. Not Pela's real figures.
+item,share
+Return reason: MagSafe wallet or charger does not stick,41% of returns
+Return reason: ordered the wrong phone model,22% of returns
+Return reason: print looked different,14% of returns
+Review phrase: survived drops on concrete,most common 5-star phrase
+Review phrase: bought one for my sister too,second most common 5-star phrase

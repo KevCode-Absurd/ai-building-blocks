@@ -1,0 +1,134 @@
+# (test data) Meta Ads Manager breakdown export, USD. Built for an e-commerce eval. Not Ritual's real figures.
+campaign,ad_format,age,gender,spend,impressions,link_clicks,purchases,purchase_value
+ASC | Women's 18+,single image,18-24,women,2344,153286,1737,40,759
+ASC | Women's 18+,single image,18-24,men,176,12987,143,2,38
+ASC | Women's 18+,single image,25-34,women,6640,407749,5026,148,2958
+ASC | Women's 18+,single image,25-34,men,500,34638,481,6,119
+ASC | Women's 18+,single image,35-44,women,5273,376451,4461,135,2803
+ASC | Women's 18+,single image,35-44,men,397,24653,291,6,122
+ASC | Women's 18+,single image,45-54,women,2929,189812,2720,67,1311
+ASC | Women's 18+,single image,45-54,men,220,16001,181,3,62
+ASC | Women's 18+,single image,55-64,women,1562,100805,1265,29,580
+ASC | Women's 18+,single image,55-64,men,118,7575,93,2,39
+ASC | Women's 18+,single image,65+,women,781,55560,769,15,292
+ASC | Women's 18+,single image,65+,men,59,3875,39,1,20
+ASC | Women's 18+,carousel,18-24,women,1339,93767,1067,21,409
+ASC | Women's 18+,carousel,18-24,men,101,6908,74,1,19
+ASC | Women's 18+,carousel,25-34,women,3794,262328,2880,76,1516
+ASC | Women's 18+,carousel,25-34,men,286,17568,245,4,83
+ASC | Women's 18+,carousel,35-44,women,3013,210710,2639,71,1433
+ASC | Women's 18+,carousel,35-44,men,227,15100,216,3,62
+ASC | Women's 18+,carousel,45-54,women,1674,114799,1540,39,756
+ASC | Women's 18+,carousel,45-54,men,126,7778,77,2,38
+ASC | Women's 18+,carousel,55-64,women,893,54649,537,17,333
+ASC | Women's 18+,carousel,55-64,men,67,4720,59,1,21
+ASC | Women's 18+,carousel,65+,women,446,27167,279,8,166
+ASC | Women's 18+,video,18-24,women,3013,193503,1891,53,1033
+ASC | Women's 18+,video,18-24,men,227,15677,212,3,59
+ASC | Women's 18+,video,25-34,women,8537,632016,8801,178,3693
+ASC | Women's 18+,video,25-34,men,643,39025,514,9,174
+ASC | Women's 18+,video,35-44,women,6780,431200,4238,144,2781
+ASC | Women's 18+,video,35-44,men,510,37724,368,8,166
+ASC | Women's 18+,video,45-54,women,3767,253872,2550,79,1624
+ASC | Women's 18+,video,45-54,men,284,19980,221,4,78
+ASC | Women's 18+,video,55-64,women,2009,132471,1622,43,843
+ASC | Women's 18+,video,55-64,men,151,9194,103,2,41
+ASC | Women's 18+,video,65+,women,1004,71987,866,17,346
+ASC | Women's 18+,video,65+,men,76,5254,58,1,20
+Prospecting | Prenatal,single image,18-24,women,949,55746,761,14,313
+Prospecting | Prenatal,single image,18-24,men,71,4245,51,1,24
+Prospecting | Prenatal,single image,25-34,women,5217,308317,3061,84,1889
+Prospecting | Prenatal,single image,25-34,men,393,23297,299,4,92
+Prospecting | Prenatal,single image,35-44,women,3036,173192,2189,49,1133
+Prospecting | Prenatal,single image,35-44,men,228,13302,188,3,74
+Prospecting | Prenatal,single image,45-54,women,285,17157,238,5,120
+Prospecting | Prenatal,carousel,18-24,women,632,38769,414,9,211
+Prospecting | Prenatal,carousel,18-24,men,48,2791,34,0,0
+Prospecting | Prenatal,carousel,25-34,women,3478,210157,2311,61,1369
+Prospecting | Prenatal,carousel,25-34,men,262,16274,221,3,74
+Prospecting | Prenatal,carousel,35-44,women,2024,114713,1270,34,801
+Prospecting | Prenatal,carousel,35-44,men,152,9762,134,2,46
+Prospecting | Prenatal,carousel,45-54,women,190,11040,159,3,67
+Prospecting | Prenatal,video,18-24,women,1581,91167,897,19,451
+Prospecting | Prenatal,video,18-24,men,119,6919,78,1,22
+Prospecting | Prenatal,video,25-34,women,8696,543197,7187,138,3074
+Prospecting | Prenatal,video,25-34,men,654,40593,554,7,161
+Prospecting | Prenatal,video,35-44,women,5059,324471,4003,85,1917
+Prospecting | Prenatal,video,35-44,men,381,21670,247,5,119
+Prospecting | Prenatal,video,45-54,women,474,25974,273,9,218
+Prospecting | Synbiotic+,single image,18-24,women,1250,84640,1032,19,592
+Prospecting | Synbiotic+,single image,18-24,men,94,7243,99,1,32
+Prospecting | Synbiotic+,single image,25-34,women,3541,254709,3250,73,2341
+Prospecting | Synbiotic+,single image,25-34,men,267,18248,202,3,94
+Prospecting | Synbiotic+,single image,35-44,women,2812,196090,2132,61,1973
+Prospecting | Synbiotic+,single image,35-44,men,212,14160,160,3,97
+Prospecting | Synbiotic+,single image,45-54,women,1562,104085,1099,29,936
+Prospecting | Synbiotic+,single image,45-54,men,118,9339,134,2,66
+Prospecting | Synbiotic+,single image,55-64,women,833,64397,694,16,509
+Prospecting | Synbiotic+,single image,55-64,men,63,4258,42,1,33
+Prospecting | Synbiotic+,single image,65+,women,417,32601,364,8,268
+Prospecting | Synbiotic+,carousel,18-24,women,625,46218,557,10,312
+Prospecting | Synbiotic+,carousel,18-24,men,47,3490,39,0,0
+Prospecting | Synbiotic+,carousel,25-34,women,1771,119572,1224,36,1122
+Prospecting | Synbiotic+,carousel,25-34,men,133,9673,105,2,65
+Prospecting | Synbiotic+,carousel,35-44,women,1406,101189,973,31,1047
+Prospecting | Synbiotic+,carousel,35-44,men,106,7222,84,2,67
+Prospecting | Synbiotic+,carousel,45-54,women,781,52671,595,17,544
+Prospecting | Synbiotic+,carousel,45-54,men,59,4555,58,1,32
+Prospecting | Synbiotic+,carousel,55-64,women,417,31727,316,8,265
+Prospecting | Synbiotic+,carousel,65+,women,208,15486,173,3,95
+Prospecting | Synbiotic+,video,18-24,women,1250,86882,1157,22,715
+Prospecting | Synbiotic+,video,18-24,men,94,7169,73,1,33
+Prospecting | Synbiotic+,video,25-34,women,3541,273920,3108,68,2256
+Prospecting | Synbiotic+,video,25-34,men,267,17373,169,4,133
+Prospecting | Synbiotic+,video,35-44,women,2812,187028,2024,60,1997
+Prospecting | Synbiotic+,video,35-44,men,212,16468,237,3,98
+Prospecting | Synbiotic+,video,45-54,women,1562,112803,1128,35,1155
+Prospecting | Synbiotic+,video,45-54,men,118,7976,91,2,66
+Prospecting | Synbiotic+,video,55-64,women,833,58678,568,14,449
+Prospecting | Synbiotic+,video,55-64,men,63,4294,53,1,33
+Prospecting | Synbiotic+,video,65+,women,417,27947,349,6,203
+Launch | Perimenopause Health,single image,25-34,women,312,19856,251,5,116
+Launch | Perimenopause Health,single image,35-44,women,1559,104534,1110,21,507
+Launch | Perimenopause Health,single image,35-44,men,117,7866,113,1,23
+Launch | Perimenopause Health,single image,45-54,women,2806,188028,1809,43,1003
+Launch | Perimenopause Health,single image,45-54,men,211,14113,141,2,48
+Launch | Perimenopause Health,single image,55-64,women,1372,90923,1087,19,452
+Launch | Perimenopause Health,single image,55-64,men,103,6644,80,1,22
+Launch | Perimenopause Health,single image,65+,women,187,11914,151,2,45
+Launch | Perimenopause Health,carousel,25-34,women,260,15447,186,4,96
+Launch | Perimenopause Health,carousel,35-44,women,1299,85008,1043,20,483
+Launch | Perimenopause Health,carousel,35-44,men,98,6595,73,1,23
+Launch | Perimenopause Health,carousel,45-54,women,4200,275145,3145,111,2572
+Launch | Perimenopause Health,carousel,45-54,men,176,11461,114,1,23
+Launch | Perimenopause Health,carousel,55-64,women,1143,70691,902,14,340
+Launch | Perimenopause Health,carousel,55-64,men,86,5016,71,1,22
+Launch | Perimenopause Health,carousel,65+,women,156,9745,122,2,45
+Launch | Perimenopause Health,video,25-34,women,468,30570,439,6,134
+Launch | Perimenopause Health,video,35-44,women,2338,147879,1614,35,828
+Launch | Perimenopause Health,video,35-44,men,176,11358,145,2,47
+Launch | Perimenopause Health,video,45-54,women,6000,382750,3847,63,1518
+Launch | Perimenopause Health,video,45-54,men,317,18839,220,3,70
+Launch | Perimenopause Health,video,55-64,women,2057,122640,1510,28,650
+Launch | Perimenopause Health,video,55-64,men,155,10483,143,1,23
+Launch | Perimenopause Health,video,65+,women,280,16023,182,3,73
+Retargeting | Site visitors 14d,single image,18-24,women,670,25665,398,19,469
+Retargeting | Site visitors 14d,single image,18-24,men,50,1959,37,1,23
+Retargeting | Site visitors 14d,single image,25-34,women,1897,76658,1222,63,1468
+Retargeting | Site visitors 14d,single image,25-34,men,143,5074,104,3,72
+Retargeting | Site visitors 14d,single image,35-44,women,1507,55673,883,59,1472
+Retargeting | Site visitors 14d,single image,35-44,men,113,4532,84,2,49
+Retargeting | Site visitors 14d,single image,45-54,women,837,33533,663,29,666
+Retargeting | Site visitors 14d,single image,45-54,men,63,2389,46,1,25
+Retargeting | Site visitors 14d,single image,55-64,women,446,15137,266,13,316
+Retargeting | Site visitors 14d,single image,65+,women,223,7699,128,6,145
+Retargeting | Site visitors 14d,carousel,18-24,women,670,26879,533,18,436
+Retargeting | Site visitors 14d,carousel,18-24,men,50,1776,35,1,24
+Retargeting | Site visitors 14d,carousel,25-34,women,1897,69116,1190,63,1591
+Retargeting | Site visitors 14d,carousel,25-34,men,143,5171,87,3,72
+Retargeting | Site visitors 14d,carousel,35-44,women,1507,57528,971,56,1362
+Retargeting | Site visitors 14d,carousel,35-44,men,113,3917,79,3,72
+Retargeting | Site visitors 14d,carousel,45-54,women,837,28825,519,27,672
+Retargeting | Site visitors 14d,carousel,45-54,men,63,2304,50,1,24
+Retargeting | Site visitors 14d,carousel,55-64,women,446,15471,288,13,315
+Retargeting | Site visitors 14d,carousel,65+,women,223,8149,185,6,151

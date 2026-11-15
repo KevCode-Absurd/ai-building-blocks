@@ -25,7 +25,7 @@ not_for:
 you_give:
   - The message or page text
   - The facts you can prove, such as numbers, credentials, dates and stock
-  - Customer reviews or your brand file (optional)
+  - Customer reviews or your org context (optional)
 you_get:
   - A list of levers used, line by line, marked true, unproven or fake
   - Fake levers removed, and each one listed
@@ -42,7 +42,7 @@ output_sample:
   input:
     - Your message, page or pitch text
     - "Facts you can prove, with sources: numbers, credentials, dates, stock"
-    - Customer reviews or your brand file (optional)
+    - Customer reviews or your org context (optional)
   output:
     - name: Lever map
       contains: Each line with the lever it uses and a status of true, unproven or fake, with the reason.
@@ -124,7 +124,7 @@ test:
 
 improve:
   - Add a list of your proof, with sources and dates, and paste it in each time.
-  - Add your brand file so the voice and claims match.
+  - Add your org context so the voice and claims match.
   - Add rules from your industry on what you may say about scarcity or results.
   - Pair it with "Hardest objections answer writer" to meet the doubts the levers do not.
 

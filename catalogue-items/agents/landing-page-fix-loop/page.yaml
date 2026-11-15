@@ -46,7 +46,7 @@ output_sample:
     - Customer reviews or questions, each with a source (optional)
   prerequisites:
     - An AI that can read screenshots and, ideally, keep files, such as Claude Code
-    - Your brand brain from the Brand profile builder (optional, it supplies your facts and voice)
+    - Your org context from the Org context builder (optional, it supplies your facts and voice)
   output:
     - name: Result
       contains: Rounds used out of three, checks and coverage scores at the start and end, and any deal-breakers left.
@@ -116,7 +116,7 @@ test:
   - Leave out your delivery terms. It should ask for them and not make them up.
   - Run it twice on the same page. The failing checks should match, apart from wording.
 improve:
-  - Put your delivery, returns and guarantee terms in your brand brain so every page starts from the same facts.
+  - Put your delivery, returns and guarantee terms in your org context so every page starts from the same facts.
   - Save the final scores for each page, so you can see which pages need work next.
   - After you publish, tell it the conversion rate before and after, so it can suggest tests.
   - Add your real customer quotes with sources, so more doubts are answered with proof.

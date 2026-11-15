@@ -17,9 +17,9 @@ when:
 not_for:
   - "You only need the words for one ad: use the Fact-based ad copy writer, which takes your brief and writes the copy."
   - "You want to know which live ads to switch off: look at your Meta Ads Manager results yourself, because this skill does not judge live ads."
-  - "You have no brand facts at all: build a brand brain first with the Brand profile builder, then come back."
+  - "You have no brand facts at all: build an org context first with the Org context builder, then come back."
 you_give:
-  - Your brand file (facts, offers, claims you may make, buyers, voice, competitors)
+  - Your org context (facts, offers, claims you may make, buyers, voice, competitors)
   - Your ad results per ad for the last 1 to 4 weeks, or what the founder has seen (optional)
   - Your target return or cost per sale (optional)
   - Customer reviews or quotes (optional)
@@ -32,7 +32,7 @@ you_get:
   - Any check the brief still misses, one line each
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your brand file underneath, including the claims you may and may not make.
+  - Paste your org context underneath, including the claims you may and may not make.
   - Paste your ad results, one row per ad, and your target if you have one.
   - Paste your reviews and your last brief if you have them.
   - Read the header first. If it says "Not proven", treat every idea as a test, not a sure thing.
@@ -45,7 +45,7 @@ output_sample:
     - Customer reviews or quotes (optional)
     - Your last brief, so no idea repeats (optional)
   prerequisites:
-    - Your brand facts, or a brand brain from the Website brand brain builder
+    - Your brand facts, or an org context from the Org context builder
   output:
     - name: Header
       contains: The evidence grade, the plan chosen (explore, extend or refresh) with the reason, and a three-line diagnosis.
@@ -103,7 +103,7 @@ example:
   input: |
     [the skill]
 
-    Brand file: Sprout (pasted: products, prices and offers, fine and
+    Org context: Sprout (pasted: products, prices and offers, fine and
     risky claims, who buys, voice, look, competitors, what seems to
     work)
 
@@ -134,7 +134,7 @@ example:
     IDEA 1  T1's gut moment, a new opening (extends the winner)
       Stage     waking (knows the problem)
       Doubt     will it work for me: "Will this upset my stomach
-                more?" (brand file)
+                more?" (org context)
       Answer    a gentle daily fiber you'll keep taking. Held up by
                 "Supports digestion and gut health", 6 g prebiotic
                 fiber per pack, review 8.
@@ -207,7 +207,7 @@ improve:
   - Write your target and your usual ad formats into "What you need" in the skill file, so it never has to choose a plan with a caveat.
   - Add your banned claims to step 8, next to the headline rule, so versions can't drift past what you may say (as version B nearly did here).
   - If you only make image ads, delete the video line in step 6, so the brief stays shorter.
-  - Answer the footer questions and save the answers in your brand file, so the next brief has fewer "inferred" fields.
+  - Answer the footer questions and save the answers in your org context, so the next brief has fewer "inferred" fields.
   - Pair it with a skill that maps which moments and messages you've already covered before choosing ideas, and one that checks each finished ad before you spend.
 works_best_with:
   tools:

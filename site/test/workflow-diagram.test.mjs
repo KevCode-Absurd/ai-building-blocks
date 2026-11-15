@@ -78,11 +78,11 @@ test('a ready workflow draws as valid Mermaid: steps in order, user inputs as st
   assert.ok(d.mermaid.includes('u1(["You give: Web page"]):::user'));
   assert.ok(d.mermaid.includes('s1["1. Brand profile builder"]'));
   assert.ok(links.includes('  s2 -->|"Ad copy"| s3'), 'friendly type names on hand-offs');
-  assert.ok(links.includes('  s1 -->|"Brand file"| s2'));
+  assert.ok(links.includes('  s1 -->|"Org context"| s2'));
   assert.ok(!d.mermaid.includes('legend['), 'no legend node without problems');
   assert.ok(d.mermaid.includes('%% Ad #34;and#34; #91;page#93; flow'));
   const detailed = workflowDiagram('Ad flow', titles(slugs), check, { detailed: true });
-  assert.match(detailed.outline, /^Ad flow: 4 steps\n1\. Brand profile builder\n {3}takes: Web page from you\n {3}hands on: Brand file to step 2, 3/);
+  assert.match(detailed.outline, /^Ad flow: 4 steps\n1\. Brand profile builder\n {3}takes: Web page from you\n {3}hands on: Org context to step 2, 3/);
   assert.match(detailed.outline, /Problems: none$/); assert.ok(detailed.legend);
 });
 
@@ -91,12 +91,12 @@ test('broken hand-offs are red and dashed, suggested steps green and dashed, wit
   const check = chain(library, slugs);
   const d = workflowDiagram('Broken', titles(slugs), check, { additions: [{ before: 2, title: 'Brand profile builder', makes: ['brand_brain'] }], detailed: true });
   const { links } = assertMermaid(d.mermaid);
-  assert.ok(d.mermaid.includes('m1{{"Missing: Brand file"}}:::bad'));
+  assert.ok(d.mermaid.includes('m1{{"Missing: Org context"}}:::bad'));
   assert.ok(links.includes('  s3 -.->|"Landing page, too late"| s2'));
   assert.ok(d.mermaid.includes('a1["+ Add: Brand profile builder"]:::add'));
   assert.ok(d.mermaid.includes('legend["'));
   const red = d.mermaid.match(/linkStyle ([\d,]+) stroke:#d33/)[1].split(',').map(Number);
-  assert.deepEqual(red.map(i => links[i]).sort(), ['  m1 -.->|"Brand file"| s3', '  s3 -.->|"Landing page, too late"| s2']);
+  assert.deepEqual(red.map(i => links[i]).sort(), ['  m1 -.->|"Org context"| s3', '  s3 -.->|"Landing page, too late"| s2']);
   assert.match(d.outline, /Landing page: OUT OF ORDER, only step 3 makes it/);
   assert.match(d.outline, /\+ Suggested: add Brand profile builder before step 3/);
 });

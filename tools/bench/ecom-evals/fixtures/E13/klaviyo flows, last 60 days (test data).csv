@@ -1,0 +1,7 @@
+# (test data) Klaviyo flow performance, 16 Sep to 14 Nov 2026, USD. There is no replenishment flow. Built for an e-commerce eval. Not KraveBeauty's real figures.
+flow,emails_in_flow,offer,recipients,open_rate,click_rate,placed_orders,revenue,revenue_per_recipient
+Welcome,1,10% code in email 1,9200,61%,3.1%,690,22080,2.4
+Abandoned checkout,3,15% code in email 1,6100,63.9%,10%,980,26460,4.34
+Browse abandonment,1,none,4100,59%,3.2%,82,2540,0.62
+Post-purchase thank you and how to use,2,none,5600,65%,6%,140,4480,0.8
+Win-back (120 days no order),1,30% code,3800,45%,2%,61,1590,0.42

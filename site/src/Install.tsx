@@ -42,7 +42,7 @@ export default function Install({ b, skill, toast, compact = false, onPrepared }
   };
   return <div className="install task-install" data-testid="install">
     <button className="btn btn-primary btn-sm" disabled={!skill || busy} onClick={() => void zip()} data-testid="install-zip">{busy ? "Preparing the files…" : prepared ? "Download the files again" : "Download the files"}</button>
-    <p className="small">Includes the complete instructions and supporting files.{hasBusiness(business) ? " The parts of your brand file this task needs are included too." : ""}</p>
+    <p className="small">Includes the complete instructions and supporting files.{hasBusiness(business) ? " The parts of your org context this task needs are included too." : ""}</p>
     {error && <p role="alert">{error}</p>}
     {(!compact || prepared) && <div className="task-file-transfer" data-testid="skill-transfer">
       <h3>Use the files in your AI</h3>

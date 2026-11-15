@@ -16,7 +16,7 @@ when:
   - You're setting up a new AI tool and want it to know you from day one.
 not_for:
   - "You already have a me.md and want it updated: use the me.md refresher."
-  - "You want a file about a business, not a person: use the Brand profile builder."
+  - "You want a file about a business, not a person: use the Org context builder."
 you_give:
   - A yes or no to using what your AI remembers
   - A CV, LinkedIn export, bio or old me.md (optional)

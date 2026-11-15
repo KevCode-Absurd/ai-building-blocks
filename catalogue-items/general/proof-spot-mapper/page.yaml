@@ -42,7 +42,7 @@ output_sample:
     - Your reviews, quotes, ratings and press, each with a source
     - The doubts buyers raise before they buy
     - Your buyer groups (optional)
-    - Your brand brain from the Brand profile builder (optional)
+    - Your org context from the Org context builder (optional)
   prerequisites:
     - A chat AI such as Claude, ChatGPT or Gemini. No code or paid tools needed.
   output:

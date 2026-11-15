@@ -62,4 +62,4 @@ output_sample:
       contains: One to four shots of the model wearing your garment, saved as files for you to pick from. A paid image model makes these, and each shot spends credits.
     - name: Quality check
       contains: A list to check colour, texture, print position, hands and collar, with a fix line to add if one fails.
-next: [product-photo-retoucher, ai-product-photo-inspector, product-photo-set-maker]
+next: [product-photo-retoucher, ai-product-photo-inspector]

@@ -11,7 +11,7 @@ const count = (n: number) => n.toLocaleString("en-US");
 
 /** Two ways to take a workflow to your AI. With `flow` and `catalogue`: "Copy as one message", the whole workflow
  *  in one chat message for the ChatGPT, Claude or Gemini app. Always: the short first message to send with the zip.
- *  `business` is the brand file to add (default: the saved one, read at click time in this browser). */
+ *  `business` is the org context to add (default: the saved one, read at click time in this browser). */
 export default function ExecutionPrompt({ goal, name, instructions, copyTestId = "copy-execution-prompt", flow, catalogue, business }: { goal?: string | null; name?: string; instructions?: string; copyTestId?: string; flow?: Flow; catalogue?: Catalogue; business?: Business }) {
   const prompt = instructions ?? executionPrompt(goal, name);
   const [copied, setCopied] = useState(false);
@@ -50,7 +50,7 @@ export default function ExecutionPrompt({ goal, name, instructions, copyTestId =
   };
   return <div className="workflow-launch" data-testid="execution-prompt">
     {canMessage && <>
-      <div className="workflow-launch-actions"><button type="button" className="btn btn-primary btn-sm" onClick={() => void copyMessage()} data-testid="copy-one-message">Copy as one message</button><span className="small">For ChatGPT, Claude or Gemini. One message with the goal, the questions to ask you and each step's method, plus your brand file if you saved one.</span></div>
+      <div className="workflow-launch-actions"><button type="button" className="btn btn-primary btn-sm" onClick={() => void copyMessage()} data-testid="copy-one-message">Copy as one message</button><span className="small">For ChatGPT, Claude or Gemini. One message with the goal, the questions to ask you and each step's method, plus your org context if you saved one.</span></div>
       {messageState === "copied" && message && <p className="small" role="status" data-testid="one-message-status">{message.fits ? `Copied ${count(message.chars)} characters. Paste it as your first message.` : `Copied ${count(message.chars)} characters. That is longer than some chats take at once. If yours cuts it off, download the workflow and attach the files.`}{message.shortened ? " Some step methods are longer than one message allows, so they are shorter versions with a link to the rest. The download has everything." : ""}</p>}
       {messageError && <p className="small" role="alert">{messageError}</p>}
       {message && messageState === "failed" && <textarea aria-label="The workflow as one message" readOnly value={message.text} rows={9} onFocus={e => e.currentTarget.select()} data-testid="one-message-text" />}

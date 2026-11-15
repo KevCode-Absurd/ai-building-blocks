@@ -1,0 +1,5 @@
+# (test data) Results for Black Friday week 2025 (no sitewide discount), USD. Built for an e-commerce eval. Not Taylor Stitch's real figures.
+tactic,members_reached,revenue,vs_normal_week,cost
+Common Club double credit (10% back instead of 5%),64000,1180000,+38%,"credit issued $118,000, about 31% redeemed by March"
+"Last Call (final sale on old season, up to 40% off)",all,640000,+210% on Last Call items,markdown on stock older than 2 seasons
+Full-price new arrivals,all,910000,+6%,

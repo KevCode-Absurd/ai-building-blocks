@@ -45,7 +45,7 @@ output_sample:
     - Your posts with format, hook, topic, date and views (after you post)
   prerequisites:
     - An AI that can read the files in the handoff pack
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
     - At least 20 posted videos before the last step
   output:
     - name: "Step 1: Account check"
@@ -104,6 +104,6 @@ test:
   - Run step 4 on a month you already know. Does it find the same winners you see?
 improve:
   - Keep the setup rules as a checklist, and re-run step 1 before you add any new account.
-  - Add the formats that won to your brand file, so the next round starts from them.
+  - Add the formats that won to your org context, so the next round starts from them.
   - Edit the topic rule if your product has two real buyer groups.
   - Pair it with a founder series planner once one format wins.

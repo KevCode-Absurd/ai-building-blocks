@@ -19,10 +19,10 @@ not_for:
   - "You have no buyer research or product photos yet: gather your reviews and photos first, because this plan leaves out reasons it can't back."
   - "You want to check finished ads against Meta rules: use the Meta ad policy checker."
 you_give:
-  - Your brand file with voice, claims, live offers, guarantee and never-show list
+  - Your org context with voice, claims, live offers, guarantee and never-show list
   - Buyer research such as reviews, buyer types and their own words
   - A list of the product photos you have and what each one shows
-  - Your cost per sale and past ad results, such as the Results section of your brand file's log.md (optional)
+  - Your cost per sale and past ad results, such as the Results section of your org context's log.md (optional)
 you_get:
   - A list of your photos saying which can lead an ad, with a shoot suggestion if there are too few
   - Five reasons to buy, five ad types and two looks, with the proof for each
@@ -30,7 +30,7 @@ you_get:
   - After your approvals, a pilot row, then all the briefs and finished images with their check results
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your brand file and buyer research underneath, including only offers that are live today.
+  - Paste your org context and buyer research underneath, including only offers that are live today.
   - List every product photo you have and what it shows. Be honest if you only have one or two.
   - Ask for stage 1 only. Read the grid, the budget check and the MISSING lines before you approve anything.
   - Reply "approved" to move on. If you ask for changes, it shows the stage again and waits.
@@ -99,10 +99,10 @@ example:
   input: |
     [the skill]
 
-    Brand file: Sprout, daily greens gummies (pasted below: facts,
+    Org context: Sprout, daily greens gummies (pasted below: facts,
     fine and risky claims, prices and the discount mess, voice, look,
     show-it-right rules).
-    Buyers: the four buyer groups in the brand file, plus all 20
+    Buyers: the four buyer groups in the org context, plus all 20
     reviews (pasted below).
     Past results: ad-results.csv, 9 ads (practice numbers, pasted).
     Photos: the adult pouch on a soft gradient with gummies in front;

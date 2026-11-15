@@ -202,7 +202,7 @@ test:
   - When a shot fails, paste the fault back in. You should get the next fix step for that shot only.
 
 improve:
-  - Save the approved avatar cards, sheets, light recipe and establishing frame in your brand file, so a series starts at stage 4.
+  - Save the approved avatar cards, sheets, light recipe and establishing frame in your org context, so a series starts at stage 4.
   - Add each voice's accent, pitch and pace to "What you need".
   - Write your tool's limits into the skill (clip length, start and end frames), so every join is planned right.
   - Pair it with "Short film video ad script writer" first, and a captions skill in your brand font after.

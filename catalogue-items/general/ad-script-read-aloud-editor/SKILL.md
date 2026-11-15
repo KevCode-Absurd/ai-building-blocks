@@ -18,8 +18,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand file and offer and buying reasons.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your org context and offer and buying reasons.
 3. This one.
 
 How to start:

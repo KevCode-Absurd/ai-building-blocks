@@ -5,7 +5,7 @@ description: Use when you want creators to post about your product and need a cl
 
 # Send creators a gift and a brief to film from
 
-Give it your brand file. Get a creator gifting plan, a phone-video script, a filming brief and an edit plan.
+Give it your org context. Get a creator gifting plan, a phone-video script, a filming brief and an edit plan.
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
@@ -16,7 +16,7 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand file** (its products and buyers part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its products and buyers part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Video clips** (yours): the clips you want to edit.
 
@@ -25,21 +25,21 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A shot list**, made by the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker): the video broken into shots, with timing and on-screen text.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand file.
-3. **A shot list** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It uses your brand file and video ad script and character sheet.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your org context.
+3. **A shot list** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It uses your org context and video ad script and character sheet.
 4. This one.
 
-**From the brand file, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`, `foundation/claims.md`, `foundation/customer-talk.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, customer words, video clips. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, customer words, video clips. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
-- **Your brand file** (required): your facts, products, offers with dates, claims you may make, what creators must not say, the account to tag, and your voice.
+- **Your org context** (required): your facts, products, offers with dates, claims you may make, what creators must not say, the account to tag, and your voice.
 - **Your customer reviews**, copied as written (required). Step 2 builds the script from your buyers' own words.
 - **Your product facts** (required): price, variants, how it opens and is used, and what never appears on camera.
 - **What a box costs you and what you will spend this round** (needed in step 1). If you leave it out, the round size is marked `MISSING:`.
@@ -57,8 +57,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Plan the gifting.** Use the skill `influencer-gifting-planner`. It reads the brand file, the budget and any creator handles with their posts. It scores each creator from 0 to 4 on four fit signals, such as whether they already post about the problem your product touches and whether their face and sound are clear enough to run as an ad. It returns the shortlist and a card of about 120 words to go in the box, with the disclosure wording. The wording must tell viewers about the free product, out loud and on screen. Make sure it also fits the posting platform's paid-partnership label if there is one and, if you sell in the US, the FTC's endorsement rules. Tell the person to confirm the final wording with the platform's own rules or a lawyer. This is not legal advice. Save it as `outputs/step-01-influencer-gifting-planner.md`.
-2. **Write the phone-video script.** Use the skill `selfie-style-ad-script`. It reads `outputs/step-01-influencer-gifting-planner.md`, your reviews and your brand file. Set the speaker as a real creator who has used the product. It returns a short script built on one line (the situation, the snag, what they did), five beats, one anchor detail, blanks for what only the creator knows, and a shot list. It never writes the creator's result for them. Save it as `outputs/step-02-selfie-style-ad-script.md`.
+1. **Plan the gifting.** Use the skill `influencer-gifting-planner`. It reads the org context, the budget and any creator handles with their posts. It scores each creator from 0 to 4 on four fit signals, such as whether they already post about the problem your product touches and whether their face and sound are clear enough to run as an ad. It returns the shortlist and a card of about 120 words to go in the box, with the disclosure wording. The wording must tell viewers about the free product, out loud and on screen. Make sure it also fits the posting platform's paid-partnership label if there is one and, if you sell in the US, the FTC's endorsement rules. Tell the person to confirm the final wording with the platform's own rules or a lawyer. This is not legal advice. Save it as `outputs/step-01-influencer-gifting-planner.md`.
+2. **Write the phone-video script.** Use the skill `selfie-style-ad-script`. It reads `outputs/step-01-influencer-gifting-planner.md`, your reviews and your org context. Set the speaker as a real creator who has used the product. It returns a short script built on one line (the situation, the snag, what they did), five beats, one anchor detail, blanks for what only the creator knows, and a shot list. It never writes the creator's result for them. Save it as `outputs/step-02-selfie-style-ad-script.md`.
 3. **Write the filming brief.** Use the skill `creator-filming-brief-writer`. It reads `outputs/step-02-selfie-style-ad-script.md` and your product facts. It returns a brief the creator can follow without asking questions: deliverables and deadline, the idea, the shoot in order, what is a must and what is a maybe, and how to name and send the files. It says that filming the video does not by itself give you the right to run it as an ad. Save it as `outputs/step-03-creator-filming-brief-writer.md`.
 
 Pause here: Send the gift and the brief, then collect the creator's footage.

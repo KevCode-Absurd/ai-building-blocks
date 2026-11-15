@@ -13,7 +13,7 @@ export const BRIEF_FRAME = [
   { field: 'deadline', ask: 'By when?', note: '' },
   { field: 'guardrails', ask: 'What must not get worse while we do this?', note: 'Numbers where possible: volume, margin, quality.', example: ['Cost per booking stays below what a booking earns', 'Review rating does not drop'] },
   { field: 'limits', ask: 'What may we change, and what is off limits: budget, brand claims, systems, people?', note: '', example: ['Ad budget stays at the current monthly spend', 'No discounts'] },
-  { field: 'assets', ask: 'What exists already that we should reuse: brand guide or brand brain, past work, documents, links?', note: '', example: ['Brand guide (brand/brand-brain.md)', 'Last quarter\'s ad export'] },
+  { field: 'assets', ask: 'What exists already that we should reuse: brand guide or org context, past work, documents, links?', note: '', example: ['Org context (context/org-context/index.md)', 'Last quarter\'s ad export'] },
   { field: 'connections', ask: 'Which tools can your AI already reach (MCP connectors, exports, accounts), and with what access?', note: 'name, access (read, draft, live), status (connected, available, missing). Never ask for keys here; ask when a stage needs one.', example: [{ name: 'Google Ads', access: 'read', status: 'connected' }, { name: 'Booking system', access: 'read', status: 'missing' }] },
   { field: 'data_home', ask: 'Where should we keep the working data: a file in this project, a Google Sheet, your database, or should we choose?', note: '' },
   { field: 'technical_level', ask: 'How hands-on do you want to be with the technical parts?', note: 'Sets how much we explain and how changes are handed over.' },
@@ -42,7 +42,7 @@ export const RESEARCH_PROTOCOL = [
 
 export const KIND_GUIDE = {
   intake: 'The brief. Exactly one, first. Done once the brief is accepted.',
-  context: 'Reuse or build the context later stages need: brand brain, business context, past learnings.',
+  context: 'Reuse or build the context later stages need: org context, business context, past learnings.',
   evidence: 'Gather the data into the agreed data home, with totals checked against the source.',
   integrity: 'Check the data and the systems behind it can be trusted before anyone reasons from them: tracking, speed, data quality.',
   diagnosis: 'Test hypotheses against the evidence; keep competing explanations.',
@@ -83,7 +83,7 @@ export const RUN_RULES = [
 export const METHOD = {
   version: METHOD_VERSION,
   loop: ['DEFINE: ask one batch of questions, aim higher with the owner, and submit the brief', 'RESEARCH: find out how experts do this job', 'COMPOSE: build the plan from our catalogue and submit it with the research', 'APPROVE: the owner approves the plan', 'RUN: specialists do the stages; the owner decides; live actions are approved one by one', 'MEASURE and LEARN: honest verdicts; rules saved; next round or a revised plan'],
-  brief_frame: BRIEF_FRAME, question_rules: ['For personal prompts, skills, agents or collections, first retrieve personal-agent-builder with get_item. Follow its adaptive private workflow; a council, formal engagement or publication is optional.', 'Ask once, in one batch, only what changes a decision.', 'Lead with your best guess where you have one ("My guess: X. Yes, or tell me what is different"), so a yes is enough.', 'Skip anything the conversation, memory or brand files already answer.', 'Offer to choose for the owner when they would rather not decide (data home, tools).'],
+  brief_frame: BRIEF_FRAME, question_rules: ['For personal prompts, skills, agents or collections, first retrieve personal-agent-builder with get_item. Follow its adaptive private workflow; a council, formal engagement or publication is optional.', 'Ask once, in one batch, only what changes a decision.', 'Lead with your best guess where you have one ("My guess: X. Yes, or tell me what is different"), so a yes is enough.', 'Skip anything the conversation, memory or org context files already answer.', 'Offer to choose for the owner when they would rather not decide (data home, tools).'],
   ambition_rules: AMBITION_RULES, research_protocol: RESEARCH_PROTOCOL, stage_kinds: KIND_GUIDE, composition_rules: COMPOSITION_RULES, run_rules: RUN_RULES,
 };
 

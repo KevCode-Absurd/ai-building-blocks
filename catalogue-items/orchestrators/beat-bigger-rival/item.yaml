@@ -10,7 +10,6 @@ inputs:
   - {type: competitor_set, required: true}
   - {type: voc_reviews, required: false}
   - {type: brand_brain, required: false}
-  - {type: question, required: false}
   - {type: idea, required: true}
 outputs:
   - {type: plan}

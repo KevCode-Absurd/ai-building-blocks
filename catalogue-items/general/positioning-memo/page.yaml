@@ -25,7 +25,7 @@ not_for:
 you_give:
   - "Facts about your product or service: what it does, who uses it, what it costs"
   - "What customers say they wanted when they came (optional)"
-  - "Your brand file (optional)"
+  - "Your org context (optional)"
   - "Who the memo is for (optional)"
 you_get:
   - "What customers think they are shopping for, and the outcome they get"
@@ -43,7 +43,7 @@ output_sample:
   input:
     - "Facts about your product or service: what it does, who uses it, what it costs"
     - What customers say they wanted when they came (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
     - Who the memo is for (optional)
   output:
     - name: What they think they are shopping for
@@ -135,7 +135,7 @@ test:
 improve:
   - "Add your real customer quotes to the facts."
   - "Add your own quality bar to the last step."
-  - "Save the line in your brand file."
+  - "Save the line in your org context."
   - "Once the line is agreed, take it to the Customer-focused message writer to turn it into copy."
 
 next: [customer-hero-message-writer]
@@ -146,7 +146,7 @@ works_best_with:
     - {name: "Customer interview notes", why: "They are the best source for what people think they are buying."}
   inputs:
     - "Reviews or support tickets"
-    - "Your brand file"
+    - "Your org context"
     - "A competitor's one-line pitch to contrast"
 
 terms:

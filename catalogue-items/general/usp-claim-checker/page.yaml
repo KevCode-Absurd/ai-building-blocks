@@ -140,7 +140,7 @@ test:
 improve:
   - "Add your top three rivals and their usual claims to the skill so the rival check starts from real data."
   - "Add a rule for claims that need legal care in your field."
-  - "Save the claim you keep to your brand file."
+  - "Save the claim you keep to your org context."
   - "Pair it with a headline writer once the claim is chosen."
 
 works_best_with:

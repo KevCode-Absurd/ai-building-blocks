@@ -1,6 +1,6 @@
 slug: brand-dna-capture
-name: Brand file capture
-summary: Measure a live site into a brand file that stays current. Prices, look, voice and facts each carry a source and a date.
+name: Org context capture
+summary: Measure a live site into an org context that stays current. Prices, look, voice and facts each carry a source and a date.
 category: general
 boards: [ecommerce]
 type: skill
@@ -18,4 +18,4 @@ version: 1.1.0
 added: 2026-11-09
 package_files: all
 credits:
-  - {title: "Original AI Blocks method and scripts", by: "AI Blocks contributors", used: "The capture snippet, the Playwright script, the brand file tool and the field guide. Built from the Gehna landing-page case of 9 Nov 2026."}
+  - {title: "Original AI Blocks method and scripts", by: "AI Blocks contributors", used: "The capture snippet, the Playwright script, the org context tool and the field guide. Built from the Gehna landing-page case of 9 Nov 2026."}

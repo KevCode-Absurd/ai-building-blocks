@@ -5,7 +5,7 @@ description: Use when you need a small set of icons for an app, site, document o
 
 # Icon set planner
 
-An icon is a tiny message that has to be understood in under a second. This skill plans the whole set before any drawing starts, so the icons look like one family and each one says one thing. It hands back a design direction and a drawing plan. For brand colours and tone, it reads your brand file if you have one.
+An icon is a tiny message that has to be understood in under a second. This skill plans the whole set before any drawing starts, so the icons look like one family and each one says one thing. It hands back a design direction and a drawing plan. For brand colours and tone, it reads your org context if you have one.
 
 ## When to use it
 

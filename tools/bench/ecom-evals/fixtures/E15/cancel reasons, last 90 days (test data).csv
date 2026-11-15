@@ -1,0 +1,8 @@
+# (test data) Reasons picked in the cancel flow (one per cancel). Built for an e-commerce eval. Not Ritual's real figures.
+reason,share
+Too expensive,38%
+"Have too much, need a break",21%
+Not sure it's working,17%
+Switching brands,9%
+Pregnancy ended or life stage changed,8%
+Other,7%

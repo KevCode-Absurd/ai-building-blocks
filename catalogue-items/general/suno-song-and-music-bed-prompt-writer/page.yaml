@@ -99,7 +99,7 @@ output_sample:
     - name: "NOT RUN"
       contains: "The checks that still need you, such as making a track and listening to it."
 
-next: [elevenlabs-spoken-script-writer, jingle-video-ad-script-writer, sound-off-commercial-checker]
+next: [elevenlabs-spoken-script-writer, sound-off-commercial-checker]
 
 works_best_with:
   tools:

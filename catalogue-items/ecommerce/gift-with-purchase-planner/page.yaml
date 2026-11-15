@@ -124,7 +124,7 @@ test:
 improve:
   - Add your free shipping threshold to the skill file so the gift tiers sit above it.
   - Add a rule on the lowest margin you will accept at any tier.
-  - Save gift redemption and repeat purchase data in your brand file to see which gifts bring buyers back.
+  - Save gift redemption and repeat purchase data in your org context to see which gifts bring buyers back.
   - Pair it with the Order threshold planner for the cart bar and the Offer profit-per-session checker for the result.
 
 works_best_with:

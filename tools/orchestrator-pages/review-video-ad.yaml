@@ -4,12 +4,12 @@ summary: "Turn customer reviews into a video ad script, then a storyboard and cl
 job: make-video-ads
 
 headline: "Turn reviews into a video ad ready to film"
-subhead: Give it your website, your customer reviews and the buyer you want to reach. It builds your brand file, ranks why people buy, writes a script where every line has a source, checks it against ad rules, then takes it through avatar, sheets, storyboard and clip prompts, with your yes at each stage.
+subhead: Give it your website, your customer reviews and the buyer you want to reach. It builds your org context, ranks why people buy, writes a script where every line has a source, checks it against ad rules, then takes it through avatar, sheets, storyboard and clip prompts, with your yes at each stage.
 
 explain: |
   Most video ads start from a blank page and a guess about what buyers care about. The result sounds like every other brand, and the person making it has to make up the shots. This workflow starts from your customers instead. It reads your reviews for the reasons people switch and the words they use, and counts how many separate people say each one.
 
-  It runs seven skills in order. The first collects your facts, voice and allowed claims into a brand file, with every fact tagged by where it came from, so no later step invents anything. The script names the one belief the ad must change and builds beats from the opening to the call to action, each with the review or fact behind it. The next step reads every line aloud to fix what sounds stiff, and the script is then locked. It's checked against Facebook and Instagram ad rules before anything is made. Then the full video process: pick the avatar, make reference images and a character sheet with every angle, storyboard every shot, and turn the storyboard into clip prompts and an edit list. You approve the avatar, the sheets and the storyboard before it moves on.
+  It runs seven skills in order. The first collects your facts, voice and allowed claims into an org context, with every fact tagged by where it came from, so no later step invents anything. The script names the one belief the ad must change and builds beats from the opening to the call to action, each with the review or fact behind it. The next step reads every line aloud to fix what sounds stiff, and the script is then locked. It's checked against Facebook and Instagram ad rules before anything is made. Then the full video process: pick the avatar, make reference images and a character sheet with every angle, storyboard every shot, and turn the storyboard into clip prompts and an edit list. You approve the avatar, the sheets and the storyboard before it moves on.
 
 when:
   - You need a new video ad and don't know where to start.
@@ -17,7 +17,7 @@ when:
   - You have plenty of reviews but have never turned them into a script.
 not_for:
   - "You have no reviews yet or no chosen buyer: write the buyer down first, or get a few reviews, then come back."
-  - "Your site facts are not confirmed yet: run the Brand profile builder on its own first, then start this."
+  - "Your site facts are not confirmed yet: run the Org context builder on its own first, then start this."
   - "You already have a script and only want the storyboard: use the Video avatar and storyboard planner."
 
 you_give:
@@ -30,13 +30,13 @@ you_get:
   - A script beat by beat, with on-screen words, what is seen and the source for each line
   - An ad rules check with fixes, before anything is made
   - The avatar card, character and product sheets, and a storyboard, each approved by you
-  - Timed shot tables, clip prompts and an edit list, plus your brand file and buying reasons to reuse
+  - Timed shot tables, clip prompts and an edit list, plus your org context and buying reasons to reuse
 
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. Your website link, your reviews, one or two sentences on who the ad is for, your product facts and real product photos.
-  - Fix anything wrong in the brand file's fact sheet, check the buying reasons, and fix anything the ad rules check marks "Fix first".
+  - Fix anything wrong in the org context's fact sheet, check the buying reasons, and fix anything the ad rules check marks "Fix first".
   - Approve the avatar card, then the sheets, then the storyboard. Nothing is made until you say yes.
 output_sample:
   input:
@@ -49,7 +49,7 @@ output_sample:
     - An AI that can read files, such as Claude with a project or Claude Code
     - A video tool or paid credits to turn clip prompts into clips (optional, only to make the clips)
   output:
-    - name: Brand file
+    - name: Org context
       contains: Eight files of your facts, offers, buyers, proof, claims and voice, each fact tagged by where it came from.
     - name: Buying reasons
       contains: A ranked map of why people buy and what nearly stopped them, counted by separate people.
@@ -67,8 +67,8 @@ output_sample:
       contains: Each step's file, the clip and shot counts, the three approvals and every gap in one list.
 
 how_it_works:
-  - title: Builds your brand file
-    text: Uses the brand file skill to read your website, check the basics with you once, and write eight files where every fact says where it came from.
+  - title: Builds your org context
+    text: Uses the org context skill to read your website, check the basics with you once, and write eight files where every fact says where it came from.
   - title: Finds why people buy
     text: Uses the buying reasons skill to copy out phrases word for word, tag what pushed and pulled each buyer, and rank reasons by how many separate people say them.
   - title: Writes and locks the script
@@ -114,7 +114,7 @@ example:
     want one habit that lasts. Their doubt: "A gummy can't hold enough
     to replace my powder."
     Product facts: the product table and the "fine to repeat" claims
-    in the brand file. Never repeat the risky list.
+    in the org context. Never repeat the risky list.
     Photos: pouch front, daily pack in a hand.
     Length and speaker: about 40 seconds, voice-over, no customer
     on camera.
@@ -129,7 +129,7 @@ example:
     a powder. After this ad they believe one pack holds what they need.
     | Opening | "Most greens powders end up here, half a tub at the back of
       the cupboard." | Still half full | an unbranded tub pushed behind
-      jars | the old way (brand file)
+      jars | the old way (org context)
     | Doubt | "Can a gummy hold enough? Each pack has 60-plus ingredients,
       21 vitamins and minerals, and 6 grams of fiber." | 60+ ingredients,
       21 vitamins & minerals, 6g fiber | gummies in an open palm |
@@ -168,7 +168,7 @@ example:
     HAND-BACK SUMMARY
     Files: outputs/step-01 to step-07. Clips and shots: 7 clips, counted
     from the shot tables. Approvals: all three, from you.
-    MISSING: your answers to the brand file's check-in; which countries
+    MISSING: your answers to the org context's check-in; which countries
     the ad targets and where you ship; the landing page; grams of sugar.
 
 tweaks:
@@ -197,15 +197,15 @@ test:
   - Run step 2 twice on the same reviews. The top three reasons should come back in the same order.
 
 improve:
-  - In the builder, drop step 1 if you already have a brand file, and give your file to step 2 directly.
-  - Save the approved avatar card, sheets and lock lines in your brand file, so the next ad starts at the storyboard.
+  - In the builder, drop step 1 if you already have an org context, and give your file to step 2 directly.
+  - Save the approved avatar card, sheets and lock lines in your org context, so the next ad starts at the storyboard.
   - "Tune step 3's skill: add your voice rules and your banned claims to its file, so every script starts inside them (for Sprout: \"supports\", never \"fix\")."
   - Swap step 7 for the clips skill of a style (clay, watercolor, selfie-style) when you want that look.
   - Pair it with a check for finished ads once the video is made, before you spend on it.
 
 works_best_with:
   tools:
-    - {name: "Claude", why: "Holds the brand file, every review number and seven steps of work in one run."}
+    - {name: "Claude", why: "Holds the org context, every review number and seven steps of work in one run."}
     - {name: "Nano Banana", why: "Makes the reference images, sheets and storyboard frames from your product photos."}
     - {name: "Veo", why: "Starts a clip from an approved frame and follows timed shot lines inside one 8-second prompt."}
     - {name: "Meta Ads Manager", why: "Sets the 18+ age and countries the rules check asks for, and previews the ad in Reels and Stories."}
@@ -217,7 +217,7 @@ works_best_with:
     - "The speaker's age range, so the shot timings use the right speaking pace"
 
 terms:
-  - term: Brand file
+  - term: Org context
     meaning: One folder with your facts, voice, offers and the claims you can make, so every AI step works from the same truth.
   - term: Avatar
     meaning: The made-up person, character or product that carries the ad. Never a real person, and never shown as a customer.

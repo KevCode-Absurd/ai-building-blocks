@@ -129,7 +129,7 @@ improve:
   - Add your real spend tiers and the thresholds that make sense for your margins to the skill file.
   - Add perks you can really deliver, and the ones you have tried and dropped.
   - Add rules for paid memberships, auto-renewal and prize or promotion rules where you sell, and ask a qualified person to check them.
-  - Save the club name, tiers and invite text to your brand file.
+  - Save the club name, tiers and invite text to your org context.
   - Pair it with the VIP customer finder, the customer spend tier tagger and the loyalty claim checker, which do the list and sums this skill builds on.
 
 works_best_with:

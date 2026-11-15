@@ -26,7 +26,7 @@ test("attachment-only entry carries the same rules as the optional goal-specific
     assert.match(text, /HANDOFF.md/); assert.match(text, /SKILL.md/); assert.match(text, /optional/i);
   }
   for (const text of [prompt, executionMarkdown()]) {
-    assert.match(text, /ask/i); assert.match(text, /brand brain/); assert.match(text, /confirmed input/i); assert.match(text, /pending.*review/i);
+    assert.match(text, /ask/i); assert.match(text, /org context/); assert.match(text, /confirmed input/i); assert.match(text, /pending.*review/i);
   }
   assert.equal(EXECUTION_RULES.length, new Set(EXECUTION_RULES.map(r => r.id)).size);
 });

@@ -140,7 +140,7 @@ test:
 improve:
   - "Add the soft labels your company overuses to step 7."
   - "Add a rule for how many hours until you will share more facts."
-  - "Keep past updates and their results in your brand file as examples of tone."
+  - "Keep past updates and their results in your org context as examples of tone."
   - "Pair it with \"Hostile-room speech planner\" when you must also speak to an angry group."
 
 works_best_with:

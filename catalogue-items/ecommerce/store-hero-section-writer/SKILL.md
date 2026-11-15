@@ -13,7 +13,7 @@ Many figures below come from agencies and single clients. Treat them as the size
 
 ## First, ground the job
 
-Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol). The store already has a look, so the mode is patch (change the live top screen) or extend (a new page in the same store). Run [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture) on the live page first and write every suggestion as a change to that page, in its own fonts, colours, buttons and image style. The layout rules in steps 11 to 13 below are defaults for mass-market, direct-response stores; luxury, fashion and editorial brands keep their own codes where the rule says so.
+Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol). The store already has a look, so the mode is patch (change the live top screen) or extend (a new page in the same store). Run [Org context capture](https://useaiblocks.com/skills/brand-dna-capture) on the live page first and write every suggestion as a change to that page, in its own fonts, colours, buttons and image style. The layout rules in steps 11 to 13 below are defaults for mass-market, direct-response stores; luxury, fashion and editorial brands keep their own codes where the rule says so.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -28,9 +28,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your website** (yours): the link to your site or the page.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand file.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand file and buyer brief.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your org context.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your org context and buyer brief.
 4. This one.
 
 How to start:

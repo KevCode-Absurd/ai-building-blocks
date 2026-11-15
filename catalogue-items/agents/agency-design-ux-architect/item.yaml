@@ -10,10 +10,6 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
-    required: false
-  - type: brand_brain
-    required: false
 outputs:
   - type: plan
   - type: page_layout_spec

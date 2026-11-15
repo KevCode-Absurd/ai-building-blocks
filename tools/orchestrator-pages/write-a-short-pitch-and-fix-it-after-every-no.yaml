@@ -22,7 +22,7 @@ you_give:
   - Your idea or cause and who you want to reach
   - Facts you can prove, numbers with sources, results, quotes you may use
   - Why you started, in your own words
-  - Your brand file or buyer profile (optional)
+  - Your org context or buyer profile (optional)
   - After the pause, each no you heard, who said it and their words
 you_get:
   - A short pitch from belief to method to what you make
@@ -30,7 +30,7 @@ you_get:
   - The hardest objections with fair answers, the fact that would sink your case and what your evidence cannot show
   - A doubt log sorted by problem, market, team and place, a rewritten pitch and one advice question for the next meeting
 how_to_use:
-  - Gather your idea, who must back it, and facts you can prove. Add your brand brain if you have one (optional).
+  - Gather your idea, who must back it, and facts you can prove. Add your org context if you have one (optional).
   - "Download the handoff pack. It's a zip with HANDOFF.md and the four skill files, in the order they run: Why-first message writer, Honest persuasion editor, Hardest objections answer writer and Pitch revision log."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Check the pitch and the objection answers. Anything your AI could not prove is cut or marked MISSING.
@@ -41,7 +41,7 @@ output_sample:
     - Your idea or cause, and who you want to reach
     - Facts you can prove, with sources
     - Why you started, in your own words
-    - Your brand brain (optional)
+    - Your org context (optional)
     - Each no you heard, who said it and their words (after the pause)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project

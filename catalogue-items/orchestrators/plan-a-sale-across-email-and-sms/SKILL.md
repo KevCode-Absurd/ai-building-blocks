@@ -16,7 +16,7 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand file** (its products part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its products part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 - **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
@@ -28,17 +28,17 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your data** (yours): the data files, with their format and where they came from.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand file.
-3. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand file.
-4. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand file and buyer brief.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your org context.
+3. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your org context.
+4. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your org context and buyer brief.
 5. This one.
 
-**From the brand file, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`, `foundation/claims.md`, `foundation/customer-talk.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, your offer, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, your offer, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -46,7 +46,7 @@ How to start:
 Required:
 - **Your offer, with dates and terms:** price, deadline, and what is true about stock.
 - **How people on your list agreed to get texts.** Without a clear consent line, the plan has no texts.
-- **Your brand file,** so the email sounds like you and only makes claims you can back.
+- **Your org context,** so the email sounds like you and only makes claims you can back.
 - **Past email and SMS results,** as an export for a closed date window with definitions: sends, clicks, orders and unsubscribes.
 - **A one-paragraph brief for the sale email:** the offer, the deadline and the audience. You write this at the first pause.
 
@@ -74,7 +74,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Write the one-paragraph brief for the sale email: the offer, the deadline and the audience.
 
-3. **Campaign email writer.** Use the skill `campaign-email-writer`. It receives the sale email's slot from the step 2 calendar, the brief you wrote, your brand file and reviews. It saves subject and preview options, the email block by block, a plain-text version, two A/B variants and a claims check. It does not write the texts. Step 4 pairs the timing of your text with this email.
+3. **Campaign email writer.** Use the skill `campaign-email-writer`. It receives the sale email's slot from the step 2 calendar, the brief you wrote, your org context and reviews. It saves subject and preview options, the email block by block, a plain-text version, two A/B variants and a claims check. It does not write the texts. Step 4 pairs the timing of your text with this email.
 4. **SMS send checker.** Use the skill `sms-send-checker`. It receives the text the person writes or brings (step 3 does not write it), the step 1 text plan, the step 2 calendar and the step 3 email timing. It saves characters and billed parts, cost, an image break-even, rule flags, whether the news is urgent, a readiness score out of 100 and a fix list.
 
 Pause here: Send the emails and texts, then export the results for the sale window.

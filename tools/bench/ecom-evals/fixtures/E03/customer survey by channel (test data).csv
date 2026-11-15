@@ -1,0 +1,7 @@
+# (test data) Survey of 1,600 buyers, Oct 2026, split by where they last bought. Built for an e-commerce eval. Not Sleepy Owl Coffee's real figures.
+question,own_site_buyers,quick_commerce_buyers
+Where did you last buy?,own site (n=900),"Blinkit, Zepto or Instamart (n=700)"
+Most bought product,Cold Brew Packs (58%),Protein Coffee and instant sachets (54%)
+Why they buy,"Taste, smooth not bitter (47%)","Speed, it arrives in minutes (51%)"
+When they drink it,Afternoon at home (44%),Before or after the gym (39%)
+Age 18 to 24 / 25 to 34 / 35+,28% / 52% / 20%,41% / 46% / 13%

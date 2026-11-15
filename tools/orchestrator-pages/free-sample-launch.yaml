@@ -45,7 +45,7 @@ output_sample:
     - "Your test results: costs, replies and orders for each ad, after the test"
   prerequisites:
     - An AI that can read files, such as Claude with the handoff pack
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Free sample offer
       contains: The offer in words you can use, who gets it, how they claim it and a capped budget.
@@ -94,6 +94,6 @@ test:
   - Look at the roll out, change or drop rule and ask if you would follow it if the result was close. If not, tighten it.
   - Run step 1 twice on the same product. The offers can differ but both should be free and capped.
 improve:
-  - Save the winning offer and the cost per customer into your brand file, so later ad plans start from what you can afford to pay.
+  - Save the winning offer and the cost per customer into your org context, so later ad plans start from what you can afford to pay.
   - Add your real cost to make and ship the sample, so the budget cap is exact.
   - After a successful test, run it again in a few new places before you scale, as the plan suggests.

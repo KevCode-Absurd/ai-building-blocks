@@ -131,7 +131,7 @@ test:
 improve:
   - Add your own scoring weights to the skill file, such as more weight on demand for a high-margin product line.
   - Add the sites that matter in your field so the web mentions gap checks them first.
-  - Save the ranked list in your brand file and rerun after each action.
+  - Save the ranked list in your org context and rerun after each action.
   - Pair it with the AI recommendation panel runner (the input) and the answer-first page rewriter or AI-ready product page editor (to act).
 
 works_best_with:

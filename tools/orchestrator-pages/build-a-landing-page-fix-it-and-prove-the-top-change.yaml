@@ -21,7 +21,7 @@ not_for:
 you_give:
   - Your offer, price and buyer
   - What counts as success on the page (a sale, a signup or a call)
-  - Your brand file (optional)
+  - Your org context (optional)
   - Visits and conversions for the last few weeks, at the first pause
   - The counts for each version, at the second pause
 you_get:
@@ -38,7 +38,7 @@ output_sample:
   input:
     - Your offer, price and buyer
     - What counts as success on the page (a sale, a signup or a call)
-    - Your brand file (optional)
+    - Your org context (optional)
     - Visits and conversions for the last few weeks, at the first pause
     - The counts for each version, at the second pause
   prerequisites:
@@ -90,7 +90,7 @@ tweaks:
     how: Give weekly visits. Step 3 sizes the test and warns you if it will take too long.
   - what: Which change to test
     how: Name it at the pause, or let step 3 argue for the top fix in the review.
-  - what: Brand file
+  - what: Org context
     how: Add it so the copy uses your voice and facts.
 judge:
   - The page has one job and one main button.

@@ -22,7 +22,7 @@ you_give:
   - "How your team really works: what gets praised, what gets ignored, the unwritten rules"
   - Where it falls short and the behaviour you want instead
   - Your current rules and policies
-  - Your brand file or a past memo in your voice (optional)
+  - Your org context or a past memo in your voice (optional)
 you_get:
   - A culture memo that says what the team does and refuses to do
   - A standards sheet with checks anyone can run
@@ -39,10 +39,10 @@ output_sample:
     - "How your team really works: what gets praised, what gets ignored, the unwritten rules"
     - Where it falls short and the behaviour you want instead
     - Your current rules and policies
-    - Your brand file or a past memo in your voice (optional)
+    - Your org context or a past memo in your voice (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
-    - Your brand brain from the Brand profile builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Culture memo
       contains: What the team does, what it refuses to do, and what it chooses when two good things collide.

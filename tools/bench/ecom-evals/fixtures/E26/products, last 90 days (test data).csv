@@ -1,0 +1,8 @@
+# (test data) Sales and returns by product, last 90 days. Built for an e-commerce eval. Not Taylor Stitch's real figures.
+product,price_usd,product_cost_share_of_price,units_sold_90d,return_rate,share_of_returns_that_are_exchanges
+The Jack (shirt),138,36%,5310,12%,30%
+Democratic Foundation Chino,138,37%,3020,16%,45%
+Carnegie Pant,178,38%,2210,31%,40%
+Long Haul Jacket,208,39%,2140,20%,35%
+Fisherman Sweater,258,40%,980,9%,30%
+"Accessories (socks, hats, belts)",38,42%,4100,5%,20%

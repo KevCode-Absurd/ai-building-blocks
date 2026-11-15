@@ -97,7 +97,7 @@ works_best_with:
     - name: Claude, ChatGPT or Gemini with file support
       why: They read the agreed facts and voice examples and keep each step as a file. They do not send, post or contact your partner. You do that.
   inputs:
-    - Your brand brain or voice notes, and your partner's if they share them.
+    - Your org context or voice notes, and your partner's if they share them.
     - A named contact at the partner for questions on the facts.
 judge:
   - Both parties claims and brand use are sourced; a draft remains unpublished until the named owners approve.

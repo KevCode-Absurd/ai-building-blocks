@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand file.
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your org context.
 2. This one.
 
 How to start:
@@ -137,7 +137,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## If something is missing
 Write `MISSING: <identity photo | product photo | approved words>`. Without an identity photo, describe a made-up adult and say so.
 
-If photos are named but you can't see them, say so in one line under NOT RUN. Take the product's look and label words from the brand file or the input, mark the photo check as still to do, and never describe a photo you didn't see. Before writing MISSING for a fact, look for it in the brand file and the input; write MISSING only when both lack it.
+If photos are named but you can't see them, say so in one line under NOT RUN. Take the product's look and label words from the org context or the input, mark the photo check as still to do, and never describe a photo you didn't see. Before writing MISSING for a fact, look for it in the org context and the input; write MISSING only when both lack it.
 
 ## Avoid
 - Using this look for every portrait. It's one camera choice.

@@ -102,6 +102,6 @@ test:
   - Run the test reader on the same numbers twice. The calls should match.
 improve:
   - Keep the ad names it gives you, so later reads line up with this plan.
-  - Save the winning hooks in your brand file for your next batch of videos.
+  - Save the winning hooks in your org context for your next batch of videos.
   - Re-run the setup check after any change to your store or pixel.
   - Pair it with a video ad script writer to make the next three to five videos.

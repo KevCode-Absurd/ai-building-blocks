@@ -22,7 +22,7 @@ not_for:
   - "You want a quick spelling and grammar pass only: use your word processor's checker, as this loop is too heavy for that."
 you_give:
   - The finished draft with its title, links and sources
-  - Your brand brain, for the voice check and the claims register (advised)
+  - Your org context, for the voice check and the claims register (advised)
   - The product's real facts, if the piece names one (optional)
   - What kind of piece it is and the one sentence it is trying to say (advised)
 you_get:
@@ -34,7 +34,7 @@ you_get:
   - The one thing your drafts keep needing, from the log
 how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents. In ChatGPT or Gemini, paste the agent text first.
-  - Paste the draft, or point the agent at the file. Attach your brand brain if you have one.
+  - Paste the draft, or point the agent at the file. Attach your org context if you have one.
   - Say what kind of piece it is and, in one line, what it should say.
   - For the quotable score, put the edited piece on a preview or staging link. Your AI reads that link, so it needs web access. No paid service or API key is needed. If your AI cannot open the link, paste each passage instead.
   - Read the claims list first and fix those yourself. Then read the piece.
@@ -42,12 +42,12 @@ how_to_use:
 output_sample:
   input:
     - Your finished draft with its title, links and sources
-    - Your brand brain, for the voice check and claims (advised)
+    - Your org context, for the voice check and claims (advised)
     - The product's real facts, if the piece names one (optional)
     - The kind of piece, and the one sentence it should say (advised)
   prerequisites:
     - An AI that can read your draft and, for the log, keep files between pieces (Claude Code does this)
-    - Your brand brain from the Brand profile builder (advised, not required)
+    - Your org context from the Org context builder (advised, not required)
   output:
     - name: One sentence
       contains: What the piece says in one line, and whether it matches the sentence you gave.
@@ -71,7 +71,7 @@ how_it_works:
   - title: Edit plain
     text: Cuts clutter, turns passive to active and splits double sentences, keeping your voice.
   - title: Check the voice
-    text: Ranks off-voice lines against your brand brain and fixes them.
+    text: Ranks off-voice lines against your org context and fixes them.
   - title: Put the answer first
     text: For guides and FAQs, opens each section with its answer.
   - title: Score how quotable it is
@@ -120,7 +120,7 @@ example:
     Then the form of folate: methylfolate, not folic acid. Backed by
     35,000+ studies, this is the formula that actually works."
     Sources in the draft: the Sprout science page.
-    Brand brain attached (claims register says: per pack, not per gummy;
+    Org context attached (claims register says: per pack, not per gummy;
     "supports", never "works"; study measured vitamin C and folate only).
   output: pending
 tweaks:
@@ -143,7 +143,7 @@ test:
   - Run it twice on the same draft. The claims list should match.
   - Give it an opinion piece. It should skip the answer-first pass and say why.
 improve:
-  - Keep your claims register in the brand brain current. The claim check is only as good as it.
+  - Keep your claims register in the org context current. The claim check is only as good as it.
   - Set the quotable bar and the round limit to match how you publish.
   - Read the pattern line each month. It tells you what to fix before drafting.
   - Pair it with the Monthly content repurposer, so only checked pieces get repurposed.
@@ -152,7 +152,7 @@ works_best_with:
     - name: Claude Code
       why: It can read the draft from your repo, keep the log between pieces and run on each ready draft.
     - name: Any good chat AI
-      why: Paste the agent and the draft. Attach the brand brain for the voice and claims checks.
+      why: Paste the agent and the draft. Attach the org context for the voice and claims checks.
   inputs:
     - The sources behind each number in the draft
     - Two past pieces you were proud of, so the voice check has your bar

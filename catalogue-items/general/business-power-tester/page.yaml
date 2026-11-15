@@ -136,7 +136,7 @@ test:
 improve:
   - Add numbers for your own price premium or cost advantage so the materiality test is exact.
   - Add the rivals that would be hurt by copying you, so counter-positioning is checked.
-  - Save the verdict and the evidence list to your brand file.
+  - Save the verdict and the evidence list to your org context.
   - Pair it with "Second business picker" when you consider a new market.
 
 works_best_with:

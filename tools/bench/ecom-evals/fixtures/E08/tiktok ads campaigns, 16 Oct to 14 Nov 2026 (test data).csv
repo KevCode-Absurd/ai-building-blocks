@@ -1,0 +1,5 @@
+# (test data) TikTok Ads Manager export, 7-day click 1-day view, USD. Built for an e-commerce eval. Not KraveBeauty's real figures.
+campaign,spend,impressions,clicks,conversions,conversion_value,cpa
+Smart+ | All products,26000,3900000,46800,1040,31200,25
+Spark Ads | Creator posts,14000,1820000,30900,700,21000,20
+In-feed | Brand video,10000,1750000,12200,160,5100,62.5

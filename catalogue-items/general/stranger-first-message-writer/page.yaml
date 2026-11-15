@@ -42,7 +42,7 @@ output_sample:
     - "Your plan: who you want to reach and why"
     - What you offer and what it solves
     - The person, role or company (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   output:
     - name: Stranger profile
       contains: Their role, how many seconds they will give you, and what they care about at work.

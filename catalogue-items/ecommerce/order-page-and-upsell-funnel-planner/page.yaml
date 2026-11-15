@@ -114,7 +114,7 @@ test:
 improve:
   - Add your payment processor's rules on post-purchase offers and one-click charges to the skill file, so the plan stays inside them.
   - Add a maximum refund rate that stops a step, such as a set percentage you choose.
-  - Save your best performing offer and its take rate to your brand file for the next plan.
+  - Save your best performing offer and its take rate to your org context for the next plan.
   - Pair it with the bundle tier layout planner for the order page tiers and the store friction checker for the cart.
 works_best_with:
   tools:

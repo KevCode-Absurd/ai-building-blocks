@@ -130,7 +130,7 @@ test:
 
 improve:
   - "Add your real send-gap rule, so TIMING stops being a suggestion."
-  - "Paste your offers file from your brand file, so prices and terms are always right."
+  - "Paste your offers file from your org context, so prices and terms are always right."
   - "Pair it with the Email send readiness scorer before loading it into your tool."
 
 works_best_with:

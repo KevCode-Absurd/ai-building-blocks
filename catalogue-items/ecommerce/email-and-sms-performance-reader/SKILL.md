@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **An email flow** with the [Inactive subscriber cleanup planner](https://useaiblocks.com/skills/sunset-flow-and-list-cleaner). Bring your question, your results (optional), an email flow (optional). It uses your offer.
-2. **An email flow** with the [Dynamic email block planner](https://useaiblocks.com/skills/dynamic-email-block-planner). Bring an email flow. It uses your brand file.
+2. **An email flow** with the [Dynamic email block planner](https://useaiblocks.com/skills/dynamic-email-block-planner). Bring an email flow. It uses your org context.
 3. This one.
 
 How to start:

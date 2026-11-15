@@ -128,7 +128,7 @@ test:
 improve:
   - Add your own named formats and styles to the parts list, so the breakdowns use your words.
   - Add your must-never claims to the check, so no swap or new ad drifts into them.
-  - Save each breakdown in your brand file, so you can compare winners over months.
+  - Save each breakdown in your org context, so you can compare winners over months.
   - Pair it with the competitor ad swipe file builder to collect rival ads, and the creative test reader to read the swaps.
 
 works_best_with:

@@ -1,12 +1,12 @@
 new_slug: make-design-directions
 name: "Make three design directions"
-summary: "Give it your design brief and brand file. You get three different directions made at real size, with one chosen."
+summary: "Give it your design brief and org context. You get three different directions made at real size, with one chosen."
 job: design-work
 thinking: high
 thinking_why: "It must plan three layouts that differ in structure, draw each one and judge them side by side."
 
 headline: "See three real design directions before you finish one"
-subhead: Give it your brief for a poster, carousel, cover or pack front, with your brand file and the real words. It makes three directions at the real size, each built on a different layout, type scale or use of colour. A fresh reviewer picks one, and that one is finished.
+subhead: Give it your brief for a poster, carousel, cover or pack front, with your org context and the real words. It makes three directions at the real size, each built on a different layout, type scale or use of colour. A fresh reviewer picks one, and that one is finished.
 
 explain: |
   A design direction written as a paragraph tells you little. You have to see it. And when an AI offers three directions, they are often one layout in three colours.
@@ -29,7 +29,7 @@ not_for:
 you_give:
   - Your brief, with what the piece is, its real size and where people will see it
   - The real words that must appear, such as the headline, date or price
-  - Your brand file or brand guide, for fonts and colours
+  - Your org context or brand guide, for fonts and colours
   - Real photos or artwork (optional)
 you_get:
   - Three directions as SVG or HTML files at the real size
@@ -40,7 +40,7 @@ you_get:
 
 how_to_use:
   - Add the skill to an AI that can run code and open files.
-  - Give it your brief, the real words and your brand file.
+  - Give it your brief, the real words and your org context.
   - It plans three directions and makes each one at the real size.
   - It runs the compare script from Make three first screens. The script needs Node.js 18 or later and Playwright for the pictures.
   - A fresh reviewer picks one. It then builds the rest of the frames in that direction.
@@ -136,7 +136,7 @@ judge:
 test:
   - Turn the pictures grey in your head. You should still see three different layouts.
   - Look at the phone picture from arm's length. The key fact should still read.
-  - Check each font against your brand file.
+  - Check each font against your org context.
 
 improve:
   - Add two pieces you admire and one you do not, so each direction has a real reference.
@@ -149,7 +149,7 @@ works_best_with:
     - {name: "A coding assistant that can run code", why: "Draws the SVG or HTML files and runs the compare script."}
     - {name: "Node.js with Playwright", why: "Makes the side-by-side pictures, large and at phone size."}
   inputs:
-    - "Your brand file or brand guide"
+    - "Your org context or brand guide"
     - "The real words for the piece"
     - "Photos or artwork you already have"
 
@@ -167,7 +167,7 @@ output_sample:
   input:
     - Your design brief with the real size
     - The real words that must appear
-    - Your brand file or brand guide
+    - Your org context or brand guide
   prerequisites:
     - An AI that can run code, to run the compare script that comes with Make three first screens
   output:

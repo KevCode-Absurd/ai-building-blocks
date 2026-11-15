@@ -1,0 +1,7 @@
+# (test data) Shopify returns report, last 90 days. Free returns on every US order. Built for an e-commerce eval. Not Taylor Stitch's real figures.
+product,units_sold,units_returned,return_rate,top_return_reason
+Long Haul Jacket,2140,728,34%,Fit: boxy or too big (58% of its returns)
+The Jack (shirt),5310,637,12%,Colour not as expected
+Democratic Foundation Chino,3020,483,16%,Waist size
+Ojai Chore Coat,1460,204,14%,Changed mind
+Fisherman Sweater,980,88,9%,Changed mind

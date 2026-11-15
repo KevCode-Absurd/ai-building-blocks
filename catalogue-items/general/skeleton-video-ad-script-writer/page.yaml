@@ -39,7 +39,7 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your product facts and approved claims underneath. Your brand file works.
+  - Paste your product facts and approved claims underneath. Your org context works.
   - Write the old habit your product replaces, in your customers' words if you have them.
   - Say the length ("25 seconds") and who the ad is for.
   - Check the claims list. Any rung with a number tied to a result should point to a claim you hold.
@@ -187,7 +187,7 @@ example:
     "chalky taste"         the old way, from a review: free
     Bent shelf, door       plain exaggeration: free
     "Sixty-plus ingredients in one daily pack"
-                           approved claim, brand file
+                           approved claim, org context
     $29.99, $49.99         price page; the SMS condition and the
                            renewal are on screen, in full
     Money back             FAQ: 30 days, first order only
@@ -229,7 +229,7 @@ improve:
   - Add the habit your buyers quit, in their own words, to "What you need" in the skill file, so every run starts from the real old way.
   - Write your product-showing rules (how the pack opens, what never appears) into the video section, so picture notes get them right first time.
   - Pick one signature item for your skeleton and write it into "The skeleton", so it becomes a character people know across ads.
-  - Save the question that wins in your brand file, then test new questions on the same game.
+  - Save the question that wins in your org context, then test new questions on the same game.
   - Pair it with the skill that turns a skeleton script into shots, which runs the full video process.
 
 works_best_with:

@@ -1,0 +1,4 @@
+# (test data) One-week pilot, 3 to 9 Nov 2026: every COD order got a WhatsApp confirm-or-cancel message before dispatch. Built for an e-commerce eval. Not Sleepy Owl Coffee's real figures.
+group,orders,cancelled_before_dispatch,rto_rate_of_dispatched
+COD orders with confirmation,610,9%,14%
+"COD orders without (same week, other warehouse)",590,0%,27%

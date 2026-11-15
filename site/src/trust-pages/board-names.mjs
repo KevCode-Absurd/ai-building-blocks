@@ -1,5 +1,5 @@
 // The business boards' addresses and names, small enough for the site bundle: item pages show "For: <board>" links
-// and the brand file asks which one fits. src/trust-pages/boards.mjs holds the full boards; a test checks they match.
+// and the org context asks which one fits. src/trust-pages/boards.mjs holds the full boards; a test checks they match.
 export const BOARD_NAMES = {
   "ecommerce": "Online stores",
   "amazon-sellers": "Amazon and marketplace sellers",

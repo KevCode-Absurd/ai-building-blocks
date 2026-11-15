@@ -131,7 +131,7 @@ test:
   - After you fix the high items, run it again and see if the score rises.
 
 improve:
-  - Add the exact shipping and return terms you offer to your brand file, so the check matches them.
+  - Add the exact shipping and return terms you offer to your org context, so the check matches them.
   - Add a list of claims you may and may not make for your products, so claim checks use it.
   - Add your own schedule if you review weekly on a set day.
   - Add Google's current policy pages to the skill file with the date you read them.

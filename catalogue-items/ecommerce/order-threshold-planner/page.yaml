@@ -120,7 +120,7 @@ test:
   - Run each tier through the discount impact checker with your own units per order.
 
 improve:
-  - Save your shipping cost at one, two and three units in your brand file.
+  - Save your shipping cost at one, two and three units in your org context.
   - Add the thresholds you tried before and what happened, so the skill does not repeat them.
   - Edit the stretch rule in the skill file to match how far your buyers will really go.
   - Pair it with a gift planner for the second reward in the cart bar.

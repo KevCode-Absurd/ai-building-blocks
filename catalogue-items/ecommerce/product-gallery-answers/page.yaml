@@ -120,7 +120,7 @@ example:
     - "I thought the first pack I tried tasted terrible, but after the
       third day they started tasting better" (retailer)
     - "The sugar free [Sprout] worked too well." (review site)
-    Pre-sale questions from the brand file: "Will the price jump after
+    Pre-sale questions from the org context: "Will the price jump after
     the first order?" / "A gummy can't hold enough to replace my
     powder." / "Will this upset my stomach more?"
   output: |

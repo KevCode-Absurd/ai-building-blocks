@@ -19,10 +19,10 @@ outputs:
   - {type: brand_guide}
 uses: [website-brand-brain-builder, store-brand-signal-auditor, brand-voice-editor, brand-guide-builder]
 steps:
-  - {uses: website-brand-brain-builder, note: "Reads your store and reviews into one brand file. Hands the brand file to steps 2, 3 and 4."}
-  - {uses: store-brand-signal-auditor, note: "Scores and ranks where homepage, pack and emails drift from the brand file. Uses the brand file from step 1 and your store capture."}
-  - {uses: brand-voice-editor, note: "Checks sample copy against the voice and rewrites the weak lines. Uses the brand file from step 1 and your own ad copy or script, not step 2's report."}
-  - {uses: brand-guide-builder, note: "Packages the voice, look and do and don't into a guide for new writers. Uses the brand file from step 1, not step 3's report."}
+  - {uses: website-brand-brain-builder, note: "Reads your store and reviews into one org context. Hands the org context to steps 2, 3 and 4."}
+  - {uses: store-brand-signal-auditor, note: "Scores and ranks where homepage, pack and emails drift from the org context. Uses the org context from step 1 and your store capture."}
+  - {uses: brand-voice-editor, note: "Checks sample copy against the voice and rewrites the weak lines. Uses the org context from step 1 and your own ad copy or script, not step 2's report."}
+  - {uses: brand-guide-builder, note: "Packages the voice, look and do and don't into a guide for new writers. Uses the org context from step 1, not step 3's report."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/make-every-touchpoint-say-the-same-thing/skeleton.yaml

@@ -12,7 +12,7 @@ explain: |
 when:
   - Your quiz has reached about 100 submissions and you have not read the answers as a whole.
   - Your ads are not landing and you do not know which pain or goal to lead with.
-  - You want to update your brand file with what buyers actually said.
+  - You want to update your org context with what buyers actually said.
 not_for:
   - "You have fewer than about 100 quiz submissions: wait and collect more, or treat the result as a rough guide and rerun it later."
   - "Your quiz has no pain question or no question about what people tried: add those questions first, because the awareness read and pain ranking need them."
@@ -31,7 +31,7 @@ how_to_use:
   - Export the answers from your quiz tool and attach the file, or paste the rows. Wait until you have about 100 submissions, not purchases.
   - Say which ad sets sent the traffic, if you know.
   - Pick the top two angles and write one test ad for each, using the buyers' own words.
-  - Add the report to your brand file and run it again each month, as the mix changes with the ads.
+  - Add the report to your org context and run it again each month, as the mix changes with the ads.
 output_sample:
   input:
     - Your quiz answers export (one row per person, one column per question)
@@ -52,8 +52,8 @@ output_sample:
       contains: Each ad angle with its evidence, buyer words, a frame to test and the proof you need.
     - name: Changes to the quiz or offer
       contains: Weak questions, missing answer options and gaps between what buyers want and what you offer.
-    - name: For your brand file
-      contains: What to update in your brand file, plus a note to rerun monthly.
+    - name: For your org context
+      contains: What to update in your org context, plus a note to rerun monthly.
     - name: Data strength
       contains: A score out of 100 showing how solid the data is, with the sum shown.
     - name: Checks missed
@@ -85,7 +85,7 @@ output_shape: |
   1. <angle> | evidence: <share and buyer words> | frame to test: <...> | proof needed: <...>
   2. ...
   CHANGES TO THE QUIZ OR OFFER: <list>
-  FOR YOUR BRAND FILE: <what to update>
+  FOR YOUR ORG CONTEXT: <what to update>
   RERUN: monthly, or when the ad mix changes
   DATA STRENGTH <n>/100 (submissions 40 + pain question 20 + past-solutions question 20 + ad source known 20)
   CHECKS MISSED: <none or list>
@@ -112,7 +112,7 @@ test:
 improve:
   - Add your quiz questions, in order, to the skill file so it knows what each column means.
   - Add your product list and which pain each one solves, so the angles name the right product.
-  - Save each monthly report in your brand file with the date, so you can see the mix change.
+  - Save each monthly report in your org context with the date, so you can see the mix change.
   - Pair it with the store quiz funnel builder, to fix questions the report shows are weak.
 works_best_with:
   tools:
@@ -123,7 +123,7 @@ works_best_with:
     - Ad set names or IDs for each submission
     - Your quiz questions in order
     - Your product list
-    - Your current brand file, to update
+    - Your current org context, to update
 terms:
   - {term: "Submission", meaning: "One person finishing the quiz and sending their answers."}
   - {term: "Awareness", meaning: "How much the buyer already knows about the problem and about solutions."}

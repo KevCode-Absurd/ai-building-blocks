@@ -22,7 +22,7 @@ you_give:
   - Your products and programmes with revenue, margin and the attention each takes
   - What you believe the business is for
   - Who on the team owns which product
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - The product line cut to the few that pay, with the numbers behind each cut
   - Every programme reviewed as keep or cut
@@ -39,10 +39,10 @@ output_sample:
     - Your products and programmes, with revenue, margin and team hours for each
     - What you believe the business is for
     - Who owns each product
-    - Your brand file (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project. In a plain chat window, paste HANDOFF.md and then each skill file in turn.
-    - A buyer brief or brand brain helps but is optional
+    - A buyer brief or org context helps but is optional
   output:
     - name: "Step 1: The cut line"
       contains: Each product marked keep or cut, with what it earns, the attention it takes and the reason.
@@ -112,7 +112,7 @@ test:
   - Give step 4 a decision with no disagreement recorded. It should ask who argued against it.
 improve:
   - Run it once a year with the new numbers, and keep the cut lines to see what crept back.
-  - Save what the business is for in your brand file so the keeps stay consistent.
+  - Save what the business is for in your org context so the keeps stay consistent.
   - Add margin after discounts and returns to your product sheet.
   - Pair it with "Announce a change of direction and keep the team" to roll the decision out.
 works_best_with:
@@ -128,5 +128,5 @@ works_best_with:
 terms:
   - term: Disagree and commit
     meaning: Jeff Bezos's phrase for recording an honest disagreement and then backing the decision fully.
-next: [announce-a-change-of-direction-and-bring-the-team-with-you, smallest-test-picker]
+next: [announce-a-change-of-direction-and-bring-the-team-with-you]
 before: []

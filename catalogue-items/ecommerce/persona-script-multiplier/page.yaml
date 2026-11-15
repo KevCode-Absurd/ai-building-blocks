@@ -128,7 +128,7 @@ test:
 
 improve:
   - Add your compliance rules for health-style claims to the skill file, and a line saying who signs off.
-  - Save each winning script and its notes to your brand file, so the next round starts from them.
+  - Save each winning script and its notes to your org context, so the next round starts from them.
   - Add your real timeline, such as when customers typically notice a result, only if you have data for it.
   - The source brand's strong health claims should not be copied. Keep claims inside your own proof.
   - Pair it with a landing page writer that works from an ad.

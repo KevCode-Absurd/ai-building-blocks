@@ -127,7 +127,7 @@ test:
 improve:
   - Add your brand voice rules to the skill file, such as words you never use.
   - Add your category's style limits (title length, banned words) so the draft fits first time.
-  - Add your real proof lines (tests, awards, review counts) to your brand file so bullets use them.
+  - Add your real proof lines (tests, awards, review counts) to your org context so bullets use them.
   - Pair it with the Amazon keyword picker before it, and the Amazon launch week planner after it.
 
 works_best_with:

@@ -1,0 +1,86 @@
+# (test data) Meta Ads Manager breakdown export, USD. Built for an e-commerce eval. Not Graza's real figures.
+campaign,ad_format,age,gender,spend,impressions,link_clicks,purchases,purchase_value
+ASC | All oils,single image,18-24,women,869,75199,758,25,999
+ASC | All oils,single image,18-24,men,532,47864,650,14,587
+ASC | All oils,single image,25-34,women,2606,225436,2958,91,3692
+ASC | All oils,single image,25-34,men,1597,148974,2123,53,2214
+ASC | All oils,single image,35-44,women,2345,220866,2156,91,3740
+ASC | All oils,single image,35-44,men,1437,129054,1674,53,2198
+ASC | All oils,single image,45-54,women,1477,143585,1695,59,2299
+ASC | All oils,single image,45-54,men,905,83424,811,32,1276
+ASC | All oils,single image,55-64,women,869,74531,1006,33,1400
+ASC | All oils,single image,55-64,men,532,48997,554,16,643
+ASC | All oils,single image,65+,women,521,45510,458,18,716
+ASC | All oils,single image,65+,men,319,28042,276,10,415
+ASC | All oils,carousel,18-24,women,620,54359,578,17,669
+ASC | All oils,carousel,18-24,men,380,34961,465,10,394
+ASC | All oils,carousel,25-34,women,1861,180861,2125,72,2979
+ASC | All oils,carousel,25-34,men,1141,96358,1199,40,1627
+ASC | All oils,carousel,35-44,women,1675,147471,1962,70,2776
+ASC | All oils,carousel,35-44,men,1027,90521,873,33,1372
+ASC | All oils,carousel,45-54,women,1055,103370,1474,37,1515
+ASC | All oils,carousel,45-54,men,646,56459,725,20,824
+ASC | All oils,carousel,55-64,women,620,54684,675,21,850
+ASC | All oils,carousel,55-64,men,380,38043,369,13,560
+ASC | All oils,carousel,65+,women,372,31317,389,11,438
+ASC | All oils,carousel,65+,men,228,20052,253,6,251
+ASC | All oils,video (Reels),18-24,women,993,84005,837,31,1289
+ASC | All oils,video (Reels),18-24,men,608,55441,654,15,598
+ASC | All oils,video (Reels),25-34,women,2978,265617,3189,121,4938
+ASC | All oils,video (Reels),25-34,men,3800,352570,4279,271,10569
+ASC | All oils,video (Reels),35-44,women,2680,267740,3783,109,4636
+ASC | All oils,video (Reels),35-44,men,1643,142920,1731,54,2309
+ASC | All oils,video (Reels),45-54,women,1688,156956,1884,58,2373
+ASC | All oils,video (Reels),45-54,men,1034,93214,954,37,1442
+ASC | All oils,video (Reels),55-64,women,993,88592,1072,38,1599
+ASC | All oils,video (Reels),55-64,men,608,60804,765,19,800
+ASC | All oils,video (Reels),65+,women,596,54127,683,20,826
+ASC | All oils,video (Reels),65+,men,365,31160,331,10,401
+Retargeting | 14d visitors,single image,18-24,women,186,7924,128,9,391
+Retargeting | 14d visitors,single image,18-24,men,114,5207,77,5,210
+Retargeting | 14d visitors,single image,25-34,women,558,26303,451,37,1606
+Retargeting | 14d visitors,single image,25-34,men,342,14740,260,21,903
+Retargeting | 14d visitors,single image,35-44,women,502,23144,481,38,1645
+Retargeting | 14d visitors,single image,35-44,men,308,14264,254,21,957
+Retargeting | 14d visitors,single image,45-54,women,316,14030,290,23,1005
+Retargeting | 14d visitors,single image,45-54,men,194,9218,187,13,565
+Retargeting | 14d visitors,single image,55-64,women,186,9045,163,13,579
+Retargeting | 14d visitors,single image,55-64,men,114,5309,77,6,269
+Retargeting | 14d visitors,single image,65+,women,112,4996,76,6,254
+Retargeting | 14d visitors,single image,65+,men,68,3302,69,3,131
+Retargeting | 14d visitors,carousel,18-24,women,186,8360,160,11,479
+Retargeting | 14d visitors,carousel,18-24,men,114,5033,91,5,216
+Retargeting | 14d visitors,carousel,25-34,women,558,25763,439,37,1596
+Retargeting | 14d visitors,carousel,25-34,men,342,14711,229,21,905
+Retargeting | 14d visitors,carousel,35-44,women,502,23636,480,35,1580
+Retargeting | 14d visitors,carousel,35-44,men,308,13372,281,20,880
+Retargeting | 14d visitors,carousel,45-54,women,316,13508,227,22,951
+Retargeting | 14d visitors,carousel,45-54,men,194,8875,148,12,550
+Retargeting | 14d visitors,carousel,55-64,women,186,9279,173,11,492
+Retargeting | 14d visitors,carousel,55-64,men,114,5751,105,6,277
+Retargeting | 14d visitors,carousel,65+,women,112,4997,94,6,269
+Retargeting | 14d visitors,carousel,65+,men,68,3270,62,3,138
+Gifting | The Trio,single image,18-24,women,186,14913,150,5,263
+Gifting | The Trio,single image,18-24,men,114,10058,114,2,100
+Gifting | The Trio,single image,25-34,women,558,49085,692,16,862
+Gifting | The Trio,single image,25-34,men,342,30123,310,9,479
+Gifting | The Trio,single image,35-44,women,502,44982,483,16,839
+Gifting | The Trio,single image,35-44,men,308,27833,320,9,482
+Gifting | The Trio,single image,45-54,women,316,26580,316,10,506
+Gifting | The Trio,single image,45-54,men,194,16498,170,5,269
+Gifting | The Trio,single image,55-64,women,186,14555,144,6,320
+Gifting | The Trio,single image,55-64,men,114,8765,126,3,151
+Gifting | The Trio,single image,65+,women,112,8898,93,3,160
+Gifting | The Trio,single image,65+,men,68,5195,59,2,101
+Gifting | The Trio,carousel,18-24,women,124,10990,106,3,153
+Gifting | The Trio,carousel,18-24,men,76,5774,58,2,105
+Gifting | The Trio,carousel,25-34,women,372,28384,286,12,646
+Gifting | The Trio,carousel,25-34,men,228,17318,190,7,374
+Gifting | The Trio,carousel,35-44,women,335,28522,312,11,567
+Gifting | The Trio,carousel,35-44,men,205,17827,220,6,301
+Gifting | The Trio,carousel,45-54,women,211,16371,209,6,303
+Gifting | The Trio,carousel,45-54,men,129,11905,145,3,152
+Gifting | The Trio,carousel,55-64,women,124,9911,101,4,213
+Gifting | The Trio,carousel,55-64,men,76,6979,87,2,109
+Gifting | The Trio,carousel,65+,women,74,5910,85,2,105
+Gifting | The Trio,carousel,65+,men,46,3791,39,1,50

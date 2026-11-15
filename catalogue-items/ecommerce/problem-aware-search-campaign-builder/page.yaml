@@ -48,7 +48,7 @@ output_sample:
     - Which claims you are allowed to make (optional)
   prerequisites:
     - A Google Ads account to build the campaign in
-    - A brand brain from the Website brand brain builder (optional)
+    - An org context from the Org context builder (optional)
   output:
     - name: Settings
       contains: Search network only, purchase goal, bid choice, presence location, brand excluded, daily budget and Display off.
@@ -128,7 +128,7 @@ improve:
   - Add your own policy list to the skill file, such as words you may not use, so every ad stays inside it.
   - Add the problem phrases from your reviews as a standing list of seed terms.
   - Write your usual advertorial structure in the skill, so the page advice matches your pages.
-  - Save winning pages and headlines in your brand file.
+  - Save winning pages and headlines in your org context.
   - Pair it with the break-even calculator, so pruning uses your real cost per sale.
 
 works_best_with:

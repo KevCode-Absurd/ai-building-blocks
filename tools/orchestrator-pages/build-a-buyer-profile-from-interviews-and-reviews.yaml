@@ -24,7 +24,7 @@ you_give:
   - Your product, its price, the problem it solves and what it replaced for buyers
   - Reviews, survey answers or support emails (optional)
   - Forum posts you read and paste by hand (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
   - Your current ad copy or landing page, to check against the profile (optional)
 you_get:
   - A call sheet for each buyer, pre-filled from their order, with a consent line
@@ -48,7 +48,7 @@ output_sample:
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
     - Five to eight recent buyers who agree to a call
-    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your org context from the Org context builder (optional, makes the result better)
   output:
     - name: Interview sheets
       contains: One sheet per buyer code with order facts, timeline questions, gap questions and a consent line.
@@ -112,7 +112,7 @@ test:
   - Pick a review it did not use and check if it fits a profile. If it fits none, a group is missing.
 improve:
   - Add your own interview questions to the sheet skill, for what your product replaced.
-  - Save the profiles and brief in your brand file so every ad and page skill starts from them.
+  - Save the profiles and brief in your org context so every ad and page skill starts from them.
   - Repeat the forum hour for each new buyer group, and call more buyers each quarter.
 
 terms:

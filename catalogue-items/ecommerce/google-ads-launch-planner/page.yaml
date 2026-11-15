@@ -48,7 +48,7 @@ output_sample:
     - Purchases Google has counted so far (optional)
     - Merchant Center and purchase tracking status (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional, makes the plan fit your products)
+    - Your org context from the Org context builder (optional, makes the plan fit your products)
   output:
     - name: READY?
       contains: A yes or not yet verdict, with the fixes to make first if the store is not ready.
@@ -137,7 +137,7 @@ test:
 
 improve:
   - Add your own rule for leaving manual bids to the skill file, if you want one rule (the sources give 15, 15 to 30, and about one a day for 30 days).
-  - Save your hero products and break-even CPA to your brand file, so the plan starts from them.
+  - Save your hero products and break-even CPA to your org context, so the plan starts from them.
   - Add your own naming pattern if you already use one.
   - Add a rule for seasonal peaks, such as holding the budget before a sale.
   - Pair it with the break-even calculator before you run it, and with the structure planner and tracking checker around it.

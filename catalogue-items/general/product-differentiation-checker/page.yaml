@@ -137,7 +137,7 @@ test:
 
 improve:
   - Add your deal-loss categories to the steps, so it sorts lost deals your way.
-  - Save the real alternatives list and the best-fit accounts to your brand file.
+  - Save the real alternatives list and the best-fit accounts to your org context.
   - Add a rule for what counts as a shortlist in your market.
   - Pair it with "Marketing brief writer" once you have a verdict.
 

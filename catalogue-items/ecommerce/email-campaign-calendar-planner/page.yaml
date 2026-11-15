@@ -44,7 +44,7 @@ output_sample:
     - Your monthly revenue, team size and segments (optional)
   prerequisites:
     - An AI chat such as Claude, ChatGPT or Gemini
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: PACE
       contains: How many campaigns a week to send, and why that fits your revenue, team and list.
@@ -124,7 +124,7 @@ improve:
   - Add your own idea buckets and a list of ideas that fit your brand.
   - Add your real send days, based on your own send-time tests.
   - Add your team's weekly capacity and who owns each type of send.
-  - Save each month's review to your brand file so the next calendar starts from what earned.
+  - Save each month's review to your org context so the next calendar starts from what earned.
   - Pair it with the email topic bank builder for ideas, the campaign email writer for the copy and the engaged list expander for the audience.
 works_best_with:
   tools:

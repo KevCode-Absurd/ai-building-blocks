@@ -1,0 +1,8 @@
+# (test data) Klaviyo segment sizes on 14 Nov 2026. Built for an e-commerce eval. Not Graza's real figures.
+segment,profiles
+"Active subscribers (subscribe and save, already up to 19% off)",18400
+"Repeat buyers, 2+ orders, not subscribed",26100
+  of which aged 45+ (from the post-purchase survey),9800
+One-time buyers,41200
+Refill can buyers (bought a refill can in the last 6 months),7300
+Subscribers who never bought,64500

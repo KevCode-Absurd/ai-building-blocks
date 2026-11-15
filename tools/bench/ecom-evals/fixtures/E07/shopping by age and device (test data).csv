@@ -1,0 +1,12 @@
+# (test data) Google Ads demographics and device report for Shopping placements, USD. Built for an e-commerce eval. Not Fellow's real figures.
+campaign_scope,age,device,clicks,spend,conversions,conv_rate,conversion_value,roas,top_search_terms
+Shopping | Kettles + PMax shopping placements,25-34,mobile,7295,6812,122,1.7%,21333,3.13,pour over kettle; gooseneck kettle; fellow stagg
+Shopping | Kettles + PMax shopping placements,25-34,desktop,4223,3742,96,2.3%,15462,4.13,pour over kettle; gooseneck kettle; fellow stagg
+Shopping | Kettles + PMax shopping placements,35-44,mobile,6276,5899,100,1.6%,16936,2.87,pour over kettle; gooseneck kettle; fellow stagg
+Shopping | Kettles + PMax shopping placements,35-44,desktop,3652,3120,93,2.6%,15520,4.97,pour over kettle; gooseneck kettle; fellow stagg
+Shopping | Kettles + PMax shopping placements,45-54,mobile,5071,4614,79,1.5%,13250,2.87,pour over kettle; gooseneck kettle; fellow stagg
+Shopping | Kettles + PMax shopping placements,45-54,desktop,2441,2306,58,2.4%,9505,4.12,pour over kettle; gooseneck kettle; fellow stagg
+Shopping | Kettles + PMax shopping placements,55-64,mobile,2653,2503,46,1.7%,7889,3.15,pour over kettle; gooseneck kettle; fellow stagg
+Shopping | Kettles + PMax shopping placements,55-64,desktop,2900,6090,177,6.1%,37524,6.16,gift for coffee lover; pour over kettle gift; stagg kettle
+Shopping | Kettles + PMax shopping placements,65+,mobile,1139,1047,20,1.7%,3454,3.3,pour over kettle; gooseneck kettle; fellow stagg
+Shopping | Kettles + PMax shopping placements,65+,desktop,710,604,16,2.2%,2805,4.64,pour over kettle; gooseneck kettle; fellow stagg

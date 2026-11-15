@@ -19,11 +19,11 @@ when:
   - You review ad results each quarter and want to tell story-led ads from ones that only win on a discount.
 not_for:
   - Your store sells mostly on low price. A brand direction will not help, so test offers and prices with a media buyer instead.
-  - You have no brand file or brand description yet. Run the Store value proposition writer first, then come back.
+  - You have no org context or brand description yet. Run the Store value proposition writer first, then come back.
   - You want ads scored against benchmarks. This skill gives no score, so use your own ad reports and a person who reads them.
 
 you_give:
-  - Your brand file or a short description of the brand and who it is for
+  - Your org context or a short description of the brand and who it is for
   - Current ad angles and offers, including any discount ads
   - Price point and average order value
   - Hook rate, hold rate and click-through rate per ad (optional)
@@ -37,19 +37,19 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your brand file or a short description of the brand. If you have no brand file, run the Store promise writer first.
+  - Paste your org context or a short description of the brand. If you have no org context, run the Store promise writer first.
   - List your current ad angles, offers and discounts, and your price and average order value.
   - Hand the one-page brief to your creators. Add ad results each quarter and ask for the review.
   - Move an angle between columns only when the review backs it.
 output_sample:
   input:
-    - Your brand file or a short description of the brand and who it is for
+    - Your org context or a short description of the brand and who it is for
     - Your current ad angles and offers, including discount ads
     - Your price point and average order value
     - Ad results per ad, such as hook, hold and click-through rates (optional)
     - Repeat purchase or cohort figures (optional)
   prerequisites:
-    - A brand file or a short brand description. If you have none, run the Store promise writer first.
+    - An org context or a short brand description. If you have none, run the Store promise writer first.
   output:
     - name: Marketing vector
       contains: One paragraph on the world your ads show, who the buyer is and the tone.
@@ -107,7 +107,7 @@ output_shape: |
   CHECKS MISSED: <none, or list>
 
 tweaks:
-  - what: Your brand file
+  - what: Your org context
     how: Paste it, or the brand traits and who it is for. A weak brand description gives a weak vector. Run the Store promise writer first if you have none.
   - what: Your discount history
     how: List every discount you have run and how often. The rule is built around what you actually do.
@@ -135,7 +135,7 @@ test:
 improve:
   - Add the off-limits list that fits your brand, such as words or offers you never use, to the skill file.
   - Add your own baseline for hook, hold and click-through from the last 60 to 90 days, so the review starts from your numbers.
-  - Save the vector to your brand file so ads, emails and pages share it.
+  - Save the vector to your org context so ads, emails and pages share it.
   - Pair it with a cohort reader for the repeat-purchase step.
 
 works_best_with:

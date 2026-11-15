@@ -5,7 +5,7 @@ job: understand-customers
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
 headline: Turn customer reviews into ad copy that sounds like you
-subhead: Give it your customer reviews and your brand file. It writes a buyer brief, picks the argument an ad should make, writes ad copy from one real product fact at a time, then checks each line against your brand voice.
+subhead: Give it your customer reviews and your org context. It writes a buyer brief, picks the argument an ad should make, writes ad copy from one real product fact at a time, then checks each line against your brand voice.
 explain: |-
   Ad copy written from guesses sounds like every other ad. Copy written from reviews alone can drift off your brand's voice or lean on claims you cannot back.
 
@@ -15,12 +15,12 @@ when:
   - Your ad copy sounds generic or sounds nothing like your site.
   - You need copy a stranger can trace back to a fact you can prove.
 not_for:
-  - "You have no customer words yet: collect reviews, emails or survey answers first, or build your brand file with the Brand profile builder."
+  - "You have no customer words yet: collect reviews, emails or survey answers first, or build your org context with the Org context builder."
   - "You only want the argument an ad should make: use the Ad angle planner."
   - "You already have ad copy and only need it to match your voice: use the Brand voice editor."
 you_give:
   - Customer reviews, copied as written
-  - Your brand file
+  - Your org context
   - Your product facts
 you_get:
   - A buyer brief with the moment they started looking and their own words
@@ -34,7 +34,7 @@ how_to_use:
 output_sample:
   input:
     - Customer reviews, tickets, survey answers or call notes, with source and date
-    - Your brand file (facts, voice, claims, buyers)
+    - Your org context (facts, voice, claims, buyers)
     - "Your product facts: price, variants, how it is used"
     - A video ad script (optional)
   prerequisites:
@@ -83,7 +83,7 @@ example:
     [the handoff pack] Follow HANDOFF.md.
 
     Reviews: 6 Sprout reviews, copied as written. Practice data.
-    Brand file: the Sprout brand file. Product facts: powder, 6g prebiotic fiber.
+    Org context: the Sprout org context. Product facts: powder, 6g prebiotic fiber.
   output: |-
     STEP 1: BUYER BRIEF
     Moment: "Yesterday's shaker was still in the sink." (review 2)
@@ -116,7 +116,7 @@ tweaks:
     how: Add your never-say list and two or three lines you like. The voice check uses them first.
 judge:
   - Every quoted phrase in the brief appears in your reviews.
-  - Each ad line points to a fact in your brand file or product facts.
+  - Each ad line points to a fact in your org context or product facts.
   - The angle fits how much the buyer already knows, and the brief says why.
   - Lines the voice check flags are fixed or listed, not left in.
 test:
@@ -125,5 +125,5 @@ test:
   - Run the voice check on a line you wrote yourself. It should flag only real breaks of your rules.
 improve:
   - Add a step at the end that turns the best copy into an image ad or a video script.
-  - Save the buyer brief in your brand file so later runs skip step 1.
+  - Save the buyer brief in your org context so later runs skip step 1.
   - Feed the voice check your best-performing ads as examples of your voice.

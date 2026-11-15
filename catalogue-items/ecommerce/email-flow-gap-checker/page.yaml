@@ -115,7 +115,7 @@ improve:
   - Add your own flow lengths and delays to the skill file once you know what works for your product.
   - Add your discount policy, such as no discount before email 4.
   - Add your event names, so the trigger check uses the names in your tool.
-  - Save the final flow list to your brand file as your record of what is live.
+  - Save the final flow list to your org context as your record of what is live.
   - Pair it with the email test planner to decide which flow to test, and the email setup health checker for the settings.
 works_best_with:
   tools:

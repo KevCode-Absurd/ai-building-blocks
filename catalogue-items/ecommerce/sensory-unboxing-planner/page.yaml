@@ -130,7 +130,7 @@ test:
 improve:
   - Add your own bans, such as no plastic filler or no strong scent, to the checks so they apply on every run.
   - Add your real packaging costs and supplier names to the cost step, so the plan uses your numbers.
-  - Save the chosen cues and the three words to your brand file, so every new product pack follows them.
+  - Save the chosen cues and the three words to your org context, so every new product pack follows them.
   - Pair it with the Brand ritual designer for the gesture and the Unboxing insert and gift planner for the card and extras.
 
 works_best_with:

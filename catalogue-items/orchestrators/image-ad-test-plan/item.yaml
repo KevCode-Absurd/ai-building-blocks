@@ -12,7 +12,6 @@ inputs:
   - {type: voc_reviews, required: false}
   - {type: performance_sheet, required: false}
   - {type: competitor_set, required: false}
-  - {type: audit_report, required: false}
   - {type: offer, required: false}
 outputs:
   - {type: hooks}

@@ -17,19 +17,19 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 
 **Makes it better (optional):**
-- **Brand file**, made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context**, made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand file and offer and buying reasons.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your org context and offer and buying reasons.
 3. This one.
 
-**From the brand file, read:** `index.md`, `look.json`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `look.json`, `foundation/design.md`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for a video ad script, your brand file, product photos. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for a video ad script, your org context, product photos. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -45,7 +45,7 @@ This skill runs on its own. All it needs to start is a script, in any form; ever
 - **Product photos** (required if the product appears): front, side, top, in a hand, out of the pack, label readable. Never drawn. Read the attached photos directly and ask for photos, not a description. If only a description comes, say the product sheet couldn't be checked against the real pack.
 - **Look** (required): the ad's style (phone video, live action, clay, watercolor) and any lock words the look's own skill uses.
 - **An approved avatar** (optional): its sheet or reference images, reused instead of stages 1 and 2.
-- **Brand file** (optional): voice, fonts, places and light, what never to show.
+- **Org context** (optional): voice, fonts, places and light, what never to show.
 - **Delivery** (optional): narrator, talking to camera, two people talking.
 
 <!-- making-it -->
@@ -62,7 +62,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
 ## Steps
 
 ### Stage 0: Script in
-Check the script is approved and complete: every line, its time and the claim behind it. Don't rewrite lines. Send back any line the screen can't show, or one a made-up avatar can't honestly say ("I tried it", a result of its own). List the places, props and product states the script needs. Props that hold or show the product come only from the product photos or the brand file: never add a jar, bottle, tub, box or other container the product doesn't come in, and never show the product in a form it isn't sold in.
+Check the script is approved and complete: every line, its time and the claim behind it. Don't rewrite lines. Send back any line the screen can't show, or one a made-up avatar can't honestly say ("I tried it", a result of its own). List the places, props and product states the script needs. Props that hold or show the product come only from the product photos or the org context: never add a jar, bottle, tub, box or other container the product doesn't come in, and never show the product in a form it isn't sold in.
 
 ### Stage 1: Pick the avatar (approval 1)
 Choose who or what carries the ad, from the buyer and the script (follow the cast note if there is one): a presenter, a character, a mascot or a talking object. Give two or three options in one line each, then write the **avatar card** for the pick: role, age range and look in plain words, clothes, props, voice (age, pitch, pace, accent), and what must never change. Avatars are made up: never a real person's face or voice, never a child, never shown as a customer.
@@ -129,7 +129,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## If something is missing
 Write `MISSING: <view | font | product photo | script line>`. Never substitute a different face, font or pack.
 
-If photos are named but you can't see them, say so in one line. Take the product's look and label words from the brand file (or the input), mark the photo check as still to do, and never describe a photo you didn't see. Before writing `MISSING:` for a fact, look for it in the brand file and the input; write it only when both lack it.
+If photos are named but you can't see them, say so in one line. Take the product's look and label words from the org context (or the input), mark the photo check as still to do, and never describe a photo you didn't see. Before writing `MISSING:` for a fact, look for it in the org context and the input; write it only when both lack it.
 
 ## Avoid
 - A scene's light on the sheet, or the sheet's flat light in a scene.

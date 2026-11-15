@@ -114,7 +114,7 @@ test:
   - Ask the skill for the plan twice with the same input. The questions and timing should match.
 improve:
   - Add the doubts you already know about (sizing, delivery time, trust in a new brand) as preset answers for the page survey.
-  - Save the tally in your brand file so later skills can use the doubts and the words shoppers used.
+  - Save the tally in your org context so later skills can use the doubts and the words shoppers used.
   - Add a rule for products where health or safety worries come up, so those answers go to a person before any claim is written.
   - Pair it with the product page section planner, so each ranked doubt gets a place on the page.
 works_best_with:

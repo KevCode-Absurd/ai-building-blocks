@@ -6,7 +6,7 @@ thinking: high
 thinking_why: "It runs several skills in a row. Give it your strongest model."
 
 headline: "Copy an ad layout that works, using your product"
-subhead: Give it a reference ad or template, your brand file and your real photos. It tests every spot in the layout against your proof, keeps, changes or drops each one, plans every zone with labelled words, then builds 4:5 and 9:16 versions and revises them with you.
+subhead: Give it a reference ad or template, your org context and your real photos. It tests every spot in the layout against your proof, keeps, changes or drops each one, plans every zone with labelled words, then builds 4:5 and 9:16 versions and revises them with you.
 
 explain: |
   When you copy an ad that's working for someone else, or fill a template, it's easy to take too much. The layout asks for five comparison rows when you can prove two, a press badge you don't have, or a number you can't back. You end up with a near copy that says things you can't prove.
@@ -23,7 +23,7 @@ not_for:
   - "You only want ad ideas, not a layout: ask your AI for a list of angles to test, then pick one."
 
 you_give:
-  - Your brand file, with the figures you may quote, approved claims, never-say list, colours and typefaces
+  - Your org context, with the figures you may quote, approved claims, never-say list, colours and typefaces
   - Your real product photos and logo file, named by what each shows
   - The reference ad or template, as an image or a short description of its layout
   - Customer quotes with their source, if the layout has a quote or review spot (optional)
@@ -36,13 +36,13 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your brand file underneath and attach your logo file and product photos.
+  - Paste your org context underneath and attach your logo file and product photos.
   - Attach the reference ad or template image. If you can only describe it, say so, and check the plan against the real image later.
   - Write one sentence of direction, such as "use this to show what's in one pack, for people who quit greens powders" or "use this to compare our three sizes, for first-time buyers".
   - Read the dropped spots and the verdict first. Fix every MISSING line, approve the plan, then leave notes in the review deck until it's right.
 output_sample:
   input:
-    - Your brand file, with approved claims, colours and typefaces
+    - Your org context, with approved claims, colours and typefaces
     - Your real product photos and logo file
     - The reference ad or template, as an image or a short description
     - Customer quotes with their source (optional)
@@ -117,7 +117,7 @@ example:
   input: |
     [the skill]
 
-    Brand file: Sprout, daily greens gummies (pasted below: facts,
+    Org context: Sprout, daily greens gummies (pasted below: facts,
     fine and risky claims, colours, Work Sans, voice, show-it-right
     rules).
     Photos: the pouch on a soft gradient and gummies poured into a
@@ -136,7 +136,7 @@ example:
     KIT CHECK
     MISSING: logo file. "Sprout" won't be typed as text in its place.
     MISSING: photo files. Both are described, not attached.
-    NOTE     Work Sans is named in the brand file. Confirm it's
+    NOTE     Work Sans is named in the org context. Confirm it's
              installed before the build.
 
     REFERENCE
@@ -226,7 +226,7 @@ improve:
   - Add your show-it-right rules (how the pack opens, what's never shown) to step 8, next to the other checks.
   - Mark the types on the map you can never fill (for example Checked fact, if you hold no study or press), so they're switched at once.
   - If you reuse the same few templates, write their spots into the skill, so you only paste the template's name.
-  - Pair it with the skill that writes image prompts for the picture, and keep each approved plan in your brand file to reuse.
+  - Pair it with the skill that writes image prompts for the picture, and keep each approved plan in your org context to reuse.
 
 works_best_with:
   tools:

@@ -1,0 +1,4 @@
+# (test data) GA4 funnel for sessions that viewed the Ode Gen 2 page, 16 Oct to 14 Nov 2026. Built for an e-commerce eval. Not Fellow's real figures.
+device,sessions,add_to_cart,begin_checkout,purchases,conversion_rate
+mobile,41200,1650,1080,371,0.90%
+desktop,17800,960,700,463,2.60%

@@ -23,10 +23,10 @@ not_for:
   - You want one finished ad checked before launch. Use the Meta ad policy checker on its own.
 you_give:
   - An export of your image ads from Meta Ads Manager or Google Ads, with the image, dates, spend and your result (cost per purchase, return on ad spend or click rate)
-  - The product this batch is for, with its facts and current offer (paste them, or use your brand brain's products file)
+  - The product this batch is for, with its facts and current offer (paste them, or use your org context's products file)
   - Clear photos of the exact product, one per angle (pack as sold, in a hand, in use, close-up)
   - Customer reviews, if you have them (needed when fewer than six ads are measured)
-  - Your brand brain, if you have one (optional; without it, paste the claims you may and may not make)
+  - Your org context, if you have one (optional; without it, paste the claims you may and may not make)
 you_get:
   - What last week's ads taught, one line each
   - A batch of about 5 ads, each changing one thing, with image words, feed text and a picture prompt
@@ -44,7 +44,7 @@ output_sample:
     - The product for this batch, with its facts and current offer
     - Clear photos of the exact product, one per angle
     - Customer reviews (needed when fewer than six ads are measured)
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can read your files, or the export pasted into the chat
     - An image tool you pay for, only if you want the pictures made
@@ -116,7 +116,7 @@ test:
   - Plant a wrong claim in a feed text. The pre-launch check should stop it.
 improve:
   - Set your own rule for how many purchases make an ad measured, if your sales are very slow or very fast.
-  - Add the claims you may never make to your brand brain, so the pre-launch check catches them.
+  - Add the claims you may never make to your org context, so the pre-launch check catches them.
   - Save the pictures you approve in the memory folder, so next week's ads can be checked against them.
   - Remove the first-line scoring step if your ads carry almost no words.
 works_best_with:

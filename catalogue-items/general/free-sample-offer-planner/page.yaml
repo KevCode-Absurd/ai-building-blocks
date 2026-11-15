@@ -138,7 +138,7 @@ test:
 improve:
   - "Add your product's safety or age rules so limits are right."
   - "Add your own cost to make and pack a sample."
-  - "Save the key list and offer wording to your brand file."
+  - "Save the key list and offer wording to your org context."
   - "Pair it with a small launch test and a cost-per-customer calculation."
 
 works_best_with:

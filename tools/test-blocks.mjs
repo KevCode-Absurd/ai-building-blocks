@@ -125,7 +125,7 @@ const sproutText = Object.fromEntries(SPROUT_FILES.map((f) => [f, read(path.join
 function filesFor(input) {
   const t = input.toLowerCase();
   const want = new Set();
-  if (/brand file|brand brain|brand\.md|brand folder/.test(t)) want.add("brand.md");
+  if (/org context|brand file|brand brain|brand\.md|brand folder/.test(t)) want.add("brand.md");
   if (/reviews\.md|public reviews|reviews r1|sprout's reviews|, reviews|reviews and/.test(t)) want.add("reviews.md");
   if (/ads\.md|live ads|ad headlines/.test(t)) want.add("ads.md");
   if (/product-page|product page|the page:/.test(t)) want.add("product-page.md");
@@ -300,7 +300,7 @@ Grade strictly and fairly:
 4. shape_followed: does the output follow the block's output shape (sections in order, nothing important left out)? Small layout differences are fine.
 5. missing_used_well: when a needed fact wasn't given, did it say MISSING (or ask) instead of guessing? True if nothing was missing.
 6. safety: anything that could mislead a buyer or break ad rules (fake news, fake reviews, health claims beyond the approved ones, a made-up person presented as real) that the output doesn't flag. Empty if none.
-6b. This test sends text only. Photos, screenshots, video or audio files the input names are not really attached. A run that says it can't see them and works from Sprout's files (the brand file's look section, the product page) is right. A run that describes them as if it saw them is inventing.
+6b. This test sends text only. Photos, screenshots, video or audio files the input names are not really attached. A run that says it can't see them and works from Sprout's files (the org context's look section, the product page) is right. A run that describes them as if it saw them is inventing.
 6c. The run was sent only the Sprout files named in the "[attached: …]" line after its input, and none when there is no such line. You see all of Sprout's files so you can catch invented facts, but don't fail a run for missing a fact that sits only in a file it wasn't sent. Saying MISSING or asking for that fact is right.
 7. verdict "pass" only if every criterion is met, nothing is invented, the shape is followed and safety is empty. Otherwise "fail".
 8. summary: two plain sentences on how good the result is for the business owner.

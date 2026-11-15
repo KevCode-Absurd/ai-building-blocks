@@ -39,7 +39,7 @@ export function Before({ plan }: { plan: Plan }) {
       )}
       {required.length > 0 && <><h3 className="with-h">Required material</h3><ul className="needs">{required.map(i => <Item key={i.key} i={i} />)}</ul></>}
       {optional.length > 0 && <details><summary>Improve the result (optional)</summary><ul className="needs">{optional.map(i => <Item key={i.key} i={i} />)}</ul></details>}
-      {brain && <p className="bp-note" data-testid="brain-files">From your brand file it reads {brain.files.map((f, n) => <span key={f}>{n ? ", " : ""}<code>{f}</code></span>)}.</p>}
+      {brain && <p className="bp-note" data-testid="brain-files">From your org context it reads {brain.files.map((f, n) => <span key={f}>{n ? ", " : ""}<code>{f}</code></span>)}.</p>}
       <p className="bp-note">Give your AI the required material when you run the task. It should ask about missing facts and mark gaps. Optional extras can wait.</p>
     </>
   );

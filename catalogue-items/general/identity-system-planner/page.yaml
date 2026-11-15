@@ -144,7 +144,7 @@ test:
 improve:
   - "Add your usual list of places to \"What you need\" so none are missed."
   - "Add the client's past identity changes, so phases account for them."
-  - "Save the hand-off guide in your brand file."
+  - "Save the hand-off guide in your org context."
   - "Pair it with \"Brand mark system planner\" for the mark itself."
 
 works_best_with:

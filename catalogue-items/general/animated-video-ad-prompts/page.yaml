@@ -47,7 +47,7 @@ output_sample:
     - "Real product photos: front, side and top"
     - Every line of text on your product label
     - How the product is used (optional)
-    - Your brand file and your video tool's clip limits (optional)
+    - Your org context and your video tool's clip limits (optional)
   prerequisites:
     - An AI chat that can read your photos
     - A video tool to make the clips from the prompts (paid credits may apply)
@@ -196,7 +196,7 @@ tweaks:
   - what: Clip limits
     how: Give your tool's clip lengths and reference slots. It splits long actions across clips and attaches only the sheets each shot needs.
   - what: Inside views
-    how: If your brand file says how the product works, the storyboard adds a cutaway with no people, showing only the parts you name.
+    how: If your org context says how the product works, the storyboard adds a cutaway with no people, showing only the parts you name.
   - what: An animal lead
     how: Say the lead is an animal and the avatar card describes the animal, with "stylised animated" in front of it.
 
@@ -216,7 +216,7 @@ test:
 improve:
   - Once your look line works, paste it into stage 0 of the skill file, so every ad starts from tested wording.
   - Add your label lines with their colours to "What you need".
-  - Save approved avatar cards and character sheets in your brand file, so the next ad starts at stage 4.
+  - Save approved avatar cards and character sheets in your org context, so the next ad starts at stage 4.
   - Pair it with "Animated film video ad script writer" first, and a captions skill in your brand font after.
 
 works_best_with:

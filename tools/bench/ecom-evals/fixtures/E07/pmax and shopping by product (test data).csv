@@ -1,0 +1,9 @@
+# (test data) Spend and conversion value by product across PMax and Shopping, USD. Built for an e-commerce eval. Not Fellow's real figures.
+product,price,spend,conversion_value,roas,note
+Espresso Series 1,1499.95,36600,40300,1.1,
+Stagg EKG Pro,179.95,38200,214000,5.6,
+Ode Brew Grinder Gen 2,399.95,9100,41000,4.5,"Last 30 days before this period: $128,000 conversion value"
+Opus 2,199.95,17400,55800,3.2,
+Aiden,399.95,15300,47300,3.1,
+Clyde kettle,99.95,9800,37400,3.8,
+Other products and coffee,,15600,141800,9.1,Mostly brand searches for accessories

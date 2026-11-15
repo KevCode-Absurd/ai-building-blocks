@@ -22,7 +22,7 @@ you_give:
   - Each sign-up week's count at every onboarding step, from your product, store or email tool
   - What the product does and what the first win is (advised)
   - Support messages, survey answers or cancel notes from the first 30 days (optional)
-  - Your brand brain, for any email or text (optional)
+  - Your org context, for any email or text (optional)
   - Last week's plan and chart, once they exist
 you_get:
   - A chart of each sign-up week's share at each step
@@ -42,7 +42,7 @@ output_sample:
     - Each sign-up week's count at every onboarding step
     - What the product does and what the first win is
     - Support messages, survey answers or cancel notes from the first 30 days (optional)
-    - Your brand brain, for any email or text (optional)
+    - Your org context, for any email or text (optional)
     - Last week's plan and chart, once they exist
   prerequisites:
     - An AI that can keep files between weeks, such as Claude Code

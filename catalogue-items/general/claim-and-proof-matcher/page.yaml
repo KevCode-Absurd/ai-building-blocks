@@ -129,7 +129,7 @@ test:
 improve:
   - Add your proof library, with sources, so fixes can use real proof.
   - Add a list of claims you may never make.
-  - Save approved claims and their proof to your brand file.
+  - Save approved claims and their proof to your org context.
   - Pair it with "Sales copy readiness checker" for a last pass before launch.
 works_best_with:
   tools:

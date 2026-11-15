@@ -123,7 +123,7 @@ test:
 improve:
   - Add your standard cost lines (pick and pack, payment fee percent) to the skill file so you do not paste them each time.
   - Add your own rule for the lowest number of sessions you trust.
-  - Save each result in your brand file so you can see which offer types win for your store.
+  - Save each result in your org context so you can see which offer types win for your store.
   - Pair it with the Discount impact checker for discount variants and the Bundle and quantity-break builder for new tiers.
 
 works_best_with:

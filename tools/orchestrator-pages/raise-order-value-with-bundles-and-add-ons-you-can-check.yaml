@@ -46,7 +46,7 @@ output_sample:
     - Orders and profit after your test, given halfway through
   prerequisites:
     - An AI that can read files, such as Claude with a Project or Claude Code
-    - Your brand brain from the Website brand brain builder (optional, makes results better)
+    - Your org context from the Org context builder (optional, makes results better)
   output:
     - name: "Step 1: Thresholds"
       contains: Where your orders cluster, a free-shipping or gift line above each peak, and a multipack ladder with profit per order.
@@ -110,7 +110,7 @@ test:
   - Run each new offer on its own for a week before you combine them.
   - After the test, check the money figure against your payout report, not just your store's dashboard.
 improve:
-  - Save your order clusters and margin floor in your brand file, so a rerun starts from them.
+  - Save your order clusters and margin floor in your org context, so a rerun starts from them.
   - Edit the bundle skill to name your repeat-purchase sizes once you know which one reorders fastest.
   - Add the after-sale follow-up question to your delivery email and log the answers.
   - Keep each test log entry, so the next round starts from what you learned.

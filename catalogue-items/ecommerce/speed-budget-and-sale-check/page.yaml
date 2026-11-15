@@ -130,7 +130,7 @@ test:
 improve:
   - "Write your store's real limits into the skill so every sale starts from them."
   - "Add the people and roles who approve changes, and name who can say 'this breaks the budget'."
-  - "Save each sale's results in your brand file, then use them to set the next sale's limits."
+  - "Save each sale's results in your org context, then use them to set the next sale's limits."
   - "Pair it with the app script auditor and the speed fix ranker."
 
 works_best_with:

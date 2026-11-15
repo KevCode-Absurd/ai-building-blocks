@@ -25,8 +25,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand file and offer and buying reasons.
-2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand file and buyer brief.
+1. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your org context and offer and buying reasons.
+2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your org context and buyer brief.
 3. This one.
 
 How to start:
@@ -54,10 +54,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Website brand brain builder.** Use the skill `website-brand-brain-builder`. Reads your store and reviews into one brand file. Hands the brand file to steps 2, 3 and 4. Saved as `outputs/step-01-website-brand-brain-builder.md`: the voice, promise, buyers and claims you can back up, with the page each came from.
-2. **Store brand signal auditor.** Use the skill `store-brand-signal-auditor`. Scores and ranks where homepage, pack and emails drift from the brand file. Uses the brand file from step 1 and your store capture. It lists each touchpoint (homepage, product page, pack, email), scores how closely it matches the brand file, and ranks the biggest gaps first with the line that causes each. Saved as `outputs/step-02-store-brand-signal-auditor.md`.
-3. **Brand voice editor.** Use the skill `brand-voice-editor`. Checks sample copy against the voice and rewrites the weak lines. Uses the brand file from step 1 and your own ad copy or script, not step 2's report. It saves each checked line, the reason it is weak and a rewrite that uses only the brand file's facts. Saved as `outputs/step-03-brand-voice-editor.md`.
-4. **Brand guide builder.** Use the skill `brand-guide-builder`. Packages the voice, look and do and don't into a guide for new writers. Uses the brand file from step 1, not step 3's report. Saved as `outputs/step-04-brand-guide-builder.md`: voice rules, look notes, do and don't lists and before and after lines.
+1. **Org context builder.** Use the skill `website-brand-brain-builder`. Reads your store and reviews into one org context. Hands the org context to steps 2, 3 and 4. Saved as `outputs/step-01-website-brand-brain-builder.md`: the voice, promise, buyers and claims you can back up, with the page each came from.
+2. **Store brand signal auditor.** Use the skill `store-brand-signal-auditor`. Scores and ranks where homepage, pack and emails drift from the org context. Uses the org context from step 1 and your store capture. It lists each touchpoint (homepage, product page, pack, email), scores how closely it matches the org context, and ranks the biggest gaps first with the line that causes each. Saved as `outputs/step-02-store-brand-signal-auditor.md`.
+3. **Brand voice editor.** Use the skill `brand-voice-editor`. Checks sample copy against the voice and rewrites the weak lines. Uses the org context from step 1 and your own ad copy or script, not step 2's report. It saves each checked line, the reason it is weak and a rewrite that uses only the org context's facts. Saved as `outputs/step-03-brand-voice-editor.md`.
+4. **Brand guide builder.** Use the skill `brand-guide-builder`. Packages the voice, look and do and don't into a guide for new writers. Uses the org context from step 1, not step 3's report. Saved as `outputs/step-04-brand-guide-builder.md`: voice rules, look notes, do and don't lists and before and after lines.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
@@ -66,7 +66,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Check before you hand it back
 - Step 1: every voice rule, promise and claim names the page it came from.
 - Step 2: every touchpoint has a score, and each ranked gap quotes the line that causes it.
-- Step 3: every rewrite uses only facts from the brand file.
+- Step 3: every rewrite uses only facts from the org context.
 - Step 4: the guide has voice rules, look notes, do and don't lists, and before and after lines.
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.

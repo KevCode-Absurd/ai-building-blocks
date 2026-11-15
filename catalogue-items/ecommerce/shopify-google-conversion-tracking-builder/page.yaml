@@ -129,7 +129,7 @@ improve:
   - Add your Tag Manager naming pattern to the skill file, so every tag reads the same.
   - Add your consent tool and its settings, so the plan respects the choices your visitors make.
   - Add a line for any other platform you run, such as Meta, so purchases are counted the same way.
-  - Save the IDs you made into your brand file, with the date.
+  - Save the IDs you made into your org context, with the date.
   - Pair it with the purchase tracking checker for a regular check.
 
 works_best_with:

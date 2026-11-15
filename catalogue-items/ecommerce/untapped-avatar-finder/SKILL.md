@@ -35,7 +35,7 @@ How to start:
 - **Three to five rivals** (strongly advised): names or Meta Ad Library links for the brands that are winning.
 - **Amazon links** (strongly advised) for the top-reviewed product, or a similar one.
 - **Customer data** (optional): who buys from you now, and their order values.
-- No brand files are needed. For the next skills below, bring only the chosen group and its evidence.
+- No org context files are needed. For the next skills below, bring only the chosen group and its evidence.
 - Cost: the Meta Ad Library, Amazon reviews and Reddit search are free. Traffic tools (step 2) and deep research (step 14) are optional and may need a paid plan or account.
 - The person pastes what they find (ad notes, review stories, forum threads). Use only what is pasted. If your AI can open pages, say so, and still show the source for each claim.
 
@@ -91,7 +91,7 @@ CHECKS MISSED: <none | list>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Forum buyer researcher](https://useaiblocks.com/skills/forum-and-review-avatar-digger). It takes the buyer profile.
 - The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the buyer profile.
-- The [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). It takes the buyer profile.
+- The [Customer community finder](https://useaiblocks.com/skills/audience-hangout-finder). It takes the buyer profile.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

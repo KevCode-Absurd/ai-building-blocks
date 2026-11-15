@@ -51,7 +51,7 @@ output_sample:
     - A photo of your product or pack
     - Your offer, banned claims and the length you want, 15 to 45 seconds
   prerequisites:
-    - Your brand brain from the Brand profile builder, or the same facts pasted in
+    - Your org context from the Org context builder, or the same facts pasted in
     - A buyer brief from the Buyer brief writer, or the same details pasted in
     - An AI that can read pictures, to check your product photo
   output:
@@ -166,7 +166,7 @@ example:
     3 = lines 7-8 (17 words). 67 words, about 27 seconds.
 
     FACTS SAID
-    About 20 g, a small handful = product page and brand file
+    About 20 g, a small handful = product page and org context
     60+ ingredients, 21 vitamins & minerals, 6 g fiber = label claim
     About 100% vitamins, about 25% minerals = science page
     Review words, exact = brand site review

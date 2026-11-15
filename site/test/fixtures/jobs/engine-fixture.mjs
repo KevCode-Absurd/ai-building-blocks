@@ -9,8 +9,8 @@ export function engineFixture({ tier = 'standard' } = {}) {
   const card = document('ai-blocks-job-card/1'), team = document('ai-blocks-team-plan/2'), routes = document('ai-blocks-routes/1'), spread = document('ai-blocks-spread/1');
   card.request_verbatim = 'Write 6 documents for business owners';
   card.dials.depth.value = tier;
-  card.brand_brain={status:'AVAILABLE',business:'Synthetic contract-test project',path:'brand-brain/00-index.md',sha256:'a'.repeat(64),read_by_coordinator:true};
-  card.context_sources=[{id:'brand-brain',kind:'files',ref:card.brand_brain.path}];
+  card.org_context={status:'AVAILABLE',business:'Synthetic contract-test project',path:'context/org-context/index.md',sha256:'a'.repeat(64),read_by_coordinator:true};
+  card.context_sources=[{id:'org-context',kind:'files',ref:card.org_context.path}];
   const pins = [0, 1, 2].map(n => ({ slug: `method-${n}`, revision_sha256: 'a'.repeat(64) }));
   for (const seat of team.seats) { seat.toolbox = pins.map(p => ({ ...p })); if (seat.seat_type === 'maker') seat.families = ['family-0', 'family-1', 'family-2']; }
   if(tier==='quick'){team.seats=team.seats.filter(s=>['s1','s2','s3','s6'].includes(s.seat_id));team.seats.find(s=>s.seat_id==='s6').seat_types=['judge','fact_checker'];routes.routes=routes.routes.slice(0,2);}

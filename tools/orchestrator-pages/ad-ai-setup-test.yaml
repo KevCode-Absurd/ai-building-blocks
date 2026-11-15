@@ -125,7 +125,7 @@ test:
   - Swap the order of one pair and see if the pick holds.
   - Check the cost per usable ad against your own usage records.
 improve:
-  - Save the claim cards in your brand file so every future chain uses them.
+  - Save the claim cards in your org context so every future chain uses them.
   - Re-run the score after each change to your prompts.
   - Keep the before set of every version, so you can go back.
 terms:

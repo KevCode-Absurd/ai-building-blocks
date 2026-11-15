@@ -128,7 +128,7 @@ test:
 improve:
   - Add your accountant's rulings to the skill file, such as how they treat return repacking.
   - Add your supplier names so repeat invoices are sorted the same way each time.
-  - Save the final bucket list to your brand file so every month uses one list.
+  - Save the final bucket list to your org context so every month uses one list.
   - Pair it with the landed cost allocator to spread freight and duty across your products.
 
 works_best_with:

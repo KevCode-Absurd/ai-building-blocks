@@ -27,7 +27,7 @@ you_give:
   - The video style and shape you want (live action, clay, watercolor, animation; 9:16 or 4:5)
   - Limits, such as total length or characters per on-screen line (optional)
   - Real product photos and how the product is used (optional, but strongly advised)
-  - Your brand file's claims list, for flags only (optional)
+  - Your org context's claims list, for flags only (optional)
 you_get:
   - A shot table with the original words, the beat each part does, and the new picture note
   - A slots table, with any slot that can't be filled flagged
@@ -46,7 +46,7 @@ output_sample:
     - The new video style and shape, such as live action 9:16 or claymation
     - Limits such as total length or characters per on-screen line (optional)
     - Real product photos and how the product is used (optional, but strongly advised)
-    - Your brand brain claims list, for flags only (optional)
+    - Your org context claims list, for flags only (optional)
   prerequisites:
     - Screenshots or the image of each shot, attached so your AI can see them
     - A video ad script from the Video ad script writer from customer quotes is optional, not required
@@ -130,7 +130,7 @@ example:
 
     New format: 15-second video, 9:16, live action
     Product photo: the pouch on a soft gradient
-    Claims list: Sprout brand file (pasted)
+    Claims list: Sprout org context (pasted)
   output: |
     LAID OUT (the still, in reading order)
       E1  on-image line  "'Sprout is too expensive': here's 61% off

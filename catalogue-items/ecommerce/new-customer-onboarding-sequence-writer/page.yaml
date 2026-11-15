@@ -48,7 +48,7 @@ output_sample:
     - Survey answers on how customers use it (optional)
     - Your founder story and a photo or short video (optional)
   prerequisites:
-    - A brand brain from the Website brand brain builder makes the result better (optional)
+    - An org context from the Org context builder makes the result better (optional)
   output:
     - name: Branch and habit to teach
       contains: Whether the plan is for subscribers or one-time buyers, and the habit every email will teach.
@@ -136,7 +136,7 @@ test:
 improve:
   - Run the survey every quarter and swap the habit when the data changes.
   - Add the real founder story and photo. The sequence reads better in your own voice.
-  - Save your time-to-result and use steps to your brand file so every flow uses the same facts.
+  - Save your time-to-result and use steps to your org context so every flow uses the same facts.
   - Pair it with the Welcome flow builder for people who join your list before they buy, and with the Post-purchase survey builder for the survey.
 
 works_best_with:

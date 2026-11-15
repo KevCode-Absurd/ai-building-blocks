@@ -126,7 +126,7 @@ test:
   - Place one test cart at each address it lists and compare the totals.
 
 improve:
-  - Save your rate rows and the date you checked each rate in your brand file.
+  - Save your rate rows and the date you checked each rate in your org context.
   - Add your product types and tax classes so every run starts with them.
   - Add a note of the states where you have a physical presence.
   - Pair it with the store go-live checker so tax is tested before you open.

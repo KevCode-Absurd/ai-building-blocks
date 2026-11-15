@@ -32,7 +32,7 @@ you_get:
   - An unboxing experience plan
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
-  - Paste your brand colours, fonts and tone. If you have a brand file, paste that instead.
+  - Paste your brand colours, fonts and tone. If you have an org context, paste that instead.
   - "Add your product details: what it is, its size and weight, where you sell it, and your budget level."
   - Answer the few questions your AI asks about anything missing, such as competitors, volumes or green needs.
   - Read the strategy statement first. If it does not sound like your brand, fix it before you use the rest.
@@ -41,7 +41,7 @@ output_sample:
   input:
     - "Your product: what it is, its size and weight, and whether it is fragile"
     - "Where you sell it: shop shelf, online, direct or gifts"
-    - Your brand colours, fonts and tone, pasted in if you have no brand file
+    - Your brand colours, fonts and tone, pasted in if you have no org context
     - Your budget level and any green or legal needs (optional)
     - Your competitors' packaging (optional)
   output:

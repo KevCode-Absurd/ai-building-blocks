@@ -24,7 +24,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This is a single-product unit check, and it needs no brand brain. The spreadsheet named in "Before you start" is just the figures below, pasted or attached. For storage, start-up cash and a score, use the [Amazon fee and margin checker](https://useaiblocks.com/skills/amazon-fee-and-margin-checker).
+This is a single-product unit check, and it needs no org context. The spreadsheet named in "Before you start" is just the figures below, pasted or attached. For storage, start-up cash and a score, use the [Amazon fee and margin checker](https://useaiblocks.com/skills/amazon-fee-and-margin-checker).
 
 - **Selling price and landed cost** (required): product, freight, duty.
 - **Amazon fees** (required): referral, fulfilment and storage, taken from Amazon's revenue calculator today.

@@ -124,7 +124,7 @@ test:
 improve:
   - Add your creator terms to the skill file, such as how long you ask them to authorize a post, so the request matches your agreements.
   - Add your ad policy rules and the claims your brand can make, so step 4 checks against them.
-  - Save the posts that won as Spark ads to your brand file, so next batch's briefs build on them.
+  - Save the posts that won as Spark ads to your org context, so next batch's briefs build on them.
   - Pair it with the TikTok ad test reader to read the test, and with a creator outreach skill to find more creators.
 
 works_best_with:

@@ -29,7 +29,7 @@ not_for:
 you_give:
   - What you do and who you do it for
   - What you love, what you do well and what you do badly, in the same message
-  - Your brand file or notes on strengths (optional)
+  - Your org context or notes on strengths (optional)
   - Rivals and what they do best (optional)
 
 you_get:
@@ -98,7 +98,7 @@ output_sample:
   input:
     - What you do and who you do it for
     - What you love, what you do well and what you do badly
-    - Your brand file or notes on strengths (optional)
+    - Your org context or notes on strengths (optional)
     - Rivals and what they do best (optional)
   output:
     - name: The three circles
@@ -144,7 +144,7 @@ test:
 improve:
   - Add your own proof for each strength so the best-at circle is firm.
   - Add the measure your team already tracks as the engine measure.
-  - Save the focus in your brand file and check new ideas against it.
+  - Save the focus in your org context and check new ideas against it.
   - Pair it with "Business power tester" to test the edge behind the focus.
 
 works_best_with:

@@ -100,5 +100,5 @@ test:
 improve:
   - Keep the losing headlines. They show which promise your visitors did not want.
   - Test the next part of the page only after this one has a clear result.
-  - Add the winning proof and headline to your brand file so ads and pages use the same words.
+  - Add the winning proof and headline to your org context so ads and pages use the same words.
   - If a result looks too good, such as a jump of several hundred percent, check tracking before you celebrate.

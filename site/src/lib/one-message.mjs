@@ -59,8 +59,8 @@ export function fitMethod(skill, budget) {
  return { text: [...picked.entries()].sort((a, b) => a[0] - b[0]).map(([, t]) => t).join('\n\n').trim(), shortened: true };
 }
 
-/** The brand file block from lib/business.ts meFor(), headed with the name the owner sees on the site. */
-export const brandBlock = text => (text ?? '').trim().replace(/^## Your me\.md/, '## My brand file');
+/** The org context block from lib/business.ts meFor(), headed with the name the owner sees on the site. */
+export const brandBlock = text => (text ?? '').trim().replace(/^## Your me\.md/, '## My org context');
 
 export const bullets = rows => rows.filter(Boolean).map(s => '- ' + String(s).trim()).join('\n');
 export const numbered = rows => rows.filter(Boolean).map((s, i) => `${i + 1}. ${String(s).trim()}`).join('\n');

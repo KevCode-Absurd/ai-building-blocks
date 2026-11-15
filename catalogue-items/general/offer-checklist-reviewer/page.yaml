@@ -134,7 +134,7 @@ test:
 improve:
   - Add your costs and margins, so the changes stay profitable.
   - Add past offer tests with results.
-  - Save the winning offer terms to your brand file.
+  - Save the winning offer terms to your org context.
   - Pair it with "Claim evidence checker" to check the page that carries the offer.
 
 works_best_with:

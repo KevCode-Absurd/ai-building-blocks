@@ -46,7 +46,7 @@ output_sample:
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
     - The handoff pack zip with HANDOFF.md and the skill files
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: Subscription offer"
       contains: Discounts, shipping cadence, first-order deal, bulk tiers, gifts, prepaid plan, margin and the most you can pay per subscriber.
@@ -104,6 +104,6 @@ test:
   - Ask a friend to find the subscribe option on your product page in ten seconds.
 improve:
   - Add your maximum discount and your cash floor to the offer skill.
-  - Save the payback result in your brand file and re-run it when costs change.
+  - Save the payback result in your org context and re-run it when costs change.
   - Add real cancel reasons to the cancel flow skill once you have them.
   - Pair it with the longer subscription workflow when you want billing emails and a retention calendar.

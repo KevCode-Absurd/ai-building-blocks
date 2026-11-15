@@ -25,7 +25,7 @@ not_for:
 you_give:
   - What you are launching and the launch date
   - What is in the smaller launch, so no stage promises a cut feature
-  - Your brand file or voice notes (optional)
+  - Your org context or voice notes (optional)
   - The people you could show first, such as customers, peers or press (optional)
 you_get:
   - A dated plan from months out to launch day
@@ -36,14 +36,14 @@ you_get:
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Tell it what you are launching, the date and what is in scope.
-  - Add your brand file if you have one, so the voice fits.
+  - Add your org context if you have one, so the voice fits.
   - Check each stage date against your calendar.
   - Start with the sign-up page. Everything else uses the list it builds.
 output_sample:
   input:
     - What you are launching and the launch date
     - What is in the smaller launch scope
-    - Your brand file or voice notes (optional)
+    - Your org context or voice notes (optional)
     - The people you could show first, such as customers, peers or press (optional)
   output:
     - name: The launch
@@ -121,7 +121,7 @@ tweaks:
   - what: Your time
     how: Say how many hours a week you have. The plan will drop stages that do not fit.
   - what: Your voice
-    how: Attach your brand file so hints and messages sound like you.
+    how: Attach your org context so hints and messages sound like you.
 
 judge:
   - Every stage has a date.
@@ -149,7 +149,7 @@ works_best_with:
   inputs:
     - "Your smaller launch scope"
     - "A list of insiders with contact notes"
-    - "Your brand file or voice notes"
+    - "Your org context or voice notes"
 
 terms:
   - term: Insider

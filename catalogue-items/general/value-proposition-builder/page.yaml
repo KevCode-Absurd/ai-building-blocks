@@ -98,7 +98,7 @@ output_sample:
     - "Results, case notes or reviews you can prove (optional)"
     - "The doubts buyers voice after they buy (optional)"
   prerequisites:
-    - "Your brand brain from the Website brand brain builder (optional)"
+    - "Your org context from the Org context builder (optional)"
   output:
     - name: "YOUR VALUE"
       contains: "Your company value, product value and your value as the seller, from facts you gave."
@@ -143,7 +143,7 @@ test:
 improve:
   - Add your strongest case and its numbers to the input every time.
   - Add claims you must not make to the checks.
-  - Save pitch versions that won deals to your brand file.
+  - Save pitch versions that won deals to your org context.
   - Pair it with a skill that writes your sales page or letter.
 
 works_best_with:

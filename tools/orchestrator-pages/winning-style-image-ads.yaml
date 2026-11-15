@@ -25,7 +25,7 @@ not_for:
 you_give:
   - "Six or more of your image ads, as pictures, with their results (spend, sales or clicks)"
   - "Your product facts and photos"
-  - "Your brand file (optional)"
+  - "Your org context (optional)"
   - "How many new ads you want, and the sizes"
   - "After step 4, the images you picked, for the upscale"
 you_get:
@@ -46,7 +46,7 @@ output_sample:
   input:
     - Your image ads as pictures, with their results (spend, sales or clicks)
     - Your product facts and photos
-    - Your brand brain (optional)
+    - Your org context (optional)
     - How many new ads you want, and the sizes
   prerequisites:
     - An AI that can read files and images, such as Claude with the handoff pack

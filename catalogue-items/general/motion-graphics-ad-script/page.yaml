@@ -209,7 +209,7 @@ test:
 
 improve:
   - Write your look card into step 3 of the skill file, so you don't rebuild it for every ad.
-  - Add your figures with sources to your brand file, so step 2 can fill the fact sheet without asking.
+  - Add your figures with sources to your org context, so step 2 can fill the fact sheet without asking.
   - Write your full offer terms into "What you need", including what the price renews at.
   - Pair it with "Motion graphics video build planner", which runs the product sheet, storyboard and the build in code.
 

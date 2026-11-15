@@ -9,7 +9,7 @@ explain: |-
 
   This workflow settles what governs one ad copy job. It drafts only the copy that does not depend on an open question, and it names who must decide the rest. It does not settle a contract dispute, negotiate client scope or redo a whole brand. Clashing instructions are kept as evidence, not followed.
 when:
-  - Several ad briefs, comments or brand files disagree on facts, tone, offer or ad deliverables.
+  - Several ad briefs, comments or org context files disagree on facts, tone, offer or ad deliverables.
   - You want useful ad drafting to continue without guessing who approved a material change.
 not_for:
   - "You have one clear brief and want ad copy: use Single-buyer ad copywriter."
@@ -18,7 +18,7 @@ not_for:
   - "You are starting a brief from nothing: use the Creative brief writer."
 output_sample:
   input:
-    - Your competing briefs, comments or brand files, each labelled with its source, owner and date
+    - Your competing briefs, comments or org context files, each labelled with its source, owner and date
     - Your current request, with the ad copy you want, how many, the language and any limits
     - Product and offer facts you have checked
     - Decisions or approvals already given (optional)

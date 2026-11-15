@@ -1,0 +1,7 @@
+# (test data) 18 answers from ChatGPT, Gemini, Perplexity and Google AI Overviews, 10 to 12 Nov 2026. Built for an e-commerce eval. Not Pela's real figures.
+prompt,answers,problem_answers,note
+what is pela,4,3,"3 say Pela makes a kitchen food recycler, linking pela.earth"
+pela phone case review,4,1,1 links pela.earth/products/... which lands on lomi.com
+best compostable phone case,4,1,1 names Pela but links to a page that redirects to lomi.com
+pela vs casetify,3,0,All say Pela costs more; facts correct
+is pela case really compostable,3,0,Correct; mention industrial composting

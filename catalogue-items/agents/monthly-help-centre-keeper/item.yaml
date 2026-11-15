@@ -7,7 +7,7 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - { type: source_text, required: true }
+  - { type: voc_reviews, required: true }
   - { type: document, required: true }
   - { type: brand_brain, required: false }
 outputs:
@@ -21,7 +21,7 @@ steps:
   - { uses: solved-ticket-help-page-writer, note: "Only for a top topic with no article: a help page built from the best solved ticket, with steps and what the customer should see. Uses that ticket and the topic from step 2. Passes on the draft page for the voice check." }
   - { uses: help-article-writer, note: "Only for a topic that needs more than one solved ticket, such as a set-up guide or an FAQ section: the article from the tickets and the product docs. Uses several solved tickets and your product docs, not step 3's page. Passes on the draft article." }
   - { uses: answer-first-page-rewriter, note: "Only for an existing article that customers found and still wrote in about: sections rewritten to give the answer first. Uses the article already in your help centre, not step 4's draft. Passes on the rewrite and the facts still needing a source." }
-  - { uses: draft-brand-voice-checker, note: "Every month, last, when a brand brain exists: every new or rewritten article checked against your voice. Uses your brand brain and the drafts from steps 3 to 5. Passes on the ranked fixes for each article." }
+  - { uses: draft-brand-voice-checker, note: "Every month, last, when an org context exists: every new or rewritten article checked against your voice. Uses your org context and the drafts from steps 3 to 5. Passes on the ranked fixes for each article." }
 schedule: "On the first Monday of each month, after last month's tickets are exported"
 asks_before: [ publishing, changing or removing any help article, replying to any customer, changing a support macro or auto-reply, changing the help centre's structure, sharing ticket contents outside the support team ]
 origin: own

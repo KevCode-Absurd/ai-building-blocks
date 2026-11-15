@@ -2301,3 +2301,8 @@ ansel-adams:
   color: black
   mouth: smile
   flow: true
+ben-francis: { skin: 1, hair: short, hairColor: dark, beard: stubble, top: hoodie, color: black, mouth: smile }
+emily-weiss: { skin: 1, hair: long, hairColor: brown, top: blouse, color: white, mouth: smile }
+neil-blumenthal: { skin: 1, hair: short, hairColor: dark, glasses: round, top: shirt, color: blue, mouth: smile }
+michael-dubin: { skin: 1, hair: short, hairColor: brown, top: suit-open, color: navy, mouth: grin }
+ezra-firestone: { skin: 1, hair: short, hairColor: dark, top: tee, color: black, mouth: smile }

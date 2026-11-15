@@ -26,7 +26,7 @@ not_for:
 you_give:
   - "The rival and public facts about it, with sources"
   - "Your strengths and the proof for each"
-  - "Your brand file (optional)"
+  - "Your org context (optional)"
 you_get:
   - "The rival's weak spots with sources"
   - "Pairs matched on the same axis"
@@ -43,7 +43,7 @@ output_sample:
   input:
     - The rival's name and public facts about it, with dates
     - Your strengths and the proof for each
-    - Your brand brain (optional)
+    - Your org context (optional)
   output:
     - name: Rival weak spots
       contains: Each weak spot from public facts, with a source and a date.
@@ -129,7 +129,7 @@ test:
 improve:
   - "Add your approved claims to the skill so strengths come with their conditions."
   - "Add words your brand never uses against a rival."
-  - "Save the winning message to your brand file with the date and the rival's status."
+  - "Save the winning message to your org context with the date and the rival's status."
   - "Pair it with Disruption risk checker if the rival is a cheaper entrant."
 
 works_best_with:

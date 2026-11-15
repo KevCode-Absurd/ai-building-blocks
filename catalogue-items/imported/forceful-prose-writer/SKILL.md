@@ -192,7 +192,7 @@ If quality is uncertain, write less. Silence beats slop.
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Fill the gaps in your brand file** with the [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter).
+- **Fill the gaps in your org context** with the [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter).
 - **Decide what to do** with the [Claim fact checker](https://useaiblocks.com/skills/claim-fact-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

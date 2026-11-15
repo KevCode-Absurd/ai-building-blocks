@@ -5,7 +5,7 @@ description: Use when you have customer words and need ad copy that sounds like 
 
 # Turn reviews into ad copy in your brand voice
 
-Give it customer reviews and your brand file. Get a buyer brief, an ad angle, fact-based ad copy and a voice check.
+Give it customer reviews and your org context. Get a buyer brief, an ad angle, fact-based ad copy and a voice check.
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
@@ -14,25 +14,25 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand file** (its products and buyers part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its products part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Makes it better (optional):**
-- **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 - **Buying reasons**, made by the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder): why people buy, in their own words, ranked by how many said it.
 - **Hooks** (yours): opening lines, each with the angle and persona it targets.
+- **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand file and offer and buying reasons.
-3. **Buying reasons** with the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder). Bring customer words. It uses your brand file.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Buying reasons** with the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder). Bring customer words. It uses your org context.
+3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your org context and offer and buying reasons.
 4. This one.
 
-**From the brand file, read:** `index.md`, `facts.json`, `offers.json`, `references.md`. Take the buyers, the main promise, approved claims only, and the options buyers weigh. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `foundation/brand-dna.md`, `foundation/customers.md`, `foundation/markets.md`, `facts.json`, `offers.json`, `references.md`. Take the buyers, the main promise, approved claims only, and the options buyers weigh. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, customer words, a video ad script. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, customer words, buying reasons. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -52,7 +52,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Write the buyer brief.** Use the skill `buyer-brief-writer`. Give it the reviews. It writes who the buyer is, the moment they started looking, what pushes them and what holds them back, with their own words quoted. Save `outputs/step-01-buyer-brief-writer.md`.
-2. **Pick the ad angle.** Use the skill `ad-angle-planner`. Give it the buyer brief (`outputs/step-01-buyer-brief-writer.md`) and the claims part of the brand file. It chooses the argument an ad should make for that buyer, with the reason. Save `outputs/step-02-ad-angle-planner.md`.
+2. **Pick the ad angle.** Use the skill `ad-angle-planner`. Give it the buyer brief (`outputs/step-01-buyer-brief-writer.md`) and the claims part of the org context. It chooses the argument an ad should make for that buyer, with the reason. Save `outputs/step-02-ad-angle-planner.md`.
 3. **Write fact-based copy.** Use the skill `fact-based-ad-copy-writer`. Give it the angle from step 2, the buyer's words from step 1 and the product facts. It writes ad copy built on one fact per ad, each with its source. Save `outputs/step-03-fact-based-ad-copy-writer.md`.
 4. **Check it sounds like your brand.** Use the skill `brand-voice-editor`. Give it the ad copy from step 3 and your voice rules and never-say list. It tests each ad line against them and fixes the lines that miss. Change wording only, and keep every fact. Save `outputs/step-04-brand-voice-editor.md`.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
@@ -64,7 +64,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Every phrase quoted in the buyer brief appears word for word in the customer reviews you gave. If it does not, remove it.
-- Every fact in the ad copy appears in the product facts or the claims part of the brand file.
+- Every fact in the ad copy appears in the product facts or the claims part of the org context.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
 

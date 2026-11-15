@@ -135,7 +135,7 @@ test:
 improve:
   - Add your developer hours and hosting limit to the skill file, so the route fits what you can keep running.
   - Add your consent banner's event names so the trigger advice is exact.
-  - Save the working event ID format to your brand file for future changes.
+  - Save the working event ID format to your org context for future changes.
   - Pair it with the store's purchase tracking check in Google, so both ad platforms agree with orders.
 
 works_best_with:

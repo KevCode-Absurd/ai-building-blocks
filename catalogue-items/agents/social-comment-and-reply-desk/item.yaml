@@ -8,7 +8,6 @@ job: organic
 level: beginner
 inputs:
   - {type: short_text, required: true}
-  - {type: copy_draft, required: false}
   - {type: brand_brain, required: false}
 outputs:
   - {type: copy_draft}

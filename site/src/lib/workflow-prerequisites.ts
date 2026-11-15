@@ -14,7 +14,7 @@ export const prerequisitePolicy = () => ({
 export function prerequisiteMarkdown(types: string[]) {
   const active = new Set(types);
   const examples: string[] = [];
-  if ([...active].some(type => /^(?:brand_brain|brand_file|brand_guidelines)$/.test(type))) examples.push("- **Brand Brain or brand file:** ask whether one already exists. Accept an attachment, folder/file path or URL. If it uses `00-start-here.md`, read that index and the relevant files before using it.");
+  if ([...active].some(type => /^(?:brand_brain|brand_file|brand_guidelines)$/.test(type))) examples.push("- **Org context:** ask whether one already exists (it may be called an org context). Accept an attachment, folder/file path or URL. If it is a `context/org-context/` folder, read `index.md` first; an older folder may use `00-start-here.md` as its index. Then read the relevant files before using it.");
   if ([...active].some(type => /^(?:offer|offer_brief|offer_details|offer_document)$/.test(type))) examples.push("- **Offer:** reuse the supplied offer and its confirmed terms. Ask for unresolved details; do not invent prices, claims or proof.");
   if ([...active].some(type => /^(?:ad_copy|ad_draft|ad_script)$/.test(type))) examples.push("- **Ad copy:** ask whether existing copy should be used or checked before creating a new version. Preserve its source and the requested scope.");
   if ([...active].some(type => /^(?:voc_reviews|customer_reviews|reviews)$/.test(type))) examples.push("- **Reviews:** use the actual supplied or accessible review source. Generated examples cannot stand in for customer evidence.");

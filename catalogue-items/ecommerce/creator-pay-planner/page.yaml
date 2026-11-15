@@ -142,7 +142,7 @@ test:
 improve:
   - Add your current shop commission rules and your own review rhythm for how often you recheck the numbers.
   - Add your standard contract lines for usage rights, ad rights and posting dates.
-  - Save your agreed CPM ceiling in your brand file, so every offer starts from it.
+  - Save your agreed CPM ceiling in your org context, so every offer starts from it.
   - Keep a list of fees paid and the orders in the following week, to see if your half-of-Meta rule holds.
 
 works_best_with:

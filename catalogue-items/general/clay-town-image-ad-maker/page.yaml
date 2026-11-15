@@ -6,7 +6,7 @@ summary: "Make a clay town image ad from your selling idea. You get an image pro
 job: make-image-ads
 
 headline: "Clay town image ad maker"
-subhead: Give it your selling idea, brand file and product photos. It finds a hassle a whole crowd shares, picks one moment with one lead and dresses the clay set like a stop-motion studio. You get an image prompt, the ad words, a layout and any check it missed.
+subhead: Give it your selling idea, org context and product photos. It finds a hassle a whole crowd shares, picks one moment with one lead and dresses the clay set like a stop-motion studio. You get an image prompt, the ad words, a layout and any check it missed.
 
 explain: |
   Some problems are awkward to show with real people: a queue at the office sink, a packed train, the school-gate rush. In a handmade clay town they become funny and easy to look at, because everyone knows the routine and nobody real is embarrassed. The risk is a busy frame nobody can read in a glance, and a clay pack whose label reads as nonsense.
@@ -24,7 +24,7 @@ not_for:
 
 you_give:
   - The reason someone buys, what the buyer knows and the selling idea
-  - Your brand file, with the buyer's moment, who else is there, label text, approved claims and offer
+  - Your org context, with the buyer's moment, who else is there, label text, approved claims and offer
   - Photos of your product's front, side and top, attached (optional, needed if it appears)
 you_get:
   - A moment plan with the shared hassle, the show job and the claim it implies
@@ -35,14 +35,14 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your selling idea and brand file. Say where your buyer's hassle happens and who else is there.
+  - Paste your selling idea and org context. Say where your buyer's hassle happens and who else is there.
   - Attach the product photos and type out every label line. It won't invent label words.
   - Make the image, then lay the real label and the words on it in your editor.
   - Show it to someone for 2 seconds. If they can't say what it's for, ask for fewer figures in focus.
 output_sample:
   input:
     - Your selling idea in one sentence
-    - Your brand file, with label text, approved claims and offer
+    - Your org context, with label text, approved claims and offer
     - Photos of your product from the front, side and top (optional)
     - Where the ad runs
   prerequisites:
@@ -212,7 +212,7 @@ test:
 
 improve:
   - Pick your finish once and write it into step 3 of the skill file, so every clay ad in a series matches.
-  - Save your lead's description in your brand file, so the same figure comes back in the next ad and the video.
+  - Save your lead's description in your org context, so the same figure comes back in the next ad and the video.
   - Add the shared places your buyers know to step 2.
   - Pair it with the clay-town video skills, so the still and the video share one world.
 

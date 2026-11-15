@@ -1,0 +1,6 @@
+# (test data) Expected landing page traffic by source for Black Friday, from last year's results. Built for an e-commerce eval. Not Pela's real figures.
+source,share_of_sessions,device_mobile
+"Instagram and Facebook ads, gift angle",48%,93%
+"Instagram and Facebook ads, protection angle",23%,91%
+Email,19%,72%
+Search,10%,64%

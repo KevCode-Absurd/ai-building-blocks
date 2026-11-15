@@ -1,25 +1,25 @@
 new_slug: brand-guide-builder
 name: Brand guide builder
-summary: Turn your brand file into a printable brand guide and a values file to paste into any design tool. Colour pairs are checked so text stays readable.
+summary: Turn your org context into a printable brand guide and a values file to paste into any design tool. Colour pairs are checked so text stays readable.
 job: brand-file
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
 headline: Brand guide builder
-subhead: Attach your brand file, plus logo rules and site styles if you have them. It builds a printable guide with a one-page quick sheet and only readable colour pairs. You get the guide, a copy-paste values file and a list of gaps to fill.
+subhead: Attach your org context, plus logo rules and site styles if you have them. It builds a printable guide with a one-page quick sheet and only readable colour pairs. You get the guide, a copy-paste values file and a list of gaps to fill.
 explain: |
   When a new designer, editor or freelancer starts, they need your colours, fonts, voice and photo rules. Usually they get a logo file and a vague "keep it clean". Then the work comes back in the wrong green, with a stock photo, yellow text nobody can read and a tagline you'd never say.
 
-  This skill turns your brand file into two files. The first is a printable HTML guide in your own colours and fonts. Page 2 is a quick sheet a stranger can work from alone. The pages after it give the reason behind each rule, then the values, then do and don't examples from your real copy. It checks every text colour against every background it sits on, so the guide only shows pairs people can read. The second file holds every value to paste into a design or image tool. Pages with nothing to show are left out, and every blank is listed with the question that would fill it.
+  This skill turns your org context into two files. The first is a printable HTML guide in your own colours and fonts. Page 2 is a quick sheet a stranger can work from alone. The pages after it give the reason behind each rule, then the values, then do and don't examples from your real copy. It checks every text colour against every background it sits on, so the guide only shows pairs people can read. The second file holds every value to paste into a design or image tool. Pages with nothing to show are left out, and every blank is listed with the question that would fill it.
 when:
   - A designer, freelancer or agency is starting work with you and needs your rules in one place.
   - Your brand rules live across a few files and nobody can find the hex codes.
   - You want a sheet you can paste into an AI image or design tool so it stays on brand.
 not_for:
-  - "Your brand has no colour codes or fonts yet: use the Brand profile builder first, then come back."
+  - "Your brand has no colour codes or fonts yet: use the Org context builder first, then come back."
   - "You need a logo or a new visual identity designed: hire a designer, because this only writes down what you already have."
-  - "You want a quick set of brand notes for your AI to write in your voice: use the Brand profile builder."
+  - "You want a quick set of brand notes for your AI to write in your voice: use the Org context builder."
 you_give:
-  - Your brand file, mainly voice-and-look.md and proof-and-claims.md
+  - Your org context, mainly voice-and-look.md and proof-and-claims.md
   - Your logo file and its rules, such as clear space and smallest size (optional)
   - Your site's styles, such as colour variables, spacing, corner radius and buttons, for web work (optional)
 you_get:
@@ -30,17 +30,17 @@ you_get:
   - Any of its seven checks the guide still misses, each named
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. A tool that can write and preview files works best.
-  - Attach your brand file. Colours and fonts are the minimum; if either is missing, it asks you for them, then carries on and marks the gaps.
+  - Attach your org context. Colours and fonts are the minimum; if either is missing, it asks you for them, then carries on and marks the gaps.
   - Add your logo rules and, for web work, your site's colour variables and button styles.
   - Open the HTML file in a browser and print to PDF with margins set to none.
-  - Check "Not yet captured" on the quick sheet and fill those gaps in your brand file.
+  - Check "Not yet captured" on the quick sheet and fill those gaps in your org context.
 output_sample:
   input:
-    - Your brand file, mainly voice-and-look.md and proof-and-claims.md
+    - Your org context, mainly voice-and-look.md and proof-and-claims.md
     - Your logo rules, such as clear space and smallest size (optional)
     - Your site's styles, such as colour variables and button looks (optional)
   prerequisites:
-    - A brand file with at least colours (hex codes) and one font, or your own notes with them
+    - An org context with at least colours (hex codes) and one font, or your own notes with them
     - An AI that can write an HTML file, so you can open it and print to PDF
   output:
     - name: brand-guide.html
@@ -59,7 +59,7 @@ how_it_works:
   - title: Checks the minimum
     text: Needs colours with hex codes and at least one font, and asks for them if they're missing. Any other topic with nothing on file is left out and listed as a gap.
   - title: Writes the reasons
-    text: One or two sentences per topic from your brand file, such as each colour's job and which font is for headings.
+    text: One or two sentences per topic from your org context, such as each colour's job and which font is for headings.
   - title: Checks colour pairs
     text: Works out the contrast of each text colour on each background. Normal text needs 4.5 to 1 and large text 3 to 1, the web's accessibility levels.
   - title: Puts the quick sheet first
@@ -97,7 +97,7 @@ example:
   input: |
     [the skill]
 
-    Brand file: the Sprout folder. voice-and-look.md has colours with
+    Org context: the Sprout folder. voice-and-look.md has colours with
     hex and job, fonts, voice traits and real lines, image style and
     the "show it right" pack rules. proof-and-claims.md has the claims
     list.
@@ -178,18 +178,18 @@ judge:
   - Every text colour shown on a background passes its contrast level, and failing pairs are named.
   - Voice examples are real lines from your copy, not invented ones.
   - It prints one topic per page with nothing cut off.
-  - Every blank in your brand file appears under "Not yet captured".
+  - Every blank in your org context appears under "Not yet captured".
 test:
   - Give only page 2 to someone who has never worked with you and ask for one social post. Every question they ask points to a gap on the quick sheet.
   - Print it to PDF with margins set to none. Each topic should fill its own page, with nothing cut off.
   - Check two of the contrast numbers in a free contrast checker. They should match to one decimal place.
   - Search your site for two of the voice examples. They should be lines you've used.
 improve:
-  - Add your logo rules to your brand file before you run it. They're the most common gap on the quick sheet.
+  - Add your logo rules to your org context before you run it. They're the most common gap on the quick sheet.
   - Add a page to the list in step 4 if you need one, such as packaging or post templates, and say what goes on it.
   - Change the paper size in step 4 if you don't print on A4, for example to Letter in the US.
   - Paste brand-tokens.md at the top of every design or image request, so each tool starts from your real values.
-  - Pair it with the skill that builds a brand file from your website, and the founder call that fills the gaps the quick sheet lists.
+  - Pair it with the skill that builds an org context from your website, and the founder call that fills the gaps the quick sheet lists.
 works_best_with:
   tools:
     - name: Claude

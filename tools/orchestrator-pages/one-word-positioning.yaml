@@ -42,7 +42,7 @@ output_sample:
     - Your brand facts and a list of what you sell and to whom (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: owned-word-mapper"
       contains: The word each rival owns, marked taken, contested or open, plus the empty claims everyone makes.
@@ -100,5 +100,5 @@ test:
   - Check that every kept item fits under the one word without a second sentence.
 improve:
   - Re-run the first step each year, since a word can pass from one rival to another.
-  - Save the word and the stop list in your brand file.
+  - Save the word and the stop list in your org context.
   - Pin the three questions for new ideas where budget decisions are made.

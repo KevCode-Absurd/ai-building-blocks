@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Use an AI that can run code and open a browser, such as Claude Code. A chat-only AI can plan but cannot check the page. You need Node 22 or newer, an installed Chrome, Edge or Chromium, and an internet connection for the picture search.
   - Download the skill folder and add it to your AI tool, or paste in the SKILL.md text.
-  - Tell your AI what the site or screen is for, who it is for and how it should feel. Add your stack and any brand files.
+  - Tell your AI what the site or screen is for, who it is for and how it should feel. Add your stack and any org context files.
   - Ask your AI to build it with this skill. It deals three directions and you pick one.
   - Review the screenshots and the fix list. Ask for more rounds if a score falls short.
   - Swap any sample content and add picture credits before you launch. Sample dish names, rates and project titles are marked as placeholders on the page.

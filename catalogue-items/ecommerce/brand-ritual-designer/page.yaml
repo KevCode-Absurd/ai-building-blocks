@@ -47,7 +47,7 @@ output_sample:
     - Reviews or messages that show how loyal buyers use it (optional)
     - Your budget and team size (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional, it makes the result better)
+    - Your org context from the Org context builder (optional, it makes the result better)
   output:
     - name: Ritual ideas
       contains: Three rituals, each with the gesture, a short name, an explaining line, where it comes from and where customers see it.
@@ -132,7 +132,7 @@ test:
 
 improve:
   - Add your own rules on what a ritual must never involve, such as anything unsafe for children or pets, and list them in the safety step.
-  - Save the chosen ritual's name, line and gesture to your brand file, so emails, pack and creator briefs stay in sync.
+  - Save the chosen ritual's name, line and gesture to your org context, so emails, pack and creator briefs stay in sync.
   - Add your real flaws and annoyances to the "retell a flaw" step so the skill tests them first.
   - Pair it with the Sensory unboxing planner for the box and the Unboxing insert and gift planner for the card that teaches the ritual.
 

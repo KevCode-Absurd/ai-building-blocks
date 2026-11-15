@@ -6,7 +6,7 @@ thinking: high
 thinking_why: "It must find ideas that differ in promise and proof, write them in full and make the visuals."
 
 headline: "Get nine ad ideas, then see the best ones made"
-subhead: Give it your ad brief, your product facts and your brand file. It writes at least nine one-line ad ideas that differ in what they promise, how they prove it and their format. It writes the strongest in full and makes each visual. A fresh reviewer picks the lead ad.
+subhead: Give it your ad brief, your product facts and your org context. It writes at least nine one-line ad ideas that differ in what they promise, how they prove it and their format. It writes the strongest in full and makes each visual. A fresh reviewer picks the lead ad.
 
 explain: |
   Ask an AI for five ads and you often get one idea written five ways. You then pay to test five versions of the same bet, and learn little.
@@ -29,7 +29,7 @@ not_for:
 you_give:
   - Your ad brief, with the buyer, the placements and how many ads
   - Your product facts, such as price, materials and proof, with source and date
-  - Your brand file, for fonts, colours and voice
+  - Your org context, for fonts, colours and voice
   - Real product photos (optional)
 you_get:
   - A table of nine or more one-line ad ideas
@@ -40,7 +40,7 @@ you_get:
 
 how_to_use:
   - Add the skill to an AI that can run code. An image tool helps but is not needed.
-  - Give it your brief, your product facts and your brand file.
+  - Give it your brief, your product facts and your org context.
   - It checks the product is in stock and at the stated price, then writes the idea table.
   - It writes the strongest ideas in full and makes each visual.
   - It runs the compare script from Make three first screens. The script needs Node.js 18 or later and Playwright for the pictures.
@@ -157,7 +157,7 @@ output_sample:
   input:
     - Your ad brief
     - Your product facts with sources and dates
-    - Your brand file
+    - Your org context
   prerequisites:
     - An AI that can run code, to run the compare script that comes with Make three first screens
     - An image tool, if you want real images and not mock-ups

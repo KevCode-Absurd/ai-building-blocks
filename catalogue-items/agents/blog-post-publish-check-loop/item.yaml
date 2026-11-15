@@ -17,7 +17,7 @@ uses: [claim-and-proof-matcher, plain-english-editor, draft-brand-voice-checker,
 steps:
   - {uses: claim-and-proof-matcher, note: "Every draft, first: each claim matched to its proof, with unsupported ones listed. Runs again after fixes. Hands the writer the list of claims that lack proof."}
   - {uses: plain-english-editor, note: "Every draft: clutter cut, each cut explained, the writer's voice kept. Works on your draft, not step 1's report. The unsupported claims stay on the writer's list. Hands step 3 the edited draft."}
-  - {uses: draft-brand-voice-checker, note: "Every draft, when a brand brain exists: off-voice lines ranked with fixes."}
+  - {uses: draft-brand-voice-checker, note: "Every draft, when an org context exists: off-voice lines ranked with fixes."}
   - {uses: answer-first-page-rewriter, note: "Only when the draft is a guide, how-to or FAQ: each section rewritten to give the answer first. Works on the draft as edited in step 2, with step 3's voice fixes applied."}
   - {uses: ai-citation-scorer, note: "Every draft, after a pause: you put the edited piece on a preview or staging link, not your live site, because this scorer reads a web page. Each passage is scored on how easily an AI assistant can quote it, with rewrites to try. Loops back to the editor while the score is low."}
   - {uses: article-formatter, note: "Last, once the checks pass: title, summary, headings and lists tidied, same words. Takes the final edited text from the steps before. It uses step 4's text, not step 5's scores; the scores only decide whether to loop back."}

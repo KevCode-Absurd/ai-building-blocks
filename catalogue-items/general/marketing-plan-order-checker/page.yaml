@@ -25,7 +25,7 @@ not_for:
 you_give:
   - Your marketing plan, in whatever form it exists
   - What you know about your market and customers
-  - Your brand file or recent results (optional)
+  - Your org context or recent results (optional)
 you_get:
   - Every line sorted into diagnosis, strategy or tactic
   - The tactics that have no strategy above them
@@ -41,7 +41,7 @@ output_sample:
   input:
     - Your marketing plan, in whatever form it exists
     - What you know about your market and customers
-    - Your brand file or recent results (optional)
+    - Your org context or recent results (optional)
   output:
     - name: Sort
       contains: Every line of your plan labelled as diagnosis, strategy or tactic, in your own words.
@@ -127,7 +127,7 @@ test:
 improve:
   - Add your standard objectives, such as repeat rate, so the measure check uses your terms.
   - Add the research you already hold, so it is not asked for again.
-  - Save the rebuilt plan in your brand file as the base for next year.
+  - Save the rebuilt plan in your org context as the base for next year.
   - Pair it with "Five forces industry checker" for the market part of the diagnosis.
 
 works_best_with:

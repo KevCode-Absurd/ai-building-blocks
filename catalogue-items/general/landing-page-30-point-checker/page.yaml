@@ -219,7 +219,7 @@ test:
 improve:
   - Add a check your market needs to the right stop, such as a size chart for clothing under Understand, and keep the count in the name true.
   - Paste your real prices, terms and claims into "Your facts" in the skill once, so checks 16, 25 and 27 run every time.
-  - Save each verdict and its five fixes, with the date, in your brand file, so the next pass shows what you fixed.
+  - Save each verdict and its five fixes, with the date, in your org context, so the next pass shows what you fixed.
   - Pair it with the "Landing page auditor" when you want a deeper review ranked by severity, and with the "Sales funnel drop-off finder" once you have sales numbers.
 
 works_best_with:

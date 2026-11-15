@@ -24,7 +24,7 @@ you_give:
   - The buyer and their biggest doubt, in their words
   - Your product facts and what the offer costs you
   - Customer questions or reviews, copied as written
-  - Your brand file, if you have one (optional)
+  - Your org context, if you have one (optional)
 
 you_get:
   - An offer that answers the doubt, its wording and a profit check
@@ -43,10 +43,10 @@ output_sample:
     - Your buyer and their biggest doubt, in their words
     - Your product facts and what the offer costs you
     - Customer questions or reviews, copied as written
-    - Your brand brain files (optional)
+    - Your org context files (optional)
   prerequisites:
     - Claude in Claude Code, or a Claude Project that can read files
-    - A brand brain from the Website brand brain builder (optional)
+    - An org context from the Org context builder (optional)
   output:
     - name: outputs/step-01-offer-builder.md
       contains: An offer that answers the buyer's doubt, with its wording and a profit check.

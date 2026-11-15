@@ -23,7 +23,7 @@ you_give:
   - Revenue per customer by month and a first-order subscription flag, if you have them
   - Each email you sent to subscribers, with the cancels and starts that followed
   - Your save rate from the cancel portal
-  - Your products, brand file and offer limits, for the emails
+  - Your products, org context and offer limits, for the emails
 you_get:
   - A score out of 100 in four parts, against last month
   - Cancels by days since the first order, with the biggest spike named
@@ -45,7 +45,7 @@ output_sample:
     - Last month's saved summary (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code, if you want it to keep last month's summary
-    - Your brand brain and offer, only if it needs to write emails (optional)
+    - Your org context and offer, only if it needs to write emails (optional)
   output:
     - name: This month
       contains: Your churn score out of 100 and the four part scores, each shown against last month.
@@ -119,7 +119,7 @@ test:
   - Give it a month with a campaign that lost more subscribers than it gained. It should name that send.
 improve:
   - Set your own cut-off for a large value gap, to suit your store, and tell it in step 5.
-  - Add your save limits and your policy on pausing to your brand file.
+  - Add your save limits and your policy on pausing to your org context.
   - Save which fixes you approved each month, so the next run can check whether they worked.
 works_best_with:
   tools:

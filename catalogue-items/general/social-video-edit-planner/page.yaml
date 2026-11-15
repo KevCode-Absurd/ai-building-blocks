@@ -26,7 +26,7 @@ you_give:
   - Your clips, or screenshots of key frames from each (attach them; your AI can see pictures), with each clip's length and any speech or music
   - A transcript, if you have one
   - The one idea this post should land
-  - Your brand file with fonts, colours and product names (optional)
+  - Your org context with fonts, colours and product names (optional)
   - Where it will be posted, its shape, length and caption style (optional)
 you_get:
   - The post's purpose and its opening line
@@ -47,7 +47,7 @@ output_sample:
     - Your clips, or screenshots of key frames from each, with each clip's length
     - A transcript, if you have one
     - The one idea the post should land
-    - Your brand file with fonts, colours and product names (optional)
+    - Your org context with fonts, colours and product names (optional)
     - Where it will be posted, its shape and length (optional)
   prerequisites:
     - An AI that can see attached pictures or video, such as Gemini or Claude

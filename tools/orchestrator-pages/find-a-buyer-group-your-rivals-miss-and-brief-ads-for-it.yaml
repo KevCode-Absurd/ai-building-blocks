@@ -23,7 +23,7 @@ you_give:
   - Three to five rivals, as names or Meta Ad Library links
   - Amazon links to the top-reviewed rival product
   - Who buys from you now, and their order values (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
   - The posts and reviews you save in the forum hour
 you_get:
   - Three or four overlooked buyer groups, how big each is, and one picked and sharpened into layers to test
@@ -45,7 +45,7 @@ output_sample:
     - The posts and reviews you save in the forum hour
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: Untapped avatar finder"
       contains: Three or four overlooked buyer groups, a size check on each, the one picked and layers to test.
@@ -102,5 +102,5 @@ test:
   - Write one ad from one angle and show it to the group, before you spend on more.
 improve:
   - Repeat the forum hour for the next group on your list.
-  - Save the chosen group and brief in your brand file so ad and page skills start from them.
+  - Save the chosen group and brief in your org context so ad and page skills start from them.
   - Add your own rule for which groups you will never target to the finder skill.

@@ -127,7 +127,7 @@ test:
   - Follow the build order for one step and see whether the order makes sense for your store.
 
 improve:
-  - Save your brand colours, fonts and logo files list in your brand file.
+  - Save your brand colours, fonts and logo files list in your org context.
   - Add your own upgrade trigger, such as the monthly sales at which the card-rate saving beats the extra cost.
   - Add the domain endings you want to protect.
   - Pair it with policy, shipping, tax and go-live skills for the later steps.

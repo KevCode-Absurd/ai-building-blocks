@@ -61,7 +61,7 @@ test('drafts follow the Quality Engine depth, and every depth lists the expert e
   const choice = qualityEngineContext(PUSH, 'copy').final_choice;
   assert.match(choice.tie, /^EXPERT_IF_VERIFIED_EDGE/);
   assert.match(choice.expert_edge, /edge items/);
-  const method = fs.readFileSync(new URL('../../marketplace/packs/shared/tools/quality/QUALITY-ENGINE-v3.md', import.meta.url), 'utf8');
+  const method = fs.readFileSync(new URL('../../marketplace/packs/shared/METHOD.md', import.meta.url), 'utf8');
   assert.match(method, /\*\*Expert edge\.\*\*/);
   assert.match(method, /Ship the plain draft unchanged only when no edge item survives/);
 });

@@ -22,7 +22,7 @@ you_give:
   - What you offer and who joins your list
   - Three to five things you know that a new reader would find useful
   - Your voice, or two emails you were happy with
-  - Your brand file (optional)
+  - Your org context (optional)
   - A note that everyone on your list asked to hear from you
 you_get:
   - A five-email welcome sequence with timing and the one thing each email teaches
@@ -40,7 +40,7 @@ output_sample:
     - What you offer and who joins your list
     - Three to five useful things you know that a new reader would want
     - Your voice, or two emails you were happy with
-    - Your brand file (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can read the files in the handoff pack
     - A buyer brief from the Buyer brief writer (optional but helps)
@@ -113,7 +113,7 @@ test:
 improve:
   - After a month, bring open and click rates by email. Step 1 learns which teaching landed.
   - Save your voice sample and claims list and paste them every run.
-  - Keep the review notes. The same mistake twice means a rule for your brand file.
+  - Keep the review notes. The same mistake twice means a rule for your org context.
   - Pair it with "Price a course or ebook and write its launch emails" when you have something new to sell to the list.
 works_best_with:
   tools:

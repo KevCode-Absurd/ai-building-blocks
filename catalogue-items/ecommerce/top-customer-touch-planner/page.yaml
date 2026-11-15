@@ -129,7 +129,7 @@ improve:
   - Add your voice rules and a sample note to the skill file, so each note reads like you.
   - Add your real cost per note, video and gift, so the touch menu uses your numbers.
   - Add a rule on gifts, such as nothing food-related without allergen details, and nothing tied to a review or a post.
-  - Save the winning note and gift to your brand file.
+  - Save the winning note and gift to your org context.
   - Pair it with the best customer finder and the VIP customer finder for the ranking, and with the loyalty and VIP program designer when you want it to scale.
 
 works_best_with:

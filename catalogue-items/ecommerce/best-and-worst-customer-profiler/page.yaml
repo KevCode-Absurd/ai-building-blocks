@@ -128,7 +128,7 @@ test:
 improve:
   - Add your own list of angles and offers to the skill file, so it uses your names and not its own.
   - Add your return and refund reasons, so a high refund rate is tied to a cause.
-  - Save the persona each run produces to your brand file, and update it each quarter.
+  - Save the persona each run produces to your org context, and update it each quarter.
   - Pair it with the best customer finder, then with a skill that turns the winning angles into ads.
 
 works_best_with:

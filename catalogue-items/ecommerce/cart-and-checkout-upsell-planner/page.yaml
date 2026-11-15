@@ -125,7 +125,7 @@ test:
   - Run the first change as a test with a holdout and compare profit per session, not only AOV.
 
 improve:
-  - Put your real margins, pairs and take rates into your brand file so each run starts from them.
+  - Put your real margins, pairs and take rates into your org context so each run starts from them.
   - Add offers you have already tried and the result.
   - Add a rule for your store that overrides the defaults, such as no add-on above a set price.
   - Pair it with the order threshold planner for the progress bar steps.

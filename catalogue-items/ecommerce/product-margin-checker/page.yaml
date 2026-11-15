@@ -128,7 +128,7 @@ test:
 
 improve:
   - Add your carrier and warehouse rates to the skill file so shipping lines are never guessed.
-  - Put your usual refund and discount rates in your brand file, and update them every quarter.
+  - Put your usual refund and discount rates in your org context, and update them every quarter.
   - Change the marketing share it tests (the skill uses 20% of price) to the share your store really runs.
   - Tag cost per item on every product in Shopify so margin stays live, including during sales.
   - Pair it with the waterfall price setter when the answer is that the price is too low. Money figures are planning numbers, so check them with your accountant.

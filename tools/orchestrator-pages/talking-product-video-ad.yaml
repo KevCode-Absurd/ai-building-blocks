@@ -23,8 +23,8 @@ not_for:
   - "You want a cartoon, clay or anime look: use the Animated film video ad script writer or the Claymation video ad script writer."
 
 you_give:
-  - Your product facts, with the claims you may make, by claim ID if your brand file has them
-  - Your brand file and who the ad is for
+  - Your product facts, with the claims you may make, by claim ID if your org context has them
+  - Your org context and who the ad is for
   - Your customer reviews (optional)
   - Your target countries, for the ad rules check (optional)
 you_get:
@@ -37,18 +37,18 @@ you_get:
 how_to_use:
   - "Download the handoff pack. It has HANDOFF.md and five skill files, in the order they run: Ad angle planner, Talking object video ad script writer, Video ad script line checker, Talking object video clip prompt writer and Meta ads compliance checker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your inputs ready. Your product facts, your brand file, and a line on who the ad is for.
+  - Have your inputs ready. Your product facts, your org context, and a line on who the ad is for.
   - Check the script before you generate anything. Fix any line the ad rules check marks "Fix first".
   - Paste each clip prompt into your video tool with the character sheet and your real product photo.
 output_sample:
   input:
     - Your product facts, with the claims you may make
-    - Your brand file and who the ad is for
+    - Your org context and who the ad is for
     - Your customer reviews (optional)
     - Your target countries for the ad rules check (optional)
   prerequisites:
     - An AI video tool such as Veo or Kling, which needs its own account or plan, to make the clips
-    - Your brand brain from the Website brand brain builder (optional, but it makes the result better)
+    - Your org context from the Org context builder (optional, but it makes the result better)
   output:
     - name: Brief
       contains: The buyer, their main doubt and the one argument the ad makes.
@@ -101,7 +101,7 @@ example:
     [the handoff pack] Follow HANDOFF.md.
 
     Product facts: the product table and the claims list
-    Brand file: sprout/brand-brain/
+    Org context: sprout/brand-brain/
     Who it is for: someone who quit a greens powder over the grit
   output: |
     BRIEF: the powder quitter, Warm. Doubt: will it work the same.

@@ -120,7 +120,7 @@ test:
 improve:
   - Add your own scale gate to the skill file if your CPC is far from $1 to $3, using revenue per 100 visitors against your ad cost per 100 visitors.
   - Add the metrics you actually trust, such as new-customer MER, so the data check has your own bar.
-  - Save your last bottleneck and re-test date in your brand file so each run starts with what you decided.
+  - Save your last bottleneck and re-test date in your org context so each run starts with what you decided.
   - Add a list of outside levers you run each quarter, so they are not credited to ads.
   - Pair it with the online store bottleneck finder for cash, the platform ROAS reality check for data and the incrementality test planner for proof.
 works_best_with:

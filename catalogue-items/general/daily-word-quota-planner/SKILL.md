@@ -40,7 +40,7 @@ How to start:
 
 ## What you need
 
-These are the inputs for this skill. Ignore any request above for a buyer brief or brand brain.
+These are the inputs for this skill. Ignore any request above for a buyer brief or org context.
 
 - **Length (required)**: In words or pages. Say if it is a guess.
 - **Your days and minutes (required)**: Which days you can write and how long you have on each.

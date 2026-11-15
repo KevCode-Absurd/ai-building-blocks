@@ -137,7 +137,7 @@ test:
 improve:
   - "Add your usual extra costs, such as payment fees, to step 2."
   - "Change the ten-orders rule in step 3 if your market needs a different minimum."
-  - "Save each test and its result in your brand file so you build a record."
+  - "Save each test and its result in your org context so you build a record."
   - "Pair it with Hungry audience ranker first, and Reason-why deal writer if the offer needs work."
 
 works_best_with:

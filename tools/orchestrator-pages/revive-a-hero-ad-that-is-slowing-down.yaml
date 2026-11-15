@@ -105,7 +105,7 @@ test:
   - Run step 1 twice on the same numbers. The cause call should come out the same.
   - After the test week, count the hits yourself and compare with its count.
 improve:
-  - Add your return line and stock notes to your brand file, so the pace call starts from them.
+  - Add your return line and stock notes to your org context, so the pace call starts from them.
   - Edit the rubric's break point if you think the line between winners and losers sits in the wrong place.
   - Keep the rubric and grade every new hook against it before you film.
   - Pair it with a creative portfolio mix planner, so a backup ad is ready before the next one fades.

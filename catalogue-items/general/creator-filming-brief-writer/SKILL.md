@@ -17,19 +17,19 @@ You write the brief a real person films from, laid out in the order they'll use 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand file** (its products part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its products part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand file and offer and buying reasons.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your org context and offer and buying reasons.
 3. This one.
 
-**From the brand file, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`, `foundation/claims.md`, `foundation/customer-talk.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, a video ad script. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, a video ad script. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -46,7 +46,7 @@ How to start:
 **Runs on its own.** None of the above is a must. If a main input is missing, ask once, in one short message, for only the talking points, how the product is handled and the never-say list, or let them paste their own version in plain words. Then carry on with what you have and mark each gap `MISSING:` or `[inferred]`. A script from the Video ad script writer from customer quotes gives a better starting point, but your own talking points work too.
 
 ## Steps
-1. **Before you start** (top of the brief): deliverables, deadline, how the video will be used and for how long, and payment terms if any. List every `[CONFIRM]` here so the sender clears them before it goes out. Say plainly that filming doesn't by itself grant the right to run the video as an ad. Add no other legal or contract terms that weren't given. Use the brand and product names from the script, the input or the brand file; `[CONFIRM]` only what none of them gives.
+1. **Before you start** (top of the brief): deliverables, deadline, how the video will be used and for how long, and payment terms if any. List every `[CONFIRM]` here so the sender clears them before it goes out. Say plainly that filming doesn't by itself grant the right to run the video as an ad. Add no other legal or contract terms that weren't given. Use the brand and product names from the script, the input or the org context; `[CONFIRM]` only what none of them gives.
 2. **The idea in two or three sentences:** who is talking, where, what happens with the product, and what the viewer should be left thinking. One line on why it should look like their own post. Describe what the viewer should think in plain words, not as a quote in quote marks; nothing here reads like a line to say.
 3. **The run order for the shoot.** Put it in the order that wastes the fewest takes:
    - *Test clip:* 10 seconds of talking, played back to check light, sound and framing.
@@ -102,7 +102,7 @@ CHECKS MISSED  <one line each, or none>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner). It takes the brief.
 - The [Founder video ad script writer](https://useaiblocks.com/skills/founder-video-ad-script-writer). It takes the brief.
-- The [Animated film video ad script writer](https://useaiblocks.com/skills/animated-video-ad-script). It takes the brief.
+- The [Short film video ad script writer](https://useaiblocks.com/skills/short-film-ad-script). It takes the brief.
 - **Plan what to test** with the [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -33,12 +33,12 @@ Then write the spec sheet (`JOB-CARD.json`), one screen:
 
 Ground only what the acceptance tests depend on:
 
-- **A page, ad, copy or email** needs the brand file. Read the part this job needs (facts and voice for copy and email; facts, voice and look for pages and ads) and capture the live site. Record its path and SHA-256 on the spec sheet.
+- **A page, ad, copy or email** needs the org context. Read the part this job needs (facts and voice for copy and email; facts, voice and look for pages and ads) and capture the live site. Record its path and SHA-256 on the spec sheet.
 - **An audit or analysis** needs the real account or data, pulled at read level with its date range.
 - **A strategy or plan** needs the real facts: offer, prices, customers and numbers, each with a source and a date.
 - **Code and documents** need the real files or system they change.
 
-Do not ask for a brand file when the job does not need one.
+Do not ask for an org context when the job does not need one.
 
 Dials are not questions. Read `ai-blocks/preferences.json` or the saved account preferences if you can, and state the dials in one line: "Using a balanced mix, 6 outputs and a standard review; say if you want otherwise." An explicit one-off choice does not change saved defaults. "Always" and "make this my default" do.
 

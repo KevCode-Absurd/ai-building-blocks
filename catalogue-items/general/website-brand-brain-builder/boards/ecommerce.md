@@ -1,4 +1,4 @@
-# Build your brand file: for online stores
+# Build your org context: for online stores
 
 ## Extra pages to read
 Collections, 5 to 10 product pages, shipping and returns, the size guide or the ingredients and materials page, and the subscription terms.

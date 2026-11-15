@@ -49,7 +49,7 @@ output_sample:
     - Your best ads with results (optional)
   prerequisites:
     - An AI chat tool such as Claude, ChatGPT or Gemini
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Fit check
       contains: Pass or fail, based on shipping cost, margin and where your buyers and creators live.

@@ -41,7 +41,7 @@ output_sample:
     - Your product sheet with names, descriptions and a reference photo for each product
     - The look you want, in one sentence
     - A spending limit for the batch
-    - Your brand brain (optional)
+    - Your org context (optional)
     - The marketplace you list on (optional)
   prerequisites:
     - An AI that can draw pictures, such as ChatGPT or Gemini, and it may need a paid account
@@ -102,6 +102,6 @@ test:
   - Check the three most complex products against the real item.
   - Rerun one row. The look should match the rest.
 improve:
-  - Keep the one-sentence look in your brand file so later batches match.
+  - Keep the one-sentence look in your org context so later batches match.
   - Save the fix lines that worked and add them to the look.
   - Add each new product to the sheet and run only the new rows.

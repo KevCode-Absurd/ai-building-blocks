@@ -46,7 +46,7 @@ how_to_use:
   - "Under it, write what you sell and who reads your writing. Say how those readers talk."
   - "Add three words for how you sound and what you never want to sound like. Paste two lines you like if you have them."
   - "Check that each wrong example sounds wrong to you, and that the avoid list holds words you would really catch yourself using."
-  - "Save the guide in your brand file or notes. Paste it above your next writing request."
+  - "Save the guide in your org context or notes. Paste it above your next writing request."
 
 how_it_works:
   - title: "Asks before it guesses"
@@ -138,5 +138,5 @@ terms:
     meaning: "A scale between two ends, such as casual to formal, that shows where your writing sits."
   - term: "Voice line"
     meaning: "One sentence that sums up how your brand sounds."
-  - term: "Brand file"
+  - term: "Org context"
     meaning: "A saved note or folder with your brand facts that you paste into your AI."

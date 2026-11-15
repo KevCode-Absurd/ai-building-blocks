@@ -1,15 +1,15 @@
 ---
 name: brand-file-from-website
-description: Use when you want one brand file every AI can read, plus a guide for designers and writers. It runs 3 skills in order, and checks each result before the next step starts.
+description: Use when you want one org context every AI can read, plus a guide for designers and writers. It runs 3 skills in order, and checks each result before the next step starts.
 ---
 
-# Build a brand file and brand guide from your website
+# Build an org context and brand guide from your website
 
-Give it your website. Get a brand file, a founder interview to fill its gaps, and a brand guide.
+Give it your website. Get an org context, a founder interview to fill its gaps, and a brand guide.
 
-What you get: step 1 saves the brand file (eight files with every fact tagged confirmed, inferred, disputed or unknown), step 2 saves a ranked founder interview plan, and step 3 saves the brand guide and a tokens file. The download pack opens with HANDOFF.md, which lists these steps and the three skill files. If you only have this file, follow the steps below.
+What you get: step 1 saves the org context (eight files with every fact tagged confirmed, inferred, disputed or unknown), step 2 saves a ranked founder interview plan, and step 3 saves the brand guide and a tokens file. The download pack opens with HANDOFF.md, which lists these steps and the three skill files. If you only have this file, follow the steps below.
 
-**When not to use:** your site is not live or saved yet (there is nothing to read), or you only need a quick look at your voice. Use the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder) on its own.
+**When not to use:** your site is not live or saved yet (there is nothing to read), or you only need a quick look at your voice. Use the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder) on its own.
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
@@ -48,12 +48,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Build the brand file.** Use the skill `website-brand-brain-builder`. Give it your site link, plus any customer words, results export and product facts. Turns your site into a brand file with every gap marked unknown, disputed or inferred. Out: eight brand files.
-2. **Plan the founder interview.** Use the skill `founder-interview-planner`. Give it the brand brain from the steps before. Reads the gaps in the brand file and turns them into a short ranked interview plan. Out: about 10 ranked questions, each tied to the gap it fills, and a written form for facts and files.
+1. **Build the org context.** Use the skill `website-brand-brain-builder`. Give it your site link, plus any customer words, results export and product facts. Turns your site into an org context with every gap marked unknown, disputed or inferred. Out: eight org context files.
+2. **Plan the founder interview.** Use the skill `founder-interview-planner`. Give it the org context from the steps before. Reads the gaps in the org context and turns them into a short ranked interview plan. Out: about 10 ranked questions, each tied to the gap it fills, and a written form for facts and files.
 
-Pause here: Hold the founder call, send the written questions, and file each answer in the brand file.
+Pause here: Hold the founder call, send the written questions, and file each answer in the org context.
 
-3. **Build the brand guide.** Use the skill `brand-guide-builder`. Give it the brand brain from the steps before. Uses the finished brand file, now with the founder's answers, to build a guide and a tokens file. Out: a printable HTML brand guide, a colour contrast table and a tokens file.
+3. **Build the brand guide.** Use the skill `brand-guide-builder`. Give it the org context from the steps before. Uses the finished org context, now with the founder's answers, to build a guide and a tokens file. Out: a printable HTML brand guide, a colour contrast table and a tokens file.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

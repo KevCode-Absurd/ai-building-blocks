@@ -32,7 +32,7 @@ How to start:
 
 Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol) and choose the mode.
 
-- **The client already has a site or brand** (patch or extend): "distinct" means recognisably theirs. Run [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture) first. The captured fonts, colours and their shares, buttons, radius, nav, footer and section order are the brief: keep them, and spend your choices on layout and content within that system. The "one memorable element" and the type and caps advice below apply only where the capture leaves a gap.
+- **The client already has a site or brand** (patch or extend): "distinct" means recognisably theirs. Run [Org context capture](https://useaiblocks.com/skills/brand-dna-capture) first. The captured fonts, colours and their shares, buttons, radius, nav, footer and section order are the brief: keep them, and spend your choices on layout and content within that system. The "one memorable element" and the type and caps advice below apply only where the capture leaves a gap.
 - **New product or brand** (new): the guidance below applies as written.
 - Either way, name the defaults to avoid from [AI default patterns](https://useaiblocks.com/skills/ai-default-patterns). With a live site, check the build with [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check).
 

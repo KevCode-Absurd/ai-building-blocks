@@ -25,7 +25,7 @@ steps:
   - {uses: quote-video-ad-script, note: "Only when the type is built on real customer words: a sourced script with checked openings. Uses the reviews and the type from step 2; hands back a script for step 7."}
   - {uses: selfie-style-ad-script, note: "Only when the type is a creator talking to camera about a doubt. Uses your brief and reviews and the type from step 2, not step 3's script; hands back a script for step 7."}
   - {uses: podcast-style-ad-script, note: "Only when the type is a two-person talk that answers a doubt. Uses your brief and reviews and the type from step 2, not step 4's script; hands back a script for step 7."}
-  - {uses: founder-video-ad-script-writer, note: "Only when the founder's own words are on file. Uses your brief, brand brain and the founder's own words, not step 5's script; hands back a script for step 7."}
+  - {uses: founder-video-ad-script-writer, note: "Only when the founder's own words are on file. Uses your brief, org context and the founder's own words, not step 5's script; hands back a script for step 7."}
   - {uses: video-ad-script-line-checker, note: "For each script: weak lines and a score out of 100. Fixed and checked again until it passes, three rounds at most. Hands back the weak lines and fixes; the fixed script that passes goes to step 8."}
   - {uses: video-ad-shot-list-maker, note: "For each script that passes: timed clips, one prompt per clip and an edit list. Works from the fixed scripts that passed step 7, not the report itself; hands the shot list and clip prompts to step 9."}
   - {uses: pre-launch-ad-checker, note: "For each script and shot list before hand-back: stop-ship items are fixed and checked again, two rounds at most."}

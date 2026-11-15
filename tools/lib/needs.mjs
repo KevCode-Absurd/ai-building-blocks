@@ -1,7 +1,7 @@
 // What each block needs before it starts and what comes after it, worked out from the inputs and outputs of every
 // block, so each skill, prompt and workflow says:
 //   - the steps before it, in order, each with a link to the block that does it and what to have ready,
-//   - which files of the brand file to read for this task,
+//   - which files of the org context to read for this task,
 //   - how to check for each thing (a coding assistant with file access: look for the file; a chat: ask for it) and what to do without it,
 //   - the tools that do the job best, and the next steps, with links.
 // Used by tools/add-needs.mjs (the "Before you start" and "After this" sections in each SKILL.md) and by
@@ -14,11 +14,12 @@ export const BRAND_BRAIN = "website-brand-brain-builder";
 
 /**
  * Each input, in plain words. `maker` is the block that makes it, when we have one; `part` says which part of the
- * brand file holds it (the products sit in offers.json and facts.json, the buyers in facts.json). Inputs not listed here use their type description and count as the person's own material.
+ * org context holds it (the products sit in offers.json and facts.json, the buyers in facts.json and foundation/customers.md). Inputs not listed here use their type description and count as the person's own material.
  */
-// The brand file (catalogue-items/general/website-brand-brain-builder/SKILL.md; site/src/jobs/brand-file.mjs). The input key
-// stays brand_brain and the builder's slug is unchanged.
-const BRAIN = { label: "Brand file", what: "your offers, facts, buyers, claims, voice and look, kept in one folder", maker: BRAND_BRAIN };
+// The org context (catalogue-items/general/website-brand-brain-builder/SKILL.md; site/src/jobs/brand-file.mjs), once called the
+// brand brain and then the brand file. The input key stays brand_brain: it is the port type id in the item.yaml files.
+// The builder moved from website-brand-brain-builder to website-brand-brain-builder (catalogue-items/renamed.json keeps the old slug).
+const BRAIN = { label: "Org context", what: "who you are, your buyers, voice, look, markets, claims and offers, kept in one folder", maker: BRAND_BRAIN };
 export const INPUTS = {
   brand_brain: BRAIN,
   product_data: { ...BRAIN, part: "products" },
@@ -93,7 +94,7 @@ const PLAIN = {
   script: { label: "A script", what: "the script, part by part" },
 };
 /**
- * The areas whose work reads the brand file's products and buyers parts: marketing, pictures, selling, writing and
+ * The areas whose work reads the org context's products and buyers parts: marketing, pictures, selling, writing and
  * strategy (positioning and prices sit under leadership), plus the store jobs that write product pages and set prices.
  * Elsewhere (stock, supply, finance) product data is a product list.
  */
@@ -104,19 +105,20 @@ const brainWork = (task) => !NON_BRAND_TASKS.has(task) && (BRAIN_TASKS.has(task)
 const BUYER_BRIEF_TASKS = new Set(["write-ad-copy", "make-image-ads", "make-video-ads", "plan-ad-tests", "write-landing-page", "write-emails", "make-offer"]);
 
 /**
- * Which brand file parts a task reads, from the brand file builder's slices ("Cut a slice": planning, writing, image
+ * Which org context parts a task reads, from the org context builder's slices ("Cut a slice": planning, writing, image
  * work) and its parts: offers.json (prices, promotions, stock, shipping), facts.json (the business, proof, policies,
  * buyers as kind `customer`, claims as kind `claim`), look.json, voice.md, references.md (admired, avoided,
- * competitors), worked.md (what the client kept and killed, results by job and date) and history/changes.md.
- * index.md always comes first.
+ * competitors), worked.md (what the client kept and killed, results by job and date) and history/changes.md, plus the
+ * written sections in foundation/ (brand-dna.md, customers.md, customer-talk.md, design.md, markets.md, claims.md,
+ * dos-donts.md). index.md always comes first.
  */
 const BRAIN_FILES = {
-  writing: { files: ["index.md", "offers.json", "facts.json", "voice.md"], note: "the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines" },
-  picture: { files: ["index.md", "look.json", "offers.json", "facts.json"], note: "how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes" },
-  planning: { files: ["index.md", "facts.json", "offers.json", "references.md"], note: "the buyers, the main promise, approved claims only, and the options buyers weigh" },
+  writing: { files: ["index.md", "offers.json", "facts.json", "voice.md", "foundation/claims.md", "foundation/customer-talk.md"], note: "the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines" },
+  picture: { files: ["index.md", "look.json", "foundation/design.md", "offers.json", "facts.json"], note: "how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes" },
+  planning: { files: ["index.md", "foundation/brand-dna.md", "foundation/customers.md", "foundation/markets.md", "facts.json", "offers.json", "references.md"], note: "the buyers, the main promise, approved claims only, and the options buyers weigh" },
   results: { files: ["index.md", "worked.md", "history/changes.md", "offers.json", "facts.json"], note: "past results by job and date, what the client kept and killed, what changed and when, the offers that ran, and who buys" },
   rivals: { files: ["index.md", "references.md", "facts.json"], note: "the options buyers weigh, each competitor's pitch, strength and gap, and who your buyers are" },
-  checking: { files: ["index.md", "facts.json", "offers.json", "voice.md"], note: "the claims list with each claim's status, the offer terms word for word, and the real voice lines" },
+  checking: { files: ["index.md", "foundation/claims.md", "foundation/dos-donts.md", "facts.json", "offers.json", "voice.md"], note: "the claims list with each claim's status, the offer terms word for word, and the real voice lines" },
 };
 const VIDEO_OUT = new Set(["video_prompt", "video_ads"]);
 const IMAGE_OUT = new Set(["image_prompt", "avatar_sheet", "static_ads", "photo_set", "pdp_images", "upscaled_image"]);
@@ -240,8 +242,8 @@ function outsideInputs(b, bySlug) {
 /**
  * An input as it reads for a block in job `task`. A hand-off named for one line of work is only that thing, made by
  * our named maker, inside that line of work: a finance check's brief is not a buyer brief, a decision log's lessons
- * are not ad lessons, and a stock sheet's product data is not the brand file. Outside it: plain words, no maker.
- * Asking for the brand file by name counts anywhere.
+ * are not ad lessons, and a stock sheet's product data is not the org context. Outside it: plain words, no maker.
+ * Asking for the org context by name counts anywhere.
  */
 function inputInfo(type, task, bySlug, describe) {
   // A generic shortlist is not evidence that this job needs a competitor ad swipe file.
@@ -255,7 +257,7 @@ function inputInfo(type, task, bySlug, describe) {
 
 /**
  * What a block needs, as { needed, helps }: each item { key, label, what, parts, required, maker?: { slug, name, url } }.
- * Things the block makes itself are left out, and the brand file's parts are merged into one item.
+ * Things the block makes itself are left out, and the org context's parts are merged into one item.
  */
 export function needsOf(b, bySlug, describe = (t) => ({ label: t, what: t })) {
   const byKey = new Map();
@@ -267,7 +269,7 @@ export function needsOf(b, bySlug, describe = (t) => ({ label: t, what: t })) {
     // later output must not erase material needed to start the job.
     const info = inputInfo(p.type, b.task, bySlug, describe);
     if (p.step && info.maker === BRAND_BRAIN && !brainWork(b.task)) continue;
-    if (info.maker === b.slug) continue; // a block never needs what it makes (the brand file builder needs no brand file)
+    if (info.maker === b.slug) continue; // a block never needs what it makes (the org context builder needs no org context)
     if (info.maker && b.steps?.some((st) => st.uses === info.maker)) continue; // a workflow whose own step makes it
     const maker = info.maker && bySlug[info.maker] ? bySlug[info.maker] : null;
     const key = maker ? maker.slug : p.type;
@@ -283,7 +285,7 @@ export function needsOf(b, bySlug, describe = (t) => ({ label: t, what: t })) {
 /**
  * The steps before this block, in the order to do them: each block that makes something it needs, after the blocks
  * those need in turn. Each step says what the person brings to it. Only steps for things this block needs, plus the
- * brand file whenever any step reads it.
+ * org context whenever any step reads it.
  */
 export function chainOf(b, bySlug, describe, { before, all } = {}) {
   const order = [];
@@ -336,7 +338,7 @@ export const NEXT_JOB = {
   "write-landing-page": "Write the landing page",
   "product-photos": "Make product photos",
   "understand-customers": "Understand your buyers",
-  "brand-file": "Fill the gaps in your brand file",
+  "brand-file": "Fill the gaps in your org context",
   "study-competitors": "Study competitor ads",
   "make-offer": "Make an offer people want",
   "grow-social": "Grow on social",
@@ -363,13 +365,13 @@ const START_HERE = ["fact-based-ad-copy-writer", "website-brand-brain-builder", 
  */
 const LIKE = { hooks: "ad_copy", objection_map: "angle_library", photo_set: "product_photos", upscaled_image: "approved_image", edit_plan: "video_ads", theme_files: "landing_page", brand_guide: "brand_brain" };
 
-/** Blocks that open many paths get a chosen list: the brand file feeds almost everything. */
+/** Blocks that open many paths get a chosen list: the org context feeds almost everything. */
 const NEXT_CHOSEN = {
   "website-brand-brain-builder": ["customer-buying-reasons-finder", "fact-based-ad-copy-writer", "quote-video-ad-script", "hidden-offer-finder", "ad-matched-landing-page-writer", "founder-interview-planner"],
   "rough-notes-to-minutes-writer": ["weekly-meeting-actions-keeper", "board-minutes-drafter"],
 };
 
-/** The brand file's parts as a hand-off: a buyer profile builder hands over a buyer profile, not the whole brand file. */
+/** The org context's parts as a hand-off: a buyer profile builder hands over a buyer profile, not the whole org context. */
 const PART_LABEL = { persona: "buyer profile", product_data: "product facts" };
 /** A hand-off as "Takes the …" names it. What it takes is what this block made, so a brief is "the brief", not a buyer brief. */
 export const handoffLabel = (type) => PART_LABEL[type] ?? bare((PLAIN[type] ?? INPUTS[type])?.label ?? type.replace(/_/g, " "));
@@ -407,7 +409,7 @@ export function nextOf(b, all, max = 5, override) {
   return found.map(({ x, takes }) => link(x, takes));
 }
 
-/** Everything the page and the SKILL.md show: the needs, the chain before, the brand file parts and the next steps. */
+/** Everything the page and the SKILL.md show: the needs, the chain before, the org context parts and the next steps. */
 export function planOf(b, bySlug, all, describe, links = b.links ?? {}) {
   const { needed, helps } = needsOf(b, bySlug, describe);
   const usesBrain = [...needed, ...helps].some((i) => i.key === BRAND_BRAIN);
@@ -439,15 +441,15 @@ export function beforeSection(plan, tools = [], nl = "\n", { imported = false } 
     out.push(`${chain.length + 1}. This one.`, "");
   }
   if (brain) {
-    // Every job that reads the brand file reads worked.md first when it exists (site/src/jobs/brand-file.mjs).
+    // Every job that reads the org context reads worked.md first when it exists (site/src/jobs/brand-file.mjs).
     const worked = brain.files.includes("worked.md") ? "" : " If `worked.md` is there, keep what the client kept and leave out what they killed.";
-    out.push(`**From the brand file, read:** ${brain.files.map((f) => `\`${f}\``).join(", ")}. Take ${brain.note}. Only \`live\` lines count as facts: stale, \`unconfirmed\` and \`banned\` lines do not.${worked} Source notes and rejected ideas never go into the result.`, "");
+    out.push(`**From the org context, read:** ${brain.files.map((f) => `\`${f}\``).join(", ")}. Take ${brain.note}. Only \`live\` lines count as facts: stale, \`unconfirmed\` and \`banned\` lines do not.${worked} Source notes and rejected ideas never go into the result.`, "");
   }
   out.push("How to start:");
   out.push(brain
-    ? "1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name."
+    ? "1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name."
     : "1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.");
-  const ask = items.slice(0, 3).map((i) => (i.key === BRAND_BRAIN ? "your brand file" : lower(i.label)));
+  const ask = items.slice(0, 3).map((i) => (i.key === BRAND_BRAIN ? "your org context" : lower(i.label)));
   out.push(ask.length
     ? `2. **Check what's missing.** Look for ${ask.join(", ")}. They can attach files, paste the details, or share a file path your assistant can read.${items.some((i) => i.maker) || chain.length ? " Offer the linked skills above when they help prepare that material." : ""} Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.`
     : "2. **Check the setup.** Use the tools listed below when the task needs them. If a tool is unavailable, say what you can do with the details provided. Do not claim you used it.");

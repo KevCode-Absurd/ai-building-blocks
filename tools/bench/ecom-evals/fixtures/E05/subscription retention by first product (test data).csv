@@ -1,0 +1,6 @@
+# (test data) Share of subscribers from the first order still active at each monthly renewal, cohorts from Jan to Jun 2026. Built for an e-commerce eval. Not Ritual's real figures.
+first_product,month_1,month_2,month_3,month_4,month_5,month_6
+Women's Multivitamin 18+,100%,70%,58%,52%,48%,45%
+Prenatal,100%,86%,82%,80%,78%,76%
+Synbiotic+,100%,52%,34%,27%,23%,20%
+"Perimenopause Health (launch cohort, 2 renewals so far)",100%,78%,71%,,,

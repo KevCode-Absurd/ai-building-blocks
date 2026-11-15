@@ -45,7 +45,7 @@ output_sample:
     - Your approved and banned claims and the offer as you state it
     - The length you want (optional)
   prerequisites:
-    - Your brand brain from the Brand profile builder (optional, but it supplies facts and claims)
+    - Your org context from the Org context builder (optional, but it supplies facts and claims)
     - A buyer brief from the Buyer brief writer (optional)
   output:
     - name: Spine
@@ -196,7 +196,7 @@ example:
 
     CLAIMS, NUMBERS AND QUOTES
     21 vitamins and minerals per pack    approved claim
-    No water, no shaker                  how it's used, brand file
+    No water, no shaker                  how it's used, org context
     "the one thing I've been able to
     stick to"                            review, brand site, exact
     $29.99, $49.99, text sign-up         price page
@@ -226,7 +226,7 @@ test:
   - Give it no customer quote. Beat 4 should become an observation, with nothing in quotation marks.
 improve:
   - Write your product's handling rules and what must never show into "What you need", so every shot list opens and holds it the right way.
-  - Paste your buyers' own nouns from reviews into "Buyer's words", and save the snags that work to your brand file.
+  - Paste your buyers' own nouns from reviews into "Buyer's words", and save the snags that work to your org context.
   - Add your brand's pet phrases and banned words to the hype list in step 7, so they get caught too.
   - Let a real creator change any line they wouldn't say, as long as they keep the point, and note what they changed.
   - Pair it with "Turn your selfie-style script into consistent clips" for an AI presenter, or "Creator filming brief writer" for a real person.

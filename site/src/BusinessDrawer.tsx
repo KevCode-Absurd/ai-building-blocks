@@ -10,7 +10,7 @@ import "./business-drawer.css";
 const kb = (bytes: number) => `${Math.ceil(bytes / 1000)} KB`;
 const tooBigMessage = (bytes: number) => `This is ${kb(bytes)}. Keep your me.md under ${kb(ME_MAX_BYTES)}: cut old projects and long notes, then try again.`;
 
-/** Your brand file: 5 quick questions about the business, more detail if you like, and your personal me.md as an
+/** Your org context: 5 quick questions about the business, more detail if you like, and your personal me.md as an
  *  optional part. Loaded only when the drawer opens. */
 export default function BusinessDrawer({ onClose, toast }: { onClose: () => void; toast: (m: string) => void }) {
   const [form, setForm] = useState<Business>(() => getBusiness());
@@ -62,7 +62,7 @@ export default function BusinessDrawer({ onClose, toast }: { onClose: () => void
     <Drawer label={BRAND_FILE_TITLE} top={<span className="mono">{BRAND_FILE_TITLE}</span>} onClose={close}>
       <form className="biz me-drawer" onSubmit={(e) => { e.preventDefault(); close(); toast(answered || details || hasFile ? "Saved. What you copy and download now fits your business." : "Nothing saved yet."); }} data-testid="business-form">
         <h2 className="title" style={{ marginTop: 0 }}>{BRAND_FILE_TITLE}</h2>
-        <SaveHint subject="brand file" onNavigate={close} />
+        <SaveHint subject="org context" onNavigate={close} />
         <p className="small biz-lead">The short briefing you'd give a new helper, written once. Answer 5 quick questions. Then every prompt you copy, every specialist you use and every pack you download fits your business.</p>
         <p className="small me-private" data-testid="me-private">Private. It stays on this device, or in your account when you sign in. It is never public. It is added to what you copy on your own device.</p>
 
@@ -132,7 +132,7 @@ export default function BusinessDrawer({ onClose, toast }: { onClose: () => void
 
         <div className="biz-bar">
           <span className="small">{answered || details || hasFile ? `${status}${hasFile ? " Your me.md is saved." : ""}` : "Every question is optional."}</span>
-          {(answered > 0 || details > 0 || hasFile || meText) && <button type="button" className="btn btn-ghost btn-sm" onClick={() => { if (confirm("Clear your brand file, including your me.md?")) { setMeText(""); setForm({}); } }}>Clear</button>}
+          {(answered > 0 || details > 0 || hasFile || meText) && <button type="button" className="btn btn-ghost btn-sm" onClick={() => { if (confirm("Clear your org context, including your me.md?")) { setMeText(""); setForm({}); } }}>Clear</button>}
           <button className="btn btn-primary btn-sm" data-testid="biz-save">Done</button>
         </div>
         {text && (

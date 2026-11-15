@@ -1,0 +1,8 @@
+# (test data) Site crawl and server log summary, last 30 days. Built for an e-commerce eval. Not Fellow's real figures.
+finding,value
+URLs crawled,2310
+Googlebot hits on /products/coffee-* URLs that return 404 (expired coffee drops),1240
+Expired coffee drop URLs with external backlinks,63
+Product pages missing Product structured data,0
+Collection pages with under 50 words of copy,9
+Average mobile LCP on collection pages,2.3 s

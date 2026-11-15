@@ -20,7 +20,7 @@ not_for:
   - "You only want to know what your buyers worry about: use the Buyer problem list builder."
 you_give:
   - Product material, such as issues, emails, bonuses and old promotions, with dates
-  - Your brand file (optional)
+  - Your org context (optional)
   - Customer words, such as reviews, emails or call notes, with dates (optional)
   - A buyer persona or short description (optional)
   - Your price, contents, guarantee and proof
@@ -41,11 +41,11 @@ output_sample:
     - Your product material, such as old promotions, emails and bonuses, with dates
     - Your price, contents, guarantee and proof
     - Customer words, such as reviews or call notes (optional)
-    - Your brand brain or a short buyer description (optional)
+    - Your org context or a short buyer description (optional)
     - The goal for the piece, such as break-even on each send (optional)
   prerequisites:
     - An AI that can read pasted text or files
-    - A brand brain from the Website brand brain builder (optional, makes the result better)
+    - An org context from the Org context builder (optional, makes the result better)
   output:
     - name: "Step 1: Copy research file builder"
       contains: Best passages sorted by purpose with their sources, the angle library, proof you can give away, and your top past hits.
@@ -94,6 +94,6 @@ test:
   - Check the dominant feeling against five customer comments. Most should fit it.
   - Give the outline to a writer who has not seen the research. They should be able to start a draft.
 improve:
-  - Save the research files and the chosen theme into your brand file, so every page and email starts from the same research.
+  - Save the research files and the chosen theme into your org context, so every page and email starts from the same research.
   - After you write and test the page, add the result and what it showed, then rerun step 2 with that to see if the feeling still holds.
-  - Add claims you cannot prove to your brand file, so the outline flags them first.
+  - Add claims you cannot prove to your org context, so the outline flags them first.

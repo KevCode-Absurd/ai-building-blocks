@@ -916,7 +916,7 @@ jobs:
           - creator-ad-roster-builder
       - id: short-film-ad-script
         name: Short film video ad script writer
-        what_it_looks_like: Paste your idea and brand file. Get a twist short-film
+        what_it_looks_like: Paste your idea and org context. Get a twist short-film
           script, timed shot table and cast note.
         when_it_wins: You want a story-led video ad with people, without filming real
           customers.
@@ -1203,7 +1203,7 @@ jobs:
           - creator-ad-roster-builder
       - id: clay-town-video-ad-script-writer
         name: Clay town video ad script writer
-        what_it_looks_like: Paste your idea and brand file. Get a clay-town video
+        what_it_looks_like: Paste your idea and org context. Get a clay-town video
           script, set card and cast note.
         when_it_wins: Your buyer's problem happens around other people (a commute, an
           office, a family dinner).
@@ -1346,7 +1346,7 @@ jobs:
           - creator-ad-roster-builder
       - id: anime-video-ad-script-writer
         name: Anime video ad script writer
-        what_it_looks_like: Paste your idea and brand file. Get anime-style video shot
+        what_it_looks_like: Paste your idea and org context. Get anime-style video shot
           cards and a cast note.
         when_it_wins: Your buyer has an old way of doing things you can draw as huge and
           silly (a shoebox of receipts, a drawer of tangled chargers).

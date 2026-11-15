@@ -1,12 +1,12 @@
-// The specialization layer: when the brand file names a kind of business, every download carries that business's
+// The specialization layer: when the org context names a kind of business, every download carries that business's
 // playbook (public/playbooks/FOR-<BOARD>.md) next to the skills, so a general skill bends toward that business.
-// Fetched at click time. If it cannot load, the download goes ahead without it: the brand file still names the kind.
+// Fetched at click time. If it cannot load, the download goes ahead without it: the org context still names the kind.
 import { BOARD_NAMES, playbookFile, playbookHref } from "../trust-pages/board-names.mjs";
 import type { Business } from "./business";
 
 const isKind = (v: unknown): v is string => typeof v === "string" && Object.hasOwn(BOARD_NAMES, v);
 
-/** The playbook for the brand file's kind of business, or null when none is set or it will not load. */
+/** The playbook for the org context's kind of business, or null when none is set or it will not load. */
 export async function loadPlaybook(b: Business): Promise<{ name: string; text: string } | null> {
   if (!isKind(b.kind)) return null;
   try {

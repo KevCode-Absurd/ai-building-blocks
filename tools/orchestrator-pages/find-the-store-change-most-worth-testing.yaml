@@ -95,7 +95,7 @@ test:
   - Take the top test and check you get enough orders to read it in about four weeks at your current traffic.
   - After you run the first test, check whether its result matched the size of gain the ranking expected.
 improve:
-  - Save your corrected baseline in your brand file, so later runs skip step 1.
+  - Save your corrected baseline in your org context, so later runs skip step 1.
   - Change the evidence weights in the ranker if your team trusts some kinds of evidence more than others.
   - Keep a log of every test, with the hypothesis and the result, and feed it back so settled questions are not retested.
   - Pair it with a test traffic checker and a verdict skill when you are ready to run the first test.

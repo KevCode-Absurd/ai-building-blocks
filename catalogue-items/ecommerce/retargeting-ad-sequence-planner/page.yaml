@@ -46,7 +46,7 @@ output_sample:
     - Reviews and testimonials you have permission to use
     - Your current retargeting audience and window (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional, it makes the result better)
+    - Your org context from the Org context builder (optional, it makes the result better)
   output:
     - name: Why visitors do not buy
       contains: A ranked list of reasons in the buyer's words, with the source and how common each one is.

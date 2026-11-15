@@ -142,7 +142,7 @@ test:
 improve:
   - Add the roles you use in your store, such as a marketplace manager, so the skill map fits your team.
   - Add your own rule for how much of your margin you can spend on one role, and have the skill check against it.
-  - Save the 90-day result it writes into your brand file, then compare it with real results in 90 days.
+  - Save the 90-day result it writes into your org context, then compare it with real results in 90 days.
   - Pair it with the skill that plans your team roles once the hire is made, and the job post writer for the ad.
 
 works_best_with:

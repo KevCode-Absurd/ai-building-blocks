@@ -129,7 +129,7 @@ test:
 improve:
   - Add your store's real page types to the skill file, such as collection pages and quizzes you run.
   - Add your approved section list, so the default order always matches your theme.
-  - Record the results by page type in your brand file, so routing follows your own data.
+  - Record the results by page type in your org context, so routing follows your own data.
   - Pair it with the Store hero section writer for the top screen and the Store advertorial writer for long pages.
 
 works_best_with:

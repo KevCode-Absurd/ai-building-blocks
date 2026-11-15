@@ -37,7 +37,7 @@ test('prepare_job_context returns a short brief and a structured annex for each 
   assert.deepEqual(a.protocol.map(s => s.id), ['frame', 'ground', 'taste', 'diverge', 'build', 'check', 'record']);
   assert.ok(a.context_requirements.some(r => r.id === 'brand_dna' && r.required));
   // Work a buyer sees also gets the tool that puts candidates side by side for the reviewer.
-  assert.deepEqual(a.capture.tools.map(t => t.file), ['capture-brand-dna.mjs', 'brand-dna-snippet.js', 'check-brand-fidelity.mjs', 'brand-file.mjs', 'compare-candidates.mjs']);
+  assert.deepEqual(a.capture.tools.map(t => t.file), ['capture-brand-dna.mjs', 'brand-dna-snippet.js', 'check-brand-fidelity.mjs', 'org-context.mjs', 'compare-candidates.mjs']);
   for (const tool of a.capture.tools) { assert.equal(tool.get_item.response_format, 'detailed'); assert.equal(tool.status, 'CHECK_GET_ITEM'); assert.equal(tool.agents_app, undefined); }
   // The agents app serves the three capture and check tools; the compare tool comes from its library skill.
   // Every pack now carries all five tools, so each has an agents.useaiblocks.com address.

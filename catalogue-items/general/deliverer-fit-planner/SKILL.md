@@ -40,7 +40,7 @@ How to start:
 
 ## What you need
 
-These are the inputs for this skill. The brief is the brief for this piece: one from the [Two-audience brief writer](https://useaiblocks.com/skills/two-audience-brief-writer) works best, but a short description of the piece is enough. No customer words or brand brain are needed.
+These are the inputs for this skill. The brief is the brief for this piece: one from the [Two-audience brief writer](https://useaiblocks.com/skills/two-audience-brief-writer) works best, but a short description of the piece is enough. No customer words or org context are needed.
 
 - **The brief or a description of the piece** (required): what it is for and how long it runs.
 - **Who delivers it and how** (required): a speaker on stage, a rep on a call, an actor, a presenter on video, you.

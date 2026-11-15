@@ -198,7 +198,7 @@ test:
 improve:
   - Paste buyer phrases from your reviews into "What you need" in the skill file, so captions use their words.
   - Write your hero line and ink line into steps 4 and 5, so your strips and comic videos look like one family.
-  - Add how your product works, with a source, to your brand file. Without it, the cutaway is dropped.
+  - Add how your product works, with a source, to your org context. Without it, the cutaway is dropped.
   - Pair it with "Motion comic video ad script writer" when you want the video version too.
 
 works_best_with:

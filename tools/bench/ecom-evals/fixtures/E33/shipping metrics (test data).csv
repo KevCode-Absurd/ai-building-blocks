@@ -1,0 +1,8 @@
+# (test data) Shipping cost and checkout metrics, last 90 days. Built for an e-commerce eval. Not Wild One's real figures.
+metric,value
+Average order value,$96
+Average cost to ship a free-shipping order,$8.90
+Contribution per free-shipping order after shipping,$31.40
+Cart abandonment rate,71%
+Share of carts between $70 and $89 that add an item to reach $90,38%
+Most added item to reach the threshold,Poop Bags ($9) and Waterproof Collar

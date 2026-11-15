@@ -125,7 +125,7 @@ test:
 improve:
   - Add your own decisions, such as a limit on discounts, to the list in the skill file.
   - Add the title names you use, so the chart reads like your team.
-  - Save the chart in your brand file and update it after every hire.
+  - Save the chart in your org context and update it after every hire.
   - Pair it with the job post writer for the ad and the interview scorecard builder for the hiring steps.
 
 works_best_with:

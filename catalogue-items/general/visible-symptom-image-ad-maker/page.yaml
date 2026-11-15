@@ -124,7 +124,7 @@ example:
                     supports digestion.
 
     WHY IT STOPS
-    All three answers fail. The sign is real (the brand file names
+    All three answers fail. The sign is real (the org context names
     bloating for this buyer, and review 10 says "less bloated"), but
     it can't be shown honestly here.
 
@@ -169,7 +169,7 @@ test:
 
 improve:
   - Write your brand's body limits into "What you need" once, so every run checks against them.
-  - Add your buyers' words for the sign to your brand file. Without them, the skill will flag the picture as a guess.
+  - Add your buyers' words for the sign to your org context. Without them, the skill will flag the picture as a guess.
   - Add your claim limits (for example "supports", never "fix") to the check list, so the flags catch risky copy every time.
   - Pair it with the everyday snapshot skill. When this one stops, the snapshot makes the picture it hands over.
 

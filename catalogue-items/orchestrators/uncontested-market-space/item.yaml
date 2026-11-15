@@ -17,7 +17,7 @@ outputs:
 uses: [competitor-white-space-mapper, onliness-statement-writer, idea-buy-in-pitch-planner]
 steps:
   - {uses: competitor-white-space-mapper, note: "Takes your rivals and what buyers value, and makes a grid that shows where nobody is strong and where to stop fighting. A rival rating with no source is marked unknown"}
-  - {uses: onliness-statement-writer, note: "One sentence on what only you do, with a rival swap test. Reads the grid and the gaps from step 1 and your brand file"}
+  - {uses: onliness-statement-writer, note: "One sentence on what only you do, with a rival swap test. Reads the grid and the gaps from step 1 and your org context"}
   - {uses: idea-buy-in-pitch-planner, note: "A story, a vision picture and a plan through four stages. Reads the chosen sentence from step 2, the people who must say yes and what you want them to do"}
 origin: rebuilt
 version: 1.0.0

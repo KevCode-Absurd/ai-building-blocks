@@ -47,7 +47,7 @@ output_sample:
     - What your brand never shows (optional)
   prerequisites:
     - An AI that can read attached photos at full size
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Photo check
       contains: Each photo marked kept or out, with the question it failed if it is out.
@@ -198,7 +198,7 @@ improve:
   - Add your never-show list and how the product is used to "What you need" in the skill file, so those lines are never MISSING.
   - Add your category's usual lookalike to the identity part (for Sprout, drugstore multivitamin gummies).
   - Write the way your store names variants into step 1, so the sheet always names the exact variant the same way.
-  - Save the sheet in your brand file with its date, and run it again whenever the packaging changes.
+  - Save the sheet in your org context with its date, and run it again whenever the packaging changes.
   - Pair it with the skills that plan a matching photo set or a full photoshoot. Both start from this sheet.
 
 works_best_with:

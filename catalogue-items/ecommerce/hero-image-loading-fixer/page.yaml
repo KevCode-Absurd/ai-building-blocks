@@ -133,7 +133,7 @@ test:
 improve:
   - "Write your theme name and its hero section file name into the skill so the edits match your code."
   - "Add your own image size rules, such as '1,600 px for banners', if they differ from the defaults."
-  - "Save the final tag pattern in your brand file for any developer who works on your theme."
+  - "Save the final tag pattern in your org context for any developer who works on your theme."
   - "Pair it with the store image prep checker, which sizes and renames the image itself."
 
 works_best_with:

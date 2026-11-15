@@ -102,6 +102,6 @@ test:
   - Change one job from the job map into a sentence for your page. See if a stranger can say who it is for.
 improve:
   - After each batch of talks, add the new notes to the same file and run step 2 again. The profile should move.
-  - Save the buyer profile in your brand file so other skills start from it.
+  - Save the buyer profile in your org context so other skills start from it.
   - Add your own bad-question examples to step 1, so it avoids the traps you fall into.
   - Pair it with the Customer buying reasons finder when you also have reviews or support emails.

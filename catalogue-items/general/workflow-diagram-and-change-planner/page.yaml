@@ -135,6 +135,6 @@ terms:
   - term: Workflow
     meaning: A few AI steps in a row, where each step uses what the one before it made.
   - term: Hand-off
-    meaning: What one step passes to the next, such as a brand file or ad copy.
+    meaning: What one step passes to the next, such as an org context or ad copy.
   - term: Mermaid
     meaning: A simple text format for diagrams that many AI apps draw as a picture.

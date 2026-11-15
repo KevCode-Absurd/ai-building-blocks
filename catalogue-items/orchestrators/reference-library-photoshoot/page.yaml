@@ -46,7 +46,7 @@ output_sample:
   input:
     - Real photos of the exact product variant, including how it is worn or used
     - A set of reference photos for the looks you like
-    - Your brand direction, if you have a brand file (optional)
+    - Your brand direction, if you have an org context (optional)
     - Sizes, number of looks and budget (optional)
   prerequisites:
     - An image tool that can use your real product photo as a reference. Many are paid or need credits or an API key. Claude cannot draw the pictures itself.

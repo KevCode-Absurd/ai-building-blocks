@@ -50,7 +50,7 @@ output_sample:
     - The AI assistants you can use, with web search on
   prerequisites:
     - An AI assistant that can search the web
-    - Your brand brain from the Brand profile builder (recommended)
+    - Your org context from the Org context builder (recommended)
     - Last month's numbers, or the ai-visibility folder (from month two)
   output:
     - name: This month

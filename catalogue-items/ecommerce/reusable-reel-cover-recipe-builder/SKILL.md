@@ -17,18 +17,18 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Brand file**, made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context**, made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **An image** (yours): a finished picture.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
-**From the brand file, read:** `index.md`, `look.json`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `look.json`, `foundation/design.md`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your question, your brand file, an image. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your question, your org context, an image. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -74,7 +74,7 @@ For a YouTube thumbnail, use the Thumbnail and title planner. For title writing 
    Swap in the user's brand colors wherever they gave them. Check the text and the background have strong contrast.
 5. **Write the image prompt.** One block of text for an image tool. It must say: the canvas size, the background, that the attached portrait is used as it is, the title lines exactly as written with the accent word and color, where each part goes, the font style, and what to leave out (extra text, extra logos, gradients). Tell the user to attach their portrait and the logo.
 6. **Check the layout rules.** Run the checks below and fix anything that fails before you hand back.
-7. **Write the reuse notes.** List what changes for each new Reel (title, accent word) and what stays fixed (everything else on the recipe card). Suggest saving the recipe card in the brand file.
+7. **Write the reuse notes.** List what changes for each new Reel (title, accent word) and what stays fixed (everything else on the recipe card). Suggest saving the recipe card in the org context.
 
 ## Checks
 

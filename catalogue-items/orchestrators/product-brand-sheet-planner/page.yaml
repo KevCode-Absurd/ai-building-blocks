@@ -16,7 +16,7 @@ you_give:
   - Your product, who it is for and the claims you may make
   - Your brand direction, colours and fonts
   - Product photos (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - plan
   - brand guide
@@ -38,13 +38,13 @@ thinking_why: It compares supplied evidence and follows a specific method.
 not_for:
   - "You need a full brand guide with voice and rules for a whole business: use the Brand guide builder."
   - "You want a set of finished product photos, not a plan: use the Product photo set reviewer."
-  - "You only need image prompts from an existing brand file: use the Brand image prompt writer."
+  - "You only need image prompts from an existing org context: use the Brand image prompt writer."
 output_sample:
   input:
     - Your product and what it is for
     - Your brand direction, colours and fonts
     - Product photos (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
   prerequisites:
     - An image tool such as ChatGPT or Gemini, to draw the images from the prompts (free plans have tight daily limits; many images may need a paid plan)
   output:

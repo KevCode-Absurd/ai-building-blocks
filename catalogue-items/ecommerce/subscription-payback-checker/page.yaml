@@ -130,7 +130,7 @@ test:
   - Run the same input twice. The call should match.
 
 improve:
-  - Save your cohort table in your brand file so you can update it monthly.
+  - Save your cohort table in your org context so you can update it monthly.
   - Add your own payback ratio and your own cash buffer to the skill file.
   - Add each new cohort's six-month ratio so the trend check has history.
   - Pair it with the subscription offer designer, and with a cancel-flow skill once you have subscribers.

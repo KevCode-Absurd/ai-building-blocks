@@ -15,7 +15,7 @@ when:
   - You are renaming because buyers cannot say what you stand for, or a rival leads your category.
   - You have a name you like and want to test it, or check it will survive a bigger range.
 not_for:
-  - "You already have a settled name and no rival problem: use the Brand profile builder to pin down your facts, then the Brand positioning sentence writer."
+  - "You already have a settled name and no rival problem: use the Org context builder to pin down your facts, then the Brand positioning sentence writer."
   - "You only want one line that says what you stand for: use the Brand positioning sentence writer."
   - "You already have a name and want a plan for how it spans your ranges: use the Store brand architecture planner."
 you_give:
@@ -44,7 +44,7 @@ output_sample:
     - Names you like or dislike, and a range you might add later (optional)
   prerequisites:
     - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
-    - Your brand profile from the Brand profile builder, or a few lines on what the brand should stand for (optional)
+    - Your brand profile from the Org context builder, or a few lines on what the brand should stand for (optional)
   output:
     - name: Rival map
       contains: Every real alternative plotted on two axes, the gaps tested, and the one corner to own with a claim and proof.
@@ -108,7 +108,7 @@ test:
   - Search each top name on Google, your marketplaces and social handles.
   - Run step 4 again on the same names. The order should match.
 improve:
-  - Save the position and brief in your brand file, so every later skill starts with them.
+  - Save the position and brief in your org context, so every later skill starts with them.
   - Re-run the rival map each year or when a rival moves.
   - Add your real clearance results back, so the name test starts from facts.
   - Pair it with a store promise writer and a brand guide builder once the name is picked.

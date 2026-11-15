@@ -1,11 +1,11 @@
 new_slug: creator-gifting-brief
 name: Send creators a gift and a brief to film from
-summary: "Plan creator gifting: pick creators by fit, write the gift card, script a phone video, brief the shoot and plan the edit. Give it your brand file."
+summary: "Plan creator gifting: pick creators by fit, write the gift card, script a phone video, brief the shoot and plan the edit. Give it your org context."
 job: grow-social
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
 headline: Send creators a gift and a brief they can film from
-subhead: Give it your brand file. It picks creators by fit, writes the card that goes with the gift, scripts a short phone video, turns the script into a filming brief, and plans the edit of what they send back.
+subhead: Give it your org context. It picks creators by fit, writes the card that goes with the gift, scripts a short phone video, turns the script into a filming brief, and plans the edit of what they send back.
 explain: |-
   Gifting fails when the creator gets a box and no direction, or a brief so long that nobody reads it. Then the footage that comes back needs rework.
   This workflow scores creators on fit, not size, and writes a short card with the disclosure wording. It scripts a phone video the creator can film in a few takes, then turns that into a brief with the shoot in order and the must-haves split from the maybes. When footage comes back, it plans the cut.
@@ -19,7 +19,7 @@ not_for:
   - "You only want paid ads and no gifting: use the Selfie-style video ad script writer on its own."
   - "You already have footage and only need captions: use the Video caption maker in your brand font."
 you_give:
-  - Your brand file
+  - Your org context
   - Customer reviews, copied as written
   - Your product facts
   - What one box costs and what you will spend this round
@@ -40,7 +40,7 @@ how_to_use:
   - If the footage breaks the approved script, the edit plan skips that moment and names the shot to reshoot. Ask the creator to film it again.
 output_sample:
   input:
-    - Your brand file, or your brand facts, products, offer and voice
+    - Your org context, or your brand facts, products, offer and voice
     - Customer reviews, copied as written
     - "Your product facts: price, variants, how it is used"
     - Who you want to reach (optional)
@@ -48,7 +48,7 @@ output_sample:
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
     - The handoff pack for this workflow
-    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your org context from the Org context builder (optional, makes the result better)
   output:
     - name: Gifting plan
       contains: A creator shortlist scored on fit, a short card to go with the gift, and the disclosure wording.
@@ -96,7 +96,7 @@ example:
   input: |-
     [the handoff pack] Follow HANDOFF.md.
 
-    Brand file: the Sprout brand file. Practice data.
+    Org context: the Sprout org context. Practice data.
     Reviews: 6 Sprout reviews. Product facts: powder, 6g prebiotic fiber.
     Footage (after the send step): 3 clips from one creator, 40 seconds in total.
   output: |-

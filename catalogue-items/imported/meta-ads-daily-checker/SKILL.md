@@ -50,7 +50,7 @@ If a number is missing, write **MISSING** for it. Never invent a figure.
 
 ## Optional brand context
 
-If the person keeps brand files, they can paste any of these. All are optional:
+If the person keeps org context files, they can paste any of these. All are optional:
 - `stack.md`: ad account ID and target cost per sale or return on ad spend. Use it to compare results with targets.
 - `audience.md`: target audience profiles, to read audience results in context.
 - `creative-kit.md`: brand creative notes, for creative advice.

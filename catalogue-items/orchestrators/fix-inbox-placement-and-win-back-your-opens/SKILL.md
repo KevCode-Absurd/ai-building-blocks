@@ -24,7 +24,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your data** (yours): the data files, with their format and where they came from.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand file.
+1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your org context.
 2. This one.
 
 How to start:

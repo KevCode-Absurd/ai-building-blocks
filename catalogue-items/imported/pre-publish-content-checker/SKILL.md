@@ -353,6 +353,6 @@ When in doubt about whether a QA process is ready, ask: does each check name a c
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer).
-- **Fill the gaps in your brand file** with the [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker).
+- **Fill the gaps in your org context** with the [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

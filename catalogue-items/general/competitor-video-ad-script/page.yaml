@@ -55,7 +55,7 @@ output_sample:
     - Buyer quotes or your brand voice (optional)
   prerequisites:
     - An AI that can read pictures, if you attach screenshots
-    - Your brand brain from the Brand profile builder (helpful, not required)
+    - Your org context from the Org context builder (helpful, not required)
   output:
     - name: Move
       contains: One sentence naming the trick the whole reference ad depends on.
@@ -199,7 +199,7 @@ test:
 improve:
   - Add your real offer terms and proof to "What you need" in the skill file, so step 3 always has true facts to use.
   - Add your brand's voice rules to step 4. The words are yours and only the pace comes from the reference, so this is where your sound goes in.
-  - Keep the breakdowns you've used, with the move each one depends on, and save the ones that worked to your brand file.
+  - Keep the breakdowns you've used, with the move each one depends on, and save the ones that worked to your org context.
   - Pair it with the skill that keeps only the idea behind an ad, when you want your own order instead of the same skeleton.
 
 works_best_with:

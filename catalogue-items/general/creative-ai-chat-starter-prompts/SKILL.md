@@ -21,7 +21,7 @@ This skill runs in any chat AI. It needs no files, web access or paid tools. One
 - **A draft prompt you already use** (yours): to repair, not replace.
 
 How to start:
-1. **Look first.** Use what they have already pasted or attached. In Claude Code, look in the project too for a brand file.
+1. **Look first.** Use what they have already pasted or attached. In Claude Code, look in the project too for an org context.
 2. **If no task is named,** ask one short question: "What do you want made, and what is it for?" Do not guess a task. If a task is named, go ahead even if the optional items are missing.
 3. **Do the job.** Mark each gap with `MISSING:` and never invent a fact, proof, review or result. Say each point once. In CHECKS MISSED, name only the checks that failed, or write "none".
 

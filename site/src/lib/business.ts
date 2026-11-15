@@ -1,5 +1,5 @@
 import { library, libraryStorage } from "./library-storage";
-// Your brand file: the briefing you'd give a new hire, written once (docs/WRITING.md calls it "your brand file").
+// Your org context: the briefing you'd give a new hire, written once (docs/WRITING.md calls it "your org context").
 // It starts with 5 quick questions about the business, can grow with more detail, and can include the owner's
 // personal me.md (docs/ME-FILE-PRD.md) as an optional part.
 // It is added to every skill they copy, every specialist message and every workflow they download, with only the
@@ -12,8 +12,8 @@ import { BOARD_NAMES, playbookFile } from "../trust-pages/board-names.mjs";
 export { GOAL_CHOICES, REACH_CHOICES, ordersPicks, profileScore, type ProfileLike, type Reach } from "./profile-order";
 
 /** What the owner calls it everywhere on the site. */
-export const BRAND_FILE = "brand file";
-export const BRAND_FILE_TITLE = "Your brand file";
+export const BRAND_FILE = "org context";
+export const BRAND_FILE_TITLE = "Your org context";
 
 export const FIELDS = [
   { id: "name", label: "Your name or business", md: "Name", hint: "" },
@@ -93,7 +93,7 @@ function basicsSection(b: Business, withFields: boolean): string {
   return rows.join("\n");
 }
 
-/** The whole brand file: the business answers plus the personal me.md when there is one. Empty when nothing is saved.
+/** The whole org context: the business answers plus the personal me.md when there is one. Empty when nothing is saved.
  *  "Business basics" is a heading lib/me-file.ts doesn't know, so every task keeps it. */
 export function businessText(b: Business): string {
   const me = meText(b);
@@ -103,20 +103,20 @@ export function businessText(b: Business): string {
   return `${me.trimEnd()}\n\n## Business basics\n\n${basics}\n`;
 }
 
-/** What a task gets: the brand file sections it needs, its voice rule and the freshness rule (lib/me-file.ts). */
+/** What a task gets: the org context sections it needs, its voice rule and the freshness rule (lib/me-file.ts). */
 export const meFor = (b: Business, tasks: TaskLike[] = []) => meContext(businessText(b), tasks);
 
-/** A skill with the person's brand file after it, ready to paste into a chat. */
+/** A skill with the person's org context after it, ready to paste into a chat. */
 export const withBusiness = (skill: string, b: Business, tasks: TaskLike[] = []) => {
   const about = meFor(b, tasks);
   return about ? `${skill.trim()}\n\n---\n\n${about}` : skill;
 };
 
-/** Picks ordered by the brand file: a local business sees local-service items first, an online shop sees store
+/** Picks ordered by the org context: a local business sees local-service items first, an online shop sees store
  *  items first, and the main goal breaks ties. Stable, and unchanged when nothing is saved. Client-side only. */
 export function orderByProfile<T>(items: readonly T[], textOf: (item: T) => string, b: Business = current): T[] {
   return orderItems(items, b, textOf);
 }
-/** Which part the brand file drawer opens at. The me.md guide sets `me` before it opens the drawer. */
+/** Which part the org context drawer opens at. The me.md guide sets `me` before it opens the drawer. */
 export const drawerFocus = { me: false };
 export const isReach =(v: unknown): v is Reach => REACH_CHOICES.some((r) => r.id === v);

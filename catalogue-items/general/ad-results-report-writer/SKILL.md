@@ -66,7 +66,6 @@ Write a longer version only if asked, and only where the data supports it. Writi
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Ad test results tracker](https://useaiblocks.com/skills/keyed-ad-results-log-keeper). It takes the audit report.
-- **Plan what to test** with the [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder). It takes the audit report.
 - **Check it before it goes live** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

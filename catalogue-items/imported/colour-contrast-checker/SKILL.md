@@ -27,8 +27,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A design direction** with the [Page typography and layout planner](https://useaiblocks.com/skills/page-grid-and-type-planner). Bring a document, a design direction (optional). It uses your brand file.
-2. **A design direction** with the [Visual system rules writer](https://useaiblocks.com/skills/visual-system-rules-writer). Bring a brief. It uses your brand file.
+1. **A design direction** with the [Page typography and layout planner](https://useaiblocks.com/skills/page-grid-and-type-planner). Bring a document, a design direction (optional). It uses your org context.
+2. **A design direction** with the [Visual system rules writer](https://useaiblocks.com/skills/visual-system-rules-writer). Bring a brief. It uses your org context.
 3. This one.
 
 How to start:

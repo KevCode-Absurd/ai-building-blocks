@@ -9,11 +9,7 @@ level: intermediate
 inputs:
   - {type: question, required: true}
   - {type: voc_reviews, required: true}
-  - {type: competitor_set, required: false}
   - {type: brand_brain, required: false}
-  - {type: ad_copy, required: false}
-  - {type: persona, required: false}
-  - {type: design_direction, required: false}
 outputs:
   - {type: audit_report}
 uses: [big-idea-and-mechanism-builder, store-advertorial-writer, advertorial-story-and-belief-checker, store-social-proof-placer, landing-page-30-point-checker]

@@ -47,7 +47,7 @@ output_sample:
     - Your offer, with price, terms and any deadline
   prerequisites:
     - An AI that can read files and save results as files, such as Claude Code or a Claude Project
-    - Your brand brain, buyer brief and offer from earlier items (optional)
+    - Your org context, buyer brief and offer from earlier items (optional)
   output:
     - name: outputs/step-01-ad-headline-writer.md
       contains: Headlines for each idea in the brief, what they are allowed to say, and the one to test first.

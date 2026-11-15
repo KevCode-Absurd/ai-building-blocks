@@ -24,7 +24,7 @@ not_for:
 
 you_give:
   - Your product facts and who the ad is for
-  - Your customer reviews and your brand file
+  - Your customer reviews and your org context
   - Later, the footage the creator sends back
 you_get:
   - A brief that says who the ad is for and what it argues
@@ -36,7 +36,7 @@ you_get:
 how_to_use:
   - Download the handoff pack. It is a zip with a HANDOFF.md file and every skill file this workflow uses.
   - Add the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
-  - Paste your product facts, your reviews, your brand file and a line on who the ad is for.
+  - Paste your product facts, your reviews, your org context and a line on who the ad is for.
   - Read the script, the line fixes and the filming brief. Fix anything that does not sound like your brand.
   - Send the filming brief to your creator. The run pauses here.
   - When the footage is back, give the clips to the same run to get the timed cut list.
@@ -44,7 +44,7 @@ output_sample:
   input:
     - Your product facts and who the ad is for
     - Your customer reviews (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
     - The raw clips from your creator, for the last step
   prerequisites:
     - An AI that can read files, such as Claude with a Project or Claude Code
@@ -112,7 +112,7 @@ example:
 
     Product facts: the product table and the claims list
     Reviews: the 20 reviews in reviews.md
-    Brand file: sprout/brand-brain/
+    Org context: sprout/brand-brain/
     Who it is for: someone who quit a greens powder over the grit
   output: |
     BRIEF: the powder quitter, Warm. Doubt: will it work the same.
@@ -169,7 +169,7 @@ test:
   - Run the last step on real footage and check the cut times against the clips.
 
 improve:
-  - Save the angle brief in your brand file so later runs start from step 2.
+  - Save the angle brief in your org context so later runs start from step 2.
   - Add a step after the cut list that checks the finished video against Meta's ad rules.
   - Tune the script skill with your usual phrases and the words you never use.
   - Pair it with a skill that reads your ad results, so each new video tests a different angle.

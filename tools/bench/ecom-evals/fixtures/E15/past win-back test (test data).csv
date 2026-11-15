@@ -1,0 +1,4 @@
+# (test data) Win-back email with 30% off, sent to subscribers who cancelled 60 to 180 days ago, with a 10% holdout, Aug 2026, USD. Built for an e-commerce eval. Not Ritual's real figures.
+group,people,reactivated_within_30_days,revenue,discount_cost
+Got the 30% off email,27000,4.6%,25700,10300
+Holdout (no email),3000,3.4%,2380,0

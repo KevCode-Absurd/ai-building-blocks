@@ -129,7 +129,7 @@ test:
   - Compare the rollout with your calendar. No step should land in the middle of a big sale.
 
 improve:
-  - Add your real margins by category to your brand file, so the margin split uses facts.
+  - Add your real margins by category to your org context, so the margin split uses facts.
   - Add your own naming pattern to the skill file if your agency or team already has one.
   - Add the stock grades you use, such as A, B and C, with the rule for each.
   - Add a rule for what counts as a legacy core campaign in your account.

@@ -44,7 +44,7 @@ output_sample:
     - "Your product facts: what it is, what it does, how it is used, price"
     - Who tries it and where, plus the time you get (optional)
     - What you can prove, such as results, photos or reviews (optional)
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Result the buyer can see
       contains: One result a buyer can see or feel in under a minute.

@@ -93,28 +93,28 @@ test('option reruns resolve against actual validated source records', async () =
 });
 
 const template = result => JSON.parse(result.files.find(file => file.path === 'templates/JOB-CARD.json').content);
-test('a missing or unread brand file blocks staffing for page, ad, copy and email jobs', async () => {
+test('a missing or unread org context blocks staffing for page, ad, copy and email jobs', async () => {
   for (const deliverable_kind of ['web_page', 'ad_creative', 'copy', 'email']) {
     const f = engineFixture(), result = await startJob({ ...f.input, deliverable_kind }, f.context), missing = structuredClone(f.card);
-    assert.ok(template(result).brand_brain, deliverable_kind);
-    delete missing.brand_brain;
-    await assert.rejects(() => send(result, { event: 'scope', document: missing }, f.context), /brand_brain: A page, ad, copy or email job needs the brand file/);
-    const unread = structuredClone(f.card); unread.brand_brain.read_by_coordinator = false;
-    await assert.rejects(() => send(result, { event: 'scope', document: unread }, f.context), /read_by_coordinator|brand_brain/);
+    assert.ok(template(result).org_context, deliverable_kind);
+    delete missing.org_context;
+    await assert.rejects(() => send(result, { event: 'scope', document: missing }, f.context), /org_context: A page, ad, copy or email job needs the org context/);
+    const unread = structuredClone(f.card); unread.org_context.read_by_coordinator = false;
+    await assert.rejects(() => send(result, { event: 'scope', document: unread }, f.context), /read_by_coordinator|org_context/);
     const detached = structuredClone(f.card); detached.context_sources = [];
     await assert.rejects(() => send(result, { event: 'scope', document: detached }, f.context), /matching context source/);
     assert.equal((await send(result, f.events[0], f.context)).phase, 'STAFF');
   }
 });
 
-test('audit, analysis, strategy, plan, code and document jobs are staffed without a brand file', async () => {
+test('audit, analysis, strategy, plan, code and document jobs are staffed without an org context', async () => {
   for (const deliverable_kind of ['audit', 'analysis', 'strategy', 'plan', 'code', 'ops_doc', 'other']) {
     const f = engineFixture(), result = await startJob({ ...f.input, deliverable_kind }, f.context), bare = structuredClone(f.card);
-    assert.equal(template(result).brand_brain, undefined, deliverable_kind);
+    assert.equal(template(result).org_context, undefined, deliverable_kind);
     assert.doesNotMatch(result.next_action.instruction, /brand (?:file|brain)/, deliverable_kind);
-    delete bare.brand_brain; bare.context_sources = [];
+    delete bare.org_context; bare.context_sources = [];
     assert.equal((await send(result, { event: 'scope', document: bare }, f.context)).phase, 'STAFF', deliverable_kind);
-    // A brand file that is supplied anyway is still accepted.
+    // An org context that is supplied anyway is still accepted.
     assert.equal((await send(result, f.events[0], f.context)).phase, 'STAFF', deliverable_kind);
   }
   // Audits and analysis need their data snapshot before production instead.
@@ -125,12 +125,12 @@ test('audit, analysis, strategy, plan, code and document jobs are staffed withou
 
 test('the kind on the job card decides, and a job with no kind keeps the old brand rule', async () => {
   const f = engineFixture(), result = await startJob({ ...f.input, deliverable_kind: 'plan' }, f.context), email = structuredClone(f.card);
-  email.deliverable_kind = 'email'; delete email.brand_brain;
-  await assert.rejects(() => send(result, { event: 'scope', document: email }, f.context), /brand_brain/);
-  // A state from before kinds were declared has no deliverable: it still asks for the brand brain.
+  email.deliverable_kind = 'email'; delete email.org_context;
+  await assert.rejects(() => send(result, { event: 'scope', document: email }, f.context), /org_context/);
+  // A state from before kinds were declared has no deliverable: it still asks for the org context.
   const legacy = structuredClone(result.state); delete legacy.base.deliverable; delete legacy.base.grounding_policy; delete legacy.base.mode_default;
-  const bare = structuredClone(f.card); delete bare.brand_brain; delete bare.deliverable_kind;
-  await assert.rejects(async () => advanceJob({ job_id: result.job_id, state: legacy, state_digest: await jobStateDigest(legacy), event: 'scope', document: bare }, f.context), /brand_brain/);
+  const bare = structuredClone(f.card); delete bare.org_context; delete bare.deliverable_kind;
+  await assert.rejects(async () => advanceJob({ job_id: result.job_id, state: legacy, state_digest: await jobStateDigest(legacy), event: 'scope', document: bare }, f.context), /org_context/);
 });
 
 test('separate jobs may declare safe delivery metadata roots without accepting another job’s files',async()=>{
@@ -159,15 +159,15 @@ test('single-kind jobs reject unrelated or missing artifact kinds before review'
  assert.equal((await send(result,{event:'produce',document:f.production},f.context)).phase,'REVIEW');
 });
 
-test('the scope step is the spec sheet, and it names a brand file or taste brief only for kinds that need one', async () => {
+test('the scope step is the spec sheet, and it names an org context or taste brief only for kinds that need one', async () => {
   const { validateJobDocument } = await import('../src/jobs/contracts.mjs');
-  const slices = { web_page: /brand file \(its facts, voice and look\)/, ad_creative: /brand file \(its facts, voice and look\)/, copy: /brand file \(its facts and voice\)/, email: /brand file \(its facts and voice\)/ };
+  const slices = { web_page: /org context \(its facts, voice and look\)/, ad_creative: /org context \(its facts, voice and look\)/, copy: /org context \(its facts and voice\)/, email: /org context \(its facts and voice\)/ };
   for (const deliverable_kind of ['web_page', 'ad_creative', 'copy', 'email', 'audit', 'analysis', 'strategy', 'plan', 'code', 'ops_doc', 'other']) {
     const f = engineFixture(), result = await startJob({ ...f.input, deliverable_kind }, f.context), scope = result.next_action.instruction, card = template(result);
     assert.match(scope, /Write the spec sheet in templates\/JOB-CARD\.json/, deliverable_kind); assert.match(scope, /acceptance_tests/, deliverable_kind); assert.match(scope, /Your final check reads from them/, deliverable_kind);
-    assert.doesNotMatch(scope, /job card|brand brain/i, deliverable_kind);
-    if (slices[deliverable_kind]) { assert.match(scope, slices[deliverable_kind], deliverable_kind); assert.match(scope, /context\/taste-brief\.md/, deliverable_kind); assert.ok(card.brand_brain && card.grounding.taste_brief, deliverable_kind); }
-    else { assert.doesNotMatch(scope + result.classification_review?.instruction, /brand (?:file|brain)|taste/i, deliverable_kind); assert.equal(card.brand_brain, undefined, deliverable_kind); assert.equal(card.grounding?.taste_brief, undefined, deliverable_kind); }
+    assert.doesNotMatch(scope, /job card|brand brain|brand file/i, deliverable_kind);
+    if (slices[deliverable_kind]) { assert.match(scope, slices[deliverable_kind], deliverable_kind); assert.match(scope, /context\/taste-brief\.md/, deliverable_kind); assert.ok(card.org_context && card.grounding.taste_brief, deliverable_kind); }
+    else { assert.doesNotMatch(scope + result.classification_review?.instruction, /org context|brand (?:file|brain)|taste/i, deliverable_kind); assert.equal(card.org_context, undefined, deliverable_kind); assert.equal(card.grounding?.taste_brief, undefined, deliverable_kind); }
     assert.equal(/deliverables with counts, grounding,/.test(scope), ['web_page', 'ad_creative', 'copy', 'email', 'audit', 'analysis'].includes(deliverable_kind), deliverable_kind);
     // The template starts from the suggested acceptance tests, as rows the job-card schema accepts.
     assert.ok(card.acceptance.length >= 5 && card.acceptance.length <= 7, deliverable_kind); assert.ok(card.acceptance.some(row => row.critical) && card.acceptance.every(row => row.id && row.criterion.endsWith('?') && /pass/i.test(row.threshold)), deliverable_kind);
@@ -179,9 +179,9 @@ test('the scope step is the spec sheet, and it names a brand file or taste brief
     else if (['audit', 'analysis'].includes(deliverable_kind)) { assert.match(produce, /Report grounding \(data_snapshot\)/, deliverable_kind); assert.doesNotMatch(produce, /brand_dna|taste_brief/, deliverable_kind); }
     else assert.doesNotMatch(produce, /grounding|brand_dna|taste_brief|data_snapshot/, deliverable_kind);
   }
-  // The job-type guess is checked against the brand file only when the kind has one.
+  // The job-type guess is checked against the org context only when the kind has one.
   const f = engineFixture(), { job, job_reason, ...unnamed } = f.input;
-  assert.match((await startJob({ ...unnamed, deliverable_kind: 'web_page' }, f.context)).classification_review.instruction, /actual output and the brand file\./);
+  assert.match((await startJob({ ...unnamed, deliverable_kind: 'web_page' }, f.context)).classification_review.instruction, /actual output and the org context\./);
   assert.match((await startJob({ ...unnamed, deliverable_kind: 'plan' }, f.context)).classification_review.instruction, /^Check this guess against the actual output\. /);
 });
 
@@ -205,4 +205,14 @@ test('the orchestrator makes the final check: it hands over, or sends the work b
   assert.equal((await send(sent, f.events[6], f.context)).phase, 'LEARN');
   // Handing over without a send-back still works.
   assert.equal((await send(result, f.events[6], f.context)).phase, 'LEARN');
+});
+
+test('a job card from before the org context rename still passes: brand_brain is read when org_context is missing', async () => {
+  for (const deliverable_kind of ['web_page', 'email']) {
+    const f = engineFixture(), result = await startJob({ ...f.input, deliverable_kind }, f.context), old = structuredClone(f.card);
+    old.brand_brain = old.org_context; old.brand_brain.path = 'brand-brain/00-index.md'; old.context_sources = [{ id: 'brand-brain', kind: 'files', ref: old.brand_brain.path }]; delete old.org_context;
+    assert.equal((await send(result, { event: 'scope', document: old }, f.context)).phase, 'STAFF', deliverable_kind);
+    const unread = structuredClone(old); unread.brand_brain.read_by_coordinator = false;
+    await assert.rejects(() => send(result, { event: 'scope', document: unread }, f.context), /read_by_coordinator|org_context/, deliverable_kind);
+  }
 });

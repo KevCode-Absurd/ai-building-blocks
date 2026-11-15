@@ -10,8 +10,6 @@ role: make
 job: ads
 level: advanced
 inputs:
-  - type: persona
-    required: false
   - type: product_data
     required: true
   - type: voc_reviews

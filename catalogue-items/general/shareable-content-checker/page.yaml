@@ -119,7 +119,7 @@ test:
 improve:
   - Add the topics your audience talks about every day to the cue step.
   - Add words that are off-brand to the story step.
-  - Save the highest-scoring pieces and what they shared to your brand file.
+  - Save the highest-scoring pieces and what they shared to your org context.
   - Pair it with Platform-native content planner to plan the posts.
 works_best_with:
   tools:

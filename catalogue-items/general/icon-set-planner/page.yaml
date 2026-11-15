@@ -25,7 +25,7 @@ not_for:
 you_give:
   - "The list of actions or objects that need icons"
   - "Where they will appear and the smallest size"
-  - "Your brand file or style rules (optional)"
+  - "Your org context or style rules (optional)"
 you_get:
   - "Grid, stroke and colour rules for the set"
   - "Three drawing options per meaning, with a pick"
@@ -121,8 +121,8 @@ tweaks:
     how: "A phone toolbar and a road sign need different rules."
   - what: "How many icons"
     how: "Under about twenty keeps the family check useful. Group larger sets by area."
-  - what: "Your brand file"
-    how: "Colours and corner style from your brand file keep the set on brand."
+  - what: "Your org context"
+    how: "Colours and corner style from your org context keep the set on brand."
 
 judge:
   - "Every meaning has three options that differ."
@@ -140,7 +140,7 @@ test:
 improve:
   - "Add your platform's own icon rules to step 2."
   - "Add a list of symbols that mean different things in your markets to step 5."
-  - "Save the final grid and stroke rules in your brand file."
+  - "Save the final grid and stroke rules in your org context."
   - "Pair it with a design brief writer when you commission the drawings."
 
 works_best_with:
@@ -148,7 +148,7 @@ works_best_with:
     - {name: "Any good chat AI", why: "Planning, comparing and writing tests is text work."}
     - {name: "Figma", why: "A common tool for drawing icons on a grid and checking the set at small size."}
   inputs:
-    - "Your brand file with colours"
+    - "Your org context with colours"
     - "Screenshots of where icons will sit"
     - "Icons you already have and like"
     - "A list of the languages your users speak"

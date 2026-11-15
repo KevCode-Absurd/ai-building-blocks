@@ -28,7 +28,7 @@ not_for:
   - "You are still choosing how you differ from rivals, not how you look. Start with the Competitor positioning mapper."
 
 you_give:
-  - "Three to five values you will not give up, and the traits your brand should show (write them, or take them from your brand brain)"
+  - "Three to five values you will not give up, and the traits your brand should show (write them, or take them from your org context)"
   - "What you sell and who buys it"
   - "Three to five rival brands, as screenshots or links to their site and pack (advised)"
   - "Where the look must show up, such as pack, site, social or product (advised)"
@@ -43,7 +43,7 @@ you_get:
 
 how_to_use:
   - "Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. Use an AI that can read images if you want to attach any. The plan works in a free chat AI alone. Figma is optional, and you may need a paid plan for it, if you want to build the boards yourself."
-  - "Paste your values, what you sell and who buys. Add your brand brain if you have one. With no values, the AI will ask for three to five before it does anything else."
+  - "Paste your values, what you sell and who buys. Add your org context if you have one. With no values, the AI will ask for three to five before it does anything else."
   - "Attach screenshots of three to five rivals and any images you like. Say what you like in each, and say if your logo is already known."
   - "Read the three directions and the fit grid. Tell the AI which you prefer and what to borrow from the others."
   - "Check each photo rule. You should be able to answer it Yes or No by looking at one photo. Ask for a rewrite of any rule you cannot."
@@ -51,14 +51,14 @@ how_to_use:
 
 output_sample:
   input:
-    - "Your brand values and traits, or your brand brain"
+    - "Your brand values and traits, or your org context"
     - "What you sell and who buys it"
     - "Screenshots or links for three to five rival brands (advised)"
     - "Images you like (optional)"
     - "Whether your logo is already known to customers"
   prerequisites:
     - "An AI that can read images, if you attach any"
-    - "Your brand brain from the Website brand brain builder (optional)"
+    - "Your org context from the Org context builder (optional)"
   output:
     - name: "Value filters"
       contains: "One rule for each value you will not give up. It says what you always show and what you never show."
@@ -147,7 +147,7 @@ test:
 improve:
   - Add your own non-negotiable values to the first step, so every run filters by them.
   - Keep a standing do-not list of looks that do not fit your brand, such as clip-art style or flashing badges, and add it to the fit grid.
-  - Save the merged direction, photo rules and colours to your brand file so ads, emails and product pages use the same look.
+  - Save the merged direction, photo rules and colours to your org context so ads, emails and product pages use the same look.
   - Pair it with the Positioning grid builder to choose the space to own first, and with the Store brand signal auditor to check the finished look.
 
 works_best_with:
@@ -156,7 +156,7 @@ works_best_with:
     - {name: "Figma", why: "Optional, and you may need a paid plan. A designer can build the wide boards and mock the pack and home page in one file. The plan works without it."}
     - {name: "Pinterest", why: "A quick place to collect reference images for each theme before you build the boards."}
   inputs:
-    - "Your brand brain file, with mission, values and voice"
+    - "Your org context file, with mission, values and voice"
     - "Screenshots of three to five rivals' sites and pack"
     - "Photos of your products in the scenes where they are used"
     - "Your current logo and any brand colours already in use"

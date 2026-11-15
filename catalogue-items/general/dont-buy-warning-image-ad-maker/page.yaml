@@ -44,7 +44,7 @@ output_sample:
     - Your approved story ad and the advice it gives
     - The kind of product that failed, in your buyers' words
     - Why it failed, and the claim that answers it, with sources
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - Ad copy for your story, for example from the Fact-based ad copy writer
     - An image tool, only if you want the picture made for you (ChatGPT, Gemini or Higgsfield)
@@ -182,7 +182,7 @@ test:
   - Run a stop against a check on the same story. Keep whichever brings more readers to the offer.
 
 improve:
-  - Add what your buyers tried before and why it failed, in their words, to your brand file.
+  - Add what your buyers tried before and why it failed, in their words, to your org context.
   - Keep a source beside every claim the story uses to answer the warning.
   - Add the checks a buyer can do themselves (a seam, a weight, a label) to step 2, so it can offer a check.
   - Pair it with a story ad skill, so the first lines give the reason the card holds back.

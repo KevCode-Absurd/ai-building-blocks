@@ -11,7 +11,7 @@ subhead: Paste the feedback on a finished image or clip, and attach the piece. I
 explain: |
   AI images and clips repeat the same mistakes: a pack torn open at the wrong edge, a hand floating in the air, a lid that vanishes between clips. If nobody writes the fix down, you pay for it again on the next job.
 
-  This skill keeps two lists. The any-product list comes with ten rules, such as hands described in full and no generated children. Your product list holds rules about your product only, like where your pack tears. For each piece of feedback it keeps the person's words, decides whether it's a lasting rule or a one-off taste, and finds where the mistake slipped in: the prompt never asked, no photo showed it, or the tool ignored a clear instruction. Each rule gets two lines, one to paste into the next prompt and one to check the result against. Repeats are counted, and rules that are now fixed in your brand file are retired, so the list stays short enough to read in a minute.
+  This skill keeps two lists. The any-product list comes with ten rules, such as hands described in full and no generated children. Your product list holds rules about your product only, like where your pack tears. For each piece of feedback it keeps the person's words, decides whether it's a lasting rule or a one-off taste, and finds where the mistake slipped in: the prompt never asked, no photo showed it, or the tool ignored a clear instruction. Each rule gets two lines, one to paste into the next prompt and one to check the result against. Repeats are counted, and rules that are now fixed in your org context are retired, so the list stays short enough to read in a minute.
 
 when:
   - Someone has just corrected an AI image or clip and you want the fix to stick.
@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have a one-off taste about one image and no rule behind it: just edit your prompt and run it again."
   - "You have no finished piece or feedback yet and only need a brief: use the Product image ad prompt writer."
-  - "You need your brand facts, claims and voice in one place: use the Brand profile builder first."
+  - "You need your brand facts, claims and voice in one place: use the Org context builder first."
 
 you_give:
   - The feedback on a finished piece, in the person's exact words (optional)
@@ -31,7 +31,7 @@ you_get:
   - Each piece of feedback sorted into a lasting rule or a one-off, with where it slipped in
   - New or updated rules, each with a prompt line, a check line, a reason and a count
   - The prompt lines for your next job, ready to paste
-  - A short list of rules to retire, once they're fixed in your brand file
+  - A short list of rules to retire, once they're fixed in your org context
   - Any of its four checks the rules still miss, and each check line a finished piece fails
 
 how_to_use:
@@ -54,7 +54,7 @@ output_sample:
     - name: Prompt lines for the next job
       contains: Each rule that applies, ready to paste, plus any missing product facts.
     - name: Retire
-      contains: Rules now fixed in the brand file with no failures in the last five jobs.
+      contains: Rules now fixed in the org context with no failures in the last five jobs.
     - name: Checks missed
       contains: Any check the rules still miss, and each check line a finished piece fails, or none.
 
@@ -68,7 +68,7 @@ how_it_works:
   - title: Writes two lines
     text: A prompt line that asks for the right thing, and a check line that says what fails, with a reason and the work it covers.
   - title: Counts and retires
-    text: Repeats add to a count instead of a new rule. Rules now fixed in your brand file, with no failures in five jobs, are retired.
+    text: Repeats add to a count instead of a new rule. Rules now fixed in your org context, with no failures in five jobs, are retired.
   - title: Hands over the rules
     text: Before each job, gives the prompt lines for that kind of work, then checks the finished piece against the check lines.
 
@@ -90,7 +90,7 @@ output_shape: |
   - MISSING: <any product fact the rules need>
 
   RETIRE
-  <rules now fixed in the brand file, with no failures in five jobs>
+  <rules now fixed in the org context, with no failures in five jobs>
 
   CHECKS MISSED
   Rules: <one line each, or none>

@@ -49,7 +49,7 @@ output_sample:
     - Your margin per product
     - Your current welcome flow and results (optional)
   prerequisites:
-    - Your brand brain and your offer from earlier items help, but are optional
+    - Your org context and your offer from earlier items help, but are optional
   output:
     - name: Header
       contains: Store name, the offer, when it ends, and whether your margin can carry it.
@@ -130,7 +130,7 @@ test:
 
 improve:
   - Add your real review count, press names and guarantee wording to the skill file so every outline uses true proof.
-  - Save your winning welcome offer and its test result in your brand file, then reuse it as the starting point.
+  - Save your winning welcome offer and its test result in your org context, then reuse it as the starting point.
   - Add the emails your current flow already has that earn well, so they stay in the plan.
   - Pair it with the signup pop-up builder, the post-purchase flow builder and the email segment builder.
 

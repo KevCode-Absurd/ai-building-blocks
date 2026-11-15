@@ -141,7 +141,7 @@ test:
 improve:
   - Add your rules for claims to the skill file, such as which words you may never use, so every brief respects them.
   - Add the ad types you already run, so it names a type you are not yet using.
-  - Save each winning angle and the quote behind it in your brand file, and paste that file next time.
+  - Save each winning angle and the quote behind it in your org context, and paste that file next time.
   - Pair it with a skill that builds your buyer profiles, and one that checks the finished ad against the platform rules.
 
 works_best_with:

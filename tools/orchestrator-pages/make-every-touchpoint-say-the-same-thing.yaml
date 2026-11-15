@@ -5,19 +5,19 @@ job: brand-file
 thinking: high
 thinking_why: Four skills run in a row and the audit judges screenshots. Give it your strongest model.
 headline: Make your site, emails and packaging sound like one brand
-subhead: Give it your store link, reviews and screenshots of your homepage, product page, pack and an email. It builds your brand file, scores where touchpoints disagree and ranks the fixes, edits your sample copy to the voice, and writes a guide new writers can follow.
+subhead: Give it your store link, reviews and screenshots of your homepage, product page, pack and an email. It builds your org context, scores where touchpoints disagree and ranks the fixes, edits your sample copy to the voice, and writes a guide new writers can follow.
 explain: |
   When a site, an email and a box each say something different, shoppers trust you less. They cannot say why, they just feel it. New writers and designers make it worse, because nothing written down tells them how the brand sounds or looks.
 
-  The steps start by writing down what the brand really is. First it reads your store and reviews into one brand file, with each fact tagged by where it came from. Then it scans your homepage, a product page, your pack and an email, scores how well they fit that file, and ranks the fixes by how many shoppers see them. It checks sample copy against your voice and rewrites weak lines. Last, it packages voice, colours and do and don't into a guide with a copy-paste tokens file.
+  The steps start by writing down what the brand really is. First it reads your store and reviews into one org context, with each fact tagged by where it came from. Then it scans your homepage, a product page, your pack and an email, scores how well they fit that file, and ranks the fixes by how many shoppers see them. It checks sample copy against your voice and rewrites weak lines. Last, it packages voice, colours and do and don't into a guide with a copy-paste tokens file.
 when:
   - Your site, emails and packaging feel like different companies.
   - A new writer, designer or agency keeps getting the voice wrong.
   - You are about to redesign or relaunch and want to know what is off first.
 not_for:
-  - "Your brand has no live site or reviews yet: start with the Brand profile builder alone, then come back."
+  - "Your brand has no live site or reviews yet: start with the Org context builder alone, then come back."
   - "You only need a short voice summary for writers: use the Brand voice one-pager writer."
-  - "You only want a guide from a brand file you already have: use the Brand guide builder."
+  - "You only want a guide from an org context you already have: use the Brand guide builder."
 you_give:
   - Your store address, plus any pasted pages if it can't be read
   - Customer reviews or survey answers (optional)
@@ -25,7 +25,7 @@ you_give:
   - A sample of your current ad or email copy (optional)
   - Your logo rules and colour codes (optional)
 you_get:
-  - A brand file of eight plain files with each fact tagged by its source
+  - An org context of eight plain files with each fact tagged by its source
   - A fit score out of 100 and a ranked fix list, ordered by what shoppers see first
   - A voice score out of 100 for your sample copy, with the weak lines rewritten
   - A printable brand guide with colour pairs checked for readable contrast, and a tokens file
@@ -45,7 +45,7 @@ output_sample:
   prerequisites:
     - An AI that can read files and images, such as Claude with the handoff folder attached
   output:
-    - name: "Step 1: Brand file"
+    - name: "Step 1: Org context"
       contains: Eight plain files on facts, offers, buyers, claims, voice and look, with each fact tagged by its source.
     - name: "Step 2: Touchpoint audit"
       contains: A scan of each asset, a touchpoint list, price fit, a score out of 100 and fixes ranked by visibility.
@@ -56,7 +56,7 @@ output_sample:
     - name: Hand-back summary
       contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
-  - title: Build your brand file
+  - title: Build your org context
     text: Reads the site and your reviews, tags every fact by source and status, and writes eight plain files on offers, buyers, claims, voice and look.
   - title: Audit your touchpoints
     text: Scans each asset for three seconds, lists every touchpoint, checks price fit and trust cues, scores the fit and ranks the fixes.
@@ -65,7 +65,7 @@ how_it_works:
   - title: Build the brand guide
     text: Packages voice, colours, type and do and don't into a guide with a quick sheet first, plus a copy-paste tokens file.
 output_shape: |-
-  STEP 1: BRAND FILE
+  STEP 1: ORG CONTEXT
     Eight files for facts, offers, buyers, claims, voice and look, market and history, each fact tagged
 
   STEP 2: TOUCHPOINT AUDIT
@@ -89,7 +89,7 @@ tweaks:
   - what: Edit mode
     how: Use report mode if the copy is already live or belongs to someone else. It lists problems and changes nothing.
 judge:
-  - Every fact in the brand file has a source tag.
+  - Every fact in the org context has a source tag.
   - The audit lists what it could not see, not guesses.
   - The fit score explains what it measures.
   - Rewritten lines keep the same claims, numbers and offers.
@@ -98,9 +98,9 @@ test:
   - Hide the logo on your homepage and a promo email. Could a stranger tell they are the same brand?
   - Take the top fix and check it against the real asset.
   - Ask a new writer to write one email using only the guide. Compare it with your best email.
-  - Check three facts in the brand file against your own records.
+  - Check three facts in the org context against your own records.
 improve:
-  - Edit the voice rules in the brand file after each real customer quote you add.
+  - Edit the voice rules in the org context after each real customer quote you add.
   - Re-run the audit after you fix the top three items.
   - Save the guide and tokens file where your designers and writers can find them.
   - Add rival touchpoints to the audit to see where you stand out.

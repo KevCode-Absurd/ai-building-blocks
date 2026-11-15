@@ -114,7 +114,7 @@ test:
   - Run it twice. The moves kept and the order of the ladder should be close.
 
 improve:
-  - Save your best moves, ladders and chains in your brand file, so a new product in the same field starts from them.
+  - Save your best moves, ladders and chains in your org context, so a new product in the same field starts from them.
   - Add customer doubts in their own words, so the ladder starts from what your buyers actually believe.
   - After the run, test the finished copy against your control with the same headline.
 

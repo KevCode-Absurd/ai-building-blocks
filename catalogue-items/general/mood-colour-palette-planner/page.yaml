@@ -137,7 +137,7 @@ test:
 improve:
   - "Add your brand colours as fixed items in the input."
   - "Add your accessibility rule for text contrast in step 5."
-  - "Save the final palette and jobs in your brand file."
+  - "Save the final palette and jobs in your org context."
   - "Pair it with an icon set planner so icons use the same palette."
 
 works_best_with:
@@ -146,7 +146,7 @@ works_best_with:
     - {name: "Coolors or Adobe Color", why: "Free colour tools for building and exporting the palette."}
   inputs:
     - "A photo of the room, page or product"
-    - "Your brand file"
+    - "Your org context"
     - "Two examples of palettes you like"
     - "The device or lighting where it will be seen"
 

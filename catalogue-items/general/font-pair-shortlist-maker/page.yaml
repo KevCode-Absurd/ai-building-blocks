@@ -103,7 +103,7 @@ test:
 improve:
   - "Add the fonts your competitors use so yours stand apart."
   - "Add your logo font and brand colours."
-  - "Save the winning pair and sizes in your brand file."
+  - "Save the winning pair and sizes in your org context."
 
 works_best_with:
   tools:

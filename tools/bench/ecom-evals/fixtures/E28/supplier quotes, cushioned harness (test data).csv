@@ -1,0 +1,5 @@
+# (test data) Quotes for 3,000 units of the Cushioned Dog Harness, Nov 2026, USD. Built for an e-commerce eval. Not Wild One's real figures.
+supplier,unit_price,incoterm,moq,lead_time_days,payment_terms
+"Supplier A (Dongguan, China)",6.1,FOB Shenzhen,3000,45,"30% deposit, 70% before shipping"
+"Supplier B (Phnom Penh, Cambodia)",7.2,FOB Sihanoukville,2000,50,"30% deposit, 70% on bill of lading"
+"Supplier C (Ho Chi Minh City, Vietnam)",6.4,EXW factory,3000,75,"50% deposit, 50% before shipping"

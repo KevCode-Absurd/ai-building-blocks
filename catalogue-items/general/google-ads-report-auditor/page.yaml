@@ -223,7 +223,7 @@ improve:
   - Write your target cost per purchase or target return into "What you need" in the skill file, so it never falls back to "describe only".
   - Add your brand terms, misspellings and existing negative keyword lists to the skill, so every search terms run checks against them.
   - If you only use some areas, delete the others from the table in the skill file, so it can't drift into parts of the account you don't run.
-  - Save each run's structured report in your brand file or a shared folder, and paste last month's next time to see what moved.
+  - Save each run's structured report in your org context or a shared folder, and paste last month's next time to see what moved.
   - Pair it with a skill that reviews your landing page when the Quality Score parts point there, and with one that writes ad copy from your approved facts.
 
 works_best_with:

@@ -19,8 +19,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Hooks** (yours): opening lines, each with the angle and persona it targets.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional), a shortlist (optional). It uses your brand file.
-2. **Hooks** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). Bring hooks. It uses your brand file and video ad script.
+1. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional), a shortlist (optional). It uses your org context.
+2. **Hooks** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). Bring hooks. It uses your org context and video ad script.
 3. This one.
 
 How to start:

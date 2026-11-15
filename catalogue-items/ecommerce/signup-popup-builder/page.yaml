@@ -140,7 +140,7 @@ improve:
   - Add your real margin and order value to the skill file, so the offer check starts from them.
   - Add the consent wording your lawyer or policy page uses for each region.
   - Add your popup tool's step and trigger names.
-  - Save each test result to your brand file so the next run starts from it.
+  - Save each test result to your org context so the next run starts from it.
   - Pair it with the email test planner for the testing rules and the welcome flow builder for what happens after the signup.
 
 works_best_with:

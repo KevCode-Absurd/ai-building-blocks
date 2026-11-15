@@ -26,7 +26,7 @@ you_give:
   - "The name, spelled exactly as it should appear"
   - "What the name means and what it should make people feel"
   - "Where the mark will be used (optional)"
-  - "Your brand file, for tone and colour limits (optional)"
+  - "Your org context, for tone and colour limits (optional)"
 you_get:
   - "At least five different shape ideas, each a sketch you can draw"
   - "A typeface type and spacing note for each"
@@ -45,7 +45,7 @@ output_sample:
     - The name, spelled exactly as it should appear
     - What the name means and what it should make people feel
     - Where the mark will be used (optional)
-    - Your brand file for tone and colour limits (optional)
+    - Your org context for tone and colour limits (optional)
   output:
     - name: Name and meaning
       contains: The name, its meaning in one line and the feeling it should give.
@@ -132,7 +132,7 @@ test:
 improve:
   - "Add your brand limits (colours, case, languages) to \"What you need\"."
   - "Add examples of marks you like to the brief, so the typeface notes fit your taste."
-  - "Save the rejected ideas in your brand file for later campaigns."
+  - "Save the rejected ideas in your org context for later campaigns."
   - "Pair it with \"Logo strength tester\" to score the finished candidates."
 
 works_best_with:

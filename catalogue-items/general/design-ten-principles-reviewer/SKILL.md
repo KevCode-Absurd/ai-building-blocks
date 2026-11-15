@@ -29,7 +29,7 @@ How to start:
 
 ## What you need
 
-A design review needs only the items below: your question (what it is and who uses it), the thing itself if you have it, and any product facts. No brand brain, claims or offer terms are needed.
+A design review needs only the items below: your question (what it is and who uses it), the thing itself if you have it, and any product facts. No org context, claims or offer terms are needed.
 
 - **What it is and who uses it** (required): a description in your own words.
 - **The thing itself** (optional): a link, screenshot or photos. Attach them, because the AI can see images. If it cannot, say which principles could not be fully checked. Without a picture or the real thing, aesthetic, unobtrusive and consistent in detail cannot be judged from words alone.

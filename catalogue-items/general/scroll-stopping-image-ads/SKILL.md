@@ -16,7 +16,7 @@ The work goes into the argument and the words first. Creative quality drives abo
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand file** (its buyers part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its buyers part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
@@ -24,14 +24,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
-**From the brand file, read:** `index.md`, `look.json`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `look.json`, `foundation/design.md`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, customer words, product photos. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, customer words, product photos. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -83,7 +83,7 @@ In this skill a "code" is the short label of an ad (type, dress, audience), a "d
 6. **Write the words** with `image-ad-copy-writer` if it's added here, or write them yourself to the same rules, to the picture that now exists. Give 2 or 3 headline options per ad. Each line traces to a buyer-sheet entry. A stranger the product isn't for should be able to tell it isn't for them.
 7. **Lay out each ad.** Real type over the picture, in the brand's typefaces, with a clear order of size. The skeleton follows the type: Product alone and The offer stack, Look inside uses centre and labels, Old way, new way splits, The moment and In use run full bleed with a card, Their words and Checked fact use big type.
 8. **Check every ad at full size** against the glance rules, the honesty rules and these: type crisp, no clipped letters; every claim and number on file; the product matches its photo; with the logo covered, a stranger could still guess the brand from its colours, shapes and type (Romaniuk on distinctive brand assets). Then check the batch: codes, arguments, the 1 in 5 limit, the type and dress counts.
-9. **After an authorized launch.** Read actual results by type and argument at the planned review point. Record spend, exposure, audience, period and purchase counts before pooling ads. Twenty purchases is a rough planning example, not a fixed noise band, significance threshold or proof of a winner. Compare only compatible groups, show uncertainty with a suitable method when supported, and say inconclusive when delivery or sample limits prevent a fair comparison. Choose promising ideas for a next controlled test; do not infer causal effects from a coverage grid or name a statistical winner from a fixed percentage gap. Record the evidence and limits in the brand file.
+9. **After an authorized launch.** Read actual results by type and argument at the planned review point. Record spend, exposure, audience, period and purchase counts before pooling ads. Twenty purchases is a rough planning example, not a fixed noise band, significance threshold or proof of a winner. Compare only compatible groups, show uncertainty with a suitable method when supported, and say inconclusive when delivery or sample limits prevent a fair comparison. Choose promising ideas for a next controlled test; do not infer causal effects from a coverage grid or name a statistical winner from a fixed percentage gap. Record the evidence and limits in the org context.
 
 ## Glance rules
 - A stranger gets it in 2 seconds: people spend about 1.7 seconds on a feed post on a phone (Facebook IQ, 2016).
@@ -97,7 +97,7 @@ In this skill a "code" is the short label of an ad (type, dress, audience), a "d
 - Every view of it comes from a real photo of that view. Drawn versions keep the real shape, colours and big lettering. Leave fine print off rather than make it up.
 - Leave the product out only for a problem shot or a shot of the thing it replaces, and then the words must name it and give one fact that's only true of it.
 - Picture the problem, what causes it, or the product doing its job. Never a result the facts don't state: no changed body or face, no week-by-week change, no drawn number without a source. Fear is never bigger than the real stake.
-- Health, body, digestion, weight, sleep or money claims (for example on a supplement) may only use wording already approved in the brand file, with its conditions. If none is approved, write `MISSING: approved claim` and leave the line out. The brand owner signs off any such line before the ad runs, and the platform's ad policy applies.
+- Health, body, digestion, weight, sleep or money claims (for example on a supplement) may only use wording already approved in the org context, with its conditions. If none is approved, write `MISSING: approved claim` and leave the line out. The brand owner signs off any such line before the ad runs, and the platform's ad policy applies.
 - Quotes are word for word, with the source and no generated face beside them. The usual way in a comparison is unbranded.
 
 ## What you hand back

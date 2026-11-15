@@ -25,7 +25,7 @@ not_for:
 you_give:
   - "What the event or brand is, and what it is for"
   - "Every place it will show up"
-  - "Your brand file (optional)"
+  - "Your org context (optional)"
   - "Looks or histories you want to avoid (optional)"
   - "Colours already in use nearby, yours or rivals' (optional)"
 you_get:
@@ -38,14 +38,14 @@ how_to_use:
   - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
   - "Describe the event or brand and where it will appear."
   - "Say what you want people to feel, and what to avoid."
-  - "Paste your brand file if you have one."
+  - "Paste your org context if you have one."
   - "Test the rules by giving them to someone who was not in the room and asking them to make one item."
   - "Name the person who checks final work against the rules."
 output_sample:
   input:
     - What the event or brand is, and what it is for
     - Every place it will show up
-    - Your brand file (optional)
+    - Your org context (optional)
     - Looks or histories you want to avoid (optional)
   output:
     - name: Feeling
@@ -143,7 +143,7 @@ test:
 improve:
   - "Add your places and sizes to \"What you need\" so rules cover them."
   - "Add colours you already own to step 3 so it works with them."
-  - "Save the rule sheet in your brand file and date it."
+  - "Save the rule sheet in your org context and date it."
   - "Pair it with \"Page grid and type planner\" to set the grid for your pages."
 
 works_best_with:

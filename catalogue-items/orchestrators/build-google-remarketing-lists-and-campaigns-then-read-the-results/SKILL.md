@@ -23,8 +23,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand file.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your org context.
 3. This one.
 
 How to start:
@@ -76,7 +76,7 @@ Pause here: Build the lists and campaigns, then run the five ads for three to fo
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Google Ads brand traffic splitter](https://useaiblocks.com/skills/brand-and-non-brand-splitter). It takes the audit report.
-- The [Performance Max campaign reviewer](https://useaiblocks.com/skills/performance-max-routine-keeper). It takes the audit report.
 - The [Google Ads launch planner](https://useaiblocks.com/skills/google-ads-launch-planner). It takes the audit report.
+- The [Google Ads scaling readiness reviewer](https://useaiblocks.com/skills/google-ads-scale-gate-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

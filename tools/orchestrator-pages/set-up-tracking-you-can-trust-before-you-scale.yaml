@@ -102,7 +102,7 @@ test:
   - Compare the platform's reported sales with your order count for one day. The gap should match the traps it names.
   - Run step 4 on two different weeks. The trust levels should not swing wildly.
 improve:
-  - Save the naming rules in your brand file, so every new campaign uses the same tags.
+  - Save the naming rules in your org context, so every new campaign uses the same tags.
   - Re-run step 1 after any theme or app change. Setups drift.
   - Add your post-purchase survey answers ("where did you first hear about us") and compare them with the platform numbers.
   - Pair it with a lift test planner once the numbers are clean.

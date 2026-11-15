@@ -145,7 +145,7 @@ test:
 improve:
   - Add your platform's ad rules and your local labelling law as a check at the top of the skill file.
   - Add your approved author line and guarantee wording, so they never change.
-  - Save the section map of your best page to your brand file as the default order.
+  - Save the section map of your best page to your org context as the default order.
   - Add your banned claims, such as health or income promises, to the Checks.
   - Pair it with the Advertorial draft editor to tighten the draft, and the Store social proof placer to place reviews.
 

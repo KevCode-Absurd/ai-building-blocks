@@ -156,7 +156,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 Write `MISSING: <what>` instead of guessing.
 - The tool can't reach the target: say its real maximum, and never call a smaller file the target.
 - You can't see the returned file: mark every row "needs a person to check".
-- You can't see the original: say so in one line, take what's in it from the input (and the brand file for the product's look and label words), and never describe a detail you didn't see. Step 1's check of the original stays open for a person.
+- You can't see the original: say so in one line, take what's in it from the input (and the org context for the product's look and label words), and never describe a detail you didn't see. Step 1's check of the original stays open for a person.
 - No design file or logo artwork: say the words were checked by eye only.
 
 ## Avoid

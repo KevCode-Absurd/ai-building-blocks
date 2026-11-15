@@ -99,7 +99,7 @@ test:
   - Give step 2 a product you already sell. The score should match how that product has actually done.
   - Run step 2 twice on the same quote. The verdict and the weakest test should match, even if the wording differs.
 improve:
-  - Add your price floor, margin floor and cash limit to your brand file, so the hard stops use your rules.
+  - Add your price floor, margin floor and cash limit to your org context, so the hard stops use your rules.
   - Edit the scoring weights in the scorer skill if your category needs different ones, such as a higher floor on margin.
   - Keep a list of ideas you dropped and why, and feed it in next time so the same dead ends are skipped.
   - Run the Launch an Amazon product with sales from day one workflow once you get a go.

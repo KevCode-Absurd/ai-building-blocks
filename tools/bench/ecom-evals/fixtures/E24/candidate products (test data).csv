@@ -1,0 +1,6 @@
+# (test data) Candidate products with supplier quotes, landed cost per unit and MOQ, for this test. Built for an e-commerce eval. Not Wild One's real figures.
+candidate,landed_cost_usd,target_price_usd,moq_units,testing_cost_usd,lead_time_days
+Car safety harness (crash-test claim needs third-party testing),14.2,58,3000,18000,120
+Dog raincoat (6 sizes x 4 colours),9.8,48,6000,0,90
+Cat travel backpack,16.5,85,1500,0,100
+Cat scratcher and toy set,6.1,34,2000,0,75

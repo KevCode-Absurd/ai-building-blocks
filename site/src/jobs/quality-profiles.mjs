@@ -5,258 +5,493 @@ export const QUALITY_PROFILES = {
     "ceiling": 1.1,
     "shape": "Answer or decision in the first 3 lines; the piece the reader will use next; then at most 3 supporting parts; any assumption that changes what to do in one line next to the part it affects.",
     "reader_minutes": 6,
-    "notes": "Use only when no family fits; a shorter answer that is dense still loses, so cut codes and repeated rationale before cutting usable parts."
+    "notes": "Use only when no family fits; a shorter answer that is dense still loses, so cut codes and repeated rationale before cutting usable parts.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof"
+    ]
   },
   "paid-social-ads": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "The asked number of concepts, each: primary text 40-90 words with the hook in the first 125 characters, headline within the platform limit (about 40 characters), image brief 2-4 lines; any required disclosure short and fitted inside each ad; shared offer details and build specs said once; a test plan only if the brief asks for one.",
     "reader_minutes": 5,
-    "notes": "Dev: 1.29x won only 5 of 8 because every ad repeated the same definition and disclaimer block; say shared lines once, keep each required disclosure short, keep each ad as short as a feed scroll allows."
+    "notes": "Dev: 1.29x won only 5 of 8 because every ad repeated the same definition and disclaimer block; say shared lines once, keep each required disclosure short, keep each ad as short as a feed scroll allows.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "landing-page": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Hero (headline, subhead, one CTA) above the fold; 4-6 sections in order problem, how it works, proof, offer, FAQ (4-6 questions), final CTA; legal lines small in the footer.",
     "reader_minutes": 2,
-    "notes": "Dev: 0.93x won 8 of 8; judges still flagged the legal text as heavy, so keep required disclosures but put them in the footer, not the selling sections."
+    "notes": "Dev: 0.93x won 8 of 8; judges still flagged the legal text as heavy, so keep required disclosures but put them in the footer, not the selling sections.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "lifecycle-email": {
     "aim": 0.9,
     "ceiling": 1.1,
     "shape": "Each email: subject, preview text, body 120-200 words with one job and one CTA; then a build table of at most 10 rows and one line on what to watch, unless the brief asks for a measurement plan.",
     "reader_minutes": 1,
-    "notes": "Dev: 0.70x still lost 3 of 8 because the emails read like dense notices; warm customer-voice copy first, operational detail only in the build table."
+    "notes": "Dev: 0.70x still lost 3 of 8 because the emails read like dense notices; warm customer-voice copy first, operational detail only in the build table.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "competitor-analysis": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Verdict and the single biggest weakness first; one comparison table (rows = competitors, columns = the asked dimensions); 3-5 actions ranked by money per unit of effort, each with an owner and a day relative to the start; compact source list.",
     "reader_minutes": 10,
-    "notes": "Dev: 1.02x won 8 of 8 but was called very dense; the table and the actions earn the words, not more prose per row."
+    "notes": "Dev: 1.02x won 8 of 8 but was called very dense; the table and the actions earn the words, not more prose per row.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers"
+    ]
   },
   "support-macros": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "One macro per asked ticket type, each: when to use (1 line), customer reply 50-150 words for email or 1-3 lines for chat, agent steps 2-4 lines; then one escalation table.",
     "reader_minutes": 8,
-    "notes": "Dev: 1.27x won 8 of 8 but clarity fell about 2 points from codes and abbreviations; agents must load a macro in seconds, so spell everything out and keep each macro short."
+    "notes": "Dev: 1.27x won 8 of 8 but clarity fell about 2 points from codes and abbreviations; agents must load a macro in seconds, so spell everything out and keep each macro short.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "creative-brief": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "One page: objective, audience and tension, single-minded message, reasons to believe with sources, tone with one example line, mandatories, deliverables table with specs, timeline table with owners.",
     "reader_minutes": 4,
-    "notes": "New in v3.3 after the 12 Nov fresh set routed an agency brief to the lifecycle-email card. One page means one page; strategy belongs in a separate note only if asked."
+    "notes": "New in v3.3 after the 12 Nov fresh set routed an agency brief to the lifecycle-email card. One page means one page; strategy belongs in a separate note only if asked.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof"
+    ]
   },
   "analysis-memo": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Recommendation box first; the numbers with inputs and one worked example; what the data does and does not show; ranked options or hypotheses; risks with mitigations; decision rule, owners and days relative to the start (calendar dates only when the brief gives them).",
     "reader_minutes": 6,
-    "notes": "New in v3.3 after the 12 Nov fresh set routed an analysis memo to experiment design and a finance memo to the generic card. Show every calculation step; keep to the asked length."
+    "notes": "New in v3.3 after the 12 Nov fresh set routed an analysis memo to experiment design and a finance memo to the generic card. Show every calculation step; keep to the asked length.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers"
+    ]
   },
   "notification-copy": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "One row per asked message: moment or trigger, title and body (or the exact string), character counts, action or deep link; then one line on which to send first and one short cadence and stop note.",
     "reader_minutes": 3,
-    "notes": "New in v3.3 for push, SMS, in-app and UI copy. The v3 dev push task lost 0 of 4 and the fresh microcopy task 1 of 4 on the generic card; length must stay at or under plain."
+    "notes": "New in v3.3 for push, SMS, in-app and UI copy. The v3 dev push task lost 0 of 4 and the fresh microcopy task 1 of 4 on the generic card; length must stay at or under plain.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "sales-pitch": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Buyer page no longer than the plain answer's pitch (one page means about 450 words): headline ask, why now, proof (3 points), the specific ask, what we commit, next step; a separate labeled rep kit after it.",
     "reader_minutes": 3,
-    "notes": "Dev: the buyer-facing page won when it stayed short; the seller's kit sits in a clearly separate section and shares the same overall budget."
+    "notes": "Dev: the buyer-facing page won when it stayed short; the seller's kit sits in a clearly separate section and shares the same overall budget.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "claims-review": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Summary table first (claim, risk level, verdict); then per claim: risk, reason with the rule in 1-2 lines, and a paste-ready rewrite; one short what-evidence-would-clear-it box.",
     "reader_minutes": 8,
-    "notes": "Dev: 0.90x won 8 of 8; the rewrites and the rule citations are what the reader uses, so cut background on the law, not the rewrites."
+    "notes": "Dev: 0.90x won 8 of 8; the rewrites and the rule citations are what the reader uses, so cut background on the law, not the rewrites.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof"
+    ]
   },
   "experiment-design": {
     "aim": 0.9,
     "ceiling": 1.1,
     "shape": "Short version first (arms, primary metric, sample size, duration, decision rule in at most 150 words); then sections in the asked order with one worked sample-size calculation and one decision table.",
     "reader_minutes": 8,
-    "notes": "Dev: 0.84x won only 4 of 8 because jargon and density hid the plan; define each metric once in plain words and make the primary metric match the decision."
+    "notes": "Dev: 0.84x won only 4 of 8 because jargon and density hid the plan; define each metric once in plain words and make the primary metric match the decision.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers"
+    ]
   },
   "creator-brief": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Creator-facing part at most 700 words: the product in one line, do and don't card, 3-5 video formats, disclosure rules, deliverables and due days; deal terms and review checklist as a separate short section.",
     "reader_minutes": 4,
-    "notes": "Dev: 1.22x won 8 of 8 but every judge called it long for creators; keep the required compliance rules, trim everything else the creator does not act on."
+    "notes": "Dev: 1.22x won 8 of 8 but every judge called it long for creators; keep the required compliance rules, trim everything else the creator does not act on.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "crisis-response": {
     "aim": 0.9,
     "ceiling": 1.1,
     "shape": "The decision in 2 lines, then the reply to post (within the platform limit, at most 120 words) that answers the charge head-on, then a 72-hour plan table (time, action, owner, trigger); at most 2 reply variants.",
     "reader_minutes": 4,
-    "notes": "Dev: 1.04x won only 4 of 8; judges wanted less density and a direct answer to the accusation, since the reader acts within hours."
+    "notes": "Dev: 1.04x won only 4 of 8; judges wanted less density and a direct answer to the accusation, since the reader acts within hours.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "outbound-sales": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Each email 50-120 words with one ask and its send day; one compliant footer stated once; then optional usable kit (personalization guide, reply scripts, short pilot plan).",
     "reader_minutes": 6,
-    "notes": "Dev: the emails won because each was shorter than the plain answer's; a seller's kit earns space only inside the owner's limit, after the emails."
+    "notes": "Dev: the emails won because each was shorter than the plain answer's; a seller's kit earns space only inside the owner's limit, after the emails.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "help-docs": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Short answer up top; who does what and when (table); numbered steps by method; what does not carry over; FAQ of 5-8 questions; no internal notes in the published text.",
     "reader_minutes": 10,
-    "notes": "Dev: extra steps and limits paid off where readers would otherwise file tickets, but clarity fell 1 point; spend words on steps, not background."
+    "notes": "Dev: extra steps and limits paid off where readers would otherwise file tickets, but clarity fell 1 point; spend words on steps, not background.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "pricing": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Recommendation and price first; one comparison table; 2-3 revenue scenarios; the gates and test before any change; customer-facing wording in at most 5 lines.",
     "reader_minutes": 8,
-    "notes": "Dev: 0.91x won 8 of 8 but clarity fell 1.6 points from a wall of figures; show the few numbers the decision turns on and move the rest to the table."
+    "notes": "Dev: 0.91x won 8 of 8 but clarity fell 1.6 points from a wall of figures; show the few numbers the decision turns on and move the rest to the table.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers"
+    ]
   },
   "job-description": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "400-700 words: role in 2-3 sentences, what you will do (5-7 bullets), what you bring (5-7), nice to have (2-3), pay and benefits, hiring process steps.",
     "reader_minutes": 4,
-    "notes": "Dev: 1.07x won 8 of 8; candidates skim on a phone, so specific bullets beat a longer story about the team."
+    "notes": "Dev: 1.07x won 8 of 8; candidates skim on a phone, so specific bullets beat a longer story about the team.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof"
+    ]
   },
   "webinar-script": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Timed outline table first (segment, minutes, speaker, goal); talk track at about 130-150 spoken words per minute of the asked length; cues in brackets; follow-up email last.",
     "reader_minutes": 15,
-    "notes": "Dev: 0.92x won 7 of 8 plus 1 tie; judges called it heavy to run, so cues stay short and the script never exceeds the spoken time."
+    "notes": "Dev: 0.92x won 7 of 8 plus 1 tie; judges called it heavy to run, so cues stay short and the script never exceeds the spoken time.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "review-replies": {
     "aim": 0.9,
     "ceiling": 1.1,
     "shape": "Public reply (praise 20-50 words, complaints 40-90) that thanks, answers one point with one fact, and invites contact; then the internal plan (owner, action, day) and platform rules on contacting reviewers.",
     "reader_minutes": 4,
-    "notes": "Dev: 0.93x won 8 of 8; the short public reply won and the plain answer's long feature list in the reply was marked down."
+    "notes": "Dev: 0.93x won 8 of 8; the short public reply won and the plain answer's long feature list in the reply was marked down.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "seo-article": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Answer the search question in the first 100 words; H2s that match real sub-questions; one table or list where readers compare; FAQ of 3-5; title and meta description within search limits.",
     "reader_minutes": 6,
-    "notes": "No dev data; length follows search intent and the pages that already rank, never padding to hit a word count."
+    "notes": "No dev data; length follows search intent and the pages that already rank, never padding to hit a word count.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "social-calendar": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "One table: day (the brief's dates when it gives them), channel, format, hook, caption, asset, CTA; captions at native length for each channel; a 3-5 line note on themes and cadence.",
     "reader_minutes": 6,
-    "notes": "No dev data; the calendar is scanned row by row, so every post fits one row and strategy prose stays short."
+    "notes": "No dev data; the calendar is scanned row by row, so every post fits one row and strategy prose stays short.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "launch-plan": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Goal and launch day first (the brief's date when it gives one); phases (before, launch day, after) as a table with owner, day relative to launch and done-when; standard safety gates (staged rollout, undo) inside the plan; risks with triggers; success measures (3-5).",
     "reader_minutes": 10,
-    "notes": "No dev data; each row must be a task someone owns, and the plan stays within the owner's limit."
+    "notes": "No dev data; each row must be a task someone owns, and the plan stays within the owner's limit.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers"
+    ]
   },
   "investor-update": {
     "aim": 0.9,
     "ceiling": 1.1,
     "shape": "Monthly 300-600 words, quarterly up to about 900: one-line summary, key metrics table, wins (3), problems (2-3) told straight, cash and runway, specific asks (1-3).",
     "reader_minutes": 3,
-    "notes": "No dev data; investors read many updates, so numbers and asks up front and no narrative padding."
+    "notes": "No dev data; investors read many updates, so numbers and asks up front and no narrative padding.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers"
+    ]
   },
   "research-design": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Decision the research informs first; 3-5 questions; method and sample with reasons; recruiting criteria; discussion guide or instrument; analysis plan and timeline.",
     "reader_minutes": 10,
-    "notes": "No dev data; the guide and screener are usable parts that earn space, background theory does not."
+    "notes": "No dev data; the guide and screener are usable parts that earn space, background theory does not.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers"
+    ]
   },
   "product-announcement": {
     "aim": 0.9,
     "ceiling": 1.1,
     "shape": "Press release 300-500 words, customer email 100-200: headline, what it is in one line, 3 benefits with a concrete example each, who gets it and when, how to start, one CTA.",
     "reader_minutes": 2,
-    "notes": "No dev data; readers decide in seconds whether it matters to them, so lead with the change and cut company backstory."
+    "notes": "No dev data; readers decide in seconds whether it matters to them, so lead with the change and cut company backstory.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "partnership-pitch": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Outreach note at most 150 words with one ask; then a one-page proposal (about 450 words): fit, what each side gets, first small test, next step.",
     "reader_minutes": 3,
-    "notes": "No dev data; follows the sales-pitch evidence that a short partner-facing page wins and extras belong in a separate section."
+    "notes": "No dev data; follows the sales-pitch evidence that a short partner-facing page wins and extras belong in a separate section.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "onboarding-flow": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Activation goal first; one table of steps (day or trigger, channel, message, goal); in-product messages at most 40 words, emails 100-150 words; metrics per step.",
     "reader_minutes": 8,
-    "notes": "No dev data; follows the lifecycle-email evidence that each message has one job and operational detail lives in the table."
+    "notes": "No dev data; follows the lifecycle-email evidence that each message has one job and operational detail lives in the table.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "press-pitch": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Subject line of about 10 words or fewer that states the story; body 100-200 words: news hook and angle in 2 sentences, why this reporter in 1 line, what is offered, embargo terms if any, one ask, contact; an optional 2-3 sentence follow-up.",
     "reader_minutes": 1,
-    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. A reporter judges it in seconds, so the story leads and company backstory is cut."
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. A reporter judges it in seconds, so the story leads and company backstory is cut.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "rfp-response": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "One row per question in the buyer's order: number, answer (Yes, No, Partly, Planned), how it works in 1-3 sentences, evidence with date, scope or limits, owner; any answer that rests on an assumption says so in one line; within any word limit the buyer sets.",
     "reader_minutes": 8,
-    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Answer first and evidence per line earn length; marketing prose does not."
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Answer first and evidence per line earn length; marketing prose does not.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "sop": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Header (number, version, owner, effective and review dates); purpose and scope in 2 lines; roles table; before you start; numbered one-action steps with checks inline; exceptions table; records table.",
     "reader_minutes": 5,
-    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Staff follow it on shift, so one action per step and no background prose."
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Staff follow it on shift, so one action per step and no background prose.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof"
+    ]
   },
   "product-description": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Title; 1-2 sentence benefit lead; 3-6 benefit bullets; specs table from the source; fit or size and care; what is in the box; shipping and returns line; 120-300 words of copy plus the table.",
     "reader_minutes": 1,
-    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Shoppers scan, so specs live in the table and no claim goes past the source."
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Shoppers scan, so specs live in the table and no claim goes past the source.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "audio-ad-script": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Header with slot length, word count at about 150 words a minute (about 75 words for 30 seconds), format, offer, code and URL; the script or talking points with the code and URL said twice; must-say and must-not-say lines; read notes.",
     "reader_minutes": 2,
-    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. The slot length is a hard limit; the word count must fit it."
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. The slot length is a hard limit; the word count must fit it.",
+    "buyer_facing": true,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers",
+      "format"
+    ]
   },
   "internal-announcement": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Subject that names the change; what changes in the first 2 sentences, when, who it affects, why, numbered actions with due days, where to ask; 150-400 words; manager notes or FAQ only if asked, labeled and separate.",
     "reader_minutes": 2,
-    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Every employee reads it once, so the change and the action lead and context stays short."
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Every employee reads it once, so the change and the action lead and context stays short.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof"
+    ]
   },
   "vendor-scorecard": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Recommendation box first (choice, why, top risk); the need in 2-3 lines; deal-breakers pass or fail table; criteria and weights table fixed before scoring; scoring table with evidence per score; totals and sensitivity; risks and next steps with owners.",
     "reader_minutes": 6,
-    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. The tables carry the work; extra length is earned only by evidence per score."
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. The tables carry the work; extra length is earned only by evidence per score.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof",
+      "numbers"
+    ]
   },
   "policy-doc": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "Header (owner, version, effective and review dates); purpose and scope; key terms; numbered rules written as condition then action; limits and approvals table; examples table with edge cases; escalation table.",
     "reader_minutes": 6,
-    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Rules must be testable; values statements with no rule do not earn length."
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. Rules must be testable; values statements with no rule do not earn length.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof"
+    ]
   },
   "localisation-brief": {
     "aim": 1,
     "ceiling": 1.1,
     "shape": "One to two pages: project summary; audience and use per locale; tone with one example line; terms to keep and never translate; glossary table; length and format rules table; legal and cultural flags; review steps and timeline.",
     "reader_minutes": 5,
-    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. The glossary and length rules are the usable parts; background on the brand stays short."
+    "notes": "New in v3.4 after the 13 Nov fresh set found no fitting card. The glossary and length rules are the usable parts; background on the brand stays short.",
+    "buyer_facing": false,
+    "required": [
+      "leakcheck",
+      "proof"
+    ]
   }
 };

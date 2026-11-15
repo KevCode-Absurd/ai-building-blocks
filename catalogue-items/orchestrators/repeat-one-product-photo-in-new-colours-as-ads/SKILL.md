@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An approved picture** (yours): the picture you've chosen to use.
 
 **Makes it better (optional):**
-- **Brand file** (its products part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its products part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Your video ads** (yours): the video ads, attached or linked.
 - **Your image ads** (yours): the image ads, attached as pictures.
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
@@ -30,16 +30,16 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand file and offer and buying reasons.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand file and buyer brief.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your org context and offer and buying reasons.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your org context and buyer brief.
 4. This one.
 
-**From the brand file, read:** `index.md`, `look.json`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `look.json`, `foundation/design.md`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for product photos, an approved picture, your brand file. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for product photos, an approved picture, your org context. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -48,7 +48,7 @@ How to start:
 - **The words each ad should carry** (required): or your offer and price. Step 2 spells out every word in the prompt.
 - **The images you approve after the pause** (required for step 4): you make them in your image tool from the step 2 prompts and pick the ones you like.
 - **The upscaler you will use, and the size you need** (needed for step 4): for print or screen, in inches or pixels.
-- **Your brand file, or your colours and voice** (optional).
+- **Your org context, or your colours and voice** (optional).
 - **Product facts** (optional): size, label text, how it opens or is held.
 
 **Cost:** making the pictures needs an image tool. Claude cannot draw unless an image tool is connected. ChatGPT and Gemini can, and free plans have tight daily limits. If you use an OpenAI or Google API key from Claude Code, each picture is billed to you. Ask before spending credits.
@@ -73,7 +73,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Plan the set.** Use the skill `repeated-image-campaign-planner`. Give it your one photo, what you sell and your brand file. It plans a set where the shape repeats and only the colour changes. It says what repeats, what changes, how many pieces, and the colour for each piece. Save it as `outputs/step-01-repeated-image-campaign-planner.md`.
+1. **Plan the set.** Use the skill `repeated-image-campaign-planner`. Give it your one photo, what you sell and your org context. It plans a set where the shape repeats and only the colour changes. It says what repeats, what changes, how many pieces, and the colour for each piece. Save it as `outputs/step-01-repeated-image-campaign-planner.md`.
 2. **Write the exact-text prompts.** Use the skill `image-ad-maker-with-exact-text`. Give it the set plan from the step 1 file, your photo and the words each ad must carry. It turns each piece in the plan into one image prompt with every word in quotes, in order, the product facts repeated so it stays true, tool settings, and a fix for each common fault. Save it as `outputs/step-02-image-ad-maker-with-exact-text.md`.
 3. **Check the ads before you make them.** Use the skill `pre-launch-ad-checker`. Give it the prompts from the step 2 file and your proof and offer. It reads them against your proof and the ad rules, names any two versions that are the same idea instead of passing them, and ends with a verdict and a fix list. Save it as `outputs/step-03-pre-launch-ad-checker.md`.
 

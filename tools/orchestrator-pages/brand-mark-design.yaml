@@ -22,7 +22,7 @@ you_give:
   - A few lines on the job, such as what it is for, when and where
   - Who it is for, and what they should do or see differently
   - Limits you already know, such as budget or size (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
   - Notes from a call or visit with the client, and marks you admire or want to avoid (optional)
   - A day or more to sketch the ideas and finish a few options
   - Your finished options, as images, and the smallest size the mark will be used
@@ -42,7 +42,7 @@ output_sample:
     - "A few lines on the design job: what it is for, when and where"
     - Who it is for, and what they should do or see differently
     - Limits you already know, such as budget or size (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
     - Your finished logo options as images, and the smallest size you will use
   prerequisites:
     - An AI that can read attached files and images
@@ -112,6 +112,6 @@ test:
   - Give it two marks and ask which one it would keep. It should answer with a reason tied to the tests.
   - Write a brief of your own and compare it with the one it writes. The limits should be tighter and the one idea clearer.
 improve:
-  - Save the finished brief to your brand file, so the next design job starts from the same limits.
+  - Save the finished brief to your org context, so the next design job starts from the same limits.
   - Add the marks you rejected and why, so the plan avoids them next time.
   - For a redesign, add how long the current mark has been used and how well it is known.

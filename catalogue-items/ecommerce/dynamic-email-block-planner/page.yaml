@@ -46,7 +46,7 @@ output_sample:
     - Your margin on a first-order discount (optional)
   prerequisites:
     - Access to your email tool, such as Klaviyo, to check real profiles
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Data held
       contains: Each customer property with its exact values, plus your apps and events.

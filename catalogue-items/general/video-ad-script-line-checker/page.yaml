@@ -196,7 +196,7 @@ improve:
   - Add your allowed and banned claims to "What you need" in the skill file, so every review checks against your real limits.
   - Add your brand's voice rules and never-say list under Delivery in the reference file, so voice problems cite your own rules.
   - Write your product type (reordered or kept) into the skill file as a default.
-  - Save the problems it finds often to your brand file as "lines we keep getting wrong", and check new drafts against them first.
+  - Save the problems it finds often to your org context as "lines we keep getting wrong", and check new drafts against them first.
   - Pair it with the skill that writes a video ad script beat by beat, to rewrite once you know what's wrong.
 
 works_best_with:

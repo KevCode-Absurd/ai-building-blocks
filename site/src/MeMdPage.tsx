@@ -4,8 +4,8 @@ import { openBusiness } from "./Business";
 import { drawerFocus } from "./lib/business";
 import "./me-md.css";
 
-// The me.md is the optional, personal part of the brand file (lib/business.ts). This line says so under the hero.
-const BRAND_NOTE = `<p class="note me-brand-note" data-testid="me-brand-note">Your me.md is the optional, personal part of your brand file. Running a business? Start with <button class="text-button" type="button" data-open-brand>5 quick questions about it</button>.</p>`;
+// The me.md is the optional, personal part of the org context (lib/business.ts). This line says so under the hero.
+const BRAND_NOTE = `<p class="note me-brand-note" data-testid="me-brand-note">Your me.md is the optional, personal part of your org context. Running a business? Start with <button class="text-button" type="button" data-open-brand>5 quick questions about it</button>.</p>`;
 const HERO_NOTE = "It is never public.</p>";
 const html = content.includes(HERO_NOTE) ? content.replace(HERO_NOTE, HERO_NOTE + BRAND_NOTE) : content;
 

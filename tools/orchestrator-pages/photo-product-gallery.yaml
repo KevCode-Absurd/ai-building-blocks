@@ -4,7 +4,7 @@ summary: "Turn your real product photos into a product page image gallery. You g
 job: product-photos
 
 headline: "Turn real photos into a product page gallery"
-subhead: Give it real photos of your product, your product facts and your brand file. It records exactly what the product looks like, scores the questions shoppers ask, plans about 8 images, makes them once you approve every word, and checks each one in 13 checks.
+subhead: Give it real photos of your product, your product facts and your org context. It records exactly what the product looks like, scores the questions shoppers ask, plans about 8 images, makes them once you approve every word, and checks each one in 13 checks.
 
 explain: |
   Many product page galleries are five versions of one packshot (the product alone on a plain background). They show what it is and nothing else, so shoppers scroll down hunting for size, ingredients and how to use it. AI images add a new risk: a pack that drifts in colour or shape, or a close-up of a part your product doesn't have.
@@ -23,7 +23,7 @@ not_for:
 you_give:
   - Real photos of the exact product, as many angles as you have, ideally one in use
   - Your product facts, including amounts, size and what's in the box
-  - Your brand file, with your colours, fonts, claims and guarantee terms
+  - Your org context, with your colours, fonts, claims and guarantee terms
   - Customer reviews, to find the worry that stops most sales (optional)
 you_get:
   - A product truth sheet, and the photos you still need
@@ -34,19 +34,19 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md". It needs an image tool connected to make the images.
-  - Have your inputs ready. Your product photos (full size, the exact variant you sell), your product facts with amounts, your brand file and, if you can, your reviews.
+  - Have your inputs ready. Your product photos (full size, the exact variant you sell), your product facts with amounts, your org context and, if you can, your reviews.
   - It works step by step and saves each result. Read the truth sheet's missing photos first. Each one is an image it can't make honestly.
   - Approve the plan and every word on it when it asks, then approve the first two images. Nothing gets made before you say yes, and the words don't change after.
 output_sample:
   input:
     - Real photos of the exact product, from as many angles as you have
     - Your product facts, with amounts, size and what is in the box
-    - Your brand file, or your website link
+    - Your org context, or your website link
     - Your customer reviews (optional)
   prerequisites:
     - An AI that can save files and follow a folder of steps
     - An image tool, or a chat that can make images, to produce the pictures
-    - Your brand brain from the Brand profile builder (recommended)
+    - Your org context from the Org context builder (recommended)
   output:
     - name: Truth sheet
       contains: Shape, colours, printed words, how it opens, what is in the box, what never to draw, and missing photos.
@@ -106,16 +106,16 @@ example:
     [the handoff pack] Follow HANDOFF.md.
 
     Product: Sprout Original (Adults), Low Sugar, 28 daily packs
-    Photos: none attached in this run. The brand file describes the
+    Photos: none attached in this run. The org context describes the
     house photo style: one pouch on a soft gradient with gummies in
     front, and adults pouring gummies into a hand.
-    Product facts: the brand file's product table, price table and
+    Product facts: the org context's product table, price table and
     "fine to repeat" claims, plus its "Show it right" rules.
-    Brand file: the Sprout brand file
+    Org context: the Sprout org context
     Reviews: reviews.md
   output: |
     TRUTH SHEET: Sprout Original (Adults), Low Sugar, 28 daily packs
-    Status: written from the brand file, not checked against photos.
+    Status: written from the org context, not checked against photos.
     It can plan the gallery. Nothing gets made from it.
     Told apart by: no white burst (Sugar-Free has one); green, not the
     yellow Kids pouch.
@@ -166,7 +166,7 @@ example:
     It won't suit me: 3 people (18, 19, "The sugar free [Sprout]
       worked too well.") | grumble -> taste and Low Sugar stay in the
       page text, not the gallery
-    The brand file's doubt, "A gummy can't hold enough", has no review
+    The org context's doubt, "A gummy can't hold enough", has no review
     behind it, so made-of moves to slot 03.
 
     GAPS

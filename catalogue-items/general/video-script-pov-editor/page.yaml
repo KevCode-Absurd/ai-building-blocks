@@ -199,7 +199,7 @@ improve:
   - Add your fixed brand lines and offer wording to step 7 of the skill file as words it must never change, so they survive every voice.
   - If the same speaker always reads your ads (an AI narrator, say), write that into "What you need" as the default.
   - Paste your allowed claims under the checks, so it flags any new wording that strays from them.
-  - Only retell scripts that have already done well, and note which voice won in your brand file next to the script.
+  - Only retell scripts that have already done well, and note which voice won in your org context next to the script.
   - Pair it with a skill that makes a script easy to say aloud, and one that plans which versions to test against each other.
 
 works_best_with:

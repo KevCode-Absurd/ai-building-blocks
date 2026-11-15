@@ -1,0 +1,8 @@
+# (test data) Amazon Brand Analytics and Sponsored Products search terms for this ASIN. Built for an e-commerce eval. Not Pela's real figures.
+search_term,impressions,clicks,orders,conversion_rate
+iphone 17 case,412000,3900,78,2.0%
+iphone 17 case magsafe,228000,2100,19,0.9%
+compostable phone case iphone 17,18400,610,85,13.9%
+eco friendly iphone 17 case,26500,540,41,7.6%
+pela case iphone 17,9100,1150,228,19.8%
+cute iphone 17 case,151000,1400,22,1.6%

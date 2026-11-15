@@ -11,7 +11,6 @@ inputs:
   - {type: keyword_list, required: true}
   - {type: competitor_set, required: false}
   - {type: brand_brain, required: false}
-  - {type: performance_sheet, required: false}
 outputs:
   - {type: plan}
 uses: [amazon-keyword-picker, amazon-listing-writer, amazon-ppc-launch-builder, amazon-inbound-stock-planner, amazon-launch-week-planner]

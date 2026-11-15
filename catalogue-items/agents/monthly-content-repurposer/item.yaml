@@ -19,7 +19,7 @@ steps:
   - {uses: long-form-post-repurposer, note: "Every month, for each piece picked: a post for X or LinkedIn that works even if nobody clicks. Uses the same picked piece as step 1, not step 1's output. Hands step 4 the no-click posts."}
   - {uses: youtube-title-and-tags-writer, note: "Only when a picked piece is a video or podcast, or a clip is planned: title, description, tags and timestamps. Uses the same picked piece, not step 2's output. Hands step 4 the title, description, tags and timestamps."}
   - {uses: social-post-planner, note: "Every month: the month's calendar built from the repurposed pieces, with ready posts per platform. Uses the posts and formats from steps 1 to 3."}
-  - {uses: draft-brand-voice-checker, note: "Every month, last, when a brand brain exists: every post and email checked against your voice, with fixes. Uses the posts from step 4."}
+  - {uses: draft-brand-voice-checker, note: "Every month, last, when an org context exists: every post and email checked against your voice, with fixes. Uses the posts from step 4."}
 schedule: "On the first Tuesday of each month, once last month's content results are in"
 asks_before: [publishing or scheduling any post, email or clip, changing a published piece, replying to comments, paying to promote anything, posting on a platform you have not used before]
 minds: [rand-fishkin]

@@ -199,6 +199,7 @@ Never bury it. Boards find out eventually. Finding out late makes it worse.
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [India finance slide reviewer](https://useaiblocks.com/skills/finance-deck-quality-checker). It takes the slide deck.
 - The [PowerPoint deck change reviewer](https://useaiblocks.com/skills/powerpoint-deck-change-reviewer). It takes the slide deck.
+- The [Case competition slide reviewer](https://useaiblocks.com/skills/case-competition-evidence-review-assistant). It takes the slide deck.
 - The [PowerPoint audience handout builder](https://useaiblocks.com/skills/powerpoint-audience-handout-builder). It takes the slide deck.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -1,12 +1,16 @@
 // Shared by the portable worker, copied launch brief and public API/MCP preparation.
 export const CONTEXT_METHOD = 'website-brand-brain-builder';
-export const BRAND_BRAIN_FILES = ['00-start-here.md','business.md','offers.md','customers.md','proof-and-claims.md','voice-and-look.md','market.md','log.md'];
-// Each area builds the context its work depends on. Only brand-dependent work needs a brand brain.
+// The org context (context/org-context/, once the brand brain): the facts the capture fills, then the written sections.
+// An older context/brand-file/ folder or an eight-file brand-brain/ folder (00-start-here.md ... log.md) still counts as material.
+export const ORG_CONTEXT_FILES = ['index.md','offers.json','facts.json','look.json','voice.md','references.md','worked.md','foundation/brand-dna.md','foundation/customers.md','foundation/customer-talk.md','foundation/design.md','foundation/markets.md','foundation/claims.md','foundation/dos-donts.md'];
+/** The old name, kept so older imports still work. */
+export const BRAND_BRAIN_FILES = ORG_CONTEXT_FILES;
+// Each area builds the context its work depends on. Only brand-dependent work needs an org context.
 export const CONTEXT_KINDS = {
- brand:{method:CONTEXT_METHOD,label:'brand brain',files:BRAND_BRAIN_FILES,
-  ask:'existing brand brain or brief, brand/asset folder, website and relevant ad-library or reference links',
-  build:'reuse a suitable existing folder or read the context method and its required references to build/update brand-brain/ with its eight files',
-  focus:'For copy or media: read offers, claims, customer evidence and voice; verify exact product, current offer, attribution and real assets. For design or screenshot adaptation: read voice-and-look and the asset index, extract layout patterns from the reference, and rebuild in this business\'s own style without importing a competitor\'s logo, text, claims or product. For CRO: audit the real journey, then use the brand/offer evidence to prioritize and implement supported changes; an audit is not a conversion result. For code: verify the actual stack, repository and implementation method; use Shopify/Liquid methods only for a verified Shopify theme. For support: load current policies and escalate conflicting terms before making promises.'},
+ brand:{method:CONTEXT_METHOD,label:'org context',files:ORG_CONTEXT_FILES,
+  ask:'existing org context or brief, brand/asset folder, website and relevant ad-library or reference links',
+  build:'reuse a suitable existing folder or read the context method and its required references to build or update context/org-context/ with these files (an older context/brand-file/ or brand-brain/ folder is material to move in, not a second copy)',
+  focus:'For copy or media: read offers, claims, customer evidence and voice; verify exact product, current offer, attribution and real assets. For design or screenshot adaptation: read the design language (look.json and foundation/design.md) and the asset index, extract layout patterns from the reference, and rebuild in this business\'s own style without importing a competitor\'s logo, text, claims or product. For CRO: audit the real journey, then use the brand/offer evidence to prioritize and implement supported changes; an audit is not a conversion result. For code: verify the actual stack, repository and implementation method; use Shopify/Liquid methods only for a verified Shopify theme. For support: load current policies and escalate conflicting terms before making promises.'},
  project:{method:'agent-context-setter',label:'project context',files:['AGENTS.md or the project\'s existing rules file','work/file-map.md'],
   ask:'the repository or project folder, its stack and versions, how to run and test it, its coding rules and the exact change wanted',
   build:'read the existing rules file, README, package or build files and tests; if no rules file exists, use the context method to write a short one with a focused file map',
@@ -46,12 +50,12 @@ export function contextIntakeContract(kind='brand') {
  const k=CONTEXT_KINDS[kind]??CONTEXT_KINDS.brand;
  return {
   state:'REVIEW_REQUIRED',assessed_by:'execution-host',service_verified:false,kind:CONTEXT_KINDS[kind]?kind:'brand',
-  requirement:k.method===CONTEXT_METHOD?'Inspect relevant context before strategy or production. Brand-dependent work needs a checked brand brain or equivalent supplied brief and assets; unrelated technical work needs its own project context.':`Inspect relevant context before strategy or production. This role's work depends on its ${k.label}, not on brand research.`,
+  requirement:k.method===CONTEXT_METHOD?'Inspect relevant context before strategy or production. Brand-dependent work needs a checked org context or equivalent supplied brief and assets; unrelated technical work needs its own project context.':`Inspect relevant context before strategy or production. This role's work depends on its ${k.label}, not on brand research.`,
   method:k.method,files:k.files,
   discovery:'Read supplied facts, authorized me.md and the named business/project folder first. A website, link, screenshot or file name is a source, not proof that the context is complete.',
   missing:`Ask one concise batch for missing essentials: ${k.ask}. Reuse answers already supplied. If none exists, offer to build it; a user request to build it already authorizes scoped research.`,
   gate:`Read the complete context method before using it. Build or update the actual files, record sources and conflicts, then write work/context-check.md. Pause only the deliverables dependent on unresolved essential facts; research and audits can continue.${k.method===CONTEXT_METHOD?' Never mark a brand claim approved from a sales page alone.':''}`,
-  reuse:`Save in the user-authorized project, index it in CONTEXT.md and log durable changes with their date${k.method===CONTEXT_METHOD?' in brand-brain/log.md':''}. Re-read the relevant current slice for every dependent task. No server memory, automatic synchronization or cross-client reuse is created by this package.`
+  reuse:`Save in the user-authorized project, index it in CONTEXT.md and log durable changes with their date${k.method===CONTEXT_METHOD?' in context/org-context/worked.md and history/changes.md':''}. Re-read the relevant current slice for every dependent task. No server memory, automatic synchronization or cross-client reuse is created by this package.`
  };
 }
 export function contextIntakeInstructions(kind='brand') {

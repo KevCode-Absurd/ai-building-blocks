@@ -132,7 +132,7 @@ test:
 improve:
   - "Write your real traffic by page type into the skill, so it knows which pages deserve a fix first."
   - "Add your own pass line, such as 'all three vitals good on mobile for the product page', if you want a stricter standard."
-  - "Save each month's verdict in your brand file, so the next read can show what moved."
+  - "Save each month's verdict in your org context, so the next read can show what moved."
   - "Pair it with the speed fix ranker to turn the three fixes into orders and money."
 
 works_best_with:

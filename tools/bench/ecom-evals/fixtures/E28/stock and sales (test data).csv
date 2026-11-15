@@ -1,0 +1,6 @@
+# (test data) Cushioned Dog Harness stock and sales, 14 Nov 2026. Built for an e-commerce eval. Not Wild One's real figures.
+metric,value
+Units on hand,6300
+"Average units sold per day, last 60 days",90
+Days of cover,70
+Spring demand (Mar to May) vs average,+35%

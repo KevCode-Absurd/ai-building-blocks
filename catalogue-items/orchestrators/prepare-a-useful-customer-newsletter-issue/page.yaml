@@ -26,7 +26,7 @@ you_give:
   - Store news you have approved, with dates and links to the pages it comes from
   - Three to five past emails or a short voice note, so it can match how you write
   - Mailing rules, such as who gets this issue, the sender name and the send date
-  - Your buyer brief or brand brain (optional)
+  - Your buyer brief or org context (optional)
 you_get:
   - The one customer question it picked, with the exact quote and how many messages sit behind it
   - Two subject and preview options, a short email, a plain-text version and two A/B variants
@@ -80,7 +80,7 @@ output_sample:
     - Your mailing rules, such as audience, sender name and send date
   prerequisites:
     - An AI that can read pasted text or files
-    - Your brand brain or buyer brief, if you have one (optional)
+    - Your org context or buyer brief, if you have one (optional)
   output:
     - name: Customer question
       contains: The question picked, an exact customer quote, how many messages back it and the limits of the sample.

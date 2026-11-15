@@ -1,0 +1,5 @@
+# (test data) Meta Ads Manager export, 1 Nov to 14 Nov 2026, 7-day click 1-day view, USD. Built for an e-commerce eval. Not Graza's real figures.
+campaign,type,days_live,spend,impressions,reach,frequency,link_clicks,ctr_link,cpm,purchases,purchase_value,cost_per_purchase,roas
+ASC | All oils,Advantage+ shopping,220,42000,3833084,1916542,2,46368,1.21%,10.96,1628,66214,25.8,1.58
+Retargeting | 14d visitors,"Sales, retargeting",300,6000,274037,53733,5.1,5002,1.83%,21.89,384,16848,15.63,2.81
+Gifting | The Trio,"Sales, broad",21,5000,421167,263229,1.6,4815,1.14%,11.87,145,7610,34.48,1.52

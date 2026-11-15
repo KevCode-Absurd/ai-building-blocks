@@ -1,0 +1,10 @@
+# (test data) Google Search Console performance by query, 15 Aug to 14 Nov 2026, US. Built for an e-commerce eval. Not Fellow's real figures.
+query,clicks,impressions,ctr,position,note
+fellow,182000,401000,45.4%,1.1,Clicks down 9% vs the 3 months before; down 8% in the same months of 2025
+fellow stagg,41000,98000,41.8%,1.2,
+pour over kettle,290,48300,0.6%,11.4,Ranking URL: /collections/kettles
+electric gooseneck kettle,2100,39000,5.4%,4.8,
+best coffee grinder,640,61000,1.0%,9.7,Two URLs swap: /blogs/brew/best-coffee-grinder and /products/ode-brew-grinder-gen-2
+burr grinder,1300,27000,4.8%,6.2,
+how to make pour over coffee,5100,88000,5.8%,3.9,
+espresso machine for beginners,120,22000,0.5%,18.3,

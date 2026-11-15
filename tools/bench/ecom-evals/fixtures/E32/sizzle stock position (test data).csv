@@ -1,0 +1,8 @@
+# (test data) Sizzle stock on 14 Nov 2026. Built for an e-commerce eval. Not Graza's real figures.
+metric,value
+Units on hand (warehouse),7900
+Units on the way (arrives 21 Nov),0
+"Supplier lead time, order to warehouse",30 days
+Safety stock policy,2 weeks of average sales
+Standard reorder quantity,"6,000 units (one container)"
+Retail orders this month,on plan

@@ -114,7 +114,7 @@ test:
   - Run it twice on the same input. The final call should be the same, even if the wording differs.
 
 improve:
-  - Save your lost-deal notes and yearly numbers in your brand file, so later runs start from them.
+  - Save your lost-deal notes and yearly numbers in your org context, so later runs start from them.
   - After the first fix, run steps 4 and 5 again and compare the totals.
   - Pair it with "Pick the small market to own first, then the ones after" if step 2 says sliver.
 

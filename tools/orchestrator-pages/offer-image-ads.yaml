@@ -6,7 +6,7 @@ thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
 
 headline: "Get three offer image ads that sell one deal clearly"
-subhead: Give it your website and your current prices and deals. It builds your brand file, finds offers worth trying, plans three image ads for the one you pick, in two sizes, and checks them against Facebook and Instagram ad rules.
+subhead: Give it your website and your current prices and deals. It builds your org context, finds offers worth trying, plans three image ads for the one you pick, in two sizes, and checks them against Facebook and Instagram ad rules.
 
 explain: |
   An offer ad goes wrong when the deal is hard to read. Two prices fight each other, the terms are in small print, or the ad promises a saving the checkout does not give. A shopper decides in a second or two, so the deal has to be clear in that time.
@@ -28,7 +28,7 @@ you_give:
   - Real product photos
   - Your target countries, for the ad rules check (optional)
 you_get:
-  - A brand file with your offers, prices and claims word for word
+  - An org context with your offers, prices and claims word for word
   - Clashes between your live offers, flagged
   - New offers to try, three picked to go first
   - Three offer image ads in two sizes, with one offer block
@@ -38,7 +38,7 @@ how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. Your website link, your prices and deals as they stand, and your product photos.
-  - Answer the one check-in on the brand file, then pick the offer you want ads for.
+  - Answer the one check-in on the org context, then pick the offer you want ads for.
   - Make the pictures with your image tool, and fix anything the ad rules check marks "Fix first".
 output_sample:
   input:
@@ -50,7 +50,7 @@ output_sample:
     - An AI that can read files and follow HANDOFF.md, such as Claude
     - Your handoff pack folder with every skill file
   output:
-    - name: Brand file
+    - name: Org context
       contains: Your offers, prices, terms and claims, each tagged with where it came from on your site.
     - name: Offer finder result
       contains: Your live offers, clashes between them, new offers from your stock, and three picked to try first.
@@ -64,8 +64,8 @@ output_sample:
       contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
-  - title: Builds your brand file
-    text: Uses the brand file skill to read your site and tag every price, deal and claim with where it came from.
+  - title: Builds your org context
+    text: Uses the org context skill to read your site and tag every price, deal and claim with where it came from.
   - title: Finds offers to try
     text: Uses the offer finder skill to copy down what is live, flag clashes, turn your stock into new offers and pick three to try first.
   - title: Plans three offer ads
@@ -150,14 +150,14 @@ test:
   - Check that the rules check quotes the exact line it flags.
 
 improve:
-  - Drop step 1 if your brand file is up to date, and start from step 2.
+  - Drop step 1 if your org context is up to date, and start from step 2.
   - Add a step after step 3 that turns the ads into image prompts for your image tool.
   - Run the ads through a pre-launch check as well as the ad rules check.
   - Pair it with a skill that reads your results, so the next set tests a new offer.
 
 works_best_with:
   tools:
-    - {name: "Claude", why: "Holds your brand file, price list and four steps of work in one run."}
+    - {name: "Claude", why: "Holds your org context, price list and four steps of work in one run."}
     - {name: "Meta Ads Manager", why: "Its preview shows where the text above the image gets cut off."}
   inputs:
     - "Your price list, with renewal prices and any text sign-up terms"

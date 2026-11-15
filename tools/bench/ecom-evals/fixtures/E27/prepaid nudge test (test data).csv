@@ -1,0 +1,4 @@
+# (test data) Checkout test, Oct 2026: Rs 30 off for paying online, shown to half of COD-intending buyers. Built for an e-commerce eval. Not Sleepy Owl Coffee's real figures.
+group,cod_intending_sessions,switched_to_prepaid,checkout_completion
+Saw Rs 30 prepaid offer,4200,31%,61%
+Control,4150,9%,63%

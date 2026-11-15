@@ -136,7 +136,7 @@ test:
 
 improve:
   - Add the checks your field cares about to the steps, such as lead times or approval gates.
-  - Save your usual cost and time figures in your brand file so it has numbers every run.
+  - Save your usual cost and time figures in your org context so it has numbers every run.
   - Add a line for how much error is acceptable in your work, so it knows when to stop.
   - Pair it with "Big problem splitter" when the goal is too large to plan yet.
 

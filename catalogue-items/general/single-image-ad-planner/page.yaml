@@ -85,7 +85,7 @@ example:
   input: |
     [the skill]
 
-    Business facts: Sprout brand file (pasted: products, prices,
+    Business facts: Sprout org context (pasted: products, prices,
     offers, fine and risky claims, buyers, voice, look)
     Customer research: all 20 reviews (pasted)
     Buyer: the price doubter. Knows the brand, maybe from a store
@@ -197,7 +197,7 @@ improve:
   - Paste your offer, renewal terms and guarantee into "What you need" in the skill file, word for word from your site, so every ad uses the same terms.
   - Mark the types on the map you can never fill (for example Checked fact, if you hold no study), so they're ruled out at once.
   - Add your top refund and cancel reasons as fixed rules, so no ad promises the thing that lets buyers down.
-  - Save each winning claim, type and layout in your brand file, and paste them next time so new ads start from what sold.
+  - Save each winning claim, type and layout in your org context, and paste them next time so new ads start from what sold.
   - Pair it with the prompt that keeps your product and words exact in the image, and a check of the finished ad before you spend.
 works_best_with:
   tools:

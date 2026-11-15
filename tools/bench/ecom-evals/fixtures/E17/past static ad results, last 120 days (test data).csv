@@ -1,0 +1,5 @@
+# (test data) Meta static ads, USD. Built for an e-commerce eval. Not Graza's real figures.
+concept,ads,spend,ctr_link,cost_per_purchase
+"Bottle standing on a counter, studio light",7,21000,0.9%,34
+"Hand squeezing oil onto food (eggs, pasta, salad), close-up",6,19800,1.8%,19
+"Illustrated label art, no food",3,6300,1.0%,37

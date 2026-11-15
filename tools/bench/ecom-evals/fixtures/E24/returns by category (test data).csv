@@ -1,0 +1,6 @@
+# (test data) Return rates by category, last 12 months. Built for an e-commerce eval. Not Wild One's real figures.
+category,return_rate,top_reason
+Harnesses,11%,Size
+Apparel collab (sizes),27%,Size
+Leashes and collars,4%,Colour
+Cat line,6%,Size

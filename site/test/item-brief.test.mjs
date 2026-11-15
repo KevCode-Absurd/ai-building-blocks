@@ -24,7 +24,7 @@ const PAGE = {
 
 test('the brief: every input once, the first three results, and how long in messages and steps', () => {
   const brief = itemBrief({ kind: 'skill', block: { inputs: ['copy_draft'], outputs: ['audit_report'] }, page: PAGE });
-  assert.deepEqual(brief.give, ['The ad, page or email copy', 'The proof you hold', 'Your brand file (optional)']);
+  assert.deepEqual(brief.give, ['The ad, page or email copy', 'The proof you hold', 'Your org context (optional)']);
   assert.deepEqual(brief.get, ['A table of every claim with a call', 'Safer lines for the weak ones', 'Claims flagged for extra care']);
   assert.equal(brief.more, 1);
   assert.equal(brief.time, 'One chat. Your AI works through 3 steps.');
@@ -32,7 +32,7 @@ test('the brief: every input once, the first three results, and how long in mess
   assert.deepEqual(itemBrief({ kind: 'skill', page: { plan: PAGE.plan, output_sample: PAGE.output_sample } }).give, ['A draft: the ad you want checked']);
   assert.deepEqual(itemBrief({ kind: 'skill', page: { output_sample: PAGE.output_sample } }).get, ['Claim table: One row per claim.']);
   const bare = itemBrief({ kind: 'prompt', block: { inputs: [{ type: 'copy_draft', required: true }, 'brand_file?'], outputs: ['audit_report'] }, page: null });
-  assert.deepEqual(bare, { give: ['Copy draft', 'Brand file'], get: ['Audit report'], more: 0, time: 'One message and one reply.' });
+  assert.deepEqual(bare, { give: ['Copy draft', 'Org context'], get: ['Audit report'], more: 0, time: 'One message and one reply.' });
   assert.deepEqual(itemBrief({ kind: 'mind' }), { give: [], get: [], more: 0, time: 'One question, or a whole conversation.' });
 });
 
@@ -50,8 +50,10 @@ test('how long never invents minutes: it counts messages and steps', () => {
 });
 
 test('one name for saved brand details, and a level anyone can read', () => {
-  assert.equal(plainWords('Brand brain (optional)'), 'Brand file (optional)');
-  assert.equal(plainWords('From your brand brain, and other brand brains'), 'From your brand file, and other brand files');
+  assert.equal(plainWords('Brand brain (optional)'), 'Org context (optional)');
+  assert.equal(plainWords('Brand file (optional)'), 'Org context (optional)');
+  assert.equal(plainWords('Bring a brand file'), 'Bring an org context');
+  assert.equal(plainWords('From your brand brain, and other brand brains'), 'From your org context, and other org contexts');
   assert.equal(plainWords('A brand brainstorm'), 'A brand brainstorm');
   assert.equal(plainWords({ Check: 'this' }), 'Check: this');
   assert.equal(levelLabel('beginner'), 'Good for beginners');
@@ -81,9 +83,9 @@ test('the plain page top: at a glance, one Download button named for the format,
   assert.match(html, /<dt>You get back<\/dt><dd><ul>(?:<li>[^<]+<\/li>){3}<\/ul><p class="small"><a href="#get">See everything you get<\/a><\/p><\/dd><dt>How long<\/dt><dd>One message and one reply\.<\/dd><\/dl>/);
   assert.match(html, /<p><a class="btn btn-primary" href="\/skills\/ad-claim-sorter\/SKILL\.md" download="ad-claim-sorter-prompt\.md">Download prompt<\/a><\/p><p class="small">Then open a new chat, attach the file or paste it in, add your details and send\.<\/p><\/section>$/);
   assert.equal(count(html, 'Download '), 1);
-  // Optional extras carry a plain gloss, and the brand file has one name.
-  assert.match(text(html), /Better with, if you have them: Brand file \(your facts and voice, in one folder\)\./);
-  assert.ok(!/brand brain/i.test(html));
+  // Optional extras carry a plain gloss, and the org context has one name.
+  assert.match(text(html), /Better with, if you have them: Org context \(your facts and voice, in one folder\)\./);
+  assert.ok(!/brand brain|brand file/i.test(html));
   const skill = itemTopHtml({ kind: 'skill', block: {}, page: PAGE, slug: 'x', hasFiles: true });
   assert.match(skill, /<a class="btn btn-primary" href="\/skills\/x\.zip" download>Download skill<\/a>/);
   const flow = itemTopHtml({ kind: 'workflow', block: {}, page: PAGE, slug: 'x', steps: 4, pack: true });

@@ -9,19 +9,19 @@ subhead: Give it your product and your rivals. It maps where each one sits, show
 explain: |
   When every rival says "quality" and "trust", buyers hear one voice and pick on price. Copying the leader's words makes it worse. You need a spot on the map that is open and a message you can prove in a few minutes.
 
-  The steps go from wide to narrow. First it lists every real alternative, including doing nothing, and plots them on two axes buyers feel. Then it finds the one word each rival owns and the words nobody can own. Last it matches your proven strengths against what rivals are weak at, keeps only the pairs a buyer can check, and tests each rival's best reply. Give it your product facts and, if you have them, buyer quotes and your brand file.
+  The steps go from wide to narrow. First it lists every real alternative, including doing nothing, and plots them on two axes buyers feel. Then it finds the one word each rival owns and the words nobody can own. Last it matches your proven strengths against what rivals are weak at, keeps only the pairs a buyer can check, and tests each rival's best reply. Give it your product facts and, if you have them, buyer quotes and your org context.
 when:
   - Your site and ads sound like everyone else's in your category.
   - A bigger rival keeps winning on the same word.
   - You are about to write a new tagline, landing page or ad set and want the message settled first.
 not_for:
-  - "Your brand has no rivals yet, or no strengths you can prove: build your facts first with the Brand profile builder."
+  - "Your brand has no rivals yet, or no strengths you can prove: build your facts first with the Org context builder."
   - "You only want to place rivals on a map: use the Competitor positioning mapper."
   - "You already know your message and need a one-line statement: use the Brand positioning sentence writer."
 you_give:
   - Your product, who it is for and the rivals you worry about
   - What buyers say about you and them, from reviews or calls (optional)
-  - Your brand file or a list of strengths you can prove (optional)
+  - Your org context or a list of strengths you can prove (optional)
 you_get:
   - A map of your rivals on two axes, with crowded and open corners marked
   - The word each rival owns, the claims nobody owns and three open words
@@ -36,7 +36,7 @@ output_sample:
     - Your product and who it is for
     - Five or more rivals, including the cheap option and doing nothing
     - Buyer quotes from reviews or calls (optional)
-    - Your brand file or a list of strengths you can prove (optional)
+    - Your org context or a list of strengths you can prove (optional)
   prerequisites:
     - An AI that can read the handoff folder, such as Claude Code or a Claude Project with files
   output:
@@ -88,5 +88,5 @@ test:
   - Check each proof against the page it points to.
 improve:
   - Re-run it every six months, since rivals change what they say.
-  - Save the open words in your brand file so later copy stays on one message.
+  - Save the open words in your org context so later copy stays on one message.
   - Test the top two messages against each other in a small ad test.

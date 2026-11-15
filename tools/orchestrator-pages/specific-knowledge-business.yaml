@@ -93,6 +93,6 @@ test:
   - Run step 2 on an income that is all hourly. It should say so plainly, not invent a passive income line.
   - Describe a person you know well, good or bad, and see if the call matches what you already know.
 improve:
-  - Save your specific knowledge picks and the test results into your brand file, so later plans start from what you learned.
+  - Save your specific knowledge picks and the test results into your org context, so later plans start from what you learned.
   - Add your real hourly rate and the work you plan to stop doing, and review them on the date it sets.
   - Reuse the partner check before any new client, hire or deal that will last more than a few months.

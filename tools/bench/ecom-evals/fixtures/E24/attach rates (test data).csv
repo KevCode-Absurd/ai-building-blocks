@@ -1,0 +1,5 @@
+# (test data) Share of orders that include a second item, last 90 days. Built for an e-commerce eval. Not Wild One's real figures.
+first_item,adds_cat_tunnel,adds_breakaway_collar,adds_harness,adds_waterproof_leash,adds_leash,adds_poop_bag_carrier
+Cat Harness & Leash,38%,21%,,,,
+Travel Carrier,,,29%,17%,,
+Cushioned Dog Harness,,,,,44%,19%

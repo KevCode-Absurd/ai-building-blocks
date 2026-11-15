@@ -165,7 +165,7 @@ test:
   - Run the three-panel drawing against a one-panel version. Keep whichever brings more readers to the offer.
 
 improve:
-  - Add your brand's limits on the body to your brand file, so no panel crosses them.
+  - Add your brand's limits on the body to your org context, so no panel crosses them.
   - Add the things your buyers tried before, as kinds of product, so the habit panels show what they really used.
   - Keep one pen and paper for all your drawn ads, so they look like one person's notebook.
   - Pair it with a story ad skill, so the first line picks up where the last panel stops.

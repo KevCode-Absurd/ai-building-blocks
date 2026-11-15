@@ -22,7 +22,7 @@ you_give:
   - The idea, the problem it solves and who it is for
   - What you already know, such as customer words, tests, costs and limits
   - Customer reviews or messages (optional)
-  - Your brand file, for rules on claims and fit (optional)
+  - Your org context, for rules on claims and fit (optional)
   - Your list of features, tasks or requests, with any dates
   - Who asked for each item (optional)
 you_get:
@@ -42,7 +42,7 @@ output_sample:
     - What you already know, such as customer words, tests, costs and limits
     - Your list of features, tasks or requests, with any dates
     - Customer reviews or messages (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
     - The handoff pack from this page (optional if you paste the skills yourself)

@@ -1,0 +1,5 @@
+# (test data) New email subscribers by source. Built for an e-commerce eval. Not KraveBeauty's real figures.
+source,new_subscribers,share
+"Pop-up, 10% off first order",3500,38%
+Checkout opt-in,4050,44%
+Skin quiz,1650,18%

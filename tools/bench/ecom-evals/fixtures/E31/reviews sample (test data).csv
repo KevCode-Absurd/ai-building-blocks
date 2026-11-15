@@ -1,0 +1,11 @@
+# (test data) A sample of recent reviews. Built for an e-commerce eval. Not Pela's real figures.
+date,product,rating,text,note
+2026-10-02,iPhone 16 Pro case,2,Edges started cracking at month 7. Loved it until then.,
+2026-10-04,iPhone 17 case,5,Survived three drops on concrete. I was skeptical.,
+2026-10-05,iPhone 16 case,2,Corner split after 8 months. Is this normal?,
+2026-10-09,iPhone 17 Pro case,5,The prints are so cute. Bought one for my sister too.,
+2026-10-12,iPhone 15 case,4,"Two years in, still good.",
+2026-10-14,iPhone 16 Pro case,3,Cracked at the button cutout after 6 months.,
+2026-10-18,iPhone 17 case,1,Order took 3 weeks. Never again. Posting this everywhere.,Same customer posted 38 near-identical reviews and comments across models on 18 to 20 Oct
+2026-10-21,iPhone 17 Pro case,5,Love that it won't sit in a landfill.,
+2026-10-26,iPhone 16 case,2,Edge cracking again. Second case.,

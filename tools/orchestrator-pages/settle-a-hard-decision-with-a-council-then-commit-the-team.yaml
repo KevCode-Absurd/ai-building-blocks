@@ -22,7 +22,7 @@ you_give:
   - The decision, the options and what a good outcome looks like
   - Hard limits, such as money, time or values
   - Who disagrees and why, in a line each (optional)
-  - Your brand file or business facts (optional)
+  - Your org context or business facts (optional)
 you_get:
   - The council's recommended decision and its strongest dissent
   - What would change the call, and the first three steps
@@ -39,7 +39,7 @@ output_sample:
     - Your decision, the options and what a good outcome looks like
     - Hard limits, such as money, time or values
     - Who disagrees and why, in a line each (optional)
-    - Your brand file or business facts (optional)
+    - Your org context or business facts (optional)
   prerequisites:
     - An AI that can read the handoff files, such as Claude with files in a Project or Claude Code
     - A dated plan with an owner for each step, which you write at the pause

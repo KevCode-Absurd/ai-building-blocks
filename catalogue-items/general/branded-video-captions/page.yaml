@@ -210,7 +210,7 @@ test:
 improve:
   - Write your font files, colours, outline and caption position into "What you need" in the skill file, so every video looks the same.
   - Set your own line limit in step 2 once you've measured your font at your caption size.
-  - Keep your font files and logo in your brand file folder, so every run can load them.
+  - Keep your font files and logo in your org context folder, so every run can load them.
   - Pair it with a skill that turns your script into clips and leaves clear space for captions. Fix any wording in the script before you caption.
 
 works_best_with:

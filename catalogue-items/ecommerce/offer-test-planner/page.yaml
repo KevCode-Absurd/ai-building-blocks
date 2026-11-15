@@ -126,7 +126,7 @@ test:
 improve:
   - Add your pop-up tool's field names to the skill file so the tag it writes matches your setup.
   - Add your own limit for visits per test, once you know how long a readable test takes on your store.
-  - Save each finished test and result in your brand file so the next plan skips offers that already lost.
+  - Save each finished test and result in your org context so the next plan skips offers that already lost.
   - Pair it with the Offer profit-per-session checker for the read-out and the Welcome pop-up offer tester for the first test.
 
 works_best_with:

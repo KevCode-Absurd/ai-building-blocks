@@ -6,7 +6,7 @@ thinking: medium
 thinking_why: "It drafts and narrows a short sentence against real rivals, which needs care but follows a fixed test."
 
 headline: "Onliness statement writer"
-subhead: Give it your brand file and the rivals you are compared with. It answers six prompts about what you do, drafts a sentence that names what only you do, swaps each rival into it, and narrows the sentence until none of them can claim it.
+subhead: Give it your org context and the rivals you are compared with. It answers six prompts about what you do, drafts a sentence that names what only you do, swaps each rival into it, and narrows the sentence until none of them can claim it.
 
 explain: |
   Many brand lines could sit on any competitor's website. "Quality products for busy people" fits a hundred firms. When a line fits everyone, it tells a buyer nothing about why to pick you.
@@ -23,7 +23,7 @@ not_for:
   - "You want a short company motto or tagline: use the Company mantra writer."
 
 you_give:
-  - Your brand file with what you offer, who for and what you can prove
+  - Your org context with what you offer, who for and what you can prove
   - The audit report or research on your market
   - The rivals buyers compare you with (optional)
   - Customer reviews or quotes (optional)
@@ -35,26 +35,26 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your brand file and the market work. Add the names of your rivals.
+  - Paste your org context and the market work. Add the names of your rivals.
   - Read the swap test first. A version that fails on any rival goes back for narrowing.
   - Say the winning sentence aloud. If it needs breath, shorten it.
 output_sample:
   input:
-    - "Your brand file: what you offer, who for and what you can prove"
+    - "Your org context: what you offer, who for and what you can prove"
     - Your audit report or notes on your market
     - The rivals buyers compare you with (optional)
     - Customer reviews or quotes (optional)
   prerequisites:
-    - A brand file with your offer, buyers and proof, such as the brand brain from the Website brand brain builder
+    - An org context with your offer, buyers and proof, such as the org context from the Org context builder
   output:
     - name: The six prompts
-      contains: One or two lines each on what, how, who, where, why and when, with MISSING marked where the brand file is silent.
+      contains: One or two lines each on what, how, who, where, why and when, with MISSING marked where the org context is silent.
     - name: Versions
       contains: Three drafts of the sentence, each narrowing the category, the buyer or the place in a different way.
     - name: Rival swap test
       contains: For each rival and version, whether they could say it truthfully, and why.
     - name: Chosen sentence
-      contains: The version that passes the test, with the proof from your brand file that backs each part.
+      contains: The version that passes the test, with the proof from your org context that backs each part.
     - name: Focus check
       contains: Whether the sentence says who you are, what you do and why it matters, and which part is weakest.
     - name: Brief
@@ -64,7 +64,7 @@ output_sample:
 
 how_it_works:
   - title: Answers six prompts
-    text: Writes what, how, who, where, why and when from your brand file.
+    text: Writes what, how, who, where, why and when from your org context.
   - title: Drafts the sentence
     text: Names what you are the only one to do, in one sentence.
   - title: Swaps in each rival
@@ -89,7 +89,7 @@ output_shape: |
   <rival> into version <n>: <could say it truthfully? yes or no> | <why>
 
   CHOSEN SENTENCE
-  <sentence> | proof in the brand file: <where>
+  <sentence> | proof in the org context: <where>
 
   FOCUS CHECK
   Who we are: <> | What we do: <> | Why it matters: <>
@@ -108,7 +108,7 @@ tweaks:
     how: List the real ones buyers compare you with. A short list that is wrong gives a false pass.
   - what: Who and where
     how: The narrower, the better. "Home cooks in small kitchens" beats "people who cook".
-  - what: Proof in the brand file
+  - what: Proof in the org context
     how: Add facts you can back. Claims with no proof are dropped.
   - what: Length
     how: Say if the sentence is for speech or print. Spoken versions are shorter.
@@ -116,7 +116,7 @@ tweaks:
 judge:
   - No named rival can claim the sentence as written.
   - The sentence names a real who and where, not "everyone".
-  - Every claim is backed by something in the brand file.
+  - Every claim is backed by something in the org context.
   - The sentence is short enough to say aloud.
   - It states who you are, what you do and why it matters.
 
@@ -128,7 +128,7 @@ test:
 
 improve:
   - Add rivals the first time you meet them, so every later run is tested against them.
-  - Add proof to the brand file as you collect it.
+  - Add proof to the org context as you collect it.
   - Change the six prompts to match words your field uses.
   - Pair it with "Competitor white space mapper" before it, to find where to stand.
 

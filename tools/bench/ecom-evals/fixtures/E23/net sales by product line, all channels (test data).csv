@@ -1,0 +1,32 @@
+# (test data) Monthly net sales across own site, Amazon and retail, USD millions. Built for an e-commerce eval. Not Graza's real figures.
+month,product_line,net_sales_usd_millions
+2026-05,"Squeeze oils (Drizzle, Sizzle)",1.62
+2026-06,"Squeeze oils (Drizzle, Sizzle)",1.6
+2026-07,"Squeeze oils (Drizzle, Sizzle)",1.58
+2026-08,"Squeeze oils (Drizzle, Sizzle)",1.61
+2026-09,"Squeeze oils (Drizzle, Sizzle)",1.63
+2026-10,"Squeeze oils (Drizzle, Sizzle)",1.62
+2026-05,Frizzle (high heat),0.21
+2026-06,Frizzle (high heat),0.24
+2026-07,Frizzle (high heat),0.28
+2026-08,Frizzle (high heat),0.33
+2026-09,Frizzle (high heat),0.38
+2026-10,Frizzle (high heat),0.44
+2026-05,Glass bottles and refill cans,0.3
+2026-06,Glass bottles and refill cans,0.31
+2026-07,Glass bottles and refill cans,0.3
+2026-08,Glass bottles and refill cans,0.31
+2026-09,Glass bottles and refill cans,0.32
+2026-10,Glass bottles and refill cans,0.32
+2026-05,Mayo and aioli,0.08
+2026-06,Mayo and aioli,0.1
+2026-07,Mayo and aioli,0.12
+2026-08,Mayo and aioli,0.14
+2026-09,Mayo and aioli,0.16
+2026-10,Mayo and aioli,0.19
+2026-05,Olive oil chips,0.06
+2026-06,Olive oil chips,0.06
+2026-07,Olive oil chips,0.05
+2026-08,Olive oil chips,0.05
+2026-09,Olive oil chips,0.05
+2026-10,Olive oil chips,0.05

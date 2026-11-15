@@ -87,7 +87,6 @@ NOT RUN is this skill’s CHECKS MISSED section. List every check that failed or
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [ElevenLabs spoken script writer](https://useaiblocks.com/skills/elevenlabs-spoken-script-writer). It takes the prompt.
-- **Make video ads** with the [Jingle video ad script writer](https://useaiblocks.com/skills/jingle-video-ad-script-writer).
 - **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

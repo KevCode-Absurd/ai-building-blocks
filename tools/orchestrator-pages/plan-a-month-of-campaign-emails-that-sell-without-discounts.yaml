@@ -1,11 +1,11 @@
 new_slug: plan-a-month-of-campaign-emails-that-sell-without-discounts
 name: Plan a month of campaign emails that sell without discounts
-summary: Plan a month of campaign emails that sell without discounts. Give it your products and brand file. Get 100 ideas, a calendar, one email and a brief.
+summary: Plan a month of campaign emails that sell without discounts. Give it your products and org context. Get 100 ideas, a calendar, one email and a brief.
 job: write-emails
 thinking: high
 thinking_why: It runs five skills in a row and each one builds on the last. Give it your strongest model.
 headline: A month of campaign emails that sell without a discount code
-subhead: Give it your product facts, your brand file and your reviews. It builds a bank of 100 email ideas, places a month of sends on a calendar, writes one full email, reviews it and turns it into a brief your designer can build.
+subhead: Give it your product facts, your org context and your reviews. It builds a bank of 100 email ideas, places a month of sends on a calendar, writes one full email, reviews it and turns it into a brief your designer can build.
 explain: |
   Many stores send an email only when there is a sale. Subscribers learn to wait for the code, margin shrinks, and the weeks between sales go quiet. The fix is a steady supply of emails that give the reader one useful thing and then point to a product.
 
@@ -20,7 +20,7 @@ not_for:
   - "You have a draft and only want a quality check: use the Email draft readiness checker."
 you_give:
   - Your product facts, such as what each product is, what is in it and how it is used
-  - Your brand file, so the emails sound like you and only make claims you can back
+  - Your org context, so the emails sound like you and only make claims you can back
   - Customer reviews and questions (optional, but they make the ideas much better)
   - Your current offers and key dates (optional)
   - A one-paragraph brief for the first email you want written, which it asks you for halfway through
@@ -34,19 +34,19 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your product facts and brand file first. Add reviews and customer questions if you have them.
+  - Paste your product facts and org context first. Add reviews and customer questions if you have them.
   - When it pauses, pick the first slot on the calendar and write its brief in one paragraph.
   - Read the review before the layout brief is made. Fix the three fixes, then let it carry on.
 output_sample:
   input:
     - Your product facts, such as what each product is and how it is used
-    - Your brand file with your voice and approved claims
+    - Your org context with your voice and approved claims
     - Customer reviews and questions (optional)
     - Your current offers and key dates (optional)
     - A one-paragraph brief for the first email, which it asks for halfway through
   prerequisites:
     - An AI that can read files, such as Claude with the handoff folder
-    - A brand file, ideally from the Website brand brain builder
+    - An org context, ideally from the Org context builder
   output:
     - name: Email topic bank
       contains: Ten topics with ten ideas each, every idea with one takeaway, a format and any claim to check.
@@ -97,7 +97,7 @@ tweaks:
   - what: Which slot you brief first
     how: Pick a slot with a clear product and a clear audience. A vague brief gives a vague email.
   - what: What you may claim
-    how: Add your approved claims to the brand file. Ideas on health or results are flagged, and the writer checks each claim against that list.
+    how: Add your approved claims to the org context. Ideas on health or results are flagged, and the writer checks each claim against that list.
 judge:
   - Every idea has one takeaway you could say in one sentence.
   - The calendar has no two sends of the same type in a row, and discount emails stay a small share of the month.
@@ -110,7 +110,7 @@ test:
   - Send the written email to yourself and read it on your phone. Count how long it takes to find the button.
   - Run the reviewer on an email you sent last month and compare its fixes with the results you saw.
 improve:
-  - Save the idea bank and the calendar in your brand file. Next month start at step 2.
+  - Save the idea bank and the calendar in your org context. Next month start at step 2.
   - Edit the calendar skill's pace rule to match how many emails your team can produce.
-  - Add three of your best past emails to the brand file as voice examples for the writer.
+  - Add three of your best past emails to the org context as voice examples for the writer.
   - Log which topics got clicks and orders, then ask the bank builder to weight the next bank toward them.

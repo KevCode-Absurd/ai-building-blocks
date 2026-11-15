@@ -21,7 +21,7 @@ not_for:
 you_give:
   - Last month's results per piece, with views, completion, replies, shares and any traced sales
   - The full text or transcript of the pieces you might repurpose
-  - Your brand brain, with voice and where your buyers spend time (advised)
+  - Your org context, with voice and where your buyers spend time (advised)
   - Your platforms and posting rhythm (advised)
   - Last month's calendar, once it exists
 you_get:
@@ -41,12 +41,12 @@ output_sample:
   input:
     - Last month's results for each piece (views, completion, replies, shares, sales if traced)
     - The full text or transcript of the pieces you might reuse
-    - Your brand brain (advised)
+    - Your org context (advised)
     - Your platforms and how often you post (advised)
     - Last month's calendar (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code, to keep the pieces and platforms files between months
-    - Your brand brain from the Brand profile builder (advised, for the voice check)
+    - Your org context from the Org context builder (advised, for the voice check)
   output:
     - name: Last month
       contains: One line on pieces published, the two that earned most, and the platform that moved most.
@@ -76,7 +76,7 @@ how_it_works:
   - title: Build the calendar
     text: Spreads the posts across the month and the platforms that earn them.
   - title: Check the voice
-    text: Ranks off-voice lines against your brand brain and fixes them.
+    text: Ranks off-voice lines against your org context and fixes them.
   - title: Log and hand back
     text: Records every format made so nothing is repurposed twice, then stops.
 output_shape: |-
@@ -121,7 +121,7 @@ example:
     - TikTok: 8 posts, average 900 views, 1 comment each, no sales traced.
     Platforms: LinkedIn (founder), X, Instagram, TikTok, newsletter.
     Posting rhythm: 3 posts a week per platform.
-    Full texts and the talk transcript attached. Brand brain attached.
+    Full texts and the talk transcript attached. Org context attached.
     Facts allowed: 60+ ingredients, 21 vitamins and minerals, 6 g fiber.
   output: pending
 tweaks:
@@ -131,18 +131,18 @@ tweaks:
     how: Name the ones you have decided to skip. The agent will not write for them even if the breakdown suggests it.
   - what: Drop rule
     how: A platform quiet for three months is a drop candidate. Set your own number of months.
-  - what: Brand brain
+  - what: Org context
     how: With it, the voice check runs and claims are checked. Without it, posts are shaped for format only.
 judge:
   - The picks match the top of your results, replies and shares first.
   - Each post gives its idea without a click.
-  - No fact appears that is not in the original piece or your brand brain.
+  - No fact appears that is not in the original piece or your org context.
   - No piece was repurposed twice.
   - Nothing was published or scheduled.
 test:
   - Give it a month where you know which piece landed. It should pick the same one.
   - Run it twice on the same results. The picks and platform calls should match.
-  - Give it a piece with a stale price in it. The posts should not repeat the price unless the brand brain confirms it.
+  - Give it a piece with a stale price in it. The posts should not repeat the price unless the org context confirms it.
 improve:
   - Add traced sales or sign-ups per piece to your results, so the ranking follows money and not just attention.
   - Write your platform list and posting rhythm into the platforms file before the first run.

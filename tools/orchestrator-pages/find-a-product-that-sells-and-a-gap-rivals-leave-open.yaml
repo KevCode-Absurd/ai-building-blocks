@@ -45,7 +45,7 @@ output_sample:
     - "After the pause: supplier quote, landed cost and planned price"
   prerequisites:
     - An AI that can read files, such as Claude with the handoff folder
-    - A Brand brain from the Website brand brain builder (optional)
+    - A Org context from the Org context builder (optional)
   output:
     - name: Proven product scout file
       contains: Five to ten candidate products with proof checks, supplier cost and a winner or fluke call for each.
@@ -102,5 +102,5 @@ test:
   - Check that the test's pass number is one you would accept even if you disliked the result.
 improve:
   - Keep your own list of winner and fluke calls, and feed it back to the scout.
-  - Add your margin rules and country to your brand file.
+  - Add your margin rules and country to your org context.
   - Run the first-test planner again after each result, with the next riskiest guess.

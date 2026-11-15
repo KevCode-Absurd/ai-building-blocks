@@ -125,7 +125,7 @@ improve:
   - Add your own price band and set the page to cart target for it.
   - Add the ad count and test length you use.
   - Pair it with the general ad performance diagnoser and the store profit margin calculator.
-  - Save each test and call in your brand file.
+  - Save each test and call in your org context.
 
 works_best_with:
   tools:

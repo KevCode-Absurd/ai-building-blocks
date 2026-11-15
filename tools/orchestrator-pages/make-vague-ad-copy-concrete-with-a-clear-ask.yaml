@@ -15,14 +15,14 @@ when:
   - Your ad explains what it is but not why it works or what to do next.
   - You want a final edit that keeps your claims and numbers fixed.
 not_for:
-  - "You have no product facts yet: build them first with the Brand profile builder, then come back."
+  - "You have no product facts yet: build them first with the Org context builder, then come back."
   - "You need a long sales page or email: use the Sales argument order editor or the Brand voice editor instead."
   - "You only want a fresh headline or opening line: use the Ad headline writer or the Ad opening writer and reviewer."
 you_give:
   - Your draft ad copy
   - Your product facts, such as materials, numbers and how it is used
   - Your offer, price and guarantee (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - A draft where vague lines are replaced with facts, with anything unproven marked confirm
   - A short passage that explains why the product works, each link backed
@@ -39,7 +39,7 @@ output_sample:
     - Your draft ad copy
     - Your product facts, such as materials, numbers and how it is used
     - Your offer, price and guarantee (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
     - The handoff pack from this page
@@ -98,6 +98,6 @@ test:
   - Swap a rival's name into each line. If they could sign it, the line is not concrete yet.
   - Check every confirm line was answered or cut.
 improve:
-  - Save the concrete facts in your brand file so every draft starts from them.
+  - Save the concrete facts in your org context so every draft starts from them.
   - Run the old and new versions as a small test and keep the winner.
   - Use the edit log to spot the vague words you reach for most.

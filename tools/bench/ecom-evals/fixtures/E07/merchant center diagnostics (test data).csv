@@ -1,0 +1,5 @@
+# (test data) Google Merchant Center item issues on 14 Nov 2026. Built for an e-commerce eval. Not Fellow's real figures.
+item_group,issue,since,affected_variants
+Ode Brew Grinder Gen 2 (3 variants),Disapproved: price mismatch between feed and landing page,2026-11-02,3
+Coffee drops (14 items),Limited performance: missing GTIN,2026-09-18,14
+Carter Move Mug (6 colours),Warning: image too small for some placements,2026-10-30,6

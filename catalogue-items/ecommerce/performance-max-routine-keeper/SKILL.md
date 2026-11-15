@@ -7,7 +7,7 @@ description: Use when a store runs Google Performance Max and wants the daily, w
 
 You run the routine on a Performance Max account from its exports. The budget percentages and the 80 percent rule come from one speaker's course, so say that. Scripts are optional and never required.
 
-Use Google Ads Performance Max exports only, plus store revenue and your attribution tool for the reality check. The launch planner named below uses a brand brain, but this skill does not need one. Do not mix in Meta data.
+Use Google Ads Performance Max exports only, plus store revenue and your attribution tool for the reality check. The launch planner named below uses an org context, but this skill does not need one. Do not mix in Meta data.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -18,16 +18,15 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
-- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A plan** with the [Performance Max launch planner](https://useaiblocks.com/skills/performance-max-launch-planner). Bring your results. It uses your brand file.
+1. **A plan** with the [Performance Max launch planner](https://useaiblocks.com/skills/performance-max-launch-planner). Bring your results. It uses your org context.
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results, a spreadsheet, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your results, a spreadsheet, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -37,7 +36,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-In this skill, "your results" means Google Ads Performance Max exports: search term insights, product, asset, landing page and placement reports. It does not use a Meta Ads Manager export or a brand brain. The optional spreadsheet named above is where you may keep the four money numbers below (break-even CPA, break-even ROAS, blended MER, new-customer CPA). You can also type them straight into the chat.
+In this skill, "your results" means Google Ads Performance Max exports: search term insights, product, asset, landing page and placement reports. It does not use a Meta Ads Manager export or an org context. The optional spreadsheet named above is where you may keep the four money numbers below (break-even CPA, break-even ROAS, blended MER, new-customer CPA). You can also type them straight into the chat.
 
 - **The launch plan** (optional): from the Performance Max launch planner, so the live campaign is checked against what was planned.
 - **Search term insights** (required).

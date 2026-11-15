@@ -1,11 +1,11 @@
 new_slug: founder-video-month
 name: Plan a month of founder videos and edit the first
-summary: Plan a month of founder videos from your brand file. Get ten episodes, a script for the first, and an edit plan for your footage.
+summary: Plan a month of founder videos from your org context. Get ten episodes, a script for the first, and an edit plan for your footage.
 job: grow-social
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
 headline: Plan a month of founder videos and get the first one edited
-subhead: Give it your brand file. It plans ten founder video episodes, writes a script for the first one in the founder's voice, fixes any line a person would trip on, then plans the edit once you have filmed it.
+subhead: Give it your org context. It plans ten founder video episodes, writes a script for the first one in the founder's voice, fixes any line a person would trip on, then plans the edit once you have filmed it.
 explain: |-
   Founder videos work because only the founder can tell the story. They stall because nobody knows what to film next, or the script reads like a press release.
 
@@ -19,7 +19,7 @@ not_for:
   - "You only need ideas for a series and no script or edit: use the Founder video series planner."
   - "You already have footage and only need cuts and captions: use the Social video edit planner."
 you_give:
-  - Your brand file
+  - Your org context
   - The founder's real story, in notes or from a call (optional)
   - Who the videos are for (optional)
   - Your footage once you have filmed the first episode (required for the edit step)
@@ -31,18 +31,18 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Give it your brand file. It plans the series, scripts episode 1 and tidies the script, then pauses.
+  - Give it your org context. It plans the series, scripts episode 1 and tidies the script, then pauses.
   - Film the episode with the script and the filming setup. Come back with the footage.
   - The edit step cannot run without footage. Without it, you stop after the read-aloud fixes.
 output_sample:
   input:
-    - Your brand file
+    - Your org context
     - The founder's real story, in notes or from a call (optional)
     - Who the videos are for (optional)
     - Your footage once you have filmed the first episode
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Series plan
       contains: Ten episodes in order, each with the buyer question, its thread and what to show on screen.
@@ -91,7 +91,7 @@ example:
   input: |-
     [the handoff pack] Follow HANDOFF.md.
 
-    Brand file: the Sprout brand file. Practice data.
+    Org context: the Sprout org context. Practice data.
     Founder notes: started Sprout after quitting three greens powders in a year.
     Footage (after the film step): 4 minutes, one take, kitchen counter.
   output: |-
@@ -125,7 +125,7 @@ tweaks:
     how: Name the platform. The edit plan then checks length, captions and cover to its rules.
 judge:
   - Each episode has something to show, not just something to say.
-  - The script only claims what the founder can show or what is in your brand file.
+  - The script only claims what the founder can show or what is in your org context.
   - No stiff line is left after the read-aloud step.
   - The edit plan gives in and out times for every cut.
 test:
@@ -134,5 +134,5 @@ test:
   - Compare the edit plan's cut list with your footage. Each time stamp should match.
 improve:
   - Run the script step again for episode 2 and keep the same filming setup.
-  - Save the founder's best lines in your brand file so later scripts sound the same.
+  - Save the founder's best lines in your org context so later scripts sound the same.
   - Add the edit plan from episode 1 as a model for the next ones.

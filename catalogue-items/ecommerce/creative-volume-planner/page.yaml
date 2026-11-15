@@ -127,7 +127,7 @@ improve:
   - Add your real hit rate and cost per ad type to the skill file, so every run starts from your numbers.
   - Add your sale calendar, so the quota rises in busy weeks.
   - Add a quality bar, such as the minimum a new ad must hit to count as a win.
-  - Save each month's plan and result to your brand file.
+  - Save each month's plan and result to your org context.
   - Pair it with the creative portfolio mix planner and the ad sameness checker.
 
 works_best_with:

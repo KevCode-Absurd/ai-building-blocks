@@ -52,7 +52,7 @@ output_sample:
     - Your offer and the video length (optional)
   prerequisites:
     - An AI that can read pictures, so it can check your product photo
-    - Your brand brain from the Brand profile builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Fit
       contains: Why clay suits this idea and buyer, or what format to use instead.
@@ -217,7 +217,7 @@ test:
 improve:
   - Paste your approved and banned claims into "What you need" in the skill file, so every picture is checked against them.
   - Add your product's never-show rules to step 6. For Sprout, the pack is only ever torn straight across the top.
-  - When a changing object works, save it with its three states in your brand file, so the next ad reuses it.
+  - When a changing object works, save it with its three states in your org context, so the next ad reuses it.
   - Pair it with "Claymation video clip prompt writer", which runs the avatar, sheets, storyboard and clips.
 
 works_best_with:

@@ -25,7 +25,7 @@ not_for:
 you_give:
   - What you make or do, and who it helps
   - Your current mission or goal, if you have one (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - A one-paragraph mission that names who is helped and how
   - A staged plan with dates, and what this stage must do
@@ -41,7 +41,7 @@ output_sample:
   input:
     - What you make or do, and who it helps
     - Your current mission or goal (optional)
-    - Your brand file, with voice, facts and history (optional)
+    - Your org context, with voice, facts and history (optional)
   output:
     - name: The mission
       contains: One short paragraph on who is helped, what they can do afterwards, and why the business does it.
@@ -128,7 +128,7 @@ test:
 
 improve:
   - Add your real founding story to the input so the higher duty is yours.
-  - Save the final mission in your brand file so every other skill uses it.
+  - Save the final mission in your org context so every other skill uses it.
   - Change the announcement step to your real setting, such as a team call or a shop floor.
   - Pair it with "Onliness statement writer" when you need the one-line version for rivals.
 
@@ -136,7 +136,7 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Drafting and tightening a short text is easy for any strong chat AI."}
   inputs:
-    - "Your brand file, so the mission matches your voice and facts"
+    - "Your org context, so the mission matches your voice and facts"
     - "A few real customer quotes about what changed for them"
     - "A short history of why you started"
 

@@ -45,7 +45,7 @@ output_sample:
     - How past buyers described the problem (optional)
   prerequisites:
     - A buyer brief from the Buyer brief writer (or paste the buyer facts yourself)
-    - Your brand brain (optional)
+    - Your org context (optional)
   output:
     - name: SITUATION
       contains: Two or three questions about the buyer's setup that you cannot look up beforehand.

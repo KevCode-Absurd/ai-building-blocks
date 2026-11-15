@@ -22,20 +22,20 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Brand file** (its buyers part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its buyers part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Your notes** (yours): what to keep, change or drop.
 - **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
-**From the brand file, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`, `foundation/claims.md`, `foundation/customer-talk.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your idea, your question, your brand file. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your idea, your question, your org context. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -43,7 +43,7 @@ How to start:
 - **Your idea or cause and who you want to reach** (required). Say who must back it and what you want from them.
 - **Facts you can prove** (required). Numbers with sources, results, and quotes you may use. A number with no source is cut or marked `MISSING:`.
 - **Why you started, in your own words** (required). The belief behind the work. If it is missing, step 1 writes `MISSING: belief` and asks. It never makes one up.
-- **Your brand file or buyer profile** (optional). Facts, voice and claims you may use.
+- **Your org context or buyer profile** (optional). Facts, voice and claims you may use.
 - **Customer words** (optional). Reviews or quotes you may use, with source and date.
 - **Each no you heard** (needed for step 4, after the pause). Who said it, when, and their words.
 
@@ -57,7 +57,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop:** stop and go to the hand-back summary if there is no idea or audience, or if no facts are given and the person will not add any. Steps already done still count.
 
 ## Steps
-1. **Why-first message writer.** Use the skill `why-first-message-writer`. It takes the idea, audience, why you started and any brand file. It saves to `outputs/step-01-why-first-message-writer.md` your usual pitch as a baseline, the belief, how you act on it, the message built from belief to how to what you make, and a skeptic test.
+1. **Why-first message writer.** Use the skill `why-first-message-writer`. It takes the idea, audience, why you started and any org context. It saves to `outputs/step-01-why-first-message-writer.md` your usual pitch as a baseline, the belief, how you act on it, the message built from belief to how to what you make, and a skeptic test.
 2. **Honest persuasion editor.** Use the skill `honest-persuasion-editor`. It takes the message in `outputs/step-01-why-first-message-writer.md` and the facts you gave. It saves to `outputs/step-02-honest-persuasion-editor.md` each line marked by persuasion lever as true, unproven or fake, the cuts with reasons, at most two true levers left, and the clean rewrite.
 3. **Hardest objections answer writer.** Use the skill `hardest-objections-answer-writer`. It takes the rewrite in `outputs/step-02-honest-persuasion-editor.md` and the facts you gave. It saves to `outputs/step-03-hardest-objections-answer-writer.md` at least eight ranked objections with fair answers, the fact that would sink the case, what the evidence cannot show, and the pitch rebuilt with them inside.
 

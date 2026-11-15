@@ -23,7 +23,7 @@ you_give:
   - Your delivery times, and how many order-status tickets you get a month
   - Your email results, such as flow revenue and recipients per month
   - Your current flows, with their triggers and delays
-  - Your brand file and offer rules (optional)
+  - Your org context and offer rules (optional)
 you_get:
   - A post-purchase flow with a trigger, a split by order count and six email outlines with subject lines
   - A delivery date rule, a four-message update flow and a tracking page plan
@@ -41,10 +41,10 @@ output_sample:
     - Your delivery times and monthly order-status tickets
     - Your email results, such as flow revenue and recipients per month
     - Your current flows, with triggers and delays (optional)
-    - Your brand brain and offer (optional)
+    - Your org context and offer (optional)
   prerequisites:
     - An AI that can read the files in the handoff pack, such as Claude in a Project or Claude Code
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "STEP 1: Post-purchase flow builder"
       contains: The trigger, a split by order count, six email outlines with subject lines, and timing.
@@ -102,6 +102,6 @@ test:
   - Compare the sample sizes with your monthly recipients. A test needing more than a month is too slow.
 improve:
   - Add the real texts of your best past emails to step 1, so new ones match your voice.
-  - Save your delivery times by region in your brand file, so step 2 starts from them.
+  - Save your delivery times by region in your org context, so step 2 starts from them.
   - Add your flow results each quarter, so step 4 ranks tests on fresh numbers.
   - Pair it with the win-back workflow once these flows have run for a few months.

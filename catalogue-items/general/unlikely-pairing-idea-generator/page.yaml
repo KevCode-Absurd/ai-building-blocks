@@ -132,7 +132,7 @@ improve:
   - Add a note on what counts as safe in your field.
   - Pair it with a brief writer once you choose a pairing.
 
-next: [design-brief-rules-writer, marketing-brief-writer]
+next: [design-brief-rules-writer]
 
 works_best_with:
   tools:

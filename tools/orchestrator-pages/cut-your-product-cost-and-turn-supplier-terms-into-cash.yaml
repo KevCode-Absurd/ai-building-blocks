@@ -47,7 +47,7 @@ output_sample:
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
     - The handoff pack with HANDOFF.md and the skill files
-    - A brand brain from the Website brand brain builder (optional)
+    - An org context from the Org context builder (optional)
   output:
     - name: "Step 1: Cost sheet"
       contains: One row per part, labour, overhead and factory margin, with a question to ask and the return risk of cutting it.
@@ -106,5 +106,5 @@ test:
   - Redo the float sum by hand. Take your terms in days and subtract production plus shipping days.
 improve:
   - Add your real part prices and your second-factory quotes after each round.
-  - Save the agreed prices and terms in your brand file so the landed cost skills start from them.
+  - Save the agreed prices and terms in your org context so the landed cost skills start from them.
   - Re-run the cash check each time you plan a large reorder.

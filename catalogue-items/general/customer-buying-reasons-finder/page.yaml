@@ -27,7 +27,7 @@ you_give:
   - Customer words such as reviews, tickets, call notes, survey answers or forum posts, each with an ID and date
   - Flags like verified buyer, rating, product, or "got it free" (optional)
   - Your own product page, to see what you already say (optional)
-  - Your brand file with product facts and customer profiles (optional)
+  - Your org context with product facts and customer profiles (optional)
 you_get:
   - A ranked map of reasons by force, each with its best exact quote, backups and how many people said it
   - The reasons customers give that your brand never says
@@ -46,7 +46,7 @@ output_sample:
     - "Your customer words: reviews, support tickets, call notes or survey answers, each with an ID and date"
     - Flags like verified buyer, rating or product (optional)
     - Your own product page text (optional)
-    - Your brand brain folder (optional)
+    - Your org context folder (optional)
   output:
     - name: Forces map
       contains: Each reason ranked by separate people, with its force, best exact quote, backup quotes and whether your brand says it.
@@ -210,7 +210,7 @@ improve:
   - "Add your product's risky topics to step 10 (for a supplement: digestion, weight, medication; for a loan: fees, credit scores), so quotes about them always land on the check list."
   - Raise the pattern bar in step 5 if you have thousands of sources. Five people is a floor for small sets, not a rule for big ones.
   - Add the moment tag to your survey. Ask buyers what happened that made them start looking. It fills the push column fast.
-  - Save the finished map to the customer profiles in your brand file, with each reason's status, so you don't rebuild the same ideas next quarter.
+  - Save the finished map to the customer profiles in your org context, with each reason's status, so you don't rebuild the same ideas next quarter.
   - Pair it with a skill that checks whether your product page answers these anxieties, and a writing skill that builds one ad per reason.
 
 works_best_with:

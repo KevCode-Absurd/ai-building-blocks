@@ -209,7 +209,7 @@ test:
   - Read the text table against your offer terms, character by character. The renewal price should never be missing from a shot that shows the first-order price.
 
 improve:
-  - Save your theme (canvas, fonts, colour codes, easing) in your brand file, so every build starts at stage 4.
+  - Save your theme (canvas, fonts, colour codes, easing) in your org context, so every build starts at stage 4.
   - Keep a Remotion project with your fonts and theme file installed, so Claude Code only has to add the scenes.
   - Add your house entrance and exit moves to the look card in stage 3, so every ad moves the same way.
   - Pair it with "Motion graphics video ad script writer", which writes the look card, fact sheet and shot table this skill reads.

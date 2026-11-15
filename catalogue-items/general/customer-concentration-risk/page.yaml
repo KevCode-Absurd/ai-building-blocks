@@ -127,7 +127,7 @@ test:
 improve:
   - "Add your own risk line to the steps so it never has to guess."
   - "Add the dependences special to your field, such as one platform or one licence."
-  - "Save your limits to your brand file so later plans stay inside them."
+  - "Save your limits to your org context so later plans stay inside them."
   - "Pair it with a plan writer to cover the work of finding new clients."
 
 works_best_with:

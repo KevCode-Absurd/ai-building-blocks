@@ -117,7 +117,7 @@ test:
   - Put a claim you cannot prove into a script. The line check should flag it as a Truth problem.
 improve:
   - Add your own pass score and round cap if your scripts run long.
-  - Add the claims you may never make to your brand brain, so the checks catch them.
+  - Add the claims you may never make to your org context, so the checks catch them.
   - Save the types that won in the memory folder, so the next batch leans on them.
   - If you only film with creators, remove the AI clip prompt step and keep the creator brief.
 works_best_with:

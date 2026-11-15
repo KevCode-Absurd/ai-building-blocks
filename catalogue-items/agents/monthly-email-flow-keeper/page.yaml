@@ -22,7 +22,7 @@ you_give:
   - Last month's and the month before's campaign list and flow revenue from your email tool (at least two months, so it can compare)
   - Your live flows with trigger, filters, delay and number of emails (the first time)
   - Deliverability and list growth figures if you have them
-  - Your brand file, offer and best sellers, for a rebuild
+  - Your org context, offer and best sellers, for a rebuild
   - What changed last month, such as a new pop-up or a sale (optional)
 you_get:
   - This month against last month, with the sums
@@ -40,7 +40,7 @@ output_sample:
   input:
     - Last month's campaign list and flow revenue from your email tool
     - Your live flows with trigger, filters, delay and number of emails (the first time)
-    - Your brand file, offer and best sellers, for a rebuild
+    - Your org context, offer and best sellers, for a rebuild
     - Deliverability and list growth figures (optional)
     - What changed last month, such as a new pop-up or a sale (optional)
   prerequisites:
@@ -120,7 +120,7 @@ test:
   - Give it a month with poor open and click rates. It should fix sending before it rebuilds a flow.
 improve:
   - Set your own floors for click rate and orders per recipient, to suit your list, and tell it in step 5.
-  - Add your voice rules and words to avoid to the brand file, so the email review follows them.
+  - Add your voice rules and words to avoid to the org context, so the email review follows them.
   - Save the changes you approved each month, so the next run can check whether they worked.
   - If you also send texts, add your SMS numbers so the reader scores them.
 works_best_with:

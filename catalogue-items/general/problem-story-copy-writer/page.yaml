@@ -167,7 +167,7 @@ test:
 improve:
   - Write the plain cause of your buyer's problem, from your product facts, into "What you need" in the skill file, so step 4 has it every run.
   - Add the fixes your buyers say they tried, from reviews, to step 2, so the drops use them.
-  - Save the opening moment that works to your brand file.
+  - Save the opening moment that works to your org context.
   - Run "Buyer brief writer" first, and finish with "Sales copy readiness checker".
 
 output_sample:
@@ -178,7 +178,7 @@ output_sample:
     - How long the story can be, in words or characters
   prerequisites:
     - A chat AI such as Claude, ChatGPT or Gemini
-    - Your brand brain and buyer brief (optional)
+    - Your org context and buyer brief (optional)
   output:
     - name: The story
       contains: Paragraphs of two to five whole sentences, no headings, with your product arriving after the turn.

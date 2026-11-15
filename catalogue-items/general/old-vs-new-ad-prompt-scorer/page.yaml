@@ -116,7 +116,7 @@ example:
     with 6g of fiber, prebiotics, and daily vitamins to help keep
     your gut balanced without powders or prep."
 
-    AFTER (new prompt: brand file + claims list, same two briefs)
+    AFTER (new prompt: org context + claims list, same two briefs)
     1: "Sprout is too expensive? Your first 28 packs are $29.99 with
     our text sign-up offer. 60+ ingredients, 21 vitamins & minerals
     and 6 g prebiotic fiber a day. Renews at $49.99 every 4 weeks.
@@ -126,7 +126,7 @@ example:
     no prep. Rip. Tip. Enjoy."
 
     Briefs: 1 = offer ad for the price doubter. 2 = gut buyer.
-    Facts: the Sprout brand file. No images. No usage records.
+    Facts: the Sprout org context. No images. No usage records.
   output: |
     SET-UP
     2 pairs. A and B assigned at random: pair 1 A=after, pair 2
@@ -196,7 +196,7 @@ test:
 improve:
   - Add your own pass-or-fail checks to step 3, such as a banned word or a claim your legal check refused.
   - Change the yes-or-no reasons in step 6 to the qualities your team cares about most.
-  - Keep one fixed set of 20 to 30 briefs and the old prompt's outputs next to your brand file, so every change is tested on the same set.
+  - Keep one fixed set of 20 to 30 briefs and the old prompt's outputs next to your org context, so every change is tested on the same set.
   - Write your own switch rule into step 10, for example "never switch if failures rise, whatever the wins".
   - Pair it with the skill that plans what each AI step is given, so a slimmer prompt can be tested before it goes live.
 

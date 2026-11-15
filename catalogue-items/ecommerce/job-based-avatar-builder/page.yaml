@@ -132,7 +132,7 @@ test:
 improve:
   - Add your product's real facts and claims to the skill file, so the "claims to prove" list checks against them.
   - Add your own list of non-category rivals, such as the workarounds your buyers mention, so the "other aisle" step starts from real ones.
-  - Save the finished cards in your brand file so every ad and page writer starts from the same buyers.
+  - Save the finished cards in your org context so every ad and page writer starts from the same buyers.
   - Pair it with the Switch story mapper for one buyer's whole decision, and with the Job spec writer when you want one job in full.
   - Re-run it every few months with fresh stories. A job that stops appearing is worth knowing about.
 

@@ -137,7 +137,7 @@ test:
 improve:
   - "Add a bank of your own stories with true details, and paste it in each time."
   - "Add topics and people you do not want to mention."
-  - "Add your brand file if the talk is for work, so tone and claims stay on message."
+  - "Add your org context if the talk is for work, so tone and claims stay on message."
   - "Pair it with \"Read-aloud speech editor\" to add breath marks and a refrain."
 
 works_best_with:

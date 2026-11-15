@@ -120,7 +120,7 @@ test:
 improve:
   - "Add your brand colour and type limits to step 5 so every plan starts inside them."
   - "Add symbols that are overused in your field to a \"skip\" list in step 3."
-  - "Save the feelings you pick to your brand file so later pieces stay consistent."
+  - "Save the feelings you pick to your org context so later pieces stay consistent."
   - "Pair it with an image prompt writer to turn the plan into a prompt."
 
 works_best_with:

@@ -112,7 +112,7 @@ test:
 improve:
   - Replace the benchmark ranges with your own once you have a year of data, and note the date in the skill file.
   - Add the checks your theme needs, such as a sticky add-to-cart bar, as extra causes for a low add-to-cart rate.
-  - Save each pull as a dated baseline in your brand file so the next run can show change.
+  - Save each pull as a dated baseline in your org context so the next run can show change.
   - Pair it with the heatmap and recording reader for the pages it flags.
 works_best_with:
   tools:

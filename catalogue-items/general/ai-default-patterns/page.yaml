@@ -118,7 +118,7 @@ works_best_with:
     - {name: "Any chat AI", why: "Reads the list and your brand summary and writes the habits to avoid."}
     - {name: "A second chat or AI seat", why: "Checks the finished work without having made it."}
   inputs:
-    - "Your brand capture from Brand DNA capture, or your brand guide"
+    - "Your brand capture from Org context capture, or your brand guide"
     - "The draft or finished work, for a review"
 
 output_sample:

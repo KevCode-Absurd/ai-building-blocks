@@ -25,7 +25,7 @@ you_give:
   - Reviews or notes, word for word (optional)
   - Time to watch buyers for a day and interview several people who switched to you
   - The interview answers, one block per person with an ID, a date and their exact words
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - A plan for a day of watching buyers, with a log sheet
   - Quick questions for buyers on their way out
@@ -44,7 +44,7 @@ output_sample:
     - Your question, such as why people buy or switch
     - Reviews, tickets or interview notes in the customer's own words
     - Your product facts (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - Time to watch buyers for a day and interview people who switched to you
     - Interview answers kept word for word, each with an ID and a date
@@ -111,5 +111,5 @@ test:
   - Run the ranking twice on the same answers. The top three reasons should be the same.
 improve:
   - Run the interviews again each year, and compare the ranking with the last one.
-  - Save the ranked reasons to your brand file, so ads and pages use real customer words.
+  - Save the ranked reasons to your org context, so ads and pages use real customer words.
   - Add your own product page, so the map shows reasons you never say.

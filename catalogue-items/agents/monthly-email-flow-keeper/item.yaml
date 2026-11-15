@@ -12,7 +12,6 @@ inputs:
   - { type: brand_brain, required: false }
   - { type: offer, required: false }
   - { type: product_data, required: false }
-  - { type: customer_list, required: true }
 outputs:
   - { type: audit_report }
   - { type: email_flow }

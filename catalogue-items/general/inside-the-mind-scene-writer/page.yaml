@@ -25,7 +25,7 @@ not_for:
 you_give:
   - A character, with age, work and one thing that is on their mind
   - One small errand or task on one day
-  - Your brand file (optional), if the scene is for a brand
+  - Your org context (optional), if the scene is for a brand
 you_get:
   - A scene told from inside the character's head
   - Time markers placed through it
@@ -41,7 +41,7 @@ output_sample:
   input:
     - A character, with age, work and one thing on their mind
     - One small errand on one day
-    - Your brand file with voice notes (optional)
+    - Your org context with voice notes (optional)
   output:
     - name: Who and what
       contains: The character, the one errand, and the day and place.
@@ -125,7 +125,7 @@ test:
 improve:
   - Add the sights, sounds and objects of your own setting, so the noticed list uses real details.
   - Add a list of words the character would never use.
-  - Save voice notes from your brand file so a brand scene sounds like your people.
+  - Save voice notes from your org context so a brand scene sounds like your people.
   - Pair it with a line editor to trim after the scene is settled.
 
 works_best_with:

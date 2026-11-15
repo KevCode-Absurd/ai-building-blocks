@@ -1,0 +1,8 @@
+# (test data) Post-purchase survey: 'Who is this order for?' Monthly answers. Built for an e-commerce eval. Not Wild One's real figures.
+month,answers,for_my_dog,for_my_cat,gift
+2026-05,1180,96%,1%,3%
+2026-06,1240,86%,9%,5%
+2026-07,1310,79%,16%,5%
+2026-08,1290,73%,22%,5%
+2026-09,1350,69%,26%,5%
+2026-10,1420,63%,31%,6%

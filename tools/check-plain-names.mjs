@@ -83,7 +83,7 @@ const ACRONYM_MEANINGS = {
 /** Insider terms and consultancy words. Each needs a plain phrase instead, or a short explanation in the same field. */
 export const INSIDER_TERMS = [
   // Our own jargon (docs/WRITING.md)
-  ["brand brain", "your brand file"], ["awareness stage", "how much the buyer already knows"], ["lever snippet", "a setting you can change"],
+  ["brand brain", "your org context"], ["awareness stage", "how much the buyer already knows"], ["lever snippet", "a setting you can change"],
   ["native ad", "an ad made to look like a normal post"], ["advertorial", "an ad written like an article"], ["static ad", "an image ad"],
   ["orchestrator", "workflow"], ["input type", "what you give it"],
   // Trade shorthand

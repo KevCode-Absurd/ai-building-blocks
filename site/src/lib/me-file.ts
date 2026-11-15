@@ -199,9 +199,9 @@ export function pickSections(tasks: TaskLike[], voice: Voice | null = voiceRule(
 
 const VOICE_LINE: Record<Voice, string> = {
   you: "**Voice:** yours. This is sent as the person, so write the way their Voice section describes. If it needs real examples, read them from the sources under Where to look.",
-  brand: "**Voice:** the brand's. This is sent as a business, so use the brand brain's voice and never the personal Voice section. For client work, follow the client's brief.",
+  brand: "**Voice:** the brand's. This is sent as a business, so use the org context's voice and never the personal Voice section. For client work, follow the client's brief.",
   neutral: "**Voice:** neutral. Write it plainly. Don't copy the personal Voice section or a brand voice.",
-  ask: "**Voice:** before you write, ask once: \"Should this sound like you, your brand, or neutral?\" Then use their Voice section, the brand brain's voice, or plain neutral wording.",
+  ask: "**Voice:** before you write, ask once: \"Should this sound like you, your brand, or neutral?\" Then use their Voice section, the org context's voice, or plain neutral wording.",
 };
 
 /** The block added to a copied skill, a downloaded skill and every pack: the sections this task needs, its voice

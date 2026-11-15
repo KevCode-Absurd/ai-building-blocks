@@ -26,7 +26,7 @@ you_give:
   - "The deal you want to run, with real numbers"
   - "Your product facts and costs"
   - "The group it is for"
-  - "A persona or brand file (optional)"
+  - "A persona or org context (optional)"
 you_get:
   - "The deal in one plain sentence"
   - "The doubts a stranger would have"
@@ -44,7 +44,7 @@ output_sample:
     - The deal you want to run, with real numbers and an end date
     - Your product facts and costs
     - The group the deal is for
-    - Your brand brain or voice sample (optional)
+    - Your org context or voice sample (optional)
   output:
     - name: The deal
       contains: The price, gift or discount, the terms and the end date in one plain sentence.
@@ -141,7 +141,7 @@ improve:
   - "Add the true reasons your business already has, such as seasonal stock, to step 3."
   - "Add personal reasons that suit your trade to step 4."
   - "Add words you never use in a deal to the avoid list."
-  - "Save the winning reason to your brand file. Pair it with Small test and rollout planner."
+  - "Save the winning reason to your org context. Pair it with Small test and rollout planner."
 
 before: [website-brand-brain-builder, hungry-audience-ranker]
 

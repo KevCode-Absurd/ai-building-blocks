@@ -97,6 +97,6 @@ test:
   - After a month, compare the number of held orders to the review hours you set.
 improve:
   - Review the rules monthly with your blocked and disputed lists, and loosen any that block real buyers.
-  - Save your chargeback watch line in your brand file.
+  - Save your chargeback watch line in your org context.
   - Add a second reviewer or an hour of review time before you tighten rules.
   - Pair it with a login and account security checker for your store.

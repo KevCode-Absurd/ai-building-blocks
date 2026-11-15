@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand file.
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your org context.
 2. This one.
 
 How to start:

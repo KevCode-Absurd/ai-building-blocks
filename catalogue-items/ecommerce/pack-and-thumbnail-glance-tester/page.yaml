@@ -131,7 +131,7 @@ test:
 improve:
   - Add your category's pack rules and marketplace image rules to the fixed-parts step, so they are always set aside first.
   - Add your real claims list, with the ones you are allowed to make, so the skill only picks from it.
-  - Save the winning pack read and the score to your brand file, and use the same four questions every time you test.
+  - Save the winning pack read and the score to your org context, and use the same four questions every time you test.
   - Pair it with the Product page image checker for the gallery and the Store brand signal auditor to check the whole brand's look.
 
 works_best_with:

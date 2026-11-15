@@ -129,9 +129,9 @@ test:
   - "Run it twice. The actions per image should match."
 
 improve:
-  - "Write your grid shape, brand file name style and standard image sizes into the skill."
+  - "Write your grid shape, org context name style and standard image sizes into the skill."
   - "Add the files you never touch (for example logos in PNG), so they pass each time."
-  - "Save your naming pattern in your brand file so every new product follows it."
+  - "Save your naming pattern in your org context so every new product follows it."
   - "Pair it with an image compressor and a product alt text writer, and with the hero image loading fixer for the first-screen image."
 
 works_best_with:
@@ -142,7 +142,7 @@ works_best_with:
   inputs:
     - "The product page copy, so each alt text matches the product"
     - "A zip of the images or screenshots of the largest ones"
-    - "Your brand file's product names, for file names"
+    - "Your org context's product names, for file names"
     - "A list of the images your theme shows at the largest size"
 
 terms:

@@ -132,7 +132,7 @@ test:
 improve:
   - Add your fixed facts to the skill file, such as sizing and returns, so every page uses the same wording.
   - Add your brand voice rules and a banned words list.
-  - Save your approved spec table format in your brand file.
+  - Save your approved spec table format in your org context.
   - Pair it with the product page SEO builder (the classic search layout) and the shopper question mapper.
 
 works_best_with:
@@ -152,4 +152,4 @@ terms:
     meaning: Code that tells machines a page's product name, price, availability and reviews.
   - term: Shoppable card
     meaning: A box in an AI answer that shows a product, seller, price and rating a shopper can click.
-next: [schema-markup-writer, answer-first-page-rewriter, ai-answer-visibility-tracker]
+next: [schema-markup-writer, ai-answer-visibility-tracker]

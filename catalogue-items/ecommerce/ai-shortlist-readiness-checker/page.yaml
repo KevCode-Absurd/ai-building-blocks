@@ -138,7 +138,7 @@ test:
 improve:
   - Add your own hard facts to the skill file, such as item types and sizes, so the matched stage rewrites lines the same way each time.
   - Add your marketplace or feed rules as extra checks.
-  - Save your approved robots.txt lines in your brand file so a theme change does not undo them.
+  - Save your approved robots.txt lines in your org context so a theme change does not undo them.
   - Pair it with the AI-ready product page editor to apply the page fixes, and the AI traffic tracking set-up to see results.
 
 works_best_with:

@@ -4,12 +4,12 @@ summary: "Turn your best ad into a landing page that matches it. You get the pag
 job: write-landing-page
 
 headline: "A landing page that matches your best ad"
-subhead: Give it your website, your offer and the ad that's working. It builds a brand file where every fact has a source, writes the page in the order a buyer needs answers, plans three designs from your brand, then reviews it in 30 checks and ranks the fixes.
+subhead: Give it your website, your offer and the ad that's working. It builds an org context where every fact has a source, writes the page in the order a buyer needs answers, plans three designs from your brand, then reviews it in 30 checks and ranks the fixes.
 
 explain: |
   A good ad makes one promise to one buyer. Then the click lands on a page that opens with the product name, a long brand story or a different offer, and the buyer leaves. A landing page (the page an ad sends people to) has to carry on the same conversation.
 
-  This workflow first builds a brand file from your website, with every price, claim and guarantee tagged by where it came from. Then it writes the page from your ad. The first screen repeats the ad's main words, says plainly what the product is, and shows the offer the ad named. The rest of the page answers your buyers' doubts, the most common first, using only your facts and real customer quotes, and states the full cost before the last button. Next it plans three design directions from your brand's own colours, type and photos, phone first. Last, it runs 30 yes-or-no checks at the five stops a buyer makes, from landing to the fine print, flags the deal-breakers and gives you the five fixes to make first.
+  This workflow first builds an org context from your website, with every price, claim and guarantee tagged by where it came from. Then it writes the page from your ad. The first screen repeats the ad's main words, says plainly what the product is, and shows the offer the ad named. The rest of the page answers your buyers' doubts, the most common first, using only your facts and real customer quotes, and states the full cost before the last button. Next it plans three design directions from your brand's own colours, type and photos, phone first. Last, it runs 30 yes-or-no checks at the five stops a buyer makes, from landing to the fine print, flags the deal-breakers and gives you the five fixes to make first.
 
 when:
   - An ad is getting clicks but the page it sends people to doesn't sell.
@@ -49,7 +49,7 @@ output_sample:
     - An AI that can work through a folder of files, such as Claude Code or a Claude Project
     - The handoff pack zip with HANDOFF.md and the skill files
   output:
-    - name: Brand file
+    - name: Org context
       contains: Eight files of your facts, offer, buyers, claims and voice, each fact tagged by where it came from.
     - name: Page copy
       contains: A page brief, first screen, buyer doubts, answer-first sections, cost block, questions and a closing button.
@@ -61,8 +61,8 @@ output_sample:
       contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
-  - title: Builds your brand file
-    text: Uses the brand file skill to read your website, check the basics with you once, and tag every price, claim and guarantee with where it came from.
+  - title: Builds your org context
+    text: Uses the org context skill to read your website, check the basics with you once, and tag every price, claim and guarantee with where it came from.
   - title: Writes the page
     text: Uses the landing page copy skill to pin one buyer, one reason and one offer, open on the ad's promise, answer each doubt and state the full cost.
   - title: Plans the design
@@ -133,11 +133,11 @@ example:
     [Start my first box]  30-day money-back guarantee, first order only.
 
     DOUBTS (most common first)
-    1 "Will the price jump after the first order?" (brand file) -> cost block
+    1 "Will the price jump after the first order?" (org context) -> cost block
     2 "I hate subscriptions because I feel like they are a trap" (17),
       "I have tried multiple times to cancel my subscription." (20)
       -> pausing and cancelling
-    3 "Is this just candy?" (brand file) -> what's in one pack
+    3 "Is this just candy?" (org context) -> what's in one pack
     4 "tasted terrible, but after the third day they started tasting
       better" (18) -> how it tastes
 
@@ -186,7 +186,7 @@ example:
 
     HAND-BACK SUMMARY
     Files: outputs/step-01 to step-04.
-    MISSING: your answers to the brand file's check-in; the cancel steps;
+    MISSING: your answers to the org context's check-in; the cancel steps;
     shipping after the first box; grams of sugar; whether "probiotics" in
     the ad is an error.
 
@@ -215,7 +215,7 @@ test:
   - Run step 4 on your current page as well. The new copy should already fix most of the old page's top fixes.
 
 improve:
-  - In the builder, drop step 1 if you already have a brand file with your offer and claims.
+  - In the builder, drop step 1 if you already have an org context with your offer and claims.
   - Add a step at the end that turns the page copy into a Shopify page, if your store runs on Shopify.
   - Swap step 4 for a review that reads the page in the order a buyer reads it, if you want fixes ranked by where people stop reading.
   - "Tune step 2's skill: add your offer terms and guarantee to its file, word for word (for Sprout: the $29.99 first order needs the text sign-up, and it renews at $49.99)."

@@ -32,7 +32,7 @@ How to start:
 
 ## What you need
 
-You do not need a buyer brief or a brand file to write a skill. The only useful inputs are the job description, a sample of the job done well and the skills you already have installed. In the list above, "your question" is the job description, the document is your sample, and the skill files are a draft skill if you already have one. This file holds the run order. The handoff pack from the workflow page adds HANDOFF.md and the five skill files.
+You do not need a buyer brief or an org context to write a skill. The only useful inputs are the job description, a sample of the job done well and the skills you already have installed. In the list above, "your question" is the job description, the document is your sample, and the skill files are a draft skill if you already have one. This file holds the run order. The handoff pack from the workflow page adds HANDOFF.md and the five skill files.
 
 - **The job you repeat** (required). Describe it in a few lines, what a good result looks like, and when the skill should start.
 - **A sample of the job done well** (optional). Paste it so the skill matches your standard.

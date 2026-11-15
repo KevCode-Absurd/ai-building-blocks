@@ -5,7 +5,7 @@ job: read-ad-results
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
 headline: Find out why ad sales dropped and what to make to win them back
-subhead: Give it your ad results for two periods and your brand file. It finds which part of your ad path got worse. Then it maps ideas you have not tried, writes a test brief and writes headlines.
+subhead: Give it your ad results for two periods and your org context. It finds which part of your ad path got worse. Then it maps ideas you have not tried, writes a test brief and writes headlines.
 explain: |-
   When cost per sale jumps, the usual move is to change the ad you can see. The cause is often somewhere else, such as broken tracking, a worn-out ad or a page that stopped converting.
 
@@ -16,11 +16,11 @@ when:
   - You need a brief for your designer that rests on numbers.
 not_for:
   - "You have no past results, such as a first launch: wait for data, or start with a plain plan for your first test ads."
-  - "You have no brand file yet: build one first with the Brand profile builder, then come back."
+  - "You have no org context yet: build one first with the Org context builder, then come back."
   - "You only want the cause of the drop: use the Ad sales drop analyst."
 you_give:
   - Your ad results export, one row per ad, for this period and the one before
-  - Your brand file
+  - Your org context
   - Your target cost per sale (optional)
   - Your store's own revenue for the period (optional)
 you_get:
@@ -32,17 +32,17 @@ you_get:
 how_to_use:
   - "Download the handoff pack. It's a zip with HANDOFF.md and the 4 skill files in the order they run: Ad sales drop analyst, Untried ad idea finder, Ad test brief writer and Ad headline writer."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your inputs ready. Your ad results for two periods and your brand file are required. It works step by step and saves each result.
+  - Have your inputs ready. Your ad results for two periods and your org context are required. It works step by step and saves each result.
   - Check the drop report before you act on it. Read the headlines for health or result claims before any go live.
 output_sample:
   input:
     - Your ad results export for this period, one row per ad
     - Your ad results export for the period before
-    - Your brand file
+    - Your org context
     - Your target cost per sale (optional)
     - Your store's own revenue for the period (optional)
   prerequisites:
-    - Your brand file, made with the Website brand brain builder
+    - Your org context, made with the Org context builder
     - An AI that can read files, such as Claude with a project or Claude Code
   output:
     - name: outputs/step-01-ad-sales-drop-analyst.md
@@ -86,7 +86,7 @@ example:
     [the handoff pack] Follow HANDOFF.md.
 
     Ad results: this month and last month, 9 ads. Practice numbers.
-    Brand file: the Sprout brand file. Practice data. Target cost per sale: $30.
+    Org context: the Sprout org context. Practice data. Target cost per sale: $30.
   output: |-
     STEP 1: DROP REPORT
     Counting check: browser and server purchases match within 3%.
@@ -100,7 +100,7 @@ example:
 
     STEP 3: TEST BRIEF
     Evidence: measured. Plan: refresh, because P1 wore out.
-    Idea 1: "The one I kept" | Doubt: "why switch?" | Answer: 80% of surveyed users take it daily (a claim on the practice brand file).
+    Idea 1: "The one I kept" | Doubt: "why switch?" | Answer: 80% of surveyed users take it daily (a claim on the practice org context).
 
     STEP 4: HEADLINES
     | The greens you'll still be taking next month. | moment | test first |
@@ -126,4 +126,4 @@ test:
 improve:
   - Run it at the same point each month, so the brief never repeats an idea you tested.
   - Add a step that turns the best idea into image ads.
-  - Save your target in your brand file so every run judges against it.
+  - Save your target in your org context so every run judges against it.

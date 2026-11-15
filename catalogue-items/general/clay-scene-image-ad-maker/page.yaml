@@ -89,7 +89,7 @@ output_sample:
     - "Product photos with a sharp label (optional at first)"
   prerequisites:
     - "An image tool such as ChatGPT (GPT Image) or Gemini (Nano Banana) to make the picture"
-    - "Your brand brain from the Brand profile builder (optional)"
+    - "Your org context from the Org context builder (optional)"
   output:
     - name: "Fit"
       contains: "Why clay suits this idea, or what to use instead."
@@ -204,7 +204,7 @@ test:
 
 improve:
   - Paste your approved and banned claims into "What you need" in the skill file, so every picture is checked against them.
-  - When a changing object works, save it with its three states in your brand file, so your stills and clay videos share it.
+  - When a changing object works, save it with its three states in your org context, so your stills and clay videos share it.
   - Add your product's never-show rules to step 7, for example that the daily pack is only ever torn straight across the top.
   - Pair it with "Claymation video ad script writer" when you want the video version too.
 

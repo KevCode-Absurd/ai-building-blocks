@@ -23,7 +23,7 @@ you_give:
   - Buyer words from reviews, calls or surveys
   - Photos of the real product
   - Rival claims (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
   - The proof you hold, such as test results (optional)
 you_get:
   - A big idea, a root cause and a named way your product works, with a list of claims that need proof
@@ -43,7 +43,7 @@ output_sample:
     - Buyer words from reviews, calls or surveys
     - Photos of your real product
     - Proof you hold, such as test results (optional)
-    - Your brand brain files (optional)
+    - Your org context files (optional)
   prerequisites:
     - An image tool to make the picture, such as ChatGPT or Gemini, because the workflow pauses for you to make it
     - A way to approve one image before the last step
@@ -113,6 +113,6 @@ test:
   - Check every label against your proof list.
   - Put the image next to your product photo and compare shape and label text.
 improve:
-  - Save the named mechanism in your brand file so later ads use the same name.
+  - Save the named mechanism in your org context so later ads use the same name.
   - Test the cutaway against your best photo ad with the same headline.
   - Make a second picture from another link in the chain.

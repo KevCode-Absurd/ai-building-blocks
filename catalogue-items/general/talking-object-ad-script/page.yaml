@@ -48,7 +48,7 @@ output_sample:
     - Your product facts, plus a photo of the product and pack (recommended)
     - Your voice, how far a joke can go, your approved claims and your offer
   prerequisites:
-    - Your brand brain from the Brand profile builder (optional)
+    - Your org context from the Org context builder (optional)
     - A buyer brief from the Buyer brief writer (optional)
   output:
     - name: NARRATOR
@@ -165,10 +165,10 @@ example:
 
     FACTS THE SHAKER STATES
     "the shaker"          review 6
-    "the powder"          the old way it replaces, brand file
-    "a green pouch"       brand file, how the pouch looks
-    "tears a little pack, tips"  brand file ("Rip. Tip. Enjoy.")
-    "No water. No shaking."  brand file (no water, no mixing, no shaker)
+    "the powder"          the old way it replaces, org context
+    "a green pouch"       org context, how the pouch looks
+    "tears a little pack, tips"  org context ("Rip. Tip. Enjoy.")
+    "No water. No shaking."  org context (no water, no mixing, no shaker)
     Not claimed: anything about his health, gut or energy. The shaker
     only reports what it saw.
 
@@ -209,7 +209,7 @@ improve:
   - Add the objects your customers mention in reviews to "What you need" in the skill file, so it starts from their words.
   - Write which moods your brand allows into step 4, so it never picks one you'd reject.
   - Add your product-showing rules (how the pack opens, what is never shown) to the video section, so picture notes get them right.
-  - Save the landing lines that win in your brand file. They make good headlines elsewhere.
+  - Save the landing lines that win in your org context. They make good headlines elsewhere.
   - Pair it with "Talking object video clip prompt writer", which takes the script and cast note from here to finished clips.
 
 works_best_with:

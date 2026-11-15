@@ -12,4 +12,4 @@ Some settings change with how the product is bought:
 
 Image ads: for unaware and problem-aware buyers, the picture shows the buyer's moment, not the pack. From solution aware up, show the real product exactly as photographed.
 
-If the brand file names no doubt for the product, assume the one that goes with how it's bought: "will it work for me" for something used up, "will it fit and last" for something bought once. Label it as assumed.
+If the org context names no doubt for the product, assume the one that goes with how it's bought: "will it work for me" for something used up, "will it fit and last" for something bought once. Label it as assumed.

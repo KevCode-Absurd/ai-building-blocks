@@ -32,13 +32,13 @@ landing-page-auditor:
   aliases:
     - Landing page conversion review
 website-brand-brain-builder:
-  name: Brand file builder
-  reason: One name everywhere for saved brand details, the brand file; keep the
-    original scope.
-  summary: Share your website. Get one brand file with your offers, facts,
-    buyers, claims, voice and look, each with a source and date.
+  name: Org context builder
+  reason: One name everywhere for saved details about the business, the org
+    context; keep the original scope.
+  summary: Share your website. Get one org context with your brand DNA, buyers,
+    voice, look, markets and claims, each with a source and date.
   subhead: Share your website and any product, customer or brand documents you
-    already have. It builds one brand file your AI reads before every job.
+    already have. It builds one org context your AI reads before every job.
     Each line says where it came from and when, old prices are flagged, and
     unanswered questions stay visible.
 ad-claim-proof-gap-finder:
@@ -3247,7 +3247,7 @@ monthly-customer-voice-keeper:
   reason: Makes the role explicit and keeps platform or technical scope where needed.
   summary: Find new buyer language and doubts in customer feedback. Get sourced
     brand note changes to review.
-  subhead: Share dated reviews, support notes and your current brand files. It
+  subhead: Share dated reviews, support notes and your current org context files. It
     counts separate people, compares past themes and checks which words or
     doubts are new. You get proposed changes with exact quotes and a watch list.
     Small batches are recorded without changing the brand; low ratings alone do
@@ -8024,7 +8024,7 @@ first-customer-group-picker:
   reason: Tighten existing introduction wording while retaining its stated inputs,
     steps, deliverables and limits.
 paper-craft-image-ad-maker:
-  subhead: Share your selling idea, brand file and product photos. It picks one
+  subhead: Share your selling idea, org context and product photos. It picks one
     moment and the paper fold caught in it, such as a flap or pop-up, and checks
     the picture against your claims. Get an image prompt, the ad words, a layout
     and the edit step for your real label.
@@ -8082,7 +8082,7 @@ talking-object-ad-script:
   reason: Tighten existing introduction wording while retaining its stated inputs,
     steps, deliverables and limits.
 talking-object-image-ad-maker:
-  subhead: Share your buyer's moment, brand file and product photos. It picks one
+  subhead: Share your buyer's moment, org context and product photos. It picks one
     object from the buyer's home, tests it and gives it one feeling and a speech
     bubble of 7 words or fewer. Get an image prompt, the ad words, a layout and
     the edit step that adds your real pack.
@@ -13329,7 +13329,7 @@ make-every-touchpoint-say-the-same-thing:
   name: Brand message consistency reviewer
   summary: Share store pages, emails, packaging and buyer evidence. Get message
     mismatches ranked, sample copy edits and a practical brand guide.
-  subhead: It builds a shared brand file, checks the material you supply and edits
+  subhead: It builds a shared org context, checks the material you supply and edits
     sample copy. It then writes the guide. You get evidence, priorities and
     gaps. The review covers only pages and files it could read; it does not
     claim every channel has been checked or changed.
@@ -13611,7 +13611,7 @@ offer-image-ads:
   name: Meta offer image ad planner
   summary: Share website facts, real prices and product photos. Get offer ideas,
     three image-ad plans and a first-pass Meta rules review.
-  subhead: It builds a brand file, checks offer clashes and plans three visual
+  subhead: It builds an org context, checks offer clashes and plans three visual
     approaches in two sizes. It then reviews the ad material against current
     rules. You get briefs and gaps. Real images and tool access are needed for
     visual checks; a plan is not platform approval or a launched campaign.
@@ -13621,7 +13621,7 @@ offer-image-ads:
     - Offer image ad planning and rule review
 offer-reel-real-product:
   name: Code-built offer video maker
-  summary: Share real product photos, approved words and brand files. Get an
+  summary: Share real product photos, approved words and org context files. Get an
     offer-video plan and code-rendered files when the required build tools are
     available.
   subhead: It plans the product card, visual style and beat-timed storyboard, then
@@ -13841,7 +13841,7 @@ plan-a-branded-unboxing-that-customers-film-and-reorder-for:
   name: Branded unboxing and insert planner
   summary: Share store facts, product details and order margins. Get a customer
     ritual idea, packaging experience and insert or gift plan.
-  subhead: It builds a brand file, proposes a repeatable product ritual and plans
+  subhead: It builds an org context, proposes a repeatable product ritual and plans
     the package's look and feel. It then costs inserts and gifts against your
     margin. You get ideas and assumptions. No filming, sharing, repeat purchase
     or sensory effect is guaranteed, and product handling and safety need real
@@ -15488,7 +15488,7 @@ review-feedback-on-a-student-reflection:
     - Student reflection feedback and revision reviewer
 review-image-ads:
   name: Customer review image ad planner
-  summary: Share your website, real reviews and ad brief. Get a brand file, buying
+  summary: Share your website, real reviews and ad brief. Get an org context, buying
     reasons, ad plans, image prompts and preflight findings.
   subhead: It tags brand facts, ranks reasons from customer words and plans one
     supported argument per ad. It writes exact-text prompts after the required
@@ -17135,7 +17135,7 @@ ad-landing-page:
   summary: Create page copy that matches your ad, three design options and a
     30-point review from your site facts and offer.
   subhead: Share your website or saved pages, offer terms and, if available, the
-    ad and customer feedback. It builds a brand file with source references,
+    ad and customer feedback. It builds an org context with source references,
     writes the page, plans three designs for phone and desktop, and checks the
     result against 30 questions. You get the files, ranked fixes and missing
     facts. Publishing needs your approval.
@@ -17360,16 +17360,16 @@ borrow-a-look-you-like-and-plan-a-readable-page:
     - Page style, layout and colour plan
 brand-file-from-website:
   name: Website brand guide builder
-  summary: Build a sourced brand file, prepare questions for its gaps and use real
+  summary: Build a sourced org context, prepare questions for its gaps and use real
     founder answers to create a brand guide.
   subhead: Share your website or saved pages, plus any product facts or customer
-    evidence. It builds a brand file with unknowns and disputed claims marked,
+    evidence. It builds an org context with unknowns and disputed claims marked,
     then ranks questions for the founder. You hold the interview and add the
     real answers. It uses the updated file to create a brand guide and reusable
     design values. You get three step files and remaining gaps.
   reason: Use a plain job-role label while preserving the defining task and platform.
   aliases:
-    - Website brand file and style guide
+    - Website org context and style guide
 brand-mark-design:
   name: Logo design planner and reviewer
   summary: Create a logo brief and mark plan, then review finished design options
@@ -17433,17 +17433,17 @@ build-a-backup-recovery-rehearsal:
   reason: Uses restore to name the concrete task and distinguishes the rehearsal
     plan from proof that a backup works.
 build-a-brand-file-and-style-guide-from-scratch:
-  name: Brand file and style guide builder
+  name: Org context and style guide builder
   summary: Turn product and buyer facts into core messages, writing rules, a
     visual direction and one shared brand guide.
   subhead: Share a brief about the product, audience, goal and supported claims.
-    It builds the brand file, adds messages and proof points, writes voice rules
+    It builds the org context, adds messages and proof points, writes voice rules
     and chooses a visual direction. It then combines them into a guide for
     writers and designers. You get five step files and missing facts. Claims
     without proof stay marked as gaps.
   reason: Uses a clear job role while preserving the stated scope.
   aliases:
-    - Brand file and style guide from scratch
+    - Org context and style guide from scratch
 build-a-buyer-profile-from-interviews-and-reviews:
   name: Buyer research brief builder
   summary: Plan buyer interviews, use real answers and reviews to build a buyer
@@ -18480,7 +18480,7 @@ competitor-ad-to-script:
   name: Competitor research video script writer
   summary: Study saved competitor ads and find useful gaps. Write an original
     video script, then check the spoken lines and ad rules.
-  subhead: Share real saved competitor ads, your brand file, customer words,
+  subhead: Share real saved competitor ads, your org context, customer words,
     product facts and current ad copy. It sorts the ads, maps gaps and uses one
     supported idea for a new script. It edits the spoken lines and checks ad
     rules, then returns five step files and gaps. If no actual ad can be
@@ -19735,7 +19735,7 @@ brand-voice-reviewer:
   name: Brand voice consistency reviewer
   summary: Check drafts against approved voice rules, fix only the flagged wording
     and track repeat slips, stopping after three rounds.
-  subhead: Share the draft, its use and your brand file and voice guide. It checks
+  subhead: Share the draft, its use and your org context and voice guide. It checks
     the wording, revises only flagged lines and checks again for up to three
     rounds. It saves recurring slips and proposes guide changes for your
     approval. You get the best draft, changed lines and open flags. Facts,
@@ -21153,7 +21153,7 @@ ad-test-brief-writer:
     what the results prove, picks a plan, and writes three ideas aimed at
     different buyer doubts. You get nine versions spelled out for a designer and
     any check it missed.
-  reason: Results are optional, but the old card asks for the brand file and
+  reason: Results are optional, but the old card asks for the org context and
     results together. Say any results and keep the already clear name and intro.
     The method can explore from brand facts when no account evidence exists.
 adaptive-filter-designer:
@@ -27835,9 +27835,9 @@ claims-reserve-calculator:
   reason: Shortened or clarified the job name.
 clay-town-video-ad-script-writer:
   name: Clay town video ad writer
-  summary: Paste your idea and brand file. Get a clay-town video script, set card
+  summary: Paste your idea and org context. Get a clay-town video script, set card
     and cast note.
-  subhead: Give it your selling idea and brand file. It writes a narrated
+  subhead: Give it your selling idea and org context. It writes a narrated
     clay-animation video around a hassle a whole crowd shares, where one lead
     gets out of it with your product. You get a set card, a timed five-part
     script and a cast note for the video step.
@@ -29352,7 +29352,7 @@ store-photo-style-locker:
   summary: Describe your store look. Get a reusable style file for consistent
     model references, lighting and layouts across product photos.
   subhead: Share the look you want, a model photo if needed, colors and things to
-    avoid. It records rules for photos and layouts in a reusable brand file. Get
+    avoid. It records rules for photos and layouts in a reusable org context. Get
     that file and a plan to compare sample images. Review new images for
     consistency.
   reason: Uses a specific job role for the described output.

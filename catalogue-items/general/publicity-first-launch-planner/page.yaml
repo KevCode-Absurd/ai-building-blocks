@@ -100,7 +100,7 @@ output_sample:
     - "Budget and dates (optional)"
     - "Outlets or writers you can reach (optional)"
   prerequisites:
-    - "Your brand brain from the Website brand brain builder (optional)"
+    - "Your org context from the Org context builder (optional)"
   output:
     - name: "The category"
       contains: "Your category in buyers' words, whether you are first in it, and a narrower one to lead if not."

@@ -43,7 +43,7 @@ output_sample:
   prerequisites:
     - An AI that can read your exported files
     - Your Google Ads reports exported with cost, conversions and conversion value
-    - Your brand brain from the Brand profile builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: This week in one line
       contains: Spend, sales, ROAS and CPA against last week and against your break-even, with the sums shown.
@@ -109,7 +109,7 @@ test:
   - Compare its change list with what you or your agency did that week, and look at where they differ.
 improve:
   - Set your own size of drop that counts as sharp in step 3, to suit how much your account moves week to week.
-  - Add your brand names and the products you never cut to your brand brain, so search terms and product calls follow them.
+  - Add your brand names and the products you never cut to your org context, so search terms and product calls follow them.
   - If you only run Search, remove the Shopping and Performance Max steps so the run is shorter.
   - Save the changes you approved in the keeper folder each week, so the next run can check whether they worked.
 works_best_with:

@@ -14,24 +14,23 @@ When not to use: to answer today's tickets, use that drafter. With no ticket exp
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**
-- **Brand file**, made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
-- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Org context**, made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 - **A brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
-**From the brand file, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`, `foundation/claims.md`, `foundation/customer-talk.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for source text, a document, your brand file. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for customer words, a document, your org context. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -42,7 +41,7 @@ How to start:
 ## What you need
 - **Last month's tickets** (required): the export, with the customer's question, the reply that solved it, the date, and if your tool records it, which help page the customer visited first.
 - **The help centre** (required): every article as text, with its address and last-updated date.
-- **Brand brain** (advised): voice and facts, for the voice check. Without it the articles are checked for clarity only.
+- **Org context** (advised): voice and facts, for the voice check. Without it the articles are checked for clarity only.
 - **Product docs** (optional): the internal docs or release notes, so an article can be checked against how the product works now.
 - **Last month's keeper file** (once it exists): the topics, the gaps and the articles proposed.
 
@@ -61,7 +60,7 @@ Keep one folder, `help-centre/`. Save each step's result as `help-centre/<month>
    - Article exists, matches support, few tickets: leave it. Say so.
 5. **Draft the missing articles.** For a topic one solved ticket covers, run `solved-ticket-help-page-writer` on the best solved ticket for a page with steps, what the customer should see, and a fix for next time. For a topic that needs more (a set-up guide, a policy explained, an FAQ section), run `help-article-writer` with the tickets and the product docs. Strip every personal detail. Mark each as a draft.
 6. **Rewrite the pages that failed.** Run `answer-first-page-rewriter` on each article from step 4 so every section gives the answer first, and the title says what the customer typed. Keep its list of facts still needing a source.
-7. **Check the voice.** If a brand brain exists, run `draft-brand-voice-checker` on every new or rewritten article. Fix what it ranks high. Without a brand brain, write `MISSING: brand brain` and skip.
+7. **Check the voice.** If an org context exists, run `draft-brand-voice-checker` on every new or rewritten article. Fix what it ranks high. Without an org context, write `MISSING: org context` and skip.
 8. **Log and hand back.** Update `topics.md` and `articles.md`. Hand back (see below), then stop.
 
 ## Stop and ask before

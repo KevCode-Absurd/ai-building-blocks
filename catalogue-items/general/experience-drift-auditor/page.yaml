@@ -135,7 +135,7 @@ test:
 improve:
   - Add your own list of sensory details, such as the smell or sound of a first visit.
   - Add a rule that any new cost cut is checked against this list.
-  - Save the details you restore to your brand file as standards.
+  - Save the details you restore to your org context as standards.
   - Pair it with "Customer value and spend limit calculator" to price the reset.
 
 works_best_with:

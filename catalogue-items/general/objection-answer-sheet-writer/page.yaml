@@ -43,7 +43,7 @@ output_sample:
     - The doubts buyers raise, or reviews and messages to find them in
     - Product facts and proof you have (optional)
     - Your ranked reasons to buy (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   output:
     - name: PLAN
       contains: One line that tells the reader the order of the sheet.

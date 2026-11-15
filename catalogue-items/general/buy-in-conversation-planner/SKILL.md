@@ -7,7 +7,7 @@ description: Use when you need a person or group to agree to something, such as 
 
 People say yes to what they want, and rarely to what you want. This skill starts the plan from the other person: their wants in their words, their likely doubts, and a conversation where they speak first. It does not trick anyone into agreeing. If the plan would fail the moment they saw how it worked, it is not a good plan.
 
-**When not to use:** for a negotiation over price or terms (use "Negotiation call prep planner"), to pressure or trick someone into a yes, or when a short message with one clear question would do. No brand brain or company facts are needed: the inputs are the person, your request and what you know about them.
+**When not to use:** for a negotiation over price or terms (use "Negotiation call prep planner"), to pressure or trick someone into a yes, or when a short message with one clear question would do. No org context or company facts are needed: the inputs are the person, your request and what you know about them.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

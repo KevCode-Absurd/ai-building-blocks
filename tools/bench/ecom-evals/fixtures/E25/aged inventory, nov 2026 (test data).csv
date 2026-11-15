@@ -1,0 +1,5 @@
+# (test data) Units on hand by season age. Built for an e-commerce eval. Not Taylor Stitch's real figures.
+season_age,units,cost_value_usd
+Current season,61000,2440000
+1 season old,18500,650000
+2+ seasons old,9200,290000

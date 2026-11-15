@@ -43,7 +43,7 @@ output_sample:
   input:
     - Your approved story ad, with any rule, reminder or workaround in it
     - How your buyer writes notes, such as capitals or short forms (optional)
-    - Your brand brain or ad copy from an earlier step (optional)
+    - Your org context or ad copy from an earlier step (optional)
   prerequisites:
     - A real, approved customer account behind the story. Do not invent a review, quote or note.
     - An image tool in your chat, or a phone and marker, to make the picture
@@ -177,8 +177,8 @@ test:
   - Run the note with words against the same photo with a blank note. Keep whichever brings more readers to the offer.
 
 improve:
-  - Ask customers what notes they've stuck up about the problem, and add them to your brand file. Real notes make the best pictures.
-  - Add the things your buyers struggle with at home to your brand file, so the note lands on one they'd know.
+  - Ask customers what notes they've stuck up about the problem, and add them to your org context. Real notes make the best pictures.
+  - Add the things your buyers struggle with at home to your org context, so the note lands on one they'd know.
   - Put the note in your story word for word. Then the picture copies the story and needs no extra check.
   - For longer handwritten lines or lists, use the handwritten note skill.
 

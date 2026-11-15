@@ -21,7 +21,7 @@ output_sample:
     - The ad sizes you want, if not 4:5 and 9:16 (optional)
   prerequisites:
     - An AI that can read files and build web pages, or an AI plus a design tool you can use yourself
-    - Your Brand brain, if you have one
+    - Your Org context, if you have one
   output:
     - name: brand.json
       contains: Your name, colours, fonts, logo, product photos, approved claims, blocked claims and current offer.

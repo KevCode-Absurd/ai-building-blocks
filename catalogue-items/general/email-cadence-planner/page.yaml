@@ -26,7 +26,7 @@ you_give:
   - Your list size and how often you email now
   - What sells when you send, and your current offers
   - A persona or buyer description (optional)
-  - Your brand file or past emails (optional)
+  - Your org context or past emails (optional)
 you_get:
   - A pace you can keep and a weekly plan
   - A story or tactic for each email, with the offer in the P.S.
@@ -44,7 +44,7 @@ output_sample:
     - Your list size and how often you email now
     - What sells when you send, and your offers with prices and end dates
     - Past emails or a buyer description (optional)
-    - Your brand brain or brand file (optional)
+    - Your org context (optional)
   output:
     - name: Starting point
       contains: Your list size, current pace, and which past emails sold or got replies.
@@ -131,7 +131,7 @@ test:
 improve:
   - Add your customer questions, so each email answers a real one.
   - Add stories from your own work, so the plan does not rely on invented ones.
-  - Save subject lines that worked to your brand file.
+  - Save subject lines that worked to your org context.
   - Pair it with "Product how-to guide writer" for email content that teaches.
 
 works_best_with:

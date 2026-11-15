@@ -142,3 +142,9 @@ test('saved SEO workflow exports against the real published catalogue, including
  assert(licenceCount>0);assert(requests.some(p=>p==='/skills/'+first+'/SKILL.md'));
  const corruptAsset=async path=>path==='/skills/'+first+'/SKILL.md'?new Response('Changed bytes'):asset(path);await assert.rejects(()=>service(store,{publicService,asset:corruptAsset}).callTool('export_workflow',{id:saved.id}),e=>e.code==='source_integrity_failed');
 });
+test('memory: the org context kind keeps its old name working, saves under the new one, and may supersede an older record',async()=>{
+ const s=service(memoryCoordinatorStore()),base={business_id:'test-business',title:'Org context',record:{kind:'brand_brain',scope:'brand',source:'Owner upload',date:'2026-11-15',content:'context/org-context/index.md'},expected_version:0,confirmed:true,idempotency_key:'org-context-0001'};
+ const old=await s.callTool('save_memory',base),read=await s.callTool('get_memory',{id:old.id});assert.equal(JSON.stringify(read).includes('"brand_brain"'),false);assert.match(JSON.stringify(read),/"org_context"/);
+ const next=await s.callTool('save_memory',{...base,idempotency_key:'org-context-0002',record:{...base.record,kind:'org_context',content:'Refreshed',supersedes:old.id}});assert.equal(next.saved,true);
+ await assert.rejects(()=>s.callTool('save_memory',{...base,idempotency_key:'org-context-0003',record:{...base.record,kind:'brand_book'}}),e=>e.code==='invalid_record');
+});

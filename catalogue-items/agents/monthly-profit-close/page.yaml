@@ -111,7 +111,7 @@ improve:
   - Add your profit target so the fix list is sized against it.
   - Save a note of which fixes you made each month, so the next close can check whether they worked.
   - If your store is under a few hundred orders a month, remove the new and returning split from the run.
-  - Keep the rules file in your brand brain folder so other agents use the same cost of goods rule.
+  - Keep the rules file in your org context folder so other agents use the same cost of goods rule.
 works_best_with:
   tools:
     - name: Claude Code

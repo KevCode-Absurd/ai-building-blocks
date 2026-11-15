@@ -135,7 +135,7 @@ test:
 improve:
   - "Add the groups you always sell to, with how they speak, so rival readings fit them."
   - "Add a line to step 3 listing slang or symbols that have gone wrong for you before."
-  - "Save each test result to your brand file so the next ad starts from what you learned."
+  - "Save each test result to your org context so the next ad starts from what you learned."
   - "Pair it with a clarity check on the same ad before you test the meaning."
 
 works_best_with:

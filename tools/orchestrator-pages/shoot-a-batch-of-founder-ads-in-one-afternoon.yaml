@@ -21,7 +21,7 @@ not_for:
 you_give:
   - Your product facts (what it is, price, who uses it and what it solves)
   - Your customer reviews, survey answers or support emails (at least 20 real lines is best)
-  - Your brand file, with the founder's origin story, how the product works, and proof such as test results, certificates and reviews
+  - Your org context, with the founder's origin story, how the product works, and proof such as test results, certificates and reviews
   - Who the ad is for (the buyer persona) and what they already know
   - Where you can film, and how many hours you have (optional)
 you_get:
@@ -45,7 +45,7 @@ output_sample:
     - Where you can film and how many hours you have (optional)
   prerequisites:
     - An AI that can read files, such as Claude with a Project or Claude Code
-    - Your brand facts, founder story and proof, pasted in or as a brand brain from the Website brand brain builder
+    - Your brand facts, founder story and proof, pasted in or as an org context from the Org context builder
   output:
     - name: Ad concept matrix
       contains: Buyer problems with an angle, an offer, the proof needed, a first line and a test order.
@@ -109,7 +109,7 @@ test:
   - Film the top-scored hook and one the scorer rated low on the same body. See if the order holds in your results.
   - Run step 1 twice on the same reviews. The top problems should match.
 improve:
-  - Add the founder's voice and phrases to your brand file, so scripts sound like them.
+  - Add the founder's voice and phrases to your org context, so scripts sound like them.
   - Collect new story parts each month from one-star reviews and support emails. The shoot planner gives a checklist.
   - Edit the script skill's five parts if your product needs a demo earlier.
   - Pair it with a video hook scorer on ads you already run, to find weak openers.

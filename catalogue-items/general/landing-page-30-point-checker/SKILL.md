@@ -9,7 +9,7 @@ A buyer makes five stops on the way to paying. They arrive and check they're in 
 
 ## First, ground the job
 
-Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol) in patch mode: the result is a set of changes to the live page, not a redesign. Capture the page with [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture), or take desktop and 390 px screenshots, so each "no" has evidence and each fix uses the page's own fonts, colours, buttons and sections.
+Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol) in patch mode: the result is a set of changes to the live page, not a redesign. Capture the page with [Org context capture](https://useaiblocks.com/skills/brand-dna-capture), or take desktop and 390 px screenshots, so each "no" has evidence and each fix uses the page's own fonts, colours, buttons and sections.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -19,19 +19,19 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Makes it better (optional):**
-- **Brand file**, made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context**, made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **A design direction**, made by the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner): the page's type, colours and layout rules.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A design direction** with the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). Bring your page, customer words (optional). It uses your brand file.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A design direction** with the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). Bring your page, customer words (optional). It uses your org context.
 3. This one.
 
-**From the brand file, read:** `index.md`, `facts.json`, `offers.json`, `voice.md`. Take the claims list with each claim's status, the offer terms word for word, and the real voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `foundation/claims.md`, `foundation/dos-donts.md`, `facts.json`, `offers.json`, `voice.md`. Take the claims list with each claim's status, the offer terms word for word, and the real voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your page, your brand file, a design direction. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your page, your org context, a design direction. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**

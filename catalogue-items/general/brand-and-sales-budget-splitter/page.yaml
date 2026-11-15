@@ -26,7 +26,7 @@ you_give:
   - Your spend by channel for a recent period
   - Your scorecard or audit report of what each channel delivers (optional)
   - Your market share and rivals' spend, if you know them (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - Each channel sorted as brand building or sales activation
   - Your current split beside a starting guide
@@ -43,7 +43,7 @@ output_sample:
     - Your spend by channel for a recent period
     - Your scorecard or audit report of what each channel delivers (optional)
     - Your market share and rivals' spend (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
   output:
     - name: Channel sort
       contains: Each channel marked as brand building or sales activation, with its spend and the reason for the label.
@@ -130,7 +130,7 @@ test:
 improve:
   - Add your own channel list so the sort uses your names.
   - Add how long your customers take to buy, so the time window fits your field.
-  - Save past shifts and what happened in your brand file.
+  - Save past shifts and what happened in your org context.
   - Pair it with "Marketing scorecard builder" so measures match the shift.
 
 works_best_with:

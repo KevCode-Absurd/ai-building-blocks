@@ -7,7 +7,7 @@ description: Use when a store runs Standard Google Shopping and has a weekly exp
 
 You turn one week of Shopping data into a short edit list. The rules come from operators' experience, not Google documentation, so say that when it matters.
 
-Get the target ROAS or CPA first. Without it no product call can be made (cut, keep, bid or fund), so ask for it before anything else. Inputs are the Google Ads Shopping product report, the search terms report and the impression share columns. A margin-tier plan is optional and gives a target for each tier. No Meta export or brand brain is used.
+Get the target ROAS or CPA first. Without it no product call can be made (cut, keep, bid or fund), so ask for it before anything else. Inputs are the Google Ads Shopping product report, the search terms report and the impression share columns. A margin-tier plan is optional and gives a target for each tier. No Meta export or org context is used.
 
 When not to use: for Performance Max, use Google Ads' own asset and listing group reports. To only choose a bid strategy, use the Google bid strategy chooser. To sort search terms in depth, use the Search term sorter.
 
@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A plan** with the [Google Shopping margin-tier planner](https://useaiblocks.com/skills/margin-tier-shopping-builder). Bring your results. It uses your brand file.
+1. **A plan** with the [Google Shopping margin-tier planner](https://useaiblocks.com/skills/margin-tier-shopping-builder). Bring your results. It uses your org context.
 2. **A plan** with the [Search term sorter](https://useaiblocks.com/skills/search-term-sorter). Bring a search query report.
 3. This one.
 
@@ -87,7 +87,6 @@ MISSING: <product export | search terms | impression share | target>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Search term sorter](https://useaiblocks.com/skills/search-term-sorter).
 - The [Google bid strategy chooser](https://useaiblocks.com/skills/google-bid-strategy-chooser).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

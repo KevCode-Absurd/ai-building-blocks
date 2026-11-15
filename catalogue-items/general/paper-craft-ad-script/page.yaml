@@ -170,7 +170,7 @@ output_sample:
     - "Your approved claims, banned claims and offer terms"
     - "Your buyer's moment and words (optional)"
   prerequisites:
-    - "A brand brain from the Website brand brain builder, for facts and claims (optional)"
+    - "An org context from the Org context builder, for facts and claims (optional)"
   output:
     - name: "Show plan"
       contains: "The selling idea, the show job, the paper mechanism, the build and paper, and the sentence the turn implies."

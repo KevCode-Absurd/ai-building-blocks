@@ -21,7 +21,7 @@ steps:
   - {uses: positioning-statement-writer, note: "Writes the one-line position and a brief from the corner you picked. Reads the grid from the step before. Hands the position plan and the brief to the name steps."}
   - {uses: store-name-generator, note: "Generates and cuts names against the brief and the rivals' naming patterns. Reads the brief from the step before. Hands a shortlist of names to the tester."}
   - {uses: store-name-tester, note: "Tests the shortlist for sound, spelling, meaning and fit. Reads the shortlist from the step before. Hands each name's keep, fix or drop call so you can pick the winner."}
-  - {uses: brand-name-stretch-checker, note: "Checks the winning name from step 4 still works when the range grows. Uses your brand file and the new product, plus the position plan and rivals from steps 1 and 2. Hands back a stretch score and a call on the name."}
+  - {uses: brand-name-stretch-checker, note: "Checks the winning name from step 4 still works when the range grows. Uses your org context and the new product, plus the position plan and rivals from steps 1 and 2. Hands back a stretch score and a call on the name."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/name-and-position-a-new-brand/skeleton.yaml

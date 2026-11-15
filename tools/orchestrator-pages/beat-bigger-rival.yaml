@@ -46,7 +46,7 @@ output_sample:
     - Your idea for doing the job differently (optional)
     - The leader's price list, sales routes or revenue split (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your org context from the Org context builder (optional, makes the result better)
     - An AI that can read the files you give it, such as Claude
   output:
     - name: "Step 1: where the leader is weak"

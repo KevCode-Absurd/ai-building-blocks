@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your lead list** (yours): your leads or open deals, exported from your CRM or a sheet.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Your lead list** with the [Prospect account researcher](https://useaiblocks.com/skills/prospect-list-builder). It uses your brand file.
+1. **Your lead list** with the [Prospect account researcher](https://useaiblocks.com/skills/prospect-list-builder). It uses your org context.
 2. This one.
 
 How to start:

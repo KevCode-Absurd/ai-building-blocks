@@ -1,12 +1,12 @@
 new_slug: make-three-first-screens
 name: "Make three first screens"
-summary: "Give it your page brief and brand file. You get three different first screens as real pages, with one chosen."
+summary: "Give it your page brief and org context. You get three different first screens as real pages, with one chosen."
 job: write-landing-page
 thinking: high
 thinking_why: "It must plan three screens that differ in substance, build each one, and judge the side-by-side sheets."
 
 headline: "See three first screens for your page before you pick one"
-subhead: Give it your page brief, your brand file and your facts. It builds three different first screens as real pages in your own fonts, colours and buttons. It puts them side by side at desktop and phone width. A fresh reviewer picks one, and that one becomes your page.
+subhead: Give it your page brief, your org context and your facts. It builds three different first screens as real pages in your own fonts, colours and buttons. It puts them side by side at desktop and phone width. A fresh reviewer picks one, and that one becomes your page.
 
 explain: |
   The first screen of a page does most of the work. Many visitors never scroll. When you ask an AI for a page, it writes one first screen and builds the rest under it. You never see what else was possible.
@@ -28,7 +28,7 @@ not_for:
 
 you_give:
   - Your brief, with who the page is for and the one thing they should do
-  - Your brand file, or your website so it can be captured first
+  - Your org context, or your website so it can be captured first
   - Your facts, such as prices, offers, proof and policies, each with its source and date
   - Where visitors come from, such as an ad or an email (optional)
 you_get:
@@ -40,7 +40,7 @@ you_get:
 
 how_to_use:
   - Add the skill to an AI that can run code and open files. A coding assistant works best.
-  - Give it your brief, your brand file and your facts. If you have no brand file, give it your website.
+  - Give it your brief, your org context and your facts. If you have no org context, give it your website.
   - It checks that what you sell is live and in stock, then plans three screens that differ on at least two things.
   - It builds the three pages and runs the compare script that comes with the skill. The script needs Node.js 18 or later and Playwright for the pictures.
   - Look at the two pictures yourself if you like. A fresh reviewer picks one against your tests.
@@ -137,7 +137,7 @@ test:
 improve:
   - Add the tests your pages must always pass, so the reviewer uses your own bar.
   - Add your best past pages as references, with what worked on each.
-  - Keep your brand file fresh, so prices and offers on the screens are current.
+  - Keep your org context fresh, so prices and offers on the screens are current.
   - Pair it with the Client's-eye check on the finished page.
 
 works_best_with:
@@ -145,7 +145,7 @@ works_best_with:
     - {name: "A coding assistant that can run code", why: "Builds the three pages, runs the compare script and opens the pictures."}
     - {name: "Node.js with Playwright", why: "Makes the desktop and phone comparison pictures. Without it you still get one page that shows the three in frames."}
   inputs:
-    - "Your brand file, or your website to capture"
+    - "Your org context, or your website to capture"
     - "Your facts with sources and dates"
     - "The ad or email your visitors click"
 
@@ -154,7 +154,7 @@ terms:
     meaning: What a visitor sees before they scroll.
   - term: Axis
     meaning: One thing a screen can change, such as the promise, the proof or the layout.
-  - term: Brand file
+  - term: Org context
     meaning: Your saved brand details, such as fonts, colours, buttons and your own words.
   - term: SAME-CONTEXT
     meaning: A label that says the same AI made and chose the options, so the choice is weaker.
@@ -162,7 +162,7 @@ terms:
 output_sample:
   input:
     - Your page brief
-    - Your brand file or website
+    - Your org context or website
     - Your facts with sources and dates
   prerequisites:
     - An AI that can run code, to use the scripts that come with this skill

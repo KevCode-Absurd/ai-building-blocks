@@ -21,13 +21,13 @@ steps:
   - {uses: social-media-results-analyst, note: "Every week: engagement rates and the best and worst posts of last week, against the account's own history. Hands on: the best and worst posts, for the flop check."}
   - {uses: organic-format-tester, note: "Only on the first week of a month, and only once 20 or more posts are saved: which formats and hooks to keep, change or drop. Uses your saved posts file, not step 1's summary. Hands on: the keep, change and drop calls for the plan."}
   - {uses: flop-post-diagnoser, note: "Only for the worst one or two posts on X or LinkedIn that had enough views to judge: why each flopped and what to change. Uses step 1's weakest posts and numbers. Hands on: one line per flop for the lessons file."}
-  - {uses: platform-native-content-planner, note: "Only when there is no saved plan for the platform, or the owner changes platform: builds the base plan and rhythm. Uses your brand brain and platform, not step 3's notes. Hands on: the base plan and the first posts."}
+  - {uses: platform-native-content-planner, note: "Only when there is no saved plan for the platform, or the owner changes platform: builds the base plan and rhythm. Uses your org context and platform, not step 3's notes. Hands on: the base plan and the first posts."}
   - {uses: standing-social-calendar-maker, note: "Every week after the base plan exists: extends the saved calendar by one week from step 4's plan, using what the last week taught. Hands on: the planned posts."}
   - {uses: short-video-hook-writer, note: "Only for planned posts that are short videos: ten checked hooks for each post idea in step 5's calendar. Hands on: the best hook and a spare for each post."}
   - {uses: shareable-content-checker, note: "Every week, on each planned post: scores it out of 30 with its hook from step 6, and sends weak ones back for a rewrite, up to two rounds."}
   - {uses: organic-post-to-ad-promoter, note: "Only when a post beat the account's usual views by a wide margin: marks it for the ads team. Uses last week's post numbers, not step 7's scores. Never boosts anything."}
 schedule: "Every Sunday evening, after the week's numbers are in"
-asks_before: [posting or scheduling any post, replying to or messaging anyone, boosting or paying to promote a post, contacting creators, making graphics in a design tool, stating a price, claim or offer the brand file does not hold]
+asks_before: [posting or scheduling any post, replying to or messaging anyone, boosting or paying to promote a post, contacting creators, making graphics in a design tool, stating a price, claim or offer the org context does not hold]
 origin: own
 version: 1.0.0
 example_pending: true

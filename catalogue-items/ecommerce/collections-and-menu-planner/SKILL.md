@@ -29,7 +29,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This skill needs only the product list, the platform, the search words and, if you have them, competitor menus. The spreadsheet in "Before you start" means the product list. It does not need a brand brain. Shopify is a paid service. Which tools your plan includes, and what the Search & Discovery app costs, can change. Check your plan and the app's page in the Shopify app store before you plan around them.
+This skill needs only the product list, the platform, the search words and, if you have them, competitor menus. The spreadsheet in "Before you start" means the product list. It does not need an org context. Shopify is a paid service. Which tools your plan includes, and what the Search & Discovery app costs, can change. Check your plan and the app's page in the Shopify app store before you plan around them.
 
 - **Products** (required): a list with type and audience, plus material, colour, size and price where they matter.
 - **Catalogue size and platform** (required).

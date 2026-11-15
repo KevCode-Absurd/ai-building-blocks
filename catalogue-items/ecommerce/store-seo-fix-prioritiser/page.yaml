@@ -126,7 +126,7 @@ test:
 improve:
   - Add your list of pages you leave out on purpose, such as landing pages for ads.
   - Add your effort scale, such as "5 minutes, an hour, needs a developer".
-  - Save your top revenue pages to your brand file so you don't retype them.
+  - Save your top revenue pages to your org context so you don't retype them.
   - Pair it with the Shopify duplicate page fixer for theme-level duplicates, and the Search Console quick-win finder once the basics are clean.
 
 works_best_with:

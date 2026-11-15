@@ -37,7 +37,7 @@ output_sample:
     - "Your product or service facts: what it is, what it does, price and proof you may use"
     - Who buys it (optional)
     - Customer words from reviews, emails or calls (optional)
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: THE READER
       contains: One line on who the ad is for.

@@ -65,7 +65,7 @@ export default function SiteHeader() {
         <section className="site-menu-account" aria-label="Your account">
           <p className="small site-menu-status">{signedIn ? "Signed in" : account.state === "loading" ? "Opening your account…" : "Saved in this browser"}</p>
           <Link to="/account" aria-current={path === "/account" ? "page" : undefined} className="site-menu-account-link" data-testid="open-saved-work">My work{problem && <span className="account-alert-dot" aria-label="Saving needs attention" />}</Link>
-          <button type="button" data-close-menu onClick={openBusiness} data-testid="nav-brand-file">Your brand file</button>
+          <button type="button" data-close-menu onClick={openBusiness} data-testid="nav-brand-file">Your org context</button>
           <Link to="/account?view=settings" data-testid="nav-settings">Account settings</Link>
           <AccountSessionActions onSignedOut={() => setOpen(false)} />
         </section>

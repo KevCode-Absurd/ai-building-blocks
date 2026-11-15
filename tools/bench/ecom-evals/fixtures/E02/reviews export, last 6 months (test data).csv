@@ -1,0 +1,22 @@
+# (test data) Reviews app export, May to Oct 2026. The 'incentivised' column marks reviews from the July giveaway. Built for an e-commerce eval. Not KraveBeauty's real figures.
+date,product,rating,text,incentivised
+2026-05-04,Great Barrier Relief,5,My skin finally calmed down after years of 10-step routines.,no
+2026-05-12,Matcha Hemp Hydrating Cleanser,5,"Gentle, doesn't strip. I threw out half my shelf.",no
+2026-05-20,Great Barrier Relief,5,It healed my eczema in a week!!,no
+2026-06-01,Oat So Simple Water Cream,4,Simple and light. Wish the jar was bigger.,no
+2026-06-09,Beet The Sun SPF 40,5,"No white cast. One cleanser, one serum, one SPF and done.",no
+2026-06-17,Great Barrier Relief,4,Took a month but my redness is way down.,no
+2026-06-26,24 Carrot Retinal,3,Bit drying at first. Started every other night.,no
+2026-07-05,Mochi Berrier Moisture Cream,5,"OMG obsessed!!! Best cream ever, holy grail, anti-aging miracle!!!",yes
+2026-07-05,Mochi Berrier Moisture Cream,5,"Amazing anti-aging, I look 10 years younger!",yes
+2026-07-06,Mochi Berrier Moisture Cream,5,"Best anti-aging cream, got it free and love it!!",yes
+2026-07-06,Mochi Berrier Moisture Cream,5,"Glow glow glow, anti-aging must have!!",yes
+2026-07-07,Mochi Berrier Moisture Cream,5,"So luxe, anti-aging magic!!!",yes
+2026-07-19,Great Barrier Relief,5,I'm done with 10 steps. This replaced three products.,no
+2026-08-02,Matcha Hemp Hydrating Cleanser,5,My go-to. Doesn't break me out.,no
+2026-08-14,Beet The Sun SPF 40,4,Wears well under makeup.,no
+2026-08-27,Great Barrier Relief,5,"Repaired my damaged skin barrier, cured my rosacea.",no
+2026-09-08,Oat So Simple Water Cream,5,Bought the refill. Love less packaging.,no
+2026-09-21,Great Barrier Relief,5,My skin finally feels like mine again.,no
+2026-10-03,Matcha Hemp Hydrating Cleanser,5,"Simple routine, happy skin.",no
+2026-10-19,24 Carrot Retinal,4,Gentle for a retinal. Slow and steady.,no

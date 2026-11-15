@@ -43,7 +43,7 @@ test("specialist message has setup, intake and the method inline, fits one messa
   assert.equal(m.chars, m.text.length);
   for (const part of ["Please work as my demo specialist", "## How to start", "What would you like me to do, and what would you like back?", "If the job needs it: Product facts", "## The method: Demo method", "## Steps", "Every claim cites a supplied fact.", "Ask me before you send, publish, spend money"]) assert.ok(m.text.includes(part), part);
   assert.doesNotMatch(m.text, /Delivers: /);
-  assert.doesNotMatch(m.text, /brand file/i);
+  assert.doesNotMatch(m.text, /org context|brand file/i);
   assert.equal(m.shortened, false);
 });
 
@@ -58,11 +58,11 @@ test("a long method is shortened honestly with a link, and a missing method stil
   assert.match(offline.text, /## How to start/);
 });
 
-test("the brand file is added only to the owner's own copy, never to the published pack or setup prompt", () => {
+test("the org context is added only to the owner's own copy, never to the published pack or setup prompt", () => {
   const brand = "## Your me.md\n\n### Business basics\n\n- **Name:** Sprout\n- **Where my customers are:** Local, around north Leeds";
   const m = specialistMessage(role, { method: skillText(20), brandFile: brand });
   assert.ok(m.text.includes("- **Name:** Sprout"));
-  assert.match(m.text, /including my brand file at the end of this message/);
+  assert.match(m.text, /including my org context at the end of this message/);
   assert.ok(m.text.indexOf("Sprout") > m.text.indexOf("## Limits"));
   const pack = JSON.stringify(baseSpecialistFiles({ ...role, tools: [], workedExample: null, version: null })) + baseSpecialistPrompt(role);
   assert.doesNotMatch(pack, /Sprout|Business basics/);
@@ -73,7 +73,7 @@ const custom = (slug, markdown, inputs = [port("brief")], outputs = [port("draft
 const c = { built: "fixture", blocks: [], bySlug: {}, renamed: {}, portTypes: {} };
 const flowOf = skills => ({ id: "f", name: "Local ads from reviews", goal: "Three local ads for Sprout", updated: 0, customSkills: skills, nodes: skills.map((s, i) => ({ id: `s${i + 1}`, slug: s.slug, x: i * 300, y: 0 })), edges: skills.slice(1).map((s, i) => ({ id: `e${i}`, from: `s${i + 1}`, to: `s${i + 2}` })) });
 
-test("workflow message carries the goal, what to ask, every step's method and the brand file, within the limit", async () => {
+test("workflow message carries the goal, what to ask, every step's method and the org context, within the limit", async () => {
   const skills = [custom("collect-reviews", skillText(20), [port("reviews")], [port("brief")]), custom("write-ads", skillText(20), [port("brief")], [port("ad_copy")])];
   const m = await flowMessage(c, flowOf(skills), { name: "Sprout", reach: "local", area: "north Leeds", goal: "More customers or bookings" }, async () => null);
   assert.ok(!("error" in m), m.error);
@@ -91,7 +91,7 @@ test("long workflows share the room fairly and say which methods are shortened",
   // The short methods arrive whole; the long ones carry a link to the rest.
   assert.ok(m.text.includes("Line 9 of steps"));
   assert.match(m.text, /Shorter version, cut to fit one message\. The full method is at https:\/\/useaiblocks\.com\//);
-  assert.doesNotMatch(m.text, /brand file/);
+  assert.doesNotMatch(m.text, /org context|brand file/);
   const none = await flowMessage(c, { ...flowOf([]), nodes: [] }, {});
   assert.ok("error" in none);
 });

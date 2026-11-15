@@ -105,5 +105,5 @@ test:
   - Run the scoring twice on the same list. The top three can differ in order, but should mostly match.
 improve:
   - Run the survey again after the change you try, and keep the share in a file to see the trend.
-  - Add the fans' reasons to your brand file, so ads and pages use their words.
+  - Add the fans' reasons to your org context, so ads and pages use their words.
   - Re-score the list after each test and record what the test showed.

@@ -1,6 +1,6 @@
 slug: build-a-brand-file-and-style-guide-from-scratch
-name: "Build a brand file and style guide from scratch"
-summary: "Give it your product and buyers. Get a brand file with messages and voice rules, a visual direction and a style guide."
+name: "Build an org context and style guide from scratch"
+summary: "Give it your product and buyers. Get an org context with messages and voice rules, a visual direction and a style guide."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -13,11 +13,11 @@ outputs:
   - {type: brand_guide}
 uses: [product-context-builder, brand-messaging-builder, brand-voice-rules-writer, brand-stylescape-planner, brand-style-guide-writer]
 steps:
-  - {uses: product-context-builder, note: "Starts the chain: your answers become the one brand file every later step reads."}
-  - {uses: brand-messaging-builder, note: "Reads the brand file and adds the core message, tagline options and proof points."}
-  - {uses: brand-voice-rules-writer, note: "Reads the messages in the brand file and adds tone, word choices and writing rules."}
-  - {uses: brand-stylescape-planner, note: "Reads the traits, messages and voice in the brand file and settles on one visual direction."}
-  - {uses: brand-style-guide-writer, note: "Combines the brand file and the visual direction into one guide others can follow."}
+  - {uses: product-context-builder, note: "Starts the chain: your answers become the one org context every later step reads."}
+  - {uses: brand-messaging-builder, note: "Reads the org context and adds the core message, tagline options and proof points."}
+  - {uses: brand-voice-rules-writer, note: "Reads the messages in the org context and adds tone, word choices and writing rules."}
+  - {uses: brand-stylescape-planner, note: "Reads the traits, messages and voice in the org context and settles on one visual direction."}
+  - {uses: brand-style-guide-writer, note: "Combines the org context and the visual direction into one guide others can follow."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/build-a-brand-file-and-style-guide-from-scratch/skeleton.yaml

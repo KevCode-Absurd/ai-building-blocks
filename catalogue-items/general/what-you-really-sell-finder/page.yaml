@@ -19,7 +19,7 @@ when:
   - You are entering a new market or use for an existing product.
   - You are about to write headlines and have not chosen the one reason to lead with.
 not_for:
-  - "You have no product facts yet: build your brand brain first with the Brand profile builder."
+  - "You have no product facts yet: build your org context first with the Org context builder."
   - "You want headlines for one angle you already chose: use the Ad headline variation writer."
   - "You want one want to lead with and a list of claims to avoid: use the Customer needs finder."
 
@@ -138,7 +138,7 @@ test:
 improve:
   - Add the angles you've already tested with results, so it avoids repeats.
   - Add reviews that show why people buy, so the answers use their words.
-  - Save the winning angle to your brand file.
+  - Save the winning angle to your org context.
   - Pair it with "Typed headline batch writer" to turn the winner into headlines, or "Shared want hook mapper" to build hooks on it.
 
 works_best_with:

@@ -45,7 +45,7 @@ output_sample:
     - Reviews, replies or questions from leads (optional)
   prerequisites:
     - An AI that can read files, such as Claude with the handoff pack
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: Information-led lead offer"
       contains: The one piece of information you offer, a short ad or letter, what counts as a reply, and a plan to route replies.
@@ -85,6 +85,6 @@ test:
   - Read the follow-up emails in a row. No two should lean on the same reason.
   - Send the first email to a friend who fits the group and ask if they know what to do next.
 improve:
-  - Add replies and questions from past leads to your brand file, so the follow-ups answer real doubts.
+  - Add replies and questions from past leads to your org context, so the follow-ups answer real doubts.
   - After a few weeks, add which emails and which reply source led to sales, and run step 2 again with that in mind.
   - Make the information offer into a short guide, checklist or recording that you can send at once.

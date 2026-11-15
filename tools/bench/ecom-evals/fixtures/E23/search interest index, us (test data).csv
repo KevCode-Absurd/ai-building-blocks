@@ -1,0 +1,7 @@
+# (test data) Search interest index for the US, 100 = the peak month in the window. Built for this test. Built for an e-commerce eval. Not Graza's real figures.
+term,2026-01,2026-04,2026-07,2026-10
+olive oil shot,100,46,31,29
+high heat cooking oil,52,61,74,88
+olive oil spray,70,74,79,83
+olive oil mayo,38,49,63,71
+extra virgin olive oil,92,90,88,91

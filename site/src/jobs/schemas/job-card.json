@@ -729,6 +729,44 @@
       "additionalProperties": true,
       "maxProperties": 20
     },
+    "org_context": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "AVAILABLE",
+            "BUILT"
+          ]
+        },
+        "business": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "read_by_coordinator": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": [
+        "status",
+        "business",
+        "path",
+        "sha256",
+        "read_by_coordinator"
+      ],
+      "additionalProperties": false,
+      "description": "The org context the coordinator read: its business, safe path, SHA-256 and read receipt. Older cards use brand_brain, which is still accepted."
+    },
     "brand_brain": {
       "type": "object",
       "properties": {

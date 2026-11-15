@@ -6,7 +6,7 @@ summary: "Make a knitted wool image ad for awkward subjects. Give it your sellin
 job: make-image-ads
 
 headline: "Knitted wool image ad maker"
-subhead: Give it your selling idea, brand file and product photos. It picks one moment caught in yarn, gives every surface a real fabric and checks the picture against your claims. You get an image prompt, the ad words, a layout and the edit step.
+subhead: Give it your selling idea, org context and product photos. It picks one moment caught in yarn, gives every surface a real fabric and checks the picture against your claims. You get an image prompt, the ad words, a layout and the edit step.
 
 explain: |
   Some subjects are hard to show in a photo. Digestion, sleep, pests, grime. A small world of knitted and crocheted wool makes them kind to look at, and odd enough to stop a scroll. It also tempts you into pictures you can't back up, like a knot on a doll's tummy coming loose.
@@ -24,7 +24,7 @@ not_for:
 
 you_give:
   - The reason someone buys, what the buyer knows and the selling idea
-  - Your brand file, with label text, the buyer's look, approved claims and offer
+  - Your org context, with label text, the buyer's look, approved claims and offer
   - Photos of your product's front, side and top, attached (optional, needed if it appears)
 you_get:
   - A moment plan with the yarn technique, the fabrics and the claim it implies
@@ -34,14 +34,14 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your selling idea and brand file, and attach the product photos.
+  - Paste your selling idea and org context, and attach the product photos.
   - Read the moment plan. If the implied sentence isn't something you can say, ask for another show job.
   - Check every object in the prompt has knitted, crocheted or felted in front of it.
   - Make the image, then lay the real label and the words on it in your editor.
 output_sample:
   input:
     - Your selling idea, what the buyer knows and where the ad runs
-    - Your brand file with label words, claims and offer (optional)
+    - Your org context with label words, claims and offer (optional)
     - Photos of your product from the front, side and top (optional)
   prerequisites:
     - An AI that can make images, or an image tool such as Nano Banana, to turn the prompt into a picture
@@ -118,7 +118,7 @@ example:
     Brand note: point gut-sensitive buyers to Low Sugar.
     Offer: $29.99 first order with text sign-up, renews at $49.99
     every 4 weeks.
-    Brand file: attached (brand.md).
+    Org context: attached (brand.md).
   output: |
     MOMENT   The change caught halfway: she has tried the fixes.
     SHOW JOB Join, plying. Six leaf-green strands, loose at the left,
@@ -194,7 +194,7 @@ judge:
   - The headline has 7 words or fewer, with at most 3 other things to read.
   - Every object in the prompt has a material word and a real color.
   - Nothing shows a body getting better, and no face is in close-up.
-  - The product matches your photos (or your brand file's description, when the photos can't be seen), with your real label laid over it.
+  - The product matches your photos (or your org context's description, when the photos can't be seen), with your real label laid over it.
 
 test:
   - Search the prompt for any object without knitted, crocheted or felted. There should be none.
@@ -205,7 +205,7 @@ test:
 improve:
   - Write your banned claims into step 4 of the skill file, so the picture is tested against them.
   - Add your house yarn thickness and colors to step 3, so every knitted ad matches.
-  - Save the headline and moment that win in your brand file.
+  - Save the headline and moment that win in your org context.
   - Pair it with the knitted-wool video skills, so the still and the video share one world.
 
 works_best_with:

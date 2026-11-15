@@ -135,7 +135,7 @@ improve:
   - Add the names of your real staff roles to the skill file, so it can say which role each person should have.
   - Add your own rule for contractors, such as "access ends on the project end date", and have it check that rule.
   - If you keep a list of approved apps, paste it in and have the skill flag anything not on it.
-  - Save the score and date to your brand file each quarter, so you can see the trend.
+  - Save the score and date to your org context each quarter, so you can see the trend.
   - Pair it with the Sign-in security checker for a deeper look at logins, and the Staff phishing rules briefer for the team sheet.
 
 works_best_with:

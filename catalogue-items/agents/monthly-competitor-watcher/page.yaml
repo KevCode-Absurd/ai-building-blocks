@@ -21,7 +21,7 @@ not_for:
 you_give:
   - Your three to six rivals, with their sites, the first time
   - This month's ads from each rival, collected by hand from the public ad library, with the date
-  - Your brand file, for your claims and proof (optional)
+  - Your org context, for your claims and proof (optional)
   - Your customer reviews (optional)
 you_get:
   - Counts by format, age and ad type for each rival, against its own last month
@@ -39,7 +39,7 @@ output_sample:
   input:
     - Your three to six rivals, with their sites (first run only)
     - This month's ads from each rival, collected by hand from the public ad library, with the date
-    - Your brand file, for your claims and proof (optional)
+    - Your org context, for your claims and proof (optional)
     - Your customer reviews (optional)
   prerequisites:
     - Last month's history file for each rival, which the first run builds
@@ -100,7 +100,7 @@ tweaks:
     how: Three to six is enough. More rivals make a long report and little action.
   - what: Your bars for a move
     how: The starting bars are a third change in live ads or 15 points in a format. Lower them for a small market, raise them for a busy one.
-  - what: Your brand file
+  - what: Your org context
     how: Add the claims you can prove. The agent only proposes gaps your proof can fill.
 judge:
   - Every change is set against that rival's own last month.
@@ -114,7 +114,7 @@ test:
   - Pick one rival it says did not move and look at its ads for anything it missed.
 improve:
   - Set your own bars for a move to suit how fast your market changes.
-  - Add the claims you never make to your brand file, so no gap is proposed against them.
+  - Add the claims you never make to your org context, so no gap is proposed against them.
   - Keep a note of each move you made, so next month can check whether rivals reacted.
   - Drop a rival that never moves, and add one that grows.
 works_best_with:

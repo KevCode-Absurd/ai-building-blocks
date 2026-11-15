@@ -24,7 +24,7 @@ output_sample:
     - Your products and how many days each one lasts
     - Your past order dates, to find the real gap between orders (optional)
     - Your offer and the most you can discount (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
     - Flow and campaign numbers exported after 30 days
   prerequisites:
     - An AI that can read files, to run the handoff pack
@@ -47,7 +47,7 @@ you_give:
   - Your products and how long each one lasts
   - Past order dates, to find the real gap between orders (optional)
   - Your offer and the most you can discount (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
   - Flow and campaign numbers after 30 days
 you_get:
   - Refill and second-order emails with the day each one goes out

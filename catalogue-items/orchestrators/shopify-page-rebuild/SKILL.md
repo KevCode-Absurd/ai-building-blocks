@@ -5,7 +5,7 @@ description: Use when you like how another brand's page is laid out and want you
 
 # Rebuild a page you admire as your own Shopify page
 
-Give it a page screenshot, your brand file and product facts. Get your own page, a design plan and Shopify files.
+Give it a page screenshot, your org context and product facts. Get your own page, a design plan and Shopify files.
 
 Use it when: you like how another brand's product page is laid out and want yours to work the same way, your product page is a standard theme with your copy dropped in, or you want a new Shopify page without writing theme code.
 Not for: no store yet or no product photos, a layout you already have and only need built (use the Static HTML landing page builder), or scoring a page you already have (use the Landing page conversion review).
@@ -17,7 +17,7 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand file** (its products part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its products part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
 - **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 
@@ -26,15 +26,15 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand file.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your org context.
 3. This one.
 
-**From the brand file, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`, `foundation/claims.md`, `foundation/customer-talk.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, reference ads, a store capture. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, reference ads, a store capture. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -45,11 +45,11 @@ How to start:
 
 ## What you need
 
-Three things are required: your brand file, the screenshot of the page you admire, and a Shopify theme you can upload to. The run stops without them. Step 4 also needs your live page screenshots. In the "Before you start" list above, "Reference ads" means the full-page screenshot of the page you admire, and "Store capture" means screenshots of your own store.
+Three things are required: your org context, the screenshot of the page you admire, and a Shopify theme you can upload to. The run stops without them. Step 4 also needs your live page screenshots. In the "Before you start" list above, "Reference ads" means the full-page screenshot of the page you admire, and "Store capture" means screenshots of your own store.
 
 - **A Shopify store and a theme you can upload files to** (required). Shopify is a paid service. Name your theme and its version if you can.
 - **A full-page screenshot of the page you admire** (required): the whole page, not a cropped one. Only its layout is borrowed, never its words or pictures.
-- **Your brand file** (required): your facts, voice and colours.
+- **Your org context** (required): your facts, voice and colours.
 - **Your product facts** (optional): price, variants and what it is made of. Real product photos at full size help. Step 3 reads price and variant facts from your store, so it needs read access to your Shopify store (for example a connected Shopify tool). If your AI has none, paste these facts instead.
 - **Your offer** (optional).
 - **Screenshots of your live page on a phone and a computer** (required for step 4, after you install the files).
@@ -61,11 +61,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **Ask the person** only for what they alone know: the brand facts, the theme name or the screenshots. If they're there, wait. If not, write `MISSING: <what>` and carry on. Never invent a price, a claim or a review.
 - **Approval:** nothing is uploaded, published or paid for without the person's clear yes. The person uploads the files to their own theme, ideally a duplicate theme first, and publishes the page.
 - **Pause** after step 3. Step 4 does not start until the page is installed and the screenshots are in.
-- **Stop** if there is no screenshot of the admired page or no brand file, or if a check fails. Stop at that step and go to the hand-back summary.
+- **Stop** if there is no screenshot of the admired page or no org context, or if a check fails. Stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Plan the layout in your own words.** Use the skill `competitor-landing-layout`. It takes the screenshot of the admired page and the person's brand file, offer and product facts. It saves `outputs/step-01-competitor-landing-layout.md`: what was borrowed (the order and job of each section) and what was not (their words and pictures), and the slot map with the person's own copy in every slot.
-2. **Plan the design.** Use the skill `landing-page-design-planner`. It takes the slot map and copy in `outputs/step-01-competitor-landing-layout.md` and the person's brand file. It saves `outputs/step-02-landing-page-design-planner.md`: colours and type from the brand, three design directions with one picked, and a build brief for it.
+1. **Plan the layout in your own words.** Use the skill `competitor-landing-layout`. It takes the screenshot of the admired page and the person's org context, offer and product facts. It saves `outputs/step-01-competitor-landing-layout.md`: what was borrowed (the order and job of each section) and what was not (their words and pictures), and the slot map with the person's own copy in every slot.
+2. **Plan the design.** Use the skill `landing-page-design-planner`. It takes the slot map and copy in `outputs/step-01-competitor-landing-layout.md` and the person's org context. It saves `outputs/step-02-landing-page-design-planner.md`: colours and type from the brand, three design directions with one picked, and a build brief for it.
 3. **Build the Shopify files.** Use the skill `shopify-landing-page-builder`. It takes the copy in `outputs/step-01-competitor-landing-layout.md` and the chosen direction in `outputs/step-02-landing-page-design-planner.md`. It saves `outputs/step-03-shopify-landing-page-builder.md`: the theme file list with the copy loaded in and numbered install steps. If the theme cannot take a built section, list it as `MISSING: unsupported section`, keep the rest of the files, and name the closest section the theme does support. Do not write code the theme cannot load.
 
 Pause here: Upload the files to your theme, publish the page and save screenshots of it on a phone and a computer.

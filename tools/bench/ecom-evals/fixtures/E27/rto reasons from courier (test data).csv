@@ -1,0 +1,6 @@
+# (test data) RTO reasons as reported by the courier, last 30 days. Built for an e-commerce eval. Not Sleepy Owl Coffee's real figures.
+reason,share
+Customer not available,60%
+Customer refused,24%
+Address issue,11%
+Other,5%

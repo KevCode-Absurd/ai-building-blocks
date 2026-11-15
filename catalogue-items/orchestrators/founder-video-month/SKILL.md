@@ -5,7 +5,7 @@ description: Use when you want regular founder videos without staring at a blank
 
 # Plan a month of founder videos and edit the first
 
-Give it your brand file. Get ten founder video episodes, a script for the first, and an edit plan for your footage.
+Give it your org context. Get ten founder video episodes, a script for the first, and an edit plan for your footage.
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
@@ -14,26 +14,26 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand file** (its buyers part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its buyers part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Video clips** (yours): the clips you want to edit.
 
 **Makes it better (optional):**
 - **A transcript** (yours): the words from a recording, written out, with who said what.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
-**From the brand file, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`, `foundation/claims.md`, `foundation/customer-talk.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, video clips, a transcript. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, video clips, a transcript. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
-- **Your brand file** (required): the brand's facts, voice, products, offers, claims and buyers. The planner also asks for ten real buyer questions, in the buyers' own words, from reviews, support emails or comments. It reads them from the brand file or from what you paste.
+- **Your org context** (required): the brand's facts, voice, products, offers, claims and buyers. The planner also asks for ten real buyer questions, in the buyers' own words, from reviews, support emails or comments. It reads them from the org context or from what you paste.
 - **The founder's real words** (optional): notes or a call about why the product is made the way it is. Without them, the script step gives you an interview guide with bracketed questions instead of invented lines.
 - **Your footage** (required for step 4): the clips of the founder filming the first episode. You make them after the pause. Steps 1 to 3 run without footage. Step 4 cannot run without it, so the workflow stops there and says what is missing.
 
@@ -46,7 +46,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Plan the video series.** Use the skill `founder-video-series-planner`. Give it the brand file and the buyer questions. You get a bank of questions sorted into four threads (how it's made, why we chose it, who it's for, what we fixed). You also get ten episodes in order, each with the buyer's question, its thread, a short answer, what to show on camera and a close. One filming setup comes with the plan, as do three cuts for episode 1 and any facts only the founder can supply. It hands step 2 the brief for the first episode.
+1. **Plan the video series.** Use the skill `founder-video-series-planner`. Give it the org context and the buyer questions. You get a bank of questions sorted into four threads (how it's made, why we chose it, who it's for, what we fixed). You also get ten episodes in order, each with the buyer's question, its thread, a short answer, what to show on camera and a close. One filming setup comes with the plan, as do three cuts for episode 1 and any facts only the founder can supply. It hands step 2 the brief for the first episode.
 2. **Script the first episode.** Use the skill `founder-video-ad-script-writer`. Give it episode 1's brief from step 1 and the founder's words, if you have them. It picks the one decision only the founder can speak to and tells it in four moves: the usual way, the choice, the cost and what you get. You get two or three openings, a line-by-line table with the picture for each line, and a casting and wardrobe note. It never invents a story: a missing fact becomes a bracketed question for the founder. It hands the script to step 3.
 3. **Make it easy to say aloud.** Use the skill `ad-script-read-aloud-editor`. Give it the script from step 2. It reads every line at speaking pace and fixes only the lines that trip the tongue, without changing what any line says. You get a list of fixes (the failing words, the rule broken, the fixed text), the lines that already work, and any line still failing. The final script to film from is the step 2 script with those fixes applied.
 

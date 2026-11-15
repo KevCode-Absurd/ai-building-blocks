@@ -1,0 +1,9 @@
+# (test data) Shopify orders report grouped by UTM campaign, net of discounts, before returns, USD. Built for an e-commerce eval. Not Taylor Stitch's real figures.
+utm_campaign,orders,new_customer_orders,returning_customer_orders,net_sales
+ASC | All products,829,489,340,151121
+Prospecting | Jackets,294,244,50,61277
+Prospecting | Shirts and chinos,198,160,38,29875
+Retargeting | 30d visitors and engagers,359,79,280,61741
+Catalog | Viewed not bought,170,76,94,29859
+Test | New creative,32,27,5,5309
+"(all other sources: email, organic, direct, search)",2210,610,1600,401000

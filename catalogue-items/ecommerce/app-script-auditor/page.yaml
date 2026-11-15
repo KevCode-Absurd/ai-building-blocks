@@ -142,7 +142,7 @@ test:
 improve:
   - "Add a list of the apps you will never remove (for example your payments or subscriptions app), so they are marked keep each time."
   - "Write your category into the skill so the benchmark comparison fits."
-  - "Save the install rule in your brand file and share it with anyone who can install apps."
+  - "Save the install rule in your org context and share it with anyone who can install apps."
   - "Pair it with the leftover app code finder and the theme script and style loader."
 
 works_best_with:

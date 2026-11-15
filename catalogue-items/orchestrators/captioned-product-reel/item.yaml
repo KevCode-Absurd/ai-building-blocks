@@ -7,14 +7,10 @@ role: orchestrate
 job: video
 level: intermediate
 inputs:
-  - {type: brief, required: true}
   - {type: brand_brain, required: true}
   - {type: product_data, required: true}
   - {type: offer, required: false}
   - {type: product_photos, required: false}
-  - {type: static_ads, required: false}
-  - {type: ad_copy, required: false}
-  - {type: image_prompt, required: false}
 outputs:
   - {type: audit_report}
 uses: [ad-angle-planner, satisfying-motion-ad-script, offer-reel-real-product, video-ad-text-overlays, branded-video-captions, pre-launch-ad-checker]

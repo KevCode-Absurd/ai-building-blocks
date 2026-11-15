@@ -1,0 +1,7 @@
+# (test data) Share of a cohort that cancels at each renewal, Jan to Jun 2026 cohorts, all products. Renewal 1 is the first full-price charge after the 40% first-order offer. Built for an e-commerce eval. Not Ritual's real figures.
+renewal,cancel_rate,note
+Renewal 1 (first full price),31%,Peaks on the day the renewal reminder with the full price lands
+Renewal 2,11%,
+Renewal 3,8%,
+Renewal 4,7%,
+Renewal 5,6%,

@@ -29,9 +29,9 @@ when:
   - A new writer, freelancer or agency joins and needs one set of brand rules.
   - You plan a refresh or a new product line and want to know what to keep.
 not_for:
-  - You already have a brand file and only want to check drafts for voice. Use the Brand voice consistency reviewer.
-  - You already have a brand file and want a printable guide. Use the Brand guide builder.
-  - You want your brand pulled from your website link. Use the Brand profile builder.
+  - You already have an org context and only want to check drafts for voice. Use the Brand voice consistency reviewer.
+  - You already have an org context and want a printable guide. Use the Brand guide builder.
+  - You want your brand pulled from your website link. Use the Org context builder.
   - You need a logo drawn or a symbol designed. Plan it with the Brand logo planner, then hire a designer.
   - You need trademark clearance or legal advice. Ask a trademark lawyer.
 you_give:
@@ -53,7 +53,7 @@ how_to_use:
   - Your AI asks once for anything missing, such as your audience or your goals. Anything still unknown is marked as an assumption.
   - Read the positioning and voice first. Fix anything that does not sound like you before it is used anywhere.
   - Treat colour, type and tagline ideas as drafts. Test them on your real pages, and take logo and legal steps to a designer or lawyer.
-  - Save the result as your brand file. Use the Brand voice reviewer agent to check new drafts against it.
+  - Save the result as your org context. Use the Brand voice reviewer agent to check new drafts against it.
 how_it_works:
   - title: Discover the brand
     text: It reads your business facts, goals, competitors and any existing rules, and says what is missing.
@@ -100,7 +100,7 @@ output_sample:
     - Existing brand rules or pieces to check (optional)
   prerequisites:
     - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
-    - Your brand file if you already have one, for the check job (optional)
+    - Your org context if you already have one, for the check job (optional)
   output:
     - name: Brand foundation
       contains: Purpose, vision, mission, values, personality and promise, each written in plain words.
@@ -150,5 +150,5 @@ tweaks:
   - what: Depth
     how: Ask for foundation and voice only if you do not need colour, type or a protection plan yet.
 improve:
-  - Save the approved result as your brand file, then check each new piece against it.
+  - Save the approved result as your org context, then check each new piece against it.
   - Add real before and after examples of your own copy to the voice guide as you go.

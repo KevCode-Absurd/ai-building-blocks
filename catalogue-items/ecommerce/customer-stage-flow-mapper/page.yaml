@@ -121,7 +121,7 @@ test:
 improve:
   - Add your exact customer definitions and filters to the skill file.
   - Add your tone rules for each stage, such as how your brand talks to loyal customers.
-  - Save your cohort groups and their jobs in your brand file.
+  - Save your cohort groups and their jobs in your org context.
   - Pair it with the flow builder skills to write each branch, and the email flow gap checker to find flows you lack.
 
 works_best_with:

@@ -5,7 +5,7 @@ job: plan-ad-tests
 thinking: high
 thinking_why: It compares many past ads across five lenses, then reads results after the test. Give it your strongest model.
 headline: Plan ad tests that teach you something
-subhead: Give it your past ads and brand file. It finds five ideas you have not tried, lays out a test campaign, and after the test reads the results and writes down what the winners share.
+subhead: Give it your past ads and org context. It finds five ideas you have not tried, lays out a test campaign, and after the test reads the results and writes down what the winners share.
 explain: |
   Most accounts make new ads by guessing. A new colour or crop is not a test, and when a round ends nobody can say why one ad won. The next round starts from nothing.
 
@@ -19,7 +19,7 @@ not_for:
   - "You only want to read the results of a test that already ran: use the Ad results report writer."
   - "Your sales dropped and you need to know why: use the Ad sales drop analyst."
 you_give:
-  - Your brand file
+  - Your org context
   - Your past ads and their results (spend, sales or replies)
   - Your budget, your target cost per sale and the number of products to test (for the layout)
   - How many days you will wait before reading the test (the read window)
@@ -36,13 +36,13 @@ how_to_use:
   - At the pause, launch the pack and do not change it until the read window ends. Then export results and come back.
 output_sample:
   input:
-    - Your brand brain, or your brand facts pasted in (optional)
+    - Your org context, or your brand facts pasted in (optional)
     - Your past ads with dates, spend and results
     - Your daily test budget and how many products to test
     - After the pause, the results export for the test ads
   prerequisites:
     - An AI that can read files, such as Claude with files attached
-    - Your brand brain from the Website brand brain builder (optional, makes it better)
+    - Your org context from the Org context builder (optional, makes it better)
     - A Meta ads account to launch the test yourself
   output:
     - name: outputs/step-01-untried-ad-idea-finder.md

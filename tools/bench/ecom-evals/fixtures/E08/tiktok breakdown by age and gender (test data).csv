@@ -1,0 +1,26 @@
+# (test data) TikTok Ads Manager audience breakdown, USD. Built for an e-commerce eval. Not KraveBeauty's real figures.
+campaign,age,gender,spend,conversions,cpa
+Spark Ads | Creator posts,18-24,female,3209,159,20.18
+Spark Ads | Creator posts,18-24,male,802,29,27.66
+Spark Ads | Creator posts,25-34,female,3586,200,17.93
+Spark Ads | Creator posts,25-34,male,3100,282,10.99
+Spark Ads | Creator posts,35-44,female,1793,88,20.38
+Spark Ads | Creator posts,35-44,male,448,15,29.87
+Spark Ads | Creator posts,45+,female,850,40,21.25
+Spark Ads | Creator posts,45+,male,212,8,26.5
+Smart+ | All products,18-24,female,7072,259,27.31
+Smart+ | All products,18-24,male,1768,52,34
+Smart+ | All products,25-34,female,7904,359,22.02
+Smart+ | All products,25-34,male,1976,60,32.93
+Smart+ | All products,35-44,female,3952,176,22.45
+Smart+ | All products,35-44,male,988,27,36.59
+Smart+ | All products,45+,female,1872,68,27.53
+Smart+ | All products,45+,male,468,14,33.43
+In-feed | Brand video,18-24,female,2720,48,56.67
+In-feed | Brand video,18-24,male,680,8,85
+In-feed | Brand video,25-34,female,3040,48,63.33
+In-feed | Brand video,25-34,male,760,9,84.44
+In-feed | Brand video,35-44,female,1520,26,58.46
+In-feed | Brand video,35-44,male,380,4,95
+In-feed | Brand video,45+,female,720,12,60
+In-feed | Brand video,45+,male,180,2,90

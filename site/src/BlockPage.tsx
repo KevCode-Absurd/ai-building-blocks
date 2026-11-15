@@ -256,7 +256,7 @@ function ScopedComposer({ slug, task, skill, give, toast, example, exampleLabel,
     {missing && <p id="task-input-help" className="small task-input-help" role="alert" data-testid="task-input-help">{missing}</p>}
     {example && <div className="task-example-actions"><button className="link-btn" onClick={useExample} data-testid="use-task-example">{exampleLabel ? `Use ${exampleLabel.toLowerCase()}` : "Use example material"}</button>{savedText !== null && exampleLabel && <span className="small">{exampleLabel}: made-up material to show what to add.</span>}{savedText !== null && <button className="link-btn" onClick={restoreText}>Restore my text</button>}</div>}
     {exampleError && <p role="alert">{exampleError}</p>}
-    <details className="task-extras"><summary>Add your brand file (optional)</summary><p className="small">Only the parts this task needs are added.</p>{hasBusiness(biz) ? <label className="task-check"><input type="checkbox" checked={includeBusiness} onChange={e => { setIncludeBusiness(e.currentTarget.checked); setCopied(false); }} />Include my brand file in this request</label> : <button className="link-btn" onClick={openBusiness}>Add your brand file</button>}</details>
+    <details className="task-extras"><summary>Add your org context (optional)</summary><p className="small">Only the parts this task needs are added.</p>{hasBusiness(biz) ? <label className="task-check"><input type="checkbox" checked={includeBusiness} onChange={e => { setIncludeBusiness(e.currentTarget.checked); setCopied(false); }} />Include my org context in this request</label> : <button className="link-btn" onClick={openBusiness}>Add your org context</button>}</details>
     <div className="composer-bar"><span id="task-local-note" className="small">Your draft stays on this device. Copying does not send it to an AI.</span><button className="btn btn-primary btn-sm" onClick={() => void copy()} data-testid="composer-copy">{copied ? "Request copied" : "Copy the request"}</button></div>
     {failed && <div className="task-copy-fallback"><p role="alert">Copy did not work. Select the complete request below and copy it.</p><textarea aria-label="Copy the complete request manually" readOnly value={request} rows={7} onFocus={e => e.currentTarget.select()} /></div>}
     {(copied || failed) && <div className="task-transfer" data-testid="task-text-transfer"><h3>Use it in your AI</h3><ol><li>Open a new chat in your AI.</li><li>Paste the complete request and send it.</li><li>Check the result against the checks below before you use it.</li></ol><p className="small">This site prepares the request. Your AI does the work.</p></div>}
@@ -369,7 +369,7 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
   };
   const copySkill = async () => {
     if (!skill) return;
-    try { await navigator.clipboard.writeText(withBusiness(skill, getBusiness(), [b])); setCopyFailed(false); trackUxEvent("request_copied"); toast(biz ? "Instructions copied with your brand file. Paste them into your AI." : "Instructions copied. Paste them into your AI."); }
+    try { await navigator.clipboard.writeText(withBusiness(skill, getBusiness(), [b])); setCopyFailed(false); trackUxEvent("request_copied"); toast(biz ? "Instructions copied with your org context. Paste them into your AI." : "Instructions copied. Paste them into your AI."); }
     catch { setCopyFailed(true); }
   };
 

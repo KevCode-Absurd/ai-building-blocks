@@ -127,7 +127,7 @@ improve:
   - Add your country's shipping and return norms, if you know them, so the gap list uses them.
   - Add a review request message to your post-purchase email, so reviews arrive from real buyers.
   - Add your own load-time target to the skill file.
-  - Save the date you submitted the interest form to your brand file.
+  - Save the date you submitted the interest form to your org context.
   - Pair it with the suspension checker, since promotions that don't match the site hurt you in both places.
 
 works_best_with:

@@ -139,7 +139,7 @@ test:
 improve:
   - "Add your real onboarding steps to the skill file so the plan builds on what exists."
   - "Add your product's usual first win to step 4."
-  - "Save each quarter's cancel groups to your brand file to track change."
+  - "Save each quarter's cancel groups to your org context to track change."
   - "Pair it with Customer buying reasons finder to learn why people joined."
 
 works_best_with:

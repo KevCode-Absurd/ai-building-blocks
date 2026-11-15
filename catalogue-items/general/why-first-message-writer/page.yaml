@@ -25,7 +25,7 @@ not_for:
 you_give:
   - "Your product, service or cause, in a few lines"
   - "Who you want to reach"
-  - "Your brand file (optional)"
+  - "Your org context (optional)"
   - "A buyer or audience profile (optional)"
   - "A true story that shows the belief (optional)"
 you_get:
@@ -44,7 +44,7 @@ output_sample:
   input:
     - Your product, service or cause, in a few lines
     - Who you want to reach
-    - Your brand file (optional)
+    - Your org context (optional)
     - A buyer or audience profile (optional)
     - A true story that shows the belief (optional)
   output:
@@ -136,7 +136,7 @@ test:
 improve:
   - "Add words your best customers use about why they chose you, so the belief sounds like them."
   - "Add a list of things you refuse to do, so the how is easy to prove."
-  - "Save the belief line to your brand file and reuse it in every message."
+  - "Save the belief line to your org context and reuse it in every message."
   - "Pair it with \"Customer-hero message writer\" when you need a page that puts the customer first."
 
 works_best_with:

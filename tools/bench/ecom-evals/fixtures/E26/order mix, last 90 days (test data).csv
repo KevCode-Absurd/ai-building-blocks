@@ -1,0 +1,6 @@
+# (test data) Orders by order value band. Built for an e-commerce eval. Not Taylor Stitch's real figures.
+order_value_band,orders,average_order_value
+Under $60 (mostly accessories only),2900,41
+$60 to $150,6100,128
+$150 to $300,5600,214
+Over $300,1900,410

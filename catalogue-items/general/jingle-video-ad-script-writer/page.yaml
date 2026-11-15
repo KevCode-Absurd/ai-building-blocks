@@ -39,7 +39,7 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your brand file or product facts and approved claims underneath.
+  - Paste your org context or product facts and approved claims underneath.
   - Say who the buyer is, the moment the product fits into, the length, and whether your brand uses music.
   - Clap the beat and sing the hook. Check every sung claim against your claims list.
   - Take the script and cast note to the skill that turns a song script into shots. It makes the music first, then runs the video process.
@@ -51,7 +51,7 @@ output_sample:
     - Your approved and banned claims, the offer and the guarantee
     - Your brand lines and voice (optional)
   prerequisites:
-    - A brand brain or buyer brief helps, but you can paste your own facts instead
+    - An org context or buyer brief helps, but you can paste your own facts instead
     - A separate music tool if you want to make the song
   output:
     - name: Hook drafts
@@ -226,7 +226,7 @@ improve:
   - Add your brand lines to "What you need" in the skill file, marked as sung exactly, so every song can use them.
   - Fix your tag (the brand name and its 2 to 4 notes) in the skill file, and use the same one in every song ad.
   - Write your answer to "does the brand use music in ads?" into the skill file, so it stops asking.
-  - Save the hook that wins to your brand file, and test a new verse against it next time.
+  - Save the hook that wins to your org context, and test a new verse against it next time.
   - Pair it with the skill that turns a song script into shots, which makes the music first, then check music rights before you pay to run it.
 
 works_best_with:

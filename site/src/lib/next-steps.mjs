@@ -14,7 +14,7 @@
 // needs a specific hand-off and the same subject.
 // A generic hand-off (a brief, a document, a spreadsheet, a report) alone is not evidence: nearly every block takes or
 // makes one, so it only counts within the same job and subject, or between jobs the workflows connect. The same goes
-// for types read in many different jobs (results, product facts, a brand brain).
+// for types read in many different jobs (results, product facts, an org context).
 // Links much weaker than the best one are left off: a short list of real next steps beats five loose ones.
 import { AREAS, FUNCTIONS } from "./catalogue-taxonomy.mjs";
 
@@ -152,9 +152,9 @@ const NO_HANDOFF = 5;
 const SIBLINGS_UNTIL = 2;
 /** The result types a block hands over: its outputs and `extra` types they contain. */
 const madeOf = (b, extra = []) => new Set([...(b.outputs ?? []).map(typeOf), ...extra]);
-/** Types a result holds as parts: a brand brain holds the products and buyers. */
+/** Types a result holds as parts: an org context holds the products and buyers. */
 export const PARTS = { brand_brain: ["product_data", "persona"] };
-/** What a block hands over, with the parts of what it makes (a brand brain builder hands over product data too). */
+/** What a block hands over, with the parts of what it makes (an org context builder hands over product data too). */
 export function handsOver(b) {
   const made = madeOf(b);
   for (const t of [...made]) for (const part of PARTS[t] ?? []) made.add(part);
@@ -254,7 +254,7 @@ const offList = (b, x) => x.slug === b.slug || x.type === "mind" || isFlow(x) ||
 
 /**
  * The blocks to suggest after `b`, best first: [{ x, score, follows, takes, hands, why }] (handoffLink, plus the
- * candidate's merits). `outs` may add result types the block's outputs contain (the brand brain's parts); `alike`, types
+ * candidate's merits). `outs` may add result types the block's outputs contain (the org context's parts); `alike`, types
  * they can stand in for (opening lines read as ad copy). Only `takes`, the other block's inputs this one really makes,
  * names the hand-off, strongest first (specific and required before generic or optional); a stand-in counts as loose evidence.
  * `siblings`: false never lists a block that takes nothing from this one (the builder and the step map, where an after
@@ -284,9 +284,9 @@ export function nextSteps(b, all, { max = 5, perTask = 3, floor = FLOOR, exclude
 /**
  * The blocks to suggest before `b`, best first: makers of what it reads, by the same ranking as nextSteps the other
  * way round (handoffLink from each candidate to `b`). Only real hand-offs: the candidate makes an input of `b` (with a
- * brand brain's parts), `b` is built on it, or it runs straight before `b` in a reviewed workflow; never a sibling.
+ * org context's parts), `b` is built on it, or it runs straight before `b` in a reviewed workflow; never a sibling.
  * `takes`: the inputs of `b` it makes, strongest first. Each: { x, score, follows, takes, hands, keep, why }.
- * `makers`: named makers of a shared input (the brand brain builder for product facts, read in every line of work):
+ * `makers`: named makers of a shared input (the org context builder for product facts, read in every line of work):
  * one that makes an input of `b` is always on the list (within `max`), whatever the subject and score.
  * @param {any} b
  * @param {any[]} all

@@ -42,7 +42,7 @@ output_sample:
     - What you sell, its price and who buys it
     - Your sales and ad spend and how many customers it brought (optional)
     - Who can sell and the roles you want to hire for (optional)
-    - Your brand brain or your offer (optional)
+    - Your org context or your offer (optional)
   prerequisites:
     - An AI that can read the files in the handoff pack, such as Claude
   output:
@@ -101,7 +101,7 @@ test:
   - Run it twice on the same input. The route should be the same.
 
 improve:
-  - Save your route, your weekly number and your stop rule in your brand file.
+  - Save your route, your weekly number and your stop rule in your org context.
   - After ninety days, re-run step 1 with your real costs and compare.
   - Pair it with "Test if your idea can own its market" to test the idea behind the product.
 

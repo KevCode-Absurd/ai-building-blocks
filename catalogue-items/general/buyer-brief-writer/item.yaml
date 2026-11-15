@@ -12,8 +12,6 @@ inputs:
     required: true
   - type: brand_brain
     required: false
-  - type: persona
-    required: false
 outputs:
   - type: brief
     required: true

@@ -177,7 +177,7 @@ improve:
   - Add your allowed and banned claims to the skill file under "What you need", so you never have to paste them again.
   - Add your brand's voice rules to step 4 ("Write the words"), with two lines from your best ad as the model.
   - If you always write for the same platform, replace the format line in your input with fixed limits inside the skill.
-  - When an ad wins, write the winning fact and buyer into your brand file, so the next run starts from what already sold.
+  - When an ad wins, write the winning fact and buyer into your org context, so the next run starts from what already sold.
   - Pair it with "Brand voice editor" before anything goes live, and "Sales copy readiness checker" as the last read.
 
 works_best_with:

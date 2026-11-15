@@ -19,7 +19,7 @@ not_for:
   - "Your buyer does not spend time on the platform: pick the place they do use, or ask a few customers where they look."
   - "You want ad copy, not a posting plan: use the Ad opening writer and reviewer."
 you_give:
-  - Your business and your brand file (what you do, who you serve, voice)
+  - Your business and your org context (what you do, who you serve, voice)
   - The one platform you want to grow on
   - A buyer description (optional)
   - Your last month of results, if any (optional)
@@ -30,13 +30,13 @@ you_get:
   - A posting rhythm, plus a monthly review rule
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your brand file and name the one platform.
+  - Paste your org context and name the one platform.
   - Add your buyer and any past results.
   - Post the first three pieces this week, before the plan feels complete.
   - At the end of the month, bring your numbers and run it again.
 output_sample:
   input:
-    - Your business and brand file (what you do, who you serve, your voice)
+    - Your business and org context (what you do, who you serve, your voice)
     - The one platform you want to grow on
     - A short buyer description (optional)
     - Your last month of results (optional)
@@ -123,7 +123,7 @@ test:
 improve:
   - Add your platform rules, such as no faces on camera, to the habits step.
   - Add the topics your audience brings up in comments to the interests list.
-  - Save the winning pieces and first lines to your brand file.
+  - Save the winning pieces and first lines to your org context.
   - Pair it with Give before ask sequence planner for the month you want to ask.
 works_best_with:
   tools:
@@ -132,7 +132,7 @@ works_best_with:
     - name: The platform's own analytics
       why: It shows views, watch time and replies for the monthly review.
   inputs:
-    - Your brand file, so the voice and facts are right
+    - Your org context, so the voice and facts are right
     - A short buyer description with their words
     - Last month's numbers per piece
     - Three accounts in your field that do well on this platform

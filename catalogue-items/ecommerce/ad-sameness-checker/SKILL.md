@@ -82,10 +82,10 @@ Offer these first. The other links in "After this" are optional:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder). It takes the audit report.
 - **Read your ad results** with the [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the audit report.
 - The [Ad decline tracker and replacement briefs](https://useaiblocks.com/skills/ad-fatigue-watcher).
-- The [Ad testing manager](https://useaiblocks.com/skills/ad-test-sprint-runner).
+- **Plan what to test** with the [Ad testing manager](https://useaiblocks.com/skills/ad-test-sprint-runner).
+- The [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

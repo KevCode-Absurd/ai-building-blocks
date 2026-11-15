@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **An audit report** with the [Discount margin and ad-cost checker](https://useaiblocks.com/skills/discount-impact-checker). Bring your results (optional). It uses your brand file and offer.
+1. **An audit report** with the [Discount margin and ad-cost checker](https://useaiblocks.com/skills/discount-impact-checker). Bring your results (optional). It uses your org context and offer.
 2. This one.
 
 How to start:
@@ -41,7 +41,7 @@ How to start:
 - **A discount check** (optional): its costs per order and the plain-discount variant, so the offer and the discount are compared on the same costs.
 - **Notes** on dates, traffic source and creative for each variant (strongly advised).
 
-The spreadsheet named above holds the variants and their cost lines; the data is sessions and orders per variant. No brand brain or offer finder is needed.
+The spreadsheet named above holds the variants and their cost lines; the data is sessions and orders per variant. No org context or offer finder is needed.
 
 When not to use: you run one offer with nothing to compare (work out profit per order in a sheet first), you have no unit costs yet (gather product cost, shipping and fees first), or you only want to know if a discount pays off (use a discount impact checker).
 

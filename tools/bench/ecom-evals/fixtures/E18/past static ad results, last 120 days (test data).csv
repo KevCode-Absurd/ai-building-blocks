@@ -1,0 +1,5 @@
+# (test data) Meta static ads for jackets, USD. Built for an e-commerce eval. Not Taylor Stitch's real figures.
+concept,ads,spend,ctr_link,cost_per_purchase
+"Studio shot on white, product only",6,22000,0.7%,118
+"Worn outside (trail, coast, city in rain), real wear on the fabric",5,19400,1.6%,64
+"New colour launch, bright background",3,8100,1.0%,97

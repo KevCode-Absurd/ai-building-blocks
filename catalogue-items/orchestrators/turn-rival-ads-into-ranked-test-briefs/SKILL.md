@@ -21,31 +21,31 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
 
 **Makes it better (optional):**
-- **Brand file**, made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context**, made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
-**From the brand file, read:** `index.md`, `references.md`, `facts.json`. Take the options buyers weigh, each competitor's pitch, strength and gap, and who your buyers are. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `references.md`, `facts.json`. Take the options buyers weigh, each competitor's pitch, strength and gap, and who your buyers are. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for reference ads, your brand file, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for reference ads, your org context, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
 
-Read the brand brain in two parts. Steps 3 and 4 use `00-start-here.md`, `voice-and-look.md`, `offers.md` and `proof-and-claims.md` for the briefs and the claims you may make. Step 2 also reads `market.md`, `business.md` and `customers.md`, as the general list above says, for the options buyers weigh and the open ground. All of this is optional. The run stops at step 1 if the export has no ads.
+Read the org context in two parts. Steps 3 and 4 use `00-start-here.md`, `voice-and-look.md`, `offers.md` and `proof-and-claims.md` for the briefs and the claims you may make. Step 2 also reads `market.md`, `business.md` and `customers.md`, as the general list above says, for the options buyers weigh and the open ground. All of this is optional. The run stops at step 1 if the export has no ads.
 
 What this chain adds over the four skills alone: each step starts from the one before, so the briefs rest on the counts and the gaps, and the layout fits the budget you gave.
 
 - **A rival's ads from the Meta Ad Library** (required). An export or a hand-collected list with ad copy, format, start date and destination link, inactive ads included. Note the date you collected them. Pick a rival a step or two above your size. Use the public library only, no paid scraping tools.
-- **Your brand file** (optional, recommended). Your products, voice and the claims you may make. Without it, the gaps are marked `CANDIDATE` and any claim a brief needs is marked `MISSING:`.
+- **Your org context** (optional, recommended). Your products, voice and the claims you may make. Without it, the gaps are marked `CANDIDATE` and any claim a brief needs is marked `MISSING:`.
 - **Your daily test budget and target cost per sale** (needed for step 4). Without them, the budget lines in the layout are left blank, never guessed.
 - **Your own ad results** (optional). An export for a closed date window, so the briefs do not repeat what already failed.
 
@@ -59,8 +59,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Count what the rival runs.** Use the skill `ad-library-teardown-counter`. It takes the Ad Library export. It saves `outputs/step-01-ad-library-teardown-counter.md`: counts of assets, formats, ad age, landing pages, awareness stages and offers, the missing beats, risky claims, content gaps and a shortlist of long-running concepts. It states the sample size and "structure only" at the top. Check before step 2: the counts match the export and each share says how many ads it rests on.
-2. **Find the gaps in their ads.** Use the skill `competitor-ad-gap-finder`. It takes the counts and shortlist in `outputs/step-01-ad-library-teardown-counter.md`, the ads themselves and your brand file if you have one. It saves `outputs/step-02-competitor-ad-gap-finder.md`: a map of nine ad types (Product alone, Look inside, The moment, Old way new way, In use, Their words, Checked fact, The offer and The occasion), a card for each ad, the gaps that fit your brand, a gap brief and a score out of 100. Check before step 3: each gap is a type or buyer question no rival covers.
-3. **Write three ideas and nine versions.** Use the skill `ad-test-brief-writer`. It takes the gap brief in `outputs/step-02-competitor-ad-gap-finder.md`, the counts in `outputs/step-01-ad-library-teardown-counter.md`, your brand file and your ad results if you have them. It saves `outputs/step-03-ad-test-brief-writer.md`: an evidence grade, three ideas each aimed at one buyer doubt, three versions of each with their own first frame, and questions to settle first. Check before step 4: no two ideas answer the same doubt.
+2. **Find the gaps in their ads.** Use the skill `competitor-ad-gap-finder`. It takes the counts and shortlist in `outputs/step-01-ad-library-teardown-counter.md`, the ads themselves and your org context if you have one. It saves `outputs/step-02-competitor-ad-gap-finder.md`: a map of nine ad types (Product alone, Look inside, The moment, Old way new way, In use, Their words, Checked fact, The offer and The occasion), a card for each ad, the gaps that fit your brand, a gap brief and a score out of 100. Check before step 3: each gap is a type or buyer question no rival covers.
+3. **Write three ideas and nine versions.** Use the skill `ad-test-brief-writer`. It takes the gap brief in `outputs/step-02-competitor-ad-gap-finder.md`, the counts in `outputs/step-01-ad-library-teardown-counter.md`, your org context and your ad results if you have them. It saves `outputs/step-03-ad-test-brief-writer.md`: an evidence grade, three ideas each aimed at one buyer doubt, three versions of each with their own first frame, and questions to settle first. Check before step 4: no two ideas answer the same doubt.
 4. **Lay out the test campaign.** Use the skill `meta-test-campaign-planner`. It takes the briefs in `outputs/step-03-ad-test-brief-writer.md`, your daily test budget and your target cost per sale. It saves `outputs/step-04-meta-test-campaign-planner.md`: ad packs with names, a budget split by stage, the budget type (CBO or ABO) with the trade-off, and rules for adding ads and scaling.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

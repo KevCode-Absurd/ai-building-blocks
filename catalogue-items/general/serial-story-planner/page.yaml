@@ -26,7 +26,7 @@ you_give:
   - "Your story or content idea and the audience"
   - "Number of parts and size of each (optional)"
   - "The ending, if you know it (optional)"
-  - "Your brand file (optional)"
+  - "Your org context (optional)"
 you_get:
   - "The ending and the main turns"
   - "A table of parts: job, size, beats and closing hook"
@@ -63,7 +63,7 @@ output_sample:
     - "Your story or series idea and who it is for"
     - "How many parts and how long each is (optional)"
     - "The ending, if you know it (optional)"
-    - "Your brand file, if the series is for a business (optional)"
+    - "Your org context, if the series is for a business (optional)"
   output:
     - name: "Ending and turns"
       contains: The last scene in two sentences and three or four turns in order.
@@ -129,7 +129,7 @@ test:
 
 improve:
   - "Add the length and cadence your channel uses."
-  - "Add the tone words for your voice from your brand file."
+  - "Add the tone words for your voice from your org context."
   - "Keep notes on what readers said at each listening point."
   - "Pair it with \"Ending-first story planner\" when you want one strong effect from a single piece."
 

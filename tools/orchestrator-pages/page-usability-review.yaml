@@ -47,7 +47,7 @@ output_sample:
     - The page or screen to review (a link, a screenshot or the text)
     - What a visitor should be able to do on it
     - A short description of your typical visitor (optional)
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
     - A morning and three people to test with, for the last step

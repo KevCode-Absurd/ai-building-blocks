@@ -125,7 +125,7 @@ test:
 improve:
   - Add your page types and the order you want fixes done in.
   - Add your known update calendar so timing matches are automatic.
-  - Save each diagnosis in your brand file, so a repeat drop shows what worked last time.
+  - Save each diagnosis in your org context, so a repeat drop shows what worked last time.
   - Pair it with the organic search report builder for the trend and the quick-win finder for pages to push once the drop is fixed.
 
 works_best_with:

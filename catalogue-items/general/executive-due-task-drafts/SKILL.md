@@ -60,7 +60,7 @@ End with source coverage, missing facts, proposed external actions and one next 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Fill the gaps in your brand file** with the [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the draft.
+- **Fill the gaps in your org context** with the [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the draft.
 - The [Work commitment and follow-up writer](https://useaiblocks.com/skills/executive-work-keeper).
 - The [Daily executive brief writer](https://useaiblocks.com/skills/executive-daily-digest). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

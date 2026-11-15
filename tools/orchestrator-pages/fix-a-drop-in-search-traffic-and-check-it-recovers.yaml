@@ -22,7 +22,7 @@ you_give:
   - A Search Console export covering the drop and the period before it
   - Crawl or indexing reports, or page screenshots (optional)
   - Your Shopify theme files, for the duplicate page fixes
-  - Your brand file or a list of your brand search terms (optional)
+  - Your org context or a list of your brand search terms (optional)
   - After the pause, a fresh export for the same pages four weeks later
 you_get:
   - The pages that lost the most clicks, what they share, a likely cause for each group and a score out of 100 for how clear the cause is
@@ -108,7 +108,7 @@ test:
   - Check at four weeks that the fixed pages are indexed in Search Console.
   - Run the last step again at eight weeks. Non-branded clicks should keep rising if the fix worked.
 improve:
-  - Add your brand terms and common misspellings to your brand file, so the filter is right every time.
+  - Add your brand terms and common misspellings to your org context, so the filter is right every time.
   - Keep a change log with dates, so the recovery report can match results to what you changed.
   - Edit the ignore list in the prioritiser for pages you leave out on purpose, such as account and cart pages.
   - Pair it with a collection page rewrite if the lost pages were thin on content.

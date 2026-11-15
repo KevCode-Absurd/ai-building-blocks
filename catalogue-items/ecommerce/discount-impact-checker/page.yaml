@@ -133,7 +133,7 @@ test:
   - Run it twice with the same input. The bar and verdict should match.
   - Use AOV 100, cost 40, current target 2.5 and one unit. At 50% off, required CPA minus 10 is not viable; at 40%, CPA 0 has no finite paid-ad target; at 25%, CPA 15 gives requiredROAS 5.
 improve:
-  - Save your real cost per order and your usual units per order in your brand file, so you do not retype them.
+  - Save your real cost per order and your usual units per order in your org context, so you do not retype them.
   - Add your own past sale results as a table, so the best-depth step has data to use.
   - Edit the score penalties in the skill file to fit your store, for example a lower tolerance if your cash is thin.
   - Pair it with a skill that picks the offer type first, and with one that plans sale timing.

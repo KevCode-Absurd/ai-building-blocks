@@ -22,7 +22,7 @@ you_give:
   - Your offer in a few lines, what you sell, the price and the terms
   - Buyer evidence, such as reviews, support messages, survey answers, call notes or cancellation reasons
   - Where the copy will run (optional)
-  - Your brand file, with voice, offers, approved claims and what competitors promise (optional)
+  - Your org context, with voice, offers, approved claims and what competitors promise (optional)
 you_get:
   - A job line that says when they look, what they want, and what stops them
   - How aware the buyer is, and how much the market has already heard, with the evidence
@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini and paste in the skill. No code, files or paid tools are needed.
   - "Paste your offer: what you sell, the price and the terms."
-  - "Paste your buyer evidence: reviews, support messages, survey answers, call notes or cancellation reasons. Add your brand file if you have one."
+  - "Paste your buyer evidence: reviews, support messages, survey answers, call notes or cancellation reasons. Add your org context if you have one."
   - Ask for the buyer brief. If it marks a force as MISSING, treat that as a gap, not a fact.
   - Check that each quote appears word for word in what you pasted.
   - Hand the brief to your copywriter or to the next skill, such as the Proof-backed sales copy writer.
@@ -41,7 +41,7 @@ output_sample:
     - "Your offer: what you sell, the price and the terms"
     - "Buyer evidence: reviews, support messages, survey answers, call notes or cancellation reasons"
     - Where the copy will run (optional)
-    - Your brand brain or brand file (optional)
+    - Your org context (optional)
   output:
     - name: Job line
       contains: One sentence on when the buyer starts looking, what they want, and what stops them, in their words.
@@ -165,7 +165,7 @@ example:
     GAPS
     - What do people who haven't bought yet use now, and why do they stay?
     - Is the price worry about the first box or the renewal?
-    - Does "can a gummy hold enough?" worry them? The brand file says so,
+    - Does "can a gummy hold enough?" worry them? The org context says so,
       but none of these reviews do.
 tweaks:
   - what: The evidence you paste
@@ -188,9 +188,9 @@ test:
   - Add a batch of cancellation reasons and run it again. The fear and habit lines should fill in.
   - Give the brief to a writer and compare their draft with one written without it. The aimed draft should spend its words on the chosen force.
 improve:
-  - Add the buyer groups from your brand file to "What you need" in the skill file, so step 3 places each group the same way every run.
+  - Add the buyer groups from your org context to "What you need" in the skill file, so step 3 places each group the same way every run.
   - Write what your main competitors promise into step 4, so the market stage is judged the same way every time.
-  - Save each brief to your brand file, one per buyer group, and update it when new reviews come in.
+  - Save each brief to your org context, one per buyer group, and update it when new reviews come in.
   - Pair it with "Sales copy opening writer" or "Ad first line writer and scorer", which both start from this brief.
 works_best_with:
   tools:

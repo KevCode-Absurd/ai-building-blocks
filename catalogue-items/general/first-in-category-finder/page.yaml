@@ -129,7 +129,7 @@ test:
 improve:
   - Add the time your market took to split before, so the timing test has a reference.
   - Add search and review data to the open test.
-  - Save the chosen category as part of your brand file.
+  - Save the chosen category as part of your org context.
   - Follow it with "Category name writer" and "Publicity-first launch planner".
 
 works_best_with:

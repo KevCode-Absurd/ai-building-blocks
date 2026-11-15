@@ -57,7 +57,7 @@ output_sample:
     - "Your budget and team size (advised)"
     - "Brands from other industries you admire (optional)"
   prerequisites:
-    - "Your brand brain from the Website brand brain builder (optional)"
+    - "Your org context from the Org context builder (optional)"
   output:
     - name: "Alternatives and axis pairs"
       contains: "Every real choice a shopper has, then ten candidate axis pairs. Each pair is an emotional extreme, such as speed against status."

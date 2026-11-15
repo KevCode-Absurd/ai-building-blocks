@@ -1,0 +1,6 @@
+# (test data) Full-price weekly sales of current-season items in the 4 weeks after Last Call 2025, index 100 = the 4 weeks before. Built for an e-commerce eval. Not Taylor Stitch's real figures.
+week,full_price_index
+Week 1 after,98
+Week 2 after,101
+Week 3 after,99
+Week 4 after,103

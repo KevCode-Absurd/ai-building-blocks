@@ -23,7 +23,7 @@ you_give:
   - How each customer first came to you (optional)
   - Survey answers or support reasons (optional)
   - Your monthly budget and weekly hours for VIP work
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - A list of customers ranked by profit, with what your top and bottom groups share and a fit score out of 100
   - A go or wait call, and VIP tiers set from your own spend, with perks, cost per member, an invite and a 90-day test
@@ -41,7 +41,7 @@ output_sample:
     - Your monthly budget and weekly hours for VIP work
     - How each customer first came to you (optional)
     - Survey answers or support reasons (optional)
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
     - At least 90 days of orders
@@ -95,5 +95,5 @@ test:
   - Ask three VIPs what they would value from a perk list. Compare with step 2.
 improve:
   - Add your own perks, such as early access to a drop, to the program skill.
-  - Save the VIP rule and tiers in your brand file, so email and ad skills know who your VIPs are.
+  - Save the VIP rule and tiers in your org context, so email and ad skills know who your VIPs are.
   - Re-run step 1 each quarter, since your best customers change.

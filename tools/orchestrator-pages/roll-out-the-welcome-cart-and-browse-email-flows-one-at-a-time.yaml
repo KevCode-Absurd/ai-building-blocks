@@ -5,7 +5,7 @@ job: write-emails
 thinking: high
 thinking_why: It runs five skills in a row, and the later flows must match the offer and voice of the first. Give it your strongest model.
 headline: Get your welcome, cart and browse emails live, one flow at a time
-subhead: Give it your email tool settings, your brand file and your offer. It scores your sending setup, then plans the welcome, cart and browse flows email by email. It ends by scoring all your flows and ranking what is still missing.
+subhead: Give it your email tool settings, your org context and your offer. It scores your sending setup, then plans the welcome, cart and browse flows email by email. It ends by scoring all your flows and ranking what is still missing.
 explain: |
   Most stores lose sales in their email setup before a single email is written. The sending domain is not set up, spam filters catch the mail, or the cart flow fires on the wrong event so people who only add to cart are never emailed. Then the flows are built in a rush, and each one repeats the others.
 
@@ -21,7 +21,7 @@ not_for:
 you_give:
   - Your sending domain, its DNS records and your DMARC record
   - Your email tool settings, such as smart sending, attribution and tracking (screenshots or notes)
-  - Your brand file (story, founder details, guarantees and what you can claim)
+  - Your org context (story, founder details, guarantees and what you can claim)
   - Your welcome offer, what it costs you and when it really ends
   - Your best sellers, reviews and shipping and returns facts
   - Revenue per flow for the last 90 days (optional)
@@ -41,12 +41,12 @@ output_sample:
   input:
     - Your sending domain, DNS records and DMARC record
     - Your email tool settings, such as smart sending and tracking
-    - Your brand file and your welcome offer
+    - Your org context and your welcome offer
     - Your best sellers, reviews, shipping and returns facts
     - Revenue per flow for the last 90 days (optional)
   prerequisites:
     - An AI that can read files, such as Claude with a Project
-    - A brand brain from the Website brand brain builder (optional)
+    - An org context from the Org context builder (optional)
     - Your offer from the Hidden offer finder (optional)
   output:
     - name: Setup check
@@ -111,7 +111,7 @@ test:
   - Walk one test profile through the filters. A past buyer should not get the welcome code.
   - Read the flow score against your own list of live flows. Does it find the same gaps you see?
 improve:
-  - Save your brand voice and offer rules in your brand file, so each flow starts from the same facts.
+  - Save your brand voice and offer rules in your org context, so each flow starts from the same facts.
   - Edit the welcome skill's default order of emails if your products need showing before the story.
   - Test the delay on the first cart email before any other change. It is the cheapest lever.
   - Pair it with a win-back flow builder once the three flows earn.

@@ -133,7 +133,7 @@ test:
 
 improve:
   - Add your own good range for new-customer MER once you have three months of data. It depends on your margin and repeat rate.
-  - Save the definitions to your brand file so every report uses them.
+  - Save the definitions to your org context so every report uses them.
   - Add a weekly view once the daily view is stable.
   - Add the 180-day band when cohort data is ready, and run the CAC payback checker for the full read.
   - Pair it with the daily contribution margin tracker for the owner view. Money figures are planning numbers, so check them with your accountant.

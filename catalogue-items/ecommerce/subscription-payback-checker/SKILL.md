@@ -18,8 +18,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand file.
-2. **Your offer** with the [Subscription offer designer](https://useaiblocks.com/skills/subscription-offer-designer). Bring your results (optional). It uses your brand file.
+1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your org context.
+2. **Your offer** with the [Subscription offer designer](https://useaiblocks.com/skills/subscription-offer-designer). Bring your results (optional). It uses your org context.
 3. This one.
 
 How to start:

@@ -68,4 +68,4 @@ output_sample:
       contains: Age range, gender and countries for EU and UK ads, when you ask for ad details.
     - name: Report
       contains: Ad count, how many are active, the longest-running ads with links, and common formats.
-next: [competitor-ad-swipe-file-builder, competitor-ad-teardown-writer, competitor-ad-gap-finder]
+next: [competitor-ad-swipe-file-builder, competitor-ad-teardown-writer]

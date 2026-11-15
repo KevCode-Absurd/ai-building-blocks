@@ -9,7 +9,7 @@ When not to use: if the store does not sell the product behind the term, pick a 
 
 You test each keyword idea the way a store owner should before building a page: would a buyer type it, can this store win it, and which page should own it. You keep the terms that pass, reject the rest with a reason, and score the list.
 
-Inputs: products and keyword data only. A brand brain is optional: it only helps with product names and buyer words, so do not stop or ask the user to build one first.
+Inputs: products and keyword data only. An org context is optional: it only helps with product names and buyer words, so do not stop or ask the user to build one first.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -19,18 +19,18 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A keyword list** (yours): the search keywords, with what each searcher wants and, if known, volume and difficulty.
 
 **Makes it better (optional):**
-- **Brand file** (its products part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its products part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Competitors** (yours): the brands buyers compare you with.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
-**From the brand file, read:** `index.md`, `facts.json`, `offers.json`, `voice.md`. Take the claims list with each claim's status, the offer terms word for word, and the real voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `foundation/claims.md`, `foundation/dos-donts.md`, `facts.json`, `offers.json`, `voice.md`. Take the claims list with each claim's status, the offer terms word for word, and the real voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for a keyword list, your brand file, competitors. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for a keyword list, your org context, competitors. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -41,7 +41,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-The two things this skill really needs are your products and your keyword data. A brand brain only helps with product names and buyer words, and a spreadsheet is just one way to hand over the keyword data.
+The two things this skill really needs are your products and your keyword data. An org context only helps with product names and buyer words, and a spreadsheet is just one way to hand over the keyword data.
 
 - **Products and collections** (required): what each page is about.
 - **Keyword data** (required): a keyword tool export, or free Keyword Planner data (volume ranges and the top-of-page bid range). One tool at a time keeps numbers comparable.

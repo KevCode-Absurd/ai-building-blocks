@@ -45,7 +45,7 @@ The old skill names used our internal terms. Replace them on the page, or explai
 
 | Internal term | Say instead |
 |---|---|
-| brand brain | your brand file (one folder with your facts, voice, offers and what you can claim) |
+| brand brain | your org context (one folder with your customers, voice, design, markets, claims, do's and don'ts) |
 | angle | the reason someone buys, in their words |
 | awareness stage | how much the buyer already knows about the problem and about you |
 | lever, lever snippet | a single setting you can change in an image or video (light, camera, mood) |

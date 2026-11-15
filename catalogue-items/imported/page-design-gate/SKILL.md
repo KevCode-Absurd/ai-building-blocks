@@ -34,7 +34,7 @@ How to start:
 
 ## First, ground the job (added by AI Blocks)
 
-Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol). If the page belongs to a business with a live site or brand guide, run [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture) first: its fonts, colours and their shares, buttons, nav, footer and section order count as a brief that pins the look, so they win over every rule below. Use [AI default patterns](https://useaiblocks.com/skills/ai-default-patterns) for the defaults to avoid, and run [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check) next to the browser proof.
+Before you start, follow the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol). If the page belongs to a business with a live site or brand guide, run [Org context capture](https://useaiblocks.com/skills/brand-dna-capture) first: its fonts, colours and their shares, buttons, nav, footer and section order count as a brief that pins the look, so they win over every rule below. Use [AI default patterns](https://useaiblocks.com/skills/ai-default-patterns) for the defaults to avoid, and run [Brand fidelity check](https://useaiblocks.com/skills/brand-fidelity-check) next to the browser proof.
 
 
 ## Overview

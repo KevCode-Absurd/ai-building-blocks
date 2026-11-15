@@ -44,7 +44,7 @@ output_sample:
     - Customer words that mention where they read or ask for advice (optional)
     - Traffic, survey or follower data (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your org context from the Org context builder (optional, makes the result better)
   output:
     - name: Audience in actions
       contains: Three to five actions that mark your buyer, such as what they buy, read or follow.

@@ -15,8 +15,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand file and offer and buying reasons.
-2. **A video ad script** with the [Founder video ad script writer](https://useaiblocks.com/skills/founder-video-ad-script-writer). It uses your brand file and buyer brief.
+1. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your org context and offer and buying reasons.
+2. **A video ad script** with the [Founder video ad script writer](https://useaiblocks.com/skills/founder-video-ad-script-writer). It uses your org context and buyer brief.
 3. This one.
 
 How to start:

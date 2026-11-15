@@ -138,7 +138,7 @@ improve:
   - Add the weights you want for each check after you have a few launches to compare.
   - Add your own past launches so the kill rule reflects your results.
   - Pair it with the category and trend risk checker before you run this one.
-  - Save each verdict in your brand file so you can see what held up.
+  - Save each verdict in your org context so you can see what held up.
 
 works_best_with:
   tools:

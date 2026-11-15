@@ -82,7 +82,7 @@ output_sample:
     - What the ad must do
     - Product photos and brand position (optional)
   prerequisites:
-    - Nothing needed first. A brand brain from the Website brand brain builder helps if you have one.
+    - Nothing needed first. An org context from the Org context builder helps if you have one.
   output:
     - name: Main style
       contains: The photo style that fits your buyer and platform best, with the reason.

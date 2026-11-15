@@ -195,8 +195,8 @@ test:
 improve:
   - Write your product's real motions and sounds into the "Product" line of the skill file once (how it opens, pours, seals), so every product card starts from them.
   - Copy your brand's handling rules there word for word, so every clip prompt carries them.
-  - Save your approved product sheet in your brand file, so the next batch starts at the storyboard.
-  - Save which finish won to your brand file, and test a new focus with the same finish next time.
+  - Save your approved product sheet in your org context, so the next batch starts at the storyboard.
+  - Save which finish won to your org context, and test a new focus with the same finish next time.
   - For a talking opening instead, pair it with the skill that makes talking openings.
 works_best_with:
   tools:

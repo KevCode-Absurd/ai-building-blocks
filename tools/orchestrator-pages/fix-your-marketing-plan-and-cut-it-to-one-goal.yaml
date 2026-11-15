@@ -41,7 +41,7 @@ output_sample:
     - How much time and money you have (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: Plan in order"
       contains: Every line sorted as diagnosis, strategy or tactic, with the target, position, gaps, tactics that serve neither, and a score.
@@ -91,5 +91,5 @@ test:
   - Ask someone outside the team to say in one sentence what the plan is for. It should match the goal.
 improve:
   - Run it again after each stop date with the results added, and let it re-score the tactics.
-  - Save the fixed plan in your brand file so later campaigns start from it.
+  - Save the fixed plan in your org context so later campaigns start from it.
   - Add rival plans in step 2 to see where you are second in the buyer's mind.

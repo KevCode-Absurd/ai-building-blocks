@@ -8,7 +8,7 @@ job: ops
 level: intermediate
 inputs:
   - {type: dataset, required: true}
-  - {type: spreadsheet, required: true}
+  - {type: spreadsheet, required: false}
 outputs:
   - {type: slide_deck}
 uses: [data-cleaner, data-quality-auditor, data-story-writer, presentation-builder]

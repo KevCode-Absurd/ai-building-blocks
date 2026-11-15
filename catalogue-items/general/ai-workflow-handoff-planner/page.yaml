@@ -36,7 +36,7 @@ you_get:
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - List your steps in order, one line each, with what each one should hand on.
-  - Attach proof-and-claims.md from your brand file, or paste the claims your ads use.
+  - Attach proof-and-claims.md from your org context, or paste the claims your ads use.
   - If you know what each step is sent now, paste it or describe it, with any measured costs (optional).
   - Check that steps able to open files are named. Steps that can't open files get the text pasted in instead.
   - Build the cards and run rules into your tool, then compare real usage with the estimates.
@@ -121,7 +121,7 @@ example:
     7. Check: the image and copy against the brief
     8. Fix: repair what failed
 
-    Today every step gets the whole brand file plus all 20 reviews.
+    Today every step gets the whole org context plus all 20 reviews.
     Usage: not measured. Fixed: none. Steps 1 and 7 run in a tool
     that can open files; the rest can't.
 

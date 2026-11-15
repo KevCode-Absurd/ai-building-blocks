@@ -14,7 +14,7 @@ when:
   - You want to see which claims and testimonials the page really makes.
 not_for:
   - "Your page has no product text, or you have no approved facts: write a plain product-copy brief by hand first."
-  - "You need a full brand voice and customer guide from your whole site: use a brand brain builder, not one product page."
+  - "You need a full brand voice and customer guide from your whole site: use an org context builder, not one product page."
   - "You need exact brand colors from a style guide: ask your designer for the real hex codes."
 you_give:
   - Product page or pasted page text

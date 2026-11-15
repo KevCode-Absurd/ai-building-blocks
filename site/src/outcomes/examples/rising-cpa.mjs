@@ -372,7 +372,7 @@ export default {
       {
         "id": "context",
         "kind": "context",
-        "name": "Build or reuse the brand brain",
+        "name": "Build or reuse the org context",
         "goal": "Know what the business sells, to whom, with what proof and in what voice, so every later output fits the brand.",
         "owner": {
           "role": "brand-file-from-website"
@@ -383,7 +383,7 @@ export default {
         "outputs": [
           {
             "id": "brand-check",
-            "name": "Brand brain check",
+            "name": "Org context check",
             "format": "markdown",
             "path": "context/BRAND-CHECK.md"
           }
@@ -856,7 +856,7 @@ export default {
         "checks": [
           {
             "id": "brand",
-            "name": "Copy and visuals match the brand brain voice and look",
+            "name": "Copy and visuals match the org context voice and look",
             "required": true
           },
           {

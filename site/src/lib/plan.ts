@@ -15,7 +15,7 @@ export function passes(c: Catalogue, from: string, to: string): string[] {
   const reads = new Set(b.inputs.map((p) => p.type));
   return a.outputs.filter((p) => reads.has(p.type)).map((p) => p.type);
 }
-/** The words on a connection: "brand file", "ad copy + brief". */
+/** The words on a connection: "org context", "ad copy + brief". */
 export function passLabel(c: Catalogue, from: string, to: string): string {
   const t = passes(c, from, to);
   const shown = t.length ? t : (c.bySlug[from]?.outputs ?? []).slice(0, 1).map((p) => p.type);

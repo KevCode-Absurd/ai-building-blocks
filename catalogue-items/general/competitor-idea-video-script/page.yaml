@@ -50,7 +50,7 @@ output_sample:
     - What not to borrow, and script length and speaker (optional)
   prerequisites:
     - A real ad someone saw, with an ID, a link or its own words
-    - Your brand facts, or the Brand profile builder result (helps, not required)
+    - Your brand facts, or the Org context builder result (helps, not required)
   output:
     - name: REFERENCE
       contains: The ad you studied, with its source, and one line on what it does.
@@ -119,7 +119,7 @@ example:
     Ad Library, 15+ copies live. (No competitor ad was on
     file, so this uses one of ours.)
     Don't borrow: the discount or the price doubt.
-    Research: buyer doubt from the brand file, "A gummy can't hold
+    Research: buyer doubt from the org context, "A gummy can't hold
     enough to replace my powder." Review: "[Sprout] has been the one
     thing I've been able to stick to."
     Facts (the daily-value figures are printed on the label and are on
@@ -139,7 +139,7 @@ example:
     IDEA BORROWED
     Say the buyer's doubt out loud, then answer it with something they
     can check.
-    Rests on: the "can a gummy hold enough" doubt (brand file) and the
+    Rests on: the "can a gummy hold enough" doubt (org context) and the
     label numbers (science page).
     Where it acts: the doubt and the answer.
     Other ideas considered: none (one ad given).
@@ -157,7 +157,7 @@ example:
       to." | Daily pack torn straight across the top, gummies into a
       palm | Review 1, brand site
     Doubt | "Fair question, though. Can a gummy hold enough?" | Can a
-      gummy hold enough? | Palm held still, close | Brand file, buyer 1
+      gummy hold enough? | Palm held still, close | Org context, buyer 1
     Answer | "One pack: about 100% of daily value for vitamins.
       Minerals, about a quarter." | Vitamins ~100% DV. Minerals ~25%
       DV. | Plain cream card, one number at a time | Science page
@@ -217,7 +217,7 @@ test:
   - Put the script beside the reference. The order should differ and no five words in a row should match.
 
 improve:
-  - Keep a list of borrowed ideas in your brand file, one sentence each, with the ad each came from and how its test went.
+  - Keep a list of borrowed ideas in your org context, one sentence each, with the ad each came from and how its test went.
   - Add your customer quotes and facts with sources to the skill file, so step 2 always has a true fact to check.
   - Run the competitor study first, so this skill gets breakdown cards and the category's clichés to avoid.
   - Pair it with the read-aloud skill after the script, so every line is easy to say.

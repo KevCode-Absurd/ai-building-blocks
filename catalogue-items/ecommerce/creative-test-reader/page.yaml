@@ -136,7 +136,7 @@ test:
 improve:
   - Add your own break-even ROAS to the skill file under "Your target", so you never have to paste it.
   - Add your store's usual path (for example video, then product page, then cart) as a fixed check in the path read.
-  - Save each week's brief in your brand file, so the next run can see what was already tested.
+  - Save each week's brief in your org context, so the next run can see what was already tested.
   - Pair it with the creative hit rate planner to size how many ads to make, and the fatigued ad reviver when a winner fades.
 
 works_best_with:

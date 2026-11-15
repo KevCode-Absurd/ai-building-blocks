@@ -1,0 +1,11 @@
+# (test data) Meta ad-level export, last 30 days, USD. Built for an e-commerce eval. Not Ritual's real figures.
+ad,campaign,format,status,spend,purchases,primary_text_start
+"Carousel | What's inside, ingredient by ingredient",Launch | Perimenopause Health,carousel,Active,6100,141,Nine ingredients. Each one traced. Here is what each one is for*
+Video | Dr. explains the formula,Launch | Perimenopause Health,video,Active,9800,108,Our scientist walks through the study design
+Static | Say goodbye to hot flashes,Launch | Perimenopause Health,single image,Rejected: unacceptable health claims,0,0,Say goodbye to hot flashes and night sweats for good
+Static | Balance your hormones naturally,Launch | Perimenopause Health,single image,Rejected: unacceptable health claims,0,0,"Balance your hormones naturally, no HRT needed"
+Video | Menopause symptoms gone,Launch | Perimenopause Health,video,Rejected: unacceptable health claims,0,0,Treats the symptoms of menopause in 4 weeks
+Static | Traceable ingredients,ASC | Women's 18+,single image,Active,14800,330,Know what's in it and where it's from
+Video | No fishy burps,ASC | Women's 18+,video,Active,19900,410,The multivitamin built for people who read labels
+"Video | Prenatal, 12 essential nutrients*",Prospecting | Prenatal,video,Active,15600,262,"Support for you and baby*, from trying to third trimester"
+"Static | Gut health, simplified*",Prospecting | Synbiotic+,single image,Active,10900,236,"3-in-1 prebiotic, probiotic and postbiotic*"

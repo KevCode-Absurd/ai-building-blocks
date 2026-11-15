@@ -189,7 +189,7 @@ improve:
   - Put your targets (cost per sale or return) into "What you need" in the skill file, so every report judges against the same line.
   - Name your reader in "What you need", for example "a co-founder who reads it on a phone". The length and the words follow from that.
   - If you report to a client, add their names for campaigns and products to the skill, so the report uses their words, not the platform's.
-  - Keep each month's three actions in log.md in your brand file, and paste them in next month so the report can say which were done and checked.
+  - Keep each month's three actions in log.md in your org context, and paste them in next month so the report can say which were done and checked.
   - Pair it with a skill that finds out why your ads stopped selling. Run that first when something big moved, and paste its findings in here.
 
 works_best_with:

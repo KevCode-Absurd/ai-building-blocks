@@ -26,7 +26,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-In "Before you start", "your question" means the four items below. A buyer brief or brand brain does not apply to a tool list.
+In "Before you start", "your question" means the four items below. A buyer brief or org context does not apply to a tool list.
 
 Gather first: the real names your team uses for orders, customers and the like, and the list of actions that must never happen.
 

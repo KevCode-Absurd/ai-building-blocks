@@ -20,7 +20,7 @@ Store ads tend to bunch in different places for each, so the empty places differ
 - Your product list and bundles, so lens 5 can count ads per product.
 - Your proof by kind: lab or test reports with dates, reviews with where they came from, your guarantee and its limits. Step 3 only counts what you paste.
 - Who may appear on camera and with what permission, before any format that needs a person counts as open.
-- Any detail of how the product opens, is worn or is used comes from the product record in the brand file, never from the idea writer.
+- Any detail of how the product opens, is worn or is used comes from the product record in the org context, never from the idea writer.
 - A side by side against another product uses prices you can date. Recheck them before the ad goes live.
 - A guarantee or trial is a safe yes only as far as its terms go. If it covers the first order only, the ad says so.
 - Real urgency only from the recent changes.

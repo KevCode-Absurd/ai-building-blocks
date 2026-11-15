@@ -132,7 +132,7 @@ improve:
   - Add your required certificates and test reports for your country.
   - Add a line for your usual shipping terms.
   - Pair it with a supplier scorer to rank the quotes.
-  - Save the best email and the winning supplier's answers in your brand file.
+  - Save the best email and the winning supplier's answers in your org context.
 
 works_best_with:
   tools:

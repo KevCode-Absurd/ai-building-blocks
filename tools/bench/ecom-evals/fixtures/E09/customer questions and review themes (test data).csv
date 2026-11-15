@@ -1,0 +1,8 @@
+# (test data) Customer questions and review themes on this listing, last 6 months. Built for an e-commerce eval. Not Pela's real figures.
+theme,count,type
+Question: does it work with MagSafe chargers and wallets?,46,question
+Question: what drop height is it rated for?,12,question
+"Review: 1 to 2 stars, MagSafe wallet falls off",31,review
+"Review: 5 stars, survived drops on concrete",58,review
+"Review: 5 stars, love the print",74,review
+"Review: 3 stars, case did not break down in my backyard compost after 6 months",9,review

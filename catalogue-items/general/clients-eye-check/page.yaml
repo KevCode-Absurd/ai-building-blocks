@@ -158,7 +158,7 @@ works_best_with:
     - {name: "A second chat window", why: "Works when your AI cannot start an agent. You paste the packet in and the reply back."}
   inputs:
     - "The brief in the client's own words"
-    - "Your facts file or brand file, with dates"
+    - "Your facts file or org context, with dates"
 
 terms:
   - term: Deliverable

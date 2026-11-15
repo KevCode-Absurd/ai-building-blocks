@@ -47,7 +47,7 @@ output_sample:
     - Claims you may not make (optional)
   prerequisites:
     - A Meta ad that already works and has enough spend to read
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: WINNER
       contains: The ad you chose, its spend and result, and notes on its tone, sentence length and signature phrases.
@@ -128,7 +128,7 @@ test:
 
 improve:
   - Add your approved claims and banned phrases to the skill file so every variant stays inside them.
-  - Save the groups that worked in your brand file for the next run.
+  - Save the groups that worked in your org context for the next run.
   - Add your own rule for how many variants to launch at once, based on your budget.
   - Pair it with the ad angle multiplier for new angles and the Meta ads compliance checker before launch.
 

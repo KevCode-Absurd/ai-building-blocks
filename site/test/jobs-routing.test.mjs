@@ -43,10 +43,10 @@ test('borderline requests ask about the output, and the caller can choose the mo
 
 test('direct and outcome routing results satisfy their published response schema', async () => {
   for (const request of ['Use copy-checker', 'I need more customers']) { const result = await startJob({ request }, context); assert.match(result.next_action.instruction, /call prepare_job_context and ground the work/); assert.equal(result.execution_plan.gates, undefined); const check = validateJobDocument('ai-blocks-job/1', result); assert(check.ok, JSON.stringify(check.errors)); }
-  // Only brand-facing work (a page, ad, copy or email) is told to read the brand file.
-  assert.match((await startJob({ request: 'Use copy-checker' }, context)).next_action.instruction, /needs the brand file/);
-  for (const deliverable_kind of ['audit', 'plan', 'code']) assert.doesNotMatch((await startJob({ request: 'Use copy-checker', deliverable_kind }, context)).next_action.instruction, /brand file/);
-  assert.doesNotMatch((await startJob({ request: 'I need more customers' }, context)).next_action.instruction, /brand file/);
+  // Only brand-facing work (a page, ad, copy or email) is told to read the org context.
+  assert.match((await startJob({ request: 'Use copy-checker' }, context)).next_action.instruction, /needs the org context/);
+  for (const deliverable_kind of ['audit', 'plan', 'code']) assert.doesNotMatch((await startJob({ request: 'Use copy-checker', deliverable_kind }, context)).next_action.instruction, /org context|brand file/);
+  assert.doesNotMatch((await startJob({ request: 'I need more customers' }, context)).next_action.instruction, /org context|brand file/);
 });
 
 // A small index, so the kind filter is tested without the built catalogue.

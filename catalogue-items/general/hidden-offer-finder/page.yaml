@@ -6,7 +6,7 @@ summary: "Find hidden offers in your own prices and deals. Get live offers liste
 job: make-offer
 
 headline: "Hidden offer finder"
-subhead: Give it your brand file. It quotes every deal you run today, flags any that clash and builds new offers only from what you already have, like sizes, prices and your guarantee. You get your live offers, new ones and three to try first.
+subhead: Give it your org context. It quotes every deal you run today, flags any that clash and builds new offers only from what you already have, like sizes, prices and your guarantee. You get your live offers, new ones and three to try first.
 
 explain: |
   Ask most businesses for their offers and you hear about money off, again and again. An offer is the whole deal: what the buyer gets, what they pay, and what makes yes feel safe today. A trial pack, the guarantee said up front or one box for the whole family can each do that job better than a bigger discount.
@@ -14,16 +14,16 @@ explain: |
   This skill starts with the deals you already run, quoted word for word, and points out where two pages say different things about the same deal. Then it lists what you already own: pack sizes, price points, your guarantee, delivery speed, extras and past buyers. Every new offer is made from that list, matched to one buyer's doubt, and checked against plain honesty rules for "free", "was" prices and subscriptions. It ends with the three worth trying first.
 
 when:
-  - You're setting up your brand file and need a list of offers to work from.
+  - You're setting up your org context and need a list of offers to work from.
   - You're writing an ad and need an honest offer to end on.
   - Your deals have piled up and different pages now say different things.
 not_for:
-  - "You have no written price list or brand file: write down your prices, guarantee and current deals first, then run it."
+  - "You have no written price list or org context: write down your prices, guarantee and current deals first, then run it."
   - "You want one offer built around a single buyer's doubt with a profit check: use the Offer price-comparison reviewer."
   - "You only want a discount code or a sale price: set that in your shop settings, no skill needed."
 
 you_give:
-  - Your brand file (products, sizes and prices, guarantee, delivery and cancel terms, current deals, buyers and their main doubts)
+  - Your org context (products, sizes and prices, guarantee, delivery and cancel terms, current deals, buyers and their main doubts)
   - One buyer to focus on (optional)
   - Anything you can't do, such as no new pack sizes (optional)
 you_get:
@@ -36,19 +36,19 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your brand file, or at least your prices, guarantee, delivery terms, current deals and buyers.
+  - Paste your org context, or at least your prices, guarantee, delivery terms, current deals and buyers.
   - Name one buyer if you want the list built around them.
   - Fix the clashes first. Pick one figure for each deal and change every page that disagrees.
   - Start with the three marked "try first", and check each one's "must arrange" line before you promise it anywhere.
 output_sample:
   input:
-    - Your brand file with products, sizes, prices, guarantee, delivery and cancel terms
+    - Your org context with products, sizes, prices, guarantee, delivery and cancel terms
     - Every deal you run today on your site, ads, emails and pop-ups
     - One buyer to focus on (optional)
     - Anything you can't do, such as no new pack sizes (optional)
     - Your cost per order (optional)
   prerequisites:
-    - A brand file, or a Brand brain from the Brand profile builder
+    - An org context, or one from the Org context builder
   output:
     - name: LIVE
       contains: Every deal you run today, quoted in your own words, with the buyer and stage each suits.
@@ -116,7 +116,7 @@ example:
   input: |
     [the skill]
 
-    [brand file: sprout/brand.md, the products, prices and offers
+    [org context: sprout/brand.md, the products, prices and offers
     sections, plus the buyers section]
 
     Prices: Adults 28 packs $66.65 one-time ($2.38/day); subscription
@@ -245,7 +245,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "This is careful reading and plain writing, so Claude, ChatGPT or Gemini all do it well with a full brand file."}
+    - {name: "Any good chat AI", why: "This is careful reading and plain writing, so Claude, ChatGPT or Gemini all do it well with a full org context."}
     - {name: "Google Sheets", why: "Works out price per day, per pack and cost per order with formulas you can check."}
   inputs:
     - "Screenshots or text of every pop-up, banner and checkout page, so no live deal or clash is missed"

@@ -43,7 +43,7 @@ output_sample:
     - Your product and the problem it solves
     - Who could sell it, with their time and reach
     - Your price, cost and what you can afford to pay (optional)
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Product test
       contains: Who to try the product on, what to ask them and what counts as it working.

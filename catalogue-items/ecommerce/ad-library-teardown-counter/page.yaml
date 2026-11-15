@@ -133,7 +133,7 @@ test:
 improve:
   - Add your own awareness definitions to the skill file, so labels match how you sort buyers.
   - Add a rule for the minimum sample size you will trust.
-  - Save each teardown in your brand file with the date, so you can see how a rival's mix shifts.
+  - Save each teardown in your org context with the date, so you can see how a rival's mix shifts.
   - Pair it with the competitor ad swipe file builder to collect the ads, and the winning ad DNA mapper to study the shortlist.
 
 works_best_with:

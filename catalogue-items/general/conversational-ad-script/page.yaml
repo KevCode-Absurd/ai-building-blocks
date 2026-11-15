@@ -6,7 +6,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Conversational video ad script writer"
-subhead: Give it the reason for the ad (who it's for, what they want, what stops them) and your brand file. It tells one story the way people talk, using only your facts. You get the ad with shot notes, or a review of your draft with plain replacements.
+subhead: Give it the reason for the ad (who it's for, what they want, what stops them) and your org context. It tells one story the way people talk, using only your facts. You get the ad with shot notes, or a review of your draft with plain replacements.
 
 explain: |
   Ads written by marketers, and by AI, tend to sound the same. Clipped fragments, a question the ad answers itself, a slogan at the end, three adjectives in a row. Readers spot it in a second and scroll on. Others drop in facts for no reason, or claim more than the proof shows.
@@ -27,7 +27,7 @@ not_for:
 you_give:
   - Who the ad is for, what they want, what they have tried, what stops them, and their own words from reviews
   - The offer, the format and how much the buyer already knows
-  - Your brand file, with voice, never-say list, facts and proof
+  - Your org context, with voice, never-say list, facts and proof
   - A draft to review instead of write (optional)
 you_get:
   - The ad in the format you asked for, with notes on what to show
@@ -37,7 +37,7 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your brand file underneath, or at least the voice notes, facts and proof.
+  - Paste your org context underneath, or at least the voice notes, facts and proof.
   - Describe the buyer and what stops them, using their own words from reviews.
   - Name the format and length, for example "one person talking to a phone camera, 30 to 40 seconds".
   - Read the thread line first. If it isn't one clear story, ask for another before you edit lines.
@@ -92,7 +92,7 @@ example:
     30 to 40 seconds.
     Offer: 30-day money-back guarantee, first order only.
 
-    Brand file: playful, cheeky, a funny friend, never preachy.
+    Org context: playful, cheeky, a funny friend, never preachy.
     Facts: 1 pack a day, torn open across the top, a small handful of
     gummies. 60+ ingredients, 21 vitamins & minerals, 6 g fiber. No
     water, no mixing, no shaker.
@@ -164,7 +164,7 @@ test:
   - Give it the brief for an ad you've run that worked. Compare its thread sentence with what your ad was about. If they differ, read why. It may have found a different moment in the same research.
   - Run it twice on one brief. The thread (who speaks, about what moment) should be the same. If it changes, your brief names more than one buyer or reason.
   - Paste an ad you already run and write "review". Read each failing line aloud next to its replacement. The replacement should sound more like talk, not more clever.
-  - Find every number and quote in the result. Each one should be in your brand file, or show as a [placeholder].
+  - Find every number and quote in the result. Each one should be in your org context, or show as a [placeholder].
 
 improve:
   - Paste your voice notes and never-say list into step 7 of the skill file, so the voice rules travel with it.
@@ -177,11 +177,11 @@ output_sample:
   input:
     - Who the ad is for, what they want, what stops them, and their own words
     - The offer, the format and how much the buyer already knows
-    - Your brand file, with voice, never-say list, facts and proof
+    - Your org context, with voice, never-say list, facts and proof
     - A draft to review instead of write (optional)
   prerequisites:
     - A chat AI such as Claude, ChatGPT or Gemini
-    - Your brand brain from the Brand profile builder (optional)
+    - Your org context from the Org context builder (optional)
     - A buyer brief from the Buyer brief writer (optional)
   output:
     - name: Thread

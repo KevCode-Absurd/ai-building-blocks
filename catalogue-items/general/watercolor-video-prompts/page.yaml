@@ -207,7 +207,7 @@ test:
   - Search every prompt for "brush". There should be none outside the avoid field.
 
 improve:
-  - Save your approved material sentence and lock lines in your brand file, so every painted ad uses the same paper and colors.
+  - Save your approved material sentence and lock lines in your org context, so every painted ad uses the same paper and colors.
   - Keep your approved sheets and list them in "What you need", so new ads start at stage 4.
   - Add your video tool, clip length and end-frame support to "Your tools", so the timing fits first time.
   - Add any miss you keep seeing to the fixes table in stage 5, with the change that cured it.

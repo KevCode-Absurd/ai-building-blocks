@@ -21,7 +21,7 @@ not_for:
 you_give:
   - Competitor ads you saved from the public Ad Library, with library ID, brand, start date and screenshot
   - Who the ads are for (new to you, warm or ready to buy) and your country
-  - Your brand file (optional)
+  - Your org context (optional)
   - The competitors that matter to you (optional)
   - Your customer reviews (optional)
 you_get:
@@ -36,12 +36,12 @@ how_to_use:
 output_sample:
   input:
     - Competitor ads you saved from the public Ad Library, with ID, brand, start date and screenshot
-    - Your brand file (optional)
+    - Your org context (optional)
     - The competitors that matter to you (optional)
     - Your customer reviews (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
-    - Your brand brain from the Website brand brain builder (optional, makes the copy better)
+    - Your org context from the Org context builder (optional, makes the copy better)
   output:
     - name: Swipe file
       contains: Competitor ads sorted by type, with three ads from different brands for each type.
@@ -85,7 +85,7 @@ example:
     [the handoff pack] Follow HANDOFF.md.
 
     Competitor ads: 12 saved greens-powder ads from 4 brands. Practice data.
-    Brand file: the Sprout brand file.
+    Org context: the Sprout org context.
   output: |-
     STEP 1: SWIPE FILE
     12 ads merged to 10. Types: before-and-after (4), ingredient list (3), doctor quote (2), subscription deal (1).

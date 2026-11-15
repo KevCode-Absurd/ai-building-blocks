@@ -25,7 +25,7 @@ not_for:
 you_give:
   - Your rivals, including those buyers might compare you with
   - What buyers in your category value, in their words if you have them
-  - Your brand file and what you love to do (optional)
+  - Your org context and what you love to do (optional)
 you_get:
   - A grid of rivals against the features that decide the choice
   - The gaps nobody serves well, each with evidence
@@ -42,7 +42,7 @@ output_sample:
     - Your rivals, including things buyers use instead of you
     - What buyers in your category value, such as reviews or notes
     - Your limits and what you love to do (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
   output:
     - name: Rivals as buyers see them
       contains: Each rival, why buyers compare it with you, and the source of that reason.

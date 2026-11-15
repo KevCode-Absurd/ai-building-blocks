@@ -75,7 +75,7 @@ test('where a job stands: each phase, a review, live actions, blocked data and a
   assert.match(jobStatus(asked).next[0].detail, /Leave the landing page alone/);
   e = advanceEngagement(e, { type: 'approve_plan', by: 'owner', decision: 'APPROVED' });
   const running = jobStatus(e);
-  assert.deepEqual(running.next.map(i => i.title), ['Build or reuse the brand brain (ready to run)', 'Gather the data in one place (ready to run)']);
+  assert.deepEqual(running.next.map(i => i.title), ['Build or reuse the org context (ready to run)', 'Gather the data in one place (ready to run)']);
   // Tracking setup has no fallback, so a missing one blocks the tracking check once it is due.
   e = advanceEngagement(e, { type: 'data', data_id: 'tracking-setup', status: 'MISSING' });
   const evidence = e.plan.stages.find(s => s.id === 'evidence');

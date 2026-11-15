@@ -131,7 +131,7 @@ test:
 improve:
   - Add your stock rule to the skill file, such as "never raise daily spend while stock cover is under 6 weeks".
   - Add your brand's must-keep lines to the check, so no hook drops a required claim.
-  - Save each winning hook and its lever in your brand file to see which lever works best for you.
+  - Save each winning hook and its lever in your org context to see which lever works best for you.
   - Pair it with the creative portfolio mix planner for backups and the creative test reader to read the new hooks.
 
 works_best_with:

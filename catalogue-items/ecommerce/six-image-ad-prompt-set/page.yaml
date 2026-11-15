@@ -42,7 +42,7 @@ how_it_works:
   - title: Read the photo and facts
     text: It notes shape, colour, material and the words on the pack. Anything it cannot see is marked unknown.
   - title: Write the fingerprint
-    text: One block holds the product line, colours, type, tone, allowed claims, offer and what to leave out. A clash between your brand file and your photo is flagged first.
+    text: One block holds the product line, colours, type, tone, allowed claims, offer and what to leave out. A clash between your org context and your photo is flagged first.
   - title: Pick scene or overlay
     text: Scene keeps the product and changes the setting. Overlay keeps your photo and adds live text and shapes.
   - title: Give each ad a job
@@ -113,7 +113,7 @@ works_best_with:
     - name: Gemini
       why: Draws from a prompt and a photo too. A good second try when the first picture changes the product.
   inputs:
-    - Your brand file, so the fingerprint starts with real colours, type and tone
+    - Your org context, so the fingerprint starts with real colours, type and tone
     - A second photo of the label up close, if the pack has small print
     - Past ads you liked, so you can say what to keep
 terms:

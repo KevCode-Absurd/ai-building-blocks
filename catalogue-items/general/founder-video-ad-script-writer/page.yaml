@@ -50,7 +50,7 @@ output_sample:
     - "The length: 30 seconds, 60 seconds, or 2 to 3 minutes (optional)"
   prerequisites:
     - A real founder, maker or expert who agrees to appear as themselves
-    - Your brand brain from the Brand profile builder (optional)
+    - Your org context from the Org context builder (optional)
     - A buyer brief from the Buyer brief writer (optional)
   output:
     - name: Filming brief table
@@ -200,7 +200,7 @@ tweaks:
 judge:
   - The ad tells one decision, and you learn something you didn't know about the product.
   - The cost of the decision is said plainly. With no founder words yet, it's a clear bracketed question for the founder, never a made-up cost.
-  - Every fact traces to the founder's words or your brand file. Anything else is a bracketed question.
+  - Every fact traces to the founder's words or your org context. Anything else is a bracketed question.
   - No line has the founder calling the product "great" or "the best".
   - Every shot is tagged, and none needs a generated person.
   - Each founder claim has a test, a count or a quote beside it, or has been toned down.
@@ -212,7 +212,7 @@ test:
   - Read the brief to your founder. Mark any line they wouldn't say in their own words, and rerun with their version.
 
 improve:
-  - Keep your founder's answers to the interview questions in your brand file, so step 2 has material every time.
+  - Keep your founder's answers to the interview questions in your org context, so step 2 has material every time.
   - Write your founder's way of talking into step 7 of the skill file, such as sentence length and words they never use.
   - If your founder can film in only one place, name it in "What you need", so every "to film" shot can be made there.
   - Pair it with the skill that makes a script easy to say aloud, before filming.

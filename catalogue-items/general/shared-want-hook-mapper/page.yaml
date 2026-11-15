@@ -132,7 +132,7 @@ output_sample:
     - A short description of your buyers (optional)
   prerequisites:
     - A chat AI such as Claude, ChatGPT or Gemini
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: The shared want
       contains: The one want your buyers already have, in their words, with a short quote or a note that it is a guess.

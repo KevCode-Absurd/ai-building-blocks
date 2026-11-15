@@ -16,8 +16,6 @@ inputs:
     required: true
   - type: product_photos
     required: false
-  - type: competitor_set
-    required: false
 outputs:
   - type: plan
     required: true

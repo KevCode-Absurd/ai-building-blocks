@@ -89,7 +89,7 @@ test:
 improve:
   - Add your real prices and add-ons so it can match them all at once.
   - Add a line on your top competitors' endings.
-  - Save the style in your brand file so new products follow it.
+  - Save the style in your org context so new products follow it.
 works_best_with:
   tools:
     - name: Any good chat AI

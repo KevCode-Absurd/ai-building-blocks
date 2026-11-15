@@ -22,7 +22,7 @@ you_give:
   - Your category and the five to ten rivals you want to cover
   - Your product facts, including prices and specs
   - The real prices and specs of each rival, which it asks you to collect halfway through
-  - Your brand file (optional)
+  - Your org context (optional)
   - Search results or sales results by page (optional)
 you_get:
   - A page table by rival and type with the search, what the shopper wants and whether the search is open
@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Name your category and your rivals. Add your brand file if you have one.
+  - Name your category and your rivals. Add your org context if you have one.
   - When it pauses, pick the first page from the plan and collect the real price and specs for you and each rival. Note the date you checked them.
   - Before you publish, fill in the proof checklist and cut any claim you cannot back. Have the page checked against the comparative advertising rules where you sell.
 output_sample:
@@ -41,7 +41,7 @@ output_sample:
     - Your category and the five to ten rivals you want to cover
     - Your product facts, including prices and specs
     - The real prices and specs of each rival, which it asks for halfway through
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
     - Search or sales results by page (optional)
   prerequisites:
     - An AI that can read files, if you use the handoff pack
@@ -98,6 +98,6 @@ test:
   - Ask an AI assistant your target question after the page has been live a few weeks and see whether it names you.
 improve:
   - Add a note to the page writer on how you test products, such as your standard test steps, so more claims can stay.
-  - Keep the rival facts sheet in your brand file and re-check it each quarter.
+  - Keep the rival facts sheet in your org context and re-check it each quarter.
   - Add a rule to the planner about which rivals you never name, if your lawyer advises it.
   - Log each page's search clicks and use them to pick the next batch.

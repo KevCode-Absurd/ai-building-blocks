@@ -121,7 +121,6 @@ improve:
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
 next:
   - training-handout-writer
-  - powerpoint-audience-handout-builder
 terms:
   - term: Review copy
     meaning: A PDF made from the Word file so you can check the pages without editing the Word file.

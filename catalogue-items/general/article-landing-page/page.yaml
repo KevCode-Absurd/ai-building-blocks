@@ -211,7 +211,7 @@ improve:
   - Write your voice into step 5 of the skill file, with three lines from your best copy and the words you never use.
   - In step 7, delete the "bought once" or "bought again" branch that doesn't fit, and add your own pack sizes, pause rules or warranty terms.
   - Add your allowed and banned claims under "What you need", so the page never goes beyond what you can prove.
-  - Save the cause and the tests from section 4 to your brand file. They rarely change, and other pages can use them.
+  - Save the cause and the tests from section 4 to your org context. They rarely change, and other pages can use them.
   - Pair it with a skill that maps real customer doubts, so section 9 answers what buyers ask, and run a landing page check before it goes live.
 works_best_with:
   tools:

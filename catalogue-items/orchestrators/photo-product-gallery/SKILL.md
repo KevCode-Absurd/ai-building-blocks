@@ -14,21 +14,21 @@ You run 4 skills one after another. Each skill's result is saved and passed to t
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand file** (its products part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its products part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
-**From the brand file, read:** `index.md`, `look.json`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `look.json`, `foundation/design.md`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, product photos, customer words. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, product photos, customer words. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -43,7 +43,7 @@ This list replaces the shared "Before you start" block above.
 
 - **Real product photos** (required): real photos of the exact product, as many angles as you have, at full size.
 - **Product facts** (required): what it is, what's in it with amounts, price, what's in the box, and the claims you may and may not make.
-- **Brand file** (required): your brand file, or the website it can be built from.
+- **Org context** (required): your org context, or the website it can be built from.
 - **Customer reviews** (optional): reviews, return reasons, support emails or pre-sale questions, copied as written.
 - **An image tool** (required for step 3): a chat AI that can draw (ChatGPT or Gemini), a connected image tool, or an OpenAI or Google API key. These can be paid. An API bills each picture, and free plans have tight daily limits. Steps 1, 2 and 4 need no image tool, and step 3 asks before it spends anything.
 
@@ -71,7 +71,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 In this workflow, steps 1 and 2 may run on photos that are described but not attached. The truth sheet then says "not checked against photos", and step 3 makes nothing until the files are in.
 
 ## Steps
-1. **Record the real product.** Use the skill `product-image-spec-writer`. Keep only full-size photos of the exact variant. Any appearance detail (shape, finish, size, colour, printed words) that is not in the brand file or visible in a real photo is written as `MISSING: <detail>`. Never describe it from memory or guess it from a photo description. Hand on the truth sheet: shape, colours, printed words, how it opens and is used, what's in the box, lookalikes to avoid, what's never shown, and the photos still missing.
+1. **Record the real product.** Use the skill `product-image-spec-writer`. Keep only full-size photos of the exact variant. Any appearance detail (shape, finish, size, colour, printed words) that is not in the org context or visible in a real photo is written as `MISSING: <detail>`. Never describe it from memory or guess it from a photo description. Hand on the truth sheet: shape, colours, printed words, how it opens and is used, what's in the box, lookalikes to avoid, what's never shown, and the photos still missing.
 2. **Plan the gallery.** Use the skill `product-page-gallery-planner`. Give it the truth sheet from step 1, the product facts and the reviews. It scores each shopper question 0 to 2 for how often it's asked, whether a picture answers it better than words, and the proof on hand. It fills about 8 slots (main image first, at least one size image, each question once) and hands on the score table, one card per image with every word and its source, and a `NEED:` list of gaps. Any health, nutrient or results claim on a card is marked `CLAIM CHECK:` and needs your yes, with the proof named, before step 3.
 3. **Make the images, after approval.** Use the skill `product-gallery-answers`. Give it the truth sheet from step 1 and the plan from step 2, and tell it to use them instead of making new ones. It sorts the reviews into five fears and moves the biggest stopper to slot 2. **Approval 1:** the plan and every word. It then makes slots 1 and 2 as test images. **Approval 2:** their look and words. Then it makes the rest, each shape composed on its own, named `<nn>-<type>_<shape>`, with alt text. No real photo files or no yes means no images.
 4. **Check every image.** Use the skill `product-page-image-checker`. Give it the images from step 3, the plan and the real photos. It runs 13 checks in three passes: the set as thumbnails (S1 to S4), each image at phone size with a one-second glance test (P1 to P3), then every word, figure and product detail zoomed in beside the real photo (Z1 to Z6). Each fault gets a severity (Stop, Fix or Polish) and one fix. If there are no images, every check is "not run".

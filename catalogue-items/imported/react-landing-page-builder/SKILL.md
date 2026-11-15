@@ -22,7 +22,7 @@ How to start:
 
 ## AI Blocks: existing-site implementation requirements
 
-Read the user's original request, brand brain and actual repository before choosing a design or framework. Inspect existing routes, components, styles, font loading and buying controls. Extend those files and reuse the working header, footer, product/variant controls and navigation. Do not create a new Next.js project, add Tailwind or swap a brand font merely because this skill's examples use them. If the actual target is not React, load a compatible AI Blocks builder instead.
+Read the user's original request, org context and actual repository before choosing a design or framework. Inspect existing routes, components, styles, font loading and buying controls. Extend those files and reuse the working header, footer, product/variant controls and navigation. Do not create a new Next.js project, add Tailwind or swap a brand font merely because this skill's examples use them. If the actual target is not React, load a compatible AI Blocks builder instead.
 
 The style table, section order and examples below are optional patterns. Existing brand tokens and the buyer's job take priority. Draft distinct buyer arguments and compositions separately, compare their trade-offs, then build the selected direction. Avoid treating every product as a SaaS pricing page or adding irrelevant feature grids and testimonial blocks. No claim of improved conversion follows from generated code.
 

@@ -43,7 +43,7 @@ output_sample:
     - Your offer and your buyer (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Search term sorter
       contains: Winning terms with match types, a negative keyword list with levels, feed fixes and a waste score out of 100.

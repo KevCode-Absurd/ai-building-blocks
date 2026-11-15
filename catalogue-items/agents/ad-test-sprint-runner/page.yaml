@@ -5,7 +5,7 @@ job: plan-ad-tests
 thinking: high
 thinking_why: It reads each result, chooses between four paths and carries lessons from round to round. Give it your strongest model.
 headline: Ad test sprint runner
-subhead: Give it your brand file, your target and your past ad results. It plans round one, and when each round ends it reads the result, decides what it means and plans the next round. It stops after three rounds without a winner and finds out why.
+subhead: Give it your org context, your target and your past ad results. It plans round one, and when each round ends it reads the result, decides what it means and plans the next round. It stops after three rounds without a winner and finds out why.
 explain: |
   One ad test teaches little. A run of tests teaches a lot, if each round builds on the last. Most people plan a test, read it in a hurry, and start again from scratch, or repeat the same idea in a new colour.
 
@@ -19,7 +19,7 @@ not_for:
   - You want one test, not a run of rounds. Plan a single round by hand with your ad platform's own test tools.
   - You need a weak product or page fixed. More ad tests will not help, so work on the product or page first, or ask a person who knows your market.
 you_give:
-  - Your brand file with products, claims, proof and buyers
+  - Your org context with products, claims, proof and buyers
   - Your target cost per sale or ROAS
   - Past ad results for the last 30 to 90 days
   - What you can spend on the whole sprint and per day, and the platform
@@ -33,19 +33,19 @@ you_get:
   - A call on whether the problem is the ads or the page after three rounds
 how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to start a sprint.
-  - Give it your brand file, target, past results and budget. It hands back the round plan.
+  - Give it your org context, target, past results and budget. It hands back the round plan.
   - Launch the round yourself, or say yes to each step if it is connected.
   - On the read date, give it the round's results. It reads them and plans the next round.
   - Keep going until a set wins or the cap of three rounds is reached.
 output_sample:
   input:
-    - Your brand file with products, claims, proof and buyers
+    - Your org context with products, claims, proof and buyers
     - Your target cost per sale or ROAS
     - Your past ad results for the last 30 to 90 days
     - Your test budget and platform (Meta or TikTok)
     - Each round's results by ad, when the round ends
   prerequisites:
-    - A brand brain folder, made with the Brand profile builder or written by you
+    - An org context folder, made with the Org context builder or written by you
     - An ad account on Meta or TikTok, with ad-level results you can export
   output:
     - name: Round plan
@@ -64,7 +64,7 @@ how_it_works:
   - title: Set the budget
     text: Works out the daily test budget, the spend limit per ad and the earliest day to read, from your target.
   - title: Find ideas
-    text: Reads your past ads and your brand file and finds five ideas you have not tried, then writes designer-ready versions.
+    text: Reads your past ads and your org context and finds five ideas you have not tried, then writes designer-ready versions.
   - title: Lay out the round
     text: Sets the ad packs, minimum spend and rules, with one idea per ad set so the result can be read.
   - title: Check the round can be read

@@ -123,7 +123,7 @@ test:
   - Run the first pick through the discount impact checker. The maths should agree.
 
 improve:
-  - Add your real margins and order spread to your brand file so each run starts from facts.
+  - Add your real margins and order spread to your org context so each run starts from facts.
   - Add offers you already tried and what happened, so it does not suggest them again.
   - Add your own customer doubts to the skill file as a standing list.
   - Pair it with the order threshold planner and the cart upsell planner for the detail behind each pick.

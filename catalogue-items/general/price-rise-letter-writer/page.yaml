@@ -125,7 +125,7 @@ test:
 
 improve:
   - "Add your refund and cancellation rules so the FAQ is complete every time."
-  - "Paste the voice file from your brand file so the letter sounds like you."
+  - "Paste the voice file from your org context so the letter sounds like you."
   - "Pair it with the Price rise readiness checker before you decide the number."
 
 works_best_with:

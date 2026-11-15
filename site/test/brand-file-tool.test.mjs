@@ -1,25 +1,25 @@
-// The brand file tool (catalogue-items/general/brand-dna-capture/scripts/brand-file.mjs) and the merging capture:
-// one brand file with a fixed shape, merged and never overwritten, with freshness enforced and slices cut to the job.
+// The org context tool (catalogue-items/general/brand-dna-capture/scripts/org-context.mjs) and the merging capture:
+// one org context with a fixed shape, merged and never overwritten, with freshness enforced and slices cut to the job.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import * as bf from '../../catalogue-items/general/brand-dna-capture/scripts/brand-file.mjs';
+import * as bf from '../../catalogue-items/general/brand-dna-capture/scripts/org-context.mjs';
 import { mergeCapture } from '../../catalogue-items/general/brand-dna-capture/scripts/capture-brand-dna.mjs';
 import { OLD_FOLDER, SITE, WRITTEN, capture, firstCapture, page, secondCapture, tempContext, writeCapture, writeFiles } from './fixtures/brand-file-fixtures.mjs';
 
 const at = (d) => new Date(`${d}T12:00:00Z`);
-const read = (ctx, file) => fs.readFileSync(path.join(ctx, 'brand-file', file), 'utf8');
+const read = (ctx, file) => fs.readFileSync(path.join(ctx, 'org-context', file), 'utf8');
 const json = (ctx, file) => JSON.parse(read(ctx, file));
 const words = (s) => s.split(/\s+/).filter(Boolean).length;
 /** Run the command line and collect what it prints. */
 function run(ctx, ...argv) { const out = []; const code = bf.main([...argv, '--dir', ctx], (line) => out.push(line)); return { code, text: out.join('\n') }; }
 function built(dna = firstCapture(), now = '2026-11-01') { const ctx = tempContext(); writeCapture(ctx, dna); const result = bf.syncBrandFile(ctx, { now: at(now) }); return { ctx, result }; }
 
-test('the first capture builds every part of the brand file, each line with its source, date and how fast it ages', () => {
+test('the first capture builds every part of the org context, each line with its source, date and how fast it ages', () => {
   const { ctx, result } = built();
   assert.deepEqual(result.changes, [], 'nothing is "changed" on the first build');
-  for (const file of ['facts.json', 'offers.json', 'look.json', 'voice.md', 'index.md']) assert.ok(fs.existsSync(path.join(ctx, 'brand-file', file)), file);
+  for (const file of ['facts.json', 'offers.json', 'look.json', 'voice.md', 'index.md']) assert.ok(fs.existsSync(path.join(ctx, 'org-context', file)), file);
   const offers = json(ctx, 'offers.json').offers, facts = json(ctx, 'facts.json').facts;
   assert.deepEqual(offers.map((r) => r.kind).sort(), ['offer', 'price', 'price', 'shipping', 'stock']);
   assert.deepEqual(facts.map((r) => r.kind).sort(), ['guarantee', 'review', 'review']);
@@ -39,7 +39,7 @@ test('the first capture builds every part of the brand file, each line with its 
   assert.match(read(ctx, 'voice.md'), /- "Shoes made from trees" \| headline \| https:\/\/shop\.example\.test\/ \| 2026-11-01/);
   assert.match(read(ctx, 'voice.md'), /## Button words\n\n- "SHOP NOW" \| button \|/);
   const index = read(ctx, 'index.md');
-  for (const part of bf.PARTS) assert.ok(index.includes(`| ${part.id} | ${part.file} |`), part.id);
+  for (const part of bf.STORE_PARTS) assert.ok(index.includes(`| ${part.id} | ${part.file} |`), part.id);
   assert.match(index, /Missing: nothing\./);
   assert.ok(words(index) < 320, 'the index fits one screen');
 });
@@ -64,7 +64,7 @@ test('a second capture merges: old values are kept, every change is listed, and 
   // An unchanged line is re-dated, not duplicated.
   assert.equal(offers.filter((r) => /Free shipping/.test(r.value)).length, 1);
   assert.equal(offers.find((r) => /Free shipping/.test(r.value)).captured_at, '2026-11-10T09:00:00.000Z');
-  const history = fs.readdirSync(path.join(ctx, 'brand-file', 'history'));
+  const history = fs.readdirSync(path.join(ctx, 'org-context', 'history'));
   assert.ok(history.some((f) => /^\d{8}-\d{4}-offers\.json$/.test(f)), history.join(', '));
   assert.match(read(ctx, 'history/changes.md'), /## 2026-11-10 12:00 UTC\n\n- [\s\S]*Price changed: Runner, USD 98 → USD 110 \(shop\.example\.test\/products\/runner\)/);
   assert.match(read(ctx, 'index.md'), /Changed at the last capture:\n- On 2026-11-10 12:00 UTC\n {2}- /);
@@ -107,7 +107,7 @@ test('competitor and reference sites go to references.md with look and headline 
   const refs = read(ctx, 'references.md');
   assert.match(refs, /## Competitors\n\n- https:\/\/competitor\.example\.test\/ \| look: #000000 50%; headlines Other Serif 700 56px; body Other Sans 400 16px; button #000000, radius 0px, uppercase \| lines: "Run further" \| capture-brand-dna\.mjs \| 2026-11-01/);
   // A hand-written line survives the next capture, and the same site is updated in place.
-  fs.appendFileSync(path.join(ctx, 'brand-file', 'references.md'), '\n## Admired\n\n- A plain product page | one action per screen | client call | 2026-11-01\n');
+  fs.appendFileSync(path.join(ctx, 'org-context', 'references.md'), '\n## Admired\n\n- A plain product page | one action per screen | client call | 2026-11-01\n');
   writeCapture(ctx, mergeCapture(capture(firstCapture().pages, '2026-11-01T09:00:00.000Z', { references: [ref] }), capture(secondCapture().pages, '2026-11-10T09:00:00.000Z', { references: [{ ...ref, captured_at: '2026-11-10T09:05:00.000Z' }] })));
   bf.syncBrandFile(ctx, { now: at('2026-11-10') });
   const after = read(ctx, 'references.md');
@@ -137,7 +137,7 @@ test('status says what exists, how old each part is, what is stale and what is m
   const { ctx } = built();
   const fresh = run(ctx, 'status', '--today', '2026-11-05');
   assert.equal(fresh.code, 0);
-  assert.match(fresh.text, /Brand file: shop\.example\.test .* as of 2026-11-05/);
+  assert.match(fresh.text, /Org context: shop\.example\.test .* as of 2026-11-05/);
   assert.match(fresh.text, /offers\s+offers\.json\s+fresh\s+2026-11-01\s+4d\s+5 lines, fresh for 7 days/);
   assert.match(fresh.text, /Result: READY$/);
   const stale = run(ctx, 'status', '--today', '2026-11-12', '--for', 'ad_creative');
@@ -147,32 +147,32 @@ test('status says what exists, how old each part is, what is stale and what is m
   assert.match(stale.text, /\n- price: Runner: USD 98 \(shop\.example\.test\/products\/runner, 2026-11-01, 11 days old\)/);
   assert.match(stale.text, /- First, refresh prices, offers, stock and shipping \(5 stale\): node .*capture-brand-dna\.mjs https:\/\/shop\.example\.test\/ https:\/\/shop\.example\.test\/products\/runner\n/);
   assert.match(stale.text, /Result: NOT READY$/);
-  // A job that needs no brand file is ready whatever the file's state, and is told to skip capture.
+  // A job that needs no org context is ready whatever the file's state, and is told to skip capture.
   const code = run(ctx, 'status', '--today', '2027-06-01', '--for', 'code');
-  assert.equal(code.code, 0); assert.match(code.text, /No brand file is needed for a code job\. Skip capture/);
+  assert.equal(code.code, 0); assert.match(code.text, /No org context is needed for a code job\. Skip capture/);
   // A plan needs facts only: a stale look does not block it, stale prices do.
-  fs.rmSync(path.join(ctx, 'brand-file', 'voice.md'));
+  fs.rmSync(path.join(ctx, 'org-context', 'voice.md'));
   const plan = bf.statusOf(ctx, { now: at('2026-11-05'), kind: 'plan' });
   assert.equal(plan.level, 'facts'); assert.equal(plan.ok, true); assert.deepEqual(plan.missing, []);
   const page = bf.statusOf(ctx, { now: at('2026-11-05'), kind: 'web_page' });
   assert.equal(page.ok, false); assert.deepEqual(page.missing, ['voice']);
-  // No brand file at all: first job builds it once; with older files present, migrate is the next step.
+  // No org context at all: first job builds it once; with older files present, migrate is the next step.
   const empty = tempContext();
   const none = run(empty, 'status', '--for', 'email');
-  assert.equal(none.code, 1); assert.match(none.text, /No brand file yet[\s\S]*First job for this business: build the brand file once/);
+  assert.equal(none.code, 1); assert.match(none.text, /No org context yet[\s\S]*First job for this business: build the org context once/);
   writeFiles(empty, { 'facts.md': WRITTEN['facts.md'] });
-  assert.match(run(empty, 'status').text, /Build the brand file from what is already here \(context\/facts\.md\): node .*brand-file\.mjs migrate/);
+  assert.match(run(empty, 'status').text, /Build the org context from what is already here \(context\/facts\.md\): node .*org-context\.mjs migrate/);
   const asJson = JSON.parse(run(ctx, 'status', '--json', '--today', '2026-11-05').text);
-  assert.equal(asJson.schema, 'ai-blocks-brand-file/1'); assert.equal(asJson.parts.length, 6);
+  assert.equal(asJson.schema, 'ai-blocks-org-context/1'); assert.equal(asJson.parts.length, 6);
   assert.equal(run(ctx, 'status', '--for', 'poster').code, 2);
 });
 
 test('slice prints only what the level needs, newest first, with stale lines set apart for a recheck', () => {
   const { ctx } = built(mergeCapture(firstCapture(), capture([secondCapture().pages[0]], '2026-11-10T09:00:00.000Z')), '2026-11-10');
   const none = run(ctx, 'slice', 'none', '--for', 'code');
-  assert.equal(none.code, 0); assert.match(none.text, /This job needs no brand file\. Skip capture\./); assert.doesNotMatch(none.text, /Runner/);
+  assert.equal(none.code, 0); assert.match(none.text, /This job needs no org context\. Skip capture\./); assert.doesNotMatch(none.text, /Runner/);
   const facts = run(ctx, 'slice', 'facts', '--today', '2026-11-10').text;
-  assert.match(facts, /^BRAND FILE SLICE: facts \| shop\.example\.test \| read 2026-11-10/);
+  assert.match(facts, /^ORG CONTEXT SLICE: facts \| shop\.example\.test \| read 2026-11-10/);
   // Fresh lines are facts; the product page was read 9 days ago, so its price and stock are listed for a recheck.
   const [live, recheck] = facts.split('RECHECK BEFORE USE');
   assert.match(live, /LIVE OFFERS[^\n]*\n- offer: Free socks with every pair this week \(shop\.example\.test, 2026-11-10\)/);
@@ -192,13 +192,13 @@ test('slice prints only what the level needs, newest first, with stale lines set
   // Something that sells is told to stop and refresh stale prices and stock first.
   assert.match(full, /STOP: 3 price, offer, stock or shipping lines are stale\. First, refresh prices, offers, stock and shipping/);
   // With --for and no level, the kind's own slice is used.
-  assert.match(run(ctx, 'slice', '--for', 'email', '--today', '2026-11-10').text, /^BRAND FILE SLICE: voice for an email job/);
+  assert.match(run(ctx, 'slice', '--for', 'email', '--today', '2026-11-10').text, /^ORG CONTEXT SLICE: voice for an email job/);
   assert.equal(run(ctx, 'slice', 'everything').code, 2);
   const missing = run(tempContext(), 'slice', 'facts');
-  assert.equal(missing.code, 1); assert.match(missing.text, /There is no brand file at .* yet/);
+  assert.equal(missing.code, 1); assert.match(missing.text, /There is no org context at .* yet/);
 });
 
-test('a slice stays inside its word budget however large the brand file is, and says how much it left out', () => {
+test('a slice stays inside its word budget however large the org context is, and says how much it left out', () => {
   const day = '2026-11-10T09:00:00.000Z', many = (n, make) => Array.from({ length: n }, (_, i) => make(i));
   const big = capture([
     page({ at: day, prices: many(16, (i) => `Trail shoe number ${i} in recycled wool now costs $${90 + i}`), offers: many(16, (i) => `Bundle offer ${i}: buy 2 pairs and get free socks worth $${10 + i}`), shipping: many(16, (i) => `Delivery option ${i} takes ${i + 2} working days by courier`), guarantees: many(16, (i) => `Guarantee ${i}: return within ${30 + i} days for a full refund`), reviews: many(16, (i) => `Rated 4.${i % 10} by ${1000 + i} reviews for comfort`), headlines: many(12, (i) => `Headline number ${i} about shoes made from natural materials`), body: many(12, (i) => `Body line ${i} explains the material and how it is made in plain words`) }),
@@ -231,13 +231,13 @@ test('learn records what the client kept, killed or asked for more of, newest fi
   assert.equal(bf.statusOf(ctx, { now: at('2026-11-08') }).parts.find((p) => p.id === 'worked').state, 'kept');
   assert.equal(run(ctx, 'learn', '--kept', 'x').code, 2, 'a job name is required');
   assert.equal(run(ctx, 'learn', '--job', 'x').code, 2, 'at least one of kept, killed or more is required');
-  // learn works before any capture, for a client whose jobs need no brand file.
+  // learn works before any capture, for a client whose jobs need no org context.
   const bare = tempContext();
   assert.equal(run(bare, 'learn', '--job', 'ops runbook', '--kept', 'the one-page format').code, 0);
-  assert.ok(fs.existsSync(path.join(bare, 'brand-file', 'worked.md')));
+  assert.ok(fs.existsSync(path.join(bare, 'org-context', 'worked.md')));
 });
 
-test('migrate builds the brand file from the older context files, keeps their sources and dates, and can be run twice', () => {
+test('migrate builds the org context from the older context files, keeps their sources and dates, and can be run twice', () => {
   const ctx = tempContext();
   writeCapture(ctx, firstCapture()); writeFiles(ctx, WRITTEN);
   const first = run(ctx, 'migrate', '--today', '2026-11-10');
@@ -278,12 +278,12 @@ test('migrate reads a capture saved from the browser snippet, which has one page
   assert.equal(json(ctx, 'look.json').type.roles.h1.family, 'Test Serif');
 });
 
-test('migrate turns an old eight-file folder into the brand file and keeps the old folder in history', () => {
+test('migrate turns an old eight-file folder into the org context and keeps the old folder in history', () => {
   const ctx = tempContext(), old = path.join(path.dirname(ctx), 'brand-brain');
   writeFiles(old, OLD_FOLDER); fs.mkdirSync(ctx, { recursive: true });
   const r = run(ctx, 'migrate', '--from', old, '--today', '2026-11-10');
   assert.equal(r.code, 0);
-  assert.match(r.text, /00-start-here\.md -> replaced by brand-file\/index\.md; the old folder is copied to brand-file\/history\/20261110-1200-brand-brain\//);
+  assert.match(r.text, /00-start-here\.md -> replaced by org-context\/index\.md; the old folder is copied to org-context\/history\/20261110-1200-brand-brain\//);
   const facts = json(ctx, 'facts.json').facts, offers = json(ctx, 'offers.json').offers;
   const sells = facts.find((x) => /Sells shoes made from natural materials/.test(x.value));
   assert.equal(sells.source, 'home page'); assert.equal(sells.captured_at, '2026-10-20'); assert.equal(sells.status, 'live');
@@ -298,22 +298,22 @@ test('migrate turns an old eight-file folder into the brand file and keeps the o
   assert.match(read(ctx, 'voice.md'), /## Notes\n\n- Plain and warm, never cheeky\./);
   assert.match(read(ctx, 'references.md'), /## Competitors\n\n- Brand two: cheaper, less durable\./);
   assert.match(read(ctx, 'worked.md'), /## Carried over from .*brand-brain\/log\.md\n\n- 2026-10-21: the owner dropped the discount-led headline\./);
-  assert.deepEqual(fs.readdirSync(path.join(ctx, 'brand-file', 'history', '20261110-1200-brand-brain')).sort(), Object.keys(OLD_FOLDER).sort());
+  assert.deepEqual(fs.readdirSync(path.join(ctx, 'org-context', 'history', '20261110-1200-brand-brain')).sort(), Object.keys(OLD_FOLDER).sort());
   // Prices read on 20 October are stale on 10 November: the migrated file says so instead of passing them on.
   const status = bf.statusOf(ctx, { now: at('2026-11-10'), kind: 'email' });
   assert.equal(status.ok, false); assert.ok(status.stale.some((s) => s.value === 'Runner: One-time $98'));
   // The old folder is found without --from when it sits beside context/.
   const auto = tempContext(); writeFiles(path.join(path.dirname(auto), 'brand-brain'), OLD_FOLDER); fs.mkdirSync(auto, { recursive: true });
-  assert.equal(run(auto, 'migrate').code, 0); assert.ok(fs.existsSync(path.join(auto, 'brand-file', 'facts.json')));
+  assert.equal(run(auto, 'migrate').code, 0); assert.ok(fs.existsSync(path.join(auto, 'org-context', 'facts.json')));
 });
 
 test('written facts: the kind, source and date are read from the line, and fast-changing kinds win', () => {
-  assert.equal(bf.kindOf('Free shipping on orders over $75'), 'shipping');
-  assert.equal(bf.kindOf('20% off everything until Sunday, now $78'), 'offer');
-  assert.equal(bf.kindOf('Runner is sold out in size 9'), 'stock');
-  assert.equal(bf.kindOf('Plan costs €9 per month'), 'price');
-  assert.equal(bf.kindOf('30-day money-back guarantee'), 'guarantee');
-  assert.equal(bf.kindOf('Founded in 2016'), 'fact');
+  assert.equal(bf.factKindOf('Free shipping on orders over $75'), 'shipping');
+  assert.equal(bf.factKindOf('20% off everything until Sunday, now $78'), 'offer');
+  assert.equal(bf.factKindOf('Runner is sold out in size 9'), 'stock');
+  assert.equal(bf.factKindOf('Plan costs €9 per month'), 'price');
+  assert.equal(bf.factKindOf('30-day money-back guarantee'), 'guarantee');
+  assert.equal(bf.factKindOf('Founded in 2016'), 'fact');
   assert.equal(bf.findDate('read on 9 Nov 2026'), '2026-11-09'); assert.equal(bf.findDate('Nov 9, 2026'), '2026-11-09');
   assert.equal(bf.findDate('2026-11-09T06:26:00Z'), '2026-11-09'); assert.equal(bf.findDate('no date here'), null);
   const r = bf.recordFromLine('- Plan costs €9 per month (source: pricing page) 3 Nov 2026', { file: 'context/facts.md' });
@@ -329,7 +329,7 @@ test('written facts: the kind, source and date are read from the line, and fast-
 
 test('a banned claim is kept on file, never handed over as a fact, and shown as banned', () => {
   const { ctx } = built();
-  const file = path.join(ctx, 'brand-file', 'facts.json'), doc = json(ctx, 'facts.json');
+  const file = path.join(ctx, 'org-context', 'facts.json'), doc = json(ctx, 'facts.json');
   doc.facts.push({ id: 'claim:cures-back-pain', kind: 'claim', value: 'Cures back pain', source: 'owner, call', captured_at: '2026-11-01', volatile: 'slow', status: 'banned' });
   fs.writeFileSync(file, JSON.stringify(doc, null, 1));
   const slice = bf.sliceText(ctx, 'facts', { now: at('2026-11-01') }).text;
@@ -342,23 +342,23 @@ test('a job saves its slice as context/facts.md; that file is never read back in
   const { ctx } = built();
   const before = [read(ctx, 'facts.json'), read(ctx, 'offers.json')];
   const out = path.join(ctx, 'facts.md'), saved = run(ctx, 'slice', 'facts', '--out', out, '--today', '2026-11-01');
-  assert.equal(saved.code, 0); assert.match(saved.text, /^Wrote the facts slice to .*facts\.md \(\d+ words\)\. Read that file, not the whole brand file\.$/);
+  assert.equal(saved.code, 0); assert.match(saved.text, /^Wrote the facts slice to .*facts\.md \(\d+ words\)\. Read that file, not the whole org context\.$/);
   assert.equal(fs.readFileSync(out, 'utf8'), `${bf.sliceText(ctx, 'facts', { now: at('2026-11-01') }).text}\n`);
   // status names the same command, so the job can copy it.
-  assert.match(run(ctx, 'status', '--for', 'plan', '--today', '2026-11-01').text, /Take only your slice: node .*brand-file\.mjs slice facts --for plan --out .*facts\.md/);
+  assert.match(run(ctx, 'status', '--for', 'plan', '--today', '2026-11-01').text, /Take only your slice: node .*org-context\.mjs slice facts --for plan --out .*facts\.md/);
   const r = run(ctx, 'migrate', '--today', '2026-11-01');
   assert.equal(r.code, 0); assert.doesNotMatch(r.text, /context\/facts\.md ->/);
   assert.deepEqual([read(ctx, 'facts.json'), read(ctx, 'offers.json')], before);
 });
 
-test('a capture saved by hand is taken in before the brand file counts as ready', () => {
+test('a capture saved by hand is taken in before the org context counts as ready', () => {
   const { ctx } = built();
   assert.equal(bf.statusOf(ctx, { now: at('2026-11-02') }).ok, true);
-  // The browser snippet route: a newer context/brand-dna.json that brand-file.mjs has not read yet.
+  // The browser snippet route: a newer context/brand-dna.json that org-context.mjs has not read yet.
   writeCapture(ctx, mergeCapture(firstCapture(), secondCapture('2026-11-02T15:00:00.000Z')));
   const waiting = run(ctx, 'status', '--today', '2026-11-03');
   assert.equal(waiting.code, 1);
-  assert.match(waiting.text, /context\/brand-dna\.json is newer than the brand file\. Take it in first: node .*brand-file\.mjs migrate/);
+  assert.match(waiting.text, /context\/brand-dna\.json is newer than the org context\. Take it in first: node .*org-context\.mjs migrate/);
   assert.equal(run(ctx, 'migrate', '--today', '2026-11-03').code, 0);
   assert.equal(run(ctx, 'status', '--today', '2026-11-03').code, 0);
   assert.equal(json(ctx, 'offers.json').offers.find((x) => x.id === 'price:runner').value, 'Runner: USD 110');
@@ -368,18 +368,18 @@ test('references reach the jobs that need taste, and a job with none kept is tol
   const { ctx } = built();
   for (const level of ['voice', 'look', 'full']) assert.match(bf.sliceText(ctx, level, { now: at('2026-11-01') }).text, /REFERENCES \(kept between jobs; add new ones to references\.md\)\n- None kept yet\. Add the sites the client admires and avoids to references\.md, or capture them with --admire, --avoid or --competitor/, level);
   assert.doesNotMatch(bf.sliceText(ctx, 'facts', { now: at('2026-11-01') }).text, /REFERENCES/);
-  fs.writeFileSync(path.join(ctx, 'brand-file', 'references.md'), '# References\n\n## Admired\n\n- A plain product page | one action per screen | client call | 2026-11-01\n');
+  fs.writeFileSync(path.join(ctx, 'org-context', 'references.md'), '# References\n\n## Admired\n\n- A plain product page | one action per screen | client call | 2026-11-01\n');
   assert.match(bf.sliceText(ctx, 'look', { now: at('2026-11-01') }).text, /REFERENCES[^\n]*\n- Admired: A plain product page \| one action per screen \| client call \| 2026-11-01/);
 });
 
 test('the command line explains itself and refuses what it does not know', () => {
   const help = run(tempContext(), '--help');
   assert.equal(help.code, 0);
-  for (const cmd of ['status [--for <kind>]', 'slice <none|facts|voice|look|full> [--for <kind>]', 'learn --job <name> --kept', 'migrate [--from <old brand folder>]']) assert.ok(help.text.includes(cmd), cmd);
+  for (const cmd of ['status [--for <kind>]', 'slice <none|facts|voice|look|full> [--for <kind>]', 'learn --job <name> --kept', 'migrate [--from <old folder>]']) assert.ok(help.text.includes(cmd), cmd);
   assert.equal(run(tempContext()).code, 2);
   assert.equal(run(tempContext(), 'publish').code, 2);
   // Self-contained: no package imports, and no network.
-  const src = fs.readFileSync(new URL('../../catalogue-items/general/brand-dna-capture/scripts/brand-file.mjs', import.meta.url), 'utf8');
+  const src = fs.readFileSync(new URL('../../catalogue-items/general/brand-dna-capture/scripts/org-context.mjs', import.meta.url), 'utf8');
   assert.deepEqual([...src.matchAll(/^import .* from '([^']+)';$/gm)].map((m) => m[1]), ['node:fs', 'node:path', 'node:url']);
   assert.doesNotMatch(src, /\bfetch\(|https?\.request|child_process/);
 });

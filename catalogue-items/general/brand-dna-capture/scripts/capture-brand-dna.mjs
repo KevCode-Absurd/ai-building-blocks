@@ -4,8 +4,9 @@
 // Opens a live site (or a local HTML file) in a real browser at 1440 and 390 px, runs brand-dna-snippet.js on
 // each page, saves screenshots, and merges what it measured into the files already there. It never overwrites:
 //   context/brand-dna.json         the raw capture: one entry per page with its own date, and the merged brand
-//   context/brand-file/            the brand file built from it (needs brand-file.mjs beside this script)
-//   context/brand-file/history/    the capture this run replaced, and changes.md: what is different since last time
+//   context/org-context/           the org context built from it (needs org-context.mjs beside this script; an older
+//                                  context/brand-file/ folder is used until it is moved)
+//   context/org-context/history/   the capture this run replaced, and changes.md: what is different since last time
 //   context/screenshots/*.png      <page>-desktop-first, -desktop-full, -mobile-first, -mobile-full
 //   context/brand-dna.md           a short measured summary, only if the file does not exist yet
 //   context/brand-dna.receipt.json path, sha256, source, date and method of the capture, for the job record
@@ -323,10 +324,10 @@ export async function captureReference(browser, ref, { snippet, outDir, shotsDir
   return out;
 }
 
-/** brand-file.mjs, when it sits beside this script or in ./tools. It builds the brand file and works out what changed. */
+/** org-context.mjs (or its old name brand-file.mjs), beside this script or in ./tools. It builds the org context and works out what changed. */
 export async function loadBrandFile() {
-  for (const d of [HERE, path.join(process.cwd(), 'tools')]) {
-    const f = path.join(d, 'brand-file.mjs');
+  for (const d of [HERE, path.join(process.cwd(), 'tools')]) for (const name of ['org-context.mjs', 'brand-file.mjs']) {
+    const f = path.join(d, name);
     if (fs.existsSync(f)) { try { const m = await import(pathToFileURL(f).href); if (m.syncBrandFile) return m; } catch { /* try the next place */ } }
   }
   return null;
@@ -391,7 +392,7 @@ export async function main(argv = process.argv.slice(2)) {
   const outDir = path.resolve(o.out), shotsDir = path.join(outDir, 'screenshots'), jsonFile = path.join(outDir, 'brand-dna.json');
   let prev = null; try { prev = JSON.parse(fs.readFileSync(jsonFile, 'utf8')); } catch { /* first capture */ }
   if (prev && !o.replace && siteHost(prev.source) && siteHost(urls[0]) && siteHost(prev.source) !== siteHost(urls[0])) {
-    console.error(`${path.relative(process.cwd(), jsonFile) || jsonFile} holds ${siteHost(prev.source)}, and a brand file is for one business.\nFor a competitor or reference, add --competitor ${urls[0]} to a capture of ${siteHost(prev.source)}.\nFor another business, use --out <another folder>. To start again here, add --replace (the old capture is kept in history).`);
+    console.error(`${path.relative(process.cwd(), jsonFile) || jsonFile} holds ${siteHost(prev.source)}, and an org context is for one business.\nFor a competitor or reference, add --competitor ${urls[0]} to a capture of ${siteHost(prev.source)}.\nFor another business, use --out <another folder>. To start again here, add --replace (the old capture is kept in history).`);
     return 2;
   }
   fs.mkdirSync(shotsDir, { recursive: true });
@@ -410,21 +411,23 @@ export async function main(argv = process.argv.slice(2)) {
   for (const pg of pages) for (const vp of ['desktop', 'mobile']) for (const n of pg[vp]?.notes || []) out.notes.push(`${pg.path} ${vp}: ${n}`);
   for (const r of references) if (r.error) out.notes.push(`${r.kind} ${r.url}: ${r.error}`);
   // Never overwrite: keep the capture this run replaces, then merge the new pages into it.
-  const historyDir = path.join(outDir, 'brand-file', 'history');
+  // The org context folder: context/org-context/, or an older context/brand-file/ until it is moved.
+  const orgFolder = !fs.existsSync(path.join(outDir, 'org-context')) && fs.existsSync(path.join(outDir, 'brand-file')) ? 'brand-file' : 'org-context';
+  const historyDir = path.join(outDir, orgFolder, 'history');
   if (prev) {
     fs.mkdirSync(historyDir, { recursive: true });
     fs.copyFileSync(jsonFile, path.join(historyDir, `${String(prev.captured_at || captured_at).slice(0, 16).replace(/[-:]/g, '').replace('T', '-')}-brand-dna.json`));
   }
   out = prev && !o.replace ? mergeCapture(prev, out) : { ...out, brand: mergeBrand(pages, out) };
-  // The brand file: facts, offers, look, voice and references, each line with its source and date, and what changed.
+  // The org context: facts, offers, look, voice and references, each line with its source and date, and what changed.
   const bf = await loadBrandFile();
   if (bf) {
-    if (prev && !fs.existsSync(path.join(outDir, 'brand-file', 'offers.json'))) bf.syncBrandFile(outDir, { dna: prev, now: new Date(prev.captured_at || captured_at) });
+    if (prev && !fs.existsSync(path.join(outDir, orgFolder, 'offers.json'))) bf.syncBrandFile(outDir, { dna: prev, now: new Date(prev.captured_at || captured_at) });
     const synced = bf.syncBrandFile(outDir, { dna: out, now: new Date(captured_at) });
     out.changes = prev ? synced.changes.slice(0, 20).map((c) => c.text) : [];
     out.changes_since = prev ? prev.captured_at || null : null;
     out.brand_file = synced.dir;
-  } else out.notes.push('brand-file.mjs is not beside this script, so the brand file was not updated and the changes since last time were not worked out. Put it there and run: node brand-file.mjs migrate');
+  } else out.notes.push('org-context.mjs is not beside this script, so the org context was not updated and the changes since last time were not worked out. Put it there and run: node org-context.mjs migrate');
   fs.writeFileSync(jsonFile, JSON.stringify(out, null, 1));
   const mdFile = path.join(outDir, 'brand-dna.md');
   if (!fs.existsSync(mdFile) || o.overwriteMd) fs.writeFileSync(mdFile, summaryMarkdown(out));
@@ -435,7 +438,7 @@ export async function main(argv = process.argv.slice(2)) {
   const failed = pages.filter((p) => !p.desktop || p.desktop.error).length;
   console.log(`\n${prev && !o.replace ? `Merged ${pages.length} page(s) into` : 'Wrote'} ${path.relative(process.cwd(), jsonFile) || jsonFile} (${out.pages.length} page(s) in all) and ${pages.length * 4} screenshots in ${path.relative(process.cwd(), shotsDir) || shotsDir}.`);
   if (prev) console.log(`The capture from ${String(prev.captured_at).slice(0, 10)} is kept in ${path.relative(process.cwd(), historyDir) || historyDir}.`);
-  if (out.brand_file) console.log(`Brand file updated: ${out.brand_file}. Check it with: node ${path.relative(process.cwd(), path.join(HERE, 'brand-file.mjs')).split(path.sep).join('/')} status`);
+  if (out.brand_file) console.log(`Org context updated: ${out.brand_file}. Check it with: node ${path.relative(process.cwd(), path.join(HERE, 'org-context.mjs')).split(path.sep).join('/')} status`);
   if (out.changes?.length) console.log('Changed since last time:\n- ' + out.changes.join('\n- '));
   else if (prev && bf) console.log('Changed since last time: nothing.');
   console.log(`Receipt: path ${receipt.path} | sha256 ${receipt.sha256} | source ${receipt.source} | date ${captured_at} | method script`);

@@ -136,7 +136,7 @@ test:
 improve:
   - Add your real folder names to the footage step so new staff upload to the right place from day one.
   - Add your own pay rates once you know what editors accept, and keep the monthly cap line.
-  - Save your sales check result in your brand file, and re-run it each quarter.
+  - Save your sales check result in your org context, and re-run it each quarter.
   - Pair it with the organic format tester to learn which formats are worth hiring for.
 
 works_best_with:

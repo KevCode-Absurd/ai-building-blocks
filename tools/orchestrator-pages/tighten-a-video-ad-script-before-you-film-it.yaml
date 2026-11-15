@@ -21,7 +21,7 @@ not_for:
 you_give:
   - Your video ad script, with shots or on-screen text if you have them
   - Who the ad is for and your product facts (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
   - Ten people's answers to "What did that ad say?" (you collect these halfway)
 you_get:
   - A bridge and pacing score with a tighter script
@@ -31,14 +31,14 @@ you_get:
 how_to_use:
   - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to your AI as files, in Claude Code or a Claude Project, and say "Follow HANDOFF.md".
-  - Paste your script when asked. Add your brand brain if you have one.
+  - Paste your script when asked. Add your org context if you have one.
   - At the pause, apply the fixes from steps 1 and 2. Show the script to ten people who fit your buyer.
   - Ask each person only "What did that ad say?" Write down their words. Do not tell them your claim first.
   - Paste the answers back. Check the stop-ship result before you book the shoot.
 output_sample:
   input:
     - Your video ad script, with shots and on-screen text
-    - Your brand brain (optional)
+    - Your org context (optional)
     - Who the ad is for and your product facts (optional)
     - Ten viewers' answers to "What did that ad say?" (added at the pause)
   prerequisites:

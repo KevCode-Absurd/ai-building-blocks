@@ -1,0 +1,5 @@
+# (test data) Third-party inspection of 20 pre-production samples per supplier. Built for an e-commerce eval. Not Wild One's real figures.
+supplier,buckle_pull_test_fails,stitching_defects,colour_match
+Supplier A,3 of 20,1 of 20,pass
+Supplier B,0 of 20,1 of 20,pass
+Supplier C,0 of 20,0 of 20,minor drift on Lilac

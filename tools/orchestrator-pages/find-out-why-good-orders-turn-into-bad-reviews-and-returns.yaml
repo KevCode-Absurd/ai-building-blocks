@@ -104,5 +104,5 @@ test:
 improve:
   - Add your real return reasons list to the second step, so it tags with your words instead of general ones.
   - Edit the tag rules in the review checker if a category you sell in has its own common misuse.
-  - Save the wrong-job groups and the claims that drew them in your brand file, and check new ads against them before launch.
+  - Save the wrong-job groups and the claims that drew them in your org context, and check new ads against them before launch.
   - Pair it with an ad copy or product page rewrite, using the not-for lines and claim edits from step 2.

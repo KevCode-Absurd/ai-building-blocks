@@ -42,7 +42,7 @@ output_sample:
   input:
     - Your approved story ad, with the flaw it describes
     - How your buyers describe the flaw, in their words (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can make images, or an image tool, to turn the photo prompt into a picture
     - A phone photo editor to draw the mark by hand
@@ -177,7 +177,7 @@ test:
   - Test the mark alone against the mark with a note on the same photo. Keep whichever brings more of the right people to the page.
 
 improve:
-  - Add your buyers' exact words for common flaws to your brand file, so the note comes from them. Reviews are the best source.
+  - Add your buyers' exact words for common flaws to your org context, so the note comes from them. Reviews are the best source.
   - Add your brand's never-shown list to the house rules, so the photo never includes those things.
   - Set your usual mark in step 4 if one always works better for your product.
   - Pair it with a story ad skill, so the story's first line explains what the mark points at.

@@ -49,7 +49,7 @@ output_sample:
     - Margin and shipping cost by pack size
     - Partners who could give a discount or gift (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional, it makes the result better)
+    - Your org context from the Org context builder (optional, it makes the result better)
   output:
     - name: Hero product line
       contains: The product name and which allowed claims were used.
@@ -123,7 +123,7 @@ test:
 improve:
   - Add your allowed claims list to the skill file so it can mark each angle as allowed or not.
   - Add the buyer words you hear on calls, not only in reviews.
-  - Save finished angles that worked in your brand file, and the ones that failed with the reason.
+  - Save finished angles that worked in your org context, and the ones that failed with the reason.
   - Pair it with the Discount impact checker for each offer and the Offer test planner to run the angles side by side.
 
 works_best_with:

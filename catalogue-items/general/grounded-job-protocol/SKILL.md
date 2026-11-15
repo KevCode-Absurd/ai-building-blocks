@@ -46,7 +46,7 @@ Ask once, in one short message, only what capture cannot tell you. Say what you 
 
 Capture what the acceptance tests depend on, and no more:
 
-- **Pages, ads, copy and email:** The live site with [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture), into `context/brand-dna.json`, `context/brand-dna.md` and `context/screenshots/`. Run `capture-brand-dna.mjs`; else run `brand-dna-snippet.js` in any browser tool or console; else ask for the URL, screenshots and CSS.
+- **Pages, ads, copy and email:** The live site with [Org context capture](https://useaiblocks.com/skills/brand-dna-capture), into `context/brand-dna.json`, `context/brand-dna.md` and `context/screenshots/`. Run `capture-brand-dna.mjs`; else run `brand-dna-snippet.js` in any browser tool or console; else ask for the URL, screenshots and CSS.
 - **Audits and analysis:** a pull of the real account or data through the client's connector, at access level 1 (read), into `context/data-snapshot.*` with its date range and source.
 - **Any job:** the buyer's real setting (city, season, any promotion live today).
 

@@ -45,7 +45,7 @@ output_sample:
     - Who should taste them, in a line or two
     - Your budget and your city
     - How you will film, and who films (optional)
-    - Your brand brain, if you have one (optional)
+    - Your org context, if you have one (optional)
   output:
     - name: COST
       contains: A line for venue, permits, product, staff, filming, insurance and clean-up, with a total.
@@ -133,7 +133,7 @@ improve:
   - Add your permit and insurance rules for your city to the skill file, so the cost and the checklist are right.
   - Add your allergen list and labelling rules for the products you make.
   - Add your pass rule as a default, with the numbers you decided, so the next event starts from it.
-  - Save the winning footage ideas to your brand file for ads.
+  - Save the winning footage ideas to your org context for ads.
   - Pair it with the Say-do gap checker to compare what tasters said with what they buy, and with the Buyer research plan with survey for calls with your buyers.
 
 works_best_with:

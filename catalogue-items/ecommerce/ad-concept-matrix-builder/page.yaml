@@ -126,7 +126,7 @@ test:
 
 improve:
   - Add your own hand-written persona list to the skill file so the loop starts from your real knowledge.
-  - Save your top five concepts and their results to your brand file, so the next run avoids repeats.
+  - Save your top five concepts and their results to your org context, so the next run avoids repeats.
   - Add the claims you may not make, so angles stay inside them.
   - After a few months, add which facets paid off, and ask for more like them.
   - Pair it with the ad sameness checker, so your finished ads really are different ideas.

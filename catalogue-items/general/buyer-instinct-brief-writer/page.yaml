@@ -43,7 +43,7 @@ output_sample:
     - Your product facts
     - Customer reviews or buyer quotes (optional)
     - A persona or description of your buyer (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   output:
     - name: Facts (springboard)
       contains: The five to eight facts most likely to matter to a buyer, with the proven ones marked.
@@ -133,7 +133,7 @@ test:
 improve:
   - Add interview notes or support tickets, so the drive rests on more words.
   - Add the drives you have already used, so it picks a different one.
-  - Save the brief to your brand file as the buyer brief.
+  - Save the brief to your org context as the buyer brief.
   - Pair it with "Customer buying reasons finder" if you want more evidence first.
 
 works_best_with:

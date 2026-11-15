@@ -50,7 +50,7 @@ output_sample:
     - Your approved claims, banned claims and offer
     - Your brand colors and voice (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
     - A buyer brief from the Buyer brief writer (optional)
   output:
     - name: Show plan
@@ -226,7 +226,7 @@ test:
 
 improve:
   - Write your banned claims into step 4 of the skill file, so every yarn change is tested against them.
-  - If you run a series, save the doll sketch and room list in your brand file and paste them into every run.
+  - If you run a series, save the doll sketch and room list in your org context and paste them into every run.
   - Add your house yarn thickness and colors to step 3, so every ad matches.
   - Pair it with the skill that turns a knitted script into shots, and with the knitted image ad skill for a matching still.
 

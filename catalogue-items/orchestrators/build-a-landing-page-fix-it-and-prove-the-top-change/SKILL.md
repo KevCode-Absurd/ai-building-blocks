@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Brand file**, made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context**, made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **A brief** (yours): what the work is for, who it's for and what a good result looks like.
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
@@ -30,15 +30,15 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand file and buyer brief.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your org context and buyer brief.
 3. This one.
 
-**From the brand file, read:** `index.md`, `facts.json`, `offers.json`, `voice.md`. Take the claims list with each claim's status, the offer terms word for word, and the real voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `foundation/claims.md`, `foundation/dos-donts.md`, `facts.json`, `offers.json`, `voice.md`. Take the claims list with each claim's status, the offer terms word for word, and the real voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your question, your brand file, a brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your question, your org context, a brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -49,7 +49,7 @@ This list is the inputs for this workflow. The "Before you start" block above is
 - **Your offer, price and buyer** (required): what you sell, what it costs and who it is for.
 - **What counts as success on the page** (required): a sale, a signup or a call.
 - **Your weekly visits** (advised): step 3 sizes the test from them and warns you if it will take too long.
-- **Your brand brain** (optional): so the copy uses your voice and facts.
+- **Your org context** (optional): so the copy uses your voice and facts.
 - **A page tool** (needed for step 3 on): somewhere you can publish the page and split visitors between two versions. Many page builders and testing tools do this only on a paid plan, so check the plan and its cost before you start; this workflow does not name or require one tool. Without one, stop after step 2 and use the review as your fix list.
 - **Visits and conversions for the last few weeks** (needed at the first pause): the baseline step 3 sizes the test against.
 - **The counts for each version, in a sheet** (needed at the second pause): visitors and conversions for the control and the new version, exported after the test has run its full time.
@@ -62,7 +62,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 
-1. **Plan and write the page.** Use the skill `conversion-landing-page-designer`. Give it your offer, price, buyer, the success action and your brand brain if you have it. It returns a page plan: the page order from headline to final call, the copy section by section, design rules and one clear button. Save it as `outputs/step-01-conversion-landing-page-designer.md`.
+1. **Plan and write the page.** Use the skill `conversion-landing-page-designer`. Give it your offer, price, buyer, the success action and your org context if you have it. It returns a page plan: the page order from headline to final call, the copy section by section, design rules and one clear button. Save it as `outputs/step-01-conversion-landing-page-designer.md`.
 2. **Review the page.** Use the skill `landing-page-auditor`. Give it the page plan and copy in `outputs/step-01-conversion-landing-page-designer.md` (or the live page address if it is already up). It reads the page three ways (a five-second glance, a skim and a doubter's full read), ranks each fix by severity, lists quick wins and up to three tests with a hypothesis each, and gives a page score out of 100. Save it as `outputs/step-02-landing-page-auditor.md`.
 
 Pause here: Fix the quick wins and publish the page. Pick the one top change to prove, and note your visits and sign-ups or sales for the last few weeks.

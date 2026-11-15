@@ -17,18 +17,17 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **The post or message** (yours): the post, comment, message or email you're replying to, with who wrote it and where.
 
 **Makes it better (optional):**
-- **Brand file**, made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
-- **A draft** (yours): the ad, page, email or script you want checked or improved.
+- **Org context**, made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
-**From the brand file, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`, `foundation/claims.md`, `foundation/customer-talk.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for the post or message, your brand file, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for the post or message, your org context. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -39,7 +38,7 @@ How to start:
 ## What you need
 - **The items to look at** (required): the posts you might reply to, or the comments on your own posts, pasted with the platform, who wrote it, the text and how long ago it was posted.
 - **Your voice** (strongly advised the first time): three to five posts or replies you wrote and liked. Saved after the first run.
-- **What you stand for and what you will not say** (optional): your brand file, or a few lines on topics to avoid.
+- **What you stand for and what you will not say** (optional): your org context, or a few lines on topics to avoid.
 - **Your own facts** (as needed): a number, a result or a link you may use. Nothing is invented.
 
 - **The writer skills, installed before the first run:** the [X reply writer](https://useaiblocks.com/skills/x-reply-writer) (`x-reply-writer`) for X, the [LinkedIn comment writer](https://useaiblocks.com/skills/linkedin-comment-writer) (`linkedin-comment-writer`) for LinkedIn, and the [YouTube comment reply writer](https://useaiblocks.com/skills/youtube-comment-reply-writer) (`youtube-comment-reply-writer`) for your own YouTube comments. Install only the ones for the platforms you use.

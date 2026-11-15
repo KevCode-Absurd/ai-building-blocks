@@ -138,5 +138,5 @@ works_best_with:
       why: Chat math on colours can slip, so test your final pairs in a tool built for it.
   inputs:
     - Screenshots of your current product.
-    - Your brand file or style guide, if you have one.
+    - Your org context or style guide, if you have one.
     - A list of the five screens you build most often.

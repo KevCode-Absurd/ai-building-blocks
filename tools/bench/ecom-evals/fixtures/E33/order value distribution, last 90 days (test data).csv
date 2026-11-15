@@ -1,0 +1,7 @@
+# (test data) US orders by order value band, last 90 days. Free standard shipping from $90. Built for an e-commerce eval. Not Wild One's real figures.
+order_value_band,orders
+Under $50,3100
+$50 to $89,5200
+$90 to $104,6900
+$105 to $149,3600
+$150 and over,1700

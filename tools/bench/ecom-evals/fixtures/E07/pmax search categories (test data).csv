@@ -1,0 +1,8 @@
+# (test data) Performance Max search term insights joined to a reporting script by our agency, USD. No brand exclusions are set on Performance Max. Built for an e-commerce eval. Not Fellow's real figures.
+search_category,spend,conversion_value,roas
+"Brand terms (""fellow"", ""fellow stagg"", ""fellow ode"")",21000,302000,14.38
+"""pour over kettle"", ""electric gooseneck kettle""",19000,62000,3.26
+"""coffee grinder"", ""burr grinder""",24000,41000,1.71
+"""espresso machine"", ""home espresso""",31000,30500,0.98
+"""gift for coffee lover"", ""coffee gifts""",6000,21600,3.6
+"Display, YouTube and not shown",17000,14900,0.88

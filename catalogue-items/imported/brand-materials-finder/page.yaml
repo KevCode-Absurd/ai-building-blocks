@@ -22,7 +22,7 @@ not_for:
 you_give:
   - The work tools you want searched, such as Notion, Google Drive or Slack
   - Your company name
-  - Places you already know hold brand files (optional)
+  - Places you already know hold org context files (optional)
   - Your go-ahead before anything is saved
 you_get:
   - A discovery report of what exists
@@ -43,7 +43,7 @@ output_sample:
   input:
     - The tools to search, such as Notion, Google Drive or Slack
     - Your company name
-    - Places you already know hold brand files (optional)
+    - Places you already know hold org context files (optional)
     - Whether to include call transcripts or only documents
   prerequisites:
     - An AI with access to your connected work tools. Gong, Granola, Slack and similar call or chat tools may need a paid plan or API access on your side

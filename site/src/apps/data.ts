@@ -18,7 +18,7 @@ export const AREAS: Area[] = [
   { id: "production", name: "Production", line: "Each video moves from brief to storyboard to clips, with an approval at every step.", path: "production" },
   { id: "landing", name: "Landing pages", line: "Pages built for an ad or a buyer, checked on every save, with speed and security tests.", path: "landing" },
   { id: "seo", name: "SEO", line: "Priorities, audits, articles and the questions AI search answers about the brand.", path: "seo" },
-  { id: "brand", name: "Brand brain", line: "Everything every writer is told about the brand: facts, voice, claims, fonts and colours.", path: "brand" },
+  { id: "brand", name: "Org context", line: "Everything every writer is told about the business: who it is, its buyers, voice, claims, fonts and colours.", path: "brand" },
 ];
 
 export const SETUP_STEPS: { step: string; what: string }[] = [

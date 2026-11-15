@@ -83,7 +83,7 @@ test:
   - Run the offer to a small slice of traffic first and check its profit per visitor against step 5.
 improve:
   - Add your real return and refund rates to the guarantee skill after one quarter.
-  - Save the winning offer and its stop rule in your brand file for your ad and email skills.
+  - Save the winning offer and its stop rule in your org context for your ad and email skills.
   - Re-run step 4 before every sale, with that sale's discount and costs.
 not_for:
   - You already have an offer and only want to test a discount against your profit goal. Use the Discount margin and ad-cost checker.
@@ -97,7 +97,7 @@ output_sample:
     - The discount you are thinking of and your target ad return
     - Your current offer's sessions and orders (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional, makes the offer more specific)
+    - Your org context from the Org context builder (optional, makes the offer more specific)
   output:
     - name: Step 1 offer
       contains: The buyer doubt, the offer with its terms, a profit check and five checks.

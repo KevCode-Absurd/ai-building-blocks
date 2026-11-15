@@ -1,7 +1,7 @@
 slug: untried-ad-idea-finder
 renamed_from: get-five-ad-ideas-you-havent-tried-yet
 name: Untried ad idea finder
-summary: Paste your past ads and brand file. Get a gap map and five untried ad ideas to test.
+summary: Paste your past ads and org context. Get a gap map and five untried ad ideas to test.
 category: general
 boards:
   - ecommerce
@@ -15,8 +15,6 @@ inputs:
   - type: performance_sheet
     required: false
   - type: reference_set
-    required: false
-  - type: audit_report
     required: false
   - type: voc_reviews
     required: false

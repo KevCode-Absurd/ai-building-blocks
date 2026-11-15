@@ -127,7 +127,7 @@ improve:
   - Add your sending domain name and your tool's name to the skill file so the fixes use your real hosts.
   - Add your own attribution window once you know your days-to-buy.
   - Add checks for any other tools that send mail from your domain, such as your helpdesk.
-  - Save the final settings table to your brand file as your record of what is correct.
+  - Save the final settings table to your org context as your record of what is correct.
   - Pair it with the inbox placement recovery planner if your opens are low, and the email flow gap checker for your flows.
 
 works_best_with:

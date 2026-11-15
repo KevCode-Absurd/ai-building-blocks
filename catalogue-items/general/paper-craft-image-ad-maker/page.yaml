@@ -2,11 +2,11 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: paper-craft-image-ad-maker
 name: "Paper craft image ad maker"
-summary: "Plan one paper-craft image ad from your selling idea, brand file and product photos. You get an image prompt, a layout and the ad words."
+summary: "Plan one paper-craft image ad from your selling idea, org context and product photos. You get an image prompt, a layout and the ad words."
 job: make-image-ads
 
 headline: "Paper craft image ad maker"
-subhead: Give it your selling idea, brand file and product photos. It picks one moment and the paper fold caught in it, such as a flap or pop-up, and checks the picture against your claims. You get an image prompt, the ad words, a layout and the edit step for your real label.
+subhead: Give it your selling idea, org context and product photos. It picks one moment and the paper fold caught in it, such as a flap or pop-up, and checks the picture against your claims. You get an image prompt, the ad words, a layout and the edit step for your real label.
 
 explain: |
   A world of real cut paper makes a small everyday problem feel like a picture book, and a pack rising from a page feels like a gift. Ask an image tool for "paper" carelessly, though, and you get flat clip art, a craft model on a desk, or a mug that comes out real because nobody said it was card.
@@ -20,11 +20,11 @@ when:
 not_for:
   - "You need a video, not a still: use the paper world ad script skill."
   - "Proof, fabric, food or a real face is the point, so a picture could mislead: use a plain product photo."
-  - "You have no brand file or approved claims yet: use the Brand profile builder first."
+  - "You have no org context or approved claims yet: use the Org context builder first."
 
 you_give:
   - The reason someone buys, what the buyer knows and the selling idea
-  - Your brand file, with label text, how it's used, approved claims and offer
+  - Your org context, with label text, how it's used, approved claims and offer
   - Photos of your product's front, side and top, attached (optional, needed if it appears)
 you_get:
   - A moment plan with the paper mechanism, the build and the claim it implies
@@ -34,14 +34,14 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your selling idea and brand file, and attach the product photos.
+  - Paste your selling idea and org context, and attach the product photos.
   - Read the moment plan. If the implied sentence isn't something you can say, ask for another show job.
   - Check every object in the prompt names its paper. Anything without it will come out real.
   - Make the image, then lay the real label and the words on it in your editor.
 output_sample:
   input:
     - Your selling idea, what the buyer knows and why they buy
-    - Your brand file with label text, approved claims and offer
+    - Your org context with label text, approved claims and offer
     - Photos of your product's front, side and top (optional)
   prerequisites:
     - An AI that can read attached photos, if you add product photos
@@ -203,7 +203,7 @@ test:
 improve:
   - If one build suits your brand, write it into step 3 of the skill file so every paper ad in a series matches.
   - Add your banned claims to step 4, so the picture is tested against them.
-  - Save the headline and moment that win in your brand file.
+  - Save the headline and moment that win in your org context.
   - Pair it with the paper-craft video skills, so the still and the video share one world.
 
 works_best_with:

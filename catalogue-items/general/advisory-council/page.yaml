@@ -26,7 +26,7 @@ you_give:
   - The question or decision, and what a good outcome looks like
   - Up to seven minds, each with a role (optional; it suggests a council if you don't)
   - Each mind's skill file from the minds library (optional; it makes their voices sharper)
-  - Your facts, numbers or brand brain (optional)
+  - Your facts, numbers or org context (optional)
 you_get:
   - The council, with each member's seat and the question they always ask
   - An opening view from each member, then a round of challenges
@@ -44,7 +44,7 @@ output_sample:
     - Your decision, and what a good outcome looks like
     - Up to seven minds, each with a role (optional)
     - Each mind's skill file from the minds library (optional)
-    - Your numbers, facts or brand brain (optional)
+    - Your numbers, facts or org context (optional)
   output:
     - name: Question
       contains: Your decision in one line, with what a good outcome looks like and any hard limits.

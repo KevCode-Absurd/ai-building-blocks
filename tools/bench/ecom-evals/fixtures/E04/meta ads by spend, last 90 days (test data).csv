@@ -1,0 +1,12 @@
+# (test data) Meta ad-level export, last 90 days, USD. Built for an e-commerce eval. Not Taylor Stitch's real figures.
+ad,campaign,format,status,spend_90d,purchases_90d,cost_per_purchase_90d,ctr_link
+UGC | Year six Jack | video,ASC | All products,video,Paused 2026-10-24 in creative refresh,31000,517,59.96,1.9%
+Static | Gift for him | single image,ASC | All products,single image,Active,9800,178,55.06,1.3%
+"Founder | Buy less, buy better | video",ASC | All products,video,Active,22400,290,77.24,1.1%
+Carousel | Fall layers,ASC | All products,carousel,Active,18100,231,78.35,1.2%
+Static | Long Haul Jacket | single image,Prospecting | Jackets,single image,Active,14200,168,84.52,1.0%
+Video | Long Haul in the rain,Prospecting | Jackets,video,Active,19800,231,85.71,1.3%
+Carousel | The Jack in 9 colours,Prospecting | Shirts and chinos,carousel,Active,11900,128,92.97,1.1%
+Meme | Chore coat vs fast fashion | single image,Test | New creative,single image,Active,2400,6,400,4.1%
+Video | Restitch the classics,Test | New creative,video,Active,2100,16,131.25,1.2%
+DPA | Viewed not bought,Catalog | Viewed not bought,catalog,Active,34000,840,40.48,1.6%

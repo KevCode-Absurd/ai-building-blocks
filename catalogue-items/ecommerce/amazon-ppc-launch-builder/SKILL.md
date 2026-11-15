@@ -29,7 +29,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This skill runs on its own and needs no brand brain. The spreadsheet named in "Before you start" is the product, price and unit profit below. Any keyword list or shortlist named there is the keyword list below, which is strongly advised but not required. Amazon ads cost real money, so the person pays for every click. If something is missing, ask once in one short message, then carry on and mark each gap `MISSING:`.
+This skill runs on its own and needs no org context. The spreadsheet named in "Before you start" is the product, price and unit profit below. Any keyword list or shortlist named there is the keyword list below, which is strongly advised but not required. Amazon ads cost real money, so the person pays for every click. If something is missing, ask once in one short message, then carry on and mark each gap `MISSING:`.
 
 - **Product, price and unit profit after Amazon fees** (required). If they do not know unit profit, tell them to work it out first (the Amazon fee and margin checker does this) and do not set a budget.
 - **Keyword list** (strongly advised), from the Amazon keyword picker.

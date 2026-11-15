@@ -46,7 +46,7 @@ output_sample:
   prerequisites:
     - An AI that can read a folder of files, such as Claude Code or a Claude Project
     - A Shopify account, since you do the base settings in admin after step 1
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: Store setup plan"
       contains: What to prepare, plan and account, payments for your country, domain name tests and the order to build in.
@@ -119,7 +119,7 @@ test:
   - Walk the buying path on your phone from the homepage to the thank-you page.
   - Ask a friend to find three products using only the menu and the search box.
 improve:
-  - Save the product sheets in your brand file, so you can add new products fast.
+  - Save the product sheets in your org context, so you can add new products fast.
   - Re-run the shipping and tax steps whenever you add a country.
   - Re-run the go-live check after any big change to payments, shipping or tax.
   - Then check your returns and shipping pages with the Shopify store policy checker (useaiblocks.com/skills/store-policy-checker). Bring the step 2 product sheets and the step 4 shipping plan, so the pages match your real rates.

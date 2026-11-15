@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Sales route picker** with the [Sales route picker](https://useaiblocks.com/skills/sales-route-picker). Bring your question, your offer (optional). It uses your brand file.
+1. **Sales route picker** with the [Sales route picker](https://useaiblocks.com/skills/sales-route-picker). Bring your question, your offer (optional). It uses your org context.
 2. This one.
 
 How to start:

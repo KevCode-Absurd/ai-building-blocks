@@ -49,7 +49,7 @@ output_sample:
     - Gift ideas with what each costs you (optional)
     - Days between reorders by pack size (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional, it makes the result better)
+    - Your org context from the Org context builder (optional, it makes the result better)
   output:
     - name: Tier table
       contains: Each tier with units, price, price per unit, money saved, shipping per unit, margin and gift.

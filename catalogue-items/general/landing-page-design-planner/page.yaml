@@ -47,7 +47,7 @@ output_sample:
     - Whether this is a refresh or a redesign (optional)
     - Phone and desktop screenshots of a built page (optional)
   prerequisites:
-    - Your brand brain from the Brand profile builder, or your own brand details
+    - Your org context from the Org context builder, or your own brand details
     - An AI that can see pictures, if you send screenshots
   output:
     - name: Design system
@@ -192,7 +192,7 @@ improve:
   - Write your design system into step 2 once (colours with their jobs, font roles, layout rules), so every page starts from the same system and you only paste the copy.
   - Replace the example directions in step 3 with kinds that suit your brand, for example a recipe-card layout for a food brand.
   - Add the terms you must always show to step 6 (renewal price, delivery time), so no direction hides them.
-  - Save the direction you choose to the look section of your brand file, so later pages match it.
+  - Save the direction you choose to the look section of your org context, so later pages match it.
   - Pair it with "Ad-matched landing page writer" for the copy first, and "Competitor landing page layout planner" when you have a reference page.
 
 works_best_with:

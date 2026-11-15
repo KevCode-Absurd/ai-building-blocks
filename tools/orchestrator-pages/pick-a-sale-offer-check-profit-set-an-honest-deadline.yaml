@@ -33,7 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in this workflow, or attach its skill files if your AI takes files.
   - Add your product, price and costs per order, with shipping and fees. Without costs, the profit step cannot score.
   - Say how many orders you can ship well. The cap will not go above what you can keep.
-  - Add past sales, reviews or your brand brain if you have them (optional).
+  - Add past sales, reviews or your org context if you have them (optional).
   - Read each step's result before the next one starts. Fix any MISSING line.
   - Check the hand-back summary. Nothing is sent or published without your yes.
 output_sample:
@@ -45,7 +45,7 @@ output_sample:
     - Customer reviews or survey words (optional)
   prerequisites:
     - An AI that can read pasted text or attached files
-    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your org context from the Org context builder (optional, makes the result better)
   output:
     - name: "Step 1: Store offer picker"
       contains: The offer types worth testing, ranked, with the margin floor and the sums behind the ranking.

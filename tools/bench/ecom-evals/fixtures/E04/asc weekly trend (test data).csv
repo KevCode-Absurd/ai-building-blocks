@@ -1,0 +1,8 @@
+# (test data) Weekly Advantage+ shopping campaign trend, USD. Built for an e-commerce eval. Not Taylor Stitch's real figures.
+week_starting,cost_per_purchase,cpm,frequency
+2026-10-05,63,13.1,2
+2026-10-12,66,13.4,2.1
+2026-10-19,68,13.9,2.1
+2026-10-26,79,14.6,2.2
+2026-11-02,86,15.8,2.3
+2026-11-09,92,16.9,2.4

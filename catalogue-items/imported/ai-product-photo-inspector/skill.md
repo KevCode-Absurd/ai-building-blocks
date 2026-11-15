@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A photo set** with the [Fabric close-up maker](https://useaiblocks.com/skills/fabric-close-up-maker). Bring product photos, a photo set (optional).
-2. **A photo set** with the [Product catalogue photo maker](https://useaiblocks.com/skills/product-photo-batch-maker). It uses your brand file.
+2. **A photo set** with the [Product catalogue photo maker](https://useaiblocks.com/skills/product-photo-batch-maker). It uses your org context.
 3. This one.
 
 How to start:

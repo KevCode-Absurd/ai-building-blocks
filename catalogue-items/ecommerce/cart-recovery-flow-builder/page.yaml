@@ -51,7 +51,7 @@ output_sample:
   prerequisites:
     - An AI chat that can read pasted text
     - Klaviyo and Shopify, if you want the exact event steps
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Current trigger check
       contains: Says whether your cart flow fires on added to cart or checkout started, and whether there is a gap.

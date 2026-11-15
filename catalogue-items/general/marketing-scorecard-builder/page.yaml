@@ -24,7 +24,7 @@ not_for:
 
 you_give:
   - The numbers you track now, with the period (a performance sheet or a list)
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - A scorecard with long-term results at the top and short-term response at the base
   - The question each measure answers and its time lag
@@ -41,7 +41,7 @@ output_sample:
     - The numbers you track now, with names and recent values
     - The period those numbers cover
     - How long customers take to buy (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
   output:
     - name: Scorecard
       contains: Measures from long-term results at the top to short-term response at the base, each with question, lag, value and source.
@@ -116,7 +116,7 @@ test:
 
 improve:
   - Add your own metrics to the sort, such as repeat orders, so the lags suit your field.
-  - Save the scorecard in your brand file and reuse it each period.
+  - Save the scorecard in your org context and reuse it each period.
   - Set the review rhythm to match your real reporting dates.
   - Pair it with "Brand and sales budget splitter" to act on what the card shows.
 

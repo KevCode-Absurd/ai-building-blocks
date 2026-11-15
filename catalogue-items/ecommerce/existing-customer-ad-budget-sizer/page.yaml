@@ -130,7 +130,7 @@ test:
   - Run it twice on the same inputs. The cap should match both times.
 
 improve:
-  - Save your CPM and frequency numbers each month in your brand file, so the cap updates in a minute.
+  - Save your CPM and frequency numbers each month in your org context, so the cap updates in a minute.
   - Add your reorder time and category notes so the category call is yours, not generic.
   - Set a lower CPA ceiling rule in the skill file if you know your repeat margin.
   - Pair it with the retargeting ad sequence planner for what to show, and the platform ROAS reality check for the wider picture.

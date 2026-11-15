@@ -49,7 +49,7 @@ output_sample:
     - The length and look you want (optional)
   prerequisites:
     - An AI chat that can read pasted text
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Fit check and length
       contains: Says if a VSL suits your product, and sets the master length and the cut lengths.
@@ -136,7 +136,7 @@ test:
 improve:
   - Add your approved claims and your banned claims to the skill file, so every script stays inside them.
   - Add your brand voice to the problem part so the lines sound like your customers.
-  - Save each VSL's hooks and results in your brand file, to see which kind of hook wins for you.
+  - Save each VSL's hooks and results in your org context, to see which kind of hook wins for you.
   - Pair it with the advertorial angle and format picker for the landing page, and the creative test reader to read the cuts.
 
 works_best_with:

@@ -74,9 +74,9 @@ test('the team-mode pack file teaches the same method: spec sheet, one lead, job
   const { STANDARD_CRITERIA } = await import('../src/jobs/rubric.mjs');
   const pack = fs.readFileSync(new URL('../src/jobs/pack/TEAM-MODE.md', import.meta.url), 'utf8');
   assert.doesNotMatch(pack, /brand brain|taste question|at most three questions|job card/i);
-  for (const phrase of ['One lead is the default', 'Ask up to three questions in one short message', 'Give each question a default', 'write the spec sheet (`JOB-CARD.json`)', 'Acceptance tests:', 'Do not ask for a brand file when the job does not need one', 'Do not search the library during the job', 'one maker for each kind of work the request names', 'sends the work back to the lead once, with the failed tests named', 'never flagged and left in']) assert.ok(pack.includes(phrase), phrase);
-  // A brand file is asked for only where a page, ad, copy or email needs it.
-  assert.match(pack, /\*\*A page, ad, copy or email\*\* needs the brand file/); assert.equal(pack.match(/brand file/g).length, 2);
+  for (const phrase of ['One lead is the default', 'Ask up to three questions in one short message', 'Give each question a default', 'write the spec sheet (`JOB-CARD.json`)', 'Acceptance tests:', 'Do not ask for an org context when the job does not need one', 'Do not search the library during the job', 'one maker for each kind of work the request names', 'sends the work back to the lead once, with the failed tests named', 'never flagged and left in']) assert.ok(pack.includes(phrase), phrase);
+  // An org context is asked for only where a page, ad, copy or email needs it.
+  assert.match(pack, /\*\*A page, ad, copy or email\*\* needs the org context/); assert.equal(pack.match(/org context/g).length, 2);
   // The rubric table carries the same weights as the engine, largest first.
   const weights = [...pack.matchAll(/^\| [A-Z][^|]+ \| (\d+) \|$/gm)].map(match => Number(match[1])).slice(-8);
   assert.deepEqual(weights, STANDARD_CRITERIA.map(row => row.weight)); assert.match(pack, /\| Does the job for the buyer or the decision \| 30 \|/);

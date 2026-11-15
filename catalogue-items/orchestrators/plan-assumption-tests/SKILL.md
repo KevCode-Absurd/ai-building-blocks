@@ -37,7 +37,7 @@ How to start:
 - **Who you think your customers are** (required)
 - **Notes from your customer talks, written straight after each talk** (required for step 3, so you add them after the pause)
 
-This run uses these four items only: the plan, your decision, your customers and your talk notes. It does not use a buyer brief or brand brain files, so do not ask for them.
+This run uses these four items only: the plan, your decision, your customers and your talk notes. It does not use a buyer brief or org context files, so do not ask for them.
 
 ## When not to use
 - If you already have customer evidence and want one test, use the Smallest test picker (`smallest-test-picker`).

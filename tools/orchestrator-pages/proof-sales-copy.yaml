@@ -16,14 +16,14 @@ when:
   - You can't decide between two ways to open and want both written to test.
   - Your page makes claims and readers say they don't believe them.
 not_for:
-  - "You have no real reviews, or no confirmed price and guarantee terms: build your brand brain and offer first, or gather them from your customers."
+  - "You have no real reviews, or no confirmed price and guarantee terms: build your org context and offer first, or gather them from your customers."
   - "You only need to check a finished ad for claims with no proof: use the Ad claims checker."
   - "You want a short ad opening, not a long sales page: use the Ad opening writer and reviewer."
 
 you_give:
   - Customer reviews, copied as written
   - Your product facts, including your price, delivery and guarantee terms
-  - Your brand file, if you have one (optional)
+  - Your org context, if you have one (optional)
   - Your offer, if you have one (optional)
 
 you_get:
@@ -43,7 +43,7 @@ output_sample:
   input:
     - Customer reviews, copied as written
     - Your product facts, with price, delivery and guarantee terms
-    - Your brand file (optional)
+    - Your org context (optional)
     - Your offer (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project

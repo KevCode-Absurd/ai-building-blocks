@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Buying reasons** with the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder). Bring customer words. It uses your brand file.
+1. **Buying reasons** with the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder). Bring customer words. It uses your org context.
 2. This one.
 
 How to start:
@@ -104,7 +104,7 @@ CHECKS MISSED  <one line each, or none>
 - The quote on the image matches the source word for word, or the cut is recorded.
 - Each ad uses a different customer, and only one reason to buy runs through the set.
 - Headlines are 27 characters or fewer, or flagged. Short main text is 50 to 150 characters.
-- A number or health claim inside a quote is still a claim the brand must be able to back. Any product number or nutrition fact in the feed text comes from the brand file, never from memory. Supplement and health claims may need a legal or ad-policy check before paid use.
+- A number or health claim inside a quote is still a claim the brand must be able to back. Any product number or nutrition fact in the feed text comes from the org context, never from memory. Supplement and health claims may need a legal or ad-policy check before paid use.
 - Free products, payments and unverified reviews are flagged before paid use.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
@@ -119,9 +119,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 <!-- /next -->
 
 ## If something is missing
-Write `MISSING: <source id | verified status | free product status | backup quotes | photo>`. If a line isn't in a source, it doesn't go in the ad. If no real quote fits a job, skip that layout. Before you write MISSING for a fact, look for it in the brand file and the input; write it only when both lack it.
+Write `MISSING: <source id | verified status | free product status | backup quotes | photo>`. If a line isn't in a source, it doesn't go in the ad. If no real quote fits a job, skip that layout. Before you write MISSING for a fact, look for it in the org context and the input; write it only when both lack it.
 
-Photos named but you can't see them: say so in one line. Take the product's look and label words from the brand file or the input, mark the photo check as still to do, and never describe a photo you didn't see.
+Photos named but you can't see them: say so in one line. Take the product's look and label words from the org context or the input, mark the photo check as still to do, and never describe a photo you didn't see.
 
 ## Avoid
 - A before-and-after of a person's body, an invented customer, or a named competitor.

@@ -6,7 +6,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Short film video ad script writer"
-subhead: Give it your selling idea and brand file. It writes a short live-action-style story where your product causes the twist, with a detail planted early that the ending pays off. You get a timed shot table, notes for the edit and a cast note.
+subhead: Give it your selling idea and org context. It writes a short live-action-style story where your product causes the twist, with a detail planted early that the ending pays off. You get a timed shot table, notes for the edit and a cast note.
 
 explain: |
   Film-style ads (a photo-real scene with actors, like a short film) can carry a feeling or a small joke better than any list of features. They usually go wrong in the writing. The product turns up as a logo card after the story ends, a character "reviews" it, or the shots look lovely and nothing happens.
@@ -24,7 +24,7 @@ not_for:
 
 you_give:
   - Your selling idea, a headline or an existing script
-  - Your brand file, with the buyer's moment, how the product is used and your approved claims
+  - Your org context, with the buyer's moment, how the product is used and your approved claims
   - The total length, your video tool's clip length and your sound choices (optional)
 you_get:
   - A one-line turn and a one-line plant and payoff
@@ -36,17 +36,17 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your selling idea and your brand file.
+  - Paste your selling idea and your org context.
   - Give the total and your tool's clip length, for example "20 seconds, 10-second clips".
   - Check the turn line. If the product isn't in the "therefore", ask for another version.
   - Take the script and cast note to "Short film video clip prompt writer". It takes it from there, with the avatars, sheets, storyboard and clips.
 output_sample:
   input:
     - Your selling idea, a headline or an existing script
-    - Your brand file with the buyer's moment, how the product is used and approved claims
+    - Your org context with the buyer's moment, how the product is used and approved claims
     - Total length, your video tool's clip length and sound choices (optional)
   prerequisites:
-    - Your brand brain from the Brand profile builder, or your brand facts pasted in
+    - Your org context from the Org context builder, or your brand facts pasted in
     - A video tool that makes clips, if you plan to film the script (optional)
   output:
     - name: Turn line
@@ -111,7 +111,7 @@ example:
     Product: Sprout daily packs. Tear one straight across the top,
     tip the small deep-green gummies into a palm, eat. Pouch: glossy
     deep green, big yellow "Sprout" wordmark, "28 Daily Packs".
-    The old way (brand file): a half-used tub of powder and a shaker.
+    The old way (org context): a half-used tub of powder and a shaker.
     Brand line: "Rip. Tip. Enjoy."
     Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber".
     Settings: 20 seconds, 10-second clips, voices and room sound,

@@ -135,7 +135,7 @@ improve:
   - Add any category you will never enter, such as one with strict rules, so it skips it.
   - Add your own sameness examples from your shelf or feed so it learns what to look for.
   - Pair it with a category name writer for the name, and with a review reader for the complaints.
-  - Save the chosen gap and position in your brand file.
+  - Save the chosen gap and position in your org context.
 
 works_best_with:
   tools:

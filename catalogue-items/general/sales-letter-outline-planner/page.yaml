@@ -149,7 +149,7 @@ test:
 improve:
   - "Add your own required sections, such as a legal line, to step 3."
   - "Add the proof types you hold, such as awards or lab tests, to step 5."
-  - "Save outlines that worked to your brand file as patterns to start from."
+  - "Save outlines that worked to your org context as patterns to start from."
   - "Pair it with Dominant emotion finder before it and a copy checker after it."
 
 works_best_with:

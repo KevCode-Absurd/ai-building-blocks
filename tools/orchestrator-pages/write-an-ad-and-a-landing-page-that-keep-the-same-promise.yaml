@@ -23,7 +23,7 @@ you_give:
   - Customer reviews or support questions, each with its source
   - The problem the product solves, and the proof that the fix works
   - Rival products and the claims they make (optional)
-  - Your brand file and buyer description (optional)
+  - Your org context and buyer description (optional)
 you_get:
   - A pain-point ad with a check on the problem and a list of policy and truth flags
   - A five-part ad check with a score out of 100 and fixes in order
@@ -41,7 +41,7 @@ output_sample:
     - Your product facts, such as price, offer, guarantee and delivery
     - Customer reviews or support questions, each with its source
     - The problem the product solves and proof the fix works
-    - Your brand brain, offer or buyer brief (optional)
+    - Your org context, offer or buyer brief (optional)
   prerequisites:
     - An AI that can read files and save step results as files
     - Your approval before anything is sent, published or paid for
@@ -108,7 +108,7 @@ test:
   - Look at the five fixes from the last check. Make them and score the page again.
   - Run a small paid test of the ad and page against your current page.
 improve:
-  - Save the checked ad and the doubts list in your brand file, so the next ad starts from them.
+  - Save the checked ad and the doubts list in your org context, so the next ad starts from them.
   - Add your best past ad to step 1, so new ads copy its structure.
   - Add your banned claims, so the policy flags use your own rules.
   - Pair it with a Meta rules checker before the ad goes live.

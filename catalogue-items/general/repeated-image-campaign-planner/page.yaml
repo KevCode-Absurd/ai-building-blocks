@@ -105,7 +105,7 @@ output_sample:
     - "Your cost per piece and brand colours (optional)"
   prerequisites:
     - "An image tool such as ChatGPT (GPT Image), Gemini (Nano Banana) or an image editor, to make the pieces"
-    - "Your brand brain from the Website brand brain builder (optional)"
+    - "Your org context from the Org context builder (optional)"
   output:
     - name: "The known thing"
       contains: "What buyers recognise on sight, and one line on why."

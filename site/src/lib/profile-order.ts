@@ -1,8 +1,8 @@
-// Order picks by the owner's saved brand file (lib/business.ts). Pure functions, no storage, no network:
-// the brand file never leaves the browser, so this runs only on the client with the saved answers.
+// Order picks by the owner's saved org context (lib/business.ts). Pure functions, no storage, no network:
+// the org context never leaves the browser, so this runs only on the client with the saved answers.
 // Use it where a list of skills, specialists or tools is shown: matching items move up, the rest keep their order.
 
-/** The brand file answers this reads. Any saved `Business` object fits. */
+/** The org context answers this reads. Any saved `Business` object fits. */
 export type ProfileLike = { reach?: string; area?: string; goal?: string; sells?: string; buyer?: string };
 export type Reach = "local" | "online" | "both";
 
@@ -12,7 +12,7 @@ export const REACH_CHOICES: { id: Reach; label: string; md: string }[] = [
   { id: "both", label: "Both", md: "Local and online" },
 ];
 
-/** Five plain goals for the setup question. The saved value is the label, so the brand file reads naturally. */
+/** Five plain goals for the setup question. The saved value is the label, so the org context reads naturally. */
 export const GOAL_CHOICES = [
   "More customers or bookings",
   "More sales online",
@@ -30,7 +30,7 @@ const GOALS: [RegExp, RegExp][] = [
   [/\b(admin|time|busywork|paperwork|inbox|organi[sz]e)\b/i, /\b(admin|automat\w*|inbox|email triage|schedul\w*|invoic\w*|bookkeep\w*|spreadsheets?|sops?|process\w*|checklists?|templates?)\b/i],
 ];
 
-/** How well an item's text fits the brand file. 0 when nothing matches or nothing is saved. */
+/** How well an item's text fits the org context. 0 when nothing matches or nothing is saved. */
 export function profileScore(text: string, p: ProfileLike): number {
   if (!text) return 0;
   let score = 0;
@@ -44,10 +44,10 @@ export function profileScore(text: string, p: ProfileLike): number {
   return score;
 }
 
-/** True when the brand file has anything that changes the order. */
+/** True when the org context has anything that changes the order. */
 export const ordersPicks = (p: ProfileLike) => !!(p.reach || p.goal?.trim());
 
-/** The same items, best fits for this brand file first. Stable: equal scores keep their original order,
+/** The same items, best fits for this org context first. Stable: equal scores keep their original order,
  *  and with nothing saved the list comes back unchanged. `textOf` gives the words to match (name, summary, tags). */
 export function orderByProfile<T>(items: readonly T[], p: ProfileLike, textOf: (item: T) => string): T[] {
   if (!ordersPicks(p)) return [...items];

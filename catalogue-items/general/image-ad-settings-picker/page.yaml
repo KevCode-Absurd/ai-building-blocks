@@ -189,7 +189,7 @@ improve:
   - Delete the settings you never use (for example video pace if you only make image ads), so the library is shorter to choose from.
   - Write your usual choices into the skill as a default set, for example "shown clearly, studio, direct", and only list the ones that change.
   - Add a fixed line under "Always on" with your brand's show-it-right rules (how the pack opens, what it never shows), so every brief carries them.
-  - When a set of choices wins a test, save it in your brand file with the ad it made.
+  - When a set of choices wins a test, save it in your org context with the ad it made.
   - Pair it with a skill that turns the finished brief into a full image ad plan, and change one setting at a time between test ads.
 
 works_best_with:

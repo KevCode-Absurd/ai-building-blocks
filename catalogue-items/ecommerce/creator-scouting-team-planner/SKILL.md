@@ -30,7 +30,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This skill runs on its own and needs no brand brain. All it needs to start is what the store sells and who buys it (the question in "Before you start"). The spreadsheet is price and landed cost; the data is sales by day by channel. If something is missing, ask once in one short message, then carry on and mark each gap `MISSING:`.
+This skill runs on its own and needs no org context. All it needs to start is what the store sells and who buys it (the question in "Before you start"). The spreadsheet is price and landed cost; the data is sales by day by channel. If something is missing, ask once in one short message, then carry on and mark each gap `MISSING:`.
 
 - **Buyer description and where they live** (required).
 - **Budget and the number of people** who can work on it (required).

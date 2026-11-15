@@ -38,7 +38,7 @@ output_sample:
     - "Your offer: what is in it and the result"
     - Your buyer (optional)
     - Rules from your ad platform or field (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   output:
     - name: The parts
       contains: Options for the reason why, buyer, goal, time and container word.

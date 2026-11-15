@@ -47,7 +47,7 @@ output_sample:
     - A few rival ads or pages (optional)
   prerequisites:
     - An AI that can read the handoff folder, such as Claude Code or a Claude Project with files
-    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your org context from the Org context builder (optional, makes the result better)
   output:
     - name: step-01-buyer-instinct-brief-writer.md
       contains: The drive underneath why people buy, the feeling the ad must leave, and old ways of saying it to avoid.
@@ -111,7 +111,7 @@ test:
   - Show the ad and your old ad to five buyers and ask which makes them feel something.
 
 improve:
-  - Save the brief's drive and feeling in your brand file, so other ads can start from them.
+  - Save the brief's drive and feeling in your org context, so other ads can start from them.
   - Add a rule to the skill for flaws you will never name, such as safety claims.
   - Keep the swap test lines that failed, as a list of wording to avoid.
 

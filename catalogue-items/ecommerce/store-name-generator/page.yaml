@@ -32,7 +32,7 @@ you_give:
   - Your three to five closest rivals, with their names
   - The countries and languages you sell in
   - Names you already like or dislike (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
 
 you_get:
   - Your four strategy questions, answered once, plus the name patterns your rivals use
@@ -100,7 +100,7 @@ output_sample:
     - The countries and languages you sell in
     - Names you already like or dislike (optional)
   prerequisites:
-    - A brand brief from the Buyer brief writer, or your brand brain from the Website brand brain builder (both optional)
+    - A brand brief from the Buyer brief writer, or your org context from the Org context builder (both optional)
   output:
     - name: Four questions
       contains: One agreed answer each on what winning means, what you must win, what you need to win and what the name must say.

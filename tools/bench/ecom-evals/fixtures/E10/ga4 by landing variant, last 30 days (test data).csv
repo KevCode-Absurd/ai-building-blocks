@@ -1,0 +1,4 @@
+# (test data) GA4 sessions that landed on the Ode page, by the variant in the landing URL. Built for an e-commerce eval. Not Fellow's real figures.
+landing_variant,sessions,add_to_cart_rate,purchases
+"SSP burrs ($599.95, the default)",38900,3.1%,410
+Core ($399.95),20100,6.9%,424

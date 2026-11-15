@@ -126,7 +126,7 @@ test:
 improve:
   - Add your fee structure to the skill file, such as a payment fee of a set percent plus a fixed amount, so each row uses your real fees.
   - Set your own go or skip rule, for example skip any discount whose break-even ROAS is above what you have ever reached.
-  - Save your two-year repeat rates in your brand file after each sale.
+  - Save your two-year repeat rates in your org context after each sale.
   - Add a note for products with different margins, and run one table per product group.
   - Pair it with the sale season pacing sheet builder and the break-even ROAS and CPA calculator.
 

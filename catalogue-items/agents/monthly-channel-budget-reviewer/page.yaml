@@ -44,7 +44,7 @@ output_sample:
     - A note of launches, sales or tracking changes (optional)
   prerequisites:
     - An AI that can keep files between months, such as Claude Code, so it can compare months
-    - Your brand brain from the Brand profile builder (recommended)
+    - Your org context from the Org context builder (recommended)
   output:
     - name: This month
       contains: One line with total spend, store revenue, blended return and the gap between platform claims and the store.

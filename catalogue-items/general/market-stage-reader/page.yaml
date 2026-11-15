@@ -43,7 +43,7 @@ output_sample:
     - Your product facts, including what it does for the buyer and its price
     - Rival claims from their ads, pages or packs (optional)
     - Customer words such as reviews or support emails (optional)
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: The want
       contains: The want buyers already have in their words, what the product does for it, and scores for urgent, lasting and wide.

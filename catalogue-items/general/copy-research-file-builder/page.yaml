@@ -18,20 +18,20 @@ when:
   - "You are taking over a product and need to learn it fast."
   - "You want a research base before writing a sales page, launch or email series."
 not_for:
-  - "You have one short brief and no past material: write from the brief, or start with the Brand profile builder."
+  - "You have one short brief and no past material: write from the brief, or start with the Org context builder."
   - "You want to name the one feeling to write to: use the Buyer emotion and copy theme finder."
   - "You need a finished sales page or email: write it from the research files, this only sorts the material."
 
 you_give:
   - "Product material: issues, emails, bonuses, old promotions, with dates"
-  - "Your brand file (optional)"
+  - "Your org context (optional)"
   - "Customer words with dates (optional)"
 you_get:
   - "Sorted files of passages, each with its source"
   - "A value note and mini-ad for each bonus"
   - "A list of proof you can give away and fascinating lines"
   - "The top past hits with why each worked"
-  - "An angle library and brand file additions"
+  - "An angle library and org context additions"
 
 how_to_use:
   - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
@@ -42,7 +42,7 @@ how_to_use:
 output_sample:
   input:
     - "Your product material: issues, emails, bonuses and old promotions, each with a title and date"
-    - Your brand file (optional)
+    - Your org context (optional)
     - Customer words with dates (optional)
     - Sales or response figures for old promotions (optional)
   output:
@@ -61,7 +61,7 @@ output_sample:
     - name: PAST HITS
       contains: The top pieces by your results, with promise, lead, feeling, offer and why each worked.
     - name: ANGLE LIBRARY
-      contains: Ranked angles with their passages and proof, plus brand file additions and a list of gaps.
+      contains: Ranked angles with their passages and proof, plus org context additions and a list of gaps.
 
 how_it_works:
   - title: "Takes stock"
@@ -75,7 +75,7 @@ how_it_works:
   - title: "Studies the winners"
     text: "Notes why the top pieces worked, using the results in your sources."
   - title: "Builds the outputs"
-    text: "Turns the files into a ranked angle library and brand file notes."
+    text: "Turns the files into a ranked angle library and org context notes."
 
 output_shape: |
   WHAT I READ
@@ -103,7 +103,7 @@ output_shape: |
   ANGLE LIBRARY
   <ranked angles with passages and proof>
 
-  BRAND FILE ADDITIONS
+  ORG CONTEXT ADDITIONS
   <people, claims with sources, bonus notes>
 
   MISSING
@@ -138,7 +138,7 @@ test:
 improve:
   - "Add your own file names to step 2 if your work needs others, such as a file for objections."
   - "Add a rule for which sources you trust most and which are marketing only."
-  - "Save the people file and proof list to your brand file so later skills can use them."
+  - "Save the people file and proof list to your org context so later skills can use them."
   - "Pair it with Dominant emotion finder next."
 
 works_best_with:

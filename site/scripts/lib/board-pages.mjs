@@ -60,7 +60,7 @@ const totals = (stages) => ({
 });
 
 /** The playbook download, as one clear block. */
-const playbookBlock = (board) => `<aside class="bz-cta" aria-label="Playbook">${pixelIcon("playbook", "px-ico bz-cta-ico")}<div><h2>Give your AI the ${esc(lower(board.name))} playbook</h2><p>One file that tells your AI what ${/^[aeiouAEIOU]/.test(board.short) ? "an" : "a"} ${esc(board.short)} business needs at each stage. Set your kind of business in your brand file, and every download includes it.</p></div><a class="btn btn-primary" href="${playbookHref(board.slug)}" download>Download the playbook</a></aside>`;
+const playbookBlock = (board) => `<aside class="bz-cta" aria-label="Playbook">${pixelIcon("playbook", "px-ico bz-cta-ico")}<div><h2>Give your AI the ${esc(lower(board.name))} playbook</h2><p>One file that tells your AI what ${/^[aeiouAEIOU]/.test(board.short) ? "an" : "a"} ${esc(board.short)} business needs at each stage. Set your kind of business in your org context, and every download includes it.</p></div><a class="btn btn-primary" href="${playbookHref(board.slug)}" download>Download the playbook</a></aside>`;
 
 /** Small numbered tiles for the 8 stages. `href(s)` is where each goes; `current` marks the stage being read. */
 const journey = (stages, href, { current, counts = true } = {}) => `<ol class="bz-journey">${stages.map((s) => {

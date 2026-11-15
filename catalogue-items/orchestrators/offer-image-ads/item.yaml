@@ -21,7 +21,7 @@ outputs:
 uses: [website-brand-brain-builder, hidden-offer-finder, three-way-offer-image-ad-planner, meta-ads-compliance-checker]
 steps:
   - {uses: website-brand-brain-builder, note: "Start here so the rest uses your real prices, terms, colours and claims."}
-  - {uses: hidden-offer-finder, note: "Read the prices and deals in the brand file, flag clashes and pick the offer to build ads on."}
+  - {uses: hidden-offer-finder, note: "Read the prices and deals in the org context, flag clashes and pick the offer to build ads on."}
   - {uses: three-way-offer-image-ad-planner, note: "Use the chosen offer to plan three ads that each show it a different way, in two sizes."}
   - {uses: meta-ads-compliance-checker, note: "Check all three ads and their words against Facebook and Instagram ad rules before launch."}
 origin: rebuilt

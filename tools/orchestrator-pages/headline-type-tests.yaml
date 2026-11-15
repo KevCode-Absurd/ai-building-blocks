@@ -48,7 +48,7 @@ output_sample:
     - Your customer reviews or other customer words (optional)
   prerequisites:
     - An AI chat that can work through a folder of files, such as Claude Code or a Claude Project
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: Buying reasons"
       contains: Your top three reasons to buy, each with where it goes and the proof that backs it.

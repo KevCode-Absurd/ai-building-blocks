@@ -215,7 +215,7 @@ improve:
   - Export reach and frequency with every run. They're what tells "tired of the ad" apart from "running out of new people".
   - Add the exact column names your ad platform exports to step 1, so the skill reads them the same way every month.
   - If your sales have a known pattern, such as a weekly email day or a slow January, add it to the list of explanations in step 3 so it gets weighed with the others.
-  - After each run, write down which finding turned out to be true in log.md in your brand file, under Results. Paste those notes in next time as your change log.
+  - After each run, write down which finding turned out to be true in log.md in your org context, under Results. Paste those notes in next time as your change log.
   - Pair it with a skill that turns your ad numbers into a one-page report when someone else needs the short version, and with a landing page check when the reasons point to what happens after the click.
 
 works_best_with:

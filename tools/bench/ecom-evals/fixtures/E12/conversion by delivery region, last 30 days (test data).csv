@@ -1,0 +1,4 @@
+# (test data) Site sessions and orders by region. Built for an e-commerce eval. Not Sleepy Owl Coffee's real figures.
+region,sessions,orders,conversion_rate
+Delhi NCR (2 to 3 day delivery),41000,1640,4.0%
+Rest of India (5 to 7 day delivery),99000,1730,1.7%

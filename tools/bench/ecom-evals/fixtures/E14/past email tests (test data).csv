@@ -1,0 +1,7 @@
+# (test data) Klaviyo A/B tests from 2026, USD revenue per recipient. Built for an e-commerce eval. Not Graza's real figures.
+test,month,segment,plain_text_rpr,designed_rpr,result
+Founders' plain-text note vs designed email,Jun 2026,Repeat buyers aged 45+,1.92,0.88,plain text won
+Founders' plain-text note vs designed email,Jun 2026,Repeat buyers under 45,0.71,0.79,no clear winner
+Founders' plain-text note vs designed email,Jun 2026,Subscribers who never bought,0.21,0.47,designed won
+20% code vs no code (holdout),Black Friday 2025,Refill can buyers,,,"Order rate 9.1% with code, 8.8% without"
+20% code vs no code (holdout),Black Friday 2025,One-time buyers,,,"Order rate 6.4% with code, 2.9% without"

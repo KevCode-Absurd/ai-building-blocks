@@ -1,0 +1,5 @@
+# (test data) Shelf prices in US grocery, Nov 2026, for this test. Built for an e-commerce eval. Not Graza's real figures.
+item,price_range_usd
+"Olive oil spray, 5 to 7 oz, leading brands",6 to 9
+"Avocado oil mayo, 12 oz",8 to 11
+"High heat blended oil, 750 mL",9 to 15

@@ -22,7 +22,7 @@ you_give:
   - "Your buyer: a persona, or a plain description"
   - Product facts, actual capabilities, limits and claim evidence if available; missing proof blocks claim approval
   - Reviews, call notes or survey answers in the buyer's words (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - The result written as a place the buyer arrives
   - Stages from today to that place, in order
@@ -38,7 +38,7 @@ output_sample:
     - Your buyer, as a persona or a plain description
     - Your product facts, limits and any proof of claims
     - Reviews, call notes or survey answers in the buyer's words (optional)
-    - Your brand brain files (optional)
+    - Your org context files (optional)
   output:
     - name: Desired result
       contains: The place the buyer wants to arrive, written without your product name, in their words where you gave any.

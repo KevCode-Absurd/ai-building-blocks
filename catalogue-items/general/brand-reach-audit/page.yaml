@@ -23,7 +23,7 @@ not_for:
   - "You want ways to keep your current customers buying: this audit aims at new buyers, so ask a person who runs your customer email or loyalty plan."
 
 you_give:
-  - Your brand file with what you sell, who buys and how (required). If you have none, make one with the Brand profile builder, or write a few plain lines
+  - Your org context with what you sell, who buys and how (required). If you have none, make one with the Org context builder, or write a few plain lines
   - Sales data, with buyers, orders and how often each buys (optional)
   - Notes on your buyers or a buyer profile (optional)
 you_get:
@@ -34,13 +34,13 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your brand file, then a sales summary with the number of buyers, orders and repeat rate.
+  - Paste your org context, then a sales summary with the number of buyers, orders and repeat rate.
   - Add what you know about when and why people buy in your category, even if it is rough.
   - Read the three gaps first. Check anything marked MISSING by asking ten recent buyers.
   - Pick the fix and run it as a small test with a number to hit and a date.
 output_sample:
   input:
-    - Your brand file with what you sell, who buys and how
+    - Your org context with what you sell, who buys and how
     - Sales data with buyers, orders and how often each buys (optional)
     - Notes on your buyers or a buyer profile (optional)
   output:
@@ -129,7 +129,7 @@ test:
 
 improve:
   - Add your category's usual buying moments to step 3 so it starts from a fuller list.
-  - Save your list of cues to your brand file and check ads against it.
+  - Save your list of cues to your org context and check ads against it.
   - Add the places you sell and the hours you are open, so the find-and-buy check has the facts.
   - Pair it with "Growth lever audit" to size each gain.
 

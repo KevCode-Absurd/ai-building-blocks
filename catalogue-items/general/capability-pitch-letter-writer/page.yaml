@@ -25,7 +25,7 @@ not_for:
 you_give:
   - "What you can do and past work"
   - "Who you are writing to and what they need most"
-  - "Your brand file (optional)"
+  - "Your org context (optional)"
 you_get:
   - "A letter with a numbered list of concrete offers"
   - "A proof offer for any hard-to-believe item"
@@ -43,7 +43,7 @@ output_sample:
     - What you can do, with your past work
     - Who you are writing to
     - Their main need
-    - Your brand brain or voice notes (optional)
+    - Your org context or voice notes (optional)
   output:
     - name: Letter
       contains: A ready-to-send letter with a numbered list of concrete offers, main need first, a trial offer and a polite close.
@@ -103,7 +103,7 @@ tweaks:
   - what: "Your past work"
     how: "Real examples let you mark more items CAN SHOW."
   - what: "Your voice"
-    how: "Share your brand file or a sample email so it sounds like you."
+    how: "Share your org context or a sample email so it sounds like you."
   - what: "Trial terms"
     how: "Say what you can run and where."
 
@@ -131,7 +131,7 @@ works_best_with:
     - {name: "Any good chat AI", why: "Drafting and trimming a letter is text work any strong chat AI does well."}
     - {name: "A notes app", why: "Keep your list of items you can show, with proof, ready to reuse."}
   inputs:
-    - "Your brand file"
+    - "Your org context"
     - "Links to past work"
     - "Recent news about the reader's company"
 

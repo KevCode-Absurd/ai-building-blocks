@@ -1,10 +1,10 @@
 new_slug: best-offer-page-and-ad
 name: "Find your best offer and write the page and ad"
-summary: "Find the offer worth testing, then get an article-style page, a 30-point check and a matching ad. Built from your brand file and live deals."
+summary: "Find the offer worth testing, then get an article-style page, a 30-point check and a matching ad. Built from your org context and live deals."
 job: make-offer
 
 headline: "Find your best offer and write the page and ad"
-subhead: Give it your brand file and a list of what is live now. It finds the clashes in your live deals and three offers to try first, writes an article-style page for the one you pick, checks that page in 30 points, then writes the matching ad.
+subhead: Give it your org context and a list of what is live now. It finds the clashes in your live deals and three offers to try first, writes an article-style page for the one you pick, checks that page in 30 points, then writes the matching ad.
 
 explain: |
   Many shops run deals that quietly clash, such as a pop-up with one discount while an ad shows another. Fix that and choose one offer to test before you write a page or an ad. Two deals that disagree lose the sale.
@@ -21,7 +21,7 @@ not_for:
   - You only need to review a page you already have. Use the Landing page conversion reviewer.
 
 you_give:
-  - Your brand file, with prices, deals, guarantee and terms
+  - Your org context, with prices, deals, guarantee and terms
   - Every deal live now, such as ads, pop-ups and site offers, and where you saw each
   - "A short brief for the ad: who the offer is for and what it should say"
   - Your cost per order, if you know it (optional)
@@ -36,7 +36,7 @@ you_get:
 how_to_use:
   - Download the handoff pack. It is a zip with HANDOFF.md and the skill files this workflow uses.
   - Give the folder to Claude, in Claude Code or as files in a Claude Project. Say "Follow HANDOFF.md". This needs an AI that can read and save files.
-  - Add your brand file, a list of every deal live now with where you saw each one, and a short brief for the ad.
+  - Add your org context, a list of every deal live now with where you saw each one, and a short brief for the ad.
   - Let it work step by step. Fix any clash it finds before you launch, and check the price and terms against your own records.
   - Pick the offer to take forward when step 1 gives you three.
   - The ad step applies the five fixes from the 30-point check to the page text. Make the same fixes on your real page.
@@ -44,14 +44,14 @@ how_to_use:
   - Use the ad copy and the image brief to build your ad. Check your platform's ad rules before you publish.
 output_sample:
   input:
-    - Your brand file, with prices, deals and terms
+    - Your org context, with prices, deals and terms
     - Everything live now, such as ads, pop-ups and site offers, and where you saw each
     - Who the offer is for (optional)
     - Customer reviews (optional)
     - Your costs and margin floor (optional)
   prerequisites:
     - An AI that can read files, so it can follow HANDOFF.md and save each step's result
-    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your org context from the Org context builder (optional, makes the result better)
   output:
     - name: step-01-hidden-offer-finder.md
       contains: Your live deals, the clashes between them, and three offers to try first, each worded three ways.
@@ -98,7 +98,7 @@ example:
   business: sprout
   input: |
     [the handoff pack] Follow HANDOFF.md.
-    Brand file: sprout-brand/
+    Org context: sprout-brand/
     Live now: ad says 61% off, pop-up says 55% off, first box $29.99.
   output: |
     LIVE DEALS

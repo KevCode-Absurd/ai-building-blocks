@@ -23,7 +23,7 @@ you_give:
   - What a visitor could tell you that shows how big the problem is
   - Your ad spend, sign-ups and how many leads fit your buyer, after a run
   - Your main offer and its price
-  - Your brand brain (optional)
+  - Your org context (optional)
 you_get:
   - "A free checker with its questions, score, what each band says and where to ask for the email"
   - Cost per qualified lead, which campaign wins and the friction to add, one lever at a time
@@ -40,10 +40,10 @@ output_sample:
     - What a visitor could tell you that shows how big the problem is
     - Your ad spend, sign-ups and how many leads fit your buyer, after a run
     - Your main offer and its price
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - Time to build the checker and run it for one to two weeks before step 2
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Free checker plan
       contains: The problem, up to five questions, the score rule, what each band says and where the email ask goes.

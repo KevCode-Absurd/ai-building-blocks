@@ -22,7 +22,7 @@ not_for:
 you_give:
   - The week's posts and replies, exported from your own community, with handles, channels and reply counts
   - Members joined, active, first-time posters and left, for the week (advised)
-  - Your brand brain and what the community is for (advised)
+  - Your org context and what the community is for (advised)
   - Launches, milestones and events in the next month (advised)
   - The community plan, once it exists
 you_get:
@@ -44,7 +44,7 @@ output_sample:
   input:
     - The week's posts and replies from your community, with handles, channels and reply counts
     - Members joined, active, first-time posters and left (optional)
-    - Your brand brain and what the community is for (optional)
+    - Your org context and what the community is for (optional)
     - Launches, milestones and events in the next month (optional)
   prerequisites:
     - An AI that can keep files between weeks, such as Claude Code, to track past recognitions
@@ -124,7 +124,7 @@ example:
     stuff (thanked two weeks ago for the same); handle K hit 50 posts.
     Coming up: the group turns one year old on 2 Nov; the new limited
     flavour lands 28 Oct.
-    Brand brain attached.
+    Org context attached.
   output: pending
 tweaks:
   - what: Unanswered rule

@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Makes it better (optional):**
-- **Brand file** (its products and buyers part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its products and buyers part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 - **Your image ads** (yours): the image ads, attached as pictures.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
@@ -32,15 +32,15 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand file.
-3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand file and offer and buying reasons.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your org context.
+3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your org context and offer and buying reasons.
 4. This one.
 
-**From the brand file, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`, `foundation/claims.md`, `foundation/customer-talk.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
 2. **Check what's missing.** Look for an image, a draft, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
@@ -49,7 +49,7 @@ How to start:
 - **Your image ad**, attached as a file (required)
 - **The headline and primary text** that go with the ad (required). Paste them in full.
 - **Your offer** (required): what you sell, the real price, shipping, returns and any guarantee. The page states the full cost, and cannot if these are missing.
-- **Your brand file** (optional). The run works without it. If there is none, ask for the facts the page needs and mark any gap `MISSING:`.
+- **Your org context** (optional). The run works without it. If there is none, ask for the facts the page needs and mark any gap `MISSING:`.
 - **Real customer words** such as reviews or pre-sale questions (optional). Step 3 turns them into the doubts the page answers.
 - **The page type** the ad goes to, such as a product page, an article-style page or a quiz (optional). Step 1 judges the match against it.
 
@@ -65,7 +65,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Static ad critic.** Use the skill `static-ad-critic`. It takes the ad image and its headline and primary text. Starts with your ad and gives back a checked version with its copy: a score out of 100, the path the eye follows, ranked fixes, a page match note, two stronger headlines and fixed ad copy. Save `outputs/step-01-static-ad-critic.md`.
 2. **Ad awareness stage checker.** Use the skill `ad-awareness-stage-checker`. It takes the fixed ad copy in `outputs/step-01-static-ad-critic.md`. Reads the fixed ad copy and says how much the buyer already knows when the ad starts, with evidence, any clash between picture and words, and a score. Hands the ad copy, rewritten to fit that stage, to step 3. Save `outputs/step-02-ad-awareness-stage-checker.md`.
-3. **Ad-matched landing page writer.** Use the skill `ad-matched-landing-page-writer`. It takes the rewritten ad copy in `outputs/step-02-ad-awareness-stage-checker.md`, the person's offer, and the brand file and customer words if given. Writes the landing page from the ad copy so the page repeats the ad's promise. Also uses your brand brain and offer, and hands the page to step 4. The first screen repeats the promise, each buyer doubt has its own section, and the full cost is stated. If no customer words were given, mark each doubt as an assumption with `MISSING: customer words`. Never invent a buyer objection or a review. It lists any facts still missing. Save `outputs/step-03-ad-matched-landing-page-writer.md`.
+3. **Ad-matched landing page writer.** Use the skill `ad-matched-landing-page-writer`. It takes the rewritten ad copy in `outputs/step-02-ad-awareness-stage-checker.md`, the person's offer, and the org context and customer words if given. Writes the landing page from the ad copy so the page repeats the ad's promise. Also uses your org context and offer, and hands the page to step 4. The first screen repeats the promise, each buyer doubt has its own section, and the full cost is stated. If no customer words were given, mark each doubt as an assumption with `MISSING: customer words`. Never invent a buyer objection or a review. It lists any facts still missing. Save `outputs/step-03-ad-matched-landing-page-writer.md`.
 4. **Meta ads compliance checker.** Use the skill `meta-ads-compliance-checker`. It takes the ad copy in `outputs/step-02-ad-awareness-stage-checker.md` and the page in `outputs/step-03-ad-matched-landing-page-writer.md`. Checks the final ad and page together before they go live. It gives a verdict, a score out of 100, findings with fixes and a rewritten ad checked against the rules listed in the skill. Meta's ad policy changes, so confirm it against Meta's current policy before you publish. Save `outputs/step-04-meta-ads-compliance-checker.md`.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

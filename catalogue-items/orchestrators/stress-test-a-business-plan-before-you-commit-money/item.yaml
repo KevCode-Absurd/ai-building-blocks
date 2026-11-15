@@ -8,7 +8,6 @@ job: analysis
 level: intermediate
 inputs:
   - {type: business_plan, required: true}
-  - {type: idea, required: false}
 outputs:
   - {type: document}
   - {type: audit_report}

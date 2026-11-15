@@ -44,7 +44,7 @@ output_sample:
   prerequisites:
     - A paid Claude plan that includes Claude Code, and a Shopify store you can sign in to, for the build in step 4. One source video put the Claude plan at about 20 dollars a month, so check current prices
     - Node, Git and the Shopify CLI installed on your computer, for the build in step 4
-    - A brand brain from the Website brand brain builder (optional)
+    - An org context from the Org context builder (optional)
   output:
     - name: "Step 1: Products and variants"
       contains: Each product's type, shared options, a variant table and a list of what is still missing.
@@ -101,5 +101,5 @@ test:
   - Run step 4's first section on the copy only. Compare the preview with your plan before you continue.
 improve:
   - Add a section at a time and review each one on your phone before you ask for the next.
-  - Keep the product facts from step 1 in your brand file so the next build starts from them.
+  - Keep the product facts from step 1 in your org context so the next build starts from them.
   - Duplicate the live theme again before every new round of edits.

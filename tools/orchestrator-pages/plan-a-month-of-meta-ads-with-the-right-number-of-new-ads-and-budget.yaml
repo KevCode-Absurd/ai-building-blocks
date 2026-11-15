@@ -44,7 +44,7 @@ output_sample:
     - Customer reviews, support emails or survey answers, with source and date
   prerequisites:
     - An AI that can work with files, such as Claude Code or a Claude Project, because the steps save files to an outputs folder
-    - Your brand brain from the Website brand brain builder (optional, it makes the result better)
+    - Your org context from the Org context builder (optional, it makes the result better)
   output:
     - name: step-01-creative-volume-planner.md
       contains: A range of new ads per month with a start number, split by format and by week.
@@ -108,7 +108,7 @@ test:
   - Read five concepts against your reviews and confirm each one starts from something a buyer said.
   - Run the same inputs twice and see if the quota and the top channel stay close.
 improve:
-  - Save the concept matrix in your brand file and reuse it next month. Only add new reviews.
+  - Save the concept matrix in your org context and reuse it next month. Only add new reviews.
   - Edit the budget skill's loss limit to a number you are comfortable with.
   - Add your ad naming rule to the test planner so every month follows one pattern.
   - After the month, feed results back in and ask the quota step to recalculate your hit rate.

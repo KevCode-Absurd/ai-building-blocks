@@ -23,7 +23,7 @@ you_give:
   - The words you would search for to find people with the problem
   - Your budget and days for a test
   - Anything you already know about rivals or workarounds (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - A list of what people complain about, how they cope today and when they say they would buy, with links
   - A half-page buyer brief in their own words
@@ -39,7 +39,7 @@ output_sample:
     - Your idea in a sentence or two, and who it is for
     - The words you would search for to find people with the problem
     - What you know about rivals or workarounds (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - A ScrapeCreators account (paid) if you want step 1 to read public posts, or posts you gathered and pasted yourself
     - An AI that can read files, such as Claude Code or a Claude Project
@@ -87,7 +87,7 @@ tweaks:
     how: Say your budget and days. Step 4 picks tests that fit them.
   - what: A past idea you killed
     how: Paste why. The kill check uses it as a pattern to look for.
-  - what: Your brand file
+  - what: Your org context
     how: Add it so the brief uses your voice and your product facts.
 judge:
   - Every pain and buying signal in step 1 has a link or a quote, not a guess.

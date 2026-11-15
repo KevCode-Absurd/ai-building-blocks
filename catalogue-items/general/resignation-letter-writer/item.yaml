@@ -16,5 +16,4 @@ outputs:
 origin: own
 version: 1.0.0
 next:
-  - email-draft-reviewer
   - email-send-readiness-scorer

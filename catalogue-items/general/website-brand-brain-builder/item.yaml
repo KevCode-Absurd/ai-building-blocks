@@ -1,7 +1,7 @@
 slug: website-brand-brain-builder
-renamed_from: website-brand-file-builder
-name: Brand file builder
-summary: Share your website. Get one brand file with your offers, facts, buyers, claims, voice and look, each with a source and date.
+renamed_from: website-brand-brain-builder
+name: "Org context builder"
+summary: "Build one org context from your website and what you already have. Who you are, your buyers, voice, look, markets and claims, each with a source and date."
 category: general
 boards:
   - ecommerce

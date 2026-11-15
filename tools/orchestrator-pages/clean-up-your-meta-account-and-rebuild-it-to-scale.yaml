@@ -42,7 +42,7 @@ output_sample:
     - After the second pause, results by ad set, plus your cash and stock position
   prerequisites:
     - An AI that can read files, such as Claude with the handoff pack
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1 file: Meta campaign purpose checker"
       contains: A one-line purpose for each campaign, setup errors found, a score, and a keep, merge or cut call.

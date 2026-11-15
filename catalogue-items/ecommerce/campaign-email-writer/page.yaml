@@ -94,7 +94,7 @@ output_shape: |
   A: <as written> | B: <one thing changed: ...>
 
   CLAIMS CHECK
-  <claim | fact in your brand file | pass or fail>
+  <claim | fact in your org context | pass or fail>
   CHECKS MISSED: <none | list>
   MISSING: <product facts | doubts | voice | reviews>
 tweaks:
@@ -123,7 +123,7 @@ test:
 improve:
   - Add your brand voice rules and banned phrases to the skill file, so every draft starts from them.
   - Add your claims register, so the check compares each line with approved wording.
-  - Save your best-performing emails to your brand file as examples of the voice.
+  - Save your best-performing emails to your org context as examples of the voice.
   - Add your region's rules on health or finance claims as an extra check.
   - Pair it with the email test planner for variants, the email layout brief writer for design and the email design checker before sending.
 works_best_with:

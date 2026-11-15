@@ -23,7 +23,7 @@ you_give:
   - Who does the work and how many hours a week they have
   - Five to ten rivals (optional)
   - Search data or past sales (optional)
-  - Your brand file and product facts (optional)
+  - Your org context and product facts (optional)
 you_get:
   - A 90-day plan sized to your hours, with one category, five core questions and the order to publish
   - A log of who each AI assistant named, linked or left out, your share of voice and a visibility score out of 100
@@ -40,7 +40,7 @@ output_sample:
     - Your category, with the collection page and three or four product pages
     - Who does the work and how many hours a week they have
     - Five to ten rivals (optional)
-    - Your brand file and product facts (optional)
+    - Your org context and product facts (optional)
   prerequisites:
     - Access to the AI assistants you want to test, so you can run the questions and paste back the answers
     - A real team member who can post on Reddit under their own name
@@ -101,6 +101,6 @@ test:
   - After a placement goes live, run the panel again and compare share of voice.
 improve:
   - Add your claim rules to the Reddit skill, so answers never say more than you can prove.
-  - Save each panel log in your brand file, so you can see change over time.
+  - Save each panel log in your org context, so you can see change over time.
   - Add the sites you already have good relationships with to the target skill.
   - Re-run the panel on the dates in the plan, not just once.

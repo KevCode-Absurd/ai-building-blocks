@@ -19,7 +19,7 @@ not_for:
   - "You need real people holding your product, or one specific model: AI images still handle this badly. Use real photos or a creator video."
   - "The text on the image must be exact for legal reasons: have a designer set it, or lock the words with the Exact-text image ad prompt writer."
   - "You only want the visual look worked out, with no prompts: use the Eight-lever ad visual planner."
-  - "You have no approved ad words or brand rules yet: write them first with the Fact-based ad copy writer and the Brand profile builder."
+  - "You have no approved ad words or brand rules yet: write them first with the Fact-based ad copy writer and the Org context builder."
   - You only need a crop or a resize. A plain photo editor is faster.
 you_give:
   - Your product photos, at least 512 pixels on the short side (required)

@@ -22,7 +22,7 @@ you_give:
   - What you sell and the groups you could reach
   - Size and cost for each group, if you know them
   - Results showing who bought what, and when (optional)
-  - A buyer persona or your brand file (optional)
+  - A buyer persona or your org context (optional)
   - The deal you want to run, with real numbers
   - Your product facts and what each order costs to make and deliver
   - How much you can afford to lose on a test
@@ -46,7 +46,7 @@ output_sample:
     - Results showing who bought what, and when (optional)
   prerequisites:
     - An AI that can read the files in the handoff pack, such as Claude with files
-    - A brand brain from the Website brand brain builder (optional)
+    - An org context from the Org context builder (optional)
   output:
     - name: Hungry audience ladder
       contains: Each group ranked from coldest to hungriest, with the buying proof, the first test group, two backups and checks.
@@ -112,5 +112,5 @@ test:
   - Change your delivery cost and run it again. The break-even response should move with it.
 improve:
   - Save each test result by group, so the next run starts from real response numbers.
-  - Add your best past reason why to your brand file, and the ones that failed.
+  - Add your best past reason why to your org context, and the ones that failed.
   - After a win, re-run the ladder to see which colder group to test next.

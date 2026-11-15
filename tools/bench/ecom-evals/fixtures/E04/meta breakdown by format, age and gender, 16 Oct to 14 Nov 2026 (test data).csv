@@ -1,0 +1,192 @@
+# (test data) Meta Ads Manager breakdown export, USD. Built for an e-commerce eval. Not Taylor Stitch's real figures.
+campaign,ad_format,age,gender,spend,impressions,link_clicks,purchases,purchase_value
+ASC | All products,single image,18-24,men,1590,100548,1266,15,2939
+ASC | All products,single image,18-24,women,349,21888,291,2,383
+ASC | All products,single image,25-34,men,5678,385575,4445,82,15865
+ASC | All products,single image,25-34,women,1246,81961,1108,14,2611
+ASC | All products,single image,35-44,men,6360,440488,6140,89,16653
+ASC | All products,single image,35-44,women,1396,93329,994,15,2940
+ASC | All products,single image,45-54,men,4543,307847,3710,66,12727
+ASC | All products,single image,45-54,women,997,59515,769,11,2074
+ASC | All products,single image,55-64,men,2726,169349,1964,36,6673
+ASC | All products,single image,55-64,women,598,34295,454,6,1101
+ASC | All products,single image,65+,men,1817,109880,1408,23,4322
+ASC | All products,single image,65+,women,2600,177760,2393,65,13390
+ASC | All products,carousel,18-24,men,1060,64542,796,10,1820
+ASC | All products,carousel,18-24,women,233,15239,163,2,377
+ASC | All products,carousel,25-34,men,3786,244052,2992,51,9797
+ASC | All products,carousel,25-34,women,831,51412,632,9,1629
+ASC | All products,carousel,35-44,men,4240,259346,2748,54,9861
+ASC | All products,carousel,35-44,women,931,55856,573,10,1870
+ASC | All products,carousel,45-54,men,3028,183309,1840,45,8853
+ASC | All products,carousel,45-54,women,665,38419,516,7,1332
+ASC | All products,carousel,55-64,men,1817,108008,1251,27,5038
+ASC | All products,carousel,55-64,women,399,24962,344,5,942
+ASC | All products,carousel,65+,men,1211,79247,1019,15,2739
+ASC | All products,carousel,65+,women,700,42143,587,6,1077
+ASC | All products,video,18-24,men,1855,117267,1643,19,3648
+ASC | All products,video,18-24,women,407,25142,317,3,580
+ASC | All products,video,25-34,men,6625,427354,6071,81,15259
+ASC | All products,video,25-34,women,1454,82756,903,16,2974
+ASC | All products,video,35-44,men,7420,491168,6036,95,17298
+ASC | All products,video,35-44,women,1629,109786,1381,21,3796
+ASC | All products,video,45-54,men,5300,318130,3274,80,14297
+ASC | All products,video,45-54,women,1163,71249,962,14,2557
+ASC | All products,video,55-64,men,3180,205457,2799,41,8077
+ASC | All products,video,55-64,women,698,40265,494,8,1462
+ASC | All products,video,65+,men,2120,134209,1918,23,4149
+ASC | All products,video,65+,women,1500,88983,1000,9,1750
+ASC | All products,catalog,18-24,men,795,52807,586,7,1369
+ASC | All products,catalog,18-24,women,174,9903,141,1,190
+ASC | All products,catalog,25-34,men,2839,179774,2391,40,7274
+ASC | All products,catalog,25-34,women,623,39098,391,7,1277
+ASC | All products,catalog,35-44,men,3180,212173,2982,49,9038
+ASC | All products,catalog,35-44,women,698,41206,400,7,1259
+ASC | All products,catalog,45-54,men,2271,137452,1554,30,5369
+ASC | All products,catalog,45-54,women,499,30910,307,6,1095
+ASC | All products,catalog,55-64,men,1363,94373,1144,19,3412
+ASC | All products,catalog,55-64,women,299,20587,286,3,574
+ASC | All products,catalog,65+,men,908,51825,637,10,1968
+ASC | All products,catalog,65+,women,199,12488,132,2,357
+Prospecting | Jackets,single image,18-24,men,654,50477,564,5,1088
+Prospecting | Jackets,single image,18-24,women,144,9817,127,1,212
+Prospecting | Jackets,single image,25-34,men,2337,160996,2161,29,6387
+Prospecting | Jackets,single image,25-34,women,513,35348,404,5,1109
+Prospecting | Jackets,single image,35-44,men,2617,174419,2307,30,6663
+Prospecting | Jackets,single image,35-44,women,575,44934,471,6,1324
+Prospecting | Jackets,single image,45-54,men,1870,126389,1707,22,4645
+Prospecting | Jackets,single image,45-54,women,410,32534,441,4,895
+Prospecting | Jackets,single image,55-64,men,1122,88999,1165,13,2756
+Prospecting | Jackets,single image,55-64,women,246,16156,162,3,651
+Prospecting | Jackets,single image,65+,men,748,53303,520,8,1706
+Prospecting | Jackets,single image,65+,women,164,12235,137,1,207
+Prospecting | Jackets,carousel,18-24,men,654,47880,686,5,1100
+Prospecting | Jackets,carousel,18-24,women,144,10209,117,1,222
+Prospecting | Jackets,carousel,25-34,men,2337,154283,2101,28,6038
+Prospecting | Jackets,carousel,25-34,women,513,33507,430,5,1123
+Prospecting | Jackets,carousel,35-44,men,2617,191039,2196,35,7229
+Prospecting | Jackets,carousel,35-44,women,575,37923,488,6,1273
+Prospecting | Jackets,carousel,45-54,men,1870,136604,1907,26,5686
+Prospecting | Jackets,carousel,45-54,women,410,28698,387,4,831
+Prospecting | Jackets,carousel,55-64,men,1122,78560,856,13,2673
+Prospecting | Jackets,carousel,55-64,women,246,17455,203,2,446
+Prospecting | Jackets,carousel,65+,men,748,55761,675,9,1878
+Prospecting | Jackets,carousel,65+,women,164,11841,130,1,220
+Prospecting | Jackets,video,18-24,men,872,65277,838,7,1496
+Prospecting | Jackets,video,18-24,women,192,12859,141,1,217
+Prospecting | Jackets,video,25-34,men,3116,224826,3085,37,8062
+Prospecting | Jackets,video,25-34,women,684,54110,649,6,1312
+Prospecting | Jackets,video,35-44,men,3490,228909,3018,44,9109
+Prospecting | Jackets,video,35-44,women,766,51698,618,8,1663
+Prospecting | Jackets,video,45-54,men,2493,169386,1896,30,6416
+Prospecting | Jackets,video,45-54,women,547,37988,370,5,1094
+Prospecting | Jackets,video,55-64,men,1496,118670,1706,18,4021
+Prospecting | Jackets,video,55-64,women,328,23457,231,3,639
+Prospecting | Jackets,video,65+,men,997,68228,946,10,2234
+Prospecting | Jackets,video,65+,women,219,17189,243,2,414
+Prospecting | Shirts and chinos,single image,18-24,men,571,46519,587,4,592
+Prospecting | Shirts and chinos,single image,18-24,women,125,9270,96,1,147
+Prospecting | Shirts and chinos,single image,25-34,men,2037,173089,1926,22,3467
+Prospecting | Shirts and chinos,single image,25-34,women,447,31819,321,4,630
+Prospecting | Shirts and chinos,single image,35-44,men,2282,181282,2485,30,4332
+Prospecting | Shirts and chinos,single image,35-44,women,501,39778,463,5,731
+Prospecting | Shirts and chinos,single image,45-54,men,1630,135958,1683,18,2743
+Prospecting | Shirts and chinos,single image,45-54,women,358,28237,338,3,468
+Prospecting | Shirts and chinos,single image,55-64,men,978,73341,777,10,1520
+Prospecting | Shirts and chinos,single image,55-64,women,215,17474,191,2,305
+Prospecting | Shirts and chinos,single image,65+,men,652,48121,485,6,901
+Prospecting | Shirts and chinos,single image,65+,women,1300,99530,1415,30,5940
+Prospecting | Shirts and chinos,carousel,18-24,men,428,30570,309,3,457
+Prospecting | Shirts and chinos,carousel,18-24,women,94,6928,72,1,157
+Prospecting | Shirts and chinos,carousel,25-34,men,1528,120945,1703,17,2508
+Prospecting | Shirts and chinos,carousel,25-34,women,335,25753,291,3,438
+Prospecting | Shirts and chinos,carousel,35-44,men,1711,133785,1373,19,2843
+Prospecting | Shirts and chinos,carousel,35-44,women,376,28152,281,3,472
+Prospecting | Shirts and chinos,carousel,45-54,men,1222,89208,1075,16,2332
+Prospecting | Shirts and chinos,carousel,45-54,women,268,21298,257,3,473
+Prospecting | Shirts and chinos,carousel,55-64,men,733,53357,679,8,1174
+Prospecting | Shirts and chinos,carousel,55-64,women,161,11301,126,1,154
+Prospecting | Shirts and chinos,carousel,65+,men,489,34311,346,5,762
+Prospecting | Shirts and chinos,carousel,65+,women,107,7729,93,1,147
+Prospecting | Shirts and chinos,video,18-24,men,428,32571,355,3,456
+Prospecting | Shirts and chinos,video,18-24,women,94,6747,94,1,145
+Prospecting | Shirts and chinos,video,25-34,men,1528,107562,1118,16,2338
+Prospecting | Shirts and chinos,video,25-34,women,335,24986,323,3,453
+Prospecting | Shirts and chinos,video,35-44,men,1711,128979,1845,20,3089
+Prospecting | Shirts and chinos,video,35-44,women,376,29971,360,4,631
+Prospecting | Shirts and chinos,video,45-54,men,1222,93809,1095,16,2508
+Prospecting | Shirts and chinos,video,45-54,women,268,20600,249,3,440
+Prospecting | Shirts and chinos,video,55-64,men,733,60481,860,8,1257
+Prospecting | Shirts and chinos,video,55-64,women,161,12560,138,1,148
+Prospecting | Shirts and chinos,video,65+,men,489,39122,511,5,738
+Prospecting | Shirts and chinos,video,65+,women,107,9013,103,1,147
+Retargeting | 30d visitors and engagers,single image,18-24,men,379,11347,217,8,1417
+Retargeting | 30d visitors and engagers,single image,18-24,women,83,2796,63,1,176
+Retargeting | 30d visitors and engagers,single image,25-34,men,1353,39705,880,34,6203
+Retargeting | 30d visitors and engagers,single image,25-34,women,297,10325,196,7,1282
+Retargeting | 30d visitors and engagers,single image,35-44,men,1515,45077,809,43,7942
+Retargeting | 30d visitors and engagers,single image,35-44,women,333,11571,250,9,1513
+Retargeting | 30d visitors and engagers,single image,45-54,men,1082,36868,593,32,5681
+Retargeting | 30d visitors and engagers,single image,45-54,women,238,7416,128,5,916
+Retargeting | 30d visitors and engagers,single image,55-64,men,649,19203,328,21,3584
+Retargeting | 30d visitors and engagers,single image,55-64,women,143,4689,97,3,519
+Retargeting | 30d visitors and engagers,single image,65+,men,433,13288,257,10,1809
+Retargeting | 30d visitors and engagers,single image,65+,women,95,2865,63,2,367
+Retargeting | 30d visitors and engagers,carousel,18-24,men,379,12794,214,7,1230
+Retargeting | 30d visitors and engagers,carousel,18-24,women,83,2525,57,1,171
+Retargeting | 30d visitors and engagers,carousel,25-34,men,1353,44164,813,42,7576
+Retargeting | 30d visitors and engagers,carousel,25-34,women,297,10394,194,7,1204
+Retargeting | 30d visitors and engagers,carousel,35-44,men,1515,45481,878,42,7556
+Retargeting | 30d visitors and engagers,carousel,35-44,women,333,11234,210,8,1389
+Retargeting | 30d visitors and engagers,carousel,45-54,men,1082,35823,611,38,7019
+Retargeting | 30d visitors and engagers,carousel,45-54,women,238,8066,132,6,1028
+Retargeting | 30d visitors and engagers,carousel,55-64,men,649,21175,413,19,3390
+Retargeting | 30d visitors and engagers,carousel,55-64,women,143,4877,97,4,702
+Retargeting | 30d visitors and engagers,carousel,65+,men,433,12944,242,10,1769
+Retargeting | 30d visitors and engagers,carousel,65+,women,95,3062,70,2,345
+Retargeting | 30d visitors and engagers,catalog,18-24,men,505,16305,312,11,1865
+Retargeting | 30d visitors and engagers,catalog,18-24,women,111,3613,81,2,357
+Retargeting | 30d visitors and engagers,catalog,25-34,men,1804,56053,951,51,8770
+Retargeting | 30d visitors and engagers,catalog,25-34,women,396,12723,240,10,1760
+Retargeting | 30d visitors and engagers,catalog,35-44,men,2020,66568,1154,65,11562
+Retargeting | 30d visitors and engagers,catalog,35-44,women,444,15026,341,12,2146
+Retargeting | 30d visitors and engagers,catalog,45-54,men,1443,43690,800,50,8505
+Retargeting | 30d visitors and engagers,catalog,45-54,women,317,10194,203,8,1436
+Retargeting | 30d visitors and engagers,catalog,55-64,men,866,28339,493,27,4634
+Retargeting | 30d visitors and engagers,catalog,55-64,women,190,6085,143,5,863
+Retargeting | 30d visitors and engagers,catalog,65+,men,577,17469,286,14,2512
+Retargeting | 30d visitors and engagers,catalog,65+,women,127,4273,85,3,550
+Catalog | Viewed not bought,catalog,18-24,men,689,26716,362,10,1788
+Catalog | Viewed not bought,catalog,18-24,women,151,5976,81,2,369
+Catalog | Viewed not bought,catalog,25-34,men,2460,97952,1760,61,10599
+Catalog | Viewed not bought,catalog,25-34,women,540,23371,385,11,2027
+Catalog | Viewed not bought,catalog,35-44,men,2755,126195,2283,63,11662
+Catalog | Viewed not bought,catalog,35-44,women,605,27185,497,12,2180
+Catalog | Viewed not bought,catalog,45-54,men,1968,87979,1139,46,8486
+Catalog | Viewed not bought,catalog,45-54,women,432,17122,317,10,1770
+Catalog | Viewed not bought,catalog,55-64,men,1181,50347,668,32,5948
+Catalog | Viewed not bought,catalog,55-64,women,259,10596,193,5,909
+Catalog | Viewed not bought,catalog,65+,men,787,33650,642,15,2630
+Catalog | Viewed not bought,catalog,65+,women,173,7089,101,3,521
+Test | New creative,single image,18-24,men,172,14350,163,1,162
+Test | New creative,single image,25-34,men,615,47605,662,5,862
+Test | New creative,single image,25-34,women,135,11637,146,1,162
+Test | New creative,single image,35-44,men,689,56257,763,5,887
+Test | New creative,single image,35-44,women,151,13358,179,1,169
+Test | New creative,single image,45-54,men,492,39914,515,5,834
+Test | New creative,single image,45-54,women,108,8530,96,1,171
+Test | New creative,single image,55-64,men,295,24447,265,2,335
+Test | New creative,single image,55-64,women,65,5235,70,0,0
+Test | New creative,single image,65+,men,197,16690,209,2,356
+Test | New creative,single image,65+,women,43,3765,52,0,0
+Test | New creative,video,18-24,men,172,15778,165,1,176
+Test | New creative,video,25-34,men,615,52494,743,5,875
+Test | New creative,video,25-34,women,135,10621,130,1,164
+Test | New creative,video,35-44,men,689,60639,849,6,1049
+Test | New creative,video,35-44,women,151,11733,122,1,168
+Test | New creative,video,45-54,men,492,43095,611,5,825
+Test | New creative,video,45-54,women,108,9183,121,1,178
+Test | New creative,video,55-64,men,295,26664,283,2,330
+Test | New creative,video,55-64,women,65,5111,62,0,0
+Test | New creative,video,65+,men,197,15767,168,1,165
+Test | New creative,video,65+,women,43,3265,40,0,0

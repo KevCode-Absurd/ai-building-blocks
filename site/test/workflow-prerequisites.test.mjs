@@ -24,7 +24,7 @@ const json = (files, name) => JSON.parse(strFromU8(files[name]));
 test("marketing preparation is conditional on actual skill inputs and precedes generation", async () => {
   const f = workflow([skill("custom-ad", [port("brand_brain"), port("offer"), port("ad_copy", false), port("voc_reviews"), port("buyer_persona", false)], [port("ad_draft")])]);
   const { files } = await exportFiles(f), text = strFromU8(files["HANDOFF.md"]);
-  for (const label of ["Brand Brain or brand file", "Offer", "Ad copy", "Reviews", "Persona"]) assert.ok(text.includes(`**${label}:`), label);
+  for (const label of ["Org context", "Offer", "Ad copy", "Reviews", "Persona"]) assert.ok(text.includes(`**${label}:`), label);
   assert.ok(text.indexOf("### Reuse existing material") < text.indexOf("### Step 1:"));
   assert.match(text, /Do you already have this\?/);
   assert.match(text, /attachment, folder\/file path or URL/);
@@ -44,9 +44,9 @@ test("coding and finance packs gain no invented marketing inputs or example chec
     assert.deepEqual(contract.input_contracts.map(item => item.type), [input]);
     assert.deepEqual(register.entries.map(item => item.type), [input]);
     const preparation = strFromU8(files["HANDOFF.md"]).split("### Reuse existing material before making more")[1].split("## Steps")[0];
-    for (const example of ["**Brand Brain or brand file:", "**Offer:", "**Ad copy:", "**Reviews:", "**Persona:"]) assert.ok(!preparation.includes(example));
+    for (const example of ["**Org context:", "**Offer:", "**Ad copy:", "**Reviews:", "**Persona:"]) assert.ok(!preparation.includes(example));
   }
-  assert.ok(!prerequisiteMarkdown(["brand_brain_output", "offer_audit"]).includes("**Brand Brain or brand file:"));
+  assert.ok(!prerequisiteMarkdown(["brand_brain_output", "offer_audit"]).includes("**Org context:"));
 });
 
 test("upstream candidates and repeated types never become accepted or silently shared prerequisites", async () => {

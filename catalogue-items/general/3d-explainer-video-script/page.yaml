@@ -48,7 +48,7 @@ output_sample:
     - Your approved and banned claims
     - The length you want, from 20 to 40 seconds (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
     - A buyer brief from the Buyer brief writer (optional)
   output:
     - name: Tests
@@ -112,7 +112,7 @@ example:
     [the skill]
 
     Idea: answer "Does a gummy even do anything?" for the gut-fix
-    seeker (brand file).
+    seeker (org context).
     Facts (sprout/brand.md):
     - 1 pack: 60+ ingredients, 21 vitamins & minerals, 6 g prebiotic
       fiber (a branded fiber blend, inulin listed). Label.
@@ -217,7 +217,7 @@ test:
 improve:
   - Write how your product works as a sourced chain into "What you need" in the skill file, so step 2 starts from your facts.
   - Add your approved verbs and banned words to step 3, for example "supports" yes, "repairs" no.
-  - Save the parts key in your brand file, so every explainer uses the same colours and names.
+  - Save the parts key in your org context, so every explainer uses the same colours and names.
   - Pair it with "3D how-it-works video clip prompt writer", which runs the avatar, sheets, storyboard and clips.
 
 works_best_with:

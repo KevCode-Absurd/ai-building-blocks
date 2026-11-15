@@ -262,10 +262,10 @@ test:
   - Check that nothing depending on your landing page or targeting is rated "would reject". If it is, the skill skipped its own rule.
 
 improve:
-  - Attach proof-and-claims.md from your brand file, so a line like "Fix the Hot Girl Tummy" is flagged against your own claims list as well as Meta's rules.
+  - Attach proof-and-claims.md from your org context, so a line like "Fix the Hot Girl Tummy" is flagged against your own claims list as well as Meta's rules.
   - Write your field, product type, target countries and age range into the skill, so the right rules are checked and the restrictions section is filled in every time.
   - Delete the rows from the table that can never apply to you (for example weapons or gambling), so findings stay short.
-  - Every time a line gets flagged, add it to the house rules in 00-start-here.md, so every tool that loads your brand file avoids it.
+  - Every time a line gets flagged, add it to the house rules in 00-start-here.md, so every tool that loads your org context avoids it.
   - Re-read Meta's Advertising Standards page every few months and update the table. Meta says the rules can change without notice.
   - Pair it with a skill that checks a finished ad for craft mistakes before you spend, since this one only reads the rules. Policies change, so open Meta's live page when a finding surprises you.
 

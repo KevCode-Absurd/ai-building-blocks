@@ -27,7 +27,7 @@ you_give:
   - The ad idea, who it's for, the reason they'd buy and the format
   - How aware the buyer is, from "Buyer brief writer" (optional; it judges it if you don't)
   - What your market has already heard, or what competitors promise (optional)
-  - Your brand file, with the buyer's main doubt, proof and offer terms (optional)
+  - Your org context, with the buyer's main doubt, proof and offer terms (optional)
 you_get:
   - A paste-ready brief of under 200 words for one level and one stage
   - The first words, when the product enters, the ask, the length and how to argue, filled in for your buyer
@@ -39,14 +39,14 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Describe the ad idea and the buyer in two or three sentences.
   - Paste the awareness level and market stage from your buyer brief, if you have one.
-  - Paste the buyer's main doubt and your offer terms from your brand file.
+  - Paste the buyer's main doubt and your offer terms from your org context.
   - Copy the brief it returns into your writer's brief, word for word.
 output_sample:
   input:
     - "Your ad idea: who it is for, why they would buy, and the format"
     - How aware the buyer is (optional)
     - What your market has already heard, or what competitors promise (optional)
-    - Your brand file with the buyer's main doubt, proof and offer terms (optional)
+    - Your org context with the buyer's main doubt, proof and offer terms (optional)
   output:
     - name: Level
       contains: The one awareness level chosen for your buyer, with a few words on what that buyer knows.
@@ -108,7 +108,7 @@ example:
     From the buyer brief: product aware. Market stage 3, every greens
     brand promises nutrients.
 
-    Brand file:
+    Org context:
     - First box $29.99 ($1.07/day), text sign-up discount needed
     - Renews at $49.99 every 4 weeks ($1.78/day). One-time $66.65
       ($2.38/day)
@@ -171,7 +171,7 @@ improve:
   - Write your usual level and market stage into "What you need" in the skill file, so it stops falling back to defaults.
   - Add what every competitor already claims, so the market stage is judged from evidence.
   - Delete the rows you never write for, such as most aware if you never show ads to past visitors, to keep the brief short.
-  - Save each brief that produced a winning ad to your brand file, with the buyer it was for.
+  - Save each brief that produced a winning ad to your org context, with the buyer it was for.
   - Run "Buyer brief writer" first, then "Sales copy opening writer" for the opening line, and "Conversational video ad script writer" to write the ad.
 
 works_best_with:

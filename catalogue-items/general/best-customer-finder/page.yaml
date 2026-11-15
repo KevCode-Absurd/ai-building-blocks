@@ -27,7 +27,7 @@ you_give:
   - A customer list with what each paid and how long they stayed
   - A note on how well each one is to work with (optional)
   - Survey answers or reviews from customers, in their words (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - The top fifth of your customers
   - The three to five traits they share, each checked against the group
@@ -46,7 +46,7 @@ output_sample:
     - How well each one is to work with (optional)
     - Survey answers or reviews in customers' own words (optional)
     - How each customer first found you (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
   output:
     - name: The data
       contains: How many customers you gave, how big the top group is, and which measures it used.

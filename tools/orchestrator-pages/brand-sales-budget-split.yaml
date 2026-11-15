@@ -24,7 +24,7 @@ not_for:
 
 you_give:
   - Your marketing spend by channel and the results you track
-  - Your brand file, with your voice and positioning (optional)
+  - Your org context, with your voice and positioning (optional)
   - Your main competitors and roughly what they spend (optional)
 
 you_get:
@@ -35,14 +35,14 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your spend by channel and the numbers you track. Add your brand file and competitors if you have them.
+  - Paste your spend by channel and the numbers you track. Add your org context and competitors if you have them.
   - It works step by step and saves each result. Read the scorecard before you read the split.
   - Put the shift it suggests into one channel first, and don't judge it on a short window.
 output_sample:
   input:
     - Your marketing spend by channel, by month
     - The results you track, such as sales, leads or sign-ups
-    - Your brand file with voice and positioning (optional)
+    - Your org context with voice and positioning (optional)
     - Your main competitors and roughly what they spend (optional)
   prerequisites:
     - An AI chat that can read pasted text or files, such as Claude
@@ -107,7 +107,7 @@ test:
 
 improve:
   - Add the long-term measures you can collect, such as price sensitivity and brand surveys, to the scorecard.
-  - Save the scorecard and the split in your brand file, and re-run it each quarter.
+  - Save the scorecard and the split in your org context, and re-run it each quarter.
   - Add your own rule for what share of spend may go to untested channels.
 
 works_best_with:

@@ -192,7 +192,7 @@ test:
 improve:
   - Write your monthly visits and orders into step 9, so it never suggests tests your traffic can't finish.
   - Add your own step names (for example "quiz", "plan picker") to step 4, so the table matches your analytics.
-  - Save the step table each month in your brand file, so the next audit compares with your own past.
+  - Save the step table each month in your org context, so the next audit compares with your own past.
   - Save the "what the page needs from you" list and fill it. Missing returns and delivery terms come back as findings every time.
   - Pair it with the "Landing page auditor" for a review without numbers, and the "A/B test traffic checker" before you start any test it suggests.
 works_best_with:

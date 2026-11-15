@@ -18,27 +18,27 @@ This workflow uses ideas from The 7 Daily Habits of Successful Copywriters by Cl
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand file** (its products and buyers part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its products and buyers part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
-**From the brand file, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`, `foundation/claims.md`, `foundation/customer-talk.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, customer words. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, customer words. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
 - **Product material** (required): issues, emails, bonuses, past promotions, product pages and notes, each with a title and a date. Newest first is best.
 - **Price, contents, guarantee and proof** (required): the product facts step 3 plans the page from.
-- **Brand file** (optional): voice, claims and offers you already have. The generated "What you need" box above lists the brand brain first. Treat it as optional. The run works from your product material, and a brand brain only adds voice and approved claims. Do not stop to ask for one.
+- **Org context** (optional): voice, claims and offers you already have. The generated "What you need" box above lists the org context first. Treat it as optional. The run works from your product material, and an org context only adds voice and approved claims. Do not stop to ask for one.
 - **Customer words** (optional): reviews, emails or call notes, with dates.
 - **A buyer persona or short description** (optional).
 - **The goal for the piece** (optional): for example break-even or profit on each send.
@@ -55,7 +55,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop:** stop if there is no product material or no price and proof, or if a step's own checks fail. Go to the hand-back summary and say which step.
 
 ## Steps
-1. **Build the research files.** Use the skill `copy-research-file-builder` on the product material, plus the brand file and customer words if given. It sorts the best passages into files by purpose, each with its source, and lists proof you can give away and the top past hits. Saves `outputs/step-01-copy-research-file-builder.md`, which holds the angle library (ranked reasons to buy, with the customer words and proof behind each).
+1. **Build the research files.** Use the skill `copy-research-file-builder` on the product material, plus the org context and customer words if given. It sorts the best passages into files by purpose, each with its source, and lists proof you can give away and the top past hits. Saves `outputs/step-01-copy-research-file-builder.md`, which holds the angle library (ranked reasons to buy, with the customer words and proof behind each).
 2. **Find the dominant feeling.** Use the skill `dominant-emotion-finder` on the angle library in `outputs/step-01-copy-research-file-builder.md`, plus the persona and customer words if given. It names the strongest feeling to write to and where it comes from. Saves `outputs/step-02-dominant-emotion-finder.md` (the feeling, the main theme, the runner-up, an updated persona).
 3. **Outline the letter.** Use the skill `sales-letter-outline-planner` on the angle library from step 1, the theme and persona update from `outputs/step-02-dominant-emotion-finder.md`, and the price, contents, guarantee and proof. It plans the whole piece before any copy and matches each claim to its proof. Saves `outputs/step-03-sales-letter-outline-planner.md`.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.

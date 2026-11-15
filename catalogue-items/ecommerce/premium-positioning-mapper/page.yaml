@@ -17,7 +17,7 @@ when:
 not_for:
   - Your product sells on price alone, like a commodity. Compare costs and rival prices in a spreadsheet, or ask a pricing adviser.
   - Your store cannot control its range, brand or where it sells. Fix that first, because a premium story needs you to back it up.
-  - You need facts on what your brand stands for first. Build your brand brain with the Brand profile builder, then come back.
+  - You need facts on what your brand stands for first. Build your org context with the Org context builder, then come back.
 you_give:
   - Your product and current price
   - Two to four buyer groups, with how well each knows you and your rivals
@@ -43,7 +43,7 @@ output_sample:
     - Reviews or buyer interview notes (optional)
     - Rival prices and what rivals claim (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder helps, but is optional
+    - Your org context from the Org context builder helps, but is optional
   output:
     - name: Group blocks
       contains: "For each buyer group: what feels exclusive, the identity they want, the story, and who may appear."
@@ -120,7 +120,7 @@ test:
   - "Omit current units or a required cost: leave the affected target missing. Keep a loss baseline separate rather than creating negative units."
 improve:
   - Add the claims you may never make (health, income, before and after) to the "do not say" step so every run starts with them.
-  - Save the group blocks you keep to your brand file, so ads, emails and product pages use the same identity and story.
+  - Save the group blocks you keep to your org context, so ads, emails and product pages use the same identity and story.
   - Add your own test of "will they remember it", such as asking five people to repeat the line a day later.
   - Pair it with the Store promise writer to write the homepage promise, and with the Brand stylescape planner to turn the story into a look.
 works_best_with:

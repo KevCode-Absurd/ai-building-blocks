@@ -31,7 +31,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-Gather before you start: your idea, the buyer, one price you could charge, and the names of ten people you can reach in two days (or the places they gather). The brand brain and project files mentioned above are optional; this runs from what you paste.
+Gather before you start: your idea, the buyer, one price you could charge, and the names of ten people you can reach in two days (or the places they gather). The org context and project files mentioned above are optional; this runs from what you paste.
 
 - **Idea, buyer and price** (required): one line each. The price must be one you could charge.
 - **Profit goal and profit per sale** (optional): if you have them. If not, the AI asks.

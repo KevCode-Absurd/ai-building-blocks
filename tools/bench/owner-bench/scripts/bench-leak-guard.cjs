@@ -107,10 +107,61 @@ function figureTerms(briefs) {
   return [...figs.keys()].sort().map(t => ({ term: t, kind: "figure", cs: false }));
 }
 
+// The e-commerce eval suite (../../ecom-evals) keeps its brands, avatars and answer keys in its own folder:
+// brand names from brands/*/PUBLIC-FACTS.md titles, avatar tags from brands/*/ORG-CONTEXT.md ("Dan, 41"; a first name alone is too common),
+// and distinctive figures from the Signals, Right call(s) and Facts to check sections of keys/E*.md.
+const ECOM = path.resolve(BENCH, "..", "ecom-evals");
+function ecomSection(text, headRe) {
+  const lines = text.split(/\r?\n/), i = lines.findIndex(l => headRe.test(l));
+  if (i < 0) return "";
+  const rest = lines.slice(i + 1), end = rest.findIndex(l => /^##\s/.test(l));
+  return (end < 0 ? rest : rest.slice(0, end)).join("\n");
+}
+// "Ritual" is also an everyday word. Key figures need 4 significant digits (or a lakh format): short ones
+// such as 13.9 or 62.50 turn up by chance in fee tables and benchmarks.
+const ECOM_CASE_SENSITIVE = new Set(["Ritual", "Fellow"]);
+const ecomDistinctive = tok => /^\d{1,2}(,\d{2})+,\d{3}$/.test(tok) || tok.replace(/[,.]/g, "").replace(/^0+/, "").replace(/0+$/, "").length >= 4;
+function ecomEvalTerms() {
+  const out = [], seen = new Set();
+  const add = (term, kind, cs) => { if (term.length >= 3 && !seen.has(term)) { seen.add(term); out.push({ term, kind, cs }); } };
+  const bdir = path.join(ECOM, "brands"), kdir = path.join(ECOM, "keys");
+  if (fs.existsSync(bdir)) for (const slug of fs.readdirSync(bdir).sort()) {
+    const facts = path.join(bdir, slug, "PUBLIC-FACTS.md"), org = path.join(bdir, slug, "ORG-CONTEXT.md");
+    if (fs.existsSync(facts)) {
+      const m = /^#\s+(.+?):\s*public facts/im.exec(fs.readFileSync(facts, "utf8"));
+      if (m) add(m[1].trim(), "brand", ECOM_CASE_SENSITIVE.has(m[1].trim()));
+    }
+    if (fs.existsSync(org)) for (const m of fs.readFileSync(org, "utf8").matchAll(/^\*\*([A-Z][a-z]{2,15}, \d{1,2})\b/gm)) add(m[1], "persona", true);
+  }
+  if (fs.existsSync(kdir)) for (const k of fs.readdirSync(kdir).filter(f => /^E\d+\.md$/.test(f)).sort()) {
+    const t = fs.readFileSync(path.join(kdir, k), "utf8");
+    const text = [/^##\s+Signals/i, /^##\s+Right calls?/i, /^##\s+Facts to check/i].map(re => ecomSection(t, re)).join("\n");
+    for (const m of text.matchAll(/(?<![\d.,])\d{1,3}(?:,\d{2,3})+(?:\.\d+)?|(?<![\d.,])\d+\.\d+/g)) if (ecomDistinctive(m[0])) add(m[0], "figure", false);
+  }
+  return out;
+}
+
 function allTerms() {
   const briefs = briefFiles();
   if (!briefs.length) throw new Error(`no briefs found under ${BENCH}`);
-  return [...brandTerms(briefs), ...personaTerms(briefs), ...figureTerms(briefs)];
+  const base = [...brandTerms(briefs), ...personaTerms(briefs), ...figureTerms(briefs)];
+  const have = new Set(base.map(t => t.term));
+  // A persona name that is also one of our agents' names (Ishita, Rohan, Tanvi...) belongs in packs: TEAM.md and
+  // hand-offs name the agent. Drop those names; the avatar tags ("Dan, 41") still guard the eval suite.
+  const agents = agentNames();
+  return [...base, ...ecomEvalTerms().filter(t => !have.has(t.term))].filter(t => !(t.kind === "persona" && agents.has(t.term)));
+}
+
+function agentNames() {
+  const dir = path.join(REPO, "marketplace", "src", "modules", "directory", "data"), names = new Set();
+  if (!fs.existsSync(dir)) return names;
+  for (const f of fs.readdirSync(dir).filter(f => /^personas.*\.json$/.test(f))) {
+    try {
+      const j = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+      for (const p of Array.isArray(j) ? j : Object.values(j)) if (p && typeof p.name === "string") names.add(p.name.split(/\s+/)[0]);
+    } catch { /* a file that is not a persona list */ }
+  }
+  return names;
 }
 
 // git grep -o: one output line per match, "<ref>:<path>:<match>" for a ref, "<path>:<match>" for the work tree.

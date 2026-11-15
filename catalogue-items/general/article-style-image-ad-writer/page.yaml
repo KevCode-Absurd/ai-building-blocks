@@ -47,7 +47,7 @@ output_sample:
     - The text of the page the ad links to (strongly recommended)
     - "How aware the buyer is: problem aware or solution aware (optional)"
   prerequisites:
-    - Your brand brain from the Brand profile builder (optional)
+    - Your org context from the Org context builder (optional)
     - A buyer brief from the Buyer brief writer (optional)
   output:
     - name: On the image
@@ -210,7 +210,7 @@ improve:
   - Add your proof on file (test counts, outside checkers, review totals) to "Brand facts" in the skill file, so the main text can use counted proof every time.
   - If you sell against a known kind of product, write that comparison into step 5 (for example "gummy pack against powder tub" or "coated pan against bare steel"), using only facts you can back.
   - If your platform or country has its own labelling rules, add them to step 6.
-  - Save the page sections it lists in its notes to your brand file, as the outline for your article-style page.
+  - Save the page sections it lists in its notes to your org context, as the outline for your article-style page.
   - Pair it with "Proof-backed sales copy writer" to write the page the ad leads to.
 
 works_best_with:

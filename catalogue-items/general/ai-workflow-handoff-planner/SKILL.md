@@ -42,7 +42,7 @@ In "Before you start", "plan" means your chain of steps, and "audit report" mean
 
 ## Steps
 1. **Lock the claims first.** Turn every claim the chain may use into a claim card: an ID, the full wording, and its limits (amount, serving, time, who it applies to, conditions, source). "3 g per serving, adults" never travels as "3 g"; a guarantee for the first order keeps "first order only". Cards move word for word. A step may pick cards; it never rewrites them.
-2. **Label every other fact** by how sure it is: checked brand fact, customer words (quoted research, never a testimonial), a guess to test, or a creative choice. Match the brand file's tags if there is one.
+2. **Label every other fact** by how sure it is: checked brand fact, customer words (quoted research, never a testimonial), a guess to test, or a creative choice. Match the org context's tags if there is one.
 3. **Decide: paste or point.** A step with a tool that can open files may get a reference (a file name, a card ID) and fetch it when needed. A step without one gets the text itself, because an ID it can't look up tells it nothing.
 4. **Write a handoff card for each step:**
    - *Needs:* what it depends on for meaning, not field names.

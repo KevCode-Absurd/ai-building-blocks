@@ -17,10 +17,10 @@ when:
 not_for:
   - "You post on several platforms at once: run it once per platform, or plan the first week with the Social platform content planner."
   - "You need one post for a launch or a sale: use the Shareable content checker on that single draft."
-  - "You have no numbers from last week and no brand file: write a brand file first with the Brand profile builder, then come back."
+  - "You have no numbers from last week and no org context: write an org context first with the Org context builder, then come back."
 you_give:
   - Last week's posts with format, hook, date and numbers
-  - Your brand file with voice and what you may claim
+  - Your org context with voice and what you may claim
   - Your platform and your goal this month, growth or sales
   - How many hours a week you can give
   - Launches, sales or news coming up (optional)
@@ -32,19 +32,19 @@ you_get:
   - A note on any post worth showing to your ads team
 how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to plan next week.
-  - The first time, give it your brand file, your platform and your goal. It saves them.
+  - The first time, give it your org context, your platform and your goal. It saves them.
   - Each week, paste or attach last week's post numbers from your platform's analytics.
   - Read the week's plan. Post the pieces you agree with yourself, or in your scheduler.
   - Run it again next week. It adds the numbers to its log and keeps learning.
 output_sample:
   input:
     - Last week's posts with format, hook, date and numbers
-    - Your brand file with voice and what you may claim
+    - Your org context with voice and what you may claim
     - Your platform and your goal this month
     - How many hours a week you can give
     - Launches, sales or news coming up (optional)
   prerequisites:
-    - A brand brain from the Brand profile builder, or your own brand file
+    - An org context from the Org context builder, or your own org context
     - An AI that can keep files between weeks, such as Claude Code, to save the log and lessons
   output:
     - name: Last week
@@ -115,7 +115,7 @@ test:
   - Give it only two posts for the week. It should say the read is thin and carry old lessons forward.
 improve:
   - Set your own score a post needs to be ready, to suit how picky you want to be.
-  - Add your voice rules and words to avoid to the brand file, so hooks follow them.
+  - Add your voice rules and words to avoid to the org context, so hooks follow them.
   - Save the posts you changed by hand each week, so it learns your edits.
   - Raise or lower the views multiple that counts as an outlier, to suit your account.
 works_best_with:

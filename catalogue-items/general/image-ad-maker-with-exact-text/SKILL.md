@@ -17,19 +17,19 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An image plan** (yours): what an image should show and say, before any prompt is written.
 
 **Makes it better (optional):**
-- **Brand file** (its products part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its products part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **An image plan** with the [Repeated image campaign planner](https://useaiblocks.com/skills/repeated-image-campaign-planner). Bring product photos. It uses your brand file.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **An image plan** with the [Repeated image campaign planner](https://useaiblocks.com/skills/repeated-image-campaign-planner). Bring product photos. It uses your org context.
 3. This one.
 
-**From the brand file, read:** `index.md`, `look.json`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `look.json`, `foundation/design.md`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for an image plan, your brand file, product photos. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for an image plan, your org context, product photos. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -75,7 +75,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
 
 4. **Keep the product true.** Pick the two or three facts a buyer would notice first and write them the same way in every prompt of a set. Words and photos must agree; when they clash, models tend to follow the words. Say what the product must not become ("a stand-up pouch, never a tub or a box"). Ask for printing to be kept as in the photo, never redrawn. A product with no printing gets none. Show it at true size: anchor it to a hand or an everyday object, because a capacity like "500 ml" says nothing about height. Show a result or a part only if a photo or fact backs it. When you don't know how something opens, show it closed.
 
-5. **Write the scene in sentences.** Open with what the image is and where it runs, and nothing about its shape: "A photorealistic product page image for an online store." Then, most important first: the subject and what it is doing, the surface and background, the light (where it comes from, how hard), the camera (height, angle, distance, what is in frame). Name each prop; "a messy desk" comes out as clutter, "a white mug and a closed laptop" comes out right. Describe what is there in positive words ("a plain cream wall") and keep "no" for the few things that must not appear. Some models, such as FLUX, don't read "no" at all. Keep the scene to what the plan approved, plus only what the rules in step 8 need (a surface it rests on, a shadow that matches the light). Where the plan is loose ("a few gummies", "a gradient"), stay loose: no exact counts, light directions or new props it didn't give. Give every colour in the scene, including the backdrop, a hex code from the plan or brand file, or write `MISSING:` for it.
+5. **Write the scene in sentences.** Open with what the image is and where it runs, and nothing about its shape: "A photorealistic product page image for an online store." Then, most important first: the subject and what it is doing, the surface and background, the light (where it comes from, how hard), the camera (height, angle, distance, what is in frame). Name each prop; "a messy desk" comes out as clutter, "a white mug and a closed laptop" comes out right. Describe what is there in positive words ("a plain cream wall") and keep "no" for the few things that must not appear. Some models, such as FLUX, don't read "no" at all. Keep the scene to what the plan approved, plus only what the rules in step 8 need (a surface it rests on, a shadow that matches the light). Where the plan is loose ("a few gummies", "a gradient"), stay loose: no exact counts, light directions or new props it didn't give. Give every colour in the scene, including the backdrop, a hex code from the plan or org context, or write `MISSING:` for it.
 
 6. **Set the layout.** Describe zones in reading order with rough proportions: "Top fifth: plain cream band for the headline. Left half: the pouch, two thirds of the frame height. Right third: three short points stacked." Say where the empty space is. For each size, say what moves. In tall 9:16 images, keep words and logos out of the top and bottom bands where the app puts its buttons and captions (on Reels, roughly the top seventh and the bottom third), and check in the ad tool's preview.
 
@@ -146,8 +146,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 | Right picture, wrong idea | Go back to the plan. A better prompt won't fix it. |
 
 ## If something is missing
-Write `MISSING: <what>` instead of guessing. Before writing it for a fact, look in the brand file and the input; write it only when both lack it.
-- Photos named but you can't see them: say so in one line. Take the product's look and label words from the brand file (or the input), mark the product check as still to do, and never describe a photo you didn't see.
+Write `MISSING: <what>` instead of guessing. Before writing it for a fact, look in the org context and the input; write it only when both lack it.
+- Photos named but you can't see them: say so in one line. Take the product's look and label words from the org context (or the input), mark the product check as still to do, and never describe a photo you didn't see.
 - No photo of a part the image needs: keep that part small, behind the product, or out of frame.
 - No size fact: show the product alone, or next to a hand from the approved photos.
 - No brand colours or type: write "no added brand colour or type" and use only the product's own.

@@ -206,7 +206,7 @@ test:
 
 improve:
   - Write your chosen dial settings into stage 0 of the skill file, so every ad in a series has the same look.
-  - Save the approved avatar card, character sheet and lock lines in your brand file, so the next ad starts at stage 4.
+  - Save the approved avatar card, character sheet and lock lines in your org context, so the next ad starts at stage 4.
   - Add your video tool's clip lengths and reference slots to "What you need".
   - Keep a short list of the faults your tool keeps making and add it to the fixes in stage 5.
   - Pair it with "Get an original anime ad script" first, and a captions skill in your brand font after.

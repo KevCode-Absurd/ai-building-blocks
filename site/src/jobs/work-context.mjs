@@ -35,7 +35,7 @@ export function inferWorkMode(request='') {
 export function workContextRequirements(request='') {
   const mode=inferWorkMode(request);
   return {mode_candidate:mode,required:mode!=='CREATE',
-    principle:'Observe the authoritative current state before changing it. Reuse the working system; propose the smallest justified change. A static brand file or a selected method is not proof of current-state understanding.',
+    principle:'Observe the authoritative current state before changing it. Reuse the working system; propose the smallest justified change. A static org context or a selected method is not proof of current-state understanding.',
     fields:['sources with dated observations, snapshot hashes, currentness and freshness basis','what must be preserved and its source','problem → proposed change → expected effect → verification','baseline-to-result comparison and what remains unmeasured'],
     source_conflicts:'Resolve conflicts between memory, guides and current primary sources explicitly. Do not silently choose the convenient version.',
     assurance:'HOST_REPORTED_CONTEXT; verify referenced local bytes separately; semantic fitness and improvement require artifact inspection and outcome evidence.'};

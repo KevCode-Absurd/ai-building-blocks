@@ -22,7 +22,7 @@ you_give:
   - The address or saved copy of the page (optional for the first step, needed for the audit)
   - Your analytics, with visits, steps and sales or sign-ups by page
   - Customer words from reviews, chats or surveys (optional)
-  - Your brand file or a note on your offer, proof and buyer doubts (optional)
+  - Your org context or a note on your offer, proof and buyer doubts (optional)
   - Time to do the research the plan lists (a few days to a few weeks)
   - Your visits and conversions for the page you want to test, pulled after the research
 you_get:
@@ -41,7 +41,7 @@ output_sample:
     - The link or saved copy of your page
     - "Your analytics: visits, steps and sales or sign-ups by page"
     - Customer words from reviews, chats or surveys (optional)
-    - Your brand brain or a note on your offer and proof (optional)
+    - Your org context or a note on your offer and proof (optional)
     - Your visits and conversions for the page to test, pulled after the research
   prerequisites:
     - An AI that can read files, such as Claude with the handoff pack
@@ -103,6 +103,6 @@ test:
   - Give the last step a very low traffic count. It should say you cannot prove a test and suggest fixing instead of testing.
   - Stop it after step 1 and check that the research plan is something you could do this week.
 improve:
-  - Save the sorted problem list in your brand file, so the next round starts from what is still open.
+  - Save the sorted problem list in your org context, so the next round starts from what is still open.
   - Keep a log of each test, its result and its date, so later runs can see what you have already learned.
   - If your traffic is too low to test, run the first three steps again after each round of fixes and test later.

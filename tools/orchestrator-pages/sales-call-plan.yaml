@@ -44,7 +44,7 @@ output_sample:
     - Proof you have, such as results and testimonials (optional)
   prerequisites:
     - An AI that can read files (the steps are saved as files)
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
     - Your offer from the Hidden offer finder (optional)
   output:
     - name: "Step 1: lead arguments"
@@ -99,6 +99,6 @@ test:
   - Give it a doubt that you cannot answer well. It should say there is no proof yet and not invent one.
   - Role play with a colleague. Use the opener, one answer and one closing question, then note which part felt forced.
 improve:
-  - Save the lead arguments, answer sheet and close into your brand file, so every seller uses the same proof.
+  - Save the lead arguments, answer sheet and close into your org context, so every seller uses the same proof.
   - After each real call, add any new doubt and how it went, and run step 3 again.
   - Add the openers that worked and the ones that did not, so step 2 learns your tone.

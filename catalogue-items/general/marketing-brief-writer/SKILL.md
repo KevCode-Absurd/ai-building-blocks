@@ -38,7 +38,7 @@ How to start:
 ## What you need
 
 - **What you sell and your facts on it** (required, as text).
-- **Brand file, voice and claims** (optional).
+- **Org context, voice and claims** (optional).
 - **Customer words** (optional): reviews, calls, support messages.
 - **Your offer, price and terms** (optional).
 - **An evidence review** (optional): which facts are current and which decisions are still open. Leave the open ones out of the brief.

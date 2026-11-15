@@ -1,0 +1,556 @@
+{
+ "suite": "AI Blocks e-commerce eval suite",
+ "version": "2026-11-15.1",
+ "note": "One owner question per task, typed the way an owner types it. Inputs are copied into each run folder; keys/ never are. Split 'heldout' is frozen: never read its outputs or reasons to choose a change. Paths are relative to this folder; a folder path means every file in it.",
+ "principle_books": "R/marketplace/knowledge/ecommerce/principles/<book>.md anchor grade 2, but judges apply sound domain practice, not only ours.",
+ "tasks": [
+  {
+   "id": "E01", "area": "org-context", "split": "tune", "agent": "philippa-brand", "brand": "wild-one",
+   "question": "can you build our org context? who buys, how we talk, how we look, what we can and cant say. one doc i can give every freelancer and AI",
+   "deliverable": "One Org context document: brand DNA, markets, customers and avatars, voice and writing style, how we speak per channel, design language, claims we can and cannot make, do's and don'ts.",
+   "outcome": "First: every freelancer and AI writes and designs on brand from day one. Second: fewer rewrites and fewer off-brand ads, so creative ships faster and converts better. Third: no claims that get ads rejected or customers misled, which protects the account and trust.",
+   "inputs": ["brands/wild-one/PUBLIC-FACTS.md", "fixtures/E01/"],
+   "buyer_facing": false, "principles": ["brand-and-voice", "claims-and-compliance", "visual-design"],
+   "checks": [
+    "Adds a cat owner avatar (or cat buyers inside an avatar) and says why: cat orders grew from 1% to 31% of survey answers in six months.",
+    "Writes voice rules that follow the email results: short, playful lines won (3.9% and 4.6% click) and the long 'ultimate, best-in-class' email lost (1.1% click, 0.41% unsubscribes); bans that wording.",
+    "Puts 'airline approved' and 'compostable' poop bags on the cannot-say list, with the reason (check each airline; corn starch blend under FTC Green Guides).",
+    "Uses the real hex codes and fonts from the public facts, not invented ones.",
+    "Treats chew damage complaints as a support and warranty note, not as brand DNA or a product promise."
+   ],
+   "traps": ["Decoy: 5 loud 1 to 2 star chew reviews out of 27 tempt a 'durability' or 'chew proof' positioning.", "Customers' own words repeat claims the brand cannot make ('airline approved', 'compostable')."],
+   "signal_count": 3, "signal_band": "2-3"
+  },
+  {
+   "id": "E02", "area": "org-context", "split": "heldout", "agent": "philippa-brand", "brand": "krave-beauty",
+   "question": "need one doc every AI and freelancer uses for us. voice, customers, look, claims. our reviews and a few emails attached",
+   "deliverable": "One Org context document with the same sections as E01.",
+   "outcome": "First: all copy and design sounds and looks like KraveBeauty and speaks to people tired of long routines. Second: fewer off-brand launches and fewer unsubscribes from shouty sends. Third: no drug claims that the FDA or ad platforms would act on.",
+   "inputs": ["brands/krave-beauty/PUBLIC-FACTS.md", "fixtures/E02/"],
+   "buyer_facing": false, "principles": ["brand-and-voice", "claims-and-compliance", "visual-design"],
+   "checks": [
+    "Builds the main avatar around routine simplification (44% of buyers) and irritated or sensitive skin (29%), not anti-aging (9%).",
+    "Excludes or discounts the five incentivised giveaway reviews and does not adopt their 'anti-aging miracle' language.",
+    "Lists 'heals eczema', 'cures rosacea' and similar wording from reviews as claims the brand cannot make (drug claims), and keeps sunscreen claims inside the Drug Facts label.",
+    "Writes an anti-urgency voice rule backed by the July email (1.6% click, 0.52% unsubscribes, 0.21% spam) versus the calm emails.",
+    "Uses the real palette and fonts from the public facts."
+   ],
+   "traps": ["Decoy: a burst of five-star giveaway reviews in July all say anti-aging.", "Real customers use drug-claim words that copy must not repeat."],
+   "signal_count": 3, "signal_band": "2-3"
+  },
+  {
+   "id": "E03", "area": "org-context", "split": "tune", "agent": "philippa-brand", "brand": "sleepy-owl",
+   "question": "make our org context. we only have the website facts, a survey and some reviews",
+   "deliverable": "One Org context document with the same sections as E01, with the gaps stated plainly.",
+   "outcome": "First: copy and design for both site buyers and quick commerce buyers sound like Sleepy Owl and speak to the right person. Second: ads and listings for each channel convert better because they lead with what that buyer wants (taste vs speed). Third: no FSSAI or greenwashing claims that cause trouble.",
+   "inputs": ["brands/sleepy-owl/PUBLIC-FACTS.md", "fixtures/E03/"],
+   "buyer_facing": false, "principles": ["brand-and-voice", "claims-and-compliance"],
+   "checks": [
+    "Writes two distinct avatars: a home cold brew drinker who buys on the site for taste, and a quick commerce buyer who buys protein coffee or sachets for speed around the gym.",
+    "Lists the gaps instead of inventing them (no free shipping threshold, COD and subscription status unknown).",
+    "Puts FSSAI-sensitive words and the 'India's Best Coffee Brand' and '100% recyclable, no plastic' claims on the cannot-say or needs-proof list.",
+    "Keeps the brand's cheeky voice while staying readable (grade 6 to 8 for customer copy)."
+   ],
+   "traps": ["Thin inputs tempt invented policies, numbers or certifications."],
+   "signal_count": 1, "signal_band": "1"
+  },
+  {
+   "id": "E04", "area": "meta-ads", "split": "tune", "agent": "lindsey-meta-media-buyer", "brand": "taylor-stitch",
+   "question": "can you audit our whole meta account? whats working, what to kill, where the money should go before black friday",
+   "deliverable": "An account audit with a verdict per campaign (scale, hold, fix, cut) and the reason in dollars, the budget split for the next 30 days, and the first week's actions in order.",
+   "outcome": "First: cut or shrink campaigns that lose money on real Shopify orders and fund the ones and segments that win, so cost per real order falls while revenue rises. Second: Black Friday and December spend goes to buyers who actually convert, including a new gift segment. Third: decisions run on Shopify-matched, after-returns numbers, so the team stops scaling what only looks good in Meta.",
+   "inputs": ["brands/taylor-stitch/ORG-CONTEXT.md", "fixtures/E04/"],
+   "buyer_facing": false, "principles": ["media-buying", "measurement-and-profit", "ad-creative-strategy"],
+   "checks": [
+    "Finds that women 65+ buy through single-image ads at about $43 per purchase versus about $82 for prospecting overall (and about $156 for the same women on video), and proposes a gift-angle single-image test for them with copy in their words.",
+    "Brings back the paused 'Year six Jack' video (about $60 per purchase over 90 days) as a first, cheap move, linked to ASC's rise from $63 to $92.",
+    "Cuts or caps retargeting: frequency 11.8 and 78% of its Shopify orders are returning customers, so its 5.0 ROAS is mostly not new sales.",
+    "Uses Shopify-matched numbers: Meta claims 2,920 purchases versus 1,882 Meta-tagged Shopify orders (about 64%), and judges campaigns on that.",
+    "Holds the Jackets campaign until the Long Haul Jacket fit issue (34% return rate) is fixed, instead of scaling it on ROAS.",
+    "Does not scale the meme ad on its 4.1% CTR (6 purchases on $2,400) and does not treat the November CPM rise as a creative problem."
+   ],
+   "traps": ["Decoy: meme ad with 4.1% CTR and $400 per purchase.", "Decoy: CPM up from $13.1 to $16.9, which is the normal Q4 rise.", "Retargeting has the best ROAS in Meta but is mostly existing buyers.", "Jackets ROAS hides a 34% return rate."],
+   "signal_count": 5, "signal_band": "4+"
+  },
+  {
+   "id": "E05", "area": "meta-ads", "split": "heldout", "agent": "lindsey-meta-media-buyer", "brand": "ritual",
+   "question": "meta audit please. ROAS is under 1 on everything and my CFO is freaking out. what do we cut",
+   "deliverable": "An account audit with a verdict per campaign, judged on payback, the budget split for the next 30 days, and the fixes for rejected ads.",
+   "outcome": "First: stop cutting subscription campaigns that pay back and cut the ones that do not, so 4-month payback improves at the same spend. Second: the Perimenopause launch grows through the segment and format that work, at about half the cost. Third: the account avoids a third policy strike that could stop all advertising.",
+   "inputs": ["brands/ritual/ORG-CONTEXT.md", "fixtures/E05/"],
+   "buyer_facing": false, "principles": ["media-buying", "measurement-and-profit", "claims-and-compliance"],
+   "checks": [
+    "Judges each campaign on contribution payback from the retention table, not first-order ROAS, and says first-order ROAS under 1 is expected with a 40% first-order offer.",
+    "Keeps or scales Prenatal despite the lowest first-order ROAS (0.36), because 76% are still active at month 6.",
+    "Does not scale Synbiotic+ on its best first-order ROAS (0.63), because only 34% remain at month 3.",
+    "Finds women 45 to 54 on carousel in the Perimenopause launch at about $38 per purchase versus about $67 for the campaign and about $95 for the same women on video, and moves budget to that format and message.",
+    "Rewrites the three rejected Perimenopause ads as structure or function claims with the FDA asterisk and disclaimer, and flags the strike risk."
+   ],
+   "traps": ["Decoy: Synbiotic+ has the best first-order ROAS.", "Every campaign shows ROAS under 1, which tempts cutting the account."],
+   "signal_count": 3, "signal_band": "2-3"
+  },
+  {
+   "id": "E06", "area": "meta-ads", "split": "tune", "agent": "lindsey-meta-media-buyer", "brand": "graza",
+   "question": "quick check on meta, last week CPA jumped. anything wrong?",
+   "deliverable": "A short answer: is anything wrong, what to change this week (if anything), and what to watch.",
+   "outcome": "First: no panic changes that reset learning in a healthy account during peak season, which protects cost per purchase. Second: one cheap shift toward a segment and format that converts at about half the cost lifts orders at the same budget. Third: the owner learns which numbers matter in Q4.",
+   "inputs": ["brands/graza/ORG-CONTEXT.md", "fixtures/E06/"],
+   "buyer_facing": false, "principles": ["media-buying", "measurement-and-profit"],
+   "checks": [
+    "Says the CPA rise (about $26 to $28.80) comes with a CPM jump to $13.90 in early Black Friday auctions and is seasonal, not broken, and the account is still under the $32 target.",
+    "Finds men 25 to 34 on Reels video at about $14 per purchase versus about $26 for ASC overall and about $29 for the same men in other formats, and proposes more recipe Reels for them.",
+    "Recommends no structural changes this week (no budget resets or new campaigns) beyond the small creative shift.",
+    "Stays short: the first screen answers the question."
+   ],
+   "traps": ["Decoy: the CPA jump is seasonal CPM.", "The right call is mostly 'hold'."],
+   "signal_count": 1, "signal_band": "1"
+  },
+  {
+   "id": "E07", "area": "google-ads", "split": "tune", "agent": "raymond-google-ads", "brand": "fellow",
+   "question": "google ads look ok at 4x ROAS but profit doesnt. what do i fix before black friday",
+   "deliverable": "A plan for the next 30 days: what is really working, what to cut, the feed fixes, the budget split across the same $165,000, and the first week's actions in order.",
+   "outcome": "First: stop paying PMax for brand searches and espresso clicks that do not pay back, and put the money into products and buyers that do, so profit rises at the same spend. Second: the top grinder starts serving again, recovering lost sales. Third: a gift-buyer campaign captures December demand.",
+   "inputs": ["brands/fellow/ORG-CONTEXT.md", "fixtures/E07/"],
+   "buyer_facing": false, "principles": ["media-buying", "measurement-and-profit", "search-and-ai-answers"],
+   "checks": [
+    "Shows PMax non-brand ROAS is about 1.75 once brand terms ($21,000 spend, 14.4 ROAS) are removed, below the 2.6 break-even, and adds brand exclusions.",
+    "Fixes the Ode Gen 2 price mismatch disapproval first (conversion value fell from $128,000 to $41,000).",
+    "Finds 55 to 64 on desktop converting at 6.1% with 6.2 ROAS on gift searches, and builds a gift-angle Shopping or Search push with gift titles before December.",
+    "Moves Espresso Series 1 ($36,600 spend, 1.1 ROAS, 23-day path) out of the main budget or onto its own target.",
+    "Keeps the total at $165,000 and gives a split that adds up."
+   ],
+   "traps": ["Decoy: brand search impression share fell from 90% to 84% while ROAS stays at 21.", "Decoy: missing GTIN on coffee drops is a small issue."],
+   "signal_count": 4, "signal_band": "4+"
+  },
+  {
+   "id": "E08", "area": "tiktok-ads", "split": "heldout", "agent": "zara-tiktok-ads", "brand": "krave-beauty",
+   "question": "is tiktok actually working for us? tiktok says 1900 sales. what should we do next month",
+   "deliverable": "A read of what TikTok really drives, the changes for next month with a budget split, and any ad to pull now.",
+   "outcome": "First: budget goes to the creator Spark Ads and the audience that buys at half the cost, so real orders per dollar rise. Second: fatigued and non-compliant ads are replaced before they cost more or get the account flagged. Third: the owner stops trusting TikTok's own count and uses a read that matches Shopify.",
+   "inputs": ["brands/krave-beauty/ORG-CONTEXT.md", "fixtures/E08/"],
+   "buyer_facing": false, "principles": ["media-buying", "measurement-and-profit", "ad-creative-strategy", "claims-and-compliance"],
+   "checks": [
+    "Says TikTok's 1,900 conversions are about 2.5 times the 760 TikTok UTM orders, and uses the survey (about 22% of new customers) as a second read.",
+    "Finds men 25 to 34 on Spark Ads at about $11 per conversion versus about $17 for Spark overall and about $38 for men elsewhere, and scales creator posts for that buyer.",
+    "Pulls or rewrites the Beet The Sun ad that says 'reef safe and waterproof' (sunscreen is an OTC drug; water resistance must be stated as 40 or 80 minutes).",
+    "Plans a refresh for the '3 steps' ad: CTR fell from 1.9% to 1.0% as frequency rose to 3.6.",
+    "Does not treat the 2.1M-view organic video as a sales driver (14 orders)."
+   ],
+   "traps": ["Decoy: 2.1M organic views, 14 orders.", "A live ad makes non-compliant sunscreen claims."],
+   "signal_count": 3, "signal_band": "2-3"
+  },
+  {
+   "id": "E09", "area": "amazon", "split": "tune", "agent": "garrett-amazon", "brand": "pela",
+   "question": "our amazon listing for the iphone 17 case isnt converting. fix it",
+   "deliverable": "A rewritten listing: title, 5 bullets, the 7 image slots with what each shows, and the first changes to make this week.",
+   "outcome": "First: more shoppers who search for a case buy this one, so conversion and sales rise at the same traffic. Second: fewer 1 to 2 star MagSafe reviews and returns, which protects the rating and ranking. Third: claims that pass Amazon and green-claims rules, so the listing is not suppressed.",
+   "inputs": ["brands/pela/ORG-CONTEXT.md", "fixtures/E09/"],
+   "buyer_facing": true, "principles": ["marketplaces", "direct-response-copy", "claims-and-compliance"],
+   "checks": [
+    "Puts the phone model and 'compostable' near the front of the title, because 'compostable phone case iphone 17' converts at 13.9% vs 2.0% for 'iphone 17 case'.",
+    "Answers MagSafe plainly: no built-in magnets, works with the MagSafe module, which addresses 46 questions and 31 low reviews.",
+    "Removes '100% compostable', 'biodegradable' and 'breaks down in your backyard' and states industrial composting standards instead.",
+    "Makes image 1 the case on the phone and adds a drop-test image using the internal 6 ft test, without claiming a certificate.",
+    "Uses the review phrase about surviving drops on concrete as proof for protection-first buyers."
+   ],
+   "traps": ["The current listing makes green claims the product facts do not support.", "Price is far above the category average; cutting price is not the fix."],
+   "signal_count": 3, "signal_band": "2-3"
+  },
+  {
+   "id": "E10", "area": "cro-audit", "split": "tune", "agent": "gretchen-store-testing", "brand": "fellow",
+   "question": "can you do a CRO audit on the ode page? mobile converts way worse",
+   "deliverable": "A ranked list of fixes with the evidence for each, the expected effect, and which to A/B test versus just ship.",
+   "outcome": "First: more mobile visitors buy the grinder, lifting revenue from traffic already paid for. Second: fewer people leave to ask whether Ode or Opus is right, which cuts lost sales and support load. Third: a faster page helps every ad and email that lands there.",
+   "inputs": ["brands/fellow/ORG-CONTEXT.md", "fixtures/E10/"],
+   "buyer_facing": false, "principles": ["landing-pages-and-cro", "store-build-and-tech", "why-people-buy"],
+   "checks": [
+    "Ranks the default variant first or near first: landing on the $599.95 SSP default converts at 3.1% add to cart versus 6.9% on the $399.95 core; ships the core as default.",
+    "Turns the 'Ode vs Opus' image into a clear, tappable comparison and an espresso answer, since 27% of exit answers ask it and 18% of mobile sessions tap the image.",
+    "Fixes mobile speed: the 9.2 MB autoplay hero video and 4.8 s mobile LCP versus 1.9 s on desktop.",
+    "Separates quick ships from tests and gives a sensible test plan for the rest.",
+    "Ignores the blog bounce rate as a page problem."
+   ],
+   "traps": ["Decoy: 81% to 86% bounce on blog posts.", "'Waiting for Black Friday' answers tempt a discount recommendation."],
+   "signal_count": 3, "signal_band": "2-3"
+  },
+  {
+   "id": "E11", "area": "landing-page", "split": "heldout", "agent": "annabel-landing-pages", "brand": "pela",
+   "question": "build me a landing page for our black friday buy one get one on iphone 17 cases. ads go straight to it",
+   "deliverable": "The full landing page, section by section, with all copy and the layout and design notes in the brand's look, ready for a developer (HTML is welcome but not required).",
+   "outcome": "First: ad clicks turn into BOGO orders on a phone, raising revenue during the peak week. Second: fewer wrong-model and MagSafe returns, which cuts cost. Third: green claims stay honest, protecting the brand and the ad accounts.",
+   "inputs": ["brands/pela/ORG-CONTEXT.md", "fixtures/E11/"],
+   "buyer_facing": true, "principles": ["landing-pages-and-cro", "direct-response-copy", "visual-design", "claims-and-compliance"],
+   "checks": [
+    "Leads with the gift angle (48% of traffic) and the 'one for you, one for a friend' idea, mobile first.",
+    "Puts a clear model picker and a MagSafe answer high on the page (41% of returns are MagSafe, 22% wrong model).",
+    "Qualifies every compostable claim (industrial composting standards; no home-compost promise).",
+    "Uses real proof from the inputs (drop test, review phrases) and no invented reviews or numbers.",
+    "Follows the Org context colours, fonts and voice."
+   ],
+   "traps": ["'100% compostable' appears in the brand's own page title.", "Inventing a home-compost time frame or star ratings."],
+   "signal_count": 2, "signal_band": "2-3"
+  },
+  {
+   "id": "E12", "area": "website", "split": "tune", "agent": "larissa-store-ux", "brand": "sleepy-owl",
+   "question": "were redoing the homepage. what should go on it and in what order",
+   "deliverable": "A homepage plan for mobile, section by section in order, with the copy for each section and the design notes.",
+   "outcome": "First: more mobile visitors find and buy Cold Brew Packs on the site instead of leaving, raising site revenue. Second: buyers outside Delhi NCR see honest delivery times and buy with confidence. Third: quick commerce links serve buyers who need speed without draining site buyers.",
+   "inputs": ["brands/sleepy-owl/ORG-CONTEXT.md", "fixtures/E12/"],
+   "buyer_facing": true, "principles": ["store-build-and-tech", "landing-pages-and-cro", "visual-design"],
+   "checks": [
+    "Moves Cold Brew Packs (61% of revenue, 5th card, 29% scroll reach) into the first screen and drops the rotating carousel.",
+    "Handles the quick commerce exits (34% of exits) on purpose: lower and framed, not a top-of-page escape.",
+    "Shows delivery time by pincode, because Delhi NCR converts at 4.0% versus 1.7% elsewhere.",
+    "Writes section copy in the brand's cheeky voice and follows the Org context design."
+   ],
+   "traps": ["Decoy: matcha searches look like a trend to lead with."],
+   "signal_count": 2, "signal_band": "2-3"
+  },
+  {
+   "id": "E13", "area": "email-audit", "split": "tune", "agent": "morag-email-sms", "brand": "krave-beauty",
+   "question": "audit our klaviyo. flows, campaigns, everything. what are we leaving on the table",
+   "deliverable": "A ranked audit: each finding with the evidence, the fix, the expected effect in dollars or orders, and the order to do them.",
+   "outcome": "First: flows that sell on their own (welcome, replenishment) bring in more orders without more discounts, so revenue rises and discount cost falls. Second: inbox placement recovers before the holiday sends, protecting every future email. Third: the team stops reading inflated opens and judges email on orders.",
+   "inputs": ["brands/krave-beauty/ORG-CONTEXT.md", "fixtures/E13/"],
+   "buyer_facing": false, "principles": ["retention-and-lifecycle", "measurement-and-profit"],
+   "checks": [
+    "Flags the Gmail spam rate at 0.38% and 0.41% on the two sends to all subscribers, above Google's 0.3% limit, and stops mailing the 180-day unengaged.",
+    "Builds a no-discount replenishment flow by product size, because the refill reminder converted at 19% versus 6% for 20% off to the same buyers.",
+    "Expands the one-email welcome flow, since 38% of sign-ups come through the pop-up.",
+    "Moves or removes the abandoned checkout code in email 1: 61% of flow orders come before email 2, so the code is given to people who would have bought.",
+    "Does not praise the 58% to 61% open rates (Apple Mail Privacy Protection) and judges on clicks and revenue per recipient."
+   ],
+   "traps": ["Decoy: high open rates.", "A 20% discount looks like the obvious lever for refill buyers."],
+   "signal_count": 4, "signal_band": "4+"
+  },
+  {
+   "id": "E14", "area": "email-copy", "split": "tune", "agent": "lucia-email-copy", "brand": "graza",
+   "question": "write our 3 black friday emails. make them sound like us not like every other BF email",
+   "deliverable": "Three emails (subject, preview text, body, button) and a short plan for who gets which version.",
+   "outcome": "First: Black Friday orders rise from the people the code actually moves. Second: margin is protected by not giving the code to subscribers and refill buyers who buy anyway. Third: the brand voice stays playful and warm, so the list stays healthy for December.",
+   "inputs": ["brands/graza/ORG-CONTEXT.md", "fixtures/E14/"],
+   "buyer_facing": true, "principles": ["direct-response-copy", "retention-and-lifecycle", "brand-and-voice"],
+   "checks": [
+    "Sends a plain-text founders' version to repeat buyers aged 45+ (plain text earned $1.92 per recipient vs $0.88 designed) and the designed version to people who never bought.",
+    "Keeps the BF20 code away from active subscribers (they already save up to 19%) and gives them a non-discount thank you or early access.",
+    "Leaves refill can buyers out of the code send or sends them a no-code reminder (9.1% vs 8.8% order rate with and without code).",
+    "Never calls Frizzle extra virgin and does not claim '100% Spanish' or organic.",
+    "Sounds like Graza (playful, punny, short) and each email has one clear ask."
+   ],
+   "traps": ["The owner's plan sends one code to everyone.", "Frizzle is a hero product but not EVOO."],
+   "signal_count": 3, "signal_band": "2-3"
+  },
+  {
+   "id": "E15", "area": "retention", "split": "heldout", "agent": "imogen-retention", "brand": "ritual",
+   "question": "our churn is bad. fix our retention flows without just throwing discounts at people",
+   "deliverable": "The new lifecycle plan: each flow or change with its trigger, message, offer (if any) and the expected effect, plus the first two to build.",
+   "outcome": "First: fewer subscribers cancel at the first full-price renewal, so recurring revenue rises. Second: save offers match what each product's buyers respond to, so fewer discounts are given. Third: win-back money moves from a blanket discount that barely works to changes that do.",
+   "inputs": ["brands/ritual/ORG-CONTEXT.md", "fixtures/E15/"],
+   "buyer_facing": false, "principles": ["retention-and-lifecycle", "measurement-and-profit", "claims-and-compliance"],
+   "checks": [
+    "Targets renewal 1 (31% cancel at the first full-price charge) with a pre-renewal message that explains the price and offers skip or delay.",
+    "Offers skip a month for Perimenopause Health (44% saved vs 12% with 20% off) and keeps the discount option for Women's 18+ (23% vs 14%).",
+    "Stops or shrinks the 30% win-back: 4.6% vs 3.4% holdout is about 1.2 points of lift for $10,300 in discounts.",
+    "Does not read 'too expensive' (38%) as a reason to discount everyone.",
+    "Keeps any health wording as structure or function with the disclaimer."
+   ],
+   "traps": ["Decoy: 'too expensive' is the top cancel reason.", "The win-back email shows $25,700 revenue, most of which would have come anyway."],
+   "signal_count": 3, "signal_band": "2-3"
+  },
+  {
+   "id": "E16", "area": "creative-images", "split": "tune", "agent": "ayaka-ad-design", "brand": "wild-one",
+   "question": "make me a test batch of 5 new static ads for the harness. medium size, for the feed",
+   "deliverable": "A short creative brief and exactly 5 image prompts (1:1), each with on-image text and the reason it should win, in a fenced json block named image-prompts.",
+   "outcome": "First: ads that stop the scroll for style-minded dog owners lift click rate and lower cost per purchase, so ROAS rises. Second: big-dog owners see the harness fits them, opening a segment that already asks for it. Third: the brand looks consistent across the feed.",
+   "inputs": ["brands/wild-one/ORG-CONTEXT.md", "fixtures/E16/"],
+   "buyer_facing": true, "image_task": true, "principles": ["ad-creative-strategy", "visual-design", "claims-and-compliance"],
+   "checks": [
+    "Builds most of the 5 on the winning concept: dog wearing it outside with a product close-up ($27 per purchase vs $61 for flat lays).",
+    "Includes at least one big-dog ad (XL, 214 comments asking about large sizes).",
+    "Uses Limeade, Oxford or Lilac and the brand's palette and type direction.",
+    "Does not claim 'no-pull' or 'stops pulling'.",
+    "Gives 5 distinct ideas, not five versions of one."
+   ],
+   "traps": ["Text-heavy feature lists lost; tempting for a 'clear' ad.", "No-pull claims."],
+   "signal_count": 2, "signal_band": "2-3"
+  },
+  {
+   "id": "E17", "area": "creative-images", "split": "heldout", "agent": "tendai-ad-creative", "brand": "graza",
+   "question": "give me 5 new static ads for drizzle and sizzle for a december test. feed size",
+   "deliverable": "A short creative brief and exactly 5 image prompts (1:1), each with on-image text and the reason it should win, in a fenced json block named image-prompts.",
+   "outcome": "First: food-first squeeze shots lift click rate and cut cost per purchase in December. Second: the ads answer 'which one is for what', which lifts conversion. Third: product names and claims stay correct.",
+   "inputs": ["brands/graza/ORG-CONTEXT.md", "fixtures/E17/"],
+   "buyer_facing": true, "image_task": true, "principles": ["ad-creative-strategy", "visual-design", "claims-and-compliance"],
+   "checks": [
+    "Centres most ads on a hand squeezing oil onto food ($19 per purchase vs $34 for bottle on counter).",
+    "Uses the customer phrase about actually using olive oil now as a hook.",
+    "Makes 'Drizzle for finishing, Sizzle for cooking' clear in at least one ad.",
+    "Does not call Frizzle extra virgin or show it as EVOO.",
+    "Matches the bottle and palette in the Org context."
+   ],
+   "traps": ["Studio bottle shots look premium but lost.", "Frizzle is not EVOO."],
+   "signal_count": 2, "signal_band": "2-3"
+  },
+  {
+   "id": "E18", "area": "creative-images", "split": "tune", "agent": "ayaka-ad-design", "brand": "taylor-stitch",
+   "question": "5 new static ads for the long haul jacket for december. feed size. make them feel like us",
+   "deliverable": "A short creative brief and exactly 5 image prompts (1:1), each with on-image text and the reason it should win, in a fenced json block named image-prompts.",
+   "outcome": "First: worn-in, outdoor ads lift click rate and halve cost per purchase versus studio shots. Second: durability proof wins buyers who want to buy once. Third: honest claims and fit notes cut returns on a jacket that already returns 34%.",
+   "inputs": ["brands/taylor-stitch/ORG-CONTEXT.md", "fixtures/E18/"],
+   "buyer_facing": true, "image_task": true, "principles": ["ad-creative-strategy", "visual-design", "claims-and-compliance"],
+   "checks": [
+    "Shows the jacket worn outside with real wear ($64 per purchase vs $118 for studio).",
+    "Uses 'year five, six, seven' durability proof as a hook (198 comments).",
+    "Never says waterproof; uses water-resistant if anything.",
+    "Follows the brand's navy, khaki and type direction and its rugged, plain voice."
+   ],
+   "traps": ["'Is it waterproof?' comments tempt a waterproof claim.", "New-colour launches lost."],
+   "signal_count": 2, "signal_band": "2-3"
+  },
+  {
+   "id": "E19", "area": "ugc-video", "split": "tune", "agent": "devon-video-ugc", "brand": "sleepy-owl",
+   "question": "write 3 UGC scripts for cold brew packs for reels. 30 sec each, creators shoot at home",
+   "deliverable": "Three 30-second scripts with shot list, on-screen text and spoken lines, plus a one-line brief for the creator.",
+   "outcome": "First: hooks that already win (overnight demo, 3pm slump) get new versions, so cost per purchase falls. Second: answering the caffeine question in the ad removes a top objection. Third: no health claims, so the ads stay live.",
+   "inputs": ["brands/sleepy-owl/ORG-CONTEXT.md", "fixtures/E19/"],
+   "buyer_facing": true, "principles": ["video-and-scripts", "direct-response-copy", "claims-and-compliance"],
+   "checks": [
+    "Builds on the overnight demo and the 3pm work-from-home hooks, not the founder story.",
+    "Answers caffeine correctly (about 425 mg per pack, which makes about 3 cups) or does not quote a number.",
+    "Makes no weight-loss or health claims despite the comments asking.",
+    "Uses 'smooth, not bitter' and the brand's cheeky voice; each script fits 30 seconds."
+   ],
+   "traps": ["Comments ask about weight loss.", "Per-cup caffeine is easy to get wrong."],
+   "signal_count": 2, "signal_band": "2-3"
+  },
+  {
+   "id": "E20", "area": "seo-audit", "split": "heldout", "agent": "stuart-store-seo", "brand": "fellow",
+   "question": "seo audit. where are the quick wins",
+   "deliverable": "A ranked list of SEO fixes with the evidence, expected effect and the first 30 days of work.",
+   "outcome": "First: pages that sit on page 2 for buying searches move to page 1, adding clicks and sales without ad spend. Second: crawl budget and links stop leaking into dead coffee pages. Third: one clear page per buying search ends the swap between blog and product.",
+   "inputs": ["brands/fellow/ORG-CONTEXT.md", "fixtures/E20/"],
+   "buyer_facing": false, "principles": ["search-and-ai-answers", "store-build-and-tech"],
+   "checks": [
+    "Ranks 'pour over kettle' first or near first: position 11.4, 48,300 impressions, 0.6% CTR, on a kettles collection with 35 words of copy.",
+    "Fixes the 'best coffee grinder' swap between the blog post and the Ode product page by choosing one target and linking the other.",
+    "Redirects expired coffee drop URLs (1,240 Googlebot hits on 404s, 63 with backlinks) instead of letting them 404.",
+    "Treats the 9% fall in 'fellow' clicks as seasonal (down 8% in the same months last year)."
+   ],
+   "traps": ["Decoy: branded clicks fell 9%."],
+   "signal_count": 3, "signal_band": "2-3"
+  },
+  {
+   "id": "E21", "area": "aeo-audit", "split": "tune", "agent": "rustam-ai-answers", "brand": "ritual",
+   "question": "what do chatgpt and the other AIs say about us? fix it",
+   "deliverable": "An AI answers audit: what is wrong or missing, why, and the fixes ranked, with the first two weeks of work.",
+   "outcome": "First: AI assistants stop repeating that Ritual is not third-party tested, which removes a reason not to buy. Second: Ritual gets named for vegan prenatal and perimenopause prompts, adding new buyers. Third: the brand's own pages become the source assistants quote.",
+   "inputs": ["brands/ritual/ORG-CONTEXT.md", "fixtures/E21/"],
+   "buyer_facing": false, "principles": ["search-and-ai-answers", "claims-and-compliance"],
+   "checks": [
+    "Creates a clear third-party testing page on the site (the info is only in a footer PDF) to answer the out-of-date 2021 Reddit claim cited 7 times.",
+    "Adds short, plain facts (vegan, folate form, DHA source) near the top of the Prenatal page or in an FAQ, since Ritual is named in 0 of 4 vegan prenatal answers.",
+    "Plans earned coverage in perimenopause comparison articles (0 of 6 answers name Ritual; 10 citations go to articles that leave it out).",
+    "Does not spend effort on 'best multivitamin for women', where Ritual is already named 4 of 4.",
+    "Keeps every claim structure or function with the disclaimer."
+   ],
+   "traps": ["Decoy: the generic multivitamin prompt already works.", "Tempting to 'reply on Reddit' as the main fix."],
+   "signal_count": 3, "signal_band": "2-3"
+  },
+  {
+   "id": "E22", "area": "aeo-audit", "split": "heldout", "agent": "rustam-ai-answers", "brand": "pela",
+   "question": "do AI answers and google say the right things about pela? whats the one thing to fix",
+   "deliverable": "A short audit with the one fix that matters most, how to do it, and what to check after.",
+   "outcome": "First: assistants stop telling shoppers that Pela makes food recyclers, so people who ask about Pela land on the case store and buy. Second: 1,840 referring domains start passing value to the store again. Third: future answers stay correct because the sources are fixed.",
+   "inputs": ["brands/pela/ORG-CONTEXT.md", "fixtures/E22/"],
+   "buyer_facing": false, "principles": ["search-and-ai-answers", "store-build-and-tech"],
+   "checks": [
+    "Names the pela.earth to lomi.com redirect as the problem: 3 of 4 'what is pela' answers say food recycler, and old product links land on lomi.com.",
+    "Fixes it with page-to-page redirects from pela.earth paths to the matching pelacase.com pages, plus updating profiles and listings that link to pela.earth.",
+    "Does not try to fix the 'Pela costs more' answers, which are true.",
+    "Says how to check the fix (re-run the prompts, crawl the redirects)."
+   ],
+   "traps": ["Decoy: price comparisons in 'pela vs casetify' answers."],
+   "signal_count": 1, "signal_band": "1"
+  },
+  {
+   "id": "E23", "area": "market-research", "split": "tune", "agent": "shannon-market-research", "brand": "graza",
+   "question": "where is the market going and what should we move into next? be honest",
+   "deliverable": "A short market read: where demand is moving, the 2 or 3 options ranked, the one to do first and why, and what would change the call.",
+   "outcome": "First: the next line is one buyers already ask for and the company can make, so the $1.2M builds revenue rather than dead stock. Second: growth comes from lines with high repeat rates, which lifts lifetime value. Third: the team avoids a fad that would tie up cash.",
+   "inputs": ["brands/graza/ORG-CONTEXT.md", "fixtures/E23/"],
+   "buyer_facing": false, "principles": ["product-and-market-research", "finance-and-cash"],
+   "checks": [
+    "Sees that mayo and aioli grew from $0.08M to $0.19M a month with the highest repeat (41%), and weighs more sauces as a strong option using existing jar lines.",
+    "Sees Frizzle and high heat cooking growing (sales doubled; search index 52 to 88) and keeps it in the plan, while noting Frizzle is not EVOO.",
+    "Weighs the spray (140 requests, rising search) against its new filler and supplier cost.",
+    "Rejects olive oil shots: search fell from 100 to 29 and only 6 requests.",
+    "Gives one first move and says what evidence would change it."
+   ],
+   "traps": ["Decoy: olive oil shot trend.", "Avocado oil is a tempting 'adjacent' answer with weak demand here."],
+   "signal_count": 3, "signal_band": "2-3"
+  },
+  {
+   "id": "E24", "area": "product-research", "split": "heldout", "agent": "revathi-product-research", "brand": "wild-one",
+   "question": "which product should we add next? one answer not five",
+   "deliverable": "One recommended product with the case for it, the numbers, the risks, and the first steps; plus why the main alternatives lost.",
+   "outcome": "First: the new product sells to customers already asking for it, adding revenue with little ad spend. Second: it fits the $60,000 cash limit and does not bring a high return rate. Third: it deepens a growing line, which lifts order value.",
+   "inputs": ["brands/wild-one/ORG-CONTEXT.md", "fixtures/E24/"],
+   "buyer_facing": false, "principles": ["product-and-market-research", "finance-and-cash"],
+   "checks": [
+    "Checks each candidate against the $60,000 cash cap (MOQ times landed cost plus testing).",
+    "Weighs the raincoat survey request against 27% returns on sized apparel and the 6,000-unit MOQ ($58,800).",
+    "Weighs the car harness demand (2,100 searches, 310 tickets) against crash-test cost and lead time, and does not make a safety claim without testing.",
+    "Uses the cat line attach rate (38% add a tunnel) as evidence for cat accessories.",
+    "Picks one and says what would change the call."
+   ],
+   "traps": ["Decoy: the survey's top request (raincoat) is the riskiest on returns and cash.", "Car safety claims need third-party testing."],
+   "signal_count": 2, "signal_band": "2-3"
+  },
+  {
+   "id": "E25", "area": "offer-pricing", "split": "tune", "agent": "brendan-offers", "brand": "taylor-stitch",
+   "question": "should we do a black friday sale this year? we never discount. what do we do instead, exactly",
+   "deliverable": "A clear yes or no on a sitewide sale, and the exact Black Friday plan instead: offers, who gets them, dates, and the margin math.",
+   "outcome": "First: Black Friday revenue rises without training buyers to wait for discounts, so full-price margin holds into 2027. Second: old stock clears into cash. Third: members feel rewarded, which lifts repeat buying.",
+   "inputs": ["brands/taylor-stitch/ORG-CONTEXT.md", "fixtures/E25/"],
+   "buyer_facing": false, "principles": ["offers-and-pricing", "finance-and-cash", "brand-and-voice"],
+   "checks": [
+    "Says no to a sitewide sale, with the margin math (62% to about 49% at 25% off).",
+    "Repeats and sizes the Common Club double credit (+38% member revenue; credit cost about 31% redeemed).",
+    "Uses Last Call for the 9,200 units two seasons or older, noting full-price sales held at index 98 to 103 after it.",
+    "Does not follow the competitor's 40% off or read 3% of 'when is your sale' replies as a mandate."
+   ],
+   "traps": ["Decoy: a competitor's 40% off.", "Decoy: a few customers asking for a sale."],
+   "signal_count": 2, "signal_band": "2-3"
+  },
+  {
+   "id": "E26", "area": "unit-economics", "split": "heldout", "agent": "radek-unit-economics", "brand": "taylor-stitch",
+   "question": "what does an order actually make us after free shipping and free returns? where are we losing money",
+   "deliverable": "Contribution per order by product and order size, where money is lost, and the 3 changes that fix most of it with their effect.",
+   "outcome": "First: the store stops losing money on small orders and costly returns, so profit per order rises. Second: fixes to fit and exchanges cut return costs and lift reviews. Third: ad targets can be set on true contribution.",
+   "inputs": ["brands/taylor-stitch/ORG-CONTEXT.md", "fixtures/E26/"],
+   "buyer_facing": false, "principles": ["measurement-and-profit", "finance-and-cash"],
+   "checks": [
+    "Shows orders under $60 (2,900 orders, $41 average) make only about $8 before marketing, and proposes a minimum for free shipping or a small-order fee while keeping free returns.",
+    "Shows the Carnegie Pant's 31% return rate costs about $17 per order versus a 12% rate, and points to fit information.",
+    "Counts exchanges as a cost (about $27.70 extra each) and suggests a cheaper exchange path.",
+    "Does not take the 63% gross margin as the answer; works to contribution after shipping, fees, pick and pack, and returns.",
+    "Shows the method so the numbers can be traced."
+   ],
+   "traps": ["Decoy: a healthy-looking 63% gross margin."],
+   "signal_count": 3, "signal_band": "2-3"
+  },
+  {
+   "id": "E27", "area": "india-cod", "split": "tune", "agent": "ishita-india-commerce", "brand": "sleepy-owl",
+   "question": "COD is killing us. should we just stop COD?",
+   "deliverable": "A clear answer, the plan by pincode tier, the expected effect on RTO and orders, and the first week's steps.",
+   "outcome": "First: RTO losses fall sharply while most COD buyers still order, so net revenue rises and cost per order falls. Second: more buyers move to prepaid, which speeds cash. Third: tier 3 orders become profitable or stop costing money.",
+   "inputs": ["brands/sleepy-owl/ORG-CONTEXT.md", "fixtures/E27/"],
+   "buyer_facing": false, "principles": ["customer-experience", "measurement-and-profit", "offers-and-pricing"],
+   "checks": [
+    "Says do not stop COD across the board; COD is about 52% of orders.",
+    "Rolls out WhatsApp COD confirmation (RTO 14% vs 27% in the pilot).",
+    "Uses the Rs 30 prepaid nudge (31% switched vs 9%) and checks the small drop in checkout completion (61% vs 63%).",
+    "Treats tier 3 differently (79% COD, 41% RTO): partial prepaid, a COD fee or limits there.",
+    "Reads 'customer not available' (60%) as a confirmation and intent problem, not only the courier's fault."
+   ],
+   "traps": ["Decoy: the courier's RTO reasons blame availability.", "Stopping COD looks simple and would cut orders hard."],
+   "signal_count": 4, "signal_band": "4+"
+  },
+  {
+   "id": "E28", "area": "sourcing", "split": "tune", "agent": "zhenyu-sourcing", "brand": "wild-one",
+   "question": "got 3 quotes for the harness. which one do we go with?",
+   "deliverable": "A pick with the landed cost per unit for each supplier, the risks, and the next steps (including what to ask each supplier).",
+   "outcome": "First: the order lands at the lowest safe cost, so margin per harness rises. Second: no buckle failures reach customers, which avoids returns, bad reviews and a safety problem. Third: stock arrives before cover runs out, so no lost sales.",
+   "inputs": ["brands/wild-one/ORG-CONTEXT.md", "fixtures/E28/"],
+   "buyer_facing": false, "principles": ["sourcing-and-procurement", "supply-planning-and-logistics"],
+   "checks": [
+    "Computes landed cost per unit for all three on the same basis: about $8.55 (A, China), $8.28 (B, Cambodia) and $7.75 (C, Vietnam, after adding inland trucking to the EXW price).",
+    "Rules out Supplier A on the buckle pull test (3 of 20 failed) regardless of price.",
+    "Checks lead time against 70 days of cover: C's 75 days misses; A and B arrive in time.",
+    "Picks B for this order (or a defensible split), within the $30,000 cash limit, and says what C must fix (Lilac colour, lead time) for a later order."
+   ],
+   "traps": ["Decoy: A has the lowest unit price.", "C's EXW price is not comparable to FOB without inland costs."],
+   "signal_count": 3, "signal_band": "2-3"
+  },
+  {
+   "id": "E29", "area": "tracking", "split": "heldout", "agent": "emre-tracking", "brand": "krave-beauty",
+   "question": "meta says way more sales than shopify since end of october. whats broken",
+   "deliverable": "A diagnosis with the evidence, the fixes in order, and how to check each fix worked.",
+   "outcome": "First: Meta counts real new orders again, so budget decisions stop scaling phantom sales. Second: renewals stop training the algorithm toward existing subscribers. Third: the team knows which gaps between tools are normal.",
+   "inputs": ["brands/krave-beauty/ORG-CONTEXT.md", "fixtures/E29/"],
+   "buyer_facing": false, "principles": ["measurement-and-profit", "store-build-and-tech"],
+   "checks": [
+    "Finds that deduplication fell to 0 after 28 Oct because server events lost event_id in the theme update, so browser and server purchases are both counted.",
+    "Finds that subscription renewals now send server Purchase events, and excludes them (or sends them as a different event).",
+    "Gives a fix order and a check for each (Events Manager deduplication rate, test events).",
+    "Says GA4 being about 12% under Shopify is normal with consent mode and is not the bug."
+   ],
+   "traps": ["Decoy: the GA4 gap."],
+   "signal_count": 2, "signal_band": "2-3"
+  },
+  {
+   "id": "E30", "area": "product-page", "split": "tune", "agent": "georgia-product-copy", "brand": "fellow",
+   "question": "rewrite the stagg ekg pro page copy. its too generic",
+   "deliverable": "The full product page copy: headline, subhead, body, bullets, a short FAQ and the variant notes.",
+   "outcome": "First: more visitors buy because the copy says what the kettle does in buyers' words. Second: fewer 'smaller than I expected' returns because capacity is clear before purchase. Third: no unproven safety claims.",
+   "inputs": ["brands/fellow/ORG-CONTEXT.md", "fixtures/E30/"],
+   "buyer_facing": true, "principles": ["direct-response-copy", "landing-pages-and-cro", "brand-and-voice"],
+   "checks": [
+    "States capacity early and concretely (0.9 L, about 4 cups), because 31% of returns say smaller than expected.",
+    "Uses buyers' phrases ('precise to the degree', 'pours like a dream', 'looks great on my counter') instead of 'elevate your ritual'.",
+    "Claims no safety marks and nothing the spec sheet does not support.",
+    "Covers the variants and prices correctly and keeps Fellow's calm, precise voice."
+   ],
+   "traps": ["Unconfirmed safety marks.", "Generic luxury language in the current copy."],
+   "signal_count": 2, "signal_band": "2-3"
+  },
+  {
+   "id": "E31", "area": "review-mining", "split": "tune", "agent": "funmilayo-customer-research", "brand": "pela",
+   "question": "whats in our reviews lately? anything we should act on",
+   "deliverable": "The 3 to 5 findings that matter, each with evidence and the action and owner, ranked.",
+   "outcome": "First: a growing product defect is caught early, which cuts returns and bad reviews. Second: the words buyers love become ad and page copy, lifting conversion. Third: noise from one angry customer does not drive a costly change.",
+   "inputs": ["brands/pela/ORG-CONTEXT.md", "fixtures/E31/"],
+   "buyer_facing": false, "principles": ["product-and-market-research", "customer-experience"],
+   "checks": [
+    "Escalates edge cracking as a likely quality issue: mentions rose from 8 to 31 a month and sit at 9.1% of iPhone 16 family reviews versus 2.0% for the 15 family.",
+    "Turns 'survived drops on concrete' and 'bought one for my sister' into copy and ad angles.",
+    "Discounts the October shipping-delay spike: 38 of 41 came from one customer.",
+    "Notes the steady MagSafe complaints as a known page and listing fix, not a new finding."
+   ],
+   "traps": ["Decoy: one customer's 38 near-identical posts."],
+   "signal_count": 3, "signal_band": "2-3"
+  },
+  {
+   "id": "E32", "area": "inventory", "split": "tune", "agent": "omar-inventory-planning", "brand": "graza",
+   "question": "should i reorder sizzle now? last weeks spike scared me",
+   "deliverable": "A yes or no with the quantity and the reasoning in a few lines.",
+   "outcome": "First: no stockout in December and no cash tied up in extra stock. Second: the team learns to read one-off spikes. Third: retail and own-site supply stay steady.",
+   "inputs": ["brands/graza/ORG-CONTEXT.md", "fixtures/E32/"],
+   "buyer_facing": false, "principles": ["supply-planning-and-logistics", "finance-and-cash"],
+   "checks": [
+    "Says yes, place the standard 6,000-unit order now: about 6.5 weeks of cover against a 30-day lead time plus 2 weeks of safety stock.",
+    "Treats the 2,890-unit week as a one-off and does not raise the order because of it.",
+    "Allows for December's usual 10% lift without overreacting.",
+    "Answers in a few lines on the first screen."
+   ],
+   "traps": ["Decoy: a single creator spike week.", "There is no hidden problem; the right call is the normal reorder."],
+   "signal_count": 0, "signal_band": "0"
+  },
+  {
+   "id": "E33", "area": "offer-pricing", "split": "heldout", "agent": "brendan-offers", "brand": "wild-one",
+   "question": "is our free shipping threshold right? should we drop it to $49 to match a competitor",
+   "deliverable": "A clear answer with the reasoning and, if any, one small change to try.",
+   "outcome": "First: keep the threshold that lifts order value, so contribution per order holds. Second: avoid a drop that would cut margin on thousands of orders. Third: if anything, a cheap add-on nudge lifts more carts over $90.",
+   "inputs": ["brands/wild-one/ORG-CONTEXT.md", "fixtures/E33/"],
+   "buyer_facing": false, "principles": ["offers-and-pricing", "measurement-and-profit"],
+   "checks": [
+    "Says keep $90: orders cluster at $90 to $104 (6,900 of 20,500) and 38% of $70 to $89 carts add an item to qualify.",
+    "Estimates what $49 would cost (free shipping on the 5,200 orders between $50 and $89 at about $8.90 each, and lost add-ons).",
+    "Does not treat 71% cart abandonment as a sign the threshold is wrong.",
+    "At most suggests a small test such as a better add-on rail; does not invent a problem."
+   ],
+   "traps": ["Decoy: competitor at $49.", "Decoy: 71% cart abandonment.", "No hidden problem; the right call is no change."],
+   "signal_count": 0, "signal_band": "0"
+  }
+ ]
+}

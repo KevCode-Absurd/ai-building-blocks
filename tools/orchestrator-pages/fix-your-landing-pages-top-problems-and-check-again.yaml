@@ -42,7 +42,7 @@ output_sample:
     - After the pause, your page again with the fix-now changes made
   prerequisites:
     - An AI that can read files and follow a handoff file
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Step 1 audit report
       contains: What the page is for, findings rated 0 to 4, quick wins, test ideas and a page score out of 100.

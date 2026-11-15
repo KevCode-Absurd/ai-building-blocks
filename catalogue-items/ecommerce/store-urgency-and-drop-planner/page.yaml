@@ -50,7 +50,7 @@ output_sample:
     - Real limits such as batch size or supplier minimum (optional)
   prerequisites:
     - An AI chat tool such as Claude, ChatGPT or Gemini
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Real levers
       contains: The limits you can truthfully use, each with its proof, such as a stock count, date or batch size.

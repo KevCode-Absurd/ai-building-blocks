@@ -5,11 +5,11 @@ job: brand-file
 thinking: medium
 thinking_why: Four skills run in a row, but they are plans, not sums. A mid-size model does it well. Use your strongest for a large range.
 headline: Turn your box opening into a moment customers film and repeat
-subhead: Give it your store link, order numbers and packaging costs. It builds your brand file, designs one small ritual around your product, plans the box so weight, colour, sound and feel match, and chooses inserts and gifts you can afford, with the payback worked out.
+subhead: Give it your store link, order numbers and packaging costs. It builds your org context, designs one small ritual around your product, plans the box so weight, colour, sound and feel match, and chooses inserts and gifts you can afford, with the payback worked out.
 explain: |
   When your product looks like your rivals', the box is one of the few places left to stand apart. Most boxes are just a container. Customers rarely film them, and nothing in them makes someone come back.
 
-  The steps build the moment in order. First it reads your store and reviews into a brand file. Then it designs one small act that customers can repeat around your product, such as a way to open, use or store it, and gives three ideas with a 90-day plan for one. Next it matches the box to that ritual, one cue per sense, with the cost of each. Last it chooses the inserts and gifts for each customer tier, costs them per order and checks how many repeat orders pay them back.
+  The steps build the moment in order. First it reads your store and reviews into an org context. Then it designs one small act that customers can repeat around your product, such as a way to open, use or store it, and gives three ideas with a 90-day plan for one. Next it matches the box to that ritual, one cue per sense, with the cost of each. Last it chooses the inserts and gifts for each customer tier, costs them per order and checks how many repeat orders pay them back.
 when:
   - Your product looks like your rivals' and you want a pack opening that customers repeat and share.
   - You send orders in plain boxes and want to know what is worth adding for the cost.
@@ -25,7 +25,7 @@ you_give:
   - Your current packaging cost per order and any repeat rate you know
   - A budget per order and a few lines in your brand voice (optional)
 you_get:
-  - A brand file that the later steps work from
+  - An org context that the later steps work from
   - Three ritual ideas with a name and a line to explain each, and a 90-day plan for one
   - An unboxing plan with one matched cue per sense, its cost per order and a test of two versions
   - Insert and gift tiers with costs, an insert card spec and the repeat orders needed to pay back
@@ -45,9 +45,9 @@ output_sample:
   prerequisites:
     - An AI that can read files and images, such as Claude
     - The handoff pack from this page, with every skill file in it
-    - A brand brain from the Brand profile builder (optional, the first step builds one if you have none)
+    - An org context from the Org context builder (optional, the first step builds one if you have none)
   output:
-    - name: "Step 1: Brand file"
+    - name: "Step 1: Org context"
       contains: Eight plain files on your facts, offers, buyers, claims, voice and look, each fact tagged by source.
     - name: "Step 2: Ritual"
       contains: Three named ritual ideas, the one to launch, a 90-day plan and how to measure it.
@@ -58,7 +58,7 @@ output_sample:
     - name: Hand-back summary
       contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
-  - title: Build your brand file
+  - title: Build your org context
     text: Reads your site and reviews and writes eight plain files with each fact tagged by source, so the later steps work from your real brand.
   - title: Design the ritual
     text: Looks for one small act in how the product is used, turns an annoyance into a ritual, and gives three ideas with a 90-day launch plan.
@@ -67,7 +67,7 @@ how_it_works:
   - title: Choose inserts and gifts
     text: Sets tiers for all orders, big orders and VIPs, does the volume sums, sets note and gift rules and checks how many repeat orders it takes to pay back.
 output_shape: |-
-  STEP 1: BRAND FILE
+  STEP 1: ORG CONTEXT
     Eight files for facts, offers, buyers, claims, voice and look, market and history
 
   STEP 2: RITUAL
@@ -102,7 +102,7 @@ test:
   - Send version A to half of new orders and version B to the rest, as the plan suggests.
   - Check after 90 days whether repeat orders or shares moved.
 improve:
-  - Save the ritual and the three words in your brand file for all later packaging.
+  - Save the ritual and the three words in your org context for all later packaging.
   - Cut the cue that costs most and did least, after the test.
   - Add new rituals each season, using the seasonal ideas in step 2.
   - Pair it with a returns policy designer so the box also eases return worries.

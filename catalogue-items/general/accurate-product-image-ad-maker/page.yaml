@@ -187,7 +187,7 @@ test:
   - Make the image and run the six checks with your real photo beside it at full size. If it passes a line you'd fail, add that rule to your mistakes list.
 
 improve:
-  - Keep your product's lock lines in your brand file, so every prompt in a set uses the same words.
+  - Keep your product's lock lines in your org context, so every prompt in a set uses the same words.
   - Add how the product opens and is held to your lock lines (for Sprout, the daily pack tears straight across the top), so it's never guessed.
   - Write your usual image tool, its limits and its price per image into "What you need", so it fits that tool every time.
   - Pair it with the truth sheet skill, which writes the lock lines, and with the skill that turns each failure note into a rule.

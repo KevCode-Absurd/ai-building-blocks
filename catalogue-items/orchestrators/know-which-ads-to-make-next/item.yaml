@@ -15,7 +15,7 @@ outputs:
 uses: [ad-results-report-writer, untried-ad-idea-finder, ad-test-brief-writer, ad-first-line-writer-and-scorer]
 steps:
   - {uses: ad-results-report-writer, note: "Work out every figure from the export's totals: return on spend, cost per sale and click rate, per ad and for the account. For any group of ads, show the row sums it rests on (spend and sales added up) before the result. Then write what changed, one open worry and three ranked actions, each with how to check it."}
-  - {uses: untried-ad-idea-finder, note: "Use the report from step 1 and the brand file. Grade the evidence, place every past ad by moment, value, buyer knowledge, opening and format, rank the five biggest gaps, and write one idea per gap."}
+  - {uses: untried-ad-idea-finder, note: "Use the report from step 1 and the org context. Grade the evidence, place every past ad by moment, value, buyer knowledge, opening and format, rank the five biggest gaps, and write one idea per gap."}
   - {uses: ad-test-brief-writer, note: "Use the report and the gap map. Grade what the results prove, pick the plan (explore, extend or refresh), and brief three ideas aimed at three different buyer doubts. Fill each thinking block, then write three versions per idea, each with its own first frame."}
   - {uses: ad-first-line-writer-and-scorer, note: "Write opening lines for the ideas in the step 3 brief, then score each on flags, gain, new and clear plus the honesty gate, with a fix for any under 3. Then close the run with a HAND-BACK SUMMARY: each step's file, any step not run and why, and every MISSING: line from all steps in one list."}
 origin: own

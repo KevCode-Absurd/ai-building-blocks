@@ -1,0 +1,8 @@
+# (test data) Review theme counts, printed compostable cases, all models. Built for an e-commerce eval. Not Pela's real figures.
+month,reviews,edges_cracking_after_months,prints_love,survived_drops,shipping_delay,magsafe_issue
+2026-05,410,8,96,41,6,22
+2026-06,395,11,90,38,5,21
+2026-07,420,17,99,44,4,19
+2026-08,430,22,101,40,7,20
+2026-09,405,26,94,39,5,18
+2026-10,440,31,103,46,41,20

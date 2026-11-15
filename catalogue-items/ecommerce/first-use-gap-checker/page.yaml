@@ -128,7 +128,7 @@ test:
 improve:
   - Put your product's setup steps and expected first-use time into the skill file, so the timeline starts from facts and not from guesses.
   - Add your return reason codes, so it tags them the way your helpdesk does.
-  - Save the three tracking measures in your brand file and read them every month.
+  - Save the three tracking measures in your org context and read them every month.
   - Pair it with the Wrong-buyer review checker (promise and buyer mismatch) and the Switch friction remover (worries before the order).
 
 works_best_with:

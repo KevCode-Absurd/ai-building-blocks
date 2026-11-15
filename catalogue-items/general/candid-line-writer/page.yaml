@@ -130,7 +130,7 @@ test:
 
 improve:
   - Add every new complaint to your flaw list, so you always have a fresh one.
-  - Keep the lines that tested best in your brand file.
+  - Keep the lines that tested best in your org context.
   - Add the buyer's own phrase for the flaw so the line sounds like them.
   - Pair it with "Flaw-first ad writer" when a single ad needs the same turn.
 

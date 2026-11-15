@@ -1,10 +1,10 @@
 new_slug: know-which-ads-to-make-next
 name: "Know which ads to keep, cut and make next"
-summary: "Find which ads to keep, cut and make next. Give it your ad results and brand file. You get ranked actions, a gap map and briefs for three new ads."
+summary: "Find which ads to keep, cut and make next. Give it your ad results and org context. You get ranked actions, a gap map and briefs for three new ads."
 job: read-ad-results
 
 headline: "Know which ads to keep, cut and make next"
-subhead: Give it your ad results export and your brand file. It works out every number from the totals, writes three ranked actions, maps what your ads haven't tried, briefs three new ideas aimed at different buyer doubts, and scores opening lines for them.
+subhead: Give it your ad results export and your org context. It works out every number from the totals, writes three ranked actions, maps what your ads haven't tried, briefs three new ideas aimed at different buyer doubts, and scores opening lines for them.
 
 explain: |
   An ad results export is a wall of numbers, and it doesn't say what to make next. Teams often react to one number, or make more of whatever they made last month, and miss the buyers and reasons they've never tried.
@@ -22,7 +22,7 @@ not_for:
 
 you_give:
   - Your ad results export, one row per ad with spend, clicks, sales and revenue
-  - Your brand file, with your buyers, offers and the claims you can make
+  - Your org context, with your buyers, offers and the claims you can make
 you_get:
   - A short report with the numbers per ad, three ranked actions and one open worry
   - A map of what your ads haven't tried yet, with the five biggest gaps ranked
@@ -32,18 +32,18 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your inputs ready. Export your results with one row per ad (spend, impressions, clicks, purchases, revenue, days live and each ad's opening line), plus your brand file. Add the previous period and your targets if you have them.
+  - Have your inputs ready. Export your results with one row per ad (spend, impressions, clicks, purchases, revenue, days live and each ad's opening line), plus your org context. Add the previous period and your targets if you have them.
   - It works step by step and saves each result. Read the report's three actions first, then check the gap map before you use the brief.
   - Give the brief and the scored opening lines to whoever makes your ads.
 output_sample:
   input:
     - Your ad results export, one row per ad with spend, impressions, clicks, purchases, revenue, days live and opening line
-    - Your brand file with your buyers, products, offers and the claims you can make
+    - Your org context with your buyers, products, offers and the claims you can make
     - The export for the period before (optional)
     - Your target cost per sale or return on ad spend (optional)
   prerequisites:
     - An AI that can read files, such as Claude with the handoff folder
-    - A brand file, which the Brand profile builder can make from your website
+    - An org context, which the Org context builder can make from your website
   output:
     - name: Ad results report
       contains: Numbers worked out from the totals for each ad, what changed, one open worry and three ranked actions.
@@ -96,7 +96,7 @@ example:
 
     Ad results: ad-results.csv (10 rows, 9 ads, 14 to 42 days each.
     P1 is split into two 21-day windows.) Practice numbers.
-    Brand file: the Sprout brand file, reviews and live ads.
+    Org context: the Sprout org context, reviews and live ads.
     Targets: none given.
   output: |
     REPORT: 14 to 42 days per ad, USD, revenue as the ad platform reports it
@@ -143,7 +143,7 @@ example:
     the best measured ad ($21.21 a sale over 30 days, one window, so no
     sign of wear yet). One new opening for T1's idea, two new ideas.
     Idea 1, "Easy on the gut" (T1's idea, new opening) | Stage: comparing
-      Doubt: "Will this upset my stomach more?" (brand file; will it
+      Doubt: "Will this upset my stomach more?" (org context; will it
       work for me?) | Answer: Sprout supports digestion with 6g prebiotic
       fiber, and gut-sensitive buyers can start with Low Sugar
       Moment: after lunch at a desk, a fiber powder untouched (inferred)
@@ -191,7 +191,7 @@ judge:
   - No ad is called a winner without numbers, and running a long time isn't treated as winning.
   - Each of the three ideas answers a different buyer doubt, and each fills a gap from the map.
   - The three versions of each idea open on different first frames, not just new words.
-  - The opening lines contain no fact that isn't in your brand file, and the run ends with a summary of every file and every MISSING line.
+  - The opening lines contain no fact that isn't in your org context, and the run ends with a summary of every file and every MISSING line.
 
 test:
   - Check one cost per sale from step 1 with a calculator, using the same rows of your export.
@@ -210,7 +210,7 @@ works_best_with:
   tools:
     - {name: "Meta Ads Manager", why: "Exports spend, impressions, clicks, purchases and revenue per ad for the dates you pick."}
     - {name: "Google Sheets", why: "Recomputes cost per sale and return on spend from the export, so you can check every number."}
-    - {name: "Claude", why: "Holds the export, the brand file and four steps of work in one run without dropping rows."}
+    - {name: "Claude", why: "Holds the export, the org context and four steps of work in one run without dropping rows."}
   inputs:
     - "The same export for the period before, so the report can say what changed"
     - "Your store's own revenue for the period, so overall return isn't the ad platform's guess"

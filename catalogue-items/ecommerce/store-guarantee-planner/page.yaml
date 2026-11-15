@@ -49,7 +49,7 @@ output_sample:
     - What a return costs you (optional for digital goods)
     - Your current return policy and payment setup (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder helps, but is not required
+    - Your org context from the Org context builder helps, but is not required
   output:
     - name: Net test
       contains: Sales, refunds, net sales and net profit for your current guarantee and the stronger one, with a verdict.

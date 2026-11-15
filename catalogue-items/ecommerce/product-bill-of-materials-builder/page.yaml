@@ -125,7 +125,7 @@ test:
 
 improve:
   - Add your standard rows (for example pack insert, tamper seal, carton) so the sheet always includes them.
-  - Save each filled sheet in your brand file, with the date. Next time the skill starts from the last one and shows what moved.
+  - Save each filled sheet in your org context, with the date. Next time the skill starts from the last one and shows what moved.
   - Add the return rate of each product, so the cost-idea ratings use your real numbers.
   - Pair it with the landed cost calculator once the sheet is done, and the price-break negotiator before the call.
 

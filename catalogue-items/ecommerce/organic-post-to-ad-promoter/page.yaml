@@ -94,7 +94,7 @@ output_shape: |
   PROMO BACK HALF (for each reshoot)
   Hook (kept): <first line or shot>
   Turn: <line that links the hook to the product>
-  Offer and call to action: <from your brand file>
+  Offer and call to action: <from your org context>
 
   TEST PLAN  Budget <$>  Compare to: <your usual ad>  Judge by: <sales, not views>
   CHECKS MISSED: <none | list>
@@ -117,7 +117,7 @@ judge:
   - Each outlier shows how many times above the baseline it is.
   - Each decision says whether the post touches the product.
   - Each post from another person's account names who must agree.
-  - Every promo half uses only claims that come from your offer or brand file.
+  - Every promo half uses only claims that come from your offer or org context.
   - It says that views do not guarantee sales and asks for a test.
 
 test:

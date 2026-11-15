@@ -11,7 +11,7 @@ explain: |
 
   It starts with intake questions on offer, audience and proof. Then it sets page structure, picks a layout, and writes copy with conversion rules in mind. A second set of rules covers type sizes, spacing, corner radius, backgrounds, hero layout, icons and motion, so a new page does not look random. It adds search and AI answer basics and a list of common mistakes.
 
-  It is built for a new software or product page with no brand look yet. If your business already has a site, your AI captures it first with Brand DNA capture. Your fonts, colours, buttons and section order then win over these rules.
+  It is built for a new software or product page with no brand look yet. If your business already has a site, your AI captures it first with Org context capture. Your fonts, colours, buttons and section order then win over these rules.
 when:
   - You are building a landing page for a new product with no brand look yet, and want copy and layout planned together.
   - Your page looks busy and inconsistent and you want clear design rules.
@@ -19,7 +19,7 @@ when:
   - You need to hand a developer exact styles to follow.
 not_for:
   - "You need a homepage or a site that serves many goals: use a plain site map and plan each page on its own."
-  - "You want to improve or add to a site that already exists: start with the Grounded job protocol and Brand DNA capture, so your own look wins. Use this skill only for its conversion questions."
+  - "You want to improve or add to a site that already exists: start with the Grounded job protocol and Org context capture, so your own look wins. Use this skill only for its conversion questions."
   - "You only want ad copy or a short email: write that with your AI directly, as this plan is built for a full page."
 you_give:
   - Your offer and price

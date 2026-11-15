@@ -24,7 +24,7 @@ you_give:
   - Your average order value, margin and break-even cost per new customer
   - The landing page you would send YouTube traffic to
   - Your offer, shipping and returns terms, and the size of your audience lists
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - A yes or wait call with a readiness score out of 100, a starting budget split and what to skip
   - A cold Demand Gen plan with bids, audiences, ad groups and a brief for a five-second hook
@@ -42,7 +42,7 @@ output_sample:
     - Your best video ads from Meta or TikTok, with their results
     - Your average order value, margin and break-even cost per new customer
     - The landing page you would send YouTube traffic to
-    - Your brand file (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
     - A paid Google Ads budget for the Demand Gen and remarketing campaigns
@@ -103,5 +103,5 @@ test:
   - Run step 3 twice on the same export. Verdicts should match, even if the wording differs.
 improve:
   - Replace its benchmarks with your own once you have a few campaigns. They come from one agency's accounts.
-  - Add your claim rules to your brand file so the hook brief stays inside Google policy.
+  - Add your claim rules to your org context so the hook brief stays inside Google policy.
   - Save your winning hooks and the next-test list, and feed them back into the next video batch.

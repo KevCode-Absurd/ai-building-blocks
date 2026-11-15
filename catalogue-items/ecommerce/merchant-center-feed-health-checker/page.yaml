@@ -132,7 +132,7 @@ test:
 improve:
   - Add your catalogue's product types to the skill file, so it knows which items need a GTIN.
   - Add your own score weights if disapproved products matter more to you than titles.
-  - Add your best sellers list to the brand file, so they rank first.
+  - Add your best sellers list to the org context, so they rank first.
   - Add your update schedule, such as a refresh every 6 hours.
   - Pair it with the Shopping feed title writer for titles and the suspension checker for store policy.
 

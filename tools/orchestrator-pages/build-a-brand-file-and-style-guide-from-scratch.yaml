@@ -1,22 +1,22 @@
 new_slug: build-a-brand-file-and-style-guide-from-scratch
-name: Build a brand file and style guide from scratch
-summary: Build a brand file and style guide from scratch. Give it your product and buyers. Get messages, voice rules, a visual direction and a guide.
+name: Build an org context and style guide from scratch
+summary: Build an org context and style guide from scratch. Give it your product and buyers. Get messages, voice rules, a visual direction and a guide.
 job: brand-file
 thinking: medium
 thinking_why: It runs five skills in a row, and each adds to the same file. A mid-size model works. Read the messages and voice rules before the style guide step.
-headline: Build your brand file and style guide from nothing
-subhead: Give it your product and who it is for. It builds one brand file, adds your core message and voice rules, settles on one visual direction from three, and writes a style guide anyone can follow without guessing.
+headline: Build your org context and style guide from nothing
+subhead: Give it your product and who it is for. It builds one org context, adds your core message and voice rules, settles on one visual direction from three, and writes a style guide anyone can follow without guessing.
 explain: |
   A brand that lives in your head gets said a little differently every time. Each new page, post or freelancer starts from nothing, and the work drifts. If you have no website yet, there is nothing to read the facts from.
 
-  The steps build the brand up in the order that keeps it consistent. First your answers become one brand file. Then it writes the core message, tagline options and proof for each audience. It adds tone, word choices and writing rules on top. Next it makes three different visual directions, scores each against your values and your buyer, and merges the best parts into one. Last it brings the brand file and the direction into a style guide. Each rule gets an example taken from your brand file, or a note that none is available.
+  The steps build the brand up in the order that keeps it consistent. First your answers become one org context. Then it writes the core message, tagline options and proof for each audience. It adds tone, word choices and writing rules on top. Next it makes three different visual directions, scores each against your values and your buyer, and merges the best parts into one. Last it brings the org context and the direction into a style guide. Each rule gets an example taken from your org context, or a note that none is available.
 when:
-  - You are starting a business or a project and have no website or brand file to read.
+  - You are starting a business or a project and have no website or org context to read.
   - Your brand is only in your head and each new writer or designer asks you the same questions.
   - You want the message, voice and look decided together, so they do not fight each other.
 not_for:
   - "You already have a brand guide and want to fill gaps: use the Brand guide builder."
-  - "You have a website and want your facts read from it: use the Brand profile builder."
+  - "You have a website and want your facts read from it: use the Org context builder."
   - "You only need a short brief on who you sell to: use the Buyer brief writer."
 you_give:
   - What you make and what it costs
@@ -25,7 +25,7 @@ you_give:
   - Names of brands whose voice or look you like, and ones you do not (optional)
   - Photos of your product and any logo or colours you must keep (optional)
 you_get:
-  - One brand file with product, buyers, proof and voice
+  - One org context with product, buyers, proof and voice
   - A core message, tagline options and proof points for each audience
   - Tone, word lists and writing rules any writer can follow
   - One merged visual direction with photo rules you can test
@@ -47,7 +47,7 @@ output_sample:
     - An AI that can read the skill files in the handoff pack, such as Claude Code or a Claude Project
   output:
     - name: outputs/step-01-product-context-builder.md
-      contains: One brand file with your product, buyers, rivals, proof and voice, with gaps marked MISSING.
+      contains: One org context with your product, buyers, rivals, proof and voice, with gaps marked MISSING.
     - name: outputs/step-02-brand-messaging-builder.md
       contains: Your core message, tagline options and proof points for each audience.
     - name: outputs/step-03-brand-voice-rules-writer.md
@@ -59,7 +59,7 @@ output_sample:
     - name: HAND-BACK SUMMARY
       contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
-  - title: Build the brand file
+  - title: Build the org context
     text: Asks about the product, buyer, rivals, proof and voice, shows a draft, and saves one file every later step reads.
   - title: Write the messages
     text: Writes one core message and a value line, tagline options and key messages with proof for each audience, and checks each claim has a fact.
@@ -68,9 +68,9 @@ how_it_works:
   - title: Choose the visual direction
     text: Makes three different directions, scores each against your values and your buyer, merges the best parts, and writes photo rules you can answer with yes or no.
   - title: Write the style guide
-    text: Combines the brand file and the direction into one guide. Each rule gets an example from your brand file, or a MISSING line if there is none.
+    text: Combines the org context and the direction into one guide. Each rule gets an example from your org context, or a MISSING line if there is none.
 output_shape: |-
-  STEP 1: BRAND FILE
+  STEP 1: ORG CONTEXT
     Product | buyers | rivals | proof | voice | gaps marked MISSING
 
   STEP 2: MESSAGES
@@ -97,7 +97,7 @@ tweaks:
   - what: Product photos
     how: Attach clear photos before step 4. Without them the photo rules stay general.
 judge:
-  - Every claim in the messages has a fact in the brand file behind it.
+  - Every claim in the messages has a fact in the org context behind it.
   - The three visual directions are truly different, and the merged one says what it took from each.
   - Each photo rule can be answered yes or no by looking at a picture.
   - The style guide has a real example next to each rule.
@@ -108,7 +108,7 @@ test:
   - Check that the core message appears in the guide's voice section without changing meaning.
   - Run step 1 again after you have real customers. Compare what changed.
 improve:
-  - Fill every MISSING line in the brand file, then re-run steps 2 to 5 so they use real facts.
-  - Add real customer quotes to the brand file after you have some.
+  - Fill every MISSING line in the org context, then re-run steps 2 to 5 so they use real facts.
+  - Add real customer quotes to the org context after you have some.
   - Add your logo files and exact colour codes to the style guide as soon as they exist.
   - Pair it with the Draft brand voice checker so each new piece is held to the guide.

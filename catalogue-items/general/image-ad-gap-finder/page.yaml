@@ -119,7 +119,7 @@ example:
     F1 carousel: "Struggling to Get Enough Fiber?"
     Full results for all 10 rows pasted below (T1, H1, K1 are videos).
     Buyer doubts: all 20 reviews (pasted below).
-    Claims and offers: Sprout brand file (pasted below).
+    Claims and offers: Sprout org context (pasted below).
   output: |
     Image ads only. T1, H1 and K1 are videos, used for the medians
     only. Results are practice numbers, not benchmarks. All codes are
@@ -227,7 +227,7 @@ improve:
   - Write your claims list and your cut claims into "What you need" in the skill file, so cut claims stay cut across every round.
   - Add your own signals to the table in step 4 (for example "most complaints are about cancelling"), with the type that answers each.
   - Mark the types you can never fill (no study means no Checked fact), so they're never picked.
-  - After each round, save the grid and the winner in your brand file, and paste the last grid next time.
+  - After each round, save the grid and the winner in your org context, and paste the last grid next time.
   - Pair it with a skill that picks the right layout for each card, and with one that plans a larger test batch once a type wins.
 
 works_best_with:

@@ -24,7 +24,7 @@ you_give:
   - Your current list, if you have one (optional)
   - Your week and how much time you can give to prospecting
   - The text of each prospect's own page, so step 4 can check claims about them
-  - Your brand file, for voice and approved claims (optional)
+  - Your org context, for voice and approved claims (optional)
 you_get:
   - A qualified prospect list with the reason each fits, the person to contact and a public source for each
   - The list ranked into tiers by fit and activity
@@ -44,7 +44,7 @@ output_sample:
     - Your current list of prospects (optional)
     - Your week and how much time you can give to prospecting
   prerequisites:
-    - Your brand brain from the Brand profile builder (optional, but it helps)
+    - Your org context from the Org context builder (optional, but it helps)
     - Your offer from the New offer opportunity finder (optional, but it helps)
   output:
     - name: Prospect list

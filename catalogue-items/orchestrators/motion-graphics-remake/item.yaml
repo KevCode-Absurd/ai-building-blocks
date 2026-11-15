@@ -10,9 +10,6 @@ inputs:
   - {type: script, required: true}
   - {type: product_data, required: true}
   - {type: brand_brain, required: false}
-  - {type: ad_copy, required: false}
-  - {type: static_ads, required: false}
-  - {type: landing_page, required: false}
 outputs:
   - {type: audit_report}
 uses: [video-ad-style-remake-planner, ad-script-read-aloud-editor, video-ad-format-picker, motion-graphics-build-plan, meta-ads-compliance-checker]

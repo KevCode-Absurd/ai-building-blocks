@@ -26,7 +26,7 @@ you_give:
   - "The brief, goal or problem as it was written"
   - "Why the work was asked for, if you know"
   - "What has been tried already (optional)"
-  - "Your brand file (optional)"
+  - "Your org context (optional)"
 
 you_get:
   - "Your brief quoted exactly, with ready-made answers marked"
@@ -45,7 +45,7 @@ output_sample:
     - Your brief, goal or problem, pasted as it was written
     - Why the work was asked for (optional)
     - What has been tried already (optional)
-    - Your brand brain or brand file (optional)
+    - Your org context (optional)
   output:
     - name: The brief as written
       contains: Your brief quoted in full, so you can see how far the new versions move from it.
@@ -140,7 +140,7 @@ works_best_with:
   inputs:
     - "Results from the last time you tried to fix this"
     - "Customer words about the problem"
-    - "Your brand file, so ideas fit how you already speak"
+    - "Your org context, so ideas fit how you already speak"
 
 terms:
   - term: Ready-made answer

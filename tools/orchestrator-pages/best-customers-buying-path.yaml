@@ -23,7 +23,7 @@ you_give:
   - A note on how good each one is to work with (optional)
   - Survey answers, reviews or emails from customers, in their words (required)
   - What each top customer read, watched or did before buying, if you know it (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
   - Weeks to run the test it sets up, with and without the new steps
 you_get:
   - Your top fifth of customers and the three to five traits they share
@@ -41,7 +41,7 @@ output_sample:
     - Your customer list with what each one paid and how long they stayed
     - Customer words such as surveys, reviews or emails
     - What your top customers read, watched or did before buying (optional)
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
     - The handoff pack zip from this page
@@ -84,6 +84,6 @@ test:
   - Run step 1 twice. The traits can be worded differently but should name the same things.
   - Check the test it sets up. It should compare leads who got the steps with leads who did not, with a rule for a win written before the test starts.
 improve:
-  - Save the profile and the channels into your brand file, so ads, sales calls and follow-up all aim at the same person.
+  - Save the profile and the channels into your org context, so ads, sales calls and follow-up all aim at the same person.
   - Repeat the run every quarter with new customers, so the profile keeps up with who is paying you now.
   - Add the "does not fit" list to your lead form or your sales script, so those people are sent somewhere else early.

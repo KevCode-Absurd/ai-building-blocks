@@ -18,7 +18,7 @@ when:
   - A freelancer or AI wrote the copy and it sounds like a generic brand in your category.
   - You run an existing ad and want a list of off-voice words without changing anything yet.
 not_for:
-  - "You have no voice notes or customer quotes yet: build your brand brain first with the Brand profile builder."
+  - "You have no voice notes or customer quotes yet: build your org context first with the Org context builder."
   - "You want to check facts, claims or numbers in the ad: use the Fact-based ad copy writer, or ask a person to check them."
   - "You want the ad to persuade better or have a stronger structure: use the Sales copy editor first."
   - "You have no voice guide yet: use the Brand voice one-pager writer."
@@ -36,7 +36,7 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Attach voice-and-look.md, 00-start-here.md and customers.md from your brand file, or paste the same notes. Your never-say list matters most.
+  - Attach voice-and-look.md, 00-start-here.md and customers.md from your org context, or paste the same notes. Your never-say list matters most.
   - Add three to ten real customer quotes, copied as written, so it knows how your buyers talk.
   - Paste the ad with numbered lines and write "Mode, fix" or "Mode, report".
   - Check each fix against your original line. If it changed a number, a claim or the offer, reject it.
@@ -48,7 +48,7 @@ output_sample:
     - Who the ad is for
     - Fix or report mode (optional)
   prerequisites:
-    - Your brand brain from the Brand profile builder, or the same voice notes pasted in
+    - Your org context from the Org context builder, or the same voice notes pasted in
   output:
     - name: VERDICT
       contains: Says on_voice or needs_fixes for the whole piece.

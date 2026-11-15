@@ -123,7 +123,7 @@ test:
   - Run the offer on a holdout. After 90 to 120 days, survey subscribers on which part of the offer decided them.
 
 improve:
-  - Add your real cohort values to your brand file so the case uses your data.
+  - Add your real cohort values to your org context so the case uses your data.
   - Add your gift list with landed cost and the value you show.
   - Add your subscription app's limits, such as whether it can send a gift at a set order number.
   - Pair it with the subscription payback checker and a skill that handles cancellations.

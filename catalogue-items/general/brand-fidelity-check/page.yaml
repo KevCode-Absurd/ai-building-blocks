@@ -24,7 +24,7 @@ not_for:
   - "A full accessibility or speed audit. Use a dedicated accessibility checker and PageSpeed for those."
 
 you_give:
-  - The capture of your live site from Brand DNA capture
+  - The capture of your live site from Org context capture
   - The new page, as a file on your computer or a preview link
   - The list of changes you meant to make, if this is an update to an existing page
 you_get:
@@ -35,7 +35,7 @@ you_get:
   - Any checks that could not run
 
 how_to_use:
-  - Capture your live site first with Brand DNA capture.
+  - Capture your live site first with Org context capture.
   - Add this skill to an AI that can run code, and give it the capture file and the new page.
   - It runs the check script, which needs Node.js 18 or later and Playwright.
   - Send each failure back to whoever built the page, then run the check again.
@@ -139,7 +139,7 @@ works_best_with:
     - {name: "Node.js with Playwright", why: "Runs the check at both screen widths and saves the side-by-side screenshots."}
     - {name: "A second chat or AI seat", why: "Gives the screenshots a fresh look from someone who did not build the page."}
   inputs:
-    - "The capture of your live site from Brand DNA capture"
+    - "The capture of your live site from Org context capture"
     - "The list of changes the new page was meant to make"
 
 output_sample:
@@ -148,7 +148,7 @@ output_sample:
     - The new page, as a file or a preview link
   prerequisites:
     - An AI that can run code, to use the scripts that come with this skill (or the manual checklist in any chat)
-    - Brand DNA capture run on your live site
+    - Org context capture run on your live site
   output:
     - name: Fidelity report
       contains: Pass or fail for each of the eight checks, with the evidence for each.

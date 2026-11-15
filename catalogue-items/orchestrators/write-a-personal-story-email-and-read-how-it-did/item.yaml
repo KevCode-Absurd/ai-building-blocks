@@ -1,6 +1,6 @@
 slug: write-a-personal-story-email-and-read-how-it-did
 name: "Write a personal story email and read how it did"
-summary: "Give it your brand file and one true story. Get a clean email ready to send, then a read of results."
+summary: "Give it your org context and one true story. Get a clean email ready to send, then a read of results."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -15,7 +15,7 @@ outputs:
   - {type: audit_report}
 uses: [story-email-writer, email-draft-reviewer, email-mistake-fixer, email-and-sms-performance-reader]
 steps:
-  - {uses: story-email-writer, note: "Starts from your brand file and one true story and writes three drafts. Hands step 2 the three drafts; you pick one."}
+  - {uses: story-email-writer, note: "Starts from your org context and one true story and writes three drafts. Hands step 2 the three drafts; you pick one."}
   - {uses: email-draft-reviewer, note: "Reads the draft you picked from the step before and lists the cuts to make. Hands you the cuts to apply to that draft before step 3."}
   - {uses: email-mistake-fixer, note: "Takes your draft from step 1 after you make step 2's cuts, not step 2's review itself, and cleans up the small errors. Hands you the final email to send."}
   - {uses: email-and-sms-performance-reader, note: "Fresh start after the send: reads the numbers so you can see if the story email beat your usual ones. Uses the campaign numbers you export after the send, with the final email from step 3 beside them."}

@@ -32,7 +32,7 @@ test('Workers routes existing APIs before static assets and keeps unknown APIs a
 });
 
 test('Workers passes asset requests intact so Cloudflare retains rewrites, redirects, queries and HEAD behavior', async () => {
-  for (const path of ['/', '/space', '/people', '/s/test-token', '/example-app/', '/skills/website-brand-brain-builder/SKILL.md?download=1', '/missing']) {
+  for (const path of ['/', '/space', '/people', '/s/test-token', '/example-app/', '/skills/org-context-builder/SKILL.md?download=1', '/missing']) {
     const request = new Request('https://example.test' + path, { method: 'HEAD' });
     const response = new Response(null, { status: 204, headers: { 'x-asset-service': 'preserved' } });
     const result = await worker.fetch(request, { ASSETS: { async fetch(received) { assert.equal(received, request); return response; } } });
@@ -132,5 +132,24 @@ test('missing saved-tour pages retain their own 404 for GET and HEAD while other
       assert.equal(result.headers.get('x-content-type-options'), 'nosniff');
       assert.deepEqual(calls, [path, tour ? '/example-app/404' : '/404']);
     }
+  }
+});
+
+test('the org context builder keeps its address, and the org-context-builder name and older names move to it', async () => {
+  // The skill keeps the website-brand-brain-builder address so its protected test records stay where they are;
+  // its title is "Org context builder".
+  const renamed = JSON.parse(fs.readFileSync(new URL('../../catalogue-items/renamed.json', import.meta.url), 'utf8'));
+  for (const old of ['org-context-builder', 'website-brand-file-builder', 'brand-knowledge-folder-from-website']) assert.equal(renamed[old], 'website-brand-brain-builder', old);
+  assert.equal(renamed['website-brand-brain-builder'], undefined);
+  assert.ok(fs.existsSync(new URL('../../catalogue-items/general/website-brand-brain-builder/item.yaml', import.meta.url)));
+  const env = { ASSETS: { async fetch(request) {
+    const asset = new URL(request.url).pathname;
+    if (request.method === 'HEAD' && asset === '/skills/website-brand-brain-builder') return new Response(null, { status: 200 });
+    return new Response('Custom not found', { status: 404 });
+  } } };
+  for (const method of ['GET', 'HEAD']) {
+    const response = await worker.fetch(new Request('https://example.test/skills/org-context-builder?ref=new', { method }), env);
+    assert.equal(response.status, 301);
+    assert.equal(response.headers.get('location'), 'https://example.test/skills/website-brand-brain-builder?ref=new');
   }
 });

@@ -119,7 +119,7 @@ test:
   - Fix one item and say you fixed two. See if it refuses to close the one it cannot check.
   - Run it twice on the same setup. The blockers should match, apart from wording.
 improve:
-  - Save your list of countries, rates and policies in your brand brain so each round starts from it.
+  - Save your list of countries, rates and policies in your org context so each round starts from it.
   - Add a launch date, so slow items are ranked by how late they would make you.
   - After launch, keep the test order results as a record of what worked.
   - Have an accountant check your tax settings once, and note what they said.

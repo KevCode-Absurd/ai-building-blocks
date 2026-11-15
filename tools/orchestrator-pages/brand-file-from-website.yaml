@@ -1,23 +1,23 @@
 new_slug: brand-file-from-website
-name: Build a brand file and brand guide from your website
-summary: Turn your website into a brand file, a founder interview plan and a brand guide with colours and fonts. Built to fix a missing brand file.
+name: Build an org context and brand guide from your website
+summary: Turn your website into an org context, a founder interview plan and a brand guide with colours and fonts. Built to fix a missing org context.
 job: brand-file
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
-headline: Get a brand file and a brand guide built from your website
-subhead: Give it your website address. It reads the site and builds your brand file, turns every gap into a short founder interview, then builds a brand guide once you have the answers. Your AI gets the facts. Your designers get the colours and fonts.
+headline: Get an org context and a brand guide built from your website
+subhead: Give it your website address. It reads the site and builds your org context, turns every gap into a short founder interview, then builds a brand guide once you have the answers. Your AI gets the facts. Your designers get the colours and fonts.
 explain: |-
   Most brands have their facts spread across a site, old decks and one person's head. AI then guesses, and designers ask the same questions again and again.
 
-  This workflow reads your site first and tags every fact by how sure it is. It lists what it could not confirm and turns that into a ranked interview plan. You hold the call and file the answers. Then it builds a guide page and a tokens file from the finished brand file, with a reason for each choice.
+  This workflow reads your site first and tags every fact by how sure it is. It lists what it could not confirm and turns that into a ranked interview plan. You hold the call and file the answers. Then it builds a guide page and a tokens file from the finished org context, with a reason for each choice.
 when:
   - You are about to brief an AI, a designer or a freelancer and have nothing written down.
   - Your site says one thing and your team says another.
   - You want one place that holds your colours, fonts, voice and the claims you can make.
 not_for:
-  - "Your brand has no live website: use the Founder interview planner on its own to start your brand file from a call."
+  - "Your brand has no live website: use the Founder interview planner on its own to start your org context from a call."
   - "You only need a voice guide: use the Brand voice one-pager writer."
-  - "You already have a brand file and only want a guide for designers: use the Brand guide builder."
+  - "You already have an org context and only want a guide for designers: use the Brand guide builder."
 you_give:
   - Your website address
   - Customer reviews, copied as written (optional)
@@ -25,7 +25,7 @@ you_give:
   - Your product facts (optional)
   - The founder for one call of about an hour
 you_get:
-  - A brand file in eight parts, with every gap marked
+  - An org context in eight parts, with every gap marked
   - A ranked list of founder questions, split into a call list and a quick written list
   - A brand guide page you can open in a browser and print
   - A tokens file with your colours, contrast pairs and fonts
@@ -43,27 +43,27 @@ output_sample:
     - An AI that can read files and work through the handoff folder
     - The founder free for one call of about an hour
   output:
-    - name: Brand file
+    - name: Org context
       contains: Eight files built from your site, with every gap marked unknown, disputed or inferred.
     - name: Founder interview plan
       contains: A ranked call list and a short written list, each question with why it matters and which file it fills.
     - name: brand-guide.html
-      contains: A guide page you can open in a browser and print, built from the finished brand file.
+      contains: A guide page you can open in a browser and print, built from the finished org context.
     - name: brand-tokens.md
       contains: Your colours, the colour pairs checked for contrast, and your fonts.
     - name: Hand-back summary
       contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
-  - title: Builds the brand file
-    text: Uses the brand file builder to read your site, tag each fact, ask up to five questions and write the eight files.
+  - title: Builds the org context
+    text: Uses the org context builder to read your site, tag each fact, ask up to five questions and write the eight files.
   - title: Plans the founder interview
     text: Uses the founder interview planner to turn every unknown or disputed fact into a ranked question.
   - title: Waits for the founder
-    text: You hold the call, send the written questions and file the answers in the brand file.
+    text: You hold the call, send the written questions and file the answers in the org context.
   - title: Builds the brand guide
     text: Uses the brand guide builder to check colours and fonts, test contrast and build the guide and tokens file.
 output_shape: |-
-  BRAND FILE
+  ORG CONTEXT
     00-start-here.md ... (eight files, gaps marked [unknown], [disputed] or [inferred])
 
   FOUNDER INTERVIEW
@@ -86,7 +86,7 @@ example:
     Website: the Sprout site (home, about, FAQ, reviews). Practice data.
     No ad results given. Founder call: Friday.
   output: |-
-    STEP 1: BRAND FILE
+    STEP 1: ORG CONTEXT
     00-start-here.md: Sprout sells a daily greens powder and a gummy. Buyers know the problem and are comparing options.
     Products: powder, 6g prebiotic fiber, 60+ ingredients. Gummy, one pack. Prices copied exactly from the site.
     Claims on file: "80% of surveyed users take it daily" (brand survey, 3,000+) with its conditions.
@@ -102,7 +102,7 @@ example:
     [Friday call held, answers filed as confirmed: founder]
 
     STEP 3: BRAND GUIDE
-    brand-guide.html built with Sprout's green and cream, one font family, and a reason for each choice taken from the brand file.
+    brand-guide.html built with Sprout's green and cream, one font family, and a reason for each choice taken from the org context.
     Contrast: dark green text on cream passes. White text on light green fails and is marked not for body text.
     CHECKS MISSED: none
 
@@ -111,21 +111,21 @@ example:
     MISSING: gummy price (site shows two); logo files.
 tweaks:
   - what: The extra material
-    how: Add reviews, ad results or product facts. The brand file builder then tags what customers say next to what the site says.
+    how: Add reviews, ad results or product facts. The org context builder then tags what customers say next to what the site says.
   - what: How long the interview runs
     how: Say how much time you have. The planner cuts the call list to fit and moves the rest to the written list.
   - what: Fonts and colours
     how: If your site hides them, paste the hex codes and font names. The guide builder needs at least one of each.
 judge:
-  - Every fact in the brand file has a tag, and every gap is marked instead of filled in.
-  - Every founder question links to a gap in the brand file.
+  - Every fact in the org context has a tag, and every gap is marked instead of filled in.
+  - Every founder question links to a gap in the org context.
   - Each colour pair in the guide shows its contrast figure, and failing pairs are marked.
   - The run ends with a summary of each file and each MISSING line.
 test:
-  - Pick three facts in the brand file and find each on your site. The wording and prices should match exactly.
+  - Pick three facts in the org context and find each on your site. The wording and prices should match exactly.
   - Open the guide in a browser and check one contrast figure with a free contrast checker.
   - Run the interview step twice. The top five questions should be the same both times.
 improve:
   - Add a step at the end that edits your next ad against the guide's voice rules.
-  - Keep the founder's answers in the brand file, so the next run starts from them.
+  - Keep the founder's answers in the org context, so the next run starts from them.
   - Re-run the first step each quarter and compare what changed on the site.

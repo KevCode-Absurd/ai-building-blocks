@@ -1,0 +1,7 @@
+# (test data) Meta Ads Manager export, 7-day click 1-day view, USD. Purchase value is the first order only, after the 40% first-order offer. Built for an e-commerce eval. Not Ritual's real figures.
+campaign,type,days_live,spend,impressions,reach,frequency,link_clicks,ctr_link,cpm,purchases,purchase_value,cost_per_purchase,roas
+ASC | Women's 18+,Advantage+ shopping,200,59966,4040789,1836722,2.2,48263,1.19%,14.84,1238,24797,48.44,0.41
+Prospecting | Prenatal,"Sales, broad",150,33929,2052753,1080396,1.9,24569,1.2%,16.53,536,12175,63.3,0.36
+Prospecting | Synbiotic+,"Sales, broad",90,27891,1982111,1101173,1.8,22289,1.12%,14.07,542,17628,51.46,0.63
+Launch | Perimenopause Health,"Sales, broad",40,25876,1663528,831764,2,18498,1.11%,15.55,389,9163,66.52,0.35
+Retargeting | Site visitors 14d,"Sales, retargeting",300,11898,447455,60467,7.4,7768,1.74%,26.59,387,9424,30.74,0.79

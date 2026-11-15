@@ -131,7 +131,7 @@ improve:
   - Add your carrier names and service levels to the skill file, so the date rule is built from them every time.
   - Add your brand voice rules, so the messages sound like you.
   - Add any limits your carrier contract or consumer law sets on how you state delivery dates.
-  - Save your WISMO rate and accuracy to your brand file each month, so you can see the trend.
+  - Save your WISMO rate and accuracy to your org context each month, so you can see the trend.
   - Pair it with the Post-purchase flow builder, and the Support capacity planner if tickets still pile up.
 
 works_best_with:

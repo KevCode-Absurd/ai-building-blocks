@@ -1,6 +1,6 @@
 slug: founder-video-month
 name: "Plan a month of founder videos and edit the first"
-summary: "Give it your brand file. Get ten founder video episodes, a script for the first, and an edit plan for your footage."
+summary: "Give it your org context. Get ten founder video episodes, a script for the first, and an edit plan for your footage."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -14,7 +14,7 @@ outputs:
   - {type: edit_plan}
 uses: [founder-video-series-planner, founder-video-ad-script-writer, ad-script-read-aloud-editor, social-video-edit-planner]
 steps:
-  - {uses: founder-video-series-planner, note: "Turns your brand file into ten episodes. It hands step 2 the brief for the first one."}
+  - {uses: founder-video-series-planner, note: "Turns your org context into ten episodes. It hands step 2 the brief for the first one."}
   - {uses: founder-video-ad-script-writer, note: "Takes the first episode's brief and writes a script that sounds like the founder. It hands the script to step 3."}
   - {uses: ad-script-read-aloud-editor, note: "Reads the script aloud line by line and fixes the places a person would stumble. It hands you the final script to film from."}
   - {uses: social-video-edit-planner, note: "Uses the footage you filmed, not step 3's script. Takes the one idea from step 1's brief, and uses the script as a guide to what was said. Plans cuts, captions, cover and export."}

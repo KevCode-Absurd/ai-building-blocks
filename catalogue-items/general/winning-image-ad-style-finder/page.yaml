@@ -26,7 +26,7 @@ you_give:
   - Six or more of your own ads, with the images attached (your AI can see pictures), dates, spend and results
   - The result you judge on, such as cost per sale
   - The product to sell, named every time, with its photos and facts
-  - Your brand file, for colours, type, claims and current offers
+  - Your org context, for colours, type, claims and current offers
   - How many new ads you want (optional, 5 by default)
 you_get:
   - A ranking of your measured ads, top, middle and bottom
@@ -45,7 +45,7 @@ output_sample:
     - Six or more of your own ads, as images, with dates, spend and results
     - The result you judge on, such as cost per sale
     - The product to sell, with its facts and a clean photo
-    - Your brand file (optional)
+    - Your org context (optional)
     - How many new ads you want (optional)
   prerequisites:
     - An AI that can look at ad images
@@ -120,7 +120,7 @@ example:
     Ad images: not attached
     Judge on: cost per purchase
     Product: Sprout Original (Adults)
-    Facts: Sprout brand file (pasted)
+    Facts: Sprout org context (pasted)
     Reviews: all 20 (pasted)
     How many new ads: 3
   output: |
@@ -217,7 +217,7 @@ test:
 
 improve:
   - Write the result you judge on and your account's usual into "What you need" in the skill file, so every run ranks the same way.
-  - Add a "why it won" line to your brand file each time you end a test, and paste those lines next time.
+  - Add a "why it won" line to your org context each time you end a test, and paste those lines next time.
   - Keep images of every ad you run, so the visual traits can always be read.
   - Run it every month with your latest results, so the style follows what's working now.
   - Pair it with a skill that finds the image ad types you've never tried, when you want ideas outside your current style.

@@ -1,0 +1,4 @@
+# (test data) Chrome UX Report style field data for the Ode page, last 28 days. Built for an e-commerce eval. Not Fellow's real figures.
+device,largest_contentful_paint_p75,interaction_to_next_paint_p75,cumulative_layout_shift_p75
+mobile,4.8 s,180 ms,0.04
+desktop,1.9 s,90 ms,0.02

@@ -32,8 +32,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand file and buyer brief.
-2. **Ad copy** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). Bring your image ads (optional), an image prompt (optional), your page (optional). It uses your brand file and ad copy and video ad script.
+1. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your org context and buyer brief.
+2. **Ad copy** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). Bring your image ads (optional), an image prompt (optional), your page (optional). It uses your org context and ad copy and video ad script.
 3. This one.
 
 How to start:

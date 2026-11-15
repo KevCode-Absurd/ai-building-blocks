@@ -126,7 +126,7 @@ improve:
   - Add your real customer groups from your orders or reviews, so the map starts from facts.
   - Change the "about 10% of ads" line if your own searches show a different cut-off for open ground.
   - Pair it with the white space finder for the product itself, and with a review reader for the words each group uses.
-  - Save the winning group and its hook in your brand file for later ads.
+  - Save the winning group and its hook in your org context for later ads.
 
 works_best_with:
   tools:

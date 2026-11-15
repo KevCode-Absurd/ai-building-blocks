@@ -44,7 +44,7 @@ output_sample:
     - Last quarter's log (optional on the first run)
   prerequisites:
     - An AI that can read and save files, such as Claude Code, to keep the offers folder and log
-    - Your brand brain from the Brand profile builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Offers table
       contains: Each offer with profit per session, margin and safety score, this quarter and last, with the sums shown.

@@ -92,7 +92,7 @@ test:
   - Check that each stage of the plan was gated on opens, not on the calendar alone.
   - Compare opens and revenue per send in the last step with the 60 days before the plan.
 improve:
-  - Save your engaged definition and your gate numbers in your brand file, so later months use the same rules.
+  - Save your engaged definition and your gate numbers in your org context, so later months use the same rules.
   - Edit the sunset flow's emails to sound like your brand, and keep the notice true to what you do.
   - Add a monthly step that exports the quiet subscribers, so the clean-out runs without a new project.
   - Pair it with a welcome or win-back flow writer once opens have recovered.

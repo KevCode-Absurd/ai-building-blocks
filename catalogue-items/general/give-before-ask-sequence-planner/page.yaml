@@ -28,7 +28,7 @@ you_give:
   - "Where the sequence will run: posts, email or messages"
   - "Questions your audience has sent you (optional)"
   - "Results of your last launch (optional)"
-  - "Your brand file (optional)"
+  - "Your org context (optional)"
 you_get:
   - "The one ask, written in plain words"
   - "A list of 8 to 15 gives, each useful on its own"
@@ -126,7 +126,7 @@ test:
 improve:
   - Add topics your audience asks about to the gives step.
   - Add your own rule for the longest give period you will wait.
-  - Save gives that got replies to your brand file.
+  - Save gives that got replies to your org context.
   - Pair it with Platform-native content planner for the pieces themselves.
 works_best_with:
   tools:

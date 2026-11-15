@@ -16,7 +16,7 @@ when:
   - You have great old documents or call recordings and want the voice in them written down.
 not_for:
   - "You need one post and have no ongoing writers: ask your AI to write it directly, with a few lines on how you want it to sound."
-  - "You have no documents or call notes yet: build your brand brain first with the Brand profile builder."
+  - "You have no documents or call notes yet: build your org context first with the Org context builder."
   - "You want a first voice guide and nothing else: use the Brand voice guide builder on its own."
 you_give:
   - Documents, decks, posts or call notes where the brand sounds right
@@ -42,7 +42,7 @@ output_sample:
     - A draft to check (optional)
   prerequisites:
     - An AI that can read your files, such as Claude with files attached
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
     - A buyer brief from the Buyer brief writer (optional)
   output:
     - name: Voice guide
@@ -97,7 +97,7 @@ test:
   - Run it on a piece you love. It should find little.
   - Re-run step 3 on the fixed draft. The ranked list should shrink.
 improve:
-  - Save the settled guide in your brand file so every tool reads the same one.
+  - Save the settled guide in your org context so every tool reads the same one.
   - Add your own before and after examples to the guide as you fix drafts.
   - Update the guide every few months with new writing you are proud of.
   - Give the guide to every new writer and tell them to run the checker before sending anything.

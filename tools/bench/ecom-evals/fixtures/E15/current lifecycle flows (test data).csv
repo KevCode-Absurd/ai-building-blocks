@@ -1,0 +1,6 @@
+# (test data) Klaviyo flows that touch subscribers today. Built for an e-commerce eval. Not Ritual's real figures.
+flow,trigger,note
+Order confirmation,Each charge,Same template for first and renewal orders
+Renewal reminder,3 days before each renewal,"Shows the new full price; no reason to stay, no skip link"
+Cancel confirmation,On cancel,
+Win-back,60 days after cancel,"30% off, one email"

@@ -114,7 +114,7 @@ test:
 
 improve:
   - Keep a log of every guess and its result, so a later test starts from what you already know.
-  - Save the pass line and rule in your brand file or plan before each test.
+  - Save the pass line and rule in your org context or plan before each test.
   - After a root cause, add its prevention check to your launch checklist.
 
 works_best_with:

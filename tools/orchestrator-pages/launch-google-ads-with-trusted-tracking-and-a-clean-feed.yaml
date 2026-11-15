@@ -45,7 +45,7 @@ output_sample:
   prerequisites:
     - An AI that can read files, such as Claude with the handoff pack
     - Admin access to your Shopify store, Google Ads and Merchant Center
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: Tracking build"
       contains: A numbered build checklist, which ID goes where, conversion actions, enhanced conversions and a test plan.
@@ -102,7 +102,7 @@ test:
   - Check the budget against your order value. Does the daily budget buy a few sales a day?
   - Stop after step 2 and fix only what it names. Run step 2 again and the score should rise.
 improve:
-  - Save your conversion action names and IDs in your brand file for the next account.
+  - Save your conversion action names and IDs in your org context for the next account.
   - Re-run the feed check each month, or after any big catalogue change.
   - Add your real break-even cost per sale to the launch step, so budgets use your margin.
   - Use the results to start a Google Ads results reader once campaigns run.

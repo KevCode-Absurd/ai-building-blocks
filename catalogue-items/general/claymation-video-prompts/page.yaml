@@ -202,7 +202,7 @@ test:
 improve:
   - Write your product line into stage 3 of the skill file once (shape, colours, label lines, size against a hand), so every run starts with it.
   - Add your brand's never-show rules to the Avoid list, for example that the daily pack is only ever torn straight across the top.
-  - Save the approved avatar card, sheets and lock lines in your brand file, so the next clay ad starts at stage 4.
+  - Save the approved avatar card, sheets and lock lines in your org context, so the next clay ad starts at stage 4.
   - Pair it with "Claymation video ad script writer" first, so the changing object and its three states are settled.
 works_best_with:
   tools:

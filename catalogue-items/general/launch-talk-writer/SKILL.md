@@ -19,7 +19,7 @@ This skill runs in any chat AI. It needs no files, web access or paid tools. Thr
 **Makes it better (optional):**
 - **Product facts and numbers** (yours): only figures you can back.
 - **One true story** (yours): a moment from making or using it.
-- **Your brand brain** (yours), if you have one: read its voice and approved claims.
+- **Your org context** (yours), if you have one: read its voice and approved claims.
 
 How to start:
 1. **Look first.** Use what they have already pasted or attached. In Claude Code, look in the project too for a brand folder with `00-start-here.md`.

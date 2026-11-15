@@ -21,7 +21,7 @@ not_for:
 you_give:
   - A topic, a rival or a product category, and who you think buys it
   - An Apify account, free for small runs (Reddit collection runs there)
-  - Your product facts or brand file (optional)
+  - Your product facts or org context (optional)
 you_get:
   - A table of public posts and comments about your topic
   - Buying reasons ranked by how many people say them, in their exact words
@@ -38,7 +38,7 @@ output_sample:
     - Your topic, a rival or a product category
     - Who you think buys it
     - Your Apify account, to collect the posts
-    - Your product facts or brand brain (optional)
+    - Your product facts or org context (optional)
   prerequisites:
     - An Apify account, free for small runs, because Reddit collection runs there
     - An AI that can read files, such as Claude Code or a Claude Project
@@ -84,7 +84,7 @@ tweaks:
     how: Comments hold the detail but multiply the count and the cost. Start with posts, then add comments for the best threads.
   - what: The time window
     how: Name the dates you want. Recent posts show what people want now. A year back shows what stays true.
-  - what: Your brand file
+  - what: Your org context
     how: Add it if you have one. Step 3 uses it to say who the product is not for.
 judge:
   - Every quote in the ranked reasons appears word for word in the table, with its source.
@@ -98,7 +98,7 @@ test:
   - Show the profile to someone who buys this kind of thing. Ask which line is wrong.
   - Try one place from the hangout list for a week and note if people answer.
 improve:
-  - Add the best quotes to your brand file so ad and page copy uses buyer words.
+  - Add the best quotes to your org context so ad and page copy uses buyer words.
   - Re-run the table every quarter. New reasons show where the market is moving.
   - Add your own reviews to step 2 when you have them. They should outrank public posts.
   - Pair it with the Customer interview coach to test the top reason in a real talk.

@@ -90,8 +90,8 @@ MISSING: <what was needed>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Customer fit reviewer](https://useaiblocks.com/skills/wrong-buyer-review-checker). It takes the buyer profile.
 - The [Top-customer outreach planner](https://useaiblocks.com/skills/top-customer-touch-planner). It takes the buyer profile.
-- The [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). It takes the buyer profile.
 - The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the buyer profile.
+- The [Customer community finder](https://useaiblocks.com/skills/audience-hangout-finder). It takes the buyer profile.
 - The [Loyalty and VIP program designer](https://useaiblocks.com/skills/loyalty-and-vip-program-designer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

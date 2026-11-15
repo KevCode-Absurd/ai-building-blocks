@@ -198,7 +198,7 @@ export const COMPLETENESS = Object.freeze({
   plan: ['totals that add up', 'steps with days relative to the start', 'an owner for each step', 'cut, keep and scale rules', 'break-even shown'],
 });
 export const completenessFor = kind => [...(COMPLETENESS[kind] ?? [])];
-/** How much brand context a job takes from the brand file. A job takes its slice, never the whole file. */
+/** How much brand context a job takes from the org context. A job takes its slice, never the whole file. */
 export const CONTEXT_LEVELS = Object.freeze({
   none: 'No brand context: work from the system, files or data.',
   facts: 'Facts only: the offer, prices, customers and numbers, each with its source and date.',
@@ -339,7 +339,7 @@ export function specSheet({ request = '', kind, mode, kindSource = 'declared', s
     decisions: shape?.decisions ? [...shape.decisions] : decisionsFor(kind, request),
     decision_rule: 'Take each decision yourself. One recommendation, with the runner-up in one line. Never hand back a menu.',
     assumptions: [`Mode: ${mode?.mode ?? 'patch'}. ${mode?.reason ?? ''}`.trim(), ...(kindSource === 'suggested' ? [`Kind of work: ${kind}, guessed from the request.`] : [])],
-    context_needed: { ...need, levels: Object.keys(CONTEXT_LEVELS), rule: 'Take this slice of the brand file, or capture it, and no more. Raise the level only when an acceptance test depends on it.' },
+    context_needed: { ...need, levels: Object.keys(CONTEXT_LEVELS), rule: 'Take this slice of the org context, or capture it, and no more. Raise the level only when an acceptance test depends on it.' },
   };
 }
 
@@ -400,7 +400,7 @@ export const CAPTURE_TOOLS = Object.freeze([
   { file: 'capture-brand-dna.mjs', skill: 'brand-dna-capture', path: 'scripts/capture-brand-dna.mjs', use: 'First choice. Node + Playwright against the live site URL; writes context/brand-dna.json and context/screenshots/.' },
   { file: 'brand-dna-snippet.js', skill: 'brand-dna-capture', path: 'scripts/brand-dna-snippet.js', use: 'Second choice. Paste into any browser tool or devtools console on the live site; save its JSON as context/brand-dna.json.' },
   { file: 'check-brand-fidelity.mjs', skill: 'brand-fidelity-check', path: 'scripts/check-brand-fidelity.mjs', use: 'CHECK step for web pages: compares the built page with context/brand-dna.json.' },
-  { file: 'brand-file.mjs', skill: 'brand-dna-capture', path: 'scripts/brand-file.mjs', use: 'GROUND step, before any capture: status --for <kind> says whether the client\'s brand file exists and what is stale; slice <level> --out context/facts.md takes only what the job needs; learn records what the client kept or killed.' },
+  { file: 'org-context.mjs', skill: 'brand-dna-capture', path: 'scripts/org-context.mjs', use: 'GROUND step, before any capture (brand-file.mjs and brand-brain.mjs are older names for it): status --for <kind> says whether the client\'s org context exists and what is stale; slice <level> --out context/facts.md takes only what the job needs; learn records what the client kept or killed.' },
   { file: 'compare-candidates.mjs', skill: 'make-three-first-screens', path: 'scripts/compare-candidates.mjs', use: 'CANDIDATES step, for work a buyer sees: puts 2 to 4 candidates (HTML, a URL, SVG or images) side by side under the labels A, B, C, so a fresh reviewer can look and choose. Use --shuffle, and keep compare.key.json from the reviewer until they have picked.' },
 ]);
 export const MARKETPLACE_TOOLS_BASE = 'https://agents.useaiblocks.com/tools/';
@@ -429,7 +429,7 @@ export function contextRequirements(kind, { siteUrl, hasExistingAsset, light = f
     { id: 'success_metric', label: 'The metric that matters and its normal range', required: true, how: 'Ask, then check it against the snapshot.' },
   ];
   if (family === 'strategy_plan') return [
-    { id: 'business_facts', label: 'Real customers, prices, numbers and limits', required: true, how: 'Take the facts from the brand file if there is one, else from the live site; ask for what is missing. No brand capture is needed.' },
+    { id: 'business_facts', label: 'Real customers, prices, numbers and limits', required: true, how: 'Take the facts from the org context if there is one, else from the live site; ask for what is missing. No brand capture is needed.' },
     { id: 'competitors', label: '2 or 3 competitors the client is compared with', required: true, how: 'Ask the client to name them, or find them.' },
     { id: 'site_url', label: 'The live site', required: false, how: siteUrl ? `Use ${siteUrl}.` : 'Ask for it.' },
   ];

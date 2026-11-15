@@ -48,7 +48,7 @@ output_sample:
     - Whether words on the image are on or off (optional, on by default)
   prerequisites:
     - An image tool in your AI, or a design tool like Canva or Figma, to build the screen
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Scene
       contains: One sentence on what someone scrolling would say they saw.

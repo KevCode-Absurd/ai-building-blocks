@@ -1,0 +1,5 @@
+# (test data) Own-site orders by pincode tier, 16 Oct to 14 Nov 2026. Built for an e-commerce eval. Not Sleepy Owl Coffee's real figures.
+pincode_tier,orders,cod_share,rto_rate_of_cod,cod_orders,rto_orders
+Metro,5200,38%,14%,1976,277
+Tier 2,3100,58%,26%,1798,467
+Tier 3 and rural,1900,79%,41%,1501,615

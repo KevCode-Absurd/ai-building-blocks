@@ -123,7 +123,7 @@ test:
 improve:
   - Add your labelling rules to the skill file, so personas and angles are named the same each time.
   - Add what counts as a real change for your products, such as a new buyer problem.
-  - Save each run's score and cluster count to your brand file, to track variety over time.
+  - Save each run's score and cluster count to your org context, to track variety over time.
   - Add your own warning level once you know how many ideas your account needs.
   - Pair it with the ad concept matrix builder to fill the gaps it finds.
 

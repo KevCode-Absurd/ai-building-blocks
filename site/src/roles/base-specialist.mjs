@@ -1,4 +1,4 @@
-// A portable base role, intentionally independent of any user's task or business. The owner's brand file is added
+// A portable base role, intentionally independent of any user's task or business. The owner's org context is added
 // only in their own browser at click time (BaseSpecialistPanel.tsx with base-specialist-message.mjs), never here.
 import {expertiseText,checksText,exampleText,reviewerNote,tiersText} from './specialist-worker.mjs';
 import {selectRules,rulesText} from './training-rules.mjs';

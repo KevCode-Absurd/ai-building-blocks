@@ -21,7 +21,7 @@ not_for:
 you_give:
   - Last month's ticket export with the question, the reply that solved it and the page visited first, if recorded
   - Every help article as text, with its address and last-updated date
-  - Your brand brain, for the voice check (advised)
+  - Your org context, for the voice check (advised)
   - Internal product docs or release notes (optional)
   - Last month's keeper file, once it exists
 you_get:
@@ -34,14 +34,14 @@ you_get:
 how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run last month.
   - Export last month's tickets from your support tool with the solving replies. Put them in the support team's folder with your help articles, or attach them in the chat.
-  - Attach your brand brain if you have one.
+  - Attach your org context if you have one.
   - Read the mismatches first and settle them with the product owner. Then read the drafts.
   - Publish what you approve in your help centre yourself. Run it again next month; it tells you whether the articles worked.
 output_sample:
   input:
     - Last month's support tickets, with the reply that solved each one
     - Every help article as text, with its address and last-updated date
-    - Your brand brain, for the voice check (advised)
+    - Your org context, for the voice check (advised)
     - Product docs or release notes (optional)
     - Last month's keeper file (not needed on the first run)
   prerequisites:
@@ -76,7 +76,7 @@ how_it_works:
   - title: Rewrite the pages that failed
     text: Each section opens with its answer and the title says what the customer typed.
   - title: Check the voice
-    text: Every new or rewritten article checked against your brand brain.
+    text: Every new or rewritten article checked against your org context.
   - title: Log and hand back
     text: Updates the topic and article files, then stops. You publish.
 output_shape: |-
@@ -119,7 +119,7 @@ example:
     $34.99; the site now says $29.99); no article on switching sugar
     level; "Limited flavours" says subscribers "may" switch back, support
     replies say they switch back automatically after one month.
-    Brand brain attached.
+    Org context attached.
   output: pending
 tweaks:
   - what: Solving replies

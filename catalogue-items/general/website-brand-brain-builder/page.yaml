@@ -1,15 +1,15 @@
-name: Brand file builder
+name: Org context builder
 new_slug: website-brand-brain-builder
-summary: Build one brand file from your website and what you already have. Offers, facts, buyers, claims, voice and look, each with a source and date.
+summary: Build one org context from your website and what you already have. Who you are, your buyers, voice, look, markets and claims, each with a source and date.
 job: brand-file
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
-headline: Brand file builder
-subhead: Share your website and any product, customer or brand documents you already have. It builds one brand file your AI reads before every job. Each line says where it came from and when, old prices are flagged, and unanswered questions stay visible.
+headline: Org context builder
+subhead: Share your website and any product, customer or brand documents you already have. It builds one org context your AI reads before every job. Each line says where it came from and when, old prices are flagged, and unanswered questions stay visible.
 explain: |
   Every time you ask an AI to write an ad, a page or an email, it starts from nothing. You paste the same facts again, it guesses the rest, and the guesses creep into your copy as prices you don't charge and claims you can't make.
 
-  This skill builds your brand file once, for any online business, and then keeps it current. It measures your website, then sorts in what you already have, like product sheets, a style guide, reviews or old ads. You get one folder in your own project. It holds your live prices and offers, your lasting facts, your buyers and the claims you can make, your voice and look, the sites you admire and compete with, and what worked on past jobs.
+  This skill builds your org context once, for any online business, and then keeps it current. It measures your website, then sorts in what you already have, like product sheets, a style guide, reviews or old ads. You get one folder in your own project. It holds eight sections: your brand DNA (what you stand for), your customers and the buyers you sell to, your voice and writing style, how you speak to customers, your design language (fonts, colours, logo and layout), the markets you sell in, the claims you can and cannot make with the proof each needs, and your do's and don'ts. It also keeps your live prices and offers, the sites you admire and compete with, and what worked on past jobs. Your store numbers and lessons stay in your store memory file, and the org context links to it.
 
   Every line carries its source, its date and a status. A claim with no proof on file is marked pending, even on your own site. Prices and offers count as old after 7 days, so your AI checks them again before it sells anything. Each job reads only the slice it needs, and a job that needs none skips it.
 when:
@@ -28,10 +28,11 @@ you_give:
   - Past results from ads, emails or offers, as an export or pasted summary (optional). If your AI is connected to an ad account or store, it reads it only with your say-so
   - Your next step, such as planning, writing or image work (optional)
 you_get:
-  - One brand file in your own project, with an index that shows what is fresh, what is old and what is missing
+  - One org context in your own project, with an index that shows what is fresh, what is old and what is missing
   - Your prices, offers, stock and shipping, each with its page and date
-  - Your lasting facts, buyers and claims, each marked checked, not confirmed or banned
-  - Real lines in your own words, your colours, fonts and buttons
+  - Your brand DNA, buyers, markets and claims, each marked checked, not confirmed or banned, with the proof each claim needs
+  - Real lines in your own words, how you speak to customers, your colours, fonts, logo, layout and buttons
+  - Your do's and don'ts, each with where it came from
   - The sites you admire, avoid and compete with, and what you kept or dropped on past jobs
   - A short slice for your next step, if you name one
 how_to_use:
@@ -40,7 +41,7 @@ how_to_use:
   - Name your next step, such as writing ads. You then get a short slice for that job.
   - Check the short fact sheet it shows you and correct anything wrong. Answer its questions, or skip them.
   - Look at the claims marked pending and the list of what's missing.
-  - Before each later job, ask it to check the brand file. It refreshes only what has gone old.
+  - Before each later job, ask it to check the org context. It refreshes only what has gone old.
 output_sample:
   input:
     - Your website address, or your pages pasted in
@@ -50,7 +51,7 @@ output_sample:
     - Your next step, such as planning, writing or image work (optional)
   output:
     - name: index.md
-      contains: One screen that says what is in the brand file, how fresh each part is and what is missing.
+      contains: One screen that says what is in the org context, how fresh each section is, what is missing, and where the store memory is.
     - name: offers.json
       contains: Each price, promotion, stock and shipping line with its page and the date it was read.
     - name: facts.json
@@ -63,11 +64,13 @@ output_sample:
       contains: The sites you admire and avoid, and your competitors with their pitch, prices and the gap they leave.
     - name: worked.md
       contains: What you kept, dropped or asked for more of, and results, by job and date.
+    - name: foundation/
+      contains: "The written sections: brand-dna.md, customers.md, why-they-buy.md, voice-bank.md, customer-talk.md, design.md, markets.md, claims.md and dos-donts.md."
     - name: Slice for your next step
       contains: Only the facts your named next step needs, if you name one.
 how_it_works:
   - title: Checks what exists
-    text: Looks for a brand file first and updates it. It never starts a second one. Older folders and loose notes are moved in.
+    text: Looks for an org context first and updates it. It never starts a second one. An older org context folder and loose notes are moved in.
   - title: Measures the site
     text: Captures your live pages for prices, offers, stock, look and real lines, each with its page and date.
   - title: Sorts in your material
@@ -85,8 +88,9 @@ how_it_works:
   - title: Keeps it current
     text: Prices, offers and stock count as old after 7 days, and look and voice after 90. A new capture adds to the file and lists what changed.
 output_shape: |
-  context/brand-file/
-    index.md        <what is here, how fresh, what is missing>
+  context/org-context/
+    index.md        <what is here, how fresh, what is missing,
+                     link to context/MEMORY.md>
     offers.json     <price | offer | stock | shipping, each with
                      source and date>
     facts.json      <facts, buyers and claims, each with source,
@@ -95,6 +99,9 @@ output_shape: |
     voice.md        <real lines, button words, customer words>
     references.md   <admired, avoided, competitors>
     worked.md       <kept, dropped, results, by job and date>
+    foundation/     <brand-dna, customers, why-they-buy,
+                     voice-bank, customer-talk, design, markets,
+                     claims, dos-donts>
     history/        <earlier versions, changes>
 
   SLICE FOR <NEXT STEP>
@@ -118,7 +125,7 @@ tweaks:
   - what: Results
     how: Paste an export with real numbers. Without numbers, every result is graded "seen running" or "reported", which is honest but less useful.
 judge:
-  - Every price in the brand file matches your price list exactly, and has the date it was read.
+  - Every price in the org context matches your price list exactly, and has the date it was read.
   - Every line has a source, and every checked fact names its page, label or person.
   - Claims with nothing on file are marked pending, even when they're on your own site.
   - Every customer quote is something a real customer wrote, with where it came from.
@@ -129,10 +136,10 @@ test:
   - Check the prices first. Compare three offers line by line with your price list; any rounding or a missing offer means it read an old or wrong page.
   - Give it a product sheet that disagrees with your site, such as an old price. Both versions should be there, marked disputed.
   - Leave out your logo file. It should come back as a MISSING line, with no stand-in logo or font.
-  - Run it again a week later. It should update the same brand file and list what changed, not start a new one.
+  - Run it again a week later. It should update the same org context and list what changed, not start a new one.
 improve:
   - Edit the page list in step 3 to name the pages that matter on your site, so it never skips them.
-  - Add your banned claims, so every job that reads the brand file leaves them out.
+  - Add your banned claims, so every job that reads the org context leaves them out.
   - Capture your pricing and best-selling pages each week, so later tasks don't use old facts.
   - After each job, tell it what you kept and dropped. The next job starts from that.
   - Pair it with a skill that interviews the founder to fill the gaps only they can answer.
@@ -150,8 +157,8 @@ works_best_with:
     - Lab reports or test certificates, so more claims can be approved instead of pending
     - Who on your team can answer questions about proof and offers, so each gap names a real person
 terms:
-  - term: Brand file
-    meaning: One folder in your own project with your offers, facts, buyers, claims, voice, look and history, which any AI or person can read before working for you.
+  - term: Org context
+    meaning: One folder in your own project about your business, with your brand DNA, buyers, voice, how you speak to customers, design language, markets, claims, do's and don'ts, offers and history, which any AI or person can read before working for you.
   - term: Status
     meaning: A short label on each line. Live means checked, not confirmed means reasoned, disputed or unknown, and banned means you've ruled it out.
   - term: Claims list
@@ -159,6 +166,6 @@ terms:
   - term: Buyer record
     meaning: A short description of one kind of buyer, what they want and what makes them hesitate, built on their own words where possible.
   - term: Slice
-    meaning: The short part of the brand file one next step needs, such as the look and allowed words for a designer.
+    meaning: The short part of the org context one next step needs, such as the look and allowed words for a designer.
   - term: Stale
     meaning: Too old to trust. Prices, offers and stock are stale after 7 days, and the look and voice after 90 days.

@@ -18,10 +18,10 @@ This skill runs in any chat AI. It needs no files or paid tools. Web search help
 **Makes it better (optional):**
 - **Your launch plan so far, budget and dates** (yours).
 - **Outlets or writers you can reach** (yours).
-- **Brand brain** (optional), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): read `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md` and `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines.
+- **Org context** (optional), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): read `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md` and `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines.
 
 How to start:
-1. **Look first.** Use what they have already pasted or attached. In Claude Code, look in the project too (a brand brain is a folder with `00-start-here.md` in it).
+1. **Look first.** Use what they have already pasted or attached. In Claude Code, look in the project too (an org context is a `context/org-context/` folder with `index.md` in it; an older one may have `00-start-here.md`).
 2. **If the product and its category are missing,** ask for both in one short message, even if the user has said go ahead. Do not return an all-`MISSING:` plan. If only an optional item is missing, go ahead and mark it `MISSING:`.
 3. **Do the job.** Mark each gap with `MISSING:` and never invent a fact to fill it. Say each point once and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write "none".
 

@@ -18,7 +18,7 @@ when:
   - Reviews mention the same worry again and again, and you want to know if the page addresses it.
   - You're rewriting a product page FAQ and want it built on real questions.
 not_for:
-  - "You have no live product page yet: write the page first, or build your brand facts with the Brand profile builder."
+  - "You have no live product page yet: write the page first, or build your brand facts with the Org context builder."
   - "You have no customer words yet: collect reviews, support emails or call notes first, or expect a smaller map built from guesses."
   - "You want to rewrite the page around the answers: use the Ad-matched landing page writer after this."
   - "You want a quick first pass with fewer checks: use the Customer objection coverage checker."
@@ -46,7 +46,7 @@ output_sample:
     - Facts you can stand behind, such as policies, measurements and test results (optional)
   prerequisites:
     - An AI that can read images, so it can check your screenshots
-    - Your brand brain from the Brand profile builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Doubt map
       contains: One row per customer doubt, with a quote, source count, where the page answers it and how visible that is.
@@ -144,7 +144,7 @@ example:
       fragment)   Sources: 1
       Current answer: "Low Sugar vs. Sugar-Free" accordion . unknown (its
       text wasn't captured)
-      Needs a fact: none; the brand file says Sugar-Free uses sugar alcohols
+      Needs a fact: none; the org context says Sugar-Free uses sugar alcohols
       Proposed: one line under the sugar picker: "Sugar-Free uses sugar
       alcohols. Sensitive stomach? Start with Low Sugar."
 
@@ -191,7 +191,7 @@ test:
 improve:
   - Add placements for your own page to step 5, such as next to the flavour picker or the subscription box, so answers land where your buyers decide.
   - Write the facts you can stand behind (policies, test results, measurements) into the skill under "Facts", so it can propose full answers instead of "needs a fact".
-  - Save the "facts to collect" list in your brand file and fill it. Each fact you add turns a gap into an answer.
+  - Save the "facts to collect" list in your org context and fill it. Each fact you add turns a gap into an answer.
   - Pair it with "Customer buying reasons finder" first, since its list of worries is the best input here, and with "Ad-matched landing page writer" to rewrite the page around the answers.
 
 works_best_with:

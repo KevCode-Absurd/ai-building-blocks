@@ -23,7 +23,7 @@ you_give:
   - Your site address and page list
   - What a sign-up or sale is worth to you (advised)
   - A read-only connection to your site, for the thin-page check (optional)
-  - Your brand brain, for rewrites (optional)
+  - Your org context, for rewrites (optional)
 you_get:
   - A verdict on each page you pushed last month
   - At most three quick wins, each with what to do and what it is worth
@@ -43,7 +43,7 @@ output_sample:
     - Your site address and page list
     - What a sign-up or sale is worth to you (advised)
     - A read-only connection to your site (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can keep files between months, such as Claude Code, to hold the page and post logs
     - The same Search Console date range each month
@@ -118,7 +118,7 @@ example:
     Last month's push: /blog/quit-greens-powders title rewritten on 12 Aug
     (was pos 13.5).
     Visitor value: a new subscriber is worth about $50 first order.
-    Page list and brand brain attached.
+    Page list and org context attached.
   output: pending
 tweaks:
   - what: Visitor value

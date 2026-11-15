@@ -48,7 +48,7 @@ output_sample:
     - Your buyer groups (optional)
     - The pages where visitors hesitate most (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Proof matched to doubts
       contains: A table that links each doubt and buyer group to a real proof item, its type, source and place.
@@ -132,7 +132,7 @@ test:
 improve:
   - Add your own buyer tags to the skill file, so every run sorts reviews the same way.
   - Add your platform and local rules on endorsements, so the authority check uses them.
-  - Record which proof placement wins in your brand file.
+  - Record which proof placement wins in your org context.
   - Pair it with the Store hero section writer for the first screen and the Page type and layout planner for the section order.
 
 works_best_with:

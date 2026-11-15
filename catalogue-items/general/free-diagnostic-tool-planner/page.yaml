@@ -25,7 +25,7 @@ not_for:
 you_give:
   - What you sell, who buys it and the problem you fix
   - What a good and a bad result look like in your field
-  - Your brand file (optional)
+  - Your org context (optional)
   - Any data you have on how buyers compare, to base the score on (optional)
 you_get:
   - The problem the tool will show, in one line
@@ -43,7 +43,7 @@ output_sample:
   input:
     - What you sell, who buys it and the problem you fix
     - What a good and a bad result look like in your field
-    - Your brand file (optional)
+    - Your org context (optional)
     - Data on how buyers compare (optional)
   output:
     - name: The problem
@@ -139,7 +139,7 @@ works_best_with:
     - {name: "A form or quiz builder", why: "A no-code form tool can run the design without custom code."}
   inputs:
     - "Data on how your past customers would have scored"
-    - "Your brand file, so the wording matches your voice"
+    - "Your org context, so the wording matches your voice"
     - "The three questions you ask in a first sales call"
 
 terms:

@@ -44,7 +44,7 @@ output_sample:
     - "Your product facts: what it does, price, and proof you may use"
     - Customer words, such as reviews or emails (optional)
     - Your offer with exact terms, such as a guarantee or trial (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - A strong chat AI that can follow the handoff folder and save a file for each step
   output:
@@ -132,7 +132,7 @@ test:
   - Run it twice. The lead want and the order of the parts should be close.
 
 improve:
-  - Save your lead want and proof map in your brand file, so a new ad starts from step 2.
+  - Save your lead want and proof map in your org context, so a new ad starts from step 2.
   - After each run, record the result with the keyed ad results log keeper.
   - Test a gain headline against a loss headline from step 2.
 

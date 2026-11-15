@@ -11,8 +11,6 @@ inputs:
   - {type: web_page, required: true}
   - {type: tool_connection, required: false}
   - {type: brand_brain, required: false}
-  - {type: question, required: true}
-  - {type: keyword_list, required: true}
 outputs:
   - {type: audit_report}
   - {type: shortlist}

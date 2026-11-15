@@ -7,12 +7,12 @@ export function readSavedCouncils(raw:string|null):SavedCouncil[]{
 export function rememberCouncil(rows:SavedCouncil[],name:string,draft:CouncilDraft,selected:string):SavedCouncil[]{
  const clean=name.trim();if(!clean||clean.length>80)throw Error('Give your council a name of 1 to 80 characters.');
  if(rows.length>=20&&!rows.some(row=>row.id===selected))throw Error('This browser can save up to 20 councils. Replace or remove one first.');
- const checked=parseCouncil(JSON.stringify(draft));checked.brand_brain.read_by_coordinator=false;
+ const checked=parseCouncil(JSON.stringify(draft));checked.org_context.read_by_coordinator=false;
  const id=rows.some(row=>row.id===selected)?selected:'council_'+crypto.randomUUID();
  const next=[{id,name:clean,saved_at:new Date().toISOString(),draft:checked},...rows.filter(row=>row.id!==id)];
  if(JSON.stringify(next).length>3000000)throw Error('Saved councils exceed this browser’s 3 MB limit. Download JSON and remove an older council.');
  return next;
 }
 export function reusableCouncil(saved:SavedCouncil):CouncilDraft{
- const draft=parseCouncil(JSON.stringify(saved.draft));draft.brand_brain.read_by_coordinator=false;return draft;
+ const draft=parseCouncil(JSON.stringify(saved.draft));draft.org_context.read_by_coordinator=false;return draft;
 }

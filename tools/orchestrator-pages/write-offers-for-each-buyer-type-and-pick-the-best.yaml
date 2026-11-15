@@ -23,7 +23,7 @@ you_give:
   - Reviews, survey answers or support lines in your buyers' words
   - Your costs per order, including shipping and fees
   - Visits and orders for each offer, once you have run them
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - Four to six buyer angles, each with its own offer and page title
   - A review of each offer with a score and the three changes to test first
@@ -40,10 +40,10 @@ output_sample:
     - Reviews, survey answers or support lines in your buyers' words
     - Your costs per order, including shipping and fees
     - Visits and orders for each offer, once you have run them
-    - Your brand file (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can read files you give it, such as Claude Code or a Claude Project
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: Angles and offers"
       contains: Four to six buyer angles, one offer for each, and a list of claims you must check.
@@ -105,4 +105,4 @@ test:
 improve:
   - Survey buyers at 90 to 120 days and ask which part of the offer persuaded them. Cut what nobody values.
   - Keep one offer live as a control for months while you test others.
-  - Save the angles in your brand file so the next product starts from step 2.
+  - Save the angles in your org context so the next product starts from step 2.

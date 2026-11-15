@@ -42,7 +42,7 @@ output_sample:
     - Customer or interview words on the topic (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: The case"
       contains: The one case that holds your idea, what people assume, the case that cuts the other way, and an outline.

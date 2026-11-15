@@ -50,7 +50,7 @@ walk(path.join(ROOT, 'catalogue-items'));
 const follows = new Set();
 for (const f of blocks.filter(isFlow)) f.steps.forEach((s, i) => { const n = f.steps[i + 1]; if (n) follows.add(`${s.uses}>${n.uses}`); });
 
-/** What a block hands over: its outputs, and the brand brain's products and buyers parts. */
+/** What a block hands over: its outputs, and the org context's products and buyers parts. */
 const handsOver = b => { const t = new Set(b.outputs.map(p => p.type)); if (t.has('brand_brain')) { t.add('product_data'); t.add('persona'); } return t; };
 /** What a block reads from outside: its inputs, and for a workflow or an agent its steps' inputs (as needs.mjs outsideInputs). */
 const reads = b => [...b.inputs, ...b.steps.flatMap(s => bySlug[s.uses]?.inputs ?? [])];

@@ -42,7 +42,7 @@ output_sample:
     - What your product does and the problem it solves
     - Groups of buyers you think could use it (optional)
     - Places and people you can reach now (optional)
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   prerequisites:
     - An AI that can read files, such as Claude with the handoff folder
     - The handoff pack with HANDOFF.md and the four skill files
@@ -107,7 +107,7 @@ test:
   - Run it twice on the same input. The first market should be close each time.
 
 improve:
-  - Save your pick and the sign to move in your brand file, so you can track it.
+  - Save your pick and the sign to move in your org context, so you can track it.
   - Re-run step 3 each time you own a market and the sign is met.
   - Pair it with "Test if your idea can own its market" to test the pick in depth.
 

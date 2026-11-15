@@ -18,7 +18,7 @@ steps:
   - {uses: content-topic-planner, note: "Once a quarter, or when the topic list runs dry: topic clusters and the next 12 issues, from what readers asked and replied to. Hands on: the topic list, which step 2 takes this week's topic from."}
   - {uses: marketing-content-drafter, note: "Every week: the issue drafted from your notes and the moment you noticed, for one named reader and the next topic in step 1's list. Hands on: the draft."}
   - {uses: plain-english-editor, note: "Every week: the draft cut to plain words, each cut explained, voice kept. Hands on: the edited draft, for the voice check."}
-  - {uses: draft-brand-voice-checker, note: "Every week, when a brand brain exists: off-voice lines ranked, each with a fix. Hands on: the list of fixes, which you apply to the edited draft before the subject lines."}
+  - {uses: draft-brand-voice-checker, note: "Every week, when an org context exists: off-voice lines ranked, each with a fix. Hands on: the list of fixes, which you apply to the edited draft before the subject lines."}
   - {uses: subject-line-writer, note: "Every week: subject lines in several angles, led by the biggest worry in the issue. Uses the issue (step 3's draft with step 4's fixes applied), not step 4's list. Hands on: the subject lines, for the score."}
   - {uses: email-send-readiness-scorer, note: "Every week, last: counts, cuts, a score out of 100 and a ship or fix call on the issue with its best subject line. Loops back to the editor if the call is fix."}
 schedule: "Every Thursday, two days before the issue goes out"

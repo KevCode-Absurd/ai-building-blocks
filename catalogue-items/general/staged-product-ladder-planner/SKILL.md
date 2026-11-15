@@ -19,10 +19,10 @@ This skill runs in any chat AI. It needs no files, web access or paid tools. Two
 - **The most you can afford to lose** (yours).
 - **Costs and prices you know** (yours): say which are guesses.
 - **How many early buyers you could reach** (yours).
-- **Brand brain** (optional), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): read `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md` and `voice-and-look.md` for the public plan's facts and voice.
+- **Org context** (optional), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): read `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md` and `voice-and-look.md` for the public plan's facts and voice.
 
 How to start:
-1. **Look first.** Use what they have already pasted or attached. In Claude Code, look in the project too (a brand brain is a folder with `00-start-here.md` in it).
+1. **Look first.** Use what they have already pasted or attached. In Claude Code, look in the project too (an org context is a `context/org-context/` folder with `index.md` in it; an older one may have `00-start-here.md`).
 2. **If the end goal or the first product and spend are missing,** ask for both in one short question, even if the user has said go ahead. Do not return an empty template. If only optional items are missing, go ahead and mark them `MISSING:`.
 3. **Do the job.** Mark each gap with `MISSING:` and never invent a fact to fill it. Say each point once and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write "none".
 

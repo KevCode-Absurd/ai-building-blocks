@@ -128,7 +128,7 @@ test:
 improve:
   - "Add the laws that apply where you send, such as consent rules, so weak permission is flagged for legal review."
   - "Add your own pattern for a welcome message, so the promise is set at the start."
-  - "Keep the sign-up promise in your brand file and use it in every welcome email."
+  - "Keep the sign-up promise in your org context and use it in every welcome email."
   - "Pair it with a flow audit once permission is sorted."
 
 works_best_with:

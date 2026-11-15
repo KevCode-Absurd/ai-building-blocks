@@ -121,7 +121,7 @@ improve:
   - Add your own tolerance for the gap between Google and store orders if you have tested one.
   - Add the names of your actions so it can tell the store app, the tag and the import apart.
   - Add any other platform you run, so its purchases are not counted twice.
-  - Save the date of each check to your brand file, and run it after every tracking change.
+  - Save the date of each check to your org context, and run it after every tracking change.
   - Pair it with the Shopify Google tracking builder for the full setup.
 
 works_best_with:

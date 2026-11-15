@@ -42,7 +42,7 @@ output_sample:
   input:
     - Your approved story ad, with what the narrator tried
     - What your buyers tried before, how long it lasted and why they stopped (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - Ad copy for your story ad, for example from the Fact-based ad copy writer
     - An image tool or a phone camera, to make the picture from the prompt
@@ -166,7 +166,7 @@ test:
   - Run it against a snapshot of the moment from the same story. Keep whichever brings more readers to the offer.
 
 improve:
-  - Add what your buyers tried before, as kinds, with how long they lasted, to your brand file.
+  - Add what your buyers tried before, as kinds, with how long they lasted, to your org context.
   - Note how your buyers usually give up (worn out, left half full or hidden away), so step 3 starts there.
   - Ask customers for a photo of their own cupboard, with permission. It shows you what's really in there.
   - Pair it with a story ad skill, so the first lines say what was tried and why it stopped.

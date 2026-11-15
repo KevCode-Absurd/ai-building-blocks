@@ -134,7 +134,7 @@ test:
 improve:
   - Add your margin floor and return-rate limit to the skill file, so the numbers check uses your own lines and not guesses.
   - Add your catalogue's families (sizes, colours, flavours) so it counts variants as one SKU when they do the same job.
-  - Save the launch gate in your brand file and run it for every new SKU.
+  - Save the launch gate in your org context and run it for every new SKU.
   - Pair it with the Job-based avatar builder for the job spec, and with the Product line cutter if you want the general keep-or-cut sort without the job test.
 
 works_best_with:

@@ -62,7 +62,6 @@ What next: turn the pairing you pick into a short brief or first draft and show 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Design brief rules writer](https://useaiblocks.com/skills/design-brief-rules-writer).
-- **Plan your strategy** with the [Marketing brief writer](https://useaiblocks.com/skills/marketing-brief-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -89,6 +89,6 @@ test:
   - Open the compressed file next to the original.
 improve:
   - Keep the seeds you like in a list so you can build a series.
-  - Save the style description in your brand file for the next piece.
+  - Save the style description in your org context for the next piece.
   - Ask for a second style to compare the two.
 next: [pack-and-thumbnail-glance-tester]

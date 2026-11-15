@@ -26,7 +26,7 @@ you_give:
   - "A few lines on the job: what it is for, when and where"
   - "Who it is for and what they should do or see differently"
   - "Limits you already know, such as budget or size (optional)"
-  - "Your brand file (optional)"
+  - "Your org context (optional)"
 you_get:
   - "Core facts: what, why, when and where"
   - "The one idea the work must carry, in a sentence"
@@ -45,7 +45,7 @@ output_sample:
     - "The design job: what it is for, when and where it will be seen"
     - Who it is for and what they should do or see differently
     - Limits you already know, such as size, budget or date (optional)
-    - Your brand brain or brand file (optional)
+    - Your org context (optional)
   output:
     - name: Core facts
       contains: Four short lines on what the job is, why it exists, when it is due and where it will be seen.
@@ -139,7 +139,7 @@ test:
 improve:
   - "Add your standing limits (brand colours, fonts) to \"What you need\" so every brief starts with them."
   - "Add your usual list of places to collect images, such as your own archive."
-  - "Save the best briefs and the work they produced in your brand file."
+  - "Save the best briefs and the work they produced in your org context."
   - "Pair it with \"Brand logo planner\" or \"Wordmark sketch planner\" for the next step."
 
 works_best_with:
@@ -149,7 +149,7 @@ works_best_with:
   inputs:
     - "Past briefs that worked and ones that failed"
     - "The budget and deadline"
-    - "Your brand file"
+    - "Your org context"
     - "Examples of work you admire and why"
 
 terms:

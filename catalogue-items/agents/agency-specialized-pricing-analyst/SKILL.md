@@ -34,7 +34,7 @@ How to start:
 
 ## What you need
 
-These are the only inputs for this agent. They replace the "Before you start" block above, including its brand brain lines, its "Recommended steps before this one" and its "From the brand brain, read" line. This job does not need a brand brain or brand files, so do not ask for them. Use the list below.
+These are the only inputs for this agent. They replace the "Before you start" block above, including its org context lines, its "Recommended steps before this one" and its "From the org context, read" line. This job does not need an org context, so do not ask for them. Use the list below.
 
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, name the part of the output it limits and carry on. Never guess a cost, price or volume.
 

@@ -6,7 +6,8 @@ traction:
   experiment_results: {desc: "Observed dated results with cohort definitions, costs, account identities, activation, paid outcomes and retention."}
 # Version 1 (2026-10-17). Field-level schemas are added as items need them.
 brand_and_product:
-  brand_brain:   {desc: "The brand's facts, voice, products, offers (with effective dates), claims register, personas and look.", schema: "planned: brand-brain v2 (Zod), backward compatible with CE v1"}
+  # The org context (once the brand brain). The id stays brand_brain so saved items and links keep working.
+  brand_brain:   {desc: "The org context: brand DNA, customers and avatars, voice and writing style, how the brand speaks to customers, design language, markets, claims allowed and banned with their proof, do's and don'ts, products and offers (with effective dates).", schema: "planned: org context v2 (Zod), backward compatible with CE v1"}
   product_data:  {desc: "One product's facts: price, variants, ingredients or materials, how it is used, photos by job."}
   offer:         {desc: "A live offer with price, terms, effective_from/to and a current flag."}
   persona:       {desc: "A buyer grounded in real review language: problem, trigger, wants, doubts, words they use."}

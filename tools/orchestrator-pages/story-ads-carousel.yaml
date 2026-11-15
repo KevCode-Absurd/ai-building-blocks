@@ -23,7 +23,7 @@ not_for:
 you_give:
   - Customer reviews, copied as written
   - Your product facts, such as price, ingredients or materials, and how it is used
-  - Your brand file, if you have one (optional)
+  - Your org context, if you have one (optional)
 
 you_get:
   - A short brief on one buyer and the moment they started looking
@@ -45,7 +45,7 @@ output_sample:
     - Your brand facts, voice and look (optional)
   prerequisites:
     - An AI that can read the handoff pack files, such as Claude Code or a Claude Project
-    - A brand brain from the Website brand brain builder (optional)
+    - An org context from the Org context builder (optional)
   output:
     - name: Buyer brief
       contains: One buyer, the moment they started looking, and the fear or habit the story must move.
@@ -137,7 +137,7 @@ test:
 improve:
   - In the builder, drop step 2 if you already have a list of selling points in buying order.
   - Add a step at the end that writes the first lines for each card.
-  - Save the buyer brief in your brand file, so later runs can start from step 2.
+  - Save the buyer brief in your org context, so later runs can start from step 2.
   - Pair it with the workflow that turns reviews into image ads, so the story and the pictures share a buyer.
 
 works_best_with:

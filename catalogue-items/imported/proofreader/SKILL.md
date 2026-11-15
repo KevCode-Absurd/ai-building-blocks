@@ -145,6 +145,6 @@ The examples show the shape of a reply. Any figure in them, such as a reading gr
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the draft.
-- **Fill the gaps in your brand file** with the [Brand voice guide builder](https://useaiblocks.com/skills/brand-voice-guide-builder).
+- **Fill the gaps in your org context** with the [Brand voice guide builder](https://useaiblocks.com/skills/brand-voice-guide-builder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

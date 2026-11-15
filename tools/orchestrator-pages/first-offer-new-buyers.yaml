@@ -43,7 +43,7 @@ output_sample:
     - Your lead numbers, such as spend, leads, how many qualify and how many buy (optional)
     - Cash you can spend while you learn
     - Time it takes to handle one lead
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project, to run the handoff pack
   output:

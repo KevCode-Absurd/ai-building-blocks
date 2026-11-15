@@ -5,7 +5,7 @@ description: Use when you want a one to ten minute video ad that still works wit
 
 # Write a narrated video ad the pictures can carry
 
-Give it your brief and brand file. Get a narrated script trimmed of lines the pictures say, plus clip prompts.
+Give it your brief and org context. Get a narrated script trimmed of lines the pictures say, plus clip prompts.
 
 Use it when: you want a one to ten minute ad that explains how something works, your last narrated ad felt like a slide show with a voice on top, or many viewers watch with the sound off.
 
@@ -18,29 +18,29 @@ This workflow chains four skills from the library: Long-form video ad script wri
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand file** (its products and buyers part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its products and buyers part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
 **Makes it better (optional):**
 - **A character sheet**, made by the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner): pictures that keep one person looking the same in every shot.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand file.
-3. **A character sheet** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). Bring product photos (optional). It uses your video ad script and brand file.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your org context.
+3. **A character sheet** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). Bring product photos (optional). It uses your video ad script and org context.
 4. This one.
 
-**From the brand file, read:** `index.md`, `look.json`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `look.json`, `foundation/design.md`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, a buyer brief, a character sheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, a buyer brief, a character sheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
 - **Your brief** (required). Why people buy, the length you want (60 seconds to 10 minutes), where the ad runs, and how much the buyer already knows.
-- **Your brand file** (required). Your claims and proof with sources, your guarantee and offer, and any banned claims.
+- **Your org context** (required). Your claims and proof with sources, your guarantee and offer, and any banned claims.
 - **Your product facts** (required). How it works, how it is used, price and variants, and the real thing to show (a product photo, a pack, an app screen).
 - **A buyer description and customer words** (optional, helps). The problem in the buyer's words, their doubts, the moment it hurts.
 - **Footage you own** (optional). Clips with a screenshot of each, and whether the people in them agreed to appear in ads.
@@ -66,7 +66,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **Stops.** Stop at a step if its input is missing or a check fails, say why, and go to the hand-back summary. Claude cannot make pictures or video by itself: it writes the prompts and tells you how to finish them.
 
 ## Steps
-1. **Write the narrated script.** Use the skill `long-form-video-ad-script-writer`. It takes your brief, brand file and product facts. It saves `outputs/step-01-long-form-video-ad-script-writer.md`: the problems, explanations, doubts and proof it will use, the rounds and length, and a table of time, narration, on-screen text and a picture note for every line.
+1. **Write the narrated script.** Use the skill `long-form-video-ad-script-writer`. It takes your brief, org context and product facts. It saves `outputs/step-01-long-form-video-ad-script-writer.md`: the problems, explanations, doubts and proof it will use, the rounds and length, and a table of time, narration, on-screen text and a picture note for every line.
 2. **Strip the voice-over.** Use the skill `voice-over-stripping-test`. It takes the script in `outputs/step-01-long-form-video-ad-script-writer.md`. It removes all the narration and rereads what is left. It saves `outputs/step-02-voice-over-stripping-test.md`: a verdict on the stripped story, each narration line marked telling or adding with an action (cut, show as something seen, or keep), and the revised script. Check before step 3: no fact was lost, and lines that must stay were kept.
 3. **Make it easy to say.** Use the skill `ad-script-read-aloud-editor`. It takes the revised script in `outputs/step-02-voice-over-stripping-test.md`. It saves `outputs/step-03-ad-script-read-aloud-editor.md`: each line a presenter would trip on, with the rule it breaks and the fixed text, and a list of lines left as they are.
 4. **Plan the shots and clip prompts.** Use the skill `video-ad-shot-list-maker`. It takes the final script from `outputs/step-03-ad-script-read-aloud-editor.md` and your product facts. It saves `outputs/step-04-video-ad-shot-list-maker.md`: the clip plan, timed shots with one action each, start and end frame prompts, a motion prompt for each clip, and an edit list.

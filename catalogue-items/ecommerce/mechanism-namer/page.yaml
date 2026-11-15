@@ -42,7 +42,7 @@ output_sample:
     - Your product and how it works
     - Your main rivals and what they say on their pages
     - Real differences in ingredient, material, process, design or test results
-    - Your brand brain (optional)
+    - Your org context (optional)
   output:
     - name: Commodity test
       contains: A verdict on whether buyers compare you on price alone, and so whether you need a mechanism.
@@ -120,7 +120,7 @@ test:
 
 improve:
   - Add your category's claim rules to the skill file so the flag step uses them.
-  - Save the chosen name and pillars to your brand file so ads, pages and emails use the same words.
+  - Save the chosen name and pillars to your org context so ads, pages and emails use the same words.
   - Add two or three mechanisms from your own field as examples, so the names sound right for you.
   - The source examples come from info products, so check each pillar fits a physical product before you use it.
   - Pair it with a skill that picks your main claim, and one that checks proof.

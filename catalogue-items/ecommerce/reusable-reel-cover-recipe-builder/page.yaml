@@ -39,7 +39,7 @@ how_to_use:
   - Read the title lines and the accent word. Change the word if it is not the punch of your hook.
   - Copy the image prompt into a tool that draws, such as ChatGPT or Gemini. Attach your portrait there too.
   - Compare the picture with the recipe card. Check that the text is easy to read at small size. Ask for changes to the prompt, not to your face.
-  - Save the recipe card in your brand file. For the next Reel, give only a new title.
+  - Save the recipe card in your org context. For the next Reel, give only a new title.
 how_it_works:
   - title: Collect the inputs
     text: It asks once for a portrait, a title or topic and brand colors. Anything missing is marked, and default colors are named as defaults.
@@ -91,7 +91,7 @@ works_best_with:
       why: You can fix the title on the picture, or build the cover there from the recipe card.
   inputs:
     - A clear portrait with the same lighting as your other covers.
-    - Your brand file, with colors and font names.
+    - Your org context, with colors and font names.
     - A list of your next five Reel titles, so you can make the set in one go.
 terms:
   - term: Accent word
@@ -112,7 +112,7 @@ tweaks:
   - what: Accent word
     how: Name the word yourself if the skill's pick misses the point of the hook.
 improve:
-  - Save the recipe card in your brand file and paste it in at the start of each new batch.
+  - Save the recipe card in your org context and paste it in at the start of each new batch.
   - Edit SKILL.md to change the starting colors and the layout values to match your brand.
   - After a month, compare views on Reels with the new covers and the old ones, then adjust one thing at a time.
   - Pair it with the Short video hook writer, so the title is strong before the cover is made.

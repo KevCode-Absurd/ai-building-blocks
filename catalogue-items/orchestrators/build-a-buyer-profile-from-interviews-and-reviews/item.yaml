@@ -7,9 +7,7 @@ role: orchestrate
 job: research
 level: intermediate
 inputs:
-  - {type: spreadsheet, required: true}
   - {type: product_data, required: true}
-  - {type: question, required: true}
   - {type: voc_reviews, required: false}
   - {type: brand_brain, required: false}
   - {type: copy_draft, required: false}

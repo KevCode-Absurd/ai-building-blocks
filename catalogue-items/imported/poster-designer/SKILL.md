@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A design direction** (yours): the page's type, colours and layout rules.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A design direction** with the [Type-led poster planner](https://useaiblocks.com/skills/type-led-poster-planner). Bring a brief. It uses your brand file.
+1. **A design direction** with the [Type-led poster planner](https://useaiblocks.com/skills/type-led-poster-planner). Bring a brief. It uses your org context.
 2. This one.
 
 How to start:
@@ -202,3 +202,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Changed by AI Blocks (2026-10-28): added numbered steps, a plain quality bar and a font fallback rule earlier; today made the font rule one rule (two or three fonts from ./canvas-fonts).
 Changed by AI Blocks (2026-11-10): refreshed the generated Before you start and After this guidance from catalogue metadata.
+Changed by AI Blocks (2026-11-15): refreshed the generated Before you start and After this guidance from catalogue metadata.

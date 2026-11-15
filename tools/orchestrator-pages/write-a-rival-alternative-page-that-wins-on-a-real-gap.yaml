@@ -22,7 +22,7 @@ you_give:
   - The names of one to five rivals
   - Your product facts and where you honestly win (optional)
   - What your buyers say about the choice (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - A side-by-side of how each rival pitches, with the topics nobody covers
   - A grid of where every rival and you are strong or weak, and where to stop fighting
@@ -38,10 +38,10 @@ output_sample:
     - The names of one to five rivals
     - Your product facts and where you honestly win (optional)
     - What your buyers say about the choice (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can read files, such as Claude, to follow HANDOFF.md
-    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your org context from the Org context builder (optional, makes the result better)
   output:
     - name: "Step 1: Rival messages"
       contains: A profile of each rival, a matrix of headlines, claims and proof, topics nobody covers, threats and next moves.
@@ -84,7 +84,7 @@ tweaks:
     how: Add numbers, awards or reviews. The page uses only facts you give it.
   - what: Where the page will rank
     how: Name the search phrase you want. Step 3 shapes the title and headings for it.
-  - what: Your brand file
+  - what: Your org context
     how: Add it so the page uses your voice.
 judge:
   - Every rival claim comes from a public page you can open.

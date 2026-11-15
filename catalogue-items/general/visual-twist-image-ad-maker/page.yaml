@@ -44,7 +44,7 @@ output_sample:
     - A live offer (optional)
   prerequisites:
     - An image tool to turn the prompt into a picture, such as GPT Image or Nano Banana
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Concept card
       contains: The one thought, the real moment, the twist and a check that the idea is unexpected and relevant.
@@ -194,7 +194,7 @@ test:
 improve:
   - Paste your brand colours and typeface into "What you need", and attach the same product photos each run, so every run builds the product the same way.
   - Add your show-it-right rules (how the pack opens, what's never shown) to the check list.
-  - Save each one thought that wins, with its twist, in your brand file, and name it in your next run.
+  - Save each one thought that wins, with its twist, in your org context, and name it in your next run.
   - Pair it with a skill that checks finished image ads for errors before you spend.
 works_best_with:
   tools:

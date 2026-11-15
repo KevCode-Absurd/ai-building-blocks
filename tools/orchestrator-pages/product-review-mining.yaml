@@ -15,7 +15,7 @@ when:
   - You have a thick manual, book or transcript and need to find the lines worth using in ads and pages.
   - Your ads all lean on one benefit and you suspect your buyers share a want you have not named.
 not_for:
-  - "Your product has no written material yet: build the Brand profile builder result first, then come back."
+  - "Your product has no written material yet: build the Org context builder result first, then come back."
   - "You only need a headline for one ad: use the Ad headline writer."
   - "You want to plan ad angles from your market, not from your own product text: use the Ad angle planner."
 you_give:
@@ -39,7 +39,7 @@ output_sample:
     - A short description of your buyers (optional)
   prerequisites:
     - An AI that can read pasted text or attached files
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Phrase sheet
       contains: Strong phrases from your own material, each with its source, sorted into piles for headlines, long copy, side notes, proof and demonstrations.
@@ -85,7 +85,7 @@ test:
   - Check three hooks against your material. Each claim should be there.
   - Run step 2 twice. The wording can change but the smaller wants should mostly match.
 improve:
-  - Save the phrase sheet and the shared want into your brand file, so every writer and tool starts with the same words.
+  - Save the phrase sheet and the shared want into your org context, so every writer and tool starts with the same words.
   - Add the phrases you must not use, such as claims you cannot prove, so they are marked early.
   - Test the hooks as the plan sets out, then save the winner and what it showed.
 next: [video-hook-scorer, headline-cover-test-ranker]

@@ -43,7 +43,7 @@ output_sample:
     - The doubts you hear from buyers (optional)
     - Your sales and refund numbers (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: Limits and deadlines"
       contains: Your capacity, a limit rule, a date rule, lines for each channel and an honesty check.

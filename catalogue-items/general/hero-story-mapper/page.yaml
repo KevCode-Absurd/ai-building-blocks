@@ -134,7 +134,7 @@ works_best_with:
   inputs:
     - "Dates and amounts, so the trial is concrete"
     - "A quote from someone who was there"
-    - "Your brand file, so the voice fits"
+    - "Your org context, so the voice fits"
 
 terms:
   - term: "Threshold"

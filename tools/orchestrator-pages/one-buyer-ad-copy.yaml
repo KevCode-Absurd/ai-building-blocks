@@ -23,7 +23,7 @@ not_for:
 you_give:
   - Customer reviews, copied as written
   - Your product facts, such as price, ingredients or materials, and how it is used
-  - Your brand file, if you have one (optional)
+  - Your org context, if you have one (optional)
 
 you_get:
   - A short brief on the buyer, their moment and the one thing the copy must move
@@ -42,7 +42,7 @@ output_sample:
   input:
     - Your customer reviews, copied as written
     - Your product facts, such as price, ingredients or materials, and how it is used
-    - Your brand file (optional)
+    - Your org context (optional)
     - Your platform's limits for headline and main text (optional)
   prerequisites:
     - An AI that can read files, so it can follow HANDOFF.md and save each step's result
@@ -142,7 +142,7 @@ test:
 improve:
   - In the builder, drop step 2 if you already know how much your buyer knows and how the ad should argue.
   - Add a step at the end that checks the copy for platform rules before you launch.
-  - Save the buyer brief in your brand file, so later runs can start from step 2.
+  - Save the buyer brief in your org context, so later runs can start from step 2.
   - Pair it with the workflow that turns reviews into image ads, so the words and pictures start from the same buyer.
 
 works_best_with:

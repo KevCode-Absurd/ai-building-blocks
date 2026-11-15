@@ -43,7 +43,7 @@ output_sample:
     - Product cost, shipping cost and planned price (asked for when it pauses)
   prerequisites:
     - An AI with web search helps. Without it, paste reviews in yourself.
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: Rating gap product finder"
       contains: Ranked buyer complaints with proof, willingness to pay, and sub-categories with weak ratings but strong search.

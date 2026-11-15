@@ -1,19 +1,19 @@
 new_slug: brand-dna-capture
-name: "Brand file capture"
-summary: "Give it your website. You get a brand file your AI keeps current: prices, look, voice and facts, each with its source and date."
+name: "Org context capture"
+summary: "Give it your website. You get an org context your AI keeps current: prices, look, voice and facts, each with its source and date."
 job: brand-file
 thinking: low
 thinking_why: "It measures a page and writes down what it found. The scripts do the hard part."
 
-headline: "Capture your site into a brand file your AI keeps up to date"
+headline: "Capture your site into an org context your AI keeps up to date"
 subhead: Give it your website and the pages that matter. It measures your colours, fonts, buttons and page order, and saves your own words, prices, offers and stock with the date each was read. Later runs add to the file, say what changed, and tell your AI which parts are too old to trust.
 
 explain: |
   When your AI makes a page or an ad without looking at your site, it uses its own favourite look and facts it half remembers. You get its fonts and its rounded cards, and sometimes last month's price.
 
-  This skill measures your live site and saves the result as your brand file, a folder in your own project. It holds your prices, offers and stock, your lasting facts, your look, real lines in your own words, the sites you admire and avoid, and what you kept or dropped on past jobs. Every line has where it was read and when.
+  This skill measures your live site and saves the result as your org context, a folder in your own project. It holds your prices, offers and stock, your lasting facts, your look, real lines in your own words, the sites you admire and avoid, and what you kept or dropped on past jobs. Every line has where it was read and when.
 
-  The brand file stays current. A new capture adds to it and never wipes it. It lists what changed, such as a new price or an offer that ended. Prices, offers and stock count as old after 7 days, and the look and voice after 90 days. Each job takes only the part it needs, and a job that needs none of it skips the capture.
+  The org context stays current. A new capture adds to it and never wipes it. It lists what changed, such as a new price or an offer that ended. Prices, offers and stock count as old after 7 days, and the look and voice after 90 days. Each job takes only the part it needs, and a job that needs none of it skips the capture.
 
 when:
   - Before your AI designs or rewrites a page for a business that already has a website.
@@ -21,9 +21,9 @@ when:
   - When your prices, offers or stock have changed since the last job.
   - When an AI-made page came back looking nothing like your site and you want to see why.
 not_for:
-  - "A new brand with no website yet. Write the brand file by hand from your brand guide and the sites you admire."
+  - "A new brand with no website yet. Write the org context by hand from your brand guide and the sites you admire."
   - "Copying a competitor's design. It keeps a competitor's look and headlines as a reference only, never their prices."
-  - "Code, operations or data jobs. They need no brand file, and the tool says so."
+  - "Code, operations or data jobs. They need no org context, and the tool says so."
 
 you_give:
   - Your website address
@@ -42,14 +42,14 @@ you_get:
 how_to_use:
   - Add the skill to an AI that can run code, or open it in any chat.
   - Give it your website address and the pages that matter for the job.
-  - If your AI can run code, it checks the brand file first, then captures only what is missing or old. It needs Node.js 18 or later and Playwright.
+  - If your AI can run code, it checks the org context first, then captures only what is missing or old. It needs Node.js 18 or later and Playwright.
   - If not, open each page in your browser, paste the snippet into the console, and save what it returns.
   - Read the index it writes. Fix anything that looks wrong, then start the real job from the slice.
   - After the job, tell it what you kept and what you dropped. It saves that for next time.
 
 how_it_works:
   - title: Checks before it captures
-    text: Looks at what the brand file already holds and how old each part is. It captures only what this job needs and what has gone stale.
+    text: Looks at what the org context already holds and how old each part is. It captures only what this job needs and what has gone stale.
   - title: Opens your real pages
     text: Loads each page at desktop and phone width, waits for it, closes pop-ups and scrolls so all photos load. It blocks tracking tags and never logs in or clicks buy.
   - title: Measures the look
@@ -62,7 +62,7 @@ how_it_works:
     text: Prints only the part a job needs, newest first. Old lines are listed apart for a recheck and are never passed on as facts.
 
 output_shape: |
-  context/brand-file/
+  context/org-context/
     index.md        what is here, how fresh each part is, what is missing
     offers.json     prices, promotions, stock, shipping (fresh for 7 days)
     facts.json      lasting facts, each with source and date (fresh for 90 days)
@@ -71,7 +71,7 @@ output_shape: |
     references.md   admired, avoided and competitors
     worked.md       what you kept, dropped or asked for more of
     history/        earlier versions, and changes.md
-  context/brand-dna.json   the raw capture the brand file is built from
+  context/brand-dna.json   the raw capture the org context is built from
   context/screenshots/     <page>-desktop-first, -desktop-full, -mobile-first, -mobile-full
   CHECKS MISSED            <one line per check that did not run, or none>
 
@@ -83,7 +83,7 @@ example:
     Capture https://www.allbirds.com and the product page
     /products/mens-tree-runners. Then show me the status and the facts slice.
   output: |
-    Brand file: allbirds.com (context/brand-file) as of 2026-11-10
+    Org context: allbirds.com (context/org-context) as of 2026-11-10
 
     part       file           state  newest      age  notes
     offers     offers.json    fresh  2026-11-10  0d   42 lines, fresh for 7 days
@@ -92,7 +92,7 @@ example:
     voice      voice.md       fresh  2026-11-10  0d   19 lines, fresh for 90 days
     Result: READY
 
-    BRAND FILE SLICE: facts | allbirds.com | read 2026-11-10
+    ORG CONTEXT SLICE: facts | allbirds.com | read 2026-11-10
     LIVE OFFERS: prices, promotions, stock, shipping (fresh for 7 days)
     - price: Men's Tree Runner: USD 70
       (allbirds.com/products/mens-tree-runners, 2026-11-10)
@@ -115,7 +115,7 @@ tweaks:
   - what: Which pages
     how: Add the pages your job touches, such as one product page, one collection and the cart. Each page keeps its own date, so you can refresh one without the others.
   - what: Only the prices
-    how: Capture just the pages with prices when they are the only old part. The rest of the brand file stays as it is.
+    how: Capture just the pages with prices when they are the only old part. The rest of the org context stays as it is.
   - what: Sites you admire or compete with
     how: Name up to three. It keeps their look and headline lines in your references, and leaves their prices out.
   - what: A page behind a pop-up
@@ -128,14 +128,14 @@ judge:
   - Every colour has a share of the page and a job, not just a hex code.
   - Fonts are named for each job (headings, body, buttons, menu), with whether they loaded.
   - Voice lines are copied word for word from the site.
-  - A second capture adds to the brand file and lists what changed. Nothing from the first one is lost.
+  - A second capture adds to the org context and lists what changed. Nothing from the first one is lost.
   - Lines older than their limit are listed for a recheck, not used.
 
 test:
   - Open your site next to the look slice. The biggest colour, the button shape and the footer columns should match what you see.
   - Change a price on a test page and capture again. The change list should show the old and the new price.
   - Ask for the status eight days after a capture. Prices and offers should show as stale.
-  - Ask for a slice for a code job. It should say no brand file is needed.
+  - Ask for a slice for a code job. It should say no org context is needed.
 
 improve:
   - Capture your pricing and best-selling product pages each week, so offers and stock stay fresh.
@@ -158,7 +158,7 @@ output_sample:
   prerequisites:
     - An AI that can run code, to use the scripts that come with this skill (or any browser for the snippet)
   output:
-    - name: Brand file
+    - name: Org context
       contains: Offers, facts, look, voice, references and what worked, each line with its source and date.
     - name: Index
       contains: One screen that says what is here, how fresh each part is and what is missing.
@@ -172,10 +172,10 @@ output_sample:
       contains: One line for each check that did not run, or none.
 
 terms:
-  - term: Brand file
+  - term: Org context
     meaning: One folder in your own project with your prices, facts, look, voice, references and what worked, which your AI reads before it works for you.
   - term: Slice
-    meaning: The short part of the brand file one job needs, such as the facts and voice for an email.
+    meaning: The short part of the org context one job needs, such as the facts and voice for an email.
   - term: Stale
     meaning: Too old to trust. Prices, offers and stock are stale after 7 days, and the look and voice after 90 days.
   - term: Share of page area

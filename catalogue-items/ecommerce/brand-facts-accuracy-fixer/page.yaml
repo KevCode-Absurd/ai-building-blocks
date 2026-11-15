@@ -24,7 +24,7 @@ when:
 not_for:
   - "You want to know how often AI names your store. Use the AI search visibility tester."
   - "You want to change your product pages so AI can read them. Use the Product page editor for AI search."
-  - "You have no written facts about your store yet. Build your brand brain first with the Brand profile builder."
+  - "You have no written facts about your store yet. Build your org context first with the Org context builder."
   - "You hope listing work will fix a poor product or bad reviews. It will not. Fix the product first."
 
 you_give:
@@ -92,7 +92,7 @@ output_sample:
     - Your true facts and policies, with exact numbers and dates
     - A list of your profiles and listings (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
     - An account with each assistant you want to check
   output:
     - name: Fact table

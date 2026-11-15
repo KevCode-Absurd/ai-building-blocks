@@ -119,7 +119,7 @@ test:
   - "Give it an update with no reader gain, such as a holiday office closure. It should say so and write the plain version."
 
 improve:
-  - "Paste your voice-and-look file from your brand file, so the rhythm and banned words are yours."
+  - "Paste your voice-and-look file from your org context, so the rhythm and banned words are yours."
   - "Add the three things your readers reply about most, so the gain line aims at them."
   - "Save the CUT lists over a month. They become your own list of phrases to stop using."
 

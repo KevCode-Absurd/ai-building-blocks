@@ -71,7 +71,7 @@ In this order:
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **If you want a hard check before you commit money** with the [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
 - **If the product is set and you need the launch order** with the [Launch teaser and preview planner](https://useaiblocks.com/skills/launch-teaser-to-preview-planner). It takes the plan.
-- **If you want to lead with press** with the [Publicity-first launch planner](https://useaiblocks.com/skills/publicity-first-launch-planner). Bring your product, brand brain and product facts.
+- **If you want to lead with press** with the [Publicity-first launch planner](https://useaiblocks.com/skills/publicity-first-launch-planner). Bring your product, org context and product facts.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

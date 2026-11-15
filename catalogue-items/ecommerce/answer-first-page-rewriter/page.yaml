@@ -132,7 +132,7 @@ test:
 improve:
   - Add your avoid-word list and tone rules to the skill file.
   - Add the label for your own ideas, such as "the Brand X sizing rule", and use it everywhere.
-  - Save your original data and sources in your brand file so each page can use them.
+  - Save your original data and sources in your org context so each page can use them.
   - Pair it with the shopper question and fan-out mapper (the questions) and the AI-ready product page editor (product pages).
 
 works_best_with:

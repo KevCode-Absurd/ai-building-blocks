@@ -75,7 +75,7 @@ output_sample:
     - Two or three of your own posts (optional)
   prerequisites:
     - An AI chat such as Claude, ChatGPT or Gemini
-    - Your brand brain from the Brand profile builder, if you have one (optional)
+    - Your org context from the Org context builder, if you have one (optional)
   output:
     - name: Content themes
       contains: Three or four themes, each with the reader it serves and its goal.
@@ -111,6 +111,6 @@ works_best_with:
     - name: Claude, ChatGPT or Gemini
       why: All three write and adapt drafts well. Paste your own posts so the voice matches yours.
   inputs:
-    - Your brand brain, if you have built one.
+    - Your org context, if you have built one.
     - Customer questions you hear often.
     - Past posts that did well, with a note on why.

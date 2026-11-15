@@ -22,7 +22,7 @@ you_give:
   - Your image ad, attached as a file
   - The headline and primary text that go with it
   - Your offer, price and what you sell
-  - Your brand file, if you have one (optional)
+  - Your org context, if you have one (optional)
 you_get:
   - A score for the ad out of 100, ranked fixes and two stronger headlines
   - The awareness stage of the ad, with a score and the fixes
@@ -39,10 +39,10 @@ output_sample:
     - Your image ad, attached as a file
     - The headline and primary text that go with the ad
     - Your offer, price and terms
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can read attached files and an image
-    - Your brand brain from the Website brand brain builder (optional, the run works without it)
+    - Your org context from the Org context builder (optional, the run works without it)
   output:
     - name: Static ad critic
       contains: A score out of 100, the path the eye follows, ranked fixes, two stronger headlines and fixed ad copy.
@@ -99,7 +99,7 @@ test:
   - Check every price and claim on the page against your product page.
   - Run it twice on the same ad. The scores and main fixes should be close.
 improve:
-  - Save the fixed ad copy and the awareness stage in your brand file, so later ads can skip step 1.
+  - Save the fixed ad copy and the awareness stage in your org context, so later ads can skip step 1.
   - Add your banned words and claims to the compliance step, so it checks your own rules.
   - Add a page you are proud of to step 3, so new pages follow its layout.
   - Pair it with a landing page checker to score the page once more after your edits.

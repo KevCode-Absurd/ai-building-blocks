@@ -15,7 +15,7 @@ when:
   - A rival is named in AI answers and you cannot tell why you are not.
   - Your product pages describe the product in marketing words, with the plain facts missing.
 not_for:
-  - "You have no product pages yet: build them first, then come back. For the facts to put on them, use the Brand profile builder."
+  - "You have no product pages yet: build them first, then come back. For the facts to put on them, use the Org context builder."
   - "You sell to other businesses and want lead lists: use a simple prospect list in a spreadsheet, or ask a sales person to build one."
   - "You only want one product page rewritten: use the Product page editor for AI search on its own."
 you_give:
@@ -46,7 +46,7 @@ output_sample:
   prerequisites:
     - Access to at least one AI assistant, such as ChatGPT, Gemini or Perplexity, to run the questions yourself
     - An AI that can read files, to run the handoff pack
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: Shopper questions"
       contains: 30 to 60 questions shoppers ask about your category, in topic groups, with the ones your store does not answer marked.
@@ -104,6 +104,6 @@ test:
   - Check each spec on the page against the box or the supplier sheet.
 improve:
   - Add your claim rules to the page editor, so health and legal wording stays safe.
-  - Save the first panel log as your baseline in your brand file and compare it every quarter.
+  - Save the first panel log as your baseline in your org context and compare it every quarter.
   - Add the questions your support team gets most to the question list.
   - Pair it with the workflow for getting named on the pages AI quotes, to work on the outside sources too.

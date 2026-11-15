@@ -44,7 +44,7 @@ output_sample:
     - Your video ad script, beat by beat
     - Your offer (optional)
     - Your brand font file (optional)
-    - Your brand brain folder (optional)
+    - Your org context folder (optional)
   prerequisites:
     - A video editor, to cut and export the ad at the pause
     - An AI that can read files, if you use the handoff pack
@@ -103,6 +103,6 @@ test:
   - Fix one flagged mistake and run step 3 again. The score should rise.
 next: [ad-results-report-writer, creative-test-reader]
 improve:
-  - Save your caption style in your brand file so every ad matches.
+  - Save your caption style in your org context so every ad matches.
   - Keep a list of your most common stop-ship mistakes and watch for them while editing.
   - Run this on every ad before launch, not only the big ones.

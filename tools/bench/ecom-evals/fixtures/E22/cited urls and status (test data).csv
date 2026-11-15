@@ -1,0 +1,6 @@
+# (test data) Pela URLs cited in the answers and in top backlinks, checked on 13 Nov 2026. Built for an e-commerce eval. Not Pela's real figures.
+url,http_status,times_cited_or_linked
+https://pela.earth/,301 to https://lomi.com/,11
+https://pela.earth/products/eco-friendly-iphone-case,301 to https://lomi.com/,6
+https://pela.earth/pages/pela-360,301 to https://lomi.com/,2
+https://pelacase.com/,200,4

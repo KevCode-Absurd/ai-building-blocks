@@ -130,7 +130,7 @@ test:
   - "After one delete on the duplicate theme, preview your key pages and run PageSpeed three times. Nothing should break."
 
 improve:
-  - "Keep a dated list of every app you install or remove in your brand file, so the next search has names to use."
+  - "Keep a dated list of every app you install or remove in your org context, so the next search has names to use."
   - "Add the file names that matter in your theme to the skill (for example a custom snippet your developer made)."
   - "Add your own rule, such as 'comment out first, delete after a week'."
   - "Pair it with the app script auditor, which makes the list of apps to remove."

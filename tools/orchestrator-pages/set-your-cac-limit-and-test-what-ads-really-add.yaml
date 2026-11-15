@@ -110,6 +110,6 @@ test:
   - Before you run the lift test, write down the result that would make you cut the channel. The plan should match.
 improve:
   - Keep the daily sheet running and review it weekly, so the limit moves with real data.
-  - Add cohort profit at 30, 90 and 180 days to your brand file once you have it.
+  - Add cohort profit at 30, 90 and 180 days to your org context once you have it.
   - Edit the rule bands in the CAC step if your type of business pays back differently.
   - Repeat the lift test on a second channel once the first has a result.

@@ -32,7 +32,7 @@ How to start:
 
 - **The brief and the acceptance tests** (required): the client's request in their own words and the 5 to 7 tests from the spec sheet.
 - **The finished deliverable** (required): the page, ad set, email series, plan or copy, exactly as the client will get it.
-- **The captured facts** (required for the truth question): the facts file or brand file, with sources and dates. Without it the reviewer marks every claim "source not seen".
+- **The captured facts** (required for the truth question): the facts file or org context, with sources and dates. Without it the reviewer marks every claim "source not seen".
 - **Kept out:** build notes, the candidates that lost, decision records and your own view of the work.
 
 ## Steps

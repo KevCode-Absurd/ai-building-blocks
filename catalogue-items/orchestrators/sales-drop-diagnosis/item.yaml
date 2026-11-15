@@ -9,9 +9,7 @@ level: advanced
 inputs:
   - {type: performance_sheet, required: true}
   - {type: brand_brain, required: true}
-  - {type: reference_set, required: false}
   - {type: voc_reviews, required: false}
-  - {type: persona, required: false}
   - {type: competitor_set, required: false}
 outputs:
   - {type: ad_copy}

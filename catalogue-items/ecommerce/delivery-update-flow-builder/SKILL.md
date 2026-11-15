@@ -18,8 +18,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **An email flow** with the [Post-purchase flow builder](https://useaiblocks.com/skills/post-purchase-flow-builder). It uses your brand file.
-2. **An email flow** with the [Reorder and second-order planner](https://useaiblocks.com/skills/reorder-and-second-order-planner). Bring your results (optional). It uses your brand file and offer.
+1. **An email flow** with the [Post-purchase flow builder](https://useaiblocks.com/skills/post-purchase-flow-builder). It uses your org context.
+2. **An email flow** with the [Reorder and second-order planner](https://useaiblocks.com/skills/reorder-and-second-order-planner). Bring your results (optional). It uses your org context and offer.
 3. This one.
 
 How to start:

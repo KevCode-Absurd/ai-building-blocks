@@ -119,7 +119,7 @@ test:
 
 improve:
   - Keep one notes file per talk, with the date, so the review can see how things changed over time.
-  - Add the group you picked and your big three unknowns to your brand file, so later runs start from there.
+  - Add the group you picked and your big three unknowns to your org context, so later runs start from there.
   - After a "change" call, run the first half again with the new group or the new problem.
 
 works_best_with:

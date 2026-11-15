@@ -15,19 +15,19 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Makes it better (optional):**
-- **Brand file**, made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context**, made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
-**From the brand file, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`, `foundation/claims.md`, `foundation/customer-talk.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for a draft, your brand file, a document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for a draft, your org context, a document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -40,7 +40,7 @@ How to start:
 - **A finished document** (optional): a procedure, policy or report to edit as the draft. Keep its steps, roles and numbers.
 - **A list of flagged lines** (optional): a claim check or review report. Fix, mark or cut each flagged line in the edit, and say in the change list which flag it answers. Do not add a claim to fill the gap.
 - **Who will read it** (optional): the reader and what they need to do after.
-- **Brand file** (optional): voice, words you always use or never use.
+- **Org context** (optional): voice, words you always use or never use.
 
 ## Steps
 1. **State the point.** Write in one sentence what the piece is trying to say, and who it is for. Write why you care about it in a second sentence if the draft shows it. If you cannot state the point, say the draft needs thinking and not editing, and ask the writer what they mean.
@@ -69,7 +69,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor). It takes the draft and notes.
 - The [Article evidence and copy editor](https://useaiblocks.com/skills/blog-post-publish-check-loop). It takes the draft.
 - The [Text proofreader](https://useaiblocks.com/skills/proofreader). It takes the draft.
-- **Fill the gaps in your brand file** with the [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the draft.
+- **Fill the gaps in your org context** with the [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the draft.
 - The [Email draft readiness checker](https://useaiblocks.com/prompts/email-send-readiness-scorer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

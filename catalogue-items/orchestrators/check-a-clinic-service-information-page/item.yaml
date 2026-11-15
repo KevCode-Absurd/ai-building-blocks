@@ -9,8 +9,6 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: question
-    required: true
   - type: copy_draft
     required: true
   - type: source_text

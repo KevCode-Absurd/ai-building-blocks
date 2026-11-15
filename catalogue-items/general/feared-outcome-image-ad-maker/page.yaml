@@ -111,11 +111,11 @@ example:
     paid. 30-day money-back guarantee on the first order.
 
     Buyer: the price doubter.
-    Feared next step, from the brand file: "Will the price jump after
+    Feared next step, from the org context: "Will the price jump after
     the first order?"
   output: |
     GATE                Their fear: "Will the price jump after the
-                        first order?" (brand file) and "they are a
+                        first order?" (org context) and "they are a
                         trap" (review 17).
                         Doable step: read the renewal line before
                         paying. Fact: the site states "Renews at $49.99

@@ -127,7 +127,7 @@ test:
   - "Leave out the renewal price. The lines that depend on it should be marked cannot verify, not scored."
 
 improve:
-  - "Paste your offers file from your brand file so the real prices are always loaded."
+  - "Paste your offers file from your org context so the real prices are always loaded."
   - "Add your pricing rules (for example, every discount shows the renewal price beside it) as extra checks."
   - "Pair it with the Meta ads compliance checker when the lines are in ads."
 

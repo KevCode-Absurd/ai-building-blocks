@@ -2,11 +2,11 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: talking-object-image-ad-maker
 name: "Talking object image ad maker"
-summary: "Plan a talking object image ad. Give it your buyer's moment and brand file. You get the narrator, bubble line, image prompt and ad words."
+summary: "Plan a talking object image ad. Give it your buyer's moment and org context. You get the narrator, bubble line, image prompt and ad words."
 job: make-image-ads
 
 headline: "Talking object image ad maker"
-subhead: Give it your buyer's moment, brand file and product photos. It picks one object from the buyer's home, tests it and gives it one feeling and a speech bubble of 7 words or fewer. You get an image prompt, the ad words, a layout and the edit step that adds your real pack.
+subhead: Give it your buyer's moment, org context and product photos. It picks one object from the buyer's home, tests it and gives it one feeling and a speech bubble of 7 words or fewer. You get an image prompt, the ad words, a layout and the edit step that adds your real pack.
 
 explain: |
   Buyers rarely say their problem out loud, and an ad that says it for them can sound preachy. An object that was in the room says it better. The crusty shaker knows it's been replaced. The bedside lamp has seen the 1 am scrolling. Nobody mistakes a talking shaker for a fake testimonial, so it can be blunt and funny.
@@ -20,11 +20,11 @@ when:
 not_for:
   - "You want a video, not a still: use the Talking object video ad script writer skill, which writes the video version."
   - "Your product needs proof to sell, like numbers or before and after photos: use a plain product photo ad with the proof written on it."
-  - "You have no brand file or buyer details yet: use the Brand profile builder and the Buyer brief writer first."
+  - "You have no org context or buyer details yet: use the Org context builder and the Buyer brief writer first."
 
 you_give:
   - The problem, how much the buyer knows, and the buyer's moment (room, time of day, what they tried before)
-  - Your brand file, with label text, approved claims, humour limits and offer
+  - Your org context, with label text, approved claims, humour limits and offer
   - Photos of your product's front, side and top, attached (optional, needed if it appears)
 you_get:
   - The narrator, the four tests it passed, its mood and its expression
@@ -36,16 +36,16 @@ you_get:
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Describe where the problem happens, for example "at the kitchen sink, 7 am". Name any object your customers mention.
-  - Paste your brand file and attach the product photos. Say how dry or silly your humour can be.
+  - Paste your org context and attach the product photos. Say how dry or silly your humour can be.
   - Make the picture from the prompt, then add the bubble, the words and your real pack in your editor.
   - Show it to someone for 2 seconds. If they can't say what the object is fed up about, ask for a plainer expression.
 output_sample:
   input:
     - The problem, what your buyer knows, and the buyer's moment
-    - Your brand file with label text, approved claims, humour limits and offer
+    - Your org context with label text, approved claims, humour limits and offer
     - Photos of your product from the front, side and top (optional)
   prerequisites:
-    - An AI chat that can read your pasted brand file
+    - An AI chat that can read your pasted org context
     - An image maker and an editor to build the final picture
   output:
     - name: Narrator
@@ -204,7 +204,7 @@ test:
 improve:
   - Add the objects your customers mention in reviews to "What you need" in the skill file, so it starts from their words.
   - Write which moods your brand allows into step 4, so it never picks one you'd reject.
-  - Save the bubble lines that win in your brand file. They make good hooks for the video version too.
+  - Save the bubble lines that win in your org context. They make good hooks for the video version too.
   - Pair it with the talking object video skills, so the still and the video share one narrator.
 
 works_best_with:

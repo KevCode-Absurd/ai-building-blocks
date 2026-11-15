@@ -25,7 +25,7 @@ you_give:
   - Your product list and who each suits
   - Screenshots of a good quiz in your niche (optional)
   - After launch, your exported answers and drop-off by question
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - Buyer research, an offer brief and four to six buyer types
   - A quiz with a job for every question, result pages by answer, a buy box and an email brief
@@ -47,7 +47,7 @@ output_sample:
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
     - A quiz tool that shows numbers per question, and an email tool
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: Buyer research"
       contains: The buyer research, an offer brief, the beliefs a buyer must hold and four to six buyer types.
@@ -103,6 +103,6 @@ test:
   - Check the finish rate after a week. The 30% target is a guide, not a rule for every niche.
   - Count one answer by hand in the export and compare it with step 3.
 improve:
-  - Add your real expert, certificate or proof to your brand file so the angles can use them.
+  - Add your real expert, certificate or proof to your org context so the angles can use them.
   - Re-run steps 3 and 4 each month with new answers, and drop the questions with the worst drop-off.
   - Write test ads for the top two angles, using the buyers' own words from the answers.

@@ -142,7 +142,7 @@ test:
 
 improve:
   - Add questions your trade always asks, such as licences or delivery areas.
-  - Keep a short list of past campaigns and results in your brand file so the first question is already answered.
+  - Keep a short list of past campaigns and results in your org context so the first question is already answered.
   - Add your limits, such as claims you may not make, to the check step.
   - Pair it with "Product differentiation checker" if you cannot find the one thing to say.
 

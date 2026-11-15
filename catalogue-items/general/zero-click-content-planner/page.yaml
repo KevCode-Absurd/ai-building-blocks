@@ -129,7 +129,7 @@ test:
 
 improve:
   - "Add the places your 'how did you hear about us' answers name, with the caveat that those answers skew."
-  - "Keep the memory hooks in your brand file as the facts worth repeating."
+  - "Keep the memory hooks in your org context as the facts worth repeating."
   - "Pair it with the Keyword to post outline writer for the pieces that earn a click."
 
 works_best_with:

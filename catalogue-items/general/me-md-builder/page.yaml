@@ -15,7 +15,7 @@ when:
   - You use more than one AI and want them all to know the same things about you.
   - Your AI gives you answers that don't sound like you or don't fit your work.
 not_for:
-  - "You want a file about a business, its products and its claims: use the Brand profile builder."
+  - "You want a file about a business, its products and its claims: use the Org context builder."
   - "You already have a me.md and want to bring it up to date: use the me.md refresher."
   - "You only need the short version for a settings box: use the me.md short-core writer."
 you_give:

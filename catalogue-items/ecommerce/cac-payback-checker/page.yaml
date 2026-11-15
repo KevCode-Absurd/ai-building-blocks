@@ -131,7 +131,7 @@ test:
 improve:
   - Put your usual product type and window in the skill file so it never has to ask.
   - Add your own target ratio once you have a year of data.
-  - Save the monthly output to your brand file and let the trend step compare it each month.
+  - Save the monthly output to your org context and let the trend step compare it each month.
   - Add your real cash limit, so the cash part of the score is yours.
   - Pair it with the lifetime gross profit to CAC checker for cohort reading. Money figures are planning numbers, so check them with your accountant.
 

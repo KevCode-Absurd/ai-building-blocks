@@ -1,0 +1,10 @@
+# (test data) We asked each prompt in ChatGPT, Gemini, Perplexity and Google AI Overviews (and two more runs for perimenopause) on 10 to 12 Nov 2026. Built for an e-commerce eval. Not Ritual's real figures.
+prompt,answers_checked,ritual_named,note
+best multivitamin for women,4,4,Named; facts correct
+is ritual multivitamin worth it,4,4,"2 of 4 say Ritual 'does not publish third-party testing', citing a 2021 Reddit thread"
+ritual vs other vitamin subscriptions,4,4,3 of 4 quote a 2023 price
+best vegan prenatal vitamin,4,0,"Not named; answers name brands whose pages list vegan, folate form and DHA source in a short FAQ"
+prenatal with methylfolate and DHA,4,1,Named once
+best supplement for perimenopause,6,0,Not named; answers cite 3 comparison articles from 2025 and 2026
+perimenopause supplement that is third-party tested,4,0,Not named
+synbiotic vs probiotic,4,2,Named as an example

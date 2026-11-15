@@ -124,7 +124,7 @@ test:
   - Run it twice on the same numbers. The ladder should match both times.
 
 improve:
-  - Put your contribution margin and profit target in your brand file so the break-even line is always right.
+  - Put your contribution margin and profit target in your org context so the break-even line is always right.
   - Edit the ladder step in the skill file if your own tests show a different step works for you. The 20 to 30 percent step is our suggestion.
   - Add your cash limit, such as the most you can lose on a first order, as a stop rule.
   - Pair it with the Meta account structure planner for the layout and the Meta delivery troubleshooter when spend stalls.

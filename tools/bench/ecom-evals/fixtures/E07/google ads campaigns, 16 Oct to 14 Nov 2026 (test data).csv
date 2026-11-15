@@ -1,0 +1,6 @@
+# (test data) Google Ads campaign export, USD, conversion value from the Google tag. Built for an e-commerce eval. Not Fellow's real figures.
+campaign,spend,conversions,conversion_value,roas,search_impression_share
+PMax | All products,118000,1610,472000,4,
+Shopping | Kettles,24000,640,105600,4.4,
+Search | Brand,9000,1050,189000,21,84% (90% the 30 days before)
+Search | Non-brand grinders,14000,104,30800,2.2,31%

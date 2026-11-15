@@ -23,7 +23,7 @@ you_give:
   - The approved script, with the demo line marked and the disclosure line
   - Real product photos, labelled front, in hand and in use
   - How the product is opened and used
-  - Your buyer, voice and never-show list from your brand file (optional)
+  - Your buyer, voice and never-show list from your org context (optional)
   - Your video tool's clip lengths (optional, 4 to 8 seconds by default)
 you_get:
   - A presenter card and voice card to approve, and reference image prompts
@@ -42,7 +42,7 @@ output_sample:
     - Your approved selfie-style script, with the demo line marked
     - Real product photos, labelled front, in hand and in use
     - How the product is opened and used
-    - Your brand file with buyer, voice and never-show list (optional)
+    - Your org context with buyer, voice and never-show list (optional)
   prerequisites:
     - An AI that can read your photos
     - An image tool and a video tool to make the pictures and clips from the prompts
@@ -204,7 +204,7 @@ test:
   - Lay the first frames of clips 1 and 7 side by side. The face, hair and coat should match.
   - Search every prompt for "phone" in the action. A phone named there often appears as a second phone in the hand.
 improve:
-  - Save your approved presenter card, picked picture and sheets in your brand file, so the next ad starts at the storyboard.
+  - Save your approved presenter card, picked picture and sheets in your org context, so the next ad starts at the storyboard.
   - Write your product's handling words into stage 5 of the skill file, so every clip prompt carries them.
   - Add your house caption style and disclosure wording to the edit step.
   - Pair it with the selfie-style script skill, which writes the five beats, the cast note and the disclosure this skill reads.

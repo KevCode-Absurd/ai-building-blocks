@@ -131,7 +131,7 @@ test:
 
 improve:
   - Add the usual questions your sales team hears to step 2.
-  - Save the best performing offer and its reply count to your brand file.
+  - Save the best performing offer and its reply count to your org context.
   - Add your rule for how fast a reply must be answered.
   - Pair it with "Almost-buyer follow-up writer" for people who reply but do not buy.
 

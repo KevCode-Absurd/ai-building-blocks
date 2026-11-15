@@ -142,7 +142,7 @@ test:
 improve:
   - Add your own question groups to the skill file, such as best of, versus, fit and worth it.
   - Add the assistants you care about and a rule for how many runs each gets.
-  - Save the table in a spreadsheet and the top cited sources in your brand file.
+  - Save the table in a spreadsheet and the top cited sources in your org context.
   - Pair it with the AI search recommendation gap finder, which reads this output, and the AI store facts checker.
 
 works_best_with:

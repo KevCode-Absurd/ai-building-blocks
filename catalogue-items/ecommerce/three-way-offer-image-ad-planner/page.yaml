@@ -118,7 +118,7 @@ example:
     Product: Sprout Original (Adults), Low Sugar, 28 daily packs.
     Photos on file: the pouch on a soft green gradient; gummies poured
     into a hand.
-    Reviews: all 20 (pasted). Product facts: brand file, fine-to-repeat.
+    Reviews: all 20 (pasted). Product facts: org context, fine-to-repeat.
     Brand look: forest green #00582D, warm cream #FFF7DF, sunflower
     yellow #FFCC2E, plum #581E5A. Work Sans bold.
   output: |
@@ -207,7 +207,7 @@ improve:
   - Write your standing offer, renewal price and qualifying condition into "What you need", word for word, so the offer block never drifts.
   - If your site shows several discount numbers, write the live one into the skill and ban the rest.
   - Add your photo rules (how the pack opens, what's never shown torn) to step 5.
-  - Once one way wins, save it in your brand file and make new openings on that way only, not more crops.
+  - Once one way wins, save it in your org context and make new openings on that way only, not more crops.
   - Pair it with a skill that checks a finished ad before you spend, and one that checks it against Meta's ad rules.
 
 works_best_with:

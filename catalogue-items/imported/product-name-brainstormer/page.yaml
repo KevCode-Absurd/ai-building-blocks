@@ -75,7 +75,7 @@ output_sample:
       contains: "Why the name is easy to remember and different from competitors."
     - name: "Domain and trademark"
       contains: "A note on possible conflicts, for you to check in a trademark search and at a domain registrar."
-next: [name-family-planner, brand-name-stretch-checker, brand-guide-builder]
+next: [name-family-planner, brand-guide-builder]
 works_best_with:
   tools:
     - name: Any chat AI

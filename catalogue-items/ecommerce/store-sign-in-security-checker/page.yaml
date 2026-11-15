@@ -126,7 +126,7 @@ improve:
   - Put your platform and the list of staff accounts in the skill file so you do not retype them.
   - Add the second step you can really support, such as "security keys for 3 owners", and have it check against that.
   - Add any rule your insurer or payment provider sets as an extra check.
-  - Keep the policy page in your brand file and refresh it when staff change.
+  - Keep the policy page in your org context and refresh it when staff change.
   - Pair it with the Staff phishing rules briefer, which makes the rules easy to follow.
 
 works_best_with:

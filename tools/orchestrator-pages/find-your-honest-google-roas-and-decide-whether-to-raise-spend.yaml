@@ -23,7 +23,7 @@ you_give:
   - The last 30 days exported from Google Ads, with campaigns, search terms, spend and conversions
   - Which search terms are your brand, including misspellings
   - Your planned new spend (optional)
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - Break-even ROAS and cost per sale for your margin, targets for any product with a different margin, and a score out of 100 on whether ads can pay
   - Brand share of spend and conversions, true non-brand ROAS against break-even, and the campaigns leaking brand terms
@@ -41,7 +41,7 @@ output_sample:
     - The last 30 days exported from Google Ads, with campaigns, search terms, spend and conversions
     - Which search terms are your brand, including misspellings
     - Your planned new spend (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can read files, such as Claude with the handoff pack
     - A Google Ads account you can export from
@@ -98,7 +98,7 @@ test:
   - Compare the brand share with what you see in the Google Ads search terms report.
   - After a stepped rise, check that non-brand ROAS stayed above break-even before making the next step.
 improve:
-  - Save your break-even figures in your brand file, so you can skip step 1 next month.
+  - Save your break-even figures in your org context, so you can skip step 1 next month.
   - Add your full brand term list, with misspellings, to the splitter skill.
   - Edit the step size in the gate checker if your account is much smaller or larger than the default allows.
   - Pair it with a feed or tracking check when a gate fails on those.

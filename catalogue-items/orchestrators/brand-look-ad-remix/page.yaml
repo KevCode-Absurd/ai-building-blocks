@@ -39,7 +39,7 @@ output_sample:
     - At least three of your own ad images, with results if you have them
     - Your product, clear photos of it, and the claims and offer you can use
     - How many new ads you want, in which sizes
-    - Your brand brain files (optional)
+    - Your org context files (optional)
   prerequisites:
     - An AI that can look at images
     - An image tool for the final pictures (the plan works without one). It may be a paid image service, so check the cost before you make a full set.

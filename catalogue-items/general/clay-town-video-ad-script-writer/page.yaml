@@ -1,12 +1,12 @@
 new_slug: clay-town-video-ad-script-writer
 name: "Clay town video ad script writer"
-summary: "Write a clay town video ad script from your selling idea and brand file. You get a set card, a timed five-part script and a cast note."
+summary: "Write a clay town video ad script from your selling idea and org context. You get a set card, a timed five-part script and a cast note."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Clay town video ad script writer"
-subhead: Give it your selling idea and brand file. It writes a narrated clay-animation video around a hassle a whole crowd shares, where one lead gets out of it with your product. You get a set card, a timed five-part script and a cast note for the video step.
+subhead: Give it your selling idea and org context. It writes a narrated clay-animation video around a hassle a whole crowd shares, where one lead gets out of it with your product. You get a set card, a timed five-part script and a cast note for the video step.
 
 explain: |
   Some problems are awkward to show with real people: a queue at the office sink, a packed train, the school-gate rush. In a handmade clay town they become funny and easy to watch, because everyone recognises the routine and nobody real is embarrassed.
@@ -26,7 +26,7 @@ not_for:
 
 you_give:
   - Your selling idea or an existing script
-  - Your brand file, with the buyer's moment, who else is there, your product's label lines and your approved claims
+  - Your org context, with the buyer's moment, who else is there, your product's label lines and your approved claims
   - A photo of your product (attach it; your AI can see pictures)
   - The length (20, 30 or 45 seconds) and how much the buyer already knows (optional)
 you_get:
@@ -38,14 +38,14 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your selling idea and your brand file. Say where your buyer's hassle happens and who else is there.
+  - Paste your selling idea and your org context. Say where your buyer's hassle happens and who else is there.
   - Attach a clear photo of your product, and type out every line of its label too. It won't invent label words.
   - Say the length, such as "30 seconds".
   - Take the script and cast note to "Turn your clay town script into handmade-looking clips". It runs the video process from there.
 output_sample:
   input:
     - Your selling idea or an existing script
-    - Your brand file with the buyer's moment, label lines and approved claims
+    - Your org context with the buyer's moment, label lines and approved claims
     - A photo of your product (recommended)
     - Length of 20, 30 or 45 seconds (optional)
   output:
@@ -182,7 +182,7 @@ example:
     - No figure speaks. The queue is the setting, never proof.
     - One morph in the ad, at line 5, with 3 words over it.
     - Inferred: the office kitchen, Dev's name and his meeting come
-      from the buyer's office job, not the brand file.
+      from the buyer's office job, not the org context.
     - MISSING: the daily pack's label words. In lines 5 and 6 the
       pack is seen from its top edge, so no label shows.
     CHECKS MISSED  none
@@ -199,7 +199,7 @@ tweaks:
   - what: The lead
     how: Name the lead's job or day (a nurse on a night shift, a parent at the school gate) and the snag and the cast note are built around them.
   - what: How it works
-    how: If your brand file says how the product works, the swap can show it in clay. Without it, there's no how-it-works moment.
+    how: If your org context says how the product works, the swap can show it in clay. Without it, there's no how-it-works moment.
 
 judge:
   - The lead is described in exactly the same words every time.
@@ -218,7 +218,7 @@ improve:
   - Pick your finish once and write it into step 3 of the skill file, so every ad in the series matches.
   - Paste your label lines with their colours into "What you need", so the sculpted product is never guessed.
   - Add the shared places your buyers know to step 2 (for Sprout, an office kitchen or a school gate).
-  - Save your lead's description in your brand file, so the same figure can come back in the next ad.
+  - Save your lead's description in your org context, so the same figure can come back in the next ad.
   - Pair it with the skill that turns a clay town script into clips, and with the clay-town image ad skill for a matching still. For one character on a single tabletop, use the single-character clay script instead.
 
 works_best_with:

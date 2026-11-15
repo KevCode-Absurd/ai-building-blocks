@@ -18,7 +18,7 @@ when:
 not_for:
   - "You only need a list of candidates from one day: use the report in your applicant tracking system (ATS)."
   - "You need to find or rank candidates: ask a recruiter or search tool, as this skill only reports on numbers you already have."
-  - "You want a branded PDF with your company logo: this copy makes a markdown report and a chart page only, so use a design tool. This copy has no PDF export or brand file."
+  - "You want a branded PDF with your company logo: this copy makes a markdown report and a chart page only, so use a design tool. This copy has no PDF export or org context."
 you_give:
   - Pipeline counts by stage, as plain text or CSV
   - The role title and the dates the report covers

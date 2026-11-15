@@ -47,7 +47,7 @@ output_sample:
     - Any real numbers the story states (optional)
   prerequisites:
     - An AI that can make images, or a way to paste the prompt into one (optional, the prompt works on its own)
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: GATE
       contains: Three answers showing whether the buyer takes this reading, the brand can back it, and it can stay ordinary.
@@ -182,7 +182,7 @@ test:
   - Run the marked photo against the same photo with no mark. Keep whichever brings more readers to the offer.
 
 improve:
-  - Add the readings your buyers mention in reviews (the app, the strip, the log) to your brand file. Their real readings make the strongest pictures.
+  - Add the readings your buyers mention in reviews (the app, the strip, the log) to your org context. Their real readings make the strongest pictures.
   - Keep a source next to every claim in your claims list. This skill can't run without them.
   - Add your never-shown list to the house rules, so the photo leaves those things out.
   - Pair it with a story ad skill, so the story's first line says what the marked part means.

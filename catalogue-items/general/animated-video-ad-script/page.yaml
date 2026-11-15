@@ -1,12 +1,12 @@
 new_slug: animated-video-ad-script
 name: "Animated film video ad script writer"
-summary: "Write an animated film video ad script: a timed 3D-style story with one cast adult, your real product and a cast note. Paste your idea and brand file."
+summary: "Write an animated film video ad script: a timed 3D-style story with one cast adult, your real product and a cast note. Paste your idea and org context."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Animated film video ad script writer"
-subhead: Give it your selling idea and brand file. It writes a three-part story in the look of a 3D animated film, casts one made-up adult and brings in your real product. You get a timed script, a cast note and any check it missed.
+subhead: Give it your selling idea and org context. It writes a three-part story in the look of a 3D animated film, casts one made-up adult and brings in your real product. You get a timed script, a cast note and any check it missed.
 
 explain: |
   The look of a 3D animated film (stylised people, real-looking light) makes an everyday problem warm and easy to watch. It goes wrong in familiar ways. The face goes blank, the light changes for no reason, or the story stops halfway so a sales speech can start.
@@ -24,7 +24,7 @@ not_for:
 
 you_give:
   - Your selling idea or an existing script
-  - Your brand file, with the buyer's moment, the product's label words and your approved claims
+  - Your org context, with the buyer's moment, the product's label words and your approved claims
   - The length, and who speaks (optional)
 you_get:
   - The story in one line, in three parts
@@ -35,17 +35,17 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your selling idea and your brand file underneath.
+  - Paste your selling idea and your org context underneath.
   - Say the length and who speaks, such as "30 seconds, narrator".
   - Check every spoken line against your approved claims before you make anything.
   - Take the script and cast note to "Animated film video clip prompt writer". It takes it from there, with the avatar, sheets, storyboard and clips.
 output_sample:
   input:
     - Your selling idea or an existing script
-    - Your brand file, with the buyer's moment, product label words and approved claims
+    - Your org context, with the buyer's moment, product label words and approved claims
     - Length and who speaks (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
     - A buyer brief from the Buyer brief writer (optional)
   output:
     - name: Story line
@@ -106,7 +106,7 @@ example:
 
     Idea: busy parents mean to take their greens and run out of time.
     A daily pack is the shortcut.
-    Buyer (brand file): busy parents, 30 to 45, mostly mums.
+    Buyer (org context): busy parents, 30 to 45, mostly mums.
     Review: "So easy to grab and eat on my way to the billion things
     I have to do as a mom."
     Approved claim: "60+ ingredients, 21 vitamins & minerals, and 6g
@@ -198,7 +198,7 @@ improve:
   - Paste your exact label words, colours and opening steps into "What you need" in the skill file, so the product is never guessed.
   - Add your approved and banned claims to step 6.
   - Add two or three buyer moments from your reviews to step 2, so the story starts in a room your buyers know.
-  - Save a casting card you like in your brand file, so a series of ads has one face.
+  - Save a casting card you like in your org context, so a series of ads has one face.
   - Pair it with "Animated film video clip prompt writer", which runs the avatar, sheets, storyboard and clips.
 
 works_best_with:

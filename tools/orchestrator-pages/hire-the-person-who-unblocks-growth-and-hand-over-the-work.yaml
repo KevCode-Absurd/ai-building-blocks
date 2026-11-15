@@ -92,6 +92,6 @@ test:
   - Run it again with your skill ratings changed. The hire should change too.
 improve:
   - Add your pay limits and your equity rules to the first skill so it never suggests what you cannot give.
-  - Keep each signed agreement in your brand file as a model for the next hire.
+  - Keep each signed agreement in your org context as a model for the next hire.
   - Edit the meeting skill to add the numbers this role should bring each week.
   - Review the agreement at 30, 60 and 90 days and write what changed back into the skill.

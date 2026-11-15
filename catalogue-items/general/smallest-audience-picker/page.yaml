@@ -123,7 +123,7 @@ test:
 improve:
   - "Add the price and yearly income of your type of work to step 3 so the sums start from them."
   - "Add what you will never do, to feed the not-for line."
-  - "Save the chosen group and the standard to your brand file."
+  - "Save the chosen group and the standard to your org context."
   - "Pair it with Hungry audience ranker to rank where to reach them."
 
 output_sample:
@@ -151,7 +151,7 @@ output_sample:
     - name: "Word of mouth"
       contains: "What the group would say, where they gather, what you will not change, and the next group to serve."
     - name: "Persona update"
-      contains: "The chosen group written up, ready to save to your brand file."
+      contains: "The chosen group written up, ready to save to your org context."
     - name: "Missing"
       contains: "Any size, price or income figure you did not give."
     - name: "Checks missed"

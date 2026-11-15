@@ -132,7 +132,7 @@ improve:
   - Add your list of approved services to the skill file, so anything else is flagged.
   - Add your renewal calendar so the skill checks dates too.
   - Add the certificate providers you actually use to name in the allowed-providers record.
-  - Save the final owners and renewals table to your brand file.
+  - Save the final owners and renewals table to your org context.
   - Pair it with the Domain and DNS planner for layout and redirects, and the Staff phishing rules briefer for lookalike address rules.
 
 works_best_with:

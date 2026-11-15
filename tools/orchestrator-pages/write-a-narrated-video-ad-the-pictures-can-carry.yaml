@@ -1,11 +1,11 @@
 new_slug: write-a-narrated-video-ad-the-pictures-can-carry
 name: Write a narrated video ad the pictures can carry
-summary: "Give it your brief and brand file. Get a narrated script trimmed of lines the pictures say, plus timed shots and clip prompts."
+summary: "Give it your brief and org context. Get a narrated script trimmed of lines the pictures say, plus timed shots and clip prompts."
 job: make-video-ads
 thinking: high
 thinking_why: The strip test needs careful judgment on every line. Give it your strongest model.
 headline: A narrated video ad where the pictures carry the story
-subhead: Give it your brief and brand file. It writes a narrated script with a picture for every line, cuts the narration that only repeats what we see, fixes how it sounds spoken, then plans timed shots and clip prompts.
+subhead: Give it your brief and org context. It writes a narrated script with a picture for every line, cuts the narration that only repeats what we see, fixes how it sounds spoken, then plans timed shots and clip prompts.
 explain: |-
   A voice-over that says what the screen already shows is wasted. Viewers who watch with the sound off miss it, and viewers who hear it feel talked down to. Long narrated ads fall into this trap often, because every line gets a voice.
 
@@ -22,7 +22,7 @@ not_for:
   - "You already have a final script and need timed shots: use the Video ad shot list maker."
 you_give:
   - "A brief: the goal, the buyer and the main point"
-  - Your brand file
+  - Your org context
   - A buyer description (optional)
   - Your product facts, such as price, variants and how it is used
 you_get:
@@ -39,7 +39,7 @@ how_to_use:
 output_sample:
   input:
     - "Your brief: the goal, the buyer and the main point"
-    - Your brand file or brand brain
+    - Your org context
     - A buyer description (optional)
     - Your product facts, such as price, variants and how it is used
     - How long the ad should run
@@ -100,5 +100,5 @@ test:
   - Run it on a shorter brief to see if the number of rounds drops.
 improve:
   - Keep a list of narration habits you want cut, and add it to step 2.
-  - Save the pictures that worked best in your brand file as a visual style.
+  - Save the pictures that worked best in your org context as a visual style.
   - Pair it with the cut and caption workflow once your clips are made.

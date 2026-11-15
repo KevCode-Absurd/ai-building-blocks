@@ -25,7 +25,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This skill runs on its own and needs no brand brain. The spreadsheet named above is just the cost facts below, pasted or attached. All it needs to start is the price, landed cost, and size and weight. If something is missing, ask once in one short message, then carry on and mark each gap `MISSING:`.
+This skill runs on its own and needs no org context. The spreadsheet named above is just the cost facts below, pasted or attached. All it needs to start is the price, landed cost, and size and weight. If something is missing, ask once in one short message, then carry on and mark each gap `MISSING:`.
 
 - **Price and landed cost** (product, freight, duties, taxes) (required).
 - **Size and weight of the packed unit** (required for pick and pack and storage).

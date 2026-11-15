@@ -5,7 +5,7 @@ job: write-emails
 thinking: medium
 thinking_why: It writes, then edits and scores a short email. A mid-size model does it well.
 headline: Send a story email that sounds like a person, then see if it beat your usual sends
-subhead: "Give it your brand file and one true story. It writes three drafts and suggests which to send first. You pick one. It then tells you what to cut and fixes the small errors. After you send it, it reads your numbers to show whether it did better than your normal emails."
+subhead: "Give it your org context and one true story. It writes three drafts and suggests which to send first. You pick one. It then tells you what to cut and fixes the small errors. After you send it, it reads your numbers to show whether it did better than your normal emails."
 explain: |
   A promo email sounds like every other promo email. A story email can sound like a friend, but it often runs long, wanders, and goes out with small mistakes. Then it's hard to tell if it worked, because nobody compared it with the usual sends.
 
@@ -19,7 +19,7 @@ not_for:
   - "You want a plain promo or sale email: use the Campaign email writer."
   - "You only want to fix the wording of an email you already wrote: use the Email call to action editor."
 you_give:
-  - "Your brand file with voice, products and what you can claim"
+  - "Your org context with voice, products and what you can claim"
   - "One true story you can tell, in rough notes"
   - "Who is on the list and the one action you want"
   - "A short brief with the goal of the email (optional)"
@@ -36,7 +36,7 @@ how_to_use:
   - "Pick one draft, take the cuts, then send it to part of your list next to your usual emails. Export the numbers after a few days."
 output_sample:
   input:
-    - Your brand file with voice, products and what you can claim
+    - Your org context with voice, products and what you can claim
     - One true story, in rough notes
     - A short brief with the goal of the email (optional)
     - Your campaign numbers a few days after sending, and your usual-send numbers to compare

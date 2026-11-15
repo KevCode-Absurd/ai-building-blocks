@@ -136,7 +136,7 @@ test:
 
 improve:
   - Add your own source domains to the skill file when a new assistant starts sending visits.
-  - Add the survey answers to your brand file so the team reads the same words.
+  - Add the survey answers to your org context so the team reads the same words.
   - Save your redirect rules in your store's redirect list.
   - Pair it with the AI recommendation panel runner, which shows visibility, and the AI shortlist readiness checker.
 

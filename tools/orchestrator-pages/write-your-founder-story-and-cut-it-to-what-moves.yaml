@@ -16,14 +16,14 @@ when:
   - Your draft is long, and you cannot tell what to cut.
 not_for:
   - "You need a formal company history or a legal bio: ask a lawyer or your communications lead to write it from records."
-  - "You only want a short tagline: use the Brand voice editor with your brand brain instead."
+  - "You only want a short tagline: use the Brand voice editor with your org context instead."
   - "You have a finished draft and only want fewer words: use the Draft shortening editor on its own."
 you_give:
   - The true facts, what happened, in what order, with rough dates
   - What it cost you and what you gave up
   - What you learned or became, and who gains from it
   - Who will read or hear it, and how long it should be
-  - Your brand file or voice notes (optional)
+  - Your org context or voice notes (optional)
 you_get:
   - The story mapped as a call, a point of no return, a hardest stretch, a change and a return
   - A draft that uses only the facts you gave
@@ -41,10 +41,10 @@ output_sample:
     - What it cost you and what you gave up
     - What you learned, and who gains from it
     - Who will read or hear it, and how long it should be
-    - Your brand brain or voice notes (optional)
+    - Your org context or voice notes (optional)
   prerequisites:
     - An AI that can work with several files, such as Claude with a Project
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Story map
       contains: Your facts in order, marked as call, point of no return, hardest stretch, change and return, plus a first draft.

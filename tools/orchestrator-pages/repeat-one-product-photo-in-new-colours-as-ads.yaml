@@ -21,7 +21,7 @@ not_for:
 you_give:
   - One clear photo of your product (more angles help)
   - The words each ad should carry, or your offer and price
-  - Your brand file or your colours and voice (optional)
+  - Your org context or your colours and voice (optional)
   - Product facts such as size and label text (optional)
   - The size you need the final images (optional)
   - The image tool and the upscaler you will use (step 4 asks which, and an image tool may bill each picture)
@@ -41,12 +41,12 @@ output_sample:
   input:
     - One clear photo of your product
     - The words each ad should carry, or your offer and price
-    - Your brand file or your colours and voice (optional)
+    - Your org context or your colours and voice (optional)
     - The size you need the final images (optional)
   prerequisites:
     - An AI that can read files and follow HANDOFF.md, such as Claude Code or a Claude Project
     - An image tool such as ChatGPT or Gemini, to make the pictures at the pause
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: Set plan"
       contains: What repeats, what changes, how many pieces, and the colour for each piece.

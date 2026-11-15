@@ -23,7 +23,7 @@ you_give:
   - Its copy (headline, primary text and call to action)
   - Where it will run, such as Facebook feed or Instagram story (needed for the last check)
   - The page it sends people to (optional)
-  - Your product facts and brand file (optional)
+  - Your product facts and org context (optional)
 you_get:
   - A score out of 100 with fixes and two rewrites
   - The ad's awareness stage, where it does not fit the buyer, and a rewrite for each mismatch
@@ -39,7 +39,7 @@ output_sample:
     - Your finished static ad image
     - "Its copy: headline, primary text and call to action"
     - The page the ad sends people to (optional)
-    - Your product facts or brand brain (optional)
+    - Your product facts or org context (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project with the handoff pack uploaded
   output:

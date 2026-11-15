@@ -61,4 +61,4 @@ output_sample:
       contains: A guide and template to record evidence when you buy from a suspect seller.
     - name: MAP notice
       contains: A notice template for a seller who prices below your minimum advertised price.
-next: [amazon-brand-registry-planner, trademark-name-first-check, amazon-monthly-account-keeper]
+next: [amazon-brand-registry-planner, trademark-name-first-check]

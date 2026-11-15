@@ -7,7 +7,7 @@ description: Use when you're about to plan, prompt or check AI-made ads, images 
 
 You keep a running list of mistakes people have caught in AI work, and the rule each one became. Before a job, you hand over the rules that apply. After feedback, you add or update rules. The aim is that nobody pays twice for the same fault.
 
-When not to use: for one person's taste on one image, just edit the prompt and run it again. With no finished piece or feedback yet and only a brief to write, use the Product image ad prompt writer. For your brand facts, claims and voice in one place, use the Brand profile builder first.
+When not to use: for one person's taste on one image, just edit the prompt and run it again. With no finished piece or feedback yet and only a brief to write, use the Product image ad prompt writer. For your brand facts, claims and voice in one place, use the Org context builder first.
 
 The "Typical cause" lines in the any-product list are common patterns, not logged incidents.
 
@@ -16,18 +16,18 @@ The "Typical cause" lines in the any-product list are common patterns, not logge
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **Makes it better (optional):**
-- **Brand file**, made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context**, made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Your notes** (yours): what to keep, change or drop.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
-**From the brand file, read:** `index.md`, `facts.json`, `offers.json`, `voice.md`. Take the claims list with each claim's status, the offer terms word for word, and the real voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `foundation/claims.md`, `foundation/dos-donts.md`, `facts.json`, `offers.json`, `voice.md`. Take the claims list with each claim's status, the offer terms word for word, and the real voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, your notes. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, your notes. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -53,14 +53,14 @@ How to start:
    - *Check line:* what to look for in the result, including the wrong version ("torn anywhere but the top edge fails").
    Then its reason in one sentence, the work it covers (copy, images, video), and a count of times seen. At most 40 words for the two lines together, and checkable on a finished piece: "better hands" isn't a rule.
 6. **Count repeats.** If the rule exists, add one to its count; never write it twice. A rule seen twice or more goes into every pre-job list for that kind of work.
-7. **Retire what's fixed at the source.** When a rule's words are now in the brand file or a prompt template, and it hasn't failed in the last five jobs, move it to a "retired" section. Keep the active list short enough to read in one minute.
+7. **Retire what's fixed at the source.** When a rule's words are now in the org context or a prompt template, and it hasn't failed in the last five jobs, move it to a "retired" section. Keep the active list short enough to read in one minute.
 8. **Before a job,** hand over the prompt lines for that kind of work, then check the finished piece against the check lines. A piece that fails one is redone.
 9. **Check it.** Run "Check before you hand it back" on the rules you wrote and fix any that fail. List any check still missed on a `CHECKS MISSED:` line, one line each, or write "none". When you check a finished piece, name each check line it fails, or write "none".
 
 ## The any-product list
 
 **The product**
-- **Used the real way.** (copy, images, video) Prompt: show it opened, worn, poured or used exactly as the brand file describes. Check: it opens where the real one opens, and the contents leave from that spot. With no steps on file, it stays closed or at rest. *Typical cause: tools can draw a sachet split at the side or corner, so it spills from the wrong place.*
+- **Used the real way.** (copy, images, video) Prompt: show it opened, worn, poured or used exactly as the org context describes. Check: it opens where the real one opens, and the contents leave from that spot. With no steps on file, it stays closed or at rest. *Typical cause: tools can draw a sachet split at the side or corner, so it spills from the wrong place.*
 - **The whole action, in words.** (images, video) Prompt: name the part, where it opens, how, what comes out, which way it moves and where it lands. Check: nothing happens that the prompt didn't describe. *Typical cause: a vague line like "being opened" leaves the tool to guess.*
 - **One look across a set.** (images) Prompt: write one description of the product and its parts, and reuse it word for word across the set. Check: one shape, size and design in every image. *Typical cause: without one fixed description, the same sachet can come back as a stick, a square and a bar in one set.*
 

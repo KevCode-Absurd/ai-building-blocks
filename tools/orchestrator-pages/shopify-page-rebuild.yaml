@@ -1,10 +1,10 @@
 new_slug: shopify-page-rebuild
 name: "Rebuild a page you admire as your own Shopify page"
-summary: "Rebuild a page you admire as your own Shopify page. Give it a screenshot, your brand file and product facts. Get your copy, a design plan and theme files."
+summary: "Rebuild a page you admire as your own Shopify page. Give it a screenshot, your org context and product facts. Get your copy, a design plan and theme files."
 job: write-landing-page
 
 headline: "Your own Shopify page, laid out like one you admire"
-subhead: Give it a screenshot of a page you like, your brand file and your product facts. It keeps the layout idea, fills every slot with your words, plans three designs, builds the Shopify files, then audits the live page.
+subhead: Give it a screenshot of a page you like, your org context and your product facts. It keeps the layout idea, fills every slot with your words, plans three designs, builds the Shopify files, then audits the live page.
 
 explain: |
   A page that sells well has a layout worth learning from, but copying its words or pictures is a mistake. The useful part is the order of sections and what each one does. Your page needs your facts in that order.
@@ -22,7 +22,7 @@ not_for:
 
 you_give:
   - A screenshot of the page you admire
-  - Your brand file, with your facts, voice and colours
+  - Your org context, with your facts, voice and colours
   - Your product facts, such as price and variants (optional)
   - Your offer (optional)
   - After you install it, screenshots of your new page on a phone and a computer
@@ -36,13 +36,13 @@ you_get:
 how_to_use:
   - "Download the handoff pack. It's a zip with HANDOFF.md and four skill files, in the order they run: Competitor landing page layout planner, Landing page design planner, Shopify landing page builder and Product page screenshot auditor."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your inputs ready. A full-page screenshot of the page you admire, your brand file and your product facts.
+  - Have your inputs ready. A full-page screenshot of the page you admire, your org context and your product facts.
   - It works step by step and saves each result. After step 3, upload the files to your theme and publish the page.
   - Take screenshots of the live page on a phone and a computer, then give them to the last step.
 output_sample:
   input:
     - A full-page screenshot of the page you admire
-    - Your brand file with your facts, voice and colours
+    - Your org context with your facts, voice and colours
     - Your product facts, such as price and variants (optional)
     - Your offer (optional)
     - Screenshots of your live page on a phone and a computer, after you install it
@@ -99,7 +99,7 @@ example:
   input: |
     [the handoff pack] Follow HANDOFF.md.
     Reference: screenshot of a competitor's product page (full page)
-    Brand file: sprout-brand/
+    Org context: sprout-brand/
     Product: Sprout greens gummies, first box $29.99
   output: |
     LAYOUT
@@ -142,7 +142,7 @@ test:
 
 improve:
   - In the builder, drop step 2 if your theme already sets the look you want.
-  - Add a step before step 1 that writes your brand file from your website.
+  - Add a step before step 1 that writes your org context from your website.
   - Add a step at the end that sizes an A/B test for the old page against the new one.
   - Pair it with the workflow that finds where a page loses buyers, once the page has live traffic.
 

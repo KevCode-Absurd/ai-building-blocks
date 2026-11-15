@@ -60,5 +60,5 @@ output_sample:
       contains: Each matching field scored, with the target for purchases and leads and fixes sorted by impact.
     - name: Custom server event
       contains: A single event you send by hand, with customer details hashed for you and an event ID made if you give none.
-    - name: Notes in your brand files
+    - name: Notes in your org context files
       contains: Pixel ID, estimated scores, platform settings and fixes applied, saved to stack.md and learnings.md.

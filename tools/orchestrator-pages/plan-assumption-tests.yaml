@@ -108,7 +108,7 @@ test:
 
 improve:
   - After each test, log what changed in the plan and why.
-  - Add the guesses that held to your brand file, so later work can rely on them.
+  - Add the guesses that held to your org context, so later work can rely on them.
   - Keep sales and marketing spend small until the guesses about customers, price and channel have passed.
 
 works_best_with:

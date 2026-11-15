@@ -11,9 +11,7 @@ inputs:
   - {type: voc_reviews, required: true}
   - {type: brand_brain, required: true}
   - {type: approved_image, required: false}
-  - {type: competitor_set, required: false}
   - {type: product_photos, required: false}
-  - {type: lessons_register, required: false}
 outputs:
   - {type: upscaled_image}
 uses: [big-idea-and-mechanism-builder, 3d-cutaway-image-ad-maker, accurate-product-image-ad-maker, pre-launch-ad-checker, image-upscale-checker]

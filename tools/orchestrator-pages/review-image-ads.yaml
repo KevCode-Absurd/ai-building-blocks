@@ -9,7 +9,7 @@ subhead: Give it your website, your reviews, your product facts and how many ads
 explain: |
   Image ads often get made the other way round. Someone picks a nice photo, then writes a headline on top that could belong to any brand. Those ads are easy to scroll past, and they sometimes promise more than the product can back up.
 
-  This workflow starts with your customers. It builds a brand file where every fact says where it came from, then reads your reviews for the reasons people buy and the doubts that nearly stopped them, counting separate people, not mentions. Then it plans each ad around one reason for one buyer: the words on the image, the text above it, the picture and the layout. Each plan becomes an image prompt that keeps your real product and your exact words. A last check lists what's fine, what's worth a look and what only a person can judge on a phone.
+  This workflow starts with your customers. It builds an org context where every fact says where it came from, then reads your reviews for the reasons people buy and the doubts that nearly stopped them, counting separate people, not mentions. Then it plans each ad around one reason for one buyer: the words on the image, the text above it, the picture and the layout. Each plan becomes an image prompt that keeps your real product and your exact words. A last check lists what's fine, what's worth a look and what only a person can judge on a phone.
 
 when:
   - You want several image ads to test, and each one should argue something different.
@@ -49,7 +49,7 @@ output_sample:
     - An AI that can read files, such as Claude Code or a Claude Project
     - An image tool or an AI that makes pictures, to turn the prompts into images
   output:
-    - name: Brand file
+    - name: Org context
       contains: Your facts, offers, prices and claims, each tagged with where it came from.
     - name: Buying reasons
       contains: Reasons people buy ranked by separate people, with customer words and what nearly stopped them.
@@ -63,8 +63,8 @@ output_sample:
       contains: Each step's file, any step not run, and every MISSING line in one list.
 
 how_it_works:
-  - title: Builds your brand file
-    text: Uses the brand file skill to read your website, check the basics with you once, and tag every fact, offer and claim with where it came from.
+  - title: Builds your org context
+    text: Uses the org context skill to read your website, check the basics with you once, and tag every fact, offer and claim with where it came from.
   - title: Finds why people buy
     text: Uses the buying reasons skill to rank the reasons in your reviews by how many separate people say them, each in a customer's exact words.
   - title: Writes and plans each ad
@@ -105,7 +105,7 @@ example:
 
     Website: sprout.example (product page, science page, FAQ)
     Reviews: the 20 public reviews in reviews.md
-    Product facts: the brand file's product table, price table and
+    Product facts: the org context's product table, price table and
     "fine to repeat" claims. Never use the risky list.
     What I want: 3 image ads for Facebook and Instagram feeds,
     square and 4:5, words on the image and text above it.
@@ -130,7 +130,7 @@ example:
     Picture: left third, an unbranded powder tub and a shaker with a green
     ring; right, a palm of green bears and a pack torn across its top.
     Backed by: fine-to-repeat claim; "no water, no mixing, no shaker"
-    from the brand file.
+    from the org context.
 
     AD 2: Fiber on the way out
     Argument: gut-fix seekers should try Sprout because one pack has 6 g
@@ -144,7 +144,7 @@ example:
     Picture: keys in one hand, a pack torn across its top in the other,
     front door ajar.
     Backed by: "Supports digestion and gut health". Low Sugar steer from the
-    brand file, because Sugar-Free upsets some stomachs.
+    org context, because Sugar-Free upsets some stomachs.
 
     AD 3: The plain price
     Argument: price doubters should start a box because the renewal price
@@ -185,7 +185,7 @@ example:
 
     HAND-BACK SUMMARY
     Files: outputs/step-01 to step-05.
-    MISSING: your answers to the brand file's check-in; a photo of one
+    MISSING: your answers to the org context's check-in; a photo of one
     pack torn across the top; the finished images, so a person can check
     them at full size; target countries for the ad rules check.
 
@@ -204,7 +204,7 @@ judge:
   - Every number on an ad appears in your facts, and the guarantee is in your own wording.
   - Character counts are shown and inside the limits. The first line above the image is 125 characters or fewer, the headline 27 or fewer, and the words on the image 8 or fewer.
   - No ad names a competitor or tells the viewer what condition they have.
-  - Any health claim (such as digestion or gut health) matches a claim on your brand file in its exact words, and a person has judged it before launch.
+  - Any health claim (such as digestion or gut health) matches a claim on your org context in its exact words, and a person has judged it before launch.
   - The image prompt describes your real pack, not a made-up one.
   - The run ends with a summary that lists every file and every MISSING line in one place.
 
@@ -215,7 +215,7 @@ test:
   - Paste one image prompt into your image tool and compare the pack with your real photo at full size.
 
 improve:
-  - In the builder, drop step 1 if your brand file is up to date, and start from step 2.
+  - In the builder, drop step 1 if your org context is up to date, and start from step 2.
   - Add a step after step 5 that checks each ad against Meta's ad rules before anything runs on Facebook or Instagram.
   - Swap step 4 for the more detailed image plan skill when you need layouts in zones and several sizes from one plan.
   - "Tune step 3's skill: write your character limits and your offer terms, word for word, into its file (for Sprout: \"30-day money-back guarantee, first order only\")."
@@ -223,7 +223,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Claude", why: "Holds the brand file, every review number and five steps of work in one run."}
+    - {name: "Claude", why: "Holds the org context, every review number and five steps of work in one run."}
     - {name: "GPT Image", why: "Takes several product photos as references and keeps short headline words readable."}
     - {name: "Nano Banana", why: "Takes many reference photos at once and handles shiny packs such as foil pouches."}
     - {name: "Meta Ads Manager", why: "Its preview shows where the text above the image and the headline get cut off."}

@@ -136,7 +136,7 @@ test:
 improve:
   - Add your chart of accounts to the skill file so cost lines are mapped the same way each month.
   - Add your fulfilment staff wages per day and parcels per day, so the per-order cost is worked out.
-  - Save your chosen layout and marketing rule to your brand file.
+  - Save your chosen layout and marketing rule to your org context.
   - Pair it with the COGS line sorter before it, and the new and returning P&L splitter after.
 
 works_best_with:

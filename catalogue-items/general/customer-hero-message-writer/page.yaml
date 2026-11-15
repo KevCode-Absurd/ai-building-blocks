@@ -26,7 +26,7 @@ you_give:
   - "What you offer, in a few lines"
   - "Your buyer: who they are and what bothers them (optional)"
   - "Customer words, word for word (optional)"
-  - "Your brand file (optional)"
+  - "Your org context (optional)"
 you_get:
   - "The customer's goal and problem on three levels"
   - "A plan of three or four steps and two calls to action"
@@ -65,7 +65,7 @@ output_sample:
     - "Customer words, word for word (optional)"
     - "Your proof, such as a result or number you can back (optional)"
   prerequisites:
-    - "Your brand file, from the Website brand brain builder (optional)"
+    - "Your org context, from the Org context builder (optional)"
   output:
     - name: "They want"
       contains: The one goal your customer would say in their own words.
@@ -139,7 +139,7 @@ test:
   - "Run it twice and check the goal and problem stay close."
 
 improve:
-  - "Add a line to your brand file with the one-liner and the plan."
+  - "Add a line to your org context with the one-liner and the plan."
   - "Add the free step you offer, so the lighter call always has one."
   - "Add the words your customers use for the problem."
   - "Pair it with \"Why-first message writer\" if the message also needs a belief."

@@ -140,7 +140,7 @@ improve:
   - Add your own day limits to the skill file once you know them, so the definition starts from your numbers.
   - Add the segment names your email tool uses for engaged and quiet contacts.
   - Add your stop numbers for complaints and bounces, and who checks them each week.
-  - Save each month's engaged size to your brand file so the next run starts from it.
+  - Save each month's engaged size to your org context so the next run starts from it.
   - Pair it with the inbox placement recovery planner first if opens are low, and with the email campaign calendar planner for the broad content.
 
 works_best_with:

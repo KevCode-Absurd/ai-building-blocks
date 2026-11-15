@@ -26,7 +26,7 @@ you_give:
   - "The world, brand or range in a few sentences, and its tone"
   - "How many names you need and what each names"
   - "A source language or region you like (optional)"
-  - "Your brand file (optional)"
+  - "Your org context (optional)"
   - "Names you already have (optional)"
 you_get:
   - "The root language or sound style and its sound rules"
@@ -45,7 +45,7 @@ output_sample:
     - Your world, brand or product range, and its tone
     - How many names you need and what each one names
     - A language or region you like (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
     - Names you already have (optional)
   output:
     - name: ROOT
@@ -142,7 +142,7 @@ works_best_with:
     - {name: "Any good chat AI", why: "It can build and check names from rules."}
     - {name: "A trademark or domain search", why: "Use it before any name goes public."}
   inputs:
-    - "Your brand file"
+    - "Your org context"
     - "A map or place list"
     - "Names you already love or hate"
 

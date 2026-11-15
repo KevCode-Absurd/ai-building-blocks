@@ -44,7 +44,7 @@ output_sample:
     - Your audience size and launch date (optional)
   prerequisites:
     - An AI that can read files, such as Claude with a Project
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Keyword shortlist
       contains: Your main phrase, phrases in tiers, the phrases you dropped, and the phrases saved for ads.
@@ -110,7 +110,7 @@ test:
   - Compare the stock order with your maker's real monthly capacity.
   - Run step 1 twice on the same export. The main phrase should match even if the wording differs.
 improve:
-  - Save the keyword shortlist in your brand file, so a second product starts at step 2.
+  - Save the keyword shortlist in your org context, so a second product starts at step 2.
   - Replace the starting bids with Amazon's live suggested bids, since the bids in the skill are old.
   - After launch, add the search terms that sold to your next keyword export.
   - Pair it with a fee and margin checker so the unit profit you give is right.

@@ -23,7 +23,7 @@ not_for:
 you_give:
   - Clear photos of the exact product, from more than one side
   - The product's facts, such as size, variant and what is in the box
-  - Your brand brain (colours, photo style, what you never show)
+  - Your org context (colours, photo style, what you never show)
   - "Where the set goes, such as a product page, a marketplace, or ads, social and email"
   - Customer reviews, to help choose the product page frames (optional)
 you_get:
@@ -43,11 +43,11 @@ output_sample:
   input:
     - Clear photos of your real product from more than one side
     - Your product facts, such as size, variant and what is in the box
-    - Your brand brain
+    - Your org context
     - "Where the set goes: a product page, a marketplace, or ads, social and email"
     - Your customer reviews (optional)
   prerequisites:
-    - Your brand brain from the Brand profile builder
+    - Your org context from the Org context builder
     - An image tool you choose to make the pictures, such as ChatGPT, Gemini or Higgsfield
   output:
     - name: Truth sheet

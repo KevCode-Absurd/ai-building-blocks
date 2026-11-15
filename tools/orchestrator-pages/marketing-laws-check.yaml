@@ -42,7 +42,7 @@ output_sample:
     - Your main rivals and what each is known for (optional)
   prerequisites:
     - An AI that can read the files in the handoff pack
-    - A brand brain from the Website brand brain builder (optional)
+    - An org context from the Org context builder (optional)
   output:
     - name: step-01-marketing-plan-law-checker.md
       contains: A pass, warn or fail on each of 13 laws, the plan line behind each, a score out of 100 and a fix list.

@@ -20,7 +20,7 @@ not_for:
   - "You want to check ads against Meta rules before launch: use the Meta ad policy checker."
 you_give:
   - Your running image ads, as pictures with their text
-  - Your brand file
+  - Your org context
   - Your ad results (optional)
   - Customer reviews (optional)
 you_get:
@@ -32,13 +32,13 @@ you_get:
 how_to_use:
   - Download the handoff pack. It is a zip with HANDOFF.md plus one skill file for each step.
   - Open Claude Code, or a Claude Project where you can add files. Add the unzipped folder.
-  - Add your image ads as pictures, and your brand file. Add results and reviews if you have them.
+  - Add your image ads as pictures, and your org context. Add results and reviews if you have them.
   - Say "Follow HANDOFF.md". It runs four steps in order and saves each result as a file.
-  - Check the ad copy before you use it. Any health claim must match your brand file's approved claims. If it does not, the line is held back and marked for your review.
+  - Check the ad copy before you use it. Any health claim must match your org context's approved claims. If it does not, the line is held back and marked for your review.
 output_sample:
   input:
     - Your running image ads, as pictures with their text
-    - Your brand file, with facts, offers, claims and voice
+    - Your org context, with facts, offers, claims and voice
     - Your ad results (optional)
     - Customer reviews (optional)
   prerequisites:
@@ -87,7 +87,7 @@ example:
     [the handoff pack] Follow HANDOFF.md.
 
     Image ads: 9 running Sprout image ads with their text. Practice data.
-    Brand file: the Sprout brand file. Reviews: 6 reviews.
+    Org context: the Sprout org context. Reviews: 6 reviews.
   output: |-
     STEP 1: GAP GRID
     9 ads coded. Types used: offer (4), benefit (3), proof (2). Empty: story, comparison, objection.
@@ -118,7 +118,7 @@ tweaks:
 judge:
   - Each new test is in a different type, so the results teach different things.
   - The three versions of each idea open on different first frames.
-  - Every copy line rests on a fact in your brand file.
+  - Every copy line rests on a fact in your org context.
   - Opening lines under 3 come with a fix.
 test:
   - Count your ads by type yourself. The grid should match.

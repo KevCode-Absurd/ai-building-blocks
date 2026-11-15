@@ -193,7 +193,7 @@ test:
 improve:
   - Write your ink line and palette into stage 0 of the skill file, so every comic ad in a series looks the same.
   - Add your product's never-show rules to the Avoid list.
-  - Save the approved avatar card, character sheet and lock lines in your brand file, so the next ad starts at stage 4.
+  - Save the approved avatar card, character sheet and lock lines in your org context, so the next ad starts at stage 4.
   - Pair it with "Motion comic video ad script writer" first, so the claim and panels are settled.
 works_best_with:
   tools:

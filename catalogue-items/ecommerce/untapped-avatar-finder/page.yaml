@@ -140,7 +140,7 @@ test:
 improve:
   - Add your price, margin and shipping limits to the skill file so groups that cannot pay are dropped early.
   - Add claims your product can never make (for example health or income claims), so no layer is written around one.
-  - Save the chosen group and its quote file to your brand file as the second buyer.
+  - Save the chosen group and its quote file to your org context as the second buyer.
   - Rerun it after a new rival enters your market. A group that nobody served last season may not be open now.
   - Pair it with the Forum and review avatar digger to go deeper on the chosen group, and with the Avatar fit checker to test your ads and page against it.
 

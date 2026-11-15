@@ -1,6 +1,6 @@
 slug: ad-test-sprint-runner
 name: "Ad test sprint runner"
-summary: Give it your brand file and results. It plans each test round, reads it when it ends and plans the next.
+summary: Give it your org context and results. It plans each test round, reads it when it ends and plans the next.
 category: agent
 type: agent
 role: orchestrate
@@ -16,7 +16,7 @@ outputs:
 uses: [ad-test-budget-calculator, untried-ad-idea-finder, ad-test-brief-writer, meta-test-campaign-planner, creative-test-reader, tiktok-ad-test-reader, ad-sameness-checker, creative-hit-rate-planner, product-test-result-reader]
 steps:
   - {uses: ad-test-budget-calculator, note: "Once per sprint: the daily test budget, the spend limit per ad and how long to wait before reading. Hands step 4 the daily budget and the read window."}
-  - {uses: untried-ad-idea-finder, note: "Round 1, and again whenever a round lost to sameness: five ideas the account has not tried. Uses your brand file and past ad results, not step 1's budget. Hands step 3 the five ideas."}
+  - {uses: untried-ad-idea-finder, note: "Round 1, and again whenever a round lost to sameness: five ideas the account has not tried. Uses your org context and past ad results, not step 1's budget. Hands step 3 the five ideas."}
   - {uses: ad-test-brief-writer, note: "Each time there are new ideas: designer-ready versions of each."}
   - {uses: meta-test-campaign-planner, note: "Each round: the campaign layout, ad packs, minimum spend and rules for the round."}
   - {uses: creative-test-reader, note: "At the end of each Meta round: keep, leave or replace calls by ad set, false winners and the next brief. Uses the round's results export by ad, read against the plan from step 4. Hands the next round its brief."}

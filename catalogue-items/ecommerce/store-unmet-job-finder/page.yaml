@@ -46,7 +46,7 @@ output_sample:
     - Your test budget (optional)
   prerequisites:
     - A chat AI that can read pasted text
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: DATA READ
       contains: How many items you pasted from each source, and whether that reaches the 50 needed.
@@ -124,7 +124,7 @@ test:
 improve:
   - Add your own search terms and ticket tags to the skill file, so the "hate" and "workaround" searches use your customers' words.
   - Add your test rules (how many visits, how long) so the cheapest test comes with a stop line.
-  - Save the leads you tested, and the result, in your brand file, so you do not test the same lead twice.
+  - Save the leads you tested, and the result, in your org context, so you do not test the same lead twice.
   - Pair it with the Job-based avatar builder to turn a proven lead into an avatar card, and with the Job spec writer to write it up in full.
 
 works_best_with:

@@ -122,7 +122,7 @@ test:
 improve:
   - Change the cost lines in the skill file to your own numbers once you have a few weeks of results.
   - Add your own watch time and CTR lines from your best past ads, so they replace the source's.
-  - Save which hooks passed to your brand file, so the next 3 hooks build on them.
+  - Save which hooks passed to your org context, so the next 3 hooks build on them.
   - Pair it with the TikTok starter campaign builder for the layout, and the TikTok Spark ad picker for posts that won on their own.
 
 works_best_with:

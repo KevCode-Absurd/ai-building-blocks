@@ -22,7 +22,7 @@ you_give:
   - Your offer, with dates and terms
   - Your product facts (optional)
   - Past email and SMS results, such as sends, clicks, orders and unsubscribes
-  - Your brand file
+  - Your org context
   - Customer reviews (optional)
   - A one-paragraph brief for the sale email, which it asks you for halfway through
   - An export of results after the sale, which it asks for at the end
@@ -111,7 +111,7 @@ test:
   - Send the first text to a small test group of your own team and read it on a phone.
   - After the sale, ask which of the ranked causes you can confirm in your own store data.
 improve:
-  - Keep the text plan's exclusion rule in your brand file, so people who never click stop getting texts.
+  - Keep the text plan's exclusion rule in your org context, so people who never click stop getting texts.
   - Run the frequency hold-out test for at least one cycle and write the winner into the plan.
   - Save your cost per text and quiet-hours rule in the planner skill, so you do not repeat them.
   - Keep the results review each month and compare it with the one before.

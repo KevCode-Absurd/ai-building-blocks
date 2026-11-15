@@ -132,7 +132,7 @@ test:
 improve:
   - Add words you never want in a tagline, such as hype words or jargon, to the distilled test so they always fail.
   - Add your real proof points, like your return window or delivery promise, to the "is it true" step.
-  - Keep a list of your places for the line in your brand file, so each new page starts with the same words.
+  - Keep a list of your places for the line in your org context, so each new page starts with the same words.
   - Pair it with the Store promise writer to settle what you promise first, and the Store brand signal auditor to check the wording across your touchpoints.
 
 works_best_with:

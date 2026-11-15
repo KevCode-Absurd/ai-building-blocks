@@ -1,51 +1,51 @@
 name: "Founder interview planner"
 new_slug: founder-interview-planner
-summary: "Plan your founder interview call. Give it your brand file and get ranked questions, a written form and every answer filed."
+summary: "Plan your founder interview call. Give it your org context and get ranked questions, a written form and every answer filed."
 job: brand-file
 thinking: high
 thinking_why: "It reads a lot of data or many customer words, and the numbers and quotes must be right."
 
 headline: "Founder interview planner"
-subhead: Attach your brand file, then paste the founder's answers after the call. It turns every unknown and guess into a ranked question for the call or a written form. You get a call plan, each answer filed with its source and a one-page readback.
+subhead: Attach your org context, then paste the founder's answers after the call. It turns every unknown and guess into a ranked question for the call or a written form. You get a call plan, each answer filed with its source and a one-page readback.
 
 explain: |
   Your website, reviews and ad results show what buyers do and say. They can't show why the product is made the way it is, which claims you can prove, who may appear in an ad, or what the founder will never sign off. Writers and AI tools guess those things, and the guesses end up in ads.
 
-  This skill reads your brand file and turns every unknown, guess, clash and unproven claim into a question, tagged with the file its answer will fill. It ranks them so the call covers what blocks work today, like proof and permissions, and sends the facts and files ahead as a written form. On the call it asks about real moments, not habits, and follows every claim with "how do you know?". Afterwards each answer lands in the right file with the founder's name, the date and the question number. A founder's word never counts as proof, so a claim stays pending until its document is on file.
+  This skill reads your org context and turns every unknown, guess, clash and unproven claim into a question, tagged with the file its answer will fill. It ranks them so the call covers what blocks work today, like proof and permissions, and sends the facts and files ahead as a written form. On the call it asks about real moments, not habits, and follows every claim with "how do you know?". Afterwards each answer lands in the right file with the founder's name, the date and the question number. A founder's word never counts as proof, so a claim stays pending until its document is on file.
 
 when:
-  - You've built a brand file from your website and it's full of unknowns and guesses.
+  - You've built an org context from your website and it's full of unknowns and guesses.
   - A writer or agency keeps asking the founder the same questions one at a time.
   - You're about to make ads with people, claims or footage and need to know what's allowed.
 not_for:
-  - "You have no brand file yet: build one first with the Brand profile builder, then come back."
+  - "You have no org context yet: build one first with the Org context builder, then come back."
   - "You can't reach the founder for a call or written answers: ask a teammate who knows the business, or wait."
   - "You only want facts from your website and reviews: read those directly, since no founder call is needed."
 
 you_give:
-  - Your brand file, read first
+  - Your org context, read first
   - The founder's answers, as call notes, a transcript or written replies (after the call)
   - Gaps you've already spotted, such as a number that differs between two pages (optional)
 you_get:
   - A ranked call plan of about 10 questions, each tied to the gap it fills
   - A written form for facts and files, plus the documents to bring
-  - Every answer filed in the right brand file, tagged with founder, date and question number
+  - Every answer filed in the right org context, tagged with founder, date and question number
   - A one-page readback of what you heard, what's still needed and what was decided
   - After the call, a count of how many gaps the answers closed
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Attach your brand file and ask for the call plan. Send the written form to the founder two days before the call.
+  - Attach your org context and ask for the call plan. Send the written form to the founder two days before the call.
   - On the call, work down the ranked list. Leave anything not reached for the written form.
   - After the call, paste the notes or transcript back in and ask it to file the answers.
   - Send the readback to the founder and chase the documents it lists.
 output_sample:
   input:
-    - Your brand file (the eight files built from your website)
+    - Your org context (the eight files built from your website)
     - The founder's answers after the call, as notes, a transcript or written replies
     - Gaps you have already spotted (optional)
   prerequisites:
-    - A brand file, ideally from the Brand profile builder
+    - An org context, ideally from the Org context builder
     - A call or written replies with the founder
   output:
     - name: Quick checks
@@ -57,7 +57,7 @@ output_sample:
     - name: Please bring
       contains: The documents, samples and photos the founder should have ready.
     - name: Filed answers
-      contains: Each answer placed in the right brand file, tagged with founder, date and question number.
+      contains: Each answer placed in the right org context, tagged with founder, date and question number.
     - name: Readback
       contains: One page on what we heard, what is still needed, what was decided and what was not answered.
     - name: Gaps closed
@@ -105,7 +105,7 @@ example:
   input: |
     [the skill]
 
-    Brand file: the Sprout folder built from the website, reviews and
+    Org context: the Sprout folder built from the website, reviews and
     ads (00-start-here.md to log.md).
 
     Gaps it already shows:
@@ -174,7 +174,7 @@ example:
     their file arrives, and you'll get a one-page readback.
 
 tweaks:
-  - what: The brand file you attach
+  - what: The org context you attach
     how: The fuller it is, the shorter the call. A file built from the website and reviews first turns most questions into quick checks.
   - what: Gaps you've spotted
     how: List them ("two pages give different customer counts") and each one becomes a ranked question with its target file.
@@ -184,31 +184,31 @@ tweaks:
     how: For physical products it adds questions on how the product looks, how it's used and which five photos you need, so pictures and videos get the product right.
 
 judge:
-  - Nothing your brand file already confirms is asked as a fresh question.
+  - Nothing your org context already confirms is asked as a fresh question.
   - Every question says which gap it fills and which file the answer goes to.
   - Every filed answer carries founder, date and question number, in the file the skill's table names.
   - Beliefs are filed as story, not as claims. "We think it works because..." doesn't become a selling line.
   - Rights are recorded with who, where, how long and paid or unpaid. No limits on file means no use.
 
 test:
-  - Before the call, compare the plan with your brand file. Anything already tagged confirmed should be a quick check, not a fresh question.
+  - Before the call, compare the plan with your org context. Anything already tagged confirmed should be a quick check, not a fresh question.
   - Feed it one answer that's a belief ("we think people stay because it's so easy to use"). It should land in business.md as story, not in proof-and-claims.md as a claim.
   - Give it an answer about who may appear in ads with no limits stated. It should record the right as incomplete and ask who, where and for how long.
-  - Open each brand file after filing. Every answer should sit in the section the table names, with its tag.
+  - Open each org context after filing. Every answer should sit in the section the table names, with its tag.
 
 improve:
   - Cut the question bank to fit you. Delete groups that don't apply (people and rights if nobody will appear) and add ones your field needs, such as licences or safety tests.
   - Change the ranking in step 2 if something else blocks your work first, such as stock or approvals.
   - Save the founder's own writing samples in voice-and-look.md. Later skills learn the voice from those, not from adjectives.
   - Run it again after each big launch. The new gaps in log.md become the next call plan.
-  - Pair it with the skill that builds the brand file from your website first, so the call fills gaps instead of starting from zero.
+  - Pair it with the skill that builds the org context from your website first, so the call fills gaps instead of starting from zero.
 
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle this well, as long as they can read all eight files at once."}
     - {name: "Zoom or Google Meet transcripts", why: "A written transcript of the call means every answer is filed in the founder's exact words."}
   inputs:
-    - "Your brand file's log.md with its open questions, so nothing that's already waiting gets missed"
+    - "Your org context's log.md with its open questions, so nothing that's already waiting gets missed"
     - "Three things the founder wrote, like an email or a post, so the voice file learns from real lines"
     - "Any rejected ads and the platform's reason, so the claims questions start from real problems"
     - "Your last 20 reviews, so the founder's view of the buyer can be checked against real words"
@@ -221,4 +221,4 @@ terms:
   - term: Rights
     meaning: Permission to use a person, photo, video or song in ads, with limits on where and for how long.
   - term: Tag
-    meaning: The label on each fact in your brand file saying whether it's confirmed, inferred, disputed or unknown.
+    meaning: The label on each fact in your org context saying whether it's confirmed, inferred, disputed or unknown.

@@ -47,7 +47,7 @@ output_sample:
     - What you sell, the price, your cost per unit and delivery cost
     - Your guarantee and terms, copied exactly
     - Recent order values and past discounts (optional)
-    - Your brand brain or voice notes (optional)
+    - Your org context or voice notes (optional)
   output:
     - name: Offer (up to three)
       contains: A short name, the buyer and doubt, the lever, the tools used and what the buyer pays and gets.
@@ -198,7 +198,7 @@ test:
 improve:
   - "Write your real costs into step 5 of the skill file: cost per unit, and delivery for one, two and three items. Every formula then becomes a number."
   - "Add your guarantee, word for word, to the certainty tools in step 3 (for Sprout: 30-day money-back, first order only), so no offer stretches it."
-  - Add your buyers and their doubts to step 1, copied from your brand file.
+  - Add your buyers and their doubts to step 1, copied from your org context.
   - Add a lesson from your own history to the five checks, such as "no new discount number while three are already live".
   - Pair it with the skill that lists offers from what you already have for a quick list, then use this one to build out the best.
 

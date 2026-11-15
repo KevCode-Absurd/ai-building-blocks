@@ -93,7 +93,7 @@ MISSING: <input>
 For influencer, TV or retail-heavy spend, use the incrementality test planner or the holdout test planner. For payback by cohort, use the CAC payback checker.
 
 ## Next step
-Save the metric definitions to the person's brand file so every report uses them. Then pair the sheet with the daily contribution margin tracker for the owner view.
+Save the metric definitions to the person's org context so every report uses them. Then pair the sheet with the daily contribution margin tracker for the owner view.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

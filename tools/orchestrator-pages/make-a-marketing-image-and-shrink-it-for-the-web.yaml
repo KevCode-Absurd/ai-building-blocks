@@ -89,6 +89,6 @@ test:
   - Compare the original and the compressed file side by side.
   - Check your page speed before and after.
 improve:
-  - Save your brand style as a few lines in your brand file so prompts match.
+  - Save your brand style as a few lines in your org context so prompts match.
   - Keep the prompts that gave the best pictures as templates.
   - Add a compression setting that you like as your default.

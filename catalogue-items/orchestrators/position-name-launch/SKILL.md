@@ -14,7 +14,7 @@ This workflow draws on ideas about positioning, brand names and press-first laun
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand file** (its products part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its products part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Competitors** (yours): the brands buyers compare you with.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
@@ -22,25 +22,25 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
-**From the brand file, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`, `foundation/claims.md`, `foundation/customer-talk.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, competitors, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, competitors, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
-Where each input goes: your product and rivals feed step 1. Your brand file and the new product feed step 2. Your price, benefits, proof, budget and dates feed step 3.
+Where each input goes: your product and rivals feed step 1. Your org context and the new product feed step 2. Your price, benefits, proof, budget and dates feed step 3.
 
 Required means the steps need it for a real result. A required item that is missing becomes a `MISSING:` line, never an invented fact.
 
 - **Your product and who it is for, with price, benefits and proof** (required)
 - **Your main rivals, the ones buyers compare you with, and what each is known for** (required)
-- **Your brand file, or a few lines on what your brand stands for and is known for** (required)
+- **Your org context, or a few lines on what your brand stands for and is known for** (required)
 - **What you want out of this, and what a good outcome looks like** (required)
 - **The new product you want to add under your brand name, with who buys it and the price level** (needed for step 2; without it step 2 marks MISSING)
 - **What you can truthfully claim: facts, tests, firsts** (optional)
@@ -62,7 +62,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 The three skills are in the AI Blocks library. Add them to your AI, or paste each one into the chat when its step starts. If one is not available, say so, run the steps you can, and mark the missing step not run.
 
 1. **Positioning statement writer.** Use the skill `positioning-statement-writer`. Give it your product, your rivals and what you can truthfully claim. It maps who tops each category in buyers' minds and what each rival owns, finds a true weak spot you can use and picks one attribute to own. It writes the position as one plain line. The step 1 file holds the ladders, the weak spot, your position, the one-line statement and a short brief for your team.
-2. **Brand name stretch checker.** Use the skill `brand-name-stretch-checker`. Give it your brand file, the new product and the step 1 file. It compares what your name means today with what the new product would mean, gives a stretch score out of 100 with its working, and makes a call. The score is a judgement, not a formula or a measured figure: it weighs how close the new product is to what the name means now, whether the same buyers would buy both, and whether the price level fits, and it gives the reason for each. The call is: use the name, make a new one, or skip. It also says what the core product risks if the stretch fails. The step 2 file holds the call.
+2. **Brand name stretch checker.** Use the skill `brand-name-stretch-checker`. Give it your org context, the new product and the step 1 file. It compares what your name means today with what the new product would mean, gives a stretch score out of 100 with its working, and makes a call. The score is a judgement, not a formula or a measured figure: it weighs how close the new product is to what the name means now, whether the same buyers would buy both, and whether the price level fits, and it gives the reason for each. The call is: use the name, make a new one, or skip. It also says what the core product risks if the stretch fails. The step 2 file holds the call.
 3. **Publicity-first launch planner.** Use the skill `publicity-first-launch-planner`. Give it the step 1 file, the step 2 call, your price, benefits and proof, and your budget and dates if you have them. It finds a news angle a reporter would care about, plans press and third-party stories before any ad, and sets the point of trust at which ads begin and how much to spend on them. The step 3 file holds the launch plan.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check below that failed or could not run (or "none").
 

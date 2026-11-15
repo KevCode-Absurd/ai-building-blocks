@@ -25,7 +25,7 @@ not_for:
 you_give:
   - Your product facts and how it is used
   - Real product photos, from the front and in use
-  - Your brand file and your font file
+  - Your org context and your font file
   - Your offer (optional)
   - A coding AI that can build video, such as Claude Code with Remotion
 you_get:
@@ -46,12 +46,12 @@ output_sample:
   input:
     - Your product facts and how it is used
     - Real product photos, from the front and in use
-    - Your brand file and your font file
+    - Your org context and your font file
     - Your offer (optional)
     - The sizes you need
   prerequisites:
     - An AI that can read your files and build video, such as Claude Code or a Claude Project with files
-    - Your brand brain from the Website brand brain builder (optional, but it improves the result)
+    - Your org context from the Org context builder (optional, but it improves the result)
   output:
     - name: Brief
       contains: The buyer and the one thing the reel argues.

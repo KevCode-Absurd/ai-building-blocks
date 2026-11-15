@@ -85,7 +85,7 @@ shadcn components via the `asChild` prop.
 1. Dependencies (Areas 2 & 7) — clear the package graph first
 2. Build config (Area 3) — remove the tagger from Vite
 3. Entry points (Areas 4 & 6) — clear runtime references
-4. Assets (Area 5) — swap brand files (defer if assets not ready yet)
+4. Assets (Area 5) — swap org context files (defer if assets not ready yet)
 5. Docs & README (Areas 1 & 10) — clean last so README reflects the cleaned project
 6. Environment & Git (Areas 9 & 12) — security sweep
 7. SEO / deploy (Area 11) — usually a no-op; confirm and move on

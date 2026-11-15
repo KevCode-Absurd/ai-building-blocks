@@ -101,7 +101,7 @@ output_sample:
     - Buyers who buy from more than one brand (optional)
     - Rivals in the new space (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Stop-early check
       contains: A plain yes or no on whether a store like yours needs a brand structure. If not, the run ends here.
@@ -154,7 +154,7 @@ test:
 
 improve:
   - Add your real ad budget lines and a rule such as "no new brand under a set monthly ad budget", so the skill checks your own limit.
-  - Save the naming rule to your brand file so every new product is named the same way.
+  - Save the naming rule to your org context so every new product is named the same way.
   - Add your marketplaces to the skill file, since own-label ranges inside a marketplace follow different rules.
   - Pair it with the Store name generator and Store name tester when a range does get its own name.
 

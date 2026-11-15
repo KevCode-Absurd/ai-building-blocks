@@ -131,7 +131,7 @@ test:
 improve:
   - Add your own house rules on type and length, so the look checks fit them.
   - Add past mailings with their results, so the review learns what holds your reader.
-  - Save the fixes you accept to your brand file.
+  - Save the fixes you accept to your org context.
   - Pair it with "Slippery slide copy checker" for a line-by-line pass on the letter.
 
 works_best_with:

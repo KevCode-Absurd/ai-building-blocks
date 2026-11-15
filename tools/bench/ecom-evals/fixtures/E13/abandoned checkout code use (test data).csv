@@ -1,0 +1,6 @@
+# (test data) Shopify discount report for the abandoned checkout code, last 60 days. Built for an e-commerce eval. Not KraveBeauty's real figures.
+metric,value
+Abandoned checkout flow orders,980
+"Of those, orders using the 15% flow code",402
+Share of flow orders placed within 2 hours of the first email (before email 2),61%
+Discount given through the flow code,"$1,870"

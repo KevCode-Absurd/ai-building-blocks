@@ -5,7 +5,7 @@ description: Use when you want a new offer tested through an article-style page 
 
 # Find your best offer and write the page and ad
 
-Give it your brand file and live prices. Get an offer to try, an article-style page, a check and a matching ad.
+Give it your org context and live prices. Get an offer to try, an article-style page, a check and a matching ad.
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
@@ -16,7 +16,7 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand file** (its buyers part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its buyers part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
 **Makes it better (optional):**
@@ -25,17 +25,17 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A design direction**, made by the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner): the page's type, colours and layout rules.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand file.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand file and buyer brief.
-4. **A design direction** with the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). Bring your page, customer words (optional). It uses your brand file.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your org context.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your org context and buyer brief.
+4. **A design direction** with the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). Bring your page, customer words (optional). It uses your org context.
 5. This one.
 
-**From the brand file, read:** `index.md`, `look.json`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `look.json`, `foundation/design.md`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, a buyer brief, ad copy. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, a buyer brief, ad copy. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -43,7 +43,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **Your brand file** (required). Used by every step: products, prices, guarantee, delivery, returns, the claims you may make and the voice. Step 1 reads the prices and deals, step 2 the facts and voice.
+- **Your org context** (required). Used by every step: products, prices, guarantee, delivery, returns, the claims you may make and the voice. Step 1 reads the prices and deals, step 2 the facts and voice.
 - **Everything live now** (required for step 1). Every ad, pop-up, email and site offer, with where you saw each one. A screenshot of each is best, so clashes can be quoted. Check that every price and term is current and true before you start. If deals clash or can't be verified, fix them first. No step runs on unverified terms.
 - **A short brief for the ad** (required for step 4). Who the offer is for and what you want the ad to say. If you have none, say so and the offer chosen in step 1 is the idea.
 - **Who the offer is for** (optional). One buyer narrows the offers in step 1 and the page in step 2.
@@ -61,8 +61,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **The ad label.** The page must be labelled as advertising. If the page has no "Advertisement" label above its headline, stop and say so.
 
 ## Steps
-1. **Find the offer to try.** Use the skill `hidden-offer-finder` on your brand file and the list of what is live. It returns the live deals, the clashes between them, your stock, new offers and three to try first, each worded three ways. Save it as `outputs/step-01-hidden-offer-finder.md`. Pause here. Show the three offers and wait for the person to pick one before step 2. If they already named an offer, use it. If they say "go ahead" without picking, ask which of the three, and only then continue. Never pick for them.
-2. **Write the article-style page.** Use the skill `article-landing-page`. It reads the offer you picked from `outputs/step-01-hidden-offer-finder.md`, plus your brand file, the buyer and any ad or reviews. It returns the ten-section page, an image list and a MISSING list. Required: "Advertisement" sits above the headline in the first screen. If it doesn't, fix it before step 3. If it still doesn't, stop here.
+1. **Find the offer to try.** Use the skill `hidden-offer-finder` on your org context and the list of what is live. It returns the live deals, the clashes between them, your stock, new offers and three to try first, each worded three ways. Save it as `outputs/step-01-hidden-offer-finder.md`. Pause here. Show the three offers and wait for the person to pick one before step 2. If they already named an offer, use it. If they say "go ahead" without picking, ask which of the three, and only then continue. Never pick for them.
+2. **Write the article-style page.** Use the skill `article-landing-page`. It reads the offer you picked from `outputs/step-01-hidden-offer-finder.md`, plus your org context, the buyer and any ad or reviews. It returns the ten-section page, an image list and a MISSING list. Required: "Advertisement" sits above the headline in the first screen. If it doesn't, fix it before step 3. If it still doesn't, stop here.
 3. **Check the page in 30 points.** Use the skill `landing-page-30-point-checker` on the page in `outputs/step-02-article-landing-page.md`. Add your facts and the ad if you have them. It returns 30 yes-or-no checks with evidence, the five fixes to make first and a score out of 100. Also confirm the Advertisement label is still there. If a check shows it is missing, stop.
 4. **Write the article-style ad.** Use the skill `article-style-image-ad-writer`. It reads two things: the step 2 page with the five fixes from `outputs/step-03-landing-page-30-point-checker.md` applied, and your brief. Make the fixes to the page text first, and add no fact you were not given. Where a fix needs a fact you don't have, write `MISSING:` instead. Write the ad against that fixed page. It returns the image headline, main text, one claim, an image brief, the page notes and what the page must cover. Label the ad as advertising: the sponsor name and an "Advertisement" or "Sponsored" label must show in the headline area of the ad itself, not only on the page. Do not use a news outlet's name, a byline, a dateline or a fake news-style layout. Before it runs, check the ad platform's current rules on misleading and deceptive formats and, in the US, the FTC's guidance on native advertising; other countries have their own rules. Required: the fixed page's first screen makes the same claim as the ad headline, and it carries the Advertisement label. If either fails, stop and don't hand the ad back as ready.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
@@ -82,7 +82,7 @@ Four step files and the summary. In order:
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
 - Every live deal is quoted from something you gave, with where it was seen. A clash is shown, never smoothed over.
-- The price, terms and dates in the offer block match your brand file.
+- The price, terms and dates in the offer block match your org context.
 - The page carries "Advertisement" above its headline, and the ad does not pose as a news story.
 - The ad's claim matches the first screen of the page after the five fixes.
 

@@ -32,7 +32,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **Collection list** (required): each with search volume and revenue if known, and how many products it holds. This is the spreadsheet in the box above; a pasted list works too. No brand brain is needed. Search volume can come from a keyword tool, but many are paid. A free option is the query data in Google Search Console for collections that already get impressions.
+- **Collection list** (required): each with search volume and revenue if known, and how many products it holds. This is the spreadsheet in the box above; a pasted list works too. No org context is needed. Search volume can come from a keyword tool, but many are paid. A free option is the query data in Google Search Console for collections that already get impressions.
 - **Current main menu and homepage sections** (required): the store link, or paste or describe them.
 - **Revenue per collection** (optional): from your store's sales report, not an ad export.
 - **Catalogue size and theme** (helpful).

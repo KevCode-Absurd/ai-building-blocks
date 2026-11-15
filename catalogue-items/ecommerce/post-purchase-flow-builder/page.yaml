@@ -85,7 +85,7 @@ output_sample:
     - "Your estimated delivery time"
     - "Your mission line, support address and one social platform"
     - "How-to steps for each product"
-    - "Your brand brain (optional)"
+    - "Your org context (optional)"
   prerequisites:
     - "An email tool that can split by number of orders, such as Klaviyo"
   output:

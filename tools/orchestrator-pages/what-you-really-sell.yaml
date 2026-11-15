@@ -18,7 +18,7 @@ when:
   - Your offer converts but you suspect the deal, the guarantee or the way you state the price could do better.
   - A reviewer or platform asked you to back up a claim and you need to see what you can prove.
 not_for:
-  - "You have no live offer yet: build your brand profile first with the Brand profile builder, then come back."
+  - "You have no live offer yet: build your brand profile first with the Org context builder, then come back."
   - "You only want the claims in an ad checked against proof: use the Claim evidence checker on its own."
   - "You only want the offer reviewed: use the Offer checklist reviewer on its own."
 you_give:
@@ -97,8 +97,8 @@ test:
   - Run it twice on the same input. The steps should land in the same places, even if the wording differs.
   - Stop it after step 1 and read the three angles yourself before you let it carry on.
 improve:
-  - Save the three angles and your proof into your brand file, so later runs can start from step 2.
-  - Add the claims you are not allowed to make to your brand file, so step 3 flags them first.
+  - Save the three angles and your proof into your org context, so later runs can start from step 2.
+  - Add the claims you are not allowed to make to your org context, so step 3 flags them first.
   - After a test ends, add the winner and what it showed, and run step 1 again for the next round.
 works_best_with:
   tools:
@@ -107,7 +107,7 @@ works_best_with:
     - name: A spreadsheet
       why: Keeps your split-test results once the angles and offer changes go live.
   inputs:
-    - Your brand profile, from the Brand profile builder
+    - Your brand profile, from the Org context builder
     - Test results, review counts and dates you can show
     - A list of claims you are not allowed to make
 next:

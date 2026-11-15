@@ -26,7 +26,7 @@ you_give:
   - "What the event or cause is, and the date and place"
   - "Where the poster will hang and how far away people will see it"
   - "The mood: serious, playful, urgent"
-  - "Your brand file (optional)"
+  - "Your org context (optional)"
 you_get:
   - "The one or two words that carry the point"
   - "A typeface feel, sizes and what is cut"
@@ -45,7 +45,7 @@ output_sample:
     - What the event or cause is, with the date and place
     - Where the poster hangs and how far away people see it
     - The mood, in one or two words
-    - Your brand file (optional)
+    - Your org context (optional)
   output:
     - name: Viewer and place
       contains: Who sees the poster, from where, from how far and for how long.
@@ -140,7 +140,7 @@ test:
 improve:
   - "Add typefaces you already own to the type step."
   - "Add your venues and their viewing distances to \"What you need\"."
-  - "Save posters that worked, with the plan, in your brand file."
+  - "Save posters that worked, with the plan, in your org context."
   - "Pair it with \"Design brief rules writer\" for a longer campaign."
 
 works_best_with:

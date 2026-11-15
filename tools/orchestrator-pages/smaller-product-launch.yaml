@@ -26,7 +26,7 @@ you_give:
   - Your launch plan with the full feature list
   - Your launch date and budget, which the workflow treats as fixed
   - Feature requests from customers, such as reviews or messages (optional)
-  - Your brand file, for the teaser and the preview (optional)
+  - Your org context, for the teaser and the preview (optional)
 
 you_get:
   - A smaller launch for the same date, with the core first, a ranked list and a later list of what was cut
@@ -44,10 +44,10 @@ output_sample:
     - Your launch plan with the full feature list
     - Your launch date and budget
     - Feature requests from customers, with who asked (optional)
-    - Your brand file (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can read files, with the handoff pack folder added
-    - Your brand file, such as a brand brain from the Website brand brain builder (optional)
+    - Your org context, such as an org context from the Org context builder (optional)
   output:
     - name: "Step 1: Smaller launch"
       contains: The fixed date and budget, the heart of the product, the ranked launch list, the later list and a promise check.
@@ -120,7 +120,7 @@ works_best_with:
     - {name: "An email list tool", why: "Collects sign-ups from the teaser page and sends the launch message."}
   inputs:
     - "A full list of feature requests, with who asked"
-    - "Your brand file, with your voice and offer"
+    - "Your org context, with your voice and offer"
     - "A short list of people who would like an early look"
 
 terms:

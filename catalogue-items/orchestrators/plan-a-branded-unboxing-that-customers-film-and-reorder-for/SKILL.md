@@ -44,15 +44,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Website brand brain builder.** Use the skill `website-brand-brain-builder`. Give it your store page and reviews. It reads them into a brand file the later steps work from. Saves `outputs/step-01-website-brand-brain-builder.md`.
-2. **Brand ritual designer.** Use the skill `brand-ritual-designer`. Give it the brand file from `outputs/step-01-website-brand-brain-builder.md`. It designs one customer ritual around the product. Saves `outputs/step-02-brand-ritual-designer.md`.
-3. **Sensory unboxing planner.** Use the skill `sensory-unboxing-planner`. Give it the ritual in `outputs/step-02-brand-ritual-designer.md` and the brand file from step 1. It matches weight, colour, sound and smell to the ritual. Saves `outputs/step-03-sensory-unboxing-planner.md`.
-4. **Unboxing insert and gift planner.** Use the skill `unboxing-insert-and-gift-planner`. Give it the unboxing plan in `outputs/step-03-sensory-unboxing-planner.md`, the brand file from step 1, and your order value, margin and packaging cost. It chooses the inserts and gifts that carry the plan, within your margin. Saves `outputs/step-04-unboxing-insert-and-gift-planner.md`.
+1. **Org context builder.** Use the skill `website-brand-brain-builder`. Give it your store page and reviews. It reads them into an org context the later steps work from. Saves `outputs/step-01-website-brand-brain-builder.md`.
+2. **Brand ritual designer.** Use the skill `brand-ritual-designer`. Give it the org context from `outputs/step-01-website-brand-brain-builder.md`. It designs one customer ritual around the product. Saves `outputs/step-02-brand-ritual-designer.md`.
+3. **Sensory unboxing planner.** Use the skill `sensory-unboxing-planner`. Give it the ritual in `outputs/step-02-brand-ritual-designer.md` and the org context from step 1. It matches weight, colour, sound and smell to the ritual. Saves `outputs/step-03-sensory-unboxing-planner.md`.
+4. **Unboxing insert and gift planner.** Use the skill `unboxing-insert-and-gift-planner`. Give it the unboxing plan in `outputs/step-03-sensory-unboxing-planner.md`, the org context from step 1, and your order value, margin and packaging cost. It chooses the inserts and gifts that carry the plan, within your margin. Saves `outputs/step-04-unboxing-insert-and-gift-planner.md`.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check below that failed or could not run (or "none").
 
 ## What you hand back
 4 step files and the summary:
-- Step 1, brand file: your facts, buyers, claims and voice read from the store.
+- Step 1, org context: your facts, buyers, claims and voice read from the store.
 - Step 2, ritual: one customer ritual around the product.
 - Step 3, unboxing plan: weight, colour, sound and smell matched to the ritual.
 - Step 4, inserts and gifts: what to include, each costed within your margin. The last file holds the plan.

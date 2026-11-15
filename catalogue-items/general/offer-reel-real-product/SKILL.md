@@ -12,7 +12,7 @@ You build a short reel as code that can draw any single frame on request, then r
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand file** (its products part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its products part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 
 **Makes it better (optional):**
@@ -20,16 +20,16 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand file and offer and buying reasons.
-3. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand file.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your org context and offer and buying reasons.
+3. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your org context.
 4. This one.
 
-**From the brand file, read:** `index.md`, `look.json`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `look.json`, `foundation/design.md`, `offers.json`, `facts.json`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture: approved claims and offer terms. Leave out review quotes and research notes. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, a video ad script, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, a video ad script, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -57,9 +57,9 @@ When those tools are unavailable, complete the independent planning stages and s
 ## Steps
 
 ### Stage 0: Script in
-Fill in the brief from the brand file, and ask about the blanks in one round: product and photos, the reel's job, words in order, offer and price exactly as the brand's offer states them, audience and placement (a feed, usually watched muted), length, shapes, colours, fonts, logo, any reference video (borrow its rhythm only), music, voice, the end card and the never-show list. A missing photo is requested, never generated.
+Fill in the brief from the org context, and ask about the blanks in one round: product and photos, the reel's job, words in order, offer and price exactly as the brand's offer states them, audience and placement (a feed, usually watched muted), length, shapes, colours, fonts, logo, any reference video (borrow its rhythm only), music, voice, the end card and the never-show list. A missing photo is requested, never generated.
 
-Before you write MISSING for a fact, look for it in the brand file and in the input: the variant, pack count, label words, how it opens, the guarantee and its limit, the never-show rules, and the page each approved word comes from. Write MISSING only when both lack it. Write each approved word with its source next to it.
+Before you write MISSING for a fact, look for it in the org context and in the input: the variant, pack count, label words, how it opens, the guarantee and its limit, the never-show rules, and the page each approved word comes from. Write MISSING only when both lack it. Write each approved word with its source next to it.
 
 **Approvals given ahead.** If the person asked for every stage in one go, or their message already approves a stage (for example "take the product card and sheets as approved"), run on and mark each checkpoint "(approve)", or `[approved]` where they already said yes. In a chat with no coding agent, the run ends at approval 3: hand back stages 0 to 4 and say the build, review rounds and render need a coding agent and APPROVED.
 
@@ -81,7 +81,7 @@ Pick the hero photo for the opening and the photo for each reason, from the real
 ### Stage 4: Storyboard (approval 3)
 1. **Lay the beat grid.** Pick the tempo, the length and named marks counted in beats. Make the music in code (or bring a cleared track) and measure where its beats really fall; grid and measured beats should differ by under 15 ms at worst. Hard cuts land on the first beat of a bar; smaller events on beats or half-beats, never on typed-in seconds.
 2. **Write the shot list.** For a physical product: the opening, done by 2 seconds, with the product in the very first frame and the first word landing with it; what it is, in one line; one to three reasons, each a brand fact paired with the photo that shows it; proof, only if the brand holds some (a figure with its source, or a customer's words as given); the offer and action on an end card no longer than 2 seconds, with the pack, logo and action, never frozen.
-3. **Check regulated claims.** Health, supplement, money or other regulated claims must match the brand's approved source and the ad platform's rules before the storyboard is approved. Show only the wording the brand file approves. Example wording shown anywhere in this pack is not approved copy for your brand. If a claim has no approved source, drop it and write `MISSING: approved claim`.
+3. **Check regulated claims.** Health, supplement, money or other regulated claims must match the brand's approved source and the ad platform's rules before the storyboard is approved. Show only the wording the org context approves. Example wording shown anywhere in this pack is not approved copy for your brand. If a claim has no approved source, drop it and write `MISSING: approved claim`.
 4. **Each row is a shot card:** its beats and seconds, the on-screen words exactly, which photo, the first and last frame of the shot, the motion and way in or out, the sound cue, any voice line, notes for 9:16, and what's new on screen (something new every 2 to 4 seconds). List the source of every claim, price and offer, and any voice cost.
 
 **Approval 3 of 3:** build nothing until the shot list says APPROVED.
@@ -156,15 +156,15 @@ MISSING: <anything blank>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Video ad on-screen text planner](https://useaiblocks.com/skills/video-ad-text-overlays). It takes the video ads.
 - The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer). It takes the video ads.
-- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the video ads.
 - **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the video ads.
+- The [Wordless video ad opening writer](https://useaiblocks.com/skills/wordless-video-ad-opening-writer). It takes the video ads.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. A missing photo, claim, price or offer is requested, and its shot is dropped rather than invented. No rights to a voice: no voice-over.
 
-If photos are named but you can't see them, say so in one line, take the product's look and label words from the brand file (or the input), mark the photo match as still to check, and never describe a photo you didn't see.
+If photos are named but you can't see them, say so in one line, take the product's look and label words from the org context (or the input), mark the photo match as still to check, and never describe a photo you didn't see.
 
 ## Avoid
 - Generating or redrawing the product or logo.

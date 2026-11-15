@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **An email flow** with the [Outbound email sequence writer](https://useaiblocks.com/skills/outbound-email-sequence-writer). Bring an email flow (optional). It uses your buyer brief and brand file.
+1. **An email flow** with the [Outbound email sequence writer](https://useaiblocks.com/skills/outbound-email-sequence-writer). Bring an email flow (optional). It uses your buyer brief and org context.
 2. This one.
 
 How to start:

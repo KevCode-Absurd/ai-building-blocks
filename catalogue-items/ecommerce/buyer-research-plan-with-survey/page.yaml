@@ -136,7 +136,7 @@ improve:
   - Add your real reward options and limits to the skill file so the cost line is always right.
   - Add your product's main objections as follow-up questions for the call guide.
   - Add a consent line and a data note to the email that match your privacy policy.
-  - Save the reading template results to your brand file, with a date.
+  - Save the reading template results to your org context, with a date.
   - Pair it with the Buyer identity segment finder to turn the identity answers into groups, and with the Forum and review avatar digger for the same questions asked of strangers.
 
 works_best_with:

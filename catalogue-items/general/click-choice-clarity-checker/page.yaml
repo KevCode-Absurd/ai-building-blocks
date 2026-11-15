@@ -133,7 +133,7 @@ test:
 improve:
   - "Add your visitor words (search terms, support phrases) to \"What you need\"."
   - "Add your own naming rules, such as banned words, to step 4."
-  - "Save approved labels to your brand file so they stay consistent."
+  - "Save approved labels to your org context so they stay consistent."
   - "Pair it with \"Small usability test planner\" to test the hard choices with real people."
 
 works_best_with:

@@ -18,7 +18,7 @@ when:
   - You hit a rank or a retailer milestone and want to use it everywhere.
   - You need short proof lines for ads, your product page, social posts and emails to retailers.
 not_for:
-  - Your store has no sales history yet. Pull an order report first, or use the Brand profile builder to gather facts you can back.
+  - Your store has no sales history yet. Pull an order report first, or use the Org context builder to gather facts you can back.
   - You want scarcity lines like "almost gone" when stock is not low. Do not write them. Show only past facts you can date.
   - You want to compare yourself to a named rival. Skip it, and show growth against your own past instead.
 
@@ -114,7 +114,7 @@ test:
 
 improve:
   - Add your platform's claim rules for ranks and "best" lines to the skill file.
-  - Keep a running list of true facts with dates in your brand file, and paste it each time.
+  - Keep a running list of true facts with dates in your org context, and paste it each time.
   - Add a rule for how long a line may run before you review it.
   - For retailer wins, get permission from the retailer before you show their email or numbers.
   - Pair it with a skill that matches claims to proof, and one that places testimonials.

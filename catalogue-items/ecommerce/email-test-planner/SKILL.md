@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **An email flow** with the [Customer email journey planner](https://useaiblocks.com/skills/customer-stage-flow-mapper). Bring an email flow, your results (optional). It uses your brand file and offer.
+1. **An email flow** with the [Customer email journey planner](https://useaiblocks.com/skills/customer-stage-flow-mapper). Bring an email flow, your results (optional). It uses your org context and offer.
 2. This one.
 
 How to start:

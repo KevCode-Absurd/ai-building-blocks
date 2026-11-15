@@ -42,7 +42,7 @@ output_sample:
     - Your customer reviews or support questions, with the source of each
     - Three to five rival products and their claims (optional)
     - The ad that sends visitors to the page (optional)
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project, to run the handoff pack
   output:
@@ -108,7 +108,7 @@ test:
   - Compare the pains on the page with the top pains in your last fifty reviews.
   - Send some cold traffic to the page and your product page, and compare sales.
 improve:
-  - Save the big idea and mechanism in your brand file, so ads and pages reuse them.
+  - Save the big idea and mechanism in your org context, so ads and pages reuse them.
   - Add an advertorial you admire to step 2, so the new page follows its structure.
   - Add your banned claims to step 3, so honesty checks use your own rules.
   - Re-run step 1 when a rival changes its claims.

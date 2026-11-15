@@ -21,7 +21,7 @@ not_for:
 you_give:
   - The page, as its full text and phone screenshots (attach them; your AI can see pictures), or its address
   - The ad or link that leads to it (optional, but best)
-  - Your brand file with buyer doubts, offer terms, real proof, guarantee and delivery terms (optional)
+  - Your org context with buyer doubts, offer terms, real proof, guarantee and delivery terms (optional)
   - Analytics, such as conversion by step and phone against desktop (optional)
 you_get:
   - The page's job, a one-line verdict, and whether the page matches its ad
@@ -109,7 +109,7 @@ example:
     The page: sprout.example/products/sprout, as text top to bottom, with
     the notes on what was and wasn't seen (sprout/product-page.md).
 
-    Brand file: sprout/brand.md (buyers and their doubts, offers, the
+    Org context: sprout/brand.md (buyers and their doubts, offers, the
     guarantee, claims that are fine and risky).
 
     No ad and no analytics this time. Judge the page on its own.
@@ -195,8 +195,8 @@ test:
 improve:
   - Set the page's job in step 1 to the one you always need, so you don't have to say it each time.
   - Add your own house rules to read 3, such as how you always show subscription prices.
-  - Write your delivery, returns and cancellation terms into your brand file, so they stop coming back as missing.
-  - Save the findings table with the date in your brand file, so the next review can see what was fixed.
+  - Write your delivery, returns and cancellation terms into your org context, so they stop coming back as missing.
+  - Save the findings table with the date in your org context, so the next review can see what was fixed.
   - Pair it with a quick landing page checklist for a fast pass first, and move up to a full audit with your sales numbers when you need fixes sized in money.
 works_best_with:
   tools:

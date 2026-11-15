@@ -98,7 +98,6 @@ MISSING: <daily data | click-window revenue | margin | CAC limit | ceiling>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Brand name fit checker](https://useaiblocks.com/skills/brand-name-stretch-checker). It takes the plan.
 - The [Values-based weekly planner](https://useaiblocks.com/skills/values-to-week-planner). It takes the plan.
-- The [Focused marketing planner](https://useaiblocks.com/skills/one-goal-marketing-plan-builder). It takes the plan.
 - The [Weekly store ad performance reviewer](https://useaiblocks.com/skills/weekly-store-ad-pulse-checker). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

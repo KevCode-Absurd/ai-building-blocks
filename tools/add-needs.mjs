@@ -1,6 +1,6 @@
 // Writes two marked sections into every SKILL.md, worked out by tools/lib/needs.mjs from the blocks' inputs and outputs:
 //   "## Before you start" (before "## What you need"): what's needed, the steps before this one with links,
-//     which brand file parts to read, how to check for each thing, and the tools that do the job best.
+//     which org context parts to read, how to check for each thing, and the tools that do the job best.
 //   "## After this" (after "## What you hand back", or the page's last output or hand-back section, or else at the end
 //     above credits and sources; see insertAfterHandBack): the AI asks what's next and offers the paths from here.
 // Imported skills get the same sections, marked as ours, and their item.yaml credit says we added them.

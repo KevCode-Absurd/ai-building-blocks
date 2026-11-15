@@ -18,7 +18,7 @@ when:
   - You have a founder talk or transcript full of good lines nobody has used.
   - Your headlines feel generic and you suspect better ones are already in your material.
 not_for:
-  - "You have no source material yet, only a short brief: use the Brand profile builder first, then bring the result here."
+  - "You have no source material yet, only a short brief: use the Org context builder first, then bring the result here."
   - "You want finished ad headlines or hooks from scratch: use the Ad headline writer or the Buyer wish hook planner."
   - "You want claims checked against ad rules before you publish: use the Meta ad policy checker."
 
@@ -132,7 +132,7 @@ test:
 improve:
   - Add your own product notes to the paste so the sheet covers more.
   - Add a list of words your brand never uses, so it skips them.
-  - Save the sheet to your brand file as the vocabulary.
+  - Save the sheet to your org context as the vocabulary.
   - Pair it with "Shared want hook mapper" to turn the piles into hooks.
 
 works_best_with:

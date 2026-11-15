@@ -117,6 +117,6 @@ test:
   - Run it again on the same report. The top three fixes should come out the same.
 improve:
   - Add your tracking tags and the apps you must keep to the skill's rules, so they are never touched.
-  - Save your ranked fixes and the dates you finished them in your brand file. The next run starts from there.
+  - Save your ranked fixes and the dates you finished them in your org context. The next run starts from there.
   - Edit the order range in the ranking skill if your own tests show a different link between speed and sales.
   - Run the first two steps every quarter, and again before any sale.

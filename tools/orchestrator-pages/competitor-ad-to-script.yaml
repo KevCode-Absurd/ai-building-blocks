@@ -4,7 +4,7 @@ summary: "Turn competitor ads into a script of your own. Give it ads from Meta's
 job: study-competitors
 
 headline: "Turn competitor ads into a script of your own"
-subhead: Give it the competitor ads you saved from Meta's public Ad Library, your brand file and your reviews. It files the ads into nine types, maps where your category crowds and what nobody does, borrows one idea, and writes an original script checked against ad rules.
+subhead: Give it the competitor ads you saved from Meta's public Ad Library, your org context and your reviews. It files the ads into nine types, maps where your category crowds and what nobody does, borrows one idea, and writes an original script checked against ad rules.
 
 explain: |
   Studying competitor ads is useful, but it's easy to end up with a copy. You rewrite a good ad's lines a little, and now yours sounds like theirs and borrows claims you can't back. The useful part of a good ad is the idea behind it, such as admitting the doubt out loud, or letting one demonstration do the talking.
@@ -22,7 +22,7 @@ not_for:
 
 you_give:
   - The ads you saved, each with its library ID, the brand, its start date, its words and a screenshot
-  - Your brand file, or your website so one can be built
+  - Your org context, or your website so one can be built
   - Your customer reviews, copied as written
   - Your product facts and the claims you may and may not make
   - Your current ad's words and offer, for the rules check to compare against
@@ -36,13 +36,13 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your inputs ready. Save the ads by hand from Meta's public Ad Library, with each one's library ID, start date, words and a screenshot. Add your brand file, reviews and product facts.
+  - Have your inputs ready. Save the ads by hand from Meta's public Ad Library, with each one's library ID, start date, words and a screenshot. Add your org context, reviews and product facts.
   - It works step by step and saves each result. If it can't see any real ads, it stops after step 1 and tells you exactly what to collect.
   - Read the distance check under the script. If any line says no, ask for a rewrite before you go further.
 output_sample:
   input:
     - Competitor ads you saved by hand, each with library ID, brand, start date, words and a screenshot
-    - Your brand file, or your website so one can be built
+    - Your org context, or your website so one can be built
     - Your customer reviews, copied as written
     - Your product facts and the claims you may and may not make
     - Your current ad's words and offer
@@ -109,7 +109,7 @@ example:
   input: |
     [the handoff pack] Follow HANDOFF.md.
 
-    Ads I collected: my notes on five competitors, from the brand file.
+    Ads I collected: my notes on five competitors, from the org context.
     - A big-name greens powder: science-first, podcast-famous, 90-day
       guarantee, about $79 a month
     - A TikTok-famous women's wellness brand: greens gummies, bloat
@@ -118,7 +118,7 @@ example:
       45% off
     - A doctor-backed greens tablet and gummy brand, sold in grocery stores
     - A vegan family liquid-vitamin brand: trust badges, gentle tone
-    Brand file, reviews and product facts: the Sprout files.
+    Org context, reviews and product facts: the Sprout files.
   output: |
     This run stopped at step 1, which is what the workflow should do here.
     It shows what happens when the ads themselves are missing.

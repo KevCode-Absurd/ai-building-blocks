@@ -120,7 +120,7 @@ improve:
   - Add your approved vendor list to the skill file so new items are checked against it.
   - Add a rule such as "no chat widget on checkout" and have it flag breaches.
   - Add your last audit date and results so it shows what changed.
-  - Save the final list to your brand file and refresh it each quarter.
+  - Save the final list to your org context and refresh it each quarter.
   - Pair it with the Store security reviewer, which owns the quarterly app review.
 
 works_best_with:

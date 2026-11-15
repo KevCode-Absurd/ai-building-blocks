@@ -88,7 +88,7 @@ test:
   - Check the clean-out list for anyone who bought, returned or opened recently. There should be none.
   - Compare your open rate and inbox placement before the clean-out and a month after.
 improve:
-  - Save the bottleneck finding and the trigger day in your brand file for the next run.
+  - Save the bottleneck finding and the trigger day in your org context for the next run.
   - Add the real emails that brought buyers back in the past to step 2 as examples.
   - Re-run steps 4 and 5 every quarter on a fresh export.
   - Pair it with the first-weeks workflow so fewer buyers lapse in the first place.

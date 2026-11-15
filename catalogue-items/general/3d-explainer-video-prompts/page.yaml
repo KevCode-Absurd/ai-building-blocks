@@ -192,7 +192,7 @@ test:
   - Show the finished film to someone and ask them to draw the process in four boxes. Their boxes should match the chain.
 improve:
   - Add your sourced chains to "What you need" in the skill file, so stage 0 starts from them.
-  - Save the parts key, sheets and lock lines in your brand file, so a series of explainers looks the same.
+  - Save the parts key, sheets and lock lines in your org context, so a series of explainers looks the same.
   - Write the details of the voice you've recorded or licensed into stage 1, so every video uses the same one.
   - Pair it with "3D how-it-works video ad script writer" when you want the script on its own first.
 works_best_with:

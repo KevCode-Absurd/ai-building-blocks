@@ -129,7 +129,7 @@ test:
 improve:
   - "Write your real visits, conversion rate and order value into the skill so you don't paste them each time."
   - "Add a rule for your own team, such as 'no theme code changes during a sale month'."
-  - "Save what each fix actually changed in your brand file, then replace the third-party range with your own."
+  - "Save what each fix actually changed in your org context, then replace the third-party range with your own."
   - "Pair it with the speed budget and sale check to keep gains from slipping back."
 
 works_best_with:

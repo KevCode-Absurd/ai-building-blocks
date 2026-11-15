@@ -8,7 +8,7 @@ import type { Suggestion } from "./suggest";
 export function suggestBefore(c: Catalogue, anchor: string | null, inFlow: Set<string>, limit = 5): Suggestion[] {
   const b = anchor ? c.bySlug[anchor] : undefined;
   if (!b) return [];
-  // The brand brain builder makes the product facts nearly every line of work reads, so it stays on the list when it fits.
+  // The org context builder makes the product facts nearly every line of work reads, so it stays on the list when it fits.
   return previousSteps(b, c.blocks, { max: limit, exclude: (x: Block) => x.type === "agent" || inFlow.has(x.slug), makers: ["website-brand-brain-builder"] })
     .map(({ x, follows, takes }: { x: Block; follows: number; takes: string[] }) => ({
       b: x,

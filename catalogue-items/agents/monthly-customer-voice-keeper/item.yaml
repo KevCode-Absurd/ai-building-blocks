@@ -1,6 +1,6 @@
 slug: monthly-customer-voice-keeper
 name: "Monthly customer voice keeper"
-summary: "Give it this month's new reviews. Get new buyer words, new doubts and wrong-fit buyers, as changes to your brand file to approve."
+summary: "Give it this month's new reviews. Get new buyer words, new doubts and wrong-fit buyers, as changes to your org context to approve."
 category: agent
 type: agent
 role: orchestrate
@@ -20,7 +20,7 @@ steps:
   - {uses: buyer-identity-segment-finder, note: "Only every third month, or when the batch holds at least 50 reviews: whether a new kind of buyer is showing up. Uses the whole review batch, not step 2's report. Passes on any new buyer group."}
   - {uses: trust-barrier-fixer, note: "Only when a new doubt passes the bar: the proof that settles it, checked against your current page or ad message. Uses your page or ad message and the new doubts, not the buyer groups. Passes on the proof for each doubt."}
 schedule: "On the first working day of each month, after last month's reviews are in"
-asks_before: [changing your brand file, changing live page, ad or email copy, replying to or contacting customers, adding a not-for line to a live page]
+asks_before: [changing your org context, changing live page, ad or email copy, replying to or contacting customers, adding a not-for line to a live page]
 origin: own
 version: 1.0.0
 example_pending: true

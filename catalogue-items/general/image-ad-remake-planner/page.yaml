@@ -6,7 +6,7 @@ summary: "Turn your best video ad into an image ad or swipe carousel. Every word
 job: make-image-ads
 
 headline: "Image ad remake planner"
-subhead: Give it your best ad, with screenshots of its shots, your brand file and product photos. It puts every line on an image or in the post text, in order, and flags lines too long instead of cutting them. You get image prompts, the cards and the post words.
+subhead: Give it your best ad, with screenshots of its shots, your org context and product photos. It puts every line on an image or in the post text, in order, and flags lines too long instead of cutting them. You get image prompts, the cards and the post words.
 
 explain: |
   When a video ad works, you want it in the feed as an image too, or as a carousel people swipe. Remaking it by hand usually means rewording it, and the rewording often drops the one line that was doing the selling. Cramming every word onto one picture loses the glance.
@@ -25,7 +25,7 @@ not_for:
 you_give:
   - The original ad, with a screenshot of each shot, plus every spoken word, on-screen line and the post text
   - Still or carousel, the size and the number of cards if it's fixed
-  - Your brand file, with label text, claims, the live offer, fonts and colors
+  - Your org context, with label text, claims, the live offer, fonts and colors
   - Real product photos, attached (optional, needed if the product appears)
 you_get:
   - The ad laid out in order, and the beat that sells with its risk in the new format
@@ -44,7 +44,7 @@ output_sample:
   input:
     - Your original ad, with a screenshot of each shot and every spoken word, on-screen line and post text
     - Still or carousel, plus the size and number of cards if fixed
-    - Your brand file, with claims, live offer, fonts and colors
+    - Your org context, with claims, live offer, fonts and colors
     - Your product photos (optional)
   prerequisites:
     - An AI that can read images, if you attach screenshots
@@ -120,7 +120,7 @@ example:
     yellow bear face top right. Photos: pouch front, daily pack in a
     hand. The daily pack tears straight across its top edge only.
     Colors: deep forest #002C17, warm cream #FFF7DF. Font: Work Sans.
-    Brand file: attached (brand.md).
+    Org context: attached (brand.md).
   output: |
     LAID OUT
       E1 line 1 "Greens powder takes a scoop, water and a shaker." problem

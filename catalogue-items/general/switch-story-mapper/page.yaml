@@ -115,7 +115,7 @@ test:
 improve:
   - Add each new interview and rerun to see if the clusters move.
   - Compare the clusters with your top reasons from reviews.
-  - Save the clusters to your brand file.
+  - Save the clusters to your org context.
   - Pair it with "Customer buying reasons finder" for larger sets of reviews.
 works_best_with:
   tools:

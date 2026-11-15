@@ -127,7 +127,7 @@ test:
 improve:
   - Add your brand voice and claims file to "What you need" so every topic follows what you can say.
   - Write your own cut rules (for example, "no topics about price comparisons") so weak topics drop out faster.
-  - Save the 5 core queries and their day 0 record to your brand file, so day 30 and 60 checks compare against the same baseline.
+  - Save the 5 core queries and their day 0 record to your org context, so day 30 and 60 checks compare against the same baseline.
   - Pair it with the AI citation source finder to plan the earned part, and the comparison page set planner for the versus pages.
 
 works_best_with:

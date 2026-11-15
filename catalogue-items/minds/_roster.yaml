@@ -1,4 +1,4 @@
-# The 505 minds: 305 original minds plus 200 practical additions across ten reviewed batches.
+# The 510 minds: 305 original minds, 200 practical additions across ten reviewed batches, and 5 e-commerce founders.
 # seat = the role we suggest when someone puts this person on a council. People can pick their own.
 # living: true means extra care (no invented quotes, no endorsement, no private life). See the PRD §5.
 # Folder per mind: catalogue-items/minds/<slug>/ with mind.yaml, knowledge.md, personality.md.
@@ -555,3 +555,9 @@ minds:
   - { slug: andrew-loomis, name: Andrew Loomis, area: arts, living: false, seat: Constructive drawing with simple forms }
   - { slug: david-hockney, name: David Hockney, area: arts, living: false, seat: Looking across time and viewpoints }
   - { slug: ansel-adams, name: Ansel Adams, area: arts, living: false, seat: Expressive everyday photography }
+  # E-commerce founders and operators (5, added 2026-11-15)
+  - {slug: ben-francis, name: "Ben Francis", area: business, living: true, seat: "Community before advertising"}
+  - {slug: emily-weiss, name: "Emily Weiss", area: business, living: true, seat: "Customers as co-creators"}
+  - {slug: neil-blumenthal, name: "Neil Blumenthal", area: business, living: true, seat: "Taking the risk out of buying online"}
+  - {slug: michael-dubin, name: "Michael Dubin", area: business, living: true, seat: "A simple offer, told with a laugh"}
+  - {slug: ezra-firestone, name: "Ezra Firestone", area: marketing, living: true, seat: "Offers, upsells and repeat buyers"}

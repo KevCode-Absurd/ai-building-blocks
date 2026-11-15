@@ -111,7 +111,7 @@ test:
   - Give the verdict step a test you already shipped. The call should match what you saw afterwards.
   - Run the first test on a page, then check that the log entry has enough detail to repeat the test.
 improve:
-  - Add your usual weekly traffic and margin to your brand file, so the traffic check starts from real numbers.
+  - Add your usual weekly traffic and margin to your org context, so the traffic check starts from real numbers.
   - Edit the smallest lift you care about in the traffic checker, to match how much a win must be worth to you.
   - Keep the log entries from every test in one file and feed it back, so you do not repeat settled tests.
   - Pair it with a page copy rewrite when the winning idea is about wording.

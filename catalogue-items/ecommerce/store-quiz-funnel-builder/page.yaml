@@ -113,7 +113,7 @@ test:
 improve:
   - Add your own claims rules so the summary page and cards cannot say anything you cannot back.
   - Add your product line and who each suits, so the routing is exact.
-  - Save the drop-off numbers from each version in your brand file, so the next quiz starts from them.
+  - Save the drop-off numbers from each version in your org context, so the next quiz starts from them.
   - Pair it with the quiz answers to ad angles reader to turn answers into ads.
 works_best_with:
   tools:

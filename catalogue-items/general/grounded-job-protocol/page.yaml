@@ -155,7 +155,7 @@ test:
 improve:
   - Keep the context folder in your project, so the next job starts from the same capture.
   - Add lessons that apply to many clients to your agent's "Rules I learned", and keep client lessons in the client's folder.
-  - Use it with Brand DNA capture, AI default patterns and Brand fidelity check, which it calls at the right steps.
+  - Use it with Org context capture, AI default patterns and Brand fidelity check, which it calls at the right steps.
 
 works_best_with:
   tools:

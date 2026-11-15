@@ -6,7 +6,7 @@ thinking: medium
 thinking_why: "It weighs obvious options against surprising ones, but follows a fixed order."
 
 headline: "Brand mark system planner"
-subhead: "Give it your brief and your brand file. It reads the brief for the answer already in it, lists the obvious options and plans a mark that tests at tiny and huge sizes. You get a mark plan and a soft strategy."
+subhead: "Give it your brief and your org context. It reads the brief for the answer already in it, lists the obvious options and plans a mark that tests at tiny and huge sizes. You get a mark plan and a soft strategy."
 
 explain: |
   The first logo idea is often the obvious one, and designers skip it to be original. But the brief usually holds a plain answer that most people know already, and a mark that builds on what people recognise starts ahead. Then comes the test: marks fail when they are shrunk to a thumbnail or blown up on a wall.
@@ -24,7 +24,7 @@ not_for:
 
 you_give:
   - "The brief for the mark"
-  - "Your brand file, with what people already know about you (optional)"
+  - "Your org context, with what people already know about you (optional)"
   - "Reference marks you admire or want to avoid (optional)"
   - "Notes from a call or visit with the client (optional)"
 you_get:
@@ -36,14 +36,14 @@ you_get:
 how_to_use:
   - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
   - "Paste the brief, or run \"Design brief rules writer\" first."
-  - "Add your brand file and the marks you use now."
+  - "Add your org context and the marks you use now."
   - "Hold a listening call or visit before sketching, using the questions in the plan."
   - "Sketch the listed ideas on paper before you open software."
   - "Test each sketch at thumbnail and wall size."
 output_sample:
   input:
     - Your brief for the mark
-    - Your brand file, with what people already know about you (optional)
+    - Your org context, with what people already know about you (optional)
     - Marks you admire or want to avoid (optional)
     - Notes from a call or visit with the client (optional)
   output:
@@ -141,7 +141,7 @@ test:
 improve:
   - "Add your standing visual rules to \"What you need\"."
   - "Add the questions you always ask a client to step 6."
-  - "Save the soft strategy in your brand file."
+  - "Save the soft strategy in your org context."
   - "Pair it with \"Logo strength tester\" to score finished options."
 
 works_best_with:

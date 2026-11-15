@@ -45,7 +45,7 @@ output_sample:
     - What buyers ask for and push back on (advised)
     - Your current price and how many buy (optional)
   prerequisites:
-    - Your brand brain from the Brand profile builder (optional, your AI can work from what you paste)
+    - Your org context from the Org context builder (optional, your AI can work from what you paste)
   output:
     - name: PARTS
       contains: Every part of your offer with its cost to you and how much buyers value it.

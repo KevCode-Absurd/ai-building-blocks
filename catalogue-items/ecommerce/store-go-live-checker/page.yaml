@@ -132,7 +132,7 @@ test:
 improve:
   - Add your own go-live items to the checklist, such as an age gate or a cookie banner your country needs.
   - Add your shipping zones and tax settings to the skill file so it can check test-order totals against them.
-  - Save your list of fulfilment locations in your brand file so each run covers all of them.
+  - Save your list of fulfilment locations in your org context so each run covers all of them.
   - Pair it with the shipping, tax and payments skills so each setting is planned before it is checked.
 
 works_best_with:

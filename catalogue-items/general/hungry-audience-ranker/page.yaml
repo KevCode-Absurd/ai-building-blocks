@@ -128,7 +128,7 @@ test:
 improve:
   - "Add your own rungs to step 3, for example a rung for event attendees."
   - "Add what recent means in your market to step 4, such as 90 days or one year."
-  - "Save the result of each test to your brand file so the ladder uses real results next time."
+  - "Save the result of each test to your org context so the ladder uses real results next time."
   - "Pair it with Small test and rollout planner next."
 
 works_best_with:

@@ -121,7 +121,7 @@ example:
     yellow, a yellow bear face top right, "28 Daily Packs" at the
     bottom. Tear only straight across the top.
     Video tool: 8-second clips, takes an end frame, no sound.
-    Brand file: attached (brand.md).
+    Org context: attached (brand.md).
     Approvals: take the avatar card and sheets as approved, and write
     every stage now.
   output: |
@@ -183,7 +183,7 @@ example:
     EDIT  Clips 1 to 4 in order, cuts. Captions inside the safe zone.
     If the label is wrong in clip 4, lay the real label from the photo
     over it. End card: MISSING until line 7 is given, then the offer
-    terms word for word from the brand file. Check line 6 says
+    terms word for word from the org context. Check line 6 says
     "supports", as approved.
     MISSING: the color of "28 Daily Packs", and a single daily pack
     photo for F3 and the tear.
@@ -216,7 +216,7 @@ test:
   - Search every prompt for "needle" and "hook". Neither should appear outside the avoid field.
 
 improve:
-  - Save your approved doll card, material sentence and room sheet in your brand file, so every ad in a series matches.
+  - Save your approved doll card, material sentence and room sheet in your org context, so every ad in a series matches.
   - Keep the approved sheets and attach them from the start, so new ads begin at stage 4.
   - Add your video tool, clip length and end-frame support to "Your tools", so the timed steps fit first time.
   - Add any miss you keep seeing to the fixes table in stage 5, with the change that cured it.

@@ -19,7 +19,7 @@ you_give:
   - "What buyers in your category value, in their words if you have them"
   - "The people who can say yes or no to the idea, and what you know about each"
   - "What you want them to do next"
-  - "Your brand file and what you love to do (optional, but step 2 marks the six prompts missing without it)"
+  - "Your org context and what you love to do (optional, but step 2 marks the six prompts missing without it)"
   - "Customer reviews or quotes (optional)"
 you_get:
   - A grid of rivals against the features that decide the choice
@@ -30,7 +30,7 @@ you_get:
 how_to_use:
   - "Download the handoff pack. It's a zip with HANDOFF.md plus three skill files, in the order they run: Competitor white space mapper, Onliness statement writer, Idea buy-in pitch planner."
   - "Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say \"Follow HANDOFF.md\"."
-  - "Paste your rivals and what buyers value, plus your brand file if you have one. It works step by step and saves each result."
+  - "Paste your rivals and what buyers value, plus your org context if you have one. It works step by step and saves each result."
   - "Check the rival ratings against what you know before you build on the gaps. A rating with no source comes back as missing."
 how_it_works:
   - title: Maps the white space
@@ -86,7 +86,7 @@ test:
   - Remove one feature from the buyer list and run again. The gaps should change in a way you can explain.
   - Read the story to a colleague. They should be able to say what you want them to do next.
 improve:
-  - Save the chosen sentence in your brand file, so pages and ads use the same line.
+  - Save the chosen sentence in your org context, so pages and ads use the same line.
   - Add real customer quotes, so the gaps rest on their words.
   - After the small test, bring back the result and re-run the grid.
 not_for:
@@ -97,7 +97,7 @@ output_sample:
   input:
     - Your rivals, including the ones buyers compare you with
     - What buyers in your category value, in their words if you have them
-    - Your brand file and what you love to do (optional)
+    - Your org context and what you love to do (optional)
     - The people who can say yes or no to the idea, and what you know about each
     - What you want them to do next
   output:

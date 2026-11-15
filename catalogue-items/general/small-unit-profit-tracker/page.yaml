@@ -126,7 +126,7 @@ test:
 
 improve:
   - Add a line for work that pays later, so research or training is not judged on a weekly number.
-  - Save your usual shared-cost rule in your brand file.
+  - Save your usual shared-cost rule in your org context.
   - Change the review rule to match how often your income really moves.
   - Pair it with "Strategy trade-off planner" to decide which units to grow or stop.
 

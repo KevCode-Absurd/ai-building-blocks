@@ -118,5 +118,5 @@ test:
   - Compare step 5's month check with your own count of returns, then adjust the return rate if it drifts.
 improve:
   - Add your own cost categories to the sorter, using the same names as your accounts.
-  - Save the unit costs and cost rule in your brand file, so future runs skip step 1 for old stock.
+  - Save the unit costs and cost rule in your org context, so future runs skip step 1 for old stock.
   - Re-run after every shipment, and every month for the P&L steps.

@@ -113,7 +113,6 @@ works_best_with:
     - Feedback from earlier rounds, if you have it
 next:
   - stress-test-a-case-competition-recommendation
-  - case-competition-evidence-review-assistant
 before:
   - case-competition-slide-deck-builder
 terms:

@@ -46,7 +46,7 @@ output_sample:
     - The page text (optional)
   prerequisites:
     - An AI that can read images, or the page text pasted in
-    - Your brand brain from the Brand profile builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Shopper's question
       contains: The one thing a shopper must do or understand, which the whole check is built around.
@@ -217,7 +217,7 @@ improve:
   - Write your standing facts (prices, guarantee, shipping, approved claims) into "What you need" in the skill file, so every check flags where the page says something else.
   - Add your page's section names (for example "plan box", "reviews block") to step 2, so each row uses the words your team uses.
   - If you always check the same shopper task, write it into the skill as the default question.
-  - After you test a row in a real browser, save the result in your brand file, so the next check starts from what's known.
+  - After you test a row in a real browser, save the result in your org context, so the next check starts from what's known.
   - Pair it with the "A/B test traffic checker" before you test any change it suggests, and the "Unanswered customer question finder" when the shopper's question comes from reviews.
 
 works_best_with:

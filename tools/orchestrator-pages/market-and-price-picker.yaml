@@ -15,7 +15,7 @@ when:
   - You sell to anyone who will pay and want a group that can afford more.
   - You are unsure whether to go narrower or broader.
 not_for:
-  - "You have a brand-new offer with no buyers yet: build your brand facts first with the Brand profile builder."
+  - "You have a brand-new offer with no buyers yet: build your brand facts first with the Org context builder."
   - "You want to add bonuses to an offer you already have: use the Offer bonus package builder."
   - "You want to test a business idea or its risky guesses: use the Business model assumption tester."
 you_give:

@@ -49,7 +49,7 @@ output_sample:
     - Real customer quotes with their sources (optional)
   prerequisites:
     - An AI chat such as Claude, ChatGPT or Gemini
-    - Your brand brain and buyer brief, if you have them (optional)
+    - Your org context and buyer brief, if you have them (optional)
   output:
     - name: Shape line
       contains: The story shape it picked, how aware the buyer is, and the number of cards.
@@ -217,7 +217,7 @@ improve:
   - Paste your offer, guarantee and its conditions into "What you need" in the skill file, so the last card always uses the same approved terms.
   - Delete the story shapes you can't support (no customer quotes means no proof stack), so it never picks one you'd have to fake.
   - Write your usual card count, colours and background into step 5, so every carousel keeps your look.
-  - When a carousel wins, save its card 1 and its shape in your brand file, and paste that next time.
+  - When a carousel wins, save its card 1 and its shape in your org context, and paste that next time.
   - Pair it with "Pre-launch ad checker" once the cards are made.
 
 works_best_with:

@@ -23,7 +23,7 @@ not_for:
   - "You want to know if the new product will sell at all: test it with real buyers before you think about the name."
 
 you_give:
-  - Your brand file, or a few lines on what the brand stands for
+  - Your org context, or a few lines on what the brand stands for
   - The new product and what it is
   - Your current plan and rivals in the new area (optional)
 you_get:
@@ -34,12 +34,12 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your brand file or describe what the brand stands for, then describe the new product.
+  - Paste your org context or describe what the brand stands for, then describe the new product.
   - Name the specialist rivals in the new area, if you know any.
   - Read the call and the limit. Bring the plan back if you choose to stretch.
 output_sample:
   input:
-    - Your brand file, or a few lines on what the brand stands for
+    - Your org context, or a few lines on what the brand stands for
     - The new product and what it is
     - Your current plan and rivals in the new area (optional)
   output:

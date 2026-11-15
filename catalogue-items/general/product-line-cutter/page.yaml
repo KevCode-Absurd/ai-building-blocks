@@ -26,7 +26,7 @@ you_give:
   - "A list of every product or service, with sales and margin for each"
   - "Who buys each one, and in what format or size"
   - "Cash tied up in stock or work in progress (optional)"
-  - "Your brand file or brief, and what is already planned (optional)"
+  - "Your org context or brief, and what is already planned (optional)"
 
 you_get:
   - "Every product placed in one group with a reason"

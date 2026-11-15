@@ -219,7 +219,7 @@ test:
   - Search the prompts for "desk", "table" and "scissors". None should appear outside the avoid field.
 
 improve:
-  - Save your approved material sentence, motion sentence and figure line in your brand file, so every ad in a series uses the same paper.
+  - Save your approved material sentence, motion sentence and figure line in your org context, so every ad in a series uses the same paper.
   - Keep the approved sheets and attach them from the start, so new ads begin at stage 4.
   - Add your video tool, clip length and end-frame support to "Your tools", so the timed steps fit first time.
   - Add any miss you keep seeing to the fixes table in stage 5, with the change that cured it.

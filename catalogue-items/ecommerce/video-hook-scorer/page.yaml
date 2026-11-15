@@ -48,7 +48,7 @@ output_sample:
     - Your body script (optional)
     - The claims you may make (optional)
   prerequisites:
-    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your org context from the Org context builder (optional, makes the result better)
   output:
     - name: SCALE
       contains: A one-line reminder that five ratings from 1 to 5 are added and multiplied by 4 for a score out of 100.
@@ -125,7 +125,7 @@ test:
 improve:
   - Add the hook types that worked for you to the skill file, so it rewrites in your proven style.
   - Add your banned claims, so the claim flag matches your rules.
-  - Save winners and losers with their scores to your brand file, and see if the scale matches your results.
+  - Save winners and losers with their scores to your org context, and see if the scale matches your results.
   - Change the verdict lines to your own cut-offs once you have results. The 80 and 60 lines are a starting point.
   - Pair it with the video script bridge checker for the body.
 

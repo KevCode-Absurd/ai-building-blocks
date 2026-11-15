@@ -44,7 +44,7 @@ output_sample:
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
     - A way to film or generate the clips yourself, using your own camera or video tool
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "STEP 1: SALES VIDEO SCRIPT"
       contains: A seven-part script with timings, hooks, shorter cuts and a brief.
@@ -111,6 +111,6 @@ test:
   - Read the step 3 script out loud with a timer and compare with the length it promised.
   - Run it again with a different set of reviews. The doubts it answers should change.
 improve:
-  - Save the review quotes you use most in your brand file so step 1 starts with them.
+  - Save the review quotes you use most in your org context so step 1 starts with them.
   - Add your own banned words to the read-aloud step.
   - Keep your winning hook in your notes and ask for new hooks around it next time.

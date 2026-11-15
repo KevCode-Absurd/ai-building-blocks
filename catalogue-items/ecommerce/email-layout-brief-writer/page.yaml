@@ -116,7 +116,7 @@ test:
   - Send a test with images off. The main message and buttons should still make sense.
   - Give only a Figma mockup. The brief must leave inbox appearance unverified until actual client tests run.
 improve:
-  - Save your best layout as a table in your brand file, so every new brief starts from it.
+  - Save your best layout as a table in your org context, so every new brief starts from it.
   - Add your brand fonts, colours and button style to the skill file so each brief names them.
   - Add a rule for your own mobile checks, such as the minimum text size you use.
   - Pair it with the email design checker to score the finished design, and the campaign email writer for the copy.

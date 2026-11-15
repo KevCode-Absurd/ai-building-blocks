@@ -18,7 +18,7 @@ not_for:
 you_give:
   - brief
   - "Optional: product photos"
-  - "Optional: brand brain"
+  - "Optional: org context"
 you_get:
   - plan
   - script
@@ -35,7 +35,7 @@ output_sample:
     - Who the ad speaks to, the one benefit, and the action you want
     - "Ad length and style: podcast, 2D animation, clay stop-motion or live-action short film"
     - Product photos (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI chat tool such as Claude, ChatGPT or Gemini. No code or paid tool is needed to get the plan.
   output:

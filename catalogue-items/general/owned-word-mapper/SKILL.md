@@ -25,8 +25,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Ad breakdowns**, made by the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder): what each reference ad does: opening, angle, format, offer and proof.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional), a shortlist (optional). It uses your brand file.
-2. **Competitors** with the [Competitor positioning mapper](https://useaiblocks.com/skills/positioning-grid-builder). Bring your question, competitors (optional), customer words (optional). It uses your brand file.
+1. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional), a shortlist (optional). It uses your org context.
+2. **Competitors** with the [Competitor positioning mapper](https://useaiblocks.com/skills/positioning-grid-builder). Bring your question, competitors (optional), customer words (optional). It uses your org context.
 3. This one.
 
 How to start:

@@ -172,7 +172,7 @@ test:
 improve:
   - Write your brand's places, light and time of day into "What you need", so the room matches your world every time.
   - Add the things your image tool keeps sneaking in (a smile, a product, a logo) to the "Avoid" list in the skill file.
-  - When an instant works, save it in your brand file as the buyer's moment, so the next story starts there.
+  - When an instant works, save it in your org context as the buyer's moment, so the next story starts there.
   - Pair it with the skill that picks the right picture for a story ad, when you're not sure a snapshot is the best type.
 
 works_best_with:

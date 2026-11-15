@@ -64,23 +64,23 @@ test('meeting minutes lead to meeting actions and board minutes rather than an u
 });
 
 const makers = {
-  'website-brand-brain-builder': { slug: 'website-brand-brain-builder', name: 'Website brand brain builder', task: 'brand-file', inputs: [], outputs: [{ type: 'brand_brain' }] },
+  'website-brand-brain-builder': { slug: 'website-brand-brain-builder', name: 'Org context builder', task: 'brand-file', inputs: [], outputs: [{ type: 'brand_brain' }] },
   'ai-image-fix-rules': { slug: 'ai-image-fix-rules', name: 'AI visual feedback editor', task: 'check-ads', inputs: [], outputs: [{ type: 'lessons_register' }] },
   'buyer-brief-writer': { slug: 'buyer-brief-writer', name: 'Buyer brief writer', task: 'understand-customers', inputs: [], outputs: [{ type: 'brief' }] },
 };
 
-test('stock and decision work get plain inputs, not the brand brain, ad lessons or a buyer brief', () => {
+test('stock and decision work get plain inputs, not the org context, ad lessons or a buyer brief', () => {
   const stock = { slug: 'stock-watch', task: 'plan-supply-chain', inputs: [{ type: 'spreadsheet', required: true }, { type: 'product_data', required: true }], outputs: [] };
   const decide = { slug: 'decision-log', task: 'think-and-decide', inputs: [{ type: 'question', required: true }, { type: 'lessons_register', required: false }, { type: 'brief', required: false }], outputs: [] };
   for (const b of [stock, decide]) {
     const { needed, helps } = needsOf(b, makers);
     assert.deepEqual([...needed, ...helps].filter(i => i.maker), []);
-    assert.doesNotMatch(JSON.stringify([...needed, ...helps]), /past ads|buyer brief|Brand brain|Brand file/i);
+    assert.doesNotMatch(JSON.stringify([...needed, ...helps]), /past ads|buyer brief|Brand brain|Brand file|Org context/i);
   }
   assert.deepEqual(needsOf(stock, makers).needed.map(i => i.key), ['spreadsheet', 'product_data']);
 });
 
-test('ad work still reads product data from the brand brain and lessons from past ads', () => {
+test('ad work still reads product data from the org context and lessons from past ads', () => {
   const ad = { slug: 'image-ad', task: 'make-image-ads', inputs: [{ type: 'product_data', required: true }, { type: 'lessons_register', required: false }], outputs: [] };
   const { needed, helps } = needsOf(ad, makers);
   assert.deepEqual(needed.map(i => i.key), ['website-brand-brain-builder']);
@@ -139,15 +139,15 @@ test('generated text never doubles an article', () => {
   assert.doesNotMatch(text2, /the the/);
 });
 
-test('work that reads the brand file names its parts and where to find it, not the old eight files', () => {
+test('work that reads the org context names its parts and where to find it, not the old eight files', () => {
   const ad = { slug: 'image-ad', name: 'Image ad maker', task: 'make-image-ads', inputs: [{ type: 'product_data', required: true }], outputs: [{ type: 'static_ads' }] };
   const plan = planOf(ad, makers, [...Object.values(makers), ad], (t) => ({ label: t, what: t }));
-  assert.deepEqual(plan.brain.files, ['index.md', 'look.json', 'offers.json', 'facts.json']);
-  assert.equal(plan.needed[0].label, 'Brand file');
+  assert.deepEqual(plan.brain.files, ['index.md', 'look.json', 'foundation/design.md', 'offers.json', 'facts.json']);
+  assert.equal(plan.needed[0].label, 'Org context');
   const text = beforeSection(plan);
-  assert.match(text, /\*\*From the brand file, read:\*\* `index\.md`, `look\.json`, `offers\.json`, `facts\.json`\./);
-  assert.match(text, /a brand file is a `context\/brand-file\/` folder with `index\.md` in it/);
-  assert.match(text, /An older brand brain folder, with `00-start-here\.md` in it, still works as material\./);
-  assert.match(text, /Look for your brand file/);
-  assert.doesNotMatch(text, /eight files|Brand brain|voice-and-look|proof-and-claims|—/);
+  assert.match(text, /\*\*From the org context, read:\*\* `index\.md`, `look\.json`, `foundation\/design\.md`, `offers\.json`, `facts\.json`\./);
+  assert.match(text, /an org context is a `context\/org-context\/` folder with `index\.md` in it/);
+  assert.match(text, /An older `context\/brand-file\/` folder, or a brand folder with `00-start-here\.md` in it, still works as material\./);
+  assert.match(text, /Look for your org context/);
+  assert.doesNotMatch(text, /eight files|brand brain|Brand file|voice-and-look|proof-and-claims|—/i);
 });

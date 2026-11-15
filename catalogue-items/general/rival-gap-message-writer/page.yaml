@@ -21,7 +21,7 @@ not_for:
 you_give:
   - The rival and public facts about it, with sources
   - Your strengths, with proof
-  - Your brand file (optional)
+  - Your org context (optional)
 you_get:
   - Two or three messages built on your strength
   - The evidence a buyer can check for each
@@ -37,7 +37,7 @@ output_sample:
   input:
     - The rival's public facts, each with a source and date
     - Your strengths, each with proof you can show
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI chat such as Claude, ChatGPT or Gemini
   output:
@@ -94,7 +94,7 @@ test:
 improve:
   - Add your approved claims and the words you never use.
   - Add your own weak spots so the reply test is harder.
-  - Save the winning message in your brand file.
+  - Save the winning message in your org context.
 next: []
 works_best_with:
   tools:

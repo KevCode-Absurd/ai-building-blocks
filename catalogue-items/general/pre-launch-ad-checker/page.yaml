@@ -21,7 +21,7 @@ not_for:
 you_give:
   - The finished ad, attached, as the image at full size, the video's key frames with its script, or a storyboard (your AI can see pictures)
   - Its main text, headline, button and where it will run
-  - Your live offer, approved claims and proof, from your brand file (recommended)
+  - Your live offer, approved claims and proof, from your org context (recommended)
   - Your logo, font and real product photos (recommended)
   - Who the ad is for, and the rest of the batch (optional)
 you_get:
@@ -37,7 +37,7 @@ how_to_use:
   - Name who the ad is for, and add your logo, font and product photos if you can.
   - Read the stop-ship list first. Fix those, then look at the rest.
   - Check the "for a person" items on a real phone before you launch.
-  - Use only proof from your own brand file. The sample figures and quotes on this page are illustrations. This check does not review platform policy, so run the Meta ads compliance checker as well.
+  - Use only proof from your own org context. The sample figures and quotes on this page are illustrations. This check does not review platform policy, so run the Meta ads compliance checker as well.
 output_sample:
   input:
     - "Your finished ad: the image, or the video's key frames with its script"
@@ -127,7 +127,7 @@ example:
     Headline field: Fix the Hot Girl Tummy
     Button: Shop now
     For: the gut-fix seeker, new to Sprout.
-    Facts and marks: the Sprout brand file (offers, approved and risky
+    Facts and marks: the Sprout org context (offers, approved and risky
       claims, look, "show it right" rules). Work Sans bold on file.
       No logo file.
   output: |
@@ -149,7 +149,7 @@ example:
     - The daily pack is torn at the corner. Sprout packs tear straight
       across the top, never a corner. Fix: tear it across the top,
       gummies pouring into her palm.
-    - Rounded handwritten font. The brand file names Work Sans bold
+    - Rounded handwritten font. The org context names Work Sans bold
       for headings. Fix: set the words in Work Sans bold.
 
     WORTH A LOOK
@@ -157,8 +157,8 @@ example:
       lately?") / gain thin (carried by "Fix", which has to go) /
       proof missing / risk missing / step strong ("Shop now").
     - Weakest, risk: her main doubt is "Will this upset my stomach
-      more?" (buyer doubts, brand file), and the pouch shows Sugar-Free,
-      which the brand file says uses sugar alcohols. Whether that
+      more?" (buyer doubts, org context), and the pouch shows Sugar-Free,
+      which the org context says uses sugar alcohols. Whether that
       upsets stomachs is not in the file (inferred: a person checks it,
       and the ad makes no health claim either way). Fix: show the Low
       Sugar pouch, and add "30-day
@@ -168,7 +168,7 @@ example:
       file, such as "[your survey result from proof-and-claims.md]".
     - Gain: Fix: one buyer's words, exactly as written: "Feel lighter,
       less bloated and overall good." (retailer review, from the
-      brand file's reviews)
+      org context's reviews)
     - 11 words on the image: a headline and three chips. Fix: drop
       "61% Off". Price is a different ad for a different buyer.
     - The words sit in a white box over the bottom third. Fix: move
@@ -192,7 +192,7 @@ example:
     Fix these: the word "Fix", the discount, the vitamin count, the
     torn pack and the font. Then add the risk line and the Low Sugar
     pouch. One ad, so no batch note. The angle is rare for Sprout:
-    the brand file's ad list counts 2 gut-health ads among its 40
+    the org context's ad list counts 2 gut-health ads among its 40
     newest.
 
     NEXT ACTION
@@ -200,7 +200,7 @@ example:
     blocking your ads" on the new words.
 tweaks:
   - what: Your facts
-    how: Attach your brand file with the live offer and approved claims. Then lines like "Fix" and "61% Off" in the example are caught against your own facts, not just flagged as something to check.
+    how: Attach your org context with the live offer and approved claims. Then lines like "Fix" and "61% Off" in the example are caught against your own facts, not just flagged as something to check.
   - what: Who it's for
     how: Name the buyer. The same ad can pass for a returning customer and fail for someone new. A new buyer needs more on who and proof.
   - what: Your logo, font and product photos
@@ -221,7 +221,7 @@ test:
   - Run it twice on the same ad. The stop-ship list, the weakest link and the verdict should match.
   - Go through "for a person" on your own phone. If you find a problem it didn't list, add that check to the skill file.
 improve:
-  - Keep your brand file current. The facts check is only as good as your offer and claims list on the day you run it.
+  - Keep your org context current. The facts check is only as good as your offer and claims list on the day you run it.
   - Add your own red flags to step 6, such as a discount you no longer run, a retired pack design or how your product opens.
   - If you only make image ads, delete the video and storyboard lines in steps 2 to 4 so the lists stay short.
   - Save the mistakes it catches in the mistakes list from the "AI image and video fix rule writer", so the next ad avoids them from the start.

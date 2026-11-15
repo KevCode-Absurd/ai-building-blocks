@@ -140,7 +140,7 @@ example:
       Says: "Fiber powders. Probiotics. And every time, you wonder if
       this one will upset your stomach more."
       Picture: presenter at a kitchen table, a plain unlabelled fiber
-      tub pushed to one side. Evidence: brand file, buyer 2 (Tries)
+      tub pushed to one side. Evidence: org context, buyer 2 (Tries)
     PROMISE AND HOW IT WORKS
       Says: "You just want to feel normal. One daily pack has 6 grams
       of prebiotic fiber in a small handful of gummies. It supports
@@ -169,7 +169,7 @@ example:
       Says: "If your stomach is sensitive, start with Low Sugar."
       Picture: the Low Sugar pouch beside one torn pack. End card
       with the offer, held 2 seconds.
-      Evidence: brand file (point gut-sensitive buyers to Low Sugar)
+      Evidence: org context (point gut-sensitive buyers to Low Sugar)
 
     OPENINGS (Who, Why stay, Flow, Agree)
     1 A fact: "Six grams of prebiotic fiber. In gummies. Gentle enough
@@ -200,7 +200,7 @@ output_sample:
     - "The buyer, the reason they buy and the length (optional)"
     - "An ad you want to borrow from, or a script and its results to fix (optional)"
   prerequisites:
-    - "Your brand brain from the Website brand brain builder (optional)"
+    - "Your org context from the Org context builder (optional)"
     - "Your offer from the Hidden offer finder (optional)"
   output:
     - name: "Belief shift"
@@ -250,7 +250,7 @@ improve:
   - Paste your best quotes into "What you need" in the skill file once, already sorted by timeline point, so every run starts from the same evidence.
   - Add your banned claims and the safe wording for your category (for example "supports", never "fixes") to the "Rules that never bend".
   - Feed it 2 to 4 star reviews, support tickets and cancel reasons. They hold the last doubts and the things a script must not promise.
-  - When a script wins, save its belief shift and selling beat to your brand file, and change one thing per variant next time.
+  - When a script wins, save its belief shift and selling beat to your org context, and change one thing per variant next time.
   - Pair it with the skill that finds the script lines that lose the sale, or the one that plans a batch of different script types.
 
 works_best_with:

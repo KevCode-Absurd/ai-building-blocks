@@ -95,7 +95,7 @@ output_sample:
     - Customer reviews or support emails (optional)
     - A list of your store pages (optional)
   prerequisites:
-    - Your brand brain from the Brand profile builder, if you have one (optional)
+    - Your org context from the Org context builder, if you have one (optional)
   output:
     - name: Store line and note
       contains: Your products and market as it read them, plus a plain note that chat questions have no search volume.
@@ -136,7 +136,7 @@ test:
 improve:
   - Add your market's language and slang to the skill file.
   - Add the question types your customers ask most, such as sizing or compatibility.
-  - Save the grouped topics in your brand file so every new page starts from the same list.
+  - Save the grouped topics in your org context so every new page starts from the same list.
   - Pair it with the AI search visibility tester, which tests these questions, and the Product page editor for AI search.
 
 works_best_with:

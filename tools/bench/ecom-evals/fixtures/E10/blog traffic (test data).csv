@@ -1,0 +1,4 @@
+# (test data) Sessions on the coffee blog, last 30 days. Built for an e-commerce eval. Not Fellow's real figures.
+page,sessions,bounce_rate,purchases
+How to dial in a pour over,52000,81%,40
+Best water temperature for coffee,31000,86%,12

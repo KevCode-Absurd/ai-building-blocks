@@ -7,12 +7,10 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: question
+  - type: document
     required: true
-  - type: source_text
-    required: false
-  - type: copy_draft
-    required: false
+  - type: slide_deck
+    required: true
 outputs:
   - type: slide_deck
   - type: audit_report

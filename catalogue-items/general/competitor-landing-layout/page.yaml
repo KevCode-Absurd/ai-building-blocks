@@ -188,7 +188,7 @@ improve:
   - Add your proof on file to "Your brand facts" in the skill (real reviews, the rating you hold and where it comes from), so slots get filled instead of removed.
   - Add rows to the slot table in step 6 for slots common in your market, such as a size chart, with what fills them and what to do when you have none.
   - Put your colours, fonts and corner radius into step 9, so every skeleton starts in your brand.
-  - Save layouts that work for you in your brand file, so your next page can start from your own best one.
+  - Save layouts that work for you in your org context, so your next page can start from your own best one.
   - Pair it with "Ad-matched landing page writer" to write the copy first, then place it into the slots. Once built, run "Landing page 30-point checker".
 works_best_with:
   tools:

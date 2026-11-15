@@ -44,7 +44,7 @@ output_sample:
   prerequisites:
     - An AI that can read files, to run the handoff pack
     - The three step skills, which come inside the handoff pack
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Step 1 keyword table
       contains: Each keyword with intent, volume, difficulty, page type, owner page and a keep or reject verdict, plus a score for the list.
@@ -97,6 +97,6 @@ test:
   - Read the page text aloud and see if a shopper would learn something from it.
 improve:
   - Edit the planner skill's thin-collection rule to match your range, such as a higher minimum product count.
-  - Save the kept keyword sheet in your brand file, so next batch starts at step 2.
-  - Add your approved product claims to the brand file so the page copy can use them.
+  - Save the kept keyword sheet in your org context, so next batch starts at step 2.
+  - Add your approved product claims to the org context so the page copy can use them.
   - After a batch is live, log impressions and clicks per collection and use them to pick batch two.

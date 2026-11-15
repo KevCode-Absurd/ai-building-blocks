@@ -26,8 +26,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand file and buyer brief.
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand file and offer and buying reasons.
+1. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your org context and buyer brief.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your org context and offer and buying reasons.
 3. This one.
 
 How to start:
@@ -36,7 +36,7 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Claude:** Holds your brand file, price list and four steps of work in one run.
+- **Claude:** Holds your org context, price list and four steps of work in one run.
 - **Meta Ads Manager:** Its preview shows where the text above the image gets cut off.
 <!-- /needs -->
 
@@ -60,9 +60,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Build your brand file.** Use the skill `website-brand-brain-builder`. Start here so the rest uses your real prices, terms, colours and claims.
-2. **Find offers to try first.** Use the skill `hidden-offer-finder`. Give it the brand brain from the steps before. Read the prices and deals in the brand file, flag clashes and pick the offer to build ads on.
-3. **Plan three offer image ads.** Use the skill `three-way-offer-image-ad-planner`. Give it the offer and the brand brain from the steps before. Use the chosen offer to plan three ads that each show it a different way, in two sizes.
+1. **Build your org context.** Use the skill `website-brand-brain-builder`. Start here so the rest uses your real prices, terms, colours and claims.
+2. **Find offers to try first.** Use the skill `hidden-offer-finder`. Give it the org context from the steps before. Read the prices and deals in the org context, flag clashes and pick the offer to build ads on.
+3. **Plan three offer image ads.** Use the skill `three-way-offer-image-ad-planner`. Give it the offer and the org context from the steps before. Use the chosen offer to plan three ads that each show it a different way, in two sizes.
 4. **Check the ads against Meta rules.** Use the skill `meta-ads-compliance-checker`. Give it the static ads from the steps before. Check all three ads and their words against Facebook and Instagram ad rules before launch.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

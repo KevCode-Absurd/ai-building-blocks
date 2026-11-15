@@ -1,12 +1,14 @@
 // The top block of an item page, worked out once for the app (BlockPage.tsx) and the plain page
 // (scripts/lib/item-top.mjs): what you give it, what you get back and how long it takes. Plus the small wording
-// fixes both share: one name for saved brand details, a plain level label and the file a prompt downloads as.
+// fixes both share: one name for saved business details, a plain level label and the file a prompt downloads as.
 
 const text = (x) => (typeof x === "string" ? x : x && typeof x === "object" ? Object.entries(x).map(([k, v]) => (v == null ? k : `${k}: ${text(v)}`)).join(" ") : String(x ?? ""));
 
-/** One name for saved brand details: "brand file". Older item data still says "brand brain". */
+/** One name for saved business details: "org context". Older item data still says "brand brain" or "brand file". */
 export function plainWords(value) {
-  return text(value).replace(/\bbrand brain(s?)\b/gi, (m, s) => `${m[0] === "B" ? "Brand" : "brand"} file${s}`);
+  return text(value)
+    .replace(/\b(a) (brand (?:brain|file)s?)\b/gi, (m, a, x) => `${a === "A" ? "An" : "an"} ${x}`)
+    .replace(/\bbrand (?:brain|file)(s?)\b/gi, (m, s) => `${m[0] === "B" ? "Org" : "org"} context${s}`);
 }
 
 const LEVELS = { beginner: "Good for beginners", advanced: "Some experience needed", expert: "For experts" };
@@ -24,7 +26,7 @@ export function howLong(kind, steps = 0) {
 }
 
 const lines = (value) => (Array.isArray(value) ? value : []).map(plainWords).map((s) => s.trim()).filter(Boolean);
-const portName = (port) => String(typeof port === "string" ? port : port?.type ?? "").replace(/\?$/, "").replace(/_/g, " ").replace(/^./, (c) => c.toUpperCase());
+const portName = (port) => plainWords(String(typeof port === "string" ? port : port?.type ?? "").replace(/\?$/, "").replace(/_/g, " ").replace(/^./, (c) => c.toUpperCase()));
 
 /**
  * The inputs (all of them, listed once on the page), the first results and the time line.

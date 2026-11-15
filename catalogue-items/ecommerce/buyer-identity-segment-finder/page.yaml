@@ -128,7 +128,7 @@ test:
 improve:
   - Add the identity words common in your niche to the skill file, so it searches for them as well as "I am a".
   - Add your own rules for size, such as a smallest group you will serve.
-  - Save the chosen group and its example phrases to your brand file as the buyer for the next ad round.
+  - Save the chosen group and its example phrases to your org context as the buyer for the next ad round.
   - Run it again every few months. New groups show up in newer reviews first.
   - Pair it with the Buyer research plan with survey for the reward and the non-buyer survey, and the Avatar fit checker to test your ad and page against the group.
 

@@ -29,7 +29,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand file.
+1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your org context.
 2. **An audit report** with the [Subscription payback checker](https://useaiblocks.com/skills/subscription-payback-checker). Bring a spreadsheet. It uses your offer.
 3. This one.
 

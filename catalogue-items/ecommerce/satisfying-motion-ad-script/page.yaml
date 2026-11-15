@@ -49,7 +49,7 @@ output_sample:
     - The length you want, for example 15 seconds
     - Your approved claims, word for word (optional)
   prerequisites:
-    - Your brand brain from the Brand profile builder (optional)
+    - Your org context from the Org context builder (optional)
     - A buyer brief from the Buyer brief writer (optional)
   output:
     - name: FIT, IN FOCUS and FINISH

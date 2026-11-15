@@ -43,7 +43,7 @@ output_sample:
     - Your buyer's moment and humour limits (optional)
   prerequisites:
     - An AI that can make images and a video tool to run the clip prompts in
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Narrator
       contains: Which object speaks, and why it stays or is replaced.
@@ -197,7 +197,7 @@ test:
   - Lay the end frames of clips 1 and 3 side by side. The eyes, brows and mouth should sit in the same place.
   - Check every frame for a second face, an extra limb or printing on the object. If you find one, use the matching fix from the skill's table.
 improve:
-  - Save your approved character card, pick and sheet in your brand file, so a second ad with the same object starts at the storyboard.
+  - Save your approved character card, pick and sheet in your org context, so a second ad with the same object starts at the storyboard.
   - Write your product-showing rules into the product sheet step (how the pack opens, what is never torn), so the product is right first time.
   - Add your house voice description to stage 1, so every object speaks in a voice your brand would use.
   - Pair it with the skill that writes a talking object script, if you don't have a script yet.

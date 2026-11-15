@@ -23,7 +23,7 @@ you_give:
   - What you sell and your price
   - The post, ad or link people click to reach the page (optional)
   - Customer quotes (optional)
-  - Your brand file
+  - Your org context
 you_get:
   - A free offer matched to your buyer's stage, with what to ask for in return
   - The path from page to free offer to emails to sale
@@ -33,17 +33,17 @@ how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe one buyer. A second buyer gets a second run.
-  - Add your brand file so the page sounds like you.
+  - Add your org context so the page sounds like you.
 output_sample:
   input:
     - Who your buyer is and the problem they have now
     - What you sell and your price
     - The post, ad or link people click to reach the page (optional)
     - Customer quotes (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
-    - Your brand brain from the Website brand brain builder (optional, but the result is better with it)
+    - Your org context from the Org context builder (optional, but the result is better with it)
   output:
     - name: "Step 1: Lead magnet"
       contains: One free offer for your buyer's stage, what to ask for in return, and an outline of its page and emails.

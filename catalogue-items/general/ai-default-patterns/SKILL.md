@@ -7,7 +7,7 @@ description: "Use when you brief, make or review a page, ad, email or plan and w
 
 With nothing else deciding, a model writes the average answer for the category: Inter, a purple gradient, three rounded cards, "Unlock seamless comfort". Banning one default does not fix it, because the model moves to the next most likely choice (ban Inter and it reaches for Space Grotesk). Two things work together:
 
-1. **Ground first.** Give the model the client's real system (fonts, colour shares, buttons, section order, voice) from [Brand DNA capture](https://useaiblocks.com/skills/brand-dna-capture). Then the "typical" answer becomes the brand's answer.
+1. **Ground first.** Give the model the client's real system (fonts, colour shares, buttons, section order, voice) from [Org context capture](https://useaiblocks.com/skills/brand-dna-capture). Then the "typical" answer becomes the brand's answer.
 2. **Name the defaults.** List the specific defaults this job is at risk of, and have a separate critic look for them against the brand, not against taste.
 
 This skill is the shared list for step 2. It is used in TASTE and CHECK of the [Grounded job protocol](https://useaiblocks.com/skills/grounded-job-protocol).

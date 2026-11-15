@@ -19,6 +19,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your data** (yours): the data files, with their format and where they came from.
+
+**Makes it better (optional):**
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
@@ -28,7 +30,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-The general "Before you start" list above mentions a buyer brief and a brand brain. This job does not use either. Ignore the "advise, don't block" rule in that box: this job asks, then waits. Its "under 700 words" rule applies only to your chat reply. The saved step files, the clean data copy and the slide deck can be as long as they need to be.
+The general "Before you start" list above mentions a buyer brief and an org context. This job does not use either. Ignore the "advise, don't block" rule in that box: this job asks, then waits. Its "under 700 words" rule applies only to your chat reply. The saved step files, the clean data copy and the slide deck can be as long as they need to be.
 
 - **The data file**, as CSV or Excel (required). It needs a header row, with one column name per column. Keep a copy of the original. The run never changes it.
 - **Who the audience is and what decision they must make** (required)

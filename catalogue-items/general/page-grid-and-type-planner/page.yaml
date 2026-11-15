@@ -25,7 +25,7 @@ not_for:
 you_give:
   - "Your content, or a list of what each page holds"
   - "The page type and size, such as web, A4 or poster"
-  - "Your brand file or current look (optional)"
+  - "Your org context or current look (optional)"
   - "The image shapes you must fit (optional)"
 you_get:
   - "A grid: margins, columns and modules"
@@ -37,14 +37,14 @@ how_to_use:
   - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
   - "Paste your content and say what the page type is."
   - "Say who reads it and what you want them to do."
-  - "Paste your brand file or sizes already in use, if any."
+  - "Paste your org context or sizes already in use, if any."
   - "Lay out one page on the grid and check the order reads at a glance."
   - "Apply the grid to the rest of the pages."
 output_sample:
   input:
     - Your content, or a list of what each page holds
     - The page type and size, such as web, A4 or poster
-    - Your brand file or current look (optional)
+    - Your org context or current look (optional)
     - The image shapes you must fit (optional)
   output:
     - name: Meaning and reader
@@ -144,7 +144,7 @@ works_best_with:
     - "A sample of the real content, not placeholders"
     - "Images with their real shapes and sizes"
     - "Printed or screen size limits"
-    - "Your brand file"
+    - "Your org context"
 
 terms:
   - term: "Grid"

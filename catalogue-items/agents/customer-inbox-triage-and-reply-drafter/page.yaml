@@ -43,7 +43,7 @@ output_sample:
     - A few replies you wrote and liked (optional)
   prerequisites:
     - An AI that can save and read files, to keep the inbox folder and log between days
-    - Your brand brain from the Brand profile builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: The inbox in one line
       contains: How many emails came in, how many are urgent and how many need your decision first.

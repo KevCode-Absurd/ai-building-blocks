@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A plan** with the [Internal proposal pitch planner](https://useaiblocks.com/skills/idea-buy-in-pitch-planner). Bring your question, your idea (optional), a brief (optional). It uses your brand file.
+1. **A plan** with the [Internal proposal pitch planner](https://useaiblocks.com/skills/idea-buy-in-pitch-planner). Bring your question, your idea (optional), a brief (optional). It uses your org context.
 2. This one.
 
 How to start:

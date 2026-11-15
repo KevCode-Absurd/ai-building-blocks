@@ -13,7 +13,7 @@ explain: |
 when:
   - Your site is slow because images are huge.
   - You are choosing where to host videos.
-  - Your brand files are scattered across drives and chat threads.
+  - Your org context files are scattered across drives and chat threads.
   - You are moving media from one platform to another.
 not_for:
   - "You want to speed up your whole site, not only images and video: run a site speed check, or ask a developer to run Lighthouse and fix what it flags."

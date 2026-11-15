@@ -6,7 +6,7 @@ summary: "Plan a watercolor image ad from your selling idea and product photos. 
 job: make-image-ads
 
 headline: "Watercolor image ad maker"
-subhead: Give it your selling idea, brand file and product photos. It picks one moment and the paint technique caught in it, then checks the picture against your claims. You get a watercolor image prompt, the ad words and a layout.
+subhead: Give it your selling idea, org context and product photos. It picks one moment and the paint technique caught in it, then checks the picture against your claims. You get a watercolor image prompt, the ad words and a layout.
 
 explain: |
   A photo can't show sixty ingredients in one pack, or a scent filling a room. A watercolor can, and a calm painting stands out in a loud feed. The risk is a lovely picture nobody can read in a glance, with a pack whose label the image tool has spelled wrong.
@@ -25,7 +25,7 @@ not_for:
 
 you_give:
   - The reason someone buys, what the buyer knows and the selling idea
-  - Your brand file, with label text, ingredients, approved claims and offer
+  - Your org context, with label text, ingredients, approved claims and offer
   - Photos of your product's front, side and top, attached (optional, needed if it appears)
 you_get:
   - A moment plan with the paint technique and the claim it implies
@@ -35,18 +35,18 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your selling idea and brand file, and attach the product photos.
+  - Paste your selling idea and org context, and attach the product photos.
   - Read the moment plan. If the implied sentence isn't something you can say, ask for another show job.
   - Make the image from the prompt, then lay the real label and the words on it in your editor.
   - Show it to someone for 2 seconds. If they can't say what it's for, ask for a simpler moment.
 output_sample:
   input:
     - Why someone buys, what your buyer already knows and your selling idea in one sentence
-    - Your brand file with label words, ingredients, approved claims and offer
+    - Your org context with label words, ingredients, approved claims and offer
     - Photos of your product from the front, side and top (optional, needed if it appears)
   prerequisites:
     - An AI that can make images, if you want the picture made in the chat. Claude cannot draw unless an image tool is connected.
-    - Your brand brain and buyer brief make the result better, but they are not required.
+    - Your org context and buyer brief make the result better, but they are not required.
   output:
     - name: Moment plan
       contains: The moment, the show job, the paint technique, the sentence the picture implies and the claim that backs it.
@@ -204,7 +204,7 @@ test:
 improve:
   - Write your house paper and colors into step 3 of the skill file, so every painted ad in a series matches.
   - Add your banned claims to step 4, so the picture is tested against them.
-  - Save your approved headline and the moment that wins in your brand file.
+  - Save your approved headline and the moment that wins in your org context.
   - Pair it with the watercolor video skills, so the still and the video share one look.
 
 works_best_with:

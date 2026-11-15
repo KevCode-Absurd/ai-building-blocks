@@ -57,4 +57,4 @@ output_sample:
       contains: The settings and link options needed to turn transitions on, if your app uses Next.js.
     - name: Moments left still
       contains: A short list of moments with no animation, such as background refreshes, and the reason for each.
-next: [animated-landing-page-builder, react-landing-page-builder]
+next: [react-landing-page-builder]

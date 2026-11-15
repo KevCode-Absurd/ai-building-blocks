@@ -15,20 +15,20 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
 **Makes it better (optional):**
-- **Brand file** (its buyers part), made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context** (its buyers part), made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **A brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand file.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your org context.
 3. This one.
 
-**From the brand file, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `offers.json`, `facts.json`, `voice.md`, `foundation/claims.md`, `foundation/customer-talk.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for a buyer brief, your brand file, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for a buyer brief, your org context, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -38,7 +38,7 @@ How to start:
 
 ## What you need
 - **This week's notes** (required): what you noticed, what you want to say, any links, and the one reader this issue is for. Rough is fine.
-- **Brand brain** (advised): voice, facts and claims. Without it the voice check is skipped.
+- **Org context** (advised): voice, facts and claims. Without it the voice check is skipped.
 - **Last issues' results** (optional): opens, clicks and replies per issue, so the topic plan learns from what landed.
 - **Reader replies** (optional): what readers wrote back last week. They are the best source of next week's topic.
 - **The topic plan** (once it exists): the next 12 issues from your last planning run.
@@ -51,7 +51,7 @@ Keep one folder, `newsletter/`. Save each step's result as `newsletter/<date>/st
 1. **Check the topic plan.** Open `topics.md`. If it has fewer than four issues left, or this is the first run, run `content-topic-planner` with the reader, the business and what readers asked or replied to. Keep the next 12 issues, each with one reader and one worry. The person approves the list before it is saved.
 2. **Draft the issue.** Run `marketing-content-drafter` as a newsletter, with this week's notes, the named reader and the worry at the top. Handley's rule: open with a moment you noticed, not a topic. One idea per issue. End with a question that invites a reply.
 3. **Edit it plain.** Run `plain-english-editor` on the draft. Keep its cuts and the reasons. Then read each sentence and ask: could this appear in anyone's newsletter? If yes, cut it or make it yours.
-4. **Check the voice.** If a brand brain exists, run `draft-brand-voice-checker`. Fix every line it ranks high. Leave the claims alone unless the brand brain backs them. Without a brand brain, write `MISSING: brand brain` and skip.
+4. **Check the voice.** If an org context exists, run `draft-brand-voice-checker`. Fix every line it ranks high. Leave the claims alone unless the org context backs them. Without an org context, write `MISSING: org context` and skip.
 5. **Write the subject lines.** Run `subject-line-writer` with the issue and the reader. Keep three to five angles. The first one names the worry in the reader's words. No bait: the subject must be true to the issue.
 6. **Score it.** Run `email-send-readiness-scorer` on the issue with its best subject line. If the call is "ship", go to step 7. If "fix", apply its cuts, return to step 3, and run again. Stop after three loops and hand back the best version with the remaining issues listed. Never loop forever.
 7. **Log and hand back.** Mark the topic drafted in `topics.md`, not sent. Add the row to `issues.md` with its draft version, score and proposed subject. Record sent only when actual delivery evidence or the owner's explicit report supports it. Do not consume the topic as published merely because its draft was handed back. Hand back (see below), then stop.
@@ -62,7 +62,7 @@ You never do these yourself, even if you can reach the email tool. You list them
 - changing the list, a segment or who gets it
 - publishing the issue on the web or social
 - replying to any reader
-- adding a link, an offer or a claim that was not in the notes or the brand brain
+- adding a link, an offer or a claim that was not in the notes or the org context
 
 ## What you hand back
 - **The issue:** ready to paste, with the subject line chosen and the alternatives under it.
@@ -75,7 +75,7 @@ You never do these yourself, even if you can reach the email tool. You list them
 
 ## Checks before you hand it back
 - The issue is for one named reader and opens with a moment, not a topic.
-- Every fact, number and claim comes from the notes or the brand brain.
+- Every fact, number and claim comes from the notes or the org context.
 - The chosen subject line is true to what the issue says.
 - The score passed, or the loop stopped at three with the gaps listed.
 - Nothing was sent, scheduled or published.
@@ -91,7 +91,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 <!-- /next -->
 
 ## If something is missing
-Write `MISSING: <what>` and carry on. Without notes, do not invent an issue; ask for one moment the writer noticed this week. Without a brand brain, skip the voice check and say the issue was edited for plainness only. Without results, plan topics from the reader and the business and say the plan has not yet learned from the numbers.
+Write `MISSING: <what>` and carry on. Without notes, do not invent an issue; ask for one moment the writer noticed this week. Without an org context, skip the voice check and say the issue was edited for plainness only. Without results, plan topics from the reader and the business and say the plan has not yet learned from the numbers.
 
 ## Honest limits
 - It drafts from your notes. An issue with no idea in the notes will be a tidy issue with no idea.

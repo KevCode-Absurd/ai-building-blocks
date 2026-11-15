@@ -28,7 +28,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-For this run, the brand brain in the box above is optional: read it if it is already there, but do not stop to ask for one. "Your results" means your 90-day sales export. The pricing inputs are the product facts, the survey answers sheet, your 90-day sales export and your per-product cost sheet. The three skills named in the steps come in the downloaded pack. If one is missing, fetch it from https://useaiblocks.com/skills/<slug> or ask for the file.
+For this run, the org context in the box above is optional: read it if it is already there, but do not stop to ask for one. "Your results" means your 90-day sales export. The pricing inputs are the product facts, the survey answers sheet, your 90-day sales export and your per-product cost sheet. The three skills named in the steps come in the downloaded pack. If one is missing, fetch it from https://useaiblocks.com/skills/<slug> or ask for the file.
 
 - **Your product facts and what it does for buyers** (required): price today, variants, what it is made of, how it is used and the problem it solves.
 - **People you can send a short survey to** (required, at the first pause): at least 30 for each price in the survey.

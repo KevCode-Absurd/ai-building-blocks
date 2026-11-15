@@ -95,6 +95,6 @@ test:
   - Compare the score to your budget after any app is added.
 improve:
   - Add your must-keep apps and tags to the skill, so it never suggests cutting them.
-  - Save your speed budget in your brand file and check every new app against it.
+  - Save your speed budget in your org context and check every new app against it.
   - Run the budget routine monthly, not just before sales.
   - Pair it with the longer speed fix workflow if your mobile report is failing across the board.

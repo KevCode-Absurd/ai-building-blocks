@@ -109,7 +109,7 @@ test:
   - Send the request for pricing to two 3PLs and see if the bids can be put side by side.
   - Check one invoice line by hand against the audit. The numbers should match.
 improve:
-  - Save the forecast and the real peak result in your brand file. Next year's run can check how far off it was.
+  - Save the forecast and the real peak result in your org context. Next year's run can check how far off it was.
   - Add your ticket reason tags to the support skill so it can name the help pages to write.
   - Keep your agreement terms and pick-time penalty in the skill so the bill audit tests them every month.
   - Run the bill audit every month, not only after peak.

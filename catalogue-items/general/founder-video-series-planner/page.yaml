@@ -49,7 +49,7 @@ output_sample:
     - Your goal, trust or launch support (optional)
   prerequisites:
     - An AI chat such as Claude, ChatGPT or Gemini
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: Question bank
       contains: Each question with its source, its thread, and what can be shown, or a note that it is parked.

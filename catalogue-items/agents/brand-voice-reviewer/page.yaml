@@ -5,7 +5,7 @@ job: brand-file
 thinking: medium
 thinking_why: It checks, rewrites flagged lines and checks again, up to three rounds. A mid-size model works. Use a stronger one for long pages.
 headline: Brand voice reviewer
-subhead: Give it any ad, email or page before it goes out, with your brand file. It checks the draft against your voice, rewrites only the lines that fail, checks again until it passes or three rounds are done, and tracks the slips that keep coming back.
+subhead: Give it any ad, email or page before it goes out, with your org context. It checks the draft against your voice, rewrites only the lines that fail, checks again until it passes or three rounds are done, and tracks the slips that keep coming back.
 explain: |
   A brand voice review is easy to skip when many people write and no one checks. Copy goes out that sounds like a different company, or makes a claim you do not make. A single check helps, but a fix can add new slips, and nobody notices the same mistake coming back every month.
 
@@ -16,14 +16,14 @@ when:
   - The same voice mistakes keep showing up and you want to fix the cause.
   - A freelancer or a tool sends you copy and you need a repeatable brand voice check before you approve it.
 not_for:
-  - You have no brand file or voice yet. Build one first with the Brand profile builder or the Brand voice one-pager writer.
+  - You have no org context or voice yet. Build one first with the Org context builder or the Brand voice one-pager writer.
   - You want to check one draft once and read the findings yourself. Use the Draft brand voice checker.
   - You want a quick polish on a single ad without saving anything. Use the Brand voice editor.
   - You want to strip stock AI wording rather than match a voice. Use the AI-style wording editor.
   - The draft is a short internal note that no customer will see. It is more checking than it needs.
 you_give:
   - The draft, and where it will be used
-  - Your brand file, with voice, claims and what you do not say
+  - Your org context, with voice, claims and what you do not say
   - Your voice guide, if you have one (optional)
   - Proof for any claims in the draft (optional)
 you_get:
@@ -34,18 +34,18 @@ you_get:
   - A suggested guide rule when a slip repeats three times
 how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to review a draft.
-  - Give it the draft and your brand file. The first time, give it your voice guide, or let it build one and approve it.
+  - Give it the draft and your org context. The first time, give it your voice guide, or let it build one and approve it.
   - Read the final draft and the open flags. Fix what is left yourself.
   - Say yes to any guide rule you want added.
   - Run it on every draft. It keeps the slip count in a review folder, which needs Claude Code or another AI that can save files. In a plain chat, paste the slip list back in next time.
 output_sample:
   input:
     - Your draft, and where it will be used
-    - Your brand file, with voice, claims and what you do not say
+    - Your org context, with voice, claims and what you do not say
     - Your voice guide (optional)
     - Proof for any claims in the draft (optional)
   prerequisites:
-    - A brand file, such as one made with the Brand profile builder
+    - An org context, such as one made with the Org context builder
     - An AI that can save files, if you want the repeat slip count kept between drafts (optional)
   output:
     - name: Result
@@ -64,7 +64,7 @@ output_sample:
       contains: Each check that failed or could not run, or none.
 how_it_works:
   - title: Get the guide
-    text: Uses your voice guide, or builds one from your brand file once and waits for your approval.
+    text: Uses your voice guide, or builds one from your org context once and waits for your approval.
   - title: Check the draft
     text: Ranks every deviation from your voice by severity, with a before and after fix for each.
   - title: Choose the path

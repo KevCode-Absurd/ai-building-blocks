@@ -1,6 +1,6 @@
 slug: review-ad-copy
 name: "Turn reviews into ad copy in your brand voice"
-summary: "Give it customer reviews and your brand file. Get a buyer brief, an ad angle, fact-based ad copy and a voice check."
+summary: "Give it customer reviews and your org context. Get a buyer brief, an ad angle, fact-based ad copy and a voice check."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -10,7 +10,6 @@ inputs:
   - {type: voc_reviews, required: true}
   - {type: brand_brain, required: true}
   - {type: product_data, required: true}
-  - {type: script, required: false}
 outputs:
   - {type: audit_report}
 uses: [buyer-brief-writer, ad-angle-planner, fact-based-ad-copy-writer, brand-voice-editor]

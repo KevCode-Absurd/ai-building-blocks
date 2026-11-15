@@ -1,0 +1,7 @@
+# (test data) Shopify orders and post-purchase survey, USD. Built for an e-commerce eval. Not KraveBeauty's real figures.
+metric,value
+Orders with a TikTok UTM,760
+"New customers, all channels",3400
+New customers answering 'TikTok' to 'Where did you first hear about us?' (answered by 61% of new customers),22% of answers
+"Orders from link in bio on the organic video 'Krave haul' (2.1M views, posted 20 Oct)",14
+"Average order value, TikTok UTM orders",29.6

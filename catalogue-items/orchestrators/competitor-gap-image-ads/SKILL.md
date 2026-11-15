@@ -18,36 +18,36 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand file**, made by the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder): your offers, facts, buyers, claims, voice and look, kept in one folder.
+- **Org context**, made by the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder): who you are, your buyers, voice, look, markets, claims and offers, kept in one folder.
 - **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
 
 **Makes it better (optional):**
 - **Competitors** (yours): the brands buyers compare you with.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Your page** (yours): the landing page's link, or its text and a screenshot.
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 - **Your image ads** (yours): the image ads, attached as pictures.
-- **Your page** (yours): the landing page's link, or its text and a screenshot.
 - **An image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand file** with the [Brand file builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand file.
-3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand file and offer and buying reasons.
+1. **Org context** with the [Org context builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your org context.
+3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your org context and offer and buying reasons.
 4. This one.
 
-**From the brand file, read:** `index.md`, `references.md`, `facts.json`. Take the options buyers weigh, each competitor's pitch, strength and gap, and who your buyers are. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
+**From the org context, read:** `index.md`, `references.md`, `facts.json`. Take the options buyers weigh, each competitor's pitch, strength and gap, and who your buyers are. Only `live` lines count as facts: stale, `unconfirmed` and `banned` lines do not. If `worked.md` is there, keep what the client kept and leave out what they killed. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand file is a `context/brand-file/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older brand brain folder, with `00-start-here.md` in it, still works as material. Look for the other things by name.
-2. **Check what's missing.** Look for your brand file, reference ads, competitors. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: an org context is a `context/org-context/` folder with `index.md` in it. If it's there, read `index.md` and the files above. An older `context/brand-file/` folder, or a brand folder with `00-start-here.md` in it, still works as material. Look for the other things by name.
+2. **Check what's missing.** Look for your org context, reference ads, competitors. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
 - **Competitor ads you saved by hand from the public Meta Ad Library** (required). For each ad: the library ID, the brand, the start date, whether it is still live, its text and a screenshot (a PNG or JPG file, or a pasted image). A short list in a note or spreadsheet is fine for the text details. Save them by hand: this workflow does not need a scraping tool or a paid ad-spy service, and it does not read the Ad Library for you. Ads without a screenshot are listed as not looked at. These ads block the run if they are missing.
 - **Who the ads are for and where** (asked for in step 2): how much the buyer already knows you (new, warm or ready to buy), and the country. If you leave these out, the gap step asks once, then carries on and marks the gap.
-- **Your brand file** (optional, but the copy is only as good as the proof in it): your facts, claims you may make with their proof, offers with dates, and your voice. Without it, step 2 marks each gap as a candidate and says what proof it needs, and step 3 writes only claims you give it and marks the rest `MISSING:`.
+- **Your org context** (optional, but the copy is only as good as the proof in it): your facts, claims you may make with their proof, offers with dates, and your voice. Without it, step 2 marks each gap as a candidate and says what proof it needs, and step 3 writes only claims you give it and marks the rest `MISSING:`.
 - **The competitors that matter to you** (optional). If you give none, step 2 picks three to six and marks the list as inferred.
 - **Your customer reviews** (optional). Step 2 counts what three or more separate buyers want or doubt.
 - **Your offer, your landing page, a video script or your own image ads** (optional). Step 3 and step 4 use the offer terms and the page text when you have them.
@@ -62,7 +62,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Build the swipe file.** Use the skill `competitor-ad-swipe-file-builder`. It reads the saved competitor ads. It files each ad under one of nine ad types, keeps up to three per type from at least two brands, adds a note on what to study in each and lists the gaps still to fill. It returns a board of ads with their library IDs. Save it as `outputs/step-01-competitor-ad-swipe-file-builder.md`.
-2. **Find the gaps.** Use the skill `competitor-ad-gap-finder`. It reads the board from `outputs/step-01-competitor-ad-swipe-file-builder.md`, plus your brand file and reviews if you have them. It counts brands per type, marks each type crowded, thin or open, lists claims two or more brands repeat, and finds buyer wants and doubts no ad speaks to. It returns three to five ranked gaps, each with a brief for your version: the ad type, what the picture shows, a short headline, the proof and what to avoid. Save it as `outputs/step-02-competitor-ad-gap-finder.md`.
+2. **Find the gaps.** Use the skill `competitor-ad-gap-finder`. It reads the board from `outputs/step-01-competitor-ad-swipe-file-builder.md`, plus your org context and reviews if you have them. It counts brands per type, marks each type crowded, thin or open, lists claims two or more brands repeat, and finds buyer wants and doubts no ad speaks to. It returns three to five ranked gaps, each with a brief for your version: the ad type, what the picture shows, a short headline, the proof and what to avoid. Save it as `outputs/step-02-competitor-ad-gap-finder.md`.
 3. **Write the image ad copy.** Use the skill `image-ad-copy-writer`. It reads each gap brief from `outputs/step-02-competitor-ad-gap-finder.md`, with your proof, offer terms and voice. For each gap it returns versions with a headline on the image, a support line, main text, a headline under the image, a description and a button, each within its limit. Each version tests one appeal. It uses only claims you hold proof for. Save it as `outputs/step-03-image-ad-copy-writer.md`.
 4. **Check it against Meta rules.** Use the skill `meta-ads-compliance-checker`. It reads the copy from `outputs/step-03-image-ad-copy-writer.md`, and your landing page text if you have it. It checks the copy against the Meta rule groups that apply, rates each finding would reject, needs a restriction or warning, and scores the copy out of 100. The score and the verdict are an AI estimate, not Meta's approval, and "ready to run" means no rule problem was found in the text. It rewrites each line that fails with your own claims only, and marks anything only you can decide as `MISSING:`. Save it as `outputs/step-04-meta-ads-compliance-checker.md`.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.

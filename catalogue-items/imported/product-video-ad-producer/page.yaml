@@ -63,4 +63,4 @@ output_sample:
       contains: The clips joined into one ad.
     - name: final-sub.mp4
       contains: The same ad with captions added.
-next: [talking-product-video-ad, product-photo-to-clip-maker]
+next: [product-photo-to-clip-maker]

@@ -93,7 +93,7 @@ output_sample:
     - "Who your best buyers are (optional)"
     - "Sales by offer (optional)"
   prerequisites:
-    - "Your brand brain from the Website brand brain builder (optional)"
+    - "Your org context from the Org context builder (optional)"
   output:
     - name: "WHAT YOU SELL"
       contains: "One line per offer with its price and the result the buyer gets."

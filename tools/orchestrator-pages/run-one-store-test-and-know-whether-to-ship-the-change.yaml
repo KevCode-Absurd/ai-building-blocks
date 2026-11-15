@@ -112,6 +112,6 @@ test:
   - Run the verdict step on a result you already trust, and see if it agrees.
 improve:
   - Keep the log entry from every verdict in one file. Most tests lose, and the log stops you retesting old ideas.
-  - Add your gross profit per order to your brand file, so the money range uses it.
+  - Add your gross profit per order to your org context, so the money range uses it.
   - Edit the bold test list to drop tests you can never build with your team.
   - Pair it with a heatmap and recording reader, so the next test starts from what visitors do.

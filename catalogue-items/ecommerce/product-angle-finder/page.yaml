@@ -49,7 +49,7 @@ output_sample:
     - Who can film, with what, and your spending cap
   prerequisites:
     - A chat AI such as Claude, ChatGPT or Gemini. No code or paid tool is needed.
-    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your org context from the Org context builder (optional, makes the result better)
   output:
     - name: Eight angles
       contains: One angle per move, each with a first video idea and a cost level.

@@ -6,12 +6,12 @@ thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
 
 headline: "Get product photos in three looks from your phone photos"
-subhead: Give it your website and a few phone photos of your product. It builds your brand file, then plans a styled set of nine photos, six flash snapshots from one real occasion, and a set that matches a photo you admire, all showing your real product.
+subhead: Give it your website and a few phone photos of your product. It builds your org context, then plans a styled set of nine photos, six flash snapshots from one real occasion, and a set that matches a photo you admire, all showing your real product.
 
 explain: |
   Most small shops have a handful of phone photos and a need for dozens of pictures: for ads, the shop, email and social. One style rarely covers all of that. A clean studio look suits the shop, a flash snapshot looks like a real night out, and a copy of a look you like gets you a feel you cannot name yourself.
 
-  This workflow starts with your brand file, so the colours, the product details and the look come from your own site and not from a guess. Each photo skill then writes prompts for your image tool and keeps the real product: its shape, its print and how it opens. You make one test picture in each look before the rest.
+  This workflow starts with your org context, so the colours, the product details and the look come from your own site and not from a guess. Each photo skill then writes prompts for your image tool and keeps the real product: its shape, its print and how it opens. You make one test picture in each look before the rest.
 
 when:
   - You only have phone photos and need many more for ads and your shop.
@@ -28,14 +28,14 @@ you_give:
   - A photo whose look you like (optional, needed for the third look)
   - Who the photos are for (optional)
 you_get:
-  - A brand file with your colours, look and product details
+  - An org context with your colours, look and product details
   - A style sheet and nine matching photo prompts
   - Six flash snapshot prompts from one real occasion
   - A prompt that matches the look of your reference photo, with the pictures ranked
   - A check list for every picture at full size
 
 how_to_use:
-  - "Download the handoff pack. It has HANDOFF.md and four skill files, in the order they run: Brand profile builder, Product photo shoot planner, Flash snapshot product photo maker and Reference-style product photo maker."
+  - "Download the handoff pack. It has HANDOFF.md and four skill files, in the order they run: Org context builder, Product photo shoot planner, Flash snapshot product photo maker and Reference-style product photo maker."
   - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
   - "Have your inputs ready: your website link, your phone photos and one photo whose look you like."
   - Take the prompts to your image tool. You need a tool or account that makes images, and it may be paid.
@@ -51,7 +51,7 @@ output_sample:
     - An image tool to run the prompts, such as GPT Image or Nano Banana, which may need a paid account
     - An AI that can open files, so it can follow the handoff pack
   output:
-    - name: Brand file
+    - name: Org context
       contains: Your colours, look, prices and product details, each tagged with where it came from.
     - name: Styled photo set
       contains: A style sheet and nine frames on a grid, each with a prompt for your image tool.
@@ -65,8 +65,8 @@ output_sample:
       contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
-  - title: Builds your brand file
-    text: Uses the brand file skill to read your site and tag every colour, product detail and claim with where it came from.
+  - title: Builds your org context
+    text: Uses the org context skill to read your site and tag every colour, product detail and claim with where it came from.
   - title: Plans a styled photo set
     text: Uses the shoot planner to write a style sheet, plan nine frames on a grid and write one prompt for each.
   - title: Makes flash snapshots
@@ -149,7 +149,7 @@ test:
   - Check that the printed words on the pack are spelled the same as the real pack.
 
 improve:
-  - Drop step 1 if your brand file is up to date, and start from step 2.
+  - Drop step 1 if your org context is up to date, and start from step 2.
   - Add a step that plans which photo goes in which place on your product page.
   - Tune the shoot planner with the look words your brand already uses.
   - Next, check each finished picture against your real product with the AI product photo inspector before it goes live.

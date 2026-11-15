@@ -41,7 +41,7 @@ output_sample:
     - Where it will run and who it is for
     - "Your facts: live price, offer, approved claims and the proof for each"
     - Your landing page (optional)
-    - Your brand brain (optional)
+    - Your org context (optional)
   prerequisites:
     - An AI that can keep files between rounds, such as Claude Code
     - The linked check skills, which it can read from the AI Blocks site if they are not installed
@@ -119,7 +119,7 @@ test:
   - Run it twice on the same ad. The result should match.
 improve:
   - Keep the repeat list between ads. After ten ads it shows the mistakes your process lets through.
-  - Add your approved claims and their proof to your brand brain once, so every run starts with facts.
+  - Add your approved claims and their proof to your org context once, so every run starts with facts.
   - Add the rejection notices you receive. They show which rules bite your account.
   - If you only run Meta ads, drop the other platform check so each round is shorter.
 works_best_with:

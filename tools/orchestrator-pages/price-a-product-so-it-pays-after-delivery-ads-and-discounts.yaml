@@ -45,7 +45,7 @@ output_sample:
     - Your current ad return and order value (optional)
   prerequisites:
     - An AI that can read the files in the handoff folder
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   output:
     - name: "Step 1: Product margin checker"
       contains: Cost of delivery per order, three margins, break-even ad return, cost to win a customer and a score out of 100.
@@ -95,7 +95,7 @@ test:
   - Run the cheapest of the three prices for two to four weeks and compare with the estimate.
   - Pick one past sale and check what the discount step would have said about it.
 improve:
-  - Save your cost lines in your brand file or a sheet, so a new product only needs its own costs.
+  - Save your cost lines in your org context or a sheet, so a new product only needs its own costs.
   - Edit the margin skill's returns allowance to match your category.
   - Add your price floor to the pricing skill, so no test price goes below it.
   - Repeat the discount check before every sale and keep the results.

@@ -51,7 +51,7 @@ output_sample:
     - People cleared to speak, such as the founder or a customer who agreed (optional)
     - The page the ad will link to (optional)
   prerequisites:
-    - Your brand brain from the Brand profile builder (optional, but it helps)
+    - Your org context from the Org context builder (optional, but it helps)
   output:
     - name: FIT
       contains: Whether a story ad suits the product, with the switch history and review numbers behind the verdict.
@@ -126,7 +126,7 @@ example:
     text sign-up, then $49.99 every 4 weeks.
     Buyers: the quitter who wants to stick (about 40%), the gut-fix
     seeker (about 25%), the busy parent (about 25%), the price doubter.
-    Claims: the brand file's "fine to repeat" list. Never the risky list.
+    Claims: the org context's "fine to repeat" list. Never the risky list.
 
     Customer words: all 20 reviews from reviews.md, numbered, with
     sources, plus "They are expensive" (retailer).

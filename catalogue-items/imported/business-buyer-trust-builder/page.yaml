@@ -35,7 +35,7 @@ you_get:
   - A content plan for each stage of the deal
   - Measures to track, with free options first
 how_to_use:
-  - List what you sell, your ideal customer, the buying committee, your sales cycle and your rivals. Add your brand brain files if you have them.
+  - List what you sell, your ideal customer, the buying committee, your sales cycle and your rivals. Add your org context files if you have them.
   - Open Claude, ChatGPT or Gemini and paste the skill. No code is needed.
   - Paste your notes. Say which roles you meet most often in deals.
   - Check each trust signal. Remove or fix any customer number, review or award that is not true today.
@@ -72,7 +72,7 @@ output_sample:
     - Your ideal customer
     - The people on the buying committee
     - How long a sale takes
-    - Your brand brain files or brand notes (optional)
+    - Your org context files or brand notes (optional)
   output:
     - name: Brand positioning
       contains: A category position, a buyer position and one positioning statement.
@@ -95,7 +95,7 @@ works_best_with:
     - name: Any good chat AI
       why: It is a planning task with text in and text out.
   inputs:
-    - Your brand brain files, if you have built them
+    - Your org context files, if you have built them
     - Two or three customer case studies you can share
     - Notes from lost deals, to find the doubts buyers had
 terms:

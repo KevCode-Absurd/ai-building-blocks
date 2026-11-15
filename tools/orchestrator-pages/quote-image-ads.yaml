@@ -45,7 +45,7 @@ output_sample:
     - Your customer reviews, copied as written, with where each came from
     - Your product facts and photos (optional)
     - Your target countries, for the ad rules check (optional)
-    - Your brand brain from the Website brand brain builder (optional)
+    - Your org context from the Org context builder (optional)
   prerequisites:
     - An AI that can read files, such as Claude with the handoff pack
     - An image tool, if you want to turn the briefs into pictures

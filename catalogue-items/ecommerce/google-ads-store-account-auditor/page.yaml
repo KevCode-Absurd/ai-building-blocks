@@ -123,7 +123,7 @@ improve:
   - Add your own brand names, misspellings and product line names to the skill file so leakage counts are exact every time.
   - Edit the brand spend line if your category needs more brand search, and write the reason in the skill.
   - Add the rules your team follows, such as a naming scheme, so the audit checks them too.
-  - Save each audit and its date in your brand file, so the next one can show what changed.
+  - Save each audit and its date in your org context, so the next one can show what changed.
   - Pair it with the scale gate checker before you raise budget.
 
 works_best_with:

@@ -109,7 +109,7 @@ test:
   - Read the hook of each reshoot against the original. The hook should be kept.
   - Compare the test budget with your cost per sale. Each ad should afford enough sales to read.
 improve:
-  - Save the winning hooks in your brand file, so the next round starts from them.
+  - Save the winning hooks in your org context, so the next round starts from them.
   - Add your creator terms to step 1, so rights checks use your real contracts.
   - Add your banned claims to step 3, so scripts are checked against your own rules.
   - Run it each month on fresh posts, and keep a list of past winners to test again.

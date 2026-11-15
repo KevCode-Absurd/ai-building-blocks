@@ -44,7 +44,7 @@ output_sample:
     - Your customer reviews (optional)
   prerequisites:
     - An AI chat tool such as Claude, ChatGPT or Gemini
-    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your org context from the Org context builder (optional, makes the result better)
   output:
     - name: step-01-competitor-white-space-mapper.md
       contains: A grid of who holds what, with the spots no rival serves marked.
@@ -99,6 +99,6 @@ test:
   - Ask three buyers to describe the category without hearing your brand. They should call it a different kind of thing.
   - Say the top name over the phone and ask a friend to spell it.
 improve:
-  - Save the chosen category and its plain-words phrase in your brand file.
+  - Save the chosen category and its plain-words phrase in your org context.
   - Re-run the first step each year. Rungs move.
   - Add press you have already won, so the plan builds on stories that exist.

@@ -542,6 +542,7 @@ export async function llmsTxt(env: Env): Promise<Response> {
     "## Use the agents",
     "",
     `- [E-commerce team](${origin}${ECOMMERCE_PATH}): AI agents built only for online stores, and a library of expert e-commerce cards you can ask (${origin}/api/knowledge/ecommerce/ask?q=...).`,
+    `- E-commerce build folders: each e-commerce agent's folder zip has a build/ folder. Open it in Claude Code and say "Build my store's agent team from BUILD.md." It sets up the store folder, the processes and the approval gate: nothing is sent, spent or published without the owner's yes.`,
     `- [Connect your AI](${origin}/connect): add the AI Blocks MCP server (${origin}/mcp) once, then ask your AI to load an agent with load_agent.`,
     `- [Agent list (JSON)](${origin}/api/agents): every agent with its role, area and outcomes.`,
     `- [Pack index (JSON)](${origin}/packs/index.json): every pack's files.json and zip.`,

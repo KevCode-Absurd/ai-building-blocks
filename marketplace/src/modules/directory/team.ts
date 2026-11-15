@@ -11,7 +11,7 @@ export function generalCoordinatorMarkdown(): string {
   return ["# General coordinator", "",
     "This is a role protocol, with no invented person or biography. Work runs in the user's own AI.", "",
     BRAND_BRAIN_GATE, "",
-    "1. Scope the real job to be done from the user's own words. Agree on deliverables, limits and a rubric with checks that can pass or fail. Ask once, five questions at most, only where the answer would change the plan.",
+    "1. Scope the real job to be done from the user's own words. Agree on deliverables, limits and a rubric with checks that can pass or fail. Ask in stages, at most three questions in one message, only where the answer would change the plan.",
     "2. Resolve saved dials, then show the tier and estimated token use. This request takes priority over saved defaults.",
     "3. Assign a task-specific lead and flexible working groups. A creative strategist may lead writers and designers. Departments help discovery; there is no fixed hierarchy.",
     "4. Give each expert a full palette. Get independent rival routes or a spread before experts read one another's work. Keep production pipelines distinct across families.",

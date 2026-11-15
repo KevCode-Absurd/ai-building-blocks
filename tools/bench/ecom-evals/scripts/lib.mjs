@@ -106,7 +106,20 @@ export function readJson(p) {
   const raw = readFileSync(p, "utf8").trim();
   try { return JSON.parse(raw); } catch {
     const m = raw.match(/\{[\s\S]*\}/); if (!m) throw new Error(`no JSON in ${p}`);
-    return JSON.parse(m[0]);
+    return parseLoose(m[0]);
+  }
+}
+// Judges sometimes close one object too early ("...]}},\n "reason": ..."). If the text does not parse, drop the
+// closing brace nearest before the point where parsing failed, and keep it only if the whole text then parses to a
+// single object. Anything else still throws.
+export function parseLoose(s) {
+  try { return JSON.parse(s); } catch (first) {
+    const at = Number((/position (\d+)/.exec(String(first.message)) ?? [])[1]);
+    const from = Number.isFinite(at) ? Math.min(at, s.length - 1) : s.length - 1;
+    for (let i = s.lastIndexOf("}", from); i > 0; i = s.lastIndexOf("}", i - 1)) {
+      try { const j = JSON.parse(s.slice(0, i) + s.slice(i + 1)); if (j && typeof j === "object" && !Array.isArray(j)) return j; } catch { /* try the brace before */ }
+    }
+    throw first;
   }
 }
 

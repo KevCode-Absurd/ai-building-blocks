@@ -208,10 +208,15 @@ for (const split of ["all", "tune", "heldout"]) {
   for (const [arm, s] of Object.entries(score.by_arm[split])) L.push(`| ${arm} | ${s.must_pass_rate == null ? "n/a" : pct(s.must_pass_rate)} | ${s.asserts_pass_rate == null ? "n/a" : pct(s.asserts_pass_rate)} | ${GRADES.map(g => (s.pass_line[g] == null ? "n/a" : pct(s.pass_line[g]))).join(" | ")} |`);
   L.push("");
 }
-L.push("### Sub-checks answered yes (all tasks)", "", "| Sub-check | " + Object.keys(score.by_arm.all).join(" | ") + " |", "|---|" + Object.keys(score.by_arm.all).map(() => "---").join("|") + "|");
-for (const c of Object.values(SUBCHECKS).flat()) L.push(`| ${c} | ${Object.values(score.by_arm.all).map(s => (s.sub_yes[c] == null ? "n/a" : pct(s.sub_yes[c]))).join(" | ")} |`);
-L.push("", "### Where failed runs first went wrong (checker)", "", "| Arm | " + ["read", "diagnose", "decide", "number", "decoy", "deliver"].join(" | ") + " |", "|---|---|---|---|---|---|---|");
-for (const [arm, m] of Object.entries(firstFailures)) L.push(`| ${arm} | ${["read", "diagnose", "decide", "number", "decoy", "deliver"].map(k => m[k] ?? 0).join(" | ")} |`);
+const anySub = Object.values(score.by_arm.all).some(s => Object.values(s.sub_yes).some(x => x != null));
+if (anySub) {
+  L.push("### Sub-checks answered yes (all tasks)", "", "| Sub-check | " + Object.keys(score.by_arm.all).join(" | ") + " |", "|---|" + Object.keys(score.by_arm.all).map(() => "---").join("|") + "|");
+  for (const c of Object.values(SUBCHECKS).flat()) L.push(`| ${c} | ${Object.values(score.by_arm.all).map(s => (s.sub_yes[c] == null ? "n/a" : pct(s.sub_yes[c]))).join(" | ")} |`);
+} else L.push("Sub-checks: not recorded. This round was judged on sheets from before rubric 2026-11-16, so the must-pass gate here counts decoys only.");
+if (Object.keys(firstFailures).length) {
+  L.push("", "### Where failed runs first went wrong (checker)", "", "| Arm | " + ["read", "diagnose", "decide", "number", "decoy", "deliver"].join(" | ") + " |", "|---|---|---|---|---|---|---|");
+  for (const [arm, m] of Object.entries(firstFailures)) L.push(`| ${arm} | ${["read", "diagnose", "decide", "number", "decoy", "deliver"].map(k => m[k] ?? 0).join(" | ")} |`);
+} else L.push("", "First failures: not recorded (checker sheets from before rubric 2026-11-16).");
 L.push("", `Judge models seen: ${Object.keys(judgeModels).length ? Object.entries(judgeModels).map(([m, n]) => `${m} (${n})`).join(", ") : "not recorded"}.`, "");
 if (flags.length) { L.push("### Task flags", "", "| Task | Split | Flag | What to do |", "|---|---|---|---|"); for (const f of flags) L.push(`| ${f.task} | ${f.split} | ${f.flag} | ${f.note} |`); L.push(""); }
 L.push("## Win rate (both orders must agree; ties excluded from the share)", "", "| Pair (first arm's share) | Split | Tasks | Wins | Losses | Ties | Share | 95% interval (tasks resampled) |", "|---|---|---|---|---|---|---|---|");

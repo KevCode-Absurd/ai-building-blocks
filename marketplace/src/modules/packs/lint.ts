@@ -72,6 +72,8 @@ function missingFiles(pack: BuiltPack): LintIssue[] {
   const issues: LintIssue[] = [];
   for (const f of pack.files) {
     if (isScript(f.path) || f.path === "pack.json" || f.source === "toolbox") continue;
+    // The build folder names paths in the owner's store folder (agents/, context/, warehouse/), not in this pack.
+    if (f.path.startsWith("build/")) continue;
     const exempt = exemptLines(f.content);
     const seen = new Set<string>();
     f.content.split("\n").forEach((line, i) => {

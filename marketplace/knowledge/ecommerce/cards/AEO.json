@@ -439,7 +439,13 @@
       "quote": "fill every information gap about your brand"
     },
     "strength": "research",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "prelaunch",
+        "early"
+      ]
+    }
   },
   {
     "id": "AEO-0012",
@@ -956,7 +962,19 @@
       "quote": "Reddit only works for Chat GPT"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "prelaunch",
+        "early"
+      ],
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "AEO-0025",
@@ -1192,7 +1210,12 @@
       "quote": "start with a direct two to four sentence answer followed by a TLDDR"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "AEO-0031",
@@ -1231,7 +1254,12 @@
       "quote": "move it to a subdirectory"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "AEO-0032",
@@ -1353,7 +1381,13 @@
       "quote": "you need to get mentioned as many times as possible"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "AEO-0035",

@@ -10,18 +10,12 @@
 //   another market or marketplace never comes back (CardIndex.fits, on the card's own facets).
 // - Doc-side expansion: each card is indexed with the questions it answers ("Asked as"), so a brief in an owner's
 //   words meets a card in an expert's words (doc2query, done once when the card was written).
-// - Stated facts: each two-column table row and each prose sentence with a number or a belief is its own small query,
-//   and what the store says it does not do ("we do not send texts") is cut from the search text.
-// - Rerank: a boost when the card's "holds when" shares the brief's words, and when several queries agree.
+// - Rerank: a light boost when the card's "holds when" shares the brief's words, and when several queries agree.
 // - Diversity: near-duplicate cards are dropped (maximal marginal relevance, by word overlap), so the digest has range.
-// - Retrieve wide, grade narrow: the tool keeps a shortlist of about 40 (its best 15 first, the rest as short lines)
-//   and asks the owner's own AI to grade it against the store and keep 10 to 15 (CRAG-style grading; the model that
-//   reads the cards is the smart reranker, and it already sits in the loop). `--keep` writes the kept cards back.
-// - Gaps: a request or signal no card covers well is listed as a gap, with one rewrite round in expert words, then
-//   decide it from the brief, never from memory.
-// - Budget: the digest is a ranked list of claims with when each holds and fails, about 2,000 words with the
-//   shortlist, because accuracy saturates after 10 to 20 documents and what sits in the middle gets lost.
-import { KnowledgeIndex, MIN_COVERAGE, tokens } from "../packs/retrieve.ts";
+// - Gaps: a request or signal no card covers well is listed as a gap: decide it from the brief, never from memory.
+// - Budget: the digest is a short ranked list of claims with when each holds and fails, about a thousand words,
+//   because accuracy saturates after 10 to 20 documents and what sits in the middle gets lost.
+import { KnowledgeIndex, MIN_COVERAGE, tokens, type Synonyms } from "../packs/retrieve.ts";
 
 export interface PrepCard {
   id: string;
@@ -37,51 +31,75 @@ export interface PrepCard {
   amazon: string[];
   mode: string;
   platforms: string[];
+  /** The situations the card holds in, by facet (scripts/tag-card-situations.mjs); a facet left out holds everywhere. */
+  situations?: Situations;
 }
 
-export interface BriefFacts { market?: string; amazon?: string; platform?: string; cod: boolean; subscription: boolean; channels: string[] }
-export interface PrepQuery { kind: "ask" | "signal" | "fact" | "brief"; text: string; weight: number }
-export interface PrepPick { card: PrepCard; score: number; via: string[] }
-/** `picks` are the tool's own best k; `shortlist` is the wider pool (picks first) the owner's AI grades. */
-export interface Prepared { facts: BriefFacts; queries: PrepQuery[]; picks: PrepPick[]; shortlist: PrepPick[]; gaps: string[]; graded?: boolean }
-
 /**
- * Ranking settings, tuned on the odd-numbered briefs of test/fixtures/ecommerce-jobs-golden.json and checked on the
- * even ones (scripts/eval-prepare.mjs --split). Changing one: run the eval, keep it only if the even half holds.
- * 15 Nov 2026, odd / even must@15: the 14 Nov settings 0.42 / 0.34; stated-fact queries at 0.5 lifted it to 0.45 /
- * 0.43, 30 passages a query and 12 fact lines to 0.46 / 0.47, no module prior to 0.52 / 0.49 (the regex guess of the
- * requested module was often wrong), a stronger "holds when" boost to 0.53 / 0.49; the negation cut then traded 0.02
- * on the odd half for wrong cards 3 down to 1. Tried and left off: the feedback round (expand), stronger tier priors,
- * a higher floor, other query weights, a 50-card pool.
+ * Situation facets: the kind of store a card's advice holds for. Each facet lists the values the card fits; a card
+ * with no entry for a facet fits every value of it. The brief's own values come from briefFacts.
+ * - stage: prelaunch (no sales yet), early (first sales, small numbers), scaling (proven, growing spend)
+ * - model: dtc (own store), cod (cash on delivery is a big share), subscription, marketplace (Amazon, TikTok Shop), wholesale
+ * - traffic: monthly sessions, low (under 20,000), medium (20,000 to 200,000), high (over 200,000)
+ * - price: order value or price point in US dollars, low (under 25), mid (25 to 150), high (over 150)
+ * - spend: monthly ad spend in US dollars, small (under 10,000), mid (10,000 to 100,000), large (over 100,000)
+ * - size: yearly revenue in US dollars, small (under 1 million), mid (1 to 10 million), large (over 10 million)
  */
-export const PREP = {
-  /** Query weights in the fusion. */
-  askWeight: 1, signalWeight: 0.8, factWeight: 0.5, briefWeight: 0.5,
-  /** Most stated-fact queries per brief. */
-  factLines: 12,
-  /** Passages each query pass contributes, and the weight of the second pass inside the requested modules. */
-  depth: 30, routedWeight: 0.7,
-  /** Rank fusion constant: score = weight / (rrf + rank). */
-  rrf: 10,
-  /** Prior for a card in a module the request names, and for one outside it (1 and 1: off). */
-  inModule: 1, offModule: 1,
-  /** Boost when the card's "holds when" shares the brief's words (overlap times holds, at most holdsCap). */
-  holds: 4, holdsCap: 0.6,
-  /** Bonus per extra query that found the card. */
-  agree: 0.1,
-  /** Source tier prior: 1 platform docs, 2 large-sample research, 3 named practitioner, 4 opinion. */
-  tier: { 1: 1.05, 2: 1.02, 3: 1, 4: 0.98 } as Record<number, number>,
-  /** Score kept by a card whose claim is written for a situation the brief does not describe, and by one whose "holds when" only names it. */
-  situation: 0.15, situationHolds: 0.15,
-  /** Word overlap above which a card repeats a picked one. */
-  duplicate: 0.45,
-  /** Cards under this share of the best score are not worth a reader's time. */
-  floor: 0.05,
-  /** Size of the shortlist the owner's AI grades. */
-  pool: 40,
-  /** Feedback round: how many of the best cards search again with their own claim, and at what weight (0: off). */
-  expand: 0, expandWeight: 0.3,
+export interface Situations { stage?: string[]; model?: string[]; traffic?: string[]; price?: string[]; spend?: string[]; size?: string[] }
+export const SITUATION_FACETS: Record<keyof Situations, string[]> = {
+  stage: ["prelaunch", "early", "scaling"], model: ["dtc", "cod", "subscription", "marketplace", "wholesale"],
+  traffic: ["low", "medium", "high"], price: ["low", "mid", "high"], spend: ["small", "mid", "large"], size: ["small", "mid", "large"],
 };
+/** The band edges of the number facets, in their own unit (sessions a month, US dollars). */
+export const SITUATION_BANDS: Record<"traffic" | "price" | "spend" | "size", [number, number]> = {
+  traffic: [20_000, 200_000], price: [25, 150], spend: [10_000, 100_000], size: [1_000_000, 10_000_000],
+};
+/** The band a number falls in: the first, middle or last value of the facet. */
+export function bandOf(facet: keyof typeof SITUATION_BANDS, n: number): string {
+  const [lo, hi] = SITUATION_BANDS[facet], v = SITUATION_FACETS[facet];
+  return n < lo ? v[0] : n > hi ? v[2] : v[1];
+}
+/** Rough US dollars per unit of each currency, only to place a number in a band (never shown to anyone). */
+const TO_USD: Record<string, number> = { "$": 1, usd: 1, "₹": 0.012, rs: 0.012, inr: 0.012, "£": 1.27, gbp: 1.27, "€": 1.08, eur: 1.08, "a$": 0.65, aud: 0.65 };
+/**
+ * The money amounts in a text, in US dollars, with the words right after each ("$1,800 a day", "Rs 2,499", "£34",
+ * "$4.2M revenue", "40k a month"). Lakh and crore count; "k" and "M" scale.
+ */
+export function amountsIn(text: string): { usd: number; rate: number; index: number; end: number; after: string; before: string }[] {
+  const out: { usd: number; rate: number; index: number; end: number; after: string; before: string }[] = [];
+  const re = /(A\$|\$|₹|£|€|\bRs\.?|\bINR|\bUSD|\bGBP|\bEUR|\bAUD)\s?(\d[\d,]*(?:\.\d+)?)\s?(k|K|m|M|mn|million|bn|billion|lakhs?|lakh|crores?|cr)?\b/g;
+  for (const m of text.matchAll(re)) {
+    const cur = m[1].toLowerCase().replace(/\.$/, "");
+    let n = Number(m[2].replace(/,/g, ""));
+    const s = (m[3] ?? "").toLowerCase();
+    n *= /^k$/.test(s) ? 1e3 : /^(m|mn|million)$/.test(s) ? 1e6 : /^(bn|billion)$/.test(s) ? 1e9 : /^lakh/.test(s) ? 1e5 : /^(crore|cr)/.test(s) ? 1e7 : 1;
+    const i = m.index ?? 0;
+    out.push({ usd: n * (TO_USD[cur] ?? 1), rate: TO_USD[cur] ?? 1, index: i, end: i + m[0].length, after: text.slice(i + m[0].length, i + m[0].length + 60), before: text.slice(Math.max(0, i - 60), i) });
+  }
+  return out;
+}
+
+export interface BriefFacts {
+  market?: string; amazon?: string; platform?: string; cod: boolean; subscription: boolean; channels: string[];
+  /** The store's situation, one value per facet where the brief makes it clear (models can be several). */
+  stage?: string; model?: string[]; traffic?: string; price?: string; spend?: string; size?: string;
+}
+export interface PrepQuery { kind: "ask" | "signal" | "fact" | "hypothesis" | "brief"; text: string; weight: number }
+export interface PrepPick { card: PrepCard; score: number; via: string[] }
+export interface Prepared { facts: BriefFacts; queries: PrepQuery[]; picks: PrepPick[]; gaps: string[]; stage?: PrepStage }
+/** Where the agent is in the job: finding the cause, making the deliverable, or checking it before hand-over. */
+export type PrepStage = "diagnose" | "make" | "check";
+export interface PrepOptions {
+  k?: number;
+  /** Facts the caller already knows (from the brand file or the agent), over what the brief says. */
+  facts?: Partial<BriefFacts>;
+  /** The job's stage: diagnose leans on the data and the agent's hypotheses, make on the requests, check on hard rules. */
+  stage?: PrepStage;
+  /** The agent's own working hypotheses or decisions, each searched as its own query ("new-customer ROAS is under break-even"). */
+  hypotheses?: string[];
+  /** Library modules the agent knows the job needs (MCR, EML): a boost like the brief's own deliverable modules. */
+  modules?: string[];
+}
 
 /** Cards from the module files a pack carries (knowledge/<vertical>/<CODE>.md, written by cards.ts moduleMarkdown). */
 export function cardsFromModuleMarkdown(code: string, md: string): PrepCard[] {
@@ -101,11 +119,24 @@ export function cardsFromModuleMarkdown(code: string, md: string): PrepCard[] {
     }
     const field = (name: string) => new RegExp(`^\\*\\*${name}:\\*\\* (.*)$`, "m").exec(block)?.[1].trim() ?? "";
     const body = block.split("\n").slice(1).join("\n");
-    const text = body.split(/\n\*\*(?:Holds when|Fails when|Numbers|Asked as|Source):\*\*/)[0].replace(/^Card .*$/m, "").trim();
+    const text = body.split(/\n\*\*(?:Holds when|Fails when|Numbers|Asked as|Fits|Source):\*\*/)[0].replace(/^Card .*$/m, "").trim();
+    const situations = parseFits(field("Fits"));
     out.push({ id: head[1], module: code, claim, text, holds: field("Holds when"), fails: field("Fails when"), asks: field("Asked as"),
-      tier: Number(head[2]), scope: head[3], markets, amazon, mode, platforms: platforms.map(p => p.toLowerCase()) });
+      tier: Number(head[2]), scope: head[3], markets, amazon, mode, platforms: platforms.map(p => p.toLowerCase()), ...(situations ? { situations } : {}) });
   }
   return out;
+}
+
+/** The "Fits" line of a card ("stage early, scaling; traffic medium, high") as situation facets; null when empty. */
+export function parseFits(line: string): Situations | null {
+  const out: Situations = {};
+  for (const part of line.split(";").map(s => s.trim()).filter(Boolean)) {
+    const [facet, ...rest] = part.split(/\s+/);
+    if (!(facet in SITUATION_FACETS)) continue;
+    const vals = rest.join(" ").split(",").map(s => s.trim()).filter(v => SITUATION_FACETS[facet as keyof Situations].includes(v));
+    if (vals.length) out[facet as keyof Situations] = vals;
+  }
+  return Object.keys(out).length ? out : null;
 }
 
 const has = (re: RegExp, s: string) => re.test(s);
@@ -123,7 +154,72 @@ export function briefFacts(brief: string): BriefFacts {
   const channels = [["meta", /\b(Meta|Facebook|Instagram|Reels?)\b/i], ["tiktok", /TikTok/i], ["google", /\bGoogle\b|Performance Max|\bPMax\b|YouTube/i],
     ["email", /\bemails?\b|Klaviyo|newsletter/i], ["sms", /\bSMS\b|text message/i], ["whatsapp", /WhatsApp/i], ["amazon", /\bAmazon\b/i]]
     .filter(([, re]) => (re as RegExp).test(brief)).map(([c]) => c as string);
-  return { market, amazon, platform, cod: has(/\bCOD\b|cash on delivery/i, brief), subscription: has(/subscri(be|ption)/i, brief), channels };
+  const cod = has(/\bCOD\b|cash on delivery/i, brief), subscription = has(/subscri(be|ption)/i, brief);
+  return { market, amazon, platform, cod, subscription, channels, ...briefSituation(brief, { cod, platform, amazon: channels.includes("amazon") }) };
+}
+
+/**
+ * The store's situation from the brief, only where it is clear: stage from launch words and size, model from how it
+ * sells, and the number facets from the brief's own figures (monthly ad spend, yearly revenue or orders times order
+ * value, order value or price, monthly sessions). A facet the brief does not settle stays unset and filters nothing.
+ */
+export function briefSituation(brief: string, f: { cod?: boolean; platform?: string; amazon?: boolean } = {}): Partial<BriefFacts> {
+  const out: Partial<BriefFacts> = {};
+  const money = amountsIn(brief);
+  // Monthly ad spend: amounts a day or a month next to spend, budget or an ad channel; the same figure said twice counts once.
+  const spends: number[] = [];
+  for (const a of money) {
+    const daily = /^\s*(?:a|per|\/)\s*day\b|^\s*daily\b/i.test(a.after), monthly = /^\s*(?:a|per|\/)\s*(?:month|mo)\b|^\s*monthly\b/i.test(a.after);
+    if (!daily && !monthly) continue;
+    if (!/\b(?:spend|spending|budget|ads?|Meta|Facebook|Instagram|Google|TikTok|Performance Max|PMax|campaigns?|creators?)\b/i.test(`${a.before.slice(-45)} ${a.after.slice(0, 30)}`)) continue;
+    if (/\b(?:revenue|sales|brings|turnover|profit|organic)\b/i.test(a.before.slice(-30))) continue;
+    const usd = a.usd * (daily ? 30 : 1);
+    if (!spends.some(s => Math.abs(s - usd) / Math.max(s, usd) < 0.15)) spends.push(usd);
+  }
+  if (spends.length) out.spend = bandOf("spend", spends.reduce((x, y) => x + y, 0));
+  // Order value: the AOV, else a price said as one ("$39 a bottle", "One bag is $29", "sells at Rs 2,199").
+  const aov = money.find(a => /\b(?:AOV|average order(?: value)?|order value)\b[^.\d]{0,12}$/i.test(a.before) || /^\s*(?:AOV|average order)/i.test(a.after));
+  const price = aov ?? money.find(a => /^\s*(?:a|per|each|for one|for a|for 1)\s+(?:bottle|bag|pair|set|pack|unit|jar|box|tube|kit|piece|item)\b|^\s*each\b/i.test(a.after) || /\b(?:price[ds]?|priced at|sells? (?:at|for)|costs? customers|is|at)\s*(?:about|around|only)?\s*$/i.test(a.before) && /\b(?:bag|bottle|pair|set|mat|pack|chair|serum|oil|price|product|version|pan|basket|wrap)\b/i.test(a.before.slice(-40)));
+  if (price) out.price = bandOf("price", price.usd);
+  // Yearly revenue: said a year, or a month of total revenue, or orders a month times order value.
+  const yearly = money.find(a => /^\s*(?:in )?(?:revenue|sales|turnover|GMV)?\s*(?:a|per|last|this)?\s*(?:year|annual(?:ly)?)\b|^\s*(?:revenue|in revenue|in sales|GMV|ARR|turnover)\b/i.test(a.after) && !/\b(?:ads?|spend|organic|search|email|channel)\b/i.test(a.before.slice(-30)));
+  const orders = /(\d[\d,]*)\s+orders?\s+(?:a|per)\s+month/i.exec(brief);
+  if (yearly) out.size = bandOf("size", yearly.usd);
+  else if (orders && aov) out.size = bandOf("size", Number(orders[1].replace(/,/g, "")) * aov.usd * 12);
+  // Monthly sessions: "42,000 sessions", "Sessions | 42,000", "120k monthly visitors"; a day or a week scales to a month.
+  const sess = /(\d[\d,.]*)\s*(k|K)?\s+(?:monthly\s+)?(?:sessions|visitors|visits)\b([^.\n]{0,20})/i.exec(brief) ?? /\b(?:sessions|visitors|visits)\b[^|\n\d]{0,20}\|\s*(\d[\d,.]*)\s*(k|K)?()/i.exec(brief);
+  if (sess) {
+    const n = Number(sess[1].replace(/,/g, "")) * (sess[2] ? 1000 : 1) * (/\b(?:a|per) day\b/i.test(sess[3]) ? 30 : /\b(?:a|per) week\b/i.test(sess[3]) ? 4.3 : 1);
+    if (Number.isFinite(n) && n > 0) out.traffic = bandOf("traffic", n);
+  }
+  // Stage: launch words first; else size and spend say a store has proven demand.
+  if (/\b(?:plan(?:ning)?|about|going|getting ready) to (?:launch|start|open) (?:a |an |our )?(?:new )?[\w\s-]{0,40}?\b(?:brand|store|business|shop)\b|\bpre-?launch\b|\bno sales yet\b|\b(?:have not|haven't|not yet) launched\b/i.test(brief)) out.stage = "prelaunch";
+  else if (/\b(?:just (?:launched|started|opened)|launched (?:\d+|a few|two|three|four|six) (?:weeks?|months?) ago|first (?:\d+|few) (?:orders|customers|sales)|new store|early days)\b/i.test(brief)) out.stage = "early";
+  else if (out.size === "mid" || out.size === "large" || out.spend === "mid" || out.spend === "large") out.stage = "scaling";
+  // Model: how it sells. Own store unless the brief says it has none; marketplace, subscriptions, wholesale and COD as said.
+  const model: string[] = [];
+  const noSite = /\bno (?:website|web ?site|own (?:site|store))\b|\b(?:only|just) on Amazon\b|\bAmazon\b[^.\n]{0,20}\bonly\b/i.test(brief);
+  if (!noSite && (f.platform || /\b(?:own (?:site|store|website)|our (?:site|website|online store)|website only|online store)\b/i.test(brief))) model.push("dtc");
+  if (f.cod) model.push("cod");
+  if (/\b(?:sell|selling|offer|run|our|the|default|a) subscriptions?\b|\bsubscription (?:app|plans?|box|orders?|customers|business|model|programme|program|brand)\b|\bsubscribe (?:and|&) save\b|\b(?:Recharge|Skio|Loop subscriptions)\b/i.test(brief)) model.push("subscription");
+  if (f.amazon && (noSite || /\b(?:FBA|Seller Central|Amazon\.(?:com|in|co\.uk))\b/i.test(brief)) || /\bTikTok Shop\b|\bFlipkart\b|\bEtsy\b|\bMeesho\b/i.test(brief)) model.push("marketplace");
+  if (/\bwholesale\b|\bstockists?\b|\bB2B\b|\bretail (?:partners|accounts|buyers)\b/i.test(brief)) model.push("wholesale");
+  if (model.length) out.model = model;
+  return out;
+}
+
+/** The facets where a card's situations and the store's differ: each is a reason the card may not hold here. */
+export function situationMisfits(card: PrepCard, f: BriefFacts): (keyof Situations)[] {
+  const s = card.situations;
+  if (!s) return [];
+  const out: (keyof Situations)[] = [];
+  for (const facet of Object.keys(SITUATION_FACETS) as (keyof Situations)[]) {
+    const fits = s[facet];
+    if (!fits?.length) continue;
+    const have = facet === "model" ? f.model ?? [] : f[facet] ? [f[facet] as string] : [];
+    if (have.length && !have.some(v => fits.includes(v))) out.push(facet);
+  }
+  return out;
 }
 
 /** A request: a work verb leads, or "I/we want/need", "help me", "can you", or a real question (not a quoted one). */
@@ -154,17 +250,6 @@ export function briefAsks(brief: string): string[] {
 const num = (s: string) => { const m = /-?\d[\d,]*(?:\.\d+)?/.exec(s.replace(/[₹$£€]/g, "")); return m ? Number(m[0].replace(/,/g, "")) : NaN; };
 
 /**
- * A table row named with what its first column holds ("45-54 age band", not a bare "45-54"), so the signal query
- * carries the words a card uses. A generic or repeated header adds nothing.
- */
-function rowLabel(header: string, cell: string): string {
-  const h = header.replace(/\*\*/g, "").trim();
-  if (!/[a-z]{3}/i.test(h) || /^(item|metric|name|row|value|label|what)$/i.test(h)) return cell;
-  const have = new Set(tokens(cell));
-  return tokens(h).every(w => have.has(w)) ? cell : `${cell} ${h.toLowerCase()}`;
-}
-
-/**
  * The brief's data signals: in each table, the row that stands out in each number column (well above or below the
  * column's middle), said as "<row> <column> highest" or "lowest"; and prose lines that rank or share something
  * ("top return reason", "38% of chats").
@@ -182,7 +267,7 @@ export function briefSignals(brief: string): string[] {
         if (rates.length < 2) continue;
         const best = Math.max(...rates.map(([v]) => v));
         const [low, lowRow] = [...rates].sort((a, b) => a[0] - b[0])[0];
-        if (low / best <= 0.6) out.push(`${rowLabel(header[0], rows[lowRow][0])}: ${header[c - 1]} to ${header[c]} rate lowest (fix the funnel step with the biggest drop, ${header[c - 1].toLowerCase()} to ${header[c].toLowerCase()})`);
+        if (low / best <= 0.6) out.push(`${rows[lowRow][0]}: ${header[c - 1]} to ${header[c]} rate lowest (fix the funnel step with the biggest drop, ${header[c - 1].toLowerCase()} to ${header[c].toLowerCase()})`);
       }
     }
     if (table.length >= 3) {
@@ -195,8 +280,8 @@ export function briefSignals(brief: string): string[] {
         const [hi, hiRow] = sorted[sorted.length - 1], [lo, loRow] = sorted[0];
         const meaning = columnMeaning(header[c]);
         if (!meaning) continue;
-        if (mid > 0 && hi / mid >= 1.25) out.push(`${rowLabel(header[0], rows[hiRow][0])}: ${header[c]} highest (${meaning.high})`);
-        if (mid > 0 && lo / mid <= 0.75 && meaning.low) out.push(`${rowLabel(header[0], rows[loRow][0])}: ${header[c]} lowest (${meaning.low})`);
+        if (mid > 0 && hi / mid >= 1.25) out.push(`${rows[hiRow][0]}: ${header[c]} highest (${meaning.high})`);
+        if (mid > 0 && lo / mid <= 0.75 && meaning.low) out.push(`${rows[loRow][0]}: ${header[c]} lowest (${meaning.low})`);
       }
     }
     table = [];
@@ -252,49 +337,32 @@ function columnMeaning(header: string): { high: string; low: string } | null {
 }
 
 /**
- * The brief's stated facts about the store, each its own small query: the rows of a two-column table ("Average days
- * between orders | 34") and the prose sentences that carry a number or a belief ("Our only win-back email goes out at
- * 180 days", "The team thinks retention is improving"). An expert reads these line by line; one long query blurs them.
+ * The brief's stated facts: prose sentences that are neither requests nor customer quotes ("36% of spend reaches
+ * existing customers", "One ad holds 70% of spend"). Each is a decision the owner has not named yet, so each is its
+ * own query. Sentences with a number or a contrast come first; at most PLAN.facts.
  */
-export function briefFactLines(brief: string): string[] {
-  const out: string[] = [];
-  const lines = brief.replace(/\r\n?/g, "\n").split("\n");
-  const isRow = (l: string) => /^\s*\|.*\|\s*$/.test(l) || /\S\s+\|\s+\S/.test(l);
-  const cells = (l: string) => l.trim().replace(/^\||\|$/g, "").split("|").map(c => c.trim().replace(/\*\*/g, ""));
-  for (let i = 0; i < lines.length; i++) {
-    if (!isRow(lines[i])) continue;
-    const table: string[][] = [];
-    while (i < lines.length && isRow(lines[i])) { const c = cells(lines[i]); if (!c.every(x => /^:?-{2,}:?$/.test(x))) table.push(c); i++; }
-    // A two-column table of labels and values: each row is a fact (the header row is not).
-    // A label of numbers alone ("Under $35") says nothing to search on.
-    if (table.length >= 2 && table.every(r => r.length === 2)) for (const [label, value] of table.slice(1)) if (tokens(label).filter(w => /^[a-z]/.test(w)).length >= 2) out.push(`${label}: ${value}`);
-  }
-  const prose = lines.filter(l => !isRow(l)).join("\n");
-  for (const s of sentencesOf(prose)) {
-    // A line that only introduces a table ("Last 30 days (7-day click):") is not a fact.
-    if (ASK.test(s) || /^["“]/.test(s) || NOT_ASK.test(s) || /:\**$/.test(s)) continue;
-    if (/\d/.test(s) || /\b(?:thinks?|believes?|assumes?|worried|afraid|we (?:do not|don't|never|only|always))\b/i.test(s)) out.push(s);
-  }
-  return [...new Set(out.map(s => s.replace(/\s+/g, " ").trim()))].slice(0, PREP.factLines);
+export function briefStatements(brief: string): string[] {
+  const prose = brief.split("\n").filter(l => !/^\s*\|/.test(l) && !/\S\s+\|\s+\S/.test(l)).join("\n");
+  const asks = new Set(briefAsks(brief));
+  const out: { s: string; score: number; i: number }[] = [];
+  sentencesOf(prose).forEach((s, i) => {
+    if (/^["“”]/.test(s) || ASK.test(s) || [...asks].some(a => s.includes(a) || a.includes(s)) || NOT_ASK.test(s)) return;
+    if (s.split(/\s+/).length < 5) return;
+    const score = (/\d/.test(s) ? 2 : 0) + (/\b(but|only|most|while|although|yet|without|never|every)\b/i.test(s) ? 1 : 0);
+    out.push({ s, score, i });
+  });
+  return out.sort((a, b) => b.score - a.score || a.i - b.i).slice(0, PLAN.facts).map(x => x.s);
 }
 
-/** The query plan: each request at full weight, each signal at 0.8, each stated fact lower, the whole brief lowest. */
+/** Query plan settings, tuned on the odd half of the jobs golden set (scripts/eval-prepare.mjs --split). */
+export const PLAN = { facts: 8, factWeight: 0.6, askWeight: 1, signalWeight: 0.8, briefWeight: 0.5 };
+
+/** The query plan: each request at full weight, each signal at 0.8, each stated fact at 0.6, the whole brief at 0.5. */
 export function planQueries(brief: string): PrepQuery[] {
-  const asks = briefAsks(brief).map(text => ({ kind: "ask" as const, text, weight: PREP.askWeight }));
-  const signals = briefSignals(brief).map(text => ({ kind: "signal" as const, text, weight: PREP.signalWeight }));
-  const said = new Set([...asks, ...signals].map(q => q.text));
-  // What the store says it does not do is no search term: "we do not send text messages" must not fetch SMS cards.
-  const plain = withoutNegations(brief);
-  const facts = PREP.factWeight > 0 ? briefFactLines(plain).filter(t => !said.has(t)).map(text => ({ kind: "fact" as const, text, weight: PREP.factWeight })) : [];
-  return [...asks, ...signals, ...facts, { kind: "brief", text: plain.replace(/\s+/g, " ").slice(0, 2000), weight: PREP.briefWeight }];
-}
-
-/**
- * The brief without what the store says it does not do ("We do not sell on TikTok Shop", "we never run SMS"): the
- * clause is cut up to its full stop, semicolon or next "and". Used for the search text and the situation checks.
- */
-export function withoutNegations(brief: string): string {
-  return brief.replace(/\b(?:we|i|they)?\s*(?:do not|don't|does not|doesn't|did not|didn't|never|no longer|cannot|can't|are not|aren't)\s+(?:yet\s+|currently\s+|ever\s+)?(?:sell|use|send|run|offer|ship|have|accept|advertise|stock|list|do|take|want)\b.*?(?=\s+and\s|[.;\n]|$)/gi, " ");
+  const asks = briefAsks(brief).map(text => ({ kind: "ask" as const, text, weight: PLAN.askWeight }));
+  const signals = briefSignals(brief).map(text => ({ kind: "signal" as const, text, weight: PLAN.signalWeight }));
+  const facts = PLAN.facts ? briefStatements(brief).map(text => ({ kind: "fact" as const, text, weight: PLAN.factWeight })) : [];
+  return [...asks, ...signals, ...facts, { kind: "brief", text: brief.replace(/\s+/g, " ").slice(0, 2000), weight: PLAN.briefWeight }];
 }
 
 /** The library modules each kind of request lives in. A card from a named module gets a modest boost, never a filter. */
@@ -337,114 +405,141 @@ export function fitsFacts(card: PrepCard, f: BriefFacts): boolean {
  * subscription card for a one-off store, a TikTok Shop card for a Meta-only brand), the card is pushed down, not
  * dropped: the brief may simply not say.
  */
-const SITUATIONS: [RegExp, RegExp][] = [
+const SITUATIONS: [RegExp, RegExp, (keyof Situations)?][] = [
   // Subscription products, not newsletter subscribers.
-  [/subscriptions?\b|subscribe and save|recharge|\bskio\b|cancelled subscribers|active subscribers/i, /subscriptions?\b|subscribe and save|recurring (order|deliver)|replenish|renewal/i],
+  [/subscriptions?\b|subscribe and save|recharge|\bskio\b|cancelled subscribers|active subscribers/i, /subscriptions?\b|subscribe and save|recurring (order|deliver)|replenish|renewal/i, "model"],
   [/tiktok shop|gmv max/i, /tiktok shop|gmv max/i],
-  [/\bamazon\b|\bfba\b|seller central/i, /\bamazon\b/i],
-  [/\bcod\b|cash on delivery|\brto\b/i, /\bcod\b|cash on delivery|\brto\b/i],
+  [/\bamazon\b|\bfba\b|seller central/i, /\bamazon\b/i, "model"],
+  [/\bcod\b|cash on delivery|\brto\b/i, /\bcod\b|cash on delivery|\brto\b/i, "model"],
   [/black friday|\bbfcm\b|cyber monday/i, /black friday|\bbfcm\b|cyber monday|holiday sale|sale season/i],
   [/whatsapp/i, /whatsapp/i],
   [/\bsms\b|text messag/i, /\bsms\b|text messag|texts\b/i],
-  [/wholesale|\bb2b\b|retailers?\b/i, /wholesale|\bb2b\b|retail/i],
+  [/wholesale|\bb2b\b|retailers?\b/i, /wholesale|\bb2b\b|retail/i, "model"],
   [/dropship/i, /dropship/i],
-  // "New customers" or "new ad concepts" is not a new store: only a launch, a new brand or no sales yet counts.
-  [/zero.to.one|pre.launch|brand.new (store|brand)|no sales yet/i, /\bnew (?:store|brand|shop|business)\b|\b(?:launch|launching|pre.?launch|first sales?|just started|no sales|zero.to.one)\b/i],
+  [/zero.to.one|pre.launch|brand.new (store|brand)|no sales yet/i, /\b(new|launch|launching|first sale|just started|no sales)\b/i, "stage"],
 ];
 /** Markets a card names in its own words when it carries no market tag ("US SMS programmes"). */
 const MARKET_WORDS: [string, RegExp][] = [["US", /\bUS\b|\bU\.S\.|United States|American\b/], ["IN", /\bIndia(n)?\b/], ["UK", /\bUK\b|United Kingdom|British\b/], ["EU", /\bEU\b|European\b/]];
-/** Tuning only (scripts/eval-prepare.mjs): set any PREP field. */
-export function tunePrep(o: Partial<typeof PREP>): void { Object.assign(PREP, o); }
+/** Score kept by a card written for a situation the brief does not describe (tuned on the odd half of the jobs golden set). */
+export let SITUATION_WEIGHT = 0.15;
+/** Cards scoring under this share of the best card are not worth a reader's time: the digest stops there. */
+export let FLOOR = 0.05;
+export function tunePrep(o: { situation?: number; floor?: number }): void { if (o.situation !== undefined) SITUATION_WEIGHT = o.situation; if (o.floor !== undefined) FLOOR = o.floor; }
 export function situationPenalty(card: PrepCard, brief: string, market?: string): number {
-  const missing = (said: string) => SITUATIONS.some(([c, b]) => c.test(said) && !b.test(brief));
-  let p = missing(card.claim) ? PREP.situation : missing(card.holds) ? PREP.situationHolds : 1;
-  if (market && !card.markets.length) {
-    const named = MARKET_WORDS.filter(([, re]) => re.test(card.holds)).map(([m]) => m);
-    if (named.length && !named.includes(market)) p *= PREP.situation;
-  }
-  return p;
+  const said = `${card.claim} ${card.holds}`;
+  // A card tagged with situations is judged on its facets (situationMisfits); its words still count for what no facet
+  // covers (a sale season, a channel such as WhatsApp or SMS, dropshipping, TikTok Shop).
+  const rows = card.situations ? SITUATIONS.filter(r => !r[2]) : SITUATIONS;
+  return (rows.some(([c, b]) => c.test(said) && !b.test(brief)) ? SITUATION_WEIGHT : 1) * marketPenalty(card, market);
+}
+/** A card with no market tag that names another market in its "holds when" ("US SMS programmes") is pushed down. */
+export function marketPenalty(card: PrepCard, market?: string): number {
+  if (!market || card.markets.length) return 1;
+  const named = MARKET_WORDS.filter(([, re]) => re.test(card.holds)).map(([m]) => m);
+  return named.length && !named.includes(market) ? SITUATION_WEIGHT : 1;
 }
 
 const overlap = (a: Set<string>, b: Set<string>) => { let n = 0; for (const w of a) if (b.has(w)) n++; return n / (a.size + b.size - n || 1); };
 
+/**
+ * Prepare settings, tuned on the odd half of the jobs golden set (scripts/eval-prepare.mjs --split):
+ * - rules: weight of the extra pass over tier-1 cards (platform documentation and law) for every request and fact, so
+ *   the hard limits a deliverable must meet reach the digest even when practitioner cards outscore them;
+ * - misfit: score kept per situation facet where the card's situations and the store's differ;
+ * - hypothesis: weight of each of the agent's own hypotheses as a query;
+ * - stages: per stage, a multiplier on each kind of query and on the rules pass.
+ */
+export const PREP = {
+  rules: 0.6, misfit: 0.1, hypothesis: 1, moduleBoost: 1.35, otherModule: 0.85, askDepth: 20,
+  stages: {
+    diagnose: { ask: 0.7, signal: 1.3, fact: 1.3, hypothesis: 1.3, brief: 1, rules: 0.8 },
+    make: { ask: 1.2, signal: 0.9, fact: 0.9, hypothesis: 1, brief: 1, rules: 1 },
+    check: { ask: 1, signal: 0.8, fact: 0.8, hypothesis: 1, brief: 1, rules: 1.6 },
+  } as Record<PrepStage, Record<PrepQuery["kind"] | "rules", number>>,
+};
+
 export class JobPrep {
   private cards: PrepCard[];
+  private byId = new Map<string, PrepCard>();
   private byPath = new Map<string, PrepCard>();
   private index: KnowledgeIndex;
   private words = new Map<string, Set<string>>();
-  constructor(cards: PrepCard[]) {
+  private rulePaths: string[];
+  /** `synonyms`: the vertical's owner-words layer (knowledge/<vertical>/synonyms.json); none searches as before. */
+  constructor(cards: PrepCard[], opts: { synonyms?: Synonyms | null } = {}) {
     this.cards = cards;
     const files = cards.map(c => {
       const path = `knowledge/cards/${c.id}.md`;
       this.byPath.set(path, c);
+      this.byId.set(c.id, c);
       this.words.set(c.id, new Set(tokens(`${c.claim} ${c.text}`)));
-      // The card line keeps each card one passage (retrieve.ts chunkMarkdown); its parts are still ranked apart.
-      return { path, text: `# ${c.claim}\n\nCard ${c.id}. Tier ${c.tier}, ${c.scope}.\n\n${c.text}\n\nHolds when: ${c.holds}\n\nAsked as: ${c.asks}` };
+      return { path, text: `# ${c.claim}\n\n${c.text}\n\nHolds when: ${c.holds}\n\nAsked as: ${c.asks}` };
     });
-    this.index = new KnowledgeIndex(files);
+    this.rulePaths = cards.filter(c => c.tier === 1).map(c => `knowledge/cards/${c.id}.md`);
+    // One passage per card, no lists inside: the line ranker adds nothing here (must@15 0.584 without, 0.574 with, odd half).
+    this.index = new KnowledgeIndex(files, { synonyms: opts.synonyms, lines: false });
   }
 
-  prepare(brief: string, opts: { k?: number; pool?: number; facts?: Partial<BriefFacts> } = {}): Prepared {
+  /**
+   * The cards a job needs. The old call, prepare(brief) or prepare(brief, { k, facts }), works as before. An agent
+   * further in can pass its stage, its own hypotheses (each searched as a query) and the modules it knows it needs.
+   */
+  prepare(brief: string, opts: PrepOptions = {}): Prepared {
     const k = Math.max(3, Math.min(25, opts.k ?? 15));
-    const poolSize = Math.max(k, Math.min(60, opts.pool ?? PREP.pool));
-    const plain = withoutNegations(brief);
-    // Channels the store says it does not use are not its channels; market and platform come from the whole brief.
-    const facts = { ...briefFacts(brief), channels: briefFacts(plain).channels, ...(opts.facts ?? {}) };
-    const queries = planQueries(brief);
+    const facts: BriefFacts = { ...briefFacts(brief), ...(opts.facts ?? {}) };
+    const mult = opts.stage ? PREP.stages[opts.stage] : null;
+    const hyps = (opts.hypotheses ?? []).map(h => h.replace(/\s+/g, " ").trim()).filter(h => h.split(" ").length >= 3).slice(0, 8);
+    const queries = [...planQueries(brief), ...hyps.map(text => ({ kind: "hypothesis" as const, text, weight: PREP.hypothesis }))]
+      .map(q => mult ? { ...q, weight: q.weight * mult[q.kind] } : q);
     const fused = new Map<string, { score: number; via: string[] }>();
     const gaps: string[] = [];
-    const wantedModules = briefModules(queries.filter(q => q.kind === "ask").map(q => q.text));
-    const routed = wantedModules.length ? this.cards.filter(c => wantedModules.includes(c.module)).map(c => `knowledge/cards/${c.id}.md`) : [];
+    const wanted = new Set([...briefModules(queries.filter(q => q.kind === "ask" || q.kind === "hypothesis").map(q => q.text)), ...(opts.modules ?? []).map(m => m.trim().toUpperCase()).filter(Boolean)]);
     const adjust = (chunk: { path: string }, score: number) => {
       const card = this.byPath.get(chunk.path);
-      return card && fitsFacts(card, facts) ? score * (PREP.tier[card.tier] ?? 1) : null;
+      return card && fitsFacts(card, facts) ? score * (card.tier === 1 ? 1.05 : card.tier === 2 ? 1.02 : card.tier === 4 ? 0.98 : 1) : null;
     };
-    const search = (q: PrepQuery, weight: number, via: boolean) => {
-      // Each query searches the whole library, and again inside the requested modules (a wider, routed pool).
-      const passes = [{ a: this.index.ask(q.text, { k: PREP.depth, max: PREP.depth, adjust }), w: 1 }];
-      if (routed.length && q.kind !== "brief") passes.push({ a: this.index.ask(q.text, { k: PREP.depth, max: PREP.depth, adjust, paths: routed }), w: PREP.routedWeight });
+    const routed = wanted.size ? this.cards.filter(c => wanted.has(c.module)).map(c => `knowledge/cards/${c.id}.md`) : [];
+    const rulesWeight = PREP.rules * (mult ? mult.rules : 1);
+    for (const q of queries) {
+      // Each query searches the whole library, again inside the requested modules (a wider, routed pool), and again
+      // among the platform and law cards, so the rules a deliverable must meet are not crowded out.
+      const depth = q.kind === "ask" ? PREP.askDepth : 10;
+      const passes = [{ a: this.index.ask(q.text, { k: depth, max: 30, adjust }), w: 1 }];
+      if (routed.length && q.kind !== "brief") passes.push({ a: this.index.ask(q.text, { k: depth, max: 30, adjust, paths: routed }), w: 0.7 });
+      if (rulesWeight > 0 && this.rulePaths.length && q.kind !== "brief") passes.push({ a: this.index.ask(q.text, { k: 5, adjust, paths: this.rulePaths }), w: rulesWeight });
       if ((q.kind === "ask" || q.kind === "signal") && (!passes[0].a.passages.length || passes[0].a.coverage < MIN_COVERAGE / 2)) gaps.push(q.text);
       for (const { a, w } of passes) a.passages.forEach((p, rank) => {
         const card = this.byPath.get(p.path);
         if (!card) return;
         const e = fused.get(card.id) ?? { score: 0, via: [] };
-        e.score += (weight * w) / (PREP.rrf + rank + 1);
-        if (via && q.kind !== "brief" && !e.via.includes(q.text)) e.via.push(q.text);
+        e.score += (q.weight * w) / (10 + rank + 1);
+        if (q.kind !== "brief" && !e.via.includes(q.text)) e.via.push(q.text);
         fused.set(card.id, e);
       });
-    };
-    for (const q of queries) search(q, q.weight, true);
-    // Rerank: when the card holds for a business like this one, and when several queries found it.
-    const briefWords = new Set(tokens(plain));
-    const wanted = new Set(wantedModules);
-    const byId = new Map(this.cards.map(c => [c.id, c]));
-    const rank = () => [...fused].map(([id, e]) => {
-      const card = byId.get(id)!;
-      const holds = card.holds ? overlap(new Set(tokens(card.holds)), briefWords) : 0;
-      const prior = wanted.size ? (wanted.has(card.module) ? PREP.inModule : PREP.offModule) : 1;
-      return { card, score: e.score * prior * situationPenalty(card, plain, facts.market) * (1 + Math.min(PREP.holdsCap, holds * PREP.holds)) * (1 + PREP.agree * Math.max(0, e.via.length - 1)), via: e.via };
-    }).sort((a, b) => b.score - a.score || a.card.id.localeCompare(b.card.id));
-    let ranked = rank();
-    // Feedback from the best cards: their claims, in the library's own words, search once more at a low weight.
-    if (PREP.expand > 0) {
-      for (const r of ranked.slice(0, PREP.expand)) search({ kind: "brief", text: `${r.card.claim} ${r.card.holds}`, weight: PREP.expandWeight }, PREP.expandWeight, false);
-      ranked = rank();
     }
-    // Diversity: skip a card that says nearly what a picked card says. The first k are the tool's picks; the rest of
-    // the shortlist is what the owner's AI may swap in when it grades.
-    const shortlist: PrepPick[] = [];
+    // Rerank: when the card holds for a business like this one, and when several queries found it.
+    const briefWords = new Set(tokens(brief));
+    const ranked = [...fused].map(([id, e]) => {
+      const card = this.byId.get(id)!;
+      const holds = card.holds ? overlap(new Set(tokens(card.holds)), briefWords) : 0;
+      const prior = wanted.size ? (wanted.has(card.module) ? PREP.moduleBoost : PREP.otherModule) : 1;
+      // Situation: a tagged card's facets against the store's, and the words of its claim and "holds when" for the rest.
+      const fit = Math.pow(PREP.misfit, situationMisfits(card, facts).length) * situationPenalty(card, brief, facts.market);
+      return { card, score: e.score * prior * fit * (1 + Math.min(0.3, holds * 2)) * (1 + 0.1 * Math.max(0, e.via.length - 1)), via: e.via };
+    }).sort((a, b) => b.score - a.score || a.card.id.localeCompare(b.card.id));
+    // Diversity: skip a card that says nearly what a picked card says.
+    const picks: PrepPick[] = [];
     const top = ranked[0]?.score ?? 0;
     for (const r of ranked) {
+      if (r.score < top * FLOOR) break;
       const w = this.words.get(r.card.id)!;
-      if (shortlist.some(p => overlap(this.words.get(p.card.id)!, w) > PREP.duplicate)) continue;
-      shortlist.push({ card: r.card, score: Math.round(r.score * 10000) / 10000, via: r.via });
-      if (shortlist.length >= poolSize) break;
+      if (picks.some(p => overlap(this.words.get(p.card.id)!, w) > 0.45)) continue;
+      picks.push({ card: r.card, score: Math.round(r.score * 10000) / 10000, via: r.via });
+      if (picks.length >= k) break;
     }
-    const cut = shortlist.findIndex(p => p.score < top * PREP.floor);
-    const picks = shortlist.slice(0, Math.min(k, cut < 0 ? k : cut));
-    // A request or signal is a gap when the library barely matches it, or when nothing it found made the digest.
-    for (const q of queries) if ((q.kind === "ask" || q.kind === "signal") && !gaps.includes(q.text) && !picks.some(p => p.via.includes(q.text))) gaps.push(q.text);
-    return { facts, queries, picks, shortlist, gaps };
+    // A request, signal or hypothesis is a gap when the library barely matches it, or when nothing it found made the digest.
+    for (const q of queries) if ((q.kind === "ask" || q.kind === "signal" || q.kind === "hypothesis") && !gaps.includes(q.text) && !picks.some(p => p.via.includes(q.text))) gaps.push(q.text);
+    return { facts, queries, picks, gaps, ...(opts.stage ? { stage: opts.stage } : {}) };
   }
 
   /** One plain query, no plan, filters, rerank or diversity: the baseline an agent gets from a single lookup. */
@@ -455,78 +550,38 @@ export class JobPrep {
 
 const clip = (s: string, n: number) => { const w = s.split(/\s+/); return w.length > n ? `${w.slice(0, n).join(" ")} ...` : s; };
 
-/**
- * The grading step, said once where the agent reads it: the owner's own AI reads each short card line against the
- * store and keeps the few that fit. A word-matching tool cannot tell "fits this store" from "shares its words"; the
- * model the owner already uses can (a reranker on a shortlist, lecture 3), at about a thousand more words read.
- */
-export const GRADE_STEP = [
-  "## Grade these cards before drafting",
-  "",
-  "This list was found by matching words, so some cards near the top will not fit and some good ones sit lower down. Read every card below, in both lists, against this store and this job:",
-  "",
-  "- Keep a card when its \"holds when\" fits this store and it would change a call in this job.",
-  "- Drop a card that is written for another kind of store, channel, market or stage, whose \"fails when\" matches this brief, or that repeats a card you kept.",
-  "- Keep 10 to 15, best first. Write each kept id with a few words on the call it supports in `context/trace.md` (in a chat app, in your notes).",
-  "- In a coding app, then run `node tools/prepare-job.mjs <brief> --keep ID,ID,...` with your ids, best first: it rewrites this file with only those cards, in full.",
-].join("\n");
-
-/** The kept cards after the owner's AI graded the shortlist, in its order: the digest then shows only these. */
-export function keepPicks(p: Prepared, ids: string[], cards: PrepCard[]): { prepared: Prepared; unknown: string[] } {
-  const byId = new Map(cards.map(c => [c.id, c]));
-  const found = new Map(p.shortlist.map(x => [x.card.id, x]));
-  const wanted = [...new Set(ids.map(s => s.trim().toUpperCase()).filter(Boolean))];
-  const unknown = wanted.filter(id => !byId.has(id));
-  const picks = wanted.filter(id => byId.has(id)).map(id => found.get(id) ?? { card: byId.get(id)!, score: 0, via: [] });
-  const gaps = p.queries.filter(q => (q.kind === "ask" || q.kind === "signal") && !picks.some(x => x.via.includes(q.text))).map(q => q.text);
-  return { prepared: { ...p, picks, shortlist: picks, gaps, graded: true }, unknown };
-}
-
-/** The digest an agent reads before drafting: facts used as filters, the ranked cards, the shortlist to grade, the gaps. */
+/** The digest an agent reads before drafting: facts used as filters, the ranked cards, and the gaps. */
 export function preparedMarkdown(p: Prepared): string {
   const f = p.facts;
   const factLine = [f.market && `market ${f.market}`, f.amazon && `Amazon ${f.amazon}`, f.platform, f.cod && "cash on delivery", f.subscription && "subscription",
     f.channels.length && `channels: ${f.channels.join(", ")}`].filter(Boolean).join("; ") || "none clear; no filter applied";
-  const asks = p.queries.filter(q => q.kind === "ask"), signals = p.queries.filter(q => q.kind === "signal");
-  const more = p.graded ? [] : p.shortlist.slice(p.picks.length);
+  const situation = [f.stage && `stage ${f.stage}`, f.model?.length && `model ${f.model.join(", ")}`, f.traffic && `traffic ${f.traffic}`, f.price && `price ${f.price}`,
+    f.spend && `ad spend ${f.spend}`, f.size && `revenue ${f.size}`].filter(Boolean).join("; ");
+  const asks = p.queries.filter(q => q.kind === "ask"), signals = p.queries.filter(q => q.kind === "signal"), hyps = p.queries.filter(q => q.kind === "hypothesis");
   return [
     "# Knowledge brief for this job",
     "",
-    p.graded
-      ? "Read before drafting. These are the library cards you kept when you graded the shortlist, best first. Use a card only where its \"holds when\" fits this business; check each \"fails when\" against the brief. Cite card ids in your notes, never in the deliverable."
-      : "Read before drafting. These are the library cards that best match this brief, best first, then more candidates. Use a card only where its \"holds when\" fits this business; check each \"fails when\" against the brief. Cite card ids in your notes, never in the deliverable.",
+    "Read before drafting. These are the library cards that fit this brief, best first. Use a card only where its \"holds when\" fits this business; check each \"fails when\" against the brief. Cite card ids in your notes, never in the deliverable.",
     "",
     `**Facts read from the brief (used as filters):** ${factLine}.`,
     "",
+    ...(situation ? [`**The store's situation (cards written for another are pushed down):** ${situation}.`, ""] : []),
+    ...(p.stage ? [`**Stage:** ${p.stage}.`, ""] : []),
     ...(asks.length ? ["**What the brief asks for:**", ...asks.map(q => `- ${q.text}`), ""] : []),
     ...(signals.length ? ["**Signals in the data:**", ...signals.map(q => `- ${q.text}`), ""] : []),
-    ...(more.length ? [GRADE_STEP, ""] : []),
-    p.graded ? "## Cards you kept" : "## Cards",
+    ...(hyps.length ? ["**Your hypotheses, each searched:**", ...hyps.map(q => `- ${q.text}`), ""] : []),
+    "## Cards",
     "",
-    // Kept cards come in full (the body and the whole holds and fails lines); before grading, short lines do.
     ...p.picks.flatMap((x, i) => [
       `${i + 1}. **${x.card.id}** ${x.card.claim} (tier ${x.card.tier}, ${x.card.scope})`,
-      ...(p.graded && x.card.text ? [`   - ${x.card.text.replace(/\s*\n+\s*/g, " ")}`] : []),
-      ...(x.card.holds ? [`   - Holds when: ${p.graded ? x.card.holds : clip(x.card.holds, 20)}`] : []),
-      ...(x.card.fails ? [`   - Fails when: ${p.graded ? x.card.fails : clip(x.card.fails, 20)}`] : []),
+      ...(x.card.holds ? [`   - Holds when: ${clip(x.card.holds, 20)}`] : []),
+      ...(x.card.fails ? [`   - Fails when: ${clip(x.card.fails, 20)}`] : []),
       ...(x.via.length ? [`   - Found for: ${clip(x.via[0], 10)}`] : []),
     ]),
     "",
-    ...(more.length ? [
-      "## More candidates",
-      "",
-      "Shorter lines. Any of these can replace a card above when it fits this store better.",
-      "",
-      ...more.map((x, i) => `${p.picks.length + i + 1}. **${x.card.id}** ${clip(x.card.claim, 30)} (tier ${x.card.tier})${x.card.holds ? ` Holds when: ${clip(x.card.holds, 14)}` : ""}`),
-      "",
-    ] : []),
     "## Gaps",
     "",
-    ...(p.gaps.length ? [
-      ...p.gaps.map(g => `- No strong card for: ${clip(g, 25)}`),
-      "",
-      "For each gap, write the need again in an expert's words, two ways, and run `node tools/ask-knowledge.mjs \"<first way>\" \"<second way>\"` once. If nothing that comes back fits this store, decide it from the brief and the owner's data, never from memory, and say so in your notes.",
-    ] : ["- None: every request and signal has a matching card."]),
+    ...(p.gaps.length ? p.gaps.map(g => `- No strong card for: ${clip(g, 25)} Decide it from the brief and the owner's data, never from memory.`) : ["- None: every request and signal has a matching card."]),
     "",
     "For more on one card or one question: `node tools/ask-knowledge.mjs \"<question>\" --module <CODE>`.",
   ].join("\n");

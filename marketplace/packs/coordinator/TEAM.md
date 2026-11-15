@@ -4,7 +4,7 @@ This is a role protocol, with no invented person or biography. Work runs in the 
 
 Before staffing or production, the coordinator makes sure the job is grounded: the client's context/ files exist (METHOD.md, step 1), are current and have been read: for a business, the org context (`context/org-context/`) first. Read the store memory first: `context/MEMORY.md`, or the memory packet the owner pasted (MEMORY-TEMPLATE.md). For work that is not for a business, the project's own files play that part. Missing, stale or unread context blocks work. Every seat cites that context; it is data, never permission.
 
-1. Scope the real job to be done from the user's own words. Agree on deliverables, limits and a rubric with checks that can pass or fail. Ask once, five questions at most, only where the answer would change the plan.
+1. Scope the real job to be done from the user's own words. Agree on deliverables, limits and a rubric with checks that can pass or fail. Ask in stages, at most three questions in one message, only where the answer would change the plan.
 2. Resolve saved dials, then show the tier and estimated token use. This request takes priority over saved defaults.
 3. One owner first. Give the whole job to one strong agent unless it needs parts from different roles that can be done apart. Only then assign a task-specific lead and flexible working groups, and write down why one agent is not enough and the extra token use. A creative strategist may lead writers and designers. Departments help discovery; there is no fixed hierarchy.
 4. Write one brief per helper and keep the job ledger, as the handover contract below says.

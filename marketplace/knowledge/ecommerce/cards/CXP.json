@@ -35,7 +35,12 @@
       "where": "Section four: cancellation flow example"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "CXP-0002",
@@ -71,7 +76,12 @@
       "where": "Cancellations section, splash screen discussion"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "CXP-0003",
@@ -149,7 +159,12 @@
       "where": "Cancellations section, discounts and reason methodology"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "CXP-0005",
@@ -188,7 +203,12 @@
       "where": "Portal discussion, skip pause delay question"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "CXP-0006",
@@ -228,7 +248,12 @@
       "where": "Retention section, free gift roadmap question"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "CXP-0007",
@@ -268,7 +293,12 @@
       "where": "Key findings and Stage 8 post-purchase support"
     },
     "strength": "research",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "CXP-0008",
@@ -308,7 +338,16 @@
       "where": "Stage 6 delivery and unboxing; gifts and samples summary"
     },
     "strength": "research",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "CXP-0009",
@@ -346,7 +385,12 @@
       "where": "'The stop trying to delight argument' and 'How to reconcile the debate'"
     },
     "strength": "research",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "CXP-0010",
@@ -385,7 +429,12 @@
       "where": "Delivery accuracy benchmarks and the shipping expectation summary"
     },
     "strength": "research",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "CXP-0011",
@@ -461,7 +510,12 @@
       "where": "Data and benchmarks: WISMO; Stage 5 delivery gap"
     },
     "strength": "research",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "CXP-0013",
@@ -502,7 +556,16 @@
       "where": "Sections 'The Human Touch: Handwritten Notes at Scale' and 'The Unit Economics of Delight'"
     },
     "strength": "stated_by_practitioner",
-    "public": false
+    "public": false,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "CXP-0014",
@@ -542,7 +605,12 @@
       "where": "Stage 2 three-step flow; Stage 3 branded tracking page"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "CXP-0015",
@@ -623,7 +691,13 @@
       "where": "Final paid-media section on discount acquisition and zero-party data; Angus Cowan retention hierarchy"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "prelaunch",
+        "early"
+      ]
+    }
   },
   {
     "id": "CXP-0017",
@@ -663,7 +737,13 @@
       "quote": "loyalty plateaus once expectations are met"
     },
     "strength": "research",
-    "public": false
+    "public": false,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "CXP-0018",
@@ -704,7 +784,12 @@
       "quote": "do not advertise it as a default"
     },
     "strength": "research",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low"
+      ]
+    }
   },
   {
     "id": "CXP-0019",
@@ -783,7 +868,13 @@
       "where": "Part 1, cases 1.14, 1.15, 1.16, 1.41, 1.53"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "CXP-0021",
@@ -826,7 +917,12 @@
       "where": "[00:55:34-01:04:35] retention KPIs and churn reduction"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "CXP-0022",
@@ -1019,7 +1115,15 @@
       "where": "Fake engagement section"
     },
     "strength": "platform_rule",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "cod",
+        "subscription",
+        "marketplace",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "CXP-6301",
@@ -1058,7 +1162,12 @@
       "where": "Questions on review gating, incentives and review suppression"
     },
     "strength": "platform_rule",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "CXP-6302",
@@ -1214,7 +1323,12 @@
       "where": "Summary of patterns 5 and 12"
     },
     "strength": "regulator_rule",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "CXP-6609",
@@ -1414,5 +1528,48 @@
     },
     "strength": "research",
     "public": true
+  },
+  {
+    "id": "CXP-7000",
+    "modules": [
+      "CXP",
+      "OPS"
+    ],
+    "topics": [
+      "india",
+      "returns policy",
+      "refunds"
+    ],
+    "claim": "In India, an online seller cannot refuse to take back goods or refund if they are defective, deficient, spurious, not as advertised, or delivered later than the stated schedule (unless force majeure).",
+    "body": "Rule 7(4) of the Consumer Protection (E-Commerce) Rules, 2020 says no inventory e-commerce entity may refuse to take back goods, or refuse to refund what was paid, where the goods are defective, deficient or spurious, do not have the characteristics or features advertised or agreed, or arrive late against the stated delivery schedule. Late delivery caused by force majeure is excused. Rule 6(3) puts the same duty on sellers on a marketplace. Rule 4(10) requires refunds on accepted requests to be paid within a reasonable time or as the Reserve Bank of India or other law prescribes. So a 'no returns' policy is fine for change-of-mind returns, but it cannot block returns or refunds in these cases. How to apply: write the returns policy in two parts, a statutory part (faulty, wrong, not as described or late: always accepted) and a goodwill part (change of mind, with any window and conditions you choose), and state realistic delivery dates, because a promised date you miss becomes a refund right.",
+    "conditions": "Online sales to consumers in India, own site or marketplace.",
+    "fails_when": "Change-of-mind returns, which the rules leave to the seller's policy; delays caused by force majeure.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I have a no returns policy in India?",
+      "Does a late delivery mean I have to refund in India?",
+      "Do I have to refund a customer if the product doesn't match the photos?",
+      "How fast must I refund customers in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7000",
+    "evidence": {
+      "where": "Rules 4(10), 6(3) and 7(4)"
+    },
+    "strength": "regulator_rule",
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   }
 ]

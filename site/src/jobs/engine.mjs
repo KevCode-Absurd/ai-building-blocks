@@ -1,6 +1,6 @@
 import { validateJobDocument } from './contracts.mjs';
 import { proposeTeam, pickLead, teamBrief } from './propose-team.mjs';
-import { agentLoad } from './lead-agents.mjs';
+import { agentLoad, journeyFor } from './lead-agents.mjs';
 import { routeJob } from './router.mjs';
 import { resolveDials, localPreferences, updatePreferences } from './dials.mjs';
 import { dialQuestions } from './dial-questions.mjs';
@@ -314,7 +314,10 @@ function singleLeadJob(input, routed, catalogue) {
   const host = input.host_capabilities ?? {}, deliverable = resolveDeliverableKind(input.deliverable_kind, input.request), kind = deliverable.kind;
   const context = prepareJobContext({ request: input.request, deliverable_kind: deliverable.source === 'declared' ? kind : undefined, site_url: input.site_url ?? undefined, has_existing_asset: input.has_existing_asset ?? undefined }, catalogue.grounding ?? {});
   // When the job type is only a guess, no lead is named: one question first, then start_job again.
-  const lead = routed.unsure ? null : pickLead({ task: input.request, job: routed.job_type.job, deliverable_kind: deliverable.source === 'declared' ? kind : undefined, host_capabilities: host }, catalogue);
+  const { journey: journeyId, ...picked } = (routed.unsure ? null : pickLead({ task: input.request, job: routed.job_type.job, deliverable_kind: deliverable.source === 'declared' ? kind : undefined, host_capabilities: host }, catalogue)) ?? {};
+  const lead = picked.role_id ? picked : null;
+  // An e-commerce lead follows the guide's journey map for this kind of job (14 Nov 2026).
+  const journey = lead?.persona_id ? journeyFor(journeyId) : null;
   // The lead agent's pack carries its toolbox, so it is what the host loads; the library role is the fallback.
   const agent = lead?.persona_id ? agentLoad(lead.persona_id) : null;
   const library = lead ? { tool: 'prepare_specialist', args: { role_id: lead.role_id } } : null;
@@ -326,6 +329,7 @@ function singleLeadJob(input, routed, catalogue) {
     estimate: { seats: 1, council_rounds: 0, token_multiple: [1, 1], source: 'estimated' }, host_profile: input.host_profile ?? (host.parallel_agents && host.max_parallel >= 2 ? 'parallel' : 'sequential'), phase: 'ROUTE',
     deliverable: { kind, source: deliverable.source },
     lead: lead ? { ...lead, load: library, ...(agent ? { agent } : {}) } : null,
+    ...(journey ? { journey } : {}),
     // With from_context the host already holds the brief, questions and rubric (annex.craft_rubric and annex.gates).
     ...(input.from_context ? { from_context: 'Use the brief, questions, annex.craft_rubric and annex.gates from your prepare_job_context result.' } : { questions, questions_note: INTAKE_ASK,
     rubric: { criteria: context.annex.craft_rubric, gates: context.annex.gates, pass: `Every gate passes, and the weighted criteria score at least ${Math.round(CRAFT_PASS * 100)}% with none under ${CRAFT_FLOOR} out of 10.` } }),

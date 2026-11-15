@@ -121,7 +121,7 @@ test("every rule that won a blind test is still in METHOD.md, stated once", () =
     ["readiness check", /\*\*Ask or start: the readiness check\.\*\*/],
     ["start", /\*\*Start\*\* when all six are answered/],
     ["ask", /\*\*Ask\*\* when any gap would change what you make if you guessed wrong\./],
-    ["five questions", /at most five questions, each with choices or a default/],
+    ["three questions in one message", /at most three questions in one message and at most two rounds of asking before you deliver, each with choices or a default/], // 14 Nov 2026: staged questions (GUIDE.md)
     ["go stop only after questions", /When the brief already answered everything, do not stop: start, and give the spec and rubric with the finished work\./],
     ["nobody can reply", /\*\*When nobody can reply\*\*[^\n]*never ask\./],
     ["org context build and gate", /`node tools\/org-context\.mjs build --from <the folder with their material>`, then write the files it starts, then `node tools\/org-context\.mjs gate --for <kind>` must pass\./],

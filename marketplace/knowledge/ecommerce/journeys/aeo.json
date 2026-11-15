@@ -1,0 +1,222 @@
+{
+  "schema": "ai-blocks-journey/1",
+  "id": "aeo",
+  "name": "Showing up in AI answers (ChatGPT, Gemini, Perplexity, Copilot, Google AI Overviews and AI Mode)",
+  "vertical": "ecommerce",
+  "asked_as": [
+    "get us recommended by ChatGPT",
+    "why doesn't AI mention our brand",
+    "what does ChatGPT say about us",
+    "do we need llms.txt",
+    "GEO / AEO for my store"
+  ],
+  "lead_agents": ["rustam-ai-answers", "stuart-store-seo"],
+  "outcome": "The owner has a fixed panel of real buying questions with a baseline of who assistants name, how they describe the store and which sources they cite; a ranked change list that fixes what is blocking the store (access, wording, facts, the sources assistants trust); and a monthly read that shows whether it worked, against a control.",
+  "first_principles": [
+    "An AI answer is a summary of the pages the assistant fetched for its own sub-searches. The brand named is the one mentioned most often and most consistently across those sources, not the one with the best single page. So the work is: be readable, use the words the sub-searches use, and be present and correct in the sources that get cited.",
+    "Each assistant is its own channel. They search different indexes (Google, Bing, their own), lean on different source types (forums, video, lists, marketplaces, reviews) and pick up changes on different clocks. Measure and plan per assistant.",
+    "Measure first. Answers change from run to run and day to day; without a fixed question panel, run the same way each time, any claimed gain is noise. Hold half the questions back as a control when testing what works.",
+    "Most AI mentions carry no link, so referral sessions undercount. Read business impact from three places together: AI referral sessions and orders, a how-did-you-hear answer that names AI assistants, and mention share in the panel.",
+    "Entity clarity is the cheapest lever: the same name, category, price range, ships-to, returns and key facts on the site, marketplace listings, review profiles, social bios and, where the brand is truly notable, Wikidata. Assistants repeat whichever version they see most, including wrong ones.",
+    "No special file or markup is required for Google's AI features; pages must be indexed and snippet-eligible. Structured data helps machines read product facts and feeds shopping surfaces, but it is not a citation lever on its own. llms.txt is unproven: cheap to add, never sold as the fix. Mass AI-written pages spike and then crash."
+  ],
+
+  "goal": {
+    "questions": [
+      {
+        "id": "goal",
+        "ask": "What do you want from AI assistants first?",
+        "why": "Being recommended is a sources and wording job; wrong facts are a consistency job; shopping results are a product data job.",
+        "options": [
+          {"label": "Be named when buyers ask 'best X for Y'", "pro": "new buyers who never heard of you", "con": "slowest; depends on third-party sources"},
+          {"label": "Fix wrong things assistants say about you", "pro": "protects buyers already searching your name", "con": "does not win new questions by itself"},
+          {"label": "Show up in AI shopping results", "pro": "product cards with price and a buy path", "con": "needs complete product data and channel set-up"}
+        ],
+        "default": "Be named for buying questions, after any wrong facts are fixed",
+        "settle_with_data": "Run the brand-fact block of the panel first (is the store legit, does it ship to X, returns, price range, what it sells). If assistants state wrong facts, fixing those comes first whatever the owner picks."
+      },
+      {
+        "id": "market",
+        "ask": "Which country and language do your buyers ask in?",
+        "why": "Assistants answer by location and language; the panel, the sources and the rivals all change.",
+        "options": [
+          {"label": "Your main selling country", "pro": "one clean panel", "con": "misses growing markets"},
+          {"label": "Two markets, a panel each", "pro": "covers a second market", "con": "double the monthly runs"}
+        ],
+        "default": "The country with the most orders, in its main buying language",
+        "skip_if": ["store sells in one country"],
+        "settle_with_data": "Orders by ship-to country from the store export."
+      },
+      {
+        "id": "rivals",
+        "ask": "Which rivals should we track you against?",
+        "why": "Rival share shows who assistants prefer and which sources carry them.",
+        "options": [
+          {"label": "The ones assistants already name", "pro": "the real competition in answers", "con": "may include brands the owner ignores"},
+          {"label": "Your own list", "pro": "matches how you see the market", "con": "may miss who actually wins answers"},
+          {"label": "Both", "pro": "full picture", "con": "longer report"}
+        ],
+        "default": "The 3 to 5 rivals named most often in the baseline runs, plus any the owner adds",
+        "settle_with_data": "Count rivals named across the category and comparison blocks of the baseline; add 'vs' and 'alternative' queries from Search Console."
+      }
+    ]
+  },
+
+  "gather": {
+    "brand_brain": "required",
+    "sources": [
+      {"what": "Official brand facts: name and spellings, what the store sells, price range, ships to, delivery times, returns, guarantees, founding, certifications", "why": "the single source every page and profile must match", "where": "org context, live policy pages", "ask_if_missing": "Please confirm these facts once; they become the facts page every profile copies.", "fallback": "build from the live site and policy pages, marked unconfirmed"},
+      {"what": "Real buying questions", "why": "the panel must be what buyers ask, not what the brand wishes they asked", "where": "support tickets, chats, reviews, site search, Search Console question and 'vs' queries", "fallback": "category questions from the live results page and forum threads"},
+      {"what": "robots.txt, CDN or firewall bot settings, and how key pages render without JavaScript", "why": "an assistant that cannot fetch or read the page cannot cite it", "where": "live site; CDN dashboard screenshot from the owner", "ask_if_missing": "Can you send a screenshot of your CDN or firewall bot settings?", "fallback": "test fetches and a JavaScript-off render of the top pages"},
+      {"what": "Search Console and Bing Webmaster Tools", "why": "Google AI features follow Google's index; Copilot and some assistants lean on Bing's", "where": "both consoles", "ask_if_missing": "Please add me as a user in Search Console and verify the site in Bing Webmaster Tools (it can import from Search Console).", "fallback": "site: searches on both engines"},
+      {"what": "AI referral sessions and orders", "why": "the part of AI demand that does click", "where": "GA4, a custom channel group for AI assistant sources", "fallback": "Shopify referrer report"},
+      {"what": "How-did-you-hear answers that name AI assistants", "why": "the part that does not click", "where": "post-purchase survey", "fallback": "set one up now; report mentions only until it has a month of answers"},
+      {"what": "Marketplace listings, review profiles, social bios, directory and Wikidata entries", "why": "the off-site facts assistants read and repeat", "where": "public pages", "fallback": "none needed; these are public"},
+      {"what": "Product catalogue and feed", "why": "AI shopping surfaces read structured product data, not page copy", "where": "Shopify export, Merchant Center", "fallback": "the live product pages"}
+    ],
+    "setup": [
+      {"need": "A way to run the question panel", "why": "the baseline and every monthly read depend on it", "check": "does the owner already pay for an AI visibility tracker",
+       "options": [
+         {"label": "Manual runs, logged out, location set, 2 runs per question per assistant", "pro": "free, sees the sub-searches and citations", "con": "a few hours a month"},
+         {"label": "A paid tracker the owner already has", "pro": "more runs, less time", "con": "often records answers given without web search; check a sample by hand"}
+       ],
+       "default": "Manual runs, with any paid tracker checked against a hand-run sample"},
+      {"need": "How-did-you-hear survey with an AI assistant option", "why": "most AI influence leaves no referral", "check": "a question on the thank-you page or post-purchase message that lists AI assistants by name",
+       "options": [
+         {"label": "Add it now", "pro": "business impact readable within a month", "con": "a small app or a setting"},
+         {"label": "Skip", "pro": "nothing to set up", "con": "the report can show mentions, never sales"}
+       ],
+       "default": "Add it now"}
+    ],
+    "data_map": [
+      {"question": "Are we named, where, and how?", "data": "Per run: assistant, searched the web or not, store named, position, products named, description accurate, rivals named, cited URLs", "where": "panel log (context/panel.csv)", "tool": "node tools/ask-knowledge.mjs \"prompt panel method runs per question\" --module AEO", "if_missing": "build the panel first; nothing else is measurable"},
+      {"question": "Which sources do assistants trust for our category?", "data": "Cited URLs grouped by type: rival site, list or roundup, forum, video, marketplace, review site, press, our site", "where": "panel log", "if_missing": "run the category block of the panel"},
+      {"question": "Which words do the assistants search with?", "data": "The sub-searches an assistant shows it ran for each question", "where": "the assistant's search details during manual runs", "if_missing": "use Search Console question queries"},
+      {"question": "Can assistants fetch and read our pages?", "data": "robots.txt rules per AI crawler, CDN bot blocking, text visible with JavaScript off (reviews, FAQs, specs)", "where": "live site", "tool": "node tools/ask-knowledge.mjs \"AI crawlers robots CDN blocking JavaScript\" --module AEO,SEO", "if_missing": "never skip"},
+      {"question": "Are our facts the same everywhere?", "data": "Brand facts sheet vs site, marketplace listings, review profiles, social bios, directories, Wikidata", "where": "public pages", "if_missing": "never skip"},
+      {"question": "Is AI bringing buyers?", "data": "AI channel sessions, purchases, gross profit; survey share naming assistants", "where": "GA4 and survey", "if_missing": "report mentions only and say so"},
+      {"question": "Are we losing clicks to AI Overviews?", "data": "Click rate vs position over time for question queries; the AI features view in Search Console where available", "where": "Search Console", "if_missing": "skip"},
+      {"question": "Can AI shopping agents read our products?", "data": "Per SKU: identifiers, price, currency, availability, shipping, returns, variants, images", "where": "catalogue export, Merchant Center diagnostics", "if_missing": "check the top 20 products by gross profit by hand"}
+    ]
+  },
+
+  "diagnose": {
+    "tools": [
+      "node tools/prepare-job.mjs context/brief.md",
+      "node tools/ask-knowledge.mjs \"which sources AI answers cite for products\" \"get named in ChatGPT answers\" --module AEO",
+      "node tools/ask-knowledge.mjs \"llms.txt structured data AI Overviews requirements\" --module AEO,SEO"
+    ],
+    "look_for": [
+      "Runs where the assistant did not search the web: no citations, answer from training data. Count them apart; they say little about what changes will do this quarter.",
+      "Present in one assistant and absent in another: usually an index gap (not in Bing, not in Google) or a source-type gap (that assistant leans on forums or video the store is not in).",
+      "The store named but described wrongly (old price, wrong ships-to, a discontinued product): find the cited page carrying the error and fix it at the source, not only on the site.",
+      "A rival named while the store is not, with the same 3 to 5 third-party pages cited across questions: that short list is the work queue.",
+      "The store's own page cited but its product not named: the page never says plainly who the product is best for, with facts that can be quoted.",
+      "Sub-search wording that never appears in the store's titles, H1s or first sentences (use case, budget, skin type, room size, 'for beginners').",
+      "Reviews, FAQs or spec tables that load by JavaScript after the page: invisible to most AI crawlers.",
+      "robots.txt allows a crawler but the CDN or firewall blocks it; or the search crawler (the one that decides ChatGPT search visibility) is blocked when only training was meant to be.",
+      "Fact conflicts across the site, marketplaces and review profiles (two founding years, two return windows, different product names).",
+      "Question queries in Search Console where position holds and clicks fall: AI Overviews are answering; the aim there is to be named in the overview, not to win the click back.",
+      "Comparison and 'best X for Y' questions with no fair, dated comparison page anywhere on the site.",
+      "Changes judged on the wrong clock: some assistants pick up a new page in days, others in weeks."
+    ],
+    "hypothesis_patterns": [
+      {"pattern": "Not found: assistants cannot fetch or read the pages", "evidence": "absent across assistants; a crawler blocked at robots.txt or the CDN; key text missing with JavaScript off", "bet": "Open access and render the text in HTML; re-run the panel after 2 to 6 weeks"},
+      {"pattern": "Not matched: pages do not use the words the sub-searches use", "evidence": "the store is cited for other questions but not these; sub-search wording absent from titles and first sentences", "bet": "Answer pages and best-for sections in that wording, with a direct answer and a facts table"},
+      {"pattern": "Not chosen: the trusted sources leave the store out", "evidence": "rivals named via the same third-party lists, forums or videos; the store absent from them", "bet": "Correct or earn a place on those exact pages honestly: samples, facts, an expert answer, a pitch"},
+      {"pattern": "Facts conflict", "evidence": "accuracy rate below most runs; different facts across site and profiles", "bet": "One official facts page, then every profile and listing updated to match; re-check monthly"},
+      {"pattern": "Product data gap for AI shopping", "evidence": "no product cards in shopping answers; missing identifiers, shipping or returns fields", "bet": "Complete product data and the channel set-up for the top products by gross profit"}
+    ]
+  },
+
+  "choose": {
+    "decisions": [
+      {"id": "lever", "ask": "Where should the effort go first: your own pages, or the sources assistants cite?",
+       "options": [
+         {"label": "Own pages: facts page, answer pages, comparisons, product data", "pro": "fully in our control; some assistants pick it up fast", "con": "will not move assistants that mostly cite third-party sources", "when": "the store's own domain is already among cited sources, or nothing on the site answers the questions"},
+         {"label": "Third-party sources: lists, reviews, forums, video, press", "pro": "moves the head answers where the brand is mentioned across many sources", "con": "slower, needs outreach and samples; cannot be bought without disclosure", "when": "most citations point to third-party pages and rivals are named through them"},
+         {"label": "Both, split by what the panel shows (my usual pick)", "pro": "works on both halves of the answer", "con": "more work to track", "when": "the panel shows a mix of own and third-party citations"}
+       ],
+       "recommend": "Count the cited URLs in the baseline by type. Weight the effort by that share, after access and wrong facts are fixed, which always come first."},
+      {"id": "test", "ask": "Test changes against a held-back half of the questions, or change everything at once?",
+       "options": [
+         {"label": "Hold back half as a control", "pro": "shows what actually worked", "con": "half the questions wait a cycle", "when": "the panel has 40 or more questions and the owner wants to know which tactics pay"},
+         {"label": "Change everything at once", "pro": "faster", "con": "gains and run-to-run noise look the same", "when": "fixing wrong facts or blocked access, where waiting helps nobody"}
+       ],
+       "recommend": "Access and fact fixes go everywhere at once. Content and source work goes to the test half first when the panel is large enough."}
+    ]
+  },
+
+  "make": {
+    "pieces": [
+      {"piece": "Question panel, baseline and monthly report", "skill": "track-ai-answer-visibility", "when": "always first; the baseline before any change"},
+      {"piece": "Ranked change list in three layers: found, matched, chosen", "skill": "get-recommended-by-ai-assistants", "when": "after the baseline"},
+      {"piece": "Crawler access, rendering and indexing fixes", "skill": "technical-seo-audit-shopify", "when": "the found layer fails"},
+      {"piece": "Answer pages for detailed buyer questions", "skill": "answer-pages-for-buyer-questions", "when": "questions in the panel have no page that answers them"},
+      {"piece": "Fair comparison and best-for pages", "skill": "build-comparison-page", "when": "comparison and 'best X for Y' questions name rivals"},
+      {"piece": "FAQ from real questions, visible in HTML", "skill": "write-faq-from-tickets-and-reviews", "when": "the same questions reach support and the panel"},
+      {"piece": "Product, Organization and breadcrumb structured data", "skill": "add-product-schema-and-rich-results", "when": "markup is missing, broken or duplicated by apps"},
+      {"piece": "Product data for AI shopping agents", "skill": "product-data-for-ai-shopping", "when": "the goal includes shopping results, or product cards show wrong price or stock"},
+      {"piece": "Consistent titles across store and marketplaces", "skill": "write-product-titles-for-store-and-marketplaces", "when": "product names differ across channels"},
+      {"piece": "More real reviews on the platforms assistants cite", "skill": "build-review-collection-system", "when": "review profiles are thin or old"},
+      {"piece": "Pitches to the lists, guides and press assistants cite", "skill": "pitch-store-to-press-and-gift-guides", "when": "the lever decision includes third-party sources"},
+      {"piece": "How-did-you-hear survey with AI assistants listed", "skill": "post-purchase-how-did-you-hear-survey", "when": "no survey names AI assistants"}
+    ],
+    "rules": [
+      "Baseline before any change; the panel wording, assistants, settings, location and run count stay fixed month to month. New questions go in a separate block.",
+      "Never fake reviews, post as a customer, pay for mentions without disclosure, or hide instructions to AI in pages.",
+      "Every fact on the facts page and every profile comes from the org context and matches the live policy pages word for word.",
+      "Answer pages open with a one or two sentence direct answer, then a facts table with units and sources, and a refresh date; fewer good pages over many thin ones.",
+      "Comparisons are fair, sourced and dated, and say where the rival wins.",
+      "Rating and review markup only from reviews shown on the page; Organization markup links only to the brand's real profiles; FAQ markup is optional plain help, with no rich result promised.",
+      "llms.txt may be added as a low-cost option, never reported as the cause of a gain. Wikipedia: never write the brand's own article; Wikidata only where the brand is notable, with sourced facts.",
+      "Each change names the questions it serves and the products behind them, ranked by gross profit."
+    ]
+  },
+
+  "check": {
+    "preflight": [
+      "node tools/quality/numbers.cjs context/numbers.json --final <deliverable>",
+      "node tools/check-handover.mjs <deliverable> --brief context/brief.md"
+    ],
+    "checks": [
+      "node tools/quality/consistency-check.mjs context/hypotheses.json <deliverable>",
+      "node tools/quality/proof.cjs <deliverable> --sources context/",
+      "node tools/quality/qe-check.cjs <deliverable> --brief context/brief.md",
+      "Mention share counts only runs where the assistant searched the web; no-search runs are reported apart.",
+      "Every cited URL in the report opens, and every fact on the facts page matches the live policy pages."
+    ],
+    "senior_review": [
+      "Is the panel made of questions buyers really ask, weighted to the products with the most gross profit?",
+      "Did we read each assistant on its own, rather than one blended score?",
+      "Are access and wrong facts fixed before any content or outreach work?",
+      "Could any tactic here be seen as fake, paid without disclosure, or hidden text?",
+      "Does the report say what is proven (crawl access, cited sources) and what is not (llms.txt, markup as a citation lever)?",
+      "When will each change be read again, on that assistant's clock, and against which control?"
+    ]
+  },
+
+  "knowledge": {
+    "diagnose": {"modules": ["AEO", "SEO", "MEA"], "ask": ["which sources AI answers cite for products", "prompt panel method and run count", "AI referral traffic undercounted how did you hear", "AI crawler access robots CDN"]},
+    "make": {"modules": ["AEO", "SEO", "PRD"], "ask": ["answer capsules direct answer format", "comparison page rules", "brand facts page to correct AI answers", "product data fields for AI shopping"]},
+    "check": {"modules": ["AEO", "SEO"], "ask": ["llms.txt and special files for AI Overviews", "review snippet rules", "spam policy on mass AI pages"]},
+    "never": ["Brand facts come from the org context and live policies, never the library.", "Mention shares and citations come from this store's own panel runs, dated."]
+  },
+
+  "handover": {
+    "files": [
+      "Question panel (CSV): every question, its block, the products it maps to, control or test.",
+      "Baseline report: mention share, top-3 share and accuracy per assistant, rivals named, cited sources grouped by type.",
+      "Ranked change list with the skill and owner for each change.",
+      "Brand facts page, ready to publish, and a profile-by-profile fix list.",
+      "Source work queue: the third-party pages to correct or pitch, with the pitch for each.",
+      "Monthly run sheet with dates, settings and the read rule."
+    ],
+    "next_moves": [
+      "Answer pages for the five highest-profit questions where the store is absent.",
+      "Comparison pages against the rivals assistants name most.",
+      "A search check: the same buying questions in Google, to see which pages already rank.",
+      "Next month's panel run against the control."
+    ]
+  }
+}

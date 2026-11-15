@@ -1,0 +1,991 @@
+{
+  "schema": "ai-blocks-ecom-skill-pick/1",
+  "written": "2026-11-14",
+  "note": "Owner requests in plain owner words, each with the agent(s) that should take it and the 1 to 3 own skills that are a right pick. Written from the owner side, before the toolbox text was tuned. Tune on split=tune only; holdout is reported separately and never used to edit toolbox.json.",
+  "items": [
+    {
+      "id": "p01",
+      "split": "tune",
+      "module": "MCR",
+      "request": "make 5 static ads for our new face serum from the product photo",
+      "agents": [
+        "ayaka-ad-design"
+      ],
+      "skills": [
+        "proven-static-formats",
+        "product-photo-ad-variations",
+        "store-meta-ad-images"
+      ]
+    },
+    {
+      "id": "p02",
+      "split": "holdout",
+      "module": "MCR",
+      "request": "I need a before and after ad for my acne patches",
+      "agents": [
+        "ayaka-ad-design"
+      ],
+      "skills": [
+        "before-after-and-chart-statics"
+      ]
+    },
+    {
+      "id": "p03",
+      "split": "tune",
+      "module": "MCR",
+      "request": "turn our best customer review into an ad",
+      "agents": [
+        "ayaka-ad-design",
+        "kofi-ad-copy"
+      ],
+      "skills": [
+        "review-screenshot-ads"
+      ]
+    },
+    {
+      "id": "p04",
+      "split": "holdout",
+      "module": "MCR",
+      "request": "our winning ad has stopped working, it's tired. freshen it up",
+      "agents": [
+        "tendai-ad-creative"
+      ],
+      "skills": [
+        "refresh-a-tired-winning-ad"
+      ]
+    },
+    {
+      "id": "p05",
+      "split": "tune",
+      "module": "MCR",
+      "request": "resize this ad for stories, reels and feed",
+      "agents": [
+        "ayaka-ad-design"
+      ],
+      "skills": [
+        "resize-ads-for-every-placement"
+      ]
+    },
+    {
+      "id": "p06",
+      "split": "holdout",
+      "module": "MCR",
+      "request": "write a UGC script for a creator to film at home",
+      "agents": [
+        "devon-video-ugc"
+      ],
+      "skills": [
+        "creator-video-script",
+        "plan-ugc-shoot-at-home"
+      ]
+    },
+    {
+      "id": "p07",
+      "split": "tune",
+      "module": "MCR",
+      "request": "people stop watching my video ad after 3 seconds",
+      "agents": [
+        "devon-video-ugc"
+      ],
+      "skills": [
+        "video-ad-retention-fix",
+        "first-frame-design"
+      ]
+    },
+    {
+      "id": "p08",
+      "split": "holdout",
+      "module": "MCR",
+      "request": "I shot an hour of raw footage, cut it into a few ads",
+      "agents": [
+        "devon-video-ugc"
+      ],
+      "skills": [
+        "cut-raw-footage-into-ad-variants"
+      ]
+    },
+    {
+      "id": "p09",
+      "split": "tune",
+      "module": "MCR",
+      "request": "make a video ad with an AI avatar talking about our product",
+      "agents": [
+        "devon-video-ugc"
+      ],
+      "skills": [
+        "ai-creator-style-video-ad",
+        "ai-presenter-video-openers"
+      ]
+    },
+    {
+      "id": "p10",
+      "split": "holdout",
+      "module": "MCR",
+      "request": "carousel ad that shows how our blender works step by step",
+      "agents": [
+        "ayaka-ad-design"
+      ],
+      "skills": [
+        "design-carousel-ad"
+      ]
+    },
+    {
+      "id": "p11",
+      "split": "tune",
+      "module": "MCR",
+      "request": "what ads should we make this month?",
+      "agents": [
+        "tendai-ad-creative"
+      ],
+      "skills": [
+        "monthly-ad-batch-sprint",
+        "proof-scored-ad-ideas",
+        "weekly-creative-sprint"
+      ]
+    },
+    {
+      "id": "p12",
+      "split": "holdout",
+      "module": "MCR",
+      "request": "find ad angles in our customer reviews",
+      "agents": [
+        "tendai-ad-creative"
+      ],
+      "skills": [
+        "mine-ad-angles-from-reviews"
+      ]
+    },
+    {
+      "id": "p13",
+      "split": "tune",
+      "module": "MCR",
+      "request": "what are my competitors running on Facebook and Instagram",
+      "agents": [
+        "tendai-ad-creative"
+      ],
+      "skills": [
+        "store-meta-competitor",
+        "cross-channel-competitor-map",
+        "ad-swipe-library"
+      ]
+    },
+    {
+      "id": "p14",
+      "split": "holdout",
+      "module": "MCR",
+      "request": "write 10 hooks for my ad",
+      "agents": [
+        "kofi-ad-copy"
+      ],
+      "skills": [
+        "ad-opener-writer",
+        "headline-angle-set"
+      ]
+    },
+    {
+      "id": "p15",
+      "split": "tune",
+      "module": "MCR",
+      "request": "we launch a new product next month and need all the ad creative for it",
+      "agents": [
+        "tendai-ad-creative"
+      ],
+      "skills": [
+        "product-launch-creative-kit"
+      ]
+    },
+    {
+      "id": "p16",
+      "split": "holdout",
+      "module": "ADC",
+      "request": "our Meta account has 30 campaigns and it's a mess",
+      "agents": [
+        "dustin-ad-deployment"
+      ],
+      "skills": [
+        "consolidate-fragmented-meta-account"
+      ]
+    },
+    {
+      "id": "p17",
+      "split": "tune",
+      "module": "ADC",
+      "request": "set up an Advantage+ shopping campaign",
+      "agents": [
+        "dustin-ad-deployment"
+      ],
+      "skills": [
+        "set-up-advantage-plus-sales-campaign"
+      ]
+    },
+    {
+      "id": "p18",
+      "split": "holdout",
+      "module": "ADC",
+      "request": "first time running Facebook ads, how should I set up the campaign?",
+      "agents": [
+        "dustin-ad-deployment"
+      ],
+      "skills": [
+        "build-meta-campaign-launch-sheet",
+        "store-meta-plan"
+      ]
+    },
+    {
+      "id": "p19",
+      "split": "tune",
+      "module": "ADC",
+      "request": "my ad got rejected and the account is restricted",
+      "agents": [
+        "dustin-ad-deployment"
+      ],
+      "skills": [
+        "fix-rejected-ads-and-account-restrictions"
+      ]
+    },
+    {
+      "id": "p20",
+      "split": "holdout",
+      "module": "ADC",
+      "request": "add the new creatives to my running campaign without resetting learning",
+      "agents": [
+        "dustin-ad-deployment"
+      ],
+      "skills": [
+        "add-new-ads-to-live-campaign"
+      ]
+    },
+    {
+      "id": "p21",
+      "split": "tune",
+      "module": "ADC",
+      "request": "set up retargeting for people who visited the site",
+      "agents": [
+        "dustin-ad-deployment"
+      ],
+      "skills": [
+        "build-meta-retargeting-and-exclusions"
+      ]
+    },
+    {
+      "id": "p22",
+      "split": "holdout",
+      "module": "ADC",
+      "request": "most of our orders are cash on delivery, how should we run Meta ads?",
+      "agents": [
+        "dustin-ad-deployment"
+      ],
+      "skills": [
+        "meta-ads-for-cod-stores"
+      ]
+    },
+    {
+      "id": "p23",
+      "split": "tune",
+      "module": "ADC",
+      "request": "check my new ads before they go live",
+      "agents": [
+        "dustin-ad-deployment"
+      ],
+      "skills": [
+        "ad-launch-prepublish-check"
+      ]
+    },
+    {
+      "id": "p24",
+      "split": "holdout",
+      "module": "ADC",
+      "request": "my ads are expensive",
+      "agents": [
+        "dustin-ad-deployment"
+      ],
+      "skills": [
+        "store-meta-audit",
+        "store-meta-deep-dive",
+        "store-meta-ads"
+      ]
+    },
+    {
+      "id": "p25",
+      "split": "tune",
+      "module": "ADC",
+      "request": "audit my Facebook ad account",
+      "agents": [
+        "dustin-ad-deployment"
+      ],
+      "skills": [
+        "store-meta-audit"
+      ]
+    },
+    {
+      "id": "p26",
+      "split": "holdout",
+      "module": "ADC",
+      "request": "what should I change in the ad account today?",
+      "agents": [
+        "dustin-ad-deployment"
+      ],
+      "skills": [
+        "daily-ad-account-review"
+      ]
+    },
+    {
+      "id": "p27",
+      "split": "tune",
+      "module": "MEA",
+      "request": "ROAS dropped hard last week and I don't know why",
+      "agents": [
+        "jared-performance-marketing"
+      ],
+      "skills": [
+        "store-results-drop-diagnosis"
+      ]
+    },
+    {
+      "id": "p28",
+      "split": "holdout",
+      "module": "ADC",
+      "request": "can I double my ad budget without it falling apart?",
+      "agents": [
+        "dustin-ad-deployment"
+      ],
+      "skills": [
+        "scale-readiness-check",
+        "store-meta-budget"
+      ]
+    },
+    {
+      "id": "p29",
+      "split": "tune",
+      "module": "MEA",
+      "request": "how much should I spend on ads next month to make 5 lakh profit",
+      "agents": [
+        "jared-performance-marketing"
+      ],
+      "skills": [
+        "set-ad-budget-from-profit-target"
+      ]
+    },
+    {
+      "id": "p30",
+      "split": "holdout",
+      "module": "ADC",
+      "request": "how should I split my budget between Google and Meta",
+      "agents": [
+        "jared-performance-marketing"
+      ],
+      "skills": [
+        "cross-channel-budget-reallocation"
+      ]
+    },
+    {
+      "id": "p31",
+      "split": "tune",
+      "module": "GAD",
+      "request": "audit my Google Ads",
+      "agents": [
+        "raymond-google-ads"
+      ],
+      "skills": [
+        "google-ads-account-audit"
+      ]
+    },
+    {
+      "id": "p32",
+      "split": "holdout",
+      "module": "GAD",
+      "request": "Performance Max is spending but not selling",
+      "agents": [
+        "raymond-google-ads"
+      ],
+      "skills": [
+        "google-pmax-diagnostics"
+      ]
+    },
+    {
+      "id": "p33",
+      "split": "tune",
+      "module": "GAD",
+      "request": "products disapproved in Merchant Center",
+      "agents": [
+        "raymond-google-ads"
+      ],
+      "skills": [
+        "fix-merchant-center-disapprovals"
+      ]
+    },
+    {
+      "id": "p34",
+      "split": "holdout",
+      "module": "GAD",
+      "request": "which search terms are wasting my Google money",
+      "agents": [
+        "raymond-google-ads"
+      ],
+      "skills": [
+        "google-search-term-mining"
+      ]
+    },
+    {
+      "id": "p35",
+      "split": "tune",
+      "module": "GAD",
+      "request": "write Google search ad headlines and descriptions",
+      "agents": [
+        "kofi-ad-copy"
+      ],
+      "skills": [
+        "write-google-responsive-search-ads"
+      ]
+    },
+    {
+      "id": "p36",
+      "split": "holdout",
+      "module": "ADC",
+      "request": "launch our first TikTok ads campaign",
+      "agents": [
+        "zara-tiktok-ads"
+      ],
+      "skills": [
+        "launch-tiktok-ads-first-campaign"
+      ]
+    },
+    {
+      "id": "p37",
+      "split": "tune",
+      "module": "ORG",
+      "request": "how do we start selling on TikTok Shop",
+      "agents": [
+        "ploy-tiktok-shop"
+      ],
+      "skills": [
+        "launch-tiktok-shop"
+      ]
+    },
+    {
+      "id": "p38",
+      "split": "holdout",
+      "module": "ADC",
+      "request": "TikTok ads: which ad groups do I scale and which do I kill today",
+      "agents": [
+        "zara-tiktok-ads"
+      ],
+      "skills": [
+        "tiktok-ads-daily-review-and-scale"
+      ]
+    },
+    {
+      "id": "p39",
+      "split": "tune",
+      "module": "ADC",
+      "request": "run our creators' videos as Spark Ads",
+      "agents": [
+        "zara-tiktok-ads"
+      ],
+      "skills": [
+        "tiktok-spark-ads-with-creators"
+      ]
+    },
+    {
+      "id": "p40",
+      "split": "holdout",
+      "module": "CRO",
+      "request": "people add to cart but don't finish checkout",
+      "agents": [
+        "gretchen-store-testing"
+      ],
+      "skills": [
+        "fix-checkout-drop-off"
+      ]
+    },
+    {
+      "id": "p41",
+      "split": "tune",
+      "module": "LPG",
+      "request": "audit my store for conversion",
+      "agents": [
+        "gretchen-store-testing"
+      ],
+      "skills": [
+        "storefront-conversion-audit"
+      ]
+    },
+    {
+      "id": "p42",
+      "split": "holdout",
+      "module": "CRO",
+      "request": "mobile conversion rate is half of desktop",
+      "agents": [
+        "gretchen-store-testing"
+      ],
+      "skills": [
+        "mobile-conversion-audit"
+      ]
+    },
+    {
+      "id": "p43",
+      "split": "tune",
+      "module": "CRO",
+      "request": "plan an A/B test on my product page",
+      "agents": [
+        "gretchen-store-testing"
+      ],
+      "skills": [
+        "design-store-ab-test"
+      ]
+    },
+    {
+      "id": "p44",
+      "split": "holdout",
+      "module": "CRO",
+      "request": "lots of people view this product but nobody adds it to cart",
+      "agents": [
+        "gretchen-store-testing"
+      ],
+      "skills": [
+        "diagnose-low-add-to-cart-products"
+      ]
+    },
+    {
+      "id": "p45",
+      "split": "tune",
+      "module": "LPG",
+      "request": "write my product page",
+      "agents": [
+        "annabel-landing-pages"
+      ],
+      "skills": [
+        "write-product-page-copy"
+      ]
+    },
+    {
+      "id": "p46",
+      "split": "holdout",
+      "module": "LPG",
+      "request": "build an advertorial page for cold Facebook traffic",
+      "agents": [
+        "annabel-landing-pages"
+      ],
+      "skills": [
+        "advertorial-story-page"
+      ]
+    },
+    {
+      "id": "p47",
+      "split": "tune",
+      "module": "LPG",
+      "request": "does my landing page match my Facebook ads?",
+      "agents": [
+        "annabel-landing-pages"
+      ],
+      "skills": [
+        "store-meta-landing",
+        "awareness-stage-message-match"
+      ]
+    },
+    {
+      "id": "p48",
+      "split": "holdout",
+      "module": "LPG",
+      "request": "descriptions for all 200 products in the store",
+      "agents": [
+        "georgia-product-copy"
+      ],
+      "skills": [
+        "write-product-descriptions-in-bulk"
+      ]
+    },
+    {
+      "id": "p49",
+      "split": "tune",
+      "module": "SPD",
+      "request": "my store is slow",
+      "agents": [
+        "arjun-page-speed"
+      ],
+      "skills": [
+        "shopify-speed-audit-and-fix-list"
+      ]
+    },
+    {
+      "id": "p50",
+      "split": "holdout",
+      "module": "SPD",
+      "request": "too many apps are slowing the site down",
+      "agents": [
+        "arjun-page-speed"
+      ],
+      "skills": [
+        "remove-app-bloat"
+      ]
+    },
+    {
+      "id": "p51",
+      "split": "tune",
+      "module": "EML",
+      "request": "set up my email flows in Klaviyo",
+      "agents": [
+        "morag-email-sms"
+      ],
+      "skills": [
+        "email-sms-flow-plan"
+      ]
+    },
+    {
+      "id": "p52",
+      "split": "holdout",
+      "module": "OPS",
+      "request": "write a WhatsApp message for COD orders",
+      "agents": [
+        "rohan-chat-sales"
+      ],
+      "skills": [
+        "confirm-cod-orders-by-chat-or-call",
+        "write-sms-and-whatsapp-messages"
+      ]
+    },
+    {
+      "id": "p53",
+      "split": "tune",
+      "module": "EML",
+      "request": "abandoned cart emails",
+      "agents": [
+        "lucia-email-copy"
+      ],
+      "skills": [
+        "write-abandoned-cart-and-checkout-emails"
+      ]
+    },
+    {
+      "id": "p54",
+      "split": "holdout",
+      "module": "EML",
+      "request": "bring back customers who haven't bought in 6 months",
+      "agents": [
+        "imogen-retention"
+      ],
+      "skills": [
+        "win-back-lapsed-customers",
+        "write-win-back-email-series"
+      ]
+    },
+    {
+      "id": "p55",
+      "split": "tune",
+      "module": "EML",
+      "request": "my emails are going to spam",
+      "agents": [
+        "morag-email-sms"
+      ],
+      "skills": [
+        "email-account-health-audit"
+      ]
+    },
+    {
+      "id": "p56",
+      "split": "holdout",
+      "module": "CXP",
+      "request": "get more first-time buyers to order a second time",
+      "agents": [
+        "latoya-post-purchase"
+      ],
+      "skills": [
+        "post-purchase-repeat-sequence",
+        "write-post-purchase-emails"
+      ]
+    },
+    {
+      "id": "p57",
+      "split": "tune",
+      "module": "CXP",
+      "request": "start a points loyalty program",
+      "agents": [
+        "latoya-post-purchase"
+      ],
+      "skills": [
+        "design-loyalty-program",
+        "vip-customer-program"
+      ]
+    },
+    {
+      "id": "p58",
+      "split": "holdout",
+      "module": "CXP",
+      "request": "we need more product reviews",
+      "agents": [
+        "latoya-post-purchase"
+      ],
+      "skills": [
+        "build-review-collection-system"
+      ]
+    },
+    {
+      "id": "p59",
+      "split": "tune",
+      "module": "SEO",
+      "request": "my collection pages don't show up on Google",
+      "agents": [
+        "stuart-store-seo"
+      ],
+      "skills": [
+        "optimize-collection-pages-for-seo",
+        "technical-seo-audit-shopify"
+      ]
+    },
+    {
+      "id": "p60",
+      "split": "holdout",
+      "module": "AEO",
+      "request": "ChatGPT never recommends my brand",
+      "agents": [
+        "rustam-ai-answers"
+      ],
+      "skills": [
+        "get-recommended-by-ai-assistants"
+      ]
+    },
+    {
+      "id": "p61",
+      "split": "tune",
+      "module": "OFF",
+      "request": "how much discount can I give on Black Friday without losing money",
+      "agents": [
+        "brendan-offers"
+      ],
+      "skills": [
+        "how-deep-can-we-discount"
+      ]
+    },
+    {
+      "id": "p62",
+      "split": "holdout",
+      "module": "OFF",
+      "request": "should free shipping start at 999 or 1499?",
+      "agents": [
+        "brendan-offers"
+      ],
+      "skills": [
+        "offer-bundle-threshold-design"
+      ]
+    },
+    {
+      "id": "p63",
+      "split": "tune",
+      "module": "OFF",
+      "request": "what price should I sell this at",
+      "agents": [
+        "juliet-merchandising"
+      ],
+      "skills": [
+        "set-prices-from-costs-and-competitors"
+      ]
+    },
+    {
+      "id": "p64",
+      "split": "holdout",
+      "module": "MEA",
+      "request": "which of my products actually make money?",
+      "agents": [
+        "radek-unit-economics"
+      ],
+      "skills": [
+        "build-sku-profit-sheet",
+        "rank-products-to-push-or-cut"
+      ]
+    },
+    {
+      "id": "p65",
+      "split": "tune",
+      "module": "MEA",
+      "request": "what's my break-even ROAS",
+      "agents": [
+        "radek-unit-economics"
+      ],
+      "skills": [
+        "store-meta-math"
+      ]
+    },
+    {
+      "id": "p66",
+      "split": "holdout",
+      "module": "MEA",
+      "request": "is the ROAS Facebook shows me real?",
+      "agents": [
+        "radek-unit-economics"
+      ],
+      "skills": [
+        "store-meta-attribution",
+        "measure-channel-lift-with-holdouts",
+        "blended-channel-profit-view"
+      ]
+    },
+    {
+      "id": "p67",
+      "split": "tune",
+      "module": "WLD",
+      "request": "do a limited drop with another brand",
+      "agents": [
+        "barnaby-wild-bets"
+      ],
+      "skills": [
+        "brand-collab-drop"
+      ]
+    },
+    {
+      "id": "p68",
+      "split": "holdout",
+      "module": "WLD",
+      "request": "should we try Pinterest or Snapchat ads?",
+      "agents": [
+        "barnaby-wild-bets"
+      ],
+      "skills": [
+        "test-a-new-ad-channel"
+      ]
+    },
+    {
+      "id": "p69",
+      "split": "tune",
+      "module": "PRD",
+      "request": "find me a winning product to sell",
+      "agents": [
+        "sipho-product-hunter"
+      ],
+      "skills": [
+        "find-trending-products"
+      ]
+    },
+    {
+      "id": "p70",
+      "split": "holdout",
+      "module": "PRD",
+      "request": "will this sell before I order 500 units?",
+      "agents": [
+        "revathi-product-research"
+      ],
+      "skills": [
+        "validate-demand-before-buying-stock"
+      ]
+    },
+    {
+      "id": "p71",
+      "split": "tune",
+      "module": "AMZ",
+      "request": "write my Amazon listing",
+      "agents": [
+        "garrett-amazon"
+      ],
+      "skills": [
+        "write-amazon-listing"
+      ]
+    },
+    {
+      "id": "p72",
+      "split": "holdout",
+      "module": "AMZ",
+      "request": "we lost the Buy Box",
+      "agents": [
+        "garrett-amazon"
+      ],
+      "skills": [
+        "win-the-buy-box"
+      ]
+    },
+    {
+      "id": "p73",
+      "split": "tune",
+      "module": "ORG",
+      "request": "find influencers for my brand",
+      "agents": [
+        "pilar-creators"
+      ],
+      "skills": [
+        "find-and-vet-influencers"
+      ]
+    },
+    {
+      "id": "p74",
+      "split": "holdout",
+      "module": "ORG",
+      "request": "send free products to influencers in exchange for posts",
+      "agents": [
+        "pilar-creators"
+      ],
+      "skills": [
+        "plan-influencer-gifting-campaign"
+      ]
+    },
+    {
+      "id": "p75",
+      "split": "tune",
+      "module": "CXP",
+      "request": "too many where-is-my-order emails",
+      "agents": [
+        "darlene-support-lead"
+      ],
+      "skills": [
+        "cut-where-is-my-order-tickets"
+      ]
+    },
+    {
+      "id": "p76",
+      "split": "holdout",
+      "module": "CXP",
+      "request": "a customer is furious and threatening to post about us",
+      "agents": [
+        "darlene-support-lead"
+      ],
+      "skills": [
+        "handle-angry-customer-escalations"
+      ]
+    },
+    {
+      "id": "p77",
+      "split": "tune",
+      "module": "CRO",
+      "request": "customers on chat keep saying it's too expensive",
+      "agents": [
+        "rohan-chat-sales"
+      ],
+      "skills": [
+        "handle-price-objections-in-chat"
+      ]
+    },
+    {
+      "id": "p78",
+      "split": "holdout",
+      "module": "OPS",
+      "request": "too many COD orders get returned undelivered",
+      "agents": [
+        "marivic-fulfilment"
+      ],
+      "skills": [
+        "cut-rto-on-cod-orders"
+      ]
+    },
+    {
+      "id": "p79",
+      "split": "tune",
+      "module": "COG",
+      "request": "when should I reorder stock?",
+      "agents": [
+        "omar-inventory-planning"
+      ],
+      "skills": [
+        "set-reorder-points-and-safety-stock"
+      ]
+    },
+    {
+      "id": "p80",
+      "split": "holdout",
+      "module": "SEC",
+      "request": "we keep getting fake orders",
+      "agents": [
+        "ilona-bot-security"
+      ],
+      "skills": [
+        "stop-fake-orders-and-card-testing"
+      ]
+    }
+  ]
+}

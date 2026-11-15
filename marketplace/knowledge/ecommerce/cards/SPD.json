@@ -171,7 +171,13 @@
       "where": "Real-World Results; Research Summary; Lighthouse vs PageSpeed Insights"
     },
     "strength": "research",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "SPD-0005",

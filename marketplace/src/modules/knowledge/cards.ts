@@ -11,7 +11,7 @@
 // a tier prior (platform docs beat practitioners beat opinion), a freshness discount past the module's review window,
 // and wild bets never above a baseline card.
 
-import { KnowledgeIndex, MIN_COVERAGE, tokens, type Chunk } from "../packs/retrieve.ts";
+import { KnowledgeIndex, MIN_COVERAGE, tokens, type Chunk, type Synonyms } from "../packs/retrieve.ts";
 
 export type Scope = "baseline" | "growth";
 export type Rights = "owned" | "public_reference" | "licensed" | "study_only";
@@ -49,6 +49,8 @@ export interface Card {
   evidence: { where: string; quote?: string };
   strength: string;
   public: boolean;
+  /** The situations the card holds in, by facet (scripts/tag-card-situations.mjs); absent: it holds everywhere. */
+  situations?: Partial<Record<"stage" | "model" | "traffic" | "price" | "spend" | "size", string[]>>;
 }
 
 export const SCOPES: readonly Scope[] = ["baseline", "growth"];
@@ -104,10 +106,16 @@ export function cardMarkdown(card: Card, source: Source | undefined, level = 3):
     "",
     ...(card.conditions.trim() ? [`**Holds when:** ${card.conditions.trim()}`, ""] : []),
     ...(card.fails_when.trim() ? [`**Fails when:** ${card.fails_when.trim()}`, ""] : []),
+    ...(fitsLine(card) ? [`**Fits:** ${fitsLine(card)}`, ""] : []),
     ...(card.numbers.length ? [`**Numbers:** ${card.numbers.join("; ")}`, ""] : []),
     ...(card.asks.length ? [`**Asked as:** ${card.asks.join(" | ")}`, ""] : []),
     `**Source:** ${src}. ${card.evidence?.where ? `Where: ${card.evidence.where}.` : ""}`.trim(),
   ].join("\n");
+}
+
+/** A card's situations as one line ("stage early, scaling; traffic medium, high"), read back by prepare.ts parseFits. */
+export function fitsLine(card: Pick<Card, "situations">): string {
+  return Object.entries(card.situations ?? {}).filter(([, v]) => Array.isArray(v) && v.length).map(([k, v]) => `${k} ${v!.join(", ")}`).join("; ");
 }
 
 /** A module's cards as one markdown file, for agent packs and the served library (knowledge/<vertical>/<CODE>.md). */
@@ -159,7 +167,8 @@ export class CardIndex {
   private modules: Map<string, ModuleDef>;
   private index: KnowledgeIndex;
   readonly vertical: Vertical;
-  constructor(vertical: Vertical, cards: Card[], sources: Source[]) {
+  /** `synonyms`: the vertical's owner-words layer (knowledge/<vertical>/synonyms.json); none searches as before. */
+  constructor(vertical: Vertical, cards: Card[], sources: Source[], synonyms: Synonyms | null = null) {
     this.vertical = vertical;
     this.cards = cards;
     this.sources = new Map(sources.map(s => [s.id, s]));
@@ -167,9 +176,10 @@ export class CardIndex {
     const files = cards.map(c => {
       const path = `cards/${c.id}.md`;
       this.byPath.set(path, c);
-      return { path, text: cardMarkdown(c, this.sources.get(c.source)) };
+      // The situations line is a filter, not words to match: it stays out of the searched text.
+      return { path, text: cardMarkdown(c, this.sources.get(c.source)).replace(/^\*\*Fits:\*\* .*\n\n/m, "") };
     });
-    this.index = new KnowledgeIndex(files);
+    this.index = new KnowledgeIndex(files, { synonyms });
   }
 
   stale(card: Card, today?: string): boolean {

@@ -272,7 +272,13 @@
       "where": "Product page optimisation module, page template slide"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "SEO-0008",
@@ -314,7 +320,13 @@
       "where": "keyword validation and on-page sections of the webinar"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "prelaunch",
+        "early"
+      ]
+    }
   },
   {
     "id": "SEO-0009",

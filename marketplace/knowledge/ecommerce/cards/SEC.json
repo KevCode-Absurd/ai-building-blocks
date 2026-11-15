@@ -277,7 +277,12 @@
       "quote": "allow agents to research freely and apply stringent verification"
     },
     "strength": "stated_by_practitioner",
-    "public": false
+    "public": false,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "SEC-0008",
@@ -348,7 +353,12 @@
       "quote": "A good agent verified by Visa that comes from a bad location"
     },
     "strength": "stated_by_practitioner",
-    "public": false
+    "public": false,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "SEC-0010",
@@ -464,7 +474,12 @@
       "quote": "At least one admin is required in Business Manager."
     },
     "strength": "platform_rule",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "SEC-6200",

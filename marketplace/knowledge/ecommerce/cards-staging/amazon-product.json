@@ -1,0 +1,3081 @@
+[
+  {
+    "id": "AMZ-7100",
+    "modules": [
+      "AMZ",
+      "LPG"
+    ],
+    "topics": [
+      "listing",
+      "product images",
+      "main image"
+    ],
+    "claim": "An Amazon US main image must show the product on pure white (RGB 255, 255, 255) filling 85% of the frame; under 500 pixels cannot upload, and 1,000 pixels or more on the longest side turns on zoom.",
+    "body": "Amazon's product image guide sets the main image rules. The main image is the one shoppers see in search results, so it must be a realistic, professional photo of the product as sold: the whole product inside the frame, shown once, one unit plus only the accessories that come with it, on a pure white background with RGB values 255, 255, 255, taking up 85% of the image. No placeholder images, no mannequins, no props that are not included, and packaging only when it is a real feature. Technical limits: JPEG, TIFF, PNG or non-animated GIF (JPEG recommended), at least 500 and at most 10,000 pixels on the longest side, at least 72 dpi, RGB preferred. Images of 1,000 pixels or more on the longest side enable zoom. If no main image meets the rules, Amazon may remove the listing from search until a compliant one is uploaded. Across all images: no review stars, no claims like free shipping, no Amazon logos or badge look-alikes such as Best seller. How to apply: shoot or export the main image at 1,000 to 2,000 pixels on pure white, check the fill before upload, and keep text, badges and lifestyle scenes for the secondary images.",
+    "conditions": "Listings in the Amazon US store; most categories (a few product types may use a lifestyle main image per their style guide).",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "background RGB 255, 255, 255",
+      "product fills 85% of the image",
+      "minimum 500, maximum 10,000 pixels on the longest side",
+      "1,000+ pixels enables zoom",
+      "at least 72 dpi"
+    ],
+    "asks": [
+      "what are Amazon's main image requirements",
+      "why was my Amazon listing removed from search for the image",
+      "what size should Amazon product photos be for zoom",
+      "can my Amazon main image have text or a lifestyle background"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7100",
+    "evidence": {
+      "where": "Product image specifications; MAIN product image requirements",
+      "quote": "Show the product as 85% of the image."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7101",
+    "modules": [
+      "AMZ",
+      "LPG"
+    ],
+    "topics": [
+      "listing",
+      "product images",
+      "AI disclosure"
+    ],
+    "claim": "Amazon asks for one compliant main image plus at least six more images and one video per product, and requires a metadata tag on images showing photorealistic AI-generated people.",
+    "body": "Amazon's image guide says every product needs at least one compliant main image and recommends uploading at least six additional images and one video so shoppers can judge the product. Uploading does not guarantee display: Amazon picks and orders images from all sellers on the detail page and may edit images to meet its rules, and a selected image can take up to 24 hours to appear. Secondary images use variant codes (PT01 to PT99 for angles, use and details; PS01 to PS06 for safety and compliance images; SWCH for swatches), and bulk uploads need the code in the file name, for example B000123456.MAIN.jpg. Since some jurisdictions require disclosure, an image with photorealistic people generated entirely by AI must carry the keyword contains-synthetic-performer in the image's XMP subject field; real people edited with AI tools do not need the tag. How to apply: plan a seven-image set plus a video for each new ASIN (main, scale, use, features, materials, what is in the box, safety or care), name files with the variant codes, and tag any fully synthetic model images before upload.",
+    "conditions": "Amazon US listings; applies to every seller contributing images to a detail page.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "at least 1 main image plus at least 6 additional images and 1 video recommended",
+      "up to 24 hours to appear",
+      "variant codes PT01 to PT99, PS01 to PS06"
+    ],
+    "asks": [
+      "how many images should an Amazon listing have",
+      "do I need to label AI generated models in Amazon photos",
+      "why aren't my uploaded images showing on my Amazon listing",
+      "what extra images should I add to my Amazon product page"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7100",
+    "evidence": {
+      "where": "Product image submission and selection; AI-generated people disclosure; Image variants",
+      "quote": "We recommend that you upload at least six additional images and one video"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7102",
+    "modules": [
+      "AMZ",
+      "LPG"
+    ],
+    "topics": [
+      "listing",
+      "bullet points"
+    ],
+    "claim": "Amazon US bullet points should number at least three, start with a header and colon, skip end punctuation and all caps, and must not carry claims like eco-friendly or anti-bacterial, guarantees, links or emojis.",
+    "body": "Amazon's bullet point requirements give the format: begin with a capital letter, include at least three bullets, write each as a sentence fragment without end punctuation, separate phrases with semicolons, spell out numbers one to nine (except names, model numbers and measurements), leave a space between a number and its unit (60 ml), and lead with a short header and a colon, as in Cotton fabric: Made from 100% cotton. Content should cover features, benefits and how the product meets the need, not the brand story, and should not repeat the title or description. Avoid subjective, performance or comparative claims unless they are verifiable on the packaging, and never compare with competitor brands. Bullets that contain any of these may be removed or edited: special characters such as the trademark sign, emojis, placeholder text like N/A or TBD, ASINs, the claims eco-friendly, anti-microbial, anti-bacterial or made from bamboo, guarantee wording such as full refund, company contact details or links, repeated information, all-caps words, abbreviations like qty or w/, and data that has its own field such as fabric content or country of origin. How to apply: draft five bullets in the header-colon pattern, one benefit each, and run them against this list before publishing.",
+    "conditions": "Amazon US listings; character limits vary by product type, so check the template's limit.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "at least 3 bullet points",
+      "numbers one to nine written in full"
+    ],
+    "asks": [
+      "how should I write Amazon bullet points",
+      "can I say eco-friendly in my Amazon listing",
+      "why did Amazon remove my bullet points",
+      "can I put a money back guarantee in Amazon bullets"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7101",
+    "evidence": {
+      "where": "Bullet point guidelines; Prohibited content",
+      "quote": "Include at least three bullet points."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7103",
+    "modules": [
+      "AMZ"
+    ],
+    "topics": [
+      "search indexing",
+      "listing troubleshooting"
+    ],
+    "claim": "An Amazon ASIN is not searchable when it has no buyable offer, no browse node, a listing quality suppression or a future launch date; fixes can take up to 72 hours to show.",
+    "body": "Amazon's search optimization guide lists why a product does not come up in search. No offer: an ASIN without a buyable offer (price, quantity, release date) is unsearchable, including when an offer expires. No browse node: an ASIN not assigned to a specific category node is not indexed at all; the guide likens a node to a supermarket shelf. Listing quality: a search-suppressed or detail-page-removed ASIN is not searchable until the issue in Fix Your Products is fixed. Future launch date: an ASIN whose offering release date is in the future stays hidden until that date passes. Adult classification also limits All Departments search by design. After changing an offer, browse node or launch date, results can take up to 72 hours to update. The guide adds that Amazon may not use all supplied description and bullet text for retrieval, so stuffing extra words gives no guarantee. How to apply: when a new ASIN does not appear for its own exact title, check these four causes in order before touching keywords or ads, and wait 72 hours after a fix before judging it.",
+    "conditions": "Amazon US listings; Seller Central tools named on the page (Manage All Inventory, Fix Your Products).",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "up to 72 hours for offer, browse node or launch date changes to show"
+    ],
+    "asks": [
+      "why can't I find my product in Amazon search",
+      "my new Amazon listing is live but not showing up",
+      "how long until Amazon listing changes appear in search",
+      "does a future launch date hide my ASIN"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7102",
+    "evidence": {
+      "where": "Troubleshooting table and note",
+      "quote": "ASINs that don't have a browse node assigned are not indexed by Amazon."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7104",
+    "modules": [
+      "AMZ",
+      "SEO"
+    ],
+    "topics": [
+      "browse classification",
+      "keyword research and indexing"
+    ],
+    "claim": "Classify every Amazon listing at the most specific browse node using the exact item type keyword from the Browse Tree Guide; 'Women's road running shoes', not 'Shoes', decides which filtered results it can appear in.",
+    "body": "Amazon's search guide explains that shoppers combine browsing and search, and that Amazon uses Item Type Keywords to place products in its browse tree. When a shopper searches All Departments, Amazon may limit results to products matching certain category classifications, so a product filed too broadly can drop out of the results that matter. The item type keyword must match the spelling and format in the category's Browse Tree Guide and be chosen at the most specific subcategory available; the guide's example is women's road running shoes rather than shoes or athletic shoes. Search terms (the generic keyword field) then add synonyms for lexical matching, such as earphones and earbuds for headphones, and are not visible to shoppers. The guide's best practices for that field: synonyms instead of repeats, spelling variants and abbreviations, all lowercase, spaces not punctuation, singular or plural but not both, no brand names, ASINs, articles like a or the, temporary words like new, or subjective words like best. How to apply: before writing copy, download the Browse Tree Guide for the category, pick the deepest matching node, then fill the generic keyword field only with true synonyms the title and bullets do not already cover.",
+    "conditions": "Amazon US listings in categories with a Browse Tree Guide.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "generic keyword attribute under 250 bytes"
+    ],
+    "asks": [
+      "what browse node should my Amazon product be in",
+      "how does Amazon decide which category my listing shows in",
+      "what goes in the Amazon generic keyword field",
+      "should I use singular and plural keywords on Amazon"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7102",
+    "evidence": {
+      "where": "Search and browse; Search terms best practices",
+      "quote": "Make sure to select keywords at the most specific subcategory available."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7105",
+    "modules": [
+      "AMZ",
+      "ADC"
+    ],
+    "topics": [
+      "Sponsored Products",
+      "ad readiness"
+    ],
+    "claim": "Amazon Ads says to advertise products that hold the Featured Offer and are in stock, with at least five reviews at 3.5 stars or more, four zoomable images, three bullets and titles near 60 characters.",
+    "body": "In its Sponsored Products best practices, Amazon Ads lists what a product should have before money goes behind it. It must be in stock to be the Featured Offer, and only the Featured Offer is eligible for ads. Amazon then advises advertising products with five or more customer reviews rated 3.5 stars or higher, featuring four or more high-quality zoomable images, including at least three bullet points and keeping titles at roughly 60 characters. The reasoning is that ads buy a visit, and the detail page has to convert it; a page with no reviews, few images or a weak title wastes clicks. How to apply: before launching or scaling a campaign, audit each ASIN against this list. For a brand-new ASIN with no reviews, keep launch spend modest and lean on Vine and the Request a Review button to reach five reviews quickly; for an existing ASIN that fails the image or bullet test, fix the page first. Note the 60-character figure is advice for ad performance, while 200 characters is the policy limit for titles in most categories.",
+    "conditions": "Sponsored Products in Amazon stores; products eligible for the Featured Offer.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "five or more reviews",
+      "3.5 stars or higher",
+      "four or more zoomable images",
+      "at least three bullet points",
+      "titles about 60 characters"
+    ],
+    "asks": [
+      "is my Amazon product ready for ads",
+      "should I run PPC on a listing with no reviews",
+      "how many reviews before advertising on Amazon",
+      "how long should my Amazon title be for ads"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7103",
+    "evidence": {
+      "where": "Featured Offer and listing checklist section",
+      "quote": "Make titles approximately 60 characters long."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7106",
+    "modules": [
+      "AMZ",
+      "ADC"
+    ],
+    "topics": [
+      "Sponsored Products",
+      "campaign structure",
+      "search term harvesting"
+    ],
+    "claim": "Amazon Ads' setup advice: run automatic and manual campaigns together, one product group and one category per campaign, no end date, about $10 a day to start, and move winning search terms from the auto report into manual.",
+    "body": "Amazon Ads' Sponsored Products best practices describe a simple structure. Create manual campaigns to supplement an automatic one rather than choosing between them. Keep each product group in its own campaign or ad group, and only put ASINs from the same category in one campaign, so budgets and bids match how the products sell. Set no end date (always on), and in the first week check metrics at least twice. Start with a daily budget of $10 or the local equivalent and add budget if campaigns often run out before the day ends. Ad groups can hold up to 1,000 products, and Amazon suggests advertising at least two products. The loop that makes the structure work is the search term report: download it from the automatic campaign, find the shopper queries that produced sales, and target those terms in a manual campaign with match types you control, adding negative targeting where terms waste spend. How to apply: launch each new ASIN with one automatic campaign and one manual campaign of its known keywords, review weekly, and harvest converting terms into manual exact while negating them in auto so the two do not bid against each other.",
+    "conditions": "Sponsored Products on Amazon; sellers with enough budget to keep campaigns running all day.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "daily budget of $10 or equivalent to start",
+      "check metrics at least twice in the first week",
+      "up to 1,000 products per ad group",
+      "advertise at least 2 products"
+    ],
+    "asks": [
+      "how should I structure Amazon PPC campaigns",
+      "auto or manual campaigns on Amazon",
+      "how much should I spend per day on Amazon ads to start",
+      "how do I use the search term report"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7103",
+    "evidence": {
+      "where": "Campaign structure, budget and keyword sections",
+      "quote": "Create manual campaigns to supplement your automated campaign."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7107",
+    "modules": [
+      "AMZ",
+      "ADC"
+    ],
+    "topics": [
+      "Sponsored Products",
+      "automatic targeting"
+    ],
+    "claim": "Sponsored Products automatic campaigns split into four targeting groups (close match, loose match, substitutes and complements) that can be bid separately, so the vague auto campaign can be steered.",
+    "body": "Amazon Ads' targeting guide explains that an automatic campaign is not one black box but four groups. Close match shows the ad to shoppers using search terms closely related to the product. Loose match shows it for loosely related terms. Substitutes shows it on detail pages of similar products, competing for the same purchase. Complements shows it on detail pages of products that go with yours. Each group can be switched on or off and bid on its own. This matters most for a new ASIN: close match usually converts best and deserves the highest bid, loose match finds new query ideas at a lower bid, substitutes tests whether shoppers will switch from a named rival, and complements can work for accessories (a proofing basket next to a bread knife) but is often weak for primary products. How to apply: from launch, set separate bids per group, then read the search term and targeting reports by group; cut bids on the group with the worst cost per order, raise the one with the best, and move proven queries and ASINs into manual campaigns.",
+    "conditions": "Sponsored Products automatic campaigns on Amazon.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "4 automatic targeting groups"
+    ],
+    "asks": [
+      "what are close match and loose match on Amazon",
+      "how do I control an Amazon auto campaign",
+      "should I bid differently on substitutes and complements",
+      "what does Amazon auto targeting actually target"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7104",
+    "evidence": {
+      "where": "Automatic targeting section",
+      "quote": "search terms closely related to your products"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7108",
+    "modules": [
+      "AMZ",
+      "ADC"
+    ],
+    "topics": [
+      "Sponsored Products",
+      "match types",
+      "bidding"
+    ],
+    "claim": "In manual Sponsored Products campaigns, bid highest on exact match, lower on phrase and lowest on broad, as Amazon Ads recommends, because exact queries are the most relevant and broad buys reach.",
+    "body": "Amazon Ads' targeting guide defines the three keyword match types. Broad match gives the widest exposure, matching related shopping queries. Phrase match is more restrictive and generally gives more relevant placements, with the keyword's words in order inside a longer query. Exact match matches the search term word for word, same words in the same order. Amazon's own advice for manual bids is to set the highest bid on exact, a lower one on phrase and the lowest on broad. The logic is cost per order: an exact query like silicone bread proofing basket converts better than a broad cousin, so it can carry a higher click price for the same return. Keywords are limited to 10 words and 80 characters and cannot contain question marks, slashes, double quotes, ampersands or backslashes. Amazon also says to test match types for at least one to two weeks before pausing keywords. How to apply: put each core keyword into all three match types in separate ad groups, bid them in descending order, and after two weeks keep the match type that delivers orders at or below your target ACOS.",
+    "conditions": "Manual keyword targeting in Sponsored Products.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "max 10 words and 80 characters per keyword",
+      "test match types at least 1 to 2 weeks before pausing"
+    ],
+    "asks": [
+      "which match type should I bid highest on Amazon",
+      "broad vs phrase vs exact on Amazon PPC",
+      "how long before I pause a keyword on Amazon",
+      "how long can an Amazon keyword be"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7104",
+    "evidence": {
+      "where": "Manual keyword targeting and bid recommendations",
+      "quote": "setting the highest bid on the exact match, a lower on the phrase match"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7109",
+    "modules": [
+      "AMZ",
+      "ADC"
+    ],
+    "topics": [
+      "Sponsored Products",
+      "negative keywords"
+    ],
+    "claim": "Add negative phrase or negative exact keywords for Amazon search terms that waste spend, but only after a term has had at least 20 clicks, and leave negatives running two weeks before changing strategy again.",
+    "body": "Amazon Ads' targeting guide covers negative targeting in automatic and manual campaigns. Negative phrase stops the ad showing on queries that contain the complete phrase or close variations; negative exact stops it on queries that contain the exact phrase or a close variation. Amazon recommends phrase or exact for negatives. It also gives two waiting rules: review a search term for negation after it has received at least 20 clicks, and let negative keywords run for two weeks or more before changing strategy. For product targeting, a negative product list keeps ads off chosen ASIN pages, for example a cheaper rival where shoppers never switch. Negatives do two jobs: they cut irrelevant spend (a bread proofing basket showing for basket weaving), and they stop an automatic campaign from bidding on terms already harvested into a manual exact campaign. How to apply: once a week, filter the search term report for terms with 20 or more clicks and no orders, or a cost per order far above target, and negate them as phrase or exact; mark the date and do not revisit that ad group's negatives for two weeks.",
+    "conditions": "Sponsored Products campaigns with search term reports.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "review a term after at least 20 clicks",
+      "let negatives run two weeks or more"
+    ],
+    "asks": [
+      "when should I add negative keywords on Amazon",
+      "how many clicks before I negate a search term",
+      "negative phrase or negative exact on Amazon",
+      "how do I stop my auto campaign bidding on my manual keywords"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7104",
+    "evidence": {
+      "where": "Negative keywords section and tips",
+      "quote": "has received at least 20 clicks"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7110",
+    "modules": [
+      "AMZ",
+      "ADC"
+    ],
+    "topics": [
+      "Sponsored Products",
+      "product targeting"
+    ],
+    "claim": "Sponsored Products product targeting lets an ad sit on chosen rival ASIN pages or whole categories, and negative product targeting keeps it off pages where shoppers will not switch.",
+    "body": "Amazon Ads' targeting guide describes product targeting as the second manual option beside keywords. A seller can target individual products by ASIN (always 10 characters, all digits or starting with B) or entire categories such as women's running shoes, refined by attributes. The ad then appears on those product detail pages, catching shoppers already deciding. Negative product targeting adds a list of ASINs where the ad must not show. The useful targets are listings the product beats on something the shopper can see: a lower price at similar ratings, a better rating at a similar price, or a feature the rival lacks that its reviews complain about. Targeting a much cheaper or much better-reviewed rival usually buys clicks that do not convert. How to apply: list the rival ASINs where your product wins on price, rating or a fixed complaint, target them in a product targeting campaign, and add the ASINs you cannot beat as negative products in your automatic campaign's substitutes group.",
+    "conditions": "Sponsored Products manual campaigns; a product with a visible edge over specific rivals.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "ASIN is 10 characters"
+    ],
+    "asks": [
+      "can I advertise on my competitor's Amazon listing",
+      "how does ASIN targeting work on Amazon",
+      "how do I stop my ads showing on certain products",
+      "which competitor products should I target with Amazon ads"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7104",
+    "evidence": {
+      "where": "Product targeting and negative product targeting sections"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7111",
+    "modules": [
+      "AMZ",
+      "ADC"
+    ],
+    "topics": [
+      "Sponsored Products",
+      "launch",
+      "keyword research and indexing"
+    ],
+    "claim": "Amazon Ads suggests launching manual keyword campaigns with at least 30 keywords and a minimum daily budget of $10 in the US (£10 UK, 1,000 yen Japan), run without an end date.",
+    "body": "Amazon's getting started guide for sponsored ads gives the minimum setup it expects for Sponsored Products. Advertisers register first, then choose automatic targeting or manual keyword or product targeting. When launching a manual keyword campaign, Amazon says to target at least 30 keywords, which gives the system enough queries to find shoppers while a new product has no sales history. The recommended minimum daily budget is $10 in the United States, £10 in the United Kingdom and 1,000 yen in Japan. Campaigns should run without an end date to keep products in front of shoppers, and automatic campaigns update the shopping terms they target on their own. Sponsored Products charge per click and show in shopping results and on product detail pages on desktop and mobile. How to apply: for a new ASIN, build the first manual campaign from 30 or more terms (the main term, its long-tail variants, and synonyms the auto campaign surfaces), budget at least the local minimum per day, and judge it on weeks of data rather than days.",
+    "conditions": "New Sponsored Products campaigns in the US, UK and Japan stores; other stores have their own minimums.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "at least 30 keywords for a manual keyword campaign",
+      "minimum daily budget $10 US, £10 UK, 1,000 yen Japan"
+    ],
+    "asks": [
+      "how many keywords should a new Amazon campaign have",
+      "what is the minimum budget for Amazon Sponsored Products",
+      "how do I set up my first Amazon ad campaign",
+      "how many keywords to launch a new ASIN"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7105",
+    "evidence": {
+      "where": "Sponsored Products section",
+      "quote": "target at least 30 keywords"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7112",
+    "modules": [
+      "AMZ",
+      "ADC",
+      "FIN"
+    ],
+    "topics": [
+      "Sponsored Products",
+      "budget pacing"
+    ],
+    "claim": "Sponsored Products daily budgets are not paced through the day and are monthly in effect: a $100 daily budget can spend up to $3,100 in a 31-day month, and ads stop when the item is out of stock.",
+    "body": "Amazon's Sponsored Products page describes the pricing model: no monthly or upfront fee, the advertiser sets a bid that is the most it will pay per click, and the daily budget is not paced across the day. Amazon gives the example that a campaign with a $100 daily budget may receive up to $3,100 in clicks over a 31-day month, so one day can spend more than the daily figure if other days spend less. Ads only appear while the advertised item is in stock. Eligibility: professional sellers, vendors, book vendors, KDP authors and agencies, for products in eligible categories that are eligible for the Featured Offer; adult, used, refurbished and closed-category products cannot be advertised. New sellers in select stores may earn up to $1,000 in ad credits by launching and spending on Sponsored Products within 30 days of their first campaign, with a Professional plan and a first buyable ASIN listed in the last 90 days. How to apply: plan ad cash by month (daily budget times days), not by day, and pause or cut budgets ahead of a stock-out so spend is not wasted on the final units.",
+    "conditions": "Sponsored Products in Amazon stores; the ad credit offer only in select marketplaces and subject to its terms.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "$100 daily budget can reach up to $3,100 in a 31-day month",
+      "up to $1,000 new seller ad credits within 30 days of first campaign",
+      "first buyable ASIN within the last 90 days"
+    ],
+    "asks": [
+      "why did Amazon spend more than my daily budget",
+      "how much will Amazon ads cost per month",
+      "do Amazon ads keep running when I'm out of stock",
+      "is there a free ad credit for new Amazon sellers"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7106",
+    "evidence": {
+      "where": "Pricing and FAQ sections; new seller offer",
+      "quote": "may receive up to $3,100 in clicks over a 31-day month"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7113",
+    "modules": [
+      "AMZ",
+      "ADC"
+    ],
+    "topics": [
+      "Sponsored Products",
+      "placement bid adjustments"
+    ],
+    "claim": "Sponsored Products lets you raise bids by up to 900% separately for top of search, rest of search and product pages, in both auto and manual campaigns and with fixed or dynamic bidding.",
+    "body": "Amazon Ads announced in January 2024 a rest-of-search bid adjustment, joining the existing top-of-search and product-page adjustments. Each placement can now take its own adjustment of up to 900%, available for all advertisers, for automatic and manual targeting, and with both fixed and dynamic bidding strategies, in stores including the United States, India, the United Kingdom, Germany and Japan. Amazon's best practices guide repeats the 900% ceiling. Placement adjustments stack on the base bid, and with dynamic bids up and down Amazon can raise a bid further, so a large top-of-search adjustment can multiply the click price. The placement report shows cost per order by placement. How to apply: run a campaign with no adjustments until it has enough clicks to judge, read the placement report, then raise the adjustment only on the placement whose cost per order beats your target, in small steps, and recheck the report before the next change. Avoid jumping straight to high multipliers on broad terms.",
+    "conditions": "Sponsored Products in the listed stores, India and the US included.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "placement bid adjustments up to 900%",
+      "announced 9 January 2024"
+    ],
+    "asks": [
+      "how do top of search bid adjustments work on Amazon",
+      "what is rest of search on Amazon ads",
+      "how high can I raise my Amazon placement bids",
+      "should I bid more for top of search on Amazon"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7107",
+    "evidence": {
+      "where": "Announcement body",
+      "quote": "adjust bids by up to 900%"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7114",
+    "modules": [
+      "AMZ",
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "ACOS",
+      "ROAS",
+      "ad metrics"
+    ],
+    "claim": "Amazon defines ACOS as ad spend divided by ad revenue times 100 and ROAS as its inverse; $50 spent for $100 in ad sales is 50% ACOS and a ROAS of 2.",
+    "body": "Amazon Ads' ACOS guide sets the two efficiency measures for sponsored ads. ACOS (advertising cost of sales) is ad spend divided by ad-attributed revenue, times 100. ROAS (return on ad spend) is ad revenue divided by ad spend, the inverse. The worked example: spending $50 to earn $100 gives an ACOS of 50% and a ROAS of 2. Amazon says there is no single good ACOS, that ACOS should not be the only metric watched, and that new campaigns often show a high ACOS simply because they are new. Both figures count only sales Amazon attributes to the ads, so they ignore organic sales the ads may lift and the profit left after product cost and fees. How to apply: report ACOS by campaign and ASIN against a target set from margin (see the break-even card), read new-launch ACOS over weeks rather than days, and add a whole-business view such as total ad spend over total sales before cutting campaigns that look expensive alone.",
+    "conditions": "Sponsored ads on Amazon; any marketplace.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "ACOS = ad spend ÷ ad revenue × 100",
+      "ROAS = ad revenue ÷ ad spend",
+      "example: $50 spend, $100 sales = 50% ACOS, ROAS 2"
+    ],
+    "asks": [
+      "what is ACOS on Amazon",
+      "how do I calculate ROAS from ACOS",
+      "is a 48% ACOS bad",
+      "why is ACOS so high on my new campaign"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7108",
+    "evidence": {
+      "where": "Definition and formula sections",
+      "quote": "There isn't a definitive number for a good Amazon ACOS."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7115",
+    "modules": [
+      "AMZ",
+      "MEA"
+    ],
+    "topics": [
+      "TACOS",
+      "ad metrics"
+    ],
+    "claim": "TACoS divides ad spend by total sales, organic included: $100 of ads with $100 of ad sales is 100% ACoS, but with $900 organic sales on top it is a 10% TACoS.",
+    "body": "TACoS (total advertising cost of sales) is a seller-community metric, not one Amazon defines in its ad documentation. Helium 10's explainer gives the formula as advertising spend divided by total revenue, times 100, and contrasts it with ACoS: $100 of spend producing $100 of ad-attributed sales is 100% ACoS, yet if the same product also sold $900 organically, total sales are $1,000 and TACoS is 10%. The point is that ACoS judges a campaign, while TACoS judges how dependent the whole product or store is on advertising. A falling or flat TACoS while sales grow suggests ads are lifting organic rank and sales; a rising TACoS with flat total sales means the business is buying the same revenue at a higher price. The article gives no good TACoS number, so the target has to come from the product's margin. How to apply: track TACoS monthly per ASIN beside ACoS; during launch accept a high ACoS if TACoS trends down as organic sales arrive, and treat a TACoS that keeps rising for several months as the signal to fix the listing or price, not just bids.",
+    "conditions": "Amazon products with both ad-attributed and organic sales; monthly view.",
+    "fails_when": "Organic sales are driven by outside traffic (social, email) rather than ad-lifted rank, so TACoS falls for reasons unrelated to Amazon ads; seasonal swings distort a single month.",
+    "scope": "growth",
+    "tier": 3,
+    "numbers": [
+      "TACoS = ad spend ÷ total revenue × 100",
+      "example: $100 spend, $100 ad sales = 100% ACoS; with $900 organic = 10% TACoS"
+    ],
+    "asks": [
+      "what is TACOS on Amazon",
+      "ACOS vs TACOS which should I track",
+      "my ACOS is high but sales are growing, is that ok",
+      "how do I know if Amazon ads are helping organic sales"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7109",
+    "evidence": {
+      "where": "ACoS versus TACoS comparison section"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "AMZ-7116",
+    "modules": [
+      "AMZ",
+      "ADC",
+      "BRD"
+    ],
+    "topics": [
+      "Sponsored Brands",
+      "Brand Registry"
+    ],
+    "claim": "Sponsored Brands needs Brand Registry for third-party sellers; it runs video, image or collection ads at the top of search, priced per click or per 1,000 viewable impressions, with no minimum spend.",
+    "body": "Amazon Ads' Sponsored Brands page sets the rules. Professional sellers must be enrolled in Amazon Brand Registry; vendors, book vendors, KDP authors and agencies can also use it, but adult, used, refurbished and closed-category products cannot. The ads carry a custom headline, the brand logo and several products, in video, image or collection formats; a video can feature up to three products and link to a Brand Store. Placements include top of search results, top of mobile search and the top of the Amazon home page, and ads may appear on product pages. Pricing is cost per click for page results, cost per 1,000 viewable impressions (vCPM) for impression share, or a fixed upfront price through reserve share of voice for top-of-search branded keywords, which needs a minimum spend commitment; CPC and vCPM have none. The advertiser chooses whether the click lands on the Brand Store or a product detail page. How to apply: once Brand Registry is approved, add a Sponsored Brands campaign for the brand name and the top category terms, landing on a Store page that shows the full range, so a second ASIN gets traffic from the first one's searches.",
+    "conditions": "Amazon stores where Sponsored Brands is offered; brand-registered sellers.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "video can feature up to three products",
+      "no minimum spend for CPC or vCPM"
+    ],
+    "asks": [
+      "do I need Brand Registry for Sponsored Brands",
+      "what are Sponsored Brands ads on Amazon",
+      "where do Sponsored Brands ads show",
+      "should my Amazon brand ads go to my store or product page"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7110",
+    "evidence": {
+      "where": "Who can use Sponsored Brands; How much does it cost; Where do ads appear",
+      "quote": "There's no minimum spend for CPC or vCPM campaigns"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7117",
+    "modules": [
+      "AMZ",
+      "ADC"
+    ],
+    "topics": [
+      "display ads",
+      "Sponsored Display"
+    ],
+    "claim": "Amazon renamed Sponsored Display to display ads: existing campaigns keep running, new ones are created under Campaigns, and placements reach Twitch, Fire TV, Echo Show and the open internet as well as Amazon.",
+    "body": "Amazon Ads' Sponsored Display page is now a rename notice. Sponsored Display is now known as display ads; existing Sponsored Display campaigns continue to run uninterrupted, and new campaigns are created from Campaigns, then Create Campaign. The notice says display campaigns connect with customers across Amazon properties including Twitch, Fire TV and Echo Show, as well as premium placements across the open internet. Amazon's getting started guide describes display ads as self-service ads that reach customers in the Amazon store plus thousands of apps and websites. For a small seller this matters in two ways: older guides and agency decks still say Sponsored Display, so search help pages under the new name, and display ads are a retargeting and awareness tool that usually comes after Sponsored Products and Sponsored Brands are covering the core search terms. How to apply: hold display ads until search campaigns are profitable, then test a small retargeting campaign aimed at shoppers who viewed the product, judged on cost per order.",
+    "conditions": "Amazon Ads accounts in 2026; the rename notice does not state eligibility or pricing.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "what happened to Sponsored Display on Amazon",
+      "are Amazon display ads the same as Sponsored Display",
+      "where do Amazon display ads show",
+      "should a new seller run Amazon display ads"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7111",
+    "evidence": {
+      "where": "Rename notice and FAQ",
+      "quote": "Sponsored Display is now known as display ads"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7118",
+    "modules": [
+      "AMZ",
+      "OPS"
+    ],
+    "topics": [
+      "FBA vs FBM",
+      "channel choice"
+    ],
+    "claim": "Amazon says FBA may be the more cost-effective choice once a Professional seller ships about 40 items or more a month, and FBA items qualify for free two-day Prime delivery.",
+    "body": "Amazon's FBA page describes the trade. With FBA, Amazon stores the stock and picks, packs and ships orders, and handles customer service and returns; the products become eligible for free two-day shipping through Prime. Amazon suggests FBA might be the more cost-effective choice for sellers on the Professional plan (39.99 dollars a month plus selling fees) who sell 40 items or more per month, and points to the Revenue Calculator to compare FBA with self-fulfilment. It claims FBA shipping costs 70% less per unit than comparable premium options from other major US carriers, citing its 2024 Small Business Empowerment Report. New Professional sellers get a 400 dollar credit toward inbound placement costs among other credits. Most products are eligible, though some need approval or are restricted. FBM keeps control of packing, inserts and stock but means meeting Amazon's shipping metrics and, for Prime, the Seller Fulfilled Prime standards. How to apply: run the Revenue Calculator for each ASIN with FBA fees against your own pick, pack and carrier cost; below roughly 40 units a month or for bulky, slow items, FBM may win, while fast, small items usually favour FBA.",
+    "conditions": "Amazon US; Professional selling plan.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "40 items or more per month",
+      "Professional plan 39.99 dollars a month",
+      "70% less per unit than comparable premium carrier options",
+      "400 dollar inbound placement credit for new sellers"
+    ],
+    "asks": [
+      "should I use FBA or ship Amazon orders myself",
+      "when is FBA worth it",
+      "does FBA give me the Prime badge",
+      "how many sales a month before FBA makes sense"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7112",
+    "evidence": {
+      "where": "FBA FAQ and benefits sections",
+      "quote": "if you sell 40 items or more per month with a Professional plan"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7119",
+    "modules": [
+      "AMZ",
+      "FIN"
+    ],
+    "topics": [
+      "FBA fees",
+      "2027 fee changes"
+    ],
+    "claim": "From 15 January 2027 US FBA fulfilment fees rise $0.19 per unit on average (about 0.8% of price); small standard items priced $10 to $50 rise $0.40 and above $50 rise $0.70.",
+    "body": "Amazon's 2027 US fee announcement says FBA fulfilment fees will increase by an average of $0.19 per unit sold, approximately 0.8% of the average selling price, with most changes effective 15 January 2027; some products rise and others fall so each fee tracks Amazon's cost. Standard-size products priced $10 to $50: small standard fees rise $0.40 per unit on average and large standard $0.12. Priced above $50: small standard rises $0.70 and large standard $0.47. Below $10: small standard rises $0.20, large standard non-apparel is unchanged and apparel rises $0.08. The bulky tiers split into four (small, medium, large and extra-large bulky) and the extra-large tier into six oversize tiers, with smaller and lighter items paying less and larger, heavier ones more. A new Fee Change Comparison dashboard in Profit Analytics shows the effect per product. How to apply: rerun unit economics for every ASIN on the 2027 rate card before setting 2027 prices; small, light products in the $10 to $50 band take the biggest proportional hit, so check whether a price above the next band or a lighter pack changes the fee.",
+    "conditions": "Amazon US FBA; rates effective 15 January 2027 unless noted.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "average +$0.19 per unit, about 0.8% of price",
+      "small standard $10 to $50: +$0.40; large standard: +$0.12",
+      "above $50: small +$0.70, large +$0.47",
+      "below $10: small standard +$0.20",
+      "effective 15 January 2027"
+    ],
+    "asks": [
+      "how much are Amazon FBA fees going up in 2027",
+      "will my FBA fees change next year",
+      "which products get hit hardest by the 2027 FBA increase",
+      "when do the new Amazon fees start"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7113",
+    "evidence": {
+      "where": "FBA fees section",
+      "quote": "FBA fulfillment fees will increase by $0.19 per unit sold"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7120",
+    "modules": [
+      "AMZ",
+      "FIN",
+      "PRD"
+    ],
+    "topics": [
+      "FBA fees",
+      "low-price FBA",
+      "pricing"
+    ],
+    "claim": "From 2027, Amazon's cheaper Low-Price FBA rates no longer cover automotive, compact appliances, computers, musical instruments or media; those items under $10 pay the $10 to $50 rates.",
+    "body": "Amazon's 2027 fee update narrows Low-Price FBA, the reduced fulfilment rate for standard-size products priced below $10. Products in the fee categories Automotive and Powersports, Compact Appliances, Computers, Musical Instruments and AV Production, and Media (books, DVD, music, software, video) will no longer get low-price rates and will be charged the same as products priced $10 to $50. For the categories that keep it, small standard low-price fees rise $0.20 per unit on average, large standard non-apparel is unchanged and apparel rises $0.08. The rate card shows the gap low-price FBA closes: for a small standard item of 2 ounces or less, the 2027 non-peak fee is $2.64 under $10 against $3.75 at $10 to $50. How to apply: if a product under $10 is in one of the excluded categories, recost it at the $10 to $50 rate before deciding to list or bundle it; a two-pack priced above $10 often pays one fulfilment fee for two units and may beat a single unit sold at a low-price rate.",
+    "conditions": "Amazon US FBA; products priced under $10 in 2027.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Low-Price FBA applies under $10",
+      "small standard 2 oz or less, 2027: $2.64 under $10 vs $3.75 at $10 to $50",
+      "small standard low-price fees +$0.20 on average"
+    ],
+    "asks": [
+      "does low price FBA still apply to my product",
+      "is it worth selling items under $10 on Amazon",
+      "should I bundle cheap products for FBA",
+      "which categories lost Amazon low-price FBA rates"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7113",
+    "evidence": {
+      "where": "Low-price products and Low-price eligibility",
+      "quote": "will no longer be eligible for low-price FBA rates"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7121",
+    "modules": [
+      "AMZ",
+      "FIN"
+    ],
+    "topics": [
+      "FBA fees",
+      "fuel surcharge",
+      "peak fees"
+    ],
+    "claim": "Since 17 April 2026 a 3.5% fuel and logistics surcharge sits on top of US FBA fulfilment fees, and holiday peak fees apply from 15 October 2026 to 14 January 2027.",
+    "body": "Amazon's FBA fulfilment fee page carries two notices that change per-unit costs during 2026. As of 17 April 2026, a 3.5% fuel and logistics-related surcharge applies to fulfilment fees across FBA in the US and Canada and to Remote Fulfillment from the US into Canada, Mexico and Brazil; from 2 May 2026 it also covers Buy with Prime in the US and Multi-Channel Fulfillment in the US and Canada. Amazon says it will keep reviewing the surcharge. Separately, holiday peak fulfilment fees apply from 15 October 2026 to 14 January 2027 for FBA, Remote Fulfillment into Canada and Mexico, MCF and Buy with Prime, and the surcharge applies to the peak fees too. The FBA fee itself is charged per unit by size tier and shipping weight. The Revenue Calculator, Profit Analytics and fee preview reports include the surcharge and peak rates. How to apply: in any unit economics sheet, multiply the rate-card fulfilment fee by 1.035 and use the peak rate card for October to mid-January orders; a margin that only works on the base fee will not survive the season.",
+    "conditions": "Amazon US FBA, MCF and Buy with Prime in 2026.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "3.5% surcharge from 17 April 2026",
+      "MCF and Buy with Prime from 2 May 2026",
+      "holiday peak fees 15 October 2026 to 14 January 2027"
+    ],
+    "asks": [
+      "what is the Amazon fuel surcharge",
+      "why are my FBA fees higher in November",
+      "when are Amazon peak fulfillment fees",
+      "does the fuel surcharge apply to Multi-Channel Fulfillment"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7114",
+    "evidence": {
+      "where": "Notes at top of page",
+      "quote": "a 3.5% fuel and logistics-related surcharge applies to fulfillment fees"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7122",
+    "modules": [
+      "AMZ",
+      "FIN",
+      "PRD"
+    ],
+    "topics": [
+      "FBA fees",
+      "rate card",
+      "unit economics"
+    ],
+    "claim": "On the 2027 US FBA rate card a large standard item of 1 to 1.25 pounds priced $10 to $50 costs $5.19 to fulfil (from $5.04), and a 2-ounce small standard item $3.75 (from $3.32), before the surcharge.",
+    "body": "Amazon's 2027 FBA fulfilment fee page prints the 2026 non-peak rates beside the 2027 ones by size tier, shipping weight and price band (under $10, $10 to $50, over $50). Some examples at $10 to $50, non-apparel, before the 3.5% fuel and logistics surcharge: small standard 2 ounces or less, $3.32 in 2026 and $3.75 in 2027; small standard 14 to 16 ounces, $3.96 then $4.32; large standard 12 to 16 ounces, $4.60 then $4.67; large standard 1 to 1.25 pounds, $5.04 then $5.19; large standard 2.75 to 3 pounds, $6.67 then $6.85. Over 3 pounds up to 20 pounds, large standard is $6.97 plus $0.08 for each 4 ounces above the first 3 pounds at $10 to $50 in 2026. Small standard uses unit weight; large standard uses the greater of unit or dimensional weight, so bulky-but-light packaging can push a product up a band. How to apply: weigh and measure the packed unit, find its tier and band, and use the 2027 figure plus 3.5% as the fulfilment line in the price and margin check; then test whether a smaller box drops it a tier.",
+    "conditions": "Amazon US FBA, non-apparel, non-peak rates; check the peak card for October to mid-January.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "small standard 2 oz or less, $10 to $50: $3.32 (2026), $3.75 (2027)",
+      "large standard 1 to 1.25 lb: $5.04 (2026), $5.19 (2027)",
+      "large standard 2.75 to 3 lb: $6.67 (2026), $6.85 (2027)",
+      "large standard 3 to 20 lb: $6.97 + $0.08 per 4 oz above 3 lb (2026, $10 to $50)"
+    ],
+    "asks": [
+      "how much is the FBA fee for a one pound product",
+      "what will Amazon charge to ship my product in 2027",
+      "how do I find my FBA size tier fee",
+      "does packaging size change my FBA fee"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7115",
+    "evidence": {
+      "where": "FBA fulfillment fees for standard-size products (excluding apparel) table"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7123",
+    "modules": [
+      "AMZ",
+      "OPS",
+      "FIN"
+    ],
+    "topics": [
+      "FBA storage fees",
+      "aged inventory",
+      "2027 fee changes"
+    ],
+    "claim": "From 1 February 2027 Amazon drops the US storage utilization surcharge and aged inventory surcharge for one age-based storage fee: flat or lower for stock that turns in under six months, higher for aged stock.",
+    "body": "Amazon's unified monthly storage fee page explains the change. Until 1 February 2027, storage is a base monthly fee per cubic foot plus a storage utilization surcharge that grows with the seller's storage utilization ratio; for standard-size items off-peak (January to September) the base is $0.78, and the total runs from $0.78 below 22 weeks of utilization to $2.66 at 52 weeks or more. New sellers (first shipment under 365 days ago), Individual sellers and sellers with 25 cubic feet or less of daily volume pay only the base. From 1 February 2027 the surcharge goes and the aged inventory surcharge merges into a single rate that rises with how long each unit has been stored, higher beyond six months, assessed per FNSKU at month end and charged between the 7th and 15th of the next month. Clothing, shoes, bags, jewellery and watches get lower rates at six to nine months. How to apply: send stock in quantities that sell through within six months, set automatic removal or Outlet deals for anything nearing that age, and recheck the age-based rate card when it is published.",
+    "conditions": "Amazon US FBA storage; rates before and after 1 February 2027.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "standard-size off-peak base $0.78 per cubic foot",
+      "with surcharge up to $2.66 per cubic foot at 52+ weeks utilization",
+      "exempt from surcharge: new sellers under 365 days, Individual, 25 cubic feet or less daily volume",
+      "change effective 1 February 2027"
+    ],
+    "asks": [
+      "how much does Amazon charge for storage",
+      "what is the storage utilization surcharge",
+      "how is Amazon changing storage fees in 2027",
+      "how long can my stock sit in FBA before it costs more"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7116",
+    "evidence": {
+      "where": "Note and Current Rates tables",
+      "quote": "higher fees for inventory stored more than six months"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7124",
+    "modules": [
+      "AMZ",
+      "OPS"
+    ],
+    "topics": [
+      "FBA inbound placement fee",
+      "shipping plans"
+    ],
+    "claim": "Sending FBA stock to one location costs an inbound placement fee ($0.24 to $0.50 a unit for large standard items of 12 ounces to 1.5 pounds); splitting it yourself is free with five identical cartons per item.",
+    "body": "Amazon's inbound placement service fee page describes three options when creating a shipping plan. Minimal shipment splits: send to as few locations as possible, usually one, for a per-unit fee, and Amazon spreads the stock. Amazon-optimized splits: send to multiple locations yourself for no fee, which requires at least five identical cartons or pallets per item, each with the same quantity and mix. Partial splits apply only to bulky items. Fees vary by size, weight, number of splits and destination (West locations can cost more): for small standard up to 8 ounces, $0.14 to $0.32; large standard 12 ounces or less, $0.20 to $0.40; 12 ounces to 1.5 pounds, $0.24 to $0.50; 1.5 to 3 pounds, $0.34 to $0.60. The fee is charged 45 days after the shipment is received. From 15 January 2027 Amazon consolidates central inbound locations into the East, leaving two inbound regions, with no change to fee rates. New sellers get 400 dollars of inbound placement credits. How to apply: pack shipments in five or more identical cartons per SKU so the free split option is available, and compare its extra freight cost against the placement fee in the plan.",
+    "conditions": "Amazon US FBA shipping plans; standard and bulky items (not extra-large).",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "small standard up to 8 oz: $0.14 to $0.32 per unit",
+      "large standard 12 oz to 1.5 lb: $0.24 to $0.50",
+      "free split needs at least 5 identical cartons or pallets per item",
+      "charged 45 days after receipt",
+      "two inbound regions from 15 January 2027"
+    ],
+    "asks": [
+      "what is the Amazon inbound placement fee",
+      "how do I avoid the FBA placement fee",
+      "should I send my FBA stock to one warehouse or several",
+      "how should I pack cartons for FBA"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7117",
+    "evidence": {
+      "where": "FBA inbound placement service; standard-size product fees table",
+      "quote": "shipments must include at least five identical cartons or pallets per item"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7125",
+    "modules": [
+      "AMZ",
+      "OPS"
+    ],
+    "topics": [
+      "low-inventory-level fee",
+      "replenishment"
+    ],
+    "claim": "From 1 February 2027 Amazon's US low-inventory-level fee applies only when stock is under 28 days of supply against shipments in both the four weeks before and after the check, from $0.32 to $1.11 a unit for standard items.",
+    "body": "Amazon's 2027 low-inventory-level fee page says the fee targets FBA products whose stock is low relative to actual shipped units. Inventory is checked weekly at FNSKU level; days of supply is compared with units shipped in the four weeks before the check and the four weeks after, and the fee applies only if both are under 28 days, at the rate for the higher of the two, on units shipped in the following week, charged four weeks later. Amazon's example: 100 units on hand, 5 a day shipped before (20 days) and 2 a day after (50 days) means no fee. Rates per unit: small standard up to 16 ounces $0.89, $0.63 or $0.32 for under 14, 14 to 21 and 21 to 28 days of supply; large standard 3 to 20 pounds $1.11, $0.87 or $0.47; oversize tiers now included. Exempt: new Professional sellers for 365 days from first receipt, New Selection parent products for 120 days or 200 units, SKUs 70% or more auto-replenished from AWD, products shipping fewer than 20 units in the past seven days, and grocery. How to apply: keep at least 28 days of supply at FBA for fast sellers and plan reorders on lead time plus that buffer.",
+    "conditions": "Amazon US FBA from 1 February 2027.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "fee applies under 28 days of supply in both trailing and following four weeks",
+      "small standard: $0.89 / $0.63 / $0.32 per unit",
+      "large standard 3 to 20 lb: $1.11 / $0.87 / $0.47",
+      "exempt: new sellers 365 days, under 20 units shipped in 7 days, 70%+ AWD auto-replenished"
+    ],
+    "asks": [
+      "what is the Amazon low inventory fee",
+      "how much stock do I need at FBA to avoid fees",
+      "does the low inventory fee apply to new sellers",
+      "how is days of supply calculated on Amazon"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7118",
+    "evidence": {
+      "where": "Fee calculation, Exemptions and Rates sections",
+      "quote": "only applies if a product's inventory level relative to actual shipped units"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7126",
+    "modules": [
+      "AMZ",
+      "OPS"
+    ],
+    "topics": [
+      "inventory performance",
+      "IPI",
+      "excess inventory"
+    ],
+    "claim": "Amazon counts an FBA item as excess once it has over 90 days of supply against forecast demand, and its guideline is to hold 30 to 60 days of expected sales.",
+    "body": "Amazon's inventory performance page lists what drives the Inventory Performance Index (IPI). Four categories: avoid excess and aged inventory, improve 90-day rolling sell-through, fix stranded listings, and keep popular items in stock. An item is excess when it has more than 90 days of supply based on forecasted demand; the excess inventory percentage is the share of FBA units so marked. Sell-through rate is units shipped over the past 90 days divided by the average units on hand in that period. Stranded inventory is sellable stock in a fulfilment centre with no active listing, which costs storage with no chance of sales. FBA in-stock rate is the share of time replenishable ASINs were in stock over the last 30 days, weighted by units sold in the last 60 days, and the Restock today button flags SKUs whose days of supply are below restock lead time. Amazon's guideline is to keep enough stock to cover 30 to 60 days of expected sales. How to apply: set reorder points so FBA stock stays between roughly 30 and 60 days of sales, keep the rest upstream (own warehouse or AWD), and clear stranded units weekly.",
+    "conditions": "Amazon US FBA, Professional sellers with an IPI score.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "excess = over 90 days of supply",
+      "hold 30 to 60 days of expected sales",
+      "sell-through measured over 90 days",
+      "in-stock rate over last 30 days, weighted by 60 days of sales"
+    ],
+    "asks": [
+      "how much inventory should I keep at Amazon",
+      "what counts as excess inventory on FBA",
+      "how do I raise my IPI score",
+      "what is stranded inventory"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7119",
+    "evidence": {
+      "where": "Categories that influence your IPI score; Excess inventory percentage",
+      "quote": "maintain enough inventory to cover 30 to 60 days of your expected sales"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7127",
+    "modules": [
+      "AMZ",
+      "OPS"
+    ],
+    "topics": [
+      "IPI",
+      "capacity limits",
+      "launch"
+    ],
+    "claim": "New ASINs do not affect Amazon's IPI score for their first 90 days, but capacity limits follow IPI, so remove stock before it reaches 365 days and fix stranded units to protect space for launches.",
+    "body": "Amazon's IPI FAQ adds the points that matter when planning a launch. The IPI score and dashboard exist only for Professional sellers. Professional accounts get FBA capacity limits based on IPI plus sales forecasts, shipment lead time and fulfilment centre capacity, so a higher score can mean more space. Newly created ASINs do not affect the score in their first 90 days, and inventory under a removal or liquidation order stops counting once the order is placed. The score blends recent and long-term performance, so improvements take time to show and short-term swings are damped. Amazon's priorities: keep 90-day sell-through in the green range all year, hold 30 to 60 days of expected sales to avoid excess, remove inventory before it reaches 365 days to avoid long-term storage fees (automatic removal can be set), use Outlet deals or Multi-Channel Fulfillment to move overstock, and fix stranded listings quickly. How to apply: before a second product launch, clear aged and stranded units from the first so the account's IPI and capacity can absorb the new ASIN's opening stock.",
+    "conditions": "Amazon US FBA, Professional plan.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "new ASINs excluded from IPI for 90 days",
+      "remove inventory before 365 days",
+      "30 to 60 days of expected sales"
+    ],
+    "asks": [
+      "does a new product hurt my IPI score",
+      "how does IPI affect my FBA storage limits",
+      "how can I get more FBA capacity",
+      "when should I remove old stock from FBA"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7120",
+    "evidence": {
+      "where": "Do new ASINs affect my IPI score; How does my IPI score affect capacity limits",
+      "quote": "Newly created ASINs in their first 90 days do not affect your IPI score."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7128",
+    "modules": [
+      "AMZ",
+      "OPS"
+    ],
+    "topics": [
+      "capacity limits",
+      "replenishment"
+    ],
+    "claim": "FBA capacity is a single monthly limit in cubic feet, announced in the third full week of each month with two months of estimates; extra space can be bought with a reservation fee that sales credits offset up to 100%.",
+    "body": "Amazon's January 2023 announcement replaced weekly restock limits and storage limits with one monthly capacity limit, effective 1 March 2023. Limits and usage are measured in cubic feet rather than units, with unit estimates shown. The coming month's limit is published in the third full week of each month in Seller Central's Capacity Monitor and by email, along with estimates for the following two months, so sellers can plan about three months ahead; estimates move up or down with how efficiently the seller uses space. The limit draws on IPI, sales forecasts, shipment lead time and fulfilment centre capacity. Sellers who need more can request it by naming a reservation fee per cubic foot; Amazon grants requests from the highest fee down, and performance credits from sales made with the extra space can offset up to 100% of that fee. How to apply: check the Capacity Monitor in the third week of every month, plan inbound shipments by cubic feet against the limit, keep overflow in a 3PL or AWD, and use a reservation request before a peak only when the expected sell-through will earn the credits back.",
+    "conditions": "Amazon US FBA, from 1 March 2023 onward.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "limits announced third full week of each month",
+      "estimates for the following two months",
+      "performance credits offset up to 100% of the reservation fee",
+      "effective 1 March 2023"
+    ],
+    "asks": [
+      "how do FBA capacity limits work",
+      "why can't I send more stock to Amazon",
+      "when does Amazon announce capacity limits",
+      "can I pay for more FBA space"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7121",
+    "evidence": {
+      "where": "Announcement body",
+      "quote": "Capacity limits for the upcoming month will be announced in the third full week"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7129",
+    "modules": [
+      "AMZ",
+      "CXP",
+      "FIN"
+    ],
+    "topics": [
+      "returns processing fee",
+      "returns"
+    ],
+    "claim": "Amazon US charges an FBA returns processing fee on every apparel and shoe return, and on other products only for returns above a category threshold; products shipping fewer than 25 units a month are exempt.",
+    "body": "Amazon's returns processing fee page sets two regimes. Apparel and shoes pay a fee on each customer-returned unit, with no threshold. All other products pay only when their return rate passes a threshold set by category. A product's return rate is the share of a month's shipped units physically returned in that month and the next two; each returned unit above the threshold is charged, between the 7th and 15th of the third month after. Amazon's example: 1,000 units shipped in June, 120 returned by August, a 10% threshold, so 20 units are charged. Products shipping fewer than 25 units in a month are exempt, and the New Selection program waives the fee on the first 200 units of an eligible new parent ASIN for 120 days. The fee is set by size tier and weight, for example $2.36 to $3.39 for large standard non-apparel items up to 16 ounces before February 2027. The FBA Returns page shows each product's rate, updated three times a week. How to apply: read FBA Returns monthly, compare each ASIN's rate with its category threshold, and fix the listing or product issue driving returns before the fee starts.",
+    "conditions": "Amazon US FBA; thresholds audited quarterly; 2027 rates align with new size tiers.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "exempt under 25 units shipped a month",
+      "example: 1,000 shipped, 120 returned, 10% threshold = 20 units charged",
+      "large standard non-apparel up to 16 oz: $2.36 to $3.39 per unit above threshold",
+      "first 200 units waived under New Selection"
+    ],
+    "asks": [
+      "what is the Amazon returns processing fee",
+      "how high can my return rate be before Amazon charges me",
+      "do apparel returns always cost a fee on FBA",
+      "where can I see my Amazon return rate"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7122",
+    "evidence": {
+      "where": "All products excluding apparel and shoes; Example",
+      "quote": "exempt from this fee if it shipped fewer than 25 units in a month"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7130",
+    "modules": [
+      "AMZ",
+      "CXP",
+      "FIN"
+    ],
+    "topics": [
+      "FBM returns",
+      "return shipping cost"
+    ],
+    "claim": "For seller-fulfilled Amazon US orders, Amazon issues prepaid return labels and charges the seller; UPS bills the greater of actual or dimensional weight (length x width x height ÷ 139) plus a 13% to 15% fuel charge.",
+    "body": "Amazon's page on shipping costs for seller-fulfilled returns says that for most domestic US returns Amazon gives customers prepaid return labels through Buy Shipping and charges the seller's account. Carriers set the price. USPS charges a base rate on actual weight and zone, plus adjustments if the customer used a different package or service. UPS charges a base rate on billable weight, the greater of actual or dimensional weight, with returns dimensional weight calculated as length times width times height divided by 139 inches, plus applicable surcharges and a fuel service charge that typically runs 13% to 15% of the total and changes monthly. Adjustments such as address corrections can post two to three weeks later. Large or heavy packages draw extra surcharges. For a brand selling both on its own site and FBM on Amazon, this means every Amazon return carries a label cost the seller does not choose, on top of the lost sale. How to apply: when setting FBM prices, add an expected return label cost (return rate times the label price for the packed box size) to the unit economics, and right-size boxes, since dimensional weight drives the UPS price.",
+    "conditions": "Seller-fulfilled (FBM) orders in the Amazon US store; domestic returns.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "UPS returns dimensional weight = L × W × H ÷ 139",
+      "UPS fuel service charge typically 13% to 15%",
+      "adjustments post 2 to 3 weeks later"
+    ],
+    "asks": [
+      "who pays return shipping on Amazon FBM orders",
+      "how much do Amazon return labels cost me",
+      "why was I charged for a return label on Amazon",
+      "how is return shipping calculated for seller fulfilled orders"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7123",
+    "evidence": {
+      "where": "Return shipping charges calculation",
+      "quote": "divided by 139 inches"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7131",
+    "modules": [
+      "AMZ",
+      "CXP"
+    ],
+    "topics": [
+      "FBM returns",
+      "refunds",
+      "SAFE-T claims"
+    ],
+    "claim": "Seller-fulfilled Amazon US returns must be refunded within four calendar days of receipt or Amazon refunds automatically, and those automated refunds generally cannot be claimed back through SAFE-T.",
+    "body": "Amazon's SAFE-T page explains how seller-fulfilled returns are settled. SAFE-T (Seller Assurance for E-Commerce Transactions) lets a seller ask Amazon for reimbursement after a refund was issued for a return that was not the seller's fault, at Amazon's discretion. It covers refunds Amazon issues through Refund at First Scan or customer service for sellers in Customer Service by Amazon, Seller Fulfilled Prime or Easy Ship, and free replacements. Automated refunds, issued when the seller does not process a refund within four calendar days of receiving the return, are not eligible except when the return never arrived or the buyer used a wrong reason code. Inside the four days, the Guided Refund Workflow lets the seller grade the item, apply restocking fees and upload evidence. When a buyer damages an item, reimbursement under the restocking fee policy is up to 50% of the order price depending on damage. Delivery disputes are covered when the seller used a Claims Protected Buy Shipping label or signature confirmation and shipped on time. How to apply: inspect and process FBM returns within four days every time, photograph damaged returns, and buy Claims Protected labels for higher-value orders.",
+    "conditions": "Seller-fulfilled orders in the Amazon US store.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "refund within four calendar days of receiving the return",
+      "reimbursement up to 50% of order price for buyer damage",
+      "CSBA goodwill concessions refunded within 48 hours"
+    ],
+    "asks": [
+      "how long do I have to refund an Amazon return",
+      "can I get money back for a damaged Amazon return",
+      "what is a SAFE-T claim",
+      "can I charge a restocking fee on Amazon"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7124",
+    "evidence": {
+      "where": "SAFE-T coverage and eligibility; restocking fee note",
+      "quote": "within four calendar days of receiving a returned item"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7132",
+    "modules": [
+      "AMZ",
+      "OPS"
+    ],
+    "topics": [
+      "Seller Fulfilled Prime",
+      "shipping performance"
+    ],
+    "claim": "Seller Fulfilled Prime requires, every week, on-time delivery of at least 93.5%, valid tracking of 99%, cancellations at or under 0.5%, and for standard items 40% of views promising one-day and 75% two-day delivery.",
+    "body": "Amazon's Seller Fulfilled Prime performance page sets the bar for showing the Prime badge on self-fulfilled offers. Performance is reviewed weekly, Sunday to Saturday. A seller must keep on-time delivery at or above 93.5%, valid tracking at or above 99% and cancellations at or below 0.5%, and meet delivery speed minimums. Speed is measured on Prime shoppers' page views where the offer was featured: the share that showed a promise of one day or less, two days or less, and five days or less. Minimums by size tier: standard size 40%, 75% and 90%; oversize 15%, 45% and 80%; extra large no one-day minimum, 25% two-day and 60% five-day. Order cutoff times, weekend operations and holidays can turn a configured two-day offer into a slower promise and count against the seller. Requirements refresh quarterly with at least 45 days' notice of increases, and since 5 November 2025 each size tier is judged separately. How to apply: before choosing SFP over FBA, check whether your warehouse and carrier can hit 40% next-day promises for standard items across the contiguous US, seven days a week; if not, FBA is the route to the badge.",
+    "conditions": "Amazon US Seller Fulfilled Prime; holiday seasons may adjust thresholds.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "on-time delivery at least 93.5%",
+      "valid tracking at least 99%",
+      "cancellation rate 0.5% or less",
+      "standard size speed: 40% one-day, 75% two-day, 90% five-day",
+      "45 days' notice of increases"
+    ],
+    "asks": [
+      "can I get the Prime badge without FBA",
+      "what are the Seller Fulfilled Prime requirements",
+      "is Seller Fulfilled Prime worth it",
+      "how fast do I need to ship for SFP"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7125",
+    "evidence": {
+      "where": "Performance requirements and delivery speed table",
+      "quote": "Maintain an On-time delivery of at least 93.5%"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7133",
+    "modules": [
+      "AMZ",
+      "BRD",
+      "FIN"
+    ],
+    "topics": [
+      "New Seller Incentives",
+      "Brand Registry",
+      "launch"
+    ],
+    "claim": "A new US seller who completes Brand Registry within six months of the first buyable ASIN gets a $52,500 brand bonus: 10% of the first $50,000 and 5% of the next $950,000 in branded sales, off referral fees.",
+    "body": "Amazon's New Seller Incentives page ties the largest benefit to Brand Registry timing. New Professional sellers who complete Brand Registry before or within six months of creating their first buyable US ASIN, and are the first brand representative for that brand, qualify. For a first buyable ASIN listed on or after 12 March 2026, $52,500 of credit is loaded within a week, used as a referral fee discount of 10% on the first $50,000 of eligible branded sales and 5% on the next $950,000, for one year. Amazon's example: on a $100 item with a 15% referral fee, the $15 fee effectively falls to $5. Other benefits: $200 of Vine credits if the seller enrols in Vine within 90 days of becoming eligible; and, if the first FBA shipment is received within 90 days of listing, $100 of Partnered Carrier inbound shipping credits (or $200 of Amazon Global Logistics fulfilment credits), automatic New Selection enrolment and $400 of inbound placement fee credits. Unused credits expire after a year. How to apply: file the trademark early, complete Brand Registry before or soon after the first listing, send the first FBA shipment within 90 days, and enrol the launch ASIN in Vine inside the window.",
+    "conditions": "New Professional sellers in the Amazon US store; terms and conditions apply.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Brand Registry within six months of first buyable ASIN",
+      "$52,500 credit: 10% on first $50,000, 5% on next $950,000 of branded sales",
+      "$200 Vine credits, enrol within 90 days",
+      "first FBA shipment within 90 days: $100 inbound shipping credits, $400 inbound placement credits",
+      "credits expire after one year"
+    ],
+    "asks": [
+      "what incentives do new Amazon sellers get",
+      "when should I do Brand Registry to get the bonus",
+      "how does the Amazon new brand bonus work",
+      "do I lose the incentives if I register my brand late"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7126",
+    "evidence": {
+      "where": "Brand representative benefits; FBA benefits",
+      "quote": "within six months of listing their first offer"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7134",
+    "modules": [
+      "AMZ",
+      "FIN"
+    ],
+    "topics": [
+      "New Selection Program",
+      "launch",
+      "FBA fees"
+    ],
+    "claim": "Amazon's 2026 New Selection Program cuts referral fees to 10% on a new branded FBA product's first 100 units and 5% on the next 100, within 120 days of first inbound, at IPI 300 or more.",
+    "body": "Amazon's New Selection Program (2026) page covers branded parent ASINs new to FBA (no FBA shipment by any seller in the past 12 months). Sellers need a Professional plan, a maximum trailing six-month IPI of 300 or higher if they have a score, and FBA enabled; books, media and video games are excluded. Benefits on the first 200 units within 120 days of the first FBA inbound date: referral fee of 10% on the first 100 units sold and 5% on the next 100 (or the existing rate if lower); free storage, no storage utilization surcharge, no low-inventory-level fee, free returns processing and free liquidation. Within 60 days of listing a buyable offer the seller also gets $75 of Vine credits for the 3 to 10 unit tier and $50 of coupon credits. Enrolling in Vine pre-launch extends the windows by 45 days. Where New Seller Incentives overlap, those apply first. How to apply: time the first inbound shipment so the 120-day clock covers the launch push, enrol in Vine pre-launch to add 45 days, and plan the first 200 units as the cheapest units the ASIN will ever sell.",
+    "conditions": "Amazon US, branded new-to-FBA parent ASINs; terms change, so confirm enrolment in the seller incentive dashboard.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "IPI 300 or higher",
+      "10% referral on first 100 units, 5% on next 100",
+      "within 120 days of first FBA inbound",
+      "$75 Vine and $50 coupon credits within 60 days",
+      "Vine pre-launch extends windows 45 days"
+    ],
+    "asks": [
+      "what is the Amazon New Selection Program",
+      "how do I get lower referral fees on a new product",
+      "does my new ASIN get free FBA storage",
+      "how should I time my Amazon launch to use fee discounts"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7127",
+    "evidence": {
+      "where": "Eligibility requirements; Program benefits",
+      "quote": "First 100 units sold: Referral fee of 10%"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7135",
+    "modules": [
+      "AMZ",
+      "ADC",
+      "MCR"
+    ],
+    "topics": [
+      "Brand Referral Bonus",
+      "external traffic"
+    ],
+    "claim": "Amazon's Brand Referral Bonus pays brands an average of 10% of sales from traffic they send to Amazon from outside ads, including other products bought within 14 days of the click.",
+    "body": "Amazon's Brand Referral Bonus page says brands in Brand Registry can earn a bonus on sales that come from their non-Amazon marketing, such as social ads, email or influencer links. The bonus averages 10% of qualifying sales and also applies to the brand's other products the shopper buys within 14 days of clicking the ad. Rates vary by category: 10% for most home, kitchen, pet supplies, toys, sports and outdoors; 11% for clothing; 5% for consumer electronics; beauty and health pay 5% at $10 or less and 10% above. The bonus appears in a weekly report and is credited against fees. For a DTC brand that already buys Meta or TikTok traffic, this means sending part of that traffic to the Amazon listing earns back roughly a referral fee's worth, and the external sales may also help Amazon rank. The trade-off is that the customer and their email stay with Amazon, not the brand's own store. How to apply: test a small share of paid social to the Amazon listing with trackable links, compare cost per order and bonus against the same spend to your own site, and keep subscription or high-repeat products sending to your own store.",
+    "conditions": "Brand-registered sellers in the Amazon US store sending measurable off-Amazon traffic.",
+    "fails_when": "The brand's own site has better lifetime value or owns the customer relationship it needs; external traffic converts worse on Amazon than on the brand's site; the category rate is low.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "average 10% bonus",
+      "14 days after the click",
+      "category rates: 11% clothing, 10% most home and pet, 5% consumer electronics"
+    ],
+    "asks": [
+      "should I send my Facebook ads traffic to Amazon",
+      "what is the Amazon Brand Referral Bonus",
+      "how much does Amazon pay for outside traffic",
+      "does driving traffic to Amazon help my ranking"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7128",
+    "evidence": {
+      "where": "Why should I participate; How is my bonus calculated",
+      "quote": "an average of 10% of sales from traffic you have driven to Amazon"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7136",
+    "modules": [
+      "AMZ",
+      "CRO",
+      "LPG"
+    ],
+    "topics": [
+      "Manage Your Experiments",
+      "listing tests"
+    ],
+    "claim": "Amazon's Manage Your Experiments lets brand owners A/B test titles, images, bullets, descriptions, A+ Content and Brand Story on high-traffic ASINs, which may need several dozen orders a week, without affecting rank.",
+    "body": "Amazon's Manage Your Experiments page describes a true split test on a listing: shoppers who view the product are randomly split into two groups that see version A or version B everywhere for the whole experiment, rather than content rotating over time, and Amazon says experiments do not affect search ranking. Six content types can be tested: product images, titles, bullet points, description, A+ Content and Brand Story. Titles and the main image drive clicks from search; images, A+ and Brand Story drive conversion on the page. Only brand owners in Brand Registry can run experiments, and only on ASINs with enough recent traffic to find a winner; depending on category, eligible ASINs may get several dozen orders per week or more. One experiment runs per ASIN at a time, though a multi-attribute experiment can cover several variants. At the end the winning version can be published. How to apply: once a product passes the traffic bar, test one big change at a time, starting with the main image or title, run it to the end rather than stopping early, and publish only clear winners.",
+    "conditions": "Brand-registered sellers in the Amazon US store; ASINs with enough traffic.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "six content types",
+      "eligible ASINs may get several dozen orders per week",
+      "one experiment per ASIN at a time"
+    ],
+    "asks": [
+      "can I A/B test my Amazon listing",
+      "how do I test a new main image on Amazon",
+      "why isn't my ASIN eligible for Manage Your Experiments",
+      "does testing a new title hurt my Amazon ranking"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7129",
+    "evidence": {
+      "where": "Overview; Eligibility",
+      "quote": "Experiments do not impact search rankings"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7137",
+    "modules": [
+      "AMZ",
+      "PRD"
+    ],
+    "topics": [
+      "gated categories",
+      "candidate screening"
+    ],
+    "claim": "Check 'Apply to sell' status in Seller Central before choosing an Amazon product; gated brands and categories need supplier invoices from a manufacturer or distributor and an account health rating of 200 or more.",
+    "body": "Amazon's page on categories and products that require approval says some brands, brands within a category, categories (jewellery is the example) and sub-categories (sunscreen) need approval before listing, sometimes several at once. Approval usually needs invoices or supply chain documents proving the product came from a verifiable supplier such as a manufacturer or authorized distributor, showing the seller's business name and address, the supplier's name, address and contact details, matching product details, quantities and dates. To apply, the account must be active, keep an account health rating at or above 200, not be blocked, suspended, under review or dormant, and have no unresolved IP complaints. To check, search the product under Catalog, Add Products: Not Available means it cannot be listed, Sell this product means no approval needed, and Apply to sell means approval is required, with Show limitations giving details. For a new product not yet in the catalog, search similar items. How to apply: run this check for every shortlisted product before paying for samples; a gated sub-category adds weeks and paperwork, and some brand gates cannot be opened at all.",
+    "conditions": "Amazon US store; private label and resale.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "account health rating at or above 200"
+    ],
+    "asks": [
+      "how do I know if my product category is gated on Amazon",
+      "what documents do I need to get ungated",
+      "can I sell sunscreen on Amazon",
+      "why does Amazon say apply to sell"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7130",
+    "evidence": {
+      "where": "Types of selling approvals; How to check; Who can apply",
+      "quote": "Maintain an account health rating at or above 200"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7138",
+    "modules": [
+      "AMZ",
+      "PRD",
+      "OPS"
+    ],
+    "topics": [
+      "dangerous goods",
+      "hazmat",
+      "candidate screening"
+    ],
+    "claim": "Amazon warns that ordinary products such as laptops, smartphones, cleaners, spray paints and cosmetics may be dangerous goods; FBA needs a safety data sheet or exemption, and unconfirmed units may be disposed of unreimbursed.",
+    "body": "Amazon's dangerous goods guide says hazmat covers products that may be flammable, pressurised, corrosive or otherwise harmful in storage or transport, and that consumer products such as laptops, smartphones, household cleaners, spray paints and cosmetics may be regulated. Classification depends on the finished product's physical and chemical properties, not its product type, so Amazon asks for dangerous goods information and documents even for products that turn out not to be hazmat. To sell dangerous goods through FBA, a seller must provide complete product information and upload a current safety data sheet or exemption sheet; there are nine classes, some prohibited from FBA. Sellers have 14 business days to meet product safety compliance requests, or face delayed shipments, cancelled deliveries or disposal at their expense, and units sent before classification is confirmed may be disposed of without reimbursement. How to apply: for any candidate with a battery, liquid, aerosol, fragrance or chemical, ask the factory for the safety data sheet before ordering, check the ASIN's classification with Amazon's lookup tool, and only ship after it is confirmed.",
+    "conditions": "Amazon US FBA; US DOT and international transport rules apply.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "nine dangerous goods classes",
+      "14 business days to comply"
+    ],
+    "asks": [
+      "is my product hazmat on Amazon",
+      "can I sell a battery powered product with FBA",
+      "what is a safety data sheet for Amazon",
+      "why is my FBA shipment blocked for dangerous goods"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7131",
+    "evidence": {
+      "where": "Introduction and FBA requirements",
+      "quote": "You have 14 business days to comply with product safety compliance requirements."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7139",
+    "modules": [
+      "AMZ",
+      "EML",
+      "PRD"
+    ],
+    "topics": [
+      "Subscribe & Save",
+      "repeat purchase"
+    ],
+    "claim": "Amazon Subscribe & Save needs Brand Registry and a used-up-and-replaced product buyable 85% of the past 30 days; the seller funds a 0% to 20% base discount and Amazon may add 5%.",
+    "body": "Amazon's Subscribe & Save page sets the rules for repeat purchase discounts on Amazon. The seller needs an account in good standing and a brand representative role in Brand Registry. Products qualify if they are meant to be used up and replaced, have been buyable for at least 85% of the past 30 days and are not in a restricted category. FBM offers must also, for three consecutive months, offer free domestic shipping and keep valid tracking above 95%, order defects under 1%, pre-fulfilment cancellations under 2.5%, delivery estimate accuracy above 93.5%, late shipments under 4% and an average delivery promise under 5 days. Eligible products are enrolled automatically at the seller's default discount (0% unless changed). The seller picks a base funding tier of 0%, 5%, 10%, 15% or 20%; when a customer has five or more enrolled products arriving together, Amazon funds an additional 5%. Coupons and deals stack on top. Customers can cancel any time, and items that run out of stock or perform poorly are removed. How to apply: for a consumable like a balm or supplement, enrol at 5% to 10%, keep stock steady so subscriptions are not paused, and price so the stacked discounts still leave margin.",
+    "conditions": "Amazon US store; replenishable branded products.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "buyable at least 85% of the past 30 days",
+      "seller base funding 0%, 5%, 10%, 15% or 20%",
+      "Amazon adds 5% for five or more items in one delivery",
+      "FBM: valid tracking above 95%, ODR under 1%, late shipment under 4%"
+    ],
+    "asks": [
+      "how do I offer subscriptions on Amazon",
+      "who pays for the Subscribe & Save discount",
+      "is my product eligible for Subscribe & Save",
+      "what discount should I set for Subscribe & Save"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7132",
+    "evidence": {
+      "where": "Eligibility requirements; Seller-funding requirements",
+      "quote": "Product is meant to be used up and replaced."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7140",
+    "modules": [
+      "AMZ",
+      "CXP"
+    ],
+    "topics": [
+      "Vine",
+      "launch",
+      "reviews"
+    ],
+    "claim": "Amazon advises enrolling a new product in Vine with inventory already in its network at least three weeks before launch, so first reviews arrive as the listing goes live; up to two products enrol free.",
+    "body": "Amazon's Vine page covers timing as well as fees. A new product can be enrolled once there is a customer-ready FBA listing and a future launch date, and Amazon recommends enrolling and having inventory in the Amazon network at least three weeks before launch. Vine Voices, invited reviewers, receive free units and post their opinions. Up to 30 units can be offered per product, and Vine offers up to two products free of enrolment cost; otherwise the fee is per parent product by units offered (see the separate Vine eligibility card). The charge comes only 30 days after enrolment and after the first review is published, and nothing is charged if no Vine review arrives within 90 days. Amazon's headline claim, from internal data, is that Vine boosts sales by an average of 30%. How to apply: set the listing's release date at least three weeks out, ship the Vine units with the launch stock, and only enrol once the product has passed your own quality checks, because the first reviews will describe whatever the units are like.",
+    "conditions": "Amazon US FBA products with fewer than 30 reviews and an eligible seller account.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "enrol at least three weeks before launch",
+      "up to 30 units per product",
+      "up to two products free of enrolment cost",
+      "no charge if no review within 90 days",
+      "average 30% sales boost (Amazon internal data)"
+    ],
+    "asks": [
+      "when should I enrol in Amazon Vine for a new product",
+      "can I use Vine before my product launches",
+      "how long do Vine reviews take",
+      "is Amazon Vine worth it for a launch"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S6440",
+    "evidence": {
+      "where": "Timing and fees sections",
+      "quote": "at least three weeks before launch"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7142",
+    "modules": [
+      "AMZ",
+      "OPS"
+    ],
+    "topics": [
+      "FBA vs FBM",
+      "Easy Ship",
+      "Self Ship",
+      "Prime eligibility"
+    ],
+    "claim": "On Amazon.in only FBA guarantees the Prime badge: Easy Ship gets Prime by invite only, Self Ship only for nearby pincodes via Local Shops, and Self Ship cannot offer Pay on Delivery.",
+    "body": "Amazon India's Sell, Pack and Ship page compares the three main ways to fulfil Amazon.in orders. FBA: Amazon stores, packs and delivers, handles returns and customer service, the offer gets the Prime badge, Pay on Delivery is supported, and fees are referral plus closing plus fulfilment fee. Easy Ship: the seller stores and packs (Amazon or own packaging) and an Amazon delivery agent picks up and delivers; Prime is by invite only, Pay on Delivery is supported, returns and customer service can optionally be left to Amazon, and fees are referral plus closing plus a shipping fee. Self Ship: the seller stores, packs and ships with its own courier, Amazon charges no shipping fee (only referral and closing), Prime is available only to customers in nearby pincodes through Local Shops on Amazon, Pay on Delivery is not supported, and the seller manages returns and service. Amazon claims Prime products see up to three times the sales of non-Prime products and FBA delivery in one or two days from 35-plus fulfilment centres. How to apply: in India, where many buyers pay on delivery, pick FBA for fast-moving SKUs that need Prime, Easy Ship for slower or bulky SKUs you store yourself, and Self Ship only if you already run reliable courier and COD operations.",
+    "conditions": "Amazon.in sellers; Seller Flex not covered on this page.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Prime products up to 3X sales vs non-Prime (Amazon claim)",
+      "35+ fulfilment centres",
+      "delivery in 1 or 2 days for FBA"
+    ],
+    "asks": [
+      "should I use FBA or Easy Ship on Amazon India",
+      "can Easy Ship products get the Prime badge",
+      "does Self Ship allow cash on delivery on Amazon.in",
+      "which Amazon India shipping option is cheapest"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [
+      "amazon.in"
+    ],
+    "mode": "both",
+    "source": "S7135",
+    "evidence": {
+      "where": "Comparison table of FBA, Easy Ship and Self-Ship",
+      "quote": "By invite only"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7143",
+    "modules": [
+      "AMZ",
+      "FIN"
+    ],
+    "topics": [
+      "Amazon.in fees",
+      "FBA vs FBM",
+      "Easy Ship"
+    ],
+    "claim": "Amazon.in's own example puts total fees on a Rs 1,000, 300 g phone at Rs 152 (15.2%) by Easy Ship, Rs 153 (15.3%) by FBA, and Rs 140 (14.0%) in the Try FBA trial.",
+    "body": "Amazon India's FBA page works one example to show that FBA costs about the same as Easy Ship once its extra services are counted. Product: a Nokia 105 at Rs 1,000, small size, 300 g, national delivery, referral fee 5% for mobile phones. Easy Ship: referral Rs 50, closing fee Rs 30, weight handling Rs 72, total Rs 152 or 15.2%. FBA: referral Rs 50, closing Rs 18, weight handling Rs 61, transport to the fulfilment centre Rs 10, storage Rs 3, pick and pack Rs 11 (removal Rs 10 only if needed), total Rs 153 or 15.3%. Try FBA, Amazon's offer for sellers who have never shipped to a fulfilment centre, waives inbound transport, storage and removals for the first 100 units or three months, whichever comes first, from a first shipment of at least 10 units, taking the total to Rs 140 or 14.0%; the inbound discount is capped at Rs 1,000. Amazon notes charges vary and to check Seller Central. How to apply: rebuild this table for your own product's price, weight and category; FBA's lower closing and weight fees often offset storage and pick and pack for light items, while heavy or slow items tilt toward Easy Ship.",
+    "conditions": "Amazon.in; fees shown before 18% GST and subject to change.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "Easy Ship total Rs 152 (15.2%)",
+      "FBA total Rs 153 (15.3%)",
+      "Try FBA total Rs 140 (14.0%)",
+      "Try FBA: first 100 units or 3 months, first shipment at least 10 units, inbound discount capped at Rs 1,000"
+    ],
+    "asks": [
+      "is FBA more expensive than Easy Ship on Amazon India",
+      "what fees does Amazon.in take on a Rs 1000 product",
+      "what is the Try FBA offer",
+      "how do I compare Amazon India fulfilment costs"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [
+      "amazon.in"
+    ],
+    "mode": "both",
+    "source": "S7136",
+    "evidence": {
+      "where": "Fee example table (Nokia 105) and Try FBA terms"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7144",
+    "modules": [
+      "AMZ",
+      "FIN",
+      "OFF"
+    ],
+    "topics": [
+      "Amazon.in fees",
+      "referral fees",
+      "pricing"
+    ],
+    "claim": "Since 16 March 2026 Amazon.in charges no referral fee on products priced under Rs 1,000 in 1,800+ categories, and Self Ship closing fees fell from Rs 45 to Rs 20 under Rs 300.",
+    "body": "Amazon India's 2026 fee revision post says that from 16 March 2026 the referral fee becomes zero for products priced under Rs 1,000, across more than 1,800 categories and over 12.5 crore products. Above Rs 1,000, referral fees fall by 4% to 9.5% in categories such as fashion, home and grocery. Easy Ship sellers save Rs 15 per order across weight handling and closing fees combined. Self Ship closing fees drop from Rs 45 to Rs 20 for items under Rs 300, and from Rs 35 to Rs 26 for Rs 300 to Rs 500. For pricing this creates a cliff at Rs 1,000: a product just under the line pays no referral fee, while one just above it pays its category rate. How to apply: when an Indian product is priced near Rs 1,000, compare net payout just under Rs 1,000 with the higher price after referral fees, and consider packs or bundles that stay under the line.",
+    "conditions": "Amazon.in; category exceptions apply; check the live fee page.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "zero referral fee under Rs 1,000 from 16 March 2026",
+      "1,800+ categories, 12.5 crore+ products",
+      "referral above Rs 1,000 cut 4% to 9.5%",
+      "Easy Ship saves Rs 15 per order",
+      "Self Ship closing fee Rs 45 to Rs 20 (under Rs 300), Rs 35 to Rs 26 (Rs 300 to 500)"
+    ],
+    "asks": [
+      "does Amazon India charge referral fees under 1000 rupees",
+      "what changed in Amazon.in fees in 2026",
+      "should I price my product under Rs 1000 on Amazon",
+      "how much is the Self Ship closing fee"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [
+      "amazon.in"
+    ],
+    "mode": "both",
+    "source": "S7137",
+    "evidence": {
+      "where": "Fee changes at a glance",
+      "quote": "If your product is priced under ₹1000, that fee becomes zero."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "AMZ-7145",
+    "modules": [
+      "AMZ",
+      "FIN",
+      "OPS"
+    ],
+    "topics": [
+      "Amazon.in fees",
+      "FBA fees",
+      "weight handling"
+    ],
+    "claim": "Amazon.in bills shipping on actual or volumetric weight (LxBxH cm / 5000), whichever is higher, in 500 g steps; FBA pick and pack is Rs 17 up to 1 kg, storage Rs 50 per cubic foot monthly, plus 18% GST.",
+    "body": "Amazon India's fees and pricing page sets out how fulfilment costs are built. Weight handling and shipping fees are charged on the higher of actual weight or volumetric weight, where volumetric weight is length times breadth times height in centimetres divided by 5,000; standard-size items have a minimum chargeable weight of 500 g and are billed in 500 g increments, so an 800 g item to a regional address costs Rs 68 (Rs 51 plus Rs 17). Fulfilment centre fees: pick and pack Rs 17 per unit for standard items up to 1 kg, Rs 5 per extra kg up to 5 kg and Rs 2 per extra 5 kg after that, Rs 26 for heavy and bulky; storage Rs 50 per cubic foot per month; removals Rs 10 standard or Rs 30 expedited per unit, Rs 100 for heavy and bulky. Easy Ship uses flat fees by weight and distance: a 350 g headphone is Rs 55, a 3.5 kg item Rs 180. All fees exclude 18% GST. New Standard-level sellers are paid every 7 days, starting 7 days after delivery. Amazon's FBA page quotes a lower storage rate, so confirm in the fee calculator. How to apply: measure the packed box, compute volumetric weight before choosing packaging, and add 18% GST to every Amazon fee in the margin sheet.",
+    "conditions": "Amazon.in; fees indicative and exclusive of GST.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "volumetric weight = L × B × H ÷ 5000 (cm)",
+      "minimum 500 g, billed in 500 g increments",
+      "pick and pack Rs 17 up to 1 kg",
+      "storage Rs 50 per cubic foot per month",
+      "Easy Ship examples: 350 g Rs 55, 3.5 kg Rs 180",
+      "18% GST on fees",
+      "payout every 7 days"
+    ],
+    "asks": [
+      "how does Amazon India calculate shipping weight",
+      "what are FBA fees on Amazon.in",
+      "is GST charged on Amazon seller fees",
+      "how often does Amazon India pay sellers"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [
+      "amazon.in"
+    ],
+    "mode": "both",
+    "source": "S7138",
+    "evidence": {
+      "where": "Weight handling fees; FC other fees; notes"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7150",
+    "modules": [
+      "PRD",
+      "AMZ"
+    ],
+    "topics": [
+      "demand and trend reading",
+      "market sizing",
+      "Product Opportunity Explorer"
+    ],
+    "claim": "Size Amazon demand by niche, not by one keyword: Product Opportunity Explorer groups the search terms whose shoppers click and buy the same products, and shows search volume, click share and conversion per term.",
+    "body": "Amazon's Product Opportunity Explorer, available to Professional sellers in Seller Central under Growth, is built to judge unmet demand for new product ideas. Its unit is the niche: a cluster of customer search terms that lead to the same products being viewed and bought (stainless-steel water bottle, BPA-free water bottle and insulated water bottle form one niche), titled by the highest-volume term. Each niche has a Products tab with the top clicked and purchased products, their launch dates, click share, price, average Amazon fees and trends, and a Search terms tab with search volume, click share, search conversion and the top three clicked products per term. Searching works by keyword, category or ASIN, and the store can be switched from the US default. Amazon warns the data is a guide and not a promise of sales. Because a niche merges all the ways shoppers describe one need, its total volume is a better demand estimate than any single keyword from a third-party tool, and its term list shows which descriptions (size, material, use) matter. How to apply: for each idea, open its niche, record total search volume, the click share held by the top three products and how recent their launch dates are, and compare ideas on the same three numbers.",
+    "conditions": "Professional seller account; product ideas sold or sellable on Amazon (US by default, other stores selectable).",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "top 3 clicked products shown per search term"
+    ],
+    "asks": [
+      "how do I check demand for a product idea on Amazon",
+      "is there a free Amazon tool for product research",
+      "how much do people search for my product on Amazon",
+      "what is an Amazon niche in Product Opportunity Explorer"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7139",
+    "evidence": {
+      "where": "About niches; Products tab; Search terms tab",
+      "quote": "A niche is a collection of customer search terms and products"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7151",
+    "modules": [
+      "PRD",
+      "AMZ"
+    ],
+    "topics": [
+      "competitive density",
+      "saturation assessment",
+      "Product Opportunity Explorer"
+    ],
+    "claim": "Read saturation in Product Opportunity Explorer's Insights tab, which gives 20 data points over today, 90 and 360 days, including product count, top-clicked products and a low share of Prime offers.",
+    "body": "The Insights tab of Amazon's Product Opportunity Explorer analyses a niche through 20 data points across three time frames: today, the past 90 days and the past 360 days. Amazon points to two uses: the number of products and the concentration among top-clicked products show how saturated the niche is, and a low percentage of Prime products signals room for a new offer with Prime delivery. The Trends tab plots up to two metrics at a time over time (each point aggregates the previous seven days), with up to five metrics kept in the picker, which shows whether search volume and product count are growing together or whether new products are arriving faster than demand. Comparing the 90-day and 360-day columns separates a niche that is filling up quickly from one that has been stable for a year. How to apply: for each shortlisted niche, note product count today against 360 days ago, the share of clicks taken by the top products, and the Prime share; prefer niches where demand grew faster than product count and where the leaders' click share is not locked up, and treat a fast-rising product count with flat search volume as a warning.",
+    "conditions": "Professional seller account; niches with enough history for 360-day data.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "20 data points",
+      "three time frames: today, 90 days, 360 days",
+      "trend points aggregate the prior 7 days",
+      "up to 2 metrics plotted, 5 in the picker"
+    ],
+    "asks": [
+      "how do I know if an Amazon niche is too crowded",
+      "how can I see if a product category is getting more competitive",
+      "what does low percentage of Prime products mean",
+      "how do I compare niches on Amazon"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7139",
+    "evidence": {
+      "where": "Insights tab; Trends tab",
+      "quote": "low percentage of Prime products metric"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7152",
+    "modules": [
+      "PRD",
+      "AMZ",
+      "AVT"
+    ],
+    "topics": [
+      "complaint mining",
+      "review mining",
+      "spec and differentiation"
+    ],
+    "claim": "Mine a niche's reviews and returns before designing the product: Product Opportunity Explorer groups review themes with their effect on star rating, and lists the most common return reasons as a share of returns.",
+    "body": "Two tabs in Amazon's Product Opportunity Explorer do the review and return mining a founder would otherwise do by hand. Customer review insights groups reviews in the niche into themes and subtopics with snippets, toggled between positive and negative. A bar chart shows how each topic affected the average star rating of the top 25% of products and of all products over the past six months, and a line chart shows how often each topic is mentioned. The Returns tab lists the most common buyer reasons for returning products in the niche, each as a percentage of all returns, with trends over time, taken from buyer feedback. Together they show which flaws cost rating points across the whole category, not one rival, and which ones send products back, which matters for the returns fee. A complaint that hurts ratings and drives returns, and that a factory can fix, is the strongest differentiation brief. How to apply: export the top negative themes and return reasons, keep the ones a spec change can fix (size, material, a part that clogs or breaks), put the fix in the supplier brief and the first bullet, and photograph it in the images.",
+    "conditions": "Professional seller account; niches with enough reviews and returns to form themes.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "top 25% of products compared with all products",
+      "past six months of reviews"
+    ],
+    "asks": [
+      "how do I find what customers hate about competing products",
+      "how can I use Amazon reviews to improve my product",
+      "why do people return products in my category",
+      "is there a tool to analyse Amazon reviews for a niche"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7139",
+    "evidence": {
+      "where": "Customer review insights tab; Returns tab"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7153",
+    "modules": [
+      "PRD",
+      "AMZ",
+      "AVT"
+    ],
+    "topics": [
+      "spec and differentiation",
+      "purchase drivers",
+      "Product Opportunity Explorer"
+    ],
+    "claim": "Product Opportunity Explorer's Purchase drivers tab ranks up to 10 product features by how much they raise or lower units sold in a niche, compared with the niche average, which tells you which spec to build.",
+    "body": "Amazon's Product Opportunity Explorer includes a Purchase drivers tab that shows the features most linked to higher or lower sales in a niche. Amazon calculates impact by comparing estimated sales of products that have a feature with the average units sold for all products in the niche, and shows up to 10 of the most relevant positive or negative features. Features are pulled from product names, descriptions and bullet points and tagged by theme where one applies, such as color: blue in a T-shirt niche. The tab turns spec choices (size, material, pack count, a function) into evidence from what shoppers actually bought, rather than guesses. It reflects correlation in existing listings, so a feature can look strong because the leading brand happens to have it. How to apply: before briefing a factory, list the positive drivers your product will have and the negative ones it must avoid, check the strongest driver against review themes to see whether shoppers mention it, and write the top driver into the title and main image.",
+    "conditions": "Professional seller account; niches with enough products to compare features.",
+    "fails_when": "The niche has few products, so one leader's features dominate the comparison; the driver is a brand effect rather than a feature; the feature cannot be made at the target cost.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "up to 10 positive or negative features"
+    ],
+    "asks": [
+      "which product features make people buy on Amazon",
+      "what features should my product have",
+      "how do I choose the spec for a new product",
+      "what sells best in my Amazon category"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7139",
+    "evidence": {
+      "where": "Purchase drivers tab"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7154",
+    "modules": [
+      "PRD",
+      "SEO"
+    ],
+    "topics": [
+      "demand and trend reading",
+      "Google Trends"
+    ],
+    "claim": "When comparing ideas in Google Trends, compare topics rather than single terms where possible; terms miss misspellings, synonyms and plural forms, while a topic groups one concept across terms and languages.",
+    "body": "Google's Trends help on comparing terms sets the rules. The current Explore lets a user compare up to 8 groups of terms at once, with up to 50 terms in each group (classic Explore allows 5 groups of 25). A search term matches the words typed in the chosen language: one word also returns phrases containing it, several words return results containing each word in any order, and quotation marks restrict results to the exact phrase. The plus sign combines terms into one line, such as two languages for the same word. Terms do not pick up misspellings, spelling variations, synonyms, or plural and singular versions, so a single term can understate interest. Topics are groups of terms sharing one concept in any language, for example London including Londres. Non-Latin terms may return little data where most people search in English. How to apply: compare product ideas as topics when Trends offers one; when it does not, build a group with the plural, singular and common synonyms joined by plus signs, keep the same region and time range for every idea, and read the shape of the line (rising, flat, seasonal), not its absolute value.",
+    "conditions": "Google Trends comparisons for any country.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "up to 8 groups of terms, up to 50 terms each",
+      "classic Explore: 5 groups, 25 terms each"
+    ],
+    "asks": [
+      "how do I compare two product ideas in Google Trends",
+      "what is the difference between a topic and a search term in Google Trends",
+      "why does Google Trends show less interest than I expected",
+      "how many terms can I compare in Google Trends"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7140",
+    "evidence": {
+      "where": "Compare terms; terms versus topics",
+      "quote": "Topics are a group of terms that share the same concept in any language."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7155",
+    "modules": [
+      "PRD"
+    ],
+    "topics": [
+      "demand and trend reading",
+      "Google Trends",
+      "candidate screening"
+    ],
+    "claim": "A Google Trends line at or near 0 means too little search volume to show, and low-interest lines are mostly noise; do not read a spike in a tiny niche term as rising demand.",
+    "body": "Google's Trends FAQ explains why small terms behave badly. Trends only shows data for popular terms, so terms with low search volume appear as 0. Because the data is a sample of searches, some noise is always present, and Google says it is most noticeable on queries with low or no search interest, where lines jump around for random reasons. Trends also removes repeated searches from the same person over a short time and filters out queries with apostrophes and other special characters. Graphs for 30 days or longer use UTC with daily, weekly or monthly points, while seven days or less use local time and hourly points. For product research this means a niche idea whose Trends line is mostly zeros with occasional spikes has no readable trend at all, and a single spike is likely noise, not a breakout. How to apply: before trusting a Trends signal, widen to the broader topic or category term and a multi-year window; if the specific term is still mostly 0, size demand with a volume tool (Keyword Planner, Amazon's Product Opportunity Explorer) instead, and only call a trend when the line rises across several periods.",
+    "conditions": "Google Trends for niche or long-tail product terms.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "low-volume terms show as 0",
+      "graphs of 30 days or longer use UTC; 7 days or shorter use local time"
+    ],
+    "asks": [
+      "why does Google Trends show zero for my product",
+      "is a spike in Google Trends real demand",
+      "can I use Google Trends for a small niche",
+      "how reliable is Google Trends for product research"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S6480",
+    "evidence": {
+      "where": "Why does Trends show zero; noise in Trends data",
+      "quote": "search terms with low volume appear as \"0.\""
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7156",
+    "modules": [
+      "PRD",
+      "GAD"
+    ],
+    "topics": [
+      "demand and trend reading",
+      "market sizing",
+      "Keyword Planner"
+    ],
+    "claim": "Keyword Planner's average monthly searches is a 12-month average for the exact keyword and close variants, rounded, so add variants yourself and read it as an order of magnitude.",
+    "body": "Google's Keyword Planner help defines average monthly searches as the average number of times people searched for a keyword and its close variants, for the chosen month range, location and Search Network settings; by default it is averaged over 12 months. Historical statistics such as average monthly searches are shown only for exact matches, and traffic forecasts account for match types while historical volume does not. Volumes are rounded, so totals across locations may not add up. A 12-month average hides seasonality: a product searched heavily in winter and barely in summer gets one middling number. Very low volume terms are not shown at all. For product research this makes Keyword Planner a good tool for comparing the rough scale of ideas and a poor one for precise forecasts. How to apply: for each idea, list the main term plus its common synonyms and long-tail variants, sum their average monthly searches in the target country, check the monthly breakdown for seasonality, and compare ideas on that sum, treating small differences as a tie.",
+    "conditions": "Google search demand in any country where Google Ads is available.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "averaged over 12 months by default",
+      "historical volume for exact matches only"
+    ],
+    "asks": [
+      "how many people search for my product on Google",
+      "how accurate is Google Keyword Planner search volume",
+      "how do I use Keyword Planner for product research",
+      "why are Keyword Planner numbers rounded"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7141",
+    "evidence": {
+      "where": "Average monthly searches definition",
+      "quote": "historical stats like average monthly searches are only shown for exact matches"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7157",
+    "modules": [
+      "PRD",
+      "GAD",
+      "MEA"
+    ],
+    "topics": [
+      "unit economics",
+      "ad cost per order",
+      "Keyword Planner"
+    ],
+    "claim": "Estimate a new product's paid-search click cost from Keyword Planner's top-of-page bid range: the low end is about the 20th percentile of past bids and the high end the 80th, over the last 30 days.",
+    "body": "Google's Keyword Planner help explains the bid columns: top of page bid (low range) is roughly the 20th percentile of bids advertisers paid to show at the top of the page, and the high range roughly the 80th percentile, both from the last 30 days of bid data. Forecasts of clicks and conversions take bid, budget, seasonality and historical ad quality into account and are built from about a week of data, so day-to-day numbers vary. At the idea stage, this gives a cost per click for the product's main terms before any money is spent. Divide that click cost by an assumed conversion rate to get an ad cost per order before fees and product cost, then compare it with the gross profit per order. If the high-range bid on the core terms already eats most of the margin, paid search cannot fund the launch. How to apply: pull top-of-page bid ranges for the core terms of each idea, use the high end for a cautious case, and drop ideas where the cost per order at a modest conversion rate leaves too little of the gross profit per order to fund the business.",
+    "conditions": "Google Search advertising in the target country; new products without their own ad history.",
+    "fails_when": "The product will be sold mainly through social ads or marketplaces, where click costs differ; the brand has its own conversion data that should replace the assumption.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "low range about the 20th percentile, high range about the 80th percentile",
+      "based on the last 30 days of bid data"
+    ],
+    "asks": [
+      "how much will Google ads cost for my product",
+      "how do I estimate cost per sale before launching",
+      "what does top of page bid mean in Keyword Planner",
+      "can I afford to advertise this product"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7141",
+    "evidence": {
+      "where": "Bid range definitions",
+      "quote": "the low range approximates the 20th percentile"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7158",
+    "modules": [
+      "PRD",
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "validation",
+      "smoke test",
+      "consumer law"
+    ],
+    "claim": "In the US, a smoke test that takes orders for a product you may never make must follow the FTC's dry-testing conditions: say it is only planned and may not ship, notify buyers if dropped, refund promptly and never substitute.",
+    "body": "The FTC's guide to the Mail, Internet or Telephone Order Merchandise Rule covers testing demand for merchandise that does not exist yet, which it calls dry-testing. A seller may do it only if five conditions are met: the promotion makes no suggestion that the item will be shipped or that interested customers will receive it; every promotional material discloses all material aspects, including that the merchandise is only planned and may not be shipped; if any part of the promotion is later dropped, buyers are told within a reasonable time; if no decision to ship has been made within a reasonable time, buyers are told and offered the chance to cancel, with a prompt refund where they paid; and no other merchandise is substituted for what was ordered. If the conditions are not met, the full rule applies, with its shipping deadlines. A fake buy button that takes money with no disclosure is not a smoke test under this guidance; it is an order. How to apply: run demand tests as a clearly labelled waitlist or reservation (planned product, may not ship, refundable), collect emails or deposits only on those terms, and set a decision date after which you either ship or refund everyone.",
+    "conditions": "US buyers; online, mail or phone orders.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "five conditions for dry-testing"
+    ],
+    "asks": [
+      "can I take pre-orders before my product exists",
+      "is a fake door test legal",
+      "how do I test demand before making inventory",
+      "can I collect deposits for a product I haven't made yet"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S6280",
+    "evidence": {
+      "where": "Dry-testing section",
+      "quote": "the merchandise is only planned and may not be shipped"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7159",
+    "modules": [
+      "PRD",
+      "OPS",
+      "CXP"
+    ],
+    "topics": [
+      "validation",
+      "pre-orders",
+      "consumer law"
+    ],
+    "claim": "US pre-orders must ship within the time you state, or 30 days if you state none; when late, get the buyer's consent to a new date or refund within seven working days of cancellation.",
+    "body": "The FTC's Mail, Internet or Telephone Order Merchandise Rule applies to pre-orders once money is taken. A seller must ship within the time clearly stated or, with no statement, within 30 days of receiving a properly completed order (payment plus the information needed), and must have a reasonable basis for any shipping promise, based on expected demand, supply, fulfilment capacity and records. When the seller learns it cannot ship on time, it must seek the buyer's consent to the delay before the promised date; a first delay notice with a new date of 30 days or less can treat silence as consent. If consent is not obtained, the seller must refund all money for unshipped goods without being asked. Refunds are due within seven working days after cancellation, or within one billing cycle for credit sales where the seller is the creditor. Factory delays are common on a first production run, so a pre-order campaign with a tight ship date turns a supplier slip into a legal deadline. How to apply: state a ship window that includes production, freight and inspection plus buffer, write the delay-notice email before launch, and keep a cash reserve to refund every pre-order if the run fails.",
+    "conditions": "US buyers; online, mail or phone orders of physical goods.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "ship within 30 days if no time stated",
+      "first delay notice with a new date of 30 days or less",
+      "refund within seven working days of cancellation",
+      "credit sales: one billing cycle"
+    ],
+    "asks": [
+      "how long can pre-orders take to ship",
+      "what do I do if my pre-orders are delayed",
+      "do I have to refund pre-orders if production is late",
+      "what shipping date should I promise for pre-orders"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S6280",
+    "evidence": {
+      "where": "The 30-day rule; delay and refund sections",
+      "quote": "within seven working days after the order is cancelled"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7161",
+    "modules": [
+      "PRD",
+      "MEA",
+      "FIN"
+    ],
+    "topics": [
+      "unit economics",
+      "margin floor",
+      "kill conditions"
+    ],
+    "claim": "Amazon says ACOS must stay below the profit margin to make money, so an idea's margin before ads is its break-even ACOS; at ACOS times price you know the ad cost each ad-driven order can bear.",
+    "body": "Amazon Ads' ACOS guide states that to maintain a profit, ACOS needs to be lower than the profit margin, and that the first step is working out break-even ACOS before setting a target. ACOS is ad spend divided by ad sales. That turns into a screen at the idea stage. Take the target price; subtract landed product cost, marketplace or payment fees, fulfilment and an allowance for returns; the share left is the margin before advertising, which is also the break-even ACOS. Whatever share that is, each ad-attributed order can carry ad spend up to that share of the price before the sale loses money. If research suggests launch campaigns in the niche will run near or above that level, the product only works if organic and repeat sales carry it. Amazon adds that new campaigns often show high ACOS simply because they are new. How to apply: for every shortlisted idea, compute margin before ads at the target price, write it down as break-even ACOS, and drop or re-price ideas whose break-even sits below the ACOS you expect during launch.",
+    "conditions": "Products sold with paid ads on Amazon or elsewhere; any marketplace.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "ACOS = ad spend ÷ ad revenue × 100"
+    ],
+    "asks": [
+      "how do I calculate break-even ACOS",
+      "how much can I spend on ads per sale",
+      "is my product margin high enough for Amazon ads",
+      "what ACOS can my product afford"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7108",
+    "evidence": {
+      "where": "Break-even ACOS guidance",
+      "quote": "your Amazon ACOS needs to be lower than your profit margin"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7162",
+    "modules": [
+      "PRD",
+      "AMZ",
+      "OPS"
+    ],
+    "topics": [
+      "candidate screening",
+      "heavy and bulky products",
+      "fulfilment cost"
+    ],
+    "claim": "Bulky products cost far more to fulfil on Amazon US: small bulky starts at $7.55 plus $0.38 a pound above the first and extra-large at $26.33, against $3.32 to $6.67 for standard items up to 3 pounds.",
+    "body": "Amazon's FBA rate card shows how size and weight drive fulfilment cost. In 2026 non-peak rates for items priced $10 to $50 (non-apparel, before the 3.5% surcharge), standard-size fees run from $3.32 for a small item of 2 ounces or less to $6.67 for a large standard item of 2.75 to 3 pounds. Once a product is bulky, fees start at $7.55 plus $0.38 per pound above the first pound for small bulky, $9.35 plus $0.38 a pound for large bulky, and $26.33 plus $0.38 a pound for extra-large up to 50 pounds; extra-large 50 to 70 pounds starts at $37.32. From 15 January 2027 the bulky tier splits into four and extra-large into six oversize tiers, smaller and lighter items paying less. Dangerous goods pay higher bulky rates again. How to apply: measure the retail box of each idea, find its size tier, and add the fulfilment fee to the margin check; a bulky item needs a much higher price to keep the same margin as a compact one, so redesign packaging or drop the idea if the fee breaks it.",
+    "conditions": "Amazon US FBA, 2026 non-peak rates; 2027 tiers change bulky fees.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "small bulky $7.55 + $0.38/lb above first lb ($10 to $50, 2026)",
+      "large bulky $9.35 + $0.38/lb",
+      "extra-large 0 to 50 lb $26.33 + $0.38/lb",
+      "extra-large 50 to 70 lb from $37.32",
+      "standard items $3.32 to $6.67 up to 3 lb"
+    ],
+    "asks": [
+      "are heavy products a bad idea for Amazon",
+      "how much does FBA charge for bulky items",
+      "will a big box kill my margin",
+      "what size tier is my product on Amazon"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7115",
+    "evidence": {
+      "where": "Bulky and Extra-Large fulfillment fee table"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7163",
+    "modules": [
+      "PRD",
+      "AMZ",
+      "CXP"
+    ],
+    "topics": [
+      "candidate screening",
+      "returns",
+      "high return categories"
+    ],
+    "claim": "Amazon's return-rate thresholds show which categories return most: luggage and handbags 12.8%, compact appliances 12.6%, eyewear 12.1%, watches 12.0%, pet products 10.2%, against 2.9% for grocery and 4.7% for toys.",
+    "body": "Amazon publishes the return-rate threshold above which an FBA product in each category pays a returns processing fee, and the thresholds track how often each category normally comes back. The highest include backpacks, handbags and luggage at 12.8%, compact appliances 12.6%, eyewear 12.1%, watches 12.0%, full-size appliances 11.9%, computers 11.4%, consumer electronics 11.2%, jewellery 10.8% and pet products 10.2%. The lowest include grocery and gourmet at 2.9%, office products 4.4%, toys and games 4.7%, and beauty, health and personal care 5.5%; home and kitchen sits at 8.1% and sports and outdoors at 8.7%. Apparel and shoes are different: every returned unit pays the fee, with no threshold. Returns cost twice, as the lost sale and the fee. How to apply: when comparing product ideas, look up each idea's category threshold, treat it as a rough expected return rate, and cost returns into the margin check (return rate times price plus the fee); ideas in apparel, shoes or the 10%-plus categories need a higher margin or a design that removes the main return reason.",
+    "conditions": "Amazon US FBA categories; thresholds are audited quarterly.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "backpacks, handbags and luggage 12.8%",
+      "compact appliances 12.6%",
+      "eyewear 12.1%",
+      "watches 12.0%",
+      "pet products 10.2%",
+      "home and kitchen 8.1%",
+      "beauty and personal care 5.5%",
+      "toys and games 4.7%",
+      "grocery 2.9%"
+    ],
+    "asks": [
+      "which product categories have the most returns",
+      "is my product category high return on Amazon",
+      "how should I factor returns into a product idea",
+      "what return rate should I expect for pet products"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7122",
+    "evidence": {
+      "where": "Return rate threshold table by category"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7164",
+    "modules": [
+      "PRD",
+      "OPS"
+    ],
+    "topics": [
+      "candidate screening",
+      "heavy and bulky products",
+      "return shipping"
+    ],
+    "claim": "Big parcels carry carrier surcharges on Amazon's US return labels: UPS adds handling over 50 pounds or 48 inches, and a large package surcharge with a 90-pound minimum billable weight past 96 inches long or 130 inches length plus girth.",
+    "body": "Amazon's page on seller-fulfilled return shipping costs passes on carrier rules that make bulky products expensive to take back. UPS bills the greater of actual or dimensional weight (length times width times height divided by 139 inches) plus a fuel charge that typically runs 13% to 15%. An additional handling surcharge can apply when a package weighs more than 50 pounds or its longest side exceeds 48 inches. A large package surcharge applies when the longest side exceeds 96 inches or length plus girth (twice the width plus twice the height) exceeds 130 inches, and such packages have a minimum billable weight of 90 pounds. Adjustments can post two to three weeks later. For product research this is a second cost of size beyond outbound fulfilment: each return of a big, light product is billed on box volume, not weight. How to apply: for any idea in a large box, compute its dimensional weight at the 139 divisor, check it against the surcharge limits, and cost an expected return label into the margin; a product that crosses 48 inches or 50 pounds needs either a high price or a near-zero return reason.",
+    "conditions": "Seller-fulfilled returns in the Amazon US store; carrier rules also shape own-site returns.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "dimensional weight divisor 139",
+      "additional handling over 50 lb or longest side over 48 in",
+      "large package: longest side over 96 in or length plus girth over 130 in",
+      "minimum billable weight 90 lb for large packages",
+      "fuel 13% to 15%"
+    ],
+    "asks": [
+      "how much does it cost to return a big item",
+      "are large products expensive to ship back",
+      "what is dimensional weight for returns",
+      "what package size triggers UPS surcharges"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7123",
+    "evidence": {
+      "where": "Surcharges for return shipping",
+      "quote": "Large packages are subject to a minimum billable weight of 90 lb"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7165",
+    "modules": [
+      "PRD",
+      "AMZ",
+      "OPS"
+    ],
+    "topics": [
+      "seasonality",
+      "inventory planning",
+      "FBA storage fees"
+    ],
+    "claim": "A seasonal product stocked at Amazon for winter pays peak storage: $2.40 per cubic foot a month for standard items in October to December against $0.78 in January to September.",
+    "body": "Amazon's storage fee page shows how much the calendar matters for seasonal products. Before the February 2027 change, standard-size items pay a base of $0.78 per cubic foot per month in the off-peak period (January to September) and $2.40 in the peak period (October to December); oversize items pay $0.56 and $1.40. Sellers past their first year with high storage utilization pay a surcharge on top, up to a total of $4.28 per cubic foot in peak for standard items. A product whose demand peaks in winter is therefore stored at the much higher peak rate exactly when it is needed, and anything left after the season sits into the next year as aged stock, which the new age-based fee charges more for after six months. For product research, a strongly seasonal idea needs a margin that covers peak storage and an exit plan for leftovers. How to apply: read the idea's Trends line over several years to time the peak, plan to land stock just before it, size the order to sell through within the season, and plan a markdown or removal for the remainder before it ages.",
+    "conditions": "Amazon US FBA storage before 1 February 2027; age-based rates after that.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "standard-size $0.78 per cubic foot (January to September)",
+      "standard-size $2.40 per cubic foot (October to December)",
+      "oversize $0.56 off-peak, $1.40 peak",
+      "peak total up to $4.28 with surcharge"
+    ],
+    "asks": [
+      "is a seasonal product a good idea for Amazon",
+      "how much does Amazon charge to store stock over Christmas",
+      "when should I send seasonal inventory to FBA",
+      "what happens to leftover seasonal stock at Amazon"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7116",
+    "evidence": {
+      "where": "Current rates, off-peak and peak tables"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7166",
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "topics": [
+      "sourcing and MOQ",
+      "samples"
+    ],
+    "claim": "Budget about $50 to $100 per supplier sample plus express air freight for a product retailing at $20 to $50, ask for the sample cost to be credited against the bulk order, and expect several sample rounds.",
+    "body": "Alibaba.com's buyer guide on samples says a sample is usually one unit used to check quality, materials and colour before a large order, and also a test of how the supplier communicates. Some suppliers let buyers tick a box on the product page; otherwise the buyer writes the request, introducing the company, giving almost the same product detail as a full order, and including the shipping address. The buyer normally pays for the sample and shipping; some suppliers waive the cost if they expect a large order. The guide's estimate is about $50 to $100 for a sample plus express air shipping when the product retails for $20 to $50, varying with distance, and buyers can ask for the sample cost to be deducted from a later full order. Factory samples ship quickly; custom samples take longer because they are built to the buyer's spec, and samples often differ from mass production, so several iterations may be needed. Payment should go through Alibaba.com rather than outside platforms. How to apply: order samples from several shortlisted suppliers at once, budget for more than one round on the chosen one, and approve a production sample before paying the deposit on bulk.",
+    "conditions": "Sourcing from overseas manufacturers through Alibaba.com or similar B2B marketplaces.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "$50 to $100 per sample plus express air for a $20 to $50 retail product"
+    ],
+    "asks": [
+      "how much do product samples cost from China",
+      "how do I ask a supplier for a sample",
+      "who pays for samples on Alibaba",
+      "how many sample rounds should I expect"
+    ],
+    "platforms": [
+      "alibaba"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7144",
+    "evidence": {
+      "where": "Who pays and sample cost sections"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "PRD-7167",
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "topics": [
+      "sourcing and MOQ",
+      "supplier vetting",
+      "negotiation"
+    ],
+    "claim": "On Alibaba.com, negotiate MOQ, samples, price and customisation through Contact Supplier or Chat Now, prefer Verified or Trade Assurance suppliers, and make counter-offers near the asking price rather than a fraction of it.",
+    "body": "Alibaba.com's official buyer guide lays out the path from search to order. Ready to Ship listings can be bought directly with Start Order, but samples, orders below the minimum order quantity (MOQ), lower prices and customisation all need negotiation through Contact Supplier and the Chat Now messenger. It names three supplier identifiers: Gold Supplier; Verified Supplier, whose profile, management system and production capability have been assessed or inspected by third parties; and Trade Assurance suppliers, who accept payment through Alibaba.com's payment portal. The guide advises keeping the transaction on Alibaba.com, mentions its Product Inspection Services, and recommends ordering samples, especially for private label or customised products, before buying in bulk. On negotiation it gives an example: for a $10 unit, offering $7 or $8 on a 1,000-unit order is reasonable, while offering $2 is not. Suppliers often sell samples at the retail price. How to apply: shortlist Verified or Trade Assurance suppliers, open with a sample request and a realistic first-order quantity, ask what MOQ the quoted price assumes, and counter within a credible range.",
+    "conditions": "Private label sourcing through Alibaba.com.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "example: $10 unit, offer $7 or $8 on 1,000 units, not $2"
+    ],
+    "asks": [
+      "how do I negotiate MOQ on Alibaba",
+      "how do I know if an Alibaba supplier is legit",
+      "what is a Verified Supplier on Alibaba",
+      "how low can I offer on a supplier quote"
+    ],
+    "platforms": [
+      "alibaba"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7145",
+    "evidence": {
+      "where": "Negotiate deals; supplier identifiers sections"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "PRD-7168",
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "topics": [
+      "quality checks",
+      "inspection",
+      "AQL"
+    ],
+    "claim": "Set the pre-shipment inspection at AQL 2.5 for general consumer goods with zero critical defects: for 4,000 units at General Inspection Level II, sample 200 and accept the lot only if 10 or fewer fail.",
+    "body": "QIMA, an inspection company, explains Acceptable Quality Limit sampling, based on ISO 2859 and ANSI/ASQ Z1.4. AQL sets the most defective units a random sample may contain before the whole lot is rejected, and is set separately for each defect type. QIMA says AQL for critical defects (safety or legal failures) is commonly 0; AQL 2.5 is the most common standard for general consumer goods; AQL 1.0 is used for higher-risk categories; and AQL 4.0 where minor cosmetic defects are acceptable. Its worked example: a shipment of 4,000 units inspected at General Inspection Level II gives code letter L; code letter L at AQL 2.5 calls for a sample of 200 units; if 10 or fewer fail the batch passes, and 11 or more means rejection. The value of agreeing these numbers is that pass and fail are defined before production, so a failed inspection is a contract matter, not an argument. How to apply: write the AQL levels (0 critical, 2.5 major, 4.0 minor, or stricter for children's or electrical products) and the defect list into the purchase order, and book the inspection before the final payment.",
+    "conditions": "Bulk production runs from contract factories; random sampling of finished goods.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [
+      "critical defects AQL 0",
+      "AQL 2.5 general consumer goods",
+      "AQL 1.0 higher-risk",
+      "AQL 4.0 minor cosmetic",
+      "4,000 units, Level II, code L: sample 200, accept 10 or fewer, reject 11 or more"
+    ],
+    "asks": [
+      "what AQL should I use for inspection",
+      "how many units should an inspector check",
+      "what is AQL 2.5",
+      "how do I set quality standards with my factory"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7146",
+    "evidence": {
+      "where": "AQL levels and worked example",
+      "quote": "AQL 2.5 is the most common standard for general consumer goods"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "PRD-7169",
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "topics": [
+      "candidate screening",
+      "product safety",
+      "compliance"
+    ],
+    "claim": "In the US, any product designed mainly for children 12 or younger needs a Children's Product Certificate based on tests by a CPSC-accepted third-party lab, and importers must e-file certificates from 8 July 2026.",
+    "body": "The US Consumer Product Safety Commission's page says domestic manufacturers and importers of children's products must issue a written Children's Product Certificate based on test results from a third-party, CPSC-accepted laboratory. A children's product is a consumer product designed or intended primarily for children 12 years of age or younger, and those subject to a children's product safety rule need third-party testing and certification. The certificate has seven elements: the product covered, each applicable safety rule, the manufacturer or importer, contact details for whoever keeps the test records, date and place of manufacture, date and place of testing, and the lab (or a small-batch registration number). From 8 July 2026, importers of most regulated consumer products must file certificates electronically with US Customs and Border Protection. This adds lab fees, time and paperwork to every children's product idea, and the costs repeat with material or supplier changes. How to apply: when an idea could be seen as for children (toys, kids' cups, baby items, small decorative items), decide early whether it is a children's product, get lab quotes into the landed cost, and drop ideas whose margin cannot carry testing.",
+    "conditions": "Products sold in the US; children's products as defined by the CPSA.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "children 12 years of age or younger",
+      "seven certificate elements",
+      "e-filing from 8 July 2026"
+    ],
+    "asks": [
+      "do I need testing to sell kids products in the US",
+      "what is a Children's Product Certificate",
+      "is my product a children's product",
+      "what does CPSC certification cost me in time"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7147",
+    "evidence": {
+      "where": "Children's Product Certificate overview and required elements",
+      "quote": "designed or intended primarily for children 12 years of age or younger"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7170",
+    "modules": [
+      "PRD",
+      "COG",
+      "FIN"
+    ],
+    "topics": [
+      "landed cost",
+      "duty",
+      "candidate screening"
+    ],
+    "claim": "At the idea stage, look up the US duty rate in the Harmonized Tariff Schedule or the USITC database, treat it as approximate since CBP makes the final call, and get a binding ruling when the margin depends on it.",
+    "body": "US Customs and Border Protection's guidance on duty rates says the Harmonized Tariff Schedule gives duty rates for virtually every item, but classifying an item correctly takes expertise: details such as fibre content, construction and country of origin change the rate. The USITC Tariff Database gives an approximate rate, only as accurate as the information entered. CBP makes the final determination of the correct duty rate, not the importer, and for very specific duty information on a particular item an importer can request a binding ruling; local ports can also advise. For a product idea, duty is one of the few landed-cost lines that can move the margin by many points, and additional duties on top of the base rate can apply by origin, so a guess made from a similar product can be wrong. How to apply: for each shortlisted idea, find the likely HTS code and base duty, check for additional duties for the planned origin country, add duty to the landed cost on the cautious side, and for any product where a different code would break the margin, request a binding ruling before the first order.",
+    "conditions": "Goods imported into the US.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "how do I find the import duty for my product",
+      "who decides the duty rate on my imports",
+      "what is a binding ruling from CBP",
+      "how much duty will I pay importing from China"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7148",
+    "evidence": {
+      "where": "Determining duty rates guidance",
+      "quote": "CBP makes the final determination of what the correct rate of duty is"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7171",
+    "modules": [
+      "PRD",
+      "AMZ",
+      "FIN"
+    ],
+    "topics": [
+      "unit economics",
+      "margin benchmarks",
+      "launch risk"
+    ],
+    "claim": "In Jungle Scout's survey of Amazon sellers, 57% reported profit margins above 10% and 28% above 20%, while 13% were not yet profitable; 58% were profitable within their first year.",
+    "body": "Jungle Scout's 2024 seller report surveyed nearly 2,000 Amazon sellers and businesses between 1 December 2023 and 3 January 2024, focusing on 1,064 sellers with at least one live listing. Among small and mid-size sellers, 57% reported profit margins higher than 10%, 28% above 20%, and 13% said the business was not yet profitable. On timing, 22% were profitable within three months, 16% in three to six months, 20% in six months to a year, 11% in one to two years and 2% after more than two years, so 58% were profitable within the first year. These are self-reported net figures from a tool vendor's audience, which skews toward active, committed sellers. They are useful as a reality check on a plan: a model that assumes a margin well above 20% from month one sits above what most sellers report. How to apply: when building the plan for a new product, treat roughly 10% to 20% net margin as the normal range, show the month the product turns profitable, and test the plan at a margin below 10% to see whether the cash still lasts.",
+    "conditions": "Amazon third-party and first-party sellers, mostly US, surveyed late 2023.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "57% margins above 10%",
+      "28% above 20%",
+      "13% not yet profitable",
+      "58% profitable within first year",
+      "survey of nearly 2,000 sellers, 1,064 with live listings"
+    ],
+    "asks": [
+      "what profit margin do Amazon sellers make",
+      "how long until an Amazon product is profitable",
+      "is a 30% margin realistic on Amazon",
+      "how many Amazon sellers lose money"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7149",
+    "evidence": {
+      "where": "Profit margins and time to profitability sections",
+      "quote": "Over half of sellers (57%) see profit margins higher than 10%."
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "PRD-7172",
+    "modules": [
+      "PRD",
+      "AMZ",
+      "FIN"
+    ],
+    "topics": [
+      "market sizing",
+      "launch risk",
+      "seller benchmarks"
+    ],
+    "claim": "Jungle Scout's seller survey found 31% of Amazon sellers made under $500 a month and 17% $501 to $1,000; only small shares reached $25,000 or more, so a typical new product sells far less than the leaders.",
+    "body": "Jungle Scout's 2024 report, from a survey of nearly 2,000 Amazon sellers and businesses (1,064 with a live listing), gives the spread of monthly sales: under $500, 31%; $501 to $1,000, 17%; $1,001 to $5,000, 22%; $5,001 to $10,000, 11%; $10,001 to $25,000, 7%; $25,001 to $50,000, 5%; $50,001 to $100,000, 4%; and 1% each in the two bands above $100,000. On start-up spend, 25% spent under $1,000 and 64% under $5,000, with 17% spending more than $10,000. The point for product research is base rates: the revenue figures that research tools show for top listings describe the leaders, while most sellers sit far below them. A demand estimate taken from the top three listings in a niche is the ceiling, not the expected result. How to apply: when forecasting a new product, model a base case well below the niche leaders' monthly revenue, size the first order to that base case, and treat leader-level sales as the upside to reorder into.",
+    "conditions": "Amazon sellers, mostly US, surveyed December 2023 to January 2024.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "31% under $500 a month",
+      "17% $501 to $1,000",
+      "22% $1,001 to $5,000",
+      "11% $5,001 to $10,000",
+      "7% $10,001 to $25,000",
+      "5% $25,001 to $50,000",
+      "64% spent under $5,000 to start"
+    ],
+    "asks": [
+      "how much does a typical Amazon seller make a month",
+      "how many units will my new product sell",
+      "how much money do I need to start on Amazon",
+      "are the sales numbers in research tools realistic"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7149",
+    "evidence": {
+      "where": "Monthly sales and startup cost tables"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "PRD-7173",
+    "modules": [
+      "PRD",
+      "FIN",
+      "COG"
+    ],
+    "topics": [
+      "unit economics",
+      "cost pressure",
+      "launch risk"
+    ],
+    "claim": "In Jungle Scout's January 2025 survey of nearly 1,500 Amazon sellers, 38% named higher shipping costs as a top challenge, 34% rising cost of goods and 32% growing ad costs: stress-test every idea's margin on all three.",
+    "body": "Jungle Scout's State of the Amazon Seller 2025 surveyed nearly 1,500 Amazon sellers and businesses from 10 to 27 January 2025. The top challenges were cost pressures: 38% cited higher shipping costs, 34% said they struggled with the rising cost of goods, and 32% said growing advertising expenses were a concern. The report also says fewer businesses source from China while sourcing from the US has nearly doubled, without giving exact shares. For product research this argues for testing margins against cost increases rather than today's quotes: freight, unit cost and click prices are the three lines most sellers saw rise, and a product with a thin margin at current costs is the first to break. How to apply: for each shortlisted idea, rerun the unit economics with freight, landed unit cost and cost per click each raised by a set stress amount, and drop ideas whose margin turns negative under the combined case; favour ideas whose price can absorb increases without leaving the niche's price band.",
+    "conditions": "Amazon sellers, survey January 2025.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "nearly 1,500 sellers, 10 to 27 January 2025",
+      "38% higher shipping costs",
+      "34% rising cost of goods",
+      "32% growing advertising expenses"
+    ],
+    "asks": [
+      "what costs are rising for Amazon sellers",
+      "how should I stress test my product margin",
+      "are ad costs going up on Amazon",
+      "should I still source from China"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7150",
+    "evidence": {
+      "where": "Key findings",
+      "quote": "cite higher shipping costs as a top challenge"
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "PRD-7174",
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "topics": [
+      "candidate screening",
+      "product safety",
+      "compliance"
+    ],
+    "claim": "In the US, a general-use product covered by a CPSC safety rule needs a General Certificate of Conformity from its maker or importer, based on testing or a reasonable testing program; third-party lab testing is not required.",
+    "body": "The US Consumer Product Safety Commission's page on the General Certificate of Conformity says domestic manufacturers and importers of certain general-use products, meaning products not made primarily for children, must issue a written certificate under section 14(a) of the Consumer Product Safety Act when the product is subject to a CPSC rule or similar requirement. The certificate must be based on testing or a reasonable testing program; unlike children's products, third-party laboratory testing is not required, though a certifier that relies on a third-party lab must name it. The certificate has seven elements: the product, each CPSC rule it is certified to, the certifying manufacturer or importer, contact details for whoever keeps the test records, date and place of manufacture, date and place of testing, and any third-party lab used. From 8 July 2026 importers of most regulated consumer products must file certificates electronically with US Customs and Border Protection. For a private label importer, the importer is the certifier, not the factory. How to apply: for each idea, check whether any CPSC rule covers the product type; if one does, plan who tests, budget for it in the landed cost, and have the certificate ready before the first shipment is entered.",
+    "conditions": "General-use (non-children's) consumer products imported into or made in the US and covered by a CPSC rule.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "seven certificate elements",
+      "e-filing from 8 July 2026"
+    ],
+    "asks": [
+      "do I need a certificate to import my product into the US",
+      "what is a General Certificate of Conformity",
+      "do adult products need lab testing for CPSC",
+      "who is responsible for product certification, me or the factory"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7151",
+    "evidence": {
+      "where": "General Certificate of Conformity overview and required elements",
+      "quote": "third-party laboratory testing is not a requirement for general-use products"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  }
+]

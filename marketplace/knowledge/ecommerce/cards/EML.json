@@ -38,7 +38,12 @@
       "where": "Subscriber campaigns section, Recharge cancel metric chart"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "EML-0002",
@@ -75,7 +80,12 @@
       "where": "Retention section, order confirmation churn graph"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "EML-0003",
@@ -112,7 +122,12 @@
       "where": "Retention section, billing reminder A/B test"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "EML-0004",
@@ -153,7 +168,12 @@
       "quote": "Every email we send somebody is a reminder for them to cancel."
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "EML-0005",
@@ -230,7 +250,12 @@
       "where": "Cancellation recovery section, win-back flow"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "EML-0007",
@@ -267,7 +292,12 @@
       "where": "Closing section, dunning and processing"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "EML-0008",
@@ -305,7 +335,16 @@
       "where": "Cancellations section, win-back discussion"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "prelaunch",
+        "early"
+      ],
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "EML-0009",
@@ -470,7 +509,13 @@
       "where": "Abandoned checkout and abandoned cart flow sections; browse abandonment A/B test example"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "EML-0013",
@@ -510,7 +555,12 @@
       "where": "Account setup: sender preferences, smart sending and attribution settings"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "EML-0014",
@@ -588,7 +638,16 @@
       "where": "List growth section, popup benchmarks and top-performing form structure"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "EML-0016",
@@ -665,7 +724,19 @@
       "where": "Section on how many campaigns to send"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "EML-0018",
@@ -705,7 +776,13 @@
       "where": "Cart abandonment section, trigger audit and Added to Cart snippet install"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "EML-0019",
@@ -745,7 +822,12 @@
       "where": "Flow playbook section, basics list and winback setup"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "EML-0020",
@@ -784,7 +866,15 @@
       "where": "Pop-up form section, client case and checklist"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "traffic": [
+        "high"
+      ]
+    }
   },
   {
     "id": "EML-0021",
@@ -862,7 +952,15 @@
       "where": "Campaigns section and flow optimisation loop"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "marketplace",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "EML-0023",
@@ -979,7 +1077,12 @@
       "where": "Frequency nuance; campaigns section; sample October calendar; send times"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "EML-0026",
@@ -1018,7 +1121,12 @@
       "where": "List growth section: pop-up form tips"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "EML-0027",
@@ -1058,7 +1166,12 @@
       "quote": "finish signing up with text to activate your discount"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "EML-0028",
@@ -1142,7 +1255,15 @@
       "quote": "you can only use one SMS per recipient in the card abandoned flow"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "marketplace",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "EML-0030",
@@ -1184,7 +1305,12 @@
       "quote": "I prefer to blast the list"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "EML-0031",
@@ -1225,7 +1351,15 @@
       "quote": "Wait 5 minutes after they've opted into your funnel"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "wholesale"
+      ],
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "EML-0032",
@@ -1304,7 +1438,12 @@
       "quote": "pick reviews that handle the objections for you"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "EML-0034",
@@ -1343,7 +1482,12 @@
       "where": "Discussion of SMS as acquisition and org structure"
     },
     "strength": "research",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "EML-0035",
@@ -1384,7 +1528,13 @@
       "where": "Conversational commerce section, Shopper and Jones Road examples"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "EML-0036",
@@ -1455,7 +1605,13 @@
       "where": "RCS section near the end"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "EML-0038",
@@ -1538,7 +1694,16 @@
       "where": "SMS principles section (frequency, send time) and KPI section near the end"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "EML-0040",
@@ -1579,7 +1744,16 @@
       "quote": "around the 8 to 12% of your website traffic will enter your email list"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "EML-0041",
@@ -1620,7 +1794,12 @@
       "quote": "we like to use a 10 to1 ratio"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "EML-0042",
@@ -1740,7 +1919,12 @@
       "quote": "not an email 2 not an email 3 not an email 4"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "EML-0045",
@@ -1779,7 +1963,12 @@
       "quote": "we don't want to wait 3 days"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "EML-0046",
@@ -1821,7 +2010,16 @@
       "quote": "the closer towards the purchase ... the shorter you want to keep this"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "EML-0047",
@@ -1860,7 +2058,16 @@
       "quote": "anything less than 10% off won't be effective"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "EML-0048",
@@ -2150,7 +2357,12 @@
       "where": "Part 1, cases 1.17, 1.48, 1.49, 1.50"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "EML-0055",
@@ -2188,7 +2400,12 @@
       "where": "progressive peaking discussion, APL International Women's Day example"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "EML-0056",
@@ -2265,7 +2482,12 @@
       "where": "[00:55:34-01:04:35] retention metrics; [01:14:26-01:16:15] post-purchase surveys"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "EML-0058",
@@ -2305,7 +2527,13 @@
       "where": "about 36:34-46:12 retention and welcome flow"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "EML-0059",
@@ -2346,7 +2574,12 @@
       "where": "Segmentation section (engaged and unengaged segments) and deliverability section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "EML-0060",
@@ -2385,7 +2618,16 @@
       "where": "Welcome series flow section: 72-hour window and flow build"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "EML-0061",
@@ -2425,7 +2667,16 @@
       "where": "A/B testing section: testing mindset and how long to test"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "EML-0062",
@@ -2464,7 +2715,16 @@
       "where": "Post-purchase flow section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "EML-0063",
@@ -2504,7 +2764,15 @@
       "where": "Campaign strategy section: frequency, campaign ideas, SMS philosophy; specialty segments"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "EML-0064",
@@ -2545,7 +2813,16 @@
       "where": "Browse abandonment and abandoned cart/checkout flow sections"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "EML-0065",
@@ -2586,7 +2863,16 @@
       "where": "List growth section: sign-up form build, mistakes and A/B test ideas"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "EML-0066",
@@ -2664,7 +2950,13 @@
       "quote": "the scarcity double whammy"
     },
     "strength": "research",
-    "public": false
+    "public": false,
+    "situations": {
+      "model": [
+        "dtc",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "EML-6320",

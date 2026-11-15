@@ -68,7 +68,7 @@ Read `context/MEMORY.md` (or the memory packet the owner pasted) and `context/or
 
 **Start** when all six are answered, or the only gaps are ones a top practitioner would fill the same way: write those as assumption lines (rule 2) and begin. **Ask** when any gap would change what you make if you guessed wrong. Typical: two readings of the ask, no idea what good looks like for a plan or campaign, no org context for buyer-facing work, a missing offer limit or date. Never ask by habit, and never guess where a wrong guess changes the work.
 
-**How to ask.** One message, before any work. Only the gaps, at most five questions, each with choices or a default so one word answers it, and "you decide" always allowed. When the job needs your tools, one of the five asks the access level for each tool. Say what you already have from the brief, so nothing repeats.
+**How to ask.** In stages, the way `tools/quality/GUIDE.md` says: the goal, material and access before any work; the way forward after you have read the data. Only the gaps: at most three questions in one message and at most two rounds of asking before you deliver, each with choices or a default so one word answers it, and "you decide" always allowed. When the job needs your tools, ask the access level for each tool. Say what you already have from the brief, so nothing repeats.
 
 > Before I start, four quick questions (or say "you decide"):
 > 1. Do you have an org context (a brand guide, brand file or folder about your business)? a) Yes: attach it or paste a link b) No: send your store URL and I will build one and keep it

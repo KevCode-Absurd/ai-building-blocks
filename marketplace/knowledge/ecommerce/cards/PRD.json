@@ -37,7 +37,12 @@
       "quote": "they're all round so we had no choice but to be square"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "PRD-0002",
@@ -77,7 +82,12 @@
       "quote": "if you throw a consumer an egg, they're going to catch it"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "PRD-0003",
@@ -159,7 +169,15 @@
       "where": "Question 6, what is your potential selling price"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "mid"
+      ]
+    }
   },
   {
     "id": "PRD-0007",
@@ -235,7 +253,12 @@
       "where": "Chapter 13, When line extension can work, section 'Rules of the road'"
     },
     "strength": "stated_by_practitioner",
-    "public": false
+    "public": false,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "PRD-0009",
@@ -271,7 +294,13 @@
       "where": "Advice to founders launching a product, packaging and MOQ discussion"
     },
     "strength": "stated_by_practitioner",
-    "public": false
+    "public": false,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "PRD-0010",
@@ -356,7 +385,15 @@
       "quote": "until this skew has reached $10 million, don't worry about the next skew"
     },
     "strength": "stated_by_practitioner",
-    "public": false
+    "public": false,
+    "situations": {
+      "model": [
+        "cod",
+        "subscription",
+        "marketplace",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "PRD-0012",
@@ -398,7 +435,15 @@
       "quote": "is it a CAC or an LTV product?"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "high"
+      ],
+      "size": [
+        "large"
+      ]
+    }
   },
   {
     "id": "PRD-0013",
@@ -436,7 +481,12 @@
       "where": "[01:08:00-01:14:26] product ideation, for me/for you, packaging constraints"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "PRD-0017",
@@ -474,7 +524,12 @@
       "where": "[01:07:05-01:16:15] global DTC focus over retail"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "PRD-6480",
@@ -590,7 +645,15 @@
       "quote": "Price gap is the percentage difference between your price and the benchmark price"
     },
     "strength": "platform_rule",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "PRD-6483",
@@ -630,6 +693,1091 @@
       "quote": "archived for one year upon the delivery of their last impression"
     },
     "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7150",
+    "modules": [
+      "PRD",
+      "AMZ"
+    ],
+    "topics": [
+      "demand and trend reading",
+      "market sizing",
+      "Product Opportunity Explorer"
+    ],
+    "claim": "Size Amazon demand by niche, not by one keyword: Product Opportunity Explorer groups the search terms whose shoppers click and buy the same products, and shows search volume, click share and conversion per term.",
+    "body": "Amazon's Product Opportunity Explorer, available to Professional sellers in Seller Central under Growth, is built to judge unmet demand for new product ideas. Its unit is the niche: a cluster of customer search terms that lead to the same products being viewed and bought (stainless-steel water bottle, BPA-free water bottle and insulated water bottle form one niche), titled by the highest-volume term. Each niche has a Products tab with the top clicked and purchased products, their launch dates, click share, price, average Amazon fees and trends, and a Search terms tab with search volume, click share, search conversion and the top three clicked products per term. Searching works by keyword, category or ASIN, and the store can be switched from the US default. Amazon warns the data is a guide and not a promise of sales. Because a niche merges all the ways shoppers describe one need, its total volume is a better demand estimate than any single keyword from a third-party tool, and its term list shows which descriptions (size, material, use) matter. How to apply: for each idea, open its niche, record total search volume, the click share held by the top three products and how recent their launch dates are, and compare ideas on the same three numbers.",
+    "conditions": "Professional seller account; product ideas sold or sellable on Amazon (US by default, other stores selectable).",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "top 3 clicked products shown per search term"
+    ],
+    "asks": [
+      "how do I check demand for a product idea on Amazon",
+      "is there a free Amazon tool for product research",
+      "how much do people search for my product on Amazon",
+      "what is an Amazon niche in Product Opportunity Explorer"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7139",
+    "evidence": {
+      "where": "About niches; Products tab; Search terms tab",
+      "quote": "A niche is a collection of customer search terms and products"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7151",
+    "modules": [
+      "PRD",
+      "AMZ"
+    ],
+    "topics": [
+      "competitive density",
+      "saturation assessment",
+      "Product Opportunity Explorer"
+    ],
+    "claim": "Read saturation in Product Opportunity Explorer's Insights tab, which gives 20 data points over today, 90 and 360 days, including product count, top-clicked products and a low share of Prime offers.",
+    "body": "The Insights tab of Amazon's Product Opportunity Explorer analyses a niche through 20 data points across three time frames: today, the past 90 days and the past 360 days. Amazon points to two uses: the number of products and the concentration among top-clicked products show how saturated the niche is, and a low percentage of Prime products signals room for a new offer with Prime delivery. The Trends tab plots up to two metrics at a time over time (each point aggregates the previous seven days), with up to five metrics kept in the picker, which shows whether search volume and product count are growing together or whether new products are arriving faster than demand. Comparing the 90-day and 360-day columns separates a niche that is filling up quickly from one that has been stable for a year. How to apply: for each shortlisted niche, note product count today against 360 days ago, the share of clicks taken by the top products, and the Prime share; prefer niches where demand grew faster than product count and where the leaders' click share is not locked up, and treat a fast-rising product count with flat search volume as a warning.",
+    "conditions": "Professional seller account; niches with enough history for 360-day data.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "20 data points",
+      "three time frames: today, 90 days, 360 days",
+      "trend points aggregate the prior 7 days",
+      "up to 2 metrics plotted, 5 in the picker"
+    ],
+    "asks": [
+      "how do I know if an Amazon niche is too crowded",
+      "how can I see if a product category is getting more competitive",
+      "what does low percentage of Prime products mean",
+      "how do I compare niches on Amazon"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7139",
+    "evidence": {
+      "where": "Insights tab; Trends tab",
+      "quote": "low percentage of Prime products metric"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7152",
+    "modules": [
+      "PRD",
+      "AMZ",
+      "AVT"
+    ],
+    "topics": [
+      "complaint mining",
+      "review mining",
+      "spec and differentiation"
+    ],
+    "claim": "Mine a niche's reviews and returns before designing the product: Product Opportunity Explorer groups review themes with their effect on star rating, and lists the most common return reasons as a share of returns.",
+    "body": "Two tabs in Amazon's Product Opportunity Explorer do the review and return mining a founder would otherwise do by hand. Customer review insights groups reviews in the niche into themes and subtopics with snippets, toggled between positive and negative. A bar chart shows how each topic affected the average star rating of the top 25% of products and of all products over the past six months, and a line chart shows how often each topic is mentioned. The Returns tab lists the most common buyer reasons for returning products in the niche, each as a percentage of all returns, with trends over time, taken from buyer feedback. Together they show which flaws cost rating points across the whole category, not one rival, and which ones send products back, which matters for the returns fee. A complaint that hurts ratings and drives returns, and that a factory can fix, is the strongest differentiation brief. How to apply: export the top negative themes and return reasons, keep the ones a spec change can fix (size, material, a part that clogs or breaks), put the fix in the supplier brief and the first bullet, and photograph it in the images.",
+    "conditions": "Professional seller account; niches with enough reviews and returns to form themes.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "top 25% of products compared with all products",
+      "past six months of reviews"
+    ],
+    "asks": [
+      "how do I find what customers hate about competing products",
+      "how can I use Amazon reviews to improve my product",
+      "why do people return products in my category",
+      "is there a tool to analyse Amazon reviews for a niche"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7139",
+    "evidence": {
+      "where": "Customer review insights tab; Returns tab"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7153",
+    "modules": [
+      "PRD",
+      "AMZ",
+      "AVT"
+    ],
+    "topics": [
+      "spec and differentiation",
+      "purchase drivers",
+      "Product Opportunity Explorer"
+    ],
+    "claim": "Product Opportunity Explorer's Purchase drivers tab ranks up to 10 product features by how much they raise or lower units sold in a niche, compared with the niche average, which tells you which spec to build.",
+    "body": "Amazon's Product Opportunity Explorer includes a Purchase drivers tab that shows the features most linked to higher or lower sales in a niche. Amazon calculates impact by comparing estimated sales of products that have a feature with the average units sold for all products in the niche, and shows up to 10 of the most relevant positive or negative features. Features are pulled from product names, descriptions and bullet points and tagged by theme where one applies, such as color: blue in a T-shirt niche. The tab turns spec choices (size, material, pack count, a function) into evidence from what shoppers actually bought, rather than guesses. It reflects correlation in existing listings, so a feature can look strong because the leading brand happens to have it. How to apply: before briefing a factory, list the positive drivers your product will have and the negative ones it must avoid, check the strongest driver against review themes to see whether shoppers mention it, and write the top driver into the title and main image.",
+    "conditions": "Professional seller account; niches with enough products to compare features.",
+    "fails_when": "The niche has few products, so one leader's features dominate the comparison; the driver is a brand effect rather than a feature; the feature cannot be made at the target cost.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "up to 10 positive or negative features"
+    ],
+    "asks": [
+      "which product features make people buy on Amazon",
+      "what features should my product have",
+      "how do I choose the spec for a new product",
+      "what sells best in my Amazon category"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7139",
+    "evidence": {
+      "where": "Purchase drivers tab"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7154",
+    "modules": [
+      "PRD",
+      "SEO"
+    ],
+    "topics": [
+      "demand and trend reading",
+      "Google Trends"
+    ],
+    "claim": "When comparing ideas in Google Trends, compare topics rather than single terms where possible; terms miss misspellings, synonyms and plural forms, while a topic groups one concept across terms and languages.",
+    "body": "Google's Trends help on comparing terms sets the rules. The current Explore lets a user compare up to 8 groups of terms at once, with up to 50 terms in each group (classic Explore allows 5 groups of 25). A search term matches the words typed in the chosen language: one word also returns phrases containing it, several words return results containing each word in any order, and quotation marks restrict results to the exact phrase. The plus sign combines terms into one line, such as two languages for the same word. Terms do not pick up misspellings, spelling variations, synonyms, or plural and singular versions, so a single term can understate interest. Topics are groups of terms sharing one concept in any language, for example London including Londres. Non-Latin terms may return little data where most people search in English. How to apply: compare product ideas as topics when Trends offers one; when it does not, build a group with the plural, singular and common synonyms joined by plus signs, keep the same region and time range for every idea, and read the shape of the line (rising, flat, seasonal), not its absolute value.",
+    "conditions": "Google Trends comparisons for any country.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "up to 8 groups of terms, up to 50 terms each",
+      "classic Explore: 5 groups, 25 terms each"
+    ],
+    "asks": [
+      "how do I compare two product ideas in Google Trends",
+      "what is the difference between a topic and a search term in Google Trends",
+      "why does Google Trends show less interest than I expected",
+      "how many terms can I compare in Google Trends"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7140",
+    "evidence": {
+      "where": "Compare terms; terms versus topics",
+      "quote": "Topics are a group of terms that share the same concept in any language."
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7155",
+    "modules": [
+      "PRD"
+    ],
+    "topics": [
+      "demand and trend reading",
+      "Google Trends",
+      "candidate screening"
+    ],
+    "claim": "A Google Trends line at or near 0 means too little search volume to show, and low-interest lines are mostly noise; do not read a spike in a tiny niche term as rising demand.",
+    "body": "Google's Trends FAQ explains why small terms behave badly. Trends only shows data for popular terms, so terms with low search volume appear as 0. Because the data is a sample of searches, some noise is always present, and Google says it is most noticeable on queries with low or no search interest, where lines jump around for random reasons. Trends also removes repeated searches from the same person over a short time and filters out queries with apostrophes and other special characters. Graphs for 30 days or longer use UTC with daily, weekly or monthly points, while seven days or less use local time and hourly points. For product research this means a niche idea whose Trends line is mostly zeros with occasional spikes has no readable trend at all, and a single spike is likely noise, not a breakout. How to apply: before trusting a Trends signal, widen to the broader topic or category term and a multi-year window; if the specific term is still mostly 0, size demand with a volume tool (Keyword Planner, Amazon's Product Opportunity Explorer) instead, and only call a trend when the line rises across several periods.",
+    "conditions": "Google Trends for niche or long-tail product terms.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "low-volume terms show as 0",
+      "graphs of 30 days or longer use UTC; 7 days or shorter use local time"
+    ],
+    "asks": [
+      "why does Google Trends show zero for my product",
+      "is a spike in Google Trends real demand",
+      "can I use Google Trends for a small niche",
+      "how reliable is Google Trends for product research"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S6480",
+    "evidence": {
+      "where": "Why does Trends show zero; noise in Trends data",
+      "quote": "search terms with low volume appear as \"0.\""
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7156",
+    "modules": [
+      "PRD",
+      "GAD"
+    ],
+    "topics": [
+      "demand and trend reading",
+      "market sizing",
+      "Keyword Planner"
+    ],
+    "claim": "Keyword Planner's average monthly searches is a 12-month average for the exact keyword and close variants, rounded, so add variants yourself and read it as an order of magnitude.",
+    "body": "Google's Keyword Planner help defines average monthly searches as the average number of times people searched for a keyword and its close variants, for the chosen month range, location and Search Network settings; by default it is averaged over 12 months. Historical statistics such as average monthly searches are shown only for exact matches, and traffic forecasts account for match types while historical volume does not. Volumes are rounded, so totals across locations may not add up. A 12-month average hides seasonality: a product searched heavily in winter and barely in summer gets one middling number. Very low volume terms are not shown at all. For product research this makes Keyword Planner a good tool for comparing the rough scale of ideas and a poor one for precise forecasts. How to apply: for each idea, list the main term plus its common synonyms and long-tail variants, sum their average monthly searches in the target country, check the monthly breakdown for seasonality, and compare ideas on that sum, treating small differences as a tie.",
+    "conditions": "Google search demand in any country where Google Ads is available.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "averaged over 12 months by default",
+      "historical volume for exact matches only"
+    ],
+    "asks": [
+      "how many people search for my product on Google",
+      "how accurate is Google Keyword Planner search volume",
+      "how do I use Keyword Planner for product research",
+      "why are Keyword Planner numbers rounded"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7141",
+    "evidence": {
+      "where": "Average monthly searches definition",
+      "quote": "historical stats like average monthly searches are only shown for exact matches"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7157",
+    "modules": [
+      "PRD",
+      "GAD",
+      "MEA"
+    ],
+    "topics": [
+      "unit economics",
+      "ad cost per order",
+      "Keyword Planner"
+    ],
+    "claim": "Estimate a new product's paid-search click cost from Keyword Planner's top-of-page bid range: the low end is about the 20th percentile of past bids and the high end the 80th, over the last 30 days.",
+    "body": "Google's Keyword Planner help explains the bid columns: top of page bid (low range) is roughly the 20th percentile of bids advertisers paid to show at the top of the page, and the high range roughly the 80th percentile, both from the last 30 days of bid data. Forecasts of clicks and conversions take bid, budget, seasonality and historical ad quality into account and are built from about a week of data, so day-to-day numbers vary. At the idea stage, this gives a cost per click for the product's main terms before any money is spent. Divide that click cost by an assumed conversion rate to get an ad cost per order before fees and product cost, then compare it with the gross profit per order. If the high-range bid on the core terms already eats most of the margin, paid search cannot fund the launch. How to apply: pull top-of-page bid ranges for the core terms of each idea, use the high end for a cautious case, and drop ideas where the cost per order at a modest conversion rate leaves too little of the gross profit per order to fund the business.",
+    "conditions": "Google Search advertising in the target country; new products without their own ad history.",
+    "fails_when": "The product will be sold mainly through social ads or marketplaces, where click costs differ; the brand has its own conversion data that should replace the assumption.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "low range about the 20th percentile, high range about the 80th percentile",
+      "based on the last 30 days of bid data"
+    ],
+    "asks": [
+      "how much will Google ads cost for my product",
+      "how do I estimate cost per sale before launching",
+      "what does top of page bid mean in Keyword Planner",
+      "can I afford to advertise this product"
+    ],
+    "platforms": [
+      "google"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7141",
+    "evidence": {
+      "where": "Bid range definitions",
+      "quote": "the low range approximates the 20th percentile"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7158",
+    "modules": [
+      "PRD",
+      "LPG",
+      "OFF"
+    ],
+    "topics": [
+      "validation",
+      "smoke test",
+      "consumer law"
+    ],
+    "claim": "In the US, a smoke test that takes orders for a product you may never make must follow the FTC's dry-testing conditions: say it is only planned and may not ship, notify buyers if dropped, refund promptly and never substitute.",
+    "body": "The FTC's guide to the Mail, Internet or Telephone Order Merchandise Rule covers testing demand for merchandise that does not exist yet, which it calls dry-testing. A seller may do it only if five conditions are met: the promotion makes no suggestion that the item will be shipped or that interested customers will receive it; every promotional material discloses all material aspects, including that the merchandise is only planned and may not be shipped; if any part of the promotion is later dropped, buyers are told within a reasonable time; if no decision to ship has been made within a reasonable time, buyers are told and offered the chance to cancel, with a prompt refund where they paid; and no other merchandise is substituted for what was ordered. If the conditions are not met, the full rule applies, with its shipping deadlines. A fake buy button that takes money with no disclosure is not a smoke test under this guidance; it is an order. How to apply: run demand tests as a clearly labelled waitlist or reservation (planned product, may not ship, refundable), collect emails or deposits only on those terms, and set a decision date after which you either ship or refund everyone.",
+    "conditions": "US buyers; online, mail or phone orders.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "five conditions for dry-testing"
+    ],
+    "asks": [
+      "can I take pre-orders before my product exists",
+      "is a fake door test legal",
+      "how do I test demand before making inventory",
+      "can I collect deposits for a product I haven't made yet"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "new_product",
+    "source": "S6280",
+    "evidence": {
+      "where": "Dry-testing section",
+      "quote": "the merchandise is only planned and may not be shipped"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7159",
+    "modules": [
+      "PRD",
+      "OPS",
+      "CXP"
+    ],
+    "topics": [
+      "validation",
+      "pre-orders",
+      "consumer law"
+    ],
+    "claim": "US pre-orders must ship within the time you state, or 30 days if you state none; when late, get the buyer's consent to a new date or refund within seven working days of cancellation.",
+    "body": "The FTC's Mail, Internet or Telephone Order Merchandise Rule applies to pre-orders once money is taken. A seller must ship within the time clearly stated or, with no statement, within 30 days of receiving a properly completed order (payment plus the information needed), and must have a reasonable basis for any shipping promise, based on expected demand, supply, fulfilment capacity and records. When the seller learns it cannot ship on time, it must seek the buyer's consent to the delay before the promised date; a first delay notice with a new date of 30 days or less can treat silence as consent. If consent is not obtained, the seller must refund all money for unshipped goods without being asked. Refunds are due within seven working days after cancellation, or within one billing cycle for credit sales where the seller is the creditor. Factory delays are common on a first production run, so a pre-order campaign with a tight ship date turns a supplier slip into a legal deadline. How to apply: state a ship window that includes production, freight and inspection plus buffer, write the delay-notice email before launch, and keep a cash reserve to refund every pre-order if the run fails.",
+    "conditions": "US buyers; online, mail or phone orders of physical goods.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "ship within 30 days if no time stated",
+      "first delay notice with a new date of 30 days or less",
+      "refund within seven working days of cancellation",
+      "credit sales: one billing cycle"
+    ],
+    "asks": [
+      "how long can pre-orders take to ship",
+      "what do I do if my pre-orders are delayed",
+      "do I have to refund pre-orders if production is late",
+      "what shipping date should I promise for pre-orders"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S6280",
+    "evidence": {
+      "where": "The 30-day rule; delay and refund sections",
+      "quote": "within seven working days after the order is cancelled"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7161",
+    "modules": [
+      "PRD",
+      "MEA",
+      "FIN"
+    ],
+    "topics": [
+      "unit economics",
+      "margin floor",
+      "kill conditions"
+    ],
+    "claim": "Amazon says ACOS must stay below the profit margin to make money, so an idea's margin before ads is its break-even ACOS; at ACOS times price you know the ad cost each ad-driven order can bear.",
+    "body": "Amazon Ads' ACOS guide states that to maintain a profit, ACOS needs to be lower than the profit margin, and that the first step is working out break-even ACOS before setting a target. ACOS is ad spend divided by ad sales. That turns into a screen at the idea stage. Take the target price; subtract landed product cost, marketplace or payment fees, fulfilment and an allowance for returns; the share left is the margin before advertising, which is also the break-even ACOS. Whatever share that is, each ad-attributed order can carry ad spend up to that share of the price before the sale loses money. If research suggests launch campaigns in the niche will run near or above that level, the product only works if organic and repeat sales carry it. Amazon adds that new campaigns often show high ACOS simply because they are new. How to apply: for every shortlisted idea, compute margin before ads at the target price, write it down as break-even ACOS, and drop or re-price ideas whose break-even sits below the ACOS you expect during launch.",
+    "conditions": "Products sold with paid ads on Amazon or elsewhere; any marketplace.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "ACOS = ad spend ÷ ad revenue × 100"
+    ],
+    "asks": [
+      "how do I calculate break-even ACOS",
+      "how much can I spend on ads per sale",
+      "is my product margin high enough for Amazon ads",
+      "what ACOS can my product afford"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7108",
+    "evidence": {
+      "where": "Break-even ACOS guidance",
+      "quote": "your Amazon ACOS needs to be lower than your profit margin"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7162",
+    "modules": [
+      "PRD",
+      "AMZ",
+      "OPS"
+    ],
+    "topics": [
+      "candidate screening",
+      "heavy and bulky products",
+      "fulfilment cost"
+    ],
+    "claim": "Bulky products cost far more to fulfil on Amazon US: small bulky starts at $7.55 plus $0.38 a pound above the first and extra-large at $26.33, against $3.32 to $6.67 for standard items up to 3 pounds.",
+    "body": "Amazon's FBA rate card shows how size and weight drive fulfilment cost. In 2026 non-peak rates for items priced $10 to $50 (non-apparel, before the 3.5% surcharge), standard-size fees run from $3.32 for a small item of 2 ounces or less to $6.67 for a large standard item of 2.75 to 3 pounds. Once a product is bulky, fees start at $7.55 plus $0.38 per pound above the first pound for small bulky, $9.35 plus $0.38 a pound for large bulky, and $26.33 plus $0.38 a pound for extra-large up to 50 pounds; extra-large 50 to 70 pounds starts at $37.32. From 15 January 2027 the bulky tier splits into four and extra-large into six oversize tiers, smaller and lighter items paying less. Dangerous goods pay higher bulky rates again. How to apply: measure the retail box of each idea, find its size tier, and add the fulfilment fee to the margin check; a bulky item needs a much higher price to keep the same margin as a compact one, so redesign packaging or drop the idea if the fee breaks it.",
+    "conditions": "Amazon US FBA, 2026 non-peak rates; 2027 tiers change bulky fees.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "small bulky $7.55 + $0.38/lb above first lb ($10 to $50, 2026)",
+      "large bulky $9.35 + $0.38/lb",
+      "extra-large 0 to 50 lb $26.33 + $0.38/lb",
+      "extra-large 50 to 70 lb from $37.32",
+      "standard items $3.32 to $6.67 up to 3 lb"
+    ],
+    "asks": [
+      "are heavy products a bad idea for Amazon",
+      "how much does FBA charge for bulky items",
+      "will a big box kill my margin",
+      "what size tier is my product on Amazon"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7115",
+    "evidence": {
+      "where": "Bulky and Extra-Large fulfillment fee table"
+    },
+    "strength": "platform_rule",
+    "public": true,
+    "situations": {
+      "model": [
+        "marketplace"
+      ]
+    }
+  },
+  {
+    "id": "PRD-7163",
+    "modules": [
+      "PRD",
+      "AMZ",
+      "CXP"
+    ],
+    "topics": [
+      "candidate screening",
+      "returns",
+      "high return categories"
+    ],
+    "claim": "Amazon's return-rate thresholds show which categories return most: luggage and handbags 12.8%, compact appliances 12.6%, eyewear 12.1%, watches 12.0%, pet products 10.2%, against 2.9% for grocery and 4.7% for toys.",
+    "body": "Amazon publishes the return-rate threshold above which an FBA product in each category pays a returns processing fee, and the thresholds track how often each category normally comes back. The highest include backpacks, handbags and luggage at 12.8%, compact appliances 12.6%, eyewear 12.1%, watches 12.0%, full-size appliances 11.9%, computers 11.4%, consumer electronics 11.2%, jewellery 10.8% and pet products 10.2%. The lowest include grocery and gourmet at 2.9%, office products 4.4%, toys and games 4.7%, and beauty, health and personal care 5.5%; home and kitchen sits at 8.1% and sports and outdoors at 8.7%. Apparel and shoes are different: every returned unit pays the fee, with no threshold. Returns cost twice, as the lost sale and the fee. How to apply: when comparing product ideas, look up each idea's category threshold, treat it as a rough expected return rate, and cost returns into the margin check (return rate times price plus the fee); ideas in apparel, shoes or the 10%-plus categories need a higher margin or a design that removes the main return reason.",
+    "conditions": "Amazon US FBA categories; thresholds are audited quarterly.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "backpacks, handbags and luggage 12.8%",
+      "compact appliances 12.6%",
+      "eyewear 12.1%",
+      "watches 12.0%",
+      "pet products 10.2%",
+      "home and kitchen 8.1%",
+      "beauty and personal care 5.5%",
+      "toys and games 4.7%",
+      "grocery 2.9%"
+    ],
+    "asks": [
+      "which product categories have the most returns",
+      "is my product category high return on Amazon",
+      "how should I factor returns into a product idea",
+      "what return rate should I expect for pet products"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7122",
+    "evidence": {
+      "where": "Return rate threshold table by category"
+    },
+    "strength": "platform_rule",
+    "public": true,
+    "situations": {
+      "model": [
+        "marketplace"
+      ]
+    }
+  },
+  {
+    "id": "PRD-7164",
+    "modules": [
+      "PRD",
+      "OPS"
+    ],
+    "topics": [
+      "candidate screening",
+      "heavy and bulky products",
+      "return shipping"
+    ],
+    "claim": "Big parcels carry carrier surcharges on Amazon's US return labels: UPS adds handling over 50 pounds or 48 inches, and a large package surcharge with a 90-pound minimum billable weight past 96 inches long or 130 inches length plus girth.",
+    "body": "Amazon's page on seller-fulfilled return shipping costs passes on carrier rules that make bulky products expensive to take back. UPS bills the greater of actual or dimensional weight (length times width times height divided by 139 inches) plus a fuel charge that typically runs 13% to 15%. An additional handling surcharge can apply when a package weighs more than 50 pounds or its longest side exceeds 48 inches. A large package surcharge applies when the longest side exceeds 96 inches or length plus girth (twice the width plus twice the height) exceeds 130 inches, and such packages have a minimum billable weight of 90 pounds. Adjustments can post two to three weeks later. For product research this is a second cost of size beyond outbound fulfilment: each return of a big, light product is billed on box volume, not weight. How to apply: for any idea in a large box, compute its dimensional weight at the 139 divisor, check it against the surcharge limits, and cost an expected return label into the margin; a product that crosses 48 inches or 50 pounds needs either a high price or a near-zero return reason.",
+    "conditions": "Seller-fulfilled returns in the Amazon US store; carrier rules also shape own-site returns.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "dimensional weight divisor 139",
+      "additional handling over 50 lb or longest side over 48 in",
+      "large package: longest side over 96 in or length plus girth over 130 in",
+      "minimum billable weight 90 lb for large packages",
+      "fuel 13% to 15%"
+    ],
+    "asks": [
+      "how much does it cost to return a big item",
+      "are large products expensive to ship back",
+      "what is dimensional weight for returns",
+      "what package size triggers UPS surcharges"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7123",
+    "evidence": {
+      "where": "Surcharges for return shipping",
+      "quote": "Large packages are subject to a minimum billable weight of 90 lb"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7165",
+    "modules": [
+      "PRD",
+      "AMZ",
+      "OPS"
+    ],
+    "topics": [
+      "seasonality",
+      "inventory planning",
+      "FBA storage fees"
+    ],
+    "claim": "A seasonal product stocked at Amazon for winter pays peak storage: $2.40 per cubic foot a month for standard items in October to December against $0.78 in January to September.",
+    "body": "Amazon's storage fee page shows how much the calendar matters for seasonal products. Before the February 2027 change, standard-size items pay a base of $0.78 per cubic foot per month in the off-peak period (January to September) and $2.40 in the peak period (October to December); oversize items pay $0.56 and $1.40. Sellers past their first year with high storage utilization pay a surcharge on top, up to a total of $4.28 per cubic foot in peak for standard items. A product whose demand peaks in winter is therefore stored at the much higher peak rate exactly when it is needed, and anything left after the season sits into the next year as aged stock, which the new age-based fee charges more for after six months. For product research, a strongly seasonal idea needs a margin that covers peak storage and an exit plan for leftovers. How to apply: read the idea's Trends line over several years to time the peak, plan to land stock just before it, size the order to sell through within the season, and plan a markdown or removal for the remainder before it ages.",
+    "conditions": "Amazon US FBA storage before 1 February 2027; age-based rates after that.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "standard-size $0.78 per cubic foot (January to September)",
+      "standard-size $2.40 per cubic foot (October to December)",
+      "oversize $0.56 off-peak, $1.40 peak",
+      "peak total up to $4.28 with surcharge"
+    ],
+    "asks": [
+      "is a seasonal product a good idea for Amazon",
+      "how much does Amazon charge to store stock over Christmas",
+      "when should I send seasonal inventory to FBA",
+      "what happens to leftover seasonal stock at Amazon"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [
+      "amazon.com"
+    ],
+    "mode": "both",
+    "source": "S7116",
+    "evidence": {
+      "where": "Current rates, off-peak and peak tables"
+    },
+    "strength": "platform_rule",
+    "public": true,
+    "situations": {
+      "model": [
+        "marketplace"
+      ]
+    }
+  },
+  {
+    "id": "PRD-7166",
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "topics": [
+      "sourcing and MOQ",
+      "samples"
+    ],
+    "claim": "Budget about $50 to $100 per supplier sample plus express air freight for a product retailing at $20 to $50, ask for the sample cost to be credited against the bulk order, and expect several sample rounds.",
+    "body": "Alibaba.com's buyer guide on samples says a sample is usually one unit used to check quality, materials and colour before a large order, and also a test of how the supplier communicates. Some suppliers let buyers tick a box on the product page; otherwise the buyer writes the request, introducing the company, giving almost the same product detail as a full order, and including the shipping address. The buyer normally pays for the sample and shipping; some suppliers waive the cost if they expect a large order. The guide's estimate is about $50 to $100 for a sample plus express air shipping when the product retails for $20 to $50, varying with distance, and buyers can ask for the sample cost to be deducted from a later full order. Factory samples ship quickly; custom samples take longer because they are built to the buyer's spec, and samples often differ from mass production, so several iterations may be needed. Payment should go through Alibaba.com rather than outside platforms. How to apply: order samples from several shortlisted suppliers at once, budget for more than one round on the chosen one, and approve a production sample before paying the deposit on bulk.",
+    "conditions": "Sourcing from overseas manufacturers through Alibaba.com or similar B2B marketplaces.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "$50 to $100 per sample plus express air for a $20 to $50 retail product"
+    ],
+    "asks": [
+      "how much do product samples cost from China",
+      "how do I ask a supplier for a sample",
+      "who pays for samples on Alibaba",
+      "how many sample rounds should I expect"
+    ],
+    "platforms": [
+      "alibaba"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7144",
+    "evidence": {
+      "where": "Who pays and sample cost sections"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true,
+    "situations": {
+      "model": [
+        "wholesale"
+      ]
+    }
+  },
+  {
+    "id": "PRD-7167",
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "topics": [
+      "sourcing and MOQ",
+      "supplier vetting",
+      "negotiation"
+    ],
+    "claim": "On Alibaba.com, negotiate MOQ, samples, price and customisation through Contact Supplier or Chat Now, prefer Verified or Trade Assurance suppliers, and make counter-offers near the asking price rather than a fraction of it.",
+    "body": "Alibaba.com's official buyer guide lays out the path from search to order. Ready to Ship listings can be bought directly with Start Order, but samples, orders below the minimum order quantity (MOQ), lower prices and customisation all need negotiation through Contact Supplier and the Chat Now messenger. It names three supplier identifiers: Gold Supplier; Verified Supplier, whose profile, management system and production capability have been assessed or inspected by third parties; and Trade Assurance suppliers, who accept payment through Alibaba.com's payment portal. The guide advises keeping the transaction on Alibaba.com, mentions its Product Inspection Services, and recommends ordering samples, especially for private label or customised products, before buying in bulk. On negotiation it gives an example: for a $10 unit, offering $7 or $8 on a 1,000-unit order is reasonable, while offering $2 is not. Suppliers often sell samples at the retail price. How to apply: shortlist Verified or Trade Assurance suppliers, open with a sample request and a realistic first-order quantity, ask what MOQ the quoted price assumes, and counter within a credible range.",
+    "conditions": "Private label sourcing through Alibaba.com.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "example: $10 unit, offer $7 or $8 on 1,000 units, not $2"
+    ],
+    "asks": [
+      "how do I negotiate MOQ on Alibaba",
+      "how do I know if an Alibaba supplier is legit",
+      "what is a Verified Supplier on Alibaba",
+      "how low can I offer on a supplier quote"
+    ],
+    "platforms": [
+      "alibaba"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7145",
+    "evidence": {
+      "where": "Negotiate deals; supplier identifiers sections"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true,
+    "situations": {
+      "model": [
+        "marketplace"
+      ]
+    }
+  },
+  {
+    "id": "PRD-7168",
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "topics": [
+      "quality checks",
+      "inspection",
+      "AQL"
+    ],
+    "claim": "Set the pre-shipment inspection at AQL 2.5 for general consumer goods with zero critical defects: for 4,000 units at General Inspection Level II, sample 200 and accept the lot only if 10 or fewer fail.",
+    "body": "QIMA, an inspection company, explains Acceptable Quality Limit sampling, based on ISO 2859 and ANSI/ASQ Z1.4. AQL sets the most defective units a random sample may contain before the whole lot is rejected, and is set separately for each defect type. QIMA says AQL for critical defects (safety or legal failures) is commonly 0; AQL 2.5 is the most common standard for general consumer goods; AQL 1.0 is used for higher-risk categories; and AQL 4.0 where minor cosmetic defects are acceptable. Its worked example: a shipment of 4,000 units inspected at General Inspection Level II gives code letter L; code letter L at AQL 2.5 calls for a sample of 200 units; if 10 or fewer fail the batch passes, and 11 or more means rejection. The value of agreeing these numbers is that pass and fail are defined before production, so a failed inspection is a contract matter, not an argument. How to apply: write the AQL levels (0 critical, 2.5 major, 4.0 minor, or stricter for children's or electrical products) and the defect list into the purchase order, and book the inspection before the final payment.",
+    "conditions": "Bulk production runs from contract factories; random sampling of finished goods.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 3,
+    "numbers": [
+      "critical defects AQL 0",
+      "AQL 2.5 general consumer goods",
+      "AQL 1.0 higher-risk",
+      "AQL 4.0 minor cosmetic",
+      "4,000 units, Level II, code L: sample 200, accept 10 or fewer, reject 11 or more"
+    ],
+    "asks": [
+      "what AQL should I use for inspection",
+      "how many units should an inspector check",
+      "what is AQL 2.5",
+      "how do I set quality standards with my factory"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7146",
+    "evidence": {
+      "where": "AQL levels and worked example",
+      "quote": "AQL 2.5 is the most common standard for general consumer goods"
+    },
+    "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "PRD-7169",
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "topics": [
+      "candidate screening",
+      "product safety",
+      "compliance"
+    ],
+    "claim": "In the US, any product designed mainly for children 12 or younger needs a Children's Product Certificate based on tests by a CPSC-accepted third-party lab, and importers must e-file certificates from 8 July 2026.",
+    "body": "The US Consumer Product Safety Commission's page says domestic manufacturers and importers of children's products must issue a written Children's Product Certificate based on test results from a third-party, CPSC-accepted laboratory. A children's product is a consumer product designed or intended primarily for children 12 years of age or younger, and those subject to a children's product safety rule need third-party testing and certification. The certificate has seven elements: the product covered, each applicable safety rule, the manufacturer or importer, contact details for whoever keeps the test records, date and place of manufacture, date and place of testing, and the lab (or a small-batch registration number). From 8 July 2026, importers of most regulated consumer products must file certificates electronically with US Customs and Border Protection. This adds lab fees, time and paperwork to every children's product idea, and the costs repeat with material or supplier changes. How to apply: when an idea could be seen as for children (toys, kids' cups, baby items, small decorative items), decide early whether it is a children's product, get lab quotes into the landed cost, and drop ideas whose margin cannot carry testing.",
+    "conditions": "Products sold in the US; children's products as defined by the CPSA.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "children 12 years of age or younger",
+      "seven certificate elements",
+      "e-filing from 8 July 2026"
+    ],
+    "asks": [
+      "do I need testing to sell kids products in the US",
+      "what is a Children's Product Certificate",
+      "is my product a children's product",
+      "what does CPSC certification cost me in time"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7147",
+    "evidence": {
+      "where": "Children's Product Certificate overview and required elements",
+      "quote": "designed or intended primarily for children 12 years of age or younger"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7170",
+    "modules": [
+      "PRD",
+      "COG",
+      "FIN"
+    ],
+    "topics": [
+      "landed cost",
+      "duty",
+      "candidate screening"
+    ],
+    "claim": "At the idea stage, look up the US duty rate in the Harmonized Tariff Schedule or the USITC database, treat it as approximate since CBP makes the final call, and get a binding ruling when the margin depends on it.",
+    "body": "US Customs and Border Protection's guidance on duty rates says the Harmonized Tariff Schedule gives duty rates for virtually every item, but classifying an item correctly takes expertise: details such as fibre content, construction and country of origin change the rate. The USITC Tariff Database gives an approximate rate, only as accurate as the information entered. CBP makes the final determination of the correct duty rate, not the importer, and for very specific duty information on a particular item an importer can request a binding ruling; local ports can also advise. For a product idea, duty is one of the few landed-cost lines that can move the margin by many points, and additional duties on top of the base rate can apply by origin, so a guess made from a similar product can be wrong. How to apply: for each shortlisted idea, find the likely HTS code and base duty, check for additional duties for the planned origin country, add duty to the landed cost on the cautious side, and for any product where a different code would break the margin, request a binding ruling before the first order.",
+    "conditions": "Goods imported into the US.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "how do I find the import duty for my product",
+      "who decides the duty rate on my imports",
+      "what is a binding ruling from CBP",
+      "how much duty will I pay importing from China"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7148",
+    "evidence": {
+      "where": "Determining duty rates guidance",
+      "quote": "CBP makes the final determination of what the correct rate of duty is"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "PRD-7171",
+    "modules": [
+      "PRD",
+      "AMZ",
+      "FIN"
+    ],
+    "topics": [
+      "unit economics",
+      "margin benchmarks",
+      "launch risk"
+    ],
+    "claim": "In Jungle Scout's survey of Amazon sellers, 57% reported profit margins above 10% and 28% above 20%, while 13% were not yet profitable; 58% were profitable within their first year.",
+    "body": "Jungle Scout's 2024 seller report surveyed nearly 2,000 Amazon sellers and businesses between 1 December 2023 and 3 January 2024, focusing on 1,064 sellers with at least one live listing. Among small and mid-size sellers, 57% reported profit margins higher than 10%, 28% above 20%, and 13% said the business was not yet profitable. On timing, 22% were profitable within three months, 16% in three to six months, 20% in six months to a year, 11% in one to two years and 2% after more than two years, so 58% were profitable within the first year. These are self-reported net figures from a tool vendor's audience, which skews toward active, committed sellers. They are useful as a reality check on a plan: a model that assumes a margin well above 20% from month one sits above what most sellers report. How to apply: when building the plan for a new product, treat roughly 10% to 20% net margin as the normal range, show the month the product turns profitable, and test the plan at a margin below 10% to see whether the cash still lasts.",
+    "conditions": "Amazon third-party and first-party sellers, mostly US, surveyed late 2023.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "57% margins above 10%",
+      "28% above 20%",
+      "13% not yet profitable",
+      "58% profitable within first year",
+      "survey of nearly 2,000 sellers, 1,064 with live listings"
+    ],
+    "asks": [
+      "what profit margin do Amazon sellers make",
+      "how long until an Amazon product is profitable",
+      "is a 30% margin realistic on Amazon",
+      "how many Amazon sellers lose money"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7149",
+    "evidence": {
+      "where": "Profit margins and time to profitability sections",
+      "quote": "Over half of sellers (57%) see profit margins higher than 10%."
+    },
+    "strength": "research",
+    "public": true
+  },
+  {
+    "id": "PRD-7172",
+    "modules": [
+      "PRD",
+      "AMZ",
+      "FIN"
+    ],
+    "topics": [
+      "market sizing",
+      "launch risk",
+      "seller benchmarks"
+    ],
+    "claim": "Jungle Scout's seller survey found 31% of Amazon sellers made under $500 a month and 17% $501 to $1,000; only small shares reached $25,000 or more, so a typical new product sells far less than the leaders.",
+    "body": "Jungle Scout's 2024 report, from a survey of nearly 2,000 Amazon sellers and businesses (1,064 with a live listing), gives the spread of monthly sales: under $500, 31%; $501 to $1,000, 17%; $1,001 to $5,000, 22%; $5,001 to $10,000, 11%; $10,001 to $25,000, 7%; $25,001 to $50,000, 5%; $50,001 to $100,000, 4%; and 1% each in the two bands above $100,000. On start-up spend, 25% spent under $1,000 and 64% under $5,000, with 17% spending more than $10,000. The point for product research is base rates: the revenue figures that research tools show for top listings describe the leaders, while most sellers sit far below them. A demand estimate taken from the top three listings in a niche is the ceiling, not the expected result. How to apply: when forecasting a new product, model a base case well below the niche leaders' monthly revenue, size the first order to that base case, and treat leader-level sales as the upside to reorder into.",
+    "conditions": "Amazon sellers, mostly US, surveyed December 2023 to January 2024.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "31% under $500 a month",
+      "17% $501 to $1,000",
+      "22% $1,001 to $5,000",
+      "11% $5,001 to $10,000",
+      "7% $10,001 to $25,000",
+      "5% $25,001 to $50,000",
+      "64% spent under $5,000 to start"
+    ],
+    "asks": [
+      "how much does a typical Amazon seller make a month",
+      "how many units will my new product sell",
+      "how much money do I need to start on Amazon",
+      "are the sales numbers in research tools realistic"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7149",
+    "evidence": {
+      "where": "Monthly sales and startup cost tables"
+    },
+    "strength": "research",
+    "public": true,
+    "situations": {
+      "model": [
+        "marketplace"
+      ]
+    }
+  },
+  {
+    "id": "PRD-7173",
+    "modules": [
+      "PRD",
+      "FIN",
+      "COG"
+    ],
+    "topics": [
+      "unit economics",
+      "cost pressure",
+      "launch risk"
+    ],
+    "claim": "In Jungle Scout's January 2025 survey of nearly 1,500 Amazon sellers, 38% named higher shipping costs as a top challenge, 34% rising cost of goods and 32% growing ad costs: stress-test every idea's margin on all three.",
+    "body": "Jungle Scout's State of the Amazon Seller 2025 surveyed nearly 1,500 Amazon sellers and businesses from 10 to 27 January 2025. The top challenges were cost pressures: 38% cited higher shipping costs, 34% said they struggled with the rising cost of goods, and 32% said growing advertising expenses were a concern. The report also says fewer businesses source from China while sourcing from the US has nearly doubled, without giving exact shares. For product research this argues for testing margins against cost increases rather than today's quotes: freight, unit cost and click prices are the three lines most sellers saw rise, and a product with a thin margin at current costs is the first to break. How to apply: for each shortlisted idea, rerun the unit economics with freight, landed unit cost and cost per click each raised by a set stress amount, and drop ideas whose margin turns negative under the combined case; favour ideas whose price can absorb increases without leaving the niche's price band.",
+    "conditions": "Amazon sellers, survey January 2025.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 2,
+    "numbers": [
+      "nearly 1,500 sellers, 10 to 27 January 2025",
+      "38% higher shipping costs",
+      "34% rising cost of goods",
+      "32% growing advertising expenses"
+    ],
+    "asks": [
+      "what costs are rising for Amazon sellers",
+      "how should I stress test my product margin",
+      "are ad costs going up on Amazon",
+      "should I still source from China"
+    ],
+    "platforms": [
+      "amazon"
+    ],
+    "platform": [],
+    "jurisdiction": [],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7150",
+    "evidence": {
+      "where": "Key findings",
+      "quote": "cite higher shipping costs as a top challenge"
+    },
+    "strength": "research",
+    "public": true,
+    "situations": {
+      "model": [
+        "marketplace"
+      ]
+    }
+  },
+  {
+    "id": "PRD-7174",
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "topics": [
+      "candidate screening",
+      "product safety",
+      "compliance"
+    ],
+    "claim": "In the US, a general-use product covered by a CPSC safety rule needs a General Certificate of Conformity from its maker or importer, based on testing or a reasonable testing program; third-party lab testing is not required.",
+    "body": "The US Consumer Product Safety Commission's page on the General Certificate of Conformity says domestic manufacturers and importers of certain general-use products, meaning products not made primarily for children, must issue a written certificate under section 14(a) of the Consumer Product Safety Act when the product is subject to a CPSC rule or similar requirement. The certificate must be based on testing or a reasonable testing program; unlike children's products, third-party laboratory testing is not required, though a certifier that relies on a third-party lab must name it. The certificate has seven elements: the product, each CPSC rule it is certified to, the certifying manufacturer or importer, contact details for whoever keeps the test records, date and place of manufacture, date and place of testing, and any third-party lab used. From 8 July 2026 importers of most regulated consumer products must file certificates electronically with US Customs and Border Protection. For a private label importer, the importer is the certifier, not the factory. How to apply: for each idea, check whether any CPSC rule covers the product type; if one does, plan who tests, budget for it in the landed cost, and have the certificate ready before the first shipment is entered.",
+    "conditions": "General-use (non-children's) consumer products imported into or made in the US and covered by a CPSC rule.",
+    "fails_when": "",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "seven certificate elements",
+      "e-filing from 8 July 2026"
+    ],
+    "asks": [
+      "do I need a certificate to import my product into the US",
+      "what is a General Certificate of Conformity",
+      "do adult products need lab testing for CPSC",
+      "who is responsible for product certification, me or the factory"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "both",
+    "source": "S7151",
+    "evidence": {
+      "where": "General Certificate of Conformity overview and required elements",
+      "quote": "third-party laboratory testing is not a requirement for general-use products"
+    },
+    "strength": "regulator_rule",
     "public": true
   }
 ]

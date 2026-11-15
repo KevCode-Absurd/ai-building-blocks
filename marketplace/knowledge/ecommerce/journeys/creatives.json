@@ -1,0 +1,672 @@
+{
+  "schema": "ai-blocks-journey/1",
+  "id": "creatives",
+  "name": "Ad creatives (static, carousel and video concepts)",
+  "vertical": "ecommerce",
+  "asked_as": [
+    "make me 10 creatives",
+    "new ads for our bestsellers",
+    "static ads for Diwali",
+    "10 more like this one",
+    "our ads are tired, we need fresh ones",
+    "carousel ads for the new collection"
+  ],
+  "lead_agents": [
+    "tendai-ad-creative",
+    "ayaka-ad-design",
+    "kemal-creative-director"
+  ],
+  "outcome": "A set of finished, on-brand ads the owner can upload today: image files in feed and Stories sizes plus their copy, each ad naming the buyer it is for, the gap it fills and the proof it shows, varied by idea rather than by colour, with one line per ad on where it goes and what will say it worked.",
+  "first_principles": [
+    "On Meta today the creative is the targeting. Broad delivery finds people from what the ad says and shows, so a segment the data underfunds needs its own concepts (its occasion, its product, its words and picture), not the same ad with its name in the headline.",
+    "A concept is buyer x angle x offer, with format as a fourth axis. A new background, pose or colour is not a new ad: Meta groups near-copies as one and serves them to the same people. Ten ads that share three ideas are three ads.",
+    "Proven winners are the control. Relaunching or extending a winner is the cheapest new money; a new concept earns its place by beating the control on store-side cost per purchase, read after about 3 times the target cost per purchase has been spent on it. So the batch size comes from the test budget, not from a round number.",
+    "A format is chosen for the hypothesis, not for variety's sake: a review card for a trust gap, a comparison for a 'why pay more' doubt, a notes list or chat for cold native reach, an offer card only for buyers who already know the product. Real range comes from different gaps, each in the structure that answers it.",
+    "Fatigue is a reading, not a feeling: frequency up while click-through and return on ad spend fall on the same ad over the same weeks, with the account's cost per thousand flat. The fix is a refresh that changes one part (hook, person, setting, buyer framing) and keeps the idea that sold.",
+    "The ad sells a physical thing the buyer will hold. Use the real product photo and set every word in the brand's own fonts. An image model may make a scene or background with no words in it; it never draws the product, the logo, a price or a letter. A wrong detail in an ad comes back as a return."
+  ],
+  "goal": {
+    "questions": [
+      {
+        "id": "scope",
+        "ask": "Is this for one product, your bestsellers, or the range as a whole?",
+        "why": "It decides which photos, proof and buyers the set is built on, and whether each ad sells one item or sends people to a collection.",
+        "options": [
+          {
+            "label": "Bestsellers",
+            "pro": "proven demand, the fastest read on new ideas",
+            "con": "can speed up fatigue on what already runs"
+          },
+          {
+            "label": "One product",
+            "pro": "depth: its own concept per buyer and objection",
+            "con": "slow to read if it is not yet a proven seller"
+          },
+          {
+            "label": "The range or the brand",
+            "pro": "reaches buyers who want choice",
+            "con": "hardest to sell in one image; needs carousels and a collection page that converts"
+          }
+        ],
+        "default": "The two or three products with the most store gross profit in the last 90 days",
+        "skip_if": [
+          "the brief names a product",
+          "one product is most of revenue in the store data"
+        ],
+        "settle_with_data": "Rank products by store revenue and gross profit over 90 days and set that next to ad spend by product. Products with high gross profit and little spend are named as the underfed candidates; say the ranking and its source in one line instead of asking."
+      },
+      {
+        "id": "moment",
+        "ask": "Do these need to carry a sale, a launch or a festival, or are they evergreen?",
+        "why": "An offer or a date changes the formats allowed (offer card, countdown), the copy, the end date on the image and how long the ads can run.",
+        "options": [
+          {
+            "label": "Evergreen",
+            "pro": "can run for months; no end date on the image",
+            "con": "no urgency to lean on"
+          },
+          {
+            "label": "A sale or offer",
+            "pro": "the strongest pull for buyers who already know you",
+            "con": "trains buyers to wait; needs a live offer and its break-even worked out"
+          },
+          {
+            "label": "A festival or season",
+            "pro": "a moment buyers already plan for (gifting, weddings, weather)",
+            "con": "short life; must be live before buyers start shopping"
+          }
+        ],
+        "default": "Evergreen, with one moment piece for any region or season the data names",
+        "skip_if": [
+          "the brief names an offer, launch or festival"
+        ],
+        "settle_with_data": "Check the store's live offers, the next 6 weeks of the calendar against last year's sales by week, and any region or season that stands out in the segment table."
+      },
+      {
+        "id": "mix",
+        "ask": "Static images only, or carousels and video concepts too?",
+        "why": "Each needs different material: statics need photos, carousels need 3 to 7 cards of story or range, video needs footage or a person who can film.",
+        "options": [
+          {
+            "label": "Statics only",
+            "pro": "fast, cheap, every word exact",
+            "con": "misses buyers who mostly watch Reels"
+          },
+          {
+            "label": "Statics plus carousels",
+            "pro": "carousels show range, steps or several proofs",
+            "con": "more cards to make and check"
+          },
+          {
+            "label": "Statics plus video concepts",
+            "pro": "covers Reels and Stories where much spend goes",
+            "con": "video needs a script and a shoot; handed to the video-scripts journey"
+          }
+        ],
+        "default": "Statics, plus a carousel where the gap is range or steps",
+        "skip_if": [
+          "the brief names the formats"
+        ],
+        "settle_with_data": "Read spend and store-side cost per purchase by format (image, video, carousel) and by placement. If video holds most spend at a better cost, include video concepts; if an existing format has never been tried, say so."
+      },
+      {
+        "id": "count",
+        "ask": "How many ads should I make?",
+        "why": "More concepts than the test budget can read is noise: each one needs spend to get a verdict.",
+        "options": [
+          {
+            "label": "The number you asked for",
+            "pro": "what you planned",
+            "con": "may be more than the budget can read"
+          },
+          {
+            "label": "What the budget can read",
+            "pro": "every ad gets a fair verdict",
+            "con": "may be fewer than you hoped"
+          }
+        ],
+        "default": "The brief's number; if none, the monthly test budget divided by about 3 times the target cost per purchase",
+        "skip_if": [
+          "the brief gives a number"
+        ],
+        "settle_with_data": "Work it out from the test budget and the target cost per purchase (from gross profit per purchase). If the asked number is far above what the budget can read, make it anyway and say in one line how many to launch first."
+      }
+    ]
+  },
+  "gather": {
+    "brand_brain": "required",
+    "sources": [
+      {
+        "what": "An org context or brand file",
+        "why": "voice, look, personas, proof and never-say lines; every ad stands on it",
+        "where": "a saved brain on their AI Blocks account, attached files, a brand guide or Drive folder",
+        "ask_if_missing": "Do you have a brand file, guide or folder? If yes, attach it or paste the link. If not, I will build one from your site, your ads and your reviews, and keep it for next time.",
+        "fallback": "build it from the site, the Meta Ad Library and public reviews, each line marked public"
+      },
+      {
+        "what": "Past ads and their results (your ad dump)",
+        "why": "the winners are the control and the look to extend; the losers say what not to repeat",
+        "where": "Meta connector (read), or an Ads Manager export at ad level for 12 months with spend, impressions, frequency, clicks, purchases and value, plus the ad files or a Drive link",
+        "ask_if_missing": "Can I read your Meta ad account? If not, export ad-level results for the last 12 months and share the folder of ad files (a Drive link is fine).",
+        "fallback": "your own live ads in the Meta Ad Library, using how long each has run as a rough sign of what works (no results)"
+      },
+      {
+        "what": "Bestseller and profit data",
+        "why": "picks which products the ads sell, judged on store orders, not platform credit",
+        "where": "Shopify or store export of orders by product for 90 days, with product cost if they have it",
+        "ask_if_missing": "For bestsellers, can you share a 90-day product sales export from your store, or shall I use Meta's purchases by product?",
+        "fallback": "Meta purchases by product, labelled as platform-reported"
+      },
+      {
+        "what": "Real product photos",
+        "why": "every ad shows the real product; no photo of a variant means no ad of it",
+        "where": "product pages, the catalogue feed, past ads, a Drive folder; high-resolution originals or cut-outs",
+        "ask_if_missing": "Can you share your original product photos (the biggest files you have) for the products we are advertising?",
+        "fallback": "the largest images the site serves; never redrawn or AI-made"
+      },
+      {
+        "what": "Logo files and brand fonts",
+        "why": "every word on an ad is set in the brand's fonts; the logo is never redrawn",
+        "where": "brand folder; the site's header and stylesheet",
+        "ask_if_missing": "Can you share your logo (SVG or large PNG) and font files?",
+        "fallback": "the logo from the site header at its native size and the fonts the site loads"
+      },
+      {
+        "what": "Customer words",
+        "why": "hooks and proof come from what buyers say, word for word",
+        "where": "reviews export, ad comments, support tickets and chats",
+        "ask_if_missing": "Can you export your reviews (rating, text, name, date, photo)?",
+        "fallback": "public reviews on the site and marketplaces"
+      },
+      {
+        "what": "Rivals' long-running ads",
+        "why": "shows the structures the category rewards and the lanes nobody owns",
+        "where": "Meta Ad Library (public)",
+        "fallback": "skip; build on the store's own data and reviews"
+      },
+      {
+        "what": "Limits",
+        "why": "never-say words, claims not allowed, the most discount allowed",
+        "where": "org context dos and don'ts",
+        "ask_if_missing": "Anything I must never say or show, and the most discount I may put on an ad?",
+        "fallback": "no discount on any ad; only claims the product page already makes"
+      }
+    ],
+    "setup": [
+      {
+        "need": "Image making",
+        "why": "decides how scenes are made; the product, logo and words are always real and set in HTML",
+        "check": "Is an image key already set in their own environment, or do they use a designer or Canva? Never ask for a key in chat.",
+        "options": [
+          {
+            "label": "HTML design with real product photos and the brand's fonts",
+            "pro": "no key, no cost, the exact product and fonts, every word spelled right, and the set checker reads it",
+            "con": "no AI scenes; the look rests on the photos they have"
+          },
+          {
+            "label": "An OpenAI image key for backgrounds and scenes only",
+            "pro": "lifestyle scenes and settings they have no photo for",
+            "con": "a cost per image on their own plan; the real product is placed in, never drawn; no words in the image; every frame checked against the real product"
+          },
+          {
+            "label": "A designer or Canva from my briefs",
+            "pro": "a human finish their team controls",
+            "con": "slower; needs a person; I send exact copy, sizes and boxes per ad"
+          }
+        ],
+        "default": "HTML design with real product photos and the brand's fonts"
+      },
+      {
+        "need": "Rendering",
+        "why": "turns each HTML ad into PNGs at feed and Stories sizes so size, contrast and safe zones can be checked",
+        "check": "Does node tools/quality/render.cjs run here?",
+        "options": [
+          {
+            "label": "Render here",
+            "pro": "finished PNGs and pixel checks",
+            "con": "needs Node and a local browser"
+          },
+          {
+            "label": "Hand over HTML and designer briefs",
+            "pro": "works anywhere",
+            "con": "someone exports the files; the pixel checks wait"
+          }
+        ],
+        "default": "Render here"
+      },
+      {
+        "need": "Getting them live",
+        "why": "decides the hand-over format",
+        "check": "What access do they have given: read only, or draft (paused ads)?",
+        "options": [
+          {
+            "label": "Files plus copy and a bulk sheet they upload",
+            "pro": "no extra access",
+            "con": "a person uploads"
+          },
+          {
+            "label": "Draft access to create paused ads",
+            "pro": "ready to switch on",
+            "con": "needs draft access and the owner's yes; launching is a separate yes"
+          }
+        ],
+        "default": "Files plus copy and a bulk sheet"
+      }
+    ],
+    "data_map": [
+      {
+        "question": "Which products earn most, and which are underfed?",
+        "data": "Revenue, gross profit and ad spend by product, 90 days",
+        "where": "store export plus Meta ad export",
+        "tool": "node tools/find-insights.mjs <export-folder> --margin <gross margin>",
+        "if_missing": "Meta purchases by product, labelled platform-reported"
+      },
+      {
+        "question": "Which buyers pay best, and which does the data underfund?",
+        "data": "Spend and revenue by age x gender, region, placement and device, 12 months",
+        "where": "Meta connector or breakdown exports",
+        "tool": "node tools/org-context.mjs segments <breakdown.csv>",
+        "if_missing": "personas from reviews only; each segment bet is labelled a guess to test"
+      },
+      {
+        "question": "What won, what lost, and what is tiring?",
+        "data": "Ad-level spend, frequency, click-through, purchases, cost per purchase and days live, joined to each ad's copy and file",
+        "where": "Meta export plus the ad files",
+        "tool": "node tools/org-context.mjs creatives <ad_results.csv> --copy <creatives.csv>",
+        "if_missing": "how long each of their own ads has run in the Ad Library, as a proxy"
+      },
+      {
+        "question": "Which concepts and formats has the account never tried?",
+        "data": "Every live and past ad tagged by buyer, angle, offer, format and awareness stage",
+        "where": "the joined ad table",
+        "if_missing": "start from the format list and the review themes"
+      },
+      {
+        "question": "Why do buyers buy, and what nearly stops them?",
+        "data": "Reviews, comments, tickets and return reasons, counted by theme with exact quotes",
+        "where": "review app export, inbox, returns",
+        "tool": "node tools/org-context.mjs reviews <reviews.csv>",
+        "if_missing": "public reviews; the product page's own claims"
+      },
+      {
+        "question": "What does the category reward?",
+        "data": "Rivals' ads with how long each has run",
+        "where": "Meta Ad Library",
+        "tool": "node tools/org-context.mjs ads <file> --source competitor:<name>",
+        "if_missing": "skip"
+      },
+      {
+        "question": "Does the click land well?",
+        "data": "Landing page conversion and add-to-cart by page for ad traffic",
+        "where": "Shopify or GA4",
+        "if_missing": "check the page on a phone by hand"
+      }
+    ]
+  },
+  "diagnose": {
+    "tools": [
+      "node tools/find-insights.mjs <export-folder> --margin <gross margin>",
+      "node tools/org-context.mjs segments <breakdown.csv>",
+      "node tools/org-context.mjs creatives <ad_results.csv> --copy <creatives.csv>",
+      "node tools/org-context.mjs plan --n <count> --out context/creative-plan.md",
+      "node tools/prepare-job.mjs context/brief.md"
+    ],
+    "look_for": [
+      "Underfunded segments: revenue share well above spend share, on 15 or more purchases, often an older age band, a region, or men buying gifts. Each one gets its own concepts in its own words and occasion.",
+      "Concentration: one or two ads holding most of the spend. Normal under campaign budgets, but when they tire the account tires with them, so their successors must be built before they fall.",
+      "Fatigue on the same ad: frequency rising, click-through and return on ad spend falling for two or more weeks, with the account's cost per thousand flat. If cost per thousand rose across the whole account, it is the auction, not the ad.",
+      "A lookalike set: live ads that differ only in colour, crop or headline. Count concepts, not ads; 30 ads on 5 ideas means the gap is ideas, not volume.",
+      "False winners: high click-through with few purchases (a curiosity hook pulling the wrong people), or high return on ad spend that comes from existing customers and retargeting. Judge on new-customer cost per purchase against store orders.",
+      "Awareness skew: nearly every ad speaks to people who already know the product (product shots, offers). Cold reach needs problem- and desire-led ads; most-aware ads belong in a small share.",
+      "Proof left unused: a review theme, a guarantee, a measured spec or a true founder story that buyers name but no ad shows.",
+      "Objections no ad answers: the top return reason or pre-purchase question (size, quality in person, delivery time, COD, is it real) answered by nothing in the account.",
+      "Paused winners: old ads with good store-side cost per purchase switched off with no reason recorded. The cheapest new ad is a relaunch.",
+      "Moments missing: a region or season that stands out in the data with no ad that names its occasion.",
+      "A page leak: ads earn clicks but the landing page converts well below the store's own average. New ads will not fix that; say so in one line and point to the product-pages journey.",
+      "Rivals' long runners: ads live for months show what the category rewards. Take the structure; never the words or the art."
+    ],
+    "hypothesis_patterns": [
+      {
+        "pattern": "An underfunded segment",
+        "evidence": "revenue share well above spend share, 15+ purchases, return on ad spend above the account's",
+        "bet": "its own concepts and its own ad set, in that persona's words, product and occasion"
+      },
+      {
+        "pattern": "A tired winner",
+        "evidence": "frequency up, click-through and return on ad spend down on the same ad for 2+ weeks; account cost per thousand flat",
+        "bet": "3 to 6 refreshes, each changing one part, keeping the idea; the original stays as the control"
+      },
+      {
+        "pattern": "A missing awareness stage",
+        "evidence": "most live concepts are product shots or offers; cold new-customer cost rising",
+        "bet": "problem- and desire-led ads in native formats (notes list, chat, problem scene) for cold buyers"
+      },
+      {
+        "pattern": "An unanswered objection",
+        "evidence": "a review, return or chat theme above about 10% with no ad that answers it",
+        "bet": "one objection-answer ad per objection, each with its own real proof"
+      },
+      {
+        "pattern": "An unused proof asset",
+        "evidence": "strong photo reviews, a guarantee or a founder story that no ad shows",
+        "bet": "review card, review wall or founder note built from it"
+      },
+      {
+        "pattern": "A local or seasonal moment",
+        "evidence": "a region or season with revenue share above its spend share, or a dated occasion in the next 6 weeks",
+        "bet": "a moment ad those buyers know, live before they start shopping"
+      },
+      {
+        "pattern": "No history to read (new account)",
+        "evidence": "rival ads running for months, review themes, the product page",
+        "bet": "3 concepts on the category's proven structures, each read at about 3 times target cost per purchase"
+      }
+    ]
+  },
+  "choose": {
+    "decisions": [
+      {
+        "id": "novelty",
+        "ask": "How different should these be from what runs now?",
+        "options": [
+          {
+            "label": "Like your winners: their format with new angles, plus one nearby format",
+            "pro": "safest and fastest to read; reuses an idea that sold",
+            "con": "the same buyers see the same idea, so fatigue comes sooner",
+            "when": "winners are still fresh (frequency low) and the test budget is small"
+          },
+          {
+            "label": "A mix: one control in your winner's format, the rest new concepts in new formats (my usual pick)",
+            "pro": "keeps sales steady while the account learns",
+            "con": "fewer brand-new ideas in this batch",
+            "when": "winners exist and at least one is tiring, or one ad holds most of the spend"
+          },
+          {
+            "label": "Mostly new formats and concepts, still with one control",
+            "pro": "the most to learn; opens new buyers",
+            "con": "more misses, more budget to read, slower",
+            "when": "no judged winners, winners fully worn out, or a new buyer or product to open"
+          }
+        ],
+        "recommend": "From the diagnosis: a tiring winner or heavy concentration means the mix; no ad with enough purchases to judge means mostly new, on the category's proven structures; fresh winners and a small budget means like your winners. Every option keeps one control so the read is fair. Which buyers get the rows comes from brand-brain.mjs plan: most to proven segments, a share to underfunded winners, about 15% to tests."
+      },
+      {
+        "id": "formats",
+        "ask": "One format you like, or shall I match a format to each gap?",
+        "options": [
+          {
+            "label": "Your chosen format",
+            "pro": "the look you want, consistent across the set",
+            "con": "one format reads as one ad to Meta, and if it does not fit the gap the whole set misses",
+            "when": "a format has clearly won for this store and you want more of it: then each new ad is a new concept inside it"
+          },
+          {
+            "label": "I match a format to each gap (my usual pick)",
+            "pro": "each ad uses the structure that answers its gap; at least 4 layouts and 3 native formats in a set of 10",
+            "con": "a less uniform look across the set",
+            "when": "most of the time"
+          },
+          {
+            "label": "Try many formats to learn",
+            "pro": "finds which formats work for this store",
+            "con": "each format gets thin budget, so results are hard to read",
+            "when": "a new account with no format history and enough budget for each"
+          }
+        ],
+        "recommend": "Match a format to each gap, unless data/creatives.md shows one format clearly winning: then keep it for the control and spread the new concepts over the formats their gaps call for."
+      }
+    ]
+  },
+  "make": {
+    "pieces": [
+      {
+        "piece": "The creative plan, one row per ad",
+        "skill": "creative-gap-map",
+        "when": "every batch: segment, number, persona, insight in their words, angle, format, proof with source, hook",
+        "variety": "fill cells the account has never tested before repeating a cell"
+      },
+      {
+        "piece": "Concepts and copy for each row",
+        "skill": "store-meta-concepts",
+        "when": "every batch",
+        "variety": "one product, one buyer, one angle per concept; no two concepts share all three"
+      },
+      {
+        "piece": "More ads in the style that already sells",
+        "skill": "new-ads-from-store-winners",
+        "when": "judged winners exist",
+        "variety": "a new buyer, angle or offer on the proven visual style, never a recolour"
+      },
+      {
+        "piece": "Refreshes of a tired winner",
+        "skill": "refresh-a-tired-winning-ad",
+        "when": "fatigue shows on a winner",
+        "variety": "each refresh changes exactly one part: hook, presenter, setting, format, buyer or offer framing"
+      },
+      {
+        "piece": "Statics from proven formats",
+        "skill": "proven-static-formats",
+        "when": "most statics",
+        "variety": "different formats for different gaps; a format is used only when the store has the proof it needs"
+      },
+      {
+        "piece": "A bespoke visual idea",
+        "skill": "static-ad-visual-idea",
+        "when": "no proven format fits the gap"
+      },
+      {
+        "piece": "Review and testimonial ads",
+        "skill": "review-screenshot-ads",
+        "when": "a trust gap and verified reviews with permission",
+        "variety": "one review per objection, from different kinds of buyer"
+      },
+      {
+        "piece": "Objection ads",
+        "skill": "objection-busting-ad-set",
+        "when": "an objection with no ad answering it"
+      },
+      {
+        "piece": "Before-and-after, comparison and chart statics",
+        "skill": "before-after-and-chart-statics",
+        "when": "a 'why this over the usual way' doubt and proof that holds"
+      },
+      {
+        "piece": "Comparison claims that stay legal",
+        "skill": "comparison-ads-that-stay-legal",
+        "when": "any ad compares with a rival or the usual way"
+      },
+      {
+        "piece": "Premium layered statics (AI background, real product, real type)",
+        "skill": "layered-static-production",
+        "when": "an image key is set up and the concept needs a scene they have no photo for"
+      },
+      {
+        "piece": "The background prompt",
+        "skill": "ad-image-prompt-compiler",
+        "when": "an AI background is used; scene only, no product, no words"
+      },
+      {
+        "piece": "Controlled visual variety across the batch",
+        "skill": "ad-batch-visual-direction",
+        "when": "a set of 6 or more"
+      },
+      {
+        "piece": "Final image files on the real product",
+        "skill": "store-meta-ad-images",
+        "when": "every image; its manual brief path is the designer or Canva route"
+      },
+      {
+        "piece": "Layout briefs for a designer",
+        "skill": "static-ad-layout-blueprint",
+        "when": "a designer or Canva makes the files"
+      },
+      {
+        "piece": "Carousels",
+        "skill": "design-carousel-ad",
+        "when": "the gap is range, steps or several proofs",
+        "variety": "the first card stops the scroll on its own; each card earns the swipe"
+      },
+      {
+        "piece": "Copy sets",
+        "skill": "ad-copy-test-sets",
+        "when": "each concept",
+        "variety": "each set on a different structure and objection"
+      },
+      {
+        "piece": "Headlines",
+        "skill": "headline-angle-set",
+        "when": "each concept needs headline options"
+      },
+      {
+        "piece": "Festival and gifting sets",
+        "skill": "seasonal-gifting-creative-plan",
+        "when": "the moment is a gifting season"
+      },
+      {
+        "piece": "Indian-language versions",
+        "skill": "write-ad-copy-in-indian-languages",
+        "when": "the segment or reviews use Hinglish or a regional language"
+      },
+      {
+        "piece": "Video concepts",
+        "skill": "write-one-page-creative-brief",
+        "when": "the mix includes video; video formats (founder-to-camera, demo-15s, unboxing and others in formats.json) go through the video-scripts journey"
+      },
+      {
+        "piece": "Every placement size",
+        "skill": "resize-ads-for-every-placement",
+        "when": "every approved ad: feed 4:5 and Stories and Reels 9:16, rebuilt, not cropped"
+      }
+    ],
+    "formats": [
+      "product-hero",
+      "problem-scene",
+      "callout-diagram",
+      "comparison-table",
+      "review-card",
+      "review-wall",
+      "native-post",
+      "notes-list",
+      "chat-screenshot",
+      "text-thread",
+      "founder-note",
+      "objection-answer",
+      "offer-card",
+      "bundle-math",
+      "how-it-works",
+      "before-after",
+      "myth-vs-fact",
+      "explainer-static",
+      "price-breakdown",
+      "press-proof",
+      "countdown-real-event",
+      "seasonal-moment",
+      "meme",
+      "long-story",
+      "story-carousel",
+      "listicle-carousel",
+      "lookbook-carousel",
+      "gift-guide",
+      "which-one-quiz",
+      "size-fit-guide",
+      "catalog-dynamic"
+    ],
+    "rules": [
+      "Every ad has a plan row: segment, the number behind it, persona, insight in their words, angle, format, proof with its source, hook. A row with no insight is cut, never filled with a guess.",
+      "Real product photos only. An image model makes a background or scene with no words in it; the product, logo, price and every letter are set on top in HTML in the brand's fonts, then rendered.",
+      "'10 more' of a format means 10 new concepts inside that format (a new buyer, objection, moment or proof), pulled fresh from the format's skill, never the same layout reworded.",
+      "Pick formats from formats.json by insight_fit: name the gap first, then a format whose fit includes it and whose needs the store meets (no real reviews, no review card; no founder, no founder note; never a faked chat, review, press mention or countdown).",
+      "A set of 10 or more uses at least 4 distinct layouts, none on more than 30% of the set, at least 3 native formats (notes list, chat, comparison table, review card, explainer), and a button on at least 70% of the ads.",
+      "The product fills at least a third of the frame and is the item the copy names; no watermark, logo or text from the source photo survives the crop; a review quote sits only on the product it is about.",
+      "Hooks start from customer words or a proven ad line, at the brand's sentence length and reading level.",
+      "Words, logo, price and the product's key detail sit inside the safe zones: feed 4:5, and 9:16 with about 14% of the top, 35% of the bottom and 6% of each side kept clear.",
+      "The button copies the brand's own button in its real ads (shape, colour, words), drawn on the image with a tight box in the manifest.",
+      "Prices match the live page today and are written the Indian way (₹1,00,000). Stock and time limits only when real. Offer cards only with a live offer whose break-even is worked out.",
+      "Absolute claims (every, all, 100%, guaranteed, the only) must be true across the whole range, or softened.",
+      "Never an AI-made person shown as a customer, reviewer or founder.",
+      "Run copy-check on every headline and line with context/never-say.txt in place; a banned claim covers its meaning ('all natural' also rules out 'every stone is natural').",
+      "Each size is its own layout: Stories and Reels (9:16) are designed for the tall frame, with the product larger and every word inside the safe zone (about 14% top and 35% bottom clear). Never the feed card placed on a blurred or plain band.",
+      "Build every creative from an HTML or SVG source and run copy-check and the consistency check on the source folder, so banned words and unsourced offers are caught before rendering."
+    ]
+  },
+  "check": {
+    "preflight": [
+      "node tools/org-context.mjs gate --for ad_creative",
+      "node tools/preflight-meta.mjs context/launch-plan.json"
+    ],
+    "checks": [
+      "node tools/check-creative-set.mjs creatives/ --manifest creatives/manifest.json --size 1080x1350",
+      "node tools/org-context.mjs voice-check creatives/copy.md --ads",
+      "node tools/quality/copy-check.cjs creatives/copy.md --limit \"Headline=40\"",
+      "node tools/quality/check-logo-contrast.cjs creatives/<ad>.png --box <logo box>",
+      "node tools/quality/consistency-check.mjs context/hypotheses.json creatives/hand-over.md",
+      "Every line of copy and on-image text through check-ad-copy-for-policy-and-claims (Meta rules, ASCI in India, personal attributes, 'free', comparisons).",
+      "Every frame with an AI-made part through keep-product-accurate-in-ai-media: label, colour, shape and size match the real product.",
+      "Each finished ad through prelaunch-ad-check before it is called ready."
+    ],
+    "senior_review": [
+      "Would a stranger in the target segment know in one second what this is, who it is for and why now?",
+      "Can I point each ad to its gap and the number or quote behind it?",
+      "Are these 10 concepts, or 3 concepts in 10 colours? Would Meta group any two as one?",
+      "Is the current best winner in the plan as the control, so the new ones have something to beat?",
+      "Is there anything the owner cannot stand behind: a claim, a price, a stock line, a person?",
+      "Does the page each ad points to keep the ad's promise on the first phone screen?",
+      "Could the owner upload this today without asking me a single question?"
+    ]
+  },
+  "knowledge": {
+    "diagnose": {
+      "modules": [
+        "MCR",
+        "ADC",
+        "AVT"
+      ],
+      "ask": [
+        "How do I tell creative fatigue from a rise in auction costs?",
+        "How many new concepts can this test budget read, and after how much spend?",
+        "What share of cold ads should speak to buyers who do not know the product yet?"
+      ]
+    },
+    "make": {
+      "modules": [
+        "MCR",
+        "BRD"
+      ],
+      "ask": [
+        "Which static formats answer a trust objection, and which a price objection?",
+        "What makes a hook filter for buyers rather than just stop the scroll?",
+        "What counts as a new concept rather than a variation under Andromeda?"
+      ]
+    },
+    "check": {
+      "modules": [
+        "MCR",
+        "ADC"
+      ],
+      "ask": [
+        "Meta sizes and safe zones for feed, Stories and Reels images",
+        "Indian rules (ASCI) on comparison ads, 'free', limited-stock claims and drip pricing",
+        "Meta rules on implying a viewer's personal attributes"
+      ]
+    },
+    "never": [
+      "Brand voice, product facts, prices and customer quotes come from the org context and the store, never from the library.",
+      "Card ids stay in the trace, never on an ad or in the hand-over."
+    ]
+  },
+  "handover": {
+    "files": [
+      "PNG files at 1080 x 1350 (feed) and 1080 x 1920 (Stories and Reels), one folder per concept, with their HTML sources",
+      "copy.md: primary text, headline, description and button per ad, plus language versions if asked",
+      "manifest.json beside the images: layout, format, product, segment, moment, button box and the source of any absolute claim",
+      "A short hand-over: per ad, one line on the gap it fills and its evidence, where it goes (its own test ad set inside the proven campaign) and the number that will say it worked",
+      "A bulk-upload sheet for paused ads, when asked"
+    ],
+    "next_moves": [
+      "10 more in the format that wins this batch, as new concepts",
+      "The landing page these ads should point to, with the same promise (product-pages journey)",
+      "Video scripts for the two strongest concepts (video-scripts journey)",
+      "A launch sheet that adds these to the live campaign without knocking winners back into learning"
+    ]
+  }
+}

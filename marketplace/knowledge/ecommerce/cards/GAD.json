@@ -289,7 +289,12 @@
       "where": "Sections 1.1, 1.2, 3.3, 4.3"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "GAD-0009",
@@ -366,7 +371,16 @@
       "quote": "Brand traffic captures demand. Non-brand traffic creates it."
     },
     "strength": "stated_by_practitioner",
-    "public": false
+    "public": false,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "GAD-0011",
@@ -596,7 +610,12 @@
       "where": "Learning phase and tROAS section near the end"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "size": [
+        "small"
+      ]
+    }
   },
   {
     "id": "GAD-0017",
@@ -743,7 +762,19 @@
       "where": "Google Ads metrics module (CTR) and Quality Score module"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "GAD-0021",
@@ -819,7 +850,12 @@
       "where": "Course introduction and account philosophy section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "GAD-0023",
@@ -900,7 +936,15 @@
       "where": "Account philosophy section and branded search campaign module"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "GAD-0025",
@@ -980,7 +1024,13 @@
       "where": "Campaign structure overview and PMax module"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "GAD-0027",
@@ -1018,7 +1068,12 @@
       "where": "Branded shopping campaign module"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "GAD-0028",
@@ -1130,7 +1185,13 @@
       "where": "Account structure overview and standard Shopping campaign module"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "GAD-0031",
@@ -1395,7 +1456,12 @@
       "where": "Failure modes of a PMax campaign"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "GAD-0038",
@@ -1473,7 +1539,12 @@
       "where": "Shopping campaigns section, structure A (ROAS performance) and structure B (gross profit margin)"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "GAD-0042",
@@ -1551,7 +1622,15 @@
       "where": "Account structure: consolidation vs segmentation and the four reasons to split"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "GAD-0044",
@@ -1630,7 +1709,12 @@
       "where": "PMax section: incrementality tests and PMax ceiling"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "GAD-0046",
@@ -1668,7 +1752,12 @@
       "where": "PMax section: asset groups, audience signals, search themes, order of importance"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "GAD-0047",
@@ -1854,7 +1943,12 @@
       "where": "Opening breakdown of PMax spend; final section on keeping PMax as a de-prioritised safety net"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "GAD-0052",
@@ -1890,7 +1984,12 @@
       "where": "Search campaigns section: brand versus non-brand, ad copy, single-theme ad groups"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "GAD-0053",

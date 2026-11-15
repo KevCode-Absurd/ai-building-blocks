@@ -17,15 +17,17 @@ test("the intake rule is a readiness check, not a fixed habit of asking or of as
   assert.match(intake, /\*\*Ask or start: the readiness check\.\*\*/);
   assert.match(intake, /\*\*Start\*\* when all six are answered/);
   assert.match(intake, /\*\*Ask\*\* when any gap would change what you make if you guessed wrong/);
-  assert.match(intake, /at most five questions/);
+  assert.match(intake, /at most three questions in one message/);
   assert.match(intake, /org-context\.mjs ask --for <kind>/);
   assert.match(intake, /What good looks like/);
   assert.match(intake, /\*\*When nobody can reply\*\*[\s\S]*never ask/);
   assert.match(intake, /When the brief already answered everything, do not stop: start/, "a fully specified brief runs without a Go stop");
-  assert.match(shared("AGENTS.md"), /five questions at most, each with a default; when the job needs your tools, one of the five asks the access level/);
+  // 14 Nov 2026 (ecom-journey): questions come in stages, the way GUIDE.md says: at most three in one message, two rounds at most.
   const agents = shared("AGENTS.md");
-  assert.match(agents, /\*\*Ask or start\.\*\* Run the readiness check/);
-  assert.doesNotMatch(agents, /three questions at most/);
+  assert.match(agents, /at most three questions in one message, each asking one thing, and at most two rounds before you deliver, each with a default/ /* 15 Nov 2026: one-part questions (GUIDE.md) */);
+  assert.match(agents, /ask the access level for each tool you need/);
+  assert.match(agents, /\*\*Guide: ask or start\.\*\* Run the readiness check/);
+  assert.match(agents, /tools\/quality\/GUIDE\.md/);
   const method = shared("METHOD.md");
   assert.match(shared("WORK-METHOD.md"), /`METHOD\.md`/, "the old file points to the method");
   assert.match(method, /\*\*When nobody can reply\*\* \(a test, an API call, or a person who says they cannot reply\): never ask\. Decide and finish \(rule 2\)\./);

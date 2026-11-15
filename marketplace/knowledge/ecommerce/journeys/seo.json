@@ -1,0 +1,237 @@
+{
+  "schema": "ai-blocks-journey/1",
+  "id": "seo",
+  "name": "Organic search for a store (SEO audit, keyword map, collection and product pages, quick wins and long builds)",
+  "vertical": "ecommerce",
+  "asked_as": [
+    "do an SEO audit of my store",
+    "why don't we rank on Google",
+    "how do I get more organic traffic",
+    "which keywords should we go after",
+    "our organic sales are flat"
+  ],
+  "lead_agents": ["stuart-store-seo", "rustam-ai-answers"],
+  "outcome": "The owner knows which pages can win which searches and why, has the quick wins ready to paste into the store this week, and has a 90-day build for one product cluster with dates to read the results in Search Console. Every change is ranked by the gross profit of the pages it touches.",
+  "first_principles": [
+    "Store organic revenue comes from pages that match buying searches: collections and sub-collections first, product pages second. A blog pays only in four shapes (this vs that, alternatives to, best X for Y, buying guides) and only when it links early to the page that sells.",
+    "Value a search term by profit, not volume: monthly searches x click share at the position you can really reach x conversion rate x gross profit per order. A cost per click above zero is proof the term earns money for someone.",
+    "Order of operations is fixed: indexed, then ranked, then clicked. Copy cannot help a page Google has not indexed or has folded into a duplicate. On Shopify the usual leaks are collection-path product URLs, indexed tag and variant pages, and supplier-copied descriptions.",
+    "The fastest money sits on pages already at positions 4 to 15 with real impressions: a sharper title, a short intro, and internal links from strong pages move them in weeks. New pages take months. Links take longest and are the only lever that closes a true authority gap.",
+    "The live results page decides the page type. If the top results are category grids, a blog post will not rank there; if they are guides, a collection will not. Read the results before choosing what to build.",
+    "Search Console is the ground truth; third-party volumes are estimates. Split branded from non-branded clicks before judging anything, because brand growth from ads and word of mouth often hides flat SEO. A page that holds its position but loses clicks has a click problem (AI answers, shopping units), not a ranking problem."
+  ],
+
+  "goal": {
+    "questions": [
+      {
+        "id": "goal",
+        "ask": "What should search do for you first?",
+        "why": "A recovery is a technical and change-history job; growth is a keyword and page job; a new category is a long build.",
+        "options": [
+          {"label": "More sales from searches you nearly win", "pro": "fastest money, weeks not months", "con": "capped by demand the store already touches"},
+          {"label": "Win a category you don't rank for yet", "pro": "biggest ceiling", "con": "3 to 6 months before it shows"},
+          {"label": "Recover traffic that fell", "pro": "restores proven revenue", "con": "needs the cause found before any new work"}
+        ],
+        "default": "More sales from searches you nearly win, plus one cluster to build",
+        "skip_if": ["brief says traffic dropped", "brief names a category to win"],
+        "settle_with_data": "Compare non-branded clicks for the last 3 months with the same 3 months a year ago in Search Console. A fall of about a fifth or more, or a drop on a date that matches a site change or a Google update, makes it a recovery job; otherwise read the near-win pages."
+      },
+      {
+        "id": "focus",
+        "ask": "Which products should search sell first?",
+        "why": "SEO effort works when it goes to one product cluster for a quarter; spread thin it moves nothing.",
+        "options": [
+          {"label": "The cluster with the most gross profit and search demand", "pro": "most money per hour of work", "con": "may not be the owner's favourite line"},
+          {"label": "Your bestsellers by revenue", "pro": "proven demand", "con": "may already rank or have thin margin"},
+          {"label": "A new or growing line", "pro": "builds the future", "con": "less proof it converts from search"}
+        ],
+        "default": "The cluster with the most gross profit x non-branded impressions",
+        "skip_if": ["brief names the products", "the store has one product line"],
+        "settle_with_data": "Join the SKU profit sheet (or order export with costs) to Search Console impressions by collection and product URL; pick the collection with the highest gross profit per month x impressions at positions 4 to 30."
+      },
+      {
+        "id": "hands",
+        "ask": "Who will make the changes in the store?",
+        "why": "Theme fixes (canonicals, grid links, breadcrumbs, schema) need code; titles, intros and collections do not. It decides whether the plan includes a developer list.",
+        "options": [
+          {"label": "You or your team, from paste-ready sheets", "pro": "no cost, starts this week", "con": "theme code fixes wait"},
+          {"label": "A developer for theme fixes, you for copy", "pro": "fixes the technical leaks too", "con": "developer time and a test theme"},
+          {"label": "Copy and settings only, no theme edits", "pro": "no risk to the live theme", "con": "some leaks stay open"}
+        ],
+        "default": "Paste-ready sheets for the owner plus a short developer list, each fix tested on a copy of the theme"
+      },
+      {
+        "id": "markets",
+        "ask": "Which countries should search win buyers in?",
+        "why": "More than one country or language means hreflang, local terms and separate keyword maps.",
+        "options": [
+          {"label": "Your main selling country", "pro": "one map, one plan", "con": "ignores other demand"},
+          {"label": "Every country you ship to", "pro": "full picture", "con": "more pages, slower"}
+        ],
+        "default": "The country with the most orders",
+        "skip_if": ["store ships to one country"],
+        "settle_with_data": "Search Console Performance by country and Shopify orders by ship-to country; add a second market only if it holds a real share of non-branded impressions and orders."
+      }
+    ]
+  },
+
+  "gather": {
+    "brand_brain": "helpful",
+    "sources": [
+      {"what": "Search Console, last 16 months: queries, pages, countries, devices; Page indexing report; Links report; sitemaps", "why": "the only real data on what Google shows, for which terms, at which position and click rate", "where": "Search Console (Domain property preferred)", "ask_if_missing": "Please add me as a restricted user in Search Console, or export Performance (Queries and Pages, 16 months) and Page indexing as CSV.", "fallback": "site: searches, a free crawl and Keyword Planner; say the plan rests on estimates"},
+      {"what": "Organic landing pages with purchases and revenue", "why": "ties pages to money, not visits", "where": "GA4 (landing page report, session default channel group = Organic Search, purchase event only)", "ask_if_missing": "Can you share GA4 read access or an export of organic landing pages with purchases for 12 months?", "fallback": "Shopify sessions and sales by landing page"},
+      {"what": "Product catalogue and collections export, with costs", "why": "which pages exist, what they sell, and the gross profit each earns", "where": "Shopify admin export, SKU profit sheet", "ask_if_missing": "Please export products and collections from Shopify, with unit cost if you track it.", "fallback": "live site crawl and an assumed margin band the owner confirms"},
+      {"what": "A crawl of the live site", "why": "duplicate paths, canonicals, status codes, internal links, orphan pages, missing titles", "where": "free crawler run by the agent", "fallback": "Search Console indexing report plus URL Inspection on the top 20 pages"},
+      {"what": "The live results page for the top 20 to 40 money terms", "why": "which page type wins, who ranks, what their pages hold", "where": "a clean search in the target country", "fallback": "none needed; this is public"},
+      {"what": "Customer words: reviews, support tickets, site search terms", "why": "the words buyers use, which tools miss", "where": "review app, helpdesk, Shopify search report", "fallback": "Search Console query wording"},
+      {"what": "Keyword volumes and cost per click", "why": "size demand the store does not touch yet; proof a term earns money", "where": "Google Keyword Planner (free with an Ads account), or a paid SEO tool the owner already has", "fallback": "Search Console impressions and Google autocomplete"}
+    ],
+    "setup": [
+      {"need": "Search Console access", "why": "every quick win and baseline comes from it", "check": "a verified property that shows 16 months of data and the Page indexing report",
+       "options": [
+         {"label": "Add the agent as a restricted user", "pro": "live data, URL Inspection", "con": "two minutes of the owner's time"},
+         {"label": "Owner exports CSVs", "pro": "no access shared", "con": "Performance export caps rows; no URL Inspection"},
+         {"label": "No Search Console", "pro": "can start now", "con": "positions and click rates are guesses; set it up today and read again in 4 weeks"}
+       ],
+       "default": "Restricted user access"},
+      {"need": "Keyword data beyond Search Console", "why": "demand for pages the store does not have yet", "check": "does the owner have a Google Ads account or a paid SEO tool",
+       "options": [
+         {"label": "Keyword Planner", "pro": "free, Google's own ranges and cost per click", "con": "broad ranges without active spend"},
+         {"label": "A paid SEO tool the owner already pays for", "pro": "competitor pages and links", "con": "estimates, not counts"}
+       ],
+       "default": "Keyword Planner plus Search Console"}
+    ],
+    "data_map": [
+      {"question": "Which pages nearly win?", "data": "Pages and queries at positions 4 to 15 with the most impressions, last 3 months", "where": "Search Console Performance", "tool": "node tools/ask-knowledge.mjs \"search console quick wins positions 4 to 15\" --module SEO", "if_missing": "no quick-win list; plan rests on new pages"},
+      {"question": "Do our snippets earn their clicks?", "data": "The store's own click rate by position bucket (1, 2-3, 4-6, 7-10, 11-20), then each page and query against it", "where": "Search Console Performance, non-branded queries", "if_missing": "use the title and intent check by hand on the top 20 pages"},
+      {"question": "How big is demand by category?", "data": "Monthly searches and cost per click for each collection's main term and its variants; seasonality", "where": "Keyword Planner, Google Trends, Search Console impressions", "if_missing": "rank by Search Console impressions only"},
+      {"question": "Which page type wins each term, and who ranks?", "data": "Top 10 results per money term: page type (grid, product, guide, list), domain, word count above and below the grid, products shown", "where": "live results page in the target country", "if_missing": "never skip; it decides the page type"},
+      {"question": "Is everything that sells indexed?", "data": "Page indexing reasons, sitemap URL count vs crawl count, canonicals on product and collection templates, collection-path product links", "where": "Search Console, crawl, page source", "tool": "node tools/ask-knowledge.mjs \"shopify duplicate collection path product urls canonical\" --module SEO", "if_missing": "URL Inspection on the top 20 pages by revenue"},
+      {"question": "What does organic actually sell?", "data": "Organic landing pages x purchases x gross profit, 12 months", "where": "GA4 joined to the SKU profit sheet", "if_missing": "Shopify sales by landing page with an assumed margin, labelled as such"},
+      {"question": "How much is brand and how much is SEO?", "data": "Clicks split by queries containing the brand name or its misspellings vs the rest", "where": "Search Console query filter (regex)", "if_missing": "say the baseline includes brand clicks"}
+    ]
+  },
+
+  "diagnose": {
+    "tools": [
+      "node tools/prepare-job.mjs context/brief.md",
+      "node tools/ask-knowledge.mjs \"collection pages before blog posts\" \"which store pages win organic revenue\" --module SEO",
+      "node tools/ask-knowledge.mjs \"click rate drop same position AI Overviews\" --module SEO,AEO"
+    ],
+    "look_for": [
+      "Branded vs non-branded first: if non-branded clicks are flat and brand clicks grew, the store has a brand win and an SEO problem.",
+      "A few landing pages bring most organic revenue; list them and protect them before any change (no handle changes, no template experiments on them first).",
+      "Pages at positions 4 to 15 with top-tier impressions and a click rate below the store's own curve at that position: the title does not match what the searcher wants (price, range size, 'for X' wording).",
+      "Two store URLs taking turns on one query (collection vs product, two near-identical collections): split signals; pick one primary page per term.",
+      "Products linked from grids as /collections/x/products/y: every product exists at two URLs and internal links point at the duplicate.",
+      "'Crawled, currently not indexed' on product pages with supplier copy or near-empty collections: Google sees no reason to keep them.",
+      "Searched sub-categories with no page of their own (a material, use, size, price band or 'for whom' variant) whose queries land on a broad collection or a single product: the cheapest new pages to win.",
+      "The page type mismatch: a blog post chasing a grid query, or a collection chasing a guide query; the live results show which wins.",
+      "When rivals outrank, name the one gap that explains it: more products on the grid, an intro and guide, more internal links, better titles, or many more referring domains. Only the last needs links.",
+      "Blog posts with traffic and no clicks to products: wrong intent or no early product link; fix or fold into a guide.",
+      "Seasonal categories read year on year, never month on month.",
+      "Pages that hold position but lose clicks: check the results page for AI answers and shopping units before rewriting anything."
+    ],
+    "hypothesis_patterns": [
+      {"pattern": "A near-win page with a weak snippet", "evidence": "position 4 to 10, impressions in the store's top tier, click rate below its own curve for that position", "bet": "Rewrite title, meta description and H1 to the searcher's wording, add 3 to 5 internal links from strong pages; read clicks after 4 weeks"},
+      {"pattern": "A missing sub-collection", "evidence": "queries with impressions and a cost per click land on a broad collection or one product; the results page shows grids", "bet": "One new indexable collection per searched variant with enough products, an intro, a short guide and links; read after 8 to 12 weeks"},
+      {"pattern": "An indexing leak", "evidence": "many products not indexed, duplicate paths in the crawl, tag or variant pages indexed", "bet": "Fix grid links and canonicals, 301 merged pages, noindex tag pages; confirm in the indexing report"},
+      {"pattern": "Two pages fighting for one term", "evidence": "two URLs alternate for the same query in Search Console", "bet": "One primary page per term: merge with a 301 or give each a different intent"},
+      {"pattern": "An authority gap", "evidence": "the store matches the top 3 on page type, products and copy, but sits far behind on referring domains", "bet": "Earned mentions (press, gift guides, stockists and suppliers) aimed at the collections ranking 4 to 10; a long build"},
+      {"pattern": "A blog that sells nothing", "evidence": "posts with sessions, near-zero product clicks and purchases", "bet": "Rewrite the best ones into comparison or buying-guide shape with product links in the first screen; prune or merge the rest"}
+    ]
+  },
+
+  "choose": {
+    "decisions": [
+      {"id": "pace", "ask": "Quick wins, a long build, or both?",
+       "options": [
+         {"label": "Quick wins only", "pro": "money in 2 to 6 weeks, little risk", "con": "capped by demand the store already touches", "when": "many pages sit at positions 4 to 15 and the team has little time"},
+         {"label": "Quick wins first, then build one cluster (my usual pick)", "pro": "early proof pays for the build", "con": "two streams to manage", "when": "near-wins exist and the keyword map shows uncovered demand with a cost per click"},
+         {"label": "Build one cluster now", "pro": "biggest ceiling", "con": "3 to 6 months before results", "when": "a young site with few impressions, or a new category"}
+       ],
+       "recommend": "If indexing is broken, fix that first and nothing else counts yet. Then pick by the near-win list: enough impressions at positions 4 to 15 to matter in gross profit means the mix; almost none means the build."},
+      {"id": "authority", "ask": "How do we close the gap to the pages that outrank you?",
+       "options": [
+         {"label": "On-page only: titles, copy, structure, internal links", "pro": "free and in our control", "con": "will not beat rivals with far more referring domains", "when": "the gap is page type, copy or links inside the site"},
+         {"label": "On-page plus earned mentions (press, gift guides, stockists, suppliers)", "pro": "durable and within Google's rules", "con": "slow, needs outreach and samples", "when": "on-page parity is reached and the referring-domain gap is large"},
+         {"label": "Paid link placements", "pro": "fast", "con": "Google treats paid links that pass ranking credit as spam; a penalty can wipe out the gain", "when": "never as our recommendation; listed so the owner knows why"}
+       ],
+       "recommend": "Compare the store's top collection with the top 3 results on page type, products shown, copy and referring domains. Recommend earned mentions only when everything except referring domains is at parity."}
+    ]
+  },
+
+  "make": {
+    "pieces": [
+      {"piece": "Technical audit and fix list", "skill": "technical-seo-audit-shopify", "when": "always first; a recovery job starts and may end here"},
+      {"piece": "Duplicate and thin page decisions with a redirect sheet", "skill": "fix-duplicate-and-thin-pages", "when": "the audit or indexing report shows duplicates or thin pages"},
+      {"piece": "Keyword map, one primary term per page", "skill": "keyword-research-for-collections-and-products", "when": "before any copy or new page"},
+      {"piece": "New collections and the menu that links them", "skill": "set-up-navigation-and-collections", "when": "the map shows searched sub-categories with no page"},
+      {"piece": "Collection SEO sheet (title, meta, H1, handle, intro, guide, filter decisions)", "skill": "optimize-collection-pages-for-seo", "when": "collections have impressions below the top results"},
+      {"piece": "Product page copy for the cluster", "skill": "write-product-page-copy", "when": "product pages rank for product terms or carry supplier copy"},
+      {"piece": "Product titles that front-load searched words", "skill": "write-product-titles-for-store-and-marketplaces", "when": "titles were copied from a supplier or are cut off"},
+      {"piece": "Internal link plan", "skill": "internal-linking-plan", "when": "near-win pages have few links in, or blog posts link to nothing"},
+      {"piece": "Structured data on product, collection and home templates", "skill": "add-product-schema-and-rich-results", "when": "results lack price, stock or rating, or Search Console reports errors"},
+      {"piece": "Comparison pages for 'X vs Y' and 'alternatives to X'", "skill": "build-comparison-page", "when": "the map shows comparison searches for the cluster"},
+      {"piece": "Buying-guide and best-for posts", "skill": "write-seo-blog-posts-that-sell", "when": "collections are in place and the results page for a term shows guides"},
+      {"piece": "Speed fix list for key templates", "skill": "shopify-speed-audit-and-fix-list", "when": "Core Web Vitals fail on mobile for the money templates"},
+      {"piece": "Image alt text across the catalogue", "skill": "write-image-alt-text-at-scale", "when": "alt text is empty or file names"},
+      {"piece": "Second-country set-up", "skill": "international-seo-hreflang", "when": "the markets question settled on more than one country"},
+      {"piece": "Earned mentions for links", "skill": "pitch-store-to-press-and-gift-guides", "when": "the authority decision chose earned mentions"}
+    ],
+    "rules": [
+      "One primary term per page, and no two store pages for the same intent.",
+      "Never change a handle without a 301 and updated internal links; never remove a page that earns clicks or links without a redirect.",
+      "Every new collection has enough products to be useful, its own intro and guide, and a reason to exist in search demand; no pages made in bulk for every tag.",
+      "Copy is for the buyer first: the term early in the title and H1, then plain facts; no keyword lists in copy or alt text.",
+      "Theme changes go on a duplicate theme, tested, then published.",
+      "Rank every fix by the gross profit of the pages it touches x the impressions at stake, and state when each should show (weeks for snippets and links, months for new pages).",
+      "Each change gets a baseline window and a read date with the same number of days, year on year for seasonal pages."
+    ]
+  },
+
+  "check": {
+    "preflight": [
+      "node tools/quality/numbers.cjs context/numbers.json --final <deliverable>",
+      "node tools/check-handover.mjs <deliverable> --brief context/brief.md"
+    ],
+    "checks": [
+      "node tools/quality/consistency-check.mjs context/hypotheses.json <deliverable>",
+      "node tools/quality/qe-check.cjs <deliverable> --brief context/brief.md",
+      "Each changed template passes the Rich Results Test and a URL Inspection live test shows the main text without JavaScript.",
+      "Every changed or merged URL is in the redirect sheet, and no redirect chains are created."
+    ],
+    "senior_review": [
+      "Is the baseline non-branded, and does the plan say what brand clicks did separately?",
+      "Did we read the live results page before choosing each page type?",
+      "Does every page we touch have one primary term, with no other store page competing for it?",
+      "Is every change ranked by gross profit, with its expected time to show and a read date?",
+      "Would any change drop a page that earns clicks or links without a redirect?",
+      "What did we assume that the owner's data contradicts (a margin, a bestseller, a market)?"
+    ]
+  },
+
+  "knowledge": {
+    "diagnose": {"modules": ["SEO", "MEA", "AEO"], "ask": ["which store pages win organic revenue", "positions 4 to 15 quick wins in Search Console", "click rate falls while position holds", "shopify duplicate URLs and canonicals"]},
+    "make": {"modules": ["SEO", "PRD", "CRO"], "ask": ["collection page title, H1, intro and guide rules", "product page template for search", "which blog formats pay for a store"]},
+    "check": {"modules": ["SEO", "SPD"], "ask": ["Google spam policies on mass-made pages and paid links", "review snippet and structured data rules", "hreflang rules"]},
+    "never": ["Search volumes, positions and click rates come from the owner's data or a dated tool export, never from the library.", "Brand voice and product facts come from the org context and the catalogue."]
+  },
+
+  "handover": {
+    "files": [
+      "Keyword map (CSV): one primary term per page, volume, cost per click, intent, current position, gross profit per month.",
+      "Collection SEO sheet ready to paste into Shopify, and the new collections to create with their rules.",
+      "Technical fix list with who does each fix and how to confirm it, plus a developer brief for theme changes.",
+      "Redirect sheet (CSV in Shopify's import format) for every changed or merged URL.",
+      "Internal link sheet: page, link to add, anchor text, placement.",
+      "Baseline and 90-day plan: non-branded clicks and organic gross profit today, each change with its read date."
+    ],
+    "next_moves": [
+      "Comparison and buying-guide pages for the chosen cluster.",
+      "An AI answers baseline, to see whether assistants name the store for the same buying questions.",
+      "Product page copy for the top-profit products in the cluster.",
+      "A monthly Search Console read on the planned dates, with keep, change or stop per change."
+    ]
+  }
+}

@@ -75,7 +75,16 @@
       "where": "Split-testing section: routing visitors to pages A, B and C and the PostHog setup"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "CRO-0003",
@@ -112,7 +121,15 @@
       "where": "Userbrain section and FigPii A/B testing section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "early"
+      ],
+      "traffic": [
+        "medium"
+      ]
+    }
   },
   {
     "id": "CRO-0004",
@@ -154,7 +171,17 @@
       "quote": "The target completion rate that you should be aiming for approximately 30%"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "medium",
+        "high"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "CRO-0005",
@@ -422,7 +449,12 @@
       "where": "Part B, stage-gated decision guide by monthly order volume"
     },
     "strength": "research",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "CRO-0012",
@@ -815,7 +847,16 @@
       "where": "Testing foundational principles section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "high"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "CRO-0022",
@@ -937,7 +978,16 @@
       "where": "Section on the math CRO sellers never run through, after the checkout teardown"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "low",
+        "medium"
+      ],
+      "size": [
+        "large"
+      ]
+    }
   },
   {
     "id": "CRO-6180",
@@ -985,7 +1035,15 @@
       "where": "Cart abandonment rate list page: average rate and reasons for abandonment during checkout"
     },
     "strength": "research",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "subscription",
+        "marketplace",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "CRO-6181",
@@ -1068,7 +1126,13 @@
       "where": "Article: benchmark summary and table of query types"
     },
     "strength": "research",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "early",
+        "scaling"
+      ]
+    }
   },
   {
     "id": "CRO-6361",
@@ -1900,6 +1964,44 @@
       "where": "about [87:28] testing cycle and hit rate maths"
     },
     "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "CRO-7000",
+    "modules": [
+      "CRO",
+      "OFF"
+    ],
+    "topics": [
+      "india",
+      "checkout",
+      "consent"
+    ],
+    "claim": "Indian e-commerce rules allow a purchase to be recorded only on an explicit, affirmative action, never a pre-ticked box, and bar cancellation charges unless the seller pays similar charges when it cancels.",
+    "body": "Rule 4(9) of the Consumer Protection (E-Commerce) Rules, 2020 says an e-commerce entity may record a consumer's consent to buy only when it is expressed through an explicit and affirmative action, and must not record it automatically, naming pre-ticked checkboxes. That covers the main order and any add-on, warranty, insurance or subscription bundled at checkout. Rule 4(8) bars cancellation charges on a consumer who cancels after confirming, unless the entity also bears similar charges when it cancels an order on its own. Rule 4(11) bars price manipulation for unreasonable profit and discriminating between consumers of the same class. How to apply: in checkout tests, every paid extra starts unticked and needs a click to add; if you charge a cancellation fee on made-to-order items, write the matching fee you will pay or credit the buyer when you cancel, and keep both in the policy.",
+    "conditions": "Checkout and order flows on Indian e-commerce sites and apps.",
+    "fails_when": "Necessary charges disclosed at purchase, such as delivery and taxes, are not optional add-ons; the 2023 dark pattern guidelines add more checkout rules (see the basket sneaking card).",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I pre-tick a gift wrap or insurance box at checkout in India?",
+      "Can I charge a cancellation fee in India?",
+      "Is an auto-added warranty legal in India?",
+      "What does Indian law say about checkout consent?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7000",
+    "evidence": {
+      "where": "Rules 4(8), 4(9) and 4(11)"
+    },
+    "strength": "regulator_rule",
     "public": true
   }
 ]

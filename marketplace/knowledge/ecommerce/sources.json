@@ -10370,5 +10370,920 @@
     "why": "Where the free monthly Pink Sheet files live, its release dates, and the twice-yearly price forecasts to use as a base case.",
     "cards": 1,
     "public": true
+  },
+  {
+    "id": "S7000",
+    "file": "web",
+    "title": "Consumer Protection (E-Commerce) Rules, 2020 (G.S.R. 462(E), 23 July 2020)",
+    "author": "Ministry of Consumer Affairs, Food and Public Distribution (Department of Consumer Affairs), Government of India",
+    "url": "https://taxguru.in/wp-content/uploads/2020/07/Consumer-Protection-E-Commerce-Rules-2020.pdf",
+    "date": "2020-07-23",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "LPG",
+      "CXP",
+      "CRO",
+      "ADC"
+    ],
+    "why": "Full text of the gazette notification (rules 1 to 8), read from a verbatim copy hosted by Taxguru because egazette and consumeraffairs.nic.in refuse automated connections. Duties of every e-commerce entity, marketplaces, marketplace sellers and inventory (own-stock) sellers.",
+    "cards": 4,
+    "public": true
+  },
+  {
+    "id": "S7001",
+    "file": "web",
+    "title": "Guidelines for Prevention and Regulation of Dark Patterns, 2023 (F. No. CCPA-1/1/2023-CCPA (Reg), 30 November 2023)",
+    "author": "Central Consumer Protection Authority, Government of India",
+    "url": "https://taxguru.in/?p=896142",
+    "date": "2023-11-30",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "LPG",
+      "OFF",
+      "ORG"
+    ],
+    "why": "Notification text with Annexure 1 (13 specified dark patterns, illustrations and exceptions), read from Taxguru's reproduction because the CCPA and gazette sites refuse automated connections.",
+    "cards": 6,
+    "public": true
+  },
+  {
+    "id": "S7002",
+    "file": "web",
+    "title": "Legal Metrology (Packaged Commodities) Rules, 2011, as amended up to 13 February 2026",
+    "author": "Ministry of Consumer Affairs, Food and Public Distribution, Government of India (consolidated text compiled by Khaitan & Co.)",
+    "url": "https://www.khaitanco.com/sites/default/files/2026-03/Legal%20Metrology%20%28Packaged%20Commodities%29%20Rules%202011.pdf",
+    "date": "2026-02-13",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "LPG",
+      "COG"
+    ],
+    "why": "Consolidated rule text with amendment footnotes: rule 6(1) declarations, rule 6(10) e-commerce display duty, rule 6(10-A) country-of-origin filter (from 1 July 2026), rule 6(11) unit sale price, rule 26 exemptions.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7003",
+    "file": "web",
+    "title": "Hallmarking: information for jewellers",
+    "author": "Bureau of Indian Standards",
+    "url": "https://www.bis.gov.in/hallmarking-jewellers/?lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "COG",
+      "OPS"
+    ],
+    "why": "BIS page on mandatory jeweller registration, first point of sale, the exemption list, HUID, invoice rules and penalties under the BIS Act 2016; date is the access date.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7004",
+    "file": "web",
+    "title": "Hallmarking FAQs",
+    "author": "Bureau of Indian Standards",
+    "url": "https://www.bis.gov.in/hallmarking-overview/hallmarking-faqs/hallmarking-faq/?lang=en",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "LPG",
+      "COG"
+    ],
+    "why": "BIS FAQ on the three hallmark marks, the six gold caratages, HUID and the BIS Care app check; date is the access date.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7006",
+    "file": "web",
+    "title": "Guidelines for Prevention of Misleading Advertisements and Endorsements for Misleading Advertisements, 2022 (F. No. J-25/4/2020-CCPA (Reg), 9 June 2022)",
+    "author": "Central Consumer Protection Authority, Government of India",
+    "url": "https://taxguru.in/?p=828129",
+    "date": "2022-06-09",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "OFF",
+      "ORG",
+      "MCR"
+    ],
+    "why": "Notification text on valid ads, bait ads, free claims, disclaimers, endorsement due diligence and material connections, read from Taxguru's reproduction because government sites refuse automated connections; penalty figures are the page's summary of the Consumer Protection Act.",
+    "cards": 3,
+    "public": true
+  },
+  {
+    "id": "S7007",
+    "file": "web",
+    "title": "Government Bans 59 mobile apps which are prejudicial to sovereignty and integrity of India, defence of India, security of state and public order",
+    "author": "Press Information Bureau, Ministry of Electronics and IT, Government of India",
+    "url": "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=1635206&reg=48&lang=2",
+    "date": "2020-06-29",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "ADC",
+      "ORG"
+    ],
+    "why": "Official release blocking TikTok and 58 other apps in India under Section 69A of the IT Act; read through search excerpts.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7100",
+    "file": "web",
+    "title": "Product image guide (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/G1881",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ",
+      "LPG"
+    ],
+    "why": "First-party main image rules (pure white background, 85% fill, 500 to 10,000 pixels, 1,000+ for zoom) and the advice to add six more images and a video. Page undated; checked 14 Nov 2026.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S7101",
+    "file": "web",
+    "title": "Product bullet point requirements (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/GX5L8BF8GLMML6CX",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party bullet point format rules and prohibited content list. Page undated; checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7102",
+    "file": "web",
+    "title": "Search optimization (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/GNYWHX2TP7C8GXHK",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party guide to browse classification, generic keywords and the reasons an ASIN is not searchable, with the 72-hour update lag. Page undated; checked 14 Nov 2026.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S7103",
+    "file": "web",
+    "title": "Best practices for your Sponsored Products ads (Amazon Ads)",
+    "author": "Amazon",
+    "url": "https://advertising.amazon.com/library/guides/sponsored-products-best-practices",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "Amazon Ads' own campaign structure, budget and ad-readiness checklist. Page undated; checked 14 Nov 2026.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S7104",
+    "file": "web",
+    "title": "A guide to targeting with Sponsored Products (Amazon Ads)",
+    "author": "Amazon",
+    "url": "https://advertising.amazon.com/library/guides/targeting-with-sponsored-products",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "Amazon Ads' definitions of automatic targeting groups, match types, product targeting and negative targeting, with limits and review thresholds. Page undated; checked 14 Nov 2026.",
+    "cards": 4,
+    "public": true
+  },
+  {
+    "id": "S7105",
+    "file": "web",
+    "title": "Getting started guide for sponsored ads (Amazon Ads)",
+    "author": "Amazon",
+    "url": "https://advertising.amazon.com/library/guides/getting-started-with-sponsored-ads",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "Amazon Ads' starter guidance: minimum daily budget by country and at least 30 keywords for manual campaigns. Page undated; checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7106",
+    "file": "web",
+    "title": "Sponsored Products (Amazon Ads product page)",
+    "author": "Amazon",
+    "url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party eligibility, placements, pricing and budget pacing for Sponsored Products, plus the new-seller ad credit offer. Undated; cites June 2026 internal data; checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7107",
+    "file": "web",
+    "title": "Rest of search bid adjustment for Sponsored Products (Amazon Ads, What's new)",
+    "author": "Amazon",
+    "url": "https://advertising.amazon.com/resources/whats-new/improve-campaign-performance",
+    "date": "2024-01-09",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "Amazon Ads announcement of the rest-of-search placement adjustment of up to 900%, with the marketplaces it covers, India included.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7108",
+    "file": "web",
+    "title": "What is advertising cost of sales (ACOS)? (Amazon Ads)",
+    "author": "Amazon",
+    "url": "https://advertising.amazon.com/library/guides/acos-advertising-cost-of-sales",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ",
+      "PRD",
+      "MEA"
+    ],
+    "why": "Amazon Ads' ACOS and ROAS formulas and its rule that ACOS must stay below profit margin. Undated; checked 14 Nov 2026.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S7109",
+    "file": "web",
+    "title": "What is Amazon TACoS? (Helium 10 blog)",
+    "author": "Josh VanAkker, Helium 10",
+    "url": "https://www.helium10.com/blog/what-is-amazon-tacos/",
+    "date": "2024-03-18",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "AMZ",
+      "MEA"
+    ],
+    "why": "Amazon does not define TACoS in its own docs; this tool vendor's explainer gives the formula and the ACoS versus TACoS example. Its first worked example has a typo ($2,000 sales for a $20,000 division), so only the ACoS/TACoS comparison is used.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7110",
+    "file": "web",
+    "title": "Sponsored Brands (Amazon Ads product page)",
+    "author": "Amazon",
+    "url": "https://advertising.amazon.com/solutions/products/sponsored-brands",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party Sponsored Brands eligibility (Brand Registry for sellers), formats, placements and pricing models. Undated; checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7111",
+    "file": "web",
+    "title": "Sponsored Display is now display ads (Amazon Ads)",
+    "author": "Amazon",
+    "url": "https://advertising.amazon.com/solutions/products/sponsored-display",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "Amazon Ads rename notice: Sponsored Display is now display ads, existing campaigns keep running. Undated; checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7112",
+    "file": "web",
+    "title": "Amazon FBA (Sell on Amazon)",
+    "author": "Amazon",
+    "url": "https://sell.amazon.com/fulfillment-by-amazon",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party FBA overview: Prime two-day eligibility, the 40-items-a-month rule of thumb, cost claim and new-seller inbound credit. Undated; checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7113",
+    "file": "web",
+    "title": "2027 US Referral and Fulfillment by Amazon fees (Seller Central Help)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/G201411300",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "Amazon's 2027 US fee announcement: average FBA increase, per-tier changes, low-price eligibility, bulky and oversize tiers, storage and returns changes, mostly effective 15 January 2027.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S7114",
+    "file": "web",
+    "title": "FBA fulfillment fees (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/G200209150",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party FBA fee hub with the 3.5% fuel and logistics surcharge from 17 April 2026 and the 2026 holiday peak window.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7115",
+    "file": "web",
+    "title": "2027 US FBA fulfillment fee changes (Seller Central Help)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/GABBX6GZPA8MSZGW",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ",
+      "PRD"
+    ],
+    "why": "Amazon's FBA rate card, 2026 non-peak and peak rates beside 2027 rates, by size tier, weight and price band, including bulky and dangerous goods.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S7116",
+    "file": "web",
+    "title": "Unified Monthly Storage Fee (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/GVZX6EAEL2KZ3SGA",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ",
+      "PRD"
+    ],
+    "why": "First-party storage rates before 1 February 2027 (off-peak and peak per cubic foot, utilization surcharge) and the move to one age-based storage fee.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S7117",
+    "file": "web",
+    "title": "FBA inbound placement service fee (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/GC3Q44PBK8BXQW3Z",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party inbound placement options and per-unit fee ranges, and the January 2027 change to two inbound regions.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7118",
+    "file": "web",
+    "title": "Low-inventory-level fee 2027 (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/GFU8NTVGHP2JQLCR",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party rules, exemptions and rate card for the low-inventory-level fee from 1 February 2027.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7119",
+    "file": "web",
+    "title": "Inventory performance (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/G202174810",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party definitions of IPI inputs: excess (over 90 days of supply), stranded inventory, sell-through and in-stock rate, with the 30 to 60 days of supply guideline.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7120",
+    "file": "web",
+    "title": "IPI frequently asked questions (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/GZJF4DY2W6MERBAL",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party IPI FAQ: Professional plan only, capacity limits based on IPI, new ASINs excluded for 90 days, remove before 365 days.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7121",
+    "file": "web",
+    "title": "Amazon announces new streamlined FBA capacity management system (Sell on Amazon blog)",
+    "author": "Dharmesh Mehta, Vice President, Amazon Worldwide Selling Partner Services",
+    "url": "https://sell.amazon.com/blog/announcements/fba-capacity",
+    "date": "2023-01-17",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ",
+      "OPS"
+    ],
+    "why": "Amazon's announcement of monthly FBA capacity limits in cubic feet, the Capacity Monitor timing and the reservation fee with performance credits, effective 1 March 2023.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7122",
+    "file": "web",
+    "title": "2027 returns processing fee changes (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/GZGEQLTM3RZXUV6T",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ",
+      "PRD"
+    ],
+    "why": "First-party returns processing fee rules, category return-rate thresholds and rate card; also a first-party list of which categories Amazon treats as high-return.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S7123",
+    "file": "web",
+    "title": "Shipping costs for seller-fulfilled returns (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/G202103400",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ",
+      "PRD"
+    ],
+    "why": "First-party explanation of prepaid return labels charged to sellers, carrier dimensional weight and large package surcharges.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S7124",
+    "file": "web",
+    "title": "Reimbursement for seller-fulfilled orders, SAFE-T (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/G202188810",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party SAFE-T claim rules, the four-calendar-day refund window and the restocking fee cap for buyer damage.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7125",
+    "file": "web",
+    "title": "Seller Fulfilled Prime performance requirements (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/G202072550",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party Seller Fulfilled Prime thresholds: on-time delivery, valid tracking, cancellation and delivery speed by size tier.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7126",
+    "file": "web",
+    "title": "New Seller Incentives (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/GXMJ38VA95GUN5XU",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party new seller benefits tied to Brand Registry timing and the first FBA shipment.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7127",
+    "file": "web",
+    "title": "New Selection Program - 2026 (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/GB36EVK8V94P8J5D",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party New Selection Program terms: eligibility, referral discounts on the first 200 units, promotional credits and fee waivers.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7128",
+    "file": "web",
+    "title": "Brand Referral Bonus (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/GL9HPJ34VBFP76HX",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party Brand Referral Bonus terms and category bonus rates for off-Amazon traffic sent to Amazon.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7129",
+    "file": "web",
+    "title": "Manage Your Experiments (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/GVP453K5XRBJS7Y9",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party description of listing A/B tests: content types, brand and traffic eligibility.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7130",
+    "file": "web",
+    "title": "Categories and products that require approval (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/G200333160",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ",
+      "PRD"
+    ],
+    "why": "First-party rules on gated brands and categories, invoice evidence and account eligibility to apply.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7131",
+    "file": "web",
+    "title": "Dangerous goods identification guide, hazmat (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/G201003400",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ",
+      "PRD"
+    ],
+    "why": "First-party FBA dangerous goods rules: everyday products can be hazmat, safety data sheets and the 14 business day compliance window.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7132",
+    "file": "web",
+    "title": "Subscribe & Save (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/G201620110",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ",
+      "PRD"
+    ],
+    "why": "First-party Subscribe & Save eligibility (Brand Registry, replenishable products, FBM thresholds) and seller funding tiers.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7135",
+    "file": "web",
+    "title": "Sell, Pack and Ship (Sell on Amazon India)",
+    "author": "Amazon India",
+    "url": "https://sell.amazon.in/shipping-and-fulfillment",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party comparison of FBA, Easy Ship and Self Ship on Amazon.in: who stores and delivers, Prime badge, Pay on Delivery, returns and fee components. Undated; checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7136",
+    "file": "web",
+    "title": "Amazon FBA, get the Prime advantage (Sell on Amazon India)",
+    "author": "Amazon India",
+    "url": "https://sell.amazon.in/shipping-and-fulfillment/fulfillment-by-amazon",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party Amazon.in FBA page with the Easy Ship versus FBA fee example and the Try FBA offer terms. Undated; checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7137",
+    "file": "web",
+    "title": "Amazon fee changes 2026 at a glance (Sell on Amazon India seller blog)",
+    "author": "Amazon India",
+    "url": "https://sell.amazon.in/seller-blog/reduce-your-amazon-selling-costs--complete-guide-to-seller-fee-change-2026",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party summary of the Amazon.in fee revision from 16 March 2026: zero referral fee under Rs 1,000, lower referral above it, Self Ship closing fee cuts. Undated post; checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7138",
+    "file": "web",
+    "title": "Amazon pricing and seller fees (Sell on Amazon India)",
+    "author": "Amazon India",
+    "url": "https://sell.amazon.in/fees-and-pricing",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "AMZ"
+    ],
+    "why": "First-party Amazon.in fee schedule: closing fees, weight handling rules, FC pick and pack, storage, GST on fees and payout cycle. Indicative; checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7139",
+    "file": "web",
+    "title": "Product Opportunity Explorer (Seller Central Help, US)",
+    "author": "Amazon",
+    "url": "https://sellercentral.amazon.com/help/hub/reference/external/GNJ4YRTXWLMBY38U",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "PRD",
+      "AMZ"
+    ],
+    "why": "First-party description of Amazon's demand research tool: niches, search terms, insights, trends, review insights, purchase drivers and returns tabs.",
+    "cards": 4,
+    "public": true
+  },
+  {
+    "id": "S7140",
+    "file": "web",
+    "title": "Compare Trends search terms (Google Trends Help)",
+    "author": "Google",
+    "url": "https://support.google.com/trends/answer/4359550",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "PRD"
+    ],
+    "why": "First-party rules for comparing terms and topics in Google Trends and how quotation marks and plus signs work. Undated; checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7141",
+    "file": "web",
+    "title": "About Keyword Planner forecasts (Google Ads Help)",
+    "author": "Google",
+    "url": "https://support.google.com/google-ads/answer/3022575",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "PRD",
+      "GAD"
+    ],
+    "why": "First-party definitions of average monthly searches (12-month average, exact match only, rounded) and top-of-page bid ranges. Undated; checked 14 Nov 2026.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S7144",
+    "file": "web",
+    "title": "How to request samples before placing a wholesale order on Alibaba.com (Alibaba Buyer Resources)",
+    "author": "Alibaba.com",
+    "url": "https://activity.alibaba.com/page/resources/How_to_request_samples.html",
+    "date": "2021-02-03",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "why": "Marketplace's own buyer guidance on sample requests, who pays and typical sample cost; guidance rather than platform rules, so tier 2.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7145",
+    "file": "web",
+    "title": "How to Buy from Alibaba: the Official Guide (Alibaba.com seller blog)",
+    "author": "Alibaba.com",
+    "url": "https://seller.alibaba.com/businessblogs/how-to-buy-and-source-from-alibaba-px65f6s8",
+    "date": "2020-12-15",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "why": "Marketplace's own buyer guide: supplier badges, negotiating MOQ and samples through Contact Supplier, staying on platform for payment; guidance, so tier 2.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7146",
+    "file": "web",
+    "title": "Acceptable Quality Limit, AQL (QIMA)",
+    "author": "QIMA",
+    "url": "https://www.qima.com/aql-acceptable-quality-limit",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 3,
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "why": "Inspection company's explainer of AQL sampling under ISO 2859 / ANSI Z1.4 with common levels and a worked lot example. Undated page; checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7147",
+    "file": "web",
+    "title": "Children's Product Certificate (US Consumer Product Safety Commission)",
+    "author": "US Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/Childrens-Product-Certificate",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "why": "US regulator page: children's products (12 and under) need a certificate based on third-party lab tests; importers e-file certificates from 8 July 2026. Checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7148",
+    "file": "web",
+    "title": "Determining Duty Rates (US Customs and Border Protection)",
+    "author": "US Customs and Border Protection",
+    "url": "https://www.cbp.gov/trade/programs-administration/determining-duty-rates",
+    "date": "2024-11-25",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "why": "US customs guidance: the HTS lists duty rates, the USITC database gives an approximate rate, CBP makes the final call, binding rulings for certainty.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7149",
+    "file": "web",
+    "title": "How Much Money Do Amazon Sellers Make? (2024 Update) (Jungle Scout)",
+    "author": "Brian Connolly, Jungle Scout",
+    "url": "https://www.junglescout.com/resources/articles/how-much-do-amazon-sellers-make/",
+    "date": "2024-07-22",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "PRD",
+      "AMZ",
+      "FIN"
+    ],
+    "why": "Survey of nearly 2,000 Amazon sellers (1 Dec 2023 to 3 Jan 2024; 1,064 sellers with a live listing): margins, time to profit, startup cost and monthly sales distribution. Tool vendor survey, large sample, tier 2.",
+    "cards": 2,
+    "public": true
+  },
+  {
+    "id": "S7150",
+    "file": "web",
+    "title": "State of the Amazon Seller 2025 (Jungle Scout)",
+    "author": "Jungle Scout",
+    "url": "https://www.junglescout.com/resources/reports/amazon-seller-report-2025/",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 2,
+    "modules": [
+      "PRD",
+      "AMZ",
+      "FIN"
+    ],
+    "why": "Survey of nearly 1,500 Amazon sellers run 10 to 27 January 2025: top cost pressures (shipping, cost of goods, advertising) and a shift in sourcing away from China. Publish date not shown; checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
+  },
+  {
+    "id": "S7151",
+    "file": "web",
+    "title": "General Certificate of Conformity (US Consumer Product Safety Commission)",
+    "author": "US Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/General-Certificate-of-Conformity",
+    "date": "2026-11-14",
+    "rights": "public_reference",
+    "tier": 1,
+    "modules": [
+      "PRD",
+      "COG"
+    ],
+    "why": "US regulator page: general-use products covered by a CPSC rule need a certificate based on testing or a reasonable testing program, no third-party lab required; e-filing from 8 July 2026. Checked 14 Nov 2026.",
+    "cards": 1,
+    "public": true
   }
 ]

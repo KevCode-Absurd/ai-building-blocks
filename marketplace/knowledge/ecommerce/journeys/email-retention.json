@@ -1,0 +1,291 @@
+{
+  "schema": "ai-blocks-journey/1",
+  "id": "email-retention",
+  "name": "Email, SMS and WhatsApp retention (welcome, abandoned cart and browse, post-purchase, win-back, VIP and repeat)",
+  "vertical": "ecommerce",
+  "asked_as": [
+    "set up my Klaviyo flows",
+    "write a win-back email series",
+    "customers buy once and never come back",
+    "write abandoned cart emails",
+    "my emails don't make money",
+    "start WhatsApp marketing for my store",
+    "post-purchase emails to get a second order"
+  ],
+  "lead_agents": ["imogen-retention", "morag-email-sms", "lucia-email-copy", "latoya-post-purchase"],
+  "outcome": "The flow that adds the most gross profit is built first and in full: segmented by what and when people bought, timed from the store's own reorder gaps and delivery times, any offer inside the margin, written in the brand's voice and language, and handed over ready to load (HTML or Klaviyo-ready) with subject lines, send timing and a holdout that shows what it really adds.",
+  "first_principles": [
+    "For most stores below large scale, retention money sits in the second order, and it is won or lost in the first 30 to 60 days. Time every message from this store's own median and 75th percentile days to second order, per first product, and from its delivery time; a template's '30 days' is a guess.",
+    "Choose the flow by its gap, not by a checklist: monthly entrants x (the store's own achievable revenue per recipient minus today's) x gross margin. A store with heavy traffic and no added-to-cart flow should not start with win-back; a store with a large quiet buyer file and steady reorders should.",
+    "Attributed email revenue is not extra revenue. Apple privacy inflates opens and a 5-day open window acts like view-through, so judge flows on placed-order rate and revenue per recipient after discount cost, and prove win-back, replenishment and VIP with a 10% holdout.",
+    "Discounts teach buyers to wait. The ladder is help first (answers, how-to, proof), then the smallest offer that still leaves gross profit on the returning order, only for people past the reorder gap, with a real expiry. Never open an abandonment flow with a code, and never send sale campaigns to active subscribers.",
+    "Segment by what and when they bought: product type (used up or bought once), order count, days since last order against that product's own cycle, gross profit to date, and bad-experience flags (return, complaint, low rating, failed COD delivery). The last group gets a fix-first note, not a promotion.",
+    "Inbox placement comes before copy: an authenticated domain, sends to engaged people only, a sunset rule, spam complaints well under 0.3%. Each channel has one job: email for depth, SMS for urgency, WhatsApp for conversation and COD confirmation where buyers live on it, each with consent recorded."
+  ],
+
+  "goal": {
+    "questions": [
+      {
+        "id": "which_flow",
+        "ask": "Shall I pick the first flow from your numbers, or do you have one in mind?",
+        "why": "The right first flow differs store to store; the wrong one spends a week on a small gap.",
+        "options": [
+          {"label": "Pick from my numbers", "pro": "starts where the most profit is", "con": "needs the order export and flow report"},
+          {"label": "Win-back", "pro": "a large quiet buyer file pays back fast", "con": "weak if most buyers lapsed after a bad experience"},
+          {"label": "Abandoned cart and checkout", "pro": "closest to purchase, quick to earn", "con": "small if traffic is small"},
+          {"label": "Post-purchase and second order", "pro": "builds the habit that every later flow rests on", "con": "pays back over weeks, not days"}
+        ],
+        "default": "Pick from the numbers and show the ranking",
+        "skip_if": ["the brief names one flow and the account audit finds nothing broken that is bigger"],
+        "settle_with_data": "Rank flows by gap: repeat rate at 60 and 90 days, median days to second order, list size and engaged share, each flow's share of email revenue and revenue per recipient, and monthly trigger volumes (sign-ups, carts, checkouts, product views by known visitors, first orders, buyers past the reorder gap)."
+      },
+      {
+        "id": "channels",
+        "ask": "Which channels can we send on: email only, email and SMS, or email and WhatsApp?",
+        "why": "Each channel changes the timing, the length, the cost per send and the consent and registration work.",
+        "options": [
+          {"label": "Email only", "pro": "no extra cost or registration", "con": "misses buyers who live on their phone"},
+          {"label": "Email and SMS", "pro": "fast reads for urgent steps", "con": "costs per segment; needs registration (DLT in India, 10DLC or toll-free in the US)"},
+          {"label": "Email and WhatsApp", "pro": "high reads and replies; COD confirmation", "con": "per-message charges, approved templates, a messaging limit"}
+        ],
+        "default": "Email, with SMS or WhatsApp versions written for the steps where they pay, ready once consent exists",
+        "settle_with_data": "Read the platform's consent counts by channel and whether a sender is registered; if no one has opted in to texts, email it is."
+      },
+      {
+        "id": "offer_limit",
+        "ask": "How far may offers go for a returning buyer?",
+        "why": "It sets the offer ladder and who gets money off at all.",
+        "options": [
+          {"label": "No discounts", "pro": "protects margin and price", "con": "slower to wake the deeply lapsed"},
+          {"label": "Up to the ceiling your margins allow", "pro": "the most that still makes profit, per product", "con": "needs product costs"},
+          {"label": "A limit you set", "pro": "simple", "con": "may be too deep for thin-margin products"}
+        ],
+        "default": "Help before money; then the smallest offer that passes the gross profit check, only late in the flow and with a real expiry",
+        "settle_with_data": "Run the discount ceiling per product from delivered cost; check the share of orders with a code and how many buyers only buy with one."
+      },
+      {
+        "id": "platform",
+        "ask": "Where will these be loaded: Klaviyo, Shopify Email, another tool, or a WhatsApp provider?",
+        "why": "It sets the file format, the template tags and the flow build spec.",
+        "options": [
+          {"label": "Klaviyo", "pro": "flows, segments and SMS in one; tags and splits I can spell out", "con": "paid by list size"},
+          {"label": "Shopify Email", "pro": "free tier, simple", "con": "fewer flow splits and filters"},
+          {"label": "Another tool", "pro": "keep what you have", "con": "I hand over plain HTML and a build spec"}
+        ],
+        "default": "Klaviyo-ready HTML and build spec; plain HTML and text work in any tool",
+        "settle_with_data": "Check the connector, the store's installed apps and the site's scripts for the email platform in use."
+      }
+    ]
+  },
+
+  "gather": {
+    "brand_brain": "required",
+    "sources": [
+      {"what": "Flow and campaign report", "why": "recipients, revenue per recipient, placed-order rate, clicks, unsubscribes and spam per flow and send; shows what is missing, mis-triggered or broken", "where": "Klaviyo connector or a read-only key the owner keeps; else exports and screenshots of Flows and Campaigns, 90 days and 12 months", "ask_if_missing": "Can you export your flow and campaign performance for the last 12 months, or connect read-only?", "fallback": "trigger volumes from the store (sign-ups, abandoned checkouts, orders)"},
+      {"what": "Order export", "why": "repeat rate, days to second order by first product, value per customer, discount use, payment method, refunds and delivery status", "where": "Shopify Orders > Export, 12 to 24 months, with customer, created at, line items, discount code, payment method, financial status", "ask_if_missing": "Can you export 12 months of orders with customer and line items?", "fallback": "the platform's repeat and returning-customer numbers, marked rough"},
+      {"what": "Delivered cost per product", "why": "the discount ceiling and the gross profit each flow adds", "where": "SKU costs, shipping, payment fees, returns and failed COD", "fallback": "the owner's average margin, marked rough"},
+      {"what": "Deliverability state", "why": "a flow to the spam folder earns nothing", "where": "DNS records for SPF, DKIM and DMARC; Google Postmaster; engaged open rates excluding privacy opens; bounces and complaints", "fallback": "check DNS publicly; read open trends from the report"},
+      {"what": "Consent and sender registration", "why": "texts and WhatsApp need recorded opt-in and a registered sender", "where": "platform consent counts by channel; DLT entity and headers (India); 10DLC or toll-free status (US); WhatsApp Business Platform account and number quality", "fallback": "email only until consent exists"},
+      {"what": "Past emails and the brand's voice", "why": "which subject and body patterns earned clicks and orders here; how the brand talks", "where": "campaign history, the org context, the site, founder notes", "fallback": "the site and ads, marked public"},
+      {"what": "Reviews, tickets and return reasons", "why": "why buyers come back or don't, and what to fix before asking them to return", "where": "review app, helpdesk, returns app", "fallback": "public reviews"},
+      {"what": "Product usage cycles", "why": "replenishment timing for products that get used up", "where": "pack size and daily use per product from the owner or the label", "fallback": "reorder gaps from the order export alone"}
+    ],
+    "setup": [
+      {
+        "need": "Read access to the email platform",
+        "why": "flow numbers and settings decide the first flow and catch broken triggers",
+        "check": "Is there a connector, a read-only key the owner holds, or exports in the folder?",
+        "options": [
+          {"label": "Read-only connector or key", "pro": "settings, flows and segments read exactly", "con": "owner creates the key and never pastes it in chat"},
+          {"label": "Exports and screenshots", "pro": "nothing shared", "con": "slower; some settings missed"},
+          {"label": "No account yet", "pro": "a clean build", "con": "ranking rests on store trigger volumes only"}
+        ],
+        "default": "Exports and screenshots, with the exact list sent once"
+      },
+      {
+        "need": "An authenticated sending domain",
+        "why": "Gmail and Yahoo require SPF, DKIM and DMARC for bulk senders; without them mail drifts to spam",
+        "check": "Look up the sending domain's DNS records",
+        "options": [
+          {"label": "Fix it first", "pro": "everything after lands", "con": "the owner or their DNS host makes the change"},
+          {"label": "Build while it is fixed", "pro": "no lost days", "con": "nothing new goes live until it passes"}
+        ],
+        "default": "Build while it is fixed; nothing goes live until it passes"
+      },
+      {
+        "need": "Email build format",
+        "why": "the owner should load emails, not rebuild them",
+        "check": "Which platform, and does the brand have a saved email template?",
+        "options": [
+          {"label": "Klaviyo-ready HTML", "pro": "responsive, inline CSS, Klaviyo tags with fallbacks, pastes into a template", "con": "tags need changing for another tool"},
+          {"label": "Plain HTML plus text", "pro": "loads anywhere", "con": "dynamic product blocks set by hand"},
+          {"label": "Plain text", "pro": "founder-style, best inbox placement", "con": "no product images"}
+        ],
+        "default": "Klaviyo-ready HTML in the brand's saved template style, plus a plain-text version of every email"
+      },
+      {
+        "need": "SMS or WhatsApp sender",
+        "why": "texts need registration and WhatsApp needs approved templates before any send",
+        "check": "Is a sender registered and are there opted-in numbers?",
+        "options": [
+          {"label": "Set it up now", "pro": "texts ready when the flow goes live", "con": "registration and template approval take days"},
+          {"label": "Email first, texts later", "pro": "no delay", "con": "misses the channel's quick reads"}
+        ],
+        "default": "Email first; texts written now and loaded once sms-and-whatsapp-compliance-setup passes"
+      }
+    ],
+    "data_map": [
+      {"question": "How many first buyers come back, and when?", "data": "Second-order rate at 60 and 90 days by first-order month and first product; median and 75th percentile days to second order", "where": "order export", "tool": "cohort-repeat-and-ltv-analysis", "if_missing": "the platform's predicted next order date if 500+ buyers; else the returning-customer rate, marked misleading"},
+      {"question": "Which flow has the biggest gap?", "data": "Monthly entrants, revenue per recipient and placed-order rate per flow against the store's own best 30 days; trigger volumes for missing flows", "where": "flow report; store abandoned checkouts, orders and sign-ups; GA4 add_to_cart", "tool": "email-sms-flow-plan", "if_missing": "trigger volumes from the store, with half the conversion of the closest existing flow as the planning rate"},
+      {"question": "Is mail reaching the inbox?", "data": "Domain authentication, engaged open rate excluding privacy opens, click rate, spam complaints, bounces, engaged share of the list", "where": "DNS, Google Postmaster, platform deliverability report", "tool": "email-account-health-audit", "if_missing": "DNS lookup plus open and click trends by month"},
+      {"question": "Who has lapsed, and what were they worth?", "data": "Recency, frequency and gross profit per customer; cutoffs from the store's own days between orders", "where": "order export", "tool": "rfm-customer-segments", "if_missing": "the platform's built-in RFM groups, noting their fixed cutoffs"},
+      {"question": "When does each product run out?", "data": "Reorder gaps per product and quantity; pack size and daily use", "where": "order export plus product facts", "tool": "replenishment-reminder-timing", "if_missing": "median reorder gap per product alone"},
+      {"question": "How deep can an offer go?", "data": "Delivered cost per product; break-even at each discount depth", "where": "SKU costs, shipping, fees, returns, failed COD", "tool": "how-deep-can-we-discount", "if_missing": "no money off; value-add offers only"},
+      {"question": "Which past emails earned?", "data": "Each send tagged by subject and body pattern, with click rate and revenue per recipient (not opens)", "where": "campaign history", "tool": "email-copy-from-store-history", "if_missing": "the org context's voice bank and proven patterns, marked untested here"},
+      {"question": "Why do buyers not come back?", "data": "Return reasons, complaints, low-star themes, failed deliveries among lapsed buyers", "where": "returns app, helpdesk, review app, order export", "tool": "turn-support-tickets-into-insights", "if_missing": "public reviews"},
+      {"question": "Who buys on COD or never received the order?", "data": "Payment method, delivered status, RTO by customer", "where": "order export and shipping platform", "if_missing": "treat COD buyers as unconfirmed until delivered"}
+    ]
+  },
+
+  "diagnose": {
+    "tools": [
+      "node tools/prepare-job.mjs context/brief.md",
+      "node tools/ask-knowledge.mjs \"<flow> timing, length and offer\" --module EML,CXP,OFF"
+    ],
+    "look_for": [
+      "Second-order rate at 60 and 90 days by first product: products that make repeat buyers should lead the welcome flow and acquisition; one-time products need a cross-sell path, not a reorder reminder.",
+      "The shape of the repeat curve: most second orders inside 30 days means post-purchase is the lever; a long, flat tail means replenishment timing or win-back.",
+      "Median and 75th percentile days to second order: post-purchase must land before the median; win-back starts past the 75th percentile or about twice the median, not at a fixed 90 days.",
+      "Flows earning less than campaigns on a store with steady traffic: usually missing or mis-triggered flows, most often one abandonment flow on Started Checkout and nothing on Added to Cart.",
+      "Revenue per recipient per flow against the store's own best 30 days: a fall with steady entrants means the flow broke (trigger, filter, smart sending left on, deliverability), not the copy.",
+      "Engaged opens well under about 50% on a 90-day engaged segment, or complaints near 0.3%: fix inbox placement before writing anything new.",
+      "Discount dependence: the share of orders with a code and buyers who only buy with one; offers to them in win-back and abandonment mostly give margin away.",
+      "Bad-experience buyers in the lapsed pile: returns, complaints, low ratings, failed COD; if they are over about 20% of the lapsed, fix the cause and send a fix-first note.",
+      "Timing against delivery: review asks or how-to emails that land before the parcel, order updates carrying promotions, COD orders sent marketing before they are confirmed.",
+      "Overlap: one person in welcome, browse, cart and a campaign on the same day; selling flows with no exit on purchase; active subscribers in sale sends.",
+      "A small, slow-growing list caps every flow: sign-up rates of 2 to 3% are common and 8 to 12% achievable; phone capture as the form's second step.",
+      "A few customers carrying the profit: the top 10 to 20% by gross profit; they need service and early access, not deeper discounts."
+    ],
+    "hypothesis_patterns": [
+      {"pattern": "The second order is the leak", "evidence": "a low 60-day second-order rate against the store's best cohort, with post-purchase limited to a thank-you", "bet": "a post-purchase sequence timed from the store's median days to second order and delivery time, per first product"},
+      {"pattern": "Carts leave with no follow-up", "evidence": "many add-to-carts by known visitors a month and no Added to Cart flow, or one flow on Started Checkout only", "bet": "a separate added-to-cart flow and a full checkout flow, discount held late or not at all"},
+      {"pattern": "A large quiet buyer file", "evidence": "many buyers past the 75th percentile reorder gap, no win-back or one generic coupon", "bet": "a win-back ladder by value and reason, with a holdout and a sunset step"},
+      {"pattern": "Inbox placement caps everything", "evidence": "falling engaged opens, rising complaints, sends to the whole list, no sunset", "bet": "authenticate, send to engaged only, sunset the dead, then widen slowly"},
+      {"pattern": "Used-up products run out unreminded", "evidence": "consumables with tight, clustered reorder gaps and no reminder", "bet": "a replenishment reminder at about 75% of the usage cycle, first one without a discount"},
+      {"pattern": "Discounts are training the list", "evidence": "a high share of orders with codes, campaigns that spike only on sales", "bet": "no-discount versions of every flow; value-add offers; codes only for the deeply lapsed"},
+      {"pattern": "A few customers carry the profit", "evidence": "the top fifth of customers by gross profit hold most of it", "bet": "a VIP flow with early access and service, and an early warning when a VIP slows down"}
+    ]
+  },
+
+  "choose": {
+    "decisions": [
+      {
+        "id": "depth",
+        "ask": "Build one flow fully, or a light pass across all flows?",
+        "options": [
+          {"label": "One flow fully", "pro": "segments, every message, texts and a holdout: the deepest gain and a clean read", "con": "other flows wait", "when": "one gap is clearly the largest and the basics work"},
+          {"label": "A light pass on all", "pro": "fixes triggers, timings and missing flows fast", "con": "thin messages; hard to tell what earned", "when": "the account is broken: core flows missing, on the wrong trigger or never exiting"},
+          {"label": "Repair basics, then one flow fully", "pro": "stops the leaks this week, then builds the biggest gap", "con": "two rounds of loading", "when": "the audit finds broken basics and one big gap"}
+        ],
+        "recommend": "From the account audit and the flow ranking: if any core flow is broken or missing, repair first; then build the largest gap in full. Show the ranking that decided it."
+      },
+      {
+        "id": "offer",
+        "ask": "How should the flow use offers?",
+        "options": [
+          {"label": "No discounts", "pro": "keeps margin and price trust; answers, proof and story do the work", "con": "slower on the deeply lapsed and on price-led buyers", "when": "thin margins, a high share of code-only buyers, or a premium brand"},
+          {"label": "An offer ladder", "pro": "help first, then the smallest profitable offer late, with a real expiry", "con": "some buyers learn to wait for the last email", "when": "healthy margins and buyers past the reorder gap"},
+          {"label": "Value instead of money off", "pro": "a gift, free shipping or early access often costs less than the same discount", "con": "needs a gift buyers want", "when": "the discount ceiling is low but a cheap, wanted add-on exists"}
+        ],
+        "recommend": "From the discount ceiling per product, the share of code-only buyers and order value. Name who is excluded from any offer (active subscribers, VIPs in sales, recent full-price buyers)."
+      }
+    ]
+  },
+
+  "make": {
+    "pieces": [
+      {"piece": "Flow ranking and plan", "skill": "email-sms-flow-plan", "when": "always first; ranks flows by gross profit gap and sets trigger, splits, delays and exits"},
+      {"piece": "Account and inbox health", "skill": "email-account-health-audit", "when": "taking over an account, or opens and clicks have fallen"},
+      {"piece": "Segments", "skill": "build-klaviyo-segments", "when": "every flow and campaign needs engaged, exclusion and buyer-count segments"},
+      {"piece": "Value groups", "skill": "rfm-customer-segments", "when": "win-back, VIP or sends that differ by customer value"},
+      {"piece": "Repeat timing", "skill": "cohort-repeat-and-ltv-analysis", "when": "post-purchase or win-back timing needs the store's own days to second order"},
+      {"piece": "Discount ceiling", "skill": "how-deep-can-we-discount", "when": "any flow carries money off"},
+      {"piece": "Welcome series", "skill": "write-welcome-series", "when": "new sign-ups get no welcome, or a template one"},
+      {"piece": "Cart and checkout recovery", "skill": "write-abandoned-cart-and-checkout-emails", "when": "carts and checkouts leave without a follow-up"},
+      {"piece": "Browse abandonment", "skill": "write-browse-abandonment-emails", "when": "known visitors view products and leave"},
+      {"piece": "First 30 days after purchase", "skill": "write-post-purchase-emails", "when": "buyers get only an order confirmation"},
+      {"piece": "Second-order sequence", "skill": "post-purchase-repeat-sequence", "when": "first buyers rarely come back"},
+      {"piece": "Reorder reminders", "skill": "replenishment-reminder-timing", "when": "products get used up"},
+      {"piece": "Win-back plan", "skill": "win-back-lapsed-customers", "when": "a large file of past buyers has gone quiet"},
+      {"piece": "Win-back emails", "skill": "write-win-back-email-series", "when": "the win-back plan is set"},
+      {"piece": "VIP flow", "skill": "vip-customer-program", "when": "a small group carries much of the profit"},
+      {"piece": "Founder note", "skill": "write-founder-plain-text-email", "when": "to close a welcome, cart or win-back flow, or for lapsed buyers"},
+      {"piece": "SMS and WhatsApp messages", "skill": "write-sms-and-whatsapp-messages", "when": "texts join a flow"},
+      {"piece": "Cart recovery by chat", "skill": "recover-carts-by-chat", "when": "WhatsApp or SMS consent exists and carts are abandoned"},
+      {"piece": "WhatsApp setup", "skill": "set-up-whatsapp-marketing", "when": "the store starts WhatsApp journeys"},
+      {"piece": "Text and WhatsApp compliance", "skill": "sms-and-whatsapp-compliance-setup", "when": "before the first SMS or WhatsApp marketing send"},
+      {"piece": "Subject lines and preview text", "skill": "write-subject-lines-and-preview-text", "when": "every email; two pairs each"},
+      {"piece": "Copy from what earned before", "skill": "email-copy-from-store-history", "when": "the store has a few months of sends"},
+      {"piece": "Flow test plan", "skill": "email-ab-test-plan", "when": "the list can read a test; delays and offers before subject lines"},
+      {"piece": "Retention dashboard", "skill": "retention-dashboard", "when": "the owner needs to see if it works month by month"}
+    ],
+    "rules": [
+      "Every delay comes from the store's own reorder gaps, usage cycles and delivery times; a fixed day count only where no store number exists, and it is marked as a default.",
+      "Every selling flow exits on purchase; order and delivery messages carry no promotion.",
+      "Each email has one job and one ask; the subject and preview are paid off in the first lines; every template tag has a fallback; the footer has the unsubscribe link and postal address.",
+      "Offers come after help, at the smallest depth that passes the gross profit check, with a real expiry; never in the first abandonment message; never to active subscribers in sales.",
+      "Bad-experience buyers (return, complaint, low rating, failed delivery) get a fix-first note, not a promotion.",
+      "SMS under 160 characters with no emoji; WhatsApp header 60, body 1,024, buttons 25 characters, in the right template category; quiet hours and opt-out wording in every marketing text.",
+      "Win-back, replenishment and VIP flows keep a 10% holdout; attributed revenue is always labelled attributed.",
+      "Voice, proof and offers come from the org context and the store's own reviews, in the brand's language and register, including its mix of languages where it uses one."
+    ]
+  },
+
+  "check": {
+    "checks": [
+      "node tools/quality/copy-check.cjs <emails.md> --limit \"Subject=50\" --limit \"Preview=90\" --limit \"SMS=160\"",
+      "node tools/quality/consistency-check.mjs context/hypotheses.json <flow-plan.md> <emails.md>",
+      "node tools/check-handover.mjs <email.html>",
+      "node tools/quality/qe-check.cjs <final> --audience consumer",
+      "Each HTML email renders at 375 and 600 px wide, in dark mode and with images off; every link, button and tag fallback works.",
+      "No person can get two marketing messages from different flows on the same day; every flow has its exit and its smart-sending setting written down.",
+      "Each offer's depth is at or under that product's discount ceiling, and the excluded groups are named."
+    ],
+    "senior_review": [
+      "Is this the flow with the biggest gross profit gap by this store's numbers, and did I show why?",
+      "Do the timings come from this store's reorder gaps and delivery times, not a template?",
+      "Does every offer leave gross profit on the returning order, and who is kept out of it?",
+      "Will these land in the inbox, and is anything going to people who never engage?",
+      "Does it read like the brand, with real proof and the customers' own words?",
+      "Is there a holdout and a read date, so the owner sees real orders, not attributed revenue?",
+      "Is it legal to send: consent recorded, unsubscribe, address, registered sender, quiet hours?"
+    ]
+  },
+
+  "knowledge": {
+    "diagnose": {"modules": ["EML", "CXP", "MEA"], "ask": ["first-to-second order timing", "flow length and first delay by flow", "engaged segment and sunset rules", "email attribution windows and holdouts"]},
+    "make": {"modules": ["EML", "OFF", "CXP"], "ask": ["offer ladder in abandonment and win-back", "welcome offer size and framing", "replenishment reminder timing", "subscriber exclusions from sales"]},
+    "check": {"modules": ["EML"], "ask": ["Gmail bulk sender rules", "US email and text consent rules", "India DLT and WhatsApp template rules"]},
+    "never": [
+      "Voice, product facts, reviews and offers come from the org context and the store's data, never from the library.",
+      "Benchmark open and click rates are ranges to sanity-check, never this store's target; its own best period is."
+    ]
+  },
+
+  "handover": {
+    "files": [
+      "A flow ranking table: each flow's gross profit gap a month, the numbers behind it, and why this one goes first.",
+      "A build spec per flow: trigger, filters, splits (new, returning, VIP, subscriber, COD), delays, exits, smart-sending setting and the exact segment conditions.",
+      "Every email as responsive HTML (inline CSS, 600 px, Klaviyo tags with fallbacks) and plain text, each with two subject lines, preview text, send delay and the hypothesis it serves, one folder per flow.",
+      "SMS and WhatsApp texts with character counts, template category and send window.",
+      "An offer rule sheet: who gets what, in which message, how deep, when it expires, and the gross profit check behind it.",
+      "A measurement plan: holdout set-up, the one metric per flow, the read date, and the retention dashboard rows to watch."
+    ],
+    "next_moves": [
+      "Build the next flow in the ranking.",
+      "A subject line and delay test sized to your list.",
+      "A sign-up form that grows the list without giving margin away.",
+      "Fix the pages these emails send people to (cro-audit journey)."
+    ]
+  }
+}

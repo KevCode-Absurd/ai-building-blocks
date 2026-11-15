@@ -153,6 +153,12 @@ export const TOOL_FILES: { name: string; purpose: string }[] = [
   { name: "log-event.mjs", purpose: "The job log the tools write: one line per tool run in context/job-log.jsonl (names, results and hashes, never the client's text); show lists them, add logs a check done another way (plain Node)." },
   { name: "check-team.mjs", purpose: "Checks the handover between a lead and its helpers (each brief, each return and this job's ledger) and the store memory or a pasted memory packet (MEMORY-TEMPLATE.md) (plain Node, no network)." },
   { name: "quality/QUALITY-ENGINE-v3.md", purpose: "A pointer: the quality engine is now part of METHOD.md." },
+  // The guide (ecom-journey, 14 Nov 2026): how a job is led from the ask to the finished work, and the data tools for its diagnose and check stages.
+  { name: "quality/GUIDE.md", purpose: "How to guide the owner from the ask to finished work in six stages (goal, gather, diagnose, choose, make and check, next): calm progress, the question rubric, setup checks, hypotheses, decision cards and next moves." },
+  { name: "find-insights.mjs", purpose: "Reads an ad-platform export (Meta connector or Ads Manager CSVs) and ranks what an owner usually misses, each with its numbers: underfunded and overfunded segments, paused or tiring winners, money with no sales, accidental-click placements, campaigns not optimising for purchases, tracking gaps, break-even (plain Node)." },
+  { name: "preflight-meta.mjs", purpose: "Checks a Meta campaign plan the way a senior media buyer would before anything goes live: sales objective and purchase optimisation for a sales goal, pixel and Purchase event, budget against the ~50 purchases a week learning needs, buyer exclusions, ads and formats per ad set, UTMs, copy lengths (plain Node, never calls Meta)." },
+  { name: "quality/consistency-check.mjs", purpose: "Checks the work is logically consistent: every piece serves a written hypothesis, every hypothesis has evidence, the same figure says the same thing everywhere, and no card ids, placeholders or working notes reach the owner (plain Node)." },
+  { name: "quality/ask-check.mjs", purpose: "Checks a message that asks the owner questions before it is sent: at most three questions, one thing each, a default each, and short enough to answer in one go (plain Node)." },
   { name: "quality/CHECKER-v3.md", purpose: "Quality Engine v3: CHECKER-v3.md" },
   { name: "quality/CLARITY.md", purpose: "Quality Engine v3: CLARITY.md" },
   { name: "quality/INTAKE.md", purpose: "A pointer: the intake is now METHOD.md step 0." },
@@ -1336,11 +1342,12 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
   // Capture and check tools: in agent packs only (zip and files.json; the one-file version links to them). A training
   // pack is uploaded back to the studio, which takes text files only, so it links to the public copies instead.
   // They capture and check a brand, so only brand-facing roles carry them (brandFacing); any other role carries just
-  // the ones its role kit or its own method names, so a pack never points at a tool it lacks.
+  // the ones its role kit, its own method or its vertical knowledge (the journey maps) names, so a pack never points
+  // at a tool it lacks.
   const department = role?.department ?? persona.area;
   const families = [...new Set(jts.map(familyOf))];
   const brand = brandFacing(department, families);
-  const kitText = brand ? "" : [...Object.values(kitFiles), persona.profile.method ?? ""].join("\n");
+  const kitText = brand ? "" : [...Object.values(kitFiles), persona.profile.method ?? "", ...personaVerticalFiles(persona, input.vertical).map(f => f.content)].join("\n");
   const toolDrafts: Draft[] = agent
     ? TOOL_FILES.filter(t => input.tools?.[t.name]?.trim() && (brand || !BRAND_TOOLS.has(t.name) || EVERY_PACK_TOOLS.has(t.name) || kitText.includes(`tools/${t.name}`)))
       .map(t => ({ path: `tools/${t.name}`, group: "tool" as const, content: input.tools![t.name], source: "tools" as const, purpose: `Tool: ${t.purpose}` }))

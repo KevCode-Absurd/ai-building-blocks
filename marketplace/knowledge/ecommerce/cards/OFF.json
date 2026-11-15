@@ -188,7 +188,12 @@
       "where": "Economics of discounting section, base example then 25% off sale"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "OFF-0006",
@@ -230,7 +235,15 @@
       "where": "Better offer example after the 25% off model; supplement brand with 90-day supply"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "marketplace",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "OFF-0007",
@@ -305,7 +318,12 @@
       "where": "Offer mechanic 5, disciplined straight discounting; seven offer failures; selecting the right offer"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "OFF-0009",
@@ -343,7 +361,12 @@
       "where": "Side note on exit intent offers; failure number three on new versus returning"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "OFF-0010",
@@ -385,7 +408,12 @@
       "where": "Upsell placement section: in cart, checkout, post purchase; RPV benchmark"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "OFF-0011",
@@ -463,7 +491,12 @@
       "where": "Offer mechanic 1, product repositioning, greens gummy example"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "OFF-0013",
@@ -579,7 +612,16 @@
       "quote": "Profit per session is the most important metric you need to track"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "OFF-0016",
@@ -657,7 +699,13 @@
       "quote": "whichever is the bigger number is what you should be using"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "OFF-0018",
@@ -695,7 +743,12 @@
       "quote": "giving them a reason of why they should buy"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "OFF-0019",
@@ -734,7 +787,15 @@
       "where": "Chapter 8, Getting Your Prospects to Act Now, trial length and 'Word Your Offer for Maximum Impact'"
     },
     "strength": "anecdote",
-    "public": false
+    "public": false,
+    "situations": {
+      "model": [
+        "wholesale"
+      ],
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "OFF-0020",
@@ -770,7 +831,12 @@
       "where": "Chapter 8, 'Give a Gift for Prompt Response'"
     },
     "strength": "anecdote",
-    "public": false
+    "public": false,
+    "situations": {
+      "model": [
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "OFF-0021",
@@ -810,7 +876,12 @@
       "where": "Chapter 5, Ethically Bribe Your Prospects, Benson's rules of thumb"
     },
     "strength": "stated_by_practitioner",
-    "public": false
+    "public": false,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0022",
@@ -848,7 +919,13 @@
       "quote": "you can still keep the e-book with my compliments"
     },
     "strength": "anecdote",
-    "public": false
+    "public": false,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "OFF-0023",
@@ -960,7 +1037,15 @@
       "where": "Chapter 1, Offers That Bring in a Flood of New Leads; Chapter 2, bait piece"
     },
     "strength": "anecdote",
-    "public": false
+    "public": false,
+    "situations": {
+      "model": [
+        "wholesale"
+      ],
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "OFF-0026",
@@ -998,7 +1083,15 @@
       "where": "Closing section on percent off vs dollar off"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "OFF-0027",
@@ -1037,7 +1130,13 @@
       "where": "Simple bundle offer section, True Classic"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "OFF-0028",
@@ -1078,7 +1177,15 @@
       "where": "First order simple offer section, eight-part pop-up test"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "OFF-0029",
@@ -1118,7 +1225,12 @@
       "where": "Front-loaded subscription offer section"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0030",
@@ -1234,7 +1346,12 @@
       "quote": "Do not offer stupid free gifts."
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0033",
@@ -1274,7 +1391,12 @@
       "where": "AOV and bundle-based offers, sock example A/B/C"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low"
+      ]
+    }
   },
   {
     "id": "OFF-0035",
@@ -1308,7 +1430,16 @@
       "where": "Closing section on where to start: free money, cheaper but weak, worth paying for, where brands die"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "OFF-0036",
@@ -1349,7 +1480,16 @@
       "quote": "Garden Alchemy. He literally has a 17.46% opt-in rate"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "OFF-0037",
@@ -1385,7 +1525,19 @@
       "where": "Take-rate section, pop-up alignment point"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "subscription"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "OFF-0038",
@@ -1423,7 +1575,12 @@
       "where": "Step one: offers and subscription take rate, LTV filter screenshot"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0039",
@@ -1458,7 +1615,12 @@
       "where": "Offer structure section, Everyday Dose and AG1 examples"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0040",
@@ -1495,7 +1657,12 @@
       "where": "End of offers section, consumption pattern caveat"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0041",
@@ -1534,7 +1701,12 @@
       "where": "Take-rate optimisation section, IM8 vs Bloom PDP comparison"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0042",
@@ -1573,7 +1745,12 @@
       "quote": "your ceiling is an acquisition problem wearing a retention costume"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0043",
@@ -1613,7 +1790,15 @@
       "where": "Subscriber campaigns, Fourth of July and Black Friday discussion"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "marketplace",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "OFF-0044",
@@ -1688,7 +1873,16 @@
       "where": "Offers section, protein powder bulk example"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "OFF-0046",
@@ -1730,7 +1924,12 @@
       "quote": "Notice how we get more free mugs as ... you buy more bags"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0047",
@@ -1773,7 +1972,16 @@
       "quote": "multiplied by your conversion rate ... should be higher than 250"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "OFF-0048",
@@ -1812,7 +2020,13 @@
       "where": "Trick 7, middle option bias test, Wildman Drinking"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "OFF-0049",
@@ -1890,7 +2104,15 @@
       "quote": "the upsell with the highest take rate"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low"
+      ]
+    }
   },
   {
     "id": "OFF-0051",
@@ -1929,7 +2151,16 @@
       "quote": "what you're trying to measure is not the take rate"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "OFF-0052",
@@ -2005,7 +2236,12 @@
       "where": "Bonus case study, product bundle test (sunglasses brand)"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid"
+      ]
+    }
   },
   {
     "id": "OFF-0054",
@@ -2044,7 +2280,13 @@
       "where": "Bonus case study, in-cart optimisation (clothing brand)"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "OFF-0055",
@@ -2156,7 +2398,19 @@
       "quote": "I consider promiscuous sampling a very bad plan."
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "OFF-0058",
@@ -2237,7 +2491,12 @@
       "where": "'Mosie Money Minute' example email on annual renewal fees"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0060",
@@ -2276,7 +2535,15 @@
       "quote": "the longer the guarantee the less returns you actually get"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low"
+      ]
+    }
   },
   {
     "id": "OFF-0061",
@@ -2317,7 +2584,16 @@
       "quote": "10 to 15% makes no difference"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "traffic": [
+        "medium",
+        "high"
+      ]
+    }
   },
   {
     "id": "OFF-0062",
@@ -2355,7 +2631,12 @@
       "where": "'Rethinking the Subscription Model' and tactical matrix 'The Proactive Pause'"
     },
     "strength": "stated_by_practitioner",
-    "public": false
+    "public": false,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0063",
@@ -2392,7 +2673,12 @@
       "where": "Category 5, Price lock for loyal customers"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0064",
@@ -2473,7 +2759,12 @@
       "where": "Unit economics section, discounting worked example and alternatives"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "OFF-0066",
@@ -2675,7 +2966,13 @@
       "where": "First year of Comfrt section (launch August 2022)"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "OFF-0071",
@@ -2716,7 +3013,12 @@
       "where": "Finances section, cohort table and pricing and offers section"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0072",
@@ -2756,7 +3058,12 @@
       "where": "Pricing and offers section, speaker's own purchase"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0073",
@@ -2875,7 +3182,15 @@
       "where": "Subscription offers section, Symbiotica example and auction framing"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0076",
@@ -2914,7 +3229,12 @@
       "where": "AOV discussion: threshold gift example (pink hat)"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "early"
+      ]
+    }
   },
   {
     "id": "OFF-0077",
@@ -2954,7 +3274,15 @@
       "where": "[00:08:39-00:14:50] retention: three-month subscription program"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-0078",
@@ -3185,7 +3513,12 @@
       "where": "15 U.S.C. 8403 (1) to (3)"
     },
     "strength": "platform_rule",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-6306",
@@ -3225,7 +3558,12 @@
       "where": "Features overview"
     },
     "strength": "platform_rule",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "OFF-6307",
@@ -7178,6 +7516,219 @@
       "where": "about [26:30] hair health offer for long time to result"
     },
     "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "OFF-7000",
+    "modules": [
+      "OFF",
+      "LPG"
+    ],
+    "topics": [
+      "india",
+      "dark patterns",
+      "pricing",
+      "drip pricing"
+    ],
+    "claim": "India's dark pattern guidelines treat four things as drip pricing: price not shown upfront, a higher charge after confirmation, 'free' without saying continued use needs payment, and blocking a paid service until more is bought.",
+    "body": "Annexure 1 of the CCPA's Guidelines for Prevention and Regulation of Dark Patterns, 2023 (30 November 2023) defines drip pricing in four forms: elements of the price not revealed upfront or revealed surreptitiously; a price after purchase confirmation higher than the amount shown at checkout; a product or service advertised as free without saying that continued use needs an in-app purchase; and stopping a user from using a service already paid for unless something more is bought. The illustrations include a flight shown at one price at checkout and charged at another at payment, a 'play chess for free' app that asks for payment after 7 days without saying so, and a gym membership that turns out to need special shoes or gloves. A marketplace is not liable for price changes made by third-party sellers or caused by factors beyond its control. How to apply: show delivery, COD and platform fees on the product page or before the cart total, keep the payment amount identical to the checkout total, and state any time limit on free trials or samples in the offer itself.",
+    "conditions": "Platforms, advertisers and sellers offering goods or services to buyers in India.",
+    "fails_when": "Price changes by a third-party seller on a marketplace (marketplace exception); the illustrations are guidance, not an exhaustive legal test.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "guidelines dated 30 November 2023",
+      "chess app illustration: payment after 7 days"
+    ],
+    "asks": [
+      "Can I add COD fees at the end of checkout in India?",
+      "Is a free trial legal in India if I charge later?",
+      "What is drip pricing under Indian law?",
+      "Do I need to show shipping charges upfront in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7001",
+    "evidence": {
+      "where": "Annexure 1, item 8 (drip pricing)"
+    },
+    "strength": "regulator_rule",
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "wholesale"
+      ]
+    }
+  },
+  {
+    "id": "OFF-7001",
+    "modules": [
+      "OFF",
+      "MCR"
+    ],
+    "topics": [
+      "india",
+      "dark patterns",
+      "urgency",
+      "scarcity"
+    ],
+    "claim": "India's 2023 dark pattern guidelines ban false urgency: invented scarcity or popularity, such as fake 'people viewing' counts, or a 'limited time, select group' sale that is not limited.",
+    "body": "The CCPA's Guidelines for Prevention and Regulation of Dark Patterns, 2023 define false urgency as falsely stating or implying urgency or scarcity to push a user into an immediate purchase or action, including showing false popularity of a product or overstating how few units remain. The illustrations are showing high demand without basis (for example, a rooms-left alert with an invented count of people viewing) and creating false time pressure, such as calling a sale exclusive for a limited time to a select group of users when it is not. The guidelines apply to every platform offering goods or services in India, and to advertisers and sellers. Countdown timers, low-stock badges and 'X people bought this' widgets are fine only when they show real data: the timer ends the offer when it reaches zero, the stock count is live, and the viewer or sales count is genuine. How to apply: audit every urgency widget on the store (many apps fake them by default), switch off any that do not read live data, and end sales when the timer says they end.",
+    "conditions": "Product pages, carts, emails and ads seen by buyers in India.",
+    "fails_when": "Genuine limited stock or time-bound offers that are honestly stated; ASCI's 2023 ad guidelines also require stock evidence for scarcity claims in ads.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I show a countdown timer on my sale in India?",
+      "Is 'only 3 left' legal in India?",
+      "Can I use a fake 'people are viewing this' popup?",
+      "What is false urgency under Indian law?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7001",
+    "evidence": {
+      "where": "Annexure 1, item 1 (false urgency)"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-7002",
+    "modules": [
+      "OFF",
+      "CRO"
+    ],
+    "topics": [
+      "india",
+      "dark patterns",
+      "bundles and AOV",
+      "upsells"
+    ],
+    "claim": "In India, adding paid items, services or donations at checkout without consent is basket sneaking; free samples, complimentary services and disclosed necessary fees (delivery, gift wrap, taxes) are allowed.",
+    "body": "Annexure 1 of the CCPA's Guidelines for Prevention and Regulation of Dark Patterns, 2023 defines basket sneaking as including extra items such as products, services or payments to charity or donation at checkout without the user's consent, so the total goes above what was chosen. Free samples, complimentary services and necessary fees disclosed at the time of purchase do not count; the guidelines name delivery charges, gift wrapping charges and government taxes as examples of such fees. Illustrations include pre-ticked paid add-ons, a paid subscription added to a single-service booking, and travel insurance added to a flight. A related pattern, confirm shaming, covers using guilt or ridicule to push the add-on, such as a decline button that says 'I will stay unsecured' or mocking a shopper who removes a charity donation. How to apply: present upsells, protection plans and donations as unticked options the shopper adds, word the decline neutrally ('No thanks'), and put any free gift in the cart at zero price with a note that it is free.",
+    "conditions": "Checkout, cart and order-bump flows for buyers in India.",
+    "fails_when": "Fees that are necessary and disclosed at purchase; add-ons the shopper actively chooses.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I auto-add shipping protection to the cart in India?",
+      "Can I add a free sample to every order?",
+      "Is a pre-ticked donation legal in India?",
+      "What wording can I use when a customer declines an upsell?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7001",
+    "evidence": {
+      "where": "Annexure 1, items 2 and 3"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-7003",
+    "modules": [
+      "OFF",
+      "EML",
+      "CXP"
+    ],
+    "topics": [
+      "india",
+      "dark patterns",
+      "subscription structure"
+    ],
+    "claim": "India's dark pattern guidelines ban subscription traps (hard or hidden cancellation, card details for a free trial) and covert SaaS billing (no notice when a trial turns paid, silent renewals).",
+    "body": "Annexure 1 of the CCPA's Guidelines for Prevention and Regulation of Dark Patterns, 2023 defines a subscription trap as making cancellation of a paid subscription impossible or long and complex, hiding the cancel option, forcing a user to give payment details or authorise auto-debit to get a free subscription, or giving ambiguous or cumbersome cancellation instructions. SaaS billing covers recurring charges that exploit subscription loops to take money as quietly as possible: not telling the user when a free trial converts to paid, silent recurring debits or auto-renewals, charging for features the user does not use, and shady card authorisation. Both apply to subscribe-and-save, refill clubs and memberships, not only software. RBI's e-mandate rules (see the library's recurring payments card) separately require a pre-debit notice. How to apply: put a cancel link where the shopper manages the subscription, let them cancel in as few steps as they took to sign up, email before a trial converts and before each renewal, and take card details for a trial only if the offer says clearly that it will convert.",
+    "conditions": "Subscriptions, memberships, trials and auto-renewing plans sold to buyers in India.",
+    "fails_when": "One-off purchases; illustrations are guidance and the CCPA decides close cases.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Do I have to let customers cancel subscriptions online in India?",
+      "Can I take card details for a free trial in India?",
+      "Do I need to tell customers before their subscription renews?",
+      "Is hiding the cancel button illegal in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7001",
+    "evidence": {
+      "where": "Annexure 1, items 5 and 12"
+    },
+    "strength": "regulator_rule",
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
+  },
+  {
+    "id": "OFF-7004",
+    "modules": [
+      "OFF",
+      "ADC"
+    ],
+    "topics": [
+      "india",
+      "advertising law",
+      "offer mechanics",
+      "free offers"
+    ],
+    "claim": "Under India's 2022 ad guidelines, a low-price bait ad needs enough stock or a 'limited stock' note, and 'free' is barred if the buyer pays packing or handling, or the base price rose to fund it.",
+    "body": "Clause 5 of the CCPA's Guidelines for Prevention of Misleading Advertisements and Endorsements, 2022 covers bait advertisements, which lure buyers with a low price. The advertiser must have a realistic prospect of selling at that price, keep enough supply for foreseeable demand, say stock is limited if demand may exceed it, say so if it is testing demand, and disclose any geographic or age restrictions. Clause 7 covers free claims: an item cannot be called free or without charge if the buyer pays more than the unavoidable cost of responding and receiving it, the commitment needed to get it must be clear, and 'free' is not allowed where the buyer pays packing or handling, where the price of the required purchase went up because of the promotion, or where its quality or quantity went down. An element already included in a package price cannot be called free, and 'free trial' cannot describe a money-back offer or one that needs a non-refundable purchase. How to apply: cost every 'free gift' and 'buy 2 get 1' offer at the normal price of the paid item, never add handling fees to a free item, and add 'while stocks last' with real stock behind it.",
+    "conditions": "Promotions and price ads seen by buyers in India.",
+    "fails_when": "ASCI's code adds its own free and BOGO rules (see the ASCI card); delivery charges at the actual cost of sending are allowed if disclosed.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "guidelines dated 9 June 2022"
+    ],
+    "asks": [
+      "Can I charge shipping on a free gift in India?",
+      "Is 'buy one get one free' legal if I raised the price?",
+      "Do I need to say limited stock on a sale ad in India?",
+      "Can I call a money-back guarantee a free trial?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7006",
+    "evidence": {
+      "where": "Clauses 5 and 7"
+    },
+    "strength": "regulator_rule",
     "public": true
   }
 ]

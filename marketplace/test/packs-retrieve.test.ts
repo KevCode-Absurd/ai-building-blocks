@@ -7,7 +7,7 @@ import { mkdtempSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { KnowledgeIndex, answerText, chunkMarkdown, glossaryOf, indexedPath, knowledgeExcerpt, knowledgeMap, parseSourcesMd, stem, tokens } from "../src/modules/packs/retrieve.ts";
+import { KnowledgeIndex, answerText, chunkMarkdown, glossaryOf, indexedPath, knowledgeExcerpt, knowledgeMap, parseSourcesMd, passageUnits, questionKind, stem, tokens, unitKind } from "../src/modules/packs/retrieve.ts";
 
 /** Plain-JS modules (scripts and pack tools) have no type declarations: load them untyped. */
 const load = (rel: string): Promise<any> => import(rel);
@@ -151,13 +151,28 @@ test("tools/blind-review.mjs counts a winner only when both orders agree, and fl
   assert.match(long.length_warning!, /100% longer/);
 });
 
-test("retrieval floor on the independent golden set: Hit@5 at least 0.65 and MRR@10 at least 0.5", async () => {
+test("the line ranker finds the one rule in a long list, and question and line kinds are read", () => {
+  const rules = Array.from({ length: 14 }, (_, i) => `- If the client asks about topic${i} widgets, check the topic${i} register first and log it.`).join("\n");
+  const md = `# Ops: role knowledge\n\n## 5. Decision rules\n\n${rules}\n- If anyone opts out on any channel, suppress them everywhere the same day.\n\n## 1. What this role is for\n\nThe role handles customers, channels, email, calls and messages for small shops, and it keeps every list clean and every channel tidy.\n`;
+  const index = new KnowledgeIndex([{ path: "knowledge.md", text: md }]);
+  const top = index.ask("Someone opted out of our emails. Can we still use another channel?", { k: 3 }).passages[0];
+  assert.match(top.text, /suppress them everywhere/);
+  assert.equal(passageUnits("- one rule here\n  wrapped on\n- two\n\n| a | b |\n|---|---|\n| row | 1 |").length, 4);
+  assert.deepEqual(questionKind("How long do we get to reply?"), { num: true, rule: false });
+  assert.deepEqual(questionKind("Should I retry it?"), { num: false, rule: true });
+  assert.deepEqual(unitKind("- If a test is cut, write down the risk [3]."), { num: false, rule: true });
+  assert.deepEqual(unitKind("| 7 to 21 days | Stripe dispute response window | [22] |"), { num: true, rule: false });
+});
+
+test("retrieval floor on the independent golden set: Hit@5 at least 0.75 and MRR@10 at least 0.6", async () => {
   const { evaluate } = await load("../scripts/eval-retrieval.mjs");
   const golden = JSON.parse(readFileSync(path.join(ROOT, "test", "fixtures", "retrieval-golden.json"), "utf8"));
   assert.equal(golden.questions.length, 75);
   const r = evaluate(golden);
-  assert.ok(r.hit5 >= 0.65, `Hit@5 ${r.hit5}`);
-  assert.ok(r.mrr >= 0.5, `MRR ${r.mrr}`);
+  // 14 Nov 2026, with the line ranker: Hit@5 0.787, MRR 0.639 (0.693 and 0.556 before it).
+  assert.ok(r.hit5 >= 0.75, `Hit@5 ${r.hit5}`);
+  assert.ok(r.mrr >= 0.6, `MRR ${r.mrr}`);
+  assert.equal(r.split.tune.n + r.split.check.n, 75, "the odd and even halves cover every question");
 });
 
 test("every role kit's citations point at a dated source with a url (scripts/check-knowledge.mjs)", async () => {

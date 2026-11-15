@@ -159,7 +159,12 @@
       "quote": "I usually do at least 4 hours"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "high"
+      ]
+    }
   },
   {
     "id": "MEA-0005",
@@ -304,7 +309,15 @@
       "where": "Conversion funnel breakdown section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low"
+      ]
+    }
   },
   {
     "id": "MEA-0009",
@@ -686,7 +699,12 @@
       "where": "Level one business signal; levels two and three account drill-down"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MEA-0019",
@@ -723,7 +741,15 @@
       "where": "Measurement section: LTGP:CAC levers and CAC floor equation"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "MEA-0020",
@@ -765,7 +791,12 @@
       "where": "Measurement section: CAC definition, LTGP components, ratio bands and back-propagating CAC"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MEA-0021",
@@ -842,7 +873,12 @@
       "where": "Putting it all together: forecasting section"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MEA-0023",
@@ -885,7 +921,16 @@
       "where": "P&L section, product margin vs gross margin worked example"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "MEA-0024",
@@ -927,7 +972,16 @@
       "where": "Metrics section, LTGP to CAC benchmarks"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "MEA-0025",
@@ -967,7 +1021,15 @@
       "where": "Metrics pyramid section and attribution notes"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MEA-0026",
@@ -1009,7 +1071,12 @@
       "where": "How ecommerce unit economics should evolve over the life cycle video, optimal and sub-optimal scenarios"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MEA-0027",
@@ -1050,7 +1117,12 @@
       "where": "How to calculate churn rate video; subscription box model segment"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "MEA-0028",
@@ -1133,7 +1205,12 @@
       "where": "channel expansion segment (Fellow example; 'pyramid of 2026'); Neuro gum Amazon ads anecdote"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MEA-0030",
@@ -1216,7 +1293,18 @@
       "quote": "you will see something like 17 massive discrepancy here"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "MEA-0032",
@@ -1257,7 +1345,18 @@
       "quote": "two to three is really where you want to be"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "dtc"
+      ],
+      "size": [
+        "large"
+      ]
+    }
   },
   {
     "id": "MEA-0033",
@@ -1296,7 +1395,15 @@
       "quote": "typically about a 25day duration"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "size": [
+        "large"
+      ]
+    }
   },
   {
     "id": "MEA-0034",
@@ -1377,7 +1484,12 @@
       "quote": "November customers repeat ... 50% worse"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MEA-0036",
@@ -1414,7 +1526,13 @@
       "quote": "you should spend 1% of your budget on tools"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "spend": [
+        "mid",
+        "large"
+      ]
+    }
   },
   {
     "id": "MEA-0037",
@@ -1455,7 +1573,12 @@
       "quote": "it always comes down to shipping"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MEA-0038",
@@ -1496,7 +1619,13 @@
       "where": "Finances section, 'four reporting choices'"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "prelaunch",
+        "early"
+      ]
+    }
   },
   {
     "id": "MEA-0039",
@@ -1615,7 +1744,12 @@
       "where": "incrementality and causal inference section; action items by revenue level"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MEA-0042",
@@ -1744,7 +1878,15 @@
       "where": "[00:01:00-00:05:27] CAC vs LTV"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ],
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "MEA-0045",
@@ -1867,7 +2009,12 @@
       "where": "Audit levers discussion: CTR first, then conversion rate times AOV"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MEA-0048",
@@ -1949,7 +2096,12 @@
       "where": "[00:04:13-00:08:39] CAC to LTV and payback discussion"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "subscription"
+      ]
+    }
   },
   {
     "id": "MEA-0050",
@@ -2030,7 +2182,13 @@
       "quote": "pull out a custom column called conversions by conversion time"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "MEA-0052",
@@ -2068,7 +2226,12 @@
       "where": "LTGP section (furniture example) and closing action steps with vertical benchmarks"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MEA-0053",
@@ -2147,7 +2310,12 @@
       "where": "Opening section on the LTGP to CAC equation and the death spiral flywheel"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc"
+      ]
+    }
   },
   {
     "id": "MEA-0055",
@@ -2185,7 +2353,12 @@
       "where": "Section on funding losses on first purchase and the closing P&L example"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "size": [
+        "mid"
+      ]
+    }
   },
   {
     "id": "MEA-6085",

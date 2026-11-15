@@ -1,6 +1,6 @@
 {
   "schema": "ai-blocks-routing-golden/1",
-  "note": "Acceptable job types for every Quality Engine benchmark request (tools/bench/quality-engine). Labelled 12 Nov 2026 by reading each ask, before tuning was finished. More than one job is acceptable where two leads would both do the work well. Requests with a card list the quality card the ask names. E01-E12 are the 12 Nov 2026 Claude blind-test requests (results-claude-2026-11-12), added after that test exposed routing misses; the extra rows are new phrasings of the same fixes, written so the fix is not fitted to those 12 alone. The 13 Nov 2026 rows (2 per card) cover the nine cards added that day, in different phrasings and companies.",
+  "note": "Acceptable job types for every Quality Engine benchmark request (tools/bench/quality-engine). Labelled 12 Nov 2026 by reading each ask, before tuning was finished. More than one job is acceptable where two leads would both do the work well. Requests with a card list the quality card the ask names. E01-E12 are the 12 Nov 2026 Claude blind-test requests (results-claude-2026-11-12), added after that test exposed routing misses; the extra rows are new phrasings of the same fixes, written so the fix is not fitted to those 12 alone. The 13 Nov 2026 rows (2 per card) cover the nine cards added that day, in different phrasings and companies. 14 Nov 2026: the two online-store product-description rows now expect the e-commerce product copywriter (georgia-product-copy, lead-agents.json `store`), not the house agent faye-product-pages; see jobs-store-routing.test.mjs.",
   "floor": 0.85,
   "jobs": {
     "T01": [
@@ -555,7 +555,7 @@
         "write-landing-page",
         "write-ad-copy"
       ],
-      "lead": "faye-product-pages",
+      "lead": "georgia-product-copy",
       "card": "product-description"
     },
     {
@@ -566,7 +566,7 @@
         "write-landing-page",
         "write-ad-copy"
       ],
-      "lead": "faye-product-pages",
+      "lead": "georgia-product-copy",
       "card": "product-description"
     },
     {

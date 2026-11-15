@@ -275,6 +275,5 @@ export function packKnowledgeIndex(env: Env, index: PackIndex): Promise<Knowledg
 
 /** ask_agent_knowledge: the passages of an agent's pack that answer a question (one or more phrasings). */
 export async function askPack(env: Env, index: PackIndex, questions: string[], opts: { k?: number; today?: string; paths?: string[] } = {}): Promise<Answer> {
-  // distinct: near-duplicate cards are dropped, the same way tools/ask-knowledge.mjs does.
-  return (await packKnowledgeIndex(env, index)).ask(questions, { ...opts, distinct: true });
+  return (await packKnowledgeIndex(env, index)).ask(questions, opts);
 }

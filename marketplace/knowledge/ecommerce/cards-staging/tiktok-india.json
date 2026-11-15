@@ -1,0 +1,1709 @@
+[
+  {
+    "id": "ADC-7000",
+    "modules": [
+      "ADC"
+    ],
+    "topics": [
+      "tiktok",
+      "account structure",
+      "campaign objectives"
+    ],
+    "claim": "On TikTok, sell with the single Sales objective, which replaced Website Conversions and Product Sales; pick the destination (TikTok Shop, website, app, or website and app) inside it.",
+    "body": "TikTok's help centre groups objectives into Awareness, Consideration and Conversion. Under Conversion, App promotion is for installs and re-engagement, and Sales is for purchases. TikTok merged its older Website Conversions and Product Sales objectives into this one Sales objective, rolling it out in phases, so some accounts may still show the old names for a while. Inside Sales, the advertiser chooses where the sale happens: TikTok Shop, a website, an app, or website and app together. For a website destination, a campaign can be built manually, with the option to switch on a product catalog so ads are generated from catalog items, or through Smart+. For a TikTok Shop destination, the campaign type is GMV Max (see the GMV Max card). How to apply: a Shopify brand that sells only on its own site chooses Sales with the website destination and a working Pixel or Events API; a brand with a TikTok Shop runs Shop sales through GMV Max and keeps website sales in a separate Sales campaign, so the two are not judged on one ROAS.",
+    "conditions": "Brands advertising on TikTok in markets where Ads Manager offers the Sales objective.",
+    "fails_when": "Accounts where the merged objective has not rolled out yet still show Website Conversions or Product Sales; TikTok is blocked in India, so none of this applies to Indian audiences.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Which TikTok campaign objective should I use to get sales?",
+      "Where did Website Conversions go in TikTok Ads Manager?",
+      "Should my TikTok ads send people to my website or TikTok Shop?",
+      "What's the difference between TikTok Sales and App promotion?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7013",
+    "evidence": {
+      "where": "About the Sales advertising objective"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-7001",
+    "modules": [
+      "ADC"
+    ],
+    "topics": [
+      "tiktok",
+      "budget and scaling rules",
+      "learning phase"
+    ],
+    "claim": "TikTok treats about 50 conversions as the sign an ad group has left the learning phase; until then, avoid cutting bid or budget or narrowing targeting.",
+    "body": "TikTok's Learning Phase FAQ says the clearest signal that an ad group has passed learning is reaching 50 conversions on its optimisation event, after which an oCPM ad group can expect a stable cost per result, and nothing else needs to be done. Before that point, the guidance is to avoid edits that slow data collection: lowering the bid or budget, or narrowing the audience. If an ad group is not getting there, TikTok's suggested fixes are better creative, a broader audience, a higher bid, or optimising for an earlier event such as add to cart instead of purchase. How to apply: size each ad group so its daily budget can plausibly buy 50 of the chosen event within a reasonable test window at your expected cost per event (budget divided by cost per event). If it cannot, consolidate ad groups or optimise for a higher-volume event first, then move down to purchase once volume exists. Practitioner cards in this library add rules of thumb on budget multiples; this card is the platform's own threshold.",
+    "conditions": "Auction campaigns optimising for a conversion event on TikTok Ads Manager.",
+    "fails_when": "Campaign budget optimisation moves learning to campaign level (see the CBO card); Smart+ and GMV Max manage learning themselves; very low-volume or high-price products may never reach 50 purchases, so an earlier event is the realistic goal.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "about 50 conversions to pass the learning phase"
+    ],
+    "asks": [
+      "How long does TikTok's learning phase take?",
+      "My TikTok ad group is stuck in learning. What do I change?",
+      "Can I edit my TikTok ad while it's learning?",
+      "Should I optimise TikTok for add to cart instead of purchase?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7010",
+    "evidence": {
+      "where": "How can I tell if my ad has passed the Learning Phase?"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-7002",
+    "modules": [
+      "ADC"
+    ],
+    "topics": [
+      "tiktok",
+      "budget and scaling rules",
+      "learning phase"
+    ],
+    "claim": "With TikTok campaign budget optimisation, learning is judged per campaign: expect stable results after 50 campaign results for installs or 20 for deeper-funnel goals, and again after each change.",
+    "body": "TikTok's Campaign Budget Optimization FAQ says that once the budget sits at campaign level, the learning phase is measured for the campaign as a whole, not for each ad group. A newly launched CBO campaign should stabilise after 50 campaign results when it optimises for installs, and after 20 results for deeper-funnel objectives such as purchases. Each later adjustment restarts the wait for another 50 or 20 results. The FAQ also says to judge CBO at campaign level, on budget consumption and the day-over-day change in cost per result, because spend inside a single ad group can look inefficient on its own while the campaign as a whole performs. How to apply: when a CBO campaign has ad groups that look expensive, do not pause them one by one during learning; read the campaign total. Batch edits so the campaign is not reset repeatedly, and leave at least the 20-result window between changes on purchase campaigns.",
+    "conditions": "TikTok auction campaigns with campaign budget optimisation switched on.",
+    "fails_when": "Ad-group budgets (no CBO), where the 50-conversion ad-group rule applies; automated campaign types such as Smart+ or GMV Max that set their own pacing.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "50 campaign results for installs",
+      "20 campaign results for deeper-funnel objectives"
+    ],
+    "asks": [
+      "How does the learning phase work with TikTok CBO?",
+      "One ad group in my TikTok CBO campaign looks expensive. Should I turn it off?",
+      "How many purchases before a TikTok CBO campaign stabilises?",
+      "Does changing my TikTok campaign reset learning?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7012",
+    "evidence": {
+      "where": "Learning phase under CBO"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-7003",
+    "modules": [
+      "ADC",
+      "FIN"
+    ],
+    "topics": [
+      "tiktok",
+      "budget and scaling rules"
+    ],
+    "claim": "TikTok requires daily budgets above $50 per campaign and $20 per ad group, and advises raising budget by at most 40% per change in learning, 30% after, no more than every two days.",
+    "body": "TikTok's About Budget help article sets the daily minimums: a campaign-level daily budget must be above $50 and an ad-group daily budget above $20, and the campaign budget should not be lower than an ad group's budget, because that causes delivery problems. On changes, it says budget increases during the learning phase should be no more than 40% per adjustment, and once the campaign has left learning, no more than 30% per adjustment, with adjustments no more often than every two days. Other TikTok pages give tighter figures for specific products (for example, Shop gross-revenue optimisation pages suggest smaller steps), so the strictest rule for the campaign type wins. How to apply: when a TikTok campaign is working, schedule scale-ups as a ladder of steps no bigger than the limit, two days apart, instead of doubling overnight; when testing on a small budget, remember the $20 floor per ad group limits how many ad groups one budget can run.",
+    "conditions": "TikTok Ads Manager auction campaigns billed in US dollars.",
+    "fails_when": "Accounts billed in other currencies have local minimums; GMV Max and Smart+ campaigns follow their own budget guidance; a step size that is fine on paper can still reset learning if bid or targeting change at the same time.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "campaign daily budget above $50",
+      "ad group daily budget above $20",
+      "at most 40% per increase during learning",
+      "at most 30% per increase after learning",
+      "no more often than every two days"
+    ],
+    "asks": [
+      "What's the minimum budget for TikTok ads?",
+      "How fast can I scale a TikTok campaign?",
+      "How much can I raise my TikTok budget without resetting learning?",
+      "Can I run TikTok ads on $20 a day?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7035",
+    "evidence": {
+      "where": "Budget minimums and adjustment guidance"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-7004",
+    "modules": [
+      "ADC",
+      "MCR"
+    ],
+    "topics": [
+      "tiktok",
+      "account structure",
+      "automation"
+    ],
+    "claim": "TikTok Smart+ runs one AI campaign where targeting, budget, catalog ads and placements can each be automated or manual, with up to 30 ad groups, 30 asset groups each and 50 creatives per asset group.",
+    "body": "TikTok describes Smart+ as a single AI-driven campaign for performance objectives that can run fully automated, partly automated or fully manual. Targeting can start from basics such as location, age and language, with custom audiences or interests as guidance, or switch to manual. Budget can be one campaign budget that TikTok spreads across ad groups (all ad groups then share budget and bid strategy) or separate ad-group budgets. Automation can be switched on or off module by module: targeting, budget, catalog ads and placements. Automatic placement can spread delivery across TikTok, Pangle, Lemon8 and the Global App Bundle where available. Supported goals include traffic, sales, app and lead generation, and TikTok search ads now run on Smart+. A campaign holds up to 30 ad groups, each with up to 30 asset groups of up to 50 creatives. How to apply: use Smart+ when the account has enough creative variety for the system to choose from; keep manual modules for the decisions you can make better, such as excluding past buyers or holding placements to TikTok only when Pangle traffic does not convert.",
+    "conditions": "TikTok advertisers with a working Pixel or Events API and a steady flow of new creative.",
+    "fails_when": "Tiny creative libraries give the automation nothing to choose between; automatic placements can shift spend into partner apps with weaker buyers; TikTok's own performance claims for Smart+ are vendor figures, not independent tests.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "up to 30 ad groups per campaign",
+      "up to 30 asset groups per ad group",
+      "up to 50 creatives per asset group"
+    ],
+    "asks": [
+      "Should I use TikTok Smart+ or a manual campaign?",
+      "How many creatives can I put in a TikTok Smart+ campaign?",
+      "Can I control targeting in Smart+?",
+      "What does TikTok Smart+ automate?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7025",
+    "evidence": {
+      "where": "Smart+ modules and campaign structure"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-7005",
+    "modules": [
+      "ADC",
+      "ORG"
+    ],
+    "topics": [
+      "tiktok",
+      "tiktok shop",
+      "shopping structure"
+    ],
+    "claim": "Since July 2025, GMV Max is the default and only campaign type for new TikTok Shop Ads; migrated campaigns take their historical ROI as the target.",
+    "body": "TikTok's GMV Max migration article says that from July 2025, GMV Max became the default and only supported campaign type for creating TikTok Shop Ads, replacing new Video Shopping, Product Shopping and LIVE Shopping campaigns; existing campaigns of the old types could keep running. When campaigns move over, TikTok uses each campaign's historical ROI results as its starting ROI target. How to apply: before migrating, write down each old campaign's real ROI over a recent clean period, net of returns, so you know whether the inherited target is one you can afford at your margin. If your break-even ROI (1 divided by contribution margin before ad spend) is above the inherited target, raise the target before scaling rather than letting GMV Max spend to a loss.",
+    "conditions": "Sellers with a TikTok Shop advertising through TikTok Ads Manager or Seller Center, in markets where TikTok Shop Ads exist.",
+    "fails_when": "Website-only brands without a TikTok Shop, who use the Sales objective with a website destination instead; markets where TikTok Shop has not launched.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "GMV Max default and only Shop Ads type from July 2025"
+    ],
+    "asks": [
+      "What happened to TikTok Video Shopping Ads?",
+      "Do I have to use GMV Max for TikTok Shop?",
+      "What ROI target does GMV Max start with?",
+      "How do I set up TikTok Shop ads now?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7014",
+    "evidence": {
+      "where": "GMV Max migration timeline"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-7006",
+    "modules": [
+      "ADC",
+      "MEA"
+    ],
+    "topics": [
+      "tiktok",
+      "tiktok shop",
+      "bidding strategy"
+    ],
+    "claim": "TikTok recommends setting a Product GMV Max ROI target from history (non-LIVE GMV divided by ad cost); a lower target buys more delivery, a higher one limits spend.",
+    "body": "TikTok's best-practice page for Product GMV Max gives the starting ROI target as historical non-LIVE GMV divided by historical ad cost, so the target reflects what the shop's product (not LIVE) sales actually returned. A lower ROI target lets the system bid more freely, which raises delivery and GMV; a higher target protects efficiency but may limit spend. A shop with no history should start from the ROI and budget the system recommends in the setup screen. How to apply: compute the historical figure yourself from Seller Center for a normal period (exclude big promotion days), then compare it with your break-even ROI from unit economics. Set the target at or above break-even and lower it in small steps only while contribution margin holds. Practitioner cards in this library argue for setting the target above TikTok's suggestion; this card is the platform's own method, which is a starting point for delivery, not a profit target.",
+    "conditions": "TikTok Shop sellers running Product GMV Max with some sales history.",
+    "fails_when": "LIVE GMV Max, which uses total LIVE room revenue instead; shops whose history is distorted by a one-off viral video or promotion; GMV figures that ignore returns and refunds.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "recommended ROI = historical non-LIVE GMV / historical ad cost"
+    ],
+    "asks": [
+      "What ROI target should I set in TikTok GMV Max?",
+      "Why is my GMV Max campaign not spending?",
+      "How do I calculate ROI for TikTok Shop ads?",
+      "Should I accept TikTok's recommended ROI?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7015",
+    "evidence": {
+      "where": "Setting the ROI target"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-7007",
+    "modules": [
+      "ADC",
+      "FIN"
+    ],
+    "topics": [
+      "tiktok",
+      "tiktok shop",
+      "bidding strategy"
+    ],
+    "claim": "TikTok's GMV Max ROI protection credits back ad spend when delivered ROI falls below 90% of the daily target, but only for eligible campaigns with more than 20 orders a day.",
+    "body": "TikTok's article on ROI protection for GMV Max says eligible campaigns receive automatic ad credits when the ROI actually delivered falls below 90% of the daily ROI target. The protection only applies to campaigns that generate more than 20 orders per day, and other eligibility conditions in the article apply, such as how the target and budget were set. The credit is in ad credit, not cash, so it lowers future ad cost rather than refunding the shortfall to the seller's bank. How to apply: treat ROI protection as a cap on how badly a high-volume campaign can miss its target, not as a guarantee for a small shop. Under about 20 orders a day there is no protection, so the ROI target and budget need to carry the risk on their own. Check the credits in the account when reconciling ad cost, and count them in the month they are used, not the month the miss happened.",
+    "conditions": "TikTok Shop sellers running GMV Max campaigns at high order volume in markets where ROI protection is offered.",
+    "fails_when": "Campaigns at or below 20 daily orders; settings changes that break eligibility; reading the credit as cash in a P&L.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "credits when ROI is below 90% of the daily target",
+      "eligible above 20 daily orders"
+    ],
+    "asks": [
+      "Does TikTok refund me if GMV Max misses my ROI?",
+      "What is GMV Max ROI protection?",
+      "How many orders do I need for TikTok ROI protection?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7016",
+    "evidence": {
+      "where": "Eligibility and credit rules"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-7008",
+    "modules": [
+      "ADC",
+      "ORG"
+    ],
+    "topics": [
+      "tiktok",
+      "tiktok shop",
+      "live shopping"
+    ],
+    "claim": "TikTok LIVE GMV Max is created in Seller Center at shop level, one campaign per TikTok identity, and its ROI counts total LIVE room revenue, not just ad-attributed sales.",
+    "body": "TikTok's comparison of LIVE Shopping Ads and LIVE GMV Max explains how ads for shoppable livestreams now work. LIVE GMV Max is set up from Seller Center, sits at the shop level, and a TikTok identity (the account that goes live) can only have one LIVE GMV Max campaign. Its ROI is calculated as total gross revenue in the LIVE room divided by ad cost, so organic viewers who buy during the stream count toward the result, unlike older LIVE Shopping Ads that were judged on attributed orders. How to apply: plan LIVE GMV Max per host account, not per stream; schedule streams so the one campaign has regular sessions to learn from. Because organic room sales are included, compare ROI against a stream with no ads before deciding the ads paid for themselves, and judge the stream's contribution margin after the host's commission and samples.",
+    "conditions": "TikTok Shop sellers who run shoppable livestreams from a bound shop or creator account.",
+    "fails_when": "Shops that never go live; markets without TikTok Shop LIVE; reading the included organic room revenue as incremental ad value.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "one LIVE GMV Max campaign per TikTok identity",
+      "ROI = total LIVE room gross revenue / ad cost"
+    ],
+    "asks": [
+      "How do I advertise my TikTok Shop livestream?",
+      "What's the difference between LIVE Shopping Ads and LIVE GMV Max?",
+      "Can I run two LIVE GMV Max campaigns?",
+      "Does TikTok LIVE ROI include organic sales?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7034",
+    "evidence": {
+      "where": "Comparison table"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-7000",
+    "modules": [
+      "ORG",
+      "ADC"
+    ],
+    "topics": [
+      "tiktok",
+      "creator and influencer collaboration",
+      "spark ads"
+    ],
+    "claim": "To run a creator's TikTok post as a Spark Ad, the creator generates an ad authorisation code for 7, 30, 60 or 365 days; Duets and Stitches need codes from both creators.",
+    "body": "TikTok's Spark Ads guide describes the code route. The creator opens the post, goes to ad settings, turns on ad authorisation, picks how long the code lasts (7, 30, 60 or 365 days) and sends it to the brand. The brand applies it in Ads Manager under Tools, Creative library, Spark ads posts, and can authorise up to 20 codes in one batch. Posts made by two creators, such as Duets and Stitches, need a code from each. The authorisation can only be extended before the code expires. A private video becomes public once it runs in a campaign and its privacy cannot be changed while promoted, and the caption cannot be edited after authorisation. Engagement from the ad counts on the original post. Brands can also pull posts from accounts linked through Business Center. How to apply: agree the code length in the creator contract to match the whole flight plus testing time, ask for the code before the post goes live with the final caption, and diary renewals before expiry, since an expired code cannot be extended.",
+    "conditions": "Brands boosting their own or creators' organic TikTok posts through Ads Manager.",
+    "fails_when": "Creators who will not authorise or who change the post; usage rights for paid ads, which the contract must still cover; posts with copyrighted music that is not cleared for ads.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "code lengths 7, 30, 60 or 365 days",
+      "up to 20 codes per batch"
+    ],
+    "asks": [
+      "How do I run a creator's TikTok as an ad?",
+      "How do I get a Spark Ads code?",
+      "How long does a TikTok Spark Ads code last?",
+      "Can I edit the caption on a Spark Ad?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7018",
+    "evidence": {
+      "where": "Apply for authorisation with video codes"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-7001",
+    "modules": [
+      "ORG",
+      "OFF"
+    ],
+    "topics": [
+      "tiktok",
+      "tiktok shop",
+      "creator and influencer collaboration",
+      "affiliate commission"
+    ],
+    "claim": "TikTok Shop affiliate commission can be set from 1% to 80%; Target Collaboration rates override Open ones, and edits take 30 days to apply for Open but 5 days for Target.",
+    "body": "TikTok Shop's guide to affiliate collaborations describes two main routes. Open Collaboration makes products visible to every creator in the marketplace, with commission set per product, per group or for all products, between 1% and 80%; sellers can require approval for each creator and can auto-add products at rates based on top-performing products in the category. Target Collaboration invites named creators to chosen products in the same range, and its rate takes priority over the open rate, so TikTok advises setting it higher. A change to commission takes effect 30 days after the edit for Open Collaboration and 5 days after for Target Collaboration. Sellers can also set a separate commission for orders that come from ads using creators' videos; if they do not, the standard rate applies. How to apply: set the open rate you can afford on every sale for a long time, because cutting it takes a month to bite; use Target invites at a higher rate for the creators you want most, and change those rates as tests come back.",
+    "conditions": "Sellers with a TikTok Shop using the affiliate programme, US Seller Center rules.",
+    "fails_when": "Commission set without the margin maths (commission, referral fee, shipping and returns together); rules may differ in other TikTok Shop markets.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "commission 1% to 80%",
+      "open collaboration edits apply after 30 days",
+      "target collaboration edits apply after 5 days"
+    ],
+    "asks": [
+      "What commission should I give TikTok Shop affiliates?",
+      "How do I lower my TikTok Shop affiliate commission?",
+      "What's the difference between open and target collaboration on TikTok Shop?",
+      "Can I pay creators more for specific TikTok videos?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7028",
+    "evidence": {
+      "where": "Open collaboration and Target collaboration sections, FAQ"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-7002",
+    "modules": [
+      "ORG"
+    ],
+    "topics": [
+      "tiktok",
+      "tiktok shop",
+      "creator and influencer collaboration"
+    ],
+    "claim": "In the US, a TikTok Shop affiliate creator must be 18 or older, based in the US, have at least 1,000 followers, and pass age and identity checks.",
+    "body": "TikTok Shop's US guide for new creators lists the checklist to promote marketplace products and earn commission: be at least 18 years old, be based in the United States, have at least 1,000 followers for affiliate creators, complete age confirmation and identity verification, and follow TikTok Shop's policies. Some older TikTok Seller University pages and other markets show a lower follower figure, so the current US checklist is the one to use. How to apply: when recruiting creators for a US launch, screen out accounts under 1,000 followers for affiliate links. For seeding programmes with smaller creators, pay a flat fee for content you run as Spark Ads instead of relying on their affiliate links.",
+    "conditions": "Creators and brands working with TikTok Shop in the United States.",
+    "fails_when": "Other markets set their own thresholds; TikTok changes follower minimums from time to time, so check the current Seller Center page before a programme launch.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "at least 18 years old",
+      "at least 1,000 followers for affiliate creators"
+    ],
+    "asks": [
+      "How many followers does a creator need for TikTok Shop?",
+      "Can small creators sell my product on TikTok Shop?",
+      "Can my brand account post shoppable TikTok videos?",
+      "What are the TikTok Shop creator requirements?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7029",
+    "evidence": {
+      "where": "Creator checklist"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-7003",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "tiktok",
+      "tiktok shop",
+      "claims",
+      "health claims"
+    ],
+    "claim": "TikTok Shop bars claims that a non-OTC product diagnoses, treats, cures or prevents disease, generally bans before-and-after content, and since 2026 bans GLP-1 comparisons for supplements.",
+    "body": "TikTok Shop's US guidance on health-related content says products that are not over-the-counter medicines cannot state or imply that they diagnose, treat, cure, mitigate or prevent a disease or medical condition, and wellness claims that a product prevents or cures a physical, mental or emotional condition are not allowed even with a disclaimer. Creator content must not imply body transformation in an unrealistic timeframe or make exaggerated promises, and before-and-after images are generally prohibited, with narrow exceptions. Low-risk, general weight claims were loosened for adult audiences in 2025, while high-risk claims such as quantified timelines or guaranteed results stay restricted. In 2026 TikTok added that content must not say a product contains or is activated by GLP-1, or compare it to prescription drugs, and asked sellers to clean old listings and videos. How to apply: write supplement and skincare listings on function and use (what is in it, how to use it), brief creators with a banned-phrase list, and audit existing videos for GLP-1 and before-and-after content.",
+    "conditions": "Supplements, skincare, wellness and weight products sold or promoted on TikTok Shop US.",
+    "fails_when": "Regulated OTC products follow their own rules; category exemptions apply to some before-and-after uses; policy pages change often, so check the current version.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I say my supplement helps with anxiety on TikTok Shop?",
+      "Are before and after videos allowed on TikTok Shop?",
+      "Can creators compare my product to Ozempic on TikTok?",
+      "Why was my TikTok Shop video taken down for health claims?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7030",
+    "evidence": {
+      "where": "Medical and wellness claims; 2026 GLP-1 update"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-7000",
+    "modules": [
+      "MCR"
+    ],
+    "topics": [
+      "tiktok",
+      "format and placement",
+      "creative specs"
+    ],
+    "claim": "TikTok auction in-feed video should be vertical 9:16 at 540x960 or larger, at most 500 MB and 516 kbps or more, with text and logos kept inside TikTok's safe zone.",
+    "body": "TikTok's auction in-feed ad specifications recommend vertical 9:16 video at 540x960 pixels or more; horizontal 16:9 needs 960x540 or more and square 1:1 needs 640x640 or more. Files must be 500 MB or smaller with a bitrate of at least 516 kbps, in formats such as .mp4, .mov, .mpeg, .3gp or .avi, and auction in-feed video can run up to 10 minutes (Spark Ads pulled from posts have no length limit). The safe zone, the area not covered by the caption, buttons and profile icons, depends on the ratio, the caption length (a longer caption shrinks it) and any extra formats such as anchors; TikTok offers downloadable safe-zone overlays, with a separate right-to-left version for Arabic. Other TikTok pages give different limits for reservation buys (for example 5 to 60 seconds and higher bitrates), so check the page for the buying type. How to apply: edit every ad on a 9:16 timeline with the safe-zone overlay on, keep captions short so the safe zone stays large, and export at a higher bitrate than the minimum.",
+    "conditions": "Auction in-feed ads in TikTok Ads Manager.",
+    "fails_when": "Reservation, TopView and partner-app placements have their own specs; a technically valid file can still look poor at the minimum resolution.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "9:16 at 540x960 px or more",
+      "16:9 at 960x540 px or more",
+      "1:1 at 640x640 px or more",
+      "500 MB or less",
+      "516 kbps or more",
+      "up to 10 minutes for auction in-feed"
+    ],
+    "asks": [
+      "What size should my TikTok ad video be?",
+      "Where is the safe zone on TikTok ads?",
+      "How long can a TikTok ad be?",
+      "Can I run horizontal video on TikTok?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7019",
+    "evidence": {
+      "where": "Video specifications and safe zone"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-7001",
+    "modules": [
+      "MCR"
+    ],
+    "topics": [
+      "tiktok",
+      "format and placement",
+      "video length"
+    ],
+    "claim": "TikTok in-feed ads can run to 60 seconds, but TikTok's small-business guide recommends 21 to 34 seconds for most ads.",
+    "body": "TikTok's video advertising guide for small businesses says in-feed ads can be up to 60 seconds long, and that 21 to 34 seconds tends to perform best, so it recommends that range for most ads. Other TikTok playbooks say any length from 15 seconds to 3 minutes can work, which is a reminder that length is a starting point to test, not a rule. Both say sound should be on: ads should carry clear audio and not be silent. How to apply: build a first cut at 21 to 34 seconds, with the product and offer clear early, and make a shorter cut (around 15 seconds) and a longer one (60 seconds or more for demonstrations or explainers) of the same concept to test against it. Judge the cuts on cost per purchase and watch time, not on completion rate alone, since short ads finish more often without selling more.",
+    "conditions": "TikTok in-feed auction ads for direct response.",
+    "fails_when": "Products that need a long demonstration or story to sell; Spark Ads of organic posts, which keep their original length; brand-awareness buys where reach matters more than conversion.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "in-feed ads up to 60 seconds",
+      "21 to 34 seconds recommended for most ads"
+    ],
+    "asks": [
+      "How long should a TikTok ad be?",
+      "Is 15 seconds too short for a TikTok ad?",
+      "Do TikTok ads need sound?",
+      "What length works best for TikTok ads?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7020",
+    "evidence": {
+      "where": "Video length tips"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-7002",
+    "modules": [
+      "MCR"
+    ],
+    "topics": [
+      "tiktok",
+      "hook types"
+    ],
+    "claim": "TikTok's creative guidance says to show the core proposition in the first 3 seconds and land the hook within the first 6 seconds.",
+    "body": "TikTok's creative best-practice page for performance ads says introducing the product or proposition in the first 3 seconds helps recall and awareness, and recommends prioritising the hook within the first 6 seconds. TikTok's small-business playbooks call the first 3 to 6 seconds the critical window. TikTok also warns against harsh sounds such as alarms or phone rings in the opening seconds because they make people skip. How to apply: storyboard every ad so the product, the problem it solves or the offer is visible or spoken by second 3, and the reason to keep watching is set by second 6. When testing hooks, change only the first 3 to 6 seconds and keep the rest of the ad fixed, so the test reads the hook, not the whole ad. Pair this with the library's hook cards from practitioners, which cover what to put in that window.",
+    "conditions": "TikTok in-feed performance ads.",
+    "fails_when": "Story formats that rely on a reveal, where showing the product at second 1 kills curiosity; organic content where creators earn attention differently.",
+    "scope": "growth",
+    "tier": 1,
+    "numbers": [
+      "proposition in the first 3 seconds",
+      "hook within the first 6 seconds"
+    ],
+    "asks": [
+      "When should my product appear in a TikTok ad?",
+      "How long is the hook in a TikTok ad?",
+      "Why do people skip my TikTok ads in the first seconds?",
+      "What should the first 3 seconds of a TikTok ad show?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7021",
+    "evidence": {
+      "where": "Hook and opening guidance"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-7003",
+    "modules": [
+      "MCR",
+      "ADC"
+    ],
+    "topics": [
+      "tiktok",
+      "advertising law",
+      "claims"
+    ],
+    "claim": "TikTok's ad policy bars exaggerated results, before-and-after product comparisons that distort outcomes, and restricts absolute claims such as 'number 1'; weight ads face extra limits.",
+    "body": "TikTok's advertising policy on misleading and false content says ads must not promise or exaggerate a product's results and specifically prohibits product effect comparisons, such as before-and-after results, that may give a false or distorted impression of what the product does; its example is wrinkle cream. Absolute claims such as 'number 1' are restricted. The weight management policy separately bars claims that a product alone causes weight loss without diet or exercise, or that weight loss is easy or guaranteed, and any content promoting disordered eating; which weight categories may advertise at all varies by market and was updated in May 2026. TikTok's ad review guidance adds that the landing page must match the ad, or the ad is likely to be rejected. How to apply: replace before-and-after creative with demonstration, texture, routine and customer-voice formats; keep proof for any superlative or drop it; and check the landing page repeats the same offer and claims as the ad.",
+    "conditions": "Paid ads in TikTok Ads Manager for beauty, wellness, fitness and other claim-heavy categories.",
+    "fails_when": "Market-specific exceptions in the weight and cosmetic surgery policies; organic and Shop content, which follow TikTok Shop's own content policy instead.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I use before and after photos in TikTok ads?",
+      "Why was my TikTok ad rejected?",
+      "Can I say 'number 1' in a TikTok ad?",
+      "Are weight loss ads allowed on TikTok?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7031",
+    "evidence": {
+      "where": "Prohibited: product effect comparisons"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-7000",
+    "modules": [
+      "MEA"
+    ],
+    "topics": [
+      "tiktok",
+      "event contracts",
+      "server-side tracking"
+    ],
+    "claim": "When the TikTok Pixel and Events API send the same event, give both the same event name and event_id; TikTok keeps the first and drops copies within 48 hours.",
+    "body": "TikTok's event deduplication documentation says that when it receives more than one event with the same event source, event name and event_id, it keeps the first and discards later copies that arrive within 48 hours of it. A copy that arrives within 5 minutes can be merged instead, filling fields the first event lacked, such as an email address. The event_id must match exactly between the browser Pixel and the server Events API; TikTok suggests the order ID for purchase events, or any random value as long as both sides use the same one. If the server event has no event_id, TikTok can fall back to matching on the _ttp cookie, but only inside a 5-minute window. How to apply: when installing the Events API (directly or through the Shopify app), confirm in Events Manager that purchase events show as deduplicated and that the Pixel and server purchase counts are close, not doubled. Double-counted purchases inflate ROAS and train the algorithm on fake conversions.",
+    "conditions": "Stores sending web events to TikTok from both the browser Pixel and a server.",
+    "fails_when": "Stores using only the Pixel or only the Events API; event IDs generated separately in browser and server code, which never match.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "48-hour deduplication window",
+      "5-minute merge window",
+      "_ttp cookie fallback within 5 minutes"
+    ],
+    "asks": [
+      "Why is TikTok counting my purchases twice?",
+      "Do I need event_id for TikTok Events API?",
+      "How do I set up TikTok Pixel and Events API together?",
+      "My TikTok ROAS looks too high. Is tracking wrong?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7022",
+    "evidence": {
+      "where": "Deduplication logic"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-7001",
+    "modules": [
+      "MEA"
+    ],
+    "topics": [
+      "tiktok",
+      "event contracts"
+    ],
+    "claim": "TikTok's standard shop events are ViewContent, AddToCart, InitiateCheckout and Purchase; send content_ids, content_type, quantity, currency and value so catalog ads and value-based bidding work.",
+    "body": "TikTok's Standard Events and Parameters article lists the standard web events supported by both the Pixel and the Events API, including ViewContent, AddToCart, InitiateCheckout and Purchase (some partner guides still use the older name CompletePayment). For product events it recommends sending content_type, quantity, description, content_ids, currency and value. Value has to be a number and carries the total for the event, while price is the unit price. Without value and currency, TikTok cannot optimise for return on ad spend or value-based bidding, and without content_ids that match the catalog, catalog and shopping ads cannot tell which product was seen or bought. How to apply: check one test order in Events Manager and confirm each event carries content_ids in the same format as the catalog's product IDs, a numeric value, and the right currency code.",
+    "conditions": "Stores optimising TikTok ads for purchases or running catalog-based ads.",
+    "fails_when": "App-only advertisers use app events instead; store apps that map events automatically can still send the wrong ID format (variant vs product ID).",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Which events should my TikTok Pixel send?",
+      "What parameters does TikTok need for purchases?",
+      "Why can't I use value-based optimisation on TikTok?",
+      "Is CompletePayment the same as Purchase on TikTok?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7023",
+    "evidence": {
+      "where": "Standard events and recommended parameters"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "MEA-7002",
+    "modules": [
+      "MEA",
+      "ADC"
+    ],
+    "topics": [
+      "tiktok",
+      "feed optimisation",
+      "catalog ads"
+    ],
+    "claim": "For TikTok Shopping Ads, TikTok asks that at least 50% of events carry content IDs matching the catalog for prospecting, 80% recommended for retargeting, plus Advanced Matching.",
+    "body": "TikTok's Shopping Ads checklist for web advertisers sets signal minimums before catalog ads can work well. Events should carry content IDs that match products in the catalog: at least 50% of events for prospecting, with 80% recommended for retargeting, because retargeting has to know exactly which product each person viewed. It also recommends turning on manual and/or automatic Advanced Matching, which passes hashed customer details such as email or phone so more events can be tied to TikTok users, and checking that purchase events carry valid email or phone data. How to apply: in Events Manager, read the catalog match rate for ViewContent and AddToCart; if it is under 50%, fix the ID mapping (often the Pixel sends variant IDs while the feed uses product IDs, or the reverse) before launching catalog ads. Turn on Advanced Matching in the Pixel settings and confirm the store's consent banner allows it where consent law applies.",
+    "conditions": "Web stores running TikTok catalog, video shopping or Smart+ catalog ads.",
+    "fails_when": "Stores with TikTok Shop only, where Shop events are native; regions where consent rules limit sending customer data.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "at least 50% of events with matching content IDs for prospecting",
+      "80% recommended for retargeting"
+    ],
+    "asks": [
+      "Why are my TikTok catalog ads not showing products?",
+      "What is TikTok catalog match rate?",
+      "Should I turn on TikTok Advanced Matching?",
+      "How do I set up TikTok shopping ads for my website?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US",
+      "UK",
+      "EU"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7024",
+    "evidence": {
+      "where": "Step 1: set up signal tools"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "FIN-7000",
+    "modules": [
+      "FIN",
+      "OFF"
+    ],
+    "topics": [
+      "tiktok",
+      "tiktok shop",
+      "fees",
+      "profit and contribution formulas"
+    ],
+    "claim": "TikTok Shop US charges a 6% referral fee per order (from 1 April 2024; some jewellery 5%), and keeps 20% of the refunded fee, capped at $5 per SKU, as a refund administration fee.",
+    "body": "TikTok Shop's US Seller University notices say the standard referral fee rose to 6% per order from 1 April 2024, with most categories at 6%; several fine jewellery sub-categories (diamond, gold, jade, platinum and carat gold, and ruby, sapphire and emerald) moved to 5% from 31 October 2024. When an order is refunded, TikTok returns the referral fee minus a refund administration fee equal to 20% of that referral fee, capped at $5 per SKU in each refund from 15 May 2025. TikTok's own example: a $500 SKU at the 6% rate gives an admin fee of $6, which the cap cuts to $5. Some refunds, such as creator sample refunds and qualifying cancellations before shipment, carry no admin fee. These fees come on top of affiliate commission, shipping and ad cost. How to apply: in the unit-economics sheet for TikTok Shop, deduct the 6% referral fee, creator commission, and an expected refund admin cost of return rate times the capped fee, before setting any ROI target.",
+    "conditions": "Sellers on TikTok Shop in the United States.",
+    "fails_when": "Other TikTok Shop markets have different rates; fees change by notice, so check the current fee page; separate programmes such as Smart Promotion add their own fees.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "6% referral fee per order from 1 April 2024",
+      "5% for listed jewellery sub-categories from 31 October 2024",
+      "refund administration fee 20% of referral fee",
+      "capped at $5 per SKU from 15 May 2025"
+    ],
+    "asks": [
+      "How much does TikTok Shop take per sale?",
+      "What are TikTok Shop fees for jewellery?",
+      "Do I get TikTok Shop fees back when a customer returns?",
+      "How do I calculate my margin on TikTok Shop?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7026",
+    "evidence": {
+      "where": "Referral fee and refund administration fee updates"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "OPS-7000",
+    "modules": [
+      "OPS",
+      "FIN"
+    ],
+    "topics": [
+      "tiktok",
+      "tiktok shop",
+      "seller onboarding"
+    ],
+    "claim": "TikTok Shop US registers individuals, sole proprietors and companies separately, needs matching names and US addresses on unexpired documents, and requires tax information once sales reach $2,000.",
+    "body": "TikTok Shop's US registration guides say sellers must be at least 18, have a US address and valid government ID, and use a phone number and email not already tied to another TikTok Shop. Individuals register under their own name with an SSN or ITIN detail; a sole proprietor with an EIN registers as a sole proprietorship; corporations and partnerships give the legal business name, registered US address, EIN, an IRS letter as proof of business, a representative and the details of each owner holding 25% or more. Documents must be unexpired, unedited, clear, under 10 MB and in JPG, PNG, JPEG or PDF; names and addresses must match exactly across documents and the application. Sellers can start selling before sending tax information, but once sales reach $2,000 they must submit it (usually a W-9) to keep selling and be paid; without it, TikTok must withhold 24% under IRS rules. How to apply: register as the entity that will receive payouts and file taxes, gather the IRS letter and owner IDs first, and submit the W-9 at setup.",
+    "conditions": "Brands and individuals opening a TikTok Shop in the United States.",
+    "fails_when": "Other markets have their own documents and rules; TikTok's pages sometimes conflict on details (for example EIN rules for sole proprietors), so check Seller Center when applying.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "owners with 25% or more must give ID",
+      "files under 10 MB",
+      "tax information required once sales reach $2,000",
+      "24% backup withholding without tax information"
+    ],
+    "asks": [
+      "What documents do I need to open a TikTok Shop?",
+      "Can I sell on TikTok Shop as an individual?",
+      "Why was my TikTok Shop application rejected?",
+      "When does TikTok Shop need my tax info?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "US"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7027",
+    "evidence": {
+      "where": "Documents by seller type; tax documents"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "OPS-7001",
+    "modules": [
+      "OPS",
+      "WLD"
+    ],
+    "topics": [
+      "tiktok",
+      "tiktok shop",
+      "market entry"
+    ],
+    "claim": "TikTok Shop runs country by country (US, Mexico, Brazil, six Southeast Asian markets, Japan, the UK and eight EU countries), each with its own registration; India is not one.",
+    "body": "TikTok Shop's seller portal lists its markets by region: in the Americas, the United States, Mexico and Brazil; in Asia, the Philippines, Singapore, Thailand, Vietnam, Indonesia, Malaysia and Japan; in Europe, the United Kingdom, Germany, France, Spain, Ireland, Italy, Poland, the Netherlands and Belgium. A seller registers separately in each market, with a local warehouse or pickup address and payout account, because the shop operates locally. Fees and documents differ: the US page says there is no setup fee and a 6% commission on each sale, while other markets publish their own rates and may require local tax numbers (Italy, for example, asks corporate sellers and sole traders for a VAT number). TikTok itself is blocked in India, so there is no TikTok Shop there. How to apply: launch TikTok Shop where you already hold stock and can ship within the market's delivery standards, and treat each new country as a separate shop with its own fees, returns address and customer service.",
+    "conditions": "Brands deciding where to open TikTok Shop.",
+    "fails_when": "TikTok adds markets over time (a TikTok newsroom post announced Austria with Belgium, the Netherlands and Poland), so check the portal; cross-border programmes may let some sellers reach markets without local entities.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "US: no setup fee, 6% commission per sale"
+    ],
+    "asks": [
+      "Which countries have TikTok Shop?",
+      "Can I sell on TikTok Shop from India?",
+      "Do I need a separate TikTok Shop for the UK?",
+      "Is TikTok Shop available in Europe?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "global"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7033",
+    "evidence": {
+      "where": "Market selector by region"
+    },
+    "strength": "platform_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-7009",
+    "modules": [
+      "ADC",
+      "ORG"
+    ],
+    "topics": [
+      "tiktok",
+      "india",
+      "channel choice"
+    ],
+    "claim": "TikTok has been blocked in India since 29 June 2020 under Section 69A of the IT Act, so Indian brands cannot advertise to or sell to Indian buyers on TikTok.",
+    "body": "On 29 June 2020 India's Ministry of Electronics and Information Technology blocked TikTok and 58 other apps under Section 69A of the Information Technology Act and its 2009 blocking rules, citing threats to sovereignty, defence, state security and public order and reports of user data being sent to servers outside India. Further orders blocked more apps later in 2020. The block means TikTok ads, TikTok Shop and TikTok creator programmes do not reach audiences in India. How to apply: for an Indian brand selling at home, short-form video plans go to Instagram Reels, YouTube Shorts and Indian short-video apps, and TikTok cards in this library (all scoped to other markets) do not apply. An Indian brand exporting to the US, UK or EU can still use TikTok in those markets through a local seller or ad account that meets that market's rules, and should apply the US or UK TikTok cards there.",
+    "conditions": "Brands selling to buyers in India.",
+    "fails_when": "Indian brands targeting buyers abroad, where TikTok is available; the block could be lifted by a future government order, so check before planning.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "blocked 29 June 2020",
+      "59 apps in the first order"
+    ],
+    "asks": [
+      "Can I advertise on TikTok in India?",
+      "Is TikTok Shop available in India?",
+      "What should I use instead of TikTok for my Indian brand?",
+      "Can my Indian brand sell on TikTok in the US?"
+    ],
+    "platforms": [
+      "tiktok"
+    ],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7007",
+    "evidence": {
+      "where": "Press release of 29 June 2020"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "LPG-7000",
+    "modules": [
+      "LPG",
+      "CXP"
+    ],
+    "topics": [
+      "india",
+      "advertising law",
+      "page disclosures",
+      "returns policy"
+    ],
+    "claim": "An Indian brand selling its own stock online must show, prominently, its return, refund, exchange, warranty, delivery and return-shipping cost terms, payment methods and fees, and a single all-in price with its breakup.",
+    "body": "The Consumer Protection (E-Commerce) Rules, 2020 call a business that owns its inventory and sells straight to consumers an inventory e-commerce entity, and expressly include single brand retailers, so a D2C brand's own website is covered. Rule 7(1) says it must display, clearly and prominently: accurate information on return, refund, exchange, warranty and guarantee, delivery and shipment, the cost of return shipping, modes of payment and the grievance mechanism; all notices required by other laws; the payment methods offered, their security, any fees, how to cancel regular payments, chargeback options and the payment provider's contact; and the total price as one figure with a breakup of every compulsory and voluntary charge, such as delivery, handling and tax. It must also give each complaint a ticket number the buyer can track. Rule 4(2) adds the entity's legal name, head office and branch addresses, website and customer care and grievance officer contacts. How to apply: put a short returns, delivery and payments summary on every product page and in the cart, link the full policies in the footer, and show the cart total with each charge listed before payment.",
+    "conditions": "Brands selling their own products to consumers in India through their own website or app.",
+    "fails_when": "Marketplace sellers give the same details to the marketplace to display (rule 6(5)); the 2026 amendment, in force 1 January 2027, adds further listing details.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "What do I legally need to show on my Indian online store?",
+      "Do I need a return policy on my Shopify store in India?",
+      "Do I have to show delivery charges before checkout in India?",
+      "What does the E-Commerce Rules say about D2C websites?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7000",
+    "evidence": {
+      "where": "Rules 3(1)(f), 4(2) and 7(1)"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "CXP-7000",
+    "modules": [
+      "CXP",
+      "OPS"
+    ],
+    "topics": [
+      "india",
+      "returns policy",
+      "refunds"
+    ],
+    "claim": "In India, an online seller cannot refuse to take back goods or refund if they are defective, deficient, spurious, not as advertised, or delivered later than the stated schedule (unless force majeure).",
+    "body": "Rule 7(4) of the Consumer Protection (E-Commerce) Rules, 2020 says no inventory e-commerce entity may refuse to take back goods, or refuse to refund what was paid, where the goods are defective, deficient or spurious, do not have the characteristics or features advertised or agreed, or arrive late against the stated delivery schedule. Late delivery caused by force majeure is excused. Rule 6(3) puts the same duty on sellers on a marketplace. Rule 4(10) requires refunds on accepted requests to be paid within a reasonable time or as the Reserve Bank of India or other law prescribes. So a 'no returns' policy is fine for change-of-mind returns, but it cannot block returns or refunds in these cases. How to apply: write the returns policy in two parts, a statutory part (faulty, wrong, not as described or late: always accepted) and a goodwill part (change of mind, with any window and conditions you choose), and state realistic delivery dates, because a promised date you miss becomes a refund right.",
+    "conditions": "Online sales to consumers in India, own site or marketplace.",
+    "fails_when": "Change-of-mind returns, which the rules leave to the seller's policy; delays caused by force majeure.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I have a no returns policy in India?",
+      "Does a late delivery mean I have to refund in India?",
+      "Do I have to refund a customer if the product doesn't match the photos?",
+      "How fast must I refund customers in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7000",
+    "evidence": {
+      "where": "Rules 4(10), 6(3) and 7(4)"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "CRO-7000",
+    "modules": [
+      "CRO",
+      "OFF"
+    ],
+    "topics": [
+      "india",
+      "checkout",
+      "consent"
+    ],
+    "claim": "Indian e-commerce rules allow a purchase to be recorded only on an explicit, affirmative action, never a pre-ticked box, and bar cancellation charges unless the seller pays similar charges when it cancels.",
+    "body": "Rule 4(9) of the Consumer Protection (E-Commerce) Rules, 2020 says an e-commerce entity may record a consumer's consent to buy only when it is expressed through an explicit and affirmative action, and must not record it automatically, naming pre-ticked checkboxes. That covers the main order and any add-on, warranty, insurance or subscription bundled at checkout. Rule 4(8) bars cancellation charges on a consumer who cancels after confirming, unless the entity also bears similar charges when it cancels an order on its own. Rule 4(11) bars price manipulation for unreasonable profit and discriminating between consumers of the same class. How to apply: in checkout tests, every paid extra starts unticked and needs a click to add; if you charge a cancellation fee on made-to-order items, write the matching fee you will pay or credit the buyer when you cancel, and keep both in the policy.",
+    "conditions": "Checkout and order flows on Indian e-commerce sites and apps.",
+    "fails_when": "Necessary charges disclosed at purchase, such as delivery and taxes, are not optional add-ons; the 2023 dark pattern guidelines add more checkout rules (see the basket sneaking card).",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I pre-tick a gift wrap or insurance box at checkout in India?",
+      "Can I charge a cancellation fee in India?",
+      "Is an auto-added warranty legal in India?",
+      "What does Indian law say about checkout consent?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7000",
+    "evidence": {
+      "where": "Rules 4(8), 4(9) and 4(11)"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "ADC-7010",
+    "modules": [
+      "ADC",
+      "MCR",
+      "LPG"
+    ],
+    "topics": [
+      "india",
+      "advertising law",
+      "claims",
+      "reviews"
+    ],
+    "claim": "Under India's E-Commerce Rules, a brand's ads must match the product's real characteristics and use conditions, it must not post reviews posing as a buyer, and vouching '100% genuine' makes it liable for authenticity.",
+    "body": "Rule 7 of the Consumer Protection (E-Commerce) Rules, 2020 sets three duties that reach ads and product pages for a brand selling its own stock. Rule 7(3): advertisements must be consistent with the actual characteristics, access and usage conditions of the goods. Rule 7(2): the entity must not falsely represent itself as a consumer and post reviews, or misrepresent the quality or features of goods. Rule 7(5): an entity that explicitly or implicitly vouches for, or guarantees, the authenticity of goods bears the liability in any action over their authenticity. Rule 4(6) adds that an entity selling imported goods must name the importer it bought them from. Marketplace sellers carry the same ad and review duties under rule 6. How to apply: check every ad claim against the product spec sheet before launch, never seed reviews from staff or agency accounts, and use 'genuine' or 'authentic' badges only where you can prove the chain of supply, because the badge shifts liability to you.",
+    "conditions": "Ads, listings and reviews for goods sold online to consumers in India.",
+    "fails_when": "ASCI's code and the CCPA's 2022 ad guidelines add further claim rules (substantiation, disclaimers); product-specific laws apply to regulated categories.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can my team post reviews of our products in India?",
+      "Is it risky to say 100% genuine on my product page?",
+      "Do my ads have to match the product exactly in India?",
+      "Do I need to name the importer on my Indian website?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7000",
+    "evidence": {
+      "where": "Rules 4(6), 7(2), 7(3) and 7(5)"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-7000",
+    "modules": [
+      "OFF",
+      "LPG"
+    ],
+    "topics": [
+      "india",
+      "dark patterns",
+      "pricing",
+      "drip pricing"
+    ],
+    "claim": "India's dark pattern guidelines treat four things as drip pricing: price not shown upfront, a higher charge after confirmation, 'free' without saying continued use needs payment, and blocking a paid service until more is bought.",
+    "body": "Annexure 1 of the CCPA's Guidelines for Prevention and Regulation of Dark Patterns, 2023 (30 November 2023) defines drip pricing in four forms: elements of the price not revealed upfront or revealed surreptitiously; a price after purchase confirmation higher than the amount shown at checkout; a product or service advertised as free without saying that continued use needs an in-app purchase; and stopping a user from using a service already paid for unless something more is bought. The illustrations include a flight shown at one price at checkout and charged at another at payment, a 'play chess for free' app that asks for payment after 7 days without saying so, and a gym membership that turns out to need special shoes or gloves. A marketplace is not liable for price changes made by third-party sellers or caused by factors beyond its control. How to apply: show delivery, COD and platform fees on the product page or before the cart total, keep the payment amount identical to the checkout total, and state any time limit on free trials or samples in the offer itself.",
+    "conditions": "Platforms, advertisers and sellers offering goods or services to buyers in India.",
+    "fails_when": "Price changes by a third-party seller on a marketplace (marketplace exception); the illustrations are guidance, not an exhaustive legal test.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "guidelines dated 30 November 2023",
+      "chess app illustration: payment after 7 days"
+    ],
+    "asks": [
+      "Can I add COD fees at the end of checkout in India?",
+      "Is a free trial legal in India if I charge later?",
+      "What is drip pricing under Indian law?",
+      "Do I need to show shipping charges upfront in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7001",
+    "evidence": {
+      "where": "Annexure 1, item 8 (drip pricing)"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-7001",
+    "modules": [
+      "OFF",
+      "MCR"
+    ],
+    "topics": [
+      "india",
+      "dark patterns",
+      "urgency",
+      "scarcity"
+    ],
+    "claim": "India's 2023 dark pattern guidelines ban false urgency: invented scarcity or popularity, such as fake 'people viewing' counts, or a 'limited time, select group' sale that is not limited.",
+    "body": "The CCPA's Guidelines for Prevention and Regulation of Dark Patterns, 2023 define false urgency as falsely stating or implying urgency or scarcity to push a user into an immediate purchase or action, including showing false popularity of a product or overstating how few units remain. The illustrations are showing high demand without basis (for example, a rooms-left alert with an invented count of people viewing) and creating false time pressure, such as calling a sale exclusive for a limited time to a select group of users when it is not. The guidelines apply to every platform offering goods or services in India, and to advertisers and sellers. Countdown timers, low-stock badges and 'X people bought this' widgets are fine only when they show real data: the timer ends the offer when it reaches zero, the stock count is live, and the viewer or sales count is genuine. How to apply: audit every urgency widget on the store (many apps fake them by default), switch off any that do not read live data, and end sales when the timer says they end.",
+    "conditions": "Product pages, carts, emails and ads seen by buyers in India.",
+    "fails_when": "Genuine limited stock or time-bound offers that are honestly stated; ASCI's 2023 ad guidelines also require stock evidence for scarcity claims in ads.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I show a countdown timer on my sale in India?",
+      "Is 'only 3 left' legal in India?",
+      "Can I use a fake 'people are viewing this' popup?",
+      "What is false urgency under Indian law?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7001",
+    "evidence": {
+      "where": "Annexure 1, item 1 (false urgency)"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "LPG-7001",
+    "modules": [
+      "LPG",
+      "EML",
+      "CRO"
+    ],
+    "topics": [
+      "india",
+      "dark patterns",
+      "pop-ups",
+      "email capture"
+    ],
+    "claim": "India's dark pattern guidelines make it unlawful to force a newsletter sign-up or app download to buy, nag without a 'No' option, hide or fade the decline button, or word opt-outs as 'Yes / Not now'.",
+    "body": "Four of the 13 patterns in Annexure 1 of the CCPA's 2023 guidelines sit in pop-ups and sign-up flows. Forced action: making a user subscribe to a newsletter, download an unrelated app, share contacts or social networks, or give unnecessary details such as Aadhaar or card numbers in order to buy or use what they came for. Nagging: repeated requests or interruptions the user has not specifically allowed, such as repeatedly asking to download the app, or asking to enable notifications or cookies with no option to say no. Interface interference: design that highlights one choice and hides another, such as a faint 'No' button, a tiny cancel symbol, or a top-right 'X' that opens an ad instead of closing the pop-up. Trick question: confusing wording that steers the user, such as an opt-out whose choices are 'Yes, I would like updates' and 'Not now' instead of yes or no. How to apply: let shoppers check out as guests, give every email or SMS pop-up a clear, equally visible 'No thanks' that closes it, show it once per session, and phrase consent as a plain yes or no.",
+    "conditions": "Websites and apps selling to buyers in India: pop-ups, sign-up gates, permission prompts and consent screens.",
+    "fails_when": "Details genuinely needed to deliver (address, phone for the courier) are not forced action; repeated prompts the user has agreed to are not nagging.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "13 specified dark patterns"
+    ],
+    "asks": [
+      "Can I make customers create an account to check out in India?",
+      "Is my email pop-up legal in India?",
+      "Can I keep asking visitors to download my app?",
+      "Is 'Not now' allowed instead of 'No' on my pop-up?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7001",
+    "evidence": {
+      "where": "Annexure 1, items 4, 6, 10 and 11"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-7002",
+    "modules": [
+      "OFF",
+      "CRO"
+    ],
+    "topics": [
+      "india",
+      "dark patterns",
+      "bundles and AOV",
+      "upsells"
+    ],
+    "claim": "In India, adding paid items, services or donations at checkout without consent is basket sneaking; free samples, complimentary services and disclosed necessary fees (delivery, gift wrap, taxes) are allowed.",
+    "body": "Annexure 1 of the CCPA's Guidelines for Prevention and Regulation of Dark Patterns, 2023 defines basket sneaking as including extra items such as products, services or payments to charity or donation at checkout without the user's consent, so the total goes above what was chosen. Free samples, complimentary services and necessary fees disclosed at the time of purchase do not count; the guidelines name delivery charges, gift wrapping charges and government taxes as examples of such fees. Illustrations include pre-ticked paid add-ons, a paid subscription added to a single-service booking, and travel insurance added to a flight. A related pattern, confirm shaming, covers using guilt or ridicule to push the add-on, such as a decline button that says 'I will stay unsecured' or mocking a shopper who removes a charity donation. How to apply: present upsells, protection plans and donations as unticked options the shopper adds, word the decline neutrally ('No thanks'), and put any free gift in the cart at zero price with a note that it is free.",
+    "conditions": "Checkout, cart and order-bump flows for buyers in India.",
+    "fails_when": "Fees that are necessary and disclosed at purchase; add-ons the shopper actively chooses.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Can I auto-add shipping protection to the cart in India?",
+      "Can I add a free sample to every order?",
+      "Is a pre-ticked donation legal in India?",
+      "What wording can I use when a customer declines an upsell?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7001",
+    "evidence": {
+      "where": "Annexure 1, items 2 and 3"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-7003",
+    "modules": [
+      "OFF",
+      "EML",
+      "CXP"
+    ],
+    "topics": [
+      "india",
+      "dark patterns",
+      "subscription structure"
+    ],
+    "claim": "India's dark pattern guidelines ban subscription traps (hard or hidden cancellation, card details for a free trial) and covert SaaS billing (no notice when a trial turns paid, silent renewals).",
+    "body": "Annexure 1 of the CCPA's Guidelines for Prevention and Regulation of Dark Patterns, 2023 defines a subscription trap as making cancellation of a paid subscription impossible or long and complex, hiding the cancel option, forcing a user to give payment details or authorise auto-debit to get a free subscription, or giving ambiguous or cumbersome cancellation instructions. SaaS billing covers recurring charges that exploit subscription loops to take money as quietly as possible: not telling the user when a free trial converts to paid, silent recurring debits or auto-renewals, charging for features the user does not use, and shady card authorisation. Both apply to subscribe-and-save, refill clubs and memberships, not only software. RBI's e-mandate rules (see the library's recurring payments card) separately require a pre-debit notice. How to apply: put a cancel link where the shopper manages the subscription, let them cancel in as few steps as they took to sign up, email before a trial converts and before each renewal, and take card details for a trial only if the offer says clearly that it will convert.",
+    "conditions": "Subscriptions, memberships, trials and auto-renewing plans sold to buyers in India.",
+    "fails_when": "One-off purchases; illustrations are guidance and the CCPA decides close cases.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Do I have to let customers cancel subscriptions online in India?",
+      "Can I take card details for a free trial in India?",
+      "Do I need to tell customers before their subscription renews?",
+      "Is hiding the cancel button illegal in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7001",
+    "evidence": {
+      "where": "Annexure 1, items 5 and 12"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-7004",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "india",
+      "advertising law",
+      "creator and influencer collaboration",
+      "dark patterns"
+    ],
+    "claim": "India's 2023 dark pattern guidelines make disguised ads, those posing as user content, news or organic posts, unlawful, and put the duty to disclose on the seller or advertiser that posts them.",
+    "body": "Annexure 1 of the CCPA's Guidelines for Prevention and Regulation of Dark Patterns, 2023 lists disguised advertisement as a dark pattern: masking an advertisement as other content, such as user-generated content or a news article, or false ads designed to blend in with the interface so users click them. The explanation says it includes misleading advertisements as defined in section 2(28) of the Consumer Protection Act, that the CCPA's 2022 misleading advertisement guidelines also apply, and that the seller or advertiser who posts the content is responsible for disclosing that it is an ad. That is a legal duty on the brand, in addition to ASCI's self-regulatory labels. How to apply: label every paid creator post, whitelisted or Spark-style ad of a creator's post, advertorial and 'review' article as an ad in the content itself, and write the label requirement into creator contracts and briefs; using ASCI's permitted labels (Ad, Sponsored, Collaboration and so on) at the start of the caption satisfies both.",
+    "conditions": "Creator, affiliate and native advertising seen by audiences in India.",
+    "fails_when": "Genuine unpaid reviews and posts with no material connection; brand-owned editorial clearly presented as the brand's own content.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Do I need to say #ad on influencer posts in India?",
+      "Who is responsible if an influencer doesn't disclose an ad in India?",
+      "Is an advertorial legal in India?",
+      "Can I run ads that look like news articles in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7001",
+    "evidence": {
+      "where": "Annexure 1, item 9 (disguised advertisement)"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-7005",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "india",
+      "advertising law",
+      "creator and influencer collaboration",
+      "endorsements"
+    ],
+    "claim": "India's 2022 ad guidelines require endorsements to reflect the endorser's genuine, current opinion and real experience, and any material connection to be disclosed; endorsers face penalties and bans.",
+    "body": "The CCPA's Guidelines for Prevention of Misleading Advertisements and Endorsements for Misleading Advertisements, 2022 (9 June 2022) apply to manufacturers, service providers, traders, advertising agencies and endorsers, in any medium. Clause 13 says an endorsement must reflect the genuine, reasonably current opinion of the person making it, based on adequate information about or experience with the product, and must not be deceptive. Clause 14 says that where an endorser has a connection with the advertiser that could affect how much weight the audience gives the endorsement, and the audience would not expect it, the connection must be fully disclosed. The page summarising the rules notes that the Consumer Protection Act lets the CCPA fine manufacturers, advertisers and endorsers up to Rs 10 lakh for a misleading ad, up to Rs 50 lakh for repeat contraventions, and bar an endorser for up to 1 year, or up to 3 years for repeats. How to apply: give creators the product to use before they post, let them say what they actually think, brief them on the disclosure, and keep the product claims they may repeat to those you can prove.",
+    "conditions": "Creator, celebrity and customer endorsements in ads seen in India.",
+    "fails_when": "ASCI's influencer guidelines add label and placement rules; category laws (health, finance) add qualification rules for some endorsers.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "guidelines dated 9 June 2022",
+      "fine up to Rs 10 lakh, up to Rs 50 lakh for repeats",
+      "endorser ban up to 1 year, up to 3 years for repeats"
+    ],
+    "asks": [
+      "Can an influencer endorse my product without using it in India?",
+      "What's the penalty for misleading influencer ads in India?",
+      "Do I need to tell creators to disclose payment in India?",
+      "Can I script an influencer's review?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7006",
+    "evidence": {
+      "where": "Clauses 13 and 14"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "OFF-7004",
+    "modules": [
+      "OFF",
+      "ADC"
+    ],
+    "topics": [
+      "india",
+      "advertising law",
+      "offer mechanics",
+      "free offers"
+    ],
+    "claim": "Under India's 2022 ad guidelines, a low-price bait ad needs enough stock or a 'limited stock' note, and 'free' is barred if the buyer pays packing or handling, or the base price rose to fund it.",
+    "body": "Clause 5 of the CCPA's Guidelines for Prevention of Misleading Advertisements and Endorsements, 2022 covers bait advertisements, which lure buyers with a low price. The advertiser must have a realistic prospect of selling at that price, keep enough supply for foreseeable demand, say stock is limited if demand may exceed it, say so if it is testing demand, and disclose any geographic or age restrictions. Clause 7 covers free claims: an item cannot be called free or without charge if the buyer pays more than the unavoidable cost of responding and receiving it, the commitment needed to get it must be clear, and 'free' is not allowed where the buyer pays packing or handling, where the price of the required purchase went up because of the promotion, or where its quality or quantity went down. An element already included in a package price cannot be called free, and 'free trial' cannot describe a money-back offer or one that needs a non-refundable purchase. How to apply: cost every 'free gift' and 'buy 2 get 1' offer at the normal price of the paid item, never add handling fees to a free item, and add 'while stocks last' with real stock behind it.",
+    "conditions": "Promotions and price ads seen by buyers in India.",
+    "fails_when": "ASCI's code adds its own free and BOGO rules (see the ASCI card); delivery charges at the actual cost of sending are allowed if disclosed.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "guidelines dated 9 June 2022"
+    ],
+    "asks": [
+      "Can I charge shipping on a free gift in India?",
+      "Is 'buy one get one free' legal if I raised the price?",
+      "Do I need to say limited stock on a sale ad in India?",
+      "Can I call a money-back guarantee a free trial?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7006",
+    "evidence": {
+      "where": "Clauses 5 and 7"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "MCR-7004",
+    "modules": [
+      "MCR",
+      "LPG"
+    ],
+    "topics": [
+      "india",
+      "advertising law",
+      "disclaimers"
+    ],
+    "claim": "Indian ad disclaimers must not contradict or correct the main claim, must be in the claim's language and font, visible on one normal reading, and keep pace with any voice-over.",
+    "body": "Clause 11 of the CCPA's Guidelines for Prevention of Misleading Advertisements and Endorsements, 2022 says a disclaimer may explain or qualify a claim but must not contradict the main claim or message, change the ordinary meaning of the words, hide material information or correct a claim that would otherwise mislead. It must be in the same language as the claim and the same font, placed prominently (ideally on the same panel for packaging), clearly visible to a normally-sighted person reading it once from a reasonable distance at a reasonable speed, and, where there is a voice-over, in sync with it at the same speed. Clause 12 adds that guarantees must state a fixed period, and research cited in an ad needs its source and date. How to apply: if a claim only works with an asterisk ('huge savings*', 'visible results fast*'), rewrite the headline so it is true without the asterisk; set disclaimers in the same typeface as the headline at a readable size and hold them on screen long enough to read.",
+    "conditions": "Print, packaging, video and digital ads seen in India.",
+    "fails_when": "Category rules (finance, health, food) may require specific disclaimer text; ASCI's code adds its own disclaimer guidance.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "guidelines dated 9 June 2022"
+    ],
+    "asks": [
+      "Can I fix a claim with 'T&C apply' in India?",
+      "How big does my ad disclaimer need to be in India?",
+      "Can my disclaimer be in English if my ad is in Hindi?",
+      "Do I need a time limit on my guarantee claim?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7006",
+    "evidence": {
+      "where": "Clauses 11 and 12"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "LPG-7002",
+    "modules": [
+      "LPG",
+      "SET",
+      "COG"
+    ],
+    "topics": [
+      "india",
+      "page disclosures",
+      "labelling",
+      "country of origin"
+    ],
+    "claim": "Indian packaged-goods rules require an online seller to show every mandatory label declaration on the product page except manufacture date, and from 1 July 2026 a country-of-origin filter for imports.",
+    "body": "Rule 6(10) of the Legal Metrology (Packaged Commodities) Rules, 2011, in force from 1 January 2018, says an e-commerce entity must display on its website or app the mandatory declarations in rule 6(1), except the month and year of manufacture or packing. Those declarations include the name and address of the manufacturer, packer or importer, the country of origin or manufacture for imports, the common or generic name, net quantity in a standard unit, the retail sale price as maximum retail price inclusive of all taxes, consumer care details, dimensions where relevant and the unit sale price. On a marketplace, the seller or manufacturer is responsible for the accuracy of what it supplies, while the platform keeps intermediary protection only if it does not edit that information. Rule 6(10-A), inserted in 2026 with effect from 1 July 2026, requires an e-commerce entity selling imported products to let buyers search and sort listings by country of origin. Online display does not remove the duty to print every declaration on the pack. How to apply: add a 'Product details' block to each product template with these fields, fed from the same data as the label.",
+    "conditions": "Pre-packaged goods sold online to consumers in India.",
+    "fails_when": "Food labels follow FSSAI rules for some fields and cosmetics the Drugs and Cosmetics Rules; packs of 10 g or 10 ml or less are generally exempt (rule 26); loose garments have their own list.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "rule 6(10) in force from 1 January 2018",
+      "rule 6(10-A) country-of-origin filter from 1 July 2026"
+    ],
+    "asks": [
+      "Do I need to show MRP on my Indian website?",
+      "What product details must I list online in India?",
+      "Do I have to show country of origin on my store?",
+      "Do I need a country-of-origin filter for imported products in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7002",
+    "evidence": {
+      "where": "Rule 6(1), 6(10) and 6(10-A) with footnotes 34 and 35"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "LPG-7003",
+    "modules": [
+      "LPG",
+      "BRD",
+      "COG"
+    ],
+    "topics": [
+      "india",
+      "jewellery",
+      "hallmarking",
+      "page disclosures"
+    ],
+    "claim": "Hallmarked gold in India carries three marks since 1 July 2021: the BIS logo, purity in carat and fineness, and a six-digit alphanumeric HUID buyers can check in the BIS Care app.",
+    "body": "The Bureau of Indian Standards' hallmarking FAQ says hallmarking is the official recording of precious metal content and covers gold and silver. Gold jewellery and artefacts are hallmarked in six grades under IS 1417:2016: 14K (585), 18K (750), 20K (833), 22K (916), 23K (958) and 24KS (995); silver has its own six grades under IS 2112:2014. Since 1 July 2021 a hallmark on gold has three parts: the BIS standard mark, the caratage and fineness, and a six-digit alphanumeric Hallmark Unique Identification (HUID) that is unique to each item and traceable. Buyers can verify any HUID through the 'Verify HUID' feature in the BIS Care app. Registered jewellers must show the BIS registration certificate and the caratage-to-fineness relationship and keep a magnifier of at least 10X so buyers can see the mark. How to apply: for an online jewellery store, state the caratage and fineness on every gold product page, show a close-up photo of the hallmark, tell buyers the HUID is on the piece and how to check it in BIS Care, and keep the HUID per item in your stock records so support can answer queries.",
+    "conditions": "Gold and silver jewellery and artefacts sold to consumers in India.",
+    "fails_when": "Exempt items such as pieces under 2 grams or kundan, polki and jadau work (see the BIS registration card); gold bullion and coins follow refinery rules.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "six gold grades: 14K (585), 18K (750), 20K (833), 22K (916), 23K (958), 24KS (995)",
+      "three marks since 1 July 2021",
+      "six-digit alphanumeric HUID",
+      "magnifier of at least 10X"
+    ],
+    "asks": [
+      "What does the hallmark on gold mean in India?",
+      "What is HUID on jewellery?",
+      "How can my customers check my gold is real?",
+      "What should my jewellery product page say about purity?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7004",
+    "evidence": {
+      "where": "Hallmarking FAQs: marks, grades and HUID"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "COG-7000",
+    "modules": [
+      "COG",
+      "OPS",
+      "FIN"
+    ],
+    "topics": [
+      "india",
+      "jewellery",
+      "hallmarking",
+      "compliance"
+    ],
+    "claim": "Any Indian business selling hallmarked gold must register with BIS (free, online, valid for life); hallmarking falls on the first sale, pieces under 2 grams are exempt, and charges are itemised on invoices.",
+    "body": "The Bureau of Indian Standards' page for jewellers says every manufacturer, wholesaler, distributor or retailer selling hallmarked gold or silver must register with BIS, which is done online through the NSWS portal, granted at once, free and valid for life. Mandatory hallmarking of gold jewellery and artefacts applies in the districts listed in the Mandatory Hallmarking Order as amended, and the duty sits with whoever makes the first point of sale, so an item is hallmarked once in the chain. The exemption list includes articles under 2 grams, kundan, polki and jadau jewellery, gold thread, gold watches and fountain pens, articles for export to a buyer's specification, items not yet complete, bullion forms, and jewellers with annual turnover up to Rs 40 lakh, who may register voluntarily. Hallmarking charges must be shown separately on the sales invoice; printing the HUID on invoices is voluntary. Under the BIS Act 2016 a breach can bring imprisonment and fines of at least Rs 1 lakh, rising to five times the value of the goods, and buyers of under-purity items are owed twice the shortfall plus testing charges. How to apply: register before launch, buy only HUID-marked stock from suppliers, and add a hallmarking line to invoices.",
+    "conditions": "Jewellery brands, including online-only sellers, selling gold or silver articles in India.",
+    "fails_when": "Districts outside the order's list; exempt categories; silver hallmarking rules differ from gold.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "registration free and valid for life",
+      "pieces under 2 grams exempt",
+      "turnover up to Rs 40 lakh exempt",
+      "fine at least Rs 1 lakh up to five times the goods' value",
+      "compensation twice the purity shortfall plus testing charges"
+    ],
+    "asks": [
+      "Do I need BIS registration to sell gold jewellery online?",
+      "Is hallmarking mandatory for small jewellery pieces?",
+      "Do I have to show hallmarking charges on my invoice?",
+      "What's the penalty for selling unhallmarked gold in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7003",
+    "evidence": {
+      "where": "Registration, exemptions (a) to (m), penalties"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  }
+]

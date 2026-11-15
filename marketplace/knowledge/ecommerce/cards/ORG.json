@@ -116,7 +116,13 @@
       "where": "early segment on the give vs ask ratio and the Leads book"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "ORG-0004",
@@ -157,7 +163,19 @@
       "quote": "let's have 20 of him"
     },
     "strength": "stated_by_practitioner",
-    "public": false
+    "public": false,
+    "situations": {
+      "stage": [
+        "early"
+      ],
+      "model": [
+        "dtc"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "ORG-0005",
@@ -200,7 +218,15 @@
       "quote": "you're first show is probably going to be bad"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "cod",
+        "subscription",
+        "marketplace",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "ORG-0006",
@@ -239,7 +265,12 @@
       "where": "Planning section (iPad buyer giveaway) and numbers section"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low"
+      ]
+    }
   },
   {
     "id": "ORG-0007",
@@ -363,7 +394,12 @@
       "where": "UGC army section and client example"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "ORG-0010",
@@ -448,7 +484,12 @@
       "where": "Repeatable formats section and multi-channel strategy section"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "ORG-0012",
@@ -492,7 +533,12 @@
       "quote": "invest in that one thing that I know every time is going to help"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "early"
+      ]
+    }
   },
   {
     "id": "ORG-0013",
@@ -532,7 +578,15 @@
       "where": "60-second blitz on networks, account types, country and schedulers"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "ORG-0014",
@@ -573,7 +627,13 @@
       "where": "Level two section on CTAs, lead magnets and DMs"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "prelaunch",
+        "early"
+      ]
+    }
   },
   {
     "id": "ORG-0015",
@@ -615,7 +675,13 @@
       "where": "Content types section and 'what are you actually going to do' plan"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "mid",
+        "high"
+      ]
+    }
   },
   {
     "id": "ORG-0016",
@@ -659,7 +725,19 @@
       "quote": "the average length of the most viral hooks was 7.7 words long"
     },
     "strength": "shown_with_numbers",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "dtc",
+        "cod",
+        "subscription",
+        "marketplace"
+      ],
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "ORG-0017",
@@ -699,7 +777,12 @@
       "quote": "the visual has to match what the reel is about"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "early"
+      ]
+    }
   },
   {
     "id": "ORG-0018",
@@ -821,7 +904,13 @@
       "where": "posting frequency and format questions in the first third"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "ORG-0021",
@@ -861,7 +950,12 @@
       "where": "converting followers into dollars, near the end"
     },
     "strength": "anecdote",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low"
+      ]
+    }
   },
   {
     "id": "ORG-0022",
@@ -903,7 +997,12 @@
       "quote": "the only ramp you do want to build is from rented to owned"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "early"
+      ]
+    }
   },
   {
     "id": "ORG-0023",
@@ -946,7 +1045,12 @@
       "quote": "precision of topic is everything"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "early"
+      ]
+    }
   },
   {
     "id": "ORG-0024",
@@ -985,7 +1089,13 @@
       "where": "Tactical tips section, short sentences and the Buffett example; earlier mention of Hemingway app"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "ORG-0025",
@@ -1353,7 +1463,13 @@
       "quote": "it's always just a flat a flat fee"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "ORG-0034",
@@ -1479,7 +1595,16 @@
       "where": "Tik Tok Shops section: the either-or creator offer"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "early",
+        "scaling"
+      ],
+      "model": [
+        "marketplace"
+      ]
+    }
   },
   {
     "id": "ORG-0037",
@@ -1565,7 +1690,13 @@
       "where": "Launch mechanics segment (about 13:28 to 20:43)"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "price": [
+        "low",
+        "mid"
+      ]
+    }
   },
   {
     "id": "ORG-0039",
@@ -1647,7 +1778,12 @@
       "where": "Influencer team structure (about 01:24 to 05:46)"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "stage": [
+        "scaling"
+      ]
+    }
   },
   {
     "id": "ORG-0041",
@@ -1694,7 +1830,12 @@
       "where": "Influencer program economics (about 05:46 to 11:42) and TikTok Shop halo discussion"
     },
     "strength": "stated_by_practitioner",
-    "public": true
+    "public": true,
+    "situations": {
+      "model": [
+        "wholesale"
+      ]
+    }
   },
   {
     "id": "ORG-6364",
@@ -2400,6 +2541,88 @@
       "where": "about [133:49] content-first brands"
     },
     "strength": "stated_by_practitioner",
+    "public": true
+  },
+  {
+    "id": "ORG-7004",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "india",
+      "advertising law",
+      "creator and influencer collaboration",
+      "dark patterns"
+    ],
+    "claim": "India's 2023 dark pattern guidelines make disguised ads, those posing as user content, news or organic posts, unlawful, and put the duty to disclose on the seller or advertiser that posts them.",
+    "body": "Annexure 1 of the CCPA's Guidelines for Prevention and Regulation of Dark Patterns, 2023 lists disguised advertisement as a dark pattern: masking an advertisement as other content, such as user-generated content or a news article, or false ads designed to blend in with the interface so users click them. The explanation says it includes misleading advertisements as defined in section 2(28) of the Consumer Protection Act, that the CCPA's 2022 misleading advertisement guidelines also apply, and that the seller or advertiser who posts the content is responsible for disclosing that it is an ad. That is a legal duty on the brand, in addition to ASCI's self-regulatory labels. How to apply: label every paid creator post, whitelisted or Spark-style ad of a creator's post, advertorial and 'review' article as an ad in the content itself, and write the label requirement into creator contracts and briefs; using ASCI's permitted labels (Ad, Sponsored, Collaboration and so on) at the start of the caption satisfies both.",
+    "conditions": "Creator, affiliate and native advertising seen by audiences in India.",
+    "fails_when": "Genuine unpaid reviews and posts with no material connection; brand-owned editorial clearly presented as the brand's own content.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [],
+    "asks": [
+      "Do I need to say #ad on influencer posts in India?",
+      "Who is responsible if an influencer doesn't disclose an ad in India?",
+      "Is an advertorial legal in India?",
+      "Can I run ads that look like news articles in India?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7001",
+    "evidence": {
+      "where": "Annexure 1, item 9 (disguised advertisement)"
+    },
+    "strength": "regulator_rule",
+    "public": true
+  },
+  {
+    "id": "ORG-7005",
+    "modules": [
+      "ORG",
+      "MCR"
+    ],
+    "topics": [
+      "india",
+      "advertising law",
+      "creator and influencer collaboration",
+      "endorsements"
+    ],
+    "claim": "India's 2022 ad guidelines require endorsements to reflect the endorser's genuine, current opinion and real experience, and any material connection to be disclosed; endorsers face penalties and bans.",
+    "body": "The CCPA's Guidelines for Prevention of Misleading Advertisements and Endorsements for Misleading Advertisements, 2022 (9 June 2022) apply to manufacturers, service providers, traders, advertising agencies and endorsers, in any medium. Clause 13 says an endorsement must reflect the genuine, reasonably current opinion of the person making it, based on adequate information about or experience with the product, and must not be deceptive. Clause 14 says that where an endorser has a connection with the advertiser that could affect how much weight the audience gives the endorsement, and the audience would not expect it, the connection must be fully disclosed. The page summarising the rules notes that the Consumer Protection Act lets the CCPA fine manufacturers, advertisers and endorsers up to Rs 10 lakh for a misleading ad, up to Rs 50 lakh for repeat contraventions, and bar an endorser for up to 1 year, or up to 3 years for repeats. How to apply: give creators the product to use before they post, let them say what they actually think, brief them on the disclosure, and keep the product claims they may repeat to those you can prove.",
+    "conditions": "Creator, celebrity and customer endorsements in ads seen in India.",
+    "fails_when": "ASCI's influencer guidelines add label and placement rules; category laws (health, finance) add qualification rules for some endorsers.",
+    "scope": "baseline",
+    "tier": 1,
+    "numbers": [
+      "guidelines dated 9 June 2022",
+      "fine up to Rs 10 lakh, up to Rs 50 lakh for repeats",
+      "endorser ban up to 1 year, up to 3 years for repeats"
+    ],
+    "asks": [
+      "Can an influencer endorse my product without using it in India?",
+      "What's the penalty for misleading influencer ads in India?",
+      "Do I need to tell creators to disclose payment in India?",
+      "Can I script an influencer's review?"
+    ],
+    "platforms": [],
+    "platform": [],
+    "jurisdiction": [
+      "IN"
+    ],
+    "marketplace": [],
+    "mode": "",
+    "source": "S7006",
+    "evidence": {
+      "where": "Clauses 13 and 14"
+    },
+    "strength": "regulator_rule",
     "public": true
   }
 ]

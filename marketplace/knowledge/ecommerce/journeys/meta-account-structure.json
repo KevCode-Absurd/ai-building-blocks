@@ -1,0 +1,580 @@
+{
+  "schema": "ai-blocks-journey/1",
+  "id": "meta-account-structure",
+  "name": "Meta account structure and campaign launch plan (next 1 to 3 months)",
+  "vertical": "ecommerce",
+  "asked_as": [
+    "set up my Meta ads properly",
+    "plan our Facebook and Instagram campaigns for the next quarter",
+    "how should I structure my ad account",
+    "launch Meta ads for my store",
+    "should I use Advantage+ or manual campaigns",
+    "rebuild our messy ad account"
+  ],
+  "lead_agents": [
+    "dustin-ad-deployment",
+    "jared-performance-marketing",
+    "radek-unit-economics"
+  ],
+  "outcome": "The owner has a finished Meta plan for the next 1 to 3 months they can run from Monday: every campaign including the warm lane (retargeting and past buyers), what each spends week by week, who it reaches and excludes, a dated calendar of the ads each campaign runs built on the owner's own offers and buying moments, the rules that promote, raise or stop, and a weekly check against store orders. It comes as one branded page plus a plan file that passes the preflight check; the only ask is one yes to build it as paused drafts.",
+  "first_principles": [
+    "Every number starts from gross profit per purchase: the order value after discount minus landed cost, shipping, pick-pack, payment fees, returns and (for cash on delivery) failed deliveries. Break-even ROAS is order value divided by that profit, and the target cost per purchase is at or under it, unless 90-day repeat profit from the order export pays for more. A budget judged on revenue or a ROAS with no break-even beside it is a guess.",
+    "Optimise for the thing you want to buy. A purchase goal gets a Sales objective optimised for the Purchase event with value; a clicks, traffic, reach or engagement campaign buys the cheapest clickers and teaches delivery the wrong person. There is no 'warm-up' traffic campaign in a store plan.",
+    "Structure is a volume sum, not a taste. An ad set needs about 50 purchases in 7 days to leave learning, so the number of ad sets the account can feed is the weekly purchases the budget buys at target cost divided by 50. Split campaigns only for business reasons (country, margin group, sub-brand, a category with its own target), never for audiences, launch dates or 'a test someone ran'.",
+    "Under broad and Advantage+ targeting, creative is the targeting. Age, gender and interests are suggestions; location, exclusions and the event are hard controls. What decides who buys is a set of genuinely different concepts (buyer, angle, offer, format), so the plan must carry a testing lane that feeds the main campaign and a rule for promoting winners by post ID.",
+    "Platform ROAS over-counts: existing customers, view-through credit and catalog retargeting all look like wins. Exclude past buyers from prospecting or cap them in money, report on 7-day click, and judge the plan on store new-customer revenue divided by ad spend before any raise.",
+    "Read and plan freely; change nothing. The plan is built as paused drafts only after the owner approves it line by line, and every switch-on, budget raise and pause needs their yes."
+  ],
+  "goal": {
+    "questions": [
+      {
+        "id": "profit_per_order",
+        "ask": "What does one typical order leave you after product, shipping, fees and returns?",
+        "why": "It sets break-even ROAS, the target cost per purchase and so every budget and ad set count in the plan.",
+        "options": [
+          {
+            "label": "I'll give the number",
+            "pro": "fastest and exact",
+            "con": "often forgets shipping, fees or returns"
+          },
+          {
+            "label": "Work it out from my costs",
+            "pro": "uses delivered cost per product",
+            "con": "needs cost per item filled in the store"
+          },
+          {
+            "label": "Estimate it for now",
+            "pro": "plan starts today",
+            "con": "every budget is marked provisional until confirmed"
+          }
+        ],
+        "default": "Work it out from product costs and the order export with store-meta-math, and mark the plan provisional until the owner confirms the number",
+        "skip_if": [
+          "brief or org context gives gross profit per purchase",
+          "a cost sheet with landed cost is attached"
+        ],
+        "settle_with_data": "Store products export with cost per item plus the 90-day order export (discounts, shipping, refunds, payment method): compute gross profit per purchase by product and margin group. If 90-day repeat gross profit per new customer is known, show the first-order and 90-day targets side by side."
+      },
+      {
+        "id": "budget",
+        "ask": "How much can Meta spend a month, and how much would you lose before stopping?",
+        "why": "The monthly cap decides how many ad sets can learn, how big the testing lane is, and the stop line.",
+        "options": [
+          {
+            "label": "Keep today's spend",
+            "pro": "no new cash risk",
+            "con": "may be too small to feed more than one ad set"
+          },
+          {
+            "label": "Work back from my profit target",
+            "pro": "budget earns its place",
+            "con": "needs the profit target and cash dates"
+          },
+          {
+            "label": "A fixed test amount",
+            "pro": "loss is capped",
+            "con": "slow reads; fewer concepts can be tested"
+          }
+        ],
+        "default": "Hold the last 30 days' spend, with a loss limit of one month's test lane, until set-ad-budget-from-profit-target gives a higher ceiling",
+        "skip_if": [
+          "brief names a monthly budget and a loss limit"
+        ],
+        "settle_with_data": "Last 30 and 90 days of spend from the export give the current run rate; stock cover and the next stock payment date give the ceiling. Offer the profit-target budget only when tracking passes."
+      },
+      {
+        "id": "aim",
+        "ask": "For these months, is the aim new customers at a profit on the first order, or more new customers at break-even to win repeat buyers?",
+        "why": "It moves the target cost per purchase and how hard the plan pushes prospecting versus existing customers.",
+        "options": [
+          {
+            "label": "Profit on the first order",
+            "pro": "safe on cash",
+            "con": "smaller volume"
+          },
+          {
+            "label": "Break-even first order",
+            "pro": "more customers, more learning signal",
+            "con": "only works if repeat profit is real and cash can wait"
+          },
+          {
+            "label": "Clear specific stock",
+            "pro": "turns stock into cash",
+            "con": "needs its own campaign so it does not drag the main one"
+          }
+        ],
+        "default": "Profit on the first order, unless the order export shows 90-day repeat profit that pays for a higher target",
+        "skip_if": [
+          "brief states the aim",
+          "store has fewer than 3 months of orders (use first-order profit)"
+        ],
+        "settle_with_data": "Order export: share of new customers who buy again within 90 days and their gross profit. If 90-day profit per new customer is well above first-order profit, show the break-even option with its cash cost."
+      },
+      {
+        "id": "access",
+        "ask": "Can I read your ad account and store orders: a read-only connection, exports, or screenshots?",
+        "why": "Without past results the plan rests on rules of thumb instead of what has sold for this store.",
+        "options": [
+          {
+            "label": "Read-only connection",
+            "pro": "complete and current",
+            "con": "a few minutes to set up"
+          },
+          {
+            "label": "Exports",
+            "pro": "no access granted",
+            "con": "a snapshot; needs the exact columns"
+          },
+          {
+            "label": "Screenshots only",
+            "pro": "quickest",
+            "con": "no breakdowns; lower confidence"
+          }
+        ],
+        "default": "Use the connector if it is already live; otherwise ask once for the Ads Manager export (90 days, ad level, with age, gender and placement breakdowns), Events Manager screenshots and the order export",
+        "skip_if": [
+          "the Meta connector is already connected and reads the account",
+          "exports are attached"
+        ],
+        "settle_with_data": "Check the connector first; read-only access is enough for the whole plan. Draft access is needed only to build the approved plan paused."
+      }
+    ]
+  },
+  "gather": {
+    "brand_brain": "helpful",
+    "sources": [
+      {
+        "what": "Ads Manager export, last 90 days at ad level by day, plus breakdowns by age and gender, placement and region",
+        "why": "shows past winners, paused winners, segments that pay and placements that waste",
+        "where": "Meta connector or Ads Manager export",
+        "ask_if_missing": "Please export Ads Manager at ad level for the last 90 days with spend, purchases, purchase value, frequency, link clicks and landing page views, and the same by age and gender and by placement.",
+        "fallback": "Plan as a first-30-days account with broad targeting and a larger testing lane"
+      },
+      {
+        "what": "Events Manager for Purchase, AddToCart and ViewContent: browser and server counts, deduplication, match quality",
+        "why": "the plan optimises on Purchase, so the event must be counted once with value",
+        "where": "Meta connector (dataset quality) or Events Manager screenshots",
+        "ask_if_missing": "Please screenshot Events Manager for the Purchase event: overview, deduplication and event match quality.",
+        "fallback": "Mark tracking unverified; the first approval item becomes a tracking check"
+      },
+      {
+        "what": "Store order export, 90 days (12 months if repeat matters), with customer ID, first-order flag, discount, shipping, refunds and payment method",
+        "why": "store truth for orders, new-customer share, repeat profit and the customer list for exclusions",
+        "where": "Shopify or WooCommerce export",
+        "ask_if_missing": "Please export orders for the last 90 days with customer, discount, shipping, refund and payment method columns.",
+        "fallback": "Judge on Meta 7-day click only and say so on the plan"
+      },
+      {
+        "what": "Product costs, stock on hand and reorder lead time for the products to advertise",
+        "why": "gross profit per purchase, and no budget behind products that will run out",
+        "where": "store products export, inventory sheet",
+        "ask_if_missing": "Which products should the ads push, and how many weeks of stock does each have?",
+        "fallback": "Advertise only the best sellers with stock cover longer than the plan"
+      },
+      {
+        "what": "Current creative pool: every live and past ad with its format and angle",
+        "why": "the testing lane and the main campaign need enough distinct concepts",
+        "where": "Ads Manager ad level, ad library, creative folder",
+        "fallback": "Plan the first batch of concepts with the creatives journey"
+      }
+    ],
+    "setup": [
+      {
+        "need": "Purchase tracking through pixel and Conversions API",
+        "why": "a Sales campaign learns only from purchases it can see, counted once with value and currency",
+        "check": "Meta 7-day click purchases within about 20% of store orders over 14 days; Purchase shows browser and server events with deduplication",
+        "options": [
+          {
+            "label": "Store platform's Meta app at maximum data sharing",
+            "pro": "no code, sends server events with event IDs",
+            "con": "check it is not doubled by a second pixel"
+          },
+          {
+            "label": "Conversions API Gateway or partner tool",
+            "pro": "more control",
+            "con": "cost; recovers little where the browser pixel is blocked"
+          },
+          {
+            "label": "Launch on browser pixel only",
+            "pro": "no setup",
+            "con": "lost purchases weaken learning; plan marked at risk"
+          }
+        ],
+        "default": "Store platform's Meta app at maximum data sharing, verified with store-meta-capi before launch"
+      },
+      {
+        "need": "Ad account access level",
+        "why": "the plan is read-only work; building drafts needs more",
+        "check": "connector scope or role in Business settings",
+        "options": [
+          {
+            "label": "Read only",
+            "pro": "nothing can change by mistake",
+            "con": "owner builds the drafts from the launch sheet"
+          },
+          {
+            "label": "Read plus draft (paused)",
+            "pro": "plan built exactly as approved",
+            "con": "owner must still switch on"
+          }
+        ],
+        "default": "Read only until the owner approves the plan; draft access only to build it paused"
+      }
+    ],
+    "data_map": [
+      {
+        "question": "What can one purchase cost and still make money?",
+        "data": "Order value, landed cost, shipping, fees, returns, failed deliveries",
+        "where": "store exports, cost sheet",
+        "tool": "skill store-meta-math",
+        "if_missing": "Ask the owner for profit per order; mark plan provisional"
+      },
+      {
+        "question": "How many ad sets can the budget feed?",
+        "data": "Monthly budget, target cost per purchase",
+        "where": "owner, store-meta-math",
+        "tool": "weekly budget / target cost per purchase / 50",
+        "if_missing": "Plan one prospecting ad set and one test pack"
+      },
+      {
+        "question": "Which buyers, placements and regions pay best?",
+        "data": "Spend, purchases and value by age and gender, placement, region",
+        "where": "Meta export breakdowns",
+        "tool": "node tools/find-insights.mjs <export> --margin <m>",
+        "if_missing": "Broad targeting; let concepts find the buyer and read breakdowns after 14 days"
+      },
+      {
+        "question": "Which past ads should come back first?",
+        "data": "Ad-level lifetime and last-90-day ROAS, purchases, status",
+        "where": "Meta export",
+        "tool": "node tools/find-insights.mjs <export>",
+        "if_missing": "Start the test lane with 3 to 5 new concepts"
+      },
+      {
+        "question": "How much should existing customers get?",
+        "data": "Customers active in 180 days, CPM, repeat rate",
+        "where": "order export, Meta export",
+        "tool": "skill build-meta-retargeting-and-exclusions",
+        "if_missing": "Exclude purchasers 180 days from prospecting; no separate customer spend"
+      },
+      {
+        "question": "Does Meta agree with the store?",
+        "data": "Meta 7-day click purchases vs store paid orders, by week",
+        "where": "Meta export, order export",
+        "tool": "skill store-meta-attribution",
+        "if_missing": "Report on 7-day click and say the store check is pending"
+      }
+    ]
+  },
+  "diagnose": {
+    "tools": [
+      "node tools/find-insights.mjs <export-folder> --margin <gross margin> --json context/insights.json",
+      "node tools/preflight-meta.mjs context/current-structure.json (the live account written in plan shape: its FAILs are the first problems to fix)"
+    ],
+    "look_for": [
+      "The purchase signal: in Events Manager (the connector's dataset quality), the share of Purchase events with a click ID (fbc), match quality, server and browser deduplication, and catalogue errors. Weak signal caps every structure.",
+      "Ad sets the budget can feed: weekly budget divided by target cost per purchase divided by 50. If that is 2, a plan with 8 ad sets is wrong before it starts.",
+      "Share of spend in learning-limited ad sets today; above about a third means consolidation is part of this plan.",
+      "Objective and event mismatch: any traffic, engagement, reach or clicks campaign, any ad set optimising for link clicks or landing page views, and add-to-cart optimisation kept after purchases passed about 10 a week.",
+      "Products with very different profit per purchase sold in one campaign: purchase bidding chases the cheapest sale, not the most profitable, so a real margin gap needs its own campaign.",
+      "Existing customers soaking up prospecting: no purchaser exclusion, or an Advantage+ segment breakdown with a large existing-customer share and 30-day frequency on buyers far above about 10.",
+      "Catalog and dynamic product ads holding a large share of spend on default attribution; on 7-day click they usually shrink sharply.",
+      "Paused or tired winners: ads that beat break-even with enough purchases (15 or more) and are now off or falling at high frequency; relaunch by post ID before building from scratch.",
+      "Placements whose link clicks rarely become landing page views (in-stream, Audience Network): accidental clicks inflate CTR and train delivery on the wrong people.",
+      "Segments whose revenue share is well above spend share with 15+ purchases (fund them through creative made for them), and segments far below break-even (cut through creative and exclusions, not narrow targeting).",
+      "Concept depth: distinct buyer-angle-offer-format concepts live, not files; a colour or pose change is the same ad to Meta.",
+      "Store versus Meta gap: if Meta 7-day click purchases are above store orders, events are doubled; if far below, events are lost. Either one comes before any structure.",
+      "Stock cover on the hero products against the plan length and reorder lead time, and any sale or launch in the next 21 days (do not restructure into a peak)."
+    ],
+    "hypothesis_patterns": [
+      {
+        "pattern": "The account is too fragmented to learn",
+        "evidence": "many ad sets under 10 purchases a week; large share of spend learning limited; same products to the same people in several campaigns",
+        "bet": "Merge into one prospecting campaign by business split plus a testing lane; expect lower cost per purchase within 3 weeks"
+      },
+      {
+        "pattern": "The campaign is buying clicks, not buyers",
+        "evidence": "traffic or engagement objective, or link-click optimisation, on a sales goal; high CTR with few purchases",
+        "bet": "Rebuild as Sales optimised for Purchase; judge on cost per purchase, not CTR"
+      },
+      {
+        "pattern": "Existing customers take credit and budget",
+        "evidence": "no purchaser exclusion, high frequency on buyers, ROAS far lower on new customers than overall",
+        "bet": "Exclude buyers from prospecting and give them a small cap sized in money"
+      },
+      {
+        "pattern": "An underfunded buyer segment",
+        "evidence": "revenue share well above spend share, 15+ purchases, ROAS above break-even",
+        "bet": "Concepts written for that buyer in the main campaign and the test lane"
+      },
+      {
+        "pattern": "Proven winners are switched off",
+        "evidence": "paused ads with ROAS above break-even and 15+ purchases",
+        "bet": "Relaunch by post ID in the main campaign before new tests"
+      },
+      {
+        "pattern": "Margin mix is pulling spend to the wrong products",
+        "evidence": "most purchases on the lowest-profit product; profit per purchase differs by a wide margin across products",
+        "bet": "Split campaigns by margin group with their own target cost"
+      }
+    ]
+  },
+  "choose": {
+    "decisions": [
+      {
+        "id": "campaign_type",
+        "ask": "Which kind of main campaign should carry the budget?",
+        "options": [
+          {
+            "label": "Advantage+ Sales with an existing-customer cap",
+            "pro": "least setup, all signal in one place, creative does the targeting",
+            "con": "less control; drifts to existing customers and view credit unless capped and read on new customers",
+            "when": "one main country, similar margins across products, the budget buys about 50 purchases a week, and 8+ ads across 4+ concepts"
+          },
+          {
+            "label": "Manual Sales campaign with ad sets by concept",
+            "pro": "clean reads per concept, own exclusions and budgets",
+            "con": "more setup; each ad set splits learning",
+            "when": "margin groups differ, purchases are low, or the owner needs to see which idea works"
+          },
+          {
+            "label": "Advantage+ Sales for proven ads, manual testing lane beside it (my usual pick)",
+            "pro": "winners scale with full signal while new concepts get a fair, separate read",
+            "con": "two campaigns to watch; the test lane needs its own budget",
+            "when": "the account already has at least one proven ad and enough budget for a test pack at about 1.5x target cost per purchase a day"
+          }
+        ],
+        "recommend": "Pick from the diagnosis: if weekly purchases at target cost reach about 50 and margins are within about 10 points, Advantage+ Sales with the two ad set cap; add the manual testing lane when budget allows a test pack at about 1.5x target cost a day. If margins differ widely or volume is low, manual Sales by margin group. Never a traffic or engagement campaign."
+      },
+      {
+        "id": "switch_pace",
+        "ask": "If ads already run, how do we move to the new structure?",
+        "options": [
+          {
+            "label": "In stages, side by side (my usual pick)",
+            "pro": "results never fall off a cliff; old winners pause last",
+            "con": "about 2 to 3 weeks of mixed numbers and a little extra spend",
+            "when": "something in the account is at or near target"
+          },
+          {
+            "label": "All at once",
+            "pro": "clean start, simple reporting",
+            "con": "every ad set restarts learning on the same day",
+            "when": "nothing is at target, or tracking was broken so old learning is worthless"
+          },
+          {
+            "label": "Keep the core, add only the testing lane and exclusions",
+            "pro": "lowest risk",
+            "con": "fragmentation stays",
+            "when": "the main ad sets already hit target and get 50+ purchases a week"
+          }
+        ],
+        "recommend": "In stages unless no ad set has held target for 7 days. Never switch within 21 days of a sale or launch. Use consolidate-fragmented-meta-account for the order: build paused, launch at about a third of the money, pause the worst first and the old winner last, with a written rollback rule."
+      }
+    ]
+  },
+  "make": {
+    "pieces": [
+      {
+        "piece": "Money lines: gross profit per purchase, break-even ROAS, target cost per purchase by product or margin group",
+        "skill": "store-meta-math",
+        "when": "always first"
+      },
+      {
+        "piece": "Monthly budget worked back from the profit target and capped by cash and stock",
+        "skill": "set-ad-budget-from-profit-target",
+        "when": "the owner asks how much to spend or the budget is open"
+      },
+      {
+        "piece": "Stage and structure for 1 to 3 months (first 30 days, finding a winner, scaling, peak, launch)",
+        "skill": "store-meta-plan",
+        "when": "always; names the stage from facts"
+      },
+      {
+        "piece": "Tracking check before launch",
+        "skill": "store-meta-capi",
+        "when": "Purchase not verified against store orders in the last 14 days"
+      },
+      {
+        "piece": "How much of Meta's credit to believe, and the reporting basis",
+        "skill": "store-meta-attribution",
+        "when": "existing account with orders to compare"
+      },
+      {
+        "piece": "Advantage+ Sales campaign with an existing-customer cap",
+        "skill": "set-up-advantage-plus-sales-campaign",
+        "when": "decision picks Advantage+ Sales"
+      },
+      {
+        "piece": "Audience map: exclusions, existing-customer cap in money, retargeting verdict",
+        "skill": "build-meta-retargeting-and-exclusions",
+        "when": "always"
+      },
+      {
+        "piece": "Merge plan and switch calendar for an existing account",
+        "skill": "consolidate-fragmented-meta-account",
+        "when": "ads already run and the account has more ad sets than it can feed"
+      },
+      {
+        "piece": "Testing lane design: pack size, daily minimum, read points, promotion and kill rules",
+        "skill": "store-meta-test",
+        "when": "always; sized from weekly purchases"
+      },
+      {
+        "piece": "How winners graduate from the testing lane",
+        "skill": "call-creative-test-winners",
+        "when": "write the rule now, use it when each pack closes"
+      },
+      {
+        "piece": "Naming rule and tag sheet for campaigns, ad sets and ads",
+        "skill": "creative-naming-and-tagging-system",
+        "when": "always"
+      },
+      {
+        "piece": "UTM rule that carries campaign and ad name into store analytics",
+        "skill": "set-up-utm-tracking-for-all-channels",
+        "when": "always"
+      },
+      {
+        "piece": "Catalog sales ads with product sets that leave out low-profit and low-stock items",
+        "skill": "set-up-meta-catalog-sales-ads",
+        "when": "a catalog exists and the range is wide"
+      },
+      {
+        "piece": "Cash-on-delivery rules: delivered-order break-even and a confirmed-order signal",
+        "skill": "meta-ads-for-cod-stores",
+        "when": "most orders are cash on delivery"
+      },
+      {
+        "piece": "Cost cap or ROAS goal",
+        "skill": "cost-capped-campaigns",
+        "when": "only after a winner holds target and the owner wants a hard ceiling"
+      },
+      {
+        "piece": "Dated creative calendar: the ads each campaign runs each week, tied to the owner's offers and the buying moments in the window",
+        "when": "always; it is how the plan becomes ads"
+      },
+      {
+        "piece": "Weekly check: a 15-minute Monday routine reading Meta 7-day click against store orders, with the keep, raise and stop numbers",
+        "when": "always"
+      },
+      {
+        "piece": "Launch sheet with every setting and its reason, for line-by-line approval",
+        "skill": "build-meta-campaign-launch-sheet",
+        "when": "always, last"
+      },
+      {
+        "piece": "Approval list and spend guardrails",
+        "skill": "ad-change-approval-gate",
+        "when": "always"
+      }
+    ],
+    "rules": [
+      "Tracking first: week 1 of the plan fixes the purchase signal the diagnosis found weak (click ID coverage on Purchase under about 50%, match quality under about 6, missing deduplication, catalogue errors), with the exact fix and who does it. A new structure learns on that signal, so it comes before any raise.",
+      "Keep what earns: a campaign or ad at or near target keeps running beside the new structure until the new one beats it for 7 days on a comparable budget. It is paused last, on that read, never on a calendar date.",
+      "Every campaign judged on sales uses the Sales objective optimised for Purchase (or purchase value). A campaign with another objective needs a written purpose, under 10% of budget and its own measure, or it is not in the plan.",
+      "Optimise for add-to-cart only while purchases are under about 10 a week, with a written date to switch to Purchase.",
+      "Number of ad sets = weekly purchases the budget buys at target cost / 50, rounded down, plus the testing lane. Fewer, better-funded ad sets beat many small ones.",
+      "Prospecting excludes purchasers of the last 180 days and the customer list. Existing-customer spend is sized in money: customers x 4 to 7 views a month x CPM / 1,000. In Advantage+ Sales use Meta's two ad set method: one capped ad set for existing customers, one excluding them.",
+      "Testing lane: each batch of 4 to 8 distinct concepts gets its own ad set, at about 1.5x target cost per purchase a day so a 7-day pack reaches about 10 purchases. Read after 3x target cost spent (3+ purchases keep, 2 wait, 0 to 1 cut), firm call at 5x. Proven to test spend about 70/30 when profitable, 90/10 when not.",
+      "Winners graduate by post ID into the main campaign so their social proof carries over; never delete, only pause.",
+      "Same attribution on every campaign: 7-day click (plus 1-day engaged view if the account uses it). Report on 7-day click and store new-customer revenue per ad spend.",
+      "Naming: ROLE | objective | audience | market for campaigns; hypothesis | concept ID | angle | format for ads. Every URL carries utm_source=meta, utm_medium=paid, utm_campaign={{campaign.name}} and utm_content={{ad.name}}.",
+      "In Advantage+ Sales: campaign budget on, Advantage+ audience on, flexible ad format off, creative enhancements off unless the owner approves each. Keep all placements except one the account's own data shows below break-even after at least 3x target cost spent: exclude it with the account-level placement controls and say why.",
+      "Use the hard controls the data earns. Minimum age goes in the account-level controls when an age band is below break-even on real spend. When a gender or age band that Advantage+ cannot hard-exclude takes about 20% or more of spend below break-even, either run the main campaign as manual Sales with that control, or keep Advantage+ and show the leak in rupees a month and why the trade is worth it. Never leave waste the diagnosis found without a control or a written reason.",
+      "Carousels hold 2 to 10 cards; give the card count for every carousel.",
+      "Location is the ship-to countries only. Products with stock cover shorter than the plan plus reorder lead time stay out of ads and product sets.",
+      "Budget raises go in steps the owner can afford, wait at least 3 days, and are judged on 7 days or more; no more than one significant edit per ad set per week.",
+      "Daily budgets add up to the monthly budget within 15%; any reserve is 15% or less with a written release rule.",
+      "Everything is built paused. Nothing goes live, scales or pauses without the owner's yes.",
+      "Always decide the warm lane: site visitors, cart and checkout starters, engagers and past buyers. In Advantage+ Sales that is the existing-customer cap sized in money; when the warm pool is large or the account's retargeting has been its cheapest source of sales, a small separate Sales campaign for it with its own creative (reassurance, reviews, the owner's exchange or gift offer). State its budget in rupees a week and why.",
+      "Week by week, not one monthly number: a table with every week of the plan, each campaign's daily budget, the moment that week serves, and the rule that releases or holds the next step.",
+      "A dated creative calendar: for every campaign, which ads run in which weeks, at least 3 per campaign at a time, each a different concept named by buyer, angle, offer and format, with the launch date and the date it is judged. Lead with the owner's own offers and limits (their words, never a discount past their limit) and the buying moments in the window (knowledge/ecommerce/moments.md: festivals, weddings, gifting dates), with creative live about 2 to 3 weeks before each peak.",
+      "The plan is finished, not a skeleton: write every campaign, ad set, ad, budget and date. One approval ask in your message (build as paused drafts?), not a numbered list of approvals inside the plan."
+    ]
+  },
+  "check": {
+    "preflight": [
+      "node tools/preflight-meta.mjs context/meta-plan.json (must PASS with zero FAIL; explain every WARN in the plan, for example a test pack under 50 purchases a week). The check reads purchase volume per ad set, so a small existing-customer ad set in its own campaign fails it: put the capped existing-customer ad set inside the Advantage+ Sales campaign, and size test packs at about 1.5x target cost a day (1x gives under 10 purchases a week and fails)"
+    ],
+    "checks": [
+      "node tools/quality/consistency-check.mjs context/hypotheses.json META-STRUCTURE.html",
+      "Every campaign split names its business reason; every ad set count fits the purchases the budget buys.",
+      "Every budget line is a formula from target cost per purchase, and the total sits inside the cash and loss limit.",
+      "Every ad names the hypothesis it serves, and every URL has the UTM rule.",
+      "The plan names the warm lane and its weekly budget, has a row for every week, and gives every campaign at least 3 dated ads that use the owner's own offers and the moments in the window."
+    ],
+    "senior_review": [
+      "Which live campaign or ad is at or near target today, and does the plan keep it running until something beats it head to head?",
+      "What did the tracking check find (click ID coverage, match quality, deduplication, catalogue), and is its fix in week 1?",
+      "Does every campaign optimise for Purchase on a Sales objective? If one does not, what is its written job, cap and measure?",
+      "How many purchases a week does each ad set get at target cost? Which are under 50, and is each of those a deliberate test?",
+      "Is the target cost per purchase at or under gross profit per purchase, or justified by real 90-day repeat profit?",
+      "Can past buyers reach the prospecting budget? How much money could go to them each month?",
+      "Is the testing lane funded enough to reach a verdict in 7 to 14 days, with the promote and kill rules written before launch?",
+      "Will the store see each ad's orders through utm_content, so a winner is judged on store orders?",
+      "Does Meta 7-day click agree with store orders within about 20%? If not, why are we launching before fixing it?",
+      "What did I assume that the owner's data contradicts, and what does this plan need that they cannot pay for or make?",
+      "Did I use what the owner told me (their offers, limits, dates and banned words) in the ads and the calendar, or did I fall back on generic tactics?",
+      "For every waste the diagnosis found (a placement, an age band, a gender), which hard control removes it, or what does leaving it cost a month and why is that worth it?"
+    ]
+  },
+  "knowledge": {
+    "diagnose": {
+      "modules": [
+        "ADC",
+        "MEA",
+        "FIN"
+      ],
+      "ask": [
+        "How many ad sets can a store budget feed given Meta's learning phase?",
+        "When should a store split campaigns, and when does a split hurt?",
+        "How should spend on existing customers be sized and capped in Advantage+ Sales?",
+        "What delivered costs belong in gross profit per purchase?"
+      ]
+    },
+    "make": {
+      "modules": [
+        "ADC",
+        "MCR",
+        "MEA"
+      ],
+      "ask": [
+        "How should a creative testing lane be sized and read for a store this size?",
+        "What attribution setting and reporting basis should a store use?",
+        "How many distinct concepts does this monthly budget need?"
+      ]
+    },
+    "check": {
+      "modules": [
+        "ADC",
+        "MEA",
+        "GAD"
+      ],
+      "ask": [
+        "Which Advantage+ Sales settings stop it counting as Advantage+?",
+        "Conversions API deduplication and the 7-day event limit for cash-on-delivery signals",
+        "Restructure timing around sales and the learning reset"
+      ]
+    },
+    "never": [
+      "The owner's margins, budgets, customer counts and targets come from their data, never the library. Brand voice and ad copy come from the org context."
+    ]
+  },
+  "handover": {
+    "files": [
+      "META-STRUCTURE.html, one branded page in plain words: the money lines; each campaign (main, testing lane, warm lane) and why it exists; who it reaches and excludes; the event it learns on; a week-by-week budget table for every week; the dated creative calendar; the promote, raise and stop rules; and the Monday check.",
+      "context/meta-plan.json: the full structure in the preflight shape (goal, target cost, margin, monthly budget, pixel, campaigns, ad sets, ads with hypothesis and UTM URLs); preflight PASS with zero FAIL and each WARN explained.",
+      "Creative calendar as a CSV (week, campaign, ad name, buyer, angle, offer, format, moment, launch date, judge date) and the ad copy for every ad in it.",
+      "Launch sheet: every campaign, ad set and ad setting with its reason, ready to build paused.",
+      "Naming and UTM rule with the tag sheet.",
+      "In your message, one ask: shall I build it as paused drafts? Then the stop line (loss limit) and: nothing goes live without your yes."
+    ],
+    "next_moves": [
+      "The first batch of concepts for the testing lane (creatives journey)",
+      "A daily 20-minute account review routine for the first 14 days (daily-ad-account-review)",
+      "A scale check when a winner holds target for two weeks (scale-readiness-check)",
+      "A checklist for every future batch of ads before it goes live (ad-launch-prepublish-check)"
+    ]
+  }
+}

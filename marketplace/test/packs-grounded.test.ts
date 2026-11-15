@@ -24,7 +24,7 @@ test("AGENTS.md is a short entry point that starts every job by grounding it", a
   const agents = file(await build(), "AGENTS.md")!;
   assert.ok(agents.split("\n").length <= 75, `AGENTS.md has ${agents.split("\n").length} lines`);
   assert.match(agents, /## How to start every job\n\n1\. \*\*Foundation first\.\*\*/);
-  assert.match(agents, /five questions at most/);
+  assert.match(agents, /at most three questions in one message/); // 14 Nov 2026: staged questions (GUIDE.md)
   // The method lives in METHOD.md and the choice of tools in toolbox.md; AGENTS.md only points at both.
   assert.match(agents, /run the job the way `METHOD\.md` says/);
   assert.match(agents, /Find the task in `toolbox\.md` and pick what fits it, at your own discretion/);
@@ -66,7 +66,7 @@ test("the pack linter fails missing files, conflicting limits, repeated paragrap
   const pack = await build();
   const long = "This paragraph is long enough to count as boilerplate when it shows up twice in the same pack, which is exactly what the linter stops.";
   const broken: BuiltPack = { ...pack, files: [...pack.files,
-    { ...pack.files[0], path: "notes-a.md", source: "agent", content: `See \`workflows/nowhere.md\` and JOB-CARD.json.\n\nAsk three questions at most.\n\n${long}\n\nOur example is Tidewell Bookkeeping.\n` },
+    { ...pack.files[0], path: "notes-a.md", source: "agent", content: `See \`workflows/nowhere.md\` and JOB-CARD.json.\n\nAsk five questions at most.\n\n${long}\n\nOur example is Tidewell Bookkeeping.\n` },
     { ...pack.files[0], path: "notes-b.md", source: "agent", content: `${long}\n\n## Optional: hosts\n\nEXECUTION-PLAN.json comes from the tool.\n` },
   ] };
   const rules = lintPack(broken).map(i => `${i.rule}:${i.message.slice(0, 40)}`);

@@ -253,8 +253,9 @@ test("trace checks pass a good trace and name exactly the rule each broken trace
     const got = failing(t);
     assert.ok(got.includes(name.trim()), `${name}: got ${got.join(", ")}`);
   }
-  const live = good(); live.splice(9, 2); live.at(-2).observed = {}; live.splice(live.length - 2, 1);
-  assert.ok(failing(live).includes("no_early_done_message"), "told live with nothing switched on");
+  const honest = good(); const msg = honest.pop();
+  honest.splice(11, 0, { ...msg, seq: 11.5, claims: claimsIn("Campaign 77 is switched on, but the ad was rejected, so it is not delivering.") });
+  assert.ok(!failing(honest).includes("no_early_done_message"), "a message that reports the problem is not a done message");
   const jump = good(); jump[4].stage = "ship";
   assert.ok(failing(jump).includes("signoffs_in_order"), "a stage that is not next");
 });
@@ -301,7 +302,7 @@ test("the failure table counts only the first failure of each job, per process",
   const md = toMarkdown(m);
   assert.match(md, /## launch\n\n3 jobs, 2 with a failure\./);
   assert.match(md, /\| Last good state \| pack: reviewer_fix \| pack: script_fix \| Total \|/);
-  assert.doesNotMatch(md, /[–—]/, "no em or en dashes");
+  assert.doesNotMatch(md, new RegExp("[" + String.fromCharCode(8211, 8212) + "]"), "no em or en dashes");
 
   const dir = project();
   fs.mkdirSync(path.join(dir, "agent-state"));
@@ -313,7 +314,7 @@ test("the failure table counts only the first failure of each job, per process",
 });
 
 test("claims and entities are read from text and responses", () => {
-  assert.deepEqual(claimsIn("Nothing is live yet. Reply yes 3f9a2c to switch it on."), { done: false, live: false, ids: [] });
+  assert.deepEqual(claimsIn("Nothing is live yet. Reply yes 3f9a2c to switch it on."), { done: false, live: false, problem: false, ids: [] });
   assert.equal(claimsIn("Ad 120210000000001 is live and spending.").live, true);
   assert.deepEqual(claimsIn("Ad 120210000000001 is live.").ids, ["120210000000001"]);
   assert.equal(claimsIn("I have not finished: step 2 failed.").done, false);

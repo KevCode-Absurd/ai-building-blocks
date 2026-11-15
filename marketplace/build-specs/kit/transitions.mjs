@@ -64,7 +64,8 @@ export function firstFailures(rows, { days = null, now = Date.now() } = {}) {
     if (s) j.last_ok = s;
   }
   // A child job's process is known from its first stage; a job seen only through plans keeps "(unknown)".
-  const list = [...jobs.values()].map(j => ({ ...j, process: j.process ?? (j.job === "(no job)" ? "(no job)" : "(unknown)") }));
+  // Reads that belong to no job are left out unless something failed there.
+  const list = [...jobs.values()].filter(j => j.job !== "(no job)" || j.failure).map(j => ({ ...j, process: j.process ?? (j.job === "(no job)" ? "(no job)" : "(unknown)") }));
   return days ? list.filter(j => !j.started || Date.parse(j.started) >= now - days * 86400000) : list;
 }
 

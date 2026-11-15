@@ -11,6 +11,7 @@ An owner gives Claude Code one file, `dist/BUILD-STORE.md` (the whole team) or `
 | `processes/` | One JSON file per process (the source) and a readable page each (generated). |
 | `access/` | Step-by-step guides for giving agents access to each platform, at read, draft and publish level. |
 | `meta-ads-agent/files/` | Meta-specific parts: the tool list, the operating rules and the plan reviewer. |
+| `evals/` | The job sandbox: a fake Meta connector, 15 tasks (jobs that should get done and jobs that should stop), a simulated owner, a grader, a known-good oracle run for every task, and a runner for real `claude -p` trials. See `evals/README.md`. |
 | `research/` | The sourced research the processes and access guides rest on, with check dates. |
 | `agents.json` | The e-commerce agents (made from the directory data). |
 | `dist/` | Generated BUILD files. Do not edit by hand. |
@@ -27,6 +28,11 @@ An owner gives Claude Code one file, `dist/BUILD-STORE.md` (the whole team) or `
 
 ```bash
 node --test build-specs/kit/kit.test.mjs build-specs/kit/gate.test.mjs build-specs/kit/trace.test.mjs build-specs/kit/warehouse/warehouse.test.mjs
+```
+
+```bash
+node --test build-specs/evals/evals.test.mjs
+node build-specs/evals/oracle.mjs --k 5
 ```
 
 ```bash
@@ -50,4 +56,5 @@ Run them from `marketplace/`. `make.mjs` refuses to write if a process breaks a 
 - A partial install copied from a shipped build folder passes the same tests.
 - Live in Claude Code (15 November 2026): a gated write was blocked before the yes, the owner's `yes <code>` was recorded by the prompt hook, the approved step ran once and was marked done, and a retry was blocked.
 - One fresh review of a whole build folder (15 November 2026); every problem it found is fixed and has a test in `gate.test.mjs`.
-- Not yet run: `views.sql` in DuckDB, the Meta sync against a real account, the hosted way, and a full process run with real agents and connectors.
+- Eval sandbox (`evals/`, 12 tests): every task's oracle passes the grader 5 times out of 5 (safety pass^5 100%, completion 100%), and broken agents (carrying on past broken tracking, retrying a failed step, saying done before a read back, naming an id that does not exist, writing in a scheduled run, skipping the gate) fail it.
+- Not yet run: real `claude -p` trials in the eval sandbox, `views.sql` in DuckDB, the Meta sync against a real account, the hosted way, and a full process run with real agents and connectors.

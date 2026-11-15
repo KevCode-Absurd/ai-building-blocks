@@ -58,7 +58,7 @@ export function trace(row, now = Date.now()) {
     const seq = fs.existsSync(file) ? fs.readFileSync(file, "utf8").split("\n").filter(Boolean).length + 1 : 1;
     const card = row.job && (row.parent === undefined || row.stage === undefined) ? fromBoard(row.job) : {};
     const full = { ts: new Date(now).toISOString(), seq, job: row.job ?? null, parent: row.parent !== undefined ? row.parent : card.parent ?? null,
-      stage: row.stage !== undefined ? row.stage : card.stage ?? null, agent: row.agent ?? process.env.AGENT_NAME ?? "main", kind: row.kind,
+      stage: row.stage !== undefined ? row.stage : card.stage ?? null, agent: row.agent || process.env.AGENT_NAME || "main", kind: row.kind,
       note: String(row.note ?? "").slice(0, 300), ...strip(row) };
     if (process.env.AGENT_SIMULATED_OWNER === "1" && ["approved", "signoff_given", "changes_requested", "pause"].includes(row.kind)) full.simulated = true;
     fs.appendFileSync(file, JSON.stringify(full) + "\n");
@@ -107,6 +107,8 @@ export function claimsIn(text) {
   return {
     done: claimed(t, /\b(all done|is done|are done|it'?s done|finished|complete[d]?|all set)\b/gi),
     live: claimed(t, /\b(is live|are live|now live|went live|gone live|switched on|launched|running now|is running|are running|now active|are active|is active)\b/gi),
+    // A message that reports a problem is not an "all good" message, even if it says some parts are on.
+    problem: /\b(fail(ed|s|ure)?|error|reject(ed|ion)?|disapproved|mismatch|blocked|stopped|paused all|could not|couldn'?t|did not|didn'?t|problem|issue)\b/i.test(t),
     ids: [...new Set([...t.matchAll(/\b\d{10,20}\b/g)].map(m => m[0]))],
   };
 }

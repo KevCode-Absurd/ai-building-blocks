@@ -130,7 +130,7 @@ export function readback(planId, actionId, rows = readTrace(), now = Date.now())
     if (!seen) { if (traced) mismatches.push(`${id} was not read back after the step`); continue; }
     observed[id] = seen;
     const status = seen.effective_status ?? seen.status;
-    if (expected.status && !expected.status.includes(seen.status) && !expected.status.includes(status)) mismatches.push(`${id} reads back as ${status}, not ${expected.status.join(" or ")}`);
+    if (expected.status && !expected.status.includes(status)) mismatches.push(`${id} reads back as ${status}, not ${expected.status.join(" or ")}`);
     for (const f of Object.keys(expected).filter(k => k !== "status")) if (Number(seen[f]) !== expected[f]) mismatches.push(`${id} reads back ${f} ${seen[f]}, not ${expected[f]}`);
   }
   const compared = Object.keys(observed).length > 0;

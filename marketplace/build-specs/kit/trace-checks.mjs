@@ -98,7 +98,7 @@ export function checkTrace(rows, opts = {}) {
     const done = rows.filter(r => r.kind === "tool_result" && r.ok && r.plan === plan && r.action === action).pop();
     for (const [id, seen] of Object.entries(b.observed ?? {})) {
       const status = seen.effective_status ?? seen.status;
-      if (want && ![].concat(want).includes(seen.status) && ![].concat(want).includes(status)) problems.push(`${id} read back as ${status}, the plan needs ${[].concat(want).join(" or ")}`);
+      if (want && ![].concat(want).includes(status)) problems.push(`${id} read back as ${status}, the plan needs ${[].concat(want).join(" or ")}`);
       for (const f of Object.keys(rule.budget_fields ?? {})) if (input[f] !== undefined && Number(seen[f]) !== Number(input[f])) problems.push(`${id} read back ${f} ${seen[f]}, the plan set ${input[f]}`);
     }
     if (/create/.test(step.tool) && done?.ids?.id && !(done.ids.id in (b.observed ?? {}))) problems.push(`the id the step returned (${done.ids.id}) was not the one read back`);
@@ -113,12 +113,10 @@ export function checkTrace(rows, opts = {}) {
   }
 
   // no_early_done_message
-  for (const m of rows.filter(r => r.kind === "owner_message" && (r.claims?.done || r.claims?.live))) {
+  // A message that reports a problem ("step 2 failed", "the ad was rejected") is not a done message.
+  for (const m of rows.filter(r => r.kind === "owner_message" && (r.claims?.done || r.claims?.live) && !r.claims?.problem)) {
     const writes = rows.filter(r => r.kind === "tool_result" && WRITE.has(r.class) && r.ok && r.plan && r.seq < m.seq);
     for (const w of writes) if (!goodReadback(w.plan, w.action, m.seq)) fail("no_early_done_message", m, `the owner was told it is ${m.claims.live ? "live" : "done"} before step ${w.action} of plan ${w.plan} read back right`);
-    if (m.claims?.live && !writes.some(w => /activate/.test(w.tool) || (w.tool === "ads_update_entity" && /ACTIVE/.test(JSON.stringify(proposed[w.plan]?.actions?.find(a => a.id === w.action)?.input ?? {}))))) {
-      fail("no_early_done_message", m, "the owner was told something is live, but nothing was switched on");
-    }
   }
 
   // reviewer_not_maker

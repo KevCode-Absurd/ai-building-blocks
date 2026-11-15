@@ -54,7 +54,12 @@
       "checks": [
         "structure-review"
       ],
-      "done_when": "structure.md gives the campaign and ad set choice, the daily budget in whole units, the end date, the spend cap, and the reason for each, inside your limits."
+      "done_when": "structure.md gives the campaign and ad set choice, the daily budget in whole units, the end date, the spend cap, and the reason for each, inside your limits.",
+      "blocked_when": {
+        "tracking_broken": "the pixel or Conversions API shows no recent purchase events, or the tracking audit is older than 30 days",
+        "out_of_limits": "the brief asks for more daily spend, a bigger step or another ad account than your limits allow",
+        "missing_input": "the brief gives a budget that is neither daily nor lifetime (for example 2,000 a month), or no end date"
+      }
     },
     {
       "id": "ad-pack",
@@ -96,7 +101,11 @@
       "done_when": "Every step of the build plan ran once and was read back, and previews.md lists a preview link for each ad.",
       "requires_signed": [
         "final/*"
-      ]
+      ],
+      "blocked_when": {
+        "needs_owner": "the build plan is shown but you have not replied with yes and its code",
+        "out_of_limits": "the plan checker refuses the plan because it breaks your limits"
+      }
     },
     {
       "id": "go-live",
@@ -116,7 +125,10 @@
       "done_when": "The activate step ran once, the objects read back as active or in review, and launch-record.md lists their ids, budgets and dates.",
       "requires_signed": [
         "final/*"
-      ]
+      ],
+      "blocked_when": {
+        "needs_owner": "the go-live plan is shown but you have not replied with yes and its code"
+      }
     },
     {
       "id": "verify",

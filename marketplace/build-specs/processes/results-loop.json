@@ -83,7 +83,11 @@
         "results/act.md"
       ],
       "publish": "Through the Meta ads connector: budget changes within your step limit, or pauses. Never deletes.",
-      "done_when": "act.md records the call, the plan code if there was one, and what was read back after the change."
+      "done_when": "act.md records the call, the plan code if there was one, and what was read back after the change.",
+      "blocked_when": {
+        "out_of_limits": "the call needs a budget step bigger than your step limit or over your daily cap",
+        "tracking_broken": "Meta purchases and shop orders differ so much that the call cannot be trusted"
+      }
     },
     {
       "id": "learn",

@@ -28,7 +28,7 @@ const DRAFT = {
 function project() {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "abb-agent-"));
   fs.mkdirSync(path.join(dir, "agent")); fs.mkdirSync(path.join(dir, "context"));
-  for (const f of ["guard.mjs", "actions.mjs", "hooks.mjs", "board.mjs", "spend.mjs", "process.mjs"]) fs.copyFileSync(path.join(KIT, f), path.join(dir, "agent", f));
+  for (const f of ["guard.mjs", "actions.mjs", "hooks.mjs", "board.mjs", "spend.mjs", "process.mjs", "trace.mjs"]) fs.copyFileSync(path.join(KIT, f), path.join(dir, "agent", f));
   fs.writeFileSync(path.join(dir, "agent", "tools.json"), JSON.stringify(TOOLS));
   fs.writeFileSync(path.join(dir, "context", "limits.json"), JSON.stringify(LIMITS));
   fs.writeFileSync(path.join(dir, "draft.json"), JSON.stringify(DRAFT));

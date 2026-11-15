@@ -115,7 +115,8 @@ export function checkPlan(plan, tools, limits, now = Date.now()) {
 // "yes <code>" writes it. Process files and Claude Code's own settings and agent files are included.
 export const PROTECTED_FILES = ["context/limits.json", "context/goals.json", "context/approvers.json", "agent/tools.json", "agent/agents.json",
   ".claude/settings.json", ".claude/settings.local.json",
-  "agent/guard.mjs", "agent/actions.mjs", "agent/hooks.mjs", "agent/board.mjs", "agent/spend.mjs", "agent/process.mjs"];
+  "agent/guard.mjs", "agent/actions.mjs", "agent/hooks.mjs", "agent/board.mjs", "agent/spend.mjs", "agent/process.mjs",
+  "agent/trace.mjs", "agent/trace-checks.mjs", "agent/transitions.mjs"];
 const PROTECTED_PATTERNS = [/(^|\/)processes\/[^/\s"']+\.json$/, /(^|\/)\.claude\/agents\/[^/\s"']+\.md$/];
 export const isProtectedFile = file => {
   const f = String(file).replace(/\\/g, "/");
@@ -178,7 +179,7 @@ export function decide(toolName, toolInput, state, tools, now = Date.now()) {
     if (canonical(want) !== canonical(got)) { near ??= { planId, actionId: next.id, fields: differences(want, got) }; continue; }
     return { allow: true, why: "approved", planId, actionId: next.id };
   }
-  if (near) return { allow: false, why: `${name} is the next step (${near.actionId}) of approved plan ${near.planId}, but the input differs from what the owner approved in: ${near.fields.join(", ")}. Send exactly the approved input (see agent-state/plans/${near.planId}.json), or make a new plan.` };
+  if (near) return { allow: false, near: near.planId, why: `${name} is the next step (${near.actionId}) of approved plan ${near.planId}, but the input differs from what the owner approved in: ${near.fields.join(", ")}. Send exactly the approved input (see agent-state/plans/${near.planId}.json), or make a new plan.` };
   return { allow: false, why: `${name} with this input is not the next step of an approved plan. Show the owner a plan and wait for "yes <code>".` };
 }
 

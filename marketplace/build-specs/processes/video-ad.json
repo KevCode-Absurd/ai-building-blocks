@@ -38,7 +38,11 @@
       "checks": [
         "intake-complete"
       ],
-      "done_when": "intake.md names the buyer, the gap we are solving, the one message, the proof we hold, the offer, the placement, and the open questions you answered."
+      "done_when": "intake.md names the buyer, the gap we are solving, the one message, the proof we hold, the offer, the placement, and the open questions you answered.",
+      "blocked_when": {
+        "missing_input": "the brief has no product, no offer or no main number to judge the ad by",
+        "misrouted": "the brief is not a video ad (for example an email, a listing or a price change), so it goes to the right process"
+      }
     },
     {
       "id": "script",

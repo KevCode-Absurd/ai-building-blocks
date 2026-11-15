@@ -27,6 +27,7 @@ Collects every fact the video needs before anyone writes a word: who it is for, 
 - **Needs:** context/org-context/ (customers, voice, design, claims, do's and don'ts); context/goals.json; context/learnings.md; warehouse view creative_performance (last 90 days); the task that started this job
 - **Makes:** intake.md, channels.json
 - **Checks:** intake-complete (every heading in intake.md is filled from a named source, and missing facts are listed as answered questions, not guesses)
+- **Stops and asks when:** the brief has no product, no offer or no main number to judge the ad by (missing input); the brief is not a video ad (for example an email, a listing or a price change), so it goes to the right process (misrouted)
 - **Done when:** intake.md names the buyer, the gap we are solving, the one message, the proof we hold, the offer, the placement, and the open questions you answered.
 
 ### 2. Angle and script

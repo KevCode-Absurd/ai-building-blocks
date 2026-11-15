@@ -12,7 +12,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { canonical, checkPlan, checkFilePlan, decide, planHash, shortCode, parseYes, parsePause, baseName, inputDaily, withoutVolatile } from "./guard.mjs";
+import { canonical, checkPlan, checkFilePlan, decide, planHash, shortCode, parseYes, parsePause, baseName, inputDaily, withoutVolatile, resolve } from "./guard.mjs";
+import { trace, readTrace } from "./trace.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const ROOT = process.env.AGENT_ROOT || path.resolve(HERE, "..");
@@ -41,12 +42,18 @@ export function savePlan(draft, now = Date.now()) {
   const tools = loadTools();
   if (!tools && draft?.kind !== "file") return { problems: ["agent/tools.json is missing or not valid JSON, so no plan can be checked. Propose a fixed version with a file plan."] };
   const problems = draft?.kind === "file" ? checkFilePlan(draft) : checkPlan(draft, tools, loadLimits(), now);
-  if (problems.length) return { problems };
+  if (problems.length) {
+    trace({ kind: "check", job: draft?.job ?? null, check: "plan-check", verdict: "FIX", by: "script", note: problems.join("; "),
+      over_limits: problems.some(p => /over your cap|step limit|not one of your ad accounts|limits ended|spend line says/.test(p)) }, now);
+    return { problems };
+  }
   const hash = planHash(draft);
   const id = `${new Date(now).toISOString().slice(0, 10)}-${shortCode(hash)}`;
   const plan = { ...draft, id, hash, code: shortCode(hash), created_at: new Date(now).toISOString() };
   writeJson(path.join(STATE(), "plans", `${id}.json`), plan);
   log({ event: "plan", plan: id, kind: plan.kind ?? "actions" });
+  trace({ kind: "plan_proposed", job: plan.job ?? null, plan: id, code: plan.code, hash, plan_kind: plan.kind ?? "actions", note: String(plan.purpose).slice(0, 200),
+    ...(plan.kind === "file" ? { target: plan.target } : { actions: plan.actions.map(a => ({ id: a.id, tool: baseName(a.tool), input: a.input })), review_by: plan.review?.by ?? null }) }, now);
   return { plan };
 }
 
@@ -56,6 +63,7 @@ export function recordPause(words, by = "owner", now = Date.now()) {
   if (!p) return null;
   writeJson(path.join(STATE(), "paused.json"), { paused: p === "pause", by, words: String(words).slice(0, 200), at: new Date(now).toISOString() });
   log({ event: p === "pause" ? "paused" : "resumed", by });
+  trace({ kind: "pause", state: p, by, agent: by, note: String(words).slice(0, 200) }, now);
   return p;
 }
 
@@ -70,6 +78,7 @@ export function recordApproval(words, by = "owner", now = Date.now()) {
   const approval = { plan_id: plan.id, hash: plan.hash, owner_words: String(words).slice(0, 500), approved_by: by, approved_at: new Date(now).toISOString(), expires_at: now + DAY };
   writeJson(path.join(STATE(), "approvals", `${plan.id}.json`), approval);
   log({ event: "approved", plan: plan.id, by });
+  trace({ kind: "approved", job: plan.job ?? null, plan: plan.id, code, hash: plan.hash, by, agent: by, note: String(words).slice(0, 200) }, now);
   if (plan.kind === "file") {
     const target = path.join(ROOT, plan.target);
     fs.mkdirSync(path.dirname(target), { recursive: true });
@@ -93,6 +102,39 @@ export function recordResult(toolName, toolInput, response, failed = false) {
   writeJson(file, run);
   log({ event: failed ? "failed" : "done", plan: verdict.planId, action: verdict.actionId, tool: baseName(toolName) });
   return { planId: verdict.planId, actionId: verdict.actionId, failed };
+}
+
+// After a step ran, compare what was read back from the platform with what the owner approved.
+// The reads come from the trace (the hooks record every read's ids, statuses and budgets), not from anyone's word.
+// Expected: the ids the step returned (or the ids it acted on); the status the tool list requires after this tool
+// (readback_status, for example PAUSED after a create) or the status the input set; every budget field the input set.
+export function readback(planId, actionId, rows = readTrace(), now = Date.now()) {
+  const st = loadState(), plan = st.plans[planId], run = st.runs[planId], tools = loadTools() ?? {};
+  const action = plan?.actions?.find(a => a.id === actionId);
+  if (!action || !run?.done?.includes(actionId)) return { match: false, mismatches: [`step ${actionId} of ${planId} has not run`] };
+  const input = resolve(action.input, run.results), rule = tools.write?.[baseName(action.tool)] ?? {};
+  const returned = run.results?.[actionId] ?? {};
+  const acted = [].concat(input.id ?? [], input.ids ?? [], input.entity_id ?? [], input.entity_ids ?? [], input.object_ids ?? []).map(String);
+  const targets = /create/.test(baseName(action.tool)) && returned.id ? [String(returned.id)] : acted.length ? acted : returned.id ? [String(returned.id)] : [];
+  const expected = {};
+  const want = rule.readback_status ?? input.status;
+  if (want) expected.status = [].concat(want);
+  for (const f of Object.keys(rule.budget_fields ?? {})) if (input[f] !== undefined && input[f] !== null && input[f] !== "") expected[f] = Number(input[f]);
+  const ran = rows.filter(r => r.kind === "tool_result" && r.ok && r.plan === planId && r.action === actionId).pop();
+  const reads = rows.filter(r => r.kind === "tool_result" && r.class === "read" && r.ok && r.seq > (ran?.seq ?? 0));
+  const traced = rows.some(r => r.kind === "tool_result");
+  const observed = {}, mismatches = [];
+  if (!targets.length) mismatches.push("the step returned no id to read back");
+  for (const id of targets) {
+    const seen = reads.flatMap(r => r.entities ?? []).filter(e => e.id === id).pop();
+    if (!seen) { if (traced) mismatches.push(`${id} was not read back after the step`); continue; }
+    observed[id] = seen;
+    const status = seen.effective_status ?? seen.status;
+    if (expected.status && !expected.status.includes(seen.status) && !expected.status.includes(status)) mismatches.push(`${id} reads back as ${status}, not ${expected.status.join(" or ")}`);
+    for (const f of Object.keys(expected).filter(k => k !== "status")) if (Number(seen[f]) !== expected[f]) mismatches.push(`${id} reads back ${f} ${seen[f]}, not ${expected[f]}`);
+  }
+  const compared = Object.keys(observed).length > 0;
+  return { match: mismatches.length ? false : compared ? true : null, targets, expected, observed, mismatches };
 }
 
 // Pull "id"-like fields out of a tool response (MCP text content holding JSON, or plain JSON).
@@ -157,8 +199,16 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   else if (cmd === "verify") {
     const file = path.join(STATE(), "runs", `${a}.json`), run = readJson(file, null);
     if (!run?.done?.includes(b)) { console.log(`Step ${b} of ${a} has not run, so there is nothing to verify.`); process.exit(1); }
-    run.verified = { ...(run.verified ?? {}), [b]: { note: c, at: new Date().toISOString() } };
-    writeJson(file, run); log({ event: "verified", plan: a, action: b }); console.log("Recorded.");
+    const rb = readback(a, b), job = loadState().plans[a]?.job ?? null;
+    trace({ kind: "readback", job, plan: a, action: b, match: rb.match, expected: rb.expected, observed: rb.observed, mismatches: rb.mismatches, note: c ?? "" });
+    if (rb.match === false) {
+      log({ event: "readback mismatch", plan: a, action: b });
+      console.log(["Not recorded as checked. What was read back does not match the approved plan:", ...rb.mismatches.map(m => `- ${m}`),
+        "Tell the owner what differs. Do not say it is done or live."].join("\n"));
+      process.exit(1);
+    }
+    run.verified = { ...(run.verified ?? {}), [b]: { note: c, at: new Date().toISOString(), compared: rb.match === true } };
+    writeJson(file, run); log({ event: "verified", plan: a, action: b }); console.log(rb.match ? "Recorded: the read back matches the approved plan." : "Recorded (no read of the object was found to compare).");
   } else if (cmd === "due") console.log(JSON.stringify(due(), null, 2));
   else if (cmd === "schedule" && a === "add") {
     const list = readJson(schedFile(), []), t = { id: `t${list.length + 1}`, due_at: new Date(b).toISOString(), task: c, done: false };

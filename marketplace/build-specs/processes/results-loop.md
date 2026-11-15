@@ -46,6 +46,7 @@ For scale or cut calls, shows you a plan: the budget step (no bigger than your l
 - **Needs:** results/readout.md; context/limits.json
 - **Makes:** results/act.md
 - **Goes live:** Through the Meta ads connector: budget changes within your step limit, or pauses. Never deletes.
+- **Stops and asks when:** the call needs a budget step bigger than your step limit or over your daily cap (out of limits); Meta purchases and shop orders differ so much that the call cannot be trusted (tracking broken)
 - **Done when:** act.md records the call, the plan code if there was one, and what was read back after the change.
 
 ### 5. Write down what we learned

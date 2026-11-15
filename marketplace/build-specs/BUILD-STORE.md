@@ -80,7 +80,7 @@ Add a `.gitignore` with `.env`, `warehouse/store.duckdb` and `node_modules/`.
 
 ### 3. Install the kit and test it
 
-Copy everything in this build folder's `files/` into the store folder, keeping each path (Appendix A lists every file and where it goes), except `files/.claude/settings.json`, which waits for step 9 so the owner-held files can still be written in step 5. Then run `node --test agent/kit.test.mjs agent/gate.test.mjs warehouse/warehouse.test.mjs`. All tests must pass before you go on. Show the owner the one-line result.
+Copy everything in this build folder's `files/` into the store folder, keeping each path (Appendix A lists every file and where it goes), except `files/.claude/settings.json`, which waits for step 9 so the owner-held files can still be written in step 5. Then run `node --test agent/kit.test.mjs agent/gate.test.mjs agent/trace.test.mjs warehouse/warehouse.test.mjs`. All tests must pass before you go on. Show the owner the one-line result.
 
 What the kit does, in plain words:
 
@@ -90,6 +90,7 @@ What the kit does, in plain words:
 - `spend.mjs` tracks generation spend against the estimate the owner signed off.
 - `process.mjs` checks process files and renders them as pages.
 - `hooks.mjs` connects all of this to Claude Code, so the rules are enforced in code, not just written down.
+- `trace.mjs` writes one line to `agent-state/trace.jsonl` for every stage, check, sign-off, change request, plan, approval, tool call, read back and stop, in order. `trace-checks.mjs` checks a trace against the rules (only approved writes, no retries, read back before saying done), and `transitions.mjs` makes the failure table the monthly review starts from.
 
 ### 4. Org context
 
@@ -170,6 +171,8 @@ Show the owner these, and put them in `CLAUDE.md`:
 - "Pause all agent work" stops every agent write until "resume agent work". Also pause the scheduled tasks if the owner wants nothing to run.
 - A publish stage lists its plan ids in `<folder>/<process>.<stage>.plans`, and each plan names its job.
 - Reviewer checks are recorded with `node agent/board.mjs check <job> <check> PASS|FIX "<note>" --by <reviewer>`, and script checks with `node agent/board.mjs run-check <job> <check>`. A maker can never pass its own work.
+- When a stage cannot go on (tracking is broken, the brief breaks the limits, an input is missing, the owner has not replied, or the job belongs to another process), the agent stops it with `node agent/board.mjs block <job> <reason> "<what is wrong>"`. The reasons are `missing_input`, `out_of_limits`, `tracking_broken`, `needs_owner` and `misrouted`. The orchestrator then asks the owner or starts the right process, and `node agent/board.mjs unblock <job> "<what changed>"` carries on.
+- After each step of a plan, read the object back with the connector, then run `node agent/actions.mjs verify <plan> <step> "<what you saw>"`. It compares the read with the plan in code (status, budget and ids) and refuses if they differ. Never tell the owner a change is done or live before this passes.
 - Image and video generation runs only inside a signed-off budget: `node agent/spend.mjs use <job folder>` first, and `node agent/spend.mjs add` after each generation.
 
 ### 14. Hosted (way 3)
@@ -192,7 +195,7 @@ Only when the owner chooses it. Build it with them, test it in read-only mode fo
 
 - Every creative job ends in the results loop, which writes a dated lesson to `context/learnings.md` with its evidence and confidence. Every intake reads it.
 - Each agent's pack carries test briefs. Before changing an agent's model or instructions, run its tests and compare. Keep a model until it is retired if it does the job well.
-- Run the process-improvement process monthly (add it to the monthly scheduled task). It reads the board history and the warehouse, reports the hit rate (the share of creatives that beat the main target), generation spend per winner and time from brief to launch, and proposes at most three process changes. Process files are owner-held, so each change is a file plan the owner approves with its code; jobs already running keep the version they started with.
+- Run the process-improvement process monthly (add it to the monthly scheduled task). It reads the board history, the trace and the warehouse, makes the failure table with `node agent/transitions.mjs` (for each process, the last step that went well against the first thing that went wrong), reports the hit rate (the share of creatives that beat the main target), generation spend per winner and time from brief to launch, and proposes at most three process changes. Process files are owner-held, so each change is a file plan the owner approves with its code; jobs already running keep the version they started with.
 
 ### 17. Done checklist
 

@@ -31,6 +31,7 @@ Decides where the new ads go: a new campaign or a test inside an existing one, t
 - **Needs:** ad-copy.md; context/limits.json; warehouse view ads_daily and context/tracking.md (the tracking audit from store setup); context/experiments.md
 - **Makes:** structure.md
 - **Checks:** structure-review (budgets are inside limits, each ad set can plausibly reach about 50 results a week or the reason is stated, and tracking was checked first)
+- **Stops and asks when:** the pixel or Conversions API shows no recent purchase events, or the tracking audit is older than 30 days (tracking broken); the brief asks for more daily spend, a bigger step or another ad account than your limits allow (out of limits); the brief gives a budget that is neither daily nor lifetime (for example 2,000 a month), or no end date (missing input)
 - **Done when:** structure.md gives the campaign and ad set choice, the daily budget in whole units, the end date, the spend cap, and the reason for each, inside your limits.
 
 ### 3. Ad pack for approval
@@ -50,6 +51,7 @@ Shows you a build plan, then on your yes uploads the files and creates the creat
 - **Needs:** ad-pack.md (signed off); Meta ads connector at level 2 or 3
 - **Makes:** previews.md
 - **Goes live:** Through the Meta ads connector: media uploads, plus a creative, campaign, ad set and ads created as drafts or paused. No money is spent at this stage.
+- **Stops and asks when:** the build plan is shown but you have not replied with yes and its code (needs owner); the plan checker refuses the plan because it breaks your limits (out of limits)
 - **Done when:** Every step of the build plan ran once and was read back, and previews.md lists a preview link for each ad.
 
 ### 5. Go live
@@ -59,6 +61,7 @@ Shows you the go-live plan: the exact objects to switch on, the total new daily 
 - **Needs:** previews.md; Meta ads connector at level 3
 - **Makes:** launch-record.md
 - **Goes live:** Through the Meta ads connector: one activate step with the exact object ids. Money starts to be spent from this step.
+- **Stops and asks when:** the go-live plan is shown but you have not replied with yes and its code (needs owner)
 - **Done when:** The activate step ran once, the objects read back as active or in review, and launch-record.md lists their ids, budgets and dates.
 
 ### 6. Check after launch

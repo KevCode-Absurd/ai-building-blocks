@@ -11,6 +11,12 @@
 //   node agent/board.mjs check <jobId> <check> PASS|FIX "<note>" --by <reviewer>   record a reviewer's verdict
 //   node agent/board.mjs run-check <jobId> <check> ["<full command>"]             run a script check and record it
 //   node agent/board.mjs submit <jobId>                            finish the current stage (asks for sign-off if needed)
+//   node agent/board.mjs block <jobId> <reason> "<note>" [--by <agent>]   stop the job and say why (reasons below)
+//   node agent/board.mjs unblock <jobId> "<what changed>"          carry on once the reason is gone
+//
+// A blocked job waits for the orchestrator, who asks the owner or sends the work to the right process.
+// Reasons: missing_input, out_of_limits, tracking_broken, needs_owner, misrouted.
+// Every event here is also written to agent-state/trace.jsonl (see trace.mjs).
 //
 // Only the owner's own message "yes <code>" signs off a stage (through the prompt hook).
 // If any file changes after the sign-off code was shown, the code stops working.
@@ -20,6 +26,7 @@ import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { canonical, sha256, shortCode, parseYes } from "./guard.mjs";
 import { loadState } from "./actions.mjs";
+import { trace, BLOCK_REASONS } from "./trace.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = process.env.AGENT_ROOT || path.resolve(HERE, "..");
@@ -90,6 +97,7 @@ export function newJob(processId, title, now = Date.now(), parent = null) {
   fs.mkdirSync(path.join(ROOT, job.folder), { recursive: true });
   scheduleStage(job, proc.stages[0], now);
   saveJob(job);
+  trace({ kind: "stage_start", job: id, parent: job.parent, stage: job.stage, agent: proc.stages[0].agent, process: processId, note: title }, now);
   return job;
 }
 
@@ -108,6 +116,7 @@ export function recordCheck(jobId, name, verdict, note, by, now = Date.now()) {
   job.checks[job.stage] = { ...(job.checks[job.stage] ?? {}), [name]: { verdict, note, by, at: stamp(now) } };
   job.history.push({ at: stamp(now), event: `check ${name} ${verdict} by ${by}`, stage: job.stage });
   saveJob(job);
+  trace({ kind: "check", job: job.id, parent: job.parent, stage: job.stage, agent: by, check: name, verdict, by, maker: stage.agent, check_kind: "reviewer", note }, now);
   return job;
 }
 
@@ -129,6 +138,7 @@ export function runCheck(jobId, name, command = null, now = Date.now()) {
   job.checks[job.stage] = { ...(job.checks[job.stage] ?? {}), [name]: { verdict, note, by: "script", at: stamp(now) } };
   job.history.push({ at: stamp(now), event: `check ${name} ${verdict} by script`, stage: job.stage });
   saveJob(job);
+  trace({ kind: "check", job: job.id, parent: job.parent, stage: job.stage, agent: "script", check: name, verdict, by: "script", maker: stage.agent, check_kind: "script", note }, now);
   return { verdict, note };
 }
 
@@ -156,6 +166,8 @@ function advance(job, proc, now) {
     if (children.length) job.history.push({ at: stamp(now), event: `handed to ${children.map(c => `${c.id} (${c.process})`).join(", ")}`, stage: job.stage });
     if (missing.length) job.history.push({ at: stamp(now), event: `not handed to ${missing.join(", ")}: not installed in processes/`, stage: job.stage });
     saveJob(job);
+    if (targets.length) trace({ kind: "handoff", job: job.id, parent: job.parent, stage: job.stage, agent: proc.stages[i].agent, to: children.map(c => c.id), processes: installed, missing,
+      note: children.length ? `handed to ${children.map(c => `${c.id} (${c.process})`).join(", ")}` : "nothing installed to hand to" }, now);
     return { job, handed_to: children[0] ?? null, handed_all: children, missing };
   }
   const next = proc.stages[i + 1];
@@ -163,6 +175,7 @@ function advance(job, proc, now) {
   job.history.push({ at: stamp(now), event: "started", stage: job.stage });
   scheduleStage(job, next, now);
   saveJob(job);
+  trace({ kind: "stage_start", job: job.id, parent: job.parent, stage: job.stage, agent: next.agent, process: job.process }, now);
   return { job };
 }
 
@@ -216,6 +229,7 @@ export function submit(jobId, now = Date.now()) {
     job.status = "waiting_owner";
     job.history.push({ at: stamp(now), event: "waiting for owner sign-off", stage: stage.id });
     saveJob(job);
+    trace({ kind: "signoff_shown", job: job.id, parent: job.parent, stage: stage.id, agent: stage.agent, code: job.pending_gate.code, hash, files: fileHashes(job.folder, stage.makes ?? []) }, now);
     return { signoff: job.pending_gate, job };
   }
   return advance(job, proc, now);
@@ -232,13 +246,71 @@ export function signOff(words, by = "owner", now = Date.now()) {
     job.pending_gate = null; job.status = "in_progress";
     job.history.push({ at: stamp(now), event: "sign-off refused: files changed after the code was shown", stage: stage.id });
     saveJob(job);
+    trace({ kind: "check", job: job.id, parent: job.parent, stage: stage.id, agent: "board", check: "signed-files-unchanged", verdict: "FIX", by: "script", maker: stage.agent, check_kind: "script", note: "files changed after the sign-off code was shown" }, now);
     return { code, found: true, changed: true, job: job.id };
   }
   job.signoffs[stage.id] = { by, words: String(words).slice(0, 500), at: stamp(now), hash: job.pending_gate.hash, files: fileHashes(job.folder, stage.makes ?? []) };
   job.history.push({ at: stamp(now), event: `signed off by ${by}`, stage: stage.id });
+  trace({ kind: "signoff_given", job: job.id, parent: job.parent, stage: stage.id, agent: by, by, code, hash: job.pending_gate.hash, files: job.signoffs[stage.id].files, note: String(words).slice(0, 200) }, now);
   const r = advance(job, proc, now);
   return { code, found: true, job: job.id, stage: stage.id, next: r.job.status === "done" ? null : r.job.stage,
     handed_to: (r.handed_all ?? []).map(c => c.id).join(", ") || null, missing: r.missing ?? [] };
+}
+
+// The owner's own words asking for changes instead of signing off (called only by the prompt hook).
+// The words count as a change request when they start like one ("change...", "no, ...", "make it shorter").
+// The pending code stops working; the maker changes the work and submits again for a new code.
+// If no job is waiting but a plan is, the request is written down against that plan.
+export const CHANGE_WORDS = /^\s*(no\b|nope\b|not\b|change|fix|redo|re-do|revise|rewrite|edit|swap|replace|remove|drop|add|make it|make the|try again|instead|i don'?t|i do not|don'?t|do not|please change|can you change|could you change|less\b|more\b|shorter|longer|lower|raise|cut)/i;
+export function requestChanges(words, by = "owner", now = Date.now()) {
+  const text = String(words ?? "");
+  if (!CHANGE_WORDS.test(text)) return null;
+  const waiting = allJobs().filter(j => j.status === "waiting_owner" && j.pending_gate);
+  const named = waiting.filter(j => text.includes(j.id));
+  const pick = named.length === 1 ? named[0] : waiting.length === 1 ? waiting[0] : null;
+  if (pick) {
+    const stage = pick.pending_gate.stage;
+    pick.pending_gate = null; pick.status = "in_progress";
+    pick.history.push({ at: stamp(now), event: `owner asked for changes: ${text.slice(0, 300)}`, stage });
+    saveJob(pick);
+    trace({ kind: "changes_requested", job: pick.id, parent: pick.parent, stage, agent: by, by, reason: text.slice(0, 500), note: text.slice(0, 200) }, now);
+    return { job: pick.id, stage };
+  }
+  if (waiting.length > 1) {
+    trace({ kind: "changes_requested", job: null, stage: null, agent: by, by, reason: text.slice(0, 500), note: `several jobs wait (${waiting.map(j => j.id).join(", ")}); ask which one` }, now);
+    return { several: waiting.map(j => j.id) };
+  }
+  const st = loadState(), open = Object.values(st.plans).filter(p => !st.approvals[p.id] && Date.parse(p.created_at) > now - DAY);
+  const plan = open.find(p => text.includes(p.code) || text.includes(p.id)) ?? (open.length === 1 ? open[0] : null);
+  if (!plan) return null;
+  trace({ kind: "changes_requested", job: plan.job ?? null, plan: plan.id, agent: by, by, reason: text.slice(0, 500), note: text.slice(0, 200) }, now);
+  return { plan: plan.id, job: plan.job ?? null };
+}
+
+// Stop a job and say why, so the orchestrator can ask the owner or send the work elsewhere.
+export function block(jobId, reason, note, by = null, now = Date.now()) {
+  const job = loadJob(jobId); if (!job) throw new Error(`No job ${jobId}`);
+  if (!BLOCK_REASONS.includes(reason)) throw new Error(`reason must be one of: ${BLOCK_REASONS.join(", ")}`);
+  if (job.status === "done") throw new Error(`${jobId} is done; nothing to block`);
+  if (!String(note ?? "").trim()) throw new Error("say in plain words what is missing or wrong");
+  const proc = loadProcess(job.process), agent = by ?? (proc ? stageOf(proc, job)?.agent : null) ?? null;
+  job.status = "blocked"; job.pending_gate = null;
+  job.blocked = { reason, note: String(note).slice(0, 500), stage: job.stage, by: agent, at: stamp(now) };
+  job.history.push({ at: stamp(now), event: `blocked (${reason}): ${String(note).slice(0, 300)}`, stage: job.stage });
+  saveJob(job);
+  trace({ kind: "blocked", job: job.id, parent: job.parent, stage: job.stage, agent, reason, note }, now);
+  return job;
+}
+export function unblock(jobId, note, by = null, now = Date.now()) {
+  const job = loadJob(jobId); if (!job) throw new Error(`No job ${jobId}`);
+  if (job.status !== "blocked") throw new Error(`${jobId} is ${job.status}, not blocked`);
+  if (!String(note ?? "").trim()) throw new Error("say what changed so the job can carry on");
+  const was = job.blocked, proc = loadProcess(job.process);
+  job.status = "in_progress"; job.blocked = null;
+  job.history.push({ at: stamp(now), event: `unblocked (was ${was?.reason}): ${String(note).slice(0, 300)}`, stage: job.stage });
+  saveJob(job);
+  trace({ kind: "stage_start", job: job.id, parent: job.parent, stage: job.stage, agent: by ?? (proc ? stageOf(proc, job)?.agent : null) ?? null, process: job.process, resumed: true, note: `unblocked: ${String(note).slice(0, 200)}` }, now);
+  return job;
 }
 
 export function describe(job, now = Date.now()) {
@@ -247,8 +319,9 @@ export function describe(job, now = Date.now()) {
   const i = proc.stages.findIndex(s => s.id === job.stage), stage = proc.stages[i];
   const where = job.status === "done" ? "done" : `stage ${i + 1} of ${proc.stages.length}: ${stage.name ?? stage.id} (${stage.agent})`;
   const later = job.status === "in_progress" && Number.isFinite(job.not_before) && now < job.not_before ? `  Starts ${stamp(job.not_before)}` : "";
+  const stop = job.status === "blocked" ? `  Blocked (${job.blocked?.reason}): ${job.blocked?.note} Ask the owner or send it to the right process.` : "";
   const wait = job.status === "waiting_owner" ? `  Waiting for you: reply "yes ${job.pending_gate.code}" to sign off ${expand(job.folder, stage.makes ?? []).map(f => path.posix.join(job.folder, f)).join(", ")}` : "";
-  return `${job.id}  ${job.title}  [${proc.name}]  ${where}${later}${wait}`;
+  return `${job.id}  ${job.title}  [${proc.name}]  ${where}${later}${wait}${stop}`;
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
@@ -269,6 +342,8 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
       if (r.problems) { console.log("Not finished yet:\n- " + r.problems.join("\n- ")); process.exit(1); }
       if (r.signoff) console.log(`${describe(r.job)}\n\nShow the owner the files above. To sign off exactly these files, they reply: yes ${r.signoff.code}`);
       else console.log(describe(r.job) + ((r.handed_all ?? []).length ? `\nHanded to ${r.handed_all.map(x => `${x.id} (${x.process})`).join(", ")}` : "") + ((r.missing ?? []).length ? `\nNot handed to ${r.missing.join(", ")}: not installed` : ""));
-    } else console.log("Commands: new <process> \"<title>\" | status [jobId] | next [agent] | check <jobId> <check> PASS|FIX \"<note>\" --by <reviewer> | run-check <jobId> <check> [\"<full command>\"] | submit <jobId>");
+    } else if (cmd === "block") { console.log(describe(block(a, b, c, by))); }
+    else if (cmd === "unblock") { console.log(describe(unblock(a, b, by))); }
+    else console.log("Commands: new <process> \"<title>\" | status [jobId] | next [agent] | check <jobId> <check> PASS|FIX \"<note>\" --by <reviewer> | run-check <jobId> <check> [\"<full command>\"] | submit <jobId> | block <jobId> <reason> \"<note>\" | unblock <jobId> \"<what changed>\"");
   } catch (e) { console.log(e.message); process.exit(1); }
 }

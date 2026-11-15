@@ -24,6 +24,10 @@ const KIT = [
   ["kit/hooks.mjs", "agent/hooks.mjs", "enforces the gate inside Claude Code"],
   ["kit/kit.test.mjs", "agent/kit.test.mjs", "tests for all of the above"],
   ["kit/gate.test.mjs", "agent/gate.test.mjs", "more gate tests: per-call fields, budgets from the input, pause, fail closed, early stages, swapped files"],
+  ["kit/trace.mjs", "agent/trace.mjs", "writes agent-state/trace.jsonl: every stage, check, sign-off, change request, plan, approval, tool call, read back and stop, in order"],
+  ["kit/trace-checks.mjs", "agent/trace-checks.mjs", "checks a trace for the rules every job must keep (approved writes only, no retries, read back before done)"],
+  ["kit/transitions.mjs", "agent/transitions.mjs", "the failure table: per process, the last step that went well against the first thing that went wrong"],
+  ["kit/trace.test.mjs", "agent/trace.test.mjs", "tests for the trace, its checks and the failure table"],
   ["agents.json", "agent/agents.json", "the agents' ids and names, so process pages show names"],
   ...["copy-check.cjs", "check-logo-contrast.cjs", "numbers.cjs", "readability.cjs", "proof.cjs", "leakcheck.cjs", "render.cjs"].map(f =>
     [`../packs/shared/tools/quality/${f}`, `tools/quality/${f}`, "a quality check the processes run (plain Node, no packages)"]),

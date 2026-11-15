@@ -6,7 +6,7 @@ Once a month the team looks at its own track record (where jobs stalled, which c
 
 | # | Stage | Who | Makes | Checked by | You sign off | Access |
 |---|---|---|---|---|---|---|
-| 1 | Read the team's track record | Margaret (margaret-job-orchestrator) | track-record.md | numbers-check | no | read |
+| 1 | Read the team's track record | Margaret (margaret-job-orchestrator) | track-record.md, transitions.md | numbers-check, transitions-current | no | read |
 | 2 | Read what the work achieved | Callum (callum-reporting) | results-record.md | numbers-check, results-review | no | read |
 | 3 | Propose changes to the processes | Malcolm (malcolm-ecommerce-growth) | proposals.md | proposal-review | yes | draft |
 | 4 | Apply the accepted changes | Margaret (margaret-job-orchestrator) | applied.md | none | yes, the plan | publish |
@@ -15,12 +15,12 @@ Once a month the team looks at its own track record (where jobs stalled, which c
 
 ### 1. Read the team's track record
 
-Reads every job card on the board from the last month: how long each stage took, which checks said FIX and why, where you asked for changes at a sign-off, which plans failed or were blocked, and which steps waited longest for you. Counts are made by reading the files, not from memory.
+Reads every job card on the board from the last month: how long each stage took, which checks said FIX and why, where you asked for changes at a sign-off, which plans failed or were blocked, and which steps waited longest for you. It also makes the failure table from the trace with node agent/transitions.mjs agent-state/trace.jsonl --days 31 --out <folder>/transitions.md: for each process, the last step that went well against the first thing that went wrong, counting each job once. Counts are made by reading the files, not from memory.
 
-- **Needs:** board/ (job cards and their history); agent-state/log.jsonl; agent-state/plans/ and runs/; processes/
-- **Makes:** track-record.md
-- **Checks:** numbers-check (every count, median and rate in the record recomputes from its own inputs)
-- **Done when:** track-record.md lists, per process, the jobs finished, the median days per stage, the most common FIX reasons, the sign-off changes you asked for, and every blocked or failed plan step.
+- **Needs:** board/ (job cards and their history); agent-state/trace.jsonl (every step, check, sign-off and tool call, in order); agent-state/log.jsonl; agent-state/plans/ and runs/; processes/
+- **Makes:** track-record.md, transitions.md
+- **Checks:** numbers-check (every count, median and rate in the record recomputes from its own inputs); transitions-current (transitions.md is exactly the table the trace gives today, so no count was typed by hand)
+- **Done when:** track-record.md lists, per process, the jobs finished, the median days per stage, the most common FIX reasons, the sign-off changes you asked for, and every blocked or failed plan step, and transitions.md is the failure table made from the trace.
 
 ### 2. Read what the work achieved
 
@@ -33,9 +33,9 @@ Joins the month's finished creatives to their results in the warehouse: hit rate
 
 ### 3. Propose changes to the processes
 
-Proposes at most three changes, each tied to evidence from the two records: for example a new check where the same FIX keeps coming back, a stage moved earlier, a sign-off you never change dropped to a lighter look, a different model for a stage that keeps failing, or a lesson promoted into an intake question. Each change says what it fixes, the cost, and how we will know next month if it worked. Changes to your money limits or goals are never made here; they are their own file plans.
+Proposes at most three changes, each tied to evidence from the two records and the failure table (start with the biggest cell): for example a new check where the same FIX keeps coming back, a stage moved earlier, a sign-off you never change dropped to a lighter look, a different model for a stage that keeps failing, or a lesson promoted into an intake question. Each change says what it fixes, the cost, and how we will know next month if it worked. Changes to your money limits or goals are never made here; they are their own file plans.
 
-- **Needs:** track-record.md; results-record.md; processes/
+- **Needs:** track-record.md; transitions.md; results-record.md; processes/
 - **Makes:** proposals.md
 - **Checks:** proposal-review (each change fixes a problem the records show, is small enough to judge in a month, and does not weaken a sign-off, a check or the approval gate without a stated reason)
 - **Done when:** proposals.md has no more than three changes, each with its evidence, expected effect, cost, and the number that will show next month whether it worked.

@@ -1,5 +1,5 @@
 {
-  "about": "What this agent may touch in Meta's ads connector. Every connector tool not named here is blocked. Reads run freely. Writes run only as the next step of a plan you approved with yes <code>. Budgets are worked out from each input's budget fields (Meta budgets are in cents, so divided by 100) and checked against your daily cap.",
+  "about": "What this agent may touch in Meta's ads connector. Every connector tool not named here is blocked. Reads run freely. Writes run only as the next step of a plan you approved with yes <code>. Budgets are worked out from each input's budget fields (Meta budgets are in cents, so divided by 100) and checked against your daily cap. After each step, readback_status is the status the object must read back with (new objects are made paused).",
   "governed_prefixes": [
     "ads_"
   ],
@@ -83,7 +83,8 @@
       "account_field": [
         "ad_account_id",
         "account_id"
-      ]
+      ],
+      "readback_status": "PAUSED"
     },
     "ads_create_ad_set": {
       "spends": true,
@@ -94,14 +95,16 @@
       "account_field": [
         "ad_account_id",
         "account_id"
-      ]
+      ],
+      "readback_status": "PAUSED"
     },
     "ads_create_ad": {
       "spends": false,
       "account_field": [
         "ad_account_id",
         "account_id"
-      ]
+      ],
+      "readback_status": "PAUSED"
     },
     "ads_create_custom_audience": {
       "spends": false,
@@ -117,7 +120,12 @@
       }
     },
     "ads_activate_entity": {
-      "spends": true
+      "spends": true,
+      "readback_status": [
+        "ACTIVE",
+        "IN_PROCESS",
+        "PENDING_REVIEW"
+      ]
     },
     "ads_experiment_abtest_create_test": {
       "spends": true

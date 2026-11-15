@@ -6,6 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { BLOCK_REASONS } from "./trace.mjs";
 
 const GATES = new Set(["none", "owner"]);
 const ACCESS = new Set(["read", "draft", "publish"]);
@@ -38,6 +39,15 @@ export function validate(proc, agents = null, others = null) {
       need((proc.checks ?? {})["spend-within-budget"] && (s.checks ?? []).includes("spend-within-budget"), `${at}: spending stages run the spend-within-budget check`);
     }
     if (s.access === "publish") need(String(s.publish ?? "").length >= 15, `${at}: say what goes live and through which connector`);
+    // A stage can say when it stops instead of carrying on. The job is then blocked with that reason
+    // (node agent/board.mjs block), and the orchestrator asks the owner or sends the work elsewhere.
+    if (s.blocked_when !== undefined) {
+      need(s.blocked_when && typeof s.blocked_when === "object" && !Array.isArray(s.blocked_when) && Object.keys(s.blocked_when).length, `${at}: blocked_when maps a reason to when it applies`);
+      for (const [reason, when] of Object.entries(s.blocked_when ?? {})) {
+        need(BLOCK_REASONS.includes(reason), `${at}: blocked_when reason ${reason} is not one of ${BLOCK_REASONS.join(", ")}`);
+        need(String(when ?? "").length >= 15, `${at}: blocked_when ${reason}: say when it applies, in plain words`);
+      }
+    }
   });
   need(proc.stages[0]?.id === "intake" || ["recurring", "setup", "continuation"].includes(proc.kind), "a making process starts with an intake stage");
   if (proc.stages[0]?.id === "intake") need((proc.stages[0].needs ?? []).some(n => /context\/org/.test(n)), "intake reads the Org context (context/org/)");
@@ -67,6 +77,7 @@ export function render(proc, names = {}) {
     if (s.spends) L.push(`- **Costs money:** ${s.spends}`);
     if (s.budget_from) L.push(`- **Costs money:** only inside the budget you approved at ${s.budget_from}; it stops before going over.`);
     if (s.publish) L.push(`- **Goes live:** ${s.publish}`);
+    if (s.blocked_when) L.push(`- **Stops and asks when:** ${Object.entries(s.blocked_when).map(([r, w]) => `${w} (${r.replace(/_/g, " ")})`).join("; ")}`);
     L.push(`- **Done when:** ${s.done_when}`);
     if (s.gate === "owner") L.push(`- **You sign off:** ${s.signoff ?? "you look at what it made and reply yes with the code"}`);
     L.push("");
